@@ -29,9 +29,9 @@ import android.provider.Settings;
 
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
+import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
-import com.android.tv.settings.library.data.State;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.ArrayList;
@@ -88,6 +88,11 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     }
 
     @Override
+    public void onAttach() {
+        // no-op
+    }
+
+    @Override
     public void onCreate(Bundle extras) {
         mNetworkModule = NetworkModule.getInstance(mContext);
         mPreferenceCompatManager = new PreferenceCompatManager();
@@ -134,6 +139,11 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
 
     @Override
     public void onDestroy() {
+    }
+
+    @Override
+    public void onDetach() {
+        // no-op
     }
 
     private void updateWifiList() {

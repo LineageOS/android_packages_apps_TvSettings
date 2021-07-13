@@ -136,14 +136,14 @@
     <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: ativar ou desativar de forma seletiva cada formato suportado por este dispositivo, independentemente do que é suportado pelo seu dispositivo de saída de áudio."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Quando selecionada, pode desativar os formatos de som suportados pela cadeia do dispositivo e que causam problemas com a reprodução. Pode ativar os formatos de som não suportados pela cadeia do dispositivo. Em alguns casos, as apps podem escolher um formato que não seja o que tem a maior qualidade."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Pretende ativar o formato de som não suportado?"</string>
-    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"O disp. de áudio ligado não indica o suporte deste formato. Isto pode causar comportamentos inesperados como estalidos ou ruídos altos no dispositivo."</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"O dispositivo de áudio ligado não indica ser compatível com este formato. Isto pode causar comportamentos inesperados como estalidos ou ruídos altos."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Cancelar"</string>
     <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"Mudar mesmo assim"</string>
     <string name="surround_sound_supported_title" msgid="4873195851187547020">"FORMATOS SUPORTADOS"</string>
     <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"FORMATOS NÃO SUPORTADOS"</string>
     <string name="surround_sound_format_info" msgid="5671866505653542934">"INFORMAÇÕES DE FORMATO"</string>
     <string name="surround_sound_show_formats" msgid="1929849219042916469">"Mostre os formatos"</string>
-    <string name="surround_sound_hide_formats" msgid="7770931097236868238">"Oculte os formatos"</string>
+    <string name="surround_sound_hide_formats" msgid="7770931097236868238">"Ocultar formatos"</string>
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"FORMATOS ATIVADOS"</string>
     <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"FORMATOS DESATIVADOS"</string>
     <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Para ativar, altere a seleção do formato para Manual."</string>
@@ -180,8 +180,8 @@
     <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Quando a opção estiver selecionada, o sistema irá permitir que as apps selecionem qualquer formato HDR que seja suportado pela cadeia do dispositivo. As apps podem escolher um formato que não seja o formato com a maior qualidade."</string>
     <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Quando selec., pode desat. manualm. os formatos HDR que são suport. pela cadeia do dispositivo e que causam problemas c/ a reprodução. Não é possível forçar a ativ. dos form. HDR não suportados pela cadeia do dispositivo. As apps podem escolher um formato que não seja o formato c/ a maior qualidade."</string>
     <string name="hdr_format_info" msgid="5652559220799426076">"INFORMAÇÕES DE FORMATO"</string>
-    <string name="hdr_show_formats" msgid="171065892975445851">"Mostre os formatos"</string>
-    <string name="hdr_hide_formats" msgid="8561568998525727230">"Oculte os formatos"</string>
+    <string name="hdr_show_formats" msgid="171065892975445851">"Mostrar formatos"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Ocultar formatos"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"FORMATOS ATIVADOS"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"FORMATOS DESATIVADOS"</string>
     <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Para desativar, altere a seleção do formato para Manual."</string>
@@ -412,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"Licença"</string>
     <string name="terms_title" msgid="192888187310800678">"Termos de Utilização"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Licença WebView do sistema"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Informação ao consumidor"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"O conteúdo apresentado no Android TV é proveniente de parceiros externos, tais como programadores de apps e estúdios de cinema, e da própria Google. Para mais informações, veja "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Má"</item>
     <item msgid="2098818614362343532">"Aceitável"</item>

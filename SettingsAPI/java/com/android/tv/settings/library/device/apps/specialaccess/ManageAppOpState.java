@@ -58,13 +58,18 @@ public abstract class ManageAppOpState extends PreferenceControllerState impleme
     }
 
     @Override
+    public void onAttach() {
+        super.onAttach();
+        mManageApplicationsController = new ManageApplicationsController(mContext,
+                getStateIdentifier(), getLifecycle(), getAppFilter(), getAppComparator(), this,
+                mUIUpdateCallback);
+    }
+
+    @Override
     public void onCreate(Bundle extras) {
         super.onCreate(extras);
         mIPackageManager = ActivityThread.getPackageManager();
         mAppOpsManager = mContext.getSystemService(AppOpsManager.class);
-        mManageApplicationsController = new ManageApplicationsController(mContext,
-                getStateIdentifier(), getLifecycle(), getAppFilter(), getAppComparator(), this,
-                mUIUpdateCallback);
     }
 
     @Override

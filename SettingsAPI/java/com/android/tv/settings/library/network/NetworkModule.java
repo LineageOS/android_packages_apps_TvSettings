@@ -25,8 +25,8 @@ import android.util.ArraySet;
 import android.util.Log;
 
 import com.android.tv.settings.library.PreferenceCompat;
+import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.data.Module;
-import com.android.tv.settings.library.data.State;
 
 import java.util.List;
 

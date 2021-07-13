@@ -31,8 +31,8 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WRITE_SETTINGS;
 
 import android.content.Context;
-import android.util.Pair;
 
+import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.device.apps.AllAppsState;
 import com.android.tv.settings.library.device.apps.AppManagementState;
@@ -48,16 +48,13 @@ import com.android.tv.settings.library.device.apps.specialaccess.WriteSettingsSt
 import com.android.tv.settings.library.network.NetworkMainState;
 import com.android.tv.settings.library.network.WifiDetailsState;
 
-import java.util.Map;
-
 /** Manager to handle creation and removal of the {@link State}. */
 public class StateManager {
     private StateManager() {
     }
 
     public static State createState(
-            Context context, int stateIdentifier, UIUpdateCallback uiUpdateCallback,
-            Map<Integer, Pair<State, Integer>> stateMap) {
+            Context context, int stateIdentifier, UIUpdateCallback uiUpdateCallback) {
         State state = null;
         switch (stateIdentifier) {
             case STATE_NETWORK_MAIN:
@@ -102,24 +99,6 @@ public class StateManager {
             default:
                 // no-op
         }
-        if (!stateMap.containsKey(stateIdentifier)) {
-            stateMap.put(stateIdentifier, new Pair(state, 0));
-        }
-        Pair<State, Integer> stateAndCount = stateMap.get(stateIdentifier);
-        stateMap.put(stateIdentifier, new Pair<>(stateAndCount.first, stateAndCount.second + 1));
-        return stateAndCount.first;
-    }
-
-    public static State getState(int stateIdentifier, Map<Integer, Pair<State, Integer>> stateMap) {
-        return stateMap.get(stateIdentifier).first;
-    }
-
-    public static void removeState(
-            int stateIdentifier, Map<Integer, Pair<State, Integer>> stateMap) {
-        Pair<State, Integer> stateAndCount = stateMap.get(stateIdentifier);
-        stateMap.put(stateIdentifier, new Pair(stateAndCount.first, stateAndCount.second - 1));
-        if (stateAndCount.second == 1) {
-            stateMap.remove(stateIdentifier);
-        }
+        return state;
     }
 }

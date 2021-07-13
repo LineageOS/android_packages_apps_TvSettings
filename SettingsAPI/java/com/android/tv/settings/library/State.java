@@ -14,13 +14,15 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.library.data;
+package com.android.tv.settings.library;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 /** Implement this to provide data for each settings screen. */
 public interface State {
+    void onAttach();
+
     void onCreate(Bundle extras);
 
     void onStart();
@@ -32,6 +34,8 @@ public interface State {
     void onStop();
 
     void onDestroy();
+
+    void onDetach();
 
     boolean onPreferenceTreeClick(String key, boolean status);
 
