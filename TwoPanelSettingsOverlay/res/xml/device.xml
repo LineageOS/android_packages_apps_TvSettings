@@ -74,8 +74,13 @@
         android:key="accessibility"
         android:title="@string/system_accessibility"/>
     <com.android.tv.settings.LongClickPreference
-        android:icon="@drawable/ic_restart_alt"
+        android:icon="@drawable/ic_reboot_alt"
         android:key="reboot"
         android:title="@string/restart_button_label"
         android:fragment="com.android.tv.settings.about.RebootConfirmFragment" />
+    <Preference
+        android:icon="@drawable/ic_shutdown"
+        android:key="shutdown"
+        android:title="@string/shutdown_button_label"
+        android:fragment="com.android.tv.settings.about.ShutdownConfirmFragment" />
 </PreferenceScreen>
