@@ -35,7 +35,7 @@ public class PictureInPictureCompat extends SpecialAccessControllerFragmentCompa
     }
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return ManagerUtil.STATE_PICTURE_IN_PICTURE;
     }
 }

@@ -35,7 +35,7 @@ public class AppManagementFragmentCompat extends PreferenceControllerFragmentCom
     }
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return ManagerUtil.STATE_APP_MANAGEMENT;
     }
 }

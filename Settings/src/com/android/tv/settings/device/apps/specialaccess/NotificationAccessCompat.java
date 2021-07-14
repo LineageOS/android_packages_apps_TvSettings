@@ -65,7 +65,7 @@ public class NotificationAccessCompat extends PreferenceControllerFragmentCompat
     }
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return ManagerUtil.STATE_NOTIFICATION_ACCESS;
     }
 }

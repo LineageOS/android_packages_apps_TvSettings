@@ -37,7 +37,7 @@ public class WifiDetailsFragmentCompat extends PreferenceControllerFragmentCompa
     }
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return STATE_WIFI_DETAILS;
     }
 }

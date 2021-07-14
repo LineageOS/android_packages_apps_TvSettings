@@ -90,7 +90,7 @@ public class NetworkFragmentCompat extends PreferenceControllerFragmentCompat {
     }
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return STATE_NETWORK_MAIN;
     }
 }

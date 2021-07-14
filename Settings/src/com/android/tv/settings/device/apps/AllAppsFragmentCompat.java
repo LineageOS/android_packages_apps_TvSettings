@@ -77,7 +77,7 @@ public class AllAppsFragmentCompat extends PreferenceControllerFragmentCompat {
     }
 
     @Override
-    public int getState() {
+    public int getStateIdentifier() {
         return STATE_ALL_APPS;
     }
 }
