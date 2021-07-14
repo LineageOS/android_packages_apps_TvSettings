@@ -29,6 +29,7 @@ import com.android.tv.settings.library.util.AbstractPreferenceController;
 import com.android.tv.settings.library.util.lifecycle.Lifecycle;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -99,7 +100,7 @@ public abstract class PreferenceControllerState implements State {
     }
 
     @Override
-    public boolean onPreferenceTreeClick(String key, boolean status) {
+    public boolean onPreferenceTreeClick(String[] key, boolean status) {
         Collection<AbstractPreferenceController> controllers =
                 new ArrayList<>(mPreferenceControllers);
         for (AbstractPreferenceController controller : controllers) {
@@ -112,7 +113,7 @@ public abstract class PreferenceControllerState implements State {
     }
 
     @Override
-    public void onPreferenceChange(String key, Object newValue) {
+    public void onPreferenceChange(String[] key, Object newValue) {
         // no-op
     }
 
@@ -162,7 +163,7 @@ public abstract class PreferenceControllerState implements State {
         return mLifecycle;
     }
 
-    private boolean keyEquals(String key1, String[] key2) {
-        return key2 != null && key2.length == 1 && key1 != null && key1.equals(key2[0]);
+    private static boolean keyEquals(String[] key1, String[] key2) {
+        return Arrays.equals(key1, key2);
     }
 }

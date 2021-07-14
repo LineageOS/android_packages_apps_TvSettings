@@ -20,10 +20,8 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 
 import com.android.tv.settings.library.ManagerUtil;
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceControllerState;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
@@ -32,37 +30,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppsState extends PreferenceControllerState {
-    private static final String KEY_RECENT_USED_APPS = "recently_used_apps_category";
-    private static final String KEY_SEE_ALL_APPS = "see_all_apps";
-    private static final String KEY_CATEGORY_PERMISSIONS = "category_permissions";
-    private static final String KEY_MANAGE_PERMISSIONS = "manage_permissions";
-    private static final String KEY_SPECIAL_APP_ACCESS = "special_app_access";
-    private static final String KEY_SECURITY = "security";
     public static final String EXTRA_VOLUME_UUID = "volumeUuid";
     public static final String EXTRA_VOLUME_NAME = "volumeName";
-    private PreferenceCompat mRecentUsedAppsPref;
-    private PreferenceCompat mSeeAllAppsPref;
-    private PreferenceCompat mPermissionsPrefCategory;
-    private PreferenceCompat mManagePermissionsPref;
-    private PreferenceCompat mSpecialAccessPref;
-    private PreferenceCompat mSecurityPref;
 
     public AppsState(Context context,
             UIUpdateCallback callback) {
         super(context, callback);
-    }
-
-    @Override
-    public void onCreate(Bundle extras) {
-        super.onCreate(extras);
-        mRecentUsedAppsPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_RECENT_USED_APPS);
-        mSeeAllAppsPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_SEE_ALL_APPS);
-        mPermissionsPrefCategory = mPreferenceCompatManager.getOrCreatePrefCompat(
-                KEY_CATEGORY_PERMISSIONS);
-        mManagePermissionsPref = mPreferenceCompatManager.getOrCreatePrefCompat(
-                KEY_MANAGE_PERMISSIONS);
-        mSpecialAccessPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_SPECIAL_APP_ACCESS);
-        mSecurityPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_SECURITY);
     }
 
     @Override

@@ -58,7 +58,7 @@ public class SystemAlertWindowState extends ManageAppOpState {
     }
 
     @Override
-    public void onPreferenceChange(String key, Object value) {
+    public void onPreferenceChange(String[] key, Object value) {
         ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
         if (appEntry != null) {
             setSystemAlertWindowAccess(appEntry, (Boolean) value);

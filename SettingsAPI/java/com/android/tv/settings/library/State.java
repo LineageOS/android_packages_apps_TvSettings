@@ -19,7 +19,9 @@ package com.android.tv.settings.library;
 import android.content.Intent;
 import android.os.Bundle;
 
-/** Implement this to provide data for each settings screen. */
+/*
+ * Implement this to provide data for each settings screen.
+ */
 public interface State {
     void onAttach();
 
@@ -37,11 +39,11 @@ public interface State {
 
     void onDetach();
 
-    boolean onPreferenceTreeClick(String key, boolean status);
+    boolean onPreferenceTreeClick(String[] key, boolean status);
 
     void onActivityResult(int requestCode, int resultCode, Intent data);
 
-    void onPreferenceChange(String key, Object newValue);
+    void onPreferenceChange(String[] key, Object newValue);
 
     int getStateIdentifier();
 }

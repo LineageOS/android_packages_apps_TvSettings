@@ -136,7 +136,7 @@ public class PictureInPictureState extends PreferenceControllerState implements
     }
 
     @Override
-    public void onPreferenceChange(String key, Object newValue) {
+    public void onPreferenceChange(String[] key, Object newValue) {
         ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
         if (appEntry != null) {
             mAppOpsManager.setMode(AppOpsManager.OP_PICTURE_IN_PICTURE,

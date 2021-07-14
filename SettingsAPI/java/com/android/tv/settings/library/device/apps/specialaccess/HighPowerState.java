@@ -71,14 +71,14 @@ public class HighPowerState extends PreferenceControllerState
     }
 
     @Override
-    public void onPreferenceChange(String key, Object value) {
+    public void onPreferenceChange(String[] key, Object value) {
         if (!(value instanceof Boolean)) {
             return;
         }
         if ((Boolean) value) {
-            mPowerAllowlistBackend.removeApp(key);
+            mPowerAllowlistBackend.removeApp(key[0]);
         } else {
-            mPowerAllowlistBackend.addApp(key);
+            mPowerAllowlistBackend.addApp(key[0]);
         }
     }
 

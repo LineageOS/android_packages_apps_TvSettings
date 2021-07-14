@@ -97,13 +97,13 @@ package com.android.tv.settings.library {
     method public void onCreate(com.android.tv.settings.library.State, android.os.Bundle);
     method public void onDestroy(com.android.tv.settings.library.State);
     method public void onPause(com.android.tv.settings.library.State);
-    method public void onPreferenceChange(com.android.tv.settings.library.State, String, Object);
-    method public boolean onPreferenceClick(com.android.tv.settings.library.State, String, boolean);
+    method public void onPreferenceChange(com.android.tv.settings.library.State, String[], Object);
+    method public boolean onPreferenceClick(com.android.tv.settings.library.State, String[], boolean);
     method public void onResume(com.android.tv.settings.library.State);
     method public void onStart(com.android.tv.settings.library.State);
     method public void onStop(com.android.tv.settings.library.State);
     method public void registerListener(com.android.tv.settings.library.UIUpdateCallback);
-    method public void unRegisterListener(com.android.tv.settings.library.UIUpdateCallback);
+    method public void unRegisterListener();
   }
 
   public interface UIUpdateCallback {

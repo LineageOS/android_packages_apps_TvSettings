@@ -29,14 +29,17 @@ public class TsSwitchPreference extends SwitchPreference implements HasKeys {
 
     public TsSwitchPreference(Context context, AttributeSet attributeSet, int i, int i1) {
         super(context, attributeSet, i, i1);
+        mKeys = new String[]{getKey()};
     }
 
     public TsSwitchPreference(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
+        mKeys = new String[]{getKey()};
     }
 
     public TsSwitchPreference(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
+        mKeys = new String[]{getKey()};
     }
 
     public TsSwitchPreference(Context context) {
