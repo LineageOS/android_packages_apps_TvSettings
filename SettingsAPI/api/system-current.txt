@@ -55,6 +55,7 @@ package com.android.tv.settings.library {
     method public int getType();
     method public String getValue();
     method public byte getVisible();
+    method public boolean hasOnPreferenceChangeListener();
     method public com.android.tv.settings.library.PreferenceCompat immutableCopy();
     method public void initChildPreferences();
     method public void setChecked(byte);
@@ -64,6 +65,7 @@ package com.android.tv.settings.library {
     method public void setEnabled(byte);
     method public void setEnabled(boolean);
     method public void setExtras(android.os.Bundle);
+    method public void setHasOnPreferenceChangeListener(boolean);
     method public void setIcon(android.graphics.drawable.Drawable);
     method public void setInfoMap(java.util.Map<java.lang.String,java.lang.String>);
     method public void setIntent(android.content.Intent);
@@ -85,6 +87,7 @@ package com.android.tv.settings.library {
     field public static final byte TYPE_PREFERENCE_CATEGORY = 1; // 0x1
     field public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3; // 0x3
     field public static final byte TYPE_RPEFERENCE = 0; // 0x0
+    field public static final byte TYPE_SWITCH = 5; // 0x5
   }
 
   public final class SettingsManager {
@@ -97,7 +100,7 @@ package com.android.tv.settings.library {
     method public void onCreate(com.android.tv.settings.library.State, android.os.Bundle);
     method public void onDestroy(com.android.tv.settings.library.State);
     method public void onPause(com.android.tv.settings.library.State);
-    method public void onPreferenceChange(com.android.tv.settings.library.State, String[], Object);
+    method public boolean onPreferenceChange(com.android.tv.settings.library.State, String[], Object);
     method public boolean onPreferenceClick(com.android.tv.settings.library.State, String[], boolean);
     method public void onResume(com.android.tv.settings.library.State);
     method public void onStart(com.android.tv.settings.library.State);

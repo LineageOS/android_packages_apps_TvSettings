@@ -43,7 +43,7 @@ public interface State {
 
     void onActivityResult(int requestCode, int resultCode, Intent data);
 
-    void onPreferenceChange(String[] key, Object newValue);
+    boolean onPreferenceChange(String[] key, Object newValue);
 
     int getStateIdentifier();
 }

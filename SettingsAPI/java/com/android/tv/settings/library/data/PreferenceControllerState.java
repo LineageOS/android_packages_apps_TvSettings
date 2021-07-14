@@ -113,8 +113,8 @@ public abstract class PreferenceControllerState implements State {
     }
 
     @Override
-    public void onPreferenceChange(String[] key, Object newValue) {
-        // no-op
+    public boolean onPreferenceChange(String[] key, Object newValue) {
+        return false;
     }
 
     @Override

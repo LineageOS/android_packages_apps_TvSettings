@@ -68,16 +68,19 @@ public class AppUsageAccessState extends ManageAppOpState {
 
         appPref.setSummary(getPreferenceSummary(entry).toString());
         appPref.setChecked(((ManageAppOpState.PermissionState) entry.extraInfo).isAllowed());
+        appPref.setHasOnPreferenceChangeListener(true);
+        appPref.setType(PreferenceCompat.TYPE_SWITCH);
         mAppEntryByKey.put(appPref.getKey()[0], entry);
         return appPref;
     }
 
     @Override
-    public void onPreferenceChange(String[] key, Object newValue) {
+    public boolean onPreferenceChange(String[] key, Object newValue) {
         ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key[0]);
         if (appEntry != null) {
             setAppUsageAccess(appEntry, (Boolean) newValue);
         }
+        return true;
     }
 
     @Override

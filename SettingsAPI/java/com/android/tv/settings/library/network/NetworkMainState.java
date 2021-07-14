@@ -238,8 +238,8 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     }
 
     @Override
-    public void onPreferenceChange(String[] key, Object newValue) {
-        // no-op
+    public boolean onPreferenceChange(String[] key, Object newValue) {
+        return false;
     }
 
 

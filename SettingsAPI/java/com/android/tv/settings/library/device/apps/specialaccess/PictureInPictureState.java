@@ -132,11 +132,13 @@ public class PictureInPictureState extends PreferenceControllerState implements
         appPref.setIcon(entry.icon);
         appPref.setChecked((Boolean) entry.extraInfo);
         mAppEntryByKey.put(appPref.getKey()[0], entry);
+        appPref.setType(PreferenceCompat.TYPE_SWITCH);
+        appPref.setHasOnPreferenceChangeListener(true);
         return appPref;
     }
 
     @Override
-    public void onPreferenceChange(String[] key, Object newValue) {
+    public boolean onPreferenceChange(String[] key, Object newValue) {
         ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
         if (appEntry != null) {
             mAppOpsManager.setMode(AppOpsManager.OP_PICTURE_IN_PICTURE,
@@ -144,6 +146,7 @@ public class PictureInPictureState extends PreferenceControllerState implements
                     appEntry.info.packageName,
                     (Boolean) newValue ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
         }
+        return true;
     }
 
 

@@ -16,14 +16,12 @@
 
 package com.android.tv.settings.device.apps.specialaccess;
 
-import android.os.Bundle;
-
 import androidx.preference.Preference;
 
-import com.android.tv.settings.R;
 import com.android.tv.settings.compat.HasKeys;
 import com.android.tv.settings.compat.PreferenceControllerFragmentCompat;
 import com.android.tv.settings.compat.RenderUtil;
+import com.android.tv.settings.compat.TsPreference;
 import com.android.tv.settings.compat.TsSwitchPreference;
 import com.android.tv.settings.library.PreferenceCompat;
 
@@ -42,11 +40,6 @@ public abstract class SpecialAccessControllerFragmentCompat
     }
 
     @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.manage_high_power_compat, null);
-    }
-
-    @Override
     public HasKeys updatePref(PreferenceCompat pref) {
         if (pref == null) {
             return null;
@@ -54,11 +47,18 @@ public abstract class SpecialAccessControllerFragmentCompat
         String[] key = pref.getKey();
         Preference preference = findTargetPreference(key);
         if (preference == null) {
-            preference = new TsSwitchPreference(getContext(), key);
+            if (pref.getType() == PreferenceCompat.TYPE_SWITCH) {
+                preference = new TsSwitchPreference(getContext(), key);
+            } else {
+                preference = new TsPreference(getContext(), key);
+            }
             getPreferenceScreen().addPreference(preference);
         }
         RenderUtil.updatePreference(
                 getContext(), (HasKeys) preference, pref, preference.getOrder());
+        if (pref.hasOnPreferenceChangeListener()) {
+            preference.setOnPreferenceChangeListener(this);
+        }
         return (HasKeys) preference;
     }
 }
