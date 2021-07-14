@@ -58,11 +58,12 @@ public class SystemAlertWindowState extends ManageAppOpState {
     }
 
     @Override
-    public void onPreferenceChange(String[] key, Object value) {
+    public boolean onPreferenceChange(String[] key, Object value) {
         ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
         if (appEntry != null) {
             setSystemAlertWindowAccess(appEntry, (Boolean) value);
         }
+        return true;
     }
 
     @NonNull
@@ -74,6 +75,8 @@ public class SystemAlertWindowState extends ManageAppOpState {
         appPref.setIcon(entry.icon);
         appPref.setSummary(getPreferenceSummary(entry));
         appPref.setChecked(((ManageAppOpState.PermissionState) entry.extraInfo).isAllowed());
+        appPref.setType(PreferenceCompat.TYPE_SWITCH);
+        appPref.setHasOnPreferenceChangeListener(true);
         mAppEntryByKey.put(appPref.getKey()[0], entry);
         return appPref;
     }

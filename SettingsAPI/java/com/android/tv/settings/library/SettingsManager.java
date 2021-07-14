@@ -131,7 +131,7 @@ public final class SettingsManager {
 
     /** @hide */
     @SystemApi
-    public void onPreferenceChange(State state, String[] key, Object newValue) {
-        state.onPreferenceChange(key, newValue);
+    public boolean onPreferenceChange(State state, String[] key, Object newValue) {
+        return state.onPreferenceChange(key, newValue);
     }
 }

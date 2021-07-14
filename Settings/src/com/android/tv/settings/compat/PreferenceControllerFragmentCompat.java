@@ -39,7 +39,8 @@ import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import java.util.List;
 
 /** Provide utility class to render settings preferences. */
-public abstract class PreferenceControllerFragmentCompat extends LeanbackPreferenceFragmentCompat {
+public abstract class PreferenceControllerFragmentCompat extends LeanbackPreferenceFragmentCompat
+        implements  Preference.OnPreferenceChangeListener {
     private SettingsManager mSettingsManager;
     private String mTitle;
     private State mState;
@@ -139,6 +140,17 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
         return true;
     }
 
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (mSettingsManager == null || mState == null || !(preference instanceof HasKeys)) {
+            return false;
+        }
+        return mSettingsManager.onPreferenceChange(
+                mState,
+                ((HasKeys) preference).getKeys(),
+                newValue);
+    }
+
     protected Preference findTargetPreference(String[] key) {
         Preference preference = findPreference(key[0]);
         for (int i = 1; i < key.length; i++) {
@@ -164,6 +176,9 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
 
         RenderUtil.updatePreference(
                 getContext(), (HasKeys) preference, prefCompat, preference.getOrder());
+        if (prefCompat.hasOnPreferenceChangeListener()) {
+            preference.setOnPreferenceChangeListener(this);
+        }
         return (HasKeys) preference;
     }
 
