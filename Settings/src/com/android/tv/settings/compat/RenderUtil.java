@@ -153,6 +153,7 @@ public final class RenderUtil {
         }
         setVisible(preference, preferenceCompat);
         setSelectable(preference, preferenceCompat);
+        setEnabled(preference, preferenceCompat);
         if (preference instanceof TwoStatePreference) {
             setChecked((TwoStatePreference) preference, preferenceCompat);
         }
@@ -213,6 +214,14 @@ public final class RenderUtil {
             preference.setVisible(true);
         } else if (preferenceParcelable.getVisible() == PreferenceCompat.STATUS_OFF) {
             preference.setVisible(false);
+        }
+    }
+
+    public static void setEnabled(Preference preference, PreferenceCompat preferenceParcelable) {
+        if (preferenceParcelable.getEnabled() == PreferenceCompat.STATUS_ON) {
+            preference.setEnabled(true);
+        } else if (preferenceParcelable.getEnabled() == PreferenceCompat.STATUS_OFF) {
+            preference.setEnabled(false);
         }
     }
 

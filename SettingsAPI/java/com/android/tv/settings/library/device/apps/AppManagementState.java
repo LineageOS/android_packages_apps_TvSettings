@@ -155,11 +155,8 @@ public class AppManagementState extends PreferenceControllerState {
     }
 
     @Override
-    public boolean onPreferenceTreeClick(String key, boolean status) {
-        if (key == null) {
-            return false;
-        }
-        if (KEY_ENABLE_DISABLE.equals(key)) {
+    public boolean onPreferenceTreeClick(String[] key, boolean status) {
+        if (KEY_ENABLE_DISABLE.equals(key[0])) {
             // disable the preference to prevent double clicking
             mEnableDisablePreferenceController.setEnabled(false);
         }
@@ -167,7 +164,7 @@ public class AppManagementState extends PreferenceControllerState {
         final Intent intent = preference.getIntent();
         if (intent != null) {
             try {
-                switch (key) {
+                switch (key[0]) {
                     case KEY_UNINSTALL:
                         ((Activity) mContext).startActivityForResult(intent,
                                 mUninstallPreferenceController.canUninstall()

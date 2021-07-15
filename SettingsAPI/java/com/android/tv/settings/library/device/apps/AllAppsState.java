@@ -28,7 +28,6 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.ArrayMap;
-import android.util.ArraySet;
 import android.util.Log;
 
 import com.android.tv.settings.library.ManagerUtil;
@@ -40,13 +39,11 @@ import com.android.tv.settings.library.util.AbstractPreferenceController;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class AllAppsState extends PreferenceControllerState {
     static final String ARG_PACKAGE_NAME = "packageName";
     private static final String TAG = "AllAppsState";
     private static final String KEY_SHOW_OTHER_APPS = "ShowOtherApps";
-    private static final Set<String> sSystemAppPackages = new ArraySet<>();
     private ApplicationsState mApplicationsState;
     private ApplicationsState.Session mSessionInstalled;
     private ApplicationsState.AppFilter mFilterInstalled;
@@ -302,9 +299,9 @@ public class AllAppsState extends PreferenceControllerState {
     }
 
     @Override
-    public boolean onPreferenceTreeClick(String key, boolean status) {
+    public boolean onPreferenceTreeClick(String[] key, boolean status) {
         super.onPreferenceTreeClick(key, status);
-        if (KEY_SHOW_OTHER_APPS.equals(key)) {
+        if (KEY_SHOW_OTHER_APPS.equals(key[0])) {
             showOtherApps();
             return true;
         }
