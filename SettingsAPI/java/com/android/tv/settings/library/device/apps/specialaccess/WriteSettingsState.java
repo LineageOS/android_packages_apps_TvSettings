@@ -70,6 +70,8 @@ public class WriteSettingsState extends ManageAppOpState {
 
         appPref.setSummary(getPreferenceSummary(entry).toString());
         appPref.setChecked(((ManageAppOpState.PermissionState) entry.extraInfo).isAllowed());
+        appPref.setType(PreferenceCompat.TYPE_SWITCH);
+        appPref.setHasOnPreferenceChangeListener(true);
         mAppEntryByKey.put(appPref.getKey()[0], entry);
         return appPref;
     }
@@ -85,11 +87,12 @@ public class WriteSettingsState extends ManageAppOpState {
     }
 
     @Override
-    public void onPreferenceChange(String key, Object newValue) {
+    public boolean onPreferenceChange(String[] key, Object newValue) {
         ApplicationsState.AppEntry appEntry = mAppEntryByKey.get(key);
         if (appEntry != null) {
             setWriteSettingsAccess(appEntry, (Boolean) newValue);
         }
+        return true;
     }
 
 

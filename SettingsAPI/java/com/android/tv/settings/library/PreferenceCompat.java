@@ -40,6 +40,7 @@ public class PreferenceCompat {
     public static final byte TYPE_PREFERENCE_ACCESS_POINT = 2;
     public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3;
     public static final byte TYPE_LIST = 4;
+    public static final byte TYPE_SWITCH = 5;
     public static final byte STATUS_UNASSIGNED = 0;
     public static final byte STATUS_OFF = 1;
     public static final byte STATUS_ON = 2;
@@ -73,6 +74,9 @@ public class PreferenceCompat {
     private byte mEnabled;
 
     private boolean mShouldRemove;
+
+    // Indicate whether there is on preference change listener
+    private boolean mHasOnPreferenceChangeListener;
 
     private List<PreferenceCompat> mChildPrefCompats;
 
@@ -232,6 +236,18 @@ public class PreferenceCompat {
     @SystemApi
     public void setShouldRemove(boolean shouldRemove) {
         mShouldRemove = shouldRemove;
+    }
+
+    /** @hide */
+    @SystemApi
+    public boolean hasOnPreferenceChangeListener() {
+        return mHasOnPreferenceChangeListener;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setHasOnPreferenceChangeListener(boolean hasOnPreferenceChangeListener) {
+        mHasOnPreferenceChangeListener = hasOnPreferenceChangeListener;
     }
 
     /** @hide */

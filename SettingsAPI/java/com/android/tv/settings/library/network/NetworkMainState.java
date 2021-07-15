@@ -194,8 +194,9 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     }
 
     @Override
-    public boolean onPreferenceTreeClick(String key, boolean status) {
-        switch (key) {
+    public boolean onPreferenceTreeClick(String[] key, boolean status) {
+        boolean handled = true;
+        switch (key[0]) {
             case KEY_WIFI_ENABLE:
                 mNetworkModule.getConnectivityListener().setWifiEnabled(status);
                 mEnableWifiPref.setChecked(status);
@@ -222,13 +223,13 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
             case KEY_ETHERNET_PROXY:
                 break;
             default:
-                // no-op
+                handled = false;
         }
         if (mUIUpdateCallback != null) {
             mUIUpdateCallback.notifyUpdate(getStateIdentifier(),
                     mPreferenceCompatManager.getOrCreatePrefCompat(key));
         }
-        return true;
+        return handled;
     }
 
     @Override
@@ -237,8 +238,8 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     }
 
     @Override
-    public void onPreferenceChange(String key, Object newValue) {
-        // no-op
+    public boolean onPreferenceChange(String[] key, Object newValue) {
+        return false;
     }
 
 

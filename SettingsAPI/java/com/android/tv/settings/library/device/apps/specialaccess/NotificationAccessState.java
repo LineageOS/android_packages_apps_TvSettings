@@ -126,6 +126,7 @@ public class NotificationAccessState extends PreferenceControllerState {
                         ResourcesUtil.getString(mContext,
                                 "default_notification_access_package_summary"));
             }
+            pref.setType(PreferenceCompat.TYPE_SWITCH);
             prefCompats.add(pref);
             mComponentNameByKey.put(pref.getKey()[0], cn);
         }
@@ -138,11 +139,12 @@ public class NotificationAccessState extends PreferenceControllerState {
     }
 
     @Override
-    public void onPreferenceChange(String key, Object newValue) {
-        final ComponentName cn = mComponentNameByKey.get(key);
+    public boolean onPreferenceChange(String[] key, Object newValue) {
+        final ComponentName cn = mComponentNameByKey.get(key[0]);
         if (cn != null) {
             mNotificationManager.setNotificationListenerAccessGranted(cn, (boolean) newValue);
         }
+        return true;
     }
 
     @Override

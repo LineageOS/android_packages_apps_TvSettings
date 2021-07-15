@@ -61,7 +61,7 @@ public final class SettingsManager {
 
     /** @hide */
     @SystemApi
-    public void unRegisterListener(UIUpdateCallback listener) {
+    public void unRegisterListener() {
         mUIUpdateCallback = null;
     }
 
@@ -116,7 +116,10 @@ public final class SettingsManager {
 
     /** @hide */
     @SystemApi
-    public boolean onPreferenceClick(State state, String key, boolean status) {
+    public boolean onPreferenceClick(State state, String[] key, boolean status) {
+        if (state == null || key == null || key.length == 0) {
+            return false;
+        }
         return state.onPreferenceTreeClick(key, status);
     }
 
@@ -128,7 +131,7 @@ public final class SettingsManager {
 
     /** @hide */
     @SystemApi
-    public void onPreferenceChange(State state, String key, Object newValue) {
-        state.onPreferenceChange(key, newValue);
+    public boolean onPreferenceChange(State state, String[] key, Object newValue) {
+        return state.onPreferenceChange(key, newValue);
     }
 }
