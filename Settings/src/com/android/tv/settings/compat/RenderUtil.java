@@ -17,15 +17,15 @@
 package com.android.tv.settings.compat;
 
 import static com.android.tv.settings.compat.TsCollapsibleCategory.COLLAPSE;
+import static com.android.tv.settings.library.ManagerUtil.INFO_NEXT_STATE;
+import static com.android.tv.settings.library.ManagerUtil.INFO_WIFI_SIGNAL_LEVEL;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
+import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_LIST;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_CATEGORY;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_RPEFERENCE;
-import static com.android.tv.settings.service.ServiceUtil.INFO_NEXT_STATE;
-import static com.android.tv.settings.service.ServiceUtil.INFO_WIFI_SIGNAL_LEVEL;
-import static com.android.tv.settings.service.ServiceUtil.STATE_WIFI_DETAILS;
 
 import android.content.Context;
 
