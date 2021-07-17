@@ -27,6 +27,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_NOTIFICATION_ACC
 import static com.android.tv.settings.library.ManagerUtil.STATE_PICTURE_IN_PICTURE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_SPECIAL_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_SYSTEM_ALERT_WINDOW;
+import static com.android.tv.settings.library.ManagerUtil.STATE_SYSTEM_DATE_TIME;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WRITE_SETTINGS;
 
@@ -47,6 +48,7 @@ import com.android.tv.settings.library.device.apps.specialaccess.SystemAlertWind
 import com.android.tv.settings.library.device.apps.specialaccess.WriteSettingsState;
 import com.android.tv.settings.library.network.NetworkMainState;
 import com.android.tv.settings.library.network.WifiDetailsState;
+import com.android.tv.settings.library.system.DateTimeState;
 
 /** Manager to handle creation and removal of the {@link State}. */
 public class StateManager {
@@ -96,6 +98,8 @@ public class StateManager {
             case STATE_WRITE_SETTINGS:
                 state = new WriteSettingsState(context, uiUpdateCallback);
                 break;
+            case STATE_SYSTEM_DATE_TIME:
+                state = new DateTimeState(context, uiUpdateCallback);
             default:
                 // no-op
         }
