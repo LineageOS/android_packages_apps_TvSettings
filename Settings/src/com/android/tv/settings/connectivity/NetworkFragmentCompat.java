@@ -16,8 +16,8 @@
 
 package com.android.tv.settings.connectivity;
 
-import static com.android.tv.settings.service.ServiceUtil.INFO_COLLAPSE;
-import static com.android.tv.settings.service.ServiceUtil.STATE_NETWORK_MAIN;
+import static com.android.tv.settings.library.ManagerUtil.INFO_COLLAPSE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK_MAIN;
 
 import android.content.Intent;
 import android.os.Bundle;
