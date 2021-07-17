@@ -16,7 +16,7 @@
 
 package com.android.tv.settings.connectivity;
 
-import static com.android.tv.settings.service.ServiceUtil.STATE_WIFI_DETAILS;
+import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
 
 import android.os.Bundle;
 
