@@ -17,13 +17,17 @@
 package com.android.tv.settings.library.network;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.IpConfiguration;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.text.TextUtils;
+
+import androidx.annotation.NonNull;
 
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
@@ -38,12 +42,8 @@ import java.util.List;
 public class WifiDetailsState implements State,
         ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener {
     private static final String TAG = "WifiDetailsState";
-    private final Context mContext;
-    private final UIUpdateCallback mUIUpdateCallback;
-    private NetworkModule mNetworkModule;
-    private AccessPoint mAccessPoint;
-    PreferenceCompatManager mPreferenceCompatManager;
 
+    private static final String ARG_ACCESS_POINT_STATE = "apBundle";
     private static final String KEY_CONNECTION_STATUS = "connection_status";
     private static final String KEY_IP_ADDRESS = "ip_address";
     private static final String KEY_MAC_ADDRESS = "mac_address";
@@ -52,10 +52,26 @@ public class WifiDetailsState implements State,
     private static final String KEY_PROXY_SETTINGS = "proxy_settings";
     private static final String KEY_IP_SETTINGS = "ip_settings";
     private static final String KEY_FORGET_NETWORK = "forget_network";
-
     private static final String VALUE_MAC_RANDOM = "random";
     private static final String VALUE_MAC_DEVICE = "device";
+    private static final String INTENT_EDIT_PROXY_SETTINGS =
+            "com.android.settings.wifi.action.EDIT_PROXY_SETTINGS";
+    private static final String INTENT_IP_SETTINGS =
+            "com.android.settings.wifi.action.EDIT_IP_SETTINGS";
+    private static final String EXTRA_NETWORK_ID = "network_id";
+    static final String INTENT_CONFIRMATION = "android.settings.ui.CONFIRM";
+    static final String EXTRA_GUIDANCE_TITLE = "guidancetitle";
+    static final String EXTRA_GUIDANCE_SUBTITLE = "guidanceSubtitle";
+    static final String EXTRA_GUIDANCE_BREADCRUMB = "guidanceBreadcrumb";
+    static final String EXTRA_GUIDANCE_ICON = "guidanceIcon";
 
+    private static final int REQUEST_CODE_FORGET_NETWORK = 1;
+
+    private final Context mContext;
+    private final UIUpdateCallback mUIUpdateCallback;
+    private NetworkModule mNetworkModule;
+    private AccessPoint mAccessPoint;
+    PreferenceCompatManager mPreferenceCompatManager;
     private PreferenceCompat mConnectionStatusPref;
     private PreferenceCompat mIpAddressPref;
     private PreferenceCompat mMacAddressPref;
@@ -64,6 +80,12 @@ public class WifiDetailsState implements State,
     private PreferenceCompat mIpSettingsPref;
     private PreferenceCompat mForgetNetworkPref;
     private PreferenceCompat mRandomMacPref;
+
+    public static void prepareArgs(@NonNull Bundle args, AccessPoint accessPoint) {
+        final Bundle apBundle = new Bundle();
+        accessPoint.saveWifiState(apBundle);
+        args.putParcelable(ARG_ACCESS_POINT_STATE, apBundle);
+    }
 
     public WifiDetailsState(Context context, UIUpdateCallback uiUpdateCallback) {
         mUIUpdateCallback = uiUpdateCallback;
@@ -80,7 +102,7 @@ public class WifiDetailsState implements State,
     public void onCreate(Bundle extras) {
         mNetworkModule = NetworkModule.getInstance(mContext);
         mPreferenceCompatManager = new PreferenceCompatManager();
-        mAccessPoint = mNetworkModule.getAccessPoint(extras);
+        mAccessPoint = new AccessPoint(mContext, extras.getBundle(ARG_ACCESS_POINT_STATE));
         if (mUIUpdateCallback != null) {
             mUIUpdateCallback.notifyUpdateScreenTitle(getStateIdentifier(),
                     String.valueOf(mAccessPoint.getSsid()));
@@ -103,8 +125,6 @@ public class WifiDetailsState implements State,
     @Override
     public void onStart() {
         mNetworkModule.addState(this);
-        mNetworkModule.getConnectivityListener().setWifiListener(this);
-        mNetworkModule.getConnectivityListener().start();
     }
 
     @Override
@@ -135,12 +155,28 @@ public class WifiDetailsState implements State,
 
     @Override
     public boolean onPreferenceTreeClick(String[] key, boolean status) {
+        if (KEY_FORGET_NETWORK.equals(key[0])) {
+            Intent forgetConfirmIntent = new Intent(INTENT_CONFIRMATION)
+                    .putExtra(EXTRA_GUIDANCE_TITLE,
+                            ResourcesUtil.getString(mContext, "wifi_forget_network"))
+                    .putExtra(EXTRA_GUIDANCE_SUBTITLE, ResourcesUtil.getString(mContext,
+                            "wifi_forget_network_description", mAccessPoint.getSsidStr()));
+            ((Activity) mContext).startActivityForResult(forgetConfirmIntent,
+                    ManagerUtil.calculateCompoundCode(getStateIdentifier(),
+                            REQUEST_CODE_FORGET_NETWORK));
+            return true;
+        }
         return false;
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // no-op
+        if (requestCode == REQUEST_CODE_FORGET_NETWORK) {
+            if (resultCode == Activity.RESULT_OK) {
+                WifiManager wifiManager = mContext.getSystemService(WifiManager.class);
+                wifiManager.forget(mAccessPoint.getConfig().networkId, null);
+            }
+        }
     }
 
     @Override
@@ -222,12 +258,15 @@ public class WifiDetailsState implements State,
             mProxySettingsPref.setSummary(proxySettings == IpConfiguration.ProxySettings.NONE
                     ? ResourcesUtil.getString(mContext, "wifi_action_proxy_none")
                     : ResourcesUtil.getString(mContext, "wifi_action_proxy_manual"));
-
+            mProxySettingsPref.setIntent(new Intent(INTENT_EDIT_PROXY_SETTINGS)
+                    .putExtra(EXTRA_NETWORK_ID, networkId));
             IpConfiguration.IpAssignment ipAssignment =
                     wifiConfiguration.getIpConfiguration().getIpAssignment();
             mIpSettingsPref.setSummary(ipAssignment == IpConfiguration.IpAssignment.STATIC
                     ? ResourcesUtil.getString(mContext, "wifi_action_static")
                     : ResourcesUtil.getString(mContext, "wifi_action_dhcp"));
+            mIpSettingsPref.setIntent(new Intent(INTENT_IP_SETTINGS)
+                    .putExtra(EXTRA_NETWORK_ID, networkId));
         }
 
         mProxySettingsPref.setVisible(wifiConfiguration != null);
@@ -236,9 +275,7 @@ public class WifiDetailsState implements State,
         if (mUIUpdateCallback != null) {
             mUIUpdateCallback.notifyUpdateAll(getStateIdentifier(), preferenceCompats);
         }
-        // TODO(b/187725199): Add intent for preferences
     }
-
 
     private void updateMacAddressPref(String macAddress) {
         if (WifiInfo.DEFAULT_MAC_ADDRESS.equals(macAddress)) {
@@ -279,6 +316,7 @@ public class WifiDetailsState implements State,
             mRandomMacPref.setSelectable(PreferenceCompat.STATUS_ON);
             String[] entries = ResourcesUtil.getStringArray(
                     mContext, "random_mac_settings_entries");
+            mRandomMacPref.setHasOnPreferenceChangeListener(true);
             mRandomMacPref.setSummary(entries[isMacRandomized ? 0 : 1]);
         }
     }

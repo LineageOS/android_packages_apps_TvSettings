@@ -137,7 +137,7 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
                 return super.onPreferenceTreeClick(preference);
             }
         }
-        return true;
+        return super.onPreferenceTreeClick(preference);
     }
 
     @Override

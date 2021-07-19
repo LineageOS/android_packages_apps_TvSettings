@@ -30,7 +30,7 @@ import com.android.tv.settings.library.util.AbstractPreferenceController;
  */
 public abstract class AppActionPreferenceController extends AbstractPreferenceController {
     ApplicationsState.AppEntry mAppEntry;
-    static final String INTENT_CONFIRMATION = "android.settings.device.apps.CONFIRM";
+    static final String INTENT_CONFIRMATION = "android.settings.ui.CONFIRM";
     static final String ARG_PACKAGE_NAME = "packageName";
     static final String EXTRA_GUIDANCE_TITLE = "guidancetitle";
     static final String EXTRA_GUIDANCE_SUBTITLE = "guidanceSubtitle";
