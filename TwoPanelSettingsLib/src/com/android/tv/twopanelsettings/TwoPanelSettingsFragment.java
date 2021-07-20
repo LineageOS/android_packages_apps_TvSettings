@@ -302,9 +302,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
         mPrefPanelIdx++;
 
-        Fragment fragment = getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
-        addOrRemovePreferenceFocusedListener(fragment, true);
-
+        Fragment fragmentToBeMainPanel = getChildFragmentManager()
+                .findFragmentById(frameResIds[mPrefPanelIdx]);
+        addOrRemovePreferenceFocusedListener(fragmentToBeMainPanel, true);
         final FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(frameResIds[mPrefPanelIdx + 1], initialPreviewFragment,
                 PREVIEW_FRAGMENT_TAG);
@@ -377,6 +377,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         if (DEBUG) {
             Log.d(TAG, "startPreferenceFragment");
         }
+        addOrRemovePreferenceFocusedListener(fragment, true);
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.add(frameResIds[mPrefPanelIdx], fragment, PREFERENCE_FRAGMENT_TAG);
         transaction.commitNow();
@@ -614,6 +615,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         if (DEBUG) {
             Log.d(TAG, "Starting immersive fragment.");
         }
+        addOrRemovePreferenceFocusedListener(fragment, true);
         final FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         Fragment target = getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
         fragment.setTargetFragment(target, 0);
@@ -807,9 +809,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
 
         mIsNavigatingBack = true;
-        Fragment preferenceFragment =
-                getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
-        addOrRemovePreferenceFocusedListener(preferenceFragment, false);
         getChildFragmentManager().popBackStack();
 
         mPrefPanelIdx--;
