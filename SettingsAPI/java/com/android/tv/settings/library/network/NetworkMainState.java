@@ -20,8 +20,10 @@ import static com.android.tv.settings.library.ManagerUtil.INFO_COLLAPSE;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -68,8 +70,12 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     private PreferenceCompat mEthernetProxyPref;
     private PreferenceCompat mAlwaysScan;
     private PreferenceCompat mWifiNetworkCategoryPref;
+    private PreferenceCompat mDataSaverSlicePref;
+    private PreferenceCompat mDataAlertSlicePref;
     private PreferenceCompatManager mPreferenceCompatManager;
     private NetworkModule mNetworkModule;
+    private ConnectivityManager mConnectivityManager;
+    private WifiManager mWifiManager;
     private final Context mContext;
     private final UIUpdateCallback mUIUpdateCallback;
     private final Handler mHandler = new Handler();
@@ -94,6 +100,8 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
 
     @Override
     public void onCreate(Bundle extras) {
+        mConnectivityManager = mContext.getSystemService(ConnectivityManager.class);
+        mWifiManager = mContext.getSystemService(WifiManager.class);
         mNetworkModule = NetworkModule.getInstance(mContext);
         mPreferenceCompatManager = new PreferenceCompatManager();
         mEnableWifiPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_ENABLE);
@@ -102,23 +110,19 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
         mCollapsePref.addInfo(INFO_COLLAPSE, "true");
         mAddPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_ADD);
         mEthernetCategory = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_ETHERNET);
-        mEthernetStatusPref = mPreferenceCompatManager.getOrCreatePrefCompat(
-                KEY_ETHERNET_STATUS);
-        mEthernetProxyPref = mPreferenceCompatManager.getOrCreatePrefCompat(
-                KEY_ETHERNET_PROXY);
-        mWifiNetworkCategoryPref = mPreferenceCompatManager.getOrCreatePrefCompat(
-                KEY_WIFI_LIST);
-        mWifiNetworkCategoryPref.addInfo(INFO_COLLAPSE, "true");
-        mWifiNetworkCategoryPref.setType(
-                PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY);
+        mEthernetStatusPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_ETHERNET_STATUS);
+        mEthernetProxyPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_ETHERNET_PROXY);
+        mWifiNetworkCategoryPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_LIST);
+        mWifiNetworkCategoryPref.setType(PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY);
+        mDataSaverSlicePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_DATA_SAVER_SLICE);
+        mDataAlertSlicePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_DATA_ALERT_SLICE);
+        updateVisibilityForDataSaver();
     }
 
     @Override
     public void onStart() {
         mNetworkModule.addState(this);
-        mNetworkModule.getConnectivityListener().setWifiListener(this);
         mNoWifiUpdateBeforeMillis = SystemClock.elapsedRealtime() + INITIAL_UPDATE_DELAY;
-        mNetworkModule.getConnectivityListener().start();
         updateWifiList();
     }
 
@@ -144,6 +148,17 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     @Override
     public void onDetach() {
         // no-op
+    }
+
+    private void updateVisibilityForDataSaver() {
+        mDataSaverSlicePref.setVisible(isConnected());
+        mDataAlertSlicePref.setVisible(isConnected());
+    }
+
+    private boolean isConnected() {
+        NetworkInfo activeNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected()
+                && ConnectivityManager.TYPE_ETHERNET != activeNetworkInfo.getType();
     }
 
     private void updateWifiList() {
@@ -172,10 +187,13 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
             accessPointPref.setType(PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT);
             accessPointPref.addInfo(ManagerUtil.INFO_WIFI_SIGNAL_LEVEL,
                     String.valueOf(accessPoint.getLevel()));
+            if (accessPoint.isActive()) {
+                accessPointPref.setSummary(ResourcesUtil.getString(mContext, "connected"));
+            }
             if (accessPoint.isActive() && !isCaptivePortal(accessPoint)) {
-                Bundle apBundle = new Bundle();
-                accessPoint.saveWifiState(apBundle);
-                accessPointPref.setExtras(apBundle);
+                Bundle extras = new Bundle();
+                WifiDetailsState.prepareArgs(extras, accessPoint);
+                accessPointPref.setExtras(extras);
                 accessPointPref.addInfo(ManagerUtil.INFO_NEXT_STATE, String.valueOf(
                         ManagerUtil.STATE_WIFI_DETAILS));
                 accessPointPref.setIntent(null);
@@ -187,7 +205,6 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
             }
             mWifiNetworkCategoryPref.addChildPrefCompat(accessPointPref);
         }
-        mNetworkModule.setAccessPoints(mWifiNetworkCategoryPref.getChildPrefCompats());
         if (mUIUpdateCallback != null) {
             mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mWifiNetworkCategoryPref);
         }
@@ -202,8 +219,8 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
                 mEnableWifiPref.setChecked(status);
                 break;
             case KEY_WIFI_COLLAPSE:
-                boolean collapse = !("true".equals(
-                        mWifiNetworkCategoryPref.getInfo(ManagerUtil.INFO_COLLAPSE)));
+                boolean collapse = !PreferenceCompatManager.getBoolean(
+                        mCollapsePref, INFO_COLLAPSE);
                 mWifiNetworkCategoryPref.addInfo(ManagerUtil.INFO_COLLAPSE,
                         String.valueOf(collapse));
                 mCollapsePref.addInfo(ManagerUtil.INFO_COLLAPSE, String.valueOf(collapse));
@@ -295,6 +312,9 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
                     mNetworkModule.getConnectivityListener().getEthernetIpAddress());
         }
 
+        updateVisibilityForDataSaver();
+        preferenceCompats.add(mDataSaverSlicePref);
+        preferenceCompats.add(mDataAlertSlicePref);
         if (mUIUpdateCallback != null) {
             mUIUpdateCallback.notifyUpdateAll(getStateIdentifier(), preferenceCompats);
         }
@@ -332,8 +352,8 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
         if (accessPoint.getDetailedState() != NetworkInfo.DetailedState.CONNECTED) {
             return false;
         }
-        NetworkCapabilities nc = mNetworkModule.getConnectivityManager().getNetworkCapabilities(
-                mNetworkModule.getWifiManager().getCurrentNetwork());
+        NetworkCapabilities nc = mConnectivityManager.getNetworkCapabilities(
+                mWifiManager.getCurrentNetwork());
         return nc != null && nc.hasCapability(NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL);
     }
 
