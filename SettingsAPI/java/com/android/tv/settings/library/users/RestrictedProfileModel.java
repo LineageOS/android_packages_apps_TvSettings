@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.users;
+package com.android.tv.settings.library.users;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -23,6 +23,8 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.util.Log;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockPatternUtils.RequestThrottledException;
@@ -47,7 +49,8 @@ public class RestrictedProfileModel {
         this(context, /* applyRestrictions= */ true);
     }
 
-    RestrictedProfileModel(final Context context, final boolean applyRestrictions) {
+    @VisibleForTesting
+    public RestrictedProfileModel(final Context context, final boolean applyRestrictions) {
         mContext = context;
         mApplyRestrictions = applyRestrictions;
 
