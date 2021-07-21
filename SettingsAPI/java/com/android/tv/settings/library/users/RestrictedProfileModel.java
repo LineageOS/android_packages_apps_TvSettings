@@ -24,8 +24,6 @@ import android.os.UserManager;
 import android.provider.Settings;
 import android.util.Log;
 
-import androidx.annotation.VisibleForTesting;
-
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockPatternUtils.RequestThrottledException;
 import com.android.internal.widget.LockscreenCredential;
@@ -49,7 +47,6 @@ public class RestrictedProfileModel {
         this(context, /* applyRestrictions= */ true);
     }
 
-    @VisibleForTesting
     public RestrictedProfileModel(final Context context, final boolean applyRestrictions) {
         mContext = context;
         mApplyRestrictions = applyRestrictions;
