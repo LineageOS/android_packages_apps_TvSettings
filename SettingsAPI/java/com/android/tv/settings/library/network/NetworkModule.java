@@ -18,28 +18,21 @@ package com.android.tv.settings.library.network;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.net.ConnectivityManager;
-import android.net.wifi.WifiManager;
-import android.os.Bundle;
 import android.util.ArraySet;
 import android.util.Log;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.data.Module;
 
-import java.util.List;
-
-public class NetworkModule implements Module, ConnectivityListener.Listener {
+/** Provide network listener for all network states. */
+public class NetworkModule implements Module, ConnectivityListener.Listener,
+        ConnectivityListener.WifiNetworkListener {
     private static final String TAG = "NetworkModule";
     private static final boolean DEBUG = false;
     private ConnectivityListener mConnectivityListener;
-    private WifiManager mWifiManager;
-    private ConnectivityManager mConnectivityManager;
     private boolean mIsWifiHardwarePresent;
     private static NetworkModule instance;
     private final Context mContext;
-    private List<PreferenceCompat> mAccessPoints;
     ArraySet<State> states = new ArraySet<>();
 
     public static NetworkModule getInstance(Context context) {
@@ -84,16 +77,15 @@ public class NetworkModule implements Module, ConnectivityListener.Listener {
 
     @Override
     public void create() {
-        mConnectivityListener = new ConnectivityListener(mContext, this, null);
         mIsWifiHardwarePresent = mContext.getPackageManager()
                 .hasSystemFeature(PackageManager.FEATURE_WIFI);
-        mWifiManager = mContext.getSystemService(WifiManager.class);
-        mConnectivityManager = mContext.getSystemService(ConnectivityManager.class);
+        mConnectivityListener = new ConnectivityListener(mContext, this, null);
+        mConnectivityListener.setWifiListener(this);
+        mConnectivityListener.start();
     }
 
     @Override
     public void destroy() {
-        mAccessPoints = null;
         mConnectivityListener.destroy();
     }
 
@@ -104,14 +96,6 @@ public class NetworkModule implements Module, ConnectivityListener.Listener {
                 .forEach(state -> ((ConnectivityListener.Listener) state).onConnectivityChange());
     }
 
-    WifiManager getWifiManager() {
-        return mWifiManager;
-    }
-
-    ConnectivityManager getConnectivityManager() {
-        return mConnectivityManager;
-    }
-
     ConnectivityListener getConnectivityListener() {
         return mConnectivityListener;
     }
@@ -120,21 +104,12 @@ public class NetworkModule implements Module, ConnectivityListener.Listener {
         return mIsWifiHardwarePresent;
     }
 
-    AccessPoint getAccessPoint(Bundle extras) {
-        AccessPoint accessPoint = new AccessPoint(mContext, extras);
-        if (mAccessPoints == null) {
-            return accessPoint;
-        }
-        PreferenceCompat matched =
-                mAccessPoints.stream()
-                        .filter(prefCompat -> prefCompat.getKey()[1].equals(
-                                accessPoint.getKey()))
-                        .findFirst().orElse(null);
-        return matched == null ? accessPoint : new AccessPoint(mContext, matched.getExtras());
-    }
-
-    public void setAccessPoints(
-            List<PreferenceCompat> accessPoints) {
-        this.mAccessPoints = accessPoints;
+    @Override
+    public void onWifiListChanged() {
+        states.stream()
+                .filter(state -> state instanceof ConnectivityListener.WifiNetworkListener)
+                .forEach(
+                        state -> ((ConnectivityListener.WifiNetworkListener) state)
+                                .onWifiListChanged());
     }
 }

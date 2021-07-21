@@ -41,7 +41,7 @@ java_sdk_library {
     ],
 
     errorprone: {
-        javacflags: ["-XepDisableAllChecks"],
+        enabled: false,
     },
 
     system_ext_specific: true,
@@ -70,7 +70,7 @@ android_library {
         ],
 
     errorprone: {
-        javacflags: ["-XepDisableAllChecks"],
+        enabled: false,
     },
 
     min_sdk_version: "29",

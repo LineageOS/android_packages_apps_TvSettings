@@ -18,6 +18,7 @@ package com.android.tv.settings.library.util;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 
 public final class ResourcesUtil {
     private static final String SETTINGS_PACKAGE_NAME = "com.android.tv.settings";
@@ -42,6 +43,21 @@ public final class ResourcesUtil {
             int id = resources.getIdentifier(name, "string", SETTINGS_PACKAGE_NAME);
             if (id != 0) {
                 return resources.getString(id, formatArgs);
+            }
+            return null;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+
+    public static Drawable getDrawable(Context context, String name) {
+        try {
+            Resources resources = context.getPackageManager()
+                    .getResourcesForApplication(SETTINGS_PACKAGE_NAME);
+            int id = resources.getIdentifier(name, "drawable", SETTINGS_PACKAGE_NAME);
+            if (id != 0) {
+                return resources.getDrawable(id);
             }
             return null;
         } catch (Exception e) {

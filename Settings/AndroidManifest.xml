@@ -1221,7 +1221,7 @@
             android:theme="@style/GuidedStepFragmentThemeTwoPanel"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.settings.device.apps.CONFIRM" />
+                <action android:name="android.settings.ui.CONFIRM" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

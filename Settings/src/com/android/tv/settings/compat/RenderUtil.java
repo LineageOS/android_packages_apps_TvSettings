@@ -34,7 +34,6 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.TwoStatePreference;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.connectivity.CollapsibleCategory;
 import com.android.tv.settings.library.PreferenceCompat;
 
 import java.util.Arrays;
@@ -96,8 +95,8 @@ public final class RenderUtil {
     }
 
     private static int getPreferenceCount(PreferenceGroup preferenceGroup) {
-        return (preferenceGroup instanceof CollapsibleCategory)
-                ? ((CollapsibleCategory) preferenceGroup).getRealPreferenceCount()
+        return (preferenceGroup instanceof TsCollapsibleCategory)
+                ? ((TsCollapsibleCategory) preferenceGroup).getRealPreferenceCount()
                 : preferenceGroup.getPreferenceCount();
     }
 
@@ -229,7 +228,7 @@ public final class RenderUtil {
             TsAccessPointPreference preference, int level, Context context) {
         switch (level) {
             case 4:
-                preference.setIcon(R.drawable.ic_cell_signal_4_white);
+                preference.setIcon(R.drawable.ic_wifi_signal_4_white);
                 return;
             case 3:
                 preference.setIcon(R.drawable.ic_wifi_signal_3_white);
