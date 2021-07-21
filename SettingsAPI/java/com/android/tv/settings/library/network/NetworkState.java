@@ -194,8 +194,7 @@ public class NetworkState implements State, AccessPoint.AccessPointListener,
                 Bundle extras = new Bundle();
                 WifiDetailsState.prepareArgs(extras, accessPoint);
                 accessPointPref.setExtras(extras);
-                accessPointPref.addInfo(ManagerUtil.INFO_NEXT_STATE, String.valueOf(
-                        ManagerUtil.STATE_WIFI_DETAILS));
+                accessPointPref.setNextState(ManagerUtil.STATE_WIFI_DETAILS);
                 accessPointPref.setIntent(null);
             } else {
                 Intent i = new Intent("com.android.settings.wifi.action.WIFI_CONNECTION_SETTINGS")

@@ -78,6 +78,9 @@ public class PreferenceCompat {
     // Indicate whether there is on preference change listener
     private boolean mHasOnPreferenceChangeListener;
 
+    // Next state of the current state, -1 to indicate there is no next state.
+    private Integer mNextState;
+
     private List<PreferenceCompat> mChildPrefCompats;
 
     /** @hide */
@@ -248,6 +251,18 @@ public class PreferenceCompat {
     @SystemApi
     public void setHasOnPreferenceChangeListener(boolean hasOnPreferenceChangeListener) {
         mHasOnPreferenceChangeListener = hasOnPreferenceChangeListener;
+    }
+
+    /** @hide */
+    @SystemApi
+    public Integer getNextState() {
+        return mNextState;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setNextState(Integer nextState) {
+        mNextState = nextState;
     }
 
     /** @hide */

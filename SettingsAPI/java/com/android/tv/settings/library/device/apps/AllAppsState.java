@@ -289,8 +289,7 @@ public class AllAppsState extends PreferenceControllerState {
         entry.ensureLabel(mContext);
         preference.setTitle(entry.label);
         preference.setSummary(entry.sizeStr);
-        preference.addInfo(ManagerUtil.INFO_NEXT_STATE, String.valueOf(
-                ManagerUtil.STATE_APP_MANAGEMENT));
+        preference.setNextState(ManagerUtil.STATE_APP_MANAGEMENT);
         Bundle b = new Bundle();
         b.putString(ARG_PACKAGE_NAME, entry.info.packageName);
         preference.setExtras(b);

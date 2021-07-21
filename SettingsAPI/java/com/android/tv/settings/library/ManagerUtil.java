@@ -28,6 +28,7 @@ import android.annotation.SystemApi;
 @SystemApi
 public final class ManagerUtil {
     public static final int OFFSET_MULTIPLIER = 100000;
+    public static final int STATE_EMPTY = -1;
     public static final int STATE_NETWORK = 0;
     public static final int STATE_WIFI_DETAILS = 1;
     public static final int STATE_DEVICE_MAIN = 2;
@@ -46,7 +47,6 @@ public final class ManagerUtil {
     public static final int STATE_SYSTEM_DATE_TIME = 15;
 
     public static final String INFO_INTENT = "intent";
-    public static final String INFO_NEXT_STATE = "next_state";
     public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";
     public static final String INFO_COLLAPSE = "collapse";
 
