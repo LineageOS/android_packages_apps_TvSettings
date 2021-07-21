@@ -44,6 +44,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.view.animation.AnimationUtils;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 
@@ -98,7 +99,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             {R.id.frame1, R.id.frame2, R.id.frame3, R.id.frame4, R.id.frame5, R.id.frame6,
                     R.id.frame7, R.id.frame8, R.id.frame9, R.id.frame10};
 
-    private static final long PANEL_ANIMATION_MS = 400;
+    private static final long PANEL_ANIMATION_SLIDE_MS = 1000;
+    private static final long PANEL_ANIMATION_ALPHA_MS = 200;
+    private static final long PANEL_BACKGROUND_ANIMATION_ALPHA_MS = 500;
     private static final long PANEL_ANIMATION_DELAY_MS = 200;
     private static final long PREVIEW_PANEL_DEFAULT_DELAY_MS = 0;
     private static final long CHECK_IDLE_STATE_MS = 100;
@@ -906,7 +909,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 ObjectAnimator slideAnim = ObjectAnimator.ofInt(mScrollView, "scrollX",
                         mScrollView.getScrollX(), animationEnd);
                 slideAnim.setAutoCancel(true);
-                slideAnim.setDuration(PANEL_ANIMATION_MS);
+                slideAnim.setDuration(PANEL_ANIMATION_SLIDE_MS);
                 slideAnim.addListener(new AnimatorListenerAdapter() {
                     @Override
                     public void onAnimationEnd(Animator animation) {
@@ -917,6 +920,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                         }
                     }
                 });
+                slideAnim.setInterpolator(AnimationUtils.loadInterpolator(
+                        getContext(), R.anim.easing_browse));
                 slideAnim.start();
                 // Color animation
                 if (scrollsToPreview) {
@@ -931,7 +936,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                             "backgroundColor",
                             new ArgbEvaluator(), previewPanelColor, mainPanelColor);
                     alphaAnim.setAutoCancel(true);
+                    alphaAnim.setDuration(PANEL_ANIMATION_ALPHA_MS);
                     backgroundColorAnim.setAutoCancel(true);
+                    backgroundColorAnim.setDuration(PANEL_BACKGROUND_ANIMATION_ALPHA_MS);
                     AnimatorSet animatorSet = new AnimatorSet();
                     if (scrollToPanelHead != null) {
                         ObjectAnimator backgroundColorAnimForHead = ObjectAnimator.ofObject(
@@ -939,12 +946,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                                 "backgroundColor",
                                 new ArgbEvaluator(), previewPanelColor, mainPanelColor);
                         backgroundColorAnimForHead.setAutoCancel(true);
+                        backgroundColorAnimForHead.setDuration(PANEL_BACKGROUND_ANIMATION_ALPHA_MS);
                         animatorSet.playTogether(alphaAnim, backgroundColorAnim,
                                 backgroundColorAnimForHead);
                     } else {
                         animatorSet.playTogether(alphaAnim, backgroundColorAnim);
                     }
-                    animatorSet.setDuration(PANEL_ANIMATION_MS);
+                    animatorSet.setInterpolator(AnimationUtils.loadInterpolator(
+                            getContext(), R.anim.easing_browse));
                     animatorSet.start();
                 } else {
                     scrollToPanel.setAlpha(1f);
@@ -958,7 +967,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                             "backgroundColor",
                             new ArgbEvaluator(), mainPanelColor, previewPanelColor);
                     alphaAnim.setAutoCancel(true);
+                    alphaAnim.setDuration(PANEL_ANIMATION_ALPHA_MS);
                     backgroundColorAnim.setAutoCancel(true);
+                    backgroundColorAnim.setDuration(PANEL_BACKGROUND_ANIMATION_ALPHA_MS);
                     AnimatorSet animatorSet = new AnimatorSet();
                     if (previewPanelHead != null) {
                         ObjectAnimator backgroundColorAnimForHead = ObjectAnimator.ofObject(
@@ -966,12 +977,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                                 "backgroundColor",
                                 new ArgbEvaluator(), mainPanelColor, previewPanelColor);
                         backgroundColorAnimForHead.setAutoCancel(true);
+                        backgroundColorAnimForHead.setDuration(PANEL_BACKGROUND_ANIMATION_ALPHA_MS);
                         animatorSet.playTogether(alphaAnim, backgroundColorAnim,
                                 backgroundColorAnimForHead);
                     } else {
                         animatorSet.playTogether(alphaAnim, backgroundColorAnim);
                     }
-                    animatorSet.setDuration(PANEL_ANIMATION_MS);
+                    animatorSet.setInterpolator(AnimationUtils.loadInterpolator(
+                            getContext(), R.anim.easing_browse));
                     animatorSet.start();
                 }
             } else {
