@@ -31,6 +31,8 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
 
+import com.android.tv.settings.library.users.RestrictedProfileModel;
+
 public class UserSwitchListenerService extends Service {
 
     private static final boolean DEBUG = false;
