@@ -41,7 +41,7 @@ import java.util.Collection;
 import java.util.List;
 
 /** State to provide data for rendering NetworkFragment. */
-public class NetworkMainState implements State, AccessPoint.AccessPointListener,
+public class NetworkState implements State, AccessPoint.AccessPointListener,
         ConnectivityListener.WifiNetworkListener, ConnectivityListener.Listener {
     private static final String TAG = "NetworkMainState";
     private static final boolean DEBUG = true;
@@ -88,7 +88,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
         }
     };
 
-    public NetworkMainState(Context context, UIUpdateCallback callback) {
+    public NetworkState(Context context, UIUpdateCallback callback) {
         mUIUpdateCallback = callback;
         mContext = context;
     }
@@ -162,8 +162,8 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     }
 
     private void updateWifiList() {
-        if (!mNetworkModule.isWifiHardwarePresent() ||
-                !mNetworkModule.getConnectivityListener().isWifiEnabledOrEnabling()) {
+        if (!mNetworkModule.isWifiHardwarePresent()
+                || !mNetworkModule.getConnectivityListener().isWifiEnabledOrEnabling()) {
             mNoWifiUpdateBeforeMillis = 0;
             return;
         }
@@ -345,7 +345,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
 
     @Override
     public int getStateIdentifier() {
-        return ManagerUtil.STATE_NETWORK_MAIN;
+        return ManagerUtil.STATE_NETWORK;
     }
 
     private boolean isCaptivePortal(AccessPoint accessPoint) {

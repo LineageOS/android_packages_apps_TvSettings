@@ -17,7 +17,7 @@
 package com.android.tv.settings.connectivity;
 
 import static com.android.tv.settings.library.ManagerUtil.INFO_COLLAPSE;
-import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK_MAIN;
+import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -91,6 +91,6 @@ public class NetworkFragmentCompat extends PreferenceControllerFragmentCompat {
 
     @Override
     public int getStateIdentifier() {
-        return STATE_NETWORK_MAIN;
+        return STATE_NETWORK;
     }
 }

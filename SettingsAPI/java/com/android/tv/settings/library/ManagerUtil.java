@@ -28,7 +28,7 @@ import android.annotation.SystemApi;
 @SystemApi
 public final class ManagerUtil {
     public static final int OFFSET_MULTIPLIER = 100000;
-    public static final int STATE_NETWORK_MAIN = 0;
+    public static final int STATE_NETWORK = 0;
     public static final int STATE_WIFI_DETAILS = 1;
     public static final int STATE_DEVICE_MAIN = 2;
     public static final int STATE_APPS = 3;
