@@ -70,9 +70,9 @@ import com.android.tv.twopanelsettings.slices.HasSliceUri;
 import com.android.tv.twopanelsettings.slices.InfoFragment;
 import com.android.tv.twopanelsettings.slices.SliceFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
+import com.android.tv.twopanelsettings.slices.SliceSeekbarPreference;
 import com.android.tv.twopanelsettings.slices.SliceSwitchPreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
-import com.android.tv.twopanelsettings.slices.SliceSeekbarPreference;
 
 import java.util.Set;
 
@@ -546,11 +546,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
         previewFragment.setEnterTransition(new Fade());
         previewFragment.setExitTransition(null);
-
         final FragmentTransaction transaction =
                 getChildFragmentManager().beginTransaction();
-        transaction.setCustomAnimations(android.R.animator.fade_in,
-                android.R.animator.fade_out);
+        transaction.setCustomAnimations(R.animator.fade_in_preview_panel,
+                R.animator.fade_out_preview_panel);
         transaction.replace(frameResIds[mPrefPanelIdx + 1], previewFragment);
         transaction.commit();
 
@@ -1103,8 +1102,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             Fragment newPrefFragment = onCreatePreviewFragment(null, preference);
             final FragmentTransaction transaction =
                     getChildFragmentManager().beginTransaction();
-            transaction.setCustomAnimations(android.R.animator.fade_in,
-                    android.R.animator.fade_out);
+            transaction.setCustomAnimations(R.animator.fade_in_preview_panel,
+                    R.animator.fade_out_preview_panel);
             transaction.replace(frameResIds[mPrefPanelIdx], newPrefFragment);
             transaction.commit();
         } else {
