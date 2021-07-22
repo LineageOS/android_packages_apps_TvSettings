@@ -111,10 +111,13 @@ public final class RenderUtil {
             int order) {
         switch (preferenceCompat.getType()) {
             case TYPE_PREFERENCE_ACCESS_POINT:
-                updateAccessPointPreference(
-                        (TsAccessPointPreference) hasKeysPreference,
-                        Integer.parseInt(preferenceCompat.getInfo(INFO_WIFI_SIGNAL_LEVEL)),
-                        context);
+                Integer wifiLevel = getInfoInt(INFO_WIFI_SIGNAL_LEVEL, preferenceCompat);
+                if (wifiLevel != null) {
+                    updateAccessPointPreference(
+                            (TsAccessPointPreference) hasKeysPreference,
+                            wifiLevel,
+                            context);
+                }
                 break;
             case TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY:
                 ((TsCollapsibleCategory) hasKeysPreference)
@@ -178,17 +181,13 @@ public final class RenderUtil {
     }
 
     public static Boolean getInfoBoolean(String key, PreferenceCompat preferenceCompat) {
-        String value = preferenceCompat.getInfo(key);
-        return value == null ? null : Boolean.parseBoolean(value);
+        Object value = preferenceCompat.getInfo(key);
+        return (value instanceof  Boolean) ? (Boolean) value : null;
     }
 
     public static Integer getInfoInt(String key, PreferenceCompat preferenceCompat) {
-        String value = preferenceCompat.getInfo(key);
-        return value == null ? null : Integer.parseInt(value);
-    }
-
-    public static String getInfoString(String key, PreferenceCompat preferenceParcelable) {
-        return preferenceParcelable.getInfo(key);
+        Object value = preferenceCompat.getInfo(key);
+        return (value instanceof Integer) ? (Integer) value : null;
     }
 
     public static void setChecked(

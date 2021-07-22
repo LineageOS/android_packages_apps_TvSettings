@@ -68,23 +68,25 @@ public class NetworkFragmentCompat extends PreferenceControllerFragmentCompat {
     }
 
     @Override
-    public HasKeys updatePref(PreferenceCompat prefParcelable) {
-        HasKeys preference = super.updatePref(prefParcelable);
+    public HasKeys updatePref(PreferenceCompat prefCompat) {
+        HasKeys preference = super.updatePref(prefCompat);
         if (preference == null) {
             return null;
         }
         String[] key = preference.getKeys();
         switch (key[0]) {
             case KEY_WIFI_COLLAPSE:
-                boolean collapse = "true".equals(prefParcelable.getInfo(INFO_COLLAPSE));
-                ((Preference) preference).setTitle(
-                        collapse ? R.string.wifi_setting_see_all : R.string.wifi_setting_see_fewer);
+                Boolean collapse = RenderUtil.getInfoBoolean(INFO_COLLAPSE, prefCompat);
+                if (collapse != null) {
+                    ((Preference) preference).setTitle(collapse ? R.string.wifi_setting_see_all
+                                    : R.string.wifi_setting_see_fewer);
+                }
                 break;
             default:
         }
-        if (prefParcelable.getType() == PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY) {
+        if (prefCompat.getType() == PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY) {
             RenderUtil.updatePreferenceGroup(
-                    mWifiNetworksCategory, prefParcelable.getChildPrefCompats());
+                    mWifiNetworksCategory, prefCompat.getChildPrefCompats());
         }
         return preference;
     }
