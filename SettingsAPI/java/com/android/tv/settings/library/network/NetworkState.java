@@ -41,7 +41,7 @@ import java.util.Collection;
 import java.util.List;
 
 /** State to provide data for rendering NetworkFragment. */
-public class NetworkMainState implements State, AccessPoint.AccessPointListener,
+public class NetworkState implements State, AccessPoint.AccessPointListener,
         ConnectivityListener.WifiNetworkListener, ConnectivityListener.Listener {
     private static final String TAG = "NetworkMainState";
     private static final boolean DEBUG = true;
@@ -88,7 +88,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
         }
     };
 
-    public NetworkMainState(Context context, UIUpdateCallback callback) {
+    public NetworkState(Context context, UIUpdateCallback callback) {
         mUIUpdateCallback = callback;
         mContext = context;
     }
@@ -107,7 +107,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
         mEnableWifiPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_ENABLE);
         mAlwaysScan = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_ALWAYS_SCAN);
         mCollapsePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_COLLAPSE);
-        mCollapsePref.addInfo(INFO_COLLAPSE, "true");
+        mCollapsePref.addInfo(INFO_COLLAPSE, true);
         mAddPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_ADD);
         mEthernetCategory = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_ETHERNET);
         mEthernetStatusPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_ETHERNET_STATUS);
@@ -162,8 +162,8 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
     }
 
     private void updateWifiList() {
-        if (!mNetworkModule.isWifiHardwarePresent() ||
-                !mNetworkModule.getConnectivityListener().isWifiEnabledOrEnabling()) {
+        if (!mNetworkModule.isWifiHardwarePresent()
+                || !mNetworkModule.getConnectivityListener().isWifiEnabledOrEnabling()) {
             mNoWifiUpdateBeforeMillis = 0;
             return;
         }
@@ -185,8 +185,6 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
                     new String[]{KEY_WIFI_LIST, accessPoint.getKey()});
             accessPointPref.setTitle(accessPoint.getTitle());
             accessPointPref.setType(PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT);
-            accessPointPref.addInfo(ManagerUtil.INFO_WIFI_SIGNAL_LEVEL,
-                    String.valueOf(accessPoint.getLevel()));
             if (accessPoint.isActive()) {
                 accessPointPref.setSummary(ResourcesUtil.getString(mContext, "connected"));
             }
@@ -194,8 +192,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
                 Bundle extras = new Bundle();
                 WifiDetailsState.prepareArgs(extras, accessPoint);
                 accessPointPref.setExtras(extras);
-                accessPointPref.addInfo(ManagerUtil.INFO_NEXT_STATE, String.valueOf(
-                        ManagerUtil.STATE_WIFI_DETAILS));
+                accessPointPref.setNextState(ManagerUtil.STATE_WIFI_DETAILS);
                 accessPointPref.setIntent(null);
             } else {
                 Intent i = new Intent("com.android.settings.wifi.action.WIFI_CONNECTION_SETTINGS")
@@ -203,6 +200,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
                         .putExtra(EXTRA_WIFI_SECURITY_NAME, accessPoint.getSecurity());
                 accessPointPref.setIntent(i);
             }
+            accessPointPref.addInfo(ManagerUtil.INFO_WIFI_SIGNAL_LEVEL, accessPoint.getLevel());
             mWifiNetworkCategoryPref.addChildPrefCompat(accessPointPref);
         }
         if (mUIUpdateCallback != null) {
@@ -219,13 +217,15 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
                 mEnableWifiPref.setChecked(status);
                 break;
             case KEY_WIFI_COLLAPSE:
-                boolean collapse = !PreferenceCompatManager.getBoolean(
-                        mCollapsePref, INFO_COLLAPSE);
-                mWifiNetworkCategoryPref.addInfo(ManagerUtil.INFO_COLLAPSE,
-                        String.valueOf(collapse));
-                mCollapsePref.addInfo(ManagerUtil.INFO_COLLAPSE, String.valueOf(collapse));
-                if (mUIUpdateCallback != null) {
-                    mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mWifiNetworkCategoryPref);
+                Object collapse = mCollapsePref.getInfo(INFO_COLLAPSE);
+                if (collapse instanceof Boolean) {
+                    mWifiNetworkCategoryPref.addInfo(
+                            ManagerUtil.INFO_COLLAPSE, !(boolean) collapse);
+                    mCollapsePref.addInfo(ManagerUtil.INFO_COLLAPSE, !(boolean) collapse);
+                    if (mUIUpdateCallback != null) {
+                        mUIUpdateCallback.notifyUpdate(getStateIdentifier(),
+                                mWifiNetworkCategoryPref);
+                    }
                 }
                 break;
             case KEY_WIFI_ALWAYS_SCAN:
@@ -345,7 +345,7 @@ public class NetworkMainState implements State, AccessPoint.AccessPointListener,
 
     @Override
     public int getStateIdentifier() {
-        return ManagerUtil.STATE_NETWORK_MAIN;
+        return ManagerUtil.STATE_NETWORK;
     }
 
     private boolean isCaptivePortal(AccessPoint accessPoint) {

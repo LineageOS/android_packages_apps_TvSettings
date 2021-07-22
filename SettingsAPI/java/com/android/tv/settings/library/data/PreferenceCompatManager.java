@@ -47,8 +47,4 @@ public class PreferenceCompatManager {
     private static String getKey(String[] key) {
         return Stream.of(key).collect(Collectors.joining(" "));
     }
-
-    public static Boolean getBoolean(PreferenceCompat preferenceCompat, String infoKey) {
-        return Boolean.parseBoolean(preferenceCompat.getInfo(infoKey));
-    }
 }

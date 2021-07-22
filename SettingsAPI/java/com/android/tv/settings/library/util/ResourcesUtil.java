@@ -36,6 +36,35 @@ public final class ResourcesUtil {
         }
     }
 
+    public static boolean getBoolean(Context context, String name) {
+        try {
+            Resources resources = context.getPackageManager()
+                    .getResourcesForApplication(SETTINGS_PACKAGE_NAME);
+            int id = resources.getIdentifier(name, "string", SETTINGS_PACKAGE_NAME);
+            if (id != 0) {
+                return resources.getBoolean(id);
+            }
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static String getQuantityString(Context context, String name, int count,  Object... formatArgs) {
+
+        try {
+            Resources resources = context.getPackageManager()
+                    .getResourcesForApplication(SETTINGS_PACKAGE_NAME);
+            int id = resources.getIdentifier(name, "string", SETTINGS_PACKAGE_NAME);
+            if (id != 0) {
+                return resources.getQuantityString(id,count ,formatArgs);
+            }
+            return null;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     public static String getString(Context context, String name, Object... formatArgs) {
         try {
             Resources resources = context.getPackageManager()
