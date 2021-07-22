@@ -22,7 +22,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_APPS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_USAGE_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_HIGH_POWER;
-import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK_MAIN;
+import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NOTIFICATION_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_PICTURE_IN_PICTURE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_SPECIAL_ACCESS;
@@ -46,7 +46,7 @@ import com.android.tv.settings.library.device.apps.specialaccess.PictureInPictur
 import com.android.tv.settings.library.device.apps.specialaccess.SpecialAppAccessState;
 import com.android.tv.settings.library.device.apps.specialaccess.SystemAlertWindowState;
 import com.android.tv.settings.library.device.apps.specialaccess.WriteSettingsState;
-import com.android.tv.settings.library.network.NetworkMainState;
+import com.android.tv.settings.library.network.NetworkState;
 import com.android.tv.settings.library.network.WifiDetailsState;
 import com.android.tv.settings.library.system.DateTimeState;
 
@@ -59,8 +59,8 @@ public class StateManager {
             Context context, int stateIdentifier, UIUpdateCallback uiUpdateCallback) {
         State state = null;
         switch (stateIdentifier) {
-            case STATE_NETWORK_MAIN:
-                state = new NetworkMainState(context, uiUpdateCallback);
+            case STATE_NETWORK:
+                state = new NetworkState(context, uiUpdateCallback);
                 break;
             case STATE_WIFI_DETAILS:
                 state = new WifiDetailsState(context, uiUpdateCallback);

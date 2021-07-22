@@ -60,7 +60,7 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
             new UIUpdateCallback() {
                 @Override
                 public void notifyUpdate(
-                        int state, com.android.tv.settings.library.PreferenceCompat preference) {
+                        int state, PreferenceCompat preference) {
                     getVisibleFragment().getChildFragmentManager().getFragments().stream()
                             .filter(
                                     fragment ->

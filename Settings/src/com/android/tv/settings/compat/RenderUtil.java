@@ -17,9 +17,9 @@
 package com.android.tv.settings.compat;
 
 import static com.android.tv.settings.compat.TsCollapsibleCategory.COLLAPSE;
-import static com.android.tv.settings.library.ManagerUtil.INFO_NEXT_STATE;
 import static com.android.tv.settings.library.ManagerUtil.INFO_WIFI_SIGNAL_LEVEL;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
+import static com.android.tv.settings.library.ManagerUtil.STATE_EMPTY;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_LIST;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT;
@@ -146,7 +146,7 @@ public final class RenderUtil {
         if (preferenceCompat.getExtras() != null) {
             preference.getExtras().putAll(preferenceCompat.getExtras());
         }
-        Integer nextState = RenderUtil.getInfoInt(INFO_NEXT_STATE, preferenceCompat);
+        Integer nextState = preferenceCompat.getNextState();
         if (nextState != null) {
             preference.setFragment(getNextFragment(nextState));
         }
@@ -253,6 +253,7 @@ public final class RenderUtil {
                 return "com.android.tv.settings.connectivity.WifiDetailsFragmentCompat";
             case STATE_APP_MANAGEMENT:
                 return "com.android.tv.settings.device.apps.AppManagementFragmentCompat";
+            case STATE_EMPTY:
             default:
                 return null;
         }
