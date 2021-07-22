@@ -20,13 +20,10 @@ import android.annotation.SystemApi;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.ArrayMap;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
@@ -57,9 +54,6 @@ public class PreferenceCompat {
 
     // 0 : preference, 1 : preferenceCategory, 2 : AccessPointPreference
     private byte mType;
-
-    // Provide extra information for particular type
-    private Map<String, String> mInfoMap;
 
     // 0 : not updated, 1 : unchecked, 2 : checked
     private byte mChecked;
@@ -267,39 +261,6 @@ public class PreferenceCompat {
 
     /** @hide */
     @SystemApi
-    public Map<String, String> getInfoMap() {
-        if (mInfoMap == null) {
-            mInfoMap = new ArrayMap<>();
-        }
-        return mInfoMap;
-    }
-
-    /** @hide */
-    @SystemApi
-    public void setInfoMap(Map<String, String> info) {
-        this.mInfoMap = info;
-    }
-
-    /** @hide */
-    @SystemApi
-    public void addInfo(String key, String value) {
-        if (mInfoMap == null) {
-            mInfoMap = new ArrayMap<>();
-        }
-        mInfoMap.put(key, value);
-    }
-
-    /** @hide */
-    @SystemApi
-    public String getInfo(String key) {
-        if (mInfoMap == null || !mInfoMap.containsKey(key)) {
-            return null;
-        }
-        return mInfoMap.get(key);
-    }
-
-    /** @hide */
-    @SystemApi
     public void setContentDescription(String contentDescription) {
         this.mContentDescription = contentDescription;
     }
@@ -390,6 +351,33 @@ public class PreferenceCompat {
 
     /** @hide */
     @SystemApi
+    public void addInfo(String key, Object value) {
+        if (mExtras == null) {
+            mExtras = new Bundle();
+        }
+        mExtras.putObject(key, value);
+    }
+
+    /** @hide */
+    @SystemApi
+    public Object getInfo(String key) {
+        if (mExtras != null) {
+            return mExtras.get(key);
+        }
+        return null;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void getInfo(String key, int value) {
+        if (mExtras == null) {
+            mExtras = new Bundle();
+        }
+        mExtras.putInt(key, value);
+    }
+
+    /** @hide */
+    @SystemApi
     public Intent getIntent() {
         return mIntent;
     }
@@ -417,46 +405,24 @@ public class PreferenceCompat {
 
     @Override
     public String toString() {
-        return "PreferenceParcelable{"
-                + "key='" + Arrays.toString(mKey) + '\''
-                + ", title='" + mTitle + '\''
-                + ", summary='" + mSummary + '\''
-                + ", contentDescription='" + mContentDescription + '\''
-                + ", type=" + mType
-                + ", extras=" + mExtras
-                + ", intent=" + mIntent
-                + ", infoMap=" + mInfoMap
-                + ", checked=" + mChecked
-                + ", visible=" + mVisible
-                + ", childPrefCompats=" + mChildPrefCompats
+        return "PreferenceCompat{"
+                + "mKey=" + Arrays.toString(mKey)
+                + ", mTitle='" + mTitle + '\''
+                + ", mSummary='" + mSummary + '\''
+                + ", mContentDescription='" + mContentDescription
+                + '\'' + ", mExtras=" + mExtras
+                + ", mIntent=" + mIntent
+                + ", mIcon=" + mIcon
+                + ", mValue='" + mValue + '\''
+                + ", mType=" + mType
+                + ", mChecked=" + mChecked
+                + ", mVisible=" + mVisible
+                + ", mSelectable=" + mSelectable
+                + ", mEnabled=" + mEnabled
+                + ", mShouldRemove=" + mShouldRemove
+                + ", mHasOnPreferenceChangeListener=" + mHasOnPreferenceChangeListener
+                + ", mNextState=" + mNextState
+                + ", mChildPrefCompats=" + mChildPrefCompats
                 + '}';
-    }
-
-    /** @hide */
-    @SystemApi
-    public PreferenceCompat immutableCopy() {
-        PreferenceCompat copy = new PreferenceCompat(Arrays.copyOf(mKey, mKey.length));
-        copy.setTitle(mTitle);
-        copy.setSummary(mSummary);
-        copy.setType(mType);
-        copy.setChecked(mChecked);
-        copy.setVisible(mVisible);
-        copy.setContentDescription(mContentDescription);
-        if (mExtras != null) {
-            copy.setExtras(new Bundle(mExtras));
-        }
-        if (mIntent != null) {
-            copy.setIntent(new Intent(mIntent));
-        }
-        Map<String, String> infoMapCopy = new ArrayMap<>();
-        if (mInfoMap != null) {
-            infoMapCopy.putAll(mInfoMap);
-        }
-        copy.setInfoMap(infoMapCopy);
-        if (mChildPrefCompats != null) {
-            copy.setChildPrefCompats(mChildPrefCompats.stream()
-                    .map(PreferenceCompat::immutableCopy).collect(Collectors.toList()));
-        }
-        return copy;
     }
 }
