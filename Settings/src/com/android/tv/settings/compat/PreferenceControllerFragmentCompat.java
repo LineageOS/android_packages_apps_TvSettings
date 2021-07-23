@@ -33,7 +33,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.SettingsManager;
 import com.android.tv.settings.library.State;
-import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.util.List;

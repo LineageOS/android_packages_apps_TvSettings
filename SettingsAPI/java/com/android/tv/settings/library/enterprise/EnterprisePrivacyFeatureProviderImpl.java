@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.enterprise;
+package com.android.tv.settings.library.enterprise;
 
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
@@ -33,7 +33,7 @@ import android.text.SpannableStringBuilder;
 import android.text.style.ClickableSpan;
 import android.view.View;
 
-import com.android.tv.settings.R;
+import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.Date;
 import java.util.List;
@@ -93,13 +93,13 @@ public class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFe
         final SpannableStringBuilder disclosure = new SpannableStringBuilder();
         final CharSequence organizationName = mDpm.getDeviceOwnerOrganizationName();
         if (organizationName != null) {
-            disclosure.append(mResources.getString(R.string.do_disclosure_with_name,
+            disclosure.append(ResourcesUtil.getString(mContext,  "do_disclosure_with_name",
                     organizationName));
         } else {
-            disclosure.append(mResources.getString(R.string.do_disclosure_generic));
+            disclosure.append(ResourcesUtil.getString(mContext, "do_disclosure_generic"));
         }
-        disclosure.append(mResources.getString(R.string.do_disclosure_learn_more_separator));
-        disclosure.append(mResources.getString(R.string.learn_more),
+        disclosure.append(ResourcesUtil.getString(mContext, "do_disclosure_learn_more_separator"));
+        disclosure.append(ResourcesUtil.getString(mContext,  "learn_more"),
                 new EnterprisePrivacySpan(mContext), 0);
         return disclosure;
     }

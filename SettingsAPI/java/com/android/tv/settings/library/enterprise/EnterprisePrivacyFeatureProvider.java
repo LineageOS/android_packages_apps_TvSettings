@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.enterprise;
+package com.android.tv.settings.library.enterprise;
 
 import java.util.Date;
 

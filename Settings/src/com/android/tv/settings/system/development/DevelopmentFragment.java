@@ -18,7 +18,7 @@ package com.android.tv.settings.system.development;
 
 import static android.view.CrossWindowBlurListeners.CROSS_WINDOW_BLUR_SUPPORTED;
 
-import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
+import static com.android.tv.settings.library.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
 
 import android.Manifest;
 import android.app.Activity;
@@ -76,7 +76,7 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.library.system.development.audio.AudioDebug;
 import com.android.tv.settings.library.system.development.audio.AudioMetrics;
 import com.android.tv.settings.library.system.development.audio.AudioReaderException;
-import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.library.overlay.FlavorUtils;
 
 import java.util.ArrayList;
 import java.util.HashSet;

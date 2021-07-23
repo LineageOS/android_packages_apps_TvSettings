@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.overlay;
+package com.android.tv.settings.library.overlay;
 
 import androidx.annotation.Keep;
 
@@ -28,4 +28,14 @@ import com.android.tv.settings.library.startup.startup.StartupVerificationFeatur
 public class FeatureFactoryImplX extends FeatureFactoryImplTwoPanel {
 
     protected static final String TAG = "FeatureFactoryImplX";
+
+    @Override
+    public BasicModeFeatureProvider getBasicModeFeatureProvider() {
+        return new BasicModeFeatureProviderImplX();
+    }
+
+    @Override
+    public StartupVerificationFeatureProvider getStartupVerificationFeatureProvider() {
+        return new StartupVerificationFeatureProviderImplX();
+    }
 }

@@ -39,7 +39,7 @@ import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.autofill.AutofillHelper;
-import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 

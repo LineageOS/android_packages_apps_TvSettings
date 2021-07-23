@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,18 +14,26 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.startup;
+package com.android.tv.settings.library.basic;
 
 import android.app.Activity;
+import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-/** Default implementation of {@link StartupVerificationFeatureProvider} */
-public class StartupVerificationFeatureProviderImpl implements StartupVerificationFeatureProvider {
+/** Feature provider for basic mode. */
+public interface BasicModeFeatureProvider {
 
-    @Override
-    public boolean startStartupVerificationActivityForResult(
-            @NonNull Activity activity, int requestCode) {
-        return false;
-    }
+    /**
+     * @param context
+     * @return whether the device is in basic mode.
+     */
+    boolean isBasicMode(@NonNull Context context);
+
+    /**
+     * Attempt to start the Activity for exiting basic mode.
+     * @param activity the Activity to start the basic mode exit Activity from
+     */
+    void startBasicModeExitActivity(@NonNull Activity activity);
+
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.enterprise.apps;
+package com.android.tv.settings.library.enterprise.apps;
 
 import android.content.pm.ApplicationInfo;
 import android.content.pm.UserInfo;
