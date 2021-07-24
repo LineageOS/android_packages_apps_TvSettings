@@ -51,7 +51,7 @@ import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
-import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.util.SettingsPreferenceUtil;
 import com.android.tv.settings.widget.SettingsViewModel;
 import com.android.tv.settings.widget.TsPreference;

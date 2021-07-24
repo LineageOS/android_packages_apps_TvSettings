@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.startup;
+package com.android.tv.settings.library.startup.startup;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -25,7 +25,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.android.tv.settings.R;
+import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.List;
 
@@ -41,9 +41,9 @@ public class StartupVerificationFeatureProviderImplX implements StartupVerificat
     public boolean startStartupVerificationActivityForResult(
             @NonNull Activity activity, int requestCode) {
         final String startupVerificationAction =
-                activity.getString(R.string.startup_verification_action);
+                ResourcesUtil.getString(activity, "startup_verification_action");
         final String startupVerificationPackage =
-                activity.getString(R.string.startup_verification_package);
+                ResourcesUtil.getString(activity, "startup_verification_package");
         if (TextUtils.isEmpty(startupVerificationAction)
                 || TextUtils.isEmpty(startupVerificationPackage)) {
             Log.e(TAG, "Activity for handling startup verification is undefined.");

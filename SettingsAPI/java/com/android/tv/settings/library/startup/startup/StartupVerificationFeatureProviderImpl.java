@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2020 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,24 +14,18 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.help;
+package com.android.tv.settings.library.startup.startup;
 
 import android.app.Activity;
-import android.content.Intent;
 
-/**
- * Implementation for {@link SupportFeatureProvider}.
- */
-public class SupportFeatureProviderImpl implements SupportFeatureProvider {
+import androidx.annotation.NonNull;
 
-    public SupportFeatureProviderImpl() {
-    }
+/** Default implementation of {@link StartupVerificationFeatureProvider} */
+public class StartupVerificationFeatureProviderImpl implements StartupVerificationFeatureProvider {
 
     @Override
-    public void startSupport(Activity activity) {
-        if (activity != null) {
-            final Intent intent = new Intent("com.android.settings.action.LAUNCH_HELP");
-            activity.startActivityForResult(intent, 0);
-        }
+    public boolean startStartupVerificationActivityForResult(
+            @NonNull Activity activity, int requestCode) {
+        return false;
     }
 }
