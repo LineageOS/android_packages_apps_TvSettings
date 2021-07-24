@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.startup;
+package com.android.tv.settings.library.startup.startup;
 
 import android.app.Activity;
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,25 +14,24 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.basic;
+package com.android.tv.settings.library.help;
 
 import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
 
-import androidx.annotation.NonNull;
+/**
+ * Implementation for {@link SupportFeatureProvider}.
+ */
+public class SupportFeatureProviderImpl implements SupportFeatureProvider {
 
-/** Implementation of {@link BasicModeFeatureProvider} */
-public class BasicModeFeatureProviderImpl implements BasicModeFeatureProvider {
-
-    protected static final String TAG = "BasicModeFeature";
-
-    @Override
-    public boolean isBasicMode(@NonNull Context context) {
-        return false;
+    public SupportFeatureProviderImpl() {
     }
 
     @Override
-    public void startBasicModeExitActivity(@NonNull Activity activity) {
-        // no-op
+    public void startSupport(Activity activity) {
+        if (activity != null) {
+            final Intent intent = new Intent("com.android.settings.action.LAUNCH_HELP");
+            activity.startActivityForResult(intent, 0);
+        }
     }
 }

@@ -33,7 +33,7 @@ import androidx.preference.SwitchPreference;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.device.apps.AppManagementFragment;
-import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.library.overlay.FlavorUtils;
 
 import java.util.ArrayList;
 import java.util.List;

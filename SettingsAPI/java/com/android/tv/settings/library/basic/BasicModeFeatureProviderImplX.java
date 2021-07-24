@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.basic;
+package com.android.tv.settings.library.basic;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -28,7 +28,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.android.tv.settings.R;
+import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.List;
 
@@ -42,7 +42,8 @@ public class BasicModeFeatureProviderImplX implements BasicModeFeatureProvider {
 
     @Override
     public boolean isBasicMode(@NonNull Context context) {
-        final String providerUriString = context.getString(R.string.basic_mode_provider_uri);
+        final String providerUriString = ResourcesUtil.getString(context,
+                "basic_mode_provider_uri");
         if (TextUtils.isEmpty(providerUriString)) {
             Log.e(TAG, "ContentProvider for basic mode is undefined.");
             return false;
@@ -64,10 +65,11 @@ public class BasicModeFeatureProviderImplX implements BasicModeFeatureProvider {
 
     @Override
     public void startBasicModeExitActivity(@NonNull Activity activity) {
-        final String basicModeExitPackage = activity.getString(R.string.basic_mode_exit_package);
+        final String basicModeExitPackage = ResourcesUtil.getString(activity,
+                "basic_mode_exit_package");
         final String basicModeExitComponent =
-                activity.getString(R.string.basic_mode_exit_component);
-        final String basicModeExitData = activity.getString(R.string.basic_mode_exit_data);
+                ResourcesUtil.getString(activity, "basic_mode_exit_component");
+        final String basicModeExitData = ResourcesUtil.getString(activity, "basic_mode_exit_data");
         if (TextUtils.isEmpty(basicModeExitPackage) || TextUtils.isEmpty(basicModeExitComponent)
                 || TextUtils.isEmpty(basicModeExitData)) {
             Log.e(TAG, "Basic mode exit activity undefined.");

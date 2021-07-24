@@ -21,10 +21,10 @@ import static com.android.tv.settings.accounts.AccountsUtil.ACCOUNTS_FRAGMENT_DE
 import static com.android.tv.settings.accounts.AccountsUtil.ACCOUNTS_FRAGMENT_RESTRICTED;
 import static com.android.tv.settings.accounts.AccountsUtil.ACCOUNTS_SLICE_FRAGMENT;
 import static com.android.tv.settings.accounts.AccountsUtil.ACCOUNTS_SYSTEM_INTENT;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.settings.util.InstrumentationUtils.logPageFocused;
 
@@ -64,7 +64,7 @@ import com.android.tv.settings.HotwordSwitchController.HotwordStateListener;
 import com.android.tv.settings.accounts.AccountsFragment;
 import com.android.tv.settings.accounts.AccountsUtil;
 import com.android.tv.settings.connectivity.ConnectivityListener;
-import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
 import com.android.tv.settings.util.SliceUtils;

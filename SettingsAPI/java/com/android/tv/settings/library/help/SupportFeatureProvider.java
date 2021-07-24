@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,26 +14,18 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.basic;
+package com.android.tv.settings.library.help;
 
 import android.app.Activity;
-import android.content.Context;
 
-import androidx.annotation.NonNull;
-
-/** Feature provider for basic mode. */
-public interface BasicModeFeatureProvider {
-
-    /**
-     * @param context
-     * @return whether the device is in basic mode.
-     */
-    boolean isBasicMode(@NonNull Context context);
+/**
+ * Feature provider for the help settings.
+ */
+public interface SupportFeatureProvider {
 
     /**
-     * Attempt to start the Activity for exiting basic mode.
-     * @param activity the Activity to start the basic mode exit Activity from
+     * Launches the support activity.
+     * @param activity
      */
-    void startBasicModeExitActivity(@NonNull Activity activity);
-
+    void startSupport(Activity activity);
 }

@@ -24,9 +24,9 @@ import androidx.preference.Preference;
 
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.tv.settings.R;
-import com.android.tv.settings.enterprise.apps.ApplicationFeatureProvider;
-import com.android.tv.settings.enterprise.apps.EnterpriseDefaultApps;
-import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.library.enterprise.apps.ApplicationFeatureProvider;
+import com.android.tv.settings.library.enterprise.apps.EnterpriseDefaultApps;
+import com.android.tv.settings.library.overlay.FlavorUtils;
 
 /**
  * Forked from:
