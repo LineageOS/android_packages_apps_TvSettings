@@ -60,6 +60,7 @@ package com.android.tv.settings.library {
     method public byte getVisible();
     method public boolean hasOnPreferenceChangeListener();
     method public void initChildPreferences();
+    method public boolean isRestricted();
     method public void setChecked(byte);
     method public void setChecked(boolean);
     method public void setChildPrefCompats(java.util.List<com.android.tv.settings.library.PreferenceCompat>);
@@ -71,6 +72,7 @@ package com.android.tv.settings.library {
     method public void setIcon(android.graphics.drawable.Drawable);
     method public void setIntent(android.content.Intent);
     method public void setNextState(Integer);
+    method public void setRestricted(boolean);
     method public void setSelectable(byte);
     method public void setSelectable(boolean);
     method public void setShouldRemove(boolean);
