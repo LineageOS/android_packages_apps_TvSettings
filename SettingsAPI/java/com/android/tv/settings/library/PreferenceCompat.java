@@ -72,6 +72,9 @@ public class PreferenceCompat {
     // Indicate whether there is on preference change listener
     private boolean mHasOnPreferenceChangeListener;
 
+    // Indicates whether the preference is a restricted preference.
+    private boolean mIsRestricted;
+
     // Next state of the current state, -1 to indicate there is no next state.
     private Integer mNextState;
 
@@ -329,6 +332,18 @@ public class PreferenceCompat {
     @SystemApi
     public void setEnabled(byte enabled) {
         this.mEnabled = enabled;
+    }
+
+    /** @hide */
+    @SystemApi
+    public boolean isRestricted() {
+        return mIsRestricted;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setRestricted(boolean restricted) {
+        mIsRestricted = restricted;
     }
 
     /** @hide */
