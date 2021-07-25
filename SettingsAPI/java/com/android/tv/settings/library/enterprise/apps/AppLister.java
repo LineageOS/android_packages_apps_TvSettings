@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.enterprise.apps;
+package com.android.tv.settings.library.enterprise.apps;
 
-import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.UserInfo;
@@ -24,25 +23,30 @@ import android.os.AsyncTask;
 import android.os.UserHandle;
 import android.os.UserManager;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Lists apps for current user that fit some criteria specified by includeInCount method
+ * implementation.
+ * This class is similar to {@link AppCounter} class, but but builds actual list of apps instead
+ * of just counting them.
+ *
  * Forked from:
- * Settings/src/com/android/settings/applications/AppCounter.java
+ * Settings/src/com/android/settings/applications/AppLister.java
  */
-public abstract class AppCounter extends AsyncTask<Void, Void, Integer> {
-
+public abstract class AppLister extends AsyncTask<Void, Void, List<UserAppInfo>> {
     protected final PackageManager mPm;
     protected final UserManager mUm;
 
-    public AppCounter(Context context, PackageManager packageManager) {
+    public AppLister(PackageManager packageManager, UserManager userManager) {
         mPm = packageManager;
-        mUm = context.getSystemService(UserManager.class);
+        mUm = userManager;
     }
 
     @Override
-    protected Integer doInBackground(Void... params) {
-        int count = 0;
+    protected List<UserAppInfo> doInBackground(Void... params) {
+        final List<UserAppInfo> result = new ArrayList<>();
         for (UserInfo user : mUm.getProfiles(UserHandle.myUserId())) {
             final List<ApplicationInfo> list =
                     mPm.getInstalledApplicationsAsUser(PackageManager.GET_DISABLED_COMPONENTS
@@ -51,22 +55,18 @@ public abstract class AppCounter extends AsyncTask<Void, Void, Integer> {
                             user.id);
             for (ApplicationInfo info : list) {
                 if (includeInCount(info)) {
-                    count++;
+                    result.add(new UserAppInfo(user, info));
                 }
             }
         }
-        return count;
+        return result;
     }
 
     @Override
-    protected void onPostExecute(Integer count) {
-        onCountComplete(count);
+    protected void onPostExecute(List<UserAppInfo> list) {
+        onAppListBuilt(list);
     }
 
-    void executeInForeground() {
-        onPostExecute(doInBackground());
-    }
-
-    protected abstract void onCountComplete(int num);
+    protected abstract void onAppListBuilt(List<UserAppInfo> list);
     protected abstract boolean includeInCount(ApplicationInfo info);
 }

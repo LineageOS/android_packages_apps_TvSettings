@@ -19,7 +19,6 @@ package com.android.tv.settings.device.display.daydream;
 import androidx.fragment.app.Fragment;
 
 import com.android.tv.settings.TvSettingsActivity;
-import com.android.tv.settings.overlay.FlavorUtils;
 
 /**
  * Activity that allows the setting of daydreams.
@@ -28,7 +27,8 @@ public class DaydreamActivity extends TvSettingsActivity {
 
     @Override
     protected Fragment createSettingsFragment() {
-        return FlavorUtils.getFeatureFactory(this).getSettingsFragmentProvider()
-            .newSettingsFragment(DaydreamFragment.class.getName(), null);
+        return com.android.tv.settings.overlay.FlavorUtils.getFeatureFactory(
+                this).getSettingsFragmentProvider()
+                .newSettingsFragment(DaydreamFragment.class.getName(), null);
     }
 }

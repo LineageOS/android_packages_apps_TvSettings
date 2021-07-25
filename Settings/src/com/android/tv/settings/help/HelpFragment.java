@@ -18,10 +18,10 @@ package com.android.tv.settings.help;
 
 import static android.content.Context.ACCESSIBILITY_SERVICE;
 
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
 import android.app.tvsettings.TvSettingsEnums;
@@ -36,7 +36,7 @@ import androidx.preference.Preference;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.library.overlay.FlavorUtils;
 
 /**
  * The "Help & feedback" screen in TV settings.

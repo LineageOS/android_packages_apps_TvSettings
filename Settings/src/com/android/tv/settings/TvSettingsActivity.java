@@ -16,7 +16,7 @@
 
 package com.android.tv.settings;
 
-import static com.android.tv.settings.overlay.FlavorUtils.ALL_FLAVORS_MASK;
+import static com.android.tv.settings.library.overlay.FlavorUtils.ALL_FLAVORS_MASK;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,7 +41,7 @@ import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.SettingsManager;
 import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
-import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.slices.ContextSingleton;
 
 import java.util.List;
