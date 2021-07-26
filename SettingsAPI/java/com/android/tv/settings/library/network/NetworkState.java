@@ -31,9 +31,10 @@ import android.provider.Settings;
 
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
-import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
+import com.android.tv.settings.library.data.PreferenceControllerState;
+import com.android.tv.settings.library.util.AbstractPreferenceController;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.ArrayList;
@@ -41,7 +42,8 @@ import java.util.Collection;
 import java.util.List;
 
 /** State to provide data for rendering NetworkFragment. */
-public class NetworkState implements State, AccessPoint.AccessPointListener,
+public class NetworkState extends PreferenceControllerState implements
+        AccessPoint.AccessPointListener,
         ConnectivityListener.WifiNetworkListener, ConnectivityListener.Listener {
     private static final String TAG = "NetworkMainState";
     private static final boolean DEBUG = true;
@@ -50,6 +52,7 @@ public class NetworkState implements State, AccessPoint.AccessPointListener,
     private static final String KEY_WIFI_COLLAPSE = "wifi_collapse";
     private static final String KEY_WIFI_OTHER = "wifi_other";
     private static final String KEY_WIFI_ADD = "wifi_add";
+    private static final String KEY_WIFI_ADD_EASYCONNECT = "wifi_add_easyconnect";
     private static final String KEY_WIFI_ALWAYS_SCAN = "wifi_always_scan";
     private static final String KEY_ETHERNET = "ethernet";
     private static final String KEY_ETHERNET_STATUS = "ethernet_status";
@@ -72,12 +75,13 @@ public class NetworkState implements State, AccessPoint.AccessPointListener,
     private PreferenceCompat mWifiNetworkCategoryPref;
     private PreferenceCompat mDataSaverSlicePref;
     private PreferenceCompat mDataAlertSlicePref;
+    private AbstractPreferenceController mAddNetworkPreferenceController;
+    private AbstractPreferenceController mEasyConnectPreferenceController;
+
     private PreferenceCompatManager mPreferenceCompatManager;
     private NetworkModule mNetworkModule;
     private ConnectivityManager mConnectivityManager;
     private WifiManager mWifiManager;
-    private final Context mContext;
-    private final UIUpdateCallback mUIUpdateCallback;
     private final Handler mHandler = new Handler();
     private long mNoWifiUpdateBeforeMillis;
     private final Runnable mInitialUpdateWifiListRunnable = new Runnable() {
@@ -88,14 +92,9 @@ public class NetworkState implements State, AccessPoint.AccessPointListener,
         }
     };
 
-    public NetworkState(Context context, UIUpdateCallback callback) {
-        mUIUpdateCallback = callback;
-        mContext = context;
-    }
-
-    @Override
-    public void onAttach() {
-        // no-op
+    public NetworkState(Context context,
+            UIUpdateCallback callback) {
+        super(context, callback);
     }
 
     @Override
@@ -117,10 +116,12 @@ public class NetworkState implements State, AccessPoint.AccessPointListener,
         mDataSaverSlicePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_DATA_SAVER_SLICE);
         mDataAlertSlicePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_DATA_ALERT_SLICE);
         updateVisibilityForDataSaver();
+        super.onCreate(extras);
     }
 
     @Override
     public void onStart() {
+        super.onStart();
         mNetworkModule.addState(this);
         mNoWifiUpdateBeforeMillis = SystemClock.elapsedRealtime() + INITIAL_UPDATE_DELAY;
         updateWifiList();
@@ -128,26 +129,15 @@ public class NetworkState implements State, AccessPoint.AccessPointListener,
 
     @Override
     public void onResume() {
+        super.onResume();
         updateConnectivity();
     }
 
     @Override
-    public void onPause() {
-    }
-
-    @Override
     public void onStop() {
+        super.onStop();
         mNetworkModule.getConnectivityListener().stop();
         mNetworkModule.removeState(this);
-    }
-
-    @Override
-    public void onDestroy() {
-    }
-
-    @Override
-    public void onDetach() {
-        // no-op
     }
 
     private void updateVisibilityForDataSaver() {
@@ -235,13 +225,13 @@ public class NetworkState implements State, AccessPoint.AccessPointListener,
                         status ? 1 : 0);
                 break;
             case KEY_ETHERNET_STATUS:
-            case KEY_WIFI_ADD:
             case KEY_ETHERNET_DHCP:
             case KEY_ETHERNET_PROXY:
                 break;
             default:
                 handled = false;
         }
+        handled = super.onPreferenceTreeClick(key, status) | handled;
         if (mUIUpdateCallback != null) {
             mUIUpdateCallback.notifyUpdate(getStateIdentifier(),
                     mPreferenceCompatManager.getOrCreatePrefCompat(key));
@@ -253,12 +243,6 @@ public class NetworkState implements State, AccessPoint.AccessPointListener,
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         // no-op
     }
-
-    @Override
-    public boolean onPreferenceChange(String[] key, Object newValue) {
-        return false;
-    }
-
 
     private void updateConnectivity() {
         List<PreferenceCompat> preferenceCompats = new ArrayList<>();
@@ -346,6 +330,18 @@ public class NetworkState implements State, AccessPoint.AccessPointListener,
     @Override
     public int getStateIdentifier() {
         return ManagerUtil.STATE_NETWORK;
+    }
+
+    @Override
+    protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
+        List<AbstractPreferenceController> controllers = new ArrayList<>();
+        mAddNetworkPreferenceController = new AddWifiPreferenceController(context,
+                mUIUpdateCallback, getStateIdentifier());
+        mEasyConnectPreferenceController = new AddEasyConnectPreferenceController(context,
+                mUIUpdateCallback, getStateIdentifier());
+        controllers.add(mAddNetworkPreferenceController);
+        controllers.add(mEasyConnectPreferenceController);
+        return controllers;
     }
 
     private boolean isCaptivePortal(AccessPoint accessPoint) {
