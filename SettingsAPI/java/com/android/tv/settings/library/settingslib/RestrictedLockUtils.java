@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.library.device.apps;
+package com.android.tv.settings.library.settingslib;
 
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
