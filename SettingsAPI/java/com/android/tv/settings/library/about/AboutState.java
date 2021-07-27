@@ -47,7 +47,8 @@ import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
-import com.android.tv.settings.library.device.apps.RestrictedLockUtils;
+import com.android.tv.settings.library.settingslib.RestrictedLockUtils;
+import com.android.tv.settings.library.settingslib.RestrictedLockUtilsInternal;
 import com.android.tv.settings.library.util.PreferenceCompatUtils;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
