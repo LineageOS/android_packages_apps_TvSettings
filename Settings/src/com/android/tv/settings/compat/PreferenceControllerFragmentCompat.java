@@ -133,8 +133,8 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
                     ((HasKeys) preference).getKeys(),
                     preference instanceof TwoStatePreference
                             && ((TwoStatePreference) preference).isChecked());
-            if (!handled) {
-                return super.onPreferenceTreeClick(preference);
+            if (handled) {
+                return true;
             }
         }
         return super.onPreferenceTreeClick(preference);

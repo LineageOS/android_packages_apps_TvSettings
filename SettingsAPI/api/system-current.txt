@@ -60,11 +60,13 @@ package com.android.tv.settings.library {
     method public byte getVisible();
     method public boolean hasOnPreferenceChangeListener();
     method public void initChildPreferences();
+    method public boolean isDisabledByAdmin();
     method public boolean isRestricted();
     method public void setChecked(byte);
     method public void setChecked(boolean);
     method public void setChildPrefCompats(java.util.List<com.android.tv.settings.library.PreferenceCompat>);
     method public void setContentDescription(String);
+    method public void setDisabledByAdmin(boolean);
     method public void setEnabled(byte);
     method public void setEnabled(boolean);
     method public void setExtras(android.os.Bundle);

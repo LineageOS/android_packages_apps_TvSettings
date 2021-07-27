@@ -38,7 +38,7 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
             UIUpdateCallback callback, int stateIdentifier) {
         super(context, callback, stateIdentifier);
         mAttrUserRestriction = getAttrUserRestriction();
-        mUseAdminDisabledSummary = isUseAdminDisabledSummary();
+        mUseAdminDisabledSummary = useAdminDisabledSummary();
         // If the system has set the user restriction, then we shouldn't add the padlock.
         if (RestrictedLockUtilsInternal.hasBaseUserRestriction(mContext, mAttrUserRestriction,
                 UserHandle.myUserId())) {
@@ -87,6 +87,16 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
                 mPreferenceCompat.setSummary(null);
             }
         }
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+    }
+
+    @Override
+    public boolean handlePreferenceTreeClick(PreferenceCompat prefCompat, boolean status) {
+        if (mDisabledByAdmin) {
+            RestrictedLockUtils.sendShowAdminSupportDetailsIntent(mContext, mEnforcedAdmin);
+            return true;
+        }
+        return false;
     }
 
     public void setEnabled(boolean enabled) {
@@ -103,9 +113,8 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
      *              {@code null}, then this preference will be enabled. Otherwise, it will be
      *              disabled.
      *              Only gray out the preference which is not {@link RestrictedTopLevelPreference}.
-     * @return true if the disabled state was changed.
      */
-    public boolean setDisabledByAdmin(RestrictedLockUtils.EnforcedAdmin admin) {
+    public void setDisabledByAdmin(RestrictedLockUtils.EnforcedAdmin admin) {
         final boolean disabled = (admin != null);
         mEnforcedAdmin = admin;
         boolean changed = false;
@@ -113,15 +122,22 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
             mDisabledByAdmin = disabled;
             changed = true;
         }
-
-        return changed;
+        mPreferenceCompat.setEnabled(!disabled);
+        mPreferenceCompat.setDisabledByAdmin(mDisabledByAdmin);
+        if (changed) {
+            mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+        }
     }
 
     public boolean isDisabledByAdmin() {
         return mDisabledByAdmin;
     }
 
-    public abstract boolean isUseAdminDisabledSummary();
+    public abstract boolean useAdminDisabledSummary();
+
+    public void setUseAdminDisabledSummary(boolean useAdminDisabledSummary) {
+        mUseAdminDisabledSummary = useAdminDisabledSummary;
+    }
 
     public abstract String getAttrUserRestriction();
 

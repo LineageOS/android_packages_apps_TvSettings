@@ -105,11 +105,11 @@ public abstract class PreferenceControllerState implements State {
                 new ArrayList<>(mPreferenceControllers);
         for (AbstractPreferenceController controller : controllers) {
             if (keyEquals(key, controller.getPreferenceKey())) {
-                controller.handlePreferenceTreeClick(
+                return controller.handlePreferenceTreeClick(
                         mPreferenceCompatManager.getOrCreatePrefCompat(key), status);
             }
         }
-        return true;
+        return false;
     }
 
     @Override

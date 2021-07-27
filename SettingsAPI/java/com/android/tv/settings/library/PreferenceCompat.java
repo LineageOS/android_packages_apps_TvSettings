@@ -75,6 +75,9 @@ public class PreferenceCompat {
     // Indicates whether the preference is a restricted preference.
     private boolean mIsRestricted;
 
+    // Indicates whether the preference is disabled by admin.
+    private boolean mIsDisabledByAdmin;
+
     // Next state of the current state, -1 to indicate there is no next state.
     private Integer mNextState;
 
@@ -344,6 +347,18 @@ public class PreferenceCompat {
     @SystemApi
     public void setRestricted(boolean restricted) {
         mIsRestricted = restricted;
+    }
+
+    /** @hide */
+    @SystemApi
+    public boolean isDisabledByAdmin() {
+        return mIsDisabledByAdmin;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setDisabledByAdmin(boolean disabledByAdmin) {
+        mIsDisabledByAdmin = disabledByAdmin;
     }
 
     /** @hide */
