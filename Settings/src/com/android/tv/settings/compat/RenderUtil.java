@@ -159,6 +159,10 @@ public final class RenderUtil {
         if (preference instanceof TwoStatePreference) {
             setChecked((TwoStatePreference) preference, preferenceCompat);
         }
+        if (preference instanceof TsRestrictedPreference) {
+            ((TsRestrictedPreference) preference).setDisabledByAdmin(
+                    preferenceCompat.isDisabledByAdmin());
+        }
         preference.setOrder(order);
     }
 
