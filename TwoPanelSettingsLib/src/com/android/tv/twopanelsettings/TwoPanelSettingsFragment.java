@@ -25,6 +25,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
+import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
 import android.content.ContentProviderClient;
 import android.content.Context;
@@ -103,7 +104,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private static final long PANEL_ANIMATION_ALPHA_MS = 200;
     private static final long PANEL_BACKGROUND_ANIMATION_ALPHA_MS = 500;
     private static final long PANEL_ANIMATION_DELAY_MS = 200;
-    private static final long PREVIEW_PANEL_DEFAULT_DELAY_MS = 0;
+    private static final long PREVIEW_PANEL_DEFAULT_DELAY_MS =
+            ActivityManager.isLowRamDeviceStatic() ? 100 : 0;
+    private static final boolean DEFAULT_CHECK_SCROLL_STATE =
+            ActivityManager.isLowRamDeviceStatic();
     private static final long CHECK_IDLE_STATE_MS = 100;
     private long mPreviewPanelCreationDelay = 0;
     private static final float PREVIEW_PANEL_ALPHA = 0.6f;
@@ -127,7 +131,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         @Override
         public void onReceive(Context context, Intent intent) {
             long delay = intent.getLongExtra(DELAY_MS, PREVIEW_PANEL_DEFAULT_DELAY_MS);
-            boolean checkScrollState = intent.getBooleanExtra(CHECK_SCROLL_STATE, false);
+            boolean checkScrollState = intent.getBooleanExtra(
+                    CHECK_SCROLL_STATE, DEFAULT_CHECK_SCROLL_STATE);
             Log.d(TAG, "New delay for creating preview panel fragment " + delay
                     + " check scroll state " + checkScrollState);
             mPreviewPanelCreationDelay = delay;
@@ -176,7 +181,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 .getBoolean(R.bool.config_check_scroll_state);
         mPreviewPanelCreationDelay = getContext().getResources()
                 .getInteger(R.integer.config_preview_panel_create_delay);
+        updatePreviewPanelCreationDelayForLowRamDevice();
         mAudioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
+    }
+
+    private void updatePreviewPanelCreationDelayForLowRamDevice() {
+        if (ActivityManager.isLowRamDeviceStatic() && mPreviewPanelCreationDelay == 0) {
+            mPreviewPanelCreationDelay = PREVIEW_PANEL_DEFAULT_DELAY_MS;
+        }
     }
 
     @Override
@@ -302,9 +314,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
         mPrefPanelIdx++;
 
-        Fragment fragment = getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
-        addOrRemovePreferenceFocusedListener(fragment, true);
-
+        Fragment fragmentToBeMainPanel = getChildFragmentManager()
+                .findFragmentById(frameResIds[mPrefPanelIdx]);
+        addOrRemovePreferenceFocusedListener(fragmentToBeMainPanel, true);
         final FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(frameResIds[mPrefPanelIdx + 1], initialPreviewFragment,
                 PREVIEW_FRAGMENT_TAG);
@@ -377,6 +389,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         if (DEBUG) {
             Log.d(TAG, "startPreferenceFragment");
         }
+        addOrRemovePreferenceFocusedListener(fragment, true);
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.add(frameResIds[mPrefPanelIdx], fragment, PREFERENCE_FRAGMENT_TAG);
         transaction.commitNow();
@@ -614,6 +627,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         if (DEBUG) {
             Log.d(TAG, "Starting immersive fragment.");
         }
+        addOrRemovePreferenceFocusedListener(fragment, true);
         final FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         Fragment target = getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
         fragment.setTargetFragment(target, 0);
@@ -807,9 +821,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
 
         mIsNavigatingBack = true;
-        Fragment preferenceFragment =
-                getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
-        addOrRemovePreferenceFocusedListener(preferenceFragment, false);
         getChildFragmentManager().popBackStack();
 
         mPrefPanelIdx--;
