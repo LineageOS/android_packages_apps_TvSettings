@@ -17,6 +17,7 @@
 package com.android.tv.settings.library.network;
 
 import android.content.Context;
+import android.os.UserManager;
 
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
@@ -24,7 +25,6 @@ import com.android.tv.settings.library.util.RestrictedPreferenceController;
 /** Preference controller for add wifi preference in NetworkState. */
 public class AddWifiPreferenceController extends RestrictedPreferenceController {
     private static final String KEY_ADD = "wifi_add";
-    private static final String USER_RESTRICTION = "no_config_wifi";
 
     public AddWifiPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier) {
@@ -38,7 +38,7 @@ public class AddWifiPreferenceController extends RestrictedPreferenceController 
 
     @Override
     public String getAttrUserRestriction() {
-        return USER_RESTRICTION;
+        return UserManager.DISALLOW_CONFIG_WIFI;
     }
 
     @Override

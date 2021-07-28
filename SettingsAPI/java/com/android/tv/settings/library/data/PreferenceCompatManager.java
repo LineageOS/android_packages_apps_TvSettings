@@ -44,7 +44,12 @@ public class PreferenceCompatManager {
         return mPrefCompats.get(compoundKey);
     }
 
-    private static String getKey(String[] key) {
+    public PreferenceCompat getPrefCompat(String[] key) {
+        String compoundKey = getKey(key);
+        return mPrefCompats.get(compoundKey);
+    }
+
+    public static String getKey(String[] key) {
         return Stream.of(key).collect(Collectors.joining(" "));
     }
 }
