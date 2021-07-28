@@ -42,6 +42,7 @@ import com.android.settingslib.RestrictedPreference;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.library.network.WifiHelper;
 
 import java.util.List;
 
@@ -115,7 +116,7 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         mIpAddressPref = findPreference(KEY_IP_ADDRESS);
         mMacAddressPref = findPreference(KEY_MAC_ADDRESS);
         mSignalStrengthPref = findPreference(KEY_SIGNAL_STRENGTH);
-        mRandomMacPref = (ListPreference) findPreference(KEY_RANDOM_MAC);
+        mRandomMacPref = findPreference(KEY_RANDOM_MAC);
         mProxySettingsPref = findPreference(KEY_PROXY_SETTINGS);
         mIpSettingsPref = findPreference(KEY_IP_SETTINGS);
         mForgetNetworkPref = findPreference(KEY_FORGET_NETWORK);
@@ -179,7 +180,7 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
 
             IpAssignment ipAssignment = wifiConfiguration.getIpConfiguration().getIpAssignment();
             mIpSettingsPref.setSummary(ipAssignment == IpAssignment.STATIC
-                            ? R.string.wifi_action_static : R.string.wifi_action_dhcp);
+                    ? R.string.wifi_action_static : R.string.wifi_action_dhcp);
             mIpSettingsPref.setIntent(EditIpSettingsActivity.createIntent(getContext(), networkId));
 
             mForgetNetworkPref.setFragment(ForgetNetworkConfirmFragment.class.getName());
@@ -205,7 +206,7 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
                     return false;
                 });
 
-        boolean canModifyNetwork = !WifiConfigHelper.isNetworkLockedDown(
+        boolean canModifyNetwork = !WifiHelper.isNetworkLockedDown(
                 getContext(), wifiConfiguration);
         if (canModifyNetwork) {
             mProxySettingsPref.setDisabledByAdmin(null);
