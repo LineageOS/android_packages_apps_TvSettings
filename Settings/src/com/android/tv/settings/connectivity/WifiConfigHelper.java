@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,19 +16,12 @@
 
 package com.android.tv.settings.connectivity;
 
-import android.app.admin.DevicePolicyManager;
-import android.content.ComponentName;
-import android.content.ContentResolver;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiConfiguration.AuthAlgorithm;
 import android.net.wifi.WifiConfiguration.KeyMgmt;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.os.UserHandle;
-import android.os.UserManager;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -143,7 +136,7 @@ public final class WifiConfigHelper {
 
     /**
      * Get {@link WifiConfiguration} based upon the {@link WifiManager} and networkId.
-     * @param wifiManager
+     *
      * @param networkId the id of the network.
      * @return the {@link WifiConfiguration} of the specified network.
      */
@@ -237,76 +230,5 @@ public final class WifiConfigHelper {
         }
 
         return null;
-    }
-
-    /**
-     * @param context Context of caller
-     * @param config  The WiFi config.
-     * @return true if Settings cannot modify the config due to lockDown.
-     */
-    public static boolean isNetworkLockedDown(Context context, WifiConfiguration config) {
-        if (config == null) {
-            return false;
-        }
-
-        final DevicePolicyManager dpm = context.getSystemService(DevicePolicyManager.class);
-        final PackageManager pm = context.getPackageManager();
-        final UserManager um = context.getSystemService(UserManager.class);
-
-        // Check if device has DPM capability. If it has and dpm is still null, then we
-        // treat this case with suspicion and bail out.
-        if (pm.hasSystemFeature(PackageManager.FEATURE_DEVICE_ADMIN) && dpm == null) {
-            return true;
-        }
-
-        boolean isConfigEligibleForLockdown = false;
-        if (dpm != null) {
-            final ComponentName deviceOwner = dpm.getDeviceOwnerComponentOnAnyUser();
-            if (deviceOwner != null) {
-                final int deviceOwnerUserId = dpm.getDeviceOwnerUserId();
-                try {
-                    final int deviceOwnerUid = pm.getPackageUidAsUser(deviceOwner.getPackageName(),
-                            deviceOwnerUserId);
-                    isConfigEligibleForLockdown = deviceOwnerUid == config.creatorUid;
-                } catch (PackageManager.NameNotFoundException e) {
-                    // don't care
-                }
-            } else if (dpm.isOrganizationOwnedDeviceWithManagedProfile()) {
-                int profileOwnerUserId = getManagedProfileId(um, UserHandle.myUserId());
-                final ComponentName profileOwner = dpm.getProfileOwnerAsUser(profileOwnerUserId);
-                if (profileOwner != null) {
-                    try {
-                        final int profileOwnerUid = pm.getPackageUidAsUser(
-                                profileOwner.getPackageName(), profileOwnerUserId);
-                        isConfigEligibleForLockdown = profileOwnerUid == config.creatorUid;
-                    } catch (PackageManager.NameNotFoundException e) {
-                        // don't care
-                    }
-                }
-            }
-        }
-        if (!isConfigEligibleForLockdown) {
-            return false;
-        }
-
-        final ContentResolver resolver = context.getContentResolver();
-        final boolean isLockdownFeatureEnabled = Settings.Global.getInt(resolver,
-                Settings.Global.WIFI_DEVICE_OWNER_CONFIGS_LOCKDOWN, 0) != 0;
-        return isLockdownFeatureEnabled;
-    }
-
-    /**
-     * Retrieves the id for the given user's  profile.
-     *
-     * @return the profile id or UserHandle.USER_NULL if there is none.
-     */
-    private static int getManagedProfileId(UserManager um, int parentUserId) {
-        final int[] profileIds = um.getProfileIdsWithDisabled(parentUserId);
-        for (int profileId : profileIds) {
-            if (profileId != parentUserId && um.isManagedProfile(profileId)) {
-                return profileId;
-            }
-        }
-        return UserHandle.USER_NULL;
     }
 }
