@@ -129,6 +129,7 @@ public final class RenderUtil {
                     pref.setValue(preferenceCompat.getValue());
 
                 }
+                break;
             default:
                 // no-op
         }

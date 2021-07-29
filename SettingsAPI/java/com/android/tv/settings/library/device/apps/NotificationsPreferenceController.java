@@ -28,9 +28,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
-import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.LibUtils;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
@@ -39,7 +37,6 @@ public class NotificationsPreferenceController extends AppActionPreferenceContro
     private static final String TAG = "NotificationsPreference";
     private static final String KEY_NOTIFICATIONS = "notifications";
     private final INotificationManager mNotificationManager;
-    private PreferenceCompat mNotificationsPreference;
 
     public NotificationsPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
@@ -55,29 +52,33 @@ public class NotificationsPreferenceController extends AppActionPreferenceContro
      */
     public void setEntry(@NonNull ApplicationsState.AppEntry entry) {
         mAppEntry = entry;
-        refresh();
+        updateState(mPreferenceCompat);
     }
 
     @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        mNotificationsPreference = screen.getOrCreatePrefCompat(getPreferenceKey());
-        super.displayPreference(screen);
-    }
-
-    @Override
-    void refresh() {
-        mNotificationsPreference.setTitle(ResourcesUtil.getString(mContext,
+    public void refresh() {
+        mPreferenceCompat.setTitle(ResourcesUtil.getString(mContext,
                 "device_apps_app_management_notifications"));
-        mNotificationsPreference.setEnabled(isBlockable(mContext, mAppEntry.info));
+        mPreferenceCompat.setEnabled(isBlockable(mContext, mAppEntry.info));
         try {
-            mNotificationsPreference.setChecked(
+            mPreferenceCompat.setChecked(
                     mNotificationManager.areNotificationsEnabledForPackage(
                             mAppEntry.info.packageName, mAppEntry.info.uid));
         } catch (RemoteException e) {
             Log.d(TAG, "Remote exception while checking notifications for package "
                     + mAppEntry.info.packageName, e);
         }
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mNotificationsPreference);
+        super.refresh();
+    }
+
+    @Override
+    public boolean useAdminDisabledSummary() {
+        return false;
+    }
+
+    @Override
+    public String getAttrUserRestriction() {
+        return null;
     }
 
     @Override

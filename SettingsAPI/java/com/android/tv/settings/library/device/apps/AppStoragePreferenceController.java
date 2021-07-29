@@ -23,9 +23,7 @@ import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.text.TextUtils;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
-import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.List;
@@ -36,8 +34,6 @@ public class AppStoragePreferenceController extends AppActionPreferenceControlle
     private final PackageManager mPackageManager;
     private final StorageManager mStorageManager;
 
-    private PreferenceCompat mAppStoragePreference;
-
     public AppStoragePreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
             ApplicationsState.AppEntry appEntry) {
@@ -47,13 +43,7 @@ public class AppStoragePreferenceController extends AppActionPreferenceControlle
     }
 
     @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        mAppStoragePreference = screen.getOrCreatePrefCompat(getPreferenceKey());
-        super.displayPreference(screen);
-    }
-
-    @Override
-    void refresh() {
+    public void refresh() {
         if (mAppEntry == null) {
             return;
         }
@@ -62,21 +52,31 @@ public class AppStoragePreferenceController extends AppActionPreferenceControlle
         final List<VolumeInfo> candidates =
                 mPackageManager.getPackageCandidateVolumes(applicationInfo);
 
-        mAppStoragePreference.setTitle(ResourcesUtil.getString(mContext,
+        mPreferenceCompat.setTitle(ResourcesUtil.getString(mContext,
                 "device_apps_app_management_storage_used"));
 
         final String volumeDesc = mStorageManager.getBestVolumeDescription(volumeInfo);
         final String size = mAppEntry.sizeStr;
         if (TextUtils.isEmpty(size)) {
-            mAppStoragePreference.setSummary(ResourcesUtil.getString(mContext,
+            mPreferenceCompat.setSummary(ResourcesUtil.getString(mContext,
                     "storage_calculating_size"));
         } else {
-            mAppStoragePreference.setSummary(ResourcesUtil.getString(
+            mPreferenceCompat.setSummary(ResourcesUtil.getString(
                     mContext,
                     "device_apps_app_management_storage_used_desc",
                     mAppEntry.sizeStr, volumeDesc));
         }
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mAppStoragePreference);
+        super.refresh();
+    }
+
+    @Override
+    public boolean useAdminDisabledSummary() {
+        return false;
+    }
+
+    @Override
+    public String getAttrUserRestriction() {
+        return null;
     }
 
     @Override

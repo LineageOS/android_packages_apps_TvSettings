@@ -24,17 +24,18 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.UserHandle;
+import android.os.UserManager;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
+import com.android.tv.settings.library.settingslib.RestrictedLockUtils;
+import com.android.tv.settings.library.settingslib.RestrictedLockUtilsInternal;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller to handle force stop preference. */
 public class ForceStopPreferenceController extends AppActionPreferenceController {
     static final String KEY_FORCE_STOP = "forceStop";
     private static final String ARG_PACKAGE_NAME = "packageName";
-    private PreferenceCompat mForceStopPref;
 
     public ForceStopPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
@@ -43,17 +44,26 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
     }
 
     @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        mForceStopPref = screen.getOrCreatePrefCompat(getPreferenceKey());
-        super.displayPreference(screen);
+    public void displayPreference(PreferenceCompatManager preferenceCompatManager) {
+        super.displayPreference(preferenceCompatManager);
+        UserManager userManager = mContext.getSystemService(UserManager.class);
+        if (userManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL)) {
+            final RestrictedLockUtils.EnforcedAdmin admin =
+                    RestrictedLockUtilsInternal.checkIfRestrictionEnforced(mContext,
+                            UserManager.DISALLOW_APPS_CONTROL, UserHandle.myUserId());
+            if (admin != null) {
+                setDisabledByAdmin(admin);
+            } else {
+                setEnabled(false);
+            }
+        }
     }
-
     @Override
-    void refresh() {
+    public void refresh() {
         if (mAppEntry == null) {
             return;
         }
-        mForceStopPref.setTitle(ResourcesUtil.getString(mContext,
+        mPreferenceCompat.setTitle(ResourcesUtil.getString(mContext,
                 "device_apps_app_management_force_stop"));
         DevicePolicyManager dpm = mContext.getSystemService(DevicePolicyManager.class);
         Intent i = new Intent(INTENT_CONFIRMATION);
@@ -62,15 +72,15 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
         i.putExtra(EXTRA_GUIDANCE_SUBTITLE, ResourcesUtil.getString(
                 mContext, "device_apps_app_management_force_stop_desc"));
         i.putExtra(EXTRA_GUIDANCE_BREADCRUMB, getAppName());
-        mForceStopPref.setIntent(i);
+        mPreferenceCompat.setIntent(i);
 
         if (dpm.packageHasActiveAdmins(mAppEntry.info.packageName)) {
             // User can't force stop device admin.
-            mForceStopPref.setVisible(false);
+            mPreferenceCompat.setVisible(false);
         } else if ((mAppEntry.info.flags & ApplicationInfo.FLAG_STOPPED) == 0) {
             // If the app isn't explicitly stopped, then always show the
             // force stop action.
-            mForceStopPref.setVisible(true);
+            mPreferenceCompat.setVisible(true);
         } else {
             Intent intent = new Intent(Intent.ACTION_QUERY_PACKAGE_RESTART,
                     Uri.fromParts("package", mAppEntry.info.packageName, null));
@@ -81,11 +91,21 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
             mContext.sendOrderedBroadcast(intent, null, new BroadcastReceiver() {
                 @Override
                 public void onReceive(Context context, Intent intent) {
-                    mForceStopPref.setVisible(getResultCode() != Activity.RESULT_CANCELED);
+                    mPreferenceCompat.setVisible(getResultCode() != Activity.RESULT_CANCELED);
                 }
             }, null, Activity.RESULT_CANCELED, null, null);
         }
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mForceStopPref);
+        super.refresh();
+    }
+
+    @Override
+    public boolean useAdminDisabledSummary() {
+        return false;
+    }
+
+    @Override
+    public String getAttrUserRestriction() {
+        return null;
     }
 
     @Override
