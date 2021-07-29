@@ -17,14 +17,20 @@
 package com.android.tv.settings.library.network;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.UserManager;
 
+import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
 /** Preference controller for easy connect preference in NetworkState. */
 public class AddEasyConnectPreferenceController extends RestrictedPreferenceController {
     private static final String KEY_ADD_EASY_CONNECT = "wifi_add_easyconnect";
-    private static final String USER_RESTRICTION = "no_config_wifi";
+    private static final String ACTION_ADD_WIFI_NETWORK =
+            "com.android.settings.wifi.action.ADD_WIFI_NETWORK";
+    private static final String EXTRA_TYPE = "com.android.tv.settings.connectivity.type";
+    private static final String EXTRA_TYPE_EASYCONNECT = "easyconnect";
 
     public AddEasyConnectPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier) {
@@ -37,8 +43,19 @@ public class AddEasyConnectPreferenceController extends RestrictedPreferenceCont
     }
 
     @Override
+    public boolean handlePreferenceTreeClick(PreferenceCompat prefCompat, boolean status) {
+        if (!mDisabledByAdmin) {
+            Intent i = new Intent(ACTION_ADD_WIFI_NETWORK)
+                    .putExtra(EXTRA_TYPE, EXTRA_TYPE_EASYCONNECT);
+            mContext.startActivity(i);
+            return true;
+        }
+        return super.handlePreferenceTreeClick(prefCompat, status);
+    }
+
+    @Override
     public String getAttrUserRestriction() {
-        return USER_RESTRICTION;
+        return UserManager.DISALLOW_CONFIG_WIFI;
     }
 
     @Override

@@ -20,14 +20,14 @@ import static com.android.tv.settings.library.ManagerUtil.INFO_COLLAPSE;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.net.ConnectivityManager;
-import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings;
+import android.util.ArrayMap;
 
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
@@ -35,11 +35,13 @@ import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.data.PreferenceControllerState;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
+import com.android.tv.settings.library.util.LibUtils;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 /** State to provide data for rendering NetworkFragment. */
 public class NetworkState extends PreferenceControllerState implements
@@ -61,8 +63,8 @@ public class NetworkState extends PreferenceControllerState implements
     private static final String KEY_DATA_SAVER_SLICE = "data_saver_slice";
     private static final String KEY_DATA_ALERT_SLICE = "data_alert_slice";
     private static final String KEY_NETWORK_DIAGNOSTICS = "network_diagnostics";
-    private static final String EXTRA_WIFI_SSID = "wifi_ssid";
-    private static final String EXTRA_WIFI_SECURITY_NAME = "wifi_security_name";
+    private static final String NETWORK_DIAGNOSTICS_ACTION =
+            "com.android.tv.settings.network.NETWORK_DIAGNOSTICS";
     private static final int INITIAL_UPDATE_DELAY = 500;
 
     private PreferenceCompat mEnableWifiPref;
@@ -75,15 +77,18 @@ public class NetworkState extends PreferenceControllerState implements
     private PreferenceCompat mWifiNetworkCategoryPref;
     private PreferenceCompat mDataSaverSlicePref;
     private PreferenceCompat mDataAlertSlicePref;
+    private PreferenceCompat mNetworkDiagnosticsPref;
     private AbstractPreferenceController mAddNetworkPreferenceController;
     private AbstractPreferenceController mEasyConnectPreferenceController;
 
     private PreferenceCompatManager mPreferenceCompatManager;
     private NetworkModule mNetworkModule;
     private ConnectivityManager mConnectivityManager;
-    private WifiManager mWifiManager;
     private final Handler mHandler = new Handler();
     private long mNoWifiUpdateBeforeMillis;
+    private final Map<String, AccessPointPreferenceController> mAccessPointPrefControllers =
+            new ArrayMap<>();
+
     private final Runnable mInitialUpdateWifiListRunnable = new Runnable() {
         @Override
         public void run() {
@@ -100,7 +105,6 @@ public class NetworkState extends PreferenceControllerState implements
     @Override
     public void onCreate(Bundle extras) {
         mConnectivityManager = mContext.getSystemService(ConnectivityManager.class);
-        mWifiManager = mContext.getSystemService(WifiManager.class);
         mNetworkModule = NetworkModule.getInstance(mContext);
         mPreferenceCompatManager = new PreferenceCompatManager();
         mEnableWifiPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_ENABLE);
@@ -115,6 +119,16 @@ public class NetworkState extends PreferenceControllerState implements
         mWifiNetworkCategoryPref.setType(PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY);
         mDataSaverSlicePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_DATA_SAVER_SLICE);
         mDataAlertSlicePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_DATA_ALERT_SLICE);
+        mNetworkDiagnosticsPref = mPreferenceCompatManager.getOrCreatePrefCompat(
+                KEY_NETWORK_DIAGNOSTICS);
+        Intent networkDiagnosticsIntent = makeNetworkDiagnosticsIntent();
+        if (networkDiagnosticsIntent != null) {
+            mNetworkDiagnosticsPref.setVisible(true);
+            mNetworkDiagnosticsPref.setIntent(networkDiagnosticsIntent);
+        } else {
+            mNetworkDiagnosticsPref.setVisible(false);
+        }
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mNetworkDiagnosticsPref);
         updateVisibilityForDataSaver();
         super.onCreate(extras);
     }
@@ -171,27 +185,15 @@ public class NetworkState extends PreferenceControllerState implements
         mWifiNetworkCategoryPref.initChildPreferences();
         for (final AccessPoint accessPoint : accessPoints) {
             accessPoint.setListener(this);
-            PreferenceCompat accessPointPref = new PreferenceCompat(
-                    new String[]{KEY_WIFI_LIST, accessPoint.getKey()});
-            accessPointPref.setTitle(accessPoint.getTitle());
-            accessPointPref.setType(PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT);
-            if (accessPoint.isActive()) {
-                accessPointPref.setSummary(ResourcesUtil.getString(mContext, "connected"));
-            }
-            if (accessPoint.isActive() && !isCaptivePortal(accessPoint)) {
-                Bundle extras = new Bundle();
-                WifiDetailsState.prepareArgs(extras, accessPoint);
-                accessPointPref.setExtras(extras);
-                accessPointPref.setNextState(ManagerUtil.STATE_WIFI_DETAILS);
-                accessPointPref.setIntent(null);
-            } else {
-                Intent i = new Intent("com.android.settings.wifi.action.WIFI_CONNECTION_SETTINGS")
-                        .putExtra(EXTRA_WIFI_SSID, accessPoint.getSsidStr())
-                        .putExtra(EXTRA_WIFI_SECURITY_NAME, accessPoint.getSecurity());
-                accessPointPref.setIntent(i);
-            }
-            accessPointPref.addInfo(ManagerUtil.INFO_WIFI_SIGNAL_LEVEL, accessPoint.getLevel());
-            mWifiNetworkCategoryPref.addChildPrefCompat(accessPointPref);
+            // Use preference controller but do not attach to lifecycle methods, manually call
+            // required methods to create preference compat.
+            AccessPointPreferenceController controller = new AccessPointPreferenceController(
+                    mContext, mUIUpdateCallback, getStateIdentifier(), accessPoint);
+            PreferenceCompat accessPointPrefCompat = controller.createRestrictedPrefCompat(
+                    mPreferenceCompatManager);
+            mAccessPointPrefControllers.put(
+                    PreferenceCompatManager.getKey(accessPointPrefCompat.getKey()), controller);
+            mWifiNetworkCategoryPref.addChildPrefCompat(accessPointPrefCompat);
         }
         if (mUIUpdateCallback != null) {
             mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mWifiNetworkCategoryPref);
@@ -201,6 +203,10 @@ public class NetworkState extends PreferenceControllerState implements
     @Override
     public boolean onPreferenceTreeClick(String[] key, boolean status) {
         boolean handled = true;
+        if (mAccessPointPrefControllers.containsKey(PreferenceCompatManager.getKey(key))) {
+            return mAccessPointPrefControllers.get(PreferenceCompatManager.getKey(key))
+                    .performClick(status);
+        }
         switch (key[0]) {
             case KEY_WIFI_ENABLE:
                 mNetworkModule.getConnectivityListener().setWifiEnabled(status);
@@ -344,17 +350,23 @@ public class NetworkState extends PreferenceControllerState implements
         return controllers;
     }
 
-    private boolean isCaptivePortal(AccessPoint accessPoint) {
-        if (accessPoint.getDetailedState() != NetworkInfo.DetailedState.CONNECTED) {
-            return false;
-        }
-        NetworkCapabilities nc = mConnectivityManager.getNetworkCapabilities(
-                mWifiManager.getCurrentNetwork());
-        return nc != null && nc.hasCapability(NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL);
-    }
 
     @Override
     public void onConnectivityChange() {
         updateConnectivity();
+    }
+
+    private Intent makeNetworkDiagnosticsIntent() {
+        Intent intent = new Intent();
+        intent.setAction(NETWORK_DIAGNOSTICS_ACTION);
+
+        ResolveInfo resolveInfo = LibUtils.systemIntentIsHandled(mContext, intent);
+        if (resolveInfo == null || resolveInfo.activityInfo == null) {
+            return null;
+        }
+
+        intent.setPackage(resolveInfo.activityInfo.packageName);
+
+        return intent;
     }
 }

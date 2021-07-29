@@ -28,11 +28,11 @@ import com.android.tv.settings.library.settingslib.RestrictedLockUtilsInternal;
 
 /** Abstract PreferenceController to handle restricted preference businesss logic. */
 public abstract class RestrictedPreferenceController extends AbstractPreferenceController {
-    private boolean mDisabledByAdmin;
+    protected boolean mDisabledByAdmin;
     private String mAttrUserRestriction;
     private RestrictedLockUtils.EnforcedAdmin mEnforcedAdmin;
     private boolean mUseAdminDisabledSummary = false;
-    private PreferenceCompat mPreferenceCompat;
+    protected PreferenceCompat mPreferenceCompat;
 
     public RestrictedPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier) {
@@ -59,6 +59,7 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
             checkRestrictionAndSetDisabled(mAttrUserRestriction, UserHandle.myUserId());
         }
         refresh();
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 
     public void checkRestrictionAndSetDisabled(String userRestriction, int userId) {
@@ -71,6 +72,7 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
     @Override
     public void updateState(PreferenceCompat preferenceCompat) {
         refresh();
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 
     public void refresh() {
@@ -87,7 +89,6 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
                 mPreferenceCompat.setSummary(null);
             }
         }
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 
     @Override
@@ -101,7 +102,10 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
 
     public void setEnabled(boolean enabled) {
         if (enabled && isDisabledByAdmin()) {
-            setDisabledByAdmin(null);
+            boolean changed = setDisabledByAdmin(null);
+            if (changed) {
+                mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+            }
             return;
         }
     }
@@ -113,8 +117,9 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
      *              {@code null}, then this preference will be enabled. Otherwise, it will be
      *              disabled.
      *              Only gray out the preference which is not {@link RestrictedTopLevelPreference}.
+     * @return whether to notify for update.
      */
-    public void setDisabledByAdmin(RestrictedLockUtils.EnforcedAdmin admin) {
+    public boolean setDisabledByAdmin(RestrictedLockUtils.EnforcedAdmin admin) {
         final boolean disabled = (admin != null);
         mEnforcedAdmin = admin;
         boolean changed = false;
@@ -124,9 +129,7 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
         }
         mPreferenceCompat.setEnabled(!disabled);
         mPreferenceCompat.setDisabledByAdmin(mDisabledByAdmin);
-        if (changed) {
-            mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
-        }
+        return changed;
     }
 
     public boolean isDisabledByAdmin() {
