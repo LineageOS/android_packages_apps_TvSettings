@@ -22,10 +22,10 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
 import static com.android.tv.settings.library.ManagerUtil.STATE_EMPTY;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_LIST;
+import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_CATEGORY;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY;
-import static com.android.tv.settings.library.PreferenceCompat.TYPE_RPEFERENCE;
 
 import android.content.Context;
 
@@ -114,7 +114,7 @@ public final class RenderUtil {
                 Integer wifiLevel = getInfoInt(INFO_WIFI_SIGNAL_LEVEL, preferenceCompat);
                 if (wifiLevel != null) {
                     updateAccessPointPreference(
-                            (TsAccessPointPreference) hasKeysPreference,
+                            (Preference) hasKeysPreference,
                             wifiLevel,
                             context);
                 }
@@ -167,6 +167,9 @@ public final class RenderUtil {
     }
 
     static HasKeys createPreference(Context context, PreferenceCompat preferenceCompat) {
+        if (preferenceCompat.isRestricted()) {
+            return new TsRestrictedPreference(preferenceCompat.getKey(), context);
+        }
         switch (preferenceCompat.getType()) {
             case TYPE_PREFERENCE_ACCESS_POINT:
                 TsAccessPointPreference accessPointPreference =
@@ -178,7 +181,7 @@ public final class RenderUtil {
                 return new TsCollapsibleCategory(context, preferenceCompat.getKey());
             case TYPE_LIST:
                 return new TsListPreference(context, preferenceCompat.getKey());
-            case TYPE_RPEFERENCE:
+            case TYPE_PREFERENCE:
             default:
                 return new TsPreference(context, preferenceCompat.getKey());
         }
@@ -227,8 +230,7 @@ public final class RenderUtil {
         }
     }
 
-    static void updateAccessPointPreference(
-            TsAccessPointPreference preference, int level, Context context) {
+    static void updateAccessPointPreference(Preference preference, int level, Context context) {
         switch (level) {
             case 4:
                 preference.setIcon(R.drawable.ic_wifi_signal_4_white);

@@ -199,7 +199,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/Theme.SettingsConnectivity" />
+            android:theme="@style/Theme.SettingsConnectivity">
+            <intent-filter>
+                <action android:name="com.android.settings.wifi.action.ADD_WIFI_NETWORK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
         <!-- AccountSliceActivity is just here to facilitate the activity-alias below to eliminate
              the risk of repackaging. -->

@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.pm.Signature;
 import android.content.pm.UserInfo;
 import android.content.res.ColorStateList;
@@ -451,5 +452,29 @@ public class LibUtils {
         VcnTransportInfo vcnTransportInfo =
                 (VcnTransportInfo) networkCapabilities.getTransportInfo();
         return vcnTransportInfo.getWifiInfo();
+    }
+
+    /**
+     * Returns the ResolveInfo for the system activity that matches given intent filter or null if
+     * no such activity exists.
+     *
+     * @param context Context of the caller
+     * @param intent  The intent matching the desired system app
+     * @return ResolveInfo of the matching activity or null if no match exists
+     */
+    public static ResolveInfo systemIntentIsHandled(Context context, Intent intent) {
+        if (intent == null) {
+            return null;
+        }
+
+        final PackageManager pm = context.getPackageManager();
+        for (ResolveInfo info : pm.queryIntentActivities(intent, 0)) {
+            if (info.activityInfo != null
+                    && (info.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM)
+                    == ApplicationInfo.FLAG_SYSTEM) {
+                return info;
+            }
+        }
+        return null;
     }
 }

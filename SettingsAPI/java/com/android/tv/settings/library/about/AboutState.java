@@ -22,8 +22,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
@@ -49,6 +47,7 @@ import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.settingslib.RestrictedLockUtils;
 import com.android.tv.settings.library.settingslib.RestrictedLockUtilsInternal;
+import com.android.tv.settings.library.util.LibUtils;
 import com.android.tv.settings.library.util.PreferenceCompatUtils;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
@@ -220,7 +219,7 @@ public class AboutState implements State {
         if (mUm.isAdminUser()) {
             final Intent systemUpdateIntent = new Intent(Settings.ACTION_SYSTEM_UPDATE_SETTINGS);
             final ResolveInfo info =
-                    systemIntentIsHandled(context, systemUpdateIntent);
+                    LibUtils.systemIntentIsHandled(context, systemUpdateIntent);
             if (info == null) {
                 removePreference(updateSettingsPref);
             } else {
@@ -476,7 +475,7 @@ public class AboutState implements State {
     private void updateTutorials() {
         mMDeviceTutorialsPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_TUTORIALS);
         if (mMDeviceTutorialsPref != null) {
-            final ResolveInfo info = systemIntentIsHandled(context,
+            final ResolveInfo info = LibUtils.systemIntentIsHandled(context,
                     mMDeviceTutorialsPref.getIntent());
             mMDeviceTutorialsPref.setVisible(info != null);
             if (info != null) {
@@ -484,29 +483,5 @@ public class AboutState implements State {
                         info.loadLabel(context.getPackageManager()).toString());
             }
         }
-    }
-
-    /**
-     * Returns the ResolveInfo for the system activity that matches given intent filter or null if
-     * no such activity exists.
-     *
-     * @param context Context of the caller
-     * @param intent  The intent matching the desired system app
-     * @return ResolveInfo of the matching activity or null if no match exists
-     */
-    public static ResolveInfo systemIntentIsHandled(Context context, Intent intent) {
-        if (intent == null) {
-            return null;
-        }
-
-        final PackageManager pm = context.getPackageManager();
-        for (ResolveInfo info : pm.queryIntentActivities(intent, 0)) {
-            if (info.activityInfo != null
-                    && (info.activityInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM)
-                    == ApplicationInfo.FLAG_SYSTEM) {
-                return info;
-            }
-        }
-        return null;
     }
 }

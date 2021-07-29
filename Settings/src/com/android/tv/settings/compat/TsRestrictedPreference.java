@@ -52,6 +52,11 @@ public class TsRestrictedPreference extends TwoTargetPreference implements HasKe
         this(context, null);
     }
 
+    public TsRestrictedPreference(String[] key, Context context) {
+        this(context, null);
+        setKeys(key);
+    }
+
     @Override
     protected int getSecondTargetResId() {
         return R.layout.restricted_icon;

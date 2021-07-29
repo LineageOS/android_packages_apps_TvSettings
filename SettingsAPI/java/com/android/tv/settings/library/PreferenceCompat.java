@@ -32,7 +32,7 @@ import java.util.stream.IntStream;
  */
 @SystemApi
 public class PreferenceCompat {
-    public static final byte TYPE_RPEFERENCE = 0;
+    public static final byte TYPE_PREFERENCE = 0;
     public static final byte TYPE_PREFERENCE_CATEGORY = 1;
     public static final byte TYPE_PREFERENCE_ACCESS_POINT = 2;
     public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3;
