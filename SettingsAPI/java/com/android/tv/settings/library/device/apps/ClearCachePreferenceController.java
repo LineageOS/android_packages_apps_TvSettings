@@ -17,18 +17,16 @@
 package com.android.tv.settings.library.device.apps;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.format.Formatter;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
-import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller to handle clear cache preference. */
 public class ClearCachePreferenceController extends AppActionPreferenceController {
     private static final String KEY_CLEAR_CACHE = "clearCache";
     private boolean mClearingCache;
-    private PreferenceCompat mClearDataPreference;
 
     public ClearCachePreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
@@ -36,30 +34,41 @@ public class ClearCachePreferenceController extends AppActionPreferenceControlle
         super(context, callback, stateIdentifier, appEntry);
     }
 
-    @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        mClearDataPreference = screen.getOrCreatePrefCompat(getPreferenceKey());
-        super.displayPreference(screen);
-    }
-
     public void setClearingCache(boolean clearingCache) {
         mClearingCache = clearingCache;
         refresh();
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 
     @Override
-    void refresh() {
+    public void refresh() {
         if (mAppEntry == null) {
             return;
         }
-        mClearDataPreference.setTitle(ResourcesUtil.getString(
+        mPreferenceCompat.setTitle(ResourcesUtil.getString(
                 mContext, "device_apps_app_management_clear_cache"));
-        mClearDataPreference.setSummary(mClearingCache
+        mPreferenceCompat.setSummary(mClearingCache
                 ? ResourcesUtil.getString(mContext, "computing_size")
                 : Formatter.formatFileSize(mContext,
                         mAppEntry.cacheSize + mAppEntry.externalCacheSize));
-        mClearDataPreference.setEnabled(!mClearingCache && mAppEntry.cacheSize > 0);
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mClearDataPreference);
+        mPreferenceCompat.setEnabled(!mClearingCache && mAppEntry.cacheSize > 0);
+        Intent i = new Intent(INTENT_CONFIRMATION);
+        i.putExtra(EXTRA_GUIDANCE_TITLE, ResourcesUtil.getString(
+                mContext, "device_apps_app_management_clear_cache"));
+        i.putExtra(EXTRA_GUIDANCE_BREADCRUMB, getAppName());
+        mPreferenceCompat.setIntent(i);
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+        super.refresh();
+    }
+
+    @Override
+    public boolean useAdminDisabledSummary() {
+        return false;
+    }
+
+    @Override
+    public String getAttrUserRestriction() {
+        return null;
     }
 
     @Override

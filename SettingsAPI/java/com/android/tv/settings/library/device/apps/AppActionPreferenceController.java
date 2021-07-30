@@ -20,15 +20,13 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
-import com.android.tv.settings.library.data.PreferenceCompatManager;
-import com.android.tv.settings.library.util.AbstractPreferenceController;
+import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
 /**
  * Base controller class to handle app action preference.
  */
-public abstract class AppActionPreferenceController extends AbstractPreferenceController {
+public abstract class AppActionPreferenceController extends RestrictedPreferenceController {
     ApplicationsState.AppEntry mAppEntry;
     static final String INTENT_CONFIRMATION = "android.settings.ui.CONFIRM";
     static final String ARG_PACKAGE_NAME = "packageName";
@@ -58,16 +56,6 @@ public abstract class AppActionPreferenceController extends AbstractPreferenceCo
         return true;
     }
 
-    @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        refresh();
-    }
-
-    @Override
-    public void updateState(PreferenceCompat preferenceCompat) {
-        refresh();
-    }
-
     protected String getAppName() {
         if (mAppEntry == null) {
             return null;
@@ -75,6 +63,4 @@ public abstract class AppActionPreferenceController extends AbstractPreferenceCo
         mAppEntry.ensureLabel(mContext);
         return mAppEntry.label;
     }
-
-    abstract void refresh();
 }
