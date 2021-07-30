@@ -20,9 +20,7 @@ import static android.content.pm.ApplicationInfo.FLAG_ALLOW_CLEAR_USER_DATA;
 import static android.content.pm.ApplicationInfo.FLAG_SYSTEM;
 
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
-import static com.android.tv.settings.library.device.apps.ClearDataPreferenceController.KEY_CLEAR_DATA;
 import static com.android.tv.settings.library.device.apps.EnableDisablePreferenceController.KEY_ENABLE_DISABLE;
-import static com.android.tv.settings.library.device.apps.UninstallPreferenceController.KEY_UNINSTALL;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -32,8 +30,12 @@ import android.content.Intent;
 import android.content.pm.IPackageDataObserver;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.hardware.usb.IUsbManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
+import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.util.Log;
 import android.widget.Toast;
@@ -61,10 +63,12 @@ public class AppManagementState extends PreferenceControllerState {
     private static final String KEY_PERMISSIONS = "permissions";
 
     // Result code identifiers
-    private static final int REQUEST_UNINSTALL = 1;
-    private static final int REQUEST_MANAGE_SPACE = 2;
-    private static final int REQUEST_UNINSTALL_UPDATES = 3;
-    private static final int REQUEST_CLEAR_DATA = 4;
+    static final int REQUEST_UNINSTALL = 1;
+    static final int REQUEST_MANAGE_SPACE = 2;
+    static final int REQUEST_UNINSTALL_UPDATES = 3;
+    static final int REQUEST_CLEAR_DATA = 4;
+    static final int REQUEST_CLEAR_CACHE = 5;
+    static final int REQUEST_CLEAR_DEFAULTS = 6;
 
     private PackageManager mPackageManager;
     private String mPackageName;
@@ -81,7 +85,7 @@ public class AppManagementState extends PreferenceControllerState {
     private ClearCachePreferenceController mClearCachePreferenceController;
     private ClearDefaultsPreferenceController mClearDefaultsPreferenceController;
     private NotificationsPreferenceController mNotificationsPreferenceController;
-    private Handler mHandler = new Handler();
+    private final Handler mHandler = new Handler();
 
     public AppManagementState(Context context,
             UIUpdateCallback callback) {
@@ -160,38 +164,16 @@ public class AppManagementState extends PreferenceControllerState {
             // disable the preference to prevent double clicking
             mEnableDisablePreferenceController.setEnabled(false);
         }
-        PreferenceCompat preference = mPreferenceCompatManager.getOrCreatePrefCompat(key);
-        final Intent intent = preference.getIntent();
-        if (intent != null) {
-            try {
-                switch (key[0]) {
-                    case KEY_UNINSTALL:
-                        ((Activity) mContext).startActivityForResult(intent,
-                                mUninstallPreferenceController.canUninstall()
-                                        ? ManagerUtil.calculateCompoundCode(
-                                                getStateIdentifier(), REQUEST_UNINSTALL)
-                                        : ManagerUtil.calculateCompoundCode(
-                                                getStateIdentifier(), REQUEST_UNINSTALL_UPDATES));
-                        break;
-                    case KEY_CLEAR_DATA:
-                        ((Activity) mContext).startActivityForResult(intent,
-                                ManagerUtil.calculateCompoundCode(
-                                        getStateIdentifier(), REQUEST_CLEAR_DATA));
-                        break;
-                    default:
-                        mContext.startActivity(intent);
-                }
-            } catch (ActivityNotFoundException e) {
-                Log.e(TAG, "Could not find activity to launch", e);
-                Toast.makeText(mContext,
-                        ResourcesUtil.getString(
-                                mContext, "device_apps_app_management_not_available"),
-                        Toast.LENGTH_SHORT).show();
-            }
-        } else {
+        try {
             return super.onPreferenceTreeClick(key, status);
+        } catch (ActivityNotFoundException e) {
+            Log.e(TAG, "Could not find activity to launch", e);
+            Toast.makeText(mContext,
+                    ResourcesUtil.getString(
+                            mContext, "device_apps_app_management_not_available"),
+                    Toast.LENGTH_SHORT).show();
         }
-        return true;
+        return false;
     }
 
     @Override
@@ -224,8 +206,34 @@ public class AppManagementState extends PreferenceControllerState {
                 mUninstallPreferenceController.refresh();
                 break;
             case REQUEST_CLEAR_DATA:
-                clearData();
+                if (resultCode == Activity.RESULT_OK) {
+                    clearData();
+                }
                 break;
+            case REQUEST_CLEAR_CACHE:
+                if (resultCode == Activity.RESULT_OK) {
+                    clearCache();
+                }
+                break;
+            case REQUEST_CLEAR_DEFAULTS:
+                if (resultCode == Activity.RESULT_OK) {
+                    clearDefaults();
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void clearDefaults() {
+        PackageManager packageManager = mContext.getPackageManager();
+        packageManager.clearPackagePreferredActivities(mPackageName);
+        try {
+            final IBinder usbBinder = ServiceManager.getService(Context.USB_SERVICE);
+            IUsbManager.Stub.asInterface(usbBinder)
+                    .clearDefaults(mPackageName, UserHandle.myUserId());
+        } catch (RemoteException e) {
+            // Ignore
         }
     }
 
@@ -249,7 +257,7 @@ public class AppManagementState extends PreferenceControllerState {
             // Disabling clear cache preference while clearing data is in progress. See b/77815256
             // for details.
             mClearCachePreferenceController.setClearingCache(true);
-            ActivityManager am = (ActivityManager) mContext.getSystemService(ActivityManager.class);
+            ActivityManager am = mContext.getSystemService(ActivityManager.class);
             boolean success = am.clearApplicationUserData(
                     mEntry.info.packageName, new IPackageDataObserver.Stub() {
                         public void onRemoveCompleted(
@@ -259,11 +267,7 @@ public class AppManagementState extends PreferenceControllerState {
                                 public void run() {
                                     mClearDataPreferenceController.setClearingData(false);
                                     mClearCachePreferenceController.setClearingCache(false);
-                                    if (succeeded) {
-                                        dataCleared(true);
-                                    } else {
-                                        dataCleared(false);
-                                    }
+                                    dataCleared(succeeded);
                                 }
                             });
                         }
@@ -278,11 +282,11 @@ public class AppManagementState extends PreferenceControllerState {
 
     private void dataCleared(boolean succeeded) {
         if (succeeded) {
-            final int userId =  UserHandle.getUserId(mEntry.info.uid);
+            final int userId = UserHandle.getUserId(mEntry.info.uid);
             mApplicationsState.requestSize(mPackageName, userId);
         } else {
             Log.w(TAG, "Failed to clear data!");
-            mClearDataPreferenceController.refresh();
+            mClearDataPreferenceController.update();
         }
     }
 
@@ -302,16 +306,16 @@ public class AppManagementState extends PreferenceControllerState {
                         });
                     }
                 });
-        mClearCachePreferenceController.refresh();
+        mClearCachePreferenceController.update();
     }
 
     private void cacheCleared(boolean succeeded) {
         if (succeeded) {
-            final int userId =  UserHandle.getUserId(mEntry.info.uid);
+            final int userId = UserHandle.getUserId(mEntry.info.uid);
             mApplicationsState.requestSize(mPackageName, userId);
         } else {
             Log.w(TAG, "Failed to clear cache!");
-            mClearCachePreferenceController.refresh();
+            mClearCachePreferenceController.update();
         }
     }
 
@@ -421,7 +425,7 @@ public class AppManagementState extends PreferenceControllerState {
         @Override
         public void onRunningStateChanged(boolean running) {
             if (mForceStopPreferenceController != null) {
-                mForceStopPreferenceController.refresh();
+                mForceStopPreferenceController.update();
             }
         }
 

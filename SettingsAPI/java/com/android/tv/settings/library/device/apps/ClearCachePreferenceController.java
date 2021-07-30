@@ -16,10 +16,15 @@
 
 package com.android.tv.settings.library.device.apps;
 
+import static com.android.tv.settings.library.device.apps.AppManagementState.REQUEST_CLEAR_CACHE;
+
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.text.format.Formatter;
 
+import com.android.tv.settings.library.ManagerUtil;
+import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
@@ -36,8 +41,7 @@ public class ClearCachePreferenceController extends AppActionPreferenceControlle
 
     public void setClearingCache(boolean clearingCache) {
         mClearingCache = clearingCache;
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+        update();
     }
 
     @Override
@@ -52,13 +56,23 @@ public class ClearCachePreferenceController extends AppActionPreferenceControlle
                 : Formatter.formatFileSize(mContext,
                         mAppEntry.cacheSize + mAppEntry.externalCacheSize));
         mPreferenceCompat.setEnabled(!mClearingCache && mAppEntry.cacheSize > 0);
-        Intent i = new Intent(INTENT_CONFIRMATION);
-        i.putExtra(EXTRA_GUIDANCE_TITLE, ResourcesUtil.getString(
-                mContext, "device_apps_app_management_clear_cache"));
-        i.putExtra(EXTRA_GUIDANCE_BREADCRUMB, getAppName());
-        mPreferenceCompat.setIntent(i);
         mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
         super.refresh();
+    }
+
+    @Override
+    public boolean handlePreferenceTreeClick(PreferenceCompat preferenceCompat, boolean status) {
+        if (!mDisabledByAdmin) {
+            Intent i = new Intent(INTENT_CONFIRMATION);
+            i.putExtra(EXTRA_GUIDANCE_TITLE, ResourcesUtil.getString(
+                    mContext, "device_apps_app_management_clear_cache"));
+            i.putExtra(EXTRA_GUIDANCE_BREADCRUMB, getAppName());
+            ((Activity) mContext).startActivityForResult(i,
+                    ManagerUtil.calculateCompoundCode(
+                            mStateIdentifier, REQUEST_CLEAR_CACHE));
+            return true;
+        }
+        return super.handlePreferenceTreeClick(preferenceCompat, status);
     }
 
     @Override
