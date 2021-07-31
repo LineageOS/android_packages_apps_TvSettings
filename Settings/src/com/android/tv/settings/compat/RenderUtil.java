@@ -48,8 +48,8 @@ public final class RenderUtil {
     }
 
     public static void updatePreferenceGroup(
-            PreferenceGroup preferenceGroup, List<PreferenceCompat> newPrefParcelables) {
-        if (preferenceGroup == null || newPrefParcelables == null) {
+            PreferenceGroup preferenceGroup, List<PreferenceCompat> newPrefCompats, int order) {
+        if (preferenceGroup == null || newPrefCompats == null) {
             return;
         }
         Context context = preferenceGroup.getContext();
@@ -60,21 +60,27 @@ public final class RenderUtil {
                 return;
             }
             HasKeys pref = (HasKeys) preferenceGroup.getPreference(index);
-            boolean match =
-                    newPrefParcelables.stream().anyMatch(
-                            prefParcelable -> keyMatch(pref, prefParcelable));
-            if (!match) {
-                preferenceGroup.removePreference((Preference) pref);
-            } else {
+            // Do not remove the preference if order is provided and current preference is not in
+            // the group with the provided order.
+            if (order != -1 && ((Preference) pref).getOrder() != order) {
                 index++;
+            } else {
+                boolean match =
+                        newPrefCompats.stream().anyMatch(
+                                prefParcelable -> keyMatch(pref, prefParcelable));
+                if (!match) {
+                    preferenceGroup.removePreference((Preference) pref);
+                } else {
+                    index++;
+                }
             }
         }
 
         // Add or update preferences following the order in the new list.
-        IntStream.range(0, newPrefParcelables.size())
+        IntStream.range(0, newPrefCompats.size())
                 .forEach(
                         i -> {
-                            PreferenceCompat preferenceCompat = newPrefParcelables.get(i);
+                            PreferenceCompat preferenceCompat = newPrefCompats.get(i);
                             OptionalInt matchedIndex =
                                     IntStream.range(0, getPreferenceCount(preferenceGroup))
                                             .filter(
@@ -90,8 +96,14 @@ public final class RenderUtil {
                                 newPref = createPreference(context, preferenceCompat);
                                 preferenceGroup.addPreference((Preference) newPref);
                             }
-                            updatePreference(context, newPref, preferenceCompat, i);
+                            updatePreference(context, newPref, preferenceCompat,
+                                    order != -1 ? order : i);
                         });
+    }
+
+    public static void updatePreferenceGroup(
+            PreferenceGroup preferenceGroup, List<PreferenceCompat> newPrefCompats) {
+        updatePreferenceGroup(preferenceGroup, newPrefCompats, -1);
     }
 
     private static int getPreferenceCount(PreferenceGroup preferenceGroup) {
@@ -127,7 +139,6 @@ public final class RenderUtil {
                 if (hasKeysPreference instanceof TsListPreference) {
                     TsListPreference pref = (TsListPreference) hasKeysPreference;
                     pref.setValue(preferenceCompat.getValue());
-
                 }
                 break;
             default:
@@ -164,12 +175,21 @@ public final class RenderUtil {
             ((TsRestrictedPreference) preference).setDisabledByAdmin(
                     preferenceCompat.isDisabledByAdmin());
         }
+        if (preference instanceof TsListPreference) {
+            ((TsListPreference) preference).setEntries(preferenceCompat.getEntries());
+            ((TsListPreference) preference).setEntryValues(preferenceCompat.getEntryValues());
+            ((TsListPreference) preference).setValueIndex(preferenceCompat.getValueIndex());
+        }
         preference.setOrder(order);
     }
 
-    static HasKeys createPreference(Context context, PreferenceCompat preferenceCompat) {
+    public static HasKeys createPreference(Context context, PreferenceCompat preferenceCompat) {
         if (preferenceCompat.isRestricted()) {
             return new TsRestrictedPreference(preferenceCompat.getKey(), context);
+        }
+        if (preferenceCompat.hasSlice()) {
+            return new TsSlicePreference(
+                    context, preferenceCompat.getKey(), preferenceCompat.getSliceUri());
         }
         switch (preferenceCompat.getType()) {
             case TYPE_PREFERENCE_ACCESS_POINT:
@@ -190,7 +210,7 @@ public final class RenderUtil {
 
     public static Boolean getInfoBoolean(String key, PreferenceCompat preferenceCompat) {
         Object value = preferenceCompat.getInfo(key);
-        return (value instanceof  Boolean) ? (Boolean) value : null;
+        return (value instanceof Boolean) ? (Boolean) value : null;
     }
 
     public static Integer getInfoInt(String key, PreferenceCompat preferenceCompat) {

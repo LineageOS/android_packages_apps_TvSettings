@@ -28,7 +28,7 @@ import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.library.overlay.FlavorUtils;
-import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.settings.library.util.SliceUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

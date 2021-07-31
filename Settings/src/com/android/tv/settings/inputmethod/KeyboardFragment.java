@@ -35,12 +35,13 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
-import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.autofill.AutofillHelper;
 import com.android.tv.settings.library.overlay.FlavorUtils;
-import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.settings.library.settingslib.AutofillHelper;
+import com.android.tv.settings.library.settingslib.DefaultAppInfo;
+import com.android.tv.settings.library.settingslib.InputMethodHelper;
+import com.android.tv.settings.library.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 import java.util.ArrayList;
@@ -116,7 +117,7 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     }
 
     private void updateKeyboards() {
-        updateCurrentKeyboardPreference((ListPreference) findPreference(KEY_CURRENT_KEYBOARD));
+        updateCurrentKeyboardPreference(findPreference(KEY_CURRENT_KEYBOARD));
         updateKeyboardsSettings();
     }
 
@@ -207,8 +208,7 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
      * Update autofill related preferences.
      */
     private void updateAutofill() {
-        final PreferenceCategory autofillCategory = (PreferenceCategory)
-                findPreference(KEY_AUTOFILL_CATEGORY);
+        final PreferenceCategory autofillCategory = findPreference(KEY_AUTOFILL_CATEGORY);
         List<DefaultAppInfo> candidates = getAutofillCandidates();
         if (candidates.isEmpty()) {
             // No need to show keyboard category and autofill category.
@@ -246,8 +246,7 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     private void updateAutofillSettings(List<DefaultAppInfo> candidates) {
         final Context preferenceContext = getPreferenceContext();
 
-        final PreferenceCategory autofillCategory = (PreferenceCategory)
-                findPreference(KEY_AUTOFILL_CATEGORY);
+        final PreferenceCategory autofillCategory = findPreference(KEY_AUTOFILL_CATEGORY);
 
         final Set<String> autofillServicesKeys = new ArraySet<>(candidates.size());
         for (final DefaultAppInfo info : candidates) {
@@ -269,7 +268,7 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
             autofillServicesKeys.add(key);
         }
 
-        for (int i = 0; i < autofillCategory.getPreferenceCount();) {
+        for (int i = 0; i < autofillCategory.getPreferenceCount(); ) {
             final Preference preference = autofillCategory.getPreference(i);
             final String key = preference.getKey();
             if (!TextUtils.isEmpty(key)

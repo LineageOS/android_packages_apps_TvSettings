@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.tv.settings.inputmethod;
+package com.android.tv.settings.library.settingslib;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -26,7 +26,7 @@ import android.util.Log;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 
-import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.settings.library.util.SliceUtils;
 
 import java.util.ArrayList;
 import java.util.List;

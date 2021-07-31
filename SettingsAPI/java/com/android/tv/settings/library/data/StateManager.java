@@ -22,6 +22,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_APPS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_USAGE_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_HIGH_POWER;
+import static com.android.tv.settings.library.ManagerUtil.STATE_KEYBOARD;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NOTIFICATION_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_PICTURE_IN_PICTURE;
@@ -46,6 +47,7 @@ import com.android.tv.settings.library.device.apps.specialaccess.PictureInPictur
 import com.android.tv.settings.library.device.apps.specialaccess.SpecialAppAccessState;
 import com.android.tv.settings.library.device.apps.specialaccess.SystemAlertWindowState;
 import com.android.tv.settings.library.device.apps.specialaccess.WriteSettingsState;
+import com.android.tv.settings.library.inputmethod.KeyboardState;
 import com.android.tv.settings.library.network.NetworkState;
 import com.android.tv.settings.library.network.WifiDetailsState;
 import com.android.tv.settings.library.system.DateTimeState;
@@ -100,6 +102,10 @@ public class StateManager {
                 break;
             case STATE_SYSTEM_DATE_TIME:
                 state = new DateTimeState(context, uiUpdateCallback);
+                break;
+            case STATE_KEYBOARD:
+                state = new KeyboardState(context, uiUpdateCallback);
+                break;
             default:
                 // no-op
         }

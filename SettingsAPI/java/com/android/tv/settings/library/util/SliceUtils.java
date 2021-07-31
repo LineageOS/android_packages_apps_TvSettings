@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2021 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,13 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.util;
+package com.android.tv.settings.library.util;
 
 import android.app.slice.SliceManager;
 import android.content.ContentProviderClient;
 import android.content.Context;
 import android.net.Uri;
 import android.util.Log;
-
-import com.android.tv.settings.R;
 
 import java.util.Collection;
 
@@ -65,7 +63,7 @@ public final class SliceUtils {
         }
         try {
             final Collection<Uri> enabledSlicesUri = sliceManager.getSliceDescendants(
-                    Uri.parse(context.getString(R.string.top_level_settings_slice_uri)));
+                    Uri.parse(ResourcesUtil.getString(context, "top_level_settings_slice_uri")));
             if (enabledSlicesUri != null) {
                 for (final Uri sliceUri : enabledSlicesUri) {
                     Log.i(TAG, "Enabled slice: " + sliceUri);
