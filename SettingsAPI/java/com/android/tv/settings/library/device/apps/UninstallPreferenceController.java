@@ -22,9 +22,7 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
-import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller to handle uninstall preference. */
@@ -32,7 +30,6 @@ public class UninstallPreferenceController extends AppActionPreferenceController
     static final String KEY_UNINSTALL = "uninstall";
     private final DevicePolicyManager mDpm;
     private final Context mAppContext;
-    private PreferenceCompat mUninstallPreference;
 
     public UninstallPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
@@ -42,31 +39,34 @@ public class UninstallPreferenceController extends AppActionPreferenceController
         mDpm = context.getSystemService(DevicePolicyManager.class);
     }
 
-
     @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        mUninstallPreference = screen.getOrCreatePrefCompat(getPreferenceKey());
-        super.displayPreference(screen);
-    }
-
-    @Override
-    void refresh() {
+    public void refresh() {
         if (mAppEntry == null) {
             return;
         }
         if (canUninstall()) {
-            mUninstallPreference.setVisible(true);
-            mUninstallPreference.setTitle(ResourcesUtil.getString(
+            mPreferenceCompat.setVisible(true);
+            mPreferenceCompat.setTitle(ResourcesUtil.getString(
                     mContext, "device_apps_app_management_uninstall"));
         } else if (canUninstallUpdates()) {
-            mUninstallPreference.setVisible(true);
-            mUninstallPreference.setTitle(ResourcesUtil.getString(
+            mPreferenceCompat.setVisible(true);
+            mPreferenceCompat.setTitle(ResourcesUtil.getString(
                     mContext, "device_apps_app_management_uninstall_updates"));
         } else {
-            mUninstallPreference.setVisible(false);
+            mPreferenceCompat.setVisible(false);
         }
-        mUninstallPreference.setIntent(getIntent());
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mUninstallPreference);
+        mPreferenceCompat.setIntent(getIntent());
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+    }
+
+    @Override
+    public boolean useAdminDisabledSummary() {
+        return false;
+    }
+
+    @Override
+    public String getAttrUserRestriction() {
+        return null;
     }
 
     private Intent getIntent() {
