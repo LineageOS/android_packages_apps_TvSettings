@@ -23,10 +23,13 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
+import com.android.tv.settings.library.settingslib.RestrictedLockUtils;
+import com.android.tv.settings.library.settingslib.RestrictedLockUtilsInternal;
 import com.android.tv.settings.library.util.LibUtils;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
@@ -37,7 +40,6 @@ import java.util.List;
 /** Preference controller to enable disable preference. */
 public class EnableDisablePreferenceController extends AppActionPreferenceController {
     private final PackageManager mPackageManager;
-    private PreferenceCompat mEnableDisablePreference;
     static final String KEY_ENABLE_DISABLE = "enableDisable";
 
     public EnableDisablePreferenceController(Context context,
@@ -48,9 +50,18 @@ public class EnableDisablePreferenceController extends AppActionPreferenceContro
     }
 
     @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        mEnableDisablePreference = screen.getOrCreatePrefCompat(getPreferenceKey());
-        super.displayPreference(screen);
+    public void displayPreference(PreferenceCompatManager preferenceCompatManager) {
+        super.displayPreference(preferenceCompatManager);
+        if (isRestricted()) {
+            final RestrictedLockUtils.EnforcedAdmin admin =
+                    RestrictedLockUtilsInternal.checkIfRestrictionEnforced(mContext,
+                            UserManager.DISALLOW_APPS_CONTROL, UserHandle.myUserId());
+            if (admin != null) {
+                setDisabledByAdmin(admin);
+            } else {
+                setEnabled(false);
+            }
+        }
     }
 
     @Override
@@ -79,8 +90,18 @@ public class EnableDisablePreferenceController extends AppActionPreferenceContro
     }
 
     public void setEnabled(boolean enabled) {
-        mEnableDisablePreference.setEnabled(enabled);
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mEnableDisablePreference);
+        mPreferenceCompat.setEnabled(enabled);
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+    }
+
+    @Override
+    public boolean useAdminDisabledSummary() {
+        return false;
+    }
+
+    @Override
+    public String getAttrUserRestriction() {
+        return null;
     }
 
     private static boolean signaturesMatch(PackageManager pm, String pkg1, String pkg2) {
@@ -113,24 +134,33 @@ public class EnableDisablePreferenceController extends AppActionPreferenceContro
                 || LibUtils.isSystemPackage(mContext.getResources(), mPackageManager, packageInfo));
     }
 
+    boolean isRestricted() {
+        UserManager userManager = mContext.getSystemService(UserManager.class);
+        return userManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL);
+    }
+
     @Override
-    void refresh() {
+    public void refresh() {
         if (mAppEntry == null) {
             return;
         }
         if (!UninstallPreferenceController.canUninstall(mAppEntry) && canDisable()) {
-            mEnableDisablePreference.setVisible(true);
+            mPreferenceCompat.setVisible(true);
             if (mAppEntry.info.enabled) {
-                mEnableDisablePreference.setTitle(ResourcesUtil.getString(
+                mPreferenceCompat.setTitle(ResourcesUtil.getString(
                         mContext, "device_apps_app_management_disable"));
             } else {
-                mEnableDisablePreference.setTitle(ResourcesUtil.getString(mContext,
-                        "evice_apps_app_management_enable"));
+                mPreferenceCompat.setTitle(ResourcesUtil.getString(mContext,
+                        "device_apps_app_management_enable"));
             }
         } else {
-            mEnableDisablePreference.setVisible(false);
+            mPreferenceCompat.setVisible(false);
         }
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mEnableDisablePreference);
+        if (mPreferenceCompat.isRestricted()) {
+            super.refresh();
+        } else {
+            mPreferenceCompat.setEnabled(true);
+        }
     }
 
 }

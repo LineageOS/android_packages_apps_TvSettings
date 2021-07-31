@@ -22,9 +22,7 @@ import android.hardware.usb.IUsbManager;
 import android.os.IBinder;
 import android.os.ServiceManager;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
-import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller class to handle clear defaults preference. */
@@ -33,7 +31,6 @@ public class ClearDefaultsPreferenceController extends AppActionPreferenceContro
 
     private final IUsbManager mUsbManager;
     private final PackageManager mPackageManager;
-    private PreferenceCompat mClearDefaultsPreference;
 
     public ClearDefaultsPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
@@ -46,21 +43,25 @@ public class ClearDefaultsPreferenceController extends AppActionPreferenceContro
     }
 
     @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        mClearDefaultsPreference = screen.getOrCreatePrefCompat(getPreferenceKey());
-        super.displayPreference(screen);
-    }
-
-    @Override
-    void refresh() {
+    public void refresh() {
         if (mAppEntry == null) {
             return;
         }
-        mClearDefaultsPreference.setTitle(ResourcesUtil.getString(
+        mPreferenceCompat.setTitle(ResourcesUtil.getString(
                 mContext, "device_apps_app_management_clear_default"));
-        mClearDefaultsPreference.setSummary(AppUtils.getLaunchByDefaultSummary(
+        mPreferenceCompat.setSummary(AppUtils.getLaunchByDefaultSummary(
                 mAppEntry, mUsbManager, mPackageManager, mContext).toString());
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mClearDefaultsPreference);
+        super.refresh();
+    }
+
+    @Override
+    public boolean useAdminDisabledSummary() {
+        return false;
+    }
+
+    @Override
+    public String getAttrUserRestriction() {
+        return null;
     }
 
     @Override
