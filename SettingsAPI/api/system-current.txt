@@ -10,16 +10,20 @@ package com.android.tv.settings.library {
     field public static final String INFO_COLLAPSE = "collapse";
     field public static final String INFO_INTENT = "intent";
     field public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";
+    field public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     field public static final int OFFSET_MULTIPLIER = 100000; // 0x186a0
     field public static final int STATE_ALARMS_AND_REMINDERS = 13; // 0xd
     field public static final int STATE_ALL_APPS = 4; // 0x4
     field public static final int STATE_APPS = 3; // 0x3
     field public static final int STATE_APP_MANAGEMENT = 5; // 0x5
     field public static final int STATE_APP_USAGE_ACCESS = 9; // 0x9
+    field public static final int STATE_AUTO_FILL_PICKER_STATE = 19; // 0x13
+    field public static final int STATE_AVAILABLE_KEYBOARD = 18; // 0x12
     field public static final int STATE_DEVICE_MAIN = 2; // 0x2
     field public static final int STATE_EMPTY = -1; // 0xffffffff
     field public static final int STATE_EXTERNAL_SOURCES = 14; // 0xe
     field public static final int STATE_HIGH_POWER = 7; // 0x7
+    field public static final int STATE_KEYBOARD = 17; // 0x11
     field public static final int STATE_NETWORK = 0; // 0x0
     field public static final int STATE_NOTIFICATION_ACCESS = 8; // 0x8
     field public static final int STATE_PICTURE_IN_PICTURE = 12; // 0xc
@@ -45,6 +49,8 @@ package com.android.tv.settings.library {
     method public int getChildPrefsCount();
     method public String getContentDescription();
     method public byte getEnabled();
+    method public CharSequence[] getEntries();
+    method public CharSequence[] getEntryValues();
     method public android.os.Bundle getExtras();
     method public android.graphics.drawable.Drawable getIcon();
     method public Object getInfo(String);
@@ -53,12 +59,15 @@ package com.android.tv.settings.library {
     method public String[] getKey();
     method public Integer getNextState();
     method public byte getSelectable();
+    method public String getSliceUri();
     method public String getSummary();
     method public String getTitle();
     method public int getType();
     method public String getValue();
+    method public int getValueIndex();
     method public byte getVisible();
     method public boolean hasOnPreferenceChangeListener();
+    method public boolean hasSlice();
     method public void initChildPreferences();
     method public boolean isDisabledByAdmin();
     method public boolean isRestricted();
@@ -69,8 +78,11 @@ package com.android.tv.settings.library {
     method public void setDisabledByAdmin(boolean);
     method public void setEnabled(byte);
     method public void setEnabled(boolean);
+    method public void setEntries(CharSequence[]);
+    method public void setEntryValues(CharSequence[]);
     method public void setExtras(android.os.Bundle);
     method public void setHasOnPreferenceChangeListener(boolean);
+    method public void setHasSlice(boolean);
     method public void setIcon(android.graphics.drawable.Drawable);
     method public void setIntent(android.content.Intent);
     method public void setNextState(Integer);
@@ -78,10 +90,12 @@ package com.android.tv.settings.library {
     method public void setSelectable(byte);
     method public void setSelectable(boolean);
     method public void setShouldRemove(boolean);
+    method public void setSliceUri(String);
     method public void setSummary(String);
     method public void setTitle(String);
     method public void setType(byte);
     method public void setValue(String);
+    method public void setValueIndex(int);
     method public void setVisible(boolean);
     method public void setVisible(byte);
     method public boolean shouldRemove();

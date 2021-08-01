@@ -49,8 +49,12 @@ public class PreferenceCompat {
     private Bundle mExtras;
     private Intent mIntent;
     private Drawable mIcon;
-
+    private CharSequence[] mEntries;
+    private CharSequence[] mEntryValues;
+    private int mValueIndex;
     private String mValue;
+    private boolean mHasSlice;
+    private String mSliceUri;
 
     // 0 : preference, 1 : preferenceCategory, 2 : AccessPointPreference
     private byte mType;
@@ -219,6 +223,42 @@ public class PreferenceCompat {
 
     /** @hide */
     @SystemApi
+    public CharSequence[] getEntries() {
+        return mEntries;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setEntries(CharSequence[] entries) {
+        mEntries = entries;
+    }
+
+    /** @hide */
+    @SystemApi
+    public CharSequence[] getEntryValues() {
+        return mEntryValues;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setEntryValues(CharSequence[] entryValues) {
+        mEntryValues = entryValues;
+    }
+
+    /** @hide */
+    @SystemApi
+    public int getValueIndex() {
+        return mValueIndex;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setValueIndex(int valueIndex) {
+        mValueIndex = valueIndex;
+    }
+
+    /** @hide */
+    @SystemApi
     public String getValue() {
         return mValue;
     }
@@ -227,6 +267,30 @@ public class PreferenceCompat {
     @SystemApi
     public void setValue(String value) {
         mValue = value;
+    }
+
+    /** @hide */
+    @SystemApi
+    public boolean hasSlice() {
+        return mHasSlice;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setHasSlice(boolean hasSlice) {
+        mHasSlice = hasSlice;
+    }
+
+    /** @hide */
+    @SystemApi
+    public String getSliceUri() {
+        return mSliceUri;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setSliceUri(String sliceUri) {
+        mSliceUri = sliceUri;
     }
 
     /** @hide */
