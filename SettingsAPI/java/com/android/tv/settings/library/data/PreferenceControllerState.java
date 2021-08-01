@@ -163,7 +163,7 @@ public abstract class PreferenceControllerState implements State {
         return mLifecycle;
     }
 
-    private static boolean keyEquals(String[] key1, String[] key2) {
+    protected static boolean keyEquals(String[] key1, String[] key2) {
         return Arrays.equals(key1, key2);
     }
 }

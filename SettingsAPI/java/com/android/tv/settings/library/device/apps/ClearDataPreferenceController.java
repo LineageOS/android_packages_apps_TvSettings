@@ -16,9 +16,15 @@
 
 package com.android.tv.settings.library.device.apps;
 
+import static com.android.tv.settings.library.device.apps.AppManagementState.REQUEST_CLEAR_DATA;
+
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.text.format.Formatter;
 
+import com.android.tv.settings.library.ManagerUtil;
+import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
@@ -35,8 +41,7 @@ public class ClearDataPreferenceController extends AppActionPreferenceController
 
     public void setClearingData(boolean clearingData) {
         mClearingData = clearingData;
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+        update();
     }
 
     @Override
@@ -51,6 +56,21 @@ public class ClearDataPreferenceController extends AppActionPreferenceController
                 : Formatter.formatFileSize(mContext,
                         mAppEntry.dataSize + mAppEntry.externalDataSize));
         super.refresh();
+    }
+
+    @Override
+    public boolean handlePreferenceTreeClick(PreferenceCompat preferenceCompat, boolean status) {
+        if (!mDisabledByAdmin) {
+            Intent i = new Intent(INTENT_CONFIRMATION);
+            i.putExtra(EXTRA_GUIDANCE_TITLE, ResourcesUtil.getString(
+                    mContext, "device_apps_app_management_clear_data"));
+            i.putExtra(EXTRA_GUIDANCE_BREADCRUMB, getAppName());
+            ((Activity) mContext).startActivityForResult(i,
+                    ManagerUtil.calculateCompoundCode(
+                            mStateIdentifier, REQUEST_CLEAR_DATA));
+            return true;
+        }
+        return super.handlePreferenceTreeClick(preferenceCompat, status);
     }
 
     @Override

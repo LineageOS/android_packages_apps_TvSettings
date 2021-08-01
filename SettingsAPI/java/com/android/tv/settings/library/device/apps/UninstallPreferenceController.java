@@ -16,12 +16,18 @@
 
 package com.android.tv.settings.library.device.apps;
 
+import static com.android.tv.settings.library.device.apps.AppManagementState.REQUEST_UNINSTALL;
+import static com.android.tv.settings.library.device.apps.AppManagementState.REQUEST_UNINSTALL_UPDATES;
+
+import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 
+import com.android.tv.settings.library.ManagerUtil;
+import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
@@ -55,8 +61,20 @@ public class UninstallPreferenceController extends AppActionPreferenceController
         } else {
             mPreferenceCompat.setVisible(false);
         }
-        mPreferenceCompat.setIntent(getIntent());
         mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+    }
+
+    @Override
+    public boolean handlePreferenceTreeClick(PreferenceCompat preferenceCompat, boolean status) {
+        if (!mDisabledByAdmin) {
+            ((Activity) mContext).startActivityForResult(getIntent(),
+                    canUninstall()
+                            ? ManagerUtil.calculateCompoundCode(mStateIdentifier, REQUEST_UNINSTALL)
+                            : ManagerUtil.calculateCompoundCode(mStateIdentifier,
+                                    REQUEST_UNINSTALL_UPDATES));
+            return true;
+        }
+        return super.handlePreferenceTreeClick(preferenceCompat, status);
     }
 
     @Override

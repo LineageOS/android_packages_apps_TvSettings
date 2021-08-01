@@ -49,20 +49,20 @@ import androidx.leanback.preference.LeanbackSettingsFragmentCompat;
 import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
-import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.LongClickPreference;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.about.RebootConfirmFragment;
-import com.android.tv.settings.autofill.AutofillHelper;
-import com.android.tv.settings.inputmethod.InputMethodHelper;
 import com.android.tv.settings.library.overlay.FlavorUtils;
+import com.android.tv.settings.library.settingslib.AutofillHelper;
+import com.android.tv.settings.library.settingslib.DefaultAppInfo;
+import com.android.tv.settings.library.settingslib.InputMethodHelper;
+import com.android.tv.settings.library.util.SliceUtils;
 import com.android.tv.settings.privacy.PrivacyToggle;
 import com.android.tv.settings.privacy.SensorFragment;
 import com.android.tv.settings.system.SecurityFragment;
-import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
