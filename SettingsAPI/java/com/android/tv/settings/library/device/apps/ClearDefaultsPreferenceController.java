@@ -16,12 +16,18 @@
 
 package com.android.tv.settings.library.device.apps;
 
+import static com.android.tv.settings.library.device.apps.AppManagementState.REQUEST_CLEAR_DEFAULTS;
+
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.usb.IUsbManager;
 import android.os.IBinder;
 import android.os.ServiceManager;
 
+import com.android.tv.settings.library.ManagerUtil;
+import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
@@ -52,6 +58,21 @@ public class ClearDefaultsPreferenceController extends AppActionPreferenceContro
         mPreferenceCompat.setSummary(AppUtils.getLaunchByDefaultSummary(
                 mAppEntry, mUsbManager, mPackageManager, mContext).toString());
         super.refresh();
+    }
+
+    @Override
+    public boolean handlePreferenceTreeClick(PreferenceCompat preferenceCompat, boolean status) {
+        if (!mDisabledByAdmin) {
+            Intent i = new Intent(INTENT_CONFIRMATION);
+            i.putExtra(EXTRA_GUIDANCE_TITLE, ResourcesUtil.getString(
+                    mContext, "device_apps_app_management_clear_default"));
+            i.putExtra(EXTRA_GUIDANCE_BREADCRUMB, getAppName());
+            ((Activity) mContext).startActivityForResult(i,
+                    ManagerUtil.calculateCompoundCode(
+                            mStateIdentifier, REQUEST_CLEAR_DEFAULTS));
+            return true;
+        }
+        return super.handlePreferenceTreeClick(preferenceCompat, status);
     }
 
     @Override
