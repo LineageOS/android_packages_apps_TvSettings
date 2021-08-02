@@ -16,6 +16,9 @@
 
 package com.android.tv.settings.library.device.apps;
 
+import static com.android.tv.settings.library.PreferenceCompat.STATUS_OFF;
+import static com.android.tv.settings.library.PreferenceCompat.STATUS_ON;
+
 import android.app.INotificationManager;
 import android.app.NotificationManager;
 import android.content.Context;
@@ -28,21 +31,38 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
+import com.android.tv.settings.library.util.AbstractPreferenceController;
 import com.android.tv.settings.library.util.LibUtils;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller to handle notifications preference. */
-public class NotificationsPreferenceController extends AppActionPreferenceController {
+public class NotificationsPreferenceController extends AbstractPreferenceController {
     private static final String TAG = "NotificationsPreference";
     private static final String KEY_NOTIFICATIONS = "notifications";
     private final INotificationManager mNotificationManager;
+    private ApplicationsState.AppEntry mAppEntry;
+    private PreferenceCompat mPreferenceCompat;
 
     public NotificationsPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
             ApplicationsState.AppEntry appEntry) {
-        super(context, callback, stateIdentifier, appEntry);
+        super(context, callback, stateIdentifier);
         mNotificationManager = NotificationManager.getService();
+        mAppEntry = appEntry;
+    }
+
+    @Override
+    public void displayPreference(PreferenceCompatManager screen) {
+        mPreferenceCompat = screen.getOrCreatePrefCompat(getPreferenceKey());
+        update();
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return true;
     }
 
     /**
@@ -52,10 +72,9 @@ public class NotificationsPreferenceController extends AppActionPreferenceContro
      */
     public void setEntry(@NonNull ApplicationsState.AppEntry entry) {
         mAppEntry = entry;
-        updateState(mPreferenceCompat);
+        update();
     }
 
-    @Override
     public void refresh() {
         mPreferenceCompat.setTitle(ResourcesUtil.getString(mContext,
                 "device_apps_app_management_notifications"));
@@ -68,17 +87,6 @@ public class NotificationsPreferenceController extends AppActionPreferenceContro
             Log.d(TAG, "Remote exception while checking notifications for package "
                     + mAppEntry.info.packageName, e);
         }
-        super.refresh();
-    }
-
-    @Override
-    public boolean useAdminDisabledSummary() {
-        return false;
-    }
-
-    @Override
-    public String getAttrUserRestriction() {
-        return null;
     }
 
     @Override
@@ -138,5 +146,34 @@ public class NotificationsPreferenceController extends AppActionPreferenceContro
             }
         }
         return false;
+    }
+
+    public boolean handlePreferenceTreeClick(PreferenceCompat preferenceCompat, boolean status) {
+        if (!(preferenceCompat.getEnabled() == STATUS_ON)) {
+            return false;
+        }
+        return setNotificationsEnabled(status);
+
+    }
+
+    private boolean setNotificationsEnabled(boolean checked) {
+        boolean result = true;
+        byte status = checked ? STATUS_ON : STATUS_OFF;
+        if (mPreferenceCompat.getChecked() != status) {
+            try {
+                mNotificationManager.setNotificationsEnabledForPackage(
+                        mAppEntry.info.packageName, mAppEntry.info.uid, checked);
+                mPreferenceCompat.setChecked(checked);
+                mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+            } catch (RemoteException ex) {
+                result = false;
+            }
+        }
+        return result;
+    }
+
+    private void update() {
+        refresh();
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 }

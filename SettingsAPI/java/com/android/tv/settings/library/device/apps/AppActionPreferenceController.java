@@ -48,7 +48,7 @@ public abstract class AppActionPreferenceController extends RestrictedPreference
      */
     public void setEntry(@NonNull ApplicationsState.AppEntry entry) {
         mAppEntry = entry;
-        refresh();
+        update();
     }
 
     @Override
@@ -62,5 +62,10 @@ public abstract class AppActionPreferenceController extends RestrictedPreference
         }
         mAppEntry.ensureLabel(mContext);
         return mAppEntry.label;
+    }
+
+    public void update() {
+        refresh();
+        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 }
