@@ -1238,9 +1238,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     preference.getExtras());
         } else {
             Fragment f = null;
-            if (preference instanceof ListPreference) {
+            if (preference instanceof ListPreference
+                    && ((ListPreference) preference).getEntries() != null) {
                 f = TwoPanelListPreferenceDialogFragment.newInstanceSingle(preference.getKey());
-            } else if (preference instanceof MultiSelectListPreference) {
+            } else if (preference instanceof MultiSelectListPreference
+                    && ((MultiSelectListPreference) preference).getEntries() != null) {
                 f = LeanbackListPreferenceDialogFragmentCompat.newInstanceMulti(
                         preference.getKey());
             }
