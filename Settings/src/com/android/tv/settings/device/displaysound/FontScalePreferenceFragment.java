@@ -49,6 +49,8 @@ public class FontScalePreferenceFragment extends SettingsPreferenceFragment impl
         final Context themedContext = getPreferenceManager().getContext();
         final String[] entryValues = getContext().getResources()
                 .getStringArray(R.array.font_scale_entry_values);
+        final String[] entries = getContext().getResources()
+                .getStringArray(R.array.font_scale_entries);
         initFontScaleValue(getContext());
 
         for (int i = 0; i < entryValues.length; i++) {
@@ -62,7 +64,7 @@ public class FontScalePreferenceFragment extends SettingsPreferenceFragment impl
                     .getString(R.string.font_scale_item_detail, scaleValue);
             preference.setSummaryOff(summary);
             preference.setSummaryOn(summary);
-            preference.setTitle(mapScaleIndexToTitle(i));
+            preference.setTitle(entries[i]);
             preference.setFragment(FontScalePreviewFragment.class.getName());
             Bundle extras = preference.getExtras();
             extras.putString(FontScalePreviewFragment.PREVIEW_FONT_SCALE_VALUE, entryValues[i]);
@@ -73,21 +75,6 @@ public class FontScalePreferenceFragment extends SettingsPreferenceFragment impl
                 preference.setChecked(true);
             }
             fontScaleGroup.addPreference(preference);
-        }
-    }
-
-    // Temporary method to accommodate additional font scale settings.
-    // TODO: remove once font scale values are finalized.
-    private String mapScaleIndexToTitle(int scaleValueIndex) {
-        final String[] entries = getContext().getResources()
-                .getStringArray(R.array.font_scale_entries);
-        if (scaleValueIndex < 2) {
-            return entries[scaleValueIndex];
-        }
-        if (scaleValueIndex > 3) {
-            return entries[3];
-        } else {
-            return entries[2];
         }
     }
 
