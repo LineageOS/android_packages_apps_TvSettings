@@ -35,6 +35,7 @@
 
     <com.android.tv.settings.compat.TsPreference
         android:key="manageKeyboards"
+        android:fragment="com.android.tv.settings.inputmethod.AvailableVirtualKeyboardFragmentCompat"
         android:order="3"
         android:title="@string/manage_keyboards"/>
 
