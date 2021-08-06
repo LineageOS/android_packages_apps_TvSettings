@@ -104,12 +104,6 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // Set list view listeners after the fragment view is created
-        if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
-            TwoPanelSettingsFragment parentFragment =
-                    (TwoPanelSettingsFragment) getCallbackFragment();
-            parentFragment.addListenerForFragment(this);
-        }
         if (view != null) {
             TextView titleView = view.findViewById(R.id.decor_title);
             // We rely on getResources().getConfiguration().getLayoutDirection() instead of
@@ -215,6 +209,11 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
     public void onResume() {
         super.onResume();
         mLifecycle.handleLifecycleEvent(ON_RESUME);
+        if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
+            TwoPanelSettingsFragment parentFragment =
+                    (TwoPanelSettingsFragment) getCallbackFragment();
+            parentFragment.addListenerForFragment(this);
+        }
     }
 
     // This should only be invoked if the parent Fragment is TwoPanelSettingsFragment.
@@ -229,6 +228,11 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
     public void onPause() {
         mLifecycle.handleLifecycleEvent(ON_PAUSE);
         super.onPause();
+        if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
+            TwoPanelSettingsFragment parentFragment =
+                    (TwoPanelSettingsFragment) getCallbackFragment();
+            parentFragment.removeListenerForFragment(this);
+        }
     }
 
     @CallSuper
@@ -243,16 +247,6 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
     public void onDestroy() {
         mLifecycle.handleLifecycleEvent(ON_DESTROY);
         super.onDestroy();
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
-            TwoPanelSettingsFragment parentFragment =
-                    (TwoPanelSettingsFragment) getCallbackFragment();
-            parentFragment.removeListenerForFragment(this);
-        }
     }
 
     @CallSuper

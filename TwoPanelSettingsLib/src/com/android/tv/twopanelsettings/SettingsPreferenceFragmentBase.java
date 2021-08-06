@@ -16,12 +16,6 @@
 
 package com.android.tv.twopanelsettings;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
 
 /**
@@ -30,19 +24,18 @@ import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
  */
 public abstract class SettingsPreferenceFragmentBase extends LeanbackPreferenceFragmentCompat {
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-            ViewGroup container, Bundle savedInstanceState) {
+    public void onResume() {
+        super.onResume();
         if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
             TwoPanelSettingsFragment parentFragment =
                     (TwoPanelSettingsFragment) getCallbackFragment();
             parentFragment.addListenerForFragment(this);
         }
-        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
+    public void onPause() {
+        super.onPause();
         if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
             TwoPanelSettingsFragment parentFragment =
                     (TwoPanelSettingsFragment) getCallbackFragment();
