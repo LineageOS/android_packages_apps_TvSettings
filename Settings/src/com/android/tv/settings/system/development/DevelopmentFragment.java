@@ -52,6 +52,7 @@ import android.sysprop.AdbProperties;
 import android.sysprop.DisplayProperties;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Pair;
 import android.view.IWindowManager;
 import android.view.LayoutInflater;
 import android.view.ThreadedRenderer;
@@ -399,6 +400,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mMobileDataAlwaysOn = findAndInitSwitchPref(MOBILE_DATA_ALWAYS_ON);
         mUsbConfiguration = addListRestrictedPreference(USB_CONFIGURATION_KEY,
                 UserManager.DISALLOW_USB_FILE_TRANSFER);
+        // Only show those functions that are available
+        listOnlySettableUsbConfigurationValues();
 
         mWindowAnimationScale = addListPreference(WINDOW_ANIMATION_SCALE_KEY);
         mTransitionAnimationScale = addListPreference(TRANSITION_ANIMATION_SCALE_KEY);
@@ -1358,24 +1361,57 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 mMobileDataAlwaysOn.isChecked() ? 1 : 0);
     }
 
+    private void listOnlySettableUsbConfigurationValues() {
+        final UsbManager manager = (UsbManager) getActivity().getSystemService(Context.USB_SERVICE);
+        mUsbConfiguration.updatePreference(p -> p.setVisible(manager != null));
+        if (manager != null) {
+            final List<Pair<String, String>> usbConfigurationValueTitlePairs =
+                    getSettableUsbConfigurationValueTitlePairs();
+            final String[] usbConfigurationValues = usbConfigurationValueTitlePairs.stream()
+                    .map(usbConfigurationValueTitlePair -> usbConfigurationValueTitlePair.first)
+                    .toArray(String[]::new);
+            final String[] usbConfigurationTitles = usbConfigurationValueTitlePairs.stream()
+                    .map(usbConfigurationValueTitlePair -> usbConfigurationValueTitlePair.second)
+                    .toArray(String[]::new);
+            mUsbConfiguration.updatePreference(listPreference -> {
+                listPreference.setEntryValues(usbConfigurationValues);
+                listPreference.setEntries(usbConfigurationTitles);
+            });
+        }
+    }
+
+    private List<Pair<String, String>> getSettableUsbConfigurationValueTitlePairs() {
+        final String[] values = getResources().getStringArray(R.array.usb_configuration_values);
+        final String[] titles = getResources().getStringArray(R.array.usb_configuration_titles);
+        final List<Pair<String, String>> settableUsbConfigurationValueTitlePairs =
+                new ArrayList<>();
+        for (int i = 0; i < values.length; i++) {
+            if (UsbManager.areSettableFunctions(UsbManager.usbFunctionsFromString(values[i]))) {
+                settableUsbConfigurationValueTitlePairs.add(Pair.create(values[i], titles[i]));
+            }
+        }
+        return settableUsbConfigurationValueTitlePairs;
+    }
+
     private void updateUsbConfigurationValues() {
         final UsbManager manager = (UsbManager) getActivity().getSystemService(Context.USB_SERVICE);
         mUsbConfiguration.updatePreference(p -> p.setVisible(manager != null));
         if (manager != null) {
-            String[] values = getResources().getStringArray(R.array.usb_configuration_values);
-            String[] titles = getResources().getStringArray(R.array.usb_configuration_titles);
+            final List<Pair<String, String>> usbConfigurationValueTitlePairs =
+                    getSettableUsbConfigurationValueTitlePairs();
             int index = 0;
             long functions = manager.getCurrentFunctions();
-            for (int i = 0; i < titles.length; i++) {
-                if ((functions & UsbManager.usbFunctionsFromString(values[i])) != 0) {
+            for (int i = 0; i < usbConfigurationValueTitlePairs.size(); i++) {
+                if ((functions & UsbManager.usbFunctionsFromString(
+                        usbConfigurationValueTitlePairs.get(i).first)) != 0) {
                     index = i;
                     break;
                 }
             }
             final int updateIndex = index;
             mUsbConfiguration.updatePreference(listPreference -> {
-                listPreference.setValue(values[updateIndex]);
-                listPreference.setSummary(titles[updateIndex]);
+                listPreference.setValue(usbConfigurationValueTitlePairs.get(updateIndex).first);
+                listPreference.setSummary(usbConfigurationValueTitlePairs.get(updateIndex).second);
                 listPreference.setOnPreferenceChangeListener(this);
             });
         }
