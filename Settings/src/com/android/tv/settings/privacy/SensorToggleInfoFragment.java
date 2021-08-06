@@ -87,9 +87,11 @@ public class SensorToggleInfoFragment extends InfoFragment {
     }
 
     private void updateTitle(boolean enabled) {
-        String toggleState = getString(
-                enabled ? R.string.sensor_toggle_info_on : R.string.sensor_toggle_info_off);
-        mTitleView.setText(getString(mToggle.toggleInfoTitle, toggleState));
+        if (isVisible()) {
+            String toggleState = getString(
+                    enabled ? R.string.sensor_toggle_info_on : R.string.sensor_toggle_info_off);
+            mTitleView.setText(getString(mToggle.toggleInfoTitle, toggleState));
+        }
     }
 
     @Override
