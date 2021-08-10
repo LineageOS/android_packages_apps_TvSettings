@@ -1243,6 +1243,21 @@
     <!-- Header title for device reset [CHAR_LIMIT=50] -->
     <string name="storage_reset_section">Reset</string>
 
+    <!-- Header title for free up storage[CHAR_LIMIT=50] -->
+    <string name="storage_free_up">Free up storage</string>
+    <!-- Header title for free up storage[CHAR_LIMIT=50] -->
+    <string name="storage_free_up_clear_cached_data">Clear cached data</string>
+    <!-- Header title for free up storage[CHAR_LIMIT=50] -->
+    <string name="storage_free_up_clear_cached_data_summary">Free up <xliff:g id="space" example="100MB">%1$s</xliff:g></string>
+    <!-- Header title for free up storage[CHAR_LIMIT=500] -->
+    <string name="storage_free_up_clear_cached_data_info">Clears temporary files that take up space. Will not impact saved data like app preferences or offline videos, and you won\'t need to sign in to apps again.</string>
+    <!-- Header title for free up storage[CHAR_LIMIT=50] -->
+    <string name="storage_free_up_clear_cached_data_confirm_title">Clear cached data?</string>
+    <!-- Header title for free up storage[CHAR_LIMIT=50] -->
+    <string name="storage_free_up_clear_cached_data_confirm_description">This will clear cached data for all apps.</string>
+    <!-- Header title for free up storage[CHAR_LIMIT=50] -->
+    <string name="storage_free_up_uninstall_apps">Uninstall apps</string>
+
     <!-- Toast informing that storage mount operation was successful. [CHAR LIMIT=64]-->
     <string name="storage_mount_success"><xliff:g id="name" example="SD card">%1$s</xliff:g> is mounted</string>
     <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=64]-->
