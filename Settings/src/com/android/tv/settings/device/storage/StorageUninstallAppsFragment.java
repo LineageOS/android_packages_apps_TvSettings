@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.device.storage;
 
+import android.app.tvsettings.TvSettingsEnums;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -110,6 +111,11 @@ public class StorageUninstallAppsFragment extends SettingsPreferenceFragment imp
             mHandler.removeCallbacks(mUpdateRunnable);
             mHandler.postDelayed(mUpdateRunnable, delay);
         }
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_STORAGE_FREE_UP_STORAGE_UNINSTALL_APPS;
     }
 
     private void updateAppListInternal(PreferenceGroup group,
