@@ -42,6 +42,7 @@ import android.transition.Fade;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
@@ -580,7 +581,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         transaction.commit();
 
         // Some fragments may steal focus on creation. Reclaim focus on main fragment.
-        if (getView()  != null && getView().getViewTreeObserver() != null) {
+        if (getView() != null && getView().getViewTreeObserver() != null) {
             getView().getViewTreeObserver().addOnGlobalLayoutListener(
                     mOnGlobalLayoutListener);
         }
@@ -741,27 +742,32 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             if (event.getAction() == KeyEvent.ACTION_DOWN
                     && ((!isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_RIGHT)
                     || (isRTL() && keyCode == KeyEvent.KEYCODE_DPAD_LEFT))) {
-                if (shouldPerformClick()) {
-                    v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,
-                            KeyEvent.KEYCODE_DPAD_CENTER));
-                    v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP,
-                            KeyEvent.KEYCODE_DPAD_CENTER));
-                } else {
-                    Fragment previewFragment = getChildFragmentManager()
-                            .findFragmentById(frameResIds[mPrefPanelIdx + 1]);
-                    if (!(previewFragment instanceof InfoFragment)
-                            && !mIsWaitingForUpdatingPreview) {
-                        mAudioManager.playSoundEffect(AudioManager.FX_FOCUS_NAVIGATION_RIGHT);
-
-                        navigateToPreviewFragment();
-                    }
-                }
+                forward();
                 // TODO(b/163432209): improve NavigationCallback and be more specific here.
                 // Do not consume the KeyEvent for NavigationCallback classes such as date & time
                 // picker.
                 return !(prefFragment instanceof NavigationCallback);
             }
             return false;
+        }
+    }
+
+    private void forward() {
+        final TwoPanelSettingsRootView rootView = (TwoPanelSettingsRootView) getView();
+        if (shouldPerformClick()) {
+            rootView.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,
+                    KeyEvent.KEYCODE_DPAD_CENTER));
+            rootView.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP,
+                    KeyEvent.KEYCODE_DPAD_CENTER));
+        } else {
+            Fragment previewFragment = getChildFragmentManager()
+                    .findFragmentById(frameResIds[mPrefPanelIdx + 1]);
+            if (!(previewFragment instanceof InfoFragment)
+                    && !mIsWaitingForUpdatingPreview) {
+                mAudioManager.playSoundEffect(AudioManager.FX_FOCUS_NAVIGATION_RIGHT);
+
+                navigateToPreviewFragment();
+            }
         }
     }
 
@@ -905,11 +911,19 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             int distanceToScrollToRight;
             int panelWidth = getResources().getDimensionPixelSize(
                     R.dimen.tp_settings_preference_pane_width);
-            View scrollToPanel = getView().findViewById(frameResIds[index]);
-            View previewPanel = getView().findViewById(frameResIds[index + 1]);
+            TwoPanelSettingsFrameLayout scrollToPanel = getView().findViewById(frameResIds[index]);
+            TwoPanelSettingsFrameLayout previewPanel = getView().findViewById(
+                    frameResIds[index + 1]);
             if (scrollToPanel == null || previewPanel == null) {
                 return;
             }
+            scrollToPanel.setOnDispatchTouchListener(null);
+            previewPanel.setOnDispatchTouchListener((view, env) -> {
+                if (env.getActionMasked() == MotionEvent.ACTION_UP) {
+                    forward();
+                }
+                return true;
+            });
             View scrollToPanelHead = scrollToPanel.findViewById(R.id.decor_title_container);
             View previewPanelHead = previewPanel.findViewById(R.id.decor_title_container);
             boolean scrollsToPreview =
