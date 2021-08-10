@@ -50,6 +50,10 @@ public final class ManagerUtil {
     public static final int STATE_AVAILABLE_KEYBOARD = 18;
     public static final int STATE_AUTO_FILL_PICKER_STATE = 19;
     public static final int STATE_LANGUAGE = 20;
+    public static final int STATE_ACCESSIBILITY = 21;
+    public static final int STATE_ACCESSIBILITY_SERVICE = 22;
+    public static final int STATE_ACCESSIBILITY_SHORTCUT = 23;
+    public static final int STATE_ACCESSIBILITY_SHORTCUT_SERVICE = 24;
 
     public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     public static final String INFO_INTENT = "intent";
@@ -74,6 +78,11 @@ public final class ManagerUtil {
     static byte getEnabled(boolean enabled) {
         return enabled ? STATUS_ON : STATUS_OFF;
     }
+
+    static byte getPersistent(boolean persistent) {
+        return persistent ? STATUS_ON : STATUS_OFF;
+    }
+
 
     /**
      * @hide

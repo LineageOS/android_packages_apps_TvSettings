@@ -20,6 +20,7 @@ import android.util.ArrayMap;
 
 import com.android.tv.settings.library.PreferenceCompat;
 
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -47,6 +48,10 @@ public class PreferenceCompatManager {
     public PreferenceCompat getPrefCompat(String[] key) {
         String compoundKey = getKey(key);
         return mPrefCompats.get(compoundKey);
+    }
+
+    public List<PreferenceCompat> getPrefCompats() {
+        return mPrefCompats.values().stream().collect(Collectors.toList());
     }
 
     public static String getKey(String[] key) {

@@ -28,12 +28,12 @@ import com.android.tv.settings.library.util.RestrictedPreferenceController;
  */
 public abstract class AppActionPreferenceController extends RestrictedPreferenceController {
     ApplicationsState.AppEntry mAppEntry;
-    static final String INTENT_CONFIRMATION = "android.settings.ui.CONFIRM";
-    static final String ARG_PACKAGE_NAME = "packageName";
-    static final String EXTRA_GUIDANCE_TITLE = "guidancetitle";
-    static final String EXTRA_GUIDANCE_SUBTITLE = "guidanceSubtitle";
-    static final String EXTRA_GUIDANCE_BREADCRUMB = "guidanceBreadcrumb";
-    static final String EXTRA_GUIDANCE_ICON = "guidanceIcon";
+    public static final String INTENT_CONFIRMATION = "android.settings.ui.CONFIRM";
+    public static final String ARG_PACKAGE_NAME = "packageName";
+    public static final String EXTRA_GUIDANCE_TITLE = "guidancetitle";
+    public static final String EXTRA_GUIDANCE_SUBTITLE = "guidanceSubtitle";
+    public static final String EXTRA_GUIDANCE_BREADCRUMB = "guidanceBreadcrumb";
+    public static final String EXTRA_GUIDANCE_ICON = "guidanceIcon";
 
     public AppActionPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier, ApplicationsState.AppEntry appEntry) {
