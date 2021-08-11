@@ -48,7 +48,7 @@ public abstract class PreferenceControllerState implements State {
         mContext = context;
         mPreferenceCompatManager = new PreferenceCompatManager();
     }
-    private final Set<AbstractPreferenceController> mPreferenceControllers = new ArraySet<>();
+    protected Set<AbstractPreferenceController> mPreferenceControllers = new ArraySet<>();
     private Lifecycle mLifecycle;
 
     @Override
@@ -114,6 +114,14 @@ public abstract class PreferenceControllerState implements State {
 
     @Override
     public boolean onPreferenceChange(String[] key, Object newValue) {
+        Collection<AbstractPreferenceController> controllers =
+                new ArrayList<>(mPreferenceControllers);
+        for (AbstractPreferenceController controller : controllers) {
+            if (keyEquals(key, controller.getPreferenceKey())) {
+                return controller.handlePreferenceChange(
+                        mPreferenceCompatManager.getOrCreatePrefCompat(key), newValue);
+            }
+        }
         return false;
     }
 

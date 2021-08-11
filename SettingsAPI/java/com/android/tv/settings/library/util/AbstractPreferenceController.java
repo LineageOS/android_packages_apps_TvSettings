@@ -92,6 +92,16 @@ public abstract class AbstractPreferenceController {
     }
 
     /**
+     * Handle preference change.
+     * @param preference preference that has been changed
+     * @param status new value of state
+     * @return whether the click is handled
+     */
+    public boolean handlePreferenceChange(PreferenceCompat preference, Object newValue) {
+        return false;
+    }
+
+    /**
      * Returns the key for this preference.
      */
     public abstract String[] getPreferenceKey();
