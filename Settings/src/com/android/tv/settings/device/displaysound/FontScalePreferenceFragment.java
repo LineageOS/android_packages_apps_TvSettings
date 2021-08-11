@@ -16,7 +16,9 @@
 
 package com.android.tv.settings.device.displaysound;
 
-import android.app.settings.SettingsEnums;
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
@@ -71,7 +73,7 @@ public class FontScalePreferenceFragment extends SettingsPreferenceFragment impl
             extras.putFloat(
                     FontScalePreviewFragment.CURRENT_FONT_SCALE_VALUE, mCurrentFontScaleValue);
 
-            if (entryValues[i].equals(String.valueOf(mCurrentFontScaleValue))) {
+            if (Float.compare(mCurrentFontScaleValue, Float.parseFloat(entryValues[i])) == 0) {
                 preference.setChecked(true);
             }
             fontScaleGroup.addPreference(preference);
@@ -94,6 +96,7 @@ public class FontScalePreferenceFragment extends SettingsPreferenceFragment impl
         radioPreference.clearOtherRadioPreferences(fontScaleGroup);
         mCurrentFontScaleValue = Float.parseFloat(preference.getKey());
         commit();
+        logNewFontScaleSelection(preference.getKey());
         return true;
     }
 
@@ -103,8 +106,25 @@ public class FontScalePreferenceFragment extends SettingsPreferenceFragment impl
         Settings.System.putFloat(resolver, Settings.System.FONT_SCALE, mCurrentFontScaleValue);
     }
 
+    private void logNewFontScaleSelection(String fontScale) {
+        final int[] textScalingOptions = {
+                TvSettingsEnums.DISPLAY_SOUND_TEXT_SCALING_SMALL,
+                TvSettingsEnums.DISPLAY_SOUND_TEXT_SCALING_DEFAULT,
+                TvSettingsEnums.DISPLAY_SOUND_TEXT_SCALING_LARGE,
+                TvSettingsEnums.DISPLAY_SOUND_TEXT_SCALING_LARGEST,
+        };
+        final String[] entryValues = getContext().getResources()
+                .getStringArray(R.array.font_scale_entry_values);
+        for (int i = 0; i < entryValues.length; i++) {
+            if (fontScale.equals(entryValues[i])) {
+                logEntrySelected(textScalingOptions[i]);
+                break;
+            }
+        }
+    }
+
     @Override
     protected int getPageId() {
-        return SettingsEnums.ACCESSIBILITY_FONT_SIZE;
+        return TvSettingsEnums.DISPLAY_SOUND_TEXT_SCALING;
     }
 }
