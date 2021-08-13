@@ -26,6 +26,8 @@ import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_CATEGORY;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY;
+import static com.android.tv.settings.library.PreferenceCompat.TYPE_RADIO;
+import static com.android.tv.settings.library.PreferenceCompat.TYPE_SWITCH;
 
 import android.content.Context;
 
@@ -202,6 +204,10 @@ public final class RenderUtil {
                 return new TsCollapsibleCategory(context, preferenceCompat.getKey());
             case TYPE_LIST:
                 return new TsListPreference(context, preferenceCompat.getKey());
+            case TYPE_RADIO:
+                return new TsRadioPreference(context, preferenceCompat.getKey());
+            case TYPE_SWITCH:
+                return new TsSwitchPreference(context, preferenceCompat.getKey());
             case TYPE_PREFERENCE:
             default:
                 return new TsPreference(context, preferenceCompat.getKey());
@@ -219,10 +225,10 @@ public final class RenderUtil {
     }
 
     public static void setChecked(
-            TwoStatePreference preference, PreferenceCompat preferenceParcelable) {
-        if (preferenceParcelable.getChecked() == PreferenceCompat.STATUS_ON) {
+            TwoStatePreference preference, PreferenceCompat preferenceCompat) {
+        if (preferenceCompat.getChecked() == PreferenceCompat.STATUS_ON) {
             preference.setChecked(true);
-        } else if (preferenceParcelable.getChecked() == PreferenceCompat.STATUS_OFF) {
+        } else if (preferenceCompat.getChecked() == PreferenceCompat.STATUS_OFF) {
             preference.setChecked(false);
         }
     }
