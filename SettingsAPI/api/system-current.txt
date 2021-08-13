@@ -24,6 +24,7 @@ package com.android.tv.settings.library {
     field public static final int STATE_EXTERNAL_SOURCES = 14; // 0xe
     field public static final int STATE_HIGH_POWER = 7; // 0x7
     field public static final int STATE_KEYBOARD = 17; // 0x11
+    field public static final int STATE_LANGUAGE = 20; // 0x14
     field public static final int STATE_NETWORK = 0; // 0x0
     field public static final int STATE_NOTIFICATION_ACCESS = 8; // 0x8
     field public static final int STATE_PICTURE_IN_PICTURE = 12; // 0xc
@@ -70,6 +71,7 @@ package com.android.tv.settings.library {
     method public boolean hasSlice();
     method public void initChildPreferences();
     method public boolean isDisabledByAdmin();
+    method public boolean isFocused();
     method public boolean isRestricted();
     method public void setChecked(byte);
     method public void setChecked(boolean);
@@ -81,6 +83,7 @@ package com.android.tv.settings.library {
     method public void setEntries(CharSequence[]);
     method public void setEntryValues(CharSequence[]);
     method public void setExtras(android.os.Bundle);
+    method public void setFocused(boolean);
     method public void setHasOnPreferenceChangeListener(boolean);
     method public void setHasSlice(boolean);
     method public void setIcon(android.graphics.drawable.Drawable);
@@ -107,6 +110,7 @@ package com.android.tv.settings.library {
     field public static final byte TYPE_PREFERENCE_ACCESS_POINT = 2; // 0x2
     field public static final byte TYPE_PREFERENCE_CATEGORY = 1; // 0x1
     field public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3; // 0x3
+    field public static final byte TYPE_RADIO = 6; // 0x6
     field public static final byte TYPE_SWITCH = 5; // 0x5
   }
 

@@ -49,6 +49,7 @@ public final class ManagerUtil {
     public static final int STATE_KEYBOARD = 17;
     public static final int STATE_AVAILABLE_KEYBOARD = 18;
     public static final int STATE_AUTO_FILL_PICKER_STATE = 19;
+    public static final int STATE_LANGUAGE = 20;
 
     public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     public static final String INFO_INTENT = "intent";

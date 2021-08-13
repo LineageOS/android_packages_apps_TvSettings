@@ -38,6 +38,7 @@ public class PreferenceCompat {
     public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3;
     public static final byte TYPE_LIST = 4;
     public static final byte TYPE_SWITCH = 5;
+    public static final byte TYPE_RADIO = 6;
     public static final byte STATUS_UNASSIGNED = 0;
     public static final byte STATUS_OFF = 1;
     public static final byte STATUS_ON = 2;
@@ -70,6 +71,9 @@ public class PreferenceCompat {
 
     // 0: not updated, 1 :not selectable, 2: selectable
     private byte mEnabled;
+
+    // 0: not updated, 1 :not focused, 2: focused
+    private boolean mIsFocused;
 
     private boolean mShouldRemove;
 
@@ -429,6 +433,18 @@ public class PreferenceCompat {
     @SystemApi
     public void setEnabled(boolean enabled) {
         setEnabled(ManagerUtil.getEnabled(enabled));
+    }
+
+    /** @hide */
+    @SystemApi
+    public boolean isFocused() {
+        return mIsFocused;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setFocused(boolean focused) {
+        mIsFocused = focused;
     }
 
     /** @hide */

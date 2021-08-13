@@ -40,7 +40,7 @@ import java.util.List;
 
 /** Provide utility class to render settings preferences. */
 public abstract class PreferenceControllerFragmentCompat extends LeanbackPreferenceFragmentCompat
-        implements  Preference.OnPreferenceChangeListener {
+        implements Preference.OnPreferenceChangeListener {
     private SettingsManager mSettingsManager;
     private String mTitle;
     private State mState;
@@ -56,6 +56,7 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
             }
         }
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -201,6 +202,7 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
 
     /**
      * Return the state identifier to be matched with SettingsAPI for the fragment.
+     *
      * @return state identifier
      */
     public abstract int getStateIdentifier();
