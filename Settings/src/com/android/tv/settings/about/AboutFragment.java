@@ -252,6 +252,8 @@ public class AboutFragment extends SettingsPreferenceFragment {
         // Remove regulatory information if none present.
         final Preference regulatoryPref = findPreference(KEY_REGULATORY_INFO);
         PreferenceUtils.resolveSystemActivityOrRemove(getActivity(), screen, regulatoryPref, 0);
+
+        updateTutorials();
     }
 
     private void removePreference(@Nullable Preference preference) {
@@ -275,7 +277,6 @@ public class AboutFragment extends SettingsPreferenceFragment {
         mDevHitCountdown = DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(getContext())
                 ? -1 : TAPS_TO_BE_A_DEVELOPER;
         mDevHitToast = null;
-        updateTutorials();
     }
 
     @Override
