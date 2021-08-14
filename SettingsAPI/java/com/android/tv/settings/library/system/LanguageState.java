@@ -101,6 +101,7 @@ public class LanguageState extends PreferenceControllerState {
                 radioPreference.setFocused(true);
             } else {
                 radioPreference.setChecked(false);
+                radioPreference.setFocused(false);
             }
             languageList.addChildPrefCompat(radioPreference);
         }
@@ -137,9 +138,7 @@ public class LanguageState extends PreferenceControllerState {
     }
 
     public PreferenceCompat clearOtherRadioPreferences(PreferenceCompat checkedPrefCompat,
-            PreferenceCompat launageList) {
-        PreferenceCompat languageList = mPreferenceCompatManager
-                .getPrefCompat(new String[]{LANGUAGE_RADIO_GROUP});
+            PreferenceCompat languageList) {
         languageList.getChildPrefCompats().stream().filter(preferenceCompat ->
                 !keyEquals(preferenceCompat.getKey(), checkedPrefCompat.getKey())).forEach(
                 preferenceCompat -> {
