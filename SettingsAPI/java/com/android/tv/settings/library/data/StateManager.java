@@ -24,6 +24,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_APP_USAGE_ACCESS
 import static com.android.tv.settings.library.ManagerUtil.STATE_AVAILABLE_KEYBOARD;
 import static com.android.tv.settings.library.ManagerUtil.STATE_HIGH_POWER;
 import static com.android.tv.settings.library.ManagerUtil.STATE_KEYBOARD;
+import static com.android.tv.settings.library.ManagerUtil.STATE_LANGUAGE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NOTIFICATION_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_PICTURE_IN_PICTURE;
@@ -53,6 +54,7 @@ import com.android.tv.settings.library.inputmethod.KeyboardState;
 import com.android.tv.settings.library.network.NetworkState;
 import com.android.tv.settings.library.network.WifiDetailsState;
 import com.android.tv.settings.library.system.DateTimeState;
+import com.android.tv.settings.library.system.LanguageState;
 
 /** Manager to handle creation and removal of the {@link State}. */
 public class StateManager {
@@ -110,6 +112,9 @@ public class StateManager {
                 break;
             case STATE_AVAILABLE_KEYBOARD:
                 state = new AvailableVirtualKeyboadState(context, uiUpdateCallback);
+                break;
+            case STATE_LANGUAGE:
+                state = new LanguageState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op
