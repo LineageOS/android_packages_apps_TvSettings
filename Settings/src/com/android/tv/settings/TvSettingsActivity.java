@@ -20,6 +20,8 @@ import static com.android.tv.settings.library.overlay.FlavorUtils.ALL_FLAVORS_MA
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.TextUtils;
 import android.transition.Scene;
 import android.transition.Slide;
@@ -52,15 +54,25 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
     private static final String SETTINGS_FRAGMENT_TAG =
             "com.android.tv.settings.MainSettings.SETTINGS_FRAGMENT";
 
+    private static final int UI_UPDATE_DELAY_MS = 200;
     private static final int REQUEST_CODE_STARTUP_VERIFICATION = 1;
 
     public SettingsManager mSettingsManager;
+    private Handler mHandler = new Handler(Looper.getMainLooper());
 
     private final UIUpdateCallback mUIUpdateCallback =
             new UIUpdateCallback() {
                 @Override
                 public void notifyUpdate(
                         int state, PreferenceCompat preference) {
+                    // Delay the  preference updates if there is no visible fragment yet, this
+                    // could happen when a configuration change has occurred.
+                    if (getVisibleFragment() == null) {
+                        mHandler.postDelayed(() -> {
+                            notifyUpdate(state, preference);
+                        }, UI_UPDATE_DELAY_MS);
+                        return;
+                    }
                     getVisibleFragment().getChildFragmentManager().getFragments().stream()
                             .filter(
                                     fragment ->
@@ -78,6 +90,14 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
                 @Override
                 public void notifyUpdateAll(
                         int state, List<PreferenceCompat> preferences) {
+                    // Delay the  preference updates if there is no visible fragment yet, this
+                    // could happen when a configuration change has occurred.
+                    if (getVisibleFragment() == null) {
+                        mHandler.postDelayed(() -> {
+                            notifyUpdateAll(state, preferences);
+                        }, UI_UPDATE_DELAY_MS);
+                        return;
+                    }
                     getVisibleFragment().getChildFragmentManager().getFragments().stream()
                             .filter(
                                     fragment ->
@@ -93,6 +113,14 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
 
                 @Override
                 public void notifyUpdateScreenTitle(int state, String title) {
+                    // Delay the  preference updates if there is no visible fragment yet, this
+                    // could happen when a configuration change has occurred.
+                    if (getVisibleFragment() == null) {
+                        mHandler.postDelayed(() -> {
+                            notifyUpdateScreenTitle(state, title);
+                        }, UI_UPDATE_DELAY_MS);
+                        return;
+                    }
                     getVisibleFragment().getChildFragmentManager().getFragments().stream()
                             .filter(
                                     fragment ->
@@ -310,5 +338,11 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
                 finish();
             }
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mHandler.removeCallbacksAndMessages(null);
     }
 }
