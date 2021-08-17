@@ -25,6 +25,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.compat.HasKeys;
 import com.android.tv.settings.compat.PreferenceControllerFragmentCompat;
 import com.android.tv.settings.compat.RenderUtil;
+import com.android.tv.settings.compat.TsRadioPreference;
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
 
@@ -62,16 +63,28 @@ public class LanguageFragmentCompat extends PreferenceControllerFragmentCompat {
                                     childPrefCompat);
                             getPreferenceScreen().addPreference(preference);
                         }
-                        RenderUtil.updatePreference(
-                                getContext(), (HasKeys) preference, childPrefCompat,
-                                preference.getOrder());
-                        if (preferenceCompat.isFocused()) {
-                            scrollToPreference(preference.getKey());
+                        if ((preference instanceof TsRadioPreference)) {
+                            final TsRadioPreference languagePref = (TsRadioPreference) preference;
+                            RenderUtil.updatePreference(
+                                    getContext(), languagePref, childPrefCompat,
+                                    preference.getOrder());
+                            languagePref.setRadioGroup(LANGUAGE_RADIO_GROUP[0]);
+                            if (childPrefCompat.isFocused()) {
+                                final Preference focusedPref = preference;
+                                scrollToPreference(focusedPref.getKey());
+                            }
                         }
                     }
-
             );
         }
         return null;
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference instanceof TsRadioPreference) {
+            ((TsRadioPreference) preference).clearOtherRadioPreferences(getPreferenceScreen());
+        }
+        return super.onPreferenceTreeClick(preference);
     }
 }
