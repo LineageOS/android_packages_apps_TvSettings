@@ -72,6 +72,7 @@ import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -112,7 +113,7 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     private static final String ACTION_ACCOUNTS = "com.android.tv.settings.ACCOUNTS";
     @VisibleForTesting
-    ConnectivityListener mConnectivityListener;
+    Optional<ConnectivityListener> mConnectivityListenerOptional;
     @VisibleForTesting
     BluetoothAdapter mBtAdapter;
     @VisibleForTesting
@@ -157,8 +158,12 @@ public class MainFragment extends PreferenceControllerFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mSuggestionQuickSettingPrefsContainer.onCreate();
-        mConnectivityListener = new ConnectivityListener(getContext(), this::updateConnectivity,
-                getSettingsLifecycle());
+        if (isWifiScanOptimisationEnabled()) {
+            mConnectivityListenerOptional = Optional.empty();
+        } else {
+            mConnectivityListenerOptional = Optional.of(new ConnectivityListener(
+                    getContext(), this::updateConnectivity, getSettingsLifecycle()));
+        }
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
         super.onCreate(savedInstanceState);
         // This is to record the initial start of Settings root in two panel settings case, as the
@@ -168,6 +173,10 @@ public class MainFragment extends PreferenceControllerFragment implements
         if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
             logPageFocused(getPageId(), true);
         }
+    }
+
+    private boolean isWifiScanOptimisationEnabled() {
+        return getContext().getResources().getBoolean(R.bool.wifi_scan_optimisation_enabled);
     }
 
     @Override
@@ -216,13 +225,16 @@ public class MainFragment extends PreferenceControllerFragment implements
 
     @VisibleForTesting
     void updateConnectivity() {
+        if (!mConnectivityListenerOptional.isPresent()) {
+            return;
+        }
         final Preference networkPref = findPreference(KEY_NETWORK);
         if (networkPref == null) {
             return;
         }
 
-        if (mConnectivityListener.isCellConnected()) {
-            final int signal = mConnectivityListener.getCellSignalStrength();
+        if (mConnectivityListenerOptional.get().isCellConnected()) {
+            final int signal = mConnectivityListenerOptional.get().getCellSignalStrength();
             switch (signal) {
                 case CellSignalStrength.SIGNAL_STRENGTH_GREAT:
                     networkPref.setIcon(R.drawable.ic_cell_signal_4_white);
@@ -241,12 +253,12 @@ public class MainFragment extends PreferenceControllerFragment implements
                     networkPref.setIcon(R.drawable.ic_cell_signal_0_white);
                     break;
             }
-        } else if (mConnectivityListener.isEthernetConnected()) {
+        } else if (mConnectivityListenerOptional.get().isEthernetConnected()) {
             networkPref.setIcon(R.drawable.ic_ethernet_white);
             networkPref.setSummary(R.string.connectivity_summary_ethernet_connected);
-        } else if (mConnectivityListener.isWifiEnabledOrEnabling()) {
-            if (mConnectivityListener.isWifiConnected()) {
-                final int signal = mConnectivityListener.getWifiSignalStrength(5);
+        } else if (mConnectivityListenerOptional.get().isWifiEnabledOrEnabling()) {
+            if (mConnectivityListenerOptional.get().isWifiConnected()) {
+                final int signal = mConnectivityListenerOptional.get().getWifiSignalStrength(5);
                 switch (signal) {
                     case 4:
                         networkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
@@ -265,7 +277,7 @@ public class MainFragment extends PreferenceControllerFragment implements
                         networkPref.setIcon(R.drawable.ic_wifi_signal_0_white);
                         break;
                 }
-                networkPref.setSummary(mConnectivityListener.getSsid());
+                networkPref.setSummary(mConnectivityListenerOptional.get().getSsid());
             } else {
                 networkPref.setIcon(R.drawable.ic_wifi_not_connected);
                 networkPref.setSummary(R.string.connectivity_summary_no_network_connected);
