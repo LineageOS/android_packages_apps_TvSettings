@@ -999,14 +999,6 @@
             </intent-filter>
         </provider>
 
-        <!-- Workaround to fix b/139637267 in Q. -->
-        <provider
-            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="${applicationId}.lifecycle-tests"
-            android:exported="false"
-            android:multiprocess="true"
-            tools:replace="android:authorities" />
-
         <activity
             android:name=".deviceadmin.ProfileOwnerAdd"
             android:clearTaskOnLaunch="true"
