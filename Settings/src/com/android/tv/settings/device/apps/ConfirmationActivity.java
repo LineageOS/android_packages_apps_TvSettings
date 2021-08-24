@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.device.apps;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -36,23 +37,30 @@ public class ConfirmationActivity extends FragmentActivity {
     private static final String EXTRA_GUIDANCE_BREADCRUMB = "guidacneBreadcrumb";
     private static final String EXTRA_GUIDANCE_ICON = "guidanceIcon";
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (savedInstanceState == null) {
             GuidedStepSupportFragment
                     .addAsRoot(this, ConfirmationFragment.newInstance(
-                            getIntent().getExtras()), android.R.id.content);
+                            getIntent()), android.R.id.content);
         }
     }
 
     public static class ConfirmationFragment extends GuidedStepSupportFragment {
         private static final int ID_OK = 0;
         private static final int ID_CANCEL = 1;
+        private final Intent mIntent;
 
-        public static ConfirmationFragment newInstance(Bundle extras) {
-            ConfirmationFragment f = new ConfirmationFragment();
-            f.setArguments(extras);
+        private ConfirmationFragment(Intent intent) {
+            mIntent = intent;
+            setArguments(intent.getExtras());
+        }
+
+        /** @return an new activity instance. */
+        public static ConfirmationFragment newInstance(Intent intent) {
+            ConfirmationFragment f = new ConfirmationFragment(intent);
             return f;
         }
 
@@ -88,10 +96,10 @@ public class ConfirmationActivity extends FragmentActivity {
         public void onGuidedActionClicked(GuidedAction action) {
             switch ((int) action.getId()) {
                 case ID_OK:
-                    getActivity().setResult(RESULT_OK);
+                    getActivity().setResult(RESULT_OK, mIntent);
                     break;
                 case ID_CANCEL:
-                    getActivity().setResult(RESULT_CANCELED);
+                    getActivity().setResult(RESULT_CANCELED, mIntent);
                     break;
             }
             getActivity().finish();
