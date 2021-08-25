@@ -86,6 +86,10 @@ public class PreferenceCompat {
     // Indicates whether the preference is disabled by admin.
     private boolean mIsDisabledByAdmin;
 
+    private byte mPersistent;
+
+    private String mRadioGroup;
+
     // Next state of the current state, -1 to indicate there is no next state.
     private Integer mNextState;
 
@@ -427,6 +431,36 @@ public class PreferenceCompat {
     @SystemApi
     public void setDisabledByAdmin(boolean disabledByAdmin) {
         mIsDisabledByAdmin = disabledByAdmin;
+    }
+
+    /** @hide */
+    @SystemApi
+    public byte getPersistent() {
+        return mPersistent;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setPersistent(byte persistent) {
+        mPersistent = persistent;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setPersistent(boolean persistent) {
+        setPersistent(ManagerUtil.getPersistent(persistent));
+    }
+
+    /** @hide */
+    @SystemApi
+    public String getRadioGroup() {
+        return mRadioGroup;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setRadioGroup(String radioGroup) {
+        mRadioGroup = radioGroup;
     }
 
     /** @hide */

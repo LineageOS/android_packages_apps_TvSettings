@@ -12,6 +12,10 @@ package com.android.tv.settings.library {
     field public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";
     field public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     field public static final int OFFSET_MULTIPLIER = 100000; // 0x186a0
+    field public static final int STATE_ACCESSIBILITY = 21; // 0x15
+    field public static final int STATE_ACCESSIBILITY_SERVICE = 22; // 0x16
+    field public static final int STATE_ACCESSIBILITY_SHORTCUT = 23; // 0x17
+    field public static final int STATE_ACCESSIBILITY_SHORTCUT_SERVICE = 24; // 0x18
     field public static final int STATE_ALARMS_AND_REMINDERS = 13; // 0xd
     field public static final int STATE_ALL_APPS = 4; // 0x4
     field public static final int STATE_APPS = 3; // 0x3
@@ -59,6 +63,8 @@ package com.android.tv.settings.library {
     method public android.content.Intent getIntent();
     method public String[] getKey();
     method public Integer getNextState();
+    method public byte getPersistent();
+    method public String getRadioGroup();
     method public byte getSelectable();
     method public String getSliceUri();
     method public String getSummary();
@@ -89,6 +95,9 @@ package com.android.tv.settings.library {
     method public void setIcon(android.graphics.drawable.Drawable);
     method public void setIntent(android.content.Intent);
     method public void setNextState(Integer);
+    method public void setPersistent(byte);
+    method public void setPersistent(boolean);
+    method public void setRadioGroup(String);
     method public void setRestricted(boolean);
     method public void setSelectable(byte);
     method public void setSelectable(boolean);
