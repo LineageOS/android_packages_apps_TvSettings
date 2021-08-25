@@ -16,6 +16,10 @@
 
 package com.android.tv.settings.library.data;
 
+import static com.android.tv.settings.library.ManagerUtil.STATE_ACCESSIBILITY;
+import static com.android.tv.settings.library.ManagerUtil.STATE_ACCESSIBILITY_SERVICE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_ACCESSIBILITY_SHORTCUT;
+import static com.android.tv.settings.library.ManagerUtil.STATE_ACCESSIBILITY_SHORTCUT_SERVICE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ALARMS_AND_REMINDERS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ALL_APPS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APPS;
@@ -38,6 +42,10 @@ import android.content.Context;
 
 import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.accessibility.AccessibilityServiceState;
+import com.android.tv.settings.library.accessibility.AccessibilityShortcutServiceState;
+import com.android.tv.settings.library.accessibility.AccessibilityShortcutState;
+import com.android.tv.settings.library.accessibility.AccessibilityState;
 import com.android.tv.settings.library.device.apps.AllAppsState;
 import com.android.tv.settings.library.device.apps.AppManagementState;
 import com.android.tv.settings.library.device.apps.AppsState;
@@ -115,6 +123,18 @@ public class StateManager {
                 break;
             case STATE_LANGUAGE:
                 state = new LanguageState(context, uiUpdateCallback);
+                break;
+            case STATE_ACCESSIBILITY:
+                state = new AccessibilityState(context, uiUpdateCallback);
+                break;
+            case STATE_ACCESSIBILITY_SERVICE:
+                state = new AccessibilityServiceState(context, uiUpdateCallback);
+                break;
+            case STATE_ACCESSIBILITY_SHORTCUT:
+                state = new AccessibilityShortcutState(context, uiUpdateCallback);
+                break;
+            case STATE_ACCESSIBILITY_SHORTCUT_SERVICE:
+                state = new AccessibilityShortcutServiceState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op

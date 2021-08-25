@@ -211,6 +211,10 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
         return mState;
     }
 
+    public <T extends State> T getState(Class<T> clazz) {
+        return clazz.cast(mState);
+    }
+
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
