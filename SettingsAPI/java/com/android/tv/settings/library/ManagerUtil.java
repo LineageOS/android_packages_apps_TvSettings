@@ -54,6 +54,8 @@ public final class ManagerUtil {
     public static final int STATE_ACCESSIBILITY_SERVICE = 22;
     public static final int STATE_ACCESSIBILITY_SHORTCUT = 23;
     public static final int STATE_ACCESSIBILITY_SHORTCUT_SERVICE = 24;
+    public static final int STATE_STORAGE = 25;
+    public static final int STATE_STORAGE_SUMMARY = 26;
 
     public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     public static final String INFO_INTENT = "intent";
