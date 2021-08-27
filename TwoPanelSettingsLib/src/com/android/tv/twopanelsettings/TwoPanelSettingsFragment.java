@@ -76,6 +76,7 @@ import com.android.tv.twopanelsettings.slices.SliceSeekbarPreference;
 import com.android.tv.twopanelsettings.slices.SliceSwitchPreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -122,6 +123,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private Preference mFocusedPreference;
     private boolean mIsWaitingForUpdatingPreview = false;
     private AudioManager mAudioManager;
+    private HashSet<VerticalGridView> mHasOnChildViewHolderSelectedListener = new HashSet<>();
 
     private static final String DELAY_MS = "delay_ms";
     private static final String CHECK_SCROLL_STATE = "check_scroll_state";
@@ -373,9 +375,17 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         VerticalGridView listView = (VerticalGridView) leanbackPreferenceFragment.getListView();
         if (listView != null) {
             if (isAddingListener) {
-                listView.setOnChildViewHolderSelectedListener(mOnChildViewHolderSelectedListener);
+                if (!mHasOnChildViewHolderSelectedListener.contains(listView)) {
+                    listView.addOnChildViewHolderSelectedListener(
+                            mOnChildViewHolderSelectedListener);
+                    mHasOnChildViewHolderSelectedListener.add(listView);
+                }
             } else {
-                listView.setOnChildViewHolderSelectedListener(null);
+                if (mHasOnChildViewHolderSelectedListener.contains(listView)) {
+                    listView.removeOnChildViewHolderSelectedListener(
+                            mOnChildViewHolderSelectedListener);
+                    mHasOnChildViewHolderSelectedListener.remove(listView);
+                }
             }
         }
     }
