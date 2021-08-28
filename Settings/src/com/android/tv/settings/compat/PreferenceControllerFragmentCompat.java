@@ -16,17 +16,25 @@
 
 package com.android.tv.settings.compat;
 
+import android.animation.AnimatorInflater;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceGroupAdapter;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceViewHolder;
 import androidx.preference.TwoStatePreference;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.tv.settings.HasSettingsManager;
 import com.android.tv.settings.R;
@@ -240,6 +248,38 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
                 }
             }
         }
+    }
+
+    @Override
+    protected RecyclerView.Adapter onCreateAdapter(PreferenceScreen preferenceScreen) {
+        return new PreferenceGroupAdapter(preferenceScreen) {
+            @Override
+            @NonNull
+            public PreferenceViewHolder onCreateViewHolder(@NonNull ViewGroup parent,
+                    int viewType) {
+                PreferenceViewHolder vh = super.onCreateViewHolder(parent, viewType);
+                if (FlavorUtils.isTwoPanel(getContext())) {
+                    vh.itemView.setStateListAnimator(AnimatorInflater.loadStateListAnimator(
+                            getContext(), R.animator.preference));
+                }
+                vh.itemView.setOnTouchListener((v, e) -> {
+                    if (e.getActionMasked() == MotionEvent.ACTION_DOWN) {
+                        vh.itemView.requestFocus();
+                        v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,
+                                KeyEvent.KEYCODE_DPAD_CENTER));
+                        return true;
+                    } else if (e.getActionMasked() == MotionEvent.ACTION_UP) {
+                        v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP,
+                                KeyEvent.KEYCODE_DPAD_CENTER));
+                        return true;
+                    }
+                    return false;
+                });
+                vh.itemView.setFocusable(true);
+                vh.itemView.setFocusableInTouchMode(true);
+                return vh;
+            }
+        };
     }
 }
 

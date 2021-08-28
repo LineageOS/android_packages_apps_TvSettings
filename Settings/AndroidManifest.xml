@@ -844,7 +844,13 @@
         <activity
             android:name=".device.storage.FormatActivity"
             android:excludeFromRecents="true"
-            android:exported="false" />
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.android.tv.settings.device.storage.FormatActivity.formatAsPublic"/>
+                <action android:name="com.android.tv.settings.device.storage.FormatActivity.formatAsPrivate"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".device.storage.MigrateStorageActivity"

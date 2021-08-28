@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.UIUpdateCallback;
@@ -36,6 +37,11 @@ public class AppsState extends PreferenceControllerState {
     public AppsState(Context context,
             UIUpdateCallback callback) {
         super(context, callback);
+    }
+
+    public static void prepareArgs(Bundle b, String volumeUuid, String volumeName) {
+        b.putString(EXTRA_VOLUME_UUID, volumeUuid);
+        b.putString(EXTRA_VOLUME_NAME, volumeName);
     }
 
     @Override
