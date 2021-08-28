@@ -33,6 +33,8 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NOTIFICATION_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_PICTURE_IN_PICTURE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_SPECIAL_ACCESS;
+import static com.android.tv.settings.library.ManagerUtil.STATE_STORAGE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_STORAGE_SUMMARY;
 import static com.android.tv.settings.library.ManagerUtil.STATE_SYSTEM_ALERT_WINDOW;
 import static com.android.tv.settings.library.ManagerUtil.STATE_SYSTEM_DATE_TIME;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
@@ -57,6 +59,8 @@ import com.android.tv.settings.library.device.apps.specialaccess.PictureInPictur
 import com.android.tv.settings.library.device.apps.specialaccess.SpecialAppAccessState;
 import com.android.tv.settings.library.device.apps.specialaccess.SystemAlertWindowState;
 import com.android.tv.settings.library.device.apps.specialaccess.WriteSettingsState;
+import com.android.tv.settings.library.device.storage.StorageState;
+import com.android.tv.settings.library.device.storage.StorageSummaryState;
 import com.android.tv.settings.library.inputmethod.AvailableVirtualKeyboadState;
 import com.android.tv.settings.library.inputmethod.KeyboardState;
 import com.android.tv.settings.library.network.NetworkState;
@@ -135,6 +139,11 @@ public class StateManager {
                 break;
             case STATE_ACCESSIBILITY_SHORTCUT_SERVICE:
                 state = new AccessibilityShortcutServiceState(context, uiUpdateCallback);
+            case STATE_STORAGE:
+                state = new StorageState(context, uiUpdateCallback);
+                break;
+            case STATE_STORAGE_SUMMARY:
+                state = new StorageSummaryState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op
