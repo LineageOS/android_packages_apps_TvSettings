@@ -200,6 +200,10 @@ public class StorageSummaryState extends PreferenceControllerState {
             preferenceCompat.setSummary(ResourcesUtil.getString(
                     context, "storage_unmount_success, description"));
         }
+        Bundle b = new Bundle();
+        StorageState.prepareArgs(b, volumeInfo);
+        preferenceCompat.setExtras(b);
+        preferenceCompat.setNextState(ManagerUtil.STATE_STORAGE);
     }
 
     private void refreshForUnsupportedDiskPref(Context context, DiskInfo info,
@@ -211,6 +215,10 @@ public class StorageSummaryState extends PreferenceControllerState {
             PreferenceCompat preferenceCompat) {
         preferenceCompat.setTitle(volumeRecord.getNickname());
         preferenceCompat.setSummary(ResourcesUtil.getString(mContext, "storage_not_connected"));
+        Bundle b = new Bundle();
+        MissingStorageState.prepareArgs(b, volumeRecord.getFsUuid());
+        preferenceCompat.setExtras(b);
+        preferenceCompat.setNextState(ManagerUtil.STATE_MISSING_STORAGE);
     }
 
     private static String getSizeString(Context context, VolumeInfo vol) {
