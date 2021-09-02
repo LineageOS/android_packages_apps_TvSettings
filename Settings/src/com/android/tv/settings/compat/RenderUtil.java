@@ -19,8 +19,11 @@ package com.android.tv.settings.compat;
 import static com.android.tv.settings.compat.TsCollapsibleCategory.COLLAPSE;
 import static com.android.tv.settings.library.ManagerUtil.INFO_WIFI_SIGNAL_LEVEL;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ACCESSIBILITY_SERVICE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_APPS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
 import static com.android.tv.settings.library.ManagerUtil.STATE_EMPTY;
+import static com.android.tv.settings.library.ManagerUtil.STATE_MISSING_STORAGE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_STORAGE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_LIST;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE;
@@ -311,6 +314,12 @@ public final class RenderUtil {
                 return "com.android.tv.settings.device.apps.AppManagementFragmentCompat";
             case STATE_ACCESSIBILITY_SERVICE:
                 return "com.android.tv.settings.accessibility.AccessibilityServiceFragmentCompat";
+            case STATE_STORAGE:
+                return "com.android.tv.settings.device.storage.StorageFragmentCompat";
+            case STATE_MISSING_STORAGE:
+                return "com.android.tv.settings.device.storage.MissingStorageFragmentCompat";
+            case STATE_APPS:
+                return "com.android.tv.settings.device.apps.AppsFragmentCompat";
             case STATE_EMPTY:
             default:
                 return null;
