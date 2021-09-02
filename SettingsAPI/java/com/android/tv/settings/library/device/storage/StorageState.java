@@ -100,6 +100,9 @@ public class StorageState extends PreferenceControllerState {
         super(context, callback);
     }
 
+    public static void prepareArgs(Bundle bundle, VolumeInfo volumeInfo) {
+        bundle.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeInfo.getId());
+    }
 
     @Override
     public void onCreate(Bundle extras) {
@@ -110,6 +113,8 @@ public class StorageState extends PreferenceControllerState {
                 extras.getString(VolumeInfo.EXTRA_VOLUME_ID));
         mExtras = extras;
         super.onCreate(extras);
+        mUIUpdateCallback.notifyUpdateScreenTitle(
+                getStateIdentifier(), mStorageManager.getBestVolumeDescription(mVolumeInfo));
         mMigratePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_MIGRATE);
         mEjectPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_EJECT);
         mErasePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_ERASE);
@@ -214,6 +219,14 @@ public class StorageState extends PreferenceControllerState {
         mMusicUsagePref.setVisible(isPrivate);
         mDownloadsUsagePref.setVisible(isPrivate);
         mCacheUsagePref.setVisible(isPrivate);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mMigratePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mEjectPref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mErasePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mAppsUsagePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mDcimUsagePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mMusicUsagePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mDownloadsUsagePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mCacheUsagePref);
     }
 
     @Override
@@ -282,6 +295,13 @@ public class StorageState extends PreferenceControllerState {
         mDownloadsUsagePref.setSummary(formatSize(mContext, downloadsSize));
         mCacheUsagePref.setSummary(formatSize(mContext, details.cacheSize));
         mMiscUsagePref.setSummary(formatSize(mContext, details.miscSize.get(currentUser)));
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mAvailablePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mAppsUsagePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mDcimUsagePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mMusicUsagePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mDownloadsUsagePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mCacheUsagePref);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mMiscUsagePref);
     }
 
     public static String formatSize(Context context, long size) {
