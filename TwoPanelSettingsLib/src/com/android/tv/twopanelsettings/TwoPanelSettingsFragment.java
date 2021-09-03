@@ -330,6 +330,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     private boolean isA11yOn() {
+        if (getActivity() == null) {
+            return false;
+        }
         return Settings.Secure.getInt(
                 getActivity().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_ENABLED, 0) == 1;
