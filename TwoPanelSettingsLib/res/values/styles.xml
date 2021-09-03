@@ -33,6 +33,8 @@
         <item name="android:textColor">@color/tp_preference_category_text_color</item>
         <item name="android:textSize">@dimen/tp_preference_category_text_size</item>
         <item name="android:textAllCaps">true</item>
+        <!-- 0.8 Spacing, 0.8/11 = 0.072727273 -->
+        <item name="android:letterSpacing">0.072727273</item>
     </style>
 
     <style name="TextAppearance.TwoPanelPreference.ListItem" parent="android:TextAppearance">
