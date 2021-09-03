@@ -361,7 +361,7 @@
         <item name="android:maxLines">3</item>
         <item name="android:fontFamily">@string/preference_category_text_font</item>
         <item name="android:textSize">@dimen/guided_action_text_size_two_panel</item>
-        <item name="android:textColor">@color/tp_preference_item_primary_text_color_selector</item>
+        <item name="android:textColor">@color/tp_preference_item_primary_text_default_color</item>
     </style>
 
     <style name="GuidedActionIconStyle" parent="@style/Widget.Leanback.GuidedActionItemIconStyle">
@@ -374,7 +374,7 @@
 
     <style name="GuidedActionItemDescriptionStyleTwoPanel" parent="Widget.Leanback.GuidedActionItemDescriptionStyle">
         <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textColor">@color/tp_preference_item_secondary_text_color_selector</item>
+        <item name="android:textColor">@color/tp_preference_item_secondary_text_default_color</item>
         <item name="android:textSize">@dimen/guided_action_description_text_size_two_panel</item>
         <item name="android:duplicateParentState">true</item>
         <item name="android:focusable">true</item>
