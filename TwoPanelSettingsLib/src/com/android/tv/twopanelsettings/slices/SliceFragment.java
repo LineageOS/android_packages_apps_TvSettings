@@ -73,7 +73,9 @@ import com.android.tv.twopanelsettings.slices.PreferenceSliceLiveData.SliceLiveD
 import com.android.tv.twopanelsettings.slices.SlicePreferencesUtil.Data;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * A screen presenting a slice in TV settings.
@@ -379,6 +381,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             }
         }
 
+        Map<Integer, Boolean> twoStatePreferenceIsCheckedByOrder = new HashMap<>();
+        for (int i = 0; i < newPrefs.size(); i++) {
+            if (newPrefs.get(i) instanceof TwoStatePreference) {
+                twoStatePreferenceIsCheckedByOrder.put(
+                        i, ((TwoStatePreference) newPrefs.get(i)).isChecked());
+            }
+        }
+
         //Iterate the new preferences list and give each preference a correct order
         for (int i = 0; i < newPrefs.size(); i++) {
             Preference newPref = newPrefs.get(i);
@@ -396,11 +406,6 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                         oldPref.setSelectable(newPref.isSelectable());
                         oldPref.setFragment(newPref.getFragment());
                         oldPref.getExtras().putAll(newPref.getExtras());
-                        if ((oldPref instanceof TwoStatePreference)
-                                && (newPref instanceof TwoStatePreference)) {
-                            ((TwoStatePreference) oldPref)
-                                    .setChecked(((TwoStatePreference) newPref).isChecked());
-                        }
                         if ((oldPref instanceof HasSliceAction)
                                 && (newPref instanceof HasSliceAction)) {
                             ((HasSliceAction) oldPref)
@@ -422,6 +427,16 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             if (neededToAddNewPref) {
                 newPref.setOrder(i);
                 screen.addPreference(newPref);
+            }
+        }
+        //addPreference will reset the checked status of TwoStatePreference.
+        //So we need to add them back
+        for (int i = 0; i < screen.getPreferenceCount(); i++) {
+            Preference screenPref = screen.getPreference(i);
+            if (screenPref instanceof TwoStatePreference
+                    && twoStatePreferenceIsCheckedByOrder.get(i) != null) {
+                ((TwoStatePreference) screenPref)
+                        .setChecked(twoStatePreferenceIsCheckedByOrder.get(i));
             }
         }
         removeAnimationClipping(getView());
