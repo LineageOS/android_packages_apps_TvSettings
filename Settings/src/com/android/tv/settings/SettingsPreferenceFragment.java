@@ -126,7 +126,6 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
                 ViewGroup decor = view.findViewById(R.id.decor_title_container);
                 if (decor != null) {
                     decor.setOutlineProvider(null);
-                    decor.setBackgroundResource(R.color.tp_preference_panel_background_color);
                 }
             } else {
                 // We only want to set the title in this location for one-panel settings.
