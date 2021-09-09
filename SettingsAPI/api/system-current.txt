@@ -23,8 +23,10 @@ package com.android.tv.settings.library {
     field public static final int STATE_APP_USAGE_ACCESS = 9; // 0x9
     field public static final int STATE_AUTO_FILL_PICKER_STATE = 19; // 0x13
     field public static final int STATE_AVAILABLE_KEYBOARD = 18; // 0x12
+    field public static final int STATE_DAYDREAM = 30; // 0x1e
     field public static final int STATE_DEVICE_MAIN = 2; // 0x2
     field public static final int STATE_EMPTY = -1; // 0xffffffff
+    field public static final int STATE_ENERGY_SAVER = 29; // 0x1d
     field public static final int STATE_EXTERNAL_SOURCES = 14; // 0xe
     field public static final int STATE_HIGH_POWER = 7; // 0x7
     field public static final int STATE_KEYBOARD = 17; // 0x11
@@ -33,6 +35,7 @@ package com.android.tv.settings.library {
     field public static final int STATE_NETWORK = 0; // 0x0
     field public static final int STATE_NOTIFICATION_ACCESS = 8; // 0x8
     field public static final int STATE_PICTURE_IN_PICTURE = 12; // 0xc
+    field public static final int STATE_POWER_AND_ENERGY = 28; // 0x1c
     field public static final int STATE_SPECIAL_ACCESS = 6; // 0x6
     field public static final int STATE_STORAGE = 25; // 0x19
     field public static final int STATE_STORAGE_SUMMARY = 26; // 0x1a
