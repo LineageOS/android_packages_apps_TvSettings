@@ -26,6 +26,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_APPS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_USAGE_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_AVAILABLE_KEYBOARD;
+import static com.android.tv.settings.library.ManagerUtil.STATE_DAYDREAM;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ENERGY_SAVER;
 import static com.android.tv.settings.library.ManagerUtil.STATE_HIGH_POWER;
 import static com.android.tv.settings.library.ManagerUtil.STATE_KEYBOARD;
@@ -60,6 +61,7 @@ import com.android.tv.settings.library.device.apps.specialaccess.PictureInPictur
 import com.android.tv.settings.library.device.apps.specialaccess.SpecialAppAccessState;
 import com.android.tv.settings.library.device.apps.specialaccess.SystemAlertWindowState;
 import com.android.tv.settings.library.device.apps.specialaccess.WriteSettingsState;
+import com.android.tv.settings.library.device.display.daydream.DaydreamState;
 import com.android.tv.settings.library.device.display.daydream.EnergySaverState;
 import com.android.tv.settings.library.device.storage.StorageState;
 import com.android.tv.settings.library.device.storage.StorageSummaryState;
@@ -149,6 +151,9 @@ public class StateManager {
                 break;
             case STATE_ENERGY_SAVER:
                 state = new EnergySaverState(context, uiUpdateCallback);
+                break;
+            case STATE_DAYDREAM:
+                state = new DaydreamState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op
