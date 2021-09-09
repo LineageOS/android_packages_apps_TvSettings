@@ -57,6 +57,9 @@ public final class ManagerUtil {
     public static final int STATE_STORAGE = 25;
     public static final int STATE_STORAGE_SUMMARY = 26;
     public static final int STATE_MISSING_STORAGE = 27;
+    public static final int STATE_POWER_AND_ENERGY = 28;
+    public static final int STATE_ENERGY_SAVER = 29;
+    public static final int STATE_DAYDREAM = 30;
 
     public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     public static final String INFO_INTENT = "intent";
