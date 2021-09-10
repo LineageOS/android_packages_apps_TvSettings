@@ -54,7 +54,7 @@
     <string name="privacy_category_title" msgid="8552430590908463601">"Privatliv"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Enhedsindstillinger"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Appindstillinger"</string>
-    <string name="privacy_category_summary" msgid="3534434883380511043">"Placering, brug og diagnostik, annoncer"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Lokation, brug og diagnostik, annoncer"</string>
     <string name="add_account" msgid="7386223854837017129">"Tilføj konto"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Fjern konto"</string>
     <string name="account_sync" msgid="4315295293211313989">"Vælg synkroniserede apps"</string>
@@ -76,7 +76,7 @@
     <string name="connectivity_summary_no_network_connected" msgid="6111160695454212460">"Der er ikke forbindelse til et netværk"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi er deaktiveret"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Scanning altid tilgængelig"</string>
-    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Lad Googles placeringstjeneste og andre apps scanne efter netværk, selv når Wi-Fi er slået fra"</string>
+    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Lad Googles lokationstjeneste og andre apps scanne efter netværk, selv når Wi-Fi er slået fra"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Opret forbindelse til netværk"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Senest åbnede apps"</string>
@@ -360,7 +360,7 @@
     <string name="storage_wizard_migrate_progress_title" msgid="2623480667090826800">"Flytter data til <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_migrate_progress_description" msgid="4023358325977284145">"Dette kan tage et øjeblik. Du må ikke fjerne drevet.\nNogle apps virker ikke korrekt under flytningen."</string>
     <string name="storage_wizard_format_slow_title" msgid="7640229918512394316">"Dette drev ser ud til at være langsomt."</string>
-    <string name="storage_wizard_format_slow_summary" msgid="3674023258060474037">"Du kan sagtens fortsætte, men apps, der er flyttet til denne placering, vil muligvis hakke, og dataoverførsler kan tage længere tid. Du kan også skifte til et hurtigere drev for at få en bedre ydeevne."</string>
+    <string name="storage_wizard_format_slow_summary" msgid="3674023258060474037">"Du kan sagtens fortsætte, men apps, der er flyttet til denne lokation, vil muligvis hakke, og dataoverførsler kan tage længere tid. Du kan også skifte til et hurtigere drev for at få en bedre ydeevne."</string>
     <string name="storage_wizard_format_action" msgid="3275676687226857170">"Formatér"</string>
     <string name="storage_wizard_backup_apps_action" msgid="1402199004931596519">"Sikkerhedskopiér apps"</string>
     <string name="storage_wizard_back_up_apps_title" msgid="6225663573896846937">"Apps, der er gemt på <xliff:g id="NAME">%1$s</xliff:g>"</string>
@@ -406,27 +406,27 @@
     <item msgid="5645263357181875427">"Brug transportstrømmens tid"</item>
     <item msgid="5501503537181350884">"Fra"</item>
   </string-array>
-    <string name="system_location" msgid="4057295363709016511">"Placering"</string>
+    <string name="system_location" msgid="4057295363709016511">"Lokation"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Tillad, at apps, der har bedt om din tilladelse, bruger dine stedoplysninger"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Placeringssamtykke"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Tilstand"</string>
-    <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Seneste placeringsanmodninger"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"Ingen apps har anmodet om placering for nylig"</string>
+    <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Seneste lokationsanmodninger"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"Ingen apps har anmodet om lokation for nylig"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Højt batteriforbrug"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Lavt batteriforbrug"</string>
-    <string name="location_mode_wifi_description" msgid="84697248707903061">"Brug Wi-Fi til at fastslå placering"</string>
+    <string name="location_mode_wifi_description" msgid="84697248707903061">"Brug Wi-Fi til at fastslå lokation"</string>
     <string name="location_status" msgid="3037321737386011224">"Placeringsstatus"</string>
-    <string name="location_services" msgid="551503779736382878">"Placeringstjenester"</string>
+    <string name="location_services" msgid="551503779736382878">"Lokationstjenester"</string>
     <string name="on" msgid="4899322147062342542">"Til"</string>
     <string name="off" msgid="3127416478888499352">"Fra"</string>
-    <string name="google_location_services_title" msgid="6304196603522909239">"Googles placeringstjenester"</string>
-    <string name="third_party_location_services_title" msgid="2826218400381676508">"Placeringstjenester fra tredjepart"</string>
-    <string name="location_reporting" msgid="3552501333650895634">"Placeringsrapportering"</string>
-    <string name="location_history" msgid="4055660203090513120">"Placeringshistorik"</string>
-    <string name="location_reporting_desc" msgid="1580018652781674608">"Google bruger denne funktion i andre produkter, f.eks. Google Nu og Google Maps. Når du slår Placeringsrapportering til, giver du ethvert Google-produkt, der bruger denne funktion, tilladelse til at gemme og bruge enhedens seneste placeringsdata i forbindelse med din Google-konto."</string>
-    <string name="location_history_desc" msgid="926674012916014270">"Når Placeringshistorik er slået til for denne konto, kan Google gemme enhedens placeringsdata, så dine apps kan bruge dem.\n\nGoogle Maps kan f.eks. give dig rutevejledning, og Google Nu kan informere dig om pendlertrafik.\n\nDu kan til enhver tid slå Placeringshistorik fra, men det vil ikke slette den. Du kan se og administrere din Placeringshistorik på maps.google.com/locationhistory."</string>
-    <string name="delete_location_history_title" msgid="707559064715633152">"Slet Placeringshistorik"</string>
-    <string name="delete_location_history_desc" msgid="4035229731487113147">"Dette vil slette alt, som Placeringshistorik har gemt fra denne enhed for denne Google-konto. Du kan ikke fortryde denne sletning. Nogle apps, herunder Google Nu, vil stoppe med at virke."</string>
+    <string name="google_location_services_title" msgid="6304196603522909239">"Googles lokationstjenester"</string>
+    <string name="third_party_location_services_title" msgid="2826218400381676508">"Lokationstjenester fra tredjepart"</string>
+    <string name="location_reporting" msgid="3552501333650895634">"Lokationsrapportering"</string>
+    <string name="location_history" msgid="4055660203090513120">"Lokationshistorik"</string>
+    <string name="location_reporting_desc" msgid="1580018652781674608">"Google bruger denne funktion i andre produkter, f.eks. Google Nu og Google Maps. Når du slår Lokationsrapportering til, giver du ethvert Google-produkt, der bruger denne funktion, tilladelse til at gemme og bruge enhedens seneste lokationsdata i forbindelse med din Google-konto."</string>
+    <string name="location_history_desc" msgid="926674012916014270">"Når Lokationshistorik er slået til for denne konto, kan Google gemme enhedens lokationsdata, så dine apps kan bruge dem.\n\nGoogle Maps kan f.eks. give dig rutevejledning, og Google Nu kan informere dig om pendlertrafik.\n\nDu kan til enhver tid slå Lokationshistorik fra, men det vil ikke slette den. Du kan se og administrere din Lokationshistorik på maps.google.com/locationhistory."</string>
+    <string name="delete_location_history_title" msgid="707559064715633152">"Slet Lokationshistorik"</string>
+    <string name="delete_location_history_desc" msgid="4035229731487113147">"Dette vil slette alt, som Lokationshistorik har gemt fra denne enhed for denne Google-konto. Du kan ikke fortryde denne sletning. Nogle apps, herunder Google Nu, vil stoppe med at virke."</string>
     <string name="system_services" msgid="5754310941186053151">"Tjenester"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Tjenesteindstillinger"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Tekst med stor kontrast"</string>
@@ -501,7 +501,7 @@
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Logføring for Bluetooth HCI"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Mailadresse"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"USB-fejlretning"</string>
-    <string name="system_allow_mock_locations" msgid="2483106887711851466">"Tillad imiterede placeringer"</string>
+    <string name="system_allow_mock_locations" msgid="2483106887711851466">"Tillad imiterede lokationer"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Vælg app til fejlretning"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Vent på fejlfinder"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Bekræft apps via USB"</string>
@@ -509,7 +509,7 @@
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Detaljeret Wi-Fi-logføring"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Aktivér detaljeret Wi-Fi-logføring"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Vis tryk"</string>
-    <string name="system_pointer_location" msgid="8724050865245555084">"Markørens placering"</string>
+    <string name="system_pointer_location" msgid="8724050865245555084">"Markørens lokation"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"Vis layoutgrænser"</string>
     <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"Vis opdateringer af GPU-visning"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Vis hardwarelag"</string>
@@ -635,7 +635,7 @@
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Kontrolleret af <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="app_not_supported_in_limited" msgid="4046604594925826955">"Denne app understøttes ikke for begrænsede profiler"</string>
     <string name="app_sees_restricted_accounts" msgid="174038126799649152">"Denne app kan få adgang til dine konti"</string>
-    <string name="restriction_location_enable_title" msgid="2552780806199464266">"Placering"</string>
+    <string name="restriction_location_enable_title" msgid="2552780806199464266">"Lokation"</string>
     <string name="restriction_location_enable_summary" msgid="3719330231217994482">"Tillad, at apps bruger dine stedoplysninger"</string>
     <string name="restricted_profile_switch_to" msgid="6193201935877168764">"Skift til begrænset profil"</string>
     <string name="restricted_profile_switch_out" msgid="3589381233390753413">"Forlad begrænset profil"</string>
