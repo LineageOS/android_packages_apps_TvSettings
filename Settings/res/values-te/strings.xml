@@ -651,7 +651,7 @@
     <string name="location_reporting" msgid="3552501333650895634">"లొకేషన్ రిపోర్టింగ్"</string>
     <string name="location_history" msgid="4055660203090513120">"లొకేషన్ హిస్టరీ"</string>
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google ఈ పీచర్‌ను Google Now మరియు Google Maps వంటి ఉత్పత్తులలో ఉపయోగిస్తుంది. లొకేషన్ నివేదనను ఆన్ చేయడం వలన ఈ ఫీచర్‌ను ఉపయోగించే ఏ Google ఉత్పత్తి అయినా మీ Google ఖాతాతో అనుబంధించిన మీ పరికరం యొక్క అత్యంత ఇటీవలి లొకేషన్ డేటాను నిల్వ చేస్తుంది మరియు ఉపయోగిస్తుంది."</string>
-    <string name="location_history_desc" msgid="926674012916014270">"ఈ ఖాతాకు లొకేషన్ హిస్టరీని ఆన్ చేసినప్పుడు, మీ యాప్‌లు ఉపయోగించడం కోసం Google మీ పరికరం లొకేషన్ డేటాను స్టోర్ చేస్తుంది.\n\nఉదాహరణకు, Google Maps మీకు దిశలను అందించగలదు అలాగే Google Now రోజువారీ ప్రయాణ మార్గంలోని రద్దీ గురించి మీకు తెలియజేయగలదు.\n\nమీరు లొకేషన్ హిస్టరీని ఎప్పుడైనా ఆఫ్ చేయవచ్చు, అయితే అలా చేయడం వలన హిస్టరీ ఏదీ తొలగించబడదు. మీ లొకేషన్ హిస్టరీని వీక్షించడానికి, మేనేజ్ చేయడానికి, maps.google.com/locationhistoryని సందర్శించండి."</string>
+    <string name="location_history_desc" msgid="926674012916014270">"ఈ ఖాతాకు లొకేషన్ హిస్టరీని ఆన్ చేసినప్పుడు, మీ యాప్‌లు ఉపయోగించడం కోసం Google మీ పరికరం లొకేషన్ డేటాను స్టోర్ చేస్తుంది.\n\nఉదాహరణకు, Google Maps మీకు దిశలను అందించగలదు అలాగే Google Now రోజువారీ ప్రయాణ మార్గంలోని రద్దీ గురించి మీకు తెలియజేయగలదు.\n\nమీరు లొకేషన్ హిస్టరీని ఎప్పుడైనా ఆఫ్ చేయవచ్చు, అయితే అలా చేయడం వలన హిస్టరీ ఏదీ తొలగించబడదు. మీ లొకేషన్ హిస్టరీని చూడటానికి, మేనేజ్ చేయడానికి, maps.google.com/locationhistoryని సందర్శించండి."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"లొకేషన్ హిస్టరీని తొలగించండి"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"ఇది ఈ Google ఖాతా కోసం ఈ పరికరంలో స్టోర్ చేయబడిన మొత్తం లొకేషన్ హిస్టరీని తొలగిస్తుంది. మీరు ఈ తొలగింపును రద్దు చేయలేరు. Google Nowతో సహా కొన్ని యాప్‌లు పని చేయకుండా ఆపివేయబడతాయి."</string>
     <string name="system_services" msgid="5754310941186053151">"సేవలు"</string>
@@ -728,7 +728,7 @@
     <string name="system_bt_hci_log" msgid="1891838112637932603">"బ్లూటూత్ HCI లాగింగ్"</string>
     <string name="system_email_address" msgid="3725494874473757217">"ఇమెయిల్ అడ్రస్‌"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"USB డీబగ్గింగ్"</string>
-    <string name="system_allow_mock_locations" msgid="2483106887711851466">"అనుకృత స్థానాలను అనుమతించు"</string>
+    <string name="system_allow_mock_locations" msgid="2483106887711851466">"డమ్మీ లొకేషన్లను అనుమతించండి"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"డీబగ్ యాప్‌ను ఎంచుకోండి"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"డీబగ్గర్ కోసం నిరీక్షణ"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"USB ద్వారా యాప్‌లను ధృవీకరించు"</string>
@@ -1042,9 +1042,9 @@
     <string name="device_admin_status" msgid="5467001937240455367">"ఈ అడ్మిన్ యాప్ యాక్టివ్‌గా ఉంది. కింది చర్యలు చేయడానికి <xliff:g id="APP_NAME">%1$s</xliff:g> యాప్‌ను అనుమతిస్తుంది:"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"కొనసాగిస్తే, మీ యూజర్‌ను మీ అడ్మిన్ మేనేజ్ చేయగలరు, దాని వలన మీ వ్యక్తిగత డేటాతో పాటు అనుబంధితంగా ఉన్న డేటా కూడా స్టోర్ చేయబడవచ్చు.\n\nమీ అడ్మిన్ నెట్‌వర్క్ యాక్టివిటీ మరియు మీ పరికరం యొక్క లొకేషన్ సమాచారంతో పాటు ఈ యూజర్‌కు అనుబంధితంగా ఉన్న సెట్టింగ్‌లు, యాక్సెస్, యాప్‌లు మరియు డేటాను పర్యవేక్షించగలరు, మేనేజ్ చేయగలరు."</string>
     <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"బగ్ రిపోర్ట్‌ను షేర్ చేయాలా?"</string>
-    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"మీ ఐటి అడ్మిన్ ఈ పరికరం సమస్యకు పరిష్కారాన్ని కనుగొనడంలో సహాయం కోసం బగ్ రిపోర్ట్‌ను రిక్వెస్ట్ చేశారు. యాప్‌లు మరియు డేటా షేర్ చేయబడవచ్చు."</string>
-    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"మీ ఐటి అడ్మిన్ ఈ పరికరం సమస్యకు పరిష్కారాన్ని కనుగొనడంలో సహాయం కోసం బగ్ రిపోర్ట్‌ను రిక్వెస్ట్ చేశారు. యాప్‌లు మరియు డేటా షేర్ చేయబడవచ్చు మరియు మీ పరికరం పనితీరు తాత్కాలికంగా నెమ్మదించవచ్చు."</string>
-    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"ఈ బగ్ రిపోర్ట్‌ మీ ఐటి అడ్మిన్‌తో షేర్ చేయబడుతోంది. మరిన్ని వివరాల కోసం వారిని సంప్రదించండి."</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"మీ IT అడ్మిన్ ఈ పరికరం సమస్యకు పరిష్కారాన్ని కనుగొనడంలో సహాయం కోసం బగ్ రిపోర్ట్‌ను రిక్వెస్ట్ చేశారు. యాప్‌లు మరియు డేటా షేర్ చేయబడవచ్చు."</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"మీ IT అడ్మిన్ ఈ పరికరం సమస్యకు పరిష్కారాన్ని కనుగొనడంలో సహాయం కోసం బగ్ రిపోర్ట్‌ను రిక్వెస్ట్ చేశారు. యాప్‌లు మరియు డేటా షేర్ చేయబడవచ్చు మరియు మీ పరికరం పనితీరు తాత్కాలికంగా నెమ్మదించవచ్చు."</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"ఈ బగ్ రిపోర్ట్‌ మీ IT అడ్మిన్‌తో షేర్ చేయబడుతోంది. మరిన్ని వివరాల కోసం వారిని సంప్రదించండి."</string>
     <string name="share_remote_bugreport_action" msgid="6760197666368262892">"షేర్ చేయి"</string>
     <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"తిరస్కరిస్తున్నాను"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g>తో కలిపి ఉపయోగించే పరికరం"</string>
