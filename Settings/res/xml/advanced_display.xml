@@ -27,4 +27,9 @@
         android:key="hdr_format_selection"
         android:persistent="true"
         android:title="@string/hdr_format_selection_title"/>
+    <Preference
+        android:fragment="com.android.tv.settings.device.displaysound.ResolutionSelectionFragment"
+        android:key="resolution_selection"
+        android:persistent="true"
+        android:title="@string/resolution_selection_title"/>
 </PreferenceScreen>
