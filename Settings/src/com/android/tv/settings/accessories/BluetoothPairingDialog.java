@@ -48,6 +48,8 @@ import com.android.tv.settings.dialog.old.ActionFragment;
 import com.android.tv.settings.dialog.old.DialogActivity;
 import com.android.tv.settings.util.AccessibilityHelper;
 
+import com.android.settingslib.bluetooth.LocalBluetoothManager;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -66,6 +68,8 @@ public class BluetoothPairingDialog extends DialogActivity {
     private static final int BLUETOOTH_PIN_MAX_LENGTH = 16;
     private static final int BLUETOOTH_PASSKEY_MAX_LENGTH = 6;
 
+    @SuppressWarnings("unused")
+    private LocalBluetoothManager mLocalBtManager;
     private BluetoothDevice mDevice;
     private int mType;
     private String mPairingKey;
@@ -109,6 +113,9 @@ public class BluetoothPairingDialog extends DialogActivity {
             finish();
             return;
         }
+
+        // LocalBluetoothManager monitors UUIDs and triggers HID host connection.
+        mLocalBtManager = AccessoryUtils.getLocalBluetoothManager(this);
 
         mDevice = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
         mType = intent.getIntExtra(BluetoothDevice.EXTRA_PAIRING_VARIANT, BluetoothDevice.ERROR);
