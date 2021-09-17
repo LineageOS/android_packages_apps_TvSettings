@@ -167,7 +167,7 @@ public class AllAppsSession {
         // Sort the list by app size on descent.
         mAllApps.sort((c1, c2) -> (c1.size < c2.size ? 1 : c1.size == c2.size ? 0 : -1));
         if (mOnUpdateAppListListener != null) {
-            mOnUpdateAppListListener.onUpdateAppList(entries);
+            mOnUpdateAppListListener.onUpdateAppList(mAllApps);
         }
     }
 
