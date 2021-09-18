@@ -185,6 +185,8 @@
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"ఎనేబుల్ అయిన ఫార్మాట్‌లు"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"డిజేబుల్ అయిన ఫార్మాట్‌లు"</string>
     <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"డిజేబుల్ చేయడానికి, ఫార్మాట్ ఎంపికను మాన్యువల్‌కు మార్చండి."</string>
+    <string name="resolution_selection_title" msgid="2873993320284587853">"రిజల్యూషన్"</string>
+    <string name="resolution_selection_auto_title" msgid="4738671207331027385">"ఆటోమేటిక్"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"కాష్ చేసిన డేటాను తీసివేయాలా?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"ఇది అన్ని అను. కాష్ చేసిన డేటాను తీసివేస్తుంది."</string>
     <string name="accessories_add" msgid="413764175035531452">"ఉపకరణాన్ని జోడించండి"</string>
@@ -284,7 +286,7 @@
     <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"అత్యంత ఇటీవలి భద్రతా లాగ్"</string>
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"ఏదీ లేదు"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"యాప్‌లు ఇన్‌స్టాల్ చేయబడ్డాయి"</string>
-    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"యాప్‌ల సంఖ్య అనేది అంచనా సమాచారం మాత్రమే. Play స్టోర్ ద్వారా కాకుండా ఇతర మార్గాల ద్వారా ఇన్‌స్టాల్ చేయబడిన యాప్‌లను ఇందులో పరిగణనలోకి తీసుకుని ఉండకపోవచ్చు."</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"యాప్‌ల సంఖ్య అనేది అంచనా సమాచారం మాత్రమే. Play Store ద్వారా కాకుండా ఇతర మార్గాల ద్వారా ఇన్‌స్టాల్ చేయబడిన యాప్‌లను ఇందులో పరిగణనలోకి తీసుకుని ఉండకపోవచ్చు."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
       <item quantity="other">కనీసం <xliff:g id="COUNT_1">%d</xliff:g> యాప్‌లు</item>
       <item quantity="one">కనీసం <xliff:g id="COUNT_0">%d</xliff:g> యాప్</item>
@@ -549,6 +551,13 @@
     <string name="storage_device_storage_section" msgid="22958375769694027">"పరికర నిల్వ"</string>
     <string name="storage_removable_storage_section" msgid="280332107650735088">"తీసివేయదగిన నిల్వ"</string>
     <string name="storage_reset_section" msgid="3896575204828589494">"రీసెట్ చేయండి"</string>
+    <string name="storage_free_up" msgid="5719667150891467122">"స్టోరేజ్‌ను ఖాళీ చేయండి"</string>
+    <string name="storage_free_up_clear_cached_data" msgid="858596875459698634">"కాష్ చేసిన డేటాను క్లియర్ చేయండి"</string>
+    <string name="storage_free_up_clear_cached_data_summary" msgid="3111860361699185304">"<xliff:g id="SPACE">%1$s</xliff:g>ను ఖాళీ చేయండి"</string>
+    <string name="storage_free_up_clear_cached_data_info" msgid="719348815620748812">"స్పేస్‌ను ఆక్రమిస్తున్న తాత్కాలిక ఫైళ్లను క్లియర్ చేస్తుంది. యాప్ ప్రాధాన్యతలు లేదా ఆఫ్‌లైన్ వీడియోల వంటి సేవ్ చేసిన డేటాను ప్రభావితం చేయదు, మీరు మళ్లీ యాప్‌లకు సైన్ ఇన్ చేయాల్సిన అవసరం లేదు."</string>
+    <string name="storage_free_up_clear_cached_data_confirm_title" msgid="5047418718048910850">"కాష్ చేసిన డేటాను క్లియర్ చేయాలా?"</string>
+    <string name="storage_free_up_clear_cached_data_confirm_description" msgid="4840728913914074729">"ఇది అన్ని యాప్‌ల కాష్ చేసిన డేటాను తీసివేస్తుంది."</string>
+    <string name="storage_free_up_uninstall_apps" msgid="7755671754934975908">"యాప్స్‌ను అన్‌ఇన్‌స్టాల్ చేయండి"</string>
     <string name="storage_mount_success" msgid="4459298609971461753">"<xliff:g id="NAME">%1$s</xliff:g> మౌంట్ చేయబడింది"</string>
     <string name="storage_mount_failure" msgid="8521666906216755903">"<xliff:g id="NAME">%1$s</xliff:g>ని మౌంట్ చేయలేకపోయింది"</string>
     <string name="storage_mount_adopted" msgid="8880688040694403520">"USB నిల్వను మళ్లీ కనెక్ట్ చేశారు"</string>
