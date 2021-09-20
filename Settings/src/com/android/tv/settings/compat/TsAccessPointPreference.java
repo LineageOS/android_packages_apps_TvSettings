@@ -39,5 +39,6 @@ public class TsAccessPointPreference extends TsPreference {
 
     public TsAccessPointPreference(Context context, String[] keys) {
         super(context, keys);
+        setKeys(keys);
     }
 }
