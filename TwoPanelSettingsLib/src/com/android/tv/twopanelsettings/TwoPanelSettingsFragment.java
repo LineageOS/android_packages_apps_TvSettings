@@ -538,6 +538,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     private void handleFragmentTransactionWhenFocused(Preference pref, boolean forceRefresh) {
+        if (!isAdded()) {
+            return;
+        }
         Fragment previewFragment = null;
         final Fragment prefFragment =
                 getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
