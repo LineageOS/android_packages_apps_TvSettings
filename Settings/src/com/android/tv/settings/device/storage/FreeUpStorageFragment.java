@@ -16,9 +16,9 @@
 
 package com.android.tv.settings.device.storage;
 
+import android.app.tvsettings.TvSettingsEnums;
 import android.os.Bundle;
 import android.text.format.Formatter;
-import android.util.ArraySet;
 
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
@@ -27,8 +27,6 @@ import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.device.apps.AppsActivity;
-
-import java.util.stream.Collectors;
 
 /**
  * Fragment for listing options to free up storage.
@@ -79,6 +77,11 @@ public class FreeUpStorageFragment extends SettingsPreferenceFragment {
         }
     }
 
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_STORAGE_FREE_UP_STORAGE;
+    }
+
     private void updateStorageUninstallAppsPrefSummary() {
         if (mStorageUninstallAppsPreference != null && mAllAppsSessionExceptPreinstalled != null) {
             final long size = mAllAppsSessionExceptPreinstalled.getAllApps().stream().map(
@@ -88,5 +91,4 @@ public class FreeUpStorageFragment extends SettingsPreferenceFragment {
                     Formatter.formatFileSize(getActivity(), size));
         }
     }
-
 }

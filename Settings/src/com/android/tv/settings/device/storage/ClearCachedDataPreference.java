@@ -16,6 +16,9 @@
 
 package com.android.tv.settings.device.storage;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.pm.IPackageDataObserver;
 import android.content.pm.PackageManager;
@@ -104,6 +107,12 @@ public class ClearCachedDataPreference extends RestrictedPreference implements
                 : context.getString(R.string.storage_free_up_clear_cached_data_summary,
                         Formatter.formatFileSize(context, cacheSize)));
         setEnabled(!mClearingCache && cacheSize > 0);
+        this.setOnPreferenceClickListener(
+                preference -> {
+                    logEntrySelected(
+                            TvSettingsEnums.SYSTEM_STORAGE_FREE_UP_STORAGE_CLEAR_CACHED_DATA);
+                    return false;
+                });
     }
 
     @Override
