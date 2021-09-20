@@ -185,6 +185,8 @@
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"இயக்கப்பட்ட வடிவமைப்புகள்"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"முடக்கப்பட்ட வடிவமைப்புகள்"</string>
     <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"முடக்க, வடிவமைப்புத் தேர்வைக் கைமுறைக்கு மாற்றவும்."</string>
+    <string name="resolution_selection_title" msgid="2873993320284587853">"தெளிவுத்திறன்"</string>
+    <string name="resolution_selection_auto_title" msgid="4738671207331027385">"தானியங்கு"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"தற்காலிகச் சேமிப்பு தரவை அழிக்கவா?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"இது, எல்லா ஆப்ஸின் தற்காலிகச் சேமிப்பு தரவை அழிக்கும்."</string>
     <string name="accessories_add" msgid="413764175035531452">"துணைக்கருவியைச் சேர்"</string>
@@ -284,7 +286,7 @@
     <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"மிகச் சமீபத்திய பாதுகாப்புப் பதிவு"</string>
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"எதுவுமில்லை"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"நிறுவிய ஆப்ஸ்"</string>
-    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"ஆப்ஸின் எண்ணிக்கை கணிப்பின் அடிப்படையிலானது. இதில் Play ஸ்டோரிலிருந்து நிறுவப்படாத ஆப்ஸ் சேர்க்கப்படாமல் இருக்கலாம்."</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"ஆப்ஸின் எண்ணிக்கை கணிப்பின் அடிப்படையிலானது. இதில் Play Storeரிலிருந்து நிறுவப்படாத ஆப்ஸ் சேர்க்கப்படாமல் இருக்கலாம்."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
       <item quantity="other">குறைந்தது <xliff:g id="COUNT_1">%d</xliff:g> ஆப்ஸ்</item>
       <item quantity="one">குறைந்தது <xliff:g id="COUNT_0">%d</xliff:g> ஆப்ஸ்</item>
@@ -549,6 +551,13 @@
     <string name="storage_device_storage_section" msgid="22958375769694027">"சாதனச் சேமிப்பகம்"</string>
     <string name="storage_removable_storage_section" msgid="280332107650735088">"அகற்றப்படக்கூடிய சேமிப்பகம்"</string>
     <string name="storage_reset_section" msgid="3896575204828589494">"மீட்டமை"</string>
+    <string name="storage_free_up" msgid="5719667150891467122">"சேமிப்பகத்தில் காலியிடத்தை அதிகரி"</string>
+    <string name="storage_free_up_clear_cached_data" msgid="858596875459698634">"தற்காலிகச் சேமிப்பு தரவை அழி"</string>
+    <string name="storage_free_up_clear_cached_data_summary" msgid="3111860361699185304">"<xliff:g id="SPACE">%1$s</xliff:g> இடத்தைக் காலியாக்கு"</string>
+    <string name="storage_free_up_clear_cached_data_info" msgid="719348815620748812">"சேமிப்பிடத்தை அதிகம் பயன்படுத்தும் தற்காலிக ஃபைல்களை அழிக்கும். ஆப்ஸ் விருப்பத்தேர்வுகள், ஆஃப்லைன் வீடியோக்கள் போன்ற சேமிக்கப்பட்ட தரவு பாதிக்கப்படாது. மேலும் நீங்கள் ஆப்ஸில் மீண்டும் உள்நுழைய வேண்டியதில்லை."</string>
+    <string name="storage_free_up_clear_cached_data_confirm_title" msgid="5047418718048910850">"தற்காலிகச் சேமிப்பு தரவை அழிக்கவா?"</string>
+    <string name="storage_free_up_clear_cached_data_confirm_description" msgid="4840728913914074729">"எல்லா ஆப்ஸின் தற்காலிகச் சேமிப்பு தரவை இது அழிக்கும்."</string>
+    <string name="storage_free_up_uninstall_apps" msgid="7755671754934975908">"ஆப்ஸை நிறுவல் நீக்கு"</string>
     <string name="storage_mount_success" msgid="4459298609971461753">"<xliff:g id="NAME">%1$s</xliff:g> பொருத்தப்பட்டது"</string>
     <string name="storage_mount_failure" msgid="8521666906216755903">"<xliff:g id="NAME">%1$s</xliff:g>ஐப் பொருத்த முடியவில்லை"</string>
     <string name="storage_mount_adopted" msgid="8880688040694403520">"USB சேமிப்பகம் இணைக்கப்பட்டது"</string>
@@ -769,7 +778,7 @@
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"முக்கிய தொடரிழையில் நீண்ட நேரம் செயல்படும்போது திரையைக் காட்சிப்படுத்து"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"adb shell dumpsys gfxinfo இல் ரெண்டரிங் நேரத்தை அளவிடலாம்"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"அறியப்படாத மூலங்கள்"</string>
-    <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play ஸ்டோர் அல்லாத, பிற மூலங்களிலிருந்து ஆப்ஸை நிறுவ அனுமதி"</string>
+    <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store அல்லாத, பிற மூலங்களிலிருந்து ஆப்ஸை நிறுவ அனுமதி"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"அறியப்படாத மூலங்களை அனுமதி"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"உங்கள் சாதனம் மற்றும் தனிப்பட்ட தரவு ஆகியவை அறியப்படாத மூலங்களிலிருந்து பெற்ற ஆப்ஸால் தாக்குதலுக்கு உள்ளாகக்கூடும். இந்தப் பயன்பாடுகளைப் பயன்படுத்தியதன் விளைவாக உங்கள் சாதனம் பாதிக்கப்பட்டால் அல்லது தரவை இழந்தால் அதற்கு நீங்கள் மட்டுமே பொறுப்பு என்பதை ஒப்புக்கொள்கிறீர்கள்."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"ஒருபோதும் வேண்டாம்"</string>
