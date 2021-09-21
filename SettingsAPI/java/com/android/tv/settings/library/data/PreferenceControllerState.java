@@ -126,7 +126,9 @@ public abstract class PreferenceControllerState implements State {
     }
 
     @Override
-    public abstract void onActivityResult(int requestCode, int resultCode, Intent data);
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // no-op
+    }
 
     @Override
     public abstract int getStateIdentifier();

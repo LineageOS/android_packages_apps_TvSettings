@@ -8,7 +8,9 @@ package com.android.tv.settings.library {
     method public static boolean isChecked(com.android.tv.settings.library.PreferenceCompat);
     method public static boolean isVisible(com.android.tv.settings.library.PreferenceCompat);
     field public static final String INFO_COLLAPSE = "collapse";
+    field public static final String INFO_CURRENT_FONT_SCALE_VALUE = "current_font_scale_value";
     field public static final String INFO_INTENT = "intent";
+    field public static final String INFO_PREVIEW_FONT_SCALE_VALUE = "preview_font_scale_value";
     field public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";
     field public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     field public static final int OFFSET_MULTIPLIER = 100000; // 0x186a0
@@ -25,12 +27,15 @@ package com.android.tv.settings.library {
     field public static final int STATE_AVAILABLE_KEYBOARD = 18; // 0x12
     field public static final int STATE_DAYDREAM = 30; // 0x1e
     field public static final int STATE_DEVICE_MAIN = 2; // 0x2
+    field public static final int STATE_DISPLAY_SOUND = 31; // 0x1f
     field public static final int STATE_EMPTY = -1; // 0xffffffff
     field public static final int STATE_ENERGY_SAVER = 29; // 0x1d
     field public static final int STATE_EXTERNAL_SOURCES = 14; // 0xe
+    field public static final int STATE_FONT_SCALE = 32; // 0x20
     field public static final int STATE_HIGH_POWER = 7; // 0x7
     field public static final int STATE_KEYBOARD = 17; // 0x11
     field public static final int STATE_LANGUAGE = 20; // 0x14
+    field public static final int STATE_MATCH_CONTENT_FRAME = 33; // 0x21
     field public static final int STATE_MISSING_STORAGE = 27; // 0x1b
     field public static final int STATE_NETWORK = 0; // 0x0
     field public static final int STATE_NOTIFICATION_ACCESS = 8; // 0x8
