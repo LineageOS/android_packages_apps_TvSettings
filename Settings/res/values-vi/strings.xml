@@ -19,7 +19,7 @@
     <string name="settings_app_name" msgid="7931201304065140909">"Cài đặt"</string>
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Cài đặt"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Mạng"</string>
-    <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Tiểu sử bị hạn chế"</string>
+    <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Hồ sơ bị hạn chế"</string>
     <string name="general_action_yes" msgid="1303080504548165355">"Có"</string>
     <string name="general_action_no" msgid="674735073031386948">"Không"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Bật"</string>
@@ -185,6 +185,8 @@
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"ĐỊNH DẠNG ĐÃ BẬT"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"ĐỊNH DẠNG BỊ TẮT"</string>
     <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Để tắt định dạng, hãy thay đổi chế độ lựa chọn định dạng thành Thủ công."</string>
+    <string name="resolution_selection_title" msgid="2873993320284587853">"Độ phân giải"</string>
+    <string name="resolution_selection_auto_title" msgid="4738671207331027385">"Tự động"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Xóa dữ liệu đã lưu trong bộ nhớ đệm?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Xóa dữ liệu lưu trong cache cho tất cả ứng dụng."</string>
     <string name="accessories_add" msgid="413764175035531452">"Thêm phụ kiên"</string>
@@ -549,6 +551,13 @@
     <string name="storage_device_storage_section" msgid="22958375769694027">"Bộ nhớ của thiết bị"</string>
     <string name="storage_removable_storage_section" msgid="280332107650735088">"Bộ nhớ di động"</string>
     <string name="storage_reset_section" msgid="3896575204828589494">"Đặt lại"</string>
+    <string name="storage_free_up" msgid="5719667150891467122">"Giải phóng bộ nhớ"</string>
+    <string name="storage_free_up_clear_cached_data" msgid="858596875459698634">"Xóa dữ liệu đã lưu trong bộ nhớ đệm"</string>
+    <string name="storage_free_up_clear_cached_data_summary" msgid="3111860361699185304">"Giải phóng <xliff:g id="SPACE">%1$s</xliff:g>"</string>
+    <string name="storage_free_up_clear_cached_data_info" msgid="719348815620748812">"Xóa các tệp tạm thời chiếm dung lượng. Điều này sẽ không ảnh hưởng đến dữ liệu đã lưu như lựa chọn ưu tiên của ứng dụng hoặc video ngoại tuyến. Ngoài ra, bạn sẽ không cần đăng nhập lại vào các ứng dụng."</string>
+    <string name="storage_free_up_clear_cached_data_confirm_title" msgid="5047418718048910850">"Bạn muốn xóa dữ liệu đã lưu trong bộ nhớ đệm?"</string>
+    <string name="storage_free_up_clear_cached_data_confirm_description" msgid="4840728913914074729">"Xóa dữ liệu đã lưu trong bộ nhớ đệm cho tất cả ứng dụng."</string>
+    <string name="storage_free_up_uninstall_apps" msgid="7755671754934975908">"Gỡ cài đặt ứng dụng"</string>
     <string name="storage_mount_success" msgid="4459298609971461753">"<xliff:g id="NAME">%1$s</xliff:g> đã được gắn"</string>
     <string name="storage_mount_failure" msgid="8521666906216755903">"Không thể gắn <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_mount_adopted" msgid="8880688040694403520">"Đã kết nối lại bộ lưu trữ USB"</string>
@@ -862,8 +871,8 @@
     <string name="restriction_location_enable_title" msgid="2552780806199464266">"Vị trí"</string>
     <string name="restriction_location_enable_summary" msgid="3719330231217994482">"Cho phép ứng dụng sử dụng thông tin vị trí của bạn"</string>
     <string name="restricted_profile_switch_to" msgid="6193201935877168764">"Chuyển sang cấu hình bị hạn chế"</string>
-    <string name="restricted_profile_switch_out" msgid="3589381233390753413">"Thoát cấu hình bị hạn chế"</string>
-    <string name="restricted_profile_delete_title" msgid="7153982195273379506">"Xóa cấu hình bị hạn chế"</string>
+    <string name="restricted_profile_switch_out" msgid="3589381233390753413">"Thoát hồ sơ bị hạn chế"</string>
+    <string name="restricted_profile_delete_title" msgid="7153982195273379506">"Xóa hồ sơ bị hạn chế"</string>
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Tạo hồ sơ bị hạn chế"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Cài đặt"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Ứng dụng được phép"</string>

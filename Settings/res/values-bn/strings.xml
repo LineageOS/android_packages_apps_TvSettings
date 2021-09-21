@@ -185,6 +185,8 @@
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"চালু করা আছে এমন ফর্ম্যাট"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"বন্ধ করা আছে এমন ফর্ম্যাট"</string>
     <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"বন্ধ করতে, ফর্ম্যাট বেছে নেওয়ার বিকল্পটি ম্যানুয়ালে পরিবর্তন করুন।"</string>
+    <string name="resolution_selection_title" msgid="2873993320284587853">"রেজোলিউশন"</string>
+    <string name="resolution_selection_auto_title" msgid="4738671207331027385">"অটোমেটিক"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"ক্যাশে করা ডেটা সাফ করবেন?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"এটি সব অ্যাপ্লিকেশানগুলি থেকে ক্যাশে করা ডেটা সাফ করে দেবে।"</string>
     <string name="accessories_add" msgid="413764175035531452">"আনুষঙ্গিক উপকরণ জুড়ুন"</string>
@@ -549,6 +551,13 @@
     <string name="storage_device_storage_section" msgid="22958375769694027">"ডিভাইস স্টোরেজ"</string>
     <string name="storage_removable_storage_section" msgid="280332107650735088">"অপসারণযোগ্য সঞ্চয়স্থান"</string>
     <string name="storage_reset_section" msgid="3896575204828589494">"আবার সেট করুন"</string>
+    <string name="storage_free_up" msgid="5719667150891467122">"জায়গা খালি করুন"</string>
+    <string name="storage_free_up_clear_cached_data" msgid="858596875459698634">"ক্যাশে করা ডেটা মুছুন"</string>
+    <string name="storage_free_up_clear_cached_data_summary" msgid="3111860361699185304">"<xliff:g id="SPACE">%1$s</xliff:g> খালি করুন"</string>
+    <string name="storage_free_up_clear_cached_data_info" msgid="719348815620748812">"জায়গা জোড়া করে রাখা অস্থায়ী ফাইল মুছে দেয়। অ্যাপে সেট করা পছন্দ বা অফলাইন ভিডিওর মতো সেভ করা ডেটাতে এর কোনও প্রভাব পড়বে না এবং আপনাকে অ্যাপে আবার সাইন-ইন করতে হবে না।"</string>
+    <string name="storage_free_up_clear_cached_data_confirm_title" msgid="5047418718048910850">"ক্যাশে করা ডেটা মুছবেন?"</string>
+    <string name="storage_free_up_clear_cached_data_confirm_description" msgid="4840728913914074729">"এটি সব অ্যাপের ক্যাশে করা ডেটা মুছে দেবে।"</string>
+    <string name="storage_free_up_uninstall_apps" msgid="7755671754934975908">"অ্যাপ আনইনস্টল করুন"</string>
     <string name="storage_mount_success" msgid="4459298609971461753">"<xliff:g id="NAME">%1$s</xliff:g> মাউন্ট করা হয়েছে"</string>
     <string name="storage_mount_failure" msgid="8521666906216755903">"<xliff:g id="NAME">%1$s</xliff:g> মাউন্ট করা যায়নি"</string>
     <string name="storage_mount_adopted" msgid="8880688040694403520">"USB সঞ্চয়স্থান আবার সংযুক্ত হয়েছে"</string>
@@ -769,7 +778,7 @@
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"মুখ্য থ্রেডে অ্যাপ্লিকেশানগুলির দীর্ঘ অ্যাক্টিভিটির সময় স্ক্রিন ফ্ল্যাশ করুন"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"adb shell dumpsys gfxinfo এ রেন্ডারিং সময় পরিমাপ করুন"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"অজানা উৎসগুলি"</string>
-    <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play স্টোর ছাড়াও অন্য উৎস থেকে অ্যাপ্লিকেশন ইনস্টল করার অনুমতি দিন"</string>
+    <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store ছাড়াও অন্য উৎস থেকে অ্যাপ্লিকেশন ইনস্টল করার অনুমতি দিন"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"অজানা উৎসগুলিকে অনুমতি দিন"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"অজানা উৎসের অ্যাপ দ্বারা আপনার ডিভাইস এবং ব্যক্তিগত তথ্য আক্রান্ত হওয়ার সম্ভাবনা বেশি। আপনি সম্মত হচ্ছেন যে এই অ্যাপ ব্যবহারের ফলে আপনার ফোনের কোনও ক্ষতি হলে বা ডেটা হারিয়ে গেলে তার জন্য আপনিই দায়ী থাকবেন।"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"কখনো নয়"</string>

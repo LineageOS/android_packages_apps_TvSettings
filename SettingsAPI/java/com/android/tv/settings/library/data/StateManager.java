@@ -27,10 +27,13 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_USAGE_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_AVAILABLE_KEYBOARD;
 import static com.android.tv.settings.library.ManagerUtil.STATE_DAYDREAM;
+import static com.android.tv.settings.library.ManagerUtil.STATE_DISPLAY_SOUND;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ENERGY_SAVER;
+import static com.android.tv.settings.library.ManagerUtil.STATE_FONT_SCALE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_HIGH_POWER;
 import static com.android.tv.settings.library.ManagerUtil.STATE_KEYBOARD;
 import static com.android.tv.settings.library.ManagerUtil.STATE_LANGUAGE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_MATCH_CONTENT_FRAME;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NOTIFICATION_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_PICTURE_IN_PICTURE;
@@ -63,6 +66,9 @@ import com.android.tv.settings.library.device.apps.specialaccess.SystemAlertWind
 import com.android.tv.settings.library.device.apps.specialaccess.WriteSettingsState;
 import com.android.tv.settings.library.device.display.daydream.DaydreamState;
 import com.android.tv.settings.library.device.display.daydream.EnergySaverState;
+import com.android.tv.settings.library.device.display.displaysound.DisplaySoundState;
+import com.android.tv.settings.library.device.display.displaysound.FontScaleState;
+import com.android.tv.settings.library.device.display.displaysound.MatchContentFrameRateState;
 import com.android.tv.settings.library.device.storage.StorageState;
 import com.android.tv.settings.library.device.storage.StorageSummaryState;
 import com.android.tv.settings.library.inputmethod.AvailableVirtualKeyboadState;
@@ -154,6 +160,15 @@ public class StateManager {
                 break;
             case STATE_DAYDREAM:
                 state = new DaydreamState(context, uiUpdateCallback);
+                break;
+            case STATE_DISPLAY_SOUND:
+                state = new DisplaySoundState(context, uiUpdateCallback);
+                break;
+            case STATE_FONT_SCALE:
+                state = new FontScaleState(context, uiUpdateCallback);
+                break;
+            case STATE_MATCH_CONTENT_FRAME:
+                state = new MatchContentFrameRateState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op

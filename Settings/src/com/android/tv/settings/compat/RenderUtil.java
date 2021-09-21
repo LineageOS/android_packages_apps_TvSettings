@@ -213,9 +213,7 @@ public final class RenderUtil {
         }
         switch (preferenceCompat.getType()) {
             case TYPE_PREFERENCE_ACCESS_POINT:
-                TsAccessPointPreference accessPointPreference =
-                        new TsAccessPointPreference(context, preferenceCompat.getKey());
-                return accessPointPreference;
+                return new TsAccessPointPreference(context, preferenceCompat.getKey());
             case TYPE_PREFERENCE_CATEGORY:
                 return new TsPreferenceCategory(context, preferenceCompat.getKey());
             case TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY:

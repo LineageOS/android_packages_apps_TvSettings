@@ -55,7 +55,10 @@ public class TsListPreference extends ListPreference implements HasKeys {
 
     @Override
     public void setKeys(String[] keys) {
-        mKeys = Arrays.copyOf(keys, keys.length);
+        this.mKeys = Arrays.copyOf(keys, keys.length);
+        if (keys.length != 0) {
+            setKey(keys[keys.length - 1]);
+        }
     }
 
     @Override
