@@ -25,7 +25,6 @@ import java.util.Arrays;
 /** RadioPreference for TV to provide extra functionality. */
 public class TsRadioPreference extends RadioPreference implements HasKeys {
     private String[] mKeys;
-
     public TsRadioPreference(Context context, String[] keys) {
         super(context);
         setKeys(keys);
