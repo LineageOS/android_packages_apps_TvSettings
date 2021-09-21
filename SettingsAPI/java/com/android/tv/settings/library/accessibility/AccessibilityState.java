@@ -86,7 +86,7 @@ public class AccessibilityState implements State {
                 TOGGLE_AUDIO_DESCRIPTION_KEY);
         mAudioDescriptionPreference.setChecked(Settings.Global.getInt(
                 mContext.getContentResolver(),
-                Settings.Global.ENABLE_ACCESSIBILITY_AUDIO_DESCRIPTION_BY_DEFAULT, 0) == 1);
+                Settings.Secure.ENABLE_ACCESSIBILITY_AUDIO_DESCRIPTION_BY_DEFAULT, 0) == 1);
 
         mServicesPref = mPreferenceCompatManager.getOrCreatePrefCompat(ACCESSIBILITY_SERVICES_KEY);
         refreshServices();
@@ -140,7 +140,7 @@ public class AccessibilityState implements State {
             return true;
         } else if (TextUtils.equals(key[0], TOGGLE_AUDIO_DESCRIPTION_KEY)) {
             Settings.Global.putInt(mContext.getContentResolver(),
-                    Settings.Global.ENABLE_ACCESSIBILITY_AUDIO_DESCRIPTION_BY_DEFAULT,
+                    Settings.Secure.ENABLE_ACCESSIBILITY_AUDIO_DESCRIPTION_BY_DEFAULT,
                     (mAudioDescriptionPreference.getChecked() == STATUS_ON ? 1 : 0));
             return true;
         }
