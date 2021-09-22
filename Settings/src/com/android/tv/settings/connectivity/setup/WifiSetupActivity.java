@@ -39,6 +39,7 @@ import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.wifi.WifiTracker;
 import com.android.tv.settings.R;
+import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.util.ThemeHelper;
@@ -47,7 +48,8 @@ import com.android.tv.settings.util.TransitionUtils;
 /**
  * Wi-Fi settings during initial setup for a large no-touch device.
  */
-public class WifiSetupActivity extends FragmentActivity implements State.FragmentChangeListener {
+public class WifiSetupActivity extends FragmentActivity implements State.FragmentChangeListener,
+        ConnectivityListener.Listener {
     private static final String TAG = "WifiSetupActivity";
     private static final String EXTRA_SHOW_SUMMARY = "extra_show_summary";
     private static final String EXTRA_SHOW_SKIP_NETWORK = "extra_show_skip_network";
@@ -66,6 +68,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
             finish();
         }
     };
+    private ConnectivityListener mConnectivityListener;
     private WifiTracker mWifiTracker;
     private NetworkListInfo mNetworkListInfo;
     private UserChoiceInfo mUserChoiceInfo;
@@ -113,6 +116,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
         mNetworkListInfo.initNetworkRefreshTime();
         mUserChoiceInfo = ViewModelProviders.of(this).get(UserChoiceInfo.class);
 
+        mConnectivityListener = new ConnectivityListener(this, this);
         WifiTracker.WifiListener wifiListener = new WifiTracker.WifiListener() {
             @Override
             public void onWifiStateChanged(int state) {
@@ -144,6 +148,19 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
         // If we are not moving forwards during the setup flow, we need to show the first fragment
         // with the reverse animation.
         mShowFirstFragmentForwards = getIntent().getBooleanExtra(EXTRA_MOVING_FORWARD, true);
+        mConnectivityListener.start();
+        if (!mShowFirstFragmentForwards && mConnectivityListener.isEthernetConnected()) {
+            setResult(Activity.RESULT_CANCELED);
+            mResultOk = false;
+            mConnectivityListener.stop();
+            super.finish();
+            return;
+        } else if (mConnectivityListener.isEthernetConnected()) {
+            onConnectivityChange();
+            if (mResultOk) {
+                return;
+            }
+        }
 
         mKnownNetworkState = new KnownNetworkState(this);
         mSelectWifiState = new SelectWifiState(this);
@@ -286,6 +303,13 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
     @Override
     public void onResume() {
         super.onResume();
+        mConnectivityListener.start();
+        if (mConnectivityListener.isEthernetConnected()) {
+            onConnectivityChange();
+            if (mResultOk) {
+                return;
+            }
+        }
         if (mWifiTracker != null) {
             mWifiTracker.onStart();
         }
@@ -293,6 +317,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
 
     @Override
     public void onPause() {
+        mConnectivityListener.stop();
         super.onPause();
         if (mWifiTracker != null) {
             mWifiTracker.onStop();
@@ -301,6 +326,7 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
 
     @Override
     protected void onDestroy() {
+        mConnectivityListener = null;
         super.onDestroy();
         if (mWifiTracker != null) {
             mWifiTracker.onDestroy();
@@ -392,5 +418,19 @@ public class WifiSetupActivity extends FragmentActivity implements State.Fragmen
     @Override
     public void onFragmentChange(Fragment newFragment, boolean movingForward) {
         updateView(newFragment, movingForward);
+    }
+
+    @Override
+    public void onConnectivityChange() {
+        ConnectivityManager connectivityManager =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo currentConnection = connectivityManager.getActiveNetworkInfo();
+        boolean isConnected = (currentConnection != null) && currentConnection.isConnected();
+        if (isConnected && mConnectivityListener.isEthernetConnected()) {
+            setResult(RESULT_OK);
+            mResultOk = true;
+            mConnectivityListener.stop();
+            finish();
+        }
     }
 }
