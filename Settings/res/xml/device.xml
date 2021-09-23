@@ -66,6 +66,13 @@
         android:title="@string/system_cast" >
         <intent android:action="com.google.android.settings.CAST_RECEIVER_SETTINGS" />
     </Preference>
+    <com.android.tv.twopanelsettings.slices.SlicePreference
+        android:icon="@drawable/ic_devices_other"
+        android:key="fastpair_slice"
+        android:title="@string/device_fastpair"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false"
+        custom:uri="@string/fastpair_slice_uri"/>
     <Preference
         android:fragment="com.android.tv.settings.device.display.daydream.DaydreamFragment"
         android:icon="@drawable/ic_settings_system_daydream"
@@ -113,11 +120,4 @@
         android:key="reboot"
         android:title="@string/restart_button_label"
         android:fragment="com.android.tv.settings.about.RebootConfirmFragment" />
-    <com.android.tv.twopanelsettings.slices.SlicePreference
-        android:icon="@drawable/ic_restart_alt"
-        android:key="fastpair_slice"
-        android:title="@string/device_fastpair"
-        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
-        custom:isPreferenceVisible="false"
-        custom:uri="@string/fastpair_slice_uri"/>
 </PreferenceScreen>
