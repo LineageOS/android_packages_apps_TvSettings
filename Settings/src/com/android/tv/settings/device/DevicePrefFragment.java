@@ -91,6 +91,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     private static final String KEY_REBOOT = "reboot";
     private static final String KEY_MIC = "microphone";
     private static final String KEY_CAMERA = "camera";
+    private static final String KEY_FASTPAIR_SETTINGS_SLICE = "fastpair_slice";
 
     private Preference mSoundsPref;
     private TwoStatePreference mSoundsSwitchPref;
@@ -168,6 +169,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
         updateSounds();
         updateGoogleSettings();
         updateCastSettings();
+        updateFastpairSettings();
         updateKeyboardAutofillSettings();
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
@@ -309,6 +311,16 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
                     || FlavorUtils.getFeatureFactory(getContext()).getBasicModeFeatureProvider()
                     .isBasicMode(getContext())) {
                 castSlicePref.setVisible(false);
+            }
+        }
+    }
+
+    @VisibleForTesting
+    void updateFastpairSettings() {
+        final SlicePreference fastpairSlicePref = findPreference(KEY_FASTPAIR_SETTINGS_SLICE);
+        if (fastpairSlicePref != null) {
+            if (SliceUtils.isSliceProviderValid(getContext(), fastpairSlicePref.getUri())) {
+                fastpairSlicePref.setVisible(true);
             }
         }
     }
