@@ -29,7 +29,7 @@ import com.android.tv.settings.library.PreferenceCompat;
  * The fragment compat for handling a full screen of radio buttons which belong to a single group.
  */
 public abstract class RadioPreferencesFragmentCompat extends PreferenceControllerFragmentCompat {
-    private TsPreferenceCategory mPrefGroup;
+    protected TsPreferenceCategory mPrefGroup;
 
     @Override
     public HasKeys updatePref(PreferenceCompat preferenceCompat) {
