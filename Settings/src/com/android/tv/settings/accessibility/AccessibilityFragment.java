@@ -97,10 +97,9 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
 
         final TwoStatePreference audioDescriptionPreference =
                 (TwoStatePreference) findPreference(TOGGLE_AUDIO_DESCRIPTION_KEY);
-        audioDescriptionPreference.setChecked(Settings.Secure.getInt(
+        audioDescriptionPreference.setChecked(Settings.Global.getInt(
                 getContext().getContentResolver(),
-                Settings.Secure.ENABLE_ACCESSIBILITY_AUDIO_DESCRIPTION_BY_DEFAULT, 0) == 1);
-
+                Settings.Global.ENABLE_ACCESSIBILITY_AUDIO_DESCRIPTION_BY_DEFAULT, 0) == 1);
 
         mServicesPref = (PreferenceGroup) findPreference(ACCESSIBILITY_SERVICES_KEY);
         if (mServicesPref != null) {
@@ -127,8 +126,8 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
             logToggleInteracted(
                     TvSettingsEnums.SYSTEM_A11Y_AUDIO_DESCRIPTION,
                     ((SwitchPreference) preference).isChecked());
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ENABLE_ACCESSIBILITY_AUDIO_DESCRIPTION_BY_DEFAULT,
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ENABLE_ACCESSIBILITY_AUDIO_DESCRIPTION_BY_DEFAULT,
                     (((SwitchPreference) preference).isChecked() ? 1 : 0));
             return true;
         } else {
