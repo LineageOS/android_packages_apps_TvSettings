@@ -19,7 +19,6 @@ package com.android.tv.settings.library.data;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.ArraySet;
 import android.util.Log;
 
 import com.android.tv.settings.library.PreferenceCompat;
@@ -32,7 +31,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 /**
  * State for managing preferenceCompats controlled through {@link AbstractPreferenceController} and
@@ -48,7 +46,7 @@ public abstract class PreferenceControllerState implements State {
         mContext = context;
         mPreferenceCompatManager = new PreferenceCompatManager();
     }
-    protected Set<AbstractPreferenceController> mPreferenceControllers = new ArraySet<>();
+    protected List<AbstractPreferenceController> mPreferenceControllers = new ArrayList<>();
     private Lifecycle mLifecycle;
 
     @Override

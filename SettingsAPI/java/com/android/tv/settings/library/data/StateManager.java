@@ -20,6 +20,8 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_ACCESSIBILITY;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ACCESSIBILITY_SERVICE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ACCESSIBILITY_SHORTCUT;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ACCESSIBILITY_SHORTCUT_SERVICE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_ADVANCED_DISPLAY;
+import static com.android.tv.settings.library.ManagerUtil.STATE_ADVANCED_VOLUME;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ALARMS_AND_REMINDERS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ALL_APPS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_APPS;
@@ -66,6 +68,8 @@ import com.android.tv.settings.library.device.apps.specialaccess.SystemAlertWind
 import com.android.tv.settings.library.device.apps.specialaccess.WriteSettingsState;
 import com.android.tv.settings.library.device.display.daydream.DaydreamState;
 import com.android.tv.settings.library.device.display.daydream.EnergySaverState;
+import com.android.tv.settings.library.device.display.displaysound.AdvancedDisplayState;
+import com.android.tv.settings.library.device.display.displaysound.AdvancedVolumeState;
 import com.android.tv.settings.library.device.display.displaysound.DisplaySoundState;
 import com.android.tv.settings.library.device.display.displaysound.FontScaleState;
 import com.android.tv.settings.library.device.display.displaysound.MatchContentFrameRateState;
@@ -169,6 +173,12 @@ public class StateManager {
                 break;
             case STATE_MATCH_CONTENT_FRAME:
                 state = new MatchContentFrameRateState(context, uiUpdateCallback);
+                break;
+            case STATE_ADVANCED_DISPLAY:
+                state = new AdvancedDisplayState(context, uiUpdateCallback);
+                break;
+            case STATE_ADVANCED_VOLUME:
+                state = new AdvancedVolumeState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op
