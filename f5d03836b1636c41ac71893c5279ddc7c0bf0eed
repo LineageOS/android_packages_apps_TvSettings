@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b959096_6a549c8c",
+        "filename": "Settings/src/com/android/tv/settings/about/RebootConfirmFragment.java",
+        "patchSetId": 20
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-09-25T13:11:27Z",
+      "side": 1,
+      "message": "need to be moved outside of AsyncTask as it\u0027ll likely cause leaks",
+      "range": {
+        "startLine": 137,
+        "startChar": 31,
+        "endLine": 137,
+        "endChar": 85
+      },
+      "revId": "f5d03836b1636c41ac71893c5279ddc7c0bf0eed",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "969a5944_6464e06d",
+        "filename": "Settings/src/com/android/tv/settings/about/RebootConfirmFragment.java",
+        "patchSetId": 20
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-09-25T13:11:27Z",
+      "side": 1,
+      "message": "pm.reboot(null); ?",
+      "range": {
+        "startLine": 143,
+        "startChar": 0,
+        "endLine": 143,
+        "endChar": 50
+      },
+      "revId": "f5d03836b1636c41ac71893c5279ddc7c0bf0eed",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1884e76f_7b111d0b",
+        "filename": "TwoPanelSettingsOverlay/Android.mk",
+        "patchSetId": 20
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-09-25T13:11:27Z",
+      "side": 1,
+      "message": "is this used?",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 35
+      },
+      "revId": "f5d03836b1636c41ac71893c5279ddc7c0bf0eed",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
