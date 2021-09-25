@@ -36,6 +36,10 @@
         android:fragment="com.android.tv.settings.device.displaysound.MatchContentRateFragmentCompat"
         android:key="match_content_frame_rate"
         android:title="@string/match_content_frame_rate_title"/>
+    <com.android.tv.settings.compat.TsPreference
+        android:key="advanced_display_settings"
+        android:title="@string/advanced_display_settings_title"
+        android:fragment="com.android.tv.settings.device.displaysound.AdvancedDisplayFragmentCompat" />
     <com.android.tv.settings.compat.TsPreferenceCategory
         android:key="sound_category"
         android:title="@string/device_sound" />
@@ -43,4 +47,8 @@
         android:key="sound_effects"
         android:persistent="true"
         android:title="@string/device_sound_effects"/>
+    <com.android.tv.settings.compat.TsPreference
+        android:key="advanced_sound_settings"
+        android:title="@string/advanced_sound_settings_title"
+        android:fragment="com.android.tv.settings.device.displaysound.AdvancedVolumeFragmentCompat" />
 </PreferenceScreen>
