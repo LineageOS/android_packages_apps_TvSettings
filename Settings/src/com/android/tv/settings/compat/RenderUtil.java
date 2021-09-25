@@ -105,6 +105,10 @@ public final class RenderUtil {
                             }
                             updatePreference(context, newPref, preferenceCompat,
                                     order != -1 ? order : i);
+                            if (newPref instanceof PreferenceGroup) {
+                                updatePreferenceGroup((PreferenceGroup) newPref,
+                                        preferenceCompat.getChildPrefCompats(), -1);
+                            }
                         });
     }
 

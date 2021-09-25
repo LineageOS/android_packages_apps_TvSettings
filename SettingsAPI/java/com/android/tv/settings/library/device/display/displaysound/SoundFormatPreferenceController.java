@@ -16,6 +16,11 @@
 
 package com.android.tv.settings.library.device.display.displaysound;
 
+import static com.android.tv.settings.library.device.display.displaysound.AdvancedVolumeState.KEY_FORMAT_INFO_ON_MANUAL;
+import static com.android.tv.settings.library.device.display.displaysound.AdvancedVolumeState.KEY_SUPPORTED_SURROUND_SOUND;
+import static com.android.tv.settings.library.device.display.displaysound.AdvancedVolumeState.KEY_SURROUND_SOUND_FORMAT_PREFIX;
+import static com.android.tv.settings.library.device.display.displaysound.AdvancedVolumeState.KEY_UNSUPPORTED_SURROUND_SOUND;
+
 import android.annotation.NonNull;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -47,6 +52,7 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
     private final List<Integer> mReportedFormats;
     private final AudioManager mAudioManager;
     private PreferenceCompat mPreferenceCompat;
+    private boolean mAvailable;
 
     public SoundFormatPreferenceController(
             Context context,
@@ -65,12 +71,18 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
 
     @Override
     public boolean isAvailable() {
-        return true;
+        return mAvailable;
     }
 
     @Override
     public void displayPreference(PreferenceCompatManager screen) {
+        // If the format is not a known surround sound format, do not create a preference
+        // for it.
+        String title = AdvancedVolumeState.getFormatDisplayResource(mContext, mFormatId);
+        mAvailable = !TextUtils.isEmpty(title);
         mPreferenceCompat = screen.getOrCreatePrefCompat(getPreferenceKey());
+        mPreferenceCompat.setTitle(title);
+        mPreferenceCompat.setType(PreferenceCompat.TYPE_SWITCH);
         refresh();
         mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
@@ -81,7 +93,7 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
         mUIUpdateCallback.notifyUpdate(mStateIdentifier, preference);
     }
 
-    public void refresh() {
+    private void refresh() {
         mPreferenceCompat.setEnabled(getFormatPreferencesEnabledState());
         mPreferenceCompat.setChecked(getFormatPreferenceCheckedState());
     }
@@ -178,6 +190,14 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
 
     @Override
     public String[] getPreferenceKey() {
-        return new String[]{AdvancedVolumeState.KEY_SURROUND_SOUND_FORMAT_PREFIX + mFormatId};
+        String key = KEY_SURROUND_SOUND_FORMAT_PREFIX + mFormatId;
+        String[] compoundKey = mReportedFormats.contains(mFormatId)
+                ? new String[]{KEY_FORMAT_INFO_ON_MANUAL, KEY_SUPPORTED_SURROUND_SOUND, key}
+                : new String[]{KEY_FORMAT_INFO_ON_MANUAL, KEY_UNSUPPORTED_SURROUND_SOUND, key};
+        return compoundKey;
+    }
+
+    public PreferenceCompat getPreferenceCompat() {
+        return mPreferenceCompat;
     }
 }
