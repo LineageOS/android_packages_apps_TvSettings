@@ -76,6 +76,13 @@
         android:key="cast_settings"
         android:title="@string/cast_settings_title"
         custom:uri="@string/cast_settings_slice_uri"/>
+    <com.android.tv.twopanelsettings.slices.SlicePreference
+        android:icon="@drawable/ic_devices_other"
+        android:key="fastpair_slice"
+        android:title="@string/device_fastpair"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false"
+        custom:uri="@string/fastpair_slice_uri"/>
     <com.android.tv.settings.widget.SwitchWithSoundPreference
         android:key="sound_effects_switch"
         android:icon="@drawable/ic_system_sound"
@@ -86,11 +93,4 @@
         android:icon="@drawable/ic_restart_alt"
         android:key="reboot"
         android:title="@string/restart_button_label"/>
-    <com.android.tv.twopanelsettings.slices.SlicePreference
-        android:icon="@drawable/ic_restart_alt"
-        android:key="fastpair_slice"
-        android:title="@string/device_fastpair"
-        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
-        custom:isPreferenceVisible="false"
-        custom:uri="@string/fastpair_slice_uri"/>
 </PreferenceScreen>
