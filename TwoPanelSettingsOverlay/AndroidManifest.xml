@@ -323,6 +323,17 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation"
+             android:excludeFromRecents="true"
+             android:exported="true"
+             android:name=".privacy.TVTrustActivity"
+             android:theme="@style/Theme.Settings.TwoPanel">
+            <intent-filter>
+                <action android:name="android.settings.TRUST_INTERFACE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
         <activity-alias android:enabled="false"
              android:excludeFromRecents="true"
              android:exported="true"
