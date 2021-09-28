@@ -151,6 +151,7 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 preferenceCompat.setChecked(false);
+                                mUIUpdateCallback.notifyUpdate(mStateIdentifier, preferenceCompat);
                                 dialog.dismiss();
                             }
                         })

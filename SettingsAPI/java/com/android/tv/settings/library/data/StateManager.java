@@ -32,6 +32,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_DAYDREAM;
 import static com.android.tv.settings.library.ManagerUtil.STATE_DISPLAY_SOUND;
 import static com.android.tv.settings.library.ManagerUtil.STATE_ENERGY_SAVER;
 import static com.android.tv.settings.library.ManagerUtil.STATE_FONT_SCALE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_HDR_FORMAT_SELECTION;
 import static com.android.tv.settings.library.ManagerUtil.STATE_HIGH_POWER;
 import static com.android.tv.settings.library.ManagerUtil.STATE_KEYBOARD;
 import static com.android.tv.settings.library.ManagerUtil.STATE_LANGUAGE;
@@ -72,6 +73,7 @@ import com.android.tv.settings.library.device.display.displaysound.AdvancedDispl
 import com.android.tv.settings.library.device.display.displaysound.AdvancedVolumeState;
 import com.android.tv.settings.library.device.display.displaysound.DisplaySoundState;
 import com.android.tv.settings.library.device.display.displaysound.FontScaleState;
+import com.android.tv.settings.library.device.display.displaysound.HdrFormatSelectionState;
 import com.android.tv.settings.library.device.display.displaysound.MatchContentFrameRateState;
 import com.android.tv.settings.library.device.storage.StorageState;
 import com.android.tv.settings.library.device.storage.StorageSummaryState;
@@ -179,6 +181,9 @@ public class StateManager {
                 break;
             case STATE_ADVANCED_VOLUME:
                 state = new AdvancedVolumeState(context, uiUpdateCallback);
+                break;
+            case STATE_HDR_FORMAT_SELECTION:
+                state = new HdrFormatSelectionState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op

@@ -22,9 +22,6 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
-import androidx.preference.Preference;
-import androidx.preference.PreferenceGroup;
-
 import com.android.tv.settings.library.PreferenceCompat;
 
 import java.util.List;
@@ -65,5 +62,12 @@ public class PreferenceCompatUtils {
 
         // Did not find a matching activity, so remove the preference
         parent.remove(preference);
+    }
+
+    public static boolean isParent(PreferenceCompat child, PreferenceCompat parent) {
+        if (parent.getChildPrefCompats() == null) {
+            return false;
+        }
+        return parent.getChildPrefCompats().stream().anyMatch(child1 -> child == child1);
     }
 }

@@ -107,4 +107,18 @@ public final class ResourcesUtil {
             return null;
         }
     }
+
+    public static int[] getIntArray(Context context, String name) {
+        try {
+            Resources resources = context.getPackageManager()
+                    .getResourcesForApplication(SETTINGS_PACKAGE_NAME);
+            int id = resources.getIdentifier(name, "array", SETTINGS_PACKAGE_NAME);
+            if (id != 0) {
+                return resources.getIntArray(id);
+            }
+            return null;
+        } catch (Exception e) {
+            return null;
+        }
+    }
 }
