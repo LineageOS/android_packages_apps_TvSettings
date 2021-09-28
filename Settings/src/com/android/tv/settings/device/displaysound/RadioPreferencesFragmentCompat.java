@@ -65,7 +65,7 @@ public abstract class RadioPreferencesFragmentCompat extends PreferenceControlle
                     }
             );
         }
-        return null;
+        return super.updatePref(preferenceCompat);
     }
 
 

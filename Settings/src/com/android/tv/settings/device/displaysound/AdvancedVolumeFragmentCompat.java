@@ -67,7 +67,7 @@ public class AdvancedVolumeFragmentCompat extends RadioPreferencesFragmentCompat
                     return null;
             }
         }
-        return null;
+        return super.updatePref(preferenceCompat);
     }
 
     @Override
