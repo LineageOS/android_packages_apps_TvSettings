@@ -38,6 +38,11 @@
         <intent android:action="com.google.android.gms.settings.ADS_PRIVACY" />
     </Preference>
 
+    <Preference
+        android:key="trust"
+        android:title="@string/trust_title"
+        android:fragment="com.android.tv.settings.privacy.TVTrustPreferences" />
+
     <PreferenceCategory android:title="@string/privacy_app_settings_category" />
 
     <com.android.tv.twopanelsettings.slices.SlicePreference
