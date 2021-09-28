@@ -25,6 +25,7 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.leanback_leanback-preference \
     androidx.leanback_leanback \
     TwoPanelSettingsLib \
+    LineagePartsResources
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
     androidx.annotation_annotation \
