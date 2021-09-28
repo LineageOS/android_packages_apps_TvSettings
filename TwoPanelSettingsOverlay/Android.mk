@@ -25,11 +25,13 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.leanback_leanback-preference \
     androidx.leanback_leanback \
     TwoPanelSettingsLib \
+    org.lineageos.parts.resources \
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
     androidx.annotation_annotation \
     statslog-tvsettings \
-    org.lineageos.platform.internal
+    org.lineageos.platform.internal \
+    org.lineageos.settings.resources \
 
 LOCAL_USE_AAPT2 := true
 LOCAL_PACKAGE_NAME := TwoPanelSettingsOverlay
