@@ -63,7 +63,7 @@ public abstract class PreferenceControllerState implements State {
             controllers = new ArrayList<>();
         }
         mPreferenceControllers.addAll(controllers);
-        refreshAllPreferences();
+        refreshAllPreferenceControllers();
     }
 
     @Override
@@ -131,7 +131,7 @@ public abstract class PreferenceControllerState implements State {
     @Override
     public abstract int getStateIdentifier();
 
-    private void refreshAllPreferences() {
+    protected void refreshAllPreferenceControllers() {
         Collection<AbstractPreferenceController> controllers =
                 new ArrayList<>(mPreferenceControllers);
         for (AbstractPreferenceController controller : controllers) {

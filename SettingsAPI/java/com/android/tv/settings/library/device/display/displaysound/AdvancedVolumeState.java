@@ -54,6 +54,7 @@ public class AdvancedVolumeState extends PreferenceControllerState {
     static final String KEY_SHOW_HIDE_FORMAT_INFO = "surround_sound_show_hide_format_info";
     static final String KEY_ENABLED_FORMATS = "enabled_formats";
     static final String KEY_DISABLED_FORMATS = "disabled_formats";
+    static final String KEY_FORMAT_INFO_ON_MANUAL = "surround_sound_format_info_on_manual";
 
     static final int[] SURROUND_SOUND_DISPLAY_ORDER = {
             AudioFormat.ENCODING_AC3, AudioFormat.ENCODING_E_AC3, AudioFormat.ENCODING_DOLBY_TRUEHD,
@@ -68,6 +69,7 @@ public class AdvancedVolumeState extends PreferenceControllerState {
     private PreferenceCompat mSupportedFormatsPreferenceCategory;
     private PreferenceCompat mUnsupportedFormatsPreferenceCategory;
     private PreferenceCompat mFormatsInfoPreferenceCategory;
+    private PreferenceCompat mFormatsInfoOnManualPreferenceCategory;
     private PreferenceCompat mEnabledFormatsPreferenceCategory;
     private PreferenceCompat mDisabledFormatsPreferenceCategory;
     private PreferenceCompat mSurroundSoundCategory;
@@ -101,11 +103,7 @@ public class AdvancedVolumeState extends PreferenceControllerState {
                 Settings.Global.ENCODED_SURROUND_OUTPUT_ENABLED_FORMATS);
         if (formatString == null) {
             for (int format : mFormats.keySet()) {
-                if (mReportedFormats.contains(format)) {
-                    mAudioManager.setSurroundFormatEnabled(format, true);
-                } else {
-                    mAudioManager.setSurroundFormatEnabled(format, false);
-                }
+                mAudioManager.setSurroundFormatEnabled(format, mReportedFormats.contains(format));
             }
         }
     }
@@ -150,24 +148,17 @@ public class AdvancedVolumeState extends PreferenceControllerState {
         }
 
         createFormatInfoPreferences();
-        createFormatPreferences();
+        createFormatInfoPreferencesOnManual();
         if (mSurroundSoundManual.getChecked() == PreferenceCompat.STATUS_ON) {
-            showFormatPreferences();
+            showFormatInfoOnManual();
         } else {
-            hideFormatPreferences();
+            hideFormatInfoOnManual();
         }
     }
 
     @Override
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
-        List<AbstractPreferenceController> preferenceControllers = new ArrayList<>();
-        for (Map.Entry<Integer, Boolean> format : mFormats.entrySet()) {
-            preferenceControllers.add(new SoundFormatPreferenceController(context,
-                    mUIUpdateCallback,
-                    getStateIdentifier(),
-                    format.getKey() /*formatId*/, mAudioManager, mFormats, mReportedFormats));
-        }
-        return preferenceControllers;
+        return null;
     }
 
     @Override
@@ -186,19 +177,19 @@ public class AdvancedVolumeState extends PreferenceControllerState {
                 case KEY_SURROUND_SOUND_AUTO: {
                     mAudioManager.setEncodedSurroundMode(
                             Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO);
-                    hideFormatPreferences();
+                    hideFormatInfoOnManual();
                     break;
                 }
                 case KEY_SURROUND_SOUND_NONE: {
                     mAudioManager.setEncodedSurroundMode(
                             Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER);
-                    hideFormatPreferences();
+                    hideFormatInfoOnManual();
                     break;
                 }
                 case KEY_SURROUND_SOUND_MANUAL: {
                     mAudioManager.setEncodedSurroundMode(
                             Settings.Global.ENCODED_SURROUND_OUTPUT_MANUAL);
-                    showFormatPreferences();
+                    showFormatInfoOnManual();
                     break;
                 }
                 default:
@@ -206,18 +197,20 @@ public class AdvancedVolumeState extends PreferenceControllerState {
                             + key);
             }
             updateFormatPreferencesStates();
+            return true;
         }
 
         if (key.length == 2 && key[0].equals(KEY_FORMAT_INFO) && key[1].equals(
                 KEY_SHOW_HIDE_FORMAT_INFO)) {
             if (pref.getTitle().equals(
                     ResourcesUtil.getString(mContext, "surround_sound_hide_formats"))) {
-                hideFormatInfoPreferences();
                 pref.setTitle(ResourcesUtil.getString(mContext, "surround_sound_show_formats"));
+                hideFormatInfo();
             } else {
-                showFormatInfoPreferences();
                 pref.setTitle(ResourcesUtil.getString(mContext, "surround_sound_hide_formats"));
+                showFormatInfo();
             }
+            return true;
         }
 
         if (key.length == 3 && key[0].equals(KEY_FORMAT_INFO) && key[2].contains(
@@ -225,7 +218,7 @@ public class AdvancedVolumeState extends PreferenceControllerState {
             if (isParent(pref, mEnabledFormatsPreferenceCategory)) {
                 showToast("surround_sound_enabled_format_info_clicked");
             } else {
-                showToast("string.surround_sound_disabled_format_info_clicked");
+                showToast("surround_sound_disabled_format_info_clicked");
             }
             return true;
         }
@@ -253,38 +246,45 @@ public class AdvancedVolumeState extends PreferenceControllerState {
     }
 
     /** Creates titles and switches for each surround sound format. */
-    private void createFormatPreferences() {
+    private void createFormatInfoPreferencesOnManual() {
+        mFormatsInfoOnManualPreferenceCategory = createPreferenceCategory(
+                "", new String[]{KEY_FORMAT_INFO_ON_MANUAL}
+        );
         mSupportedFormatsPreferenceCategory = createPreferenceCategory(
-                "surround_sound_supported_title", new String[]{KEY_SUPPORTED_SURROUND_SOUND});
+                "surround_sound_supported_title",
+                new String[]{KEY_FORMAT_INFO_ON_MANUAL, KEY_SUPPORTED_SURROUND_SOUND});
         mUnsupportedFormatsPreferenceCategory = createPreferenceCategory(
-                "surround_sound_unsupported_title", new String[]{KEY_UNSUPPORTED_SURROUND_SOUND});
+                "surround_sound_unsupported_title",
+                new String[]{KEY_FORMAT_INFO_ON_MANUAL, KEY_UNSUPPORTED_SURROUND_SOUND});
 
+        mFormatsInfoOnManualPreferenceCategory.addChildPrefCompat(
+                mSupportedFormatsPreferenceCategory);
+        mFormatsInfoOnManualPreferenceCategory.addChildPrefCompat(
+                mUnsupportedFormatsPreferenceCategory);
+        List<AbstractPreferenceController> preferenceControllers = new ArrayList<>();
         for (int formatId : SURROUND_SOUND_DISPLAY_ORDER) {
             if (mFormats.containsKey(formatId)) {
-                boolean enabled = mFormats.get(formatId);
-
-                // If the format is not a known surround sound format, do not create a preference
-                // for it.
-                String title = getFormatDisplayResource(formatId);
-                if (TextUtils.isEmpty(title)) {
-                    continue;
-                }
-                String key = KEY_SURROUND_SOUND_FORMAT_PREFIX + formatId;
-                String[] compoundKey = mReportedFormats.contains(formatId)
-                        ? new String[]{KEY_SUPPORTED_SURROUND_SOUND, key}
-                        : new String[]{KEY_UNSUPPORTED_SURROUND_SOUND, key};
-                final PreferenceCompat pref = mPreferenceCompatManager.getOrCreatePrefCompat(
-                        compoundKey);
-                pref.setTitle(title);
-                pref.setEnabled(true);
-                pref.setChecked(enabled);
-                if (mReportedFormats.contains(formatId)) {
-                    mSupportedFormatsPreferenceCategory.addChildPrefCompat(pref);
-                } else {
-                    mUnsupportedFormatsPreferenceCategory.addChildPrefCompat(pref);
+                SoundFormatPreferenceController soundFormatPC = new SoundFormatPreferenceController(
+                        mContext,
+                        mUIUpdateCallback,
+                        getStateIdentifier(),
+                        formatId /*formatId*/, mAudioManager, mFormats, mReportedFormats);
+                preferenceControllers.add(soundFormatPC);
+                soundFormatPC.displayPreference(mPreferenceCompatManager);
+                if (soundFormatPC.isAvailable()) {
+                    if (mReportedFormats.contains(formatId)) {
+                        mSupportedFormatsPreferenceCategory.addChildPrefCompat(
+                                soundFormatPC.getPreferenceCompat());
+                    } else {
+                        mUnsupportedFormatsPreferenceCategory.addChildPrefCompat(
+                                soundFormatPC.getPreferenceCompat());
+                    }
                 }
             }
         }
+        mPreferenceControllers.addAll(preferenceControllers);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(),
+                mFormatsInfoOnManualPreferenceCategory);
     }
 
     /** Creates titles and preferences for each surround sound format. */
@@ -308,9 +308,7 @@ public class AdvancedVolumeState extends PreferenceControllerState {
 
         for (int formatId : SURROUND_SOUND_DISPLAY_ORDER) {
             if (mFormats.containsKey(formatId)) {
-                // If the format is not a known surround sound format, do not create a preference
-                // for it.
-                String title = getFormatDisplayResource(formatId);
+                String title = getFormatDisplayResource(mContext, formatId);
                 if (TextUtils.isEmpty(title)) {
                     continue;
                 }
@@ -319,6 +317,7 @@ public class AdvancedVolumeState extends PreferenceControllerState {
                         ? new String[]{KEY_FORMAT_INFO, KEY_ENABLED_FORMATS, key}
                         : new String[]{KEY_FORMAT_INFO, KEY_DISABLED_FORMATS, key};
                 PreferenceCompat pref = createPreference(title, compoundKey);
+                pref.setTitle(title);
                 if (mReportedFormats.contains(formatId)) {
                     mEnabledFormatsPreferenceCategory.addChildPrefCompat(pref);
                 } else {
@@ -326,53 +325,80 @@ public class AdvancedVolumeState extends PreferenceControllerState {
                 }
             }
         }
-        hideFormatInfoPreferences();
+        hideFormatInfo();
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mFormatsInfoPreferenceCategory);
     }
 
-    private void showFormatPreferences() {
+    private void notifyUpdateFormatInfo() {
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(),
+                mFormatsInfoOnManualPreferenceCategory);
+        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mFormatsInfoPreferenceCategory);
+    }
+
+    private void showFormatInfoOnManual() {
         mSupportedFormatsPreferenceCategory.setVisible(true);
         mUnsupportedFormatsPreferenceCategory.setVisible(true);
         updateFormatPreferencesStates();
         // hide the formats info section.
         mFormatsInfoPreferenceCategory.setVisible(false);
-        notifyUpdateFormatPreferences();
+        notifyUpdateFormatInfo();
     }
 
-    private void notifyUpdateFormatPreferences() {
-        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mSupportedFormatsPreferenceCategory);
-        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mUnsupportedFormatsPreferenceCategory);
-        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mFormatsInfoPreferenceCategory);
-    }
-
-    private void hideFormatPreferences() {
+    private void hideFormatInfoOnManual() {
         mSupportedFormatsPreferenceCategory.setVisible(false);
         mUnsupportedFormatsPreferenceCategory.setVisible(false);
         updateFormatPreferencesStates();
         // show the formats info section.
         mFormatsInfoPreferenceCategory.setVisible(true);
-        notifyUpdateFormatPreferences();
+        notifyUpdateFormatInfo();
     }
 
-    private void showFormatInfoPreferences() {
+    private void showFormatInfo() {
         mEnabledFormatsPreferenceCategory.setVisible(true);
         mDisabledFormatsPreferenceCategory.setVisible(true);
-        notifyUpdateFormatInfoPreferences();
+        notifyUpdateFormatInfo();
     }
 
-    private void hideFormatInfoPreferences() {
+    private void hideFormatInfo() {
         mEnabledFormatsPreferenceCategory.setVisible(false);
         mDisabledFormatsPreferenceCategory.setVisible(false);
-        notifyUpdateFormatInfoPreferences();
+        notifyUpdateFormatInfo();
     }
 
-    private void notifyUpdateFormatInfoPreferences() {
-        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mEnabledFormatsPreferenceCategory);
-        mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mDisabledFormatsPreferenceCategory);
+
+    /**
+     * @return the display id for each surround sound format.
+     */
+    static String getFormatDisplayResource(Context context, int formatId) {
+        switch (formatId) {
+            case AudioFormat.ENCODING_AC3:
+                return ResourcesUtil.getString(context, "surround_sound_format_ac3");
+            case AudioFormat.ENCODING_E_AC3:
+                return ResourcesUtil.getString(context, "surround_sound_format_e_ac3");
+            case AudioFormat.ENCODING_DTS:
+                return ResourcesUtil.getString(context, "surround_sound_format_dts");
+            case AudioFormat.ENCODING_DTS_HD:
+                return ResourcesUtil.getString(context, "surround_sound_format_dts_hd");
+            case AudioFormat.ENCODING_DTS_UHD:
+                return ResourcesUtil.getString(context, "surround_sound_format_dts_uhd");
+            case AudioFormat.ENCODING_DOLBY_TRUEHD:
+                return ResourcesUtil.getString(context, "surround_sound_format_dolby_truehd");
+            case AudioFormat.ENCODING_E_AC3_JOC:
+                return ResourcesUtil.getString(context, "surround_sound_format_e_ac3_joc");
+            case AudioFormat.ENCODING_DOLBY_MAT:
+                return ResourcesUtil.getString(context, "surround_sound_format_dolby_mat");
+            case AudioFormat.ENCODING_DRA:
+                return ResourcesUtil.getString(context, "surround_sound_format_dra");
+            default:
+                return "";
+        }
     }
 
     private void showToast(String resName) {
-        Toast.makeText(mContext, ResourcesUtil.getString(mContext, resName), Toast.LENGTH_SHORT)
-                .show();
+        String toast = ResourcesUtil.getString(mContext, resName);
+        if (!TextUtils.isEmpty(toast)) {
+            Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
+        }
     }
 
     private PreferenceCompat createPreferenceCategory(String valueName, String[] key) {
@@ -401,34 +427,6 @@ public class AdvancedVolumeState extends PreferenceControllerState {
             case Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO:
             default:
                 return KEY_SURROUND_SOUND_AUTO;
-        }
-    }
-
-    /**
-     * @return the display id for each surround sound format.
-     */
-    private String getFormatDisplayResource(int formatId) {
-        switch (formatId) {
-            case AudioFormat.ENCODING_AC3:
-                return ResourcesUtil.getString(mContext, "surround_sound_format_ac3");
-            case AudioFormat.ENCODING_E_AC3:
-                return ResourcesUtil.getString(mContext, "surround_sound_format_e_ac3");
-            case AudioFormat.ENCODING_DTS:
-                return ResourcesUtil.getString(mContext, "surround_sound_format_dts");
-            case AudioFormat.ENCODING_DTS_HD:
-                return ResourcesUtil.getString(mContext, "surround_sound_format_dts_hd");
-            case AudioFormat.ENCODING_DTS_UHD:
-                return ResourcesUtil.getString(mContext, "surround_sound_format_dts_uhd");
-            case AudioFormat.ENCODING_DOLBY_TRUEHD:
-                return ResourcesUtil.getString(mContext, "surround_sound_format_dolby_truehd");
-            case AudioFormat.ENCODING_E_AC3_JOC:
-                return ResourcesUtil.getString(mContext, "surround_sound_format_e_ac3_joc");
-            case AudioFormat.ENCODING_DOLBY_MAT:
-                return ResourcesUtil.getString(mContext, "surround_sound_format_dolby_mat");
-            case AudioFormat.ENCODING_DRA:
-                return ResourcesUtil.getString(mContext, "surround_sound_format_dra");
-            default:
-                return "";
         }
     }
 
