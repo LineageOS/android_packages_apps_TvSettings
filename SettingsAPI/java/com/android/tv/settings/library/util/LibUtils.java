@@ -51,6 +51,8 @@ import android.telephony.AccessNetworkConstants;
 import android.telephony.NetworkRegistrationInfo;
 import android.telephony.ServiceState;
 import android.telephony.TelephonyManager;
+import android.text.TextUtils;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
@@ -476,5 +478,12 @@ public class LibUtils {
             }
         }
         return null;
+    }
+
+    public static void showToast(Context context, String resName) {
+        String toast = ResourcesUtil.getString(context, resName);
+        if (!TextUtils.isEmpty(toast)) {
+            Toast.makeText(context, toast, Toast.LENGTH_SHORT).show();
+        }
     }
 }

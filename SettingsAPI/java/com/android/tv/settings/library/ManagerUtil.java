@@ -65,6 +65,7 @@ public final class ManagerUtil {
     public static final int STATE_MATCH_CONTENT_FRAME = 33;
     public static final int STATE_ADVANCED_DISPLAY = 34;
     public static final int STATE_ADVANCED_VOLUME = 35;
+    public static final int STATE_HDR_FORMAT_SELECTION = 36;
 
     public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     public static final String INFO_INTENT = "intent";
