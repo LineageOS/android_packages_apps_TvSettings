@@ -49,6 +49,7 @@ public class AppsFragment extends PreferenceControllerFragment {
     private static final String KEY_SECURITY = "security";
     private static final String KEY_OVERLAY_SECURITY = "overlay_security";
     private static final String KEY_UPDATE = "update";
+    private static final String TOP_LEVEL_SLICE_URI = "top_level_settings_slice_uri";
 
     public static void prepareArgs(Bundle b, String volumeUuid, String volumeName) {
         b.putString(AppsActivity.EXTRA_VOLUME_UUID, volumeUuid);
@@ -102,8 +103,9 @@ public class AppsFragment extends PreferenceControllerFragment {
     private boolean isOverlaySecuritySlicePreferenceEnabled(
             @Nullable Preference overlaySecuritySlicePreference) {
         return overlaySecuritySlicePreference instanceof SlicePreference
-                && SliceUtils.isSettingsSliceEnabled(
-                        getContext(), ((SlicePreference) overlaySecuritySlicePreference).getUri());
+                && SliceUtils.isSettingsSliceEnabled(getContext(),
+                        ((SlicePreference) overlaySecuritySlicePreference).getUri(),
+                                TOP_LEVEL_SLICE_URI);
     }
 
     private void showOverlaySecuritySlicePreference(
@@ -132,7 +134,9 @@ public class AppsFragment extends PreferenceControllerFragment {
             @Nullable Preference updateSlicePreference) {
         return updateSlicePreference instanceof SlicePreference
                 && SliceUtils.isSettingsSliceEnabled(
-                        getContext(), ((SlicePreference) updateSlicePreference).getUri());
+                        getContext(),
+                        ((SlicePreference) updateSlicePreference).getUri(),
+                                TOP_LEVEL_SLICE_URI);
     }
 
     @Override
