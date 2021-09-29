@@ -36,6 +36,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_HDR_FORMAT_SELEC
 import static com.android.tv.settings.library.ManagerUtil.STATE_HIGH_POWER;
 import static com.android.tv.settings.library.ManagerUtil.STATE_KEYBOARD;
 import static com.android.tv.settings.library.ManagerUtil.STATE_LANGUAGE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_LOCATION;
 import static com.android.tv.settings.library.ManagerUtil.STATE_MATCH_CONTENT_FRAME;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NOTIFICATION_ACCESS;
@@ -83,6 +84,7 @@ import com.android.tv.settings.library.network.NetworkState;
 import com.android.tv.settings.library.network.WifiDetailsState;
 import com.android.tv.settings.library.system.DateTimeState;
 import com.android.tv.settings.library.system.LanguageState;
+import com.android.tv.settings.library.system.LocationState;
 
 /** Manager to handle creation and removal of the {@link State}. */
 public class StateManager {
@@ -184,6 +186,9 @@ public class StateManager {
                 break;
             case STATE_HDR_FORMAT_SELECTION:
                 state = new HdrFormatSelectionState(context, uiUpdateCallback);
+                break;
+            case STATE_LOCATION:
+                state = new LocationState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op
