@@ -660,6 +660,7 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
+            android:permission="android.permission.BLUETOOTH_CONNECT"
             android:theme="@style/TvSettingsActivityTheme" />
 
         <activity
