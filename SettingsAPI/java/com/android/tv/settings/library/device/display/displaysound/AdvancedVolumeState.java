@@ -24,7 +24,6 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
-import android.widget.Toast;
 
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
@@ -32,6 +31,8 @@ import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceControllerState;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
+import com.android.tv.settings.library.util.LibUtils;
+import com.android.tv.settings.library.util.PreferenceCompatUtils;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.ArrayList;
@@ -215,10 +216,10 @@ public class AdvancedVolumeState extends PreferenceControllerState {
 
         if (key.length == 3 && key[0].equals(KEY_FORMAT_INFO) && key[2].contains(
                 KEY_SURROUND_SOUND_FORMAT_INFO_PREFIX)) {
-            if (isParent(pref, mEnabledFormatsPreferenceCategory)) {
-                showToast("surround_sound_enabled_format_info_clicked");
+            if (PreferenceCompatUtils.isParent(pref, mEnabledFormatsPreferenceCategory)) {
+                LibUtils.showToast(mContext, "surround_sound_enabled_format_info_clicked");
             } else {
-                showToast("surround_sound_disabled_format_info_clicked");
+                LibUtils.showToast(mContext, "surround_sound_disabled_format_info_clicked");
             }
             return true;
         }
@@ -226,12 +227,6 @@ public class AdvancedVolumeState extends PreferenceControllerState {
         return super.onPreferenceTreeClick(key, status);
     }
 
-    private boolean isParent(PreferenceCompat child, PreferenceCompat parent) {
-        if (parent.getChildPrefCompats() == null) {
-            return false;
-        }
-        return parent.getChildPrefCompats().stream().anyMatch(child1 -> child == child1);
-    }
 
     AudioManager getAudioManager() {
         return mContext.getSystemService(AudioManager.class);
@@ -391,13 +386,6 @@ public class AdvancedVolumeState extends PreferenceControllerState {
                 return ResourcesUtil.getString(context, "surround_sound_format_dra");
             default:
                 return "";
-        }
-    }
-
-    private void showToast(String resName) {
-        String toast = ResourcesUtil.getString(mContext, resName);
-        if (!TextUtils.isEmpty(toast)) {
-            Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -14,17 +14,18 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:title="@string/surround_sound_select_formats">
+    android:title="@string/hdr_format_selection_title"
+    android:key="hdr_format_selection_screen" >
+
     <com.android.tv.settings.compat.TsPreferenceCategory
-        android:key="advanced_sound_settings_option">
+        android:key="hdr_format_selection_option">
     </com.android.tv.settings.compat.TsPreferenceCategory>
     <com.android.tv.settings.compat.TsPreferenceCategory
-        android:key="surround_sound_format_info">
+        android:key="hdr_format_info">
     </com.android.tv.settings.compat.TsPreferenceCategory>
     <com.android.tv.settings.compat.TsPreferenceCategory
-        android:key="surround_sound_format_info_on_manual">
+        android:key="hdr_format_info_on_manual">
     </com.android.tv.settings.compat.TsPreferenceCategory>
 </PreferenceScreen>
