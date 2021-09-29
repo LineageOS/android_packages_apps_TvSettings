@@ -16,10 +16,15 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.hardware.display.DisplayManager;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.Display;
+import android.widget.Button;
 
 import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
@@ -31,11 +36,13 @@ import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
+import com.android.tv.settings.util.ResolutionSelectionUtils;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 /**
  * This Fragment is responsible for allowing the user to choose the resolution and refresh rate
@@ -55,6 +62,8 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
     private PreferenceCategory mResolutionPreferenceCategory;
 
     static final Set<Integer> STANDARD_RESOLUTIONS_IN_ORDER = Set.of(2160, 1080, 720, 576, 480);
+    static final int DIALOG_TIMEOUT_MILLIS = 12000;
+    static final int DIALOG_START_MILLIS = 1000;
 
     /** @return the new instance of the class */
     public static ResolutionSelectionFragment newInstance() {
@@ -125,14 +134,10 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         mResolutionPreferenceCategory.addPreference(pref);
 
         for (int i = 0; i < mModes.length; i++) {
-            int resolution = Math.min(mModes[i].getPhysicalHeight(), mModes[i].getPhysicalWidth());
-            String title = resolution + "p";
-            if (resolution == 2160) {
-                title = "4k";
-            }
             mResolutionPreferenceCategory.addPreference(createResolutionPreference(
-                    title,
-                    getRefreshRateString(mModes[i].getRefreshRate()) + " Hz",
+                    ResolutionSelectionUtils.getResolutionString(
+                            mModes[i].getPhysicalWidth(), mModes[i].getPhysicalHeight()),
+                    ResolutionSelectionUtils.getRefreshRateString(mModes[i].getRefreshRate()),
                     i));
         }
     }
@@ -173,13 +178,23 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         if (preference instanceof RadioPreference) {
             selectRadioPreference(preference);
 
+            Display.Mode newMode = null;
+            Display.Mode previousMode = mDisplayManager.getUserPreferredDisplayMode();
             if (key.equals(KEY_RESOLUTION_SELECTION_AUTO)) {
                 mDisplayManager.clearUserPreferredDisplayMode();
             } else if (key.contains(KEY_RESOLUTION_PREFIX)) {
                 int modeIndex = Integer.valueOf(key.substring(KEY_RESOLUTION_PREFIX.length()));
-                Display.Mode mode = mModes[modeIndex];
-                mDisplayManager.setUserPreferredDisplayMode(mode);
+                newMode = mModes[modeIndex];
+                mDisplayManager.setUserPreferredDisplayMode(newMode);
             }
+            // Show the dialog after a delay of 1 second. If the dialog or any UX
+            // is shown when the resolution change is under process, the dialog is lost.
+            Display.Mode finalNewMode = newMode;
+            new Handler().postDelayed(new Runnable() {
+                public void run() {
+                    showWarningDialogOnResolutionChange(finalNewMode, previousMode);
+                }
+            }, DIALOG_START_MILLIS);
         }
 
         return super.onPreferenceTreeClick(preference);
@@ -199,12 +214,65 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         return -1;
     }
 
-    private String getRefreshRateString(float refreshRate) {
-        float roundedRefreshRate = Math.round(refreshRate * 100.0f) / 100.0f;
-        if (roundedRefreshRate % 1 == 0) {
-            return Integer.toString((int) roundedRefreshRate);
+    private void setUserPreferredMode(Display.Mode mode) {
+        int modeIndex = lookupModeIndex(mode);
+        if (modeIndex != -1) {
+            selectRadioPreference(findPreference(KEY_RESOLUTION_PREFIX + modeIndex));
+            mDisplayManager.setUserPreferredDisplayMode(mode);
         } else {
-            return Float.toString(roundedRefreshRate);
+            selectRadioPreference(findPreference(KEY_RESOLUTION_SELECTION_AUTO));
+            mDisplayManager.clearUserPreferredDisplayMode();
         }
+    }
+
+    private void showWarningDialogOnResolutionChange(
+            Display.Mode currentMode, Display.Mode previousMode) {
+        final String dialogDescription =
+                getResources().getString(R.string.resolution_selection_dialog_desc,
+                        ResolutionSelectionUtils.modeToString(currentMode, getContext()));
+        AlertDialog dialog = new AlertDialog.Builder(getContext())
+                .setTitle(R.string.resolution_selection_dialog_title)
+                .setMessage(dialogDescription)
+                .setPositiveButton(
+                        R.string.resolution_selection_dialog_ok,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                .setNegativeButton(
+                        R.string.resolution_selection_dialog_cancel,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                setUserPreferredMode(previousMode);
+                                dialog.dismiss();
+                            }
+                        })
+                .create();
+
+        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(final DialogInterface dialog) {
+                final Button cancelButton =
+                        ((AlertDialog) dialog).getButton(AlertDialog.BUTTON_NEGATIVE);
+                final CharSequence negativeButtonText = cancelButton.getText();
+                new CountDownTimer(DIALOG_TIMEOUT_MILLIS, 1000) {
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+                        cancelButton.setText(String.format("%s (%d)", negativeButtonText,
+                                //add one to timeout so it never displays zero
+                                TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) + 1
+                        ));
+                    }
+                    @Override
+                    public void onFinish() {
+                        if (((AlertDialog) dialog).isShowing()) {
+                            dialog.dismiss();
+                        }
+                    }
+                }.start();
+            }
+        });
+        dialog.show();
     }
 }
