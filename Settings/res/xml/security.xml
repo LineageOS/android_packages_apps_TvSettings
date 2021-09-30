@@ -22,11 +22,6 @@
         android:title="@string/security_unknown_sources_title"
         android:summary="@string/security_unknown_sources_desc"
         android:fragment="com.android.tv.settings.device.apps.specialaccess.ExternalSources" />
-
-    <!-- Trust interface -->
-    <org.lineageos.internal.lineageparts.LineagePartsPreference
-        android:key="trust_interface" />
-
     <PreferenceCategory
         android:key="restricted_profile_group"
         android:title="@string/user_new_profile_name">
