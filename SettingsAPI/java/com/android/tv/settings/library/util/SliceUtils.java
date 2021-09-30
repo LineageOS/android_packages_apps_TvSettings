@@ -49,11 +49,14 @@ public final class SliceUtils {
 
     /**
      * Checks if the slice is enabled
+     *
      * @param context Current context of the app
      * @param uri Settings slice uri
+     * @param topLevelSettingsSliceUri Top level settings slice uri
      * @return returns true if slice is enabled, false otherwise
      */
-    public static boolean isSettingsSliceEnabled(Context context, String uri) {
+    public static boolean isSettingsSliceEnabled(Context context, String uri,
+            String topLevelSettingsSliceUri) {
         if (uri == null) {
             return false;
         }
@@ -63,7 +66,7 @@ public final class SliceUtils {
         }
         try {
             final Collection<Uri> enabledSlicesUri = sliceManager.getSliceDescendants(
-                    Uri.parse(ResourcesUtil.getString(context, "top_level_settings_slice_uri")));
+                    Uri.parse(ResourcesUtil.getString(context, topLevelSettingsSliceUri)));
             if (enabledSlicesUri != null) {
                 for (final Uri sliceUri : enabledSlicesUri) {
                     Log.i(TAG, "Enabled slice: " + sliceUri);

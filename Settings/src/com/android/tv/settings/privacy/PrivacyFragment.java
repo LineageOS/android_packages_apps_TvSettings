@@ -51,6 +51,7 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
     private static final String KEY_MIC = "microphone";
     private static final String KEY_CAMERA = "camera";
     private static final String KEY_UPDATE = "update";
+    private static final String TOP_LEVEL_SLICE_URI = "top_level_settings_slice_uri";
 
     private int getPreferenceScreenResId() {
         switch (FlavorUtils.getFlavor(getContext())) {
@@ -129,7 +130,9 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
             @Nullable Preference overlaySecuritySlicePreference) {
         return overlaySecuritySlicePreference instanceof SlicePreference
                 && SliceUtils.isSettingsSliceEnabled(
-                getContext(), ((SlicePreference) overlaySecuritySlicePreference).getUri());
+                        getContext(),
+                        ((SlicePreference) overlaySecuritySlicePreference).getUri(),
+                                TOP_LEVEL_SLICE_URI);
     }
 
     private void showOverlaySecuritySlicePreference(
@@ -158,7 +161,9 @@ public class PrivacyFragment extends SettingsPreferenceFragment {
             @Nullable Preference updateSlicePreference) {
         return updateSlicePreference instanceof SlicePreference
                 && SliceUtils.isSettingsSliceEnabled(
-                getContext(), ((SlicePreference) updateSlicePreference).getUri());
+                        getContext(),
+                        ((SlicePreference) updateSlicePreference).getUri(),
+                                TOP_LEVEL_SLICE_URI);
     }
 
     @Override
