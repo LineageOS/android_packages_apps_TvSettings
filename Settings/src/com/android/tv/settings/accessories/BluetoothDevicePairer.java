@@ -36,6 +36,7 @@ import android.view.InputDevice;
 import com.android.tv.settings.util.bluetooth.BluetoothDeviceCriteria;
 import com.android.tv.settings.util.bluetooth.BluetoothScanner;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -358,9 +359,10 @@ public class BluetoothDevicePairer {
         if (scanMode != BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
             Log.d(TAG, "Turning on discoverability, default scan mode: " + scanMode);
             mDefaultScanMode = scanMode;
+            // Remove discoverable timeout.
+            bluetoothAdapter.setDiscoverableTimeout(Duration.ZERO);
             bluetoothAdapter.setScanMode(
-                    BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE,
-                    0 /* no timeout */);
+                    BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE);
         }
 
         // set status to scanning before we start listening since
