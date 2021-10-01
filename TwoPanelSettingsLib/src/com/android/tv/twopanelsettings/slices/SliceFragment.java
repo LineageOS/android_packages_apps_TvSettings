@@ -139,7 +139,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mUriString = getArguments().getString(SlicesConstants.TAG_TARGET_URI);
-        ContextSingleton.getInstance().grantFullAccess(getContext(), Uri.parse(mUriString));
+        if (!TextUtils.isEmpty(mUriString)) {
+            ContextSingleton.getInstance().grantFullAccess(getContext(), Uri.parse(mUriString));
+        }
         super.onCreate(savedInstanceState);
     }
 
@@ -151,13 +153,17 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         this.getPreferenceScreen().removeAll();
 
         showProgressBar();
-        getSliceLiveData().observeForever(this);
+        if (!TextUtils.isEmpty(mUriString)) {
+            getSliceLiveData().observeForever(this);
+        }
         if (TextUtils.isEmpty(mScreenTitle)) {
             mScreenTitle = getArguments().getCharSequence(SlicesConstants.TAG_SCREEN_TITLE, "");
         }
         super.onResume();
-        getContext().getContentResolver().registerContentObserver(
-                SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver);
+        if (!TextUtils.isEmpty(mUriString)) {
+            getContext().getContentResolver().registerContentObserver(
+                    SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver);
+        }
         fireFollowupPendingIntent();
     }
 

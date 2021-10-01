@@ -692,6 +692,7 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
+            android:permission="android.permission.BLUETOOTH_PRIVILEGED"
             android:taskAffinity="">
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST"/>
