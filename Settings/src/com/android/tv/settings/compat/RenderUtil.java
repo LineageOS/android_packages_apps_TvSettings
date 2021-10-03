@@ -200,6 +200,7 @@ public final class RenderUtil {
             ((TsListPreference) preference).setEntries(preferenceCompat.getEntries());
             ((TsListPreference) preference).setEntryValues(preferenceCompat.getEntryValues());
             ((TsListPreference) preference).setValueIndex(preferenceCompat.getValueIndex());
+            ((TsListPreference) preference).setValue(preferenceCompat.getValue());
         }
         preference.setOrder(order);
     }

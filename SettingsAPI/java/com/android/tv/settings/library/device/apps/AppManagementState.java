@@ -92,6 +92,10 @@ public class AppManagementState extends PreferenceControllerState {
         super(context, callback);
     }
 
+    public static void prepareArgs(Bundle args, String packageName) {
+        args.putString(ARG_PACKAGE_NAME, packageName);
+    }
+
     @Override
     public void onCreate(Bundle extras) {
         mPackageName = extras.getString(ARG_PACKAGE_NAME);
