@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.library.system;
+package com.android.tv.settings.library.privacy;
 
 import android.content.Context;
 import android.location.LocationManager;

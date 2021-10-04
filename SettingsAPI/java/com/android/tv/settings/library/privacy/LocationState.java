@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.library.system;
+package com.android.tv.settings.library.privacy;
 
 import static com.android.tv.settings.library.ManagerUtil.STATE_APP_MANAGEMENT;
 import static com.android.tv.settings.library.ManagerUtil.STATE_LOCATION;
@@ -30,7 +30,6 @@ import android.os.Process;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
-
 
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
@@ -69,7 +68,7 @@ public class LocationState extends PreferenceControllerState {
     private PreferenceCompat mRecentLocationRequests;
 
 
-    private BroadcastReceiver mReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (Log.isLoggable(TAG, Log.DEBUG)) {
@@ -156,7 +155,7 @@ public class LocationState extends PreferenceControllerState {
 
     private void addPreferencesSorted(List<PreferenceCompat> prefs) {
         // If there's some items to display, sort the items and add them to the container.
-        prefs.sort(Comparator.comparing(lhs -> lhs.getTitle().toString()));
+        prefs.sort(Comparator.comparing(lhs -> lhs.getTitle()));
         for (PreferenceCompat entry : prefs) {
             mRecentLocationRequests.addChildPrefCompat(entry);
         }
