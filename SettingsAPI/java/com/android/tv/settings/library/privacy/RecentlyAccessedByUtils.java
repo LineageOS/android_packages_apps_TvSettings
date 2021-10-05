@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.privacy;
+package com.android.tv.settings.library.privacy;
 
 import android.app.AppOpsManager;
 import android.content.Context;
@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * Helper class for the 'Recently Accessed By' sections.
  */
-class RecentlyAccessedByUtils {
+public class RecentlyAccessedByUtils {
 
     // Get the last 24 hours of app ops access information.
     private static final long RECENT_TIME_INTERVAL_MILLIS = DateUtils.DAY_IN_MILLIS;
@@ -47,7 +47,7 @@ class RecentlyAccessedByUtils {
     /**
      * Gets list of apps that recently used the given AppOps sorted by the most recent access.
      */
-    static List<App> getAppList(Context context, int[] appOps) {
+    public static List<App> getAppList(Context context, int[] appOps) {
         PackageManager packageManager = context.getPackageManager();
         IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(context);
         long currentTime = System.currentTimeMillis();
@@ -126,11 +126,11 @@ class RecentlyAccessedByUtils {
         return new App(packageName, icon, appLabel, mostRecentAccessEnd);
     }
 
-    static class App {
-        final String mPackageName;
-        final Drawable mIcon;
-        final CharSequence mLabel;
-        final long mLastAccess;
+    public static class App {
+        public final String mPackageName;
+        public final Drawable mIcon;
+        public final CharSequence mLabel;
+        public final long mLastAccess;
 
         private App(String packageName, Drawable icon, CharSequence label, long lastAccess) {
             this.mPackageName = packageName;

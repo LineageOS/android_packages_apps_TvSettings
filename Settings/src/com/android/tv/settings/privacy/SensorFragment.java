@@ -34,6 +34,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.device.apps.AppManagementFragment;
 import com.android.tv.settings.library.overlay.FlavorUtils;
+import com.android.tv.settings.library.privacy.RecentlyAccessedByUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +47,7 @@ import java.util.List;
 public class SensorFragment extends SettingsPreferenceFragment {
 
     private static final String TAG = "SensorFragment";
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = false;
 
     public static final String TOGGLE_EXTRA = "toggle";
     /** How many recent apps should be shown when the list is collapsed. */

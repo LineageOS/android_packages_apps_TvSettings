@@ -39,6 +39,8 @@ public class PreferenceCompat {
     public static final byte TYPE_LIST = 4;
     public static final byte TYPE_SWITCH = 5;
     public static final byte TYPE_RADIO = 6;
+    public static final byte TYPE_PREFERENCE_COLLAPSE_CATEGORY = 7;
+
     public static final byte STATUS_UNASSIGNED = 0;
     public static final byte STATUS_OFF = 1;
     public static final byte STATUS_ON = 2;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.system;
+package com.android.tv.settings.privacy;
 
-import static com.android.tv.settings.library.ManagerUtil.STATE_LOCATION;
+import static com.android.tv.settings.library.ManagerUtil.STATE_SENSOR;
 
 import android.os.Bundle;
 
@@ -30,22 +30,23 @@ import com.android.tv.settings.compat.RenderUtil;
 import com.android.tv.settings.library.PreferenceCompat;
 
 /**
- * The fragment compat for location settings screen in TV settings.
+ * The fragment compat for the microphone/camera settings screen in TV settings.
+ * Allows the user to turn of the respective sensor.
  */
 @Keep
-public class LocationFragmentCompat extends PreferenceControllerFragmentCompat {
-    private static final String KEY_RECENT_LOCATION_REQUESTS = "recent_location_requests";
+public class SensorFragmentCompat extends PreferenceControllerFragmentCompat {
+    private static final String KEY_RECENT_REQUESTS = "recent_requests";
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
-        setPreferencesFromResource(R.xml.location_compat, null);
+        setPreferencesFromResource(R.xml.sensor_compat, null);
     }
 
     @Override
     public HasKeys updatePref(PreferenceCompat prefCompat) {
         super.updatePref(prefCompat);
         if (prefCompat.getKey().length == 1
-                && prefCompat.getKey()[0].equals(KEY_RECENT_LOCATION_REQUESTS)
+                && prefCompat.getKey()[0].equals(KEY_RECENT_REQUESTS)
                 && prefCompat.getChildPrefCompats() != null) {
             RenderUtil.updatePreferenceGroup(
                     ((PreferenceGroup) findPreference(prefCompat.getKey()[0])),
@@ -56,6 +57,6 @@ public class LocationFragmentCompat extends PreferenceControllerFragmentCompat {
 
     @Override
     public int getStateIdentifier() {
-        return STATE_LOCATION;
+        return STATE_SENSOR;
     }
 }
