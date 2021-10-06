@@ -37,6 +37,7 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.UiThread;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
@@ -461,9 +462,22 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         if (wifiInfo != null) {
             ssid = wifiInfo.getSSID();
             if (ssid != null) {
-                ssid = WifiInfo.sanitizeSsid(ssid);
+                ssid = sanitizeSsid(ssid);
             }
         }
         return ssid;
+    }
+
+    public static String sanitizeSsid(@Nullable String string) {
+        return removeDoubleQuotes(string);
+    }
+
+    public static String removeDoubleQuotes(@Nullable String string) {
+        if (string == null) return null;
+        final int length = string.length();
+        if ((length > 1) && (string.charAt(0) == '"') && (string.charAt(length - 1) == '"')) {
+            return string.substring(1, length - 1);
+        }
+        return string;
     }
 }
