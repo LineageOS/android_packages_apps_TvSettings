@@ -41,6 +41,8 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_MATCH_CONTENT_FR
 import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NOTIFICATION_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_PICTURE_IN_PICTURE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_PRIVACY;
+import static com.android.tv.settings.library.ManagerUtil.STATE_SENSOR;
 import static com.android.tv.settings.library.ManagerUtil.STATE_SPECIAL_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_STORAGE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_STORAGE_SUMMARY;
@@ -82,9 +84,11 @@ import com.android.tv.settings.library.inputmethod.AvailableVirtualKeyboadState;
 import com.android.tv.settings.library.inputmethod.KeyboardState;
 import com.android.tv.settings.library.network.NetworkState;
 import com.android.tv.settings.library.network.WifiDetailsState;
+import com.android.tv.settings.library.privacy.LocationState;
+import com.android.tv.settings.library.privacy.PrivacyState;
+import com.android.tv.settings.library.privacy.SensorState;
 import com.android.tv.settings.library.system.DateTimeState;
 import com.android.tv.settings.library.system.LanguageState;
-import com.android.tv.settings.library.system.LocationState;
 
 /** Manager to handle creation and removal of the {@link State}. */
 public class StateManager {
@@ -189,6 +193,12 @@ public class StateManager {
                 break;
             case STATE_LOCATION:
                 state = new LocationState(context, uiUpdateCallback);
+                break;
+            case STATE_SENSOR:
+                state = new SensorState(context, uiUpdateCallback);
+                break;
+            case STATE_PRIVACY:
+                state = new PrivacyState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op
