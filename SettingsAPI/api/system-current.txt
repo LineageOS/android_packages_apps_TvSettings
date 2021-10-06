@@ -7,7 +7,6 @@ package com.android.tv.settings.library {
     method public static int getStateIdentifier(int);
     method public static boolean isChecked(com.android.tv.settings.library.PreferenceCompat);
     method public static boolean isVisible(com.android.tv.settings.library.PreferenceCompat);
-    field public static final String INFO_COLLAPSE = "collapse";
     field public static final String INFO_CURRENT_FONT_SCALE_VALUE = "current_font_scale_value";
     field public static final String INFO_INTENT = "intent";
     field public static final String INFO_PREVIEW_FONT_SCALE_VALUE = "preview_font_scale_value";
@@ -135,8 +134,7 @@ package com.android.tv.settings.library {
     field public static final byte TYPE_PREFERENCE = 0; // 0x0
     field public static final byte TYPE_PREFERENCE_ACCESS_POINT = 2; // 0x2
     field public static final byte TYPE_PREFERENCE_CATEGORY = 1; // 0x1
-    field public static final byte TYPE_PREFERENCE_COLLAPSE_CATEGORY = 7; // 0x7
-    field public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3; // 0x3
+    field public static final byte TYPE_PREFERENCE_COLLAPSE_CATEGORY = 3; // 0x3
     field public static final byte TYPE_RADIO = 6; // 0x6
     field public static final byte TYPE_SWITCH = 5; // 0x5
   }
