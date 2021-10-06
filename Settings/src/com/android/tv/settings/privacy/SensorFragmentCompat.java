@@ -21,12 +21,14 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_SENSOR;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.compat.HasKeys;
 import com.android.tv.settings.compat.PreferenceControllerFragmentCompat;
 import com.android.tv.settings.compat.RenderUtil;
+import com.android.tv.settings.compat.TsCollapsibleCategory;
 import com.android.tv.settings.library.PreferenceCompat;
 
 /**
@@ -36,10 +38,21 @@ import com.android.tv.settings.library.PreferenceCompat;
 @Keep
 public class SensorFragmentCompat extends PreferenceControllerFragmentCompat {
     private static final String KEY_RECENT_REQUESTS = "recent_requests";
+    private static final String KEY_COLLAPSE = "collapse";
+    private Preference mCollapsePref;
+    private Preference mRecentQuestsCategory;
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
         setPreferencesFromResource(R.xml.sensor_compat, null);
+        mCollapsePref = findTargetPreference(new String[]{KEY_COLLAPSE});
+        mRecentQuestsCategory = findTargetPreference(new String[]{KEY_RECENT_REQUESTS});
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateCollapsePref();
     }
 
     @Override
@@ -51,8 +64,31 @@ public class SensorFragmentCompat extends PreferenceControllerFragmentCompat {
             RenderUtil.updatePreferenceGroup(
                     ((PreferenceGroup) findPreference(prefCompat.getKey()[0])),
                     prefCompat.getChildPrefCompats());
+            updateCollapsePref();
         }
         return null;
+    }
+
+    private void updateCollapsePref() {
+        // Once user click "See all", collapse preference should be hidden, this behavior is
+        // different from "See all networks" in Wi-Fi settings screen.
+        if (mCollapsePref != null) {
+            mCollapsePref.setVisible(mRecentQuestsCategory instanceof TsCollapsibleCategory
+                    && mRecentQuestsCategory.isVisible()
+                    && ((TsCollapsibleCategory) mRecentQuestsCategory).shouldShowCollapsePref()
+                    && ((TsCollapsibleCategory) mRecentQuestsCategory).isCollapsed());
+        }
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference.getKey() != null && preference.getKey().equals(KEY_COLLAPSE)) {
+            final boolean collapse = !((TsCollapsibleCategory) mRecentQuestsCategory).isCollapsed();
+            ((TsCollapsibleCategory) mRecentQuestsCategory).setCollapsed(collapse);
+            mCollapsePref.setVisible(false);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preference);
     }
 
     @Override

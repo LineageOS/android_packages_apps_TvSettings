@@ -26,5 +26,8 @@
     <com.android.tv.settings.compat.TsCollapsibleCategory
         android:key="recent_requests" />
     <com.android.tv.settings.compat.TsPreference
+        android:key="collapse"
+        android:title="@string/recently_accessed_show_all" />
+    <com.android.tv.settings.compat.TsPreference
         android:key="open_permission_controller" />
 </PreferenceScreen>

@@ -29,7 +29,7 @@ import static com.android.tv.settings.library.PreferenceCompat.TYPE_LIST;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_CATEGORY;
-import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY;
+import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_COLLAPSE_CATEGORY;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_RADIO;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_SWITCH;
 
@@ -142,7 +142,7 @@ public final class RenderUtil {
                             context);
                 }
                 break;
-            case TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY:
+            case TYPE_PREFERENCE_COLLAPSE_CATEGORY:
                 ((TsCollapsibleCategory) hasKeysPreference)
                         .setCollapsed(getInfoBoolean(COLLAPSE, preferenceCompat));
                 break;
@@ -221,7 +221,7 @@ public final class RenderUtil {
                 return new TsAccessPointPreference(context, preferenceCompat.getKey());
             case TYPE_PREFERENCE_CATEGORY:
                 return new TsPreferenceCategory(context, preferenceCompat.getKey());
-            case TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY:
+            case TYPE_PREFERENCE_COLLAPSE_CATEGORY:
                 return new TsCollapsibleCategory(context, preferenceCompat.getKey());
             case TYPE_LIST:
                 return new TsListPreference(context, preferenceCompat.getKey());
