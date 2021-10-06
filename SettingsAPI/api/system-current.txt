@@ -45,6 +45,8 @@ package com.android.tv.settings.library {
     field public static final int STATE_NOTIFICATION_ACCESS = 8; // 0x8
     field public static final int STATE_PICTURE_IN_PICTURE = 12; // 0xc
     field public static final int STATE_POWER_AND_ENERGY = 28; // 0x1c
+    field public static final int STATE_PRIVACY = 39; // 0x27
+    field public static final int STATE_SENSOR = 38; // 0x26
     field public static final int STATE_SPECIAL_ACCESS = 6; // 0x6
     field public static final int STATE_STORAGE = 25; // 0x19
     field public static final int STATE_STORAGE_SUMMARY = 26; // 0x1a
@@ -133,6 +135,7 @@ package com.android.tv.settings.library {
     field public static final byte TYPE_PREFERENCE = 0; // 0x0
     field public static final byte TYPE_PREFERENCE_ACCESS_POINT = 2; // 0x2
     field public static final byte TYPE_PREFERENCE_CATEGORY = 1; // 0x1
+    field public static final byte TYPE_PREFERENCE_COLLAPSE_CATEGORY = 7; // 0x7
     field public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3; // 0x3
     field public static final byte TYPE_RADIO = 6; // 0x6
     field public static final byte TYPE_SWITCH = 5; // 0x5
