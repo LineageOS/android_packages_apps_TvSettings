@@ -55,12 +55,12 @@ public abstract class RadioPreferencesFragmentCompat extends PreferenceControlle
                             mPrefGroup.addPreference(preference);
                         }
                         if ((preference instanceof TsRadioPreference)) {
-                            final TsRadioPreference fontScalePref =
+                            final TsRadioPreference radioPref =
                                     (TsRadioPreference) preference;
                             RenderUtil.updatePreference(
-                                    getContext(), fontScalePref, childPrefCompat,
+                                    getContext(), radioPref, childPrefCompat,
                                     preference.getOrder());
-                            fontScalePref.setRadioGroup(preferenceCompat.getRadioGroup());
+                            radioPref.setRadioGroup(preferenceCompat.getRadioGroup());
                         }
                     }
             );
