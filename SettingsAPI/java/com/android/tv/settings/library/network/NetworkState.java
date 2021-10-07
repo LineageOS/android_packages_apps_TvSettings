@@ -16,8 +16,6 @@
 
 package com.android.tv.settings.library.network;
 
-import static com.android.tv.settings.library.ManagerUtil.INFO_COLLAPSE;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
@@ -68,7 +66,6 @@ public class NetworkState extends PreferenceControllerState implements
     private static final int INITIAL_UPDATE_DELAY = 500;
 
     private PreferenceCompat mEnableWifiPref;
-    private PreferenceCompat mCollapsePref;
     private PreferenceCompat mAddPref;
     private PreferenceCompat mEthernetCategory;
     private PreferenceCompat mEthernetStatusPref;
@@ -109,14 +106,12 @@ public class NetworkState extends PreferenceControllerState implements
         mPreferenceCompatManager = new PreferenceCompatManager();
         mEnableWifiPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_ENABLE);
         mAlwaysScan = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_ALWAYS_SCAN);
-        mCollapsePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_COLLAPSE);
-        mCollapsePref.addInfo(INFO_COLLAPSE, true);
         mAddPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_ADD);
         mEthernetCategory = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_ETHERNET);
         mEthernetStatusPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_ETHERNET_STATUS);
         mEthernetProxyPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_ETHERNET_PROXY);
         mWifiNetworkCategoryPref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_WIFI_LIST);
-        mWifiNetworkCategoryPref.setType(PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY);
+        mWifiNetworkCategoryPref.setType(PreferenceCompat.TYPE_PREFERENCE_COLLAPSE_CATEGORY);
         mDataSaverSlicePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_DATA_SAVER_SLICE);
         mDataAlertSlicePref = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_DATA_ALERT_SLICE);
         mNetworkDiagnosticsPref = mPreferenceCompatManager.getOrCreatePrefCompat(
@@ -212,18 +207,6 @@ public class NetworkState extends PreferenceControllerState implements
                 mNetworkModule.getConnectivityListener().setWifiEnabled(status);
                 mEnableWifiPref.setChecked(status);
                 break;
-            case KEY_WIFI_COLLAPSE:
-                Object collapse = mCollapsePref.getInfo(INFO_COLLAPSE);
-                if (collapse instanceof Boolean) {
-                    mWifiNetworkCategoryPref.addInfo(
-                            ManagerUtil.INFO_COLLAPSE, !(boolean) collapse);
-                    mCollapsePref.addInfo(ManagerUtil.INFO_COLLAPSE, !(boolean) collapse);
-                    if (mUIUpdateCallback != null) {
-                        mUIUpdateCallback.notifyUpdate(getStateIdentifier(),
-                                mWifiNetworkCategoryPref);
-                    }
-                }
-                break;
             case KEY_WIFI_ALWAYS_SCAN:
                 mAlwaysScan.setChecked(status);
                 Settings.Global.putInt(mContext.getContentResolver(),
@@ -260,12 +243,8 @@ public class NetworkState extends PreferenceControllerState implements
         mWifiNetworkCategoryPref.setVisible(wifiEnabled);
         preferenceCompats.add(mWifiNetworkCategoryPref);
 
-        mCollapsePref.setVisible(wifiEnabled);
-        preferenceCompats.add(mCollapsePref);
-
         mAddPref.setVisible(wifiEnabled);
         preferenceCompats.add(mAddPref);
-
 
         if (!wifiEnabled) {
             updateWifiList();

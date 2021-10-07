@@ -73,7 +73,6 @@ public final class ManagerUtil {
     public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     public static final String INFO_INTENT = "intent";
     public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";
-    public static final String INFO_COLLAPSE = "collapse";
     /** Argument key containing the current font scale value. */
     public static final String INFO_CURRENT_FONT_SCALE_VALUE = "current_font_scale_value";
     /** Argument key containing the font scale value this fragment will preview. */

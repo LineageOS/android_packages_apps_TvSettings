@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.connectivity;
 
-import static com.android.tv.settings.library.ManagerUtil.INFO_COLLAPSE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
 
 import android.content.Intent;
@@ -43,6 +42,7 @@ public class NetworkFragmentCompat extends PreferenceControllerFragmentCompat {
     private TsCollapsibleCategory mWifiNetworksCategory;
     private Preference mEthernetProxyPref;
     private Preference mEthernetDhcpPref;
+    private Preference mCollapsePref;
 
     private int getPreferenceScreenResId() {
         return R.xml.network_compat;
@@ -56,6 +56,7 @@ public class NetworkFragmentCompat extends PreferenceControllerFragmentCompat {
         setPreferencesFromResource(getPreferenceScreenResId(), null);
         mWifiNetworksCategory = findPreference(KEY_WIFI_LIST);
         mEthernetProxyPref = findPreference(KEY_ETHERNET_PROXY);
+        mCollapsePref = findTargetPreference(new String[]{KEY_WIFI_COLLAPSE});
         mEthernetProxyPref.setIntent(
                 new Intent()
                         .setAction("com.android.settings.wifi.action.EDIT_PROXY_SETTINGS")
@@ -67,6 +68,13 @@ public class NetworkFragmentCompat extends PreferenceControllerFragmentCompat {
                         .putExtra("network_id", "-1"));
     }
 
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateCollapsePref();
+    }
+
     @Override
     public HasKeys updatePref(PreferenceCompat prefCompat) {
         HasKeys preference = super.updatePref(prefCompat);
@@ -74,21 +82,32 @@ public class NetworkFragmentCompat extends PreferenceControllerFragmentCompat {
             return null;
         }
         String[] key = preference.getKeys();
-        switch (key[0]) {
-            case KEY_WIFI_COLLAPSE:
-                Boolean collapse = RenderUtil.getInfoBoolean(INFO_COLLAPSE, prefCompat);
-                if (collapse != null) {
-                    ((Preference) preference).setTitle(collapse ? R.string.wifi_setting_see_all
-                                    : R.string.wifi_setting_see_fewer);
-                }
-                break;
-            default:
-        }
-        if (prefCompat.getType() == PreferenceCompat.TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY) {
+        if (prefCompat.getType() == PreferenceCompat.TYPE_PREFERENCE_COLLAPSE_CATEGORY) {
             RenderUtil.updatePreferenceGroup(
                     mWifiNetworksCategory, prefCompat.getChildPrefCompats());
+            updateCollapsePref();
         }
         return preference;
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference.getKey() != null && preference.getKey().equals(KEY_WIFI_COLLAPSE)) {
+            final boolean collapse = !mWifiNetworksCategory.isCollapsed();
+            mCollapsePref.setTitle(collapse
+                    ? R.string.wifi_setting_see_all : R.string.wifi_setting_see_fewer);
+            mWifiNetworksCategory.setCollapsed(collapse);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
+    private void updateCollapsePref() {
+        if (mCollapsePref != null) {
+            mCollapsePref.setVisible(mWifiNetworksCategory != null
+                    && mWifiNetworksCategory.isVisible()
+                    && mWifiNetworksCategory.shouldShowCollapsePref());
+        }
     }
 
     @Override

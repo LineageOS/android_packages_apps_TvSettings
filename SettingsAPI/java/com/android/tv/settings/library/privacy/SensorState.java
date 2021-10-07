@@ -124,7 +124,7 @@ public class SensorState extends PreferenceControllerState {
         mRecentAppsCategory = mPreferenceCompatManager.getOrCreatePrefCompat(KEY_RECENT_REQUESTS);
         mRecentAppsCategory.setTitle(
                 ResourcesUtil.getString(mContext, "recently_accessed_by_category"));
-
+        mRecentAppsCategory.clearChildPrefCompats();
         // Get recent accesses.
         List<RecentlyAccessedByUtils.App> recentApps = RecentlyAccessedByUtils.getAppList(
                 mContext, mToggle.appOps);
@@ -143,7 +143,7 @@ public class SensorState extends PreferenceControllerState {
             mRecentAppsCategory.addChildPrefCompat(pref);
         }
 
-        if (recentApps.size() == 0) {
+        if (mRecentAppsCategory.getChildPrefsCount() == 0) {
             PreferenceCompat banner = mPreferenceCompatManager.getOrCreatePrefCompat(
                     new String[]{KEY_RECENT_REQUESTS, KEY_NO_RECENT});
             banner.setSummary(ResourcesUtil.getString(mContext, "no_recent_sensor_accesses"));

@@ -35,11 +35,10 @@ public class PreferenceCompat {
     public static final byte TYPE_PREFERENCE = 0;
     public static final byte TYPE_PREFERENCE_CATEGORY = 1;
     public static final byte TYPE_PREFERENCE_ACCESS_POINT = 2;
-    public static final byte TYPE_PREFERENCE_WIFI_COLLAPSE_CATEGORY = 3;
+    public static final byte TYPE_PREFERENCE_COLLAPSE_CATEGORY = 3;
     public static final byte TYPE_LIST = 4;
     public static final byte TYPE_SWITCH = 5;
     public static final byte TYPE_RADIO = 6;
-    public static final byte TYPE_PREFERENCE_COLLAPSE_CATEGORY = 7;
 
     public static final byte STATUS_UNASSIGNED = 0;
     public static final byte STATUS_OFF = 1;
