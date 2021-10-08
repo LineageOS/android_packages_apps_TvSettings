@@ -69,6 +69,7 @@ public final class ManagerUtil {
     public static final int STATE_LOCATION = 37;
     public static final int STATE_SENSOR = 38;
     public static final int STATE_PRIVACY = 39;
+    public static final int STATE_RESOLUTION_SELECTION = 40;
 
     public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     public static final String INFO_INTENT = "intent";

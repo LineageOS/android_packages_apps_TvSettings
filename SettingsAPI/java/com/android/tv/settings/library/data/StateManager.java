@@ -42,6 +42,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NOTIFICATION_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_PICTURE_IN_PICTURE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_PRIVACY;
+import static com.android.tv.settings.library.ManagerUtil.STATE_RESOLUTION_SELECTION;
 import static com.android.tv.settings.library.ManagerUtil.STATE_SENSOR;
 import static com.android.tv.settings.library.ManagerUtil.STATE_SPECIAL_ACCESS;
 import static com.android.tv.settings.library.ManagerUtil.STATE_STORAGE;
@@ -78,6 +79,7 @@ import com.android.tv.settings.library.device.display.displaysound.DisplaySoundS
 import com.android.tv.settings.library.device.display.displaysound.FontScaleState;
 import com.android.tv.settings.library.device.display.displaysound.HdrFormatSelectionState;
 import com.android.tv.settings.library.device.display.displaysound.MatchContentFrameRateState;
+import com.android.tv.settings.library.device.display.displaysound.ResolutionSelectionState;
 import com.android.tv.settings.library.device.storage.StorageState;
 import com.android.tv.settings.library.device.storage.StorageSummaryState;
 import com.android.tv.settings.library.inputmethod.AvailableVirtualKeyboadState;
@@ -199,6 +201,9 @@ public class StateManager {
                 break;
             case STATE_PRIVACY:
                 state = new PrivacyState(context, uiUpdateCallback);
+                break;
+            case STATE_RESOLUTION_SELECTION:
+                state = new ResolutionSelectionState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op
