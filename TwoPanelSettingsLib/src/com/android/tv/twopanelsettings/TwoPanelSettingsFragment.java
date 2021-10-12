@@ -270,9 +270,18 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 return false;
             }
             try {
-                Fragment immersiveFragment = Fragment.instantiate(getActivity(), pref.getFragment(),
+                Fragment fragment = Fragment.instantiate(getActivity(), pref.getFragment(),
                         pref.getExtras());
-                startImmersiveFragment(immersiveFragment);
+                if (fragment instanceof GuidedStepSupportFragment) {
+                    startImmersiveFragment(fragment);
+                } else {
+                    if (DEBUG) {
+                        Log.d(TAG, "No-op: Preference is clicked before preview is shown");
+                    }
+                    // return true so it won't be handled by onPreferenceTreeClick
+                    // in PreferenceFragment
+                    return true;
+                }
             } catch (Exception e) {
                 Log.e(TAG, "error trying to instantiate fragment " + e);
                 // return true so it won't be handled by onPreferenceTreeClick in PreferenceFragment
