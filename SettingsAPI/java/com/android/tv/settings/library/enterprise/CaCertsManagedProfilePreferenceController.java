@@ -17,20 +17,25 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
+
 import androidx.annotation.VisibleForTesting;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 
 public class CaCertsManagedProfilePreferenceController extends CaCertsPreferenceControllerBase {
-    @VisibleForTesting static final String CA_CERTS_MANAGED_PROFILE = "ca_certs_managed_profile";
+    @VisibleForTesting
+    static final String CA_CERTS_MANAGED_PROFILE = "ca_certs_managed_profile";
 
     public CaCertsManagedProfilePreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
     }
 
     @Override
     public String[] getPreferenceKey() {
-        return new String[] {CA_CERTS_MANAGED_PROFILE};
+        return new String[]{CA_CERTS_MANAGED_PROFILE};
     }
 
     @Override

@@ -29,14 +29,16 @@ import android.text.format.DateUtils;
 
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
 public class AllowTurnScreenOffWithWakeLockPC extends RestrictedPreferenceController {
     private static final int DEFAULT_SLEEP_TIME_MS = (int) (24 * DateUtils.HOUR_IN_MILLIS);
 
     public AllowTurnScreenOffWithWakeLockPC(Context context,
-            UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
     }
 
     @Override
@@ -45,13 +47,8 @@ public class AllowTurnScreenOffWithWakeLockPC extends RestrictedPreferenceContro
     }
 
     @Override
-    public void refresh() {
-        updateAllowTurnScreenOffWithWakeLockPref();
-    }
-
     public void update() {
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+        updateAllowTurnScreenOffWithWakeLockPref();
     }
 
     private void updateAllowTurnScreenOffWithWakeLockPref() {

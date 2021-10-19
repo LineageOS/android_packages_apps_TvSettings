@@ -18,7 +18,9 @@ package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
 
 public class GlobalHttpProxyPreferenceController extends AbstractPreferenceController {
@@ -26,8 +28,9 @@ public class GlobalHttpProxyPreferenceController extends AbstractPreferenceContr
     private final ConnectivityManager mCm;
 
     public GlobalHttpProxyPreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mCm = context.getSystemService(ConnectivityManager.class);
     }
 
@@ -37,7 +40,17 @@ public class GlobalHttpProxyPreferenceController extends AbstractPreferenceContr
     }
 
     @Override
+    protected void init() {
+        update();
+    }
+
+    @Override
+    protected void update() {
+
+    }
+
+    @Override
     public String[] getPreferenceKey() {
-        return new String[] {KEY_GLOBAL_HTTP_PROXY};
+        return new String[]{KEY_GLOBAL_HTTP_PROXY};
     }
 }

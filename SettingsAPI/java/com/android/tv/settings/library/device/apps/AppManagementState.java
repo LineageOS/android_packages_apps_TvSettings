@@ -118,10 +118,10 @@ public class AppManagementState extends PreferenceControllerState {
         }
 
         if (mClearDefaultsPreferenceController != null) {
-            mClearDefaultsPreferenceController.refresh();
+            mClearDefaultsPreferenceController.updateAndNotify();
         }
         if (mEnableDisablePreferenceController != null) {
-            mEnableDisablePreferenceController.refresh();
+            mEnableDisablePreferenceController.updateAndNotify();
         }
         updatePrefs();
     }
@@ -135,21 +135,29 @@ public class AppManagementState extends PreferenceControllerState {
     @Override
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
         mForceStopPreferenceController = new ForceStopPreferenceController(
-                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry);
+                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry,
+                mPreferenceCompatManager);
         mUninstallPreferenceController = new UninstallPreferenceController(
-                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry);
+                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry,
+                mPreferenceCompatManager);
         mEnableDisablePreferenceController = new EnableDisablePreferenceController(
-                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry);
+                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry,
+                mPreferenceCompatManager);
         mAppStoragePreferenceController = new AppStoragePreferenceController(
-                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry);
+                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry,
+                mPreferenceCompatManager);
         mClearDataPreferenceController = new ClearDataPreferenceController(
-                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry);
+                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry,
+                mPreferenceCompatManager);
         mClearCachePreferenceController = new ClearCachePreferenceController(
-                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry);
+                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry,
+                mPreferenceCompatManager);
         mClearDefaultsPreferenceController = new ClearDefaultsPreferenceController(
-                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry);
+                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry,
+                mPreferenceCompatManager);
         mNotificationsPreferenceController = new NotificationsPreferenceController(
-                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry);
+                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry,
+                mPreferenceCompatManager);
         List<AbstractPreferenceController> list = new ArrayList<>();
         list.add(mForceStopPreferenceController);
         list.add(mUninstallPreferenceController);
@@ -207,7 +215,7 @@ public class AppManagementState extends PreferenceControllerState {
                 }
                 break;
             case REQUEST_UNINSTALL_UPDATES:
-                mUninstallPreferenceController.refresh();
+                mUninstallPreferenceController.updateAndNotify();
                 break;
             case REQUEST_CLEAR_DATA:
                 if (resultCode == Activity.RESULT_OK) {
@@ -281,7 +289,7 @@ public class AppManagementState extends PreferenceControllerState {
                 dataCleared(false);
             }
         }
-        mClearDataPreferenceController.refresh();
+        mClearDataPreferenceController.updateAndNotify();
     }
 
     private void dataCleared(boolean succeeded) {
@@ -460,13 +468,13 @@ public class AppManagementState extends PreferenceControllerState {
                 // Nothing to do here.
                 return;
             }
-            mAppStoragePreferenceController.refresh();
+            mAppStoragePreferenceController.updateAndNotify();
             if (mClearCachePreferenceController != null) {
-                mClearCachePreferenceController.refresh();
+                mClearCachePreferenceController.updateAndNotify();
             }
 
             if (mClearDataPreferenceController != null) {
-                mClearDataPreferenceController.refresh();
+                mClearDataPreferenceController.updateAndNotify();
             }
         }
 
@@ -476,13 +484,13 @@ public class AppManagementState extends PreferenceControllerState {
                 // Nothing to do here.
                 return;
             }
-            mAppStoragePreferenceController.refresh();
+            mAppStoragePreferenceController.updateAndNotify();
             if (mClearCachePreferenceController != null) {
-                mClearCachePreferenceController.refresh();
+                mClearCachePreferenceController.updateAndNotify();
             }
 
             if (mClearDataPreferenceController != null) {
-                mClearDataPreferenceController.refresh();
+                mClearDataPreferenceController.updateAndNotify();
             }
         }
 
@@ -499,13 +507,13 @@ public class AppManagementState extends PreferenceControllerState {
                 // Nothing to do here.
                 return;
             }
-            mAppStoragePreferenceController.refresh();
+            mAppStoragePreferenceController.updateAndNotify();
             if (mClearCachePreferenceController != null) {
-                mClearCachePreferenceController.refresh();
+                mClearCachePreferenceController.updateAndNotify();
             }
 
             if (mClearDataPreferenceController != null) {
-                mClearDataPreferenceController.refresh();
+                mClearDataPreferenceController.updateAndNotify();
             }
         }
     }

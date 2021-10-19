@@ -39,13 +39,12 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
 
     public ForceStopPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
-            ApplicationsState.AppEntry appEntry) {
-        super(context, callback, stateIdentifier, appEntry);
+            ApplicationsState.AppEntry appEntry, PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, appEntry, preferenceCompatManager);
     }
 
     @Override
-    public void displayPreference(PreferenceCompatManager preferenceCompatManager) {
-        super.displayPreference(preferenceCompatManager);
+    public void init() {
         UserManager userManager = mContext.getSystemService(UserManager.class);
         if (userManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL)) {
             final RestrictedLockUtils.EnforcedAdmin admin =
@@ -57,9 +56,11 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
                 setEnabled(false);
             }
         }
+        update();
     }
+
     @Override
-    public void refresh() {
+    public void update() {
         if (mAppEntry == null) {
             return;
         }
@@ -95,7 +96,7 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
                 }
             }, null, Activity.RESULT_CANCELED, null, null);
         }
-        super.refresh();
+        super.update();
     }
 
     @Override
@@ -106,11 +107,6 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
     @Override
     public String getAttrUserRestriction() {
         return null;
-    }
-
-    @Override
-    public boolean isAvailable() {
-        return true;
     }
 
     @Override

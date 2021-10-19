@@ -70,11 +70,12 @@ public class AccessibilityServiceState implements State {
 
     /**
      * Put args in bundle
-     * @param args Bundle to prepare
-     * @param packageName Package of accessibility service
-     * @param serviceName Class of accessibility service
+     *
+     * @param args         Bundle to prepare
+     * @param packageName  Package of accessibility service
+     * @param serviceName  Class of accessibility service
      * @param activityName Class of accessibility service settings activity
-     * @param label Screen title
+     * @param label        Screen title
      */
     public static Bundle prepareArgs(Bundle args, String packageName, String serviceName,
             String activityName, String label) {

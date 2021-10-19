@@ -30,6 +30,7 @@ public final class SliceUtils {
 
     public static final String PATH_SLICE_FRAGMENT =
             "com.android.tv.twopanelsettings.slices.SliceFragment";
+
     /**
      * Check if slice provider exists.
      */
@@ -50,8 +51,8 @@ public final class SliceUtils {
     /**
      * Checks if the slice is enabled
      *
-     * @param context Current context of the app
-     * @param uri Settings slice uri
+     * @param context                  Current context of the app
+     * @param uri                      Settings slice uri
      * @param topLevelSettingsSliceUri Top level settings slice uri
      * @return returns true if slice is enabled, false otherwise
      */

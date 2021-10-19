@@ -25,6 +25,7 @@ import android.net.IpConfiguration;
 import android.net.wifi.WifiConfiguration;
 
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
@@ -36,8 +37,9 @@ public class ProxySettingsPreferenceController extends RestrictedPreferenceContr
     private final AccessPoint mAccessPoint;
 
     public ProxySettingsPreferenceController(Context context,
-            UIUpdateCallback callback, int stateIdentifier, AccessPoint accessPoint) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager, AccessPoint accessPoint) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mAccessPoint = accessPoint;
     }
 
@@ -52,7 +54,7 @@ public class ProxySettingsPreferenceController extends RestrictedPreferenceContr
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         WifiConfiguration wifiConfiguration = mAccessPoint.getConfig();
         if (wifiConfiguration != null) {
             final int networkId = wifiConfiguration.networkId;
@@ -66,7 +68,7 @@ public class ProxySettingsPreferenceController extends RestrictedPreferenceContr
         }
         WifiDetailsState.updateRestrictedPreference(
                 mPreferenceCompat, mContext, mAccessPoint, this);
-        super.refresh();
+        super.update();
     }
 
     @Override

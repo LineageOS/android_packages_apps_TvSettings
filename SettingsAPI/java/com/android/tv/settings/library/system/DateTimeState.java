@@ -60,8 +60,8 @@ public class DateTimeState implements State {
     private PreferenceCompat mTime24Pref;
     private PreferenceCompat mAutoDateTimePref;
 
-    private Context mContext;
-    private UIUpdateCallback mUIUpdateCallback;
+    private final Context mContext;
+    private final UIUpdateCallback mUIUpdateCallback;
     private PreferenceCompatManager mPreferenceCompatManager;
 
     public DateTimeState(Context context, UIUpdateCallback callback) {
@@ -69,7 +69,7 @@ public class DateTimeState implements State {
         mContext = context;
     }
 
-    private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             updateTimeAndDateDisplay();

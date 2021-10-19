@@ -17,6 +17,7 @@
 package com.android.tv.settings.library.settingslib.enterprise;
 
 import static android.app.admin.DevicePolicyManager.DEVICE_OWNER_TYPE_FINANCED;
+
 import static com.android.tv.settings.library.settingslib.enterprise.ActionDisabledLearnMoreButtonLauncher.DEFAULT_RESOLVE_ACTIVITY_CHECKER;
 import static com.android.tv.settings.library.settingslib.enterprise.ManagedDeviceActionDisabledByAdminController.DEFAULT_FOREGROUND_USER_CHECKER;
 
@@ -35,6 +36,7 @@ public final class ActionDisabledByAdminControllerFactory {
 
     /**
      * Returns the relevant instance of {@link ActionDisabledByAdminController}.
+     *
      * @param userHandle user on which to launch the help page, if necessary
      */
     public static ActionDisabledByAdminController createInstance(Context context,

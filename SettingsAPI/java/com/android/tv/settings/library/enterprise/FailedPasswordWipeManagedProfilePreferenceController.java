@@ -17,7 +17,9 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 
 public class FailedPasswordWipeManagedProfilePreferenceController
         extends FailedPasswordWipePreferenceControllerBase {
@@ -25,8 +27,9 @@ public class FailedPasswordWipeManagedProfilePreferenceController
             "failed_password_wipe_managed_profile";
 
     public FailedPasswordWipeManagedProfilePreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
     }
 
     @Override
@@ -36,6 +39,6 @@ public class FailedPasswordWipeManagedProfilePreferenceController
 
     @Override
     public String[] getPreferenceKey() {
-        return new String[] {KEY_FAILED_PASSWORD_WIPE_MANAGED_PROFILE};
+        return new String[]{KEY_FAILED_PASSWORD_WIPE_MANAGED_PROFILE};
     }
 }

@@ -65,7 +65,6 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
 
     private Calendar mCal;
     private List<UsageStats> mStats;
-
     private PreferenceCompat mCategory;
 
     static {
@@ -79,15 +78,17 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
     }
 
     public RecentAppsPreferenceController(Context context, Application app,
-            UIUpdateCallback callback, int stateIdentifier) {
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
         this(context, app == null ? null : ApplicationsState.getInstance(app), callback,
-                stateIdentifier);
+                stateIdentifier, preferenceCompatManager);
     }
 
     @VisibleForTesting
     RecentAppsPreferenceController(Context context, ApplicationsState appState,
-            UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mIconDrawableFactory = IconDrawableFactory.newInstance(context);
         mUserId = UserHandle.myUserId();
         mPm = context.getPackageManager();
@@ -96,24 +97,21 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
     }
 
     @Override
-    public boolean isAvailable() {
-        return true;
-    }
-
-    @Override
     public String[] getPreferenceKey() {
         return new String[]{KEY_PREF_CATEGORY};
     }
 
     @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        super.displayPreference(screen);
-        mCategory = screen.getOrCreatePrefCompat(getPreferenceKey());
-        refreshUi();
+    public boolean isAvailable() {
+        return true;
     }
 
-    @VisibleForTesting
-    void refreshUi() {
+    @Override
+    public void init() {
+        update();
+    }
+
+    public void update() {
         reloadData();
         final List<UsageStats> recentApps = getDisplayableRecentAppList();
         if (recentApps != null && !recentApps.isEmpty()) {
@@ -121,7 +119,6 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
         } else {
             displayOnlyAllApps();
         }
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mCategory);
     }
 
     private void displayOnlyAllApps() {
@@ -151,12 +148,6 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
                     System.currentTimeMillis() - stat.getLastTimeUsed(), false).toString());
             mCategory.addChildPrefCompat(pref);
         }
-    }
-
-    @Override
-    public void updateState(PreferenceCompat preference) {
-        super.updateState(preference);
-        refreshUi();
     }
 
     @Override

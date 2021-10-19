@@ -19,6 +19,7 @@ package com.android.tv.settings.library.settingslib.enterprise;
 import static java.util.Objects.requireNonNull;
 
 import android.annotation.UserIdInt;
+
 import com.android.internal.util.Preconditions;
 import com.android.tv.settings.library.settingslib.RestrictedLockUtils.EnforcedAdmin;
 
@@ -28,7 +29,8 @@ import com.android.tv.settings.library.settingslib.RestrictedLockUtils.EnforcedA
 abstract class BaseActionDisabledByAdminController
         implements ActionDisabledByAdminController {
 
-    protected @UserIdInt int mEnforcementAdminUserId;
+    protected @UserIdInt
+    int mEnforcementAdminUserId;
     protected EnforcedAdmin mEnforcedAdmin;
     protected ActionDisabledLearnMoreButtonLauncher mLauncher;
     protected final DeviceAdminStringProvider mStringProvider;

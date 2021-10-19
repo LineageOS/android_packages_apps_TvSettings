@@ -58,7 +58,7 @@ public class NotificationAccessState extends PreferenceControllerState {
     private PackageManager mPackageManager;
     private ServiceListing mServiceListing;
     private IconDrawableFactory mIconDrawableFactory;
-    private ArrayMap<String, ComponentName> mComponentNameByKey = new ArrayMap<>();
+    private final ArrayMap<String, ComponentName> mComponentNameByKey = new ArrayMap<>();
 
     public NotificationAccessState(Context context,
             UIUpdateCallback callback) {

@@ -99,8 +99,8 @@ public class AboutState implements State {
         }
     };
 
-    private Context context;
-    private UIUpdateCallback uiUpdateCallback;
+    private final Context context;
+    private final UIUpdateCallback uiUpdateCallback;
     private PreferenceCompat mFirmwareVersionPref;
     private PreferenceCompat mDeviceTutorialsPref;
     private PreferenceCompat mMDeviceTutorialsPref;

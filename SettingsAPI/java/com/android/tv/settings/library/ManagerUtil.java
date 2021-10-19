@@ -22,8 +22,7 @@ import static com.android.tv.settings.library.PreferenceCompat.STATUS_ON;
 import android.annotation.SystemApi;
 
 /**
- * @hide
- * Provide constants and utility methods.
+ * @hide Provide constants and utility methods.
  */
 @SystemApi
 public final class ManagerUtil {
@@ -104,31 +103,28 @@ public final class ManagerUtil {
 
 
     /**
-     * @hide
-     * Return whether the preference is checked.
+     * @hide Return whether the preference is checked.
      * 0 : not updated, 1 : unchecked, 2 : checked
      */
     @SystemApi
     public static boolean isChecked(PreferenceCompat pref) {
-        return pref.getChecked() == STATUS_ON ? true : false;
+        return pref.getChecked() == STATUS_ON;
     }
 
     /**
-     * @hide
-     * Return whether the preference is visible.
+     * @hide Return whether the preference is visible.
      * 0 : not updated, 1 : invisible, 2 : visible
      */
     @SystemApi
     public static boolean isVisible(PreferenceCompat pref) {
-        return pref.getVisible() == STATUS_OFF ? true : false;
+        return pref.getVisible() == STATUS_OFF;
     }
 
     /**
-     * @hide
-     * Calculate the compound code based on the state identifier and request code.
-     * @param state state identifier
+     * @param state       state identifier
      * @param requestCode requestCode
      * @return compound code
+     * @hide Calculate the compound code based on the state identifier and request code.
      */
     @SystemApi
     public static int calculateCompoundCode(int state, int requestCode) {
@@ -136,10 +132,9 @@ public final class ManagerUtil {
     }
 
     /**
-     * @hide
-     * Get the state identifier based on the compound code.
      * @param code compound code
      * @return state identifier
+     * @hide Get the state identifier based on the compound code.
      */
     @SystemApi
     public static int getStateIdentifier(int code) {
@@ -150,10 +145,9 @@ public final class ManagerUtil {
     }
 
     /**
-     * @hide
-     * Return the request code for a particular state.
      * @param code compound code
      * @return request code
+     * @hide Return the request code for a particular state.
      */
     @SystemApi
     public static int getRequestCode(int code) {

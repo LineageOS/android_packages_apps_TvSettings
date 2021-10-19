@@ -23,6 +23,7 @@ import android.os.UserManager;
 
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.settingslib.RestrictedLockUtils;
 import com.android.tv.settings.library.settingslib.RestrictedLockUtilsInternal;
 import com.android.tv.settings.library.util.ResourcesUtil;
@@ -36,8 +37,9 @@ public class LocationModePC extends RestrictedPreferenceController {
     private static final String LOCATION_MODE_OFF = "off";
 
     public LocationModePC(Context context,
-            UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
     }
 
     @Override
@@ -46,16 +48,16 @@ public class LocationModePC extends RestrictedPreferenceController {
     }
 
     @Override
-    public void refresh() {
+    protected void init() {
         final RestrictedLockUtils.EnforcedAdmin admin = checkIfUserRestrictionEnforcedByAdmin();
         if (admin == null) {
             mPreferenceCompat.setHasOnPreferenceChangeListener(true);
             mPreferenceCompat.setType(PreferenceCompat.TYPE_LIST);
             mPreferenceCompat.setTitle(ResourcesUtil.getString(mContext, "location_status"));
-            mPreferenceCompat.setEntries(new CharSequence[] {
+            mPreferenceCompat.setEntries(new CharSequence[]{
                     ResourcesUtil.getString(mContext, "location_mode_wifi_description"),
                     ResourcesUtil.getString(mContext, "off")});
-            mPreferenceCompat.setEntryValues(new CharSequence[] {
+            mPreferenceCompat.setEntryValues(new CharSequence[]{
                     LOCATION_MODE_WIFI,
                     LOCATION_MODE_OFF
             });
@@ -64,8 +66,7 @@ public class LocationModePC extends RestrictedPreferenceController {
             mPreferenceCompat.setTitle(ResourcesUtil.getString(mContext, "location_status"));
             setDisabledByAdmin(admin);
         }
-
-        super.refresh();
+        update();
     }
 
     private RestrictedLockUtils.EnforcedAdmin checkIfUserRestrictionEnforcedByAdmin() {
@@ -92,12 +93,9 @@ public class LocationModePC extends RestrictedPreferenceController {
         return null;
     }
 
-    public void update() {
-        refreshLocationMode();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
-    }
 
-    private void refreshLocationMode() {
+    @Override
+    protected void update() {
         boolean locationEnabled = mContext.getSystemService(LocationManager.class)
                 .isLocationEnabled();
         if (!mDisabledByAdmin) {

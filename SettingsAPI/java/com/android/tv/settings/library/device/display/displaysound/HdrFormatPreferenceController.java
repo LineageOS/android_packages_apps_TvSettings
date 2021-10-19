@@ -47,11 +47,13 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
     private boolean mAvailable;
 
     public HdrFormatPreferenceController(Context context,
-            UIUpdateCallback callback, int stateIdentifier, int hdrType,
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager,
+            int hdrType,
             DisplayManager displayManager,
             @NonNull Set<Integer> displayReportedHdrTypes,
             @NonNull Set<Integer> userDisabledHdrTypes) {
-        super(context, callback, stateIdentifier);
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mHdrType = hdrType;
         mDisplayManager = displayManager;
         mDisplayReportedHdrTypes = displayReportedHdrTypes;
@@ -64,22 +66,15 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
     }
 
     @Override
-    public void displayPreference(PreferenceCompatManager screen) {
+    public void init() {
         String title = HdrFormatSelectionState.getFormatPreferenceTitle(mContext, mHdrType);
         mAvailable = !TextUtils.isEmpty(title);
-        mPreferenceCompat = screen.getOrCreatePrefCompat(getPreferenceKey());
         mPreferenceCompat.setTitle(title);
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+        update();
     }
 
     @Override
-    public void updateState(PreferenceCompat preference) {
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, preference);
-    }
-
-    private void refresh() {
+    public void update() {
         if (mDisplayReportedHdrTypes.contains(mHdrType)) {
             mPreferenceCompat.setType(PreferenceCompat.TYPE_SWITCH);
             mPreferenceCompat.setChecked(!mUserDisabledHdrTypes.contains(mHdrType));
@@ -89,14 +84,9 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
         }
     }
 
-    public void update() {
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
-    }
-
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat preference, boolean status) {
-        final boolean enabled = preference.getChecked() == PreferenceCompat.STATUS_ON;
+    public boolean handlePreferenceTreeClick(boolean status) {
+        final boolean enabled = mPreferenceCompat.getChecked() == PreferenceCompat.STATUS_ON;
 
         if (enabled) {
             mUserDisabledHdrTypes.remove(mHdrType);
@@ -118,9 +108,5 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
                 ? new String[]{KEY_FORMAT_INFO_ON_MANUAL, KEY_SUPPORTED_HDR_FORMATS, key}
                 : new String[]{KEY_FORMAT_INFO_ON_MANUAL, KEY_UNSUPPORTED_HDR_FORMATS, key};
         return compoundKey;
-    }
-
-    public PreferenceCompat getPreferenceCompat() {
-        return mPreferenceCompat;
     }
 }

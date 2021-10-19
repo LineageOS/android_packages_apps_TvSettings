@@ -183,9 +183,10 @@ public class NetworkState extends PreferenceControllerState implements
             // Use preference controller but do not attach to lifecycle methods, manually call
             // required methods to create preference compat.
             AccessPointPreferenceController controller = new AccessPointPreferenceController(
-                    mContext, mUIUpdateCallback, getStateIdentifier(), accessPoint);
-            PreferenceCompat accessPointPrefCompat = controller.createRestrictedPrefCompat(
-                    mPreferenceCompatManager);
+                    mContext, mUIUpdateCallback, getStateIdentifier(), mPreferenceCompatManager,
+                    accessPoint, new String[]{KEY_WIFI_LIST, accessPoint.getKey()});
+            controller.init();
+            PreferenceCompat accessPointPrefCompat = controller.getPrefCompat();
             mAccessPointPrefControllers.put(
                     PreferenceCompatManager.getKey(accessPointPrefCompat.getKey()), controller);
             mWifiNetworkCategoryPref.addChildPrefCompat(accessPointPrefCompat);
@@ -321,9 +322,9 @@ public class NetworkState extends PreferenceControllerState implements
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
         List<AbstractPreferenceController> controllers = new ArrayList<>();
         mAddNetworkPreferenceController = new AddWifiPreferenceController(context,
-                mUIUpdateCallback, getStateIdentifier());
+                mUIUpdateCallback, getStateIdentifier(), mPreferenceCompatManager);
         mEasyConnectPreferenceController = new AddEasyConnectPreferenceController(context,
-                mUIUpdateCallback, getStateIdentifier());
+                mUIUpdateCallback, getStateIdentifier(), mPreferenceCompatManager);
         controllers.add(mAddNetworkPreferenceController);
         controllers.add(mEasyConnectPreferenceController);
         return controllers;
