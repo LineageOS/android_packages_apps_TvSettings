@@ -36,7 +36,7 @@ public class WifiUtils {
         // Add RSSI/band information for this config, what was seen up to 6 seconds ago
         // verbose WiFi Logging is only turned on thru developers settings
         if (accessPoint.isActive() && info != null) {
-            summary.append(" f=" + Integer.toString(info.getFrequency()));
+            summary.append(" f=" + info.getFrequency());
         }
 //        summary.append(" " + getVisibilityStatus(accessPoint));
         if (config != null
@@ -50,9 +50,9 @@ public class WifiUtils {
                 long min = (diff / 60) % 60; //minutes
                 long hour = (min / 60) % 60; //hours
                 summary.append(", ");
-                if (hour > 0) summary.append(Long.toString(hour) + "h ");
-                summary.append(Long.toString(min) + "m ");
-                summary.append(Long.toString(sec) + "s ");
+                if (hour > 0) summary.append(hour + "h ");
+                summary.append(min + "m ");
+                summary.append(sec + "s ");
             }
             summary.append(")");
         }

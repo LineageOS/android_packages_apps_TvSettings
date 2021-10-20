@@ -29,7 +29,6 @@ import android.text.format.DateUtils;
 import android.util.ArrayMap;
 import android.util.Log;
 
-
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
@@ -136,7 +135,7 @@ public class DaydreamState extends PreferenceControllerState {
         mActiveDreamPC.setEntryValues(dreamEntryValues);
         mActiveDreamPC.setValue(mBackend.isEnabled() && currentDreamComponent != null
                 ? currentDreamComponent.toShortString() : DREAM_COMPONENT_NONE);
-        mActiveDreamPC.update();
+        mActiveDreamPC.updateAndNotify();
     }
 
     private void refreshDreamInfoMap(List<DreamBackend.DreamInfo> infos,
@@ -223,8 +222,10 @@ public class DaydreamState extends PreferenceControllerState {
     @Override
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
         List<AbstractPreferenceController> preferenceControllers = new ArrayList<>();
-        mDreamTimePC = new DreamTimePC(mContext, mUIUpdateCallback, getStateIdentifier());
-        mActiveDreamPC = new ActiveDreamPC(mContext, mUIUpdateCallback, getStateIdentifier());
+        mDreamTimePC = new DreamTimePC(mContext, mUIUpdateCallback, getStateIdentifier(),
+                mPreferenceCompatManager);
+        mActiveDreamPC = new ActiveDreamPC(mContext, mUIUpdateCallback, getStateIdentifier(),
+                mPreferenceCompatManager);
         preferenceControllers.add(mActiveDreamPC);
         preferenceControllers.add(mDreamTimePC);
         return preferenceControllers;

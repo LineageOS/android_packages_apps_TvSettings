@@ -29,7 +29,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Display;
 
-
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceControllerState;
@@ -198,18 +197,19 @@ public class HdrFormatSelectionState extends PreferenceControllerState {
         for (int hdrType : HDR_FORMATS_DISPLAY_ORDER) {
             if (mDeviceHdrTypes.contains(hdrType)) {
                 HdrFormatPreferenceController hdrFormatPC = new HdrFormatPreferenceController(
-                        mContext, mUIUpdateCallback, getStateIdentifier(), hdrType, mDisplayManager,
+                        mContext, mUIUpdateCallback, getStateIdentifier(),
+                        mPreferenceCompatManager, hdrType, mDisplayManager,
                         mDisplayReportedHdrTypes, mUserDisabledHdrTypes
                 );
                 preferenceControllers.add(hdrFormatPC);
-                hdrFormatPC.displayPreference(mPreferenceCompatManager);
+                hdrFormatPC.init();
                 if (hdrFormatPC.isAvailable()) {
                     if (mDisplayReportedHdrTypes.contains(hdrType)) {
                         mSupportedFormatsCategory.addChildPrefCompat(
-                                hdrFormatPC.getPreferenceCompat());
+                                hdrFormatPC.getPrefCompat());
                     } else {
                         mUnsupportedFormatsCategory.addChildPrefCompat(
-                                hdrFormatPC.getPreferenceCompat());
+                                hdrFormatPC.getPrefCompat());
                     }
                 }
             }

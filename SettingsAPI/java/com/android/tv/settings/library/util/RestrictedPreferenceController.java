@@ -20,7 +20,6 @@ import android.content.Context;
 import android.os.UserHandle;
 import android.text.TextUtils;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.settingslib.RestrictedLockUtils;
@@ -32,11 +31,25 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
     private String mAttrUserRestriction;
     private RestrictedLockUtils.EnforcedAdmin mEnforcedAdmin;
     private boolean mUseAdminDisabledSummary = false;
-    protected PreferenceCompat mPreferenceCompat;
 
     public RestrictedPreferenceController(Context context,
-            UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager prefCompatManager) {
+        super(context, callback, stateIdentifier, prefCompatManager);
+        mAttrUserRestriction = getAttrUserRestriction();
+        mUseAdminDisabledSummary = useAdminDisabledSummary();
+        // If the system has set the user restriction, then we shouldn't add the padlock.
+        if (RestrictedLockUtilsInternal.hasBaseUserRestriction(mContext, mAttrUserRestriction,
+                UserHandle.myUserId())) {
+            mAttrUserRestriction = null;
+            return;
+        }
+    }
+
+    public RestrictedPreferenceController(Context context,
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager prefCompatManager, String[] key) {
+        super(context, callback, stateIdentifier, prefCompatManager, key);
         mAttrUserRestriction = getAttrUserRestriction();
         mUseAdminDisabledSummary = useAdminDisabledSummary();
         // If the system has set the user restriction, then we shouldn't add the padlock.
@@ -48,18 +61,11 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
     }
 
     @Override
-    public boolean isAvailable() {
-        return true;
-    }
-
-    @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        mPreferenceCompat = screen.getOrCreatePrefCompat(getPreferenceKey());
+    protected void init() {
         if (mAttrUserRestriction != null) {
             checkRestrictionAndSetDisabled(mAttrUserRestriction, UserHandle.myUserId());
         }
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+        update();
     }
 
     public void checkRestrictionAndSetDisabled(String userRestriction, int userId) {
@@ -70,12 +76,7 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
     }
 
     @Override
-    public void updateState(PreferenceCompat preferenceCompat) {
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
-    }
-
-    public void refresh() {
+    protected void update() {
         if (mDisabledByAdmin) {
             mPreferenceCompat.setEnabled(true);
         }
@@ -92,7 +93,7 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat prefCompat, boolean status) {
+    public boolean handlePreferenceTreeClick(boolean status) {
         if (mDisabledByAdmin) {
             RestrictedLockUtils.sendShowAdminSupportDetailsIntent(mContext, mEnforcedAdmin);
             return true;
@@ -100,11 +101,17 @@ public abstract class RestrictedPreferenceController extends AbstractPreferenceC
         return false;
     }
 
+
+    @Override
+    public boolean isAvailable() {
+        return true;
+    }
+
     public void setEnabled(boolean enabled) {
         if (enabled && isDisabledByAdmin()) {
             boolean changed = setDisabledByAdmin(null);
             if (changed) {
-                mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+                notifyChange();
             }
             return;
         }

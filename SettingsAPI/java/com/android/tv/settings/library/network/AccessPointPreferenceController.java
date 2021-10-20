@@ -35,15 +35,16 @@ import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
 /** Preference controller for access point preference in NetworkState. */
 public class AccessPointPreferenceController extends RestrictedPreferenceController {
-    private static final String KEY_WIFI_LIST = "wifi_list";
-    private AccessPoint mAccessPoint;
+    private final AccessPoint mAccessPoint;
     private static final String EXTRA_WIFI_SSID = "wifi_ssid";
     private static final String EXTRA_WIFI_SECURITY_NAME = "wifi_security_name";
 
 
     public AccessPointPreferenceController(Context context,
-            UIUpdateCallback callback, int stateIdentifier, AccessPoint accessPoint) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager, AccessPoint accessPoint,
+            String[] key) {
+        super(context, callback, stateIdentifier, preferenceCompatManager, key);
         mAccessPoint = accessPoint;
     }
 
@@ -58,12 +59,12 @@ public class AccessPointPreferenceController extends RestrictedPreferenceControl
     }
 
     @Override
-    public String[] getPreferenceKey() {
-        return new String[]{KEY_WIFI_LIST, mAccessPoint.getKey()};
+    public boolean isAvailable() {
+        return true;
     }
 
-    public PreferenceCompat createRestrictedPrefCompat(PreferenceCompatManager screen) {
-        mPreferenceCompat = screen.getOrCreatePrefCompat(getPreferenceKey());
+    @Override
+    public void init() {
         if (getAttrUserRestriction() != null) {
             checkRestrictionAndSetDisabled(getAttrUserRestriction(), UserHandle.myUserId());
         }
@@ -86,8 +87,7 @@ public class AccessPointPreferenceController extends RestrictedPreferenceControl
         }
         mPreferenceCompat.addInfo(ManagerUtil.INFO_WIFI_SIGNAL_LEVEL, mAccessPoint.getLevel());
         mPreferenceCompat.setRestricted(true);
-        refresh();
-        return mPreferenceCompat;
+        update();
     }
 
 
@@ -104,6 +104,6 @@ public class AccessPointPreferenceController extends RestrictedPreferenceControl
     }
 
     public boolean performClick(boolean status) {
-        return handlePreferenceTreeClick(mPreferenceCompat, status);
+        return handlePreferenceTreeClick(status);
     }
 }

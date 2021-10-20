@@ -121,7 +121,7 @@ public class InputMethodSettingValuesWrapper {
                 InputMethodAndSubtypeUtil.getEnabledInputMethodsAndSubtypeList(mContentResolver);
         final ArrayList<InputMethodInfo> result = new ArrayList<>();
         for (InputMethodInfo imi : mMethodList) {
-            if (enabledInputMethodsAndSubtypes.keySet().contains(imi.getId())) {
+            if (enabledInputMethodsAndSubtypes.containsKey(imi.getId())) {
                 result.add(imi);
             }
         }

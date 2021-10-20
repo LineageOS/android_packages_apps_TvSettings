@@ -17,39 +17,38 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class PreferenceCategoryController extends AbstractPreferenceController {
-    private final String mKey;
+
     private final List<AbstractPreferenceController> mChildren;
 
     public PreferenceCategoryController(
-            Context context, UIUpdateCallback callback, int stateIdentifier, String key) {
-        super(context, callback, stateIdentifier);
-        mKey = key;
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager, String[] key) {
+        super(context, callback, stateIdentifier, preferenceCompatManager, key);
         mChildren = new ArrayList<>();
     }
 
     @Override
     public boolean isAvailable() {
-        if (mChildren == null || mChildren.isEmpty()) {
-            return false;
-        }
-        // Category is available if any child is available
-        for (AbstractPreferenceController controller : mChildren) {
-            if (controller.isAvailable()) {
-                return true;
-            }
-        }
-        return false;
+        return true;
     }
 
     @Override
-    public String[] getPreferenceKey() {
-        return new String[] {mKey};
+    protected void init() {
+        // no-op
+    }
+
+    @Override
+    protected void update() {
+        // no-op
     }
 
     public PreferenceCategoryController setChildren(

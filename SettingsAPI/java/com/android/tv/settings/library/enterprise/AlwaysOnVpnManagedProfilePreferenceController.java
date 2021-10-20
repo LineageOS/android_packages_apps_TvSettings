@@ -17,7 +17,9 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
 
@@ -26,8 +28,9 @@ public class AlwaysOnVpnManagedProfilePreferenceController extends AbstractPrefe
     private final EnterprisePrivacyFeatureProvider mFeatureProvider;
 
     public AlwaysOnVpnManagedProfilePreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mFeatureProvider =
                 FlavorUtils.getFeatureFactory(context).getEnterprisePrivacyFeatureProvider(context);
     }
@@ -38,7 +41,16 @@ public class AlwaysOnVpnManagedProfilePreferenceController extends AbstractPrefe
     }
 
     @Override
+    protected void init() {
+        update();
+    }
+
+    @Override
+    protected void update() {
+    }
+
+    @Override
     public String[] getPreferenceKey() {
-        return new String[] {KEY_ALWAYS_ON_VPN_MANAGED_PROFILE};
+        return new String[]{KEY_ALWAYS_ON_VPN_MANAGED_PROFILE};
     }
 }

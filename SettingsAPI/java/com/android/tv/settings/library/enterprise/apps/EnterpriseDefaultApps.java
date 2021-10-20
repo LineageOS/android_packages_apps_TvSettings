@@ -27,20 +27,20 @@ import android.provider.MediaStore;
  * Settings/src/com/android/settings/applications/EnterpriseDefaultApps.java
  */
 public enum EnterpriseDefaultApps {
-    BROWSER(new Intent[] {
+    BROWSER(new Intent[]{
             buildIntent(Intent.ACTION_VIEW, Intent.CATEGORY_BROWSABLE, "http:", null)}),
-    CALENDAR(new Intent[] {
+    CALENDAR(new Intent[]{
             buildIntent(Intent.ACTION_INSERT, null, null, "vnd.android.cursor.dir/event")}),
-    CAMERA(new Intent[] {
+    CAMERA(new Intent[]{
             new Intent(MediaStore.ACTION_IMAGE_CAPTURE),
             new Intent(MediaStore.ACTION_VIDEO_CAPTURE)}),
-    CONTACTS(new Intent[] {
+    CONTACTS(new Intent[]{
             buildIntent(Intent.ACTION_PICK, null, null, ContactsContract.Contacts.CONTENT_TYPE)}),
-    EMAIL(new Intent[] {
+    EMAIL(new Intent[]{
             new Intent(Intent.ACTION_SENDTO), new Intent(Intent.ACTION_SEND),
             new Intent(Intent.ACTION_SEND_MULTIPLE)}),
-    MAP(new Intent[] {buildIntent(Intent.ACTION_VIEW, null, "geo:", null)}),
-    PHONE(new Intent[] {new Intent(Intent.ACTION_DIAL), new Intent(Intent.ACTION_CALL)});
+    MAP(new Intent[]{buildIntent(Intent.ACTION_VIEW, null, "geo:", null)}),
+    PHONE(new Intent[]{new Intent(Intent.ACTION_DIAL), new Intent(Intent.ACTION_CALL)});
     private final Intent[] mIntents;
 
     EnterpriseDefaultApps(Intent[] intents) {

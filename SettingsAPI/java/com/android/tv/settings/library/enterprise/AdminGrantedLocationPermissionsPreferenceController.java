@@ -18,7 +18,9 @@ package com.android.tv.settings.library.enterprise;
 
 import android.Manifest;
 import android.content.Context;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 
 /**
  * Forked from:
@@ -31,14 +33,15 @@ public class AdminGrantedLocationPermissionsPreferenceController
             "enterprise_privacy_number_location_access_packages";
 
     public AdminGrantedLocationPermissionsPreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier, boolean async) {
-        super(context, callback, stateIdentifier, async,
-                new String[] {Manifest.permission.ACCESS_COARSE_LOCATION,
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager, boolean async) {
+        super(context, callback, stateIdentifier, preferenceCompatManager, async,
+                new String[]{Manifest.permission.ACCESS_COARSE_LOCATION,
                         Manifest.permission.ACCESS_FINE_LOCATION});
     }
 
     @Override
     public String[] getPreferenceKey() {
-        return new String[] {KEY_ENTERPRISE_PRIVACY_NUMBER_LOCATION_ACCESS_PACKAGES};
+        return new String[]{KEY_ENTERPRISE_PRIVACY_NUMBER_LOCATION_ACCESS_PACKAGES};
     }
 }

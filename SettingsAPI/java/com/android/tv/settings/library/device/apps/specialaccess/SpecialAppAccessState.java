@@ -42,6 +42,10 @@ public class SpecialAppAccessState extends PreferenceControllerState {
     }
 
     @Override
+    public void onResume() {
+        updatePreferenceStates();
+    }
+
     protected void updatePreferenceStates() {
         ActivityManager activityManager = (ActivityManager) mContext
                 .getSystemService(Context.ACTIVITY_SERVICE);

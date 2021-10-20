@@ -54,7 +54,7 @@ public abstract class InstalledAppCounter extends AppCounter {
         final int userId = UserHandle.getUserId(info.uid);
         if (installReason != IGNORE_INSTALL_REASON
                 && pm.getInstallReason(info.packageName,
-                        new UserHandle(userId)) != installReason) {
+                new UserHandle(userId)) != installReason) {
             return false;
         }
         if ((info.flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) != 0) {

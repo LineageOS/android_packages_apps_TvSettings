@@ -24,6 +24,7 @@ import android.os.storage.VolumeInfo;
 import android.text.TextUtils;
 
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.List;
@@ -36,14 +37,14 @@ public class AppStoragePreferenceController extends AppActionPreferenceControlle
 
     public AppStoragePreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
-            ApplicationsState.AppEntry appEntry) {
-        super(context, callback, stateIdentifier, appEntry);
+            ApplicationsState.AppEntry appEntry, PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, appEntry, preferenceCompatManager);
         mPackageManager = context.getPackageManager();
         mStorageManager = context.getSystemService(StorageManager.class);
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         if (mAppEntry == null) {
             return;
         }
@@ -66,7 +67,7 @@ public class AppStoragePreferenceController extends AppActionPreferenceControlle
                     "device_apps_app_management_storage_used_desc",
                     mAppEntry.sizeStr, volumeDesc));
         }
-        super.refresh();
+        super.update();
     }
 
     @Override

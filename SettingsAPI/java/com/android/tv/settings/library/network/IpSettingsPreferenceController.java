@@ -24,6 +24,7 @@ import android.net.IpConfiguration;
 import android.net.wifi.WifiConfiguration;
 
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
@@ -35,8 +36,9 @@ public class IpSettingsPreferenceController extends RestrictedPreferenceControll
     private final AccessPoint mAccessPoint;
 
     public IpSettingsPreferenceController(Context context,
-            UIUpdateCallback callback, int stateIdentifier, AccessPoint accessPoint) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager, AccessPoint accessPoint) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mAccessPoint = accessPoint;
     }
 
@@ -51,7 +53,7 @@ public class IpSettingsPreferenceController extends RestrictedPreferenceControll
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         WifiConfiguration wifiConfiguration = mAccessPoint.getConfig();
         if (wifiConfiguration != null) {
             final int networkId = wifiConfiguration.networkId;
@@ -66,7 +68,7 @@ public class IpSettingsPreferenceController extends RestrictedPreferenceControll
         mPreferenceCompat.setVisible(wifiConfiguration != null);
         WifiDetailsState.updateRestrictedPreference(
                 mPreferenceCompat, mContext, mAccessPoint, this);
-        super.refresh();
+        super.update();
     }
 
     @Override

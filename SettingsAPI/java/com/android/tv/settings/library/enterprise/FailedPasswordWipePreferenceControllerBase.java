@@ -17,8 +17,9 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
-import com.android.tv.settings.library.PreferenceCompat;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
 import com.android.tv.settings.library.util.ResourcesUtil;
@@ -28,8 +29,9 @@ public abstract class FailedPasswordWipePreferenceControllerBase
     protected final EnterprisePrivacyFeatureProvider mFeatureProvider;
 
     public FailedPasswordWipePreferenceControllerBase(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mFeatureProvider =
                 FlavorUtils.getFeatureFactory(context).getEnterprisePrivacyFeatureProvider(context);
     }
@@ -37,9 +39,14 @@ public abstract class FailedPasswordWipePreferenceControllerBase
     protected abstract int getMaximumFailedPasswordsBeforeWipe();
 
     @Override
-    public void updateState(PreferenceCompat preference) {
+    public void init() {
+        update();
+    }
+
+    @Override
+    public void update() {
         final int failedPasswordsBeforeWipe = getMaximumFailedPasswordsBeforeWipe();
-        preference.setSummary(ResourcesUtil.getQuantityString(mContext,
+        mPreferenceCompat.setSummary(ResourcesUtil.getQuantityString(mContext,
                 "enterprise_privacy_number_failed_password_wipe", failedPasswordsBeforeWipe,
                 failedPasswordsBeforeWipe));
     }

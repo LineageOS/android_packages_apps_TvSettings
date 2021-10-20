@@ -22,12 +22,14 @@ import android.content.Context;
 import android.os.UserManager;
 
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
 public class DreamTimePC extends RestrictedPreferenceController {
     public DreamTimePC(Context context,
-            UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
     }
 
     @Override
@@ -47,6 +49,7 @@ public class DreamTimePC extends RestrictedPreferenceController {
 
     public void setValue(String value) {
         mPreferenceCompat.setValue(value);
+        notifyChange();
     }
 
     public String getValue() {

@@ -42,9 +42,9 @@ public class StringUtil {
      * Returns elapsed time for the given millis, in the following format:
      * 2 days, 5 hr, 40 min, 29 sec
      *
-     * @param context     the application context
-     * @param millis      the elapsed time in milli seconds
-     * @param withSeconds include seconds?
+     * @param context          the application context
+     * @param millis           the elapsed time in milli seconds
+     * @param withSeconds      include seconds?
      * @param collapseTimeUnit limit the output to top 2 time unit
      *                         e.g. 2 days, 5 hr, 40 min, 29 sec will convert to 2 days, 5 hr
      * @return the formatted elapsed time

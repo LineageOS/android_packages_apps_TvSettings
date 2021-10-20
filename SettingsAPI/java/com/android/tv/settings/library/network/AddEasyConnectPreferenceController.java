@@ -20,8 +20,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.UserManager;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
 /** Preference controller for easy connect preference in NetworkState. */
@@ -33,8 +33,14 @@ public class AddEasyConnectPreferenceController extends RestrictedPreferenceCont
     private static final String EXTRA_TYPE_EASYCONNECT = "easyconnect";
 
     public AddEasyConnectPreferenceController(Context context,
-            UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return true;
     }
 
     @Override
@@ -43,14 +49,14 @@ public class AddEasyConnectPreferenceController extends RestrictedPreferenceCont
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat prefCompat, boolean status) {
+    public boolean handlePreferenceTreeClick(boolean status) {
         if (!mDisabledByAdmin) {
             Intent i = new Intent(ACTION_ADD_WIFI_NETWORK)
                     .putExtra(EXTRA_TYPE, EXTRA_TYPE_EASYCONNECT);
             mContext.startActivity(i);
             return true;
         }
-        return super.handlePreferenceTreeClick(prefCompat, status);
+        return super.handlePreferenceTreeClick(status);
     }
 
     @Override

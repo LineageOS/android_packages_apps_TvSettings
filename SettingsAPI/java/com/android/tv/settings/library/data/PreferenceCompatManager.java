@@ -20,7 +20,6 @@ import android.util.ArrayMap;
 
 import com.android.tv.settings.library.PreferenceCompat;
 
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -29,15 +28,20 @@ import java.util.stream.Stream;
 public class PreferenceCompatManager {
     private final Map<String, PreferenceCompat> mPrefCompats = new ArrayMap<>();
 
-    public void addPrefCompat(PreferenceCompat preferenceCompat) {
-        mPrefCompats.put(getKey(preferenceCompat.getKey()), preferenceCompat);
-    }
-
     public PreferenceCompat getOrCreatePrefCompat(String key) {
         return getOrCreatePrefCompat(new String[]{key});
     }
 
+    /**
+     * Get or create the preferenceCompat with the specified key.
+     *
+     * @param key key of the preferenceCompat
+     * @return preferenceCompat with the specified key.
+     */
     public PreferenceCompat getOrCreatePrefCompat(String[] key) {
+        if (key == null) {
+            return null;
+        }
         String compoundKey = getKey(key);
         if (!mPrefCompats.containsKey(compoundKey)) {
             mPrefCompats.put(compoundKey, new PreferenceCompat(key));
@@ -45,13 +49,21 @@ public class PreferenceCompatManager {
         return mPrefCompats.get(compoundKey);
     }
 
+    /**
+     * Get the preferenceCompat, used in
+     * {@link PreferenceControllerState#onPreferenceChange(String[],
+     * Object)}
+     * or {@link PreferenceControllerState#onPreferenceTreeClick(String[], boolean)}
+     *
+     * @param key key of the preferenceCompat
+     * @return preferenceCompat with the specified key, or null if does not exist.
+     */
     public PreferenceCompat getPrefCompat(String[] key) {
+        if (key == null) {
+            return null;
+        }
         String compoundKey = getKey(key);
         return mPrefCompats.get(compoundKey);
-    }
-
-    public List<PreferenceCompat> getPrefCompats() {
-        return mPrefCompats.values().stream().collect(Collectors.toList());
     }
 
     public static String getKey(String[] key) {

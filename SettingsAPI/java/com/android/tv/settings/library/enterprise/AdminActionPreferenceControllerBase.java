@@ -18,12 +18,13 @@ package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
 import android.text.format.DateUtils;
-import androidx.preference.Preference;
-import com.android.tv.settings.library.PreferenceCompat;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
 import com.android.tv.settings.library.util.ResourcesUtil;
+
 import java.util.Date;
 
 /**
@@ -34,8 +35,9 @@ public abstract class AdminActionPreferenceControllerBase extends AbstractPrefer
     protected final EnterprisePrivacyFeatureProvider mFeatureProvider;
 
     public AdminActionPreferenceControllerBase(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mFeatureProvider =
                 FlavorUtils.getFeatureFactory(context).getEnterprisePrivacyFeatureProvider(context);
     }
@@ -43,12 +45,12 @@ public abstract class AdminActionPreferenceControllerBase extends AbstractPrefer
     protected abstract Date getAdminActionTimestamp();
 
     @Override
-    public void updateState(PreferenceCompat preference) {
+    public void update() {
         final Date timestamp = getAdminActionTimestamp();
-        preference.setSummary(timestamp == null
-                        ? ResourcesUtil.getString(mContext, "enterprise_privacy_none")
-                        : DateUtils.formatDateTime(mContext, timestamp.getTime(),
-                                DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE));
+        mPreferenceCompat.setSummary(timestamp == null
+                ? ResourcesUtil.getString(mContext, "enterprise_privacy_none")
+                : DateUtils.formatDateTime(mContext, timestamp.getTime(),
+                        DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE));
     }
 
     @Override

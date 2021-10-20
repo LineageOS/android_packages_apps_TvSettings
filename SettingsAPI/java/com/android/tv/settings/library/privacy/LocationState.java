@@ -74,7 +74,7 @@ public class LocationState extends PreferenceControllerState {
             if (Log.isLoggable(TAG, Log.DEBUG)) {
                 Log.d(TAG, "Received location mode change intent: " + intent);
             }
-            mLocationMode.update();
+            mLocationMode.updateAndNotify();
         }
     };
 
@@ -138,7 +138,7 @@ public class LocationState extends PreferenceControllerState {
 
         mContext.registerReceiver(mReceiver,
                 new IntentFilter(LocationManager.MODE_CHANGED_ACTION));
-        mLocationMode.update();
+        mLocationMode.updateAndNotify();
     }
 
     @Override
@@ -188,7 +188,7 @@ public class LocationState extends PreferenceControllerState {
             }
 
             writeLocationMode(mode);
-            mLocationMode.update();
+            mLocationMode.updateAndNotify();
         }
         return true;
     }
@@ -220,7 +220,8 @@ public class LocationState extends PreferenceControllerState {
     @Override
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
         List<AbstractPreferenceController> preferenceControllers = new ArrayList<>();
-        mLocationMode = new LocationModePC(mContext, mUIUpdateCallback, getStateIdentifier());
+        mLocationMode = new LocationModePC(mContext, mUIUpdateCallback, getStateIdentifier(),
+                mPreferenceCompatManager);
         preferenceControllers.add(mLocationMode);
         return preferenceControllers;
     }

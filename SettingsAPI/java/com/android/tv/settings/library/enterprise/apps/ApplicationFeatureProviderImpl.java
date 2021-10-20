@@ -60,7 +60,7 @@ public class ApplicationFeatureProviderImpl implements ApplicationFeatureProvide
     /** Flags to use when querying PackageManager for Euicc component implementations. */
     private static final int EUICC_QUERY_FLAGS =
             PackageManager.MATCH_SYSTEM_ONLY | PackageManager.MATCH_DEBUG_TRIAGED_MISSING
-                | PackageManager.GET_RESOLVED_FILTER;
+                    | PackageManager.GET_RESOLVED_FILTER;
 
     public ApplicationFeatureProviderImpl(Context context, PackageManager pm,
             IPackageManager pms, DevicePolicyManager dpm) {
@@ -183,7 +183,7 @@ public class ApplicationFeatureProviderImpl implements ApplicationFeatureProvide
 
     private static class CurrentUserAndManagedProfilePolicyInstalledAppCounter
             extends InstalledAppCounter {
-        private NumberOfAppsCallback mCallback;
+        private final NumberOfAppsCallback mCallback;
 
         CurrentUserAndManagedProfilePolicyInstalledAppCounter(Context context,
                 PackageManager packageManager, NumberOfAppsCallback callback) {
@@ -199,7 +199,7 @@ public class ApplicationFeatureProviderImpl implements ApplicationFeatureProvide
 
     private static class CurrentUserAndManagedProfileAppWithAdminGrantedPermissionsCounter
             extends AppWithAdminGrantedPermissionsCounter {
-        private NumberOfAppsCallback mCallback;
+        private final NumberOfAppsCallback mCallback;
 
         CurrentUserAndManagedProfileAppWithAdminGrantedPermissionsCounter(Context context,
                 String[] permissions, PackageManager packageManager,
@@ -216,7 +216,7 @@ public class ApplicationFeatureProviderImpl implements ApplicationFeatureProvide
     }
 
     private static class CurrentUserPolicyInstalledAppLister extends InstalledAppLister {
-        private ListOfAppsCallback mCallback;
+        private final ListOfAppsCallback mCallback;
 
         CurrentUserPolicyInstalledAppLister(PackageManager packageManager,
                 UserManager userManager, ListOfAppsCallback callback) {
@@ -232,7 +232,7 @@ public class ApplicationFeatureProviderImpl implements ApplicationFeatureProvide
 
     private static class CurrentUserAppWithAdminGrantedPermissionsLister extends
             AppWithAdminGrantedPermissionsLister {
-        private ListOfAppsCallback mCallback;
+        private final ListOfAppsCallback mCallback;
 
         CurrentUserAppWithAdminGrantedPermissionsLister(String[] permissions,
                 PackageManager packageManager, IPackageManager packageManagerService,

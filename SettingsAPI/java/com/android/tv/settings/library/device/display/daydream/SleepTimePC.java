@@ -24,6 +24,7 @@ import android.text.format.DateUtils;
 
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
@@ -31,8 +32,9 @@ public class SleepTimePC extends RestrictedPreferenceController {
     private static final int WARNING_THRESHOLD_SLEEP_TIME_MS = (int) (4 * DateUtils.HOUR_IN_MILLIS);
 
     public SleepTimePC(Context context,
-            UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
     }
 
     @Override
@@ -41,7 +43,7 @@ public class SleepTimePC extends RestrictedPreferenceController {
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         mPreferenceCompat.setHasOnPreferenceChangeListener(true);
         mPreferenceCompat.setType(PreferenceCompat.TYPE_LIST);
         UserManager userManager = UserManager.get(mContext);
@@ -70,9 +72,5 @@ public class SleepTimePC extends RestrictedPreferenceController {
 
     public String getValue() {
         return mPreferenceCompat.getValue();
-    }
-
-    public void update() {
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 }

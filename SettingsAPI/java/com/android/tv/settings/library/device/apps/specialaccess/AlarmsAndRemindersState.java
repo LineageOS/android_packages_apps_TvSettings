@@ -34,6 +34,7 @@ import com.android.tv.settings.library.util.ResourcesUtil;
 public class AlarmsAndRemindersState extends ManageAppOpState {
     private AppOpsManager mAppOpsManager;
     private final ArrayMap<String, ApplicationsState.AppEntry> mAppEntryByKey = new ArrayMap<>();
+
     public AlarmsAndRemindersState(Context context,
             UIUpdateCallback callback) {
         super(context, callback);

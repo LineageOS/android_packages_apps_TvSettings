@@ -1963,10 +1963,7 @@ public class AccessPoint implements Comparable<AccessPoint> {
 
         if (TextUtils.equals(ssid, scanResult.SSID)) {
             return true;
-        } else if (scanResult.BSSID != null && TextUtils.equals(bssid, scanResult.BSSID)) {
-            return true;
-        }
-        return false;
+        } else return scanResult.BSSID != null && TextUtils.equals(bssid, scanResult.BSSID);
     }
 
     private boolean isSameSsidOrBssid(WifiInfo wifiInfo) {
@@ -1976,10 +1973,7 @@ public class AccessPoint implements Comparable<AccessPoint> {
 
         if (TextUtils.equals(ssid, removeDoubleQuotes(wifiInfo.getSSID()))) {
             return true;
-        } else if (wifiInfo.getBSSID() != null && TextUtils.equals(bssid, wifiInfo.getBSSID())) {
-            return true;
-        }
-        return false;
+        } else return wifiInfo.getBSSID() != null && TextUtils.equals(bssid, wifiInfo.getBSSID());
     }
 
     private boolean isSameSsidOrBssid(AccessPoint accessPoint) {
@@ -1989,10 +1983,7 @@ public class AccessPoint implements Comparable<AccessPoint> {
 
         if (TextUtils.equals(ssid, accessPoint.getSsid())) {
             return true;
-        } else if (accessPoint.getBssid() != null
-                && TextUtils.equals(bssid, accessPoint.getBssid())) {
-            return true;
-        }
-        return false;
+        } else return accessPoint.getBssid() != null
+                && TextUtils.equals(bssid, accessPoint.getBssid());
     }
 }

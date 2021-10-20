@@ -44,14 +44,18 @@ public class EnableDisablePreferenceController extends AppActionPreferenceContro
 
     public EnableDisablePreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
-            ApplicationsState.AppEntry appEntry) {
-        super(context, callback, stateIdentifier, appEntry);
+            ApplicationsState.AppEntry appEntry, PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, appEntry, preferenceCompatManager);
         mPackageManager = context.getPackageManager();
     }
 
     @Override
-    public void displayPreference(PreferenceCompatManager preferenceCompatManager) {
-        super.displayPreference(preferenceCompatManager);
+    public boolean isAvailable() {
+        return true;
+    }
+
+    @Override
+    public void init() {
         if (isRestricted()) {
             final RestrictedLockUtils.EnforcedAdmin admin =
                     RestrictedLockUtilsInternal.checkIfRestrictionEnforced(mContext,
@@ -62,6 +66,7 @@ public class EnableDisablePreferenceController extends AppActionPreferenceContro
                 setEnabled(false);
             }
         }
+        update();
     }
 
     @Override
@@ -91,7 +96,7 @@ public class EnableDisablePreferenceController extends AppActionPreferenceContro
 
     public void setEnabled(boolean enabled) {
         mPreferenceCompat.setEnabled(enabled);
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+        notifyChange();
     }
 
     @Override
@@ -140,7 +145,7 @@ public class EnableDisablePreferenceController extends AppActionPreferenceContro
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         if (mAppEntry == null) {
             return;
         }
@@ -157,7 +162,7 @@ public class EnableDisablePreferenceController extends AppActionPreferenceContro
             mPreferenceCompat.setVisible(false);
         }
         if (mPreferenceCompat.isRestricted()) {
-            super.refresh();
+            super.update();
         } else {
             mPreferenceCompat.setEnabled(true);
         }

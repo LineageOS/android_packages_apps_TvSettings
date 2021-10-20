@@ -24,8 +24,8 @@ import android.content.Intent;
 import android.net.wifi.WifiConfiguration;
 
 import com.android.tv.settings.library.ManagerUtil;
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
@@ -40,8 +40,9 @@ public class ForgetNetworkPreferenceController extends RestrictedPreferenceContr
     private final AccessPoint mAccessPoint;
 
     public ForgetNetworkPreferenceController(Context context,
-            UIUpdateCallback callback, int stateIdentifier, AccessPoint accessPoint) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager, AccessPoint accessPoint) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mAccessPoint = accessPoint;
     }
 
@@ -56,7 +57,7 @@ public class ForgetNetworkPreferenceController extends RestrictedPreferenceContr
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat prefCompat, boolean status) {
+    public boolean handlePreferenceTreeClick(boolean status) {
         if (!mDisabledByAdmin) {
             Intent forgetConfirmIntent = new Intent(INTENT_CONFIRMATION)
                     .putExtra(EXTRA_GUIDANCE_TITLE,
@@ -68,16 +69,16 @@ public class ForgetNetworkPreferenceController extends RestrictedPreferenceContr
                             REQUEST_CODE_FORGET_NETWORK));
             return true;
         }
-        return super.handlePreferenceTreeClick(prefCompat, status);
+        return super.handlePreferenceTreeClick(status);
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         WifiConfiguration wifiConfiguration = mAccessPoint.getConfig();
         mPreferenceCompat.setVisible(wifiConfiguration != null);
         WifiDetailsState.updateRestrictedPreference(
                 mPreferenceCompat, mContext, mAccessPoint, this);
-        super.refresh();
+        super.update();
     }
 
     @Override

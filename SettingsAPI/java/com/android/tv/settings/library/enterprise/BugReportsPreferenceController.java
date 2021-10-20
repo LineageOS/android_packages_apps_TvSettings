@@ -17,15 +17,24 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
+
 import java.util.Date;
 
 public class BugReportsPreferenceController extends AdminActionPreferenceControllerBase {
     private static final String KEY_BUG_REPORTS = "bug_reports";
 
     public BugReportsPreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
+    }
+
+    @Override
+    protected void init() {
+        update();
     }
 
     @Override
@@ -35,6 +44,6 @@ public class BugReportsPreferenceController extends AdminActionPreferenceControl
 
     @Override
     public String[] getPreferenceKey() {
-        return new String[] {KEY_BUG_REPORTS};
+        return new String[]{KEY_BUG_REPORTS};
     }
 }
