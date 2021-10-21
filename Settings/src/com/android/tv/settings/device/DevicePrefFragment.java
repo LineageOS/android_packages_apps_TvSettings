@@ -92,6 +92,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     private static final String KEY_MIC = "microphone";
     private static final String KEY_CAMERA = "camera";
     private static final String KEY_FASTPAIR_SETTINGS_SLICE = "fastpair_slice";
+    private static final String KEY_OVERLAY_INTERNAL_SETTINGS_SLICE = "overlay_internal";
 
     private Preference mSoundsPref;
     private TwoStatePreference mSoundsSwitchPref;
@@ -169,6 +170,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
         updateSounds();
         updateGoogleSettings();
         updateCastSettings();
+        updateInternalSettings();
         updateFastpairSettings();
         updateKeyboardAutofillSettings();
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
@@ -312,6 +314,17 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
                     .isBasicMode(getContext())) {
                 castSlicePref.setVisible(false);
             }
+        }
+    }
+
+    private void updateInternalSettings() {
+        final SlicePreference internalSlicePref = findPreference(
+                KEY_OVERLAY_INTERNAL_SETTINGS_SLICE);
+        if (internalSlicePref != null) {
+            internalSlicePref.setVisible(
+                    SliceUtils.isSliceProviderValid(getContext(), internalSlicePref.getUri())
+                            && SliceUtils.isSettingsSliceEnabled(getContext(),
+                            internalSlicePref.getUri(), null));
         }
     }
 
