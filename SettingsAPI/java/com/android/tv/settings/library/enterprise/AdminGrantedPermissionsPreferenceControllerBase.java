@@ -17,8 +17,9 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
-import com.android.tv.settings.library.PreferenceCompat;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.enterprise.apps.ApplicationFeatureProvider;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
@@ -32,8 +33,9 @@ public abstract class AdminGrantedPermissionsPreferenceControllerBase
     private boolean mHasApps;
 
     public AdminGrantedPermissionsPreferenceControllerBase(Context context,
-            UIUpdateCallback callback, int stateIdentifier, boolean async, String[] permissions) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager, boolean async, String[] permissions) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mPermissions = permissions;
         mFeatureProvider =
                 FlavorUtils.getFeatureFactory(context).getApplicationFeatureProvider(context);
@@ -42,17 +44,22 @@ public abstract class AdminGrantedPermissionsPreferenceControllerBase
     }
 
     @Override
-    public void updateState(PreferenceCompat preference) {
+    public void init() {
+        update();
+    }
+
+    @Override
+    public void update() {
         mFeatureProvider.calculateNumberOfAppsWithAdminGrantedPermissions(
                 mPermissions, true /* async */, (num) -> {
                     if (num == 0) {
                         mHasApps = false;
                     } else {
-                        preference.setSummary(ResourcesUtil.getQuantityString(mContext,
+                        mPreferenceCompat.setSummary(ResourcesUtil.getQuantityString(mContext,
                                 "enterprise_privacy_number_packages_lower_bound", num, num));
                         mHasApps = true;
                     }
-                    preference.setVisible(mHasApps);
+                    mPreferenceCompat.setVisible(mHasApps);
                 });
     }
 
@@ -78,13 +85,10 @@ public abstract class AdminGrantedPermissionsPreferenceControllerBase
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat preference, boolean status) {
-        if (!getPreferenceKey().equals(preference.getKey())) {
-            return false;
-        }
+    public boolean handlePreferenceTreeClick(boolean status) {
         if (!mHasApps) {
             return false;
         }
-        return super.handlePreferenceTreeClick(preference, status);
+        return super.handlePreferenceTreeClick(status);
     }
 }

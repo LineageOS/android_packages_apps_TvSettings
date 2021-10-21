@@ -24,8 +24,8 @@ import android.content.Intent;
 import android.text.format.Formatter;
 
 import com.android.tv.settings.library.ManagerUtil;
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller to handle clear cache preference. */
@@ -35,17 +35,17 @@ public class ClearCachePreferenceController extends AppActionPreferenceControlle
 
     public ClearCachePreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
-            ApplicationsState.AppEntry appEntry) {
-        super(context, callback, stateIdentifier, appEntry);
+            ApplicationsState.AppEntry appEntry, PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, appEntry, preferenceCompatManager);
     }
 
     public void setClearingCache(boolean clearingCache) {
         mClearingCache = clearingCache;
-        update();
+        updateAndNotify();
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         if (mAppEntry == null) {
             return;
         }
@@ -56,12 +56,10 @@ public class ClearCachePreferenceController extends AppActionPreferenceControlle
                 : Formatter.formatFileSize(mContext,
                         mAppEntry.cacheSize + mAppEntry.externalCacheSize));
         mPreferenceCompat.setEnabled(!mClearingCache && mAppEntry.cacheSize > 0);
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
-        super.refresh();
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat preferenceCompat, boolean status) {
+    public boolean handlePreferenceTreeClick(boolean status) {
         if (!mDisabledByAdmin) {
             Intent i = new Intent(INTENT_CONFIRMATION);
             i.putExtra(EXTRA_GUIDANCE_TITLE, ResourcesUtil.getString(
@@ -72,7 +70,7 @@ public class ClearCachePreferenceController extends AppActionPreferenceControlle
                             mStateIdentifier, REQUEST_CLEAR_CACHE));
             return true;
         }
-        return super.handlePreferenceTreeClick(preferenceCompat, status);
+        return super.handlePreferenceTreeClick(status);
     }
 
     @Override

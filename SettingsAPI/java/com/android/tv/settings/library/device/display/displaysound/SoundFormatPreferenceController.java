@@ -52,17 +52,17 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
     private final List<Integer> mReportedFormats;
     private final AudioManager mAudioManager;
     private PreferenceCompat mPreferenceCompat;
-    private boolean mAvailable;
 
     public SoundFormatPreferenceController(
             Context context,
             UIUpdateCallback uiUpdateCallback,
             int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager,
             int formatId,
             AudioManager audioManager,
             @NonNull Map<Integer, Boolean> formats,
             @NonNull List<Integer> reportedFormats) {
-        super(context, uiUpdateCallback, stateIdentifier);
+        super(context, uiUpdateCallback, stateIdentifier, preferenceCompatManager);
         mFormatId = formatId;
         mAudioManager = audioManager;
         mFormats = formats;
@@ -70,44 +70,27 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
     }
 
     @Override
-    public boolean isAvailable() {
-        return mAvailable;
-    }
-
-    @Override
-    public void displayPreference(PreferenceCompatManager screen) {
+    protected void init() {
         // If the format is not a known surround sound format, do not create a preference
         // for it.
         String title = AdvancedVolumeState.getFormatDisplayResource(mContext, mFormatId);
-        mAvailable = !TextUtils.isEmpty(title);
-        mPreferenceCompat = screen.getOrCreatePrefCompat(getPreferenceKey());
+        mPreferenceCompat.setVisible(!TextUtils.isEmpty(title));
         mPreferenceCompat.setTitle(title);
         mPreferenceCompat.setType(PreferenceCompat.TYPE_SWITCH);
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+        update();
     }
 
     @Override
-    public void updateState(PreferenceCompat preference) {
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, preference);
-    }
-
-    private void refresh() {
+    protected void update() {
         mPreferenceCompat.setEnabled(getFormatPreferencesEnabledState());
         mPreferenceCompat.setChecked(getFormatPreferenceCheckedState());
     }
 
-    public void update() {
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
-    }
-
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat preference, boolean status) {
+    public boolean handlePreferenceTreeClick(boolean status) {
         // In case of enabling unsupported format, show a warning dialog
         if (!isReportedFormat() && status) {
-            showWarningDialogOnEnableUnsupportedFormat(preference);
+            showWarningDialogOnEnableUnsupportedFormat();
         } else {
             mAudioManager.setSurroundFormatEnabled(mFormatId, status);
         }
@@ -130,7 +113,7 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
         }
     }
 
-    private void showWarningDialogOnEnableUnsupportedFormat(PreferenceCompat preferenceCompat) {
+    private void showWarningDialogOnEnableUnsupportedFormat() {
         new AlertDialog.Builder(mContext)
                 .setTitle(ResourcesUtil.getString(mContext,
                         "surround_sound_enable_unsupported_dialog_title"))
@@ -150,8 +133,8 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
                                 "surround_sound_enable_unsupported_dialog_cancel"),
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                preferenceCompat.setChecked(false);
-                                mUIUpdateCallback.notifyUpdate(mStateIdentifier, preferenceCompat);
+                                mPreferenceCompat.setChecked(false);
+                                mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
                                 dialog.dismiss();
                             }
                         })
@@ -169,7 +152,8 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
         String enabledFormats = Settings.Global.getString(mContext.getContentResolver(),
                 Settings.Global.ENCODED_SURROUND_OUTPUT_ENABLED_FORMATS);
         if (enabledFormats == null) {
-            // Starting with Android P passthrough setting ALWAYS has been replaced with MANUAL.
+            // , PreferenceCompatManager preferenceCompatManagerStarting with Android P
+            // passthrough setting ALWAYS has been replaced with MANUAL.
             // In that case all formats will be enabled when in MANUAL mode.
             formats.addAll(mFormats.keySet());
         } else {
@@ -196,6 +180,10 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
                 ? new String[]{KEY_FORMAT_INFO_ON_MANUAL, KEY_SUPPORTED_SURROUND_SOUND, key}
                 : new String[]{KEY_FORMAT_INFO_ON_MANUAL, KEY_UNSUPPORTED_SURROUND_SOUND, key};
         return compoundKey;
+    }
+
+    public boolean isAvailable() {
+        return mPreferenceCompat.getVisible() == PreferenceCompat.STATUS_ON;
     }
 
     public PreferenceCompat getPreferenceCompat() {

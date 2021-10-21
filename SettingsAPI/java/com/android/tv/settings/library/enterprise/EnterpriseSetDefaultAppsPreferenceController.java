@@ -19,8 +19,9 @@ package com.android.tv.settings.library.enterprise;
 import android.content.Context;
 import android.os.UserHandle;
 import android.os.UserManager;
-import com.android.tv.settings.library.PreferenceCompat;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.enterprise.apps.ApplicationFeatureProvider;
 import com.android.tv.settings.library.enterprise.apps.EnterpriseDefaultApps;
 import com.android.tv.settings.library.overlay.FlavorUtils;
@@ -37,17 +38,18 @@ public class EnterpriseSetDefaultAppsPreferenceController extends AbstractPrefer
     private final UserManager mUserManager;
 
     public EnterpriseSetDefaultAppsPreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mApplicationFeatureProvider =
                 FlavorUtils.getFeatureFactory(context).getApplicationFeatureProvider(context);
         mUserManager = context.getSystemService(UserManager.class);
     }
 
     @Override
-    public void updateState(PreferenceCompat preference) {
+    public void update() {
         final int num = getNumberOfEnterpriseSetDefaultApps();
-        preference.setSummary(ResourcesUtil.getQuantityString(
+        mPreferenceCompat.setSummary(ResourcesUtil.getQuantityString(
                 mContext, "enterprise_privacy_number_packages", num, num));
     }
 
@@ -57,8 +59,13 @@ public class EnterpriseSetDefaultAppsPreferenceController extends AbstractPrefer
     }
 
     @Override
+    protected void init() {
+        update();
+    }
+
+    @Override
     public String[] getPreferenceKey() {
-        return new String[] {KEY_DEFAULT_APPS};
+        return new String[]{KEY_DEFAULT_APPS};
     }
 
     private int getNumberOfEnterpriseSetDefaultApps() {
@@ -67,9 +74,9 @@ public class EnterpriseSetDefaultAppsPreferenceController extends AbstractPrefer
         for (UserHandle user : mUserManager.getUserProfiles()) {
             for (EnterpriseDefaultApps app : EnterpriseDefaultApps.values()) {
                 num += mApplicationFeatureProvider
-                               .findPersistentPreferredActivities(
-                                       user.getIdentifier(), app.getIntents())
-                               .size();
+                        .findPersistentPreferredActivities(
+                                user.getIdentifier(), app.getIntents())
+                        .size();
             }
         }
         return num;

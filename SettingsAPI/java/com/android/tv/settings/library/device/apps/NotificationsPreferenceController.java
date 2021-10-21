@@ -48,21 +48,10 @@ public class NotificationsPreferenceController extends AbstractPreferenceControl
 
     public NotificationsPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
-            ApplicationsState.AppEntry appEntry) {
-        super(context, callback, stateIdentifier);
+            ApplicationsState.AppEntry appEntry, PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mNotificationManager = NotificationManager.getService();
         mAppEntry = appEntry;
-    }
-
-    @Override
-    public void displayPreference(PreferenceCompatManager screen) {
-        mPreferenceCompat = screen.getOrCreatePrefCompat(getPreferenceKey());
-        update();
-    }
-
-    @Override
-    public boolean isAvailable() {
-        return true;
     }
 
     /**
@@ -72,12 +61,23 @@ public class NotificationsPreferenceController extends AbstractPreferenceControl
      */
     public void setEntry(@NonNull ApplicationsState.AppEntry entry) {
         mAppEntry = entry;
+        updateAndNotify();
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return true;
+    }
+
+    @Override
+    protected void init() {
+        mPreferenceCompat.setTitle(ResourcesUtil.getString(mContext,
+                "device_apps_app_management_notifications"));
         update();
     }
 
-    public void refresh() {
-        mPreferenceCompat.setTitle(ResourcesUtil.getString(mContext,
-                "device_apps_app_management_notifications"));
+    @Override
+    public void update() {
         mPreferenceCompat.setEnabled(isBlockable(mContext, mAppEntry.info));
         try {
             mPreferenceCompat.setChecked(
@@ -170,10 +170,5 @@ public class NotificationsPreferenceController extends AbstractPreferenceControl
             }
         }
         return result;
-    }
-
-    private void update() {
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 }

@@ -33,91 +33,93 @@ public abstract class AbstractPreferenceController {
     protected final Context mContext;
     protected final UIUpdateCallback mUIUpdateCallback;
     protected final int mStateIdentifier;
+    protected final PreferenceCompatManager mPreferenceCompatManager;
+    protected final String[] mKey;
+    protected final PreferenceCompat mPreferenceCompat;
 
     public AbstractPreferenceController(Context context, UIUpdateCallback callback,
-            int stateIdentifier) {
+            int stateIdentifier, PreferenceCompatManager preferenceCompatManager) {
         mUIUpdateCallback = callback;
         mContext = context;
         mStateIdentifier = stateIdentifier;
+        mPreferenceCompatManager = preferenceCompatManager;
+        mKey = getPreferenceKey();
+        mPreferenceCompat = mPreferenceCompatManager.getOrCreatePrefCompat(mKey);
+    }
+
+    public AbstractPreferenceController(Context context, UIUpdateCallback callback,
+            int stateIdentifier, PreferenceCompatManager preferenceCompatManager, String[] key) {
+        mUIUpdateCallback = callback;
+        mContext = context;
+        mStateIdentifier = stateIdentifier;
+        mPreferenceCompatManager = preferenceCompatManager;
+        mKey = key;
+        mPreferenceCompat = mPreferenceCompatManager.getOrCreatePrefCompat(mKey);
     }
 
     /**
-     * Displays preference in this controller.
-     */
-    public void displayPreference(PreferenceCompatManager manager) {
-        final String[] prefKey = getPreferenceKey();
-        if (prefKey == null) {
-            return;
-        }
-        /* visible */
-        setVisible(manager, prefKey, isAvailable() /* visible */);
-    }
-
-    /**
-     * Updates the current status of preference (summary, switch state, etc)
-     */
-    public void updateState(PreferenceCompat preference) {
-        refreshSummary(preference);
-    }
-
-    /**
-     * Refresh preference summary with getSummary()
-     */
-    protected void refreshSummary(PreferenceCompat preference) {
-        if (preference == null) {
-            return;
-        }
-        final CharSequence summary = getSummary();
-        if (summary == null) {
-            // Default getSummary returns null. If subclass didn't override this, there is nothing
-            // we need to do.
-            return;
-        }
-        preference.setSummary(summary.toString());
-    }
-
-    /**
-     * Returns true if preference is available (should be displayed)
+     * @return whether the setting controlled by the controller is available.
      */
     public abstract boolean isAvailable();
 
     /**
+     * Initialize preference compat.
+     */
+    protected abstract void init();
+
+    /**
+     * Initialize preference compat and notify to update UI.
+     */
+    public void initAndNotify() {
+        init();
+        notifyChange();
+    }
+
+    /**
+     * Updates the current status of preference compat.
+     */
+    public void updateAndNotify() {
+        update();
+        notifyChange();
+    }
+
+    public void notifyChange() {
+        if (mPreferenceCompat != null) {
+            mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
+        }
+    }
+
+    /**
+     * Update preference compat.
+     */
+    protected abstract void update();
+
+
+    /**
      * Handle preference click.
-     * @param preference preference that is clicked
+     *
      * @param status status of new state
      * @return whether the click is handled
      */
-    public boolean handlePreferenceTreeClick(PreferenceCompat preference, boolean status) {
+    public boolean handlePreferenceTreeClick(boolean status) {
         return false;
     }
 
     /**
      * Handle preference change.
-     * @param preference preference that has been changed
-     * @param status new value of state
+     *
+     * @param newValue new value of state
      * @return whether the click is handled
      */
-    public boolean handlePreferenceChange(PreferenceCompat preference, Object newValue) {
+    public boolean handlePreferenceChange(Object newValue) {
         return false;
     }
 
-    /**
-     * Returns the key for this preference.
-     */
-    public abstract String[] getPreferenceKey();
-
-    /**
-     * Show/hide a preference.
-     */
-    protected final void setVisible(PreferenceCompatManager manager, String[] prefKey,
-            boolean visible) {
-        manager.getOrCreatePrefCompat(prefKey).setVisible(visible);
+    public PreferenceCompat getPrefCompat() {
+        return mPreferenceCompat;
     }
 
-    /**
-     * @return a {@link CharSequence} for the summary of the preference.
-     */
-    public CharSequence getSummary() {
-        return null;
+    public String[] getPreferenceKey() {
+        return mKey;
     }
 }

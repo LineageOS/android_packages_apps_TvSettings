@@ -17,9 +17,9 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
-import androidx.preference.Preference;
-import com.android.tv.settings.library.PreferenceCompat;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
 import com.android.tv.settings.library.util.ResourcesUtil;
@@ -29,19 +29,20 @@ public class AlwaysOnVpnCurrentUserPreferenceController extends AbstractPreferen
     private final EnterprisePrivacyFeatureProvider mFeatureProvider;
 
     public AlwaysOnVpnCurrentUserPreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mFeatureProvider =
                 FlavorUtils.getFeatureFactory(context).getEnterprisePrivacyFeatureProvider(context);
     }
 
     @Override
-    public void updateState(PreferenceCompat preference) {
-        preference.setTitle(mFeatureProvider.isInCompMode()
-                        ? ResourcesUtil.getString(
-                                mContext, "enterprise_privacy_always_on_vpn_personal")
-                        : ResourcesUtil.getString(
-                                mContext, "enterprise_privacy_always_on_vpn_device"));
+    public void update() {
+        mPreferenceCompat.setTitle(mFeatureProvider.isInCompMode()
+                ? ResourcesUtil.getString(
+                mContext, "enterprise_privacy_always_on_vpn_personal")
+                : ResourcesUtil.getString(
+                        mContext, "enterprise_privacy_always_on_vpn_device"));
     }
 
     @Override
@@ -50,7 +51,12 @@ public class AlwaysOnVpnCurrentUserPreferenceController extends AbstractPreferen
     }
 
     @Override
+    protected void init() {
+        update();
+    }
+
+    @Override
     public String[] getPreferenceKey() {
-        return new String[] {KEY_ALWAYS_ON_VPN_PRIMARY_USER};
+        return new String[]{KEY_ALWAYS_ON_VPN_PRIMARY_USER};
     }
 }

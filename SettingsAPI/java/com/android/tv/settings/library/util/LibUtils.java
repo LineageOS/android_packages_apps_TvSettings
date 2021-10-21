@@ -170,7 +170,7 @@ public class LibUtils {
     /**
      * This method computes disabled color from normal color
      *
-     * @param context the context
+     * @param context    the context
      * @param inputColor normal color.
      * @return disabled color.
      */
@@ -234,7 +234,7 @@ public class LibUtils {
     /**
      * Create a color matrix suitable for a ColorMatrixColorFilter that modifies only the color but
      * preserves the alpha for a given drawable
-     * @param color
+     *
      * @return a color matrix that uses the source alpha and given color
      */
     public static ColorMatrix getAlphaInvariantColorMatrixForColor(@ColorInt int color) {
@@ -242,11 +242,11 @@ public class LibUtils {
         int g = Color.green(color);
         int b = Color.blue(color);
 
-        ColorMatrix cm = new ColorMatrix(new float[] {
+        ColorMatrix cm = new ColorMatrix(new float[]{
                 0, 0, 0, 0, r,
                 0, 0, 0, 0, g,
                 0, 0, 0, 0, b,
-                0, 0, 0, 1, 0 });
+                0, 0, 0, 1, 0});
 
         return cm;
     }
@@ -353,13 +353,9 @@ public class LibUtils {
             return false;
         }
         int state = getCombinedServiceState(serviceState);
-        if (state == ServiceState.STATE_POWER_OFF
-                || state == ServiceState.STATE_OUT_OF_SERVICE
-                || state == ServiceState.STATE_EMERGENCY_ONLY) {
-            return false;
-        } else {
-            return true;
-        }
+        return state != ServiceState.STATE_POWER_OFF
+                && state != ServiceState.STATE_OUT_OF_SERVICE
+                && state != ServiceState.STATE_EMERGENCY_ONLY;
     }
 
     /**
@@ -421,8 +417,8 @@ public class LibUtils {
     /**
      * Returns a bitmap with rounded corner.
      *
-     * @param context application context.
-     * @param source bitmap to apply round corner.
+     * @param context      application context.
+     * @param source       bitmap to apply round corner.
      * @param cornerRadius corner radius value.
      */
     public static Bitmap convertCornerRadiusBitmap(@NonNull Context context,

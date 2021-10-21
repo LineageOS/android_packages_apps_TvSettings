@@ -68,7 +68,7 @@ public class EnergySaverState extends PreferenceControllerState {
                 setSleepTime(validatedSleepTime);
             }
         }
-        mSleepTimePC.update();
+        mSleepTimePC.updateAndNotify();
     }
 
     @Override
@@ -123,7 +123,7 @@ public class EnergySaverState extends PreferenceControllerState {
             }
         }
         mSleepTimePC.setValue(String.valueOf(value));
-        mAllowTurnScreenOffWithWakeLockPC.update();
+        mAllowTurnScreenOffWithWakeLockPC.updateAndNotify();
     }
 
     private String getConfirmationDialogDescription(int newSleepTime) {
@@ -205,9 +205,9 @@ public class EnergySaverState extends PreferenceControllerState {
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
         List<AbstractPreferenceController> preferenceControllers = new ArrayList<>();
         mAllowTurnScreenOffWithWakeLockPC = new AllowTurnScreenOffWithWakeLockPC(
-                mContext, mUIUpdateCallback, getStateIdentifier());
+                mContext, mUIUpdateCallback, getStateIdentifier(), mPreferenceCompatManager);
         mSleepTimePC = new SleepTimePC(
-                mContext, mUIUpdateCallback, getStateIdentifier());
+                mContext, mUIUpdateCallback, getStateIdentifier(), mPreferenceCompatManager);
         preferenceControllers.add(mAllowTurnScreenOffWithWakeLockPC);
         preferenceControllers.add(mSleepTimePC);
         return preferenceControllers;

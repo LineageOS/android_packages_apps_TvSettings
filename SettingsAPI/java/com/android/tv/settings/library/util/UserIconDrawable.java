@@ -72,9 +72,9 @@ public class UserIconDrawable extends Drawable implements Drawable.Callback {
     /**
      * Gets the system default managed-user badge as a drawable. This drawable is tint-able.
      * For badging purpose, consider
-     * {@link android.content.pm.PackageManager#getUserBadgedDrawableForDensity(Drawable, UserHandle, Rect, int)}.
+     * {@link android.content.pm.PackageManager#getUserBadgedDrawableForDensity(Drawable,
+     * UserHandle, Rect, int)}.
      *
-     * @param context
      * @return drawable containing just the badge
      */
     public static Drawable getManagedUserDrawable(Context context) {
@@ -91,7 +91,7 @@ public class UserIconDrawable extends Drawable implements Drawable.Callback {
 
     /**
      * Gets the preferred list-item size of this drawable.
-     * @param context
+     *
      * @return size in pixels
      */
     public static int getSizeForList(Context context) {
@@ -105,6 +105,7 @@ public class UserIconDrawable extends Drawable implements Drawable.Callback {
 
     /**
      * Use this constructor if the drawable is intended to be placed in listviews
+     *
      * @param intrinsicSize if 0, the intrinsic size will come from the icon itself
      */
     public UserIconDrawable(int intrinsicSize) {
@@ -194,7 +195,6 @@ public class UserIconDrawable extends Drawable implements Drawable.Callback {
 
     /**
      * Sets global padding of icon/frame. Doesn't effect the badge.
-     * @param padding
      */
     public void setPadding(float padding) {
         mPadding = padding;
@@ -237,6 +237,7 @@ public class UserIconDrawable extends Drawable implements Drawable.Callback {
     /**
      * This sets the "intrinsic" size of this drawable. Useful for views which use the drawable's
      * intrinsic size for layout. It is independent of the bounds.
+     *
      * @param size if 0, the intrinsic size will be set to the displayed icon's size
      */
     public void setIntrinsicSize(int size) {
@@ -335,7 +336,7 @@ public class UserIconDrawable extends Drawable implements Drawable.Callback {
         final Canvas canvas = new Canvas(mBitmap);
         canvas.drawColor(0, PorterDuff.Mode.CLEAR);
 
-        if(mUserDrawable != null) {
+        if (mUserDrawable != null) {
             mUserDrawable.draw(canvas);
         } else if (mUserIcon != null) {
             int saveId = canvas.save();

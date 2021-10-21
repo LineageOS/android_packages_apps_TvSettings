@@ -17,30 +17,34 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
+
 import androidx.annotation.VisibleForTesting;
-import com.android.tv.settings.library.PreferenceCompat;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 public class CaCertsCurrentUserPreferenceController extends CaCertsPreferenceControllerBase {
-    @VisibleForTesting static final String CA_CERTS_CURRENT_USER = "ca_certs_current_user";
+    @VisibleForTesting
+    static final String CA_CERTS_CURRENT_USER = "ca_certs_current_user";
 
     public CaCertsCurrentUserPreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
     }
 
     @Override
     public String[] getPreferenceKey() {
-        return new String[] {CA_CERTS_CURRENT_USER};
+        return new String[]{CA_CERTS_CURRENT_USER};
     }
 
     @Override
-    public void updateState(PreferenceCompat preference) {
-        super.updateState(preference);
-        preference.setTitle(mFeatureProvider.isInCompMode()
-                        ? ResourcesUtil.getString(mContext, "enterprise_privacy_ca_certs_personal")
-                        : ResourcesUtil.getString(mContext, "enterprise_privacy_ca_certs_device"));
+    public void update() {
+        super.update();
+        mPreferenceCompat.setTitle(mFeatureProvider.isInCompMode()
+                ? ResourcesUtil.getString(mContext, "enterprise_privacy_ca_certs_personal")
+                : ResourcesUtil.getString(mContext, "enterprise_privacy_ca_certs_device"));
     }
 
     @Override

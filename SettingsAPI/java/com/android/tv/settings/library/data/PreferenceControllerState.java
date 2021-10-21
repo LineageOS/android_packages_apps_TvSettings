@@ -19,9 +19,7 @@ package com.android.tv.settings.library.data;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
@@ -41,13 +39,14 @@ public abstract class PreferenceControllerState implements State {
     protected final Context mContext;
     protected UIUpdateCallback mUIUpdateCallback;
     protected PreferenceCompatManager mPreferenceCompatManager;
+    protected List<AbstractPreferenceController> mPreferenceControllers = new ArrayList<>();
+    private Lifecycle mLifecycle;
+
     public PreferenceControllerState(Context context, UIUpdateCallback callback) {
         mUIUpdateCallback = callback;
         mContext = context;
         mPreferenceCompatManager = new PreferenceCompatManager();
     }
-    protected List<AbstractPreferenceController> mPreferenceControllers = new ArrayList<>();
-    private Lifecycle mLifecycle;
 
     @Override
     public void onAttach() {
@@ -63,13 +62,13 @@ public abstract class PreferenceControllerState implements State {
             controllers = new ArrayList<>();
         }
         mPreferenceControllers.addAll(controllers);
-        refreshAllPreferenceControllers();
+        initAllPreferenceControllers();
     }
 
     @Override
     public void onStart() {
         mLifecycle.onStart();
-        updatePreferenceStates();
+        updateAllPreferenceControllers();
     }
 
     @Override
@@ -103,8 +102,7 @@ public abstract class PreferenceControllerState implements State {
                 new ArrayList<>(mPreferenceControllers);
         for (AbstractPreferenceController controller : controllers) {
             if (keyEquals(key, controller.getPreferenceKey())) {
-                return controller.handlePreferenceTreeClick(
-                        mPreferenceCompatManager.getOrCreatePrefCompat(key), status);
+                return controller.handlePreferenceTreeClick(status);
             }
         }
         return false;
@@ -116,8 +114,7 @@ public abstract class PreferenceControllerState implements State {
                 new ArrayList<>(mPreferenceControllers);
         for (AbstractPreferenceController controller : controllers) {
             if (keyEquals(key, controller.getPreferenceKey())) {
-                return controller.handlePreferenceChange(
-                        mPreferenceCompatManager.getOrCreatePrefCompat(key), newValue);
+                return controller.handlePreferenceChange(newValue);
             }
         }
         return false;
@@ -131,33 +128,26 @@ public abstract class PreferenceControllerState implements State {
     @Override
     public abstract int getStateIdentifier();
 
-    protected void refreshAllPreferenceControllers() {
+    protected void initAllPreferenceControllers() {
         Collection<AbstractPreferenceController> controllers =
                 new ArrayList<>(mPreferenceControllers);
         for (AbstractPreferenceController controller : controllers) {
-            controller.displayPreference(mPreferenceCompatManager);
+            if (controller.isAvailable()) {
+                controller.initAndNotify();
+            }
         }
     }
 
     /**
      * Update state of each preference managed by PreferenceController.
      */
-    protected void updatePreferenceStates() {
+    protected void updateAllPreferenceControllers() {
         Collection<AbstractPreferenceController> controllers =
                 new ArrayList<>(mPreferenceControllers);
         for (AbstractPreferenceController controller : controllers) {
-            if (!controller.isAvailable()) {
-                continue;
+            if (controller.isAvailable()) {
+                controller.updateAndNotify();
             }
-            final String[] key = controller.getPreferenceKey();
-
-            final PreferenceCompat preference = mPreferenceCompatManager.getOrCreatePrefCompat(key);
-            if (preference == null) {
-                Log.d(TAG, "Cannot find preference with key " + key
-                        + " in Controller " + controller.getClass().getSimpleName());
-                continue;
-            }
-            controller.updateState(preference);
         }
     }
 

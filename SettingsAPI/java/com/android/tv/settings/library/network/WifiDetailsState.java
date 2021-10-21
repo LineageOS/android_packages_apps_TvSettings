@@ -213,11 +213,11 @@ public class WifiDetailsState extends PreferenceControllerState implements
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
         List<AbstractPreferenceController> controllers = new ArrayList<>();
         mProxySettingsPrefController = new ProxySettingsPreferenceController(context,
-                mUIUpdateCallback, getStateIdentifier(), mAccessPoint);
+                mUIUpdateCallback, getStateIdentifier(), mPreferenceCompatManager, mAccessPoint);
         mIpSettingsPrefController = new IpSettingsPreferenceController(context,
-                mUIUpdateCallback, getStateIdentifier(), mAccessPoint);
+                mUIUpdateCallback, getStateIdentifier(), mPreferenceCompatManager, mAccessPoint);
         mForgetNetworkPrefController = new ForgetNetworkPreferenceController(context,
-                mUIUpdateCallback, getStateIdentifier(), mAccessPoint);
+                mUIUpdateCallback, getStateIdentifier(), mPreferenceCompatManager, mAccessPoint);
         controllers.add(mProxySettingsPrefController);
         controllers.add(mIpSettingsPrefController);
         controllers.add(mForgetNetworkPrefController);

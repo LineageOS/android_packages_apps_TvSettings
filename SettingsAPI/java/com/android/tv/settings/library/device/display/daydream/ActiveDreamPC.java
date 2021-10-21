@@ -23,12 +23,14 @@ import android.os.UserManager;
 
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
 public class ActiveDreamPC extends RestrictedPreferenceController {
     public ActiveDreamPC(Context context,
-            UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
     }
 
     @Override
@@ -37,13 +39,14 @@ public class ActiveDreamPC extends RestrictedPreferenceController {
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         mPreferenceCompat.setHasOnPreferenceChangeListener(true);
         mPreferenceCompat.setType(PreferenceCompat.TYPE_LIST);
         UserManager userManager = UserManager.get(mContext);
         if (userManager.hasUserRestriction(getAttrUserRestriction())) {
             mPreferenceCompat.setEnabled(false);
         }
+        super.update();
     }
 
     @Override
@@ -61,10 +64,6 @@ public class ActiveDreamPC extends RestrictedPreferenceController {
 
     void setValue(String value) {
         mPreferenceCompat.setValue(value);
-    }
-
-    void update() {
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 
     @Override

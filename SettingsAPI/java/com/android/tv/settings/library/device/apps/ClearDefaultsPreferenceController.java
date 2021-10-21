@@ -27,8 +27,8 @@ import android.os.IBinder;
 import android.os.ServiceManager;
 
 import com.android.tv.settings.library.ManagerUtil;
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller class to handle clear defaults preference. */
@@ -40,8 +40,8 @@ public class ClearDefaultsPreferenceController extends AppActionPreferenceContro
 
     public ClearDefaultsPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
-            ApplicationsState.AppEntry appEntry) {
-        super(context, callback, stateIdentifier, appEntry);
+            ApplicationsState.AppEntry appEntry, PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, appEntry, preferenceCompatManager);
         final IBinder usbBinder = ServiceManager.getService(Context.USB_SERVICE);
         mUsbManager = IUsbManager.Stub.asInterface(usbBinder);
         mPackageManager = context.getPackageManager();
@@ -49,7 +49,7 @@ public class ClearDefaultsPreferenceController extends AppActionPreferenceContro
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         if (mAppEntry == null) {
             return;
         }
@@ -57,11 +57,11 @@ public class ClearDefaultsPreferenceController extends AppActionPreferenceContro
                 mContext, "device_apps_app_management_clear_default"));
         mPreferenceCompat.setSummary(AppUtils.getLaunchByDefaultSummary(
                 mAppEntry, mUsbManager, mPackageManager, mContext).toString());
-        super.refresh();
+        super.update();
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat preferenceCompat, boolean status) {
+    public boolean handlePreferenceTreeClick(boolean status) {
         if (!mDisabledByAdmin) {
             Intent i = new Intent(INTENT_CONFIRMATION);
             i.putExtra(EXTRA_GUIDANCE_TITLE, ResourcesUtil.getString(
@@ -72,7 +72,7 @@ public class ClearDefaultsPreferenceController extends AppActionPreferenceContro
                             mStateIdentifier, REQUEST_CLEAR_DEFAULTS));
             return true;
         }
-        return super.handlePreferenceTreeClick(preferenceCompat, status);
+        return super.handlePreferenceTreeClick(status);
     }
 
     @Override

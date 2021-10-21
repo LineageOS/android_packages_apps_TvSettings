@@ -1006,7 +1006,7 @@ public class WifiTracker implements LifecycleObserver, OnStart, OnStop, OnDestro
         /** retrieve a non-null list of values with key K */
         List<V> getAll(K key) {
             List<V> values = store.get(key);
-            return values != null ? values : Collections.<V>emptyList();
+            return values != null ? values : Collections.emptyList();
         }
 
         void put(K key, V val) {

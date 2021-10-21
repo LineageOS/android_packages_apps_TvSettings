@@ -17,15 +17,19 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
+
 import java.util.Date;
 
 public class NetworkLogsPreferenceController extends AdminActionPreferenceControllerBase {
     private static final String KEY_NETWORK_LOGS = "network_logs";
 
     public NetworkLogsPreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
     }
 
     @Override
@@ -40,7 +44,12 @@ public class NetworkLogsPreferenceController extends AdminActionPreferenceContro
     }
 
     @Override
+    protected void init() {
+        update();
+    }
+
+    @Override
     public String[] getPreferenceKey() {
-        return new String[] {KEY_NETWORK_LOGS};
+        return new String[]{KEY_NETWORK_LOGS};
     }
 }
