@@ -55,7 +55,7 @@ public class AppsState extends PreferenceControllerState {
         final Application app = activity != null ? activity.getApplication() : null;
         List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new RecentAppsPreferenceController(mContext, app, mUIUpdateCallback,
-                getStateIdentifier()));
+                getStateIdentifier(), mPreferenceCompatManager));
         return controllers;
     }
 

@@ -21,6 +21,7 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
 /**
@@ -36,8 +37,9 @@ public abstract class AppActionPreferenceController extends RestrictedPreference
     public static final String EXTRA_GUIDANCE_ICON = "guidanceIcon";
 
     public AppActionPreferenceController(Context context,
-            UIUpdateCallback callback, int stateIdentifier, ApplicationsState.AppEntry appEntry) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier, ApplicationsState.AppEntry appEntry,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mAppEntry = appEntry;
     }
 
@@ -51,21 +53,11 @@ public abstract class AppActionPreferenceController extends RestrictedPreference
         update();
     }
 
-    @Override
-    public boolean isAvailable() {
-        return true;
-    }
-
     protected String getAppName() {
         if (mAppEntry == null) {
             return null;
         }
         mAppEntry.ensureLabel(mContext);
         return mAppEntry.label;
-    }
-
-    public void update() {
-        refresh();
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 }

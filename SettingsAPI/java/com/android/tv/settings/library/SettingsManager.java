@@ -26,14 +26,13 @@ import com.android.tv.settings.library.data.StateManager;
 import java.util.List;
 
 /**
- * @hide
- * Provides access to TvSettings data.
+ * @hide Provides access to TvSettings data.
  */
 @SystemApi
 public final class SettingsManager {
     private static final String TAG = "TvSettingsManager";
     private com.android.tv.settings.library.UIUpdateCallback mUIUpdateCallback;
-    private Context mContext;
+    private final Context mContext;
 
     /** @hide */
     @SystemApi

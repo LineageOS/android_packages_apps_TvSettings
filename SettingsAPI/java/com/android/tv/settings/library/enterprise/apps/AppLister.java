@@ -50,8 +50,8 @@ public abstract class AppLister extends AsyncTask<Void, Void, List<UserAppInfo>>
         for (UserInfo user : mUm.getProfiles(UserHandle.myUserId())) {
             final List<ApplicationInfo> list =
                     mPm.getInstalledApplicationsAsUser(PackageManager.GET_DISABLED_COMPONENTS
-                            | PackageManager.GET_DISABLED_UNTIL_USED_COMPONENTS
-                            | (user.isAdmin() ? PackageManager.MATCH_ANY_USER : 0),
+                                    | PackageManager.GET_DISABLED_UNTIL_USED_COMPONENTS
+                                    | (user.isAdmin() ? PackageManager.MATCH_ANY_USER : 0),
                             user.id);
             for (ApplicationInfo info : list) {
                 if (includeInCount(info)) {
@@ -68,5 +68,6 @@ public abstract class AppLister extends AsyncTask<Void, Void, List<UserAppInfo>>
     }
 
     protected abstract void onAppListBuilt(List<UserAppInfo> list);
+
     protected abstract boolean includeInCount(ApplicationInfo info);
 }

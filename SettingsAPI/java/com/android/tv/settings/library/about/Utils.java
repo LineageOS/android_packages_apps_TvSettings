@@ -322,13 +322,9 @@ public class Utils {
             return false;
         }
         int state = getCombinedServiceState(serviceState);
-        if (state == ServiceState.STATE_POWER_OFF
-                || state == ServiceState.STATE_OUT_OF_SERVICE
-                || state == ServiceState.STATE_EMERGENCY_ONLY) {
-            return false;
-        } else {
-            return true;
-        }
+        return state != ServiceState.STATE_POWER_OFF
+                && state != ServiceState.STATE_OUT_OF_SERVICE
+                && state != ServiceState.STATE_EMERGENCY_ONLY;
     }
 
     /**

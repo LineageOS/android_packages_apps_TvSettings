@@ -72,9 +72,11 @@ public class InputMethodPreferenceController extends RestrictedPreferenceControl
     private boolean mHasSwitch;
 
     public InputMethodPreferenceController(Context context,
-            UIUpdateCallback callback, int stateIdentifier, InputMethodInfo imi, CharSequence title,
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager, InputMethodInfo imi,
+            CharSequence title,
             boolean isAllowedByOrganization, OnSavePreferenceListener onSaveListener) {
-        super(context, callback, stateIdentifier);
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mImi = imi;
         mTitle = title.toString();
         mIsAllowedByOrganization = isAllowedByOrganization;
@@ -86,23 +88,21 @@ public class InputMethodPreferenceController extends RestrictedPreferenceControl
     }
 
     public InputMethodPreferenceController(final Context context, UIUpdateCallback callback,
-            int stateIdentifier, final InputMethodInfo imi,
+            int stateIdentifier, PreferenceCompatManager preferenceCompatManager,
+            final InputMethodInfo imi,
             final boolean isImeEnabler, final boolean isAllowedByOrganization,
             final InputMethodPreferenceController.OnSavePreferenceListener onSaveListener) {
-        this(context, callback, stateIdentifier, imi, imi.loadLabel(context.getPackageManager()),
+        this(context, callback, stateIdentifier, preferenceCompatManager, imi,
+                imi.loadLabel(context.getPackageManager()),
                 isAllowedByOrganization,
                 onSaveListener);
         mHasSwitch = isImeEnabler;
 
     }
 
-    @Override
-    public void displayPreference(PreferenceCompatManager preferenceCompatManager) {
-        super.displayPreference(preferenceCompatManager);
-    }
 
     @Override
-    public boolean handlePreferenceChange(PreferenceCompat preferenceCompat, Object newValue) {
+    public boolean handlePreferenceChange(Object newValue) {
         if (!mHasSwitch) {
             // Prevent disabling an IME because this preference is for invoking a settings activity.
             return true;
@@ -152,7 +152,7 @@ public class InputMethodPreferenceController extends RestrictedPreferenceControl
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat prefCompat, boolean status) {
+    public boolean handlePreferenceTreeClick(boolean status) {
         if (!mDisabledByAdmin) {
             // Always returns true to prevent invoking an intent without catching exceptions.
             if (mHasSwitch) {
@@ -161,7 +161,7 @@ public class InputMethodPreferenceController extends RestrictedPreferenceControl
                 return true;
             }
             try {
-                final Intent intent = prefCompat.getIntent();
+                final Intent intent = mPreferenceCompat.getIntent();
                 if (intent != null) {
                     // Invoke a settings activity of an input method.
                     mContext.startActivity(intent);
@@ -175,11 +175,16 @@ public class InputMethodPreferenceController extends RestrictedPreferenceControl
             }
             return true;
         }
-        return super.handlePreferenceTreeClick(prefCompat, status);
+        return super.handlePreferenceTreeClick(status);
     }
 
     @Override
-    public void refresh() {
+    public boolean isAvailable() {
+        return true;
+    }
+
+    @Override
+    public void update() {
         mPreferenceCompat.setTitle(mTitle);
         mPreferenceCompat.setType(PreferenceCompat.TYPE_SWITCH);
         final String settingsActivity = mImi.getSettingsActivity();
@@ -191,6 +196,11 @@ public class InputMethodPreferenceController extends RestrictedPreferenceControl
             intent.setClassName(mImi.getPackageName(), settingsActivity);
             mPreferenceCompat.setIntent(intent);
         }
+    }
+
+    @Override
+    public void init() {
+        super.init();
     }
 
     private boolean isImeEnabler() {

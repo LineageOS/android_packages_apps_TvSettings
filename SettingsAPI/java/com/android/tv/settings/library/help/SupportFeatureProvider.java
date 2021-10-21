@@ -25,7 +25,6 @@ public interface SupportFeatureProvider {
 
     /**
      * Launches the support activity.
-     * @param activity
      */
     void startSupport(Activity activity);
 }

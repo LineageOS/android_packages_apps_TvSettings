@@ -18,7 +18,9 @@ package com.android.tv.settings.library.enterprise;
 
 import android.Manifest;
 import android.content.Context;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 
 /**
  * Forked from:
@@ -31,12 +33,14 @@ public class AdminGrantedCameraPermissionPreferenceController
             "enterprise_privacy_number_camera_access_packages";
 
     public AdminGrantedCameraPermissionPreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier, boolean async) {
-        super(context, callback, stateIdentifier, async, new String[] {Manifest.permission.CAMERA});
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager, boolean async) {
+        super(context, callback, stateIdentifier, preferenceCompatManager, async,
+                new String[]{Manifest.permission.CAMERA});
     }
 
     @Override
     public String[] getPreferenceKey() {
-        return new String[] {KEY_ENTERPRISE_PRIVACY_NUMBER_CAMERA_ACCESS_PACKAGES};
+        return new String[]{KEY_ENTERPRISE_PRIVACY_NUMBER_CAMERA_ACCESS_PACKAGES};
     }
 }

@@ -101,7 +101,7 @@ public class RestrictedProfileModel {
 
     /**
      * @return a @{link UserInfo} for the restricted profile, or {@code null} if there is no
-     *         restricted profile on the device.
+     * restricted profile on the device.
      */
     public UserInfo getUser() {
         if (mCurrentUserInfo.isRestricted()) {

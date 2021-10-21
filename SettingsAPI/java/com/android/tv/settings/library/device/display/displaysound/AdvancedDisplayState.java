@@ -37,6 +37,7 @@ import java.util.List;
 public class AdvancedDisplayState extends PreferenceControllerState {
     private static final String KEY_GAME_MODE = "game_mode";
     private PreferenceCompat mAllowGameMode;
+
     public AdvancedDisplayState(Context context,
             UIUpdateCallback callback) {
         super(context, callback);

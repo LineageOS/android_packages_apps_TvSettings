@@ -17,8 +17,9 @@
 package com.android.tv.settings.library.enterprise;
 
 import android.content.Context;
-import com.android.tv.settings.library.PreferenceCompat;
+
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.enterprise.apps.ApplicationFeatureProvider;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
@@ -35,25 +36,26 @@ public class EnterpriseInstalledPackagesPreferenceController extends AbstractPre
     private final boolean mAsync;
 
     public EnterpriseInstalledPackagesPreferenceController(
-            Context context, UIUpdateCallback callback, int stateIdentifier, boolean async) {
-        super(context, callback, stateIdentifier);
+            Context context, UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager, boolean async) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
         mFeatureProvider =
                 FlavorUtils.getFeatureFactory(context).getApplicationFeatureProvider(context);
         mAsync = async;
     }
 
     @Override
-    public void updateState(PreferenceCompat preference) {
+    public void update() {
         mFeatureProvider.calculateNumberOfPolicyInstalledApps(true /* async */, (num) -> {
             final boolean available;
             if (num == 0) {
                 available = false;
             } else {
                 available = true;
-                preference.setSummary(ResourcesUtil.getQuantityString(
+                mPreferenceCompat.setSummary(ResourcesUtil.getQuantityString(
                         mContext, "enterprise_privacy_number_packages_lower_bound", num, num));
             }
-            preference.setVisible(available);
+            mPreferenceCompat.setVisible(available);
         });
     }
 
@@ -76,7 +78,12 @@ public class EnterpriseInstalledPackagesPreferenceController extends AbstractPre
     }
 
     @Override
+    protected void init() {
+        update();
+    }
+
+    @Override
     public String[] getPreferenceKey() {
-        return new String[] {KEY_NUMBER_ENTERPRISE_INSTALLED_PACKAGES};
+        return new String[]{KEY_NUMBER_ENTERPRISE_INSTALLED_PACKAGES};
     }
 }

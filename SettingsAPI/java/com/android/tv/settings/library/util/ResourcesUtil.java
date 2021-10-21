@@ -22,6 +22,7 @@ import android.graphics.drawable.Drawable;
 
 public final class ResourcesUtil {
     private static final String SETTINGS_PACKAGE_NAME = "com.android.tv.settings";
+
     public static String getString(Context context, String name) {
         try {
             Resources resources = context.getPackageManager()
@@ -50,14 +51,15 @@ public final class ResourcesUtil {
         }
     }
 
-    public static String getQuantityString(Context context, String name, int count,  Object... formatArgs) {
+    public static String getQuantityString(Context context, String name, int count,
+            Object... formatArgs) {
 
         try {
             Resources resources = context.getPackageManager()
                     .getResourcesForApplication(SETTINGS_PACKAGE_NAME);
             int id = resources.getIdentifier(name, "string", SETTINGS_PACKAGE_NAME);
             if (id != 0) {
-                return resources.getQuantityString(id,count ,formatArgs);
+                return resources.getQuantityString(id, count, formatArgs);
             }
             return null;
         } catch (Exception e) {

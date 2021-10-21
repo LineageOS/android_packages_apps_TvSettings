@@ -20,6 +20,7 @@ import android.content.Context;
 import android.os.UserManager;
 
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
 /** Preference controller for add wifi preference in NetworkState. */
@@ -27,8 +28,9 @@ public class AddWifiPreferenceController extends RestrictedPreferenceController 
     private static final String KEY_ADD = "wifi_add";
 
     public AddWifiPreferenceController(Context context,
-            UIUpdateCallback callback, int stateIdentifier) {
-        super(context, callback, stateIdentifier);
+            UIUpdateCallback callback, int stateIdentifier,
+            PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, preferenceCompatManager);
     }
 
     @Override

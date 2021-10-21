@@ -27,8 +27,8 @@ import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 
 import com.android.tv.settings.library.ManagerUtil;
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller to handle uninstall preference. */
@@ -39,14 +39,14 @@ public class UninstallPreferenceController extends AppActionPreferenceController
 
     public UninstallPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
-            ApplicationsState.AppEntry appEntry) {
-        super(context, callback, stateIdentifier, appEntry);
+            ApplicationsState.AppEntry appEntry, PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, appEntry, preferenceCompatManager);
         mAppContext = context;
         mDpm = context.getSystemService(DevicePolicyManager.class);
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         if (mAppEntry == null) {
             return;
         }
@@ -61,11 +61,10 @@ public class UninstallPreferenceController extends AppActionPreferenceController
         } else {
             mPreferenceCompat.setVisible(false);
         }
-        mUIUpdateCallback.notifyUpdate(mStateIdentifier, mPreferenceCompat);
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat preferenceCompat, boolean status) {
+    public boolean handlePreferenceTreeClick(boolean status) {
         if (!mDisabledByAdmin) {
             ((Activity) mContext).startActivityForResult(getIntent(),
                     canUninstall()
@@ -74,7 +73,7 @@ public class UninstallPreferenceController extends AppActionPreferenceController
                                     REQUEST_UNINSTALL_UPDATES));
             return true;
         }
-        return super.handlePreferenceTreeClick(preferenceCompat, status);
+        return super.handlePreferenceTreeClick(status);
     }
 
     @Override

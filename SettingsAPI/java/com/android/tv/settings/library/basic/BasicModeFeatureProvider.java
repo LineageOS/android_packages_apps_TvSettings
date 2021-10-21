@@ -25,13 +25,13 @@ import androidx.annotation.NonNull;
 public interface BasicModeFeatureProvider {
 
     /**
-     * @param context
      * @return whether the device is in basic mode.
      */
     boolean isBasicMode(@NonNull Context context);
 
     /**
      * Attempt to start the Activity for exiting basic mode.
+     *
      * @param activity the Activity to start the basic mode exit Activity from
      */
     void startBasicModeExitActivity(@NonNull Activity activity);

@@ -24,7 +24,9 @@ import android.content.pm.PackageManager;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.text.TextUtils;
+
 import androidx.annotation.Nullable;
+
 import com.android.tv.settings.library.settingslib.enterprise.ActionDisabledLearnMoreButtonLauncher.ResolveActivityChecker;
 
 
@@ -54,6 +56,7 @@ final class ManagedDeviceActionDisabledByAdminController
 
     /**
      * Constructs a {@link ManagedDeviceActionDisabledByAdminController}
+     *
      * @param preferredUserHandle - user on which to launch the help web page, if necessary
      */
     ManagedDeviceActionDisabledByAdminController(

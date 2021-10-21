@@ -97,12 +97,13 @@ public class AvailableVirtualKeyboadState extends PreferenceControllerState
                     || permittedList.contains(imi.getPackageName());
             final InputMethodPreferenceController prefController =
                     new InputMethodPreferenceController(
-                            mContext, mUIUpdateCallback, getStateIdentifier(), imi, true,
+                            mContext, mUIUpdateCallback, getStateIdentifier(),
+                            mPreferenceCompatManager, imi, true,
                             isAllowedByOrganization, this);
             mPreferenceControllers.add(prefController);
-            prefController.displayPreference(mPreferenceCompatManager);
-            prefController.updatePreferenceViews();
+            prefController.init();
             prefController.getPrefCompat().setIcon(getInputMethodIcon(packageManager, imi));
+            prefController.notifyChange();
             prefCompats.add(prefController.getPrefCompat());
         }
         mUIUpdateCallback.notifyUpdateAll(getStateIdentifier(), prefCompats);

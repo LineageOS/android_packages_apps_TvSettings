@@ -263,9 +263,10 @@ public class AdvancedVolumeState extends PreferenceControllerState {
                         mContext,
                         mUIUpdateCallback,
                         getStateIdentifier(),
+                        mPreferenceCompatManager,
                         formatId /*formatId*/, mAudioManager, mFormats, mReportedFormats);
                 preferenceControllers.add(soundFormatPC);
-                soundFormatPC.displayPreference(mPreferenceCompatManager);
+                soundFormatPC.initAndNotify();
                 if (soundFormatPC.isAvailable()) {
                     if (mReportedFormats.contains(formatId)) {
                         mSupportedFormatsPreferenceCategory.addChildPrefCompat(

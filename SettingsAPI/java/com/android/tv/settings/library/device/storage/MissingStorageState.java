@@ -25,7 +25,6 @@ import android.os.storage.VolumeRecord;
 import android.text.TextUtils;
 import android.util.Log;
 
-
 import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;

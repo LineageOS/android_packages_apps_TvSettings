@@ -21,11 +21,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
+
 import androidx.annotation.Nullable;
+
 import com.android.tv.settings.library.settingslib.RestrictedLockUtils;
 
 public class BiometricActionDisabledByAdminController extends
-    BaseActionDisabledByAdminController {
+        BaseActionDisabledByAdminController {
 
     private static final String TAG = "BiometricActionDisabledByAdminController";
 

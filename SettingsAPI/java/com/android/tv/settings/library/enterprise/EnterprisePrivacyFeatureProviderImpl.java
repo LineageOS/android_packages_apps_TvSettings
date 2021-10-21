@@ -93,13 +93,13 @@ public class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFe
         final SpannableStringBuilder disclosure = new SpannableStringBuilder();
         final CharSequence organizationName = mDpm.getDeviceOwnerOrganizationName();
         if (organizationName != null) {
-            disclosure.append(ResourcesUtil.getString(mContext,  "do_disclosure_with_name",
+            disclosure.append(ResourcesUtil.getString(mContext, "do_disclosure_with_name",
                     organizationName));
         } else {
             disclosure.append(ResourcesUtil.getString(mContext, "do_disclosure_generic"));
         }
         disclosure.append(ResourcesUtil.getString(mContext, "do_disclosure_learn_more_separator"));
-        disclosure.append(ResourcesUtil.getString(mContext,  "learn_more"),
+        disclosure.append(ResourcesUtil.getString(mContext, "learn_more"),
                 new EnterprisePrivacySpan(mContext), 0);
         return disclosure;
     }

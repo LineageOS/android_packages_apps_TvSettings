@@ -33,7 +33,8 @@ public interface StartupVerificationFeatureProvider {
      * - show challenge/informative UI (e.g., adult re-auth) based on device's status and invoke
      * setResult(RESULT_OK) before finishing ONLY IF it has determined that TvSettings should be
      * launched normally.
-     * @param activity the activity to invoke startActivityForResult() from
+     *
+     * @param activity    the activity to invoke startActivityForResult() from
      * @param requestCode the requestCode expected by onActivityResult() to receive result of
      *                    startup verification activity
      * @return whether the Activity is found and started. The false result, aka the absence of the

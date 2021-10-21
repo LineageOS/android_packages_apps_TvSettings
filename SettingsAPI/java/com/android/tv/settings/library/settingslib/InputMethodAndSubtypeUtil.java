@@ -139,7 +139,7 @@ public class InputMethodAndSubtypeUtil {
             return set;
         }
         sStringInputMethodSplitter.setString(disabledIMEsStr);
-        while(sStringInputMethodSplitter.hasNext()) {
+        while (sStringInputMethodSplitter.hasNext()) {
             set.add(sStringInputMethodSplitter.next());
         }
         return set;

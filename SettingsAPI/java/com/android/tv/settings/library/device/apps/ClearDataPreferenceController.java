@@ -24,8 +24,8 @@ import android.content.Intent;
 import android.text.format.Formatter;
 
 import com.android.tv.settings.library.ManagerUtil;
-import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 
 /** Preference controller to handle clear data preference. */
@@ -35,8 +35,8 @@ public class ClearDataPreferenceController extends AppActionPreferenceController
 
     public ClearDataPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
-            ApplicationsState.AppEntry appEntry) {
-        super(context, callback, stateIdentifier, appEntry);
+            ApplicationsState.AppEntry appEntry, PreferenceCompatManager preferenceCompatManager) {
+        super(context, callback, stateIdentifier, appEntry, preferenceCompatManager);
     }
 
     public void setClearingData(boolean clearingData) {
@@ -45,7 +45,7 @@ public class ClearDataPreferenceController extends AppActionPreferenceController
     }
 
     @Override
-    public void refresh() {
+    public void update() {
         if (mAppEntry == null) {
             return;
         }
@@ -55,11 +55,11 @@ public class ClearDataPreferenceController extends AppActionPreferenceController
                 ? ResourcesUtil.getString(mContext, "computing_size")
                 : Formatter.formatFileSize(mContext,
                         mAppEntry.dataSize + mAppEntry.externalDataSize));
-        super.refresh();
+        super.update();
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(PreferenceCompat preferenceCompat, boolean status) {
+    public boolean handlePreferenceTreeClick(boolean status) {
         if (!mDisabledByAdmin) {
             Intent i = new Intent(INTENT_CONFIRMATION);
             i.putExtra(EXTRA_GUIDANCE_TITLE, ResourcesUtil.getString(
@@ -70,7 +70,7 @@ public class ClearDataPreferenceController extends AppActionPreferenceController
                             mStateIdentifier, REQUEST_CLEAR_DATA));
             return true;
         }
-        return super.handlePreferenceTreeClick(preferenceCompat, status);
+        return super.handlePreferenceTreeClick(status);
     }
 
     @Override
