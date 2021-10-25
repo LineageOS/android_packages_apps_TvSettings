@@ -25,11 +25,13 @@ import static com.android.tv.settings.util.InstrumentationUtils.logToggleInterac
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.hardware.display.DisplayManager;
 import android.hardware.hdmi.HdmiControlManager;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.view.Display;
 
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
@@ -39,19 +41,27 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.SliceUtils;
+import com.android.tv.settings.util.ResolutionSelectionUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
+
+import java.util.Objects;
 
 /**
  * The "Display & sound" screen in TV Settings.
  */
 @Keep
-public class DisplaySoundFragment extends SettingsPreferenceFragment {
+public class DisplaySoundFragment extends SettingsPreferenceFragment implements
+        DisplayManager.DisplayListener {
 
     static final String KEY_SOUND_EFFECTS = "sound_effects";
     private static final String KEY_CEC = "cec";
+    private static final String KEY_RESOLUTION_TITLE = "resolution_selection";
 
     private AudioManager mAudioManager;
     private HdmiControlManager mHdmiControlManager;
+
+    private Display.Mode mCurrentMode = null;
+    private DisplayManager mDisplayManager;
 
     public static DisplaySoundFragment newInstance() {
         return new DisplaySoundFragment();
@@ -89,6 +99,12 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment {
         final TwoStatePreference soundPref = findPreference(KEY_SOUND_EFFECTS);
         soundPref.setChecked(getSoundEffectsEnabled());
         updateCecPreference();
+
+        mDisplayManager = getContext().getSystemService(DisplayManager.class);
+        mDisplayManager.registerDisplayListener(this, null);
+        mCurrentMode = mDisplayManager.getUserPreferredDisplayMode();
+        updateResolutionTitleDescription(ResolutionSelectionUtils.modeToString(
+                mCurrentMode, getContext()));
     }
 
     @Override
@@ -140,5 +156,26 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment {
     @Override
     protected int getPageId() {
         return TvSettingsEnums.DISPLAY_SOUND;
+    }
+
+    @Override
+    public void onDisplayAdded(int displayId) {}
+
+    @Override
+    public void onDisplayRemoved(int displayId) {}
+
+    @Override
+    public void onDisplayChanged(int displayId) {
+        Display.Mode newMode = mDisplayManager.getUserPreferredDisplayMode();
+        if (!Objects.equals(mCurrentMode, newMode)) {
+            updateResolutionTitleDescription(
+                    ResolutionSelectionUtils.modeToString(newMode, getContext()));
+            mCurrentMode = newMode;
+        }
+    }
+
+    private void updateResolutionTitleDescription(String summary) {
+        Preference titlePreference = findPreference(KEY_RESOLUTION_TITLE);
+        titlePreference.setSummary(summary);
     }
 }
