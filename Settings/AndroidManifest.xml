@@ -1167,14 +1167,6 @@
         <service
             android:name=".accessories.BluetoothDevicesService"
             android:exported="false" />
-
-        <service
-            android:name=".service.SettingsService"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.android.tv.settings.SETTINGS_SERVICE" />
-            </intent-filter>
-        </service>
         <provider
             android:name=".accessories.ConnectedDevicesSliceProvider"
             android:authorities="com.android.tv.settings.accessories.sliceprovider"
