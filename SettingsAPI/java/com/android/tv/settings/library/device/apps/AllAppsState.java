@@ -290,9 +290,9 @@ public class AllAppsState extends PreferenceControllerState {
         preference.setTitle(entry.label);
         preference.setSummary(entry.sizeStr);
         preference.setNextState(ManagerUtil.STATE_APP_MANAGEMENT);
-        Bundle b = new Bundle();
-        b.putString(ARG_PACKAGE_NAME, entry.info.packageName);
-        preference.setExtras(b);
+        Bundle nextStateExtras = new Bundle();
+        AppManagementState.prepareArgs(nextStateExtras, entry.info.packageName);
+        preference.setExtras(nextStateExtras);
         preference.setIcon(entry.icon);
         return preference;
     }

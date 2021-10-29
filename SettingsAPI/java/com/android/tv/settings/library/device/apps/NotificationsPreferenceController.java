@@ -44,7 +44,6 @@ public class NotificationsPreferenceController extends AbstractPreferenceControl
     private static final String KEY_NOTIFICATIONS = "notifications";
     private final INotificationManager mNotificationManager;
     private ApplicationsState.AppEntry mAppEntry;
-    private PreferenceCompat mPreferenceCompat;
 
     public NotificationsPreferenceController(Context context,
             UIUpdateCallback callback, int stateIdentifier,
