@@ -51,7 +51,6 @@ public class SoundFormatPreferenceController extends AbstractPreferenceControlle
     private final Map<Integer, Boolean> mFormats;
     private final List<Integer> mReportedFormats;
     private final AudioManager mAudioManager;
-    private PreferenceCompat mPreferenceCompat;
 
     public SoundFormatPreferenceController(
             Context context,

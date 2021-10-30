@@ -22,6 +22,7 @@ import android.app.usage.UsageStatsManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.os.UserHandle;
 import android.util.ArrayMap;
 import android.util.ArraySet;
@@ -29,6 +30,7 @@ import android.util.IconDrawableFactory;
 import android.util.Log;
 
 import com.android.internal.annotations.VisibleForTesting;
+import com.android.tv.settings.library.ManagerUtil;
 import com.android.tv.settings.library.PreferenceCompat;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
@@ -65,7 +67,6 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
 
     private Calendar mCal;
     private List<UsageStats> mStats;
-    private PreferenceCompat mCategory;
 
     static {
         SKIP_SYSTEM_PACKAGES.addAll(Arrays.asList(
@@ -122,11 +123,11 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
     }
 
     private void displayOnlyAllApps() {
-        mCategory.setVisible(false);
+        mPreferenceCompat.setVisible(false);
     }
 
     private void displayRecentApps(List<UsageStats> recentApps) {
-        mCategory.setVisible(true);
+        mPreferenceCompat.setVisible(true);
         final int recentAppsCount = recentApps.size();
         for (int i = 0; i < recentAppsCount; i++) {
             final UsageStats stat = recentApps.get(i);
@@ -138,15 +139,17 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
                 continue;
             }
 
-            String[] prefKey = new String[mCategory.getKey().length + 1];
-            System.arraycopy(mCategory.getKey(), 0, prefKey, 0, mCategory.getKey().length);
-            prefKey[prefKey.length - 1] = pkgName;
+            String[] prefKey = new String[]{KEY_PREF_CATEGORY, pkgName};
             PreferenceCompat pref = new PreferenceCompat(prefKey);
             pref.setTitle(appEntry.label);
             pref.setIcon(mIconDrawableFactory.getBadgedIcon(appEntry.info));
             pref.setSummary(StringUtil.formatRelativeTime(mContext,
                     System.currentTimeMillis() - stat.getLastTimeUsed(), false).toString());
-            mCategory.addChildPrefCompat(pref);
+            pref.setNextState(ManagerUtil.STATE_APP_MANAGEMENT);
+            Bundle nextStateExtras = new Bundle();
+            AppManagementState.prepareArgs(nextStateExtras, pkgName);
+            pref.setExtras(nextStateExtras);
+            mPreferenceCompat.addChildPrefCompat(pref);
         }
     }
 

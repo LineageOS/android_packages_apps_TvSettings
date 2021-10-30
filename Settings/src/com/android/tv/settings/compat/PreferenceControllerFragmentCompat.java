@@ -188,6 +188,11 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
         if (prefCompat.hasOnPreferenceChangeListener()) {
             preference.setOnPreferenceChangeListener(this);
         }
+        if (prefCompat.getChildPrefCompats() != null && prefCompat.getChildPrefCompats().size() > 0
+                && preference instanceof PreferenceGroup) {
+            RenderUtil.updatePreferenceGroup((PreferenceGroup) preference,
+                    prefCompat.getChildPrefCompats());
+        }
         return (HasKeys) preference;
     }
 
