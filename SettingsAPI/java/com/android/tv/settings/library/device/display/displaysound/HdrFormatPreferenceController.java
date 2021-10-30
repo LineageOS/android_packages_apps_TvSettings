@@ -43,7 +43,6 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
     private final Set<Integer> mDisplayReportedHdrTypes;
     private final Set<Integer> mUserDisabledHdrTypes;
 
-    private PreferenceCompat mPreferenceCompat;
     private boolean mAvailable;
 
     public HdrFormatPreferenceController(Context context,
