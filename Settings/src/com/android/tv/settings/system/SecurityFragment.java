@@ -395,7 +395,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
             case PIN_MODE_RESTRICTED_PROFILE_DELETE:
                 mUiThreadHandler.post(() -> {
                     mRestrictedProfile.removeUser();
-                    UserSwitchListenerService.updateLaunchPoint(getActivity(), false);
+                    UserSwitchListenerService.onUserCreatedOrDeleted(getActivity());
                     refresh();
                 });
                 break;
@@ -480,7 +480,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
             if (result == null) {
                 return;
             }
-            UserSwitchListenerService.updateLaunchPoint(mContext, true);
+            UserSwitchListenerService.onUserCreatedOrDeleted(mContext);
             LocalBroadcastManager.getInstance(mContext).sendBroadcast(
                     new Intent(ACTION_RESTRICTED_PROFILE_CREATED)
                             .putExtra(EXTRA_RESTRICTED_PROFILE_INFO, result));
