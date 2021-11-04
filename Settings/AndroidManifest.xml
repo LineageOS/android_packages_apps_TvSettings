@@ -609,6 +609,20 @@
             </intent-filter>
         </activity>
 
+        <receiver
+            android:name=".system.ShieldMtpActivity$BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".system.ShieldMtpActivity"
+            android.configChanges="keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android.theme="@style/Theme.SettingsConnectivity"/>
+
         <activity
             android:name=".system.LocationActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
