@@ -34,7 +34,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.lifecycle_lifecycle-extensions
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    androidx.lifecycle_lifecycle-common-java8
+    androidx.lifecycle_lifecycle-common-java8 \
+    vendor.nvidia.hardware.convertibleport-V1.0-java
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
     org.lineageos.platform.internal

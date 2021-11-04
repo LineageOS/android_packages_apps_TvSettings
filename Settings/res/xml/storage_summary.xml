@@ -26,4 +26,13 @@
         android:key="removable_storage"
         android:title="@string/storage_removable_storage_section"
         android:layout="@layout/preference_category_compact_layout" />
+
+    <PreferenceCategory
+        android:title="@string/shield_storage_access_section"
+        android:key="shield_storage" >
+            <SwitchPreference
+                android:title="@string/mtp_title"
+                android:key="shield_mtp"
+                android:order="0" />
+    </PreferenceCategory>
 </PreferenceScreen>

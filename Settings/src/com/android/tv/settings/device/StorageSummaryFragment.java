@@ -38,6 +38,9 @@ import com.android.tv.settings.device.storage.NewStorageActivity;
 import com.android.tv.settings.device.storage.StorageFragment;
 import com.android.tv.settings.device.storage.StoragePreference;
 
+import com.android.tv.settings.system.ShieldMtpActivity;
+import com.android.tv.settings.util.ConvertiblePort;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +56,12 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
     private static final String KEY_DEVICE_CATEGORY = "device_storage";
     private static final String KEY_REMOVABLE_CATEGORY = "removable_storage";
 
+    private static final String KEY_SHIELD_MTP = "shield_mtp";
+    private static final String KEY_SHIELD_STORAGE_CATEGORY = "shield_storage";
+
     private static final int REFRESH_DELAY_MILLIS = 500;
+
+    private SwitchPreference mShieldMtp;
 
     private StorageManager mStorageManager;
     private final StorageSummaryFragment.StorageEventListener
@@ -87,6 +95,7 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
     public void onStart() {
         super.onStart();
         mStorageManager.registerListener(mStorageEventListener);
+        shieldMtpSetup();
     }
 
     @Override
@@ -229,6 +238,15 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
                 removableCategory.removePreference(pref);
             }
         }
+
+        if (mShieldMtp == null) {
+            Log.e(TAG, "Didn't find MTP setting preference.\n");
+        } else if (!displayShieldCategory()) {
+            ((PreferenceCategory) findPreference(KEY_SHIELD_STORAGE_CATEGORY)).removePreference(mShieldMtp);
+        } else {
+            mShieldMtp.setChecked(ConvertiblePort.getConvertiblePortSetting(getContext()).equals(ShieldMtpActivity.DEVICE_MODE));
+            setShieldMtpSummary();
+        }
     }
 
     private static class VolPreference extends Preference {
@@ -330,5 +348,47 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.SETTINGS_STORAGE_CATEGORY;
+    }
+
+    private void shieldMtpSetup() {
+        final Intent intent = new Intent();
+        intent.setComponent(new ComponentName("com.android.tv.settings", "com.android.tv.settings.system.ShieldMtpActivity"));
+        intent.putExtra(ShieldMtpActivity.isDevOption, false);
+        mShieldMtp = (SwitchPreference) findPreference(KEY_SHIELD_MTP);
+        if (mShieldMtp == null) {
+            Log.e(TAG, "Didn't find MTP setting preference.\n");
+            return;
+        }
+        setShieldMtpSummary();
+        mShieldMtp.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                String currentMode = ConvertiblePort.getConvertiblePortSetting(getContext());
+                if (ShieldMtpActivity.isConvPortBusy(getContext())) {
+                    intent.putExtra(ShieldMtpActivity.pageNumber, ShieldMtpActivity.PORT_BUSY_PAGE);
+                    startActivity(intent);
+                    mShieldMtp.setChecked(ConvertiblePort.getConvertiblePortSetting(getContext()).equals(ShieldMtpActivity.DEVICE_MODE));
+                } else if (currentMode.equals(ShieldMtpActivity.HOST_MODE)) {
+                    intent.putExtra(ShieldMtpActivity.pageNumber, ShieldMtpActivity.MTP_INFO_PAGE);
+                    startActivity(intent);
+                } else if (currentMode.equals(ShieldMtpActivity.DEVICE_MODE)) {
+                    ShieldMtpActivity.setPortMode(getContext(), ShieldMtpActivity.HOST_MODE, false);
+                }
+                setShieldMtpSummary();
+                return true;
+            }
+        });
+    }
+
+    private void setShieldMtpSummary() {
+        if (mShieldMtp.isChecked()) {
+            mShieldMtp.setSummary(getString(R.string.mtp_summary));
+        } else {
+            mShieldMtp.setSummary(null);
+        }
+    }
+
+    private boolean displayShieldCategory() {
+        return getResources().getBoolean(R.bool.has_convertible_port);
     }
 }
