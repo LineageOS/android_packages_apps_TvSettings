@@ -410,6 +410,15 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <receiver android:name=".system.ShieldMtpActivity$BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".system.ShieldMtpActivity"
+            android.configChanges="keyboardHidden|navigation"
+            android.theme="@style/Theme.SettingsConnectivity" />
         <activity android:configChanges="keyboard|keyboardHidden|navigation"
              android:excludeFromRecents="true"
              android:exported="true"

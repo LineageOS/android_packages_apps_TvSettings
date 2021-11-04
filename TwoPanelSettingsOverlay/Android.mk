@@ -29,7 +29,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
 LOCAL_STATIC_JAVA_LIBRARIES := \
     androidx.annotation_annotation \
     statslog-tvsettings \
-    org.lineageos.platform.internal
+    org.lineageos.platform.internal \
+    vendor.nvidia.hardware.convertibleport-V1.0-java
 
 LOCAL_USE_AAPT2 := true
 LOCAL_PACKAGE_NAME := TwoPanelSettingsOverlay
