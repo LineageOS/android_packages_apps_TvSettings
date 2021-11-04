@@ -34,10 +34,9 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     androidx.lifecycle_lifecycle-extensions
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    androidx.lifecycle_lifecycle-common-java8
-
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    org.lineageos.platform.internal
+    androidx.lifecycle_lifecycle-common-java8 \
+    org.lineageos.platform.internal \
+    vendor.nvidia.hardware.convertibleport-V1.0-java
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 
