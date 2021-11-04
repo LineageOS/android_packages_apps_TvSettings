@@ -89,6 +89,7 @@ import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.system.development.audio.AudioDebug;
 import com.android.tv.settings.system.development.audio.AudioMetrics;
 import com.android.tv.settings.system.development.audio.AudioReaderException;
+import com.android.tv.settings.system.ShieldMtpActivity;
 
 import java.net.NetworkInterface;
 import java.net.InetAddress;
@@ -1685,6 +1686,14 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     @Override
     public void onEnableAdbConfirm() {
+        if (getResources().getBoolean(R.bool.has_convertible_port)) {
+            Intent intent = new Intent();
+            intent.setComponent(new ComponentName(getContext().getPackageName(), ShieldMtpActivity.class.getName()));
+            intent.putExtra(ShieldMtpActivity.CALLER, true);
+            intent.putExtra(ShieldMtpActivity.PAGE_NUMBER,
+                    ShieldMtpActivity.USB_DEBUG_INFO_PAGE);
+            startActivity(intent);
+        }
         Settings.Global.putInt(mContentResolver, Settings.Global.ADB_ENABLED, 1);
         mEnableAdb.setChecked(true);
         updateVerifyAppsOverUsbOptions();
@@ -1730,12 +1739,22 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         } else if (preference == mBugreport) {
             captureBugReport(this.getActivity());
         } else if (preference == mEnableAdb) {
-            if (mEnableAdb.isChecked()) {
+            Intent intent = new Intent();
+            intent.setComponent(new ComponentName(getContext().getPackageName(), ShieldMtpActivity.class.getName()));
+            intent.putExtra(ShieldMtpActivity.CALLER, true);
+            if (ShieldMtpActivity.isConvPortBusy(getActivity())) {
+                intent.putExtra(ShieldMtpActivity.PAGE_NUMBER,
+                        ShieldMtpActivity.PORT_BUSY_PAGE);
+                startActivity(intent);
+            } else if (mEnableAdb.isChecked()) {
                 // Pass to super to launch the dialog, then uncheck until the dialog
                 // result comes back
                 super.onPreferenceTreeClick(preference);
                 mEnableAdb.setChecked(false);
             } else {
+                if (getResources().getBoolean(R.bool.has_convertible_port)) {
+                    ShieldMtpActivity.setPortMode(getActivity(), ShieldMtpActivity.HOST_MODE, true);
+                }
                 Settings.Global.putInt(mContentResolver, Settings.Global.ADB_ENABLED, 0);
                 mVerifyAppsOverUsb.setEnabled(false);
                 mVerifyAppsOverUsb.setChecked(false);
