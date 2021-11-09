@@ -176,6 +176,8 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
 
     private void updateResolutionTitleDescription(String summary) {
         Preference titlePreference = findPreference(KEY_RESOLUTION_TITLE);
-        titlePreference.setSummary(summary);
+        if (titlePreference != null) {
+            titlePreference.setSummary(summary);
+        }
     }
 }
