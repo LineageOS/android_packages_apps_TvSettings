@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.device.displaysound;
 
-import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
 import android.app.tvsettings.TvSettingsEnums;
@@ -69,7 +68,7 @@ public class FontScalePreferenceFragment extends SettingsPreferenceFragment impl
             preference.setSummaryOff(summary);
             preference.setSummaryOn(summary);
             preference.setTitle(entries[i]);
-            if (FlavorUtils.getFlavor(getContext()) == FLAVOR_TWO_PANEL) {
+            if (FlavorUtils.isTwoPanel(getContext())) {
                 preference.setFragment(FontScalePreviewFragment.class.getName());
             }
             Bundle extras = preference.getExtras();
