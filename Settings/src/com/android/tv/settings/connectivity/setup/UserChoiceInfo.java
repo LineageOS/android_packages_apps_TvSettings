@@ -52,7 +52,7 @@ public class UserChoiceInfo extends ViewModel {
     private int mWifiSecurity;
     private ScanResult mChosenNetwork;
     private String mConnectedNetwork;
-    private boolean mIsPasswordHidden = false;
+    private boolean mIsPasswordHidden = true;
 
     /**
      * Store the page summary into a HashMap.
