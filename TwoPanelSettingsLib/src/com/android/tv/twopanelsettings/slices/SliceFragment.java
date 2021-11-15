@@ -380,7 +380,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 if (chosenPreference != null && chosenPreference instanceof HasSliceUri
                         && ((HasSliceUri) chosenPreference).getUri() != null) {
                     chosenPreference.setFragment(SliceFragment.class.getCanonicalName());
-                    parentFragment.refocusPreferenceForceRefresh(chosenPreference);
+                    parentFragment.refocusPreferenceForceRefresh(chosenPreference, this);
                 }
                 if (parentFragment.isFragmentInTheMainPanel(this)) {
                     parentFragment.navigateToPreviewFragment();
