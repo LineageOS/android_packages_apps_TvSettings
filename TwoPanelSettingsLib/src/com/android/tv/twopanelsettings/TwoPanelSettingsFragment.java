@@ -39,6 +39,7 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.transition.Fade;
+import android.util.ArrayMap;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -77,7 +78,7 @@ import com.android.tv.twopanelsettings.slices.SliceSeekbarPreference;
 import com.android.tv.twopanelsettings.slices.SliceSwitchPreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
 
-import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -124,13 +125,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private Preference mFocusedPreference;
     private boolean mIsWaitingForUpdatingPreview = false;
     private AudioManager mAudioManager;
-    private HashSet<VerticalGridView> mHasOnChildViewHolderSelectedListener = new HashSet<>();
+    private final Map<VerticalGridView, OnChildViewHolderSelectedListenerTwoPanel>
+            mHasOnChildViewHolderSelectedListener = new ArrayMap<>();
 
     private static final String DELAY_MS = "delay_ms";
     private static final String CHECK_SCROLL_STATE = "check_scroll_state";
 
     /** An broadcast receiver to help OEM test best delay for preview panel fragment creation. */
-    private BroadcastReceiver mPreviewPanelDelayReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mPreviewPanelDelayReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             long delay = intent.getLongExtra(DELAY_MS, PREVIEW_PANEL_DEFAULT_DELAY_MS);
@@ -143,28 +145,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
     };
 
-    private final OnChildViewHolderSelectedListener mOnChildViewHolderSelectedListener =
-            new OnChildViewHolderSelectedListener() {
-                @Override
-                public void onChildViewHolderSelected(RecyclerView parent,
-                        RecyclerView.ViewHolder child, int position, int subposition) {
-                    if (parent == null || child == null) {
-                        return;
-                    }
-                    int adapterPosition = child.getAdapterPosition();
-                    PreferenceGroupAdapter preferenceGroupAdapter =
-                            (PreferenceGroupAdapter) parent.getAdapter();
-                    if (preferenceGroupAdapter != null) {
-                        Preference preference = preferenceGroupAdapter.getItem(adapterPosition);
-                        onPreferenceFocused(preference);
-                    }
-                }
-
-                @Override
-                public void onChildViewHolderSelectedAndPositioned(RecyclerView parent,
-                        RecyclerView.ViewHolder child, int position, int subposition) {
-                }
-            };
 
     private final OnGlobalLayoutListener mOnGlobalLayoutListener = new OnGlobalLayoutListener() {
         @Override
@@ -177,6 +157,35 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }
     };
 
+    private class OnChildViewHolderSelectedListenerTwoPanel extends
+            OnChildViewHolderSelectedListener {
+        private final int mPaneLIndex;
+
+        OnChildViewHolderSelectedListenerTwoPanel(int panelIndex) {
+            mPaneLIndex = panelIndex;
+        }
+
+        @Override
+        public void onChildViewHolderSelected(RecyclerView parent,
+                RecyclerView.ViewHolder child, int position, int subposition) {
+            if (parent == null || child == null) {
+                return;
+            }
+            int adapterPosition = child.getAdapterPosition();
+            PreferenceGroupAdapter preferenceGroupAdapter =
+                    (PreferenceGroupAdapter) parent.getAdapter();
+            if (preferenceGroupAdapter != null) {
+                Preference preference = preferenceGroupAdapter.getItem(adapterPosition);
+                onPreferenceFocused(preference, mPaneLIndex);
+            }
+        }
+
+        @Override
+        public void onChildViewHolderSelectedAndPositioned(RecyclerView parent,
+                RecyclerView.ViewHolder child, int position, int subposition) {
+        }
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -184,6 +193,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 .getBoolean(R.bool.config_check_scroll_state);
         mPreviewPanelCreationDelay = getContext().getResources()
                 .getInteger(R.integer.config_preview_panel_create_delay);
+
         updatePreviewPanelCreationDelayForLowRamDevice();
         mAudioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
     }
@@ -388,15 +398,17 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         VerticalGridView listView = (VerticalGridView) leanbackPreferenceFragment.getListView();
         if (listView != null) {
             if (isAddingListener) {
-                if (!mHasOnChildViewHolderSelectedListener.contains(listView)) {
+                if (!mHasOnChildViewHolderSelectedListener.containsKey(listView)) {
+                    OnChildViewHolderSelectedListenerTwoPanel listener =
+                            new OnChildViewHolderSelectedListenerTwoPanel(mPrefPanelIdx);
                     listView.addOnChildViewHolderSelectedListener(
-                            mOnChildViewHolderSelectedListener);
-                    mHasOnChildViewHolderSelectedListener.add(listView);
+                            new OnChildViewHolderSelectedListenerTwoPanel(mPrefPanelIdx));
+                    mHasOnChildViewHolderSelectedListener.put(listView, listener);
                 }
             } else {
-                if (mHasOnChildViewHolderSelectedListener.contains(listView)) {
+                if (mHasOnChildViewHolderSelectedListener.containsKey(listView)) {
                     listView.removeOnChildViewHolderSelectedListener(
-                            mOnChildViewHolderSelectedListener);
+                            mHasOnChildViewHolderSelectedListener.get(listView));
                     mHasOnChildViewHolderSelectedListener.remove(listView);
                 }
             }
@@ -494,11 +506,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         void onSeekbarPreferenceChanged(SliceSeekbarPreference preference, int addValue);
     }
 
-    protected void onPreferenceFocused(Preference pref) {
-        onPreferenceFocusedImpl(pref, false);
+    protected void onPreferenceFocused(Preference pref, int panelIndex) {
+        onPreferenceFocusedImpl(pref, false, panelIndex);
     }
 
-    private void onPreferenceFocusedImpl(Preference pref, boolean forceRefresh) {
+    private void onPreferenceFocusedImpl(Preference pref, boolean forceRefresh, int panelIndex) {
         if (pref == null) {
             return;
         }
@@ -516,9 +528,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             VerticalGridView listView = (VerticalGridView)
                     ((LeanbackPreferenceFragmentCompat) prefFragment).getListView();
             mHandler.postDelayed(new PostShowPreviewRunnable(
-                    listView, pref, forceRefresh), mPreviewPanelCreationDelay);
+                    listView, pref, forceRefresh, panelIndex), mPreviewPanelCreationDelay);
         } else {
-            handleFragmentTransactionWhenFocused(pref, forceRefresh);
+            handleFragmentTransactionWhenFocused(pref, forceRefresh, panelIndex);
         }
     }
 
@@ -526,11 +538,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         private final VerticalGridView mListView;
         private final Preference mPref;
         private final boolean mForceFresh;
+        private final int mPanelIndex;
 
-        PostShowPreviewRunnable(VerticalGridView listView, Preference pref, boolean forceFresh) {
+        PostShowPreviewRunnable(VerticalGridView listView, Preference pref, boolean forceFresh,
+                int panelIndex) {
             this.mListView = listView;
             this.mPref = pref;
             this.mForceFresh = forceFresh;
+            mPanelIndex = panelIndex;
         }
 
         @Override
@@ -539,15 +554,16 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 if (mListView.getScrollState() != RecyclerView.SCROLL_STATE_IDLE) {
                     mHandler.postDelayed(this, CHECK_IDLE_STATE_MS);
                 } else {
-                    handleFragmentTransactionWhenFocused(mPref, mForceFresh);
+                    handleFragmentTransactionWhenFocused(mPref, mForceFresh, mPanelIndex);
                     mIsWaitingForUpdatingPreview = false;
                 }
             }
         }
     }
 
-    private void handleFragmentTransactionWhenFocused(Preference pref, boolean forceRefresh) {
-        if (!isAdded()) {
+    private void handleFragmentTransactionWhenFocused(Preference pref, boolean forceRefresh,
+            int panelIndex) {
+        if (!isAdded() || panelIndex != mPrefPanelIdx) {
             return;
         }
         Fragment previewFragment = null;
@@ -780,7 +796,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             if (!(previewFragment instanceof InfoFragment)
                     && !mIsWaitingForUpdatingPreview) {
                 mAudioManager.playSoundEffect(AudioManager.FX_FOCUS_NAVIGATION_RIGHT);
-
                 navigateToPreviewFragment();
             }
         }
@@ -1140,7 +1155,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     updateInfoFragmentStatus(fragment);
                 }
                 if (chosenPreference instanceof ListPreference) {
-                    refocusPreferenceForceRefresh(chosenPreference);
+                    refocusPreferenceForceRefresh(chosenPreference, fragment);
                 }
             }
         } catch (ClassNotFoundException e) {
@@ -1149,8 +1164,11 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     /** Force refresh preview panel. */
-    public void refocusPreferenceForceRefresh(Preference chosenPreference) {
-        onPreferenceFocusedImpl(chosenPreference, true);
+    public void refocusPreferenceForceRefresh(Preference chosenPreference, Fragment fragment) {
+        if (!isFragmentInTheMainPanel(fragment)) {
+            return;
+        }
+        onPreferenceFocusedImpl(chosenPreference, true, mPrefPanelIdx);
     }
 
     /** Show error message in preview panel **/
@@ -1176,7 +1194,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     appendErrorToContentDescription(prefFragment, errorMessage);
                 }
                 updatePreferenceWithErrorMessage(preference, errorMessage, getContext());
-                onPreferenceFocused(preference);
+                onPreferenceFocused(preference, mPrefPanelIdx);
             }
         }
     }
