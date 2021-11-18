@@ -32,9 +32,4 @@ public class AccessibilitySettingsActivity extends TvSettingsActivity {
                 this).getSettingsFragmentProvider()
                 .newSettingsFragment(AccessibilityFragment.class.getName(), null);
     }
-
-    @Override
-    protected int getAvailableFlavors() {
-        return X_EXPERIENCE_FLAVORS_MASK;
-    }
 }
