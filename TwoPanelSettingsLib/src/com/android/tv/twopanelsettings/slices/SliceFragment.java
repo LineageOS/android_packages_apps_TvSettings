@@ -141,21 +141,13 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         mUriString = getArguments().getString(SlicesConstants.TAG_TARGET_URI);
         if (!TextUtils.isEmpty(mUriString)) {
             ContextSingleton.getInstance().grantFullAccess(getContext(), Uri.parse(mUriString));
+            getSliceLiveData().observe(this, this);
         }
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public void onResume() {
-        this.setTitle(mScreenTitle);
-        this.setSubtitle(mScreenSubtitle);
-        this.setIcon(mScreenIcon);
-        this.getPreferenceScreen().removeAll();
-
-        showProgressBar();
-        if (!TextUtils.isEmpty(mUriString)) {
-            getSliceLiveData().observeForever(this);
-        }
         if (TextUtils.isEmpty(mScreenTitle)) {
             mScreenTitle = getArguments().getCharSequence(SlicesConstants.TAG_SCREEN_TITLE, "");
         }
@@ -164,12 +156,12 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             getContext().getContentResolver().registerContentObserver(
                     SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver);
         }
+        removeAnimationClipping(getView());
         fireFollowupPendingIntent();
     }
 
     private SliceLiveDataImpl getSliceLiveData() {
-        return ContextSingleton.getInstance()
-                .getSliceLiveData(getActivity(), Uri.parse(mUriString));
+        return ContextSingleton.getInstance().getSliceLiveData(getContext(), Uri.parse(mUriString));
     }
 
     private void fireFollowupPendingIntent() {
@@ -211,7 +203,6 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         super.onPause();
         hideProgressBar();
         getContext().getContentResolver().unregisterContentObserver(mContentObserver);
-        getSliceLiveData().removeObserver(this);
     }
 
     @Override
@@ -267,7 +258,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             getSliceLiveData().removeObserver(this);
             getContext().getContentResolver().unregisterContentObserver(mContentObserver);
             mUriString = redirectSlice;
-            getSliceLiveData().observeForever(this);
+            getSliceLiveData().observe(this, this);
             getContext().getContentResolver().registerContentObserver(
                     SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver);
         }
@@ -727,6 +718,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (errorMessage != null) {
             showErrorMessage(errorMessage);
         }
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle b) {
+        super.onViewCreated(view, b);
+        setTitle(mScreenTitle);
+        setSubtitle(mScreenSubtitle);
+        setIcon(mScreenIcon);
     }
 
     private void finish() {

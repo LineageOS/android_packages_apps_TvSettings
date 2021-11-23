@@ -22,7 +22,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.text.TextUtils;
 import android.transition.Scene;
 import android.transition.Slide;
 import android.transition.Transition;
@@ -44,7 +43,6 @@ import com.android.tv.settings.library.SettingsManager;
 import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.overlay.FlavorUtils;
-import com.android.tv.twopanelsettings.slices.ContextSingleton;
 
 import java.util.List;
 
@@ -169,13 +167,6 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
         if ((FlavorUtils.getFlavor(this) & getAvailableFlavors()) == 0) {
             Log.w(TAG, "Activity is not supported in current flavor");
             finish();
-        }
-        if (!TextUtils.isEmpty(getString(R.string.account_slice_uri))
-                && !TextUtils.isEmpty(getString(R.string.slice_rendering_app))) {
-            ContextSingleton.getInstance().grantFullAccess(
-                    this,
-                    getString(R.string.account_slice_uri),
-                    getString(R.string.slice_rendering_app));
         }
         if (savedInstanceState == null) {
             final Fragment fragment = createSettingsFragment();
