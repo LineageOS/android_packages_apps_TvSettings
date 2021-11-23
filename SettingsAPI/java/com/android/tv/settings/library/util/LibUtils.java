@@ -69,6 +69,14 @@ public class LibUtils {
     static final String STORAGE_MANAGER_ENABLED_PROPERTY =
             "ro.storage_manager.enabled";
 
+
+    @VisibleForTesting
+    public static final String PROPERTY_APP_HIBERNATION_ENABLED =
+            "app_hibernation_enabled";
+
+    public static final String PROPERTY_HIBERNATION_TARGETS_PRE_S_APPS =
+            "app_hibernation_targets_pre_s_apps";
+
     private static Signature[] sSystemSignature;
     private static String sPermissionControllerPackageName;
     private static String sServicesSystemSharedLibPackageName;

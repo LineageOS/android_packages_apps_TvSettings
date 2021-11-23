@@ -61,6 +61,7 @@ public class AppManagementState extends PreferenceControllerState {
     private static final String KEY_OPEN = "open";
     private static final String KEY_LICENSES = "licenses";
     private static final String KEY_PERMISSIONS = "permissions";
+    private static final String KEY_HIBERNATION_CATEGORY = "hibernationSwitchCategory";
 
     // Result code identifiers
     static final int REQUEST_UNINSTALL = 1;
@@ -85,6 +86,7 @@ public class AppManagementState extends PreferenceControllerState {
     private ClearCachePreferenceController mClearCachePreferenceController;
     private ClearDefaultsPreferenceController mClearDefaultsPreferenceController;
     private NotificationsPreferenceController mNotificationsPreferenceController;
+    private HibernationSwitchPreferenceController mHibernationSwitchPreferenceController;
     private final Handler mHandler = new Handler();
 
     public AppManagementState(Context context,
@@ -123,9 +125,20 @@ public class AppManagementState extends PreferenceControllerState {
         if (mEnableDisablePreferenceController != null) {
             mEnableDisablePreferenceController.updateAndNotify();
         }
+        if (mHibernationSwitchPreferenceController != null) {
+            mHibernationSwitchPreferenceController.onResume();
+        }
         updatePrefs();
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        if (mHibernationSwitchPreferenceController != null) {
+            mHibernationSwitchPreferenceController.onPause();
+        }
+    }
 
     @Override
     public int getStateIdentifier() {
@@ -158,6 +171,9 @@ public class AppManagementState extends PreferenceControllerState {
         mNotificationsPreferenceController = new NotificationsPreferenceController(
                 mContext, mUIUpdateCallback, getStateIdentifier(), mEntry,
                 mPreferenceCompatManager);
+        mHibernationSwitchPreferenceController = new HibernationSwitchPreferenceController(
+                mContext, mUIUpdateCallback, getStateIdentifier(), mEntry,
+                mPreferenceCompatManager);
         List<AbstractPreferenceController> list = new ArrayList<>();
         list.add(mForceStopPreferenceController);
         list.add(mUninstallPreferenceController);
@@ -167,6 +183,7 @@ public class AppManagementState extends PreferenceControllerState {
         list.add(mClearDataPreferenceController);
         list.add(mClearDefaultsPreferenceController);
         list.add(mNotificationsPreferenceController);
+        list.add(mHibernationSwitchPreferenceController);
         return list;
     }
 
@@ -400,6 +417,17 @@ public class AppManagementState extends PreferenceControllerState {
         // Notifications
         if (mNotificationsPreferenceController == null) {
             mNotificationsPreferenceController.setEntry(mEntry);
+        }
+
+        // Hibernation switch
+        if (mHibernationSwitchPreferenceController != null) {
+            mHibernationSwitchPreferenceController.setEntry(mEntry);
+            PreferenceCompat hibernationSwitchCategory =
+                    mPreferenceCompatManager.getOrCreatePrefCompat(
+                            KEY_HIBERNATION_CATEGORY);
+            hibernationSwitchCategory.setVisible(
+                    mHibernationSwitchPreferenceController.shouldBeVisible());
+            mUIUpdateCallback.notifyUpdate(getStateIdentifier(), hibernationSwitchCategory);
         }
 
         // Open Source Licenses
