@@ -102,7 +102,7 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
 
         mDisplayManager = getContext().getSystemService(DisplayManager.class);
         mDisplayManager.registerDisplayListener(this, null);
-        mCurrentMode = mDisplayManager.getUserPreferredDisplayMode();
+        mCurrentMode = mDisplayManager.getGlobalUserPreferredDisplayMode();
         updateResolutionTitleDescription(ResolutionSelectionUtils.modeToString(
                 mCurrentMode, getContext()));
     }
@@ -166,7 +166,7 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
 
     @Override
     public void onDisplayChanged(int displayId) {
-        Display.Mode newMode = mDisplayManager.getUserPreferredDisplayMode();
+        Display.Mode newMode = mDisplayManager.getGlobalUserPreferredDisplayMode();
         if (!Objects.equals(mCurrentMode, newMode)) {
             updateResolutionTitleDescription(
                     ResolutionSelectionUtils.modeToString(newMode, getContext()));
