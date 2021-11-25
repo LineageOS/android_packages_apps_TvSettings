@@ -20,7 +20,6 @@ import android.app.slice.SliceManager;
 import android.content.Context;
 import android.net.Uri;
 import android.util.ArrayMap;
-import android.util.Log;
 
 import com.android.tv.twopanelsettings.slices.PreferenceSliceLiveData.SliceLiveDataImpl;
 
@@ -71,18 +70,6 @@ public class ContextSingleton {
             ctx.getSystemService(SliceManager.class).grantPermissionFromUser(
                     uri, currentPackageName, true);
             mGivenFullSliceAccess = true;
-        }
-    }
-
-    /**
-     *  Grant full access to specific package.
-     */
-    public void grantFullAccess(Context ctx, String uri, String packageName) {
-        try {
-            ctx.getSystemService(SliceManager.class).grantPermissionFromUser(
-                    Uri.parse(uri), packageName, true);
-        } catch (Exception e) {
-            Log.e(TAG, "Cannot grant full access to " + packageName + " " + e);
         }
     }
 }
