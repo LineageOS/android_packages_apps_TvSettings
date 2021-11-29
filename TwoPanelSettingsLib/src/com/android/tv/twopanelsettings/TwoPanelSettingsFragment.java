@@ -401,8 +401,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 if (!mHasOnChildViewHolderSelectedListener.containsKey(listView)) {
                     OnChildViewHolderSelectedListenerTwoPanel listener =
                             new OnChildViewHolderSelectedListenerTwoPanel(mPrefPanelIdx);
-                    listView.addOnChildViewHolderSelectedListener(
-                            new OnChildViewHolderSelectedListenerTwoPanel(mPrefPanelIdx));
+                    listView.addOnChildViewHolderSelectedListener(listener);
                     mHasOnChildViewHolderSelectedListener.put(listView, listener);
                 }
             } else {
