@@ -49,6 +49,11 @@
     <string-array name="known_bluetooth_device_labels" translatable="false">
     </string-array>
 
+    <!-- known_bluetooth_device_labels used to be named as known_remote_labels, for backward
+        compatibility, we will keep supporting this option. -->
+    <string-array name="known_remote_labels" translatable="false">
+    </string-array>
+
     <!-- Whether to show the bluetooth toggle. Please be very careful with this config as setting it
         to true would surface a toggle in Remotes & Accessories settings that allows the user to
         turn off Bluetooth. Without an IR remote or some other form of connection, the user may not
