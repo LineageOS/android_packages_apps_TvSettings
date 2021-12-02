@@ -123,7 +123,7 @@ public class WifiSecurityHelper {
                 if ((length == 10 || length == 26 || length == 58)
                         && password.matches("[0-9A-Fa-f]*")) {
                     config.wepKeys[0] = password;
-                } else {
+                } else if (length != 0) {
                     config.wepKeys[0] = '"' + password + '"';
                 }
                 break;
