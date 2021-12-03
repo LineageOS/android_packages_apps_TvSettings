@@ -79,6 +79,8 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     @VisibleForTesting
     static final String KEY_CAST_SETTINGS = "cast";
     private static final String KEY_CAST_SETTINGS_SLICE = "cast_settings";
+    private static final String KEY_DEFAULT_AUDIO_OUTPUT_SETTINGS_SLICE =
+            "default_audio_output_settings";
     @VisibleForTesting
     static final String KEY_KEYBOARD = "keyboard";
     private static final String TAG = "DeviceFragment";
@@ -170,6 +172,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
         updateSounds();
         updateGoogleSettings();
         updateCastSettings();
+        updateDefaultAudioOutputSettings();
         updateInternalSettings();
         updateFastpairSettings();
         updateKeyboardAutofillSettings();
@@ -314,6 +317,16 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
                     .isBasicMode(getContext())) {
                 castSlicePref.setVisible(false);
             }
+        }
+    }
+
+    private void updateDefaultAudioOutputSettings() {
+        final SlicePreference defaultAudioOutputSlicePref = findPreference(
+                KEY_DEFAULT_AUDIO_OUTPUT_SETTINGS_SLICE);
+        if (defaultAudioOutputSlicePref != null) {
+            defaultAudioOutputSlicePref.setVisible(
+                    SliceUtils.isSliceProviderValid(getContext(),
+                        defaultAudioOutputSlicePref.getUri()));
         }
     }
 
