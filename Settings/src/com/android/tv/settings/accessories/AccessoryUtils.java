@@ -141,6 +141,13 @@ final class AccessoryUtils {
                         Collections.unmodifiableList(
                                 Arrays.asList(context.getResources().getStringArray(
                                         R.array.known_bluetooth_device_labels)));
+                // For backward compatibility, the customization name used to be known_remote_labels
+                if (sKnownDeviceLabels.isEmpty()) {
+                    sKnownDeviceLabels = Collections.unmodifiableList(
+                            Arrays.asList(
+                                context.getResources().getStringArray(
+                                    R.array.known_remote_labels)));
+                }
             }
         }
 
