@@ -638,7 +638,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         super.onResume();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("com.android.tv.settings.PREVIEW_DELAY");
-        getContext().registerReceiver(mPreviewPanelDelayReceiver, intentFilter);
+        getContext().registerReceiver(mPreviewPanelDelayReceiver, intentFilter,
+                Context.RECEIVER_EXPORTED_UNAUDITED);
         // Trap back button presses
         final TwoPanelSettingsRootView rootView = (TwoPanelSettingsRootView) getView();
         if (rootView != null) {
