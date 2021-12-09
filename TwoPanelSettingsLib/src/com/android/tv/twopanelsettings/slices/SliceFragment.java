@@ -50,6 +50,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -698,8 +699,22 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
 
     private void handleUri(Uri uri) {
         String uriString = uri.getQueryParameter(SlicesConstants.PARAMETER_URI);
+        String errorMessage = uri.getQueryParameter(SlicesConstants.PARAMETER_ERROR);
+        // Display the errorMessage based upon two different scenarios:
+        // a) If the provided uri string matches with current page slice uri(usually happens
+        // when the data fails to correctly load), show the errors in the current panel using
+        // InfoFragment UI.
+        // b) If the provided uri string does not match with current page slice uri(usually happens
+        // when the data fails to save), show the error message as the toast.
+        if (uriString != null && errorMessage != null) {
+            if (!uriString.equals(mUriString)) {
+                showErrorMessageAsToast(errorMessage);
+            } else {
+                showErrorMessage(errorMessage);
+            }
+        }
         // Provider should provide the correct slice uri in the parameter if it wants to do certain
-        // action(includes go back, forward, error message), otherwise TvSettings would ignore it.
+        // action(includes go back, forward), otherwise TvSettings would ignore it.
         if (uriString == null || !uriString.equals(mUriString)) {
             return;
         }
@@ -713,11 +728,10 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 finish();
             }
         }
+    }
 
-        String errorMessage = uri.getQueryParameter(SlicesConstants.PARAMETER_ERROR);
-        if (errorMessage != null) {
-            showErrorMessage(errorMessage);
-        }
+    private void showErrorMessageAsToast(String errorMessage) {
+        Toast.makeText(getActivity(), errorMessage, Toast.LENGTH_SHORT).show();
     }
 
     @Override
