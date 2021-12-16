@@ -28,6 +28,7 @@ import android.content.pm.PackageManager;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.UserHandle;
+import android.os.UserManager;
 import android.util.Log;
 
 import com.android.tv.settings.library.users.RestrictedProfileModel;
@@ -61,8 +62,10 @@ public class UserSwitchListenerService extends Service {
                 Log.d(TAG, "boot completed, user is " + UserHandle.myUserId()
                         + " boot user id: " + bootUserId);
             }
-            if (UserHandle.myUserId() != bootUserId) {
-                switchUserNow(bootUserId);
+            if (UserManager.get(context).isSystemUser()) {
+                if (UserHandle.myUserId() != bootUserId) {
+                    switchUserNow(bootUserId);
+                }
             }
             onUserCreatedOrDeleted(context);
         }
@@ -77,28 +80,24 @@ public class UserSwitchListenerService extends Service {
      * Enable or disable the restricted profile launcher entry activity as well as the
      * {@link UserSwitchListenerService} depending on whether there is a restricted profile.
      */
-    public static void onUserCreatedOrDeleted(Context context) {
-        boolean restrictedProfile = hasRestrictedProfile(context);
-
+    public static void onUserCreatedOrDeleted(final Context context) {
+        final boolean restrictedProfile = hasRestrictedProfile(context);
         if (DEBUG) {
             Log.d(TAG, "updating restricted profile : " + restrictedProfile);
         }
 
-        PackageManager pm = context.getPackageManager();
-        ComponentName compName = new ComponentName(context,
-                RESTRICTED_PROFILE_LAUNCHER_ENTRY_ACTIVITY);
-
-        int componentState = restrictedProfile ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
-
-        pm.setComponentEnabledSetting(compName, componentState, PackageManager.DONT_KILL_APP);
-        pm.setComponentEnabledSetting(new ComponentName(context, UserSwitchListenerService.class),
-                componentState, PackageManager.DONT_KILL_APP);
+        context.getPackageManager().setComponentEnabledSetting(new ComponentName(context,
+                        RESTRICTED_PROFILE_LAUNCHER_ENTRY_ACTIVITY), restrictedProfile
+                        ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                        : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                PackageManager.DONT_KILL_APP);
 
         if (restrictedProfile) {
-            context.startService(new Intent(context, UserSwitchListenerService.class));
+            context.startServiceAsUser(new Intent(context, UserSwitchListenerService.class),
+                    UserHandle.SYSTEM);
         } else {
-            context.stopService(new Intent(context, UserSwitchListenerService.class));
+            context.stopServiceAsUser(new Intent(context, UserSwitchListenerService.class),
+                    UserHandle.SYSTEM);
         }
     }
 
