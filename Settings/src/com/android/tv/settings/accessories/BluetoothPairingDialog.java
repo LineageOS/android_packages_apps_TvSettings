@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.accessories;
 
+import static com.android.tv.settings.accessories.AccessoryUtils.getHtmlEscapedDeviceName;
+
 import android.app.Fragment;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -380,7 +382,7 @@ public class BluetoothPairingDialog extends DialogActivity {
             switch (mType) {
                 case BluetoothDevice.PAIRING_VARIANT_PIN:
                     instructions = getString(R.string.bluetooth_enter_pin_msg,
-                            Html.escapeHtml(mDevice.getName()));
+                            getHtmlEscapedDeviceName(mDevice));
                     final TextView instructionText = (TextView) v.findViewById(R.id.hint_text);
                     instructionText.setText(getString(R.string.bluetooth_pin_values_hint));
                     // Maximum of 16 characters in a PIN
@@ -390,7 +392,7 @@ public class BluetoothPairingDialog extends DialogActivity {
 
                 case BluetoothDevice.PAIRING_VARIANT_PASSKEY:
                     instructions = getString(R.string.bluetooth_enter_passkey_msg,
-                            Html.escapeHtml(mDevice.getName()));
+                            getHtmlEscapedDeviceName(mDevice));
                     // Maximum of 6 digits for passkey
                     maxLength = BLUETOOTH_PASSKEY_MAX_LENGTH;
                     textInput.setInputType(InputType.TYPE_CLASS_TEXT);
@@ -464,7 +466,7 @@ public class BluetoothPairingDialog extends DialogActivity {
                 case BluetoothDevice.PAIRING_VARIANT_DISPLAY_PASSKEY:
                 case BluetoothDevice.PAIRING_VARIANT_DISPLAY_PIN:
                     instructions = getString(R.string.bluetooth_display_passkey_pin_msg,
-                            Html.escapeHtml(mDevice.getName()), mPairingKey);
+                            getHtmlEscapedDeviceName(mDevice), mPairingKey);
 
                     // Since its only a notification, send an OK to the framework,
                     // indicating that the dialog has been displayed.
@@ -477,13 +479,13 @@ public class BluetoothPairingDialog extends DialogActivity {
 
                 case BluetoothDevice.PAIRING_VARIANT_PASSKEY_CONFIRMATION:
                     instructions = getString(R.string.bluetooth_confirm_passkey_msg,
-                            Html.escapeHtml(mDevice.getName()), mPairingKey);
+                            getHtmlEscapedDeviceName(mDevice), mPairingKey);
                     break;
 
                 case BluetoothDevice.PAIRING_VARIANT_CONSENT:
                 case BluetoothDevice.PAIRING_VARIANT_OOB_CONSENT:
                     instructions = getString(R.string.bluetooth_incoming_pairing_msg,
-                            Html.escapeHtml(mDevice.getName()));
+                            getHtmlEscapedDeviceName(mDevice));
 
                     break;
                 default:
