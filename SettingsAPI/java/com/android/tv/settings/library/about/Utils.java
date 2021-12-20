@@ -9,7 +9,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -18,16 +17,11 @@ import android.graphics.ColorFilter;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.drawable.Drawable;
-import android.location.LocationManager;
 import android.media.AudioManager;
 import android.net.NetworkCapabilities;
 import android.net.vcn.VcnTransportInfo;
 import android.net.wifi.WifiInfo;
 import android.os.BatteryManager;
-import android.os.SystemProperties;
-import android.os.UserHandle;
-import android.print.PrintManager;
-import android.provider.Settings;
 import android.telephony.AccessNetworkConstants;
 import android.telephony.NetworkRegistrationInfo;
 import android.telephony.ServiceState;
@@ -57,15 +51,7 @@ public class Utils {
             com.android.internal.R.drawable.ic_wifi_signal_4
     };
 
-    public static void updateLocationEnabled(Context context, boolean enabled, int userId,
-            int source) {
-        Settings.Secure.putIntForUser(
-                context.getContentResolver(), Settings.Secure.LOCATION_CHANGER, source,
-                userId);
 
-        LocationManager locationManager = context.getSystemService(LocationManager.class);
-        locationManager.setLocationEnabledForUser(enabled, UserHandle.of(userId));
-    }
 
     /** Formats a double from 0.0..100.0 with an option to round **/
     public static String formatPercentage(double percentage, boolean round) {
@@ -213,31 +199,6 @@ public class Utils {
         return new ColorMatrixColorFilter(getAlphaInvariantColorMatrixForColor(color));
     }
 
-    /**
-     * Determine whether a package is a "system package", in which case certain things (like
-     * disabling notifications or disabling the package altogether) should be disallowed.
-     */
-    public static boolean isSystemPackage(Resources resources, PackageManager pm, PackageInfo pkg) {
-        if (sSystemSignature == null) {
-            sSystemSignature = new Signature[]{getSystemSignature(pm)};
-        }
-        if (sPermissionControllerPackageName == null) {
-            sPermissionControllerPackageName = pm.getPermissionControllerPackageName();
-        }
-        if (sServicesSystemSharedLibPackageName == null) {
-            sServicesSystemSharedLibPackageName = pm.getServicesSystemSharedLibraryPackageName();
-        }
-        if (sSharedSystemSharedLibPackageName == null) {
-            sSharedSystemSharedLibPackageName = pm.getSharedSystemSharedLibraryPackageName();
-        }
-        return (sSystemSignature[0] != null
-                && sSystemSignature[0].equals(getFirstSignature(pkg)))
-                || pkg.packageName.equals(sPermissionControllerPackageName)
-                || pkg.packageName.equals(sServicesSystemSharedLibPackageName)
-                || pkg.packageName.equals(sSharedSystemSharedLibPackageName)
-                || pkg.packageName.equals(PrintManager.PRINT_SPOOLER_PACKAGE_NAME)
-                || isDeviceProvisioningPackage(resources, pkg.packageName);
-    }
 
     private static Signature getFirstSignature(PackageInfo pkg) {
         if (pkg != null && pkg.signatures != null && pkg.signatures.length > 0) {
@@ -255,50 +216,11 @@ public class Utils {
         return null;
     }
 
-    /**
-     * Returns {@code true} if the supplied package is the device provisioning app. Otherwise,
-     * returns {@code false}.
-     */
-    public static boolean isDeviceProvisioningPackage(Resources resources, String packageName) {
-        String deviceProvisioningPackage = resources.getString(
-                com.android.internal.R.string.config_deviceProvisioningPackage);
-        return deviceProvisioningPackage != null && deviceProvisioningPackage.equals(packageName);
-    }
-
-
-    public static int getDefaultStorageManagerDaysToRetain(Resources resources) {
-        int defaultDays = Settings.Secure.AUTOMATIC_STORAGE_MANAGER_DAYS_TO_RETAIN_DEFAULT;
-        try {
-            defaultDays =
-                    resources.getInteger(
-                            com.android
-                                    .internal
-                                    .R
-                                    .integer
-                                    .config_storageManagerDaystoRetainDefault);
-        } catch (Resources.NotFoundException e) {
-            // We are likely in a test environment.
-        }
-        return defaultDays;
-    }
-
     public static boolean isWifiOnly(Context context) {
         return !context.getSystemService(TelephonyManager.class).isDataCapable();
     }
 
-    /** Returns if the automatic storage management feature is turned on or not. **/
-    public static boolean isStorageManagerEnabled(Context context) {
-        boolean isDefaultOn;
-        try {
-            isDefaultOn = SystemProperties.getBoolean(STORAGE_MANAGER_ENABLED_PROPERTY, false);
-        } catch (Resources.NotFoundException e) {
-            isDefaultOn = false;
-        }
-        return Settings.Secure.getInt(context.getContentResolver(),
-                Settings.Secure.AUTOMATIC_STORAGE_MANAGER_ENABLED,
-                isDefaultOn ? 1 : 0)
-                != 0;
-    }
+
 
     /**
      * get that {@link AudioManager#getMode()} is in ringing/call/communication(VoIP) status.

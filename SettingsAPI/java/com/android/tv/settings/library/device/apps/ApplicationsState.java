@@ -48,11 +48,9 @@ import android.os.SystemClock;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.text.format.Formatter;
-import android.util.IconDrawableFactory;
 import android.util.Log;
 import android.util.SparseArray;
 
-import com.android.internal.R;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.util.ArrayUtils;
 import com.android.tv.settings.library.util.LibUtils;
@@ -117,7 +115,6 @@ public class ApplicationsState {
 
     final Context mContext;
     final PackageManager mPm;
-    final IconDrawableFactory mDrawableFactory;
     final IPackageManager mIpm;
     final UserManager mUm;
     final StorageStatsManager mStats;
@@ -175,7 +172,7 @@ public class ApplicationsState {
     /**
      * Flags to configure the session to request various types of info.
      */
-    @IntDef(prefix = {"FLAG_SESSION_"}, value = {
+    @IntDef( value = {
             FLAG_SESSION_REQUEST_HOME_APP,
             FLAG_SESSION_REQUEST_ICONS,
             FLAG_SESSION_REQUEST_SIZES,
@@ -199,7 +196,6 @@ public class ApplicationsState {
     private ApplicationsState(Application app, IPackageManager iPackageManager) {
         mContext = app;
         mPm = mContext.getPackageManager();
-        mDrawableFactory = IconDrawableFactory.newInstance(mContext);
         mIpm = iPackageManager;
         mUm = mContext.getSystemService(UserManager.class);
         mStats = mContext.getSystemService(StorageStatsManager.class);
@@ -1690,7 +1686,8 @@ public class ApplicationsState {
                     return true;
                 } else {
                     this.mounted = false;
-                    this.icon = context.getDrawable(R.drawable.sym_app_on_sd_unavailable_icon);
+                    this.icon = context.getDrawable(
+				    com.android.internal.R.drawable.sym_app_on_sd_unavailable_icon);
                 }
             } else if (!this.mounted) {
                 // If the app wasn't mounted but is now mounted, reload
@@ -1831,21 +1828,6 @@ public class ApplicationsState {
         }
     };
 
-    public static final ApplicationsState.AppFilter FILTER_WORK =
-            new ApplicationsState.AppFilter() {
-                private int mCurrentUser;
-
-                @Override
-                public void init() {
-                    mCurrentUser = ActivityManager.getCurrentUser();
-                }
-
-                @Override
-                public boolean filterApp(
-                        ApplicationsState.AppEntry entry) {
-                    return UserHandle.getUserId(entry.info.uid) != mCurrentUser;
-                }
-            };
 
     /**
      * Displays a combined list with "downloaded" and "visible in launcher" apps only.
@@ -1961,20 +1943,6 @@ public class ApplicationsState {
         }
     };
 
-    public static final ApplicationsState.AppFilter
-            FILTER_WITH_DOMAIN_URLS = new ApplicationsState.AppFilter() {
-        @Override
-        public void init() {
-        }
-
-        @Override
-        public boolean filterApp(
-                ApplicationsState.AppEntry entry) {
-            return !AppUtils.isInstant(entry.info)
-                    && hasFlag(entry.info.privateFlags,
-                    ApplicationInfo.PRIVATE_FLAG_HAS_DOMAIN_URLS);
-        }
-    };
 
     public static final ApplicationsState.AppFilter
             FILTER_NOT_HIDE = new ApplicationsState.AppFilter() {
@@ -1983,7 +1951,8 @@ public class ApplicationsState {
         @Override
         public void init(Context context) {
             mHidePackageNames = context.getResources()
-                    .getStringArray(R.array.config_hideWhenDisabled_packageNames);
+                    .getStringArray(
+			com.android.internal.R.array.config_hideWhenDisabled_packageNames);
         }
 
         @Override
