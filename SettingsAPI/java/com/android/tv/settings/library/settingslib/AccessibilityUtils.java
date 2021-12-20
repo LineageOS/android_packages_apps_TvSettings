@@ -29,8 +29,6 @@ import android.text.TextUtils;
 import android.util.ArraySet;
 import android.view.accessibility.AccessibilityManager;
 
-import com.android.internal.R;
-
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -186,7 +184,7 @@ public class AccessibilityUtils {
         if (currentShortcutServiceId != null) {
             return currentShortcutServiceId;
         }
-        return context.getString(R.string.config_defaultAccessibilityService);
+        return context.getString(com.android.internal.R.string.config_defaultAccessibilityService);
     }
 
     private static Set<ComponentName> getInstalledServices(Context context) {
