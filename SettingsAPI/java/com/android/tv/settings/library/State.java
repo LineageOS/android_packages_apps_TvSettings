@@ -46,4 +46,6 @@ public interface State {
     boolean onPreferenceChange(String[] key, Object newValue);
 
     int getStateIdentifier();
+
+    void onDisplayDialogPreference(String[] key);
 }

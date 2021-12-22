@@ -286,5 +286,18 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
             }
         };
     }
+
+    @Override
+    public void onDisplayPreferenceDialog(Preference preference) {
+        if (getActivity() instanceof HasSettingsManager) {
+            if (mState == null || (!(preference instanceof HasKeys))) {
+                super.onDisplayPreferenceDialog(preference);
+                return;
+            }
+            mSettingsManager.onDisplayPreferenceDialog(mState, ((HasKeys) preference).getKeys());
+            return;
+        }
+        super.onDisplayPreferenceDialog(preference);
+    }
 }
 
