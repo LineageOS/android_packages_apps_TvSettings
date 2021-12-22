@@ -46,6 +46,7 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFE
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_SUMMARY;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TITLE_ICON;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER;
 
 import android.net.Uri;
 
@@ -147,6 +148,14 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     @NonNull
     public void addScreenTitle(@NonNull RowBuilder builder) {
         addRow(builder, TYPE_PREFERENCE_SCREEN_TITLE);
+    }
+
+    /**
+     * Add an embedded preference placeholder where another slice can control the properties via
+     * setEmbeddedPreference.
+     */
+    public void addEmbeddedPreference(@NonNull RowBuilder builder) {
+        addRow(builder, TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER);
     }
 
     /**

@@ -30,6 +30,7 @@ public class EmbeddedSlicePreference extends SlicePreference {
 
     public EmbeddedSlicePreference(Context context, String uri) {
         super(context);
+        setUri(uri);
         mHelper = new EmbeddedSlicePreferenceHelper(this, getUri());
     }
 

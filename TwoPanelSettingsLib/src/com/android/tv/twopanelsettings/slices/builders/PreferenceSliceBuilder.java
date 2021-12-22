@@ -19,8 +19,8 @@ package com.android.tv.twopanelsettings.slices.builders;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.BUTTONSTYLE;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.CHECKMARK;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
-import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.SEEKBAR;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -154,6 +154,15 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
      */
     public PreferenceSliceBuilder addScreenTitle(RowBuilder builder) {
         mImpl.addScreenTitle(builder);
+        return this;
+    }
+
+    /**
+     * Add an embedded preference placeholder where another slice can control the properties via
+     * setEmbeddedPreference.
+     */
+    public PreferenceSliceBuilder addEmbeddedPreference(RowBuilder builder) {
+        mImpl.addEmbeddedPreference(builder);
         return this;
     }
 

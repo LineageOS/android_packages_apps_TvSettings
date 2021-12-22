@@ -38,8 +38,8 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFE
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TITLE_ICON;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
-import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.SEEKBAR;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
 
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
@@ -79,7 +79,8 @@ public final class SlicePreferencesUtil {
         if (item.getSubType() != null) {
             String subType = item.getSubType();
             if (subType.equals(SlicesConstants.TYPE_PREFERENCE)
-                    || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED)) {
+                    || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED)
+                    || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER)) {
                 // TODO: Figure out all the possible cases and reorganize the logic
                 if (data.mInfoItems.size() > 0) {
                     preference = new InfoPreference(
@@ -152,7 +153,12 @@ public final class SlicePreferencesUtil {
                     }
                 } else {
                     if (preference == null) {
-                        preference = new SlicePreference(contextThemeWrapper);
+                        if (subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER)) {
+                            preference = new EmbeddedSlicePreference(contextThemeWrapper,
+                                    String.valueOf(uri));
+                        } else {
+                            preference = new SlicePreference(contextThemeWrapper);
+                        }
                     }
                     ((HasSliceUri) preference).setUri(uri.toString());
                     if (preference instanceof HasSliceAction) {
