@@ -59,6 +59,7 @@ public class EmbeddedSlicePreference extends SlicePreference {
     }
 
     void update() {
+        setEnabled(mHelper.mNewPref.isEnabled());
         setTitle(mHelper.mNewPref.getTitle());
         setSummary(mHelper.mNewPref.getSummary());
         setIcon(mHelper.mNewPref.getIcon());
