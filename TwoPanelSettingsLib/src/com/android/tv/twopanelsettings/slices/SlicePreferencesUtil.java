@@ -159,6 +159,9 @@ public final class SlicePreferencesUtil {
                         } else {
                             preference = new SlicePreference(contextThemeWrapper);
                         }
+                        if (hasEndIcon(data.mHasEndIconItem)) {
+                            preference.setLayoutResource(R.layout.preference_reversed_icon);
+                        }
                     }
                     ((HasSliceUri) preference).setUri(uri.toString());
                     if (preference instanceof HasSliceAction) {
@@ -215,6 +218,17 @@ public final class SlicePreferencesUtil {
                 }
             }
 
+            if (shouldForceContentDescription(item)) {
+                String fallbackContentDescription = "";
+                if (preference.getTitle() != null) {
+                    fallbackContentDescription = preference.getTitle().toString();
+                }
+
+                if (preference instanceof SlicePreference) {
+                    ((SlicePreference) preference).setContentDescription(
+                            getInfoContentDescription(item, fallbackContentDescription));
+                }
+            }
             // Set preview info image and text
             CharSequence infoText = getInfoText(item);
             CharSequence infoSummary = getInfoSummary(item);
@@ -282,6 +296,7 @@ public final class SlicePreferencesUtil {
         SliceItem mRadioGroupItem;
         SliceItem mIntentItem;
         SliceItem mFollowupIntentItem;
+        SliceItem mHasEndIconItem;
         List<SliceItem> mEndItems = new ArrayList<>();
         List<SliceItem> mInfoItems = new ArrayList<>();
     }
@@ -319,6 +334,9 @@ public final class SlicePreferencesUtil {
                         break;
                     case SlicesConstants.TAG_TARGET_URI :
                         data.mTargetSliceItem = item;
+                        break;
+                    case SlicesConstants.EXTRA_HAS_END_ICON:
+                        data.mHasEndIconItem = item;
                         break;
                 }
             } else if (FORMAT_TEXT.equals(item.getFormat()) && (item.getSubType() == null)) {
@@ -504,6 +522,29 @@ public final class SlicePreferencesUtil {
             }
         }
         return true;
+    }
+
+    private static boolean hasEndIcon(SliceItem item) {
+        return item != null && item.getInt() > 0;
+    }
+
+    /**
+     * Checks if custom content description should be forced to be used if provided. This function
+     * can be extended with more cases if needed.
+     *
+     * @param item The {@link SliceItem} containing the necessary information.
+     * @return <code>true</code> if custom content description should be used.
+     */
+    private static boolean shouldForceContentDescription(SliceItem sliceItem) {
+        List<SliceItem> items = sliceItem.getSlice().getItems();
+        for (SliceItem item : items)  {
+            // Checks if an end icon has been set.
+            if (item.getSubType() != null
+                    && item.getSubType().equals(SlicesConstants.EXTRA_HAS_END_ICON)) {
+                return hasEndIcon(item);
+            }
+        }
+        return false;
     }
 
     /**

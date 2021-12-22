@@ -449,6 +449,12 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                             ((HasSliceUri) oldPref)
                                     .setUri(((HasSliceUri) newPref).getUri());
                         }
+                        if ((oldPref instanceof HasCustomContentDescription)
+                                && (newPref instanceof HasCustomContentDescription)) {
+                            ((HasCustomContentDescription) oldPref).setContentDescription(
+                                    ((HasCustomContentDescription) newPref)
+                                            .getContentDescription());
+                        }
                         oldPref.setOrder(i);
                     }
                     if (sameKey) {
