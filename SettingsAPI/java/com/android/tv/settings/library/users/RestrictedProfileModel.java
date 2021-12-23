@@ -152,7 +152,8 @@ public class RestrictedProfileModel {
      */
     private boolean shouldAllowRunInBackground() {
         final boolean defaultValue = mContext.getResources().getBoolean(
-                com.android.internal.R.bool.config_keepRestrictedProfilesInBackground);
+                mContext.getResources().getIdentifier("config_keepRestrictedProfilesInBackground",
+                        "bool", "android"));
         return Settings.Global.getInt(mContext.getContentResolver(),
                 Settings.Global.KEEP_PROFILE_IN_BACKGROUND, defaultValue ? 1 : 0) > 0;
     }

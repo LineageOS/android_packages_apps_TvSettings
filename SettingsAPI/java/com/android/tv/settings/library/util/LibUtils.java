@@ -247,7 +247,8 @@ public class LibUtils {
      */
     public static boolean isDeviceProvisioningPackage(Resources resources, String packageName) {
         String deviceProvisioningPackage = resources.getString(
-                com.android.internal.R.string.config_deviceProvisioningPackage);
+                resources.getIdentifier("config_deviceProvisioningPackage",
+                        "string", "android"));
         return deviceProvisioningPackage != null && deviceProvisioningPackage.equals(packageName);
     }
 

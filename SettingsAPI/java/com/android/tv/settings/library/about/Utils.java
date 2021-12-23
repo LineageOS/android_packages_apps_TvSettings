@@ -35,24 +35,6 @@ import java.text.NumberFormat;
 
 public class Utils {
 
-    static final String STORAGE_MANAGER_ENABLED_PROPERTY =
-            "ro.storage_manager.enabled";
-
-    private static Signature[] sSystemSignature;
-    private static String sPermissionControllerPackageName;
-    private static String sServicesSystemSharedLibPackageName;
-    private static String sSharedSystemSharedLibPackageName;
-
-    static final int[] WIFI_PIE = {
-            com.android.internal.R.drawable.ic_wifi_signal_0,
-            com.android.internal.R.drawable.ic_wifi_signal_1,
-            com.android.internal.R.drawable.ic_wifi_signal_2,
-            com.android.internal.R.drawable.ic_wifi_signal_3,
-            com.android.internal.R.drawable.ic_wifi_signal_4
-    };
-
-
-
     /** Formats a double from 0.0..100.0 with an option to round **/
     public static String formatPercentage(double percentage, boolean round) {
         final int localPercentage = round ? Math.round((float) percentage) : (int) percentage;

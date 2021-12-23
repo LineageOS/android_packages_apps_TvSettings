@@ -1686,8 +1686,8 @@ public class ApplicationsState {
                     return true;
                 } else {
                     this.mounted = false;
-                    this.icon = context.getDrawable(
-				    com.android.internal.R.drawable.sym_app_on_sd_unavailable_icon);
+                    this.icon = context.getDrawable(context.getResources().getIdentifier(
+                            "sym_app_on_sd_unavailable_icon", "drawable", "android"));
                 }
             } else if (!this.mounted) {
                 // If the app wasn't mounted but is now mounted, reload
@@ -1951,8 +1951,8 @@ public class ApplicationsState {
         @Override
         public void init(Context context) {
             mHidePackageNames = context.getResources()
-                    .getStringArray(
-			com.android.internal.R.array.config_hideWhenDisabled_packageNames);
+                    .getStringArray(context.getResources().getIdentifier(
+                            "config_hideWhenDisabled_packageNames", "array", "android"));
         }
 
         @Override

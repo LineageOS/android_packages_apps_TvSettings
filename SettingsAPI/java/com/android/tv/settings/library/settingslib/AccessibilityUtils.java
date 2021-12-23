@@ -184,7 +184,9 @@ public class AccessibilityUtils {
         if (currentShortcutServiceId != null) {
             return currentShortcutServiceId;
         }
-        return context.getString(com.android.internal.R.string.config_defaultAccessibilityService);
+        return context.getString(
+                context.getResources().getIdentifier("config_defaultAccessibilityService",
+                        "string", "android"));
     }
 
     private static Set<ComponentName> getInstalledServices(Context context) {
