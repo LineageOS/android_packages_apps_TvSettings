@@ -20,7 +20,6 @@ import android.annotation.UserIdInt;
 import android.content.Intent;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * Forked from:
@@ -79,11 +78,6 @@ public interface ApplicationFeatureProvider {
      * then by package name
      */
     List<UserAppInfo> findPersistentPreferredActivities(@UserIdInt int userId, Intent[] intents);
-
-    /**
-     * Returns a list of package names that should be kept enabled.
-     */
-    Set<String> getKeepEnabledPackages();
 
     /**
      * Returns a user readable text explaining how much time user has spent in an app at a

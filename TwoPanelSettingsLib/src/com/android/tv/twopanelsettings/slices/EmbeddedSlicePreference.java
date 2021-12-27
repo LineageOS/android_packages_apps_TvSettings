@@ -30,6 +30,7 @@ public class EmbeddedSlicePreference extends SlicePreference {
 
     public EmbeddedSlicePreference(Context context, String uri) {
         super(context);
+        setUri(uri);
         mHelper = new EmbeddedSlicePreferenceHelper(this, getUri());
     }
 
@@ -59,6 +60,7 @@ public class EmbeddedSlicePreference extends SlicePreference {
     }
 
     void update() {
+        setEnabled(mHelper.mNewPref.isEnabled());
         setTitle(mHelper.mNewPref.getTitle());
         setSummary(mHelper.mNewPref.getSummary());
         setIcon(mHelper.mNewPref.getIcon());
