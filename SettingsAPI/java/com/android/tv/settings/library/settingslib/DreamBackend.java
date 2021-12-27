@@ -105,11 +105,14 @@ public class DreamBackend {
                 ServiceManager.getService(DreamService.DREAM_SERVICE));
         mComparator = new DreamBackend.DreamInfoComparator(getDefaultDream());
         mDreamsEnabledByDefault = mContext.getResources()
-                .getBoolean(com.android.internal.R.bool.config_dreamsEnabledByDefault);
+                .getBoolean(mContext.getResources().getIdentifier("config_dreamsEnabledByDefault",
+                        "bool", "android"));
         mDreamsActivatedOnSleepByDefault = mContext.getResources()
-                .getBoolean(com.android.internal.R.bool.config_dreamsActivatedOnSleepByDefault);
+                .getBoolean(mContext.getResources().getIdentifier(
+                "config_dreamsActivatedOnSleepByDefault", "bool", "android"));
         mDreamsActivatedOnDockByDefault = mContext.getResources()
-                .getBoolean(com.android.internal.R.bool.config_dreamsActivatedOnDockByDefault);
+                .getBoolean(mContext.getResources().getIdentifier(
+                "config_dreamsActivatedOnDockByDefault", "bool", "android"));
     }
 
     public List<DreamBackend.DreamInfo> getDreamInfos() {
@@ -351,7 +354,8 @@ public class DreamBackend {
                 return null;
             }
             TypedArray sa = res.obtainAttributes(attrs, com.android.internal.R.styleable.Dream);
-            cn = sa.getString(com.android.internal.R.styleable.Dream_settingsActivity);
+            cn = sa.getString(
+                    res.getIdentifier("Dream_settingsActivity", "styleable", "android"));
             sa.recycle();
         } catch (PackageManager.NameNotFoundException | IOException | XmlPullParserException e) {
             caughtException = e;

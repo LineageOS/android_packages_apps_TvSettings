@@ -97,11 +97,6 @@ public class RecentlyAccessedByUtils {
             long accessEnd = entry.getLastAccessTime(AppOpsManager.OP_FLAGS_ALL)
                     + entry.getLastDuration(AppOpsManager.OP_FLAGS_ALL);
 
-            if (DEBUG) {
-                Log.v(TAG, "appOp: " + entry.getOpStr()
-                        + ", running: " + entry.isRunning()
-                        + ", accessEnd: " + accessEnd);
-            }
             if (entry.isRunning()) {
                 mostRecentAccessEnd = currentTime;
             } else if (accessEnd >= recentAccessCutoffTime && accessEnd >= mostRecentAccessEnd) {

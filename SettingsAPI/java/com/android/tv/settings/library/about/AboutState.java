@@ -32,7 +32,6 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
-import android.sysprop.TelephonyProperties;
 import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -53,7 +52,6 @@ import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * The "About" screen in TV settings.
@@ -141,16 +139,6 @@ public class AboutState implements State {
             removePreference(securityPatchPref);
         }
 
-        String basebandVersion = TelephonyProperties.baseband_version().stream()
-                .map(x -> x == null ? "" : x)
-                .collect(Collectors.joining(","));
-
-        if (basebandVersion.isEmpty()) {
-            basebandVersion = ResourcesUtil.getString(context, "device_info_default");
-        }
-
-        mPreferenceCompatManager.getOrCreatePrefCompat(KEY_BASEBAND_VERSION).setSummary(
-                basebandVersion);
         mPreferenceCompatManager.getOrCreatePrefCompat(KEY_DEVICE_MODEL).setSummary(
                 Build.MODEL + DeviceInfoUtils.getMsvSuffix());
         mPreferenceCompatManager.getOrCreatePrefCompat(KEY_EQUIPMENT_ID)
@@ -326,7 +314,7 @@ public class AboutState implements State {
 
                     Intent intent = new Intent(Intent.ACTION_MAIN);
                     intent.setClassName("android",
-                            com.android.internal.app.PlatLogoActivity.class.getName());
+                            "PlatLogoActivity");
                     try {
                         context.startActivity(intent);
                     } catch (Exception e) {

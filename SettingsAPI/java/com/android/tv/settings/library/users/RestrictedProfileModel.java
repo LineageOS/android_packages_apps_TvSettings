@@ -24,10 +24,6 @@ import android.os.UserManager;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.android.internal.widget.LockPatternUtils;
-import com.android.internal.widget.LockPatternUtils.RequestThrottledException;
-import com.android.internal.widget.LockscreenCredential;
-
 /**
  * Manipulate and list restricted profiles on the device.
  */
@@ -156,21 +152,9 @@ public class RestrictedProfileModel {
      */
     private boolean shouldAllowRunInBackground() {
         final boolean defaultValue = mContext.getResources().getBoolean(
-                com.android.internal.R.bool.config_keepRestrictedProfilesInBackground);
+                mContext.getResources().getIdentifier("config_keepRestrictedProfilesInBackground",
+                        "bool", "android"));
         return Settings.Global.getInt(mContext.getContentResolver(),
                 Settings.Global.KEEP_PROFILE_IN_BACKGROUND, defaultValue ? 1 : 0) > 0;
-    }
-
-    /**
-     * @return {@code true} if {@code password} is a correct PIN for exiting the restricted user.
-     */
-    public boolean checkPassword(String password) {
-        try (LockscreenCredential credential = LockscreenCredential.createPinOrNone(password)) {
-            final int userId = getOwnerUserId();
-            return new LockPatternUtils(mContext).checkCredential(credential, userId, null);
-        } catch (RequestThrottledException e) {
-            Log.e(TAG, "Unable to check password for unlocking the user", e);
-        }
-        return false;
     }
 }
