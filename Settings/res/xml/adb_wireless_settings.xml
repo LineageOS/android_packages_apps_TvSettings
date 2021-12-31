@@ -16,15 +16,13 @@
         xmlns:settings="http://schemas.android.com/apk/res-auto"
         android:title="@string/adb_wireless_settings">
 
-    <PreferenceCategory
-        android:layout="@layout/preference_category_no_label">
+    <PreferenceCategory>
         <!-- ADB device name -->
         <Preference
             android:key="adb_device_name_pref"
             android:title="@string/my_device_info_device_name_preference_title"
             android:summary="@string/summary_placeholder"
             android:selectable="false"
-            settings:controller="com.android.settings.development.AdbDeviceNamePreferenceController"
             settings:enableCopying="true"/>
 
         <!-- IP address & port -->
@@ -37,8 +35,7 @@
 
     <!-- Pairing methods category -->
     <PreferenceCategory
-        android:key="adb_pairing_methods_category"
-        android:layout="@layout/preference_category_no_label">
+        android:key="adb_pairing_methods_category">
         <!-- qrcode scanner -->
         <Preference
             android:key="adb_pair_method_qrcode_pref"
@@ -59,7 +56,6 @@
     <!-- Off message: Shown only in the off state -->
     <PreferenceCategory
         android:key="adb_wireless_footer_category"
-        android:layout="@layout/preference_category_no_label"
         settings:allowDividerAbove="false"/>
 
 </PreferenceScreen>
