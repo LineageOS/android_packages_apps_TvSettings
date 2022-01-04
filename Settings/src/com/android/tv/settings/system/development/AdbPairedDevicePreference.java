@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.development;
+package com.android.tv.settings.system.development;
 
 import android.content.Context;
 import android.debug.PairDevice;
@@ -24,7 +24,7 @@ import android.view.View;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
-import com.android.settings.R;
+import com.android.tv.settings.R;
 
 /**
  * An AP preference for the currently connected AP
@@ -77,10 +77,18 @@ public class AdbPairedDevicePreference extends Preference {
 
     static void setTitle(AdbPairedDevicePreference preference,
                          PairDevice pairedDevice) {
+        final CharSequence fingerprintFormat = preference.getContext().getText(
+                R.string.adb_device_fingerprint_title_format);
+        final String device_fingerprint =
+                String.format(fingerprintFormat.toString(), pairedDevice.getGuid());
+        final String summary = pairedDevice.isConnected()
+                ? preference.getContext().getString(R.string.adb_network_device_details_status,
+                        preference.getContext().getString(R.string.adb_wireless_device_connected_summary),
+                        device_fingerprint)
+                : device_fingerprint;
+
         preference.setTitle(pairedDevice.getDeviceName());
-        preference.setSummary(pairedDevice.isConnected()
-                ? preference.getContext().getText(R.string.adb_wireless_device_connected_summary)
-                : "");
+        preference.setSummary(summary);
     }
 
     /**
@@ -92,4 +100,3 @@ public class AdbPairedDevicePreference extends Preference {
         bundle.putParcelable(PAIRED_DEVICE_EXTRA, mPairedDevice);
     }
 }
-
