@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.android.settings.development;
+package com.android.tv.settings.system.development;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.view.View;
 import android.widget.TextView;
 
-import com.android.settings.R;
+import com.android.tv.settings.R;
 
 /**
  * The class for allowing UIs like {@link AdbWirelessDialog} and {@link AdbWirelessDialogUiBase} to
@@ -71,11 +71,6 @@ public class AdbWirelessDialogController {
                 mView.findViewById(R.id.l_pairing_failed).setVisibility(View.VISIBLE);
                 mFailedMsg = (TextView) mView.findViewById(R.id.pairing_failed_label);
                 mFailedMsg.setText(msg);
-                mUi.setSubmitButton(res.getString(R.string.okay));
-                break;
-            case AdbWirelessDialogUiBase.MODE_QRCODE_FAILED:
-                mUi.setTitle(R.string.adb_pairing_device_dialog_failed_title);
-                mView.findViewById(R.id.l_qrcode_pairing_failed).setVisibility(View.VISIBLE);
                 mUi.setSubmitButton(res.getString(R.string.okay));
                 break;
         }

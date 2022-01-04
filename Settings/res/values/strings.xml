@@ -2513,4 +2513,17 @@
     <string name="font_sans_serif_light" translatable="false">sans-serif-light</string>
     <string name="font_sans_serif_thin" translatable="false">sans-serif-thin</string>
     <string name="font_sans_serif_condensed" translatable="false">sans-serif-condensed</string>
+
+    <!-- DO NOT TRANSLATE Summary placeholder -->
+    <string name="summary_placeholder" translatable="false">&#160;</string>
+    <!-- Title for preference showing the name of the device. [CHAR LIMIT=60]-->
+    <string name="my_device_info_device_name_preference_title">Device name</string>
+    <!-- Title of device details screen [CHAR LIMIT=28]-->
+    <string name="device_details_title">Device details</string>
+    <!-- Accessibility settings: button for lauching settings for an accessibility service -->
+    <string name="settings_button">Settings</string>
+    <!-- Verify forgetting paired device for ADB over network -->
+    <string name="adb_network_forget_confirm">Forget device <xliff:g id="device_name">%1$s</xliff:g>?</string>
+    <!-- Device detail information for ADB over network -->
+    <string name="adb_network_device_details_status"><xliff:g id="is_connected">%1$s</xliff:g>\n<xliff:g id="device_fingerprint">%2$s</xliff:g></string>
 </resources>
