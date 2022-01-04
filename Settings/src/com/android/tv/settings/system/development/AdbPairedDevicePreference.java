@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.development;
+package com.android.tv.settings.system.development;
 
 import android.content.Context;
 import android.debug.PairDevice;
@@ -24,7 +24,7 @@ import android.view.View;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
-import com.android.settings.R;
+import com.android.tv.settings.R;
 
 /**
  * An AP preference for the currently connected AP
@@ -92,4 +92,3 @@ public class AdbPairedDevicePreference extends Preference {
         bundle.putParcelable(PAIRED_DEVICE_EXTRA, mPairedDevice);
     }
 }
-

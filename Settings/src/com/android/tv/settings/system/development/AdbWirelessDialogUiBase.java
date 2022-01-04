@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.development;
+package com.android.tv.settings.system.development;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -124,4 +124,3 @@ public interface AdbWirelessDialogUiBase {
      */
     Button getCancelButton();
 }
-
