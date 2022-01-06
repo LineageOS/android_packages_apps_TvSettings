@@ -26,6 +26,9 @@ import android.content.IntentFilter;
 import android.debug.AdbManager;
 import android.debug.IAdbManager;
 import android.debug.PairDevice;
+import android.net.ConnectivityManager;
+import android.net.LinkProperties;
+import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -45,8 +48,11 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.widget.FooterPreference;
 
+import java.net.Inet4Address;
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -77,7 +83,6 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
 
     private WirelessDebuggingEnabler mWifiDebuggingEnabler;
 
-    private static AdbIpAddressPreferenceController sAdbIpAddressPreferenceController;
     // UI components
     private static final String PREF_KEY_ADB_NETWORK_SWITCH = "adb_root_enable";
     private static final String PREF_KEY_ADB_DEVICE_NAME = "adb_device_name_pref";
@@ -103,8 +108,19 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
     // Map of paired devices, with the device GUID is the key
     private Map<String, AdbPairedDevicePreference> mPairedDevicePreferences;
 
-    private IAdbManager mAdbManager;
     private int mConnectionPort;
+
+    // AdbIpAddressPreferenceController
+    private static final String PREF_ADB_IP_KEY = "adb_ip_addr_pref";
+    private Preference mAdbIpAddrPref;
+    private ConnectivityManager mCM;
+    private IAdbManager mAdbManager;
+
+    private static final String[] CONNECTIVITY_INTENTS = {
+            ConnectivityManager.CONNECTIVITY_ACTION,
+            WifiManager.ACTION_LINK_CONFIGURATION_CHANGED,
+            WifiManager.NETWORK_STATE_CHANGED_ACTION,
+    };
 
     class PairingCodeDialogListener implements AdbWirelessDialog.AdbWirelessDialogListener {
         @Override
@@ -161,7 +177,7 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
                 } else if (res.equals(AdbManager.WIRELESS_STATUS_CONNECTED)) {
                     int port = intent.getIntExtra(AdbManager.WIRELESS_DEBUG_PORT_EXTRA, 0);
                     Log.i(TAG, "Got pairing code port=" + port);
-                    String ipAddr = sAdbIpAddressPreferenceController.getIpv4Address() + ":" + port;
+                    String ipAddr = getIpv4Address() + ":" + port;
                     if (mPairingCodeDialog != null) {
                         mPairingCodeDialog.getController().setIpAddr(ipAddr);
                     }
@@ -176,6 +192,8 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
         //final SettingsActivity activity = (SettingsActivity) getActivity();
         mWifiDebuggingEnabler = new WirelessDebuggingEnabler(getActivity(),
                 mSwitchWidget, this, getLifecycle());
+
+        updateConnectivity();
     }
 
     @Override
@@ -187,9 +205,10 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
         mIntentFilter.addAction(AdbManager.WIRELESS_DEBUG_STATE_CHANGED_ACTION);
         mIntentFilter.addAction(AdbManager.WIRELESS_DEBUG_PAIRING_RESULT_ACTION);
 
-        // TODO ???
-        sAdbIpAddressPreferenceController =
-                new AdbIpAddressPreferenceController(getContext(), getLifecycle());
+        // AdbIpAddressPreferenceController
+        mCM = getContext().getSystemService(ConnectivityManager.class);
+        mAdbManager = IAdbManager.Stub.asInterface(ServiceManager.getService(
+                Context.ADB_SERVICE));
     }
 
     @Override
@@ -218,6 +237,9 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
         final CharSequence title = getText(R.string.adb_wireless_list_empty_off);
         mOffMessagePreference.setTitle(title);
         mFooterCategory.addPreference(mOffMessagePreference);
+
+        // AdbIpAddressPreferenceController
+        mAdbIpAddrPref = findPreference(PREF_ADB_IP_KEY);
     }
 
     @Override
@@ -293,25 +315,6 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
     }
 
     @Override
-    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
-        return buildPreferenceControllers(context, getActivity(), this, fragment,
-                getLifecycle());
-    }
-*/
-
-    private static List<AbstractPreferenceController> buildPreferenceControllers(
-            Context context, Activity activity, WirelessDebuggingFragment fragment,
-            Lifecycle lifecycle) {
-        final List<AbstractPreferenceController> controllers = new ArrayList<>();
-        sAdbIpAddressPreferenceController =
-                new AdbIpAddressPreferenceController(context, lifecycle);
-        controllers.add(sAdbIpAddressPreferenceController);
-
-        return controllers;
-    }
-
-/*
-    @Override
     protected String getLogTag() {
         return TAG;
     }
@@ -319,6 +322,7 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
 
     @Override
     public void onEnabled(boolean enabled) {
+        Log.i("WirelessDebuggingEnabler", "onEnabled : " + Boolean.toString(enabled));
         if (enabled) {
             showDebuggingPreferences();
             mAdbManager = IAdbManager.Stub.asInterface(ServiceManager.getService(
@@ -333,7 +337,7 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
             } catch (RemoteException e) {
                 Log.e(TAG, "Unable to request the paired list for Adb wireless");
             }
-            sAdbIpAddressPreferenceController.updateState(mIpAddrPreference);
+            updateConnectivity();
         } else {
             showOffMessage();
         }
@@ -478,4 +482,69 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
             deviceName = Build.MODEL;
         }
         return deviceName;
-    }}
+    }
+
+    // AdbIpAddressPreferenceController
+    private void updateConnectivity() {
+        String ipAddress = getDefaultIpAddresses(mCM);
+        if (ipAddress != null) {
+            int port = getPort();
+            if (port <= 0) {
+                mAdbIpAddrPref.setSummary(R.string.status_unavailable);
+            } else {
+                ipAddress += ":" + port;
+            }
+            mAdbIpAddrPref.setSummary(ipAddress);
+        } else {
+            mAdbIpAddrPref.setSummary(R.string.status_unavailable);
+        }
+    }
+
+    private int getPort() {
+        try {
+            return mAdbManager.getAdbWirelessPort();
+        } catch (RemoteException e) {
+            Log.e(TAG, "Unable to get the adbwifi port");
+        }
+        return 0;
+    }
+
+    private String getIpv4Address() {
+        return getDefaultIpAddresses(mCM);
+    }
+
+    /**
+     * Returns the default link's IP addresses, if any, taking into account IPv4 and IPv6 style
+     * addresses.
+     * @param cm ConnectivityManager
+     * @return the formatted and newline-separated IP addresses, or null if none.
+     */
+    private static String getDefaultIpAddresses(ConnectivityManager cm) {
+        LinkProperties prop = cm.getActiveLinkProperties();
+        return formatIpAddresses(prop);
+    }
+
+    private static String formatIpAddresses(LinkProperties prop) {
+        if (prop == null) {
+            return null;
+        }
+
+        Iterator<InetAddress> iter = prop.getAllAddresses().iterator();
+        // If there are no entries, return null
+        if (!iter.hasNext()) {
+            return null;
+        }
+
+        // Concatenate all available addresses, newline separated
+        StringBuilder addresses = new StringBuilder();
+        while (iter.hasNext()) {
+            InetAddress addr = iter.next();
+            if (addr instanceof Inet4Address) {
+                // adb only supports ipv4 at the moment
+                addresses.append(addr.getHostAddress());
+                break;
+            }
+        }
+        return addresses.toString();
+    }
+}
