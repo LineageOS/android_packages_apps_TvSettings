@@ -144,14 +144,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             ContextSingleton.getInstance().grantFullAccess(getContext(), Uri.parse(mUriString));
             getSliceLiveData().observe(this, this);
         }
+        if (TextUtils.isEmpty(mScreenTitle)) {
+            mScreenTitle = getArguments().getCharSequence(SlicesConstants.TAG_SCREEN_TITLE, "");
+        }
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public void onResume() {
-        if (TextUtils.isEmpty(mScreenTitle)) {
-            mScreenTitle = getArguments().getCharSequence(SlicesConstants.TAG_SCREEN_TITLE, "");
-        }
         super.onResume();
         if (!TextUtils.isEmpty(mUriString)) {
             getContext().getContentResolver().registerContentObserver(
