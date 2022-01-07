@@ -1805,4 +1805,8 @@
     <string name="device_details_title">Device details</string>
     <!-- Accessibility settings: button for lauching settings for an accessibility service -->
     <string name="settings_button">Settings</string>
+    <!-- Verify forgetting paired device for ADB over network -->
+    <string name="adb_network_forget_confirm">Forget device <xliff:g id="device_name">%1$s</xliff:g>?</string>
+    <!-- Device detail information for ADB over network -->
+    <string name="adb_network_device_details_status"><xliff:g id="is_connected">%1$s</xliff:g>\n<xliff:g id="device_fingerprint">%2$s</xliff:g></string>
 </resources>

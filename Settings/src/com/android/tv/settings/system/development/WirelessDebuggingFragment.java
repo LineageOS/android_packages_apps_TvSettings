@@ -17,10 +17,12 @@
 package com.android.tv.settings.system.development;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.settings.SettingsEnums;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.debug.AdbManager;
@@ -188,7 +190,7 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
         mWifiDebuggingEnabler = new WirelessDebuggingEnabler(getActivity(),
                 mSwitchWidget, this, getLifecycle());
 
-        mSwitchWidget.setChecked(mWifiDebuggingEnablerisAdbWifiEnabled());
+        mSwitchWidget.setChecked(mWifiDebuggingEnabler.isAdbWifiEnabled());
 
         updateConnectivity();
     }
@@ -267,9 +269,7 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == PAIRED_DEVICE_REQUEST) {
-            handlePairedDeviceRequest(resultCode, data);
-        } else if (requestCode == PAIRING_DEVICE_REQUEST) {
+        if (requestCode == PAIRING_DEVICE_REQUEST) {
             handlePairingDeviceRequest(resultCode, data);
         }
     }
@@ -299,18 +299,6 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
             d.show();
         }
     }
-
-/*
-    @Override
-    protected int getPreferenceScreenResId() {
-        return R.xml.adb_wireless_settings;
-    }
-
-    @Override
-    protected String getLogTag() {
-        return TAG;
-    }
-*/
 
     @Override
     public void onEnabled(boolean enabled) {
@@ -366,13 +354,11 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
                 AdbPairedDevicePreference p =
                         new AdbPairedDevicePreference(entry.getValue(),
                             mPairedDevicesCategory.getContext());
-                mPairedDevicePreferences.put(
-                        entry.getKey(),
-                        p);
+                mPairedDevicePreferences.put(entry.getKey(), p);
                 p.setOnPreferenceClickListener(preference -> {
                     AdbPairedDevicePreference pref =
                             (AdbPairedDevicePreference) preference;
-                    //launchPairedDeviceDetailsFragment(pref);
+                    verifyForgetPairedDevice(pref);
                     return true;
                 });
                 mPairedDevicesCategory.addPreference(p);
@@ -399,13 +385,11 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
                     AdbPairedDevicePreference p =
                             new AdbPairedDevicePreference(entry.getValue(),
                                 mPairedDevicesCategory.getContext());
-                    mPairedDevicePreferences.put(
-                            entry.getKey(),
-                            p);
+                    mPairedDevicePreferences.put(entry.getKey(), p);
                     p.setOnPreferenceClickListener(preference -> {
                         AdbPairedDevicePreference pref =
                                 (AdbPairedDevicePreference) preference;
-                        //launchPairedDeviceDetailsFragment(pref);
+                        verifyForgetPairedDevice(pref);
                         return true;
                     });
                     mPairedDevicesCategory.addPreference(p);
@@ -414,39 +398,33 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment
         }
     }
 
-    /*private void launchPairedDeviceDetailsFragment(AdbPairedDevicePreference p) {
-        // For sending to the device details fragment.
-        p.savePairedDeviceToExtras(p.getExtras());
-        new SubSettingLauncher(getContext())
-                .setTitleRes(R.string.adb_wireless_device_details_title)
-                .setDestination(AdbDeviceDetailsFragment.class.getName())
-                .setArguments(p.getExtras())
-                .setSourceMetricsCategory(getMetricsCategory())
-                .setResultListener(this, PAIRED_DEVICE_REQUEST)
-                .launch();
-    }*/
+    private void verifyForgetPairedDevice(AdbPairedDevicePreference pref) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setMessage(getResources().getString(R.string.adb_network_forget_confirm,
+                pref.getPairedDevice().getDeviceName()))
+            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    forgetPairedDeviceRequest(pref);
+                    dialog.dismiss();
+                }
+            })
+            .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            })
+            .show();
+    }
 
-    void handlePairedDeviceRequest(int result, Intent data) {
-        if (result != Activity.RESULT_OK) {
-            return;
-        }
-
+    private void forgetPairedDeviceRequest(AdbPairedDevicePreference pref) {
         Log.i(TAG, "Processing paired device request");
-        int requestType = data.getIntExtra(PAIRED_DEVICE_REQUEST_TYPE, -1);
-
         PairDevice p;
 
-        switch (requestType) {
-            case FORGET_ACTION:
-                try {
-                    p = (PairDevice) data.getParcelableExtra(PAIRED_DEVICE_EXTRA);
-                    mAdbManager.unpairDevice(p.getGuid());
-                } catch (RemoteException e) {
-                    Log.e(TAG, "Unable to forget the device");
-                }
-                break;
-            default:
-                break;
+        try {
+            p = (PairDevice) pref.getPairedDevice();
+            mAdbManager.unpairDevice(p.getGuid());
+        } catch (RemoteException e) {
+            Log.e(TAG, "Unable to forget the device");
         }
     }
 
