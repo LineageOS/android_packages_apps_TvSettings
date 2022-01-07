@@ -69,7 +69,7 @@ public class WirelessDebuggingEnabler implements LifecycleObserver, OnResume, On
         };
     }
 
-    private boolean isAdbWifiEnabled() {
+    public boolean isAdbWifiEnabled() {
         return Settings.Global.getInt(mContentResolver, Settings.Global.ADB_WIFI_ENABLED, 0) != 0;
     }
 
