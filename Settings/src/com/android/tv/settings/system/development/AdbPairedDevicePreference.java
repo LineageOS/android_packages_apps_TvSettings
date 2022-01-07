@@ -77,10 +77,18 @@ public class AdbPairedDevicePreference extends Preference {
 
     static void setTitle(AdbPairedDevicePreference preference,
                          PairDevice pairedDevice) {
+        final CharSequence fingerprintFormat = preference.getContext().getText(
+                R.string.adb_device_fingerprint_title_format);
+        final String device_fingerprint =
+                String.format(fingerprintFormat.toString(), pairedDevice.getGuid());
+        final String summary = pairedDevice.isConnected()
+                ? preference.getContext().getString(R.string.adb_network_device_details_status,
+                        preference.getContext().getString(R.string.adb_wireless_device_connected_summary),
+                        device_fingerprint)
+                : device_fingerprint;
+
         preference.setTitle(pairedDevice.getDeviceName());
-        preference.setSummary(pairedDevice.isConnected()
-                ? preference.getContext().getText(R.string.adb_wireless_device_connected_summary)
-                : "");
+        preference.setSummary(summary);
     }
 
     /**
