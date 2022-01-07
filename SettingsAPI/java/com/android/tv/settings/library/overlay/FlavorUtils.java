@@ -41,6 +41,8 @@ public final class FlavorUtils {
             FLAVOR_CLASSIC | FLAVOR_TWO_PANEL | FLAVOR_X | FLAVOR_VENDOR;
     public static final int TWO_PANEL_FLAVORS_MASK = FLAVOR_TWO_PANEL | FLAVOR_X | FLAVOR_VENDOR;
     public static final int X_EXPERIENCE_FLAVORS_MASK = FLAVOR_X | FLAVOR_VENDOR;
+    public static final int NON_X_EXPERIENCE_FLAVORS_MASK =
+            FLAVOR_UNDEFINED | FLAVOR_CLASSIC | FLAVOR_TWO_PANEL;
 
     private static FeatureFactory sFeatureFactory;
 
