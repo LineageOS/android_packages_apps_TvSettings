@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.device.display.daydream;
 
+import static com.android.tv.settings.library.overlay.FlavorUtils.NON_X_EXPERIENCE_FLAVORS_MASK;
+
 import androidx.fragment.app.Fragment;
 
 import com.android.tv.settings.TvSettingsActivity;
@@ -30,5 +32,10 @@ public class DaydreamActivity extends TvSettingsActivity {
         return com.android.tv.settings.overlay.FlavorUtils.getFeatureFactory(
                 this).getSettingsFragmentProvider()
                 .newSettingsFragment(DaydreamFragment.class.getName(), null);
+    }
+
+    @Override
+    protected int getAvailableFlavors() {
+        return NON_X_EXPERIENCE_FLAVORS_MASK;
     }
 }
