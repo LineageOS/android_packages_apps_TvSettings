@@ -14,6 +14,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Display settings.  The delay in inactivity before the daydream starts. -->
     <string-array name="sleep_timeout_entries">
         <item>Às dèidh 5 mionaidean</item>
         <item>Às dèidh 15 mionaidean</item>
@@ -21,6 +22,8 @@
         <item>Uair a thìde</item>
         <item>Às dèidh 2 uair a thìde</item>
     </string-array>
+    <!-- Do not translate. -->
+    <!-- Display settings.  The delay after the daydream starts when the screen goes off. -->
     <string-array name="screen_off_timeout_entries">
         <item>Às dèidh 15 mionaidean</item>
         <item>Às dèidh leth-uair a thìde</item>
@@ -31,6 +34,8 @@
         <item>24 uair a thìde</item>
         <item>Na dèan bruadair</item>
     </string-array>
+    <!-- Do not translate. -->
+    <!-- Titles for captioning typeface preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_typeface_selector_titles">
         <item>Bun-roghainn</item>
         <item>Sans-serif</item>
@@ -42,6 +47,8 @@
         <item>Eadailteach</item>
         <item>Tùs-litrichean beaga</item>
     </string-array>
+    <!-- Values for captioning typeface preference. -->
+    <!-- Titles for captioning font size preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_font_size_selector_titles">
         <item>Glè bheag</item>
         <item>Beag</item>
@@ -49,6 +56,8 @@
         <item>Mòr</item>
         <item>Glè mhòr</item>
     </string-array>
+    <!-- Values for captioning font size preference. -->
+    <!-- Titles for captioning character edge type preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_edge_type_selector_titles">
         <item>Gun oir</item>
         <item>Oir‑loidhne</item>
@@ -56,22 +65,40 @@
         <item>Àrdaichte</item>
         <item>Air a bhrùthadh</item>
     </string-array>
+    <!-- Values for captioning character edge type preference. -->
+    <!-- Titles for captioning color preference. -->
+    <!-- Index to id mapping for captioning color preference. -->
+    <!-- Titles for captioning opacity preference. [CHAR LIMIT=35] -->
     <string-array name="captioning_opacity_selector_titles">
         <item>25%</item>
         <item>50%</item>
         <item>75%</item>
         <item>100%</item>
     </string-array>
+    <!-- Values for captioning opacity preference. -->
+    <!-- List entries for controlling surround sound passthrough setting -->
+    <!-- Entry values for surround sound preference -->
+    <!-- Blacklist packages which should be seen as system apps in "All apps" page -->
+    <!-- Type of EAP method -->
+    <!-- Phase 2 options for PEAP -->
     <string-array name="wifi_peap_phase2_entries">
         <item>Gun oir</item>
+        <!-- Do not translate. -->
         <item>MSCHAPV2</item>
+        <!-- Do not translate. -->
         <item>GTC</item>
     </string-array>
+    <!-- Phase 2 options for rest of EAP methods -->
     <string-array name="wifi_phase2_entries">
         <item>Gun oir</item>
+        <!-- Do not translate. -->
         <item>PAP</item>
+        <!-- Do not translate. -->
         <item>MSCHAP</item>
+        <!-- Do not translate. -->
         <item>MSCHAPV2</item>
+        <!-- Do not translate. -->
         <item>GTC</item>
     </string-array>
+    <!-- customized ignored packages for system alert window-->
 </resources>
