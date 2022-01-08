@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.development;
+package com.android.tv.settings.system.development;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -25,7 +25,8 @@ import android.os.Looper;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.android.settings.widget.SwitchWidgetController;
+import androidx.preference.SwitchPreference;
+
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnPause;
@@ -34,11 +35,10 @@ import com.android.settingslib.core.lifecycle.events.OnResume;
 /**
  * Class to control the switch bar in the wireless debugging fragment.
  */
-public class WirelessDebuggingEnabler implements SwitchWidgetController.OnSwitchChangeListener,
-        LifecycleObserver, OnResume, OnPause {
+public class WirelessDebuggingEnabler implements LifecycleObserver, OnResume, OnPause {
     private static final String TAG = "WirelessDebuggingEnabler";
 
-    private final SwitchWidgetController mSwitchWidget;
+    private final SwitchPreference mSwitchWidget;
     private Context mContext;
     private boolean mListeningToOnSwitchChange = false;
     private OnEnabledListener mListener;
@@ -46,12 +46,12 @@ public class WirelessDebuggingEnabler implements SwitchWidgetController.OnSwitch
     private final ContentObserver mSettingsObserver;
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
-    public WirelessDebuggingEnabler(Context context, SwitchWidgetController switchWidget,
+    public WirelessDebuggingEnabler(Context context, SwitchPreference switchWidget,
             OnEnabledListener listener, Lifecycle lifecycle) {
         mContext = context;
         mSwitchWidget = switchWidget;
-        mSwitchWidget.setListener(this);
-        mSwitchWidget.setupView();
+        mSwitchWidget.setOnPreferenceChangeListener((p, v) ->
+                writeAdbWifiSetting((Boolean) v));
 
         mListener = listener;
         if (lifecycle != null) {
@@ -69,9 +69,7 @@ public class WirelessDebuggingEnabler implements SwitchWidgetController.OnSwitch
     }
 
     private boolean isAdbWifiEnabled() {
-        return Settings.Global.getInt(mContentResolver, Settings.Global.ADB_WIFI_ENABLED,
-                AdbPreferenceController.ADB_SETTING_OFF)
-                != AdbPreferenceController.ADB_SETTING_OFF;
+        return Settings.Global.getInt(mContentResolver, Settings.Global.ADB_WIFI_ENABLED, 0) != 0;
     }
 
     /**
@@ -79,16 +77,13 @@ public class WirelessDebuggingEnabler implements SwitchWidgetController.OnSwitch
      */
     public void teardownSwitchController() {
         if (mListeningToOnSwitchChange) {
-            mSwitchWidget.stopListening();
             mListeningToOnSwitchChange = false;
         }
-        mSwitchWidget.teardownView();
     }
 
     @Override
     public void onResume() {
         if (!mListeningToOnSwitchChange) {
-            mSwitchWidget.startListening();
             mListeningToOnSwitchChange = true;
         }
         onWirelessDebuggingEnabled(isAdbWifiEnabled());
@@ -100,28 +95,22 @@ public class WirelessDebuggingEnabler implements SwitchWidgetController.OnSwitch
     @Override
     public void onPause() {
         if (mListeningToOnSwitchChange) {
-            mSwitchWidget.stopListening();
             mListeningToOnSwitchChange = false;
         }
         mContentResolver.unregisterContentObserver(mSettingsObserver);
     }
 
     private void onWirelessDebuggingEnabled(boolean enabled) {
-        mSwitchWidget.setChecked(enabled);
         if (mListener != null) {
             mListener.onEnabled(enabled);
         }
     }
 
-    protected void writeAdbWifiSetting(boolean enabled) {
+    protected boolean writeAdbWifiSetting(boolean enabled) {
+        Log.i(TAG, "writeAdbWifiSetting : " + Boolean.toString(enabled));
         Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.ADB_WIFI_ENABLED, enabled ? AdbPreferenceController.ADB_SETTING_ON
-                : AdbPreferenceController.ADB_SETTING_OFF);
-    }
+                Settings.Global.ADB_WIFI_ENABLED, enabled ? 1 : 0);
 
-    @Override
-    public boolean onSwitchToggled(boolean isChecked) {
-        writeAdbWifiSetting(isChecked);
         return true;
     }
 

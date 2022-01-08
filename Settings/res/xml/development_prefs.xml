@@ -101,11 +101,11 @@
                     android:title="@string/clear_adb_keys"
                     android:fragment="com.android.tv.settings.system.development.AdbKeysDialog" />
 
-        <com.android.settings.widget.MasterSwitchPreference
-            android:fragment="com.android.settings.development.WirelessDebuggingFragment"
+        <Preference
             android:key="toggle_adb_wireless"
             android:title="@string/enable_adb_wireless"
-            android:summary="@string/enable_adb_wireless_summary" />
+            android:summary="@string/enable_adb_wireless_summary"
+            android:fragment="com.android.tv.settings.system.development.WirelessDebuggingFragment" />
 
         <SwitchPreference
             android:key="enable_terminal"

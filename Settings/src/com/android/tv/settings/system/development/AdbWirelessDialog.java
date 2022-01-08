@@ -14,15 +14,14 @@
  * limitations under the License.
  */
 
-package com.android.settings.development;
+package com.android.tv.settings.system.development;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import androidx.appcompat.app.AlertDialog;
 
 import com.android.tv.settings.R;
 
@@ -31,8 +30,7 @@ import com.android.tv.settings.R;
  * fragment.
  */
 public class AdbWirelessDialog extends AlertDialog implements
-        AdbWirelessDialogUiBase,
-        DialogInterface.OnClickListener {
+        AdbWirelessDialogUiBase, DialogInterface.OnClickListener {
 
     /**
      * Interface for subscribers to implement in order to listen
