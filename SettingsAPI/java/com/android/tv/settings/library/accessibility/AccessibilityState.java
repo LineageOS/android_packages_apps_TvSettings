@@ -257,4 +257,9 @@ public class AccessibilityState implements State {
         }
         refreshServicesUI();
     }
+
+    @Override
+    public void onDisplayDialogPreference(String[] key) {
+
+    }
 }
