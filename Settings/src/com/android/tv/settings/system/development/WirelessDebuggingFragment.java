@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-package com.android.settings.development;
+package com.android.tv.settings.system.development;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.settings.SettingsEnums;
@@ -25,6 +26,9 @@ import android.content.IntentFilter;
 import android.debug.AdbManager;
 import android.debug.IAdbManager;
 import android.debug.PairDevice;
+import android.net.ConnectivityManager;
+import android.net.LinkProperties;
+import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -32,32 +36,27 @@ import android.os.ServiceManager;
 import android.provider.Settings;
 import android.util.Log;
 
+import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
+import androidx.preference.SwitchPreference;
 
-import com.android.tv.settings.R;
-import com.android.settings.SettingsActivity;
-import com.android.settings.core.SubSettingLauncher;
-import com.android.settings.dashboard.DashboardFragment;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.widget.SwitchBarController;
-import com.android.settingslib.core.AbstractPreferenceController;
-import com.android.settingslib.core.lifecycle.Lifecycle;
-import com.android.settingslib.development.DevelopmentSettingsEnabler;
-import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.FooterPreference;
+import com.android.tv.settings.R;
+import com.android.tv.settings.SettingsPreferenceFragment;
 
-import java.util.ArrayList;
+import java.net.Inet4Address;
+import java.net.InetAddress;
 import java.util.HashMap;
-import java.util.List;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
  * Fragment shown when clicking in the "Wireless Debugging" preference in
  * the developer options.
  */
-@SearchIndexable
-public class WirelessDebuggingFragment extends DashboardFragment
+@Keep
+public class WirelessDebuggingFragment extends SettingsPreferenceFragment
         implements WirelessDebuggingEnabler.OnEnabledListener {
 
     private static final String TAG = "WirelessDebuggingFrag";
@@ -79,21 +78,21 @@ public class WirelessDebuggingFragment extends DashboardFragment
 
     private WirelessDebuggingEnabler mWifiDebuggingEnabler;
 
-    private static AdbIpAddressPreferenceController sAdbIpAddressPreferenceController;
     // UI components
+    private static final String PREF_KEY_ADB_NETWORK_SWITCH = "adb_root_enable";
     private static final String PREF_KEY_ADB_DEVICE_NAME = "adb_device_name_pref";
     private static final String PREF_KEY_ADB_IP_ADDR = "adb_ip_addr_pref";
     private static final String PREF_KEY_PAIRING_METHODS_CATEGORY = "adb_pairing_methods_category";
-    private static final String PREF_KEY_ADB_QRCODE_PAIRING = "adb_pair_method_qrcode_pref";
     private static final String PREF_KEY_ADB_CODE_PAIRING = "adb_pair_method_code_pref";
     private static final String PREF_KEY_PAIRED_DEVICES_CATEGORY = "adb_paired_devices_category";
     private static final String PREF_KEY_FOOTER_CATEGORY = "adb_wireless_footer_category";
+
+    private SwitchPreference mSwitchWidget;
 
     private Preference mDeviceNamePreference;
     private Preference mIpAddrPreference;
 
     private PreferenceCategory mPairingMethodsCategory;
-    private Preference mQrcodePairingPreference;
     private Preference mCodePairingPreference;
 
     private PreferenceCategory mPairedDevicesCategory;
@@ -104,8 +103,13 @@ public class WirelessDebuggingFragment extends DashboardFragment
     // Map of paired devices, with the device GUID is the key
     private Map<String, AdbPairedDevicePreference> mPairedDevicePreferences;
 
-    private IAdbManager mAdbManager;
     private int mConnectionPort;
+
+    // AdbIpAddressPreferenceController
+    private static final String PREF_ADB_IP_KEY = "adb_ip_addr_pref";
+    private Preference mAdbIpAddrPref;
+    private ConnectivityManager mCM;
+    private IAdbManager mAdbManager;
 
     class PairingCodeDialogListener implements AdbWirelessDialog.AdbWirelessDialogListener {
         @Override
@@ -153,16 +157,16 @@ public class WirelessDebuggingFragment extends DashboardFragment
                         mPairingCodeDialog.getController().setPairingCode(pairingCode);
                     }
                 } else if (res.equals(AdbManager.WIRELESS_STATUS_SUCCESS)) {
-                    removeDialog(AdbWirelessDialogUiBase.MODE_PAIRING);
+                    getActivity().removeDialog(AdbWirelessDialogUiBase.MODE_PAIRING);
                     mPairingCodeDialog = null;
                 } else if (res.equals(AdbManager.WIRELESS_STATUS_FAIL)) {
-                    removeDialog(AdbWirelessDialogUiBase.MODE_PAIRING);
+                    getActivity().removeDialog(AdbWirelessDialogUiBase.MODE_PAIRING);
                     mPairingCodeDialog = null;
-                    showDialog(AdbWirelessDialogUiBase.MODE_PAIRING_FAILED);
+                    createDialog(AdbWirelessDialogUiBase.MODE_PAIRING_FAILED);
                 } else if (res.equals(AdbManager.WIRELESS_STATUS_CONNECTED)) {
                     int port = intent.getIntExtra(AdbManager.WIRELESS_DEBUG_PORT_EXTRA, 0);
                     Log.i(TAG, "Got pairing code port=" + port);
-                    String ipAddr = sAdbIpAddressPreferenceController.getIpv4Address() + ":" + port;
+                    String ipAddr = getIpv4Address() + ":" + port;
                     if (mPairingCodeDialog != null) {
                         mPairingCodeDialog.getController().setIpAddr(ipAddr);
                     }
@@ -174,10 +178,13 @@ public class WirelessDebuggingFragment extends DashboardFragment
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        final SettingsActivity activity = (SettingsActivity) getActivity();
-        mWifiDebuggingEnabler =  new WirelessDebuggingEnabler(activity,
-                new SwitchBarController(activity.getSwitchBar()), this,
-                getSettingsLifecycle());
+
+        mWifiDebuggingEnabler = new WirelessDebuggingEnabler(getActivity(),
+                mSwitchWidget, this, getLifecycle());
+
+        mSwitchWidget.setChecked(mWifiDebuggingEnablerisAdbWifiEnabled());
+
+        updateConnectivity();
     }
 
     @Override
@@ -188,38 +195,44 @@ public class WirelessDebuggingFragment extends DashboardFragment
         mIntentFilter = new IntentFilter(AdbManager.WIRELESS_DEBUG_PAIRED_DEVICES_ACTION);
         mIntentFilter.addAction(AdbManager.WIRELESS_DEBUG_STATE_CHANGED_ACTION);
         mIntentFilter.addAction(AdbManager.WIRELESS_DEBUG_PAIRING_RESULT_ACTION);
+
+        // AdbIpAddressPreferenceController
+        mCM = getContext().getSystemService(ConnectivityManager.class);
+        mAdbManager = IAdbManager.Stub.asInterface(ServiceManager.getService(
+                Context.ADB_SERVICE));
+    }
+
+    @Override
+    public void onCreatePreferences(Bundle bundle, String s) {
+        setPreferencesFromResource(R.xml.adb_wireless_settings, null);
     }
 
     private void addPreferences() {
-        mDeviceNamePreference =
-            (Preference) findPreference(PREF_KEY_ADB_DEVICE_NAME);
-        mIpAddrPreference =
-            (Preference) findPreference(PREF_KEY_ADB_IP_ADDR);
+        mSwitchWidget = (SwitchPreference) findPreference(PREF_KEY_ADB_NETWORK_SWITCH);
+        mDeviceNamePreference = (Preference) findPreference(PREF_KEY_ADB_DEVICE_NAME);
+        mIpAddrPreference = (Preference) findPreference(PREF_KEY_ADB_IP_ADDR);
         mPairingMethodsCategory =
                 (PreferenceCategory) findPreference(PREF_KEY_PAIRING_METHODS_CATEGORY);
-        mCodePairingPreference =
-                (Preference) findPreference(PREF_KEY_ADB_CODE_PAIRING);
+        mCodePairingPreference = (Preference) findPreference(PREF_KEY_ADB_CODE_PAIRING);
         mCodePairingPreference.setOnPreferenceClickListener(preference -> {
-            showDialog(AdbWirelessDialogUiBase.MODE_PAIRING);
-            return true;
-        });
-        mQrcodePairingPreference =
-                (Preference) findPreference(PREF_KEY_ADB_QRCODE_PAIRING);
-        mQrcodePairingPreference.setOnPreferenceClickListener(preference -> {
-            launchQrcodeScannerFragment();
+            createDialog(AdbWirelessDialogUiBase.MODE_PAIRING);
             return true;
         });
 
         mPairedDevicesCategory =
                 (PreferenceCategory) findPreference(PREF_KEY_PAIRED_DEVICES_CATEGORY);
-        mFooterCategory =
-                (PreferenceCategory) findPreference(PREF_KEY_FOOTER_CATEGORY);
+        mFooterCategory = (PreferenceCategory) findPreference(PREF_KEY_FOOTER_CATEGORY);
 
         mOffMessagePreference =
                 new FooterPreference(mFooterCategory.getContext());
         final CharSequence title = getText(R.string.adb_wireless_list_empty_off);
         mOffMessagePreference.setTitle(title);
         mFooterCategory.addPreference(mOffMessagePreference);
+
+        mDeviceNamePreference.setSummary(getDeviceName());
+
+        // AdbIpAddressPreferenceController
+        mAdbIpAddrPref = findPreference(PREF_ADB_IP_KEY);
     }
 
     @Override
@@ -240,7 +253,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
     public void onPause() {
         super.onPause();
 
-        removeDialog(AdbWirelessDialogUiBase.MODE_PAIRING);
+        //TODO removeDialog(AdbWirelessDialogUiBase.MODE_PAIRING);
         getActivity().unregisterReceiver(mReceiver);
     }
 
@@ -260,13 +273,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
         return SettingsEnums.SETTINGS_ADB_WIRELESS;
     }
 
-    @Override
-    public int getDialogMetricsCategory(int dialogId) {
-        return SettingsEnums.ADB_WIRELESS_DEVICE_PAIRING_DIALOG;
-    }
-
-    @Override
-    public Dialog onCreateDialog(int dialogId) {
+    private void createDialog(int dialogId) {
         Dialog d = AdbWirelessDialog.createModal(getActivity(),
                 dialogId == AdbWirelessDialogUiBase.MODE_PAIRING
                     ? mPairingCodeDialogListener : null, dialogId);
@@ -281,41 +288,27 @@ public class WirelessDebuggingFragment extends DashboardFragment
                         AdbWirelessDialogUiBase.MODE_PAIRING_FAILED);
             }
         }
+
         if (d != null) {
-            return d;
+            d.show();
         }
-        return super.onCreateDialog(dialogId);
     }
 
+/*
     @Override
     protected int getPreferenceScreenResId() {
         return R.xml.adb_wireless_settings;
     }
 
     @Override
-    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
-        return buildPreferenceControllers(context, getActivity(), this /* fragment */,
-                getSettingsLifecycle());
-    }
-
-    private static List<AbstractPreferenceController> buildPreferenceControllers(
-            Context context, Activity activity, WirelessDebuggingFragment fragment,
-            Lifecycle lifecycle) {
-        final List<AbstractPreferenceController> controllers = new ArrayList<>();
-        sAdbIpAddressPreferenceController =
-                new AdbIpAddressPreferenceController(context, lifecycle);
-        controllers.add(sAdbIpAddressPreferenceController);
-
-        return controllers;
-    }
-
-    @Override
     protected String getLogTag() {
         return TAG;
     }
+*/
 
     @Override
     public void onEnabled(boolean enabled) {
+        Log.i("WirelessDebuggingEnabler", "onEnabled : " + Boolean.toString(enabled));
         if (enabled) {
             showDebuggingPreferences();
             mAdbManager = IAdbManager.Stub.asInterface(ServiceManager.getService(
@@ -330,7 +323,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
             } catch (RemoteException e) {
                 Log.e(TAG, "Unable to request the paired list for Adb wireless");
             }
-            sAdbIpAddressPreferenceController.updateState(mIpAddrPreference);
+            updateConnectivity();
         } else {
             showOffMessage();
         }
@@ -373,7 +366,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
                 p.setOnPreferenceClickListener(preference -> {
                     AdbPairedDevicePreference pref =
                             (AdbPairedDevicePreference) preference;
-                    launchPairedDeviceDetailsFragment(pref);
+                    //launchPairedDeviceDetailsFragment(pref);
                     return true;
                 });
                 mPairedDevicesCategory.addPreference(p);
@@ -406,7 +399,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
                     p.setOnPreferenceClickListener(preference -> {
                         AdbPairedDevicePreference pref =
                                 (AdbPairedDevicePreference) preference;
-                        launchPairedDeviceDetailsFragment(pref);
+                        //launchPairedDeviceDetailsFragment(pref);
                         return true;
                     });
                     mPairedDevicesCategory.addPreference(p);
@@ -415,7 +408,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
         }
     }
 
-    private void launchPairedDeviceDetailsFragment(AdbPairedDevicePreference p) {
+    /*private void launchPairedDeviceDetailsFragment(AdbPairedDevicePreference p) {
         // For sending to the device details fragment.
         p.savePairedDeviceToExtras(p.getExtras());
         new SubSettingLauncher(getContext())
@@ -425,7 +418,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
                 .setSourceMetricsCategory(getMetricsCategory())
                 .setResultListener(this, PAIRED_DEVICE_REQUEST)
                 .launch();
-    }
+    }*/
 
     void handlePairedDeviceRequest(int result, Intent data) {
         if (result != Activity.RESULT_OK) {
@@ -459,7 +452,7 @@ public class WirelessDebuggingFragment extends DashboardFragment
         int requestType = data.getIntExtra(PAIRING_DEVICE_REQUEST_TYPE, -1);
         switch (requestType) {
             case FAIL_ACTION:
-                showDialog(AdbWirelessDialogUiBase.MODE_PAIRING_FAILED);
+                createDialog(AdbWirelessDialogUiBase.MODE_PAIRING_FAILED);
                 break;
             default:
                 break;
@@ -476,20 +469,67 @@ public class WirelessDebuggingFragment extends DashboardFragment
         return deviceName;
     }
 
-    private void launchQrcodeScannerFragment() {
-        new SubSettingLauncher(getContext())
-                .setDestination(AdbQrcodeScannerFragment.class.getName())
-                .setSourceMetricsCategory(getMetricsCategory())
-                .setResultListener(this, PAIRING_DEVICE_REQUEST)
-                .launch();
+    // AdbIpAddressPreferenceController
+    private void updateConnectivity() {
+        String ipAddress = getDefaultIpAddresses(mCM);
+        if (ipAddress != null) {
+            int port = getPort();
+            if (port <= 0) {
+                mAdbIpAddrPref.setSummary(R.string.status_unavailable);
+            } else {
+                ipAddress += ":" + port;
+            }
+            mAdbIpAddrPref.setSummary(ipAddress);
+        } else {
+            mAdbIpAddrPref.setSummary(R.string.status_unavailable);
+        }
     }
 
-    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.development_tile_settings) {
+    private int getPort() {
+        try {
+            return mAdbManager.getAdbWirelessPort();
+        } catch (RemoteException e) {
+            Log.e(TAG, "Unable to get the adbwifi port");
+        }
+        return 0;
+    }
 
-                @Override
-                protected boolean isPageSearchEnabled(Context context) {
-                    return DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(context);
-                }
-            };
+    private String getIpv4Address() {
+        return getDefaultIpAddresses(mCM);
+    }
+
+    /**
+     * Returns the default link's IP addresses, if any, taking into account IPv4 and IPv6 style
+     * addresses.
+     * @param cm ConnectivityManager
+     * @return the formatted and newline-separated IP addresses, or null if none.
+     */
+    private static String getDefaultIpAddresses(ConnectivityManager cm) {
+        LinkProperties prop = cm.getActiveLinkProperties();
+        return formatIpAddresses(prop);
+    }
+
+    private static String formatIpAddresses(LinkProperties prop) {
+        if (prop == null) {
+            return null;
+        }
+
+        Iterator<InetAddress> iter = prop.getAllAddresses().iterator();
+        // If there are no entries, return null
+        if (!iter.hasNext()) {
+            return null;
+        }
+
+        // Concatenate all available addresses, newline separated
+        StringBuilder addresses = new StringBuilder();
+        while (iter.hasNext()) {
+            InetAddress addr = iter.next();
+            if (addr instanceof Inet4Address) {
+                // adb only supports ipv4 at the moment
+                addresses.append(addr.getHostAddress());
+                break;
+            }
+        }
+        return addresses.toString();
+    }
 }
