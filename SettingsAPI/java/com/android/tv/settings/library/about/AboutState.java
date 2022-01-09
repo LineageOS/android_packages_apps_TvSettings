@@ -472,4 +472,9 @@ public class AboutState implements State {
             }
         }
     }
+
+    @Override
+    public void onDisplayDialogPreference(String[] key) {
+
+    }
 }

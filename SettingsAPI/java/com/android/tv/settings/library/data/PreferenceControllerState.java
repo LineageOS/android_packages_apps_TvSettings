@@ -164,4 +164,9 @@ public abstract class PreferenceControllerState implements State {
     protected static boolean keyEquals(String[] key1, String[] key2) {
         return Arrays.equals(key1, key2);
     }
+
+    @Override
+    public void onDisplayDialogPreference(String[] key) {
+
+    }
 }

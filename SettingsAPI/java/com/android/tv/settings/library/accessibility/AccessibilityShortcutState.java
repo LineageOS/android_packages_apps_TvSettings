@@ -189,4 +189,9 @@ public class AccessibilityShortcutState implements State {
     private void putLastShortcutService(String s) {
         mSharedPref.edit().putString(LAST_SHORTCUT_SERVICE, s).apply();
     }
+
+    @Override
+    public void onDisplayDialogPreference(String[] key) {
+
+    }
 }
