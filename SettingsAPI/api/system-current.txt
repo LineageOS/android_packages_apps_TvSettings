@@ -38,6 +38,7 @@ package com.android.tv.settings.library {
     field public static final int STATE_HIGH_POWER = 7; // 0x7
     field public static final int STATE_KEYBOARD = 17; // 0x11
     field public static final int STATE_LANGUAGE = 20; // 0x14
+    field public static final int STATE_LEGAL = 42; // 0x2a
     field public static final int STATE_LOCATION = 37; // 0x25
     field public static final int STATE_MATCH_CONTENT_FRAME = 33; // 0x21
     field public static final int STATE_MISSING_STORAGE = 27; // 0x1b
@@ -80,8 +81,12 @@ package com.android.tv.settings.library {
     method public void getInfo(String, int);
     method public android.content.Intent getIntent();
     method public String[] getKey();
+    method public String getMessage();
+    method public String getNegativeButtonText();
+    method public String getNeutralButtonText();
     method public Integer getNextState();
     method public byte getPersistent();
+    method public String getPositiveButtonText();
     method public String getRadioGroup();
     method public byte getSelectable();
     method public String getSliceUri();
@@ -112,9 +117,13 @@ package com.android.tv.settings.library {
     method public void setHasSlice(boolean);
     method public void setIcon(android.graphics.drawable.Drawable);
     method public void setIntent(android.content.Intent);
+    method public void setMessage(String);
+    method public void setNegativeButtonText(String);
+    method public void setNeutralButtonText(String);
     method public void setNextState(Integer);
     method public void setPersistent(byte);
     method public void setPersistent(boolean);
+    method public void setPositiveButtonText(String);
     method public void setRadioGroup(String);
     method public void setRestricted(boolean);
     method public void setSelectable(byte);
@@ -132,6 +141,7 @@ package com.android.tv.settings.library {
     field public static final byte STATUS_OFF = 1; // 0x1
     field public static final byte STATUS_ON = 2; // 0x2
     field public static final byte STATUS_UNASSIGNED = 0; // 0x0
+    field public static final byte TYPE_DIALOG = 7; // 0x7
     field public static final byte TYPE_LIST = 4; // 0x4
     field public static final byte TYPE_PREFERENCE = 0; // 0x0
     field public static final byte TYPE_PREFERENCE_ACCESS_POINT = 2; // 0x2
@@ -150,6 +160,7 @@ package com.android.tv.settings.library {
     method public void onAttach(com.android.tv.settings.library.State);
     method public void onCreate(com.android.tv.settings.library.State, android.os.Bundle);
     method public void onDestroy(com.android.tv.settings.library.State);
+    method public void onDisplayPreferenceDialog(com.android.tv.settings.library.State, String[]);
     method public void onPause(com.android.tv.settings.library.State);
     method public boolean onPreferenceChange(com.android.tv.settings.library.State, String[], Object);
     method public boolean onPreferenceClick(com.android.tv.settings.library.State, String[], boolean);

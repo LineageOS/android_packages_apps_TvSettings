@@ -8,6 +8,7 @@ package com.android.tv.settings.library {
     method public void onCreate(android.os.Bundle);
     method public void onDestroy();
     method public void onDetach();
+    method public void onDisplayDialogPreference(String[]);
     method public void onPause();
     method public boolean onPreferenceChange(String[], Object);
     method public boolean onPreferenceTreeClick(String[], boolean);

@@ -264,4 +264,9 @@ public class DateTimeState implements State {
     private boolean isRestrictedProfileInEffect() {
         return new RestrictedProfileModel(mContext).isCurrentUser();
     }
+
+    @Override
+    public void onDisplayDialogPreference(String[] key) {
+
+    }
 }

@@ -124,6 +124,14 @@ public final class SettingsManager {
 
     /** @hide */
     @SystemApi
+    public void onDisplayPreferenceDialog(State state, String[] key) {
+        if (state != null && key != null && key.length > 0) {
+            state.onDisplayDialogPreference(key);
+        }
+    }
+
+    /** @hide */
+    @SystemApi
     public void onActivityResult(State state, int code, int resultCode, Intent data) {
         state.onActivityResult(ManagerUtil.getRequestCode(code), resultCode, data);
     }

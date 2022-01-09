@@ -25,6 +25,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_EMPTY;
 import static com.android.tv.settings.library.ManagerUtil.STATE_MISSING_STORAGE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_STORAGE;
 import static com.android.tv.settings.library.ManagerUtil.STATE_WIFI_DETAILS;
+import static com.android.tv.settings.library.PreferenceCompat.TYPE_DIALOG;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_LIST;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE;
 import static com.android.tv.settings.library.PreferenceCompat.TYPE_PREFERENCE_ACCESS_POINT;
@@ -229,6 +230,8 @@ public final class RenderUtil {
                 return new TsRadioPreference(context, preferenceCompat.getKey());
             case TYPE_SWITCH:
                 return new TsSwitchPreference(context, preferenceCompat.getKey());
+            case TYPE_DIALOG:
+                return new TsDialogPreference(context, preferenceCompat.getKey());
             case TYPE_PREFERENCE:
             default:
                 return new TsPreference(context, preferenceCompat.getKey());

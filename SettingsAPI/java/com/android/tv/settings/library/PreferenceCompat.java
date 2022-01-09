@@ -39,6 +39,7 @@ public class PreferenceCompat {
     public static final byte TYPE_LIST = 4;
     public static final byte TYPE_SWITCH = 5;
     public static final byte TYPE_RADIO = 6;
+    public static final byte TYPE_DIALOG = 7;
 
     public static final byte STATUS_UNASSIGNED = 0;
     public static final byte STATUS_OFF = 1;
@@ -57,6 +58,10 @@ public class PreferenceCompat {
     private String mValue;
     private boolean mHasSlice;
     private String mSliceUri;
+    private String mMessage;
+    private String mNeutralButtonText;
+    private String mNegativeButtonText;
+    private String mPositiveButtonText;
 
     // 0 : preference, 1 : preferenceCategory, 2 : AccessPointPreference
     private byte mType;
@@ -216,6 +221,54 @@ public class PreferenceCompat {
     @SystemApi
     public String getContentDescription() {
         return mContentDescription;
+    }
+
+    /** @hide */
+    @SystemApi
+    public String getMessage() {
+        return mMessage;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setMessage(String message) {
+        this.mMessage = message;
+    }
+
+    /** @hide */
+    @SystemApi
+    public String getNeutralButtonText() {
+        return mNeutralButtonText;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setNeutralButtonText(String neutralButtonText) {
+        this.mNeutralButtonText = neutralButtonText;
+    }
+
+    /** @hide */
+    @SystemApi
+    public String getNegativeButtonText() {
+        return mNegativeButtonText;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setNegativeButtonText(String negativeButtonText) {
+        this.mNegativeButtonText = negativeButtonText;
+    }
+
+    /** @hide */
+    @SystemApi
+    public String getPositiveButtonText() {
+        return mPositiveButtonText;
+    }
+
+    /** @hide */
+    @SystemApi
+    public void setPositiveButtonText(String positiveButtonText) {
+        this.mPositiveButtonText = positiveButtonText;
     }
 
     /** @hide */
