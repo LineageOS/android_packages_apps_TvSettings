@@ -102,7 +102,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Nedávno otevřené aplikace"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Zobrazit všechny aplikace"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Oprávnění"</string>
-    <string name="apps_security" msgid="1392489151324802853">"Zabezpečení"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Všechny aplikace"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Zobrazit systémové aplikace"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Nainstalované aplikace"</string>
@@ -127,9 +128,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos s Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos s Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Poznámka: Pokud zařízení správně neuvádí podporované formáty, možnost Automaticky nemusí fungovat."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automaticky: Povolit pouze formáty, které jsou podporovány zařízením zvukového výstupu "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Když je vybrána tato možnost, systém umožní aplikacím zvolit libovolný formát zvuku, který vaše výstupní zařízení podporuje. Aplikace mohou zvolit formát, který není v nejvyšší kvalitě."</string>
@@ -156,11 +159,17 @@
     <string name="game_mode_title" msgid="7280816243531315755">"Povolit herní režim"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Sladit snímkovou frekvenci obsahu"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Synchronizované"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Zařízení se nikdy bude pokoušet srovnat svůj výstup s původní snímkovou frekvencí sledovaného obsahu (pokud o to aplikace požádá a POUZE v případě, že vaše televize podporuje plynulý přechod na synchronizované zobrazení)."</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Zařízení se pokusí srovnat svůj výstup s původní snímkovou frekvencí sledovaného obsahu (pokud o to aplikace požádá a POUZE v případě, že vaše televize podporuje plynulý přechod na synchronizované zobrazení)."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Nesynchronizované"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Zařízení se nikdy bude pokoušet srovnat svůj výstup s původní snímkovou frekvencí sledovaného obsahu (pokud o to aplikace požádá). V důsledku toho se může obrazovka při zahájení nebo ukončení přehrávání videa na chviličku vypnout."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Zařízení se pokusí srovnat svůj výstup s původní snímkovou frekvencí sledovaného obsahu (pokud o to aplikace požádá). V důsledku toho se může obrazovka při zahájení nebo ukončení přehrávání videa na chviličku vypnout."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nikdy"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Zařízení se nikdy nebude pokoušet srovnat svůj výstup s původní snímkovou frekvencí sledovaného obsahu (ani pokud o to aplikace požádá)."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Zvětšení/zmenšení textu"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Přizpůsobit velikost na <xliff:g id="SCALE">%1$d</xliff:g> %%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Ukázkový text"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Čaroděj ze země Oz"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Kapitola 11: Smaragdové město v zemi Oz"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"I přestože měli oči chráněné zelenými brýlemi, Dorotka a její přátelé byli oslněni krásou celého města. Ulice byly lemovány nádhernými domy ze zeleného mramoru posetého blyštivými smaragdy. Chodníky byly dlážděny stejným druhem zeleného mramoru a jednotlivé dlaždice od sebe dělily řady úzce sázených smaragdů, které se leskly ve slunečním svitu. Okenní tabule byly ze zeleného skla, dokonce i obloha nad městem měla zelený nádech i sluneční paprsky byly zelené. \n\nKolem procházelo mnoho lidí – muži, ženy i děti. Všichni byli zelení a nosili zelené oblečení. Zraky všech se upíraly na Dorotku a její neobvykle různorodé společníky. Když děti zahlédly i Lva, utíkaly se schovat za své maminky. Nikdo se neodvážil na skupinku promluvit. V ulici bylo mnoho obchodů a Dorotka si všimla, že také v nich je všechno zelené. Bonbony, popcorn, boty, klobouky, oblečení všech druhů. Na jednom místě prodávali zelenou limonádu, a když ji děti kupovaly, platily za ni zelenými mincemi. \n\nZdálo se, že ve městě nejsou koně ani jakákoli zvířata. Lidé k převážení věcí používali zelené vozíky, které tlačili před sebou. Všichni vypadali, že jsou spokojeni a daří se jim."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Výběr formátu"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automaticky"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ručně"</string>
@@ -346,6 +355,7 @@
       <item quantity="other">Aplikace k telefonování</item>
       <item quantity="one">Aplikace k telefonování</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Prohlížeč"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Výukové programy"</string>
@@ -356,7 +366,7 @@
     <string name="device_name" msgid="566626587332817733">"Název zařízení"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Restartovat"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Právní informace"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Licence open source"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"Zdroj třetí strany"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Právní informace společnosti Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Údaje o licenci jsou nedostupné."</string>
     <string name="about_model" msgid="9164284529291439296">"Model"</string>
@@ -432,6 +442,9 @@
     <string name="license_title" msgid="4032466200355435641">"Licence"</string>
     <string name="terms_title" msgid="192888187310800678">"Smluvní podmínky"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Systémová licence WebView"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Informace pro spotřebitele"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"Obsah na Android TV pochází od třetích stran, jako jsou vývojáři aplikací a filmová studia, nebo od společnosti Google. Další informace najdete na adrese "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Slabá"</item>
     <item msgid="2098818614362343532">"Přijatelná"</item>
@@ -634,6 +647,22 @@
     <item msgid="5645263357181875427">"Používat čas z transportního streamu"</item>
     <item msgid="5501503537181350884">"Vypnout"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Pro všechny aplikace a služby"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Nedávno použito aplikací"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Žádný nedávný přístup"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Zobrazit vše"</string>
+    <string name="microphone" msgid="7893752847683941214">"Mikrofon"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Přístup k mikrofonu"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Přístup aplikací k mikrofonu"</string>
+    <string name="camera" msgid="1226671478936288283">"Fotoaparát"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Přístup k fotoaparátu"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Přístup aplikací k fotoaparátu"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Přístup k mikrofonu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Když je toto nastavení zapnuté, všechny aplikace a služby s oprávněním mají přístup ke všem mikrofonům v tomto zařízení.\n\nToto nastavení nebude mít vliv na periferní zvuková zařízení s vlastním protokolem."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Přístup k fotoaparátu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Když je toto nastavení zapnuté, všechny aplikace a služby s oprávněním mají přístup ke všem fotoaparátům v tomto zařízení.\n\nToto nastavení nebude mít vliv na periferní kamerová zařízení s vlastním protokolem."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Zapnuto"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Vypnuto"</string>
     <string name="system_location" msgid="4057295363709016511">"Poloha"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Povolit aplikacím, které o to požádaly, používat údaje o poloze"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Souhlas se sběrem dat o poloze"</string>
@@ -917,7 +946,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Nejsou nastavena výchozí nastavení"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Vymazat mezipaměť"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Oznámení"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Licence open source"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Zdroj třetí strany"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Oprávnění"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Aplikace není k dispozici"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
@@ -1007,6 +1036,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Povolit obraz v obraze"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Žádná nainstalovaná aplikace nepodporuje režim obraz v obraze"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Povolí aplikacím vytvořit okno v režimu obraz v obraze, když je aplikace otevřená nebo poté, co ji opustíte (například abyste mohli pokračovat ve sledování videa). Toto okno se zobrazuje nad ostatními aplikacemi, které používáte."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Povolte aplikacím nastavovat budíky a plánovat akce závislé na čase. Aplikace poběží na pozadí, což může vést k vyšší spotřebě energie.\n\nPokud je toto oprávnění vypnuté, stávající budíky a události závislé na čase naplánované aplikací nebudou fungovat."</string>
     <string name="special_access" msgid="21806055758289916">"Zvláštní přístup aplikací"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Zvuk"</string>

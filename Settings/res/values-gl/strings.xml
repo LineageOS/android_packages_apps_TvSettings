@@ -98,7 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Aplicacións abertas recentemente"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Ver todas as aplicacións"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Permisos"</string>
-    <string name="apps_security" msgid="1392489151324802853">"Seguranza"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Todas as aplicacións"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Mostrar aplicacións do sistema"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Aplicacións instaladas"</string>
@@ -123,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos con Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: Quizais a opción Automático non funcione se o dispositivo non indica ben que formatos admite."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automático: activa só os formatos compatibles co dispositivo de saída de audio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Cando esta opción estea seleccionada, o sistema permitirá que as aplicacións seleccionen calquera formato de son compatible coa cadea de dispositivos. As aplicacións poden escoller un formato que non sexa da máxima calidade."</string>
@@ -157,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Se a aplicación o solicita, o dispositivo fará que a saída coincida cos fotogramas por segundo orixinais do contido que esteas vendo. Ten en conta que a pantalla pode quedar sen imaxe durante un segundo ao iniciar ou deter a reprodución de vídeos."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nunca"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Aínda que a aplicación o solicite, o dispositivo nunca tentará facer que a saída coincida cos fotogramas por segundo orixinais do contido que esteas vendo."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Axuste do tamaño do texto"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Axustar tamaño ao <xliff:g id="SCALE">%1$d</xliff:g> %%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Texto de mostra"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"O marabilloso mago de Oz"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Capítulo 11: A marabillosa Cidade Esmeralda de Oz"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Ao principio, aínda cos ollos protexidos polas lentes verdes, Dorothy e os seus amigos quedaron cegados polo brillo daquela marabillosa cidade. As rúas estaban formadas por preciosas casas construídas con mármore verde e todo estaba salpicado de relucentes esmeraldas. Pasearon por un camiño de mármore verde cuxas placas se unían con fileiras de esmeraldas, colocadas moi xuntas e que relucían baixo a luz do sol. As ventás tiñan cristal verde e ata o ceo e os raios do sol tiraban a verde. \n\nHabía moitos homes, mulleres e nenos paseando e todos tiñan a pel verdosa e vestían roupa verde. Miraban con asombro a Dorothy e os seus estraños acompañantes, e os nenos corrían a esconderse detrás das súas nais cando vían o león, pero ninguén lles dirixía a palabra. Había tamén moitas tendas e Dorothy observou que todo o que había nelas era verde. Vendían caramelos e flocos de millo verdes, así como zapatos, chapeus e todo tipo de roupa da mesma cor. Nunha delas, un home vendía limoada verde e Dorothy puido comprobar que os nenos pagaban con moedas verdes. \n\nNon parecía que naquel lugar houbese cabalos nin animais de ningún tipo, pois os homes transportábano todo tirando de pequenos carros desta cor. Todos parecían felices, satisfeitos e afortunados."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Selección de formato"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automático"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
@@ -251,7 +260,7 @@
     <string name="no_device_admins" msgid="4628974717150185625">"Non hai ningunha aplicación de administración de dispositivos dispoñible"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Desactivado polo administrador"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Non dispoñible"</string>
-    <string name="manage_device_admin" msgid="5714217234035017983">"Apps de administración"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Aplicacións de administración de dispositivos"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Non hai aplicacións activas"</string>
     <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplicacións activas</item>
@@ -326,6 +335,7 @@
       <item quantity="other">Aplicacións do teléfono</item>
       <item quantity="one">Aplicación do teléfono</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Aplicación do navegador"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Titoriais"</string>
@@ -336,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"Nome do dispositivo"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Reiniciar"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Información legal"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Licenzas de código aberto"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"Fonte externa"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Información legal de Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Os datos da licenza non están dispoñibles"</string>
     <string name="about_model" msgid="9164284529291439296">"Modelo"</string>
@@ -402,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"Licenza"</string>
     <string name="terms_title" msgid="192888187310800678">"Termos e condicións"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Licenza WebView do sistema"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Información para os usuarios"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"O contido que atopas en Android TV provén de socios externos, como programadores de aplicacións e estudios de cine, así como do propio Google. Para obter máis información, consulta "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"Vale"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Deficiente"</item>
     <item msgid="2098818614362343532">"Aceptable"</item>
@@ -413,7 +426,7 @@
     <string name="title_signal_strength" msgid="5047116893338315998">"Intensidade do sinal"</string>
     <string name="title_random_mac_settings" msgid="6685812569356353378">"Privacidade"</string>
   <string-array name="random_mac_settings_entries">
-    <item msgid="3457228452595715533">"Usar enderezo MAC aleatorio (valor predeterminado)"</item>
+    <item msgid="3457228452595715533">"Usar MAC aleatorio (predefinido)"</item>
     <item msgid="2490415280467390067">"Usar MAC do dispositivo"</item>
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"Non dispoñible"</string>
@@ -604,6 +617,22 @@
     <item msgid="5645263357181875427">"Usar a hora fornecida polo taboleiro de transporte"</item>
     <item msgid="5501503537181350884">"Desactivar"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Para todas as aplicacións e servizos"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Aplicacións que accederon recentemente"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Ningunha aplicación accedeu recentemente"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Ver todo"</string>
+    <string name="microphone" msgid="7893752847683941214">"Micrófono"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Acceso ao micrófono"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Acceso das aplicacións ao micrófono"</string>
+    <string name="camera" msgid="1226671478936288283">"Cámara"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Acceso á cámara"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Acceso das aplicacións á cámara"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Acceso ao micrófono: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Cando este interruptor está activado, todos os servizos e aplicacións con permiso poden acceder a calquera micrófono deste dispositivo.\n\nOs periféricos de audio que teñan protocolos personalizados non se verán afectados por esta opción de configuración."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Acceso á cámara: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Cando este interruptor está activado, todos os servizos e aplicacións con permiso poden acceder a calquera cámara deste dispositivo.\n\nOs periféricos de cámara que teñan protocolos personalizados non se verán afectados por esta opción de configuración."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Opción activada"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Opción desactivada"</string>
     <string name="system_location" msgid="4057295363709016511">"Localización"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Permite ás aplicacións que solicitaron permiso utilizar a túa información de localización"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Autorización de localización"</string>
@@ -675,7 +704,7 @@
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> pode recompilar todo o texto que escribes (excepto os contrasinais), incluídos datos persoais, como números de tarxetas de crédito."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Deter <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Se seleccionas Aceptar, deterase <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
-    <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Síntese de voz"</string>
+    <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Conversión de texto a voz"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Configuración do motor"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Pronunciar contrasinais"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"Motor preferido"</string>
@@ -838,8 +867,8 @@
       <item quantity="other">%d aplicacións permitidas</item>
       <item quantity="one">1 aplicación permitida</item>
     </plurals>
-    <string name="restricted_profile_allowed" msgid="970921490464867884">"Permitido"</string>
-    <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Non permitido"</string>
+    <string name="restricted_profile_allowed" msgid="970921490464867884">"Con permiso"</string>
+    <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Sen permiso"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Personalizar restricións"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="3293508876131962699">"Un momento..."</string>
     <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"Cambiar PIN"</string>
@@ -879,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Valores predeterminados sen definir"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Borrar caché"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Notificacións"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Licenzas de código aberto"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Fonte externa"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Permisos"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"A aplicación non está dispoñible"</string>
     <string name="settings_ok" msgid="5950888975075541964">"ACEPTAR"</string>
@@ -940,8 +969,8 @@
     <string name="capturing_bugreport" msgid="832512801903486821">"Realizando informe de erros"</string>
     <string name="available_virtual_keyboard_category" msgid="7445262027711560629">"Teclados virtuais dispoñibles"</string>
     <string name="manage_keyboards" msgid="7983890675377321912">"Xestionar teclados"</string>
-    <string name="app_permission_summary_allowed" msgid="5359622119044147500">"Permitido"</string>
-    <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"Non permitido"</string>
+    <string name="app_permission_summary_allowed" msgid="5359622119044147500">"Con permiso"</string>
+    <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"Sen permiso"</string>
     <string name="usage_access" msgid="8402350645248312782">"Acceso aos datos de uso"</string>
     <string name="usage_access_description" msgid="3276026988575551587">"Co acceso aos datos de uso unha aplicación pode realizar un seguimento das demais aplicacións que utilizas e da súa frecuencia de uso, así como do operador, da configuración do idioma e doutros detalles."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Optimización de enerxía"</string>
@@ -969,6 +998,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Permitir pantalla superposta"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Ningunha das aplicacións instaladas é compatible coa función da pantalla superposta"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Permite que esta aplicación cree unha ventá de pantalla superposta mentres estea aberta ou despois de saír dela (por exemplo, para continuar visualizando un vídeo). A ventá móstrase sobre as demais aplicacións que esteas utilizando."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Permite que as aplicacións definan alarmas e planifiquen accións que dependan da hora. Con este permiso, as aplicacións poden executarse en segundo plano, o que pode provocar un maior consumo de batería.\n\nSe este permiso está desactivado, non funcionarán as alarmas que xa se definisen nin os eventos que dependan da hora planificados polas aplicacións."</string>
     <string name="special_access" msgid="21806055758289916">"Acceso especial das apps"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audio"</string>
@@ -1004,7 +1034,7 @@
     <string name="remove_device_admin" msgid="2623866073546295104">"Desactivar esta aplicación de administración de dispositivos"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Desinstalar aplicación"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Desactivar e desinstalar"</string>
-    <string name="select_device_admin_msg" msgid="8475934459999710332">"Apps de administración"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Aplicacións de administración de dispositivos"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"Activar aplicación de administración?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Activar esta aplicación de administración de dispositivos"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"A activación desta aplicación de administración permitirá á aplicación <xliff:g id="APP_NAME">%1$s</xliff:g> levar a cabo as seguintes operacións:"</string>

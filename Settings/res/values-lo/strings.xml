@@ -98,7 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"ແອັບທີ່ຫາກໍເປີດຫຼ້າສຸດ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"ເບິ່ງແອັບທັງໝົດ"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"ການອະນຸຍາດ"</string>
-    <string name="apps_security" msgid="1392489151324802853">"ຄວາມປອດໄພ"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"ແອັບທັງໝົດ"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"ສະ​ແດງ​ແອັບ​ລະ​ບົບ"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"ແອັບທີ່ຕິດຕັ້ງແລ້ວ"</string>
@@ -123,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos ພ້ອມກັບ Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos ພ້ອມກັບ Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ໝາຍເຫດ: ຕົວເລືອກອັດຕະໂນມັດອາດບໍ່ສາມາດໃຊ້ໄດ້ຫາກອຸປະກອນຂອງທ່ານບໍ່ລາຍງານຮູບແບບທີ່ຮອງຮັບຢ່າງຖືກຕ້ອງ."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"ອັດຕະໂນມັດ: ເປີດການນຳໃຊ້ສະເພາະຮູບແບບທີ່ອຸປະກອນເອົ້າພຸດສຽງຂອງທ່ານຮອງຮັບເທົ່ານັ້ນ "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"ເມື່ອເລືອກແລ້ວ, ລະບົບຈະອະນຸຍາດໃຫ້ແອັບເລືອກຮູບແບບສຽງໃດກໍໄດ້ທີ່ຮອງຮັບໂດຍຕ່ອງໂສ້ອຸປະກອນຂອງທ່ານ. ແອັບອາດເລືອກຮູບແບບໃດໜຶ່ງທີ່ບໍ່ແມ່ນຮູບແບບຄຸນນະພາບສູງທີ່ສຸດ."</string>
@@ -157,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ຫາກແອັບຮ້ອງຂໍມັນ, ອຸປະກອນຂອງທ່ານຈະຈັບຄູ່ເອົ້າພຸດຂອງມັນກັບອັດຕາເຟຣມຕົ້ນສະບັບຂອງເນື້ອຫາທີ່ທ່ານກຳລັງເບິ່ງ. ນີ້ອາດເຮັດໃຫ້ໜ້າຈໍຂອງທ່ານບໍ່ສະແດງຜົນຫຍັງເປັນໄລຍະເວລາຊົ່ວຄາວເມື່ອອອກ ຫຼື ເຂົ້າການຫຼິ້ນວິດີໂອໃດໜຶ່ງ."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"ບໍ່ໃຊ້ເລີຍ"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"ອຸປະກອນຈະບໍ່ພະຍາຍາມຈັບຄູ່ເອົ້າພຸດຂອງມັນກັບອັດຕາເຟຣມຕົ້ນສະບັບຂອງເນື້ອຫາທີ່ທ່ານກຳລັງເບິ່ງ, ເຖິງແມ່ນວ່າແອັບຈະສົ່ງຄຳຮ້ອງຂໍກໍຕາມ."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"ອັດຕາສ່ວນ​ຂໍ້​ຄວາມ"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"ປັບຂະໜາດເປັນ <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"ຂໍ້ຄວາມຕົວຢ່າງ"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"ພໍ່ມົດອັດສະຈັນແຫ່ງອອດຊ໌"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"ບົດທີ 11: ເມືອງມໍລະກົດອັນໜ້າອັດສະຈັນຂອງອອດຊ໌"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"ເຖິງແມ່ນວ່າຈະໃສ່ແວ່ນຕາສີຂຽວເພື່ອປົກປ້ອງສາຍຕາໄວ້ແລ້ວ ແຕ່ໂດໂຣທີ ແລະ ໝູ່ຄູ່ກໍອົດບໍ່ໄດ້ທີ່ຈະຕົກຕະລຶງກັບຄວາມງາມເມື່ອພົບເຫັນເມືອງອັດໜ້າອັດສະຈັນນີ້ເປັນເທື່ອທຳອິດ. ຫົນທາງທີ່ມີເຮືອນສວຍງາມສ້າງຂຶ້ນຈາກຫິນອ່ອນສີຂຽວປະດັບດ້ວຍມໍລະກົດເງົາງາມເປັນປະກາຍເຕັມໄປໝົດ. ເຂົາເຈົ້າພາກັນຍ່າງໄປຕາມຫົນທາງທີ່ສ້າງຂຶ້ນຈາກຫິນອ່ອນສີຂຽວຄືກັນ, ຮ່ອງລະຫວ່າງຫິນອ່ອນແຕ່ລະກ້ອນໂຮຍດ້ວຍມໍລະກົດຮຽງກັນເປັນແຖວ, ສ່ອງປະກາຍເປັນແສງຍິບຍັບເມື່ອຕ້ອງກັບແສງແດດ. ປ່ອງຢ້ຽມສ້າງຂຶ້ນຈາກແກ້ວສີຂຽວ; ແມ່ນແຕ່ທ້ອງຟ້າທີ່ປົກຄຸມເມືອງນີ້ກໍຍັງມີສີຂຽວອ່ອນ ແລະ ແສງແດດທີ່ສ່ອງລົງມາກໍເປັນສີຂຽວເຊັ່ນກັນ. \n\nມີຄົນຍ່າງໄປມາຫຼວງຫຼາຍ, ທັງຜູ້ຊາຍ, ຜູ້ຍິງ ແລະ ເດັກນ້ອຍ, ທຸກຄົນລ້ວນແລ້ວແຕ່ນຸ່ງເຄື່ອງທີ່ມີສີຂຽວ ແລະ ມີຜິວອອກເປັນສີຂຽວໆ. ເຂົາເຈົ້າພາກັນເບິ່ງມາຫາໂດໂຣທີ ແລະ ໝູ່ຄູ່ດ້ວຍສາຍຕາທີ່ສົງໄສ ແລະ ເດັກນ້ອຍກໍພາກັນແລ່ນໜີແລ້ວລີ້ຢູ່ຫຼັງແມ່ຂອງເຂົາເຈົ້າເມື່ອເຂົາເຈົ້າເຫັນສິງໂຕ; ແຕ່ບໍ່ມີໃຜລົມນຳເຂົາເຈົ້າເລີຍ. ຮ້ານຄ້າຫຼວງຫຼາຍຕັ້ງຢູ່ຕາມຖະໜົນຫົນທາງ ແລະ ໂດໂຣທີກໍເຫັນວ່າທຸກສິ່ງຢ່າງໃນນັ້ນລ້ວນແຕ່ເປັນສີຂຽວ. ມີເຂົ້າໜົມສີຂຽວ ແລະ ສາລີຂົ້ວເປັນສີຂຽວ, ຮວມທັງເກີບສີຂຽວ, ໝວກສີຂຽວ ແລະ ເຄື່ອງນຸ່ງທຸກແບບເປັນສີຂຽວນຳ. ມີຮ້ານໜຶ່ງທີ່ຂາຍນ້ຳໝາກນາວສີຂຽວ ແລະ ເມື່ອມີເດັກນ້ອຍໄປຊື້ນ້ຳໝາກນາວ ໂດໂຣທີກໍເຫັນວ່າເຂົາເຈົ້າຈ່າຍເງິນທີ່ມີສີຂຽວນຳ. \n\nເບິ່ງຄືວ່າເມືອງນີ້ຈະບໍ່ມີມ້າ ຫຼື ສັດຊະນິດອື່ນໃດເລີຍ; ຜູ້ຄົນຂົນເຄື່ອງດ້ວຍລໍ້ຍູ້ນ້ອຍໆສີຂຽວທີ່ເຂົາເຈົ້າຕ້ອງຍູ້ໄປທາງໜ້າ. ທຸກຄົນເບິ່ງຄືມີຄວາມສຸກ, ຄວາມຍິນດີ ແລະ ຄວາມຮັ່ງມີ."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"ການເລືອກຮູບແບບ"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"ອັດຕະໂນມັດ"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"ດ້ວຍຕົວເອງ"</string>
@@ -326,6 +335,7 @@
       <item quantity="other">ແອັບໂທລະສັບ</item>
       <item quantity="one">ແອັບໂທລະສັບ</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"ແອັບໂປຣແກຣມທ່ອງເວັບ"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"ສາທິດການນຳໃຊ້"</string>
@@ -336,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"ຊື່​ອຸ​ປະ​ກອນ"</string>
     <string name="restart_button_label" msgid="911750765086382990">"ຣີສະຕາດ"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"​ຂໍ້​ມູນ​ທາງ​ກົດ​ໝາຍ"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"​ລິ​ຂະ​ສິດ​ໂອ​ເພນ​ຊອດ"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"ແຫຼ່ງຂໍ້ມູນພາກສ່ວນທີສາມ"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google ຕາມ​ກົດ​ໝາຍ"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"ບໍ່​ມີ​ຂໍ້​ມູນ​ລິ​ຂະ​ສິດ"</string>
     <string name="about_model" msgid="9164284529291439296">"ໂມເດວ"</string>
@@ -402,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"ລິຂະສິດ"</string>
     <string name="terms_title" msgid="192888187310800678">"ຂໍ້ກຳນົດ ແລະເງື່ອນໄຂ"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"ໃບ​ອະ​ນຸ​ຍາດ WebView ຂອງ​ລະບົບ"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"ຂໍ້ມູນຜູ້ບໍລິໂພກ"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"ເນື້ອຫາທີ່ທ່ານພົບຢູ່ Android TV ມາຈາກຮຸ້ນສ່ວນພາກສ່ວນທີສາມ ເຊັ່ນ: ນັກພັດທະນາແອັບ ແລະ ສະຕູດິໂອໜັງ, ຮວມທັງຈາກ Google ເອງ. ສຳລັບຂໍ້ມູນເພີ່ມເຕີມ, ກະລຸນາອ່ານ "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"ຕົກລົງ"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"ອ່ອນ"</item>
     <item msgid="2098818614362343532">"ພໍໃຊ້"</item>
@@ -604,6 +617,22 @@
     <item msgid="5645263357181875427">"ໃຊ້ເວລາທີ່ກະແສການຂົນສົ່ງສະໜອງໃຫ້"</item>
     <item msgid="5501503537181350884">"ປິດ"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"ສຳລັບແອັບ ແລະ ບໍລິການທັງໝົດ"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"ເຂົ້າເຖິງຫຼ້າສຸດໂດຍ"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"ບໍ່ມີການເຂົ້າເຖິງຫຼ້າສຸດ"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"ເບິ່ງທັງໝົດ"</string>
+    <string name="microphone" msgid="7893752847683941214">"ໄມໂຄຣໂຟນ"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"ການເຂົ້າເຖິງໄມໂຄຣໂຟນ"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"ສິດເຂົ້າເຖິງໄມໂຄຣໂຟນຂອງແອັບ"</string>
+    <string name="camera" msgid="1226671478936288283">"ກ້ອງຖ່າຍຮູບ"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"ການເຂົ້າເຖິງກ້ອງຖ່າຍຮູບ"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"ສິດເຂົ້າເຖິງກ້ອງຖ່າຍຮູບຂອງແອັບ"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"ການເຂົ້າເຖິງໄມໂຄຣໂຟນ: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"ເມື່ອເປີດໃຊ້ແລ້ວ, ແອັບ ແລະ ບໍລິການທັງໝົດທີ່ມີການອະນຸຍາດຈະສາມາດເຂົ້າເຖິງໄມໂຄຣໂຟນໃດກໍຕາມຢູ່ອຸປະກອນນີ້ໄດ້.\n\nອຸປະກອນຕໍ່ພ່ວງສຽງທີ່ມີໂປຣໂຕຄໍກຳນົດເອງຈະບໍ່ໄດ້ຮັບຜົນກະທົບຈາກການຕັ້ງຄ່ານີ້."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"ການເຂົ້າເຖິງກ້ອງຖ່າຍຮູບ: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"ເມື່ອເປີດໃຊ້ແລ້ວ, ແອັບ ແລະ ບໍລິການທັງໝົດທີ່ມີການອະນຸຍາດຈະສາມາດເຂົ້າເຖິງກ້ອງຖ່າຍຮູບໃດກໍຕາມຢູ່ອຸປະກອນນີ້ໄດ້.\n\nອຸປະກອນຕໍ່ພ່ວງກ້ອງຖ່າຍຮູບທີ່ມີໂປຣໂຕຄໍກຳນົດເອງຈະບໍ່ໄດ້ຮັບຜົນກະທົບຈາກການຕັ້ງຄ່ານີ້."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"ເປີດ"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"ປິດ"</string>
     <string name="system_location" msgid="4057295363709016511">"ສະຖານທີ່"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"ໃຫ້​ແອັບຯ​ທີ່​ໄດ້​ຂໍ​ການ​ອະ​ນຸ​ຍາດ​ຈາກ​ທ່ານ​ແລ້ວ​ສາ​ມາດ​ໃຊ້​ຂໍ້​ມູນ​ສະ​ຖານ​ທີ່​ຂອງ​ທ່ານ​ໄດ້"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"ການ​ຍິນຍອມ​ກ່ຽວກັບ​ສະຖານທີ່"</string>
@@ -879,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"ບໍ່​ໄດ້​ຕັ້ງ​ຄ່າ​ເລີ່ມ​ຕົ້ນ"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"ລຶບລ້າງແຄ​ຊ໌"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"ການແຈ້ງ​ເຕືອນ"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"ໃບອະນຸຍາດໂອເພນຊອດ"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"ແຫຼ່ງຂໍ້ມູນພາກສ່ວນທີສາມ"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"ການອະນຸຍາດ"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"ບໍ່ສາມາດໃຊ້ແອັບພລິເຄຊັນໄດ້"</string>
     <string name="settings_ok" msgid="5950888975075541964">"ຕົກລົງ"</string>
@@ -969,6 +998,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"ອະນຸຍາດການສະແດງຜົນຊ້ອນ"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"ບໍ່ມີແອັບທີ່ຮອງຮັບການສະແດງຜົນຫຼາຍຢ່າງພ້ອມກັນຕິດຕັ້ງໄວ້"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"ອະນຸຍາດໃຫ້ແອັບຕ່າງໆສາມາດສ້າງໜ້າຈໍທີ່ຊ້ອນຂຶ້ນມາໃນເວລາເປີດແອັບອື່ນ ຫຼື ຫຼັງຈາກທ່ານອອກຈາກມັນ (ເຊັ່ນ: ເພື່ອສືບຕໍ່ການເບິ່ງວິດີໂອ). ໜ້າຈໍນີ້ຈະສະແດງບັງແອັບອື່ນທີ່ທ່ານກຳລັງໃຊ້ຢູ່."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"ອະນຸຍາດໃຫ້ແອັບຕັ້ງໂມງປຸກ ແລະ ກຳນົດເວລາຄຳສັ່ງທີ່ເນັ້ນເລື່ອງເວລາເປັນສຳຄັນໄດ້. ນີ້ຈະເຮັດໃຫ້ແອັບເຮັດວຽກໄດ້ໃນພື້ນຫຼັງ, ເຊິ່ງອາດໃຊ້ແບັດເຕີຣີຫຼາຍຂຶ້ນ.\n\nຫາກປິດການອະນຸຍາດນີ້ໄວ້, ໂມງປຸກທີ່ມີຢູ່ກ່ອນແລ້ວ ແລະ ເຫດການທີ່ອ້າງອີງເວລາທີ່ກຳນົດໄວ້ໂດຍແອັບຈະບໍ່ສາມາດເຮັດວຽກໄດ້."</string>
     <string name="special_access" msgid="21806055758289916">"ສິດການເຂົ້າເຖິງແອັບພິເສດ"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"ສຽງ"</string>
