@@ -63,6 +63,7 @@ import com.android.settingslib.suggestions.SuggestionControllerMixinCompat;
 import com.android.tv.settings.HotwordSwitchController.HotwordStateListener;
 import com.android.tv.settings.accounts.AccountsFragment;
 import com.android.tv.settings.accounts.AccountsUtil;
+import com.android.tv.settings.connectivity.ActiveNetworkProvider;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.SliceUtils;
@@ -130,6 +131,8 @@ public class MainFragment extends PreferenceControllerFragment implements
         }
     };
 
+    private ActiveNetworkProvider mActiveNetworkProvider;
+
     public static MainFragment newInstance() {
         return new MainFragment();
     }
@@ -159,6 +162,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     public void onCreate(Bundle savedInstanceState) {
         mSuggestionQuickSettingPrefsContainer.onCreate();
         if (isWifiScanOptimisationEnabled()) {
+            mActiveNetworkProvider = new ActiveNetworkProvider(getContext());
             mConnectivityListenerOptional = Optional.empty();
         } else {
             mConnectivityListenerOptional = Optional.of(new ConnectivityListener(
@@ -185,9 +189,33 @@ public class MainFragment extends PreferenceControllerFragment implements
         mSuggestionQuickSettingPrefsContainer.showOrHideQuickSettings();
         updateAccountPref();
         updateAccessoryPref();
-        updateConnectivity();
+        if (isWifiScanOptimisationEnabled()) {
+            updateConnectivityType();
+        } else {
+            updateConnectivity();
+        }
         updateBasicModeSuggestion();
         return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    private void updateConnectivityType() {
+        final Preference networkPref = findPreference(KEY_NETWORK);
+        if (networkPref == null) {
+            return;
+        }
+
+        if (mActiveNetworkProvider.isTypeCellular()) {
+            networkPref.setIcon(R.drawable.ic_cell_signal_4_white);
+        } else if (mActiveNetworkProvider.isTypeEthernet()) {
+            networkPref.setIcon(R.drawable.ic_ethernet_white);
+            networkPref.setSummary(R.string.connectivity_summary_ethernet_connected);
+        } else if (mActiveNetworkProvider.isTypeWifi()) {
+            networkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
+            networkPref.setSummary(mActiveNetworkProvider.getSsid());
+        } else {
+            networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
+            networkPref.setSummary(R.string.connectivity_summary_wifi_disabled);
+        }
     }
 
     @Override
