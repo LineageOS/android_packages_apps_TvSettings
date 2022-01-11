@@ -98,8 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Aplikacionet e hapura së fundi"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Shiko të gjitha aplikacionet"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Lejet"</string>
-    <!-- no translation found for apps_security (1392489151324802853) -->
-    <skip />
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Të gjitha aplikacionet"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Shfaq aplikacionet e sistemit"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Aplikacionet e instaluara"</string>
@@ -124,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos me Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos me Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Shënim. Opsioni \"Automatik\" mund të mos funksionojë nëse pajisja nuk i raporton saktë formatet e mbështetura."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatike: Aktivizo vetëm formatet që mbështeten nga pajisja jote e daljes së audios "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kur përzgjidhet, sistemi do të lejojë që aplikacionet të zgjedhin çdo format tingulli që mbështetet nga zinxhiri i pajisjeve të tua. Aplikacionet mund të zgjedhin një format që nuk është formati i cilësisë më të lartë."</string>
@@ -158,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Nëse aplikacioni e kërkon, pajisja jote do ta përshtatë daljen e saj me shpejtësinë origjinale të kuadrove që shikon. Kjo mund të bëjë që ekrani të jetë bosh për një sekondë kur del ose hyn në luajtjen e një videoje."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Asnjëherë"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Edhe nëse aplikacioni e kërkon, pajisja jote asnjëherë nuk do të përpiqet ta përshtatë daljen e saj me shpejtësinë origjinale të kuadrove që shikon."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Shkallëzimi i tekstit"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Shkalla në <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Teksti shembull"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Magjistari i mrekullueshëm i Ozit"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Kapitulli 11: Qyteti i mrekullueshëm i smeraldtë i Ozit"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Edhe me sytë e mbrojtur nga syzet e gjelbra, Doroti dhe shokët e saj u dalldisën në fillim nga shkëlqimi i Qytetit të mrekullueshëm. Rrugët ishin të mbushura me shtëpi të bukura të gjitha të ndërtuara me mermer të gjelbër dhe kudo shkëlqenin prej tyre smeralde. Ata shëtitën në një trotuar me po të njëjtin mermer të gjelbër dhe aty ku blloqet bashkoheshin kishte radhë të tjera smeraldi, ngjitur me njëra-tjetrën, dhe që shkëlqenin nën ndriçimin e diellit. Dritaret ishin me xhama të gjelbër; edhe qielli mbi Qytet kishte një nuancë të gjelbër, dhe rrezet e diellit ishin të gjelbra. \n\nKishte shumë njerëz, burra, gra dhe fëmijë që shëtisnin dhe të gjithë ishin të veshur me rroba të gjelbra dhe kishin lëkurë të gjelbër. Ata e shikonin Dorotin dhe shoqëruesit e saj të çuditshëm me sy të habitur, dhe fëmijët të gjithë u trembën dhe u fshehën pas nënave kur panë Luanin, por askush nuk u foli. Në rrugë kishte shumë dyqane dhe Doroti pa se gjithçka brenda tyre ishte e gjelbër. Shiteshin karamele të gjelbra dhe kokoshka të gjelbra, si dhe këpucë të gjelbra, kapele të gjelbra dhe rroba të gjelbra të të gjitha llojeve. Në një vend dikush shiste limonadë të gjelbër dhe kur fëmijët blinin, Doroti pa se ata paguanin me monedha të gjelbra. \n\nDukej sikur nuk kishte kuaj apo kafshë të ndonjë lloji; burrat i transportonin sendet me karroca të vogla të gjelbra, të cilat i shtynin përpara. Të gjithë dukeshin të kënaqur, të lumtur dhe të begatë."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Zgjedhja e formatit"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatik"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuale"</string>
@@ -327,6 +335,7 @@
       <item quantity="other">Aplikacionet e telefonatave</item>
       <item quantity="one">Aplikacioni i telefonatave</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Aplikacioni i shfletuesit"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Udhëzime"</string>
@@ -337,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"Emri i pajisjes"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Rinis"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Informacioni ligjor"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Licencat me burim të hapur"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"Kodi burimor nga një palë e tretë"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Informacioni ligjor i Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Të dhënat e licencës nuk ofrohen"</string>
     <string name="about_model" msgid="9164284529291439296">"Modeli"</string>
@@ -403,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"Licenca"</string>
     <string name="terms_title" msgid="192888187310800678">"Kushtet e përgjithshme"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Licenca e WebView në sistem"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Informacione për konsumatorët"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"Përmbajtjet që gjen në Android TV vijnë nga partnerë palë të treta, si p.sh. zhvillues aplikacionesh dhe studio filmash, si dhe nga vetë Google. Për më shumë informacione, shiko "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"Në rregull"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"I dobët"</item>
     <item msgid="2098818614362343532">"Pak i dobët"</item>
@@ -605,6 +617,22 @@
     <item msgid="5645263357181875427">"Përdor orën e ofruar nga transmetimi i transportit"</item>
     <item msgid="5501503537181350884">"Joaktive"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Për të gjitha aplikacionet dhe shërbimet"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Qasjet së fundi nga"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Nuk ka pasur qasje së fundi"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Shiko të gjitha"</string>
+    <string name="microphone" msgid="7893752847683941214">"Mikrofoni"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Qasja te mikrofoni"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Qasja e aplikacionit te mikrofoni"</string>
+    <string name="camera" msgid="1226671478936288283">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Qasja te kamera"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Qasja e aplikacionit te kamera"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Qasja te mikrofoni: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Kur kjo është e aktivizuar, të gjitha aplikacionet dhe shërbimet që kanë lejen mund të kenë qasje te çdo mikrofon në këtë pajisje.\n\nPajisjet periferike të kamerës me një protokoll të personalizuar nuk do të preken nga ky cilësim."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Qasja te kamera: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Kur kjo është e aktivizuar, të gjitha aplikacionet dhe shërbimet që kanë lejen mund të kenë qasje te çdo kamerë në këtë pajisje.\n\nPajisjet periferike të kamerës me një protokoll të personalizuar nuk do të preken nga ky cilësim."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Aktiv"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Joaktiv"</string>
     <string name="system_location" msgid="4057295363709016511">"Vendndodhja"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Lejoji aplikacionet që kanë kërkuar lejen tënde të përdorin informacionin e vendndodhjes"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Miratimi i vendndodhjes"</string>
@@ -880,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Nuk janë caktuar parazgjedhje"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Pastro memorien specifike"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Njoftime"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Licencat me burim të hapur"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Kodi burimor nga një palë e tretë"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Lejet"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Aplikacioni nuk disponohet"</string>
     <string name="settings_ok" msgid="5950888975075541964">"Në rregull"</string>
@@ -970,6 +998,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Lejo figurë brenda figurës"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Asnjë aplikacion i instaluar nuk e mbështet figurën brenda figurës"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Lejo aplikacionet të krijojnë dritare \"figurë brenda figure\" ndërkohë që aplikacioni është i hapur ose pasi të dalësh prej tij (për shembull, për të vazhduar shikimin e një videoje). Kjo dritare shfaqet mbi aplikacionet e tjera që po përdor."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Lejo që aplikacionet të caktojnë alarmet dhe të planifikojnë veprime që kanë një afat të caktuar. Kjo lejon që aplikacionet të ekzekutohen në sfond, gjë që mund të përdorë më shumë energji.\n\nNëse kjo leje është caktuar si joaktive, alarmet ekzistuese dhe ngjarjet me bazë kohore të planifikuara nga aplikacionet nuk do të funksionojnë."</string>
     <string name="special_access" msgid="21806055758289916">"Qasja e veçantë e apl."</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audioja"</string>

@@ -98,7 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Վերջերս օգտագործված հավելվածներ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Դիտել բոլոր հավելվածները"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Թույլտվություններ"</string>
-    <string name="apps_security" msgid="1392489151324802853">"Անվտանգություն"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Բոլոր հավելվածները"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Ցուցադրել համակարգի հավելվածները"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Տեղադրված հավելվածներ"</string>
@@ -111,7 +112,7 @@
     <string name="device_surround_sound" msgid="1889436002598316470">"Ծավալային ձայն"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Համակարգի ձայներ"</string>
     <string name="device_apps" msgid="2134756632245008919">"Հավելվածներ"</string>
-    <string name="device_storage" msgid="8540243547121791073">"Պահեստ"</string>
+    <string name="device_storage" msgid="8540243547121791073">"Պահոց"</string>
     <string name="device_reset" msgid="6115282675800077867">"Զրոյացնել"</string>
     <string name="device_backup_restore" msgid="3634531946308269398">"Պահուստավորում և վերականգնում"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Վերակայել բոլոր տվյալները"</string>
@@ -123,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos և Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos և Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"«Ավտոմատ» տարբերակը կարող է չաշխատել, եթե ձեր սարքը պատշաճ կերպով չի նշում աջակցվող ձևաչափերը։"</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Ավտոմատ․ միացվում են միայն այն ձևաչափերը, որոնք աջակցվում են ձեր աուդիո արտածման սարքի կողմից "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Երբ այս կարգավորումը միացված է, հավելվածները կարող են ավտոմատ ընտրել ձեր սարքերում աջակցվող ձայնի ցանկացած ձևաչափերից մեկը։ Ընդ որում, ընտրված ձևաչափի որակը կարող է լինել ոչ ամենաբարձրը։"</string>
@@ -157,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Երբ հավելվածը պահանջում է, սարքը կհամապատասխանեցնի իր հաճախականությունը նվագարկվող տեսանյութի կադրերի հաճախականությանը։ Տեսանյութի նվագարկման սկզբում և վերջում էկրանը մի պահ կարող է սպիտակել։"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Երբեք"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Նույնիսկ երբ հավելվածը պահանջում է, սարքը չի համապատասխանեցնի իր հաճախականությունը նվագարկվող տեսանյութի կադրերի հաճախականությանը։"</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Տեքստի մասշտաբավորում"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Մասշտաբը դարձնել <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Տեքստի նմուշ"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Օզի կախարդը"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Գլուխ 11. Օզի հրաշալի Զմրուխտե քաղաքը"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Նույնիսկ հագնելով կանաչ ապակիներով ակնոցներ՝ Դորոթին և իր ընկերները շլացան այս զարմանահրաշ քաղաքի փայլից։ Փողոցների երկայնքով շարված էին կանաչ մարմարից գեղեցիկ տներ՝ զարդարված փայլուն զմրուխտներով։ Ճամփորդները քայլում էին այդ նույն կանաչ մարմարով պատված մայթերով, որոնց սալիկների արանքները լցված էին արևի շողերի տակ փայլող զմրուխտներով։ Տների պատուհանները կանաչ ապակուց էին։ Զմրուխտե քաղաքում նույնիսկ երկինքն ուներ կանաչ երանգ, իսկ կանաչ արևը պայծառ կանաչ շողեր էր արձակում։ \n\nՇուրջը տղամարդիկ, կանայք և երեխաներ էին քայլում, որոնք բոլորը կրում էին կանաչ հագուստ և ունեին կանաչավուն մաշկ։ Նրանք զարմանքով էին նայում Դորոթիին և նրա տարօրինակ ուղեկիցներին։ Նկատելով Առյուծին՝ երեխաները թաքնվում էին իրենց ծնողների մեջքի ետևում և ոչ-ոք չէր համարձակվում խոսել անծանոթների հետ։ Խանութներում վաճառվում էին կանաչ գույնի ապրանքներ. կանաչ կոնֆետներ և կանաչ ադիբուդի, տարբեր տեսակի կանաչ կոշիկներ, գլխարկներ և զգեստներ։ Վաճառականներից մեկն առաջարկում էր կանաչ լիմոնադ, իսկ նրան շրջապատող երեխաները լիմոնադի համար վճարում էին կանաչ մետաղադրամներով։ \n\nԶմրուխտե քաղաքի փողոցներում ոչ ձիեր, ոչ էլ այլ կենդանիներ կային։ Տղամարդիկ իրենց իրերը կրում էին փոքր կանաչ ձեռնասայլակներով։ Քաղաքի բոլոր բնակիչները ուրախ և անհոգ տեսք ունեին։"</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Ձևաչափի ընտրություն"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Ավտոմատ"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ձեռքով"</string>
@@ -191,7 +200,7 @@
     <string name="accessory_connected" msgid="5229574480869175180">"Միացված է"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"Փոխել անունը"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"Մուտքագրեք նոր անուն այս լրասարքի համար"</string>
-    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Bluetooth զուգավորում"</string>
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Bluetooth զուգակցում"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"Սարքավորումների որոնում…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Նախքան ձեր Bluetooth սարքերը զուգավորելը, համոզվեք, որ դրանք զուգավորման ռեժիմում են։"</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Սարք է հայտնաբերվել և ավտոմատ կմիանա <xliff:g id="COUNTDOWN">%1$s</xliff:g> վայրկյանից"</string>
@@ -247,7 +256,7 @@
     <string name="system_accessibility" msgid="3081009195560501010">"Հատուկ գործառույթներ"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"Մշակողի ընտրանքներ"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Չկա"</string>
-    <string name="system_diagnostic" msgid="1654842813331919958">"Օգտագործում և ախտորոշում"</string>
+    <string name="system_diagnostic" msgid="1654842813331919958">"Օգտագործում և դիագնոստիկա"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"Սարքի ադմինիստրատորի հավելվածներ չկան"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Անջատվել է ադմինիստրատորի կողմից"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Հասանելի չէ"</string>
@@ -326,6 +335,7 @@
       <item quantity="one">Հեռախոսի հավելվածներ</item>
       <item quantity="other">Հեռախոսի հավելվածներ</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Դիտարկիչ"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Ուղեցույցներ"</string>
@@ -336,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"Սարքի անունը"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Վերագործարկել"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Իրավական տեղեկություններ"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Բաց կոդով ծրագրաշարի արտոնագրեր"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"Կողմնակի աղբյուր"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google-ի իրավական տեղեկություններ"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Արտոնագրի տվյալներն անհասանելի են"</string>
     <string name="about_model" msgid="9164284529291439296">"Մոդելը"</string>
@@ -402,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"Արտոնագիր"</string>
     <string name="terms_title" msgid="192888187310800678">"Դրույթներն ու պայմանները"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Համակարգի WebView-ի արտոնագիր"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Տեղեկություններ սպառողների համար"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"Բովանդակությունը, որը կարող եք գտնել Android TV-ում, մատակարարվում է ինչպես անկախ գործընկերների (օր․՝ հավելվածների մշակողների, կինոստուդիաների), այնպես էլ հենց Google-ի կողմից։ Լրացուցիչ տեղեկությունների համար այցելեք "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>" էջ։"</string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"Եղավ"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Թույլ"</item>
     <item msgid="2098818614362343532">"Բավարար"</item>
@@ -510,7 +523,7 @@
     <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Դուք թույլտվություն չունեք փոխելու Wi‑Fi-ի ցանցը:"</string>
     <string name="title_ok" msgid="6500452958848127145">"Լավ"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Չեղարկել"</string>
-    <string name="storage_title" msgid="6637715914885228193">"Պահեստ"</string>
+    <string name="storage_title" msgid="6637715914885228193">"Պահոց"</string>
     <string name="storage_available" msgid="8860901789290434209">"Հասանելի է"</string>
     <string name="storage_size" msgid="5517261387579171381">"Ընդհանուր տարածքը՝ <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
     <string name="storage_calculating_size" msgid="5716281278843281044">"Հաշվարկում…"</string>
@@ -604,6 +617,22 @@
     <item msgid="5645263357181875427">"Օգտագործել տրանսպորտային հոսքի տրամադրած ժամանակը"</item>
     <item msgid="5501503537181350884">"Անջատել"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Բոլոր հավելվածների և ծառայությունների համար"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Վերջերս օգտագործվել է՝"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Վերջերս չի օգտագործվել"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Տեսնել բոլորը"</string>
+    <string name="microphone" msgid="7893752847683941214">"Խոսափող"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Խոսափողի հասանելիություն"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Խոսափողի հասանելիությունը հավելվածներին"</string>
+    <string name="camera" msgid="1226671478936288283">"Տեսախցիկ"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Տեսախցիկի հասանելիություն"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Տեսախցիկի հասանելիությունը հավելվածներին"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Խոսափողի հասանելիություն՝ <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Երբ այս կարգավորումը միացված է, բոլոր հավելվածերն ու ծառայությունները, որոնք ունեն թույլտվություն, կարող են օգտագործել խոսափողն այս սարքում։\n\nԱյս կարգավորումը չի ազդում անհատականացված հաղորդակարգով արտաքին աուդիո սարքերի վրա։"</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Տեսախցիկի հասանելիություն՝ <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Երբ այս կարգավորումը միացված է, բոլոր հավելվածերն ու ծառայությունները, որոնք ունեն թույլտվություն, կարող են օգտագործել խոսափողն այս սարքում։\n\nԱյս կարգավորումը չի ազդում տեսախցիկի՝ անհատականացված հաղորդակարգով արտաքին սարքերի վրա։"</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Միացված է"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Անջատված է"</string>
     <string name="system_location" msgid="4057295363709016511">"Տեղադրություն"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Թույլատրել հավելվածներին օգտագործել ձեր տեղադրության մասին տվյալները"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Տեղադրության մասին տվյալների հավաքում"</string>
@@ -835,8 +864,8 @@
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Կարգավորումներ"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Թույլատրված ծրագրեր"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="one">%d հավելված է թույլատրվում</item>
-      <item quantity="other">%d հավելված է թույլատրվում</item>
+      <item quantity="one">Թույլատրված է %d հավելված</item>
+      <item quantity="other">Թույլատրված է %d հավելված</item>
     </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Թույլատրված է"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Արգելված"</string>
@@ -879,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Կանխադրված արժեքները սահմանված չեն"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Մաքրել քեշը"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Ծանուցումներ"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Բաց կոդով ծրագրակազմի արտոնագրեր"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Կողմնակի աղբյուր"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Թույլտվություններ"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Հավելվածն անհասանելի է"</string>
     <string name="settings_ok" msgid="5950888975075541964">"Հաստատել"</string>
@@ -929,7 +958,7 @@
     <string name="keep_settings" msgid="703474489210093961">"Չփոխել"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"Թույլտվություններ"</string>
     <string name="device_apps_permissions" msgid="8421323706003063878">"Հավելվածների թույլտվություններ"</string>
-    <string name="app_permissions_group_summary" msgid="6818210080117761117">"Թույլատրված է <xliff:g id="COUNT_0">%1$d</xliff:g>/<xliff:g id="COUNT_1">%2$d</xliff:g> հավելվածի"</string>
+    <string name="app_permissions_group_summary" msgid="6818210080117761117">"Թույլատրված է <xliff:g id="COUNT_1">%2$d</xliff:g> հավելվածից <xliff:g id="COUNT_0">%1$d</xliff:g>-ին"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth-ի թույլտվության հայց"</string>
     <string name="security_patch" msgid="8924741264829495392">"Android TV-ի OS-ի անվտանգության համակարգի թարմացում"</string>
     <string name="choose_application" msgid="2375936782103669988">"Ընտրեք հավելված"</string>
@@ -969,6 +998,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Թույլատրել «նկար նկարի մեջ» ռեժիմը"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Տեղադրված հավելվածները չեն աջակցում «նկար նկարի մեջ» ռեժիմը"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Թույլատրել հավելվածներին ստեղծել «նկար նկարի մեջ» պատուհան` հավելվածն օգտագործելիս կամ փակելուց հետո (օրինակ՝ տեսանյութի դիտումը շարունակելու համար): Այս պատուհանը ցուցադրվում է ձեր կողմից օգտագործվող այլ հավելվածների վրայից:"</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Թույլատրեք հավելվածներին կարգավորել զարթուցիչներ և ստեղծել գործողությունների կատարման ժամանակացույցներ։ Այդպես հավելվածները կկարողանան աշխատել ֆոնային ռեժիմում, ինչի արդյունքում ավելի շատ էներգիա կսպառվի։\n\nԵթե այս թույլտվությունն անջատված է, հավելվածի կողմից կարգավորված զարթուցիչները և միջոցառումների ժամանակացույցները չեն աշխատի։"</string>
     <string name="special_access" msgid="21806055758289916">"Հատուկ հասանելիություն"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Աուդիո"</string>
@@ -1005,9 +1035,9 @@
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Հեռացնել հավելվածը"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Անջատել և ապատեղադրել"</string>
     <string name="select_device_admin_msg" msgid="8475934459999710332">"Սարքի ադմինիստրատորի հավելվածներ"</string>
-    <string name="add_device_admin_msg" msgid="5390773166682603421">"Ակտիվացնե՞լ սարքի ադմինիստրատորի հավելվածը:"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Ակտիվացնե՞լ սարքի ադմինիստրատորի հավելվածը"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Ակտիվացնել այս սարքի ադմինիստրատորի հավելվածը"</string>
-    <string name="device_admin_warning" msgid="7399916080685200660">"Ադմինիստրատորի այս հավելվածի ակտիվացումը <xliff:g id="APP_NAME">%1$s</xliff:g> հավելվածին թույլ կտա կատարել հետևյալ գործողությունները`"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Ադմինիստրատորի այս հավելվածի ակտիվացումը թույլ կտա «<xliff:g id="APP_NAME">%1$s</xliff:g>» հավելվածին կատարել հետևյալ գործողությունները`"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> հավելվածը կկառավարի և կվերահսկի այս սարքը։"</string>
     <string name="device_admin_status" msgid="5467001937240455367">"Ադմինիստրատորի այս հավելվածը ակտիվ է և թույլ է տալիս <xliff:g id="APP_NAME">%1$s</xliff:g>-ին կատարել հետևյալ գործողությունները`"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Շարունակելու դեպքում օգտատերը կկառավարվի ձեր ադմինիստրատորի կողմից, որը, ձեր անձնական տվյալներից բացի, կկարողանա պահել նաև դրա հետ առնչվող տվյալները:\n\nՁեր ադմինիստրատորը կարող է վերահսկել և կառավարել կարգավորումները, մուտքը, հավելվածները և այս օգտատիրոջ հետ առնչվող տվյալները, ներառյալ ցանցային գործունեությունը և ձեր սարքի տեղադրության տվյալները:"</string>
