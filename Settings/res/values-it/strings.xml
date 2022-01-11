@@ -46,8 +46,8 @@
     <string name="accounts_category_title" msgid="7286858931427579845">"Account e accesso"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Nessun account"</string>
     <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
+      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> accounts</item>
       <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> account</item>
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> account</item>
     </plurals>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Servizi multimediali, Assistente, Pagamenti"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Rete e Internet"</string>
@@ -57,8 +57,8 @@
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Telecomandi e accessori"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Nessun dispositivo Bluetooth connesso"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
+      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> accessories</item>
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> accessori</item>
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> accessorio</item>
     </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Display e audio"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Guida e feedback"</string>
@@ -98,7 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"App aperte di recente"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Mostra tutte le app"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Autorizzazioni"</string>
-    <string name="apps_security" msgid="1392489151324802853">"Sicurezza"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Tutte le app"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Mostra app di sistema"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"App installate"</string>
@@ -123,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos con Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: Automatico può non funzionare se il dispositivo non segnala correttamente formati supportati."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatica. Vengono attivati soltanto i formati supportati dal tuo dispositivo di output audio. "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Se selezioni questa opzione, il sistema consentirà alle app di selezionare qualsiasi formato audio supportato dalla tua catena di dispositivi. Le app potrebbero scegliere un formato di qualità non ottimale."</string>
@@ -144,19 +147,25 @@
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"FORMATI ATTIVI"</string>
     <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"FORMATI DISATTIVATI"</string>
     <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Per attivare formati, imposta la selezione del formato Manuale."</string>
-    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Per disattivare formati, imposta la selezione del formato Manuale."</string>
+    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Per disattivare i formati, imposta la selezione del formato su Manuale."</string>
     <string name="display_category_title" msgid="247804007525046312">"Display"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Impostazioni display avanzate"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Impostazioni audio avanzate"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Consenti modalità di gioco"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Adatta a frame rate dei contenuti"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Adatta alla frequenza fotogrammi dei contenuti"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Fluida"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Se l\'app lo richiede, l\'output del dispositivo corrisponderà al frame rate originale dei contenuti che stai guardando, SOLTANTO se la TV può effettuare una transizione fluida."</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Se l\'app lo richiede, l\'output del dispositivo corrisponderà alla alla frequenza fotogrammi originale dei contenuti che stai guardando, SOLTANTO se la TV può effettuare una transizione fluida."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Non fluida"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Se l\'app lo richiede, l\'output del dispositivo corrisponderà alla frequenza fotogrammi originale dei contenuti che stai guardando. Lo schermo potrebbe oscurarsi per un secondo quando attivi o disattivi la riproduzione di un video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Mai"</string>
-    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Anche se l\'app lo richiede, l\'output del dispositivo non potrà mai corrispondere al frame rate originale dei contenuti che stai guardando."</string>
+    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Anche se l\'app lo richiede, l\'output del dispositivo non potrà mai corrispondere alla frequenza fotogrammi originale dei contenuti che stai guardando."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Ridimensionamento testo"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Ridimensiona a <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Testo di esempio"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Il meraviglioso mago di Oz"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Capitolo 11: La splendida Città di smeraldo di Oz"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Sebbene i loro occhi fossero protetti dalle lenti verdi, Dorothy e i suoi amici rimasero immediatamente abbagliati dal fulgore della splendida Città. Lungo le strade si affacciavano belle case tutte realizzate in marmo verde e tempestate ovunque di smeraldi scintillanti. Camminarono lungo un marciapiede fatto dello stesso marmo verde, i cui blocchi erano congiunti da file e file di smeraldi incastonati che rilucevano sotto il sole splendente. I vetri alle finestre erano verdi e persino il cielo sopra la Città e i raggi di sole avevano una sfumatura verde. \n\nC\'erano molte persone che passeggiavano, uomini, donne e bambini: erano tutti vestiti di verde e avevano la pelle verdognola. Guardavano Dorothy e la sua stravagante compagnia con occhi pieni di meraviglia e i bambini correvano tutti a nascondersi dietro le loro madri quando vedevano il Leone; ma nessuno rivolse loro la parola. C\'erano molti negozi lungo la strada e Dorothy vide che ogni cosa al loro interno era verde. Si vendevano caramelle verdi e popcorn verdi, come pure scarpe verdi, cappelli verdi e abiti verdi di ogni tipo. C\'era anche un posto in cui un uomo vendeva limonata verde e, quando i bambini la acquistavano, Dorothy vide che pagavano con monetine verdi. \n\nSembrava che non esistessero cavalli o altri animali; gli uomini portavano le merci spingendole davanti a sé su carretti verdi. Tutti sembravano felici, soddisfatti e prosperi."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Selezione del formato"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatica"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuale"</string>
@@ -175,7 +184,7 @@
     <string name="hdr_hide_formats" msgid="8561568998525727230">"Nascondi formati"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"FORMATI ATTIVI"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"FORMATI DISATTIVATI"</string>
-    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Per disattivare formati, imposta la selezione del formato Manuale."</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Per disattivare i formati, imposta la selezione del formato su Manuale."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Cancellare i dati memorizzati nella cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Ciò cancella tutti i dati delle app nella cache."</string>
     <string name="accessories_add" msgid="413764175035531452">"Aggiungi accessorio"</string>
@@ -254,8 +263,8 @@
     <string name="manage_device_admin" msgid="5714217234035017983">"App di amministrazione del dispositivo"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Nessuna app attiva"</string>
     <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> app attiva</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> app attive</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app attiva</item>
     </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Disattivata da amministratore, norma crittografia o archivio credenziali"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Informazioni sul dispositivo gestito"</string>
@@ -275,16 +284,16 @@
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"App installate"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Il numero di app è una stima che potrebbe non includere le app installate da fonti diverse dal Play Store."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
+      <item quantity="one">Almeno <xliff:g id="COUNT_1">%d</xliff:g> app</item>
       <item quantity="other">Almeno <xliff:g id="COUNT_1">%d</xliff:g> app</item>
-      <item quantity="one">Almeno <xliff:g id="COUNT_0">%d</xliff:g> app</item>
     </plurals>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Autorizzazioni di accesso alla posizione"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Autorizzazioni microfono"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Autorizzazioni fotocamera"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"App predefinite"</string>
     <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> app</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> app</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app</item>
     </plurals>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Tastiera predefinita"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Metodo impostato: <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
@@ -296,36 +305,37 @@
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Credenziali attendibili nel profilo personale"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Credenziali attendibili nel profilo di lavoro"</string>
     <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
+      <item quantity="one">Almeno <xliff:g id="COUNT_1">%d</xliff:g> certificato CA</item>
       <item quantity="other">Almeno <xliff:g id="COUNT_1">%d</xliff:g> certificati CA</item>
-      <item quantity="one">Almeno <xliff:g id="COUNT_0">%d</xliff:g> certificato CA</item>
     </plurals>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"L\'amministratore può bloccare il dispositivo e reimpostare la password"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"L\'amministratore può eliminare tutti i dati del dispositivo"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Tentativi di inserimento della password non riusciti prima dell\'eliminazione di tutti i dati del dispositivo"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Tentativi di inserimento della password non riusciti prima dell\'eliminazione dei dati del profilo di lavoro"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> tentativo</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> tentativi</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> tentativo</item>
     </plurals>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Questo dispositivo è gestito dalla tua organizzazione."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Questo dispositivo è gestito da <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Ulteriori informazioni"</string>
     <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="other">App Fotocamera</item>
       <item quantity="one">App Fotocamera</item>
+      <item quantity="other">App Fotocamera</item>
     </plurals>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"App di calendario"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"App di contatti"</string>
     <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="other">App client di posta</item>
       <item quantity="one">App client di posta</item>
+      <item quantity="other">App client di posta</item>
     </plurals>
     <string name="default_map_app_title" msgid="9051013257374474801">"App di mappe"</string>
     <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="other">App Telefono</item>
       <item quantity="one">App Telefono</item>
+      <item quantity="other">App Telefono</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"App browser"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Tutorial"</string>
@@ -336,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"Nome dispositivo"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Riavvia"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Informazioni legali"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Licenze open source"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"Licenze open source di terze parti"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Note legali Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Dati di licenza non disponibili"</string>
     <string name="about_model" msgid="9164284529291439296">"Modello"</string>
@@ -344,8 +354,8 @@
     <string name="about_serial" msgid="3432319328808745459">"Numero di serie"</string>
     <string name="about_build" msgid="8467840394761634575">"Build sistema operativo Android TV"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
+      <item quantity="one">You are now <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steps away from being a developer</item>
       <item quantity="other">Ora ti mancano <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> passaggi per diventare uno sviluppatore</item>
-      <item quantity="one">Ora ti manca <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> passaggio per diventare uno sviluppatore</item>
     </plurals>
     <string name="about_ads" msgid="7662896442040086522">"Annunci"</string>
     <string name="ads_description" msgid="8081069475265061074">"Gestisci le impostazioni degli annunci, ad esempio reimpostando il tuo ID pubblicità."</string>
@@ -361,21 +371,21 @@
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"La rete potrebbe essere monitorata"</string>
     <string name="done_button" msgid="616159688526431451">"Fine"</string>
     <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="other">Considera attendibili i certificati o rimuovili</item>
       <item quantity="one">Considera attendibile il certificato o rimuovilo</item>
+      <item quantity="other">Considera attendibili i certificati o rimuovili</item>
     </plurals>
     <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ha installato un\'autorità di certificazione sul tuo dispositivo. L\'amministratore potrebbe monitorare l\'attività di rete del dispositivo, inclusi siti web protetti, email e app.\n\nContatta l\'amministratore per avere ulteriori informazioni su questo certificato.</item>
       <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ha installato autorità di certificazione sul tuo dispositivo. L\'amministratore potrebbe monitorare l\'attività di rete del dispositivo, inclusi siti web protetti, email e app.\n\nContatta l\'amministratore per avere ulteriori informazioni su questi certificati.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> ha installato un\'autorità di certificazione sul tuo dispositivo. L\'amministratore potrebbe monitorare l\'attività di rete del dispositivo, inclusi siti web protetti, email e app.\n\nContatta l\'amministratore per avere ulteriori informazioni su questo certificato.</item>
     </plurals>
     <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
+      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ha installato un\'autorità di certificazione per il tuo profilo di lavoro. L\'amministratore potrebbe monitorare l\'attività di rete lavorativa, inclusi siti web protetti, email e app.\n\nContatta l\'amministratore per avere ulteriori informazioni su questo certificato.</item>
       <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ha installato autorità di certificazione per il tuo profilo di lavoro. L\'amministratore potrebbe monitorare l\'attività di rete lavorativa, inclusi siti web protetti, email e app.\n\nContatta l\'amministratore per avere ulteriori informazioni su questi certificati.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> ha installato un\'autorità di certificazione per il tuo profilo di lavoro. L\'amministratore potrebbe monitorare l\'attività di rete lavorativa, inclusi siti web protetti, email e app.\n\nContatta l\'amministratore per avere ulteriori informazioni su questo certificato.</item>
     </plurals>
     <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Una terza parte può monitorare la tua attività di rete, inclusi siti web protetti, email e applicazioni.\n\nQuesto è reso possibile da credenziali attendibili installate sul tuo dispositivo."</string>
     <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="other">Controlla i certificati</item>
       <item quantity="one">Controlla il certificato</item>
+      <item quantity="other">Controlla i certificati</item>
     </plurals>
     <string name="device_status" msgid="8266002761193692207">"Stato"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Rete, numeri di serie e altre informazioni"</string>
@@ -402,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"Licenza"</string>
     <string name="terms_title" msgid="192888187310800678">"Termini e condizioni"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Licenza di sistema per WebView"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Informazioni per i consumatori"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"I contenuti che trovi su Android TV provengono da partner terzi quali sviluppatori di app e studi cinematografici, nonché da Google stessa. Per ulteriori informazioni, visita la pagina "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Scadente"</item>
     <item msgid="2098818614362343532">"Discreta"</item>
@@ -520,7 +533,7 @@
     <string name="storage_music_usage" msgid="5362871290115089474">"Audio"</string>
     <string name="storage_media_misc_usage" msgid="3404230292054880339">"Vari"</string>
     <string name="storage_media_cache_usage" msgid="6397941751551207630">"Dati memorizzati nella cache"</string>
-    <string name="storage_eject" msgid="3268870873944951902">"Rimuovi"</string>
+    <string name="storage_eject" msgid="3268870873944951902">"Espelli"</string>
     <string name="storage_format" msgid="5360900929128087085">"Resetta e formatta"</string>
     <string name="storage_format_as_private" msgid="77945551149326052">"Resetta e formatta come memoria dispositivo"</string>
     <string name="storage_format_as_public" msgid="6745112917895223463">"Resetta e formatta come archivio rimovibile"</string>
@@ -604,6 +617,22 @@
     <item msgid="5645263357181875427">"Utilizza l\'ora di trasmissione fornita in streaming"</item>
     <item msgid="5501503537181350884">"OFF"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Per tutte le app e tutti i servizi"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Accesso recente da parte di:"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Nessun accesso recente"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Mostra tutto"</string>
+    <string name="microphone" msgid="7893752847683941214">"Microfono"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Accesso al microfono"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Accesso delle app al microfono"</string>
+    <string name="camera" msgid="1226671478936288283">"Videocamera"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Accesso alla videocamera"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Accesso delle app alla videocamera"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Accesso al microfono: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Se attivi questa opzione, tutte le app e tutti i servizi autorizzati possono accedere a qualsiasi microfono su questo dispositivo.\n\nQuesta impostazione non verrà applicata per periferiche audio con un protocollo personalizzato."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Accesso alla videocamera: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Se attivi questa opzione, tutte le app e tutti i servizi autorizzati possono accedere a qualsiasi videocamera su questo dispositivo.\n\nQuesta impostazione non verrà applicata per videocamere con un protocollo personalizzato."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"On"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Off"</string>
     <string name="system_location" msgid="4057295363709016511">"Geolocalizzazione"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Consenti alle applicazioni che hanno chiesto la tua autorizzazione di utilizzare le informazioni sulla tua posizione"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Consenso alla geolocalizzazione"</string>
@@ -810,16 +839,16 @@
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Alimentaz. automat. TV attiva"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Collega la TV al dispositivo HDMI"</string>
     <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
+      <item quantity="one">Connected Inputs</item>
       <item quantity="other">Ingressi collegati</item>
-      <item quantity="one">Ingresso collegato</item>
     </plurals>
     <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
+      <item quantity="one">Standby Inputs</item>
       <item quantity="other">Ingressi in standby</item>
-      <item quantity="one">Ingresso in standby</item>
     </plurals>
     <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
+      <item quantity="one">Not Connected Inputs</item>
       <item quantity="other">Ingressi non collegati</item>
-      <item quantity="one">Ingresso non collegato</item>
     </plurals>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Limita l\'accesso ad app e altri contenuti nel tuo account"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Profilo con limitazioni"</string>
@@ -835,8 +864,8 @@
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Impostazioni"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"App consentite"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
+      <item quantity="one">%d apps allowed</item>
       <item quantity="other">%d app consentite</item>
-      <item quantity="one">1 app consentita</item>
     </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Consentito"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Non consentito"</string>
@@ -879,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Nessuna impostazione predefinita"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Svuota cache"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Notifiche"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Licenze open source"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Licenze open source di terze parti"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Autorizzazioni"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"App non disponibile"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
@@ -969,7 +998,8 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Consenti Picture in picture"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Nessuna app installata supporta la modalità Picture in picture"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Consenti alle app di creare una finestra Picture in picture quando l\'app è aperta o dopo l\'uscita (ad esempio, per continuare a guardare un video). Questa finestra viene visualizzata sopra le altre app in uso."</string>
-    <string name="special_access" msgid="21806055758289916">"Accesso speciale alle app"</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Consenti alle app di impostare sveglie e programmare azioni per le quali il fattore temporale è decisivo. Le app potranno così essere eseguite in background, comportando un consumo maggiore della batteria.\n\nSe questa autorizzazione viene disattivata, le sveglie esistenti e gli eventi basati sull\'orario programmati dalle app non funzioneranno."</string>
+    <string name="special_access" msgid="21806055758289916">"Accesso speciale per le app"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audio"</string>
     <string name="record_audio" msgid="5035689290259575229">"Registra audio"</string>

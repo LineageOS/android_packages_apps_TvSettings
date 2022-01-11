@@ -98,7 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Kürzlich geöffnete Apps"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Alle Apps ansehen"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Berechtigungen"</string>
-    <string name="apps_security" msgid="1392489151324802853">"Sicherheit"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Alle Apps"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"System-Apps anzeigen"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Installierte Apps"</string>
@@ -123,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos mit Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos mit Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"„Automatisch“ funktioniert ggf. nicht, wenn das Gerät die unterstützten Formate nicht korrekt meldet."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatisch: Nur Formate aktivieren, die von deinem Audio-Ausgabegerät unterstützt werden "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Bei dieser Option können Apps jedes Tonformat wählen, das von deiner Gerätekette unterstützt wird. Möglicherweise wählen Apps ein Format, das nicht der höchsten Qualität entspricht."</string>
@@ -144,7 +147,7 @@
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"AKTIVIERTE FORMATE"</string>
     <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"DEAKTIVIERTE FORMATE"</string>
     <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Ändere zum Aktivieren die Formatauswahl in „Manuell“."</string>
-    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Ändere zum Deaktivieren die Formatauswahl in „Manuell“."</string>
+    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Zum Deaktivieren muss der Formatauswahlmodus „Manuell“ aktiviert sein."</string>
     <string name="display_category_title" msgid="247804007525046312">"Display"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Erweiterte Displayeinstellungen"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -152,11 +155,17 @@
     <string name="game_mode_title" msgid="7280816243531315755">"Spielmodus zulassen"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Inhalts-Framerate anpassen"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Nahtlos"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Wenn die App es anfordert, wird die Ausgabe deines Geräts an die ursprüngliche Frame-Rate des aktuellen Inhalts angepasst. Das gilt allerdings NUR, wenn dein Fernseher einen nahtlosen Übergang unterstützt."</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Wenn die App es anfordert, wird die Ausgabe deines Geräts an die ursprüngliche Framerate des aktuellen Inhalts angepasst. Das gilt allerdings NUR, wenn dein Fernseher einen nahtlosen Übergang unterstützt."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Nicht nahtlos"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Wenn die App es anfordert, wird die Ausgabe deines Geräts an die ursprüngliche Frame-Rate des aktuellen Inhalts angepasst. Das kann dazu führen, dass der Bildschirm beim Beenden oder Starten einer Videowiedergabe vorübergehend schwarz wird."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Wenn die App es anfordert, wird die Ausgabe deines Geräts an die ursprüngliche Framerate des aktuellen Inhalts angepasst. Das kann dazu führen, dass der Bildschirm beim Beenden oder Starten einer Videowiedergabe vorübergehend schwarz wird."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nie"</string>
-    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Selbst wenn die App es anfordert, wird die Ausgabe deines Geräts nie an die ursprüngliche Frame-Rate des aktuellen Inhalts angepasst."</string>
+    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Selbst wenn die App es anfordert, wird die Ausgabe deines Geräts nie an die ursprüngliche Framerate des aktuellen Inhalts angepasst."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Textskalierung"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Auf <xliff:g id="SCALE">%1$d</xliff:g> %% skalieren"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Beispieltext"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Der Zauberer von Oz"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Kapitel 11: Die wundervolle Smaragdstadt von Oz"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Obwohl ihre Augen durch die grünen Gläser der Brillen geschützt waren, wurden Dorothy und ihren Freunden vom Glanz und vom Schimmer der wundervollen Stadt beinahe schwindelig. Prächtige Häuser aus grünem Marmor, die mit Smaragden besetzt waren, säumten die Straßen. Auch das Straßenpflaster bestand aus feinstem grünem Marmor und die Fugen waren mit glitzernden Smaragden bestückt. Sie funkelten und leuchteten in der Sonne. Die Fensterscheiben der Häuser bestanden aus grünem Glas, der Himmel über der Stadt schimmerte hellgrün, und sogar die Strahlen der Sonne wirkten leicht grünlich. \n\nIn der Stadt gab es viel Leben. Männer, Frauen und Kinder liefen geschäftig durch die Straßen. Alle waren grün gekleidet und trugen eine grüne Brille. Ihre Haut schien leicht grün zu sein und sie sahen Dorothy und ihre Freunde mit großen verwunderten Augen an. Als die Kinder den Löwen sahen, rannten sie davon, um sich hinter ihren Müttern zu verstecken. Niemand richtete das Wort an die Wanderer. Es gab auch viele Geschäfte in der Smaragdstadt und sogar die Auslagen der Läden waren grün. Da gab es grüne Bonbons, grünes Popcorn, grüne Schuhe, grüne Hüte und viele grüne Kleider. Ein Mann verkaufte grüne Limonade und Dorothy sah die Kinder mit grünem Geld dafür bezahlen. \n\nPferde oder andere Tiere konnte Dorothy nirgendwo entdecken. Dafür begegneten ihnen immer wieder Männer, die auf ihren kleinen grünen Karren Lasten durch die Stadt schoben. Alle schienen glücklich und zufrieden zu sein."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Formatauswahl"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatisch"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuell"</string>
@@ -175,7 +184,7 @@
     <string name="hdr_hide_formats" msgid="8561568998525727230">"Formate ausblenden"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"AKTIVIERTE FORMATE"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"DEAKTIVIERTE FORMATE"</string>
-    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Ändere zum Deaktivieren die Formatauswahl in „Manuell“."</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Zum Deaktivieren muss der Formatauswahlmodus „Manuell“ aktiviert sein."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Daten im Cache löschen?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Daten im Cache werden für alle Apps gelöscht."</string>
     <string name="accessories_add" msgid="413764175035531452">"Zubehör hinzufügen"</string>
@@ -326,6 +335,7 @@
       <item quantity="other">Telefon-Apps</item>
       <item quantity="one">Telefon-App</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Browser-App"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g> und <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g> und <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Anleitungen"</string>
@@ -336,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"Gerätename"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Neu starten"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Rechtliche Hinweise"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Open-Source-Lizenzen"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"Drittanbieter"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Rechtliche Hinweise"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Lizenzdaten sind nicht verfügbar."</string>
     <string name="about_model" msgid="9164284529291439296">"Modell"</string>
@@ -402,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"Lizenz"</string>
     <string name="terms_title" msgid="192888187310800678">"Nutzungsbedingungen"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"System-WebView-Lizenz"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Informationen für Nutzer"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"Inhalte bei Android TV stammen von Drittanbietern, wie App-Entwicklern und Filmstudios, sowie von Google selbst. Weitere Informationen findest du unter "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>"."</string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Schwach"</item>
     <item msgid="2098818614362343532">"Ausreichend"</item>
@@ -604,6 +617,22 @@
     <item msgid="5645263357181875427">"Zeit aus Transport Stream beziehen"</item>
     <item msgid="5501503537181350884">"Aus"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Für alle Apps und Dienste"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Zugriffe in letzter Zeit durch"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Keine Zugriffe in letzter Zeit"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Alle ansehen"</string>
+    <string name="microphone" msgid="7893752847683941214">"Mikrofon"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Mikrofonzugriff"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"App-Zugriff auf das Mikrofon"</string>
+    <string name="camera" msgid="1226671478936288283">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Kamerazugriff"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"App-Zugriff auf die Kamera"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofonzugriff: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Wenn diese Funktion aktiviert ist, können alle Apps und Dienste mit entsprechender Berechtigung auf alle Mikrofone dieses Geräts zugreifen.\n\nAuf Audio-Peripheriegeräte mit benutzerdefiniertem Protokoll hat diese Einstellung keine Auswirkung."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kamerazugriff: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Wenn diese Funktion aktiviert ist, können alle Apps und Dienste mit entsprechender Berechtigung auf alle Kameras dieses Geräts zugreifen.\n\nAuf Peripheriegeräte der Kamera mit benutzerdefiniertem Protokoll hat diese Einstellung keine Auswirkung."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"An"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Aus"</string>
     <string name="system_location" msgid="4057295363709016511">"Standort"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Meine Standortdaten dürfen von Apps verwendet werden, die ich dazu berechtigt habe."</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Standortfreigabe"</string>
@@ -688,7 +717,7 @@
     <string name="system_drawing" msgid="5802739024643871942">"Zeichnen"</string>
     <string name="system_monitoring" msgid="7997260748312620855">"Überwachen"</string>
     <string name="system_apps" msgid="8481888654606868074">"Apps"</string>
-    <string name="system_stay_awake" msgid="5935117574414511413">"Nicht in den Ruhezustand wechseln"</string>
+    <string name="system_stay_awake" msgid="5935117574414511413">"Bildschirm aktiv lassen"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP-Prüfung"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI-Optimierung"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Jetzt neu starten?"</string>
@@ -879,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Keine Standardeinstellungen festgelegt"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Cache leeren"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Benachrichtigungen"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Open-Source-Lizenzen"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Drittanbieter"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Berechtigungen"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"App nicht verfügbar"</string>
     <string name="settings_ok" msgid="5950888975075541964">"Ok"</string>
@@ -969,6 +998,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Bild im Bild zulassen"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Keine der installierten Apps unterstützt den Bild-im-Bild-Modus"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Während eine App geöffnet ist oder nachdem du sie schließt (z. B. um ein Video weiter anzusehen), öffnet sie ein Bild-im-Bild-Fenster. Dieses wird über anderen Apps eingeblendet, die du gerade verwendest."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Apps erlauben, Wecker zu stellen und zeitbasierte Aktionen zu planen. Dadurch laufen Apps im Hintergrund. Dies kann den Stromverbrauch erhöhen.\n\nWenn diese Berechtigung deaktiviert ist, funktionieren bereits gestellte Wecker und zeitbasierte Ereignisse, die von der entsprechenden App geplant sind, nicht wie erwartet."</string>
     <string name="special_access" msgid="21806055758289916">"Spezieller App-Zugriff"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g> und <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audio"</string>
