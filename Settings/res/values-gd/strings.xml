@@ -571,12 +571,12 @@
     <string name="title_current_autofill_service">Seirbheis fèin-lìonaidh làithreach</string>
     <string name="title_select_autofill_service">Tagh seirbheis fèin-lìonaidh</string>
     <string name="autofill_none">Chan eil gin</string>
-    <string name="autofill_confirmation_message">        &lt;b&gt;Dèan cinnteach gu bheil earbsa agad san aplacaid seo&lt;/b&gt;
-        &lt;br/&gt;
-        &lt;br/&gt;
-        Cleachdaidh &lt;xliff:g id="app_name" example="Password service"&gt;%1$s&lt;/xliff:g&gt; na tha air an sgrìn agad
+    <string name="autofill_confirmation_message"><![CDATA[        <b>Dèan cinnteach gu bheil earbsa agad san aplacaid seo</b>
+        <br/>
+        <br/>
+        Cleachdaidh <xliff:g id="app_name" example="Password service">%1$s</xliff:g> na tha air an sgrìn agad
         airson faighinn a-mach dè ghabhas fhèin-lìonadh.
-        </string>
+        ]]></string>
     <string name="computing_size">’Ga àireamhachadh\u2026</string>
     <string name="title_select_wifi_network">Tagh an lìonra WiFi agad</string>
     <string name="accessories_wifi_display_rename_device">Thoir ainm ùr air</string>
@@ -607,6 +607,8 @@
     <string name="inputs_device_auto_off_desc">Cuir cumhachd nan uidheaman HDMI dheth leis an TBh</string>
     <string name="inputs_tv_auto_on">Cur air fèin-obrachail an TBh</string>
     <string name="inputs_tv_auto_on_desc">Cuir cumhachd an TBh air le uidheam HDMI</string>
+    <string name="inputs_volume_control_enabled">Smachd air àirde na fuaime CEC</string>
+    <string name="inputs_volume_control_enabled_desc">Stiùirich àirde fuaime TV/AVR seach àirde na fuaime taobh a-staigh</string>
     <plurals name="inputs_header_connected_input">
         <item quantity="one">Ion-chur co-cheangailte</item>
         <item quantity="two">Ion-chuir cho-cheangailte</item>
