@@ -94,7 +94,8 @@ public class ResolutionSelectionState extends PreferenceControllerState {
 
         createPreferences();
 
-        mUserPreferredModeIndex = lookupModeIndex(mDisplayManager.getUserPreferredDisplayMode());
+        mUserPreferredModeIndex = lookupModeIndex(
+                mDisplayManager.getGlobalUserPreferredDisplayMode());
         if (mUserPreferredModeIndex != -1) {
             selectRadioPreference(new String[]{KEY_MODE_SELECTION,
                     KEY_RESOLUTION_PREFIX + mUserPreferredModeIndex});
@@ -185,12 +186,12 @@ public class ResolutionSelectionState extends PreferenceControllerState {
         }
 
         if (key[1].equals(KEY_RESOLUTION_SELECTION_AUTO)) {
-            mDisplayManager.clearUserPreferredDisplayMode();
+            mDisplayManager.clearGlobalUserPreferredDisplayMode();
             return true;
         } else if (key[1].contains(KEY_RESOLUTION_PREFIX)) {
             int modeIndex = Integer.valueOf(key[1].substring(KEY_RESOLUTION_PREFIX.length()));
             Display.Mode mode = mModes[modeIndex];
-            mDisplayManager.setUserPreferredDisplayMode(mode);
+            mDisplayManager.setGlobalUserPreferredDisplayMode(mode);
             return true;
         }
         return false;

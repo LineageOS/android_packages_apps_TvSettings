@@ -71,7 +71,7 @@ public class ResolutionSelectionFragmentTest {
 
         fragment.onPreferenceTreeClick(preference);
 
-        verify(mDisplayManager).clearUserPreferredDisplayMode();
+        verify(mDisplayManager).clearGlobalUserPreferredDisplayMode();
         assertThat(preference.isChecked()).isTrue();
     }
 
@@ -90,7 +90,7 @@ public class ResolutionSelectionFragmentTest {
         fragment.onPreferenceTreeClick(preference);
 
         ArgumentCaptor<Display.Mode> mode = ArgumentCaptor.forClass(Display.Mode.class);
-        verify(mDisplayManager).setUserPreferredDisplayMode(mode.capture());
+        verify(mDisplayManager).setGlobalUserPreferredDisplayMode(mode.capture());
         assertThat(mode.getValue().getPhysicalHeight()).isEqualTo(600);
         assertThat(mode.getValue().getPhysicalWidth()).isEqualTo(800);
         assertThat(mode.getValue().getRefreshRate()).isEqualTo(120);
@@ -179,7 +179,7 @@ public class ResolutionSelectionFragmentTest {
 
         ResolutionSelectionFragment fragment = spy(ResolutionSelectionFragment.class);
         doReturn(mDisplayManager).when(fragment).getDisplayManager();
-        doReturn(userPreferredMode).when(mDisplayManager).getUserPreferredDisplayMode();
+        doReturn(userPreferredMode).when(mDisplayManager).getGlobalUserPreferredDisplayMode();
 
         return FragmentController.of(fragment)
                 .create()
