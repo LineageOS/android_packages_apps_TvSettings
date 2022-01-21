@@ -168,6 +168,7 @@ public class CaptionSettingsFragment extends BaseSettingsFragment {
             boolean enabled = mCaptioningManager.isEnabled();
             if (enabled) {
                 mPreviewText.setVisibility(View.VISIBLE);
+                mPreviewWindow.setVisibility(View.VISIBLE);
                 Activity activity = getActivity();
                 mPreviewText.setStyle(mStyleId);
                 mPreviewText.setTextSize(mFontScale * mDefaultFontSize);
@@ -192,6 +193,7 @@ public class CaptionSettingsFragment extends BaseSettingsFragment {
                 mPreviewText.invalidate();
             } else {
                 mPreviewText.setVisibility(View.INVISIBLE);
+                mPreviewWindow.setVisibility(View.INVISIBLE);
             }
         }
     }
