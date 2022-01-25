@@ -323,6 +323,19 @@
         </activity>
 
         <activity
+            android:name=".device.apps.specialaccess.AllFilesAccessActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:taskAffinity=""
+            android:theme="@style/TvSettingsActivityTheme">
+            <intent-filter android:priority="1">
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.settings.MANAGE_APP_ALL_FILES_ACCESS_PERMISSION"/>
+                <data android:scheme="package" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".device.apps.specialaccess.AppUsageAccessActivity"
             android:excludeFromRecents="true"
             android:exported="true"
