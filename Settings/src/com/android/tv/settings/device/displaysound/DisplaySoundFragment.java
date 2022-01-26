@@ -55,6 +55,8 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
 
     static final String KEY_SOUND_EFFECTS = "sound_effects";
     private static final String KEY_CEC = "cec";
+    private static final String KEY_DEFAULT_AUDIO_OUTPUT_SETTINGS_SLICE =
+            "default_audio_output_settings";
     private static final String KEY_RESOLUTION_TITLE = "resolution_selection";
 
     private AudioManager mAudioManager;
@@ -99,6 +101,7 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
         final TwoStatePreference soundPref = findPreference(KEY_SOUND_EFFECTS);
         soundPref.setChecked(getSoundEffectsEnabled());
         updateCecPreference();
+        updateDefaultAudioOutputSettings();
 
         mDisplayManager = getContext().getSystemService(DisplayManager.class);
         mDisplayManager.registerDisplayListener(this, null);
@@ -150,6 +153,16 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
             cecPreference.setVisible(true);
         } else {
             cecPreference.setVisible(false);
+        }
+    }
+
+    private void updateDefaultAudioOutputSettings() {
+        final SlicePreference defaultAudioOutputSlicePref = findPreference(
+                KEY_DEFAULT_AUDIO_OUTPUT_SETTINGS_SLICE);
+        if (defaultAudioOutputSlicePref != null) {
+            defaultAudioOutputSlicePref.setVisible(
+                    SliceUtils.isSliceProviderValid(getContext(),
+                        defaultAudioOutputSlicePref.getUri()));
         }
     }
 
