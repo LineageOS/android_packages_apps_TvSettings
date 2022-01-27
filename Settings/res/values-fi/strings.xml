@@ -54,7 +54,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Ääni"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Sovellukset"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Laitteen asetukset"</string>
-    <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Etälaitteet ja lisävarusteet"</string>
+    <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Kaukosäätimet ja lisävarusteet"</string>
     <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Ei liitettyjä Bluetooth-laitteita"</string>
     <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
       <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> lisävarustetta</item>
@@ -89,7 +89,7 @@
     <string name="connectivity_summary_ethernet_connected" msgid="2612843587731520061">"Ethernet liitetty"</string>
     <string name="connectivity_summary_no_network_connected" msgid="6111160695454212460">"Ei verkkoyhteyttä"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi ei ole käytössä."</string>
-    <string name="wifi_setting_always_scan" msgid="431846292711998602">"Etsiminen aina käytössä"</string>
+    <string name="wifi_setting_always_scan" msgid="431846292711998602">"Haku aina käytössä"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Anna Googlen sijaintipalvelun ja muiden sovellusten hakea verkkoja, vaikka Wi-Fi-yhteys olisi pois käytöstä."</string>
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Etsiminen aina käytössä. Anna Googlen sijaintipalvelun ja muiden sovellusten hakea verkkoja, vaikka Wi-Fi-yhteys olisi poissa päältä."</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
@@ -216,7 +216,7 @@
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Peru"</string>
     <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s yhdistetty"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"Yhteys katkaistu: %1$s"</string>
-    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Etälaitteet ja lisävarusteet"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Kaukosäätimet ja lisävarusteet"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Laita Bluetooth pois päältä"</string>
     <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Et voi käyttää Google Assistantia kaukosäätimellä, kun Bluetooth on poissa päältä."</string>
@@ -700,7 +700,7 @@
     <string name="color_magenta" msgid="2377854703399624607">"Magenta"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Ota käyttöön"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Määritykset"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Otetaanko <xliff:g id="SERVICE">%1$s</xliff:g> käyttöön?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Käytetäänkö <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> voi kerätä kaiken kirjoittamasi tekstin paitsi salasanat. Palvelu voi kerätä myös henkilökohtaisia ​​tietoja, kuten luottokorttien numeroita."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Pysäytetäänkö <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Valitse OK, niin <xliff:g id="SERVICE">%1$s</xliff:g> poistetaan käytöstä."</string>
@@ -939,8 +939,8 @@
     <string name="factory_reset_description" msgid="6697396335158766785">"Tämä palauttaa laitteesi oletusasetukset sekä tyhjentää kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Tämä palauttaa laitteesi oletusasetukset sekä tyhjentää kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
     <string name="factory_reset_content_description" msgid="1677022688420116803">"Tehdasasetusten palautus. Tämä palauttaa laitteesi oletusasetukset sekä tyhjentää kaiken datan ja kaikki tilit, tiedostot ja ladatut sovellukset."</string>
-    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Poistetaanko kaikki henkilökohtaiset tietosi ja lataamasi sovellukset tältä laitteelta? Tätä toimintoa ei voi peruuttaa."</string>
-    <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Poista kaikki"</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Tyhjennetäänkö kaikki henkilökohtaiset tietosi ja lataamasi sovellukset tältä laitteelta? Tätä toimintoa ei voi peruuttaa."</string>
+    <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Tyhjennä kaikki"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Nimeä <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Nimeä laite, niin se on helpompi tunnistaa, kun haluat suoratoistaa tai yhdistää siihen muista laitteista."</string>
   <string-array name="rooms">
@@ -949,9 +949,9 @@
     <item msgid="6448060889026244632">"Oleskelutilan TV"</item>
     <item msgid="3336274213215419228">"Makuuhuoneen TV"</item>
   </string-array>
-    <string name="custom_room" msgid="6798144004583173563">"Anna muokattu nimi..."</string>
+    <string name="custom_room" msgid="6798144004583173563">"Lisää oma nimi..."</string>
     <string name="device_rename_title" msgid="9070021379000499270">"Anna uusi nimi laitteelle <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
-    <string name="device_rename_description" msgid="1973894029492915135">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> on tällä hetkellä nimeltään <xliff:g id="DEVICENAME">%2$s</xliff:g>."</string>
+    <string name="device_rename_description" msgid="1973894029492915135">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> on tällä hetkellä nimeltään <xliff:g id="DEVICENAME">%2$s</xliff:g>"</string>
     <string name="device_name_suggestion_title" msgid="3986220212759193742">"Anna laitteelle nimi"</string>
     <string name="device_name_suggestion_summary" msgid="4582691399302362938">"Käytä tätä nimeä kuvien, videoiden ja muun sisällön suoratoistoon puhelimella."</string>
     <string name="change_setting" msgid="7211706374208138343">"Vaihda"</string>
