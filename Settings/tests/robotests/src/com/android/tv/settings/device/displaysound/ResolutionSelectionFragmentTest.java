@@ -175,6 +175,8 @@ public class ResolutionSelectionFragmentTest {
             Display.Mode[] supportedModes, Display.Mode userPreferredMode) {
         Display display = spy(Display.class);
         doReturn(supportedModes).when(display).getSupportedModes();
+        Display.Mode systemPreferredMode = supportedModes[0];
+        doReturn(systemPreferredMode).when(display).getSystemPreferredDisplayMode();
         doReturn(display).when(mDisplayManager).getDisplay(Display.DEFAULT_DISPLAY);
 
         ResolutionSelectionFragment fragment = spy(ResolutionSelectionFragment.class);
