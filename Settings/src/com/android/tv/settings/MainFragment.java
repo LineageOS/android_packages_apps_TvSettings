@@ -111,6 +111,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     @VisibleForTesting
     static final String KEY_DISPLAY_AND_SOUND = "display_and_sound";
     private static final String KEY_CHANNELS_AND_INPUTS = "channels_and_inputs";
+    private static final String KEY_CHANNELS_AND_INPUTS_SLICE = "channels_and_inputs_slice";
 
     private static final String ACTION_ACCOUNTS = "com.android.tv.settings.ACCOUNTS";
     @VisibleForTesting
@@ -195,6 +196,7 @@ public class MainFragment extends PreferenceControllerFragment implements
             updateConnectivity();
         }
         updateBasicModeSuggestion();
+        updateChannelsAndInputs();
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
@@ -572,6 +574,21 @@ public class MainFragment extends PreferenceControllerFragment implements
             basicModeSuggestion.setVisible(true);
         } else {
             basicModeSuggestion.setVisible(false);
+        }
+    }
+
+    private void updateChannelsAndInputs() {
+        Preference channelsAndInputsPreference = findPreference(KEY_CHANNELS_AND_INPUTS);
+        SlicePreference channelsAndInputsSlicePreference =
+                (SlicePreference) findPreference(KEY_CHANNELS_AND_INPUTS_SLICE);
+        if (channelsAndInputsSlicePreference != null
+                && FlavorUtils.isTwoPanel(getContext())
+                && SliceUtils.isSliceProviderValid(
+                getContext(), channelsAndInputsSlicePreference.getUri())) {
+            channelsAndInputsSlicePreference.setVisible(true);
+            if (channelsAndInputsPreference != null) {
+                channelsAndInputsPreference.setVisible(false);
+            }
         }
     }
 
