@@ -104,10 +104,15 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
         updateDefaultAudioOutputSettings();
 
         mDisplayManager = getContext().getSystemService(DisplayManager.class);
-        mDisplayManager.registerDisplayListener(this, null);
-        mCurrentMode = mDisplayManager.getGlobalUserPreferredDisplayMode();
-        updateResolutionTitleDescription(ResolutionSelectionUtils.modeToString(
-                mCurrentMode, getContext()));
+        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
+        if (display.getSystemPreferredDisplayMode() != null) {
+            mDisplayManager.registerDisplayListener(this, null);
+            mCurrentMode = mDisplayManager.getGlobalUserPreferredDisplayMode();
+            updateResolutionTitleDescription(ResolutionSelectionUtils.modeToString(
+                    mCurrentMode, getContext()));
+        } else {
+            removeResolutionPreference();
+        }
     }
 
     @Override
@@ -191,6 +196,13 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
         Preference titlePreference = findPreference(KEY_RESOLUTION_TITLE);
         if (titlePreference != null) {
             titlePreference.setSummary(summary);
+        }
+    }
+
+    private void removeResolutionPreference() {
+        Preference resolutionPreference = findPreference(KEY_RESOLUTION_TITLE);
+        if (resolutionPreference != null) {
+            getPreferenceScreen().removePreference(resolutionPreference);
         }
     }
 }

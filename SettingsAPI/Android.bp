@@ -16,37 +16,6 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-java_sdk_library {
-    name: "com.android.tv.settings.library",
-    srcs: ["java/**/*.java"],
-    api_packages: [
-        "com.android.tv.settings.library",
-    ],
-    unsafe_ignore_missing_latest_api: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    libs: [
-        "androidx-constraintlayout_constraintlayout",
-        "androidx.recyclerview_recyclerview",
-        "androidx.preference_preference",
-        "androidx.appcompat_appcompat",
-        "androidx.legacy_legacy-preference-v14",
-        "androidx.leanback_leanback-preference",
-        "androidx.leanback_leanback",
-        "androidx.lifecycle_lifecycle-extensions",
-        "androidx.lifecycle_lifecycle-common-java8",
-        "androidx.annotation_annotation",
-        "zxing-core-1.7",
-    ],
-
-    errorprone: {
-        enabled: false,
-    },
-
-    system_ext_specific: true,
-    no_dist: true,
-}
 
 android_library {
 
@@ -55,6 +24,7 @@ android_library {
         "java/**/*.java",
     ],
 
+    platform_apis: true,
     static_libs: [
             "androidx-constraintlayout_constraintlayout",
             "androidx.recyclerview_recyclerview",

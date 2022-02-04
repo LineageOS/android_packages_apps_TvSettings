@@ -39,6 +39,17 @@
         android:key="general_settings"
         android:title="@string/header_category_general_settings"
         android:order="2">
+
+        <com.android.tv.twopanelsettings.slices.SlicePreference
+            android:icon="@drawable/ic_photo_size_select_actual"
+            android:key="channels_and_inputs_slice"
+            android:title="@string/channels_and_inputs_title"
+            android:summary="@string/channels_and_inputs_summary"
+            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            custom:isPreferenceVisible="false"
+            custom:uri="@string/channels_and_inputs_slice_uri">
+        </com.android.tv.twopanelsettings.slices.SlicePreference>
+
         <Preference
             android:icon="@drawable/ic_network"
             android:key="network"
