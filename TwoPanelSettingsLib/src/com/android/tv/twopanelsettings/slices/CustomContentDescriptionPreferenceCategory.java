@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2022 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,24 +21,22 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 
-import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceViewHolder;
 
 /**
- * Preference that allows external classes to set its view's content description for accessibility
- * purposes.
+ * PreferenceCategory that allows external classes to set its view's content description for
+ * accessibility purposes.
  */
-public class CustomContentDescriptionPreference extends Preference implements
-        HasCustomContentDescription {
-
+public class CustomContentDescriptionPreferenceCategory extends PreferenceCategory
+        implements HasCustomContentDescription {
     private String mContentDescription;
-
-    public CustomContentDescriptionPreference(Context context) {
-        super(context);
+    public CustomContentDescriptionPreferenceCategory(Context context, AttributeSet attrs) {
+        super(context, attrs);
     }
 
-    public CustomContentDescriptionPreference(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public CustomContentDescriptionPreferenceCategory(Context context) {
+        super(context);
     }
 
     @Override

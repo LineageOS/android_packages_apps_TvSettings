@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2022 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,23 +21,24 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 
-import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
+import com.android.settingslib.RestrictedPreference;
+
 /**
- * Preference that allows external classes to set its view's content description for accessibility
- * purposes.
+ * Restricted preference that allows external classes to set its view's content description for
+ * accessibility purposes.
  */
-public class CustomContentDescriptionPreference extends Preference implements
+public class CustomContentDescriptionRestrictedPreference extends RestrictedPreference implements
         HasCustomContentDescription {
 
     private String mContentDescription;
 
-    public CustomContentDescriptionPreference(Context context) {
+    public CustomContentDescriptionRestrictedPreference(Context context) {
         super(context);
     }
 
-    public CustomContentDescriptionPreference(Context context, AttributeSet attrs) {
+    public CustomContentDescriptionRestrictedPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
