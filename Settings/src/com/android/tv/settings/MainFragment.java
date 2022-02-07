@@ -43,6 +43,7 @@ import android.content.pm.ProviderInfo;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.icu.text.MessageFormat;
 import android.net.Uri;
 import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
@@ -72,7 +73,10 @@ import com.android.tv.settings.system.SecurityFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
@@ -554,8 +558,13 @@ public class MainFragment extends PreferenceControllerFragment implements
                 if (accounts.length == 1) {
                     accountsPref.setSummary(accounts[0].name);
                 } else {
-                    accountsPref.setSummary(getResources().getQuantityString(
-                            R.plurals.accounts_category_summary, accounts.length, accounts.length));
+                    MessageFormat msgFormat = new MessageFormat(
+                            getContext().getResources().getString(
+                                    R.string.accounts_category_summary),
+                            Locale.getDefault());
+                    Map<String, Object> arguments = new HashMap<>();
+                    arguments.put("count", accounts.length);
+                    accountsPref.setSummary(msgFormat.format(arguments));
                 }
             }
         }

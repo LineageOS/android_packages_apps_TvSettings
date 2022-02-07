@@ -28,6 +28,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ResolveInfo;
+import android.icu.text.MessageFormat;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -58,10 +59,13 @@ import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.name.DeviceManager;
 import com.android.tv.settings.library.overlay.FlavorUtils;
+import com.android.tv.settings.name.DeviceManager;
 import com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference;
 
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -359,11 +363,13 @@ public class AboutFragment extends SettingsPreferenceFragment {
                         if (mDevHitToast != null) {
                             mDevHitToast.cancel();
                         }
-                        mDevHitToast = Toast
-                                .makeText(getActivity(), getResources().getQuantityString(
-                                        R.plurals.show_dev_countdown, mDevHitCountdown,
-                                        mDevHitCountdown),
-                                        Toast.LENGTH_SHORT);
+                        MessageFormat msgFormat = new MessageFormat(
+                                getResources().getString(R.string.show_dev_countdown),
+                                Locale.getDefault());
+                        Map<String, Object> arguments = new HashMap<>();
+                        arguments.put("count", mDevHitCountdown);
+                        mDevHitToast = Toast.makeText(
+                                getActivity(), msgFormat.format(arguments), Toast.LENGTH_SHORT);
                         mDevHitToast.show();
                     }
                 } else if (mDevHitCountdown < 0) {
