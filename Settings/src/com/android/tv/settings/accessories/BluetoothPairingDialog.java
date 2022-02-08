@@ -271,7 +271,7 @@ public class BluetoothPairingDialog extends DialogActivity {
         if (DEBUG) {
             Log.d(TAG, "cancelPairing");
         }
-        mDevice.cancelPairing();
+        mDevice.cancelBondProcess();
     }
 
     private void createUserEntryDialog() {
