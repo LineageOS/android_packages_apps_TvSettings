@@ -30,6 +30,7 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.icu.text.MessageFormat;
 import android.telephony.SignalStrength;
 
 import androidx.preference.Preference;
@@ -45,7 +46,10 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadows.ShadowAccountManager;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Locale;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
@@ -271,8 +275,13 @@ public class MainFragmentTest {
         mMainFragment.updateAccountPrefInfo();
 
         verify(accountsPref, atLeastOnce()).setIcon(R.drawable.ic_accounts_and_sign_in);
-        String summary = RuntimeEnvironment.application.getResources()
-                .getQuantityString(R.plurals.accounts_category_summary, 2, 2);
+        MessageFormat msgFormat = new MessageFormat(
+                RuntimeEnvironment.application.getResources().getString(
+                        R.string.accounts_category_summary),
+                Locale.getDefault());
+        Map<String, Object> arguments = new HashMap<>();
+        arguments.put("count", 2);
+        String summary = msgFormat.format(arguments);
         verify(accountsPref, atLeastOnce()).setSummary(summary);
         assertTrue(mMainFragment.mHasAccounts);
     }
