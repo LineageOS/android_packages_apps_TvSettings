@@ -261,12 +261,14 @@ public class DeviceAdminAdd extends FragmentActivity {
                 return;
             }
 
-            // othewise, only the defined default supervision profile owner can be set after user
+            // otherwise, only the defined default supervision profile owner can be set after user
             // setup.
             final String supervisor = getString(
                     getResources().getIdentifier("config_defaultSupervisionProfileOwnerComponent",
                             "string", "android"));
-            if (supervisor == null) {
+            final String supervisionRolePackage = getString(
+                    getResources().getIdentifier("config_systemSupervision", "string", "android"));
+            if (supervisor == null && supervisionRolePackage == null) {
                 Log.w(TAG, "Unable to set profile owner post-setup, no default supervisor"
                         + "profile owner defined");
                 finish();
@@ -275,7 +277,8 @@ public class DeviceAdminAdd extends FragmentActivity {
 
             final ComponentName supervisorComponent = ComponentName.unflattenFromString(
                     supervisor);
-            if (who.compareTo(supervisorComponent) != 0) {
+            if (who.compareTo(supervisorComponent) != 0
+                    && !who.getPackageName().equals(supervisionRolePackage)) {
                 Log.w(TAG, "Unable to set non-default profile owner post-setup " + who);
                 finish();
                 return;
