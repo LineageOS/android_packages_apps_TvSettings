@@ -102,8 +102,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Nedávno spustené aplikácie"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Zobraziť všetky aplikácie"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Povolenia"</string>
-    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
-    <string name="update_slice_title" msgid="6553763903108611747"></string>
+    <string name="apps_security" msgid="1392489151324802853">"Zabezpečenie"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Všetky aplikácie"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Zobraziť systémové aplikácie"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Nainštalované aplikácie"</string>
@@ -128,17 +127,15 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos s Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos s Dolby Digital Plus"</string>
-    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Poznámka: Možnosť Automaticky nemusí fungovať, ak zariadenie správne neuvádza podporované formáty."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automaticky: povoľte iba formáty podporované vaším zvukovým výstupným zariadením "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Keď vyberiete túto možnosť, systém umožní aplikáciám vybrať ľubovoľný formát zvuku, ktorý váš reťazec zariadení podporuje. Aplikácie môžu zvoliť formát, ktorý nemá najvyššiu kvalitu."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Žiadne: nepoužívať priestorový zvuk"</string>
     <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manuálne: selektívne povoľte alebo zakážte každý formát podporovaný týmto zariadením bez ohľadu na formáty podporované vaším zvukovým výstupným zariadením."</string>
-    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Keď vyberiete túto možnosť, môžete manuálne zakázať formáty zvuku podporované vaším reťazcom zariadení, ktoré pri prehrávaní spôsobujú problémy. Formáty zvuku nepodporované vaším reťazcom zariadení nie je možné povoliť. V niektorých prípadoch môžu aplikácie zvoliť formát, ktorý nemá najvyššiu kvalitu."</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Keď vyberiete túto možnosť, môžete ručne zakázať formáty zvuku podporované vaším reťazcom zariadení, ktoré pri prehrávaní spôsobujú problémy. Formáty zvuku nepodporované vaším reťazcom zariadení nie je možné povoliť. V niektorých prípadoch môžu aplikácie zvoliť formát, ktorý nemá najvyššiu kvalitu."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Chcete povoliť nepodporovaný formát zvuku?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Vaše pripojené audio zariadenie neuvádza podporu pre tento formát. Môže to viesť k neočakávanému správaniu vrátane hlasného zvuku alebo praskania."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Zrušiť"</string>
@@ -150,8 +147,8 @@
     <string name="surround_sound_hide_formats" msgid="7770931097236868238">"Skryť formáty"</string>
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"AKTIVOVANÉ FORMÁTY"</string>
     <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"DEAKTIVOVANÉ FORMÁTY"</string>
-    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Ak chcete aktivovať, zmeňte výber formátu za manuálny."</string>
-    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Ak chcete deaktivovať, zmeňte výber formátu za manuálny."</string>
+    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Ak chcete aktivovať, zmeňte výber formátu za ručný."</string>
+    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Ak chcete deaktivovať, zmeňte výber formátu za ručný."</string>
     <string name="display_category_title" msgid="247804007525046312">"Zobrazenie"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Rozšírenie nastavenia zobrazenia"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -164,12 +161,6 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ak o to aplikácia požiada, vaše zariadenie prispôsobí výstup pôvodnej snímkovej frekvencii obsahu, ktorý pozeráte. Môže to spôsobiť, že pri ukončení prehrávania videa alebo prejdení naň bude vaša obrazovka chvíľu prázdna."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nikdy"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Vaše zariadenie sa nikdy nepokúsi prispôsobiť výstup pôvodnej snímkovej frekvencii obsahu, ktorý pozeráte, ani keď o to aplikácia požiada."</string>
-    <string name="font_scale_settings_title" msgid="4114019544800225980">"Mierka písma"</string>
-    <string name="font_scale_item_detail" msgid="1558315053348778805">"<xliff:g id="SCALE">%1$d</xliff:g> %%"</string>
-    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Ukážka textu"</string>
-    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Čarodejník z krajiny Oz"</string>
-    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11. kapitola: Nádherné smaragdové mesto"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Lesk tohto nádherného mesta Dorotku a jej priateľov najskôr oslepoval, hoci mali na očiach zelené okuliare. Ulice lemovali nádherné domy zo zeleného mramoru, husto osadené trblietajúcimi sa smaragdmi. Kráčali po chodníku z takého istého zeleného mramoru. Na miestach, kde sa spájali dlaždice, sa ligotali v odraze slnka husté rady smaragdov. Obločné tabule boli zo zeleného skla. Dokonca aj obloha nad mestom bola zafarbená dozelena a slnečné lúče boli tiež zelené. \n\nV uliciach bolo veľa ľudí. Muži, ženy i deti si vykračovali oblečení v zelených šatách a všetci mali zelenkavú pokožku. Zvedavo si obzerali Dorotku a jej prazvláštnu spoločnosť. Keď deti zbadali leva, rýchlo utiekli a skryli sa za matkin chrbát. Nik sa však Dorotke a jej spoločníkom neprihovoril. Na ulici bolo mnoho rozličných obchodov. Dorotkinmu zraku neušlo, že všetok tovar bol zelený. Zelené cukríky, zelené pukance, zelené topánky, zelené klobúky a všelijaké zelené šaty – to všetko tu bolo na predaj. Jeden obchodník predával zelenú limonádu. Keď si ju deti kupovali, Dorotka zbadala, že platia zelenými mincami. \n\nZdalo sa, že sa v meste nenachádzajú žiadne kone ani iné zvieratá. Muži tlačili pred sebou malé zelené vozíky, v ktorých prevážali veci, kam bolo treba. Všetci vyzerali šťastní, spokojní a prekvitajúci."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Výber formátu"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automaticky"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuálne"</string>
@@ -188,7 +179,7 @@
     <string name="hdr_hide_formats" msgid="8561568998525727230">"Skryť formáty"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"AKTIVOVANÉ FORMÁTY"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"DEAKTIVOVANÉ FORMÁTY"</string>
-    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Ak chcete deaktivovať, zmeňte výber formátu za manuálny."</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Ak chcete deaktivovať, zmeňte výber formátu za ručný."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vymazať údaje vo vyrovnávacej pamäti?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Vymažú sa údaje v pamäti pre všetky aplikácie"</string>
     <string name="accessories_add" msgid="413764175035531452">"Pridať príslušenstvo"</string>
@@ -355,7 +346,6 @@
       <item quantity="other">Telefónne aplikácie</item>
       <item quantity="one">Telefónna aplikácia</item>
     </plurals>
-    <string name="default_browser_title" msgid="3612813200586492159">"Prehliadač"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Návody"</string>
@@ -366,7 +356,7 @@
     <string name="device_name" msgid="566626587332817733">"Názov zariadenia"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Reštartovať"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Právne informácie"</string>
-    <string name="about_legal_license" msgid="4056934178111674054">"Zdroj tretej strany"</string>
+    <string name="about_legal_license" msgid="4801707286720681261">"Licencie open source"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Právne informácie spoločnosti Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Údaje licencie nie sú dostupné"</string>
     <string name="about_model" msgid="9164284529291439296">"Model"</string>
@@ -421,7 +411,7 @@
     <string name="device_status_summary" msgid="3270932829412434985">"Sieť, sériové čísla a ďalšie informácie"</string>
     <string name="manual" msgid="5683935624321864999">"Ručne"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Regulačné informácie"</string>
-    <string name="device_feedback" msgid="4871903271442960465">"Odoslať spätnú väzbu o zariadení"</string>
+    <string name="device_feedback" msgid="4871903271442960465">"Spätná väzba o zariadení"</string>
     <string name="oem_unlock_enable_disabled_summary_bootloader_unlocked" msgid="4641790432171693921">"Zavádzací program systému je už odomknutý"</string>
     <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"Najprv sa pripojte k internetu"</string>
     <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"Pripojte sa k internetu alebo kontaktujte svojho operátora"</string>
@@ -442,9 +432,6 @@
     <string name="license_title" msgid="4032466200355435641">"Licencia"</string>
     <string name="terms_title" msgid="192888187310800678">"Zmluvné podmienky"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Licencia systému WebView"</string>
-    <string name="consumer_information_title" msgid="7729729568416672733">"Spotrebiteľské informácie"</string>
-    <string name="consumer_information_message" msgid="205236637689468764">"Obsah, ktorý nájdete na Android TV, pochádza od partnerov tretích strán, ako sú vývojári aplikácií a filmové štúdiá, ale aj od Googlu. Viac sa dozviete na "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>"."</string>
-    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Slabá"</item>
     <item msgid="2098818614362343532">"Priemerná"</item>
@@ -647,22 +634,6 @@
     <item msgid="5645263357181875427">"Použiť čas z transportného streamu"</item>
     <item msgid="5501503537181350884">"Vypnúť"</item>
   </string-array>
-    <string name="sensor_toggle_description" msgid="7415801459994303159">"Pre všetky aplikácie a služby"</string>
-    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Aplikácie s nedávnym prístupom"</string>
-    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Žiadne nedávne prístupy"</string>
-    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Zobraziť všetko"</string>
-    <string name="microphone" msgid="7893752847683941214">"Mikrofón"</string>
-    <string name="mic_toggle_title" msgid="7193417007060235665">"Prístup k mikrofónu"</string>
-    <string name="open_mic_permissions" msgid="8121871594807641073">"Prístup aplikácií k mikrofónu"</string>
-    <string name="camera" msgid="1226671478936288283">"Kamera"</string>
-    <string name="camera_toggle_title" msgid="5566469574224956142">"Prístup ku kamere"</string>
-    <string name="open_camera_permissions" msgid="301360297337141591">"Prístup aplikácií ku kamere"</string>
-    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Prístup k mikrofónu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Keď zapnete toto nastavenie, všetky aplikácie aj služby s povolením budú mať prístup ku ktorémukoľvek mikrofónu tohto zariadenia.\n\nNeovplyvní periférie zvuku s vlastným protokolom."</string>
-    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Prístup ku kamere: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Keď zapnete toto nastavenie, všetky aplikácie aj služby s povolením budú mať prístup ku ktorejkoľvek kamere tohto zariadenia.\n\nNeovplyvní periférie kamery s vlastným protokolom."</string>
-    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Zapnuté"</string>
-    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Vypnuté"</string>
     <string name="system_location" msgid="4057295363709016511">"Poloha"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Povoliť aplikáciám, ktoré o to požiadali, používať informácie o polohe"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Súhlas so zhromažďovaním údajov o polohe"</string>
@@ -946,7 +917,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Nie sú nastavené predvolené nastavenia"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Vymazať vyrovnávaciu pamäť"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Upozornenia"</string>
-    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Zdroj tretej strany"</string>
+    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Licencie open source"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Povolenia"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Aplikácia nie je k dispozícii"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
@@ -1036,7 +1007,6 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Povoliť obraz v obraze"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Žiadna z nainštalovaných aplikácií nepodporuje obraz v obraze"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Povoľte aplikáciám vytvoriť okno v režime obraz v obraze, kým je aplikácia otvorená alebo potom, čo ju opustíte (napríklad aby ste mohli pokračovať v pozeraní videa). Toto okno sa zobrazuje nad ostatnými aplikáciami, ktoré používate."</string>
-    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Povoľte aplikáciám nastavovať budíky a plánovať akcie s časovým obmedzením. Aplikáciám to umožní pracovať na pozadí, čo môže zvýšiť spotrebu energie.\n\nAk je toto povolenie vypnuté, súčasné budíky a udalosti s časovým obmedzením naplánované aplikáciou nebudú fungovať."</string>
     <string name="special_access" msgid="21806055758289916">"Špeciálny prístup aplikácií"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Zvuk"</string>

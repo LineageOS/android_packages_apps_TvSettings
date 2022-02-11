@@ -32,7 +32,7 @@
     <string name="disabled" msgid="4589065923272201387">"Идэвхгүй болгосон"</string>
     <string name="unavailable" msgid="1610732303812180196">"Боломжгүй"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"Зөвлөмж"</string>
-    <string name="header_category_quick_settings" msgid="3785334008768367890">"Шуурхай тохиргоо"</string>
+    <string name="header_category_quick_settings" msgid="3785334008768367890">"Хурдан тохиргоо"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Ерөнхий тохиргоо"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Зөвлөмжийг үл хэрэгсэх"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"OK Google\"-н илрүүлэлт"</string>
@@ -98,8 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Саяхан нээсэн апп"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Бүх аппыг харах"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Зөвшөөрөл"</string>
-    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
-    <string name="update_slice_title" msgid="6553763903108611747"></string>
+    <!-- no translation found for apps_security (1392489151324802853) -->
+    <skip />
     <string name="all_apps_title" msgid="3717294436135280133">"Бүх апп"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Системийн аппыг харуулах"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Суулгасан апп"</string>
@@ -124,11 +124,9 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD-тай Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus-тай Dolby Atmos"</string>
-    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Санамж: Таны төхөөрөмж дэмждэг форматаа зөв мэдээлэхгүй бол Автомат сонголт ажиллахгүй байж болно."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Автомат: Зөвхөн таны аудио гаралтын төхөөрөмжийн дэмждэг форматуудыг идэвхжүүлнэ "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Сонгосон үед систем нь аппуудад таны төхөөрөмжийн сүлжээний дэмждэг дурын дууны форматыг сонгохыг зөвшөөрнө. Аппууд өндөр чанартай биш форматыг сонгож болзошгүй."</string>
@@ -160,12 +158,6 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Апп ингэх хүсэлт тавьсан тохиолдолд таны төхөөрөмж гаралтаа таны үзэж буй контентын эх фрэймийн хурдтай тааруулна. Энэ нь видеог дахин тоглуулах явцаас гарах эсвэл үүнд орох үед таны дэлгэцийг секундийн турш хоосон болгож болно."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Хэзээ ч үгүй"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Апп ингэх хүсэлт тавьсан байлаа ч таны төхөөрөмж гаралтаа таны үзэж буй контентын эх фрэймийн хурдтай тааруулах гэж хэзээ ч оролдохгүй."</string>
-    <string name="font_scale_settings_title" msgid="4114019544800225980">"Текстийн тохируулга"</string>
-    <string name="font_scale_item_detail" msgid="1558315053348778805">"<xliff:g id="SCALE">%1$d</xliff:g>%%-д тохируулах"</string>
-    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Жишээ текст"</string>
-    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Озын Гайхамшигт шидтэн"</string>
-    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Бүлэг 11: Озын Гайхамшигт Маргад эрдэнийн хот"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Дороти болон түүний нөхөд ногоон шилээр нүдээ хамгаалсан байсан ч гайхамшигт хотын гялтганах гэрэлд нүд нь гялбаж байлаа. Хотын байшингуудыг ногоон гантигаар барьсан ба энд тэндгүй маргад эрдэнийн чулууг битүү шигтгэсэн байх аж. Тэдний явж буй маргад ногоон замыг хооронд нь маргад эрдэнээр холбосон бөгөөд нарны гэрэлд гялалзана. Байшингуудын цонхыг ногоон өвсөөр хүрээлсэн бөгөөд тэр ч бүү хэл тэнгэрийн хаяа, нарны цацраг нь хүртэл ногоон туяатай байлаа. \n\nЭнд тэндгүй ногоон өнгийн хувцас өмссөн, арьс нь ногоон туяатай хүмүүс явж байв. Тэд Дороти болон түүний хачирхалтай нөхдийг гайхан харах бөгөөд хүүхэд багачууд арсланг харсан даруйдаа ээжийнхээ ард нуугдах хэдий ч хэн ч тэдэнтэй үг сольсонгүй. Гудамжинд маш олон дэлгүүр байх хэдий ч тэдгээр нь мөн л ногоон өнгөтэй болохыг Дороти ажив. Дэлгүүрт ногоон өнгийн чихэр, эрдэнэ шиш хямдралтай үнээр зарагдах бөгөөд гутал, малгай зэрэг бүх төрлийн хувцас ногоон өнгөтэй байв. Тэнд нэгэн эр ногоон өнгийн нимбэгийн шүүс зарж байх ба үүнийг нь авч ууж буй хүүхдүүд ногоон өнгийн зоосоор төлбөрөө төлж байхыг Дороти харав. \n\nАжиглаад байхад энд ямар ч амьтан, морь мал байхгүй бөгөөд хүмүүс жижиг тэргээр ачаа бараагаа зөөж харагдана. Энэ хотын бүх хүн аз жаргалтай, амар тайван харагдаж байлаа."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Форматын сонголт"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Автомат"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Гар арга"</string>
@@ -209,7 +201,7 @@
     <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;-тай хослуулахын тулд дараах түлхүүрийг харуулж байгаа эсэхийг шалгана уу: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"Хаанаас: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Энэ төхөөрөмжтэй хослуулах уу?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;-тай хослуулахын тулд &lt;br&gt;Дээр нь дараахыг бичээд : &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, Return буюу Enter товч дарна уу."</string>
-    <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&amp;lt-тай хослуулахын тулд;/b&gt;, &lt;br&gt;Төхөөрөмжийн шаардлагатай ПИН-г оруулна уу:"</string>
+    <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&amp;lt-тай хослуулахын тулд;/b&gt;, &lt;br&gt;Төхөөрөмжийн шаардлагатай PIN-г оруулна уу:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"&lt;b&gt;: <xliff:g id="DEVICE_NAME">%1$s</xliff:g> &lt;/b&gt; төхөөрөмжийг хослуулахийг тулд &lt;/br&gt; Төхөөрөмжийн нэвтрэх нууц үгийг оруул:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Гол төлөв 0000 эсвэл 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Хослуулах"</string>
@@ -335,7 +327,6 @@
       <item quantity="other">Гар утасны аппууд</item>
       <item quantity="one">Гар утасны апп</item>
     </plurals>
-    <string name="default_browser_title" msgid="3612813200586492159">"Хөтөч апп"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Практик хичээл"</string>
@@ -346,7 +337,7 @@
     <string name="device_name" msgid="566626587332817733">"Төхөөрөмжийн нэр"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Дахин эхлүүлэх"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Хууль эрх зүйн мэдээлэл"</string>
-    <string name="about_legal_license" msgid="4056934178111674054">"Гуравдагч талын эх сурвалж"</string>
+    <string name="about_legal_license" msgid="4801707286720681261">"Нээлттэй эхийн лиценз"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google-ийн хууль эрх зүйн"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Лицензийн мэдээлэл байхгүй байна"</string>
     <string name="about_model" msgid="9164284529291439296">"Модел"</string>
@@ -412,9 +403,6 @@
     <string name="license_title" msgid="4032466200355435641">"Лиценз"</string>
     <string name="terms_title" msgid="192888187310800678">"Нөхцөл, заалт"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Системийн WebView-н лиценз"</string>
-    <string name="consumer_information_title" msgid="7729729568416672733">"Хэрэглэгчийн мэдээлэл"</string>
-    <string name="consumer_information_message" msgid="205236637689468764">"Таны Android TV дээрээс олох контентыг апп хөгжүүлэгч болон кино студи зэрэг гуравдагч талын түншүүдээс гадна Google-с өөрөөс нь цуглуулдаг. Нэмэлт мэдээлэл авах бол "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>"-г харна уу"</string>
-    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Муу"</item>
     <item msgid="2098818614362343532">"Боломжийн"</item>
@@ -617,22 +605,6 @@
     <item msgid="5645263357181875427">"Тээврийн урсгалаас олгосон хугацааг ашиглах"</item>
     <item msgid="5501503537181350884">"Идэвхгүй"</item>
   </string-array>
-    <string name="sensor_toggle_description" msgid="7415801459994303159">"Бүх апп болон үйлчилгээнд"</string>
-    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Саяхан хандсан аппууд"</string>
-    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Саяхны хандалт байхгүй"</string>
-    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Бүгдийг харах"</string>
-    <string name="microphone" msgid="7893752847683941214">"Микрофон"</string>
-    <string name="mic_toggle_title" msgid="7193417007060235665">"Микрофоны хандалт"</string>
-    <string name="open_mic_permissions" msgid="8121871594807641073">"Микрофоны аппын хандалт"</string>
-    <string name="camera" msgid="1226671478936288283">"Камер"</string>
-    <string name="camera_toggle_title" msgid="5566469574224956142">"Камерын хандалт"</string>
-    <string name="open_camera_permissions" msgid="301360297337141591">"Камерын аппын хандалт"</string>
-    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Микрофоны хандалт: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Асаасан үед зөвшөөрөлтэй бүх апп болон үйлчилгээ энэ төхөөрөмж дээрх дурын микрофонд хандаж болно.\n\nЗахиалгат протоколтой аудионы нэмэлт хэрэгслүүдэд энэ тохиргоо нөлөөлөхгүй."</string>
-    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Камерын хандалт: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Асаасан үед зөвшөөрөлтэй бүх апп болон үйлчилгээ энэ төхөөрөмж дээрх дурын камерт хандаж болно.\n\nЗахиалгат протоколтой камерын нэмэлт хэрэгслүүдэд энэ тохиргоо нөлөөлөхгүй."</string>
-    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Асаалттай"</string>
-    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Унтраалттай"</string>
     <string name="system_location" msgid="4057295363709016511">"Байршил"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Таны байршлын мэдээллийг ашиглах зөвшөөрөл хүссэн апп-уудад ашиглуулна уу"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Байршлын зөвшөөрөл"</string>
@@ -704,7 +676,7 @@
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> нь нууц үгээс бусад таны бичсэн текстүүдийг хадгалж болно. Үүнд кредит картын дугаар гэх мэт хувийн мэдээлэл багтана."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"<xliff:g id="SERVICE">%1$s</xliff:g>-г зогсоох уу?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"OK-г сонгосноор <xliff:g id="SERVICE">%1$s</xliff:g>-г зогсоох болно."</string>
-    <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Бичвэрийг ярианд хувиргах"</string>
+    <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Текст-яриа"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Хөдөлгүүрийн оновчилол"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Нууц үгийг хэлэх"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"Сонгосон систем"</string>
@@ -812,7 +784,7 @@
     <string name="title_select_wifi_network" msgid="935820896444071617">"Wi-Fi сүлжээ сонгох"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Нэр солих"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"Wi-Fi Дэлгэц"</string>
-    <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"ПИН шаардлагатай"</string>
+    <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"PIN шаардлагатай"</string>
     <string name="whichApplication" msgid="4510042089342879264">"Үйлдлийг дуусгах"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Энэ үйлдэлд энэ сонголтыг байнга ашиглах уу?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"Үргэлж ашиглах"</string>
@@ -871,18 +843,18 @@
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Зөвшөөрөгдөөгүй"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Хязгаарлалтуудыг тааруулах"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="3293508876131962699">"Түр хүлээнэ үү…"</string>
-    <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"ПИН өөрчлөх"</string>
+    <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"PIN өөрчлөх"</string>
     <string name="restriction_description" msgid="2053112392083722259">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
     <string name="app_sees_restricted_accounts_and_controlled_by" msgid="1261056180558324892">"Энэ апп таны бүртгэлд хандах боломжтой. <xliff:g id="APP">%1$s</xliff:g>-с удирддаг"</string>
-    <string name="pin_enter_unlock_channel" msgid="243855138978654080">"Энэ сувгийг үзэхийн тулд ПИН оруулна уу"</string>
-    <string name="pin_enter_unlock_program" msgid="275489015420025531">"Энэ хөтөлбөрийг үзэхийн тулд ПИН оруулна уу"</string>
-    <string name="pin_enter_pin" msgid="5020029261153234751">"ПИН оруулна уу"</string>
-    <string name="pin_enter_new_pin" msgid="1930944619313642621">"Шинэ ПИН тохируулах"</string>
-    <string name="pin_enter_again" msgid="7615050143778858658">"Шинэ ПИН дахин оруулна уу"</string>
-    <string name="pin_enter_old_pin" msgid="5665265735227617942">"Хуучин ПИН оруулна уу"</string>
+    <string name="pin_enter_unlock_channel" msgid="243855138978654080">"Энэ сувгийг үзэхийн тулд PIN оруулна уу"</string>
+    <string name="pin_enter_unlock_program" msgid="275489015420025531">"Энэ хөтөлбөрийг үзэхийн тулд PIN оруулна уу"</string>
+    <string name="pin_enter_pin" msgid="5020029261153234751">"PIN оруулна уу"</string>
+    <string name="pin_enter_new_pin" msgid="1930944619313642621">"Шинэ PIN тохируулах"</string>
+    <string name="pin_enter_again" msgid="7615050143778858658">"Шинэ PIN дахин оруулна уу"</string>
+    <string name="pin_enter_old_pin" msgid="5665265735227617942">"Хуучин PIN оруулна уу"</string>
     <string name="pin_enter_wrong_seconds" msgid="3014013615537066237">"Ta ПИН-ээ 5 удаа буруу орууллаа.\n<xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> секундын дараа дахин оролдоно уу."</string>
-    <string name="pin_toast_wrong" msgid="4297542365877164402">"Буруу ПИН, дахин оролдоно уу"</string>
-    <string name="pin_toast_not_match" msgid="2439298696342975155">"Дахин оролдоно уу, ПИН таарахгүй байна"</string>
+    <string name="pin_toast_wrong" msgid="4297542365877164402">"Буруу PIN, дахин оролдоно уу"</string>
+    <string name="pin_toast_not_match" msgid="2439298696342975155">"Дахин оролдоно уу, PIN таарахгүй байна"</string>
     <string name="wifi_setup_input_password" msgid="8510003548463241234">"<xliff:g id="SSID">%1$s</xliff:g>-д нууц үгийг оруулна уу"</string>
     <string name="wifi_setup_description" msgid="6843574399437584520">"Үргэлжлүүлэхийн тулд <xliff:g id="WIFI_SUBMIT_ICON">%1$s</xliff:g>-г сонгоно уу."</string>
     <string name="label_done_key" msgid="8576286462300373440">"Болсон"</string>
@@ -908,7 +880,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Үндсэн тохиргоог хийгээгүй"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Кешийг арилгах"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Мэдэгдэл"</string>
-    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Гуравдагч талын эх сурвалж"</string>
+    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Нээлттэй эх кодын лиценз"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Зөвшөөрлүүд"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Апп боломжгүй байна"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
@@ -998,7 +970,6 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Дэлгэцэн доторх дэлгэцийг зөвшөөрөх"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Дэлгэцэн доторх дэлгэцийг дэмждэг суулгасан апп алга"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Апп нээлттэй үед эсвэл таныг энэ аппаас гарсны дараа (жишээ нь видео үргэлжлүүлэн үзэхийн тулд) дэлгэцэн доторх дэлгэц цонх үүсгэхийг аппад зөвшөөрнө үү. Энэ цонх таны ашиглаж буй бусад апп дээр харагдана."</string>
-    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Аппад сэрүүлэг тавих болон хугацаанд мэдрэг үйлдлийн хуваарь гаргахыг зөвшөөрнө үү. Энэ нь аппад ард ажиллахыг зөвшөөрөх бөгөөд ингэснээр илүү их цэнэг ашиглаж магадгүй.\n\nХэрэв энэ зөвшөөрөл унтраалттай бол аппын аль хэдийн тавьсан сэрүүлэг болон хуваарь гаргасан хугацаанд тулгуурласан үйл явдал ажиллахгүй."</string>
     <string name="special_access" msgid="21806055758289916">"Аппын тусгай хандалт"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Аудио"</string>

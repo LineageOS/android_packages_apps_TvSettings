@@ -98,8 +98,7 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Programu ulizofungua hivi karibuni"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Angalia programu zote"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Ruhusa"</string>
-    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
-    <string name="update_slice_title" msgid="6553763903108611747"></string>
+    <string name="apps_security" msgid="1392489151324802853">"Usalama"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"Programu zote"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Onyesha programu za mfumo"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Programu zilizosakinishwa"</string>
@@ -124,19 +123,17 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos iliyo na Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos iliyo na Dolby Digital Plus"</string>
-    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Kumbuka: Chaguo la Otomatiki huenda lisitumike ikiwa kifaa chako hakiripoti kwa usahihi miundo inayotumika."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Otomatiki: Washa tu miundo inayotumika na kifaa chako cha kutoa sauti "</string>
-    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Ukichagua, mfumo utaruhusu programu kuteua muundo wowote wa sauti unaotumika kwenye vifaa vyako. Huenda programu zikachagua muundo ambao si wenye ubora wa juu zaidi."</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Ukichagua, mfumo utaruhusu programu kuteua muundo wowote wa sauti unaotumika kwenye vifaa vyako. Huenda programu zikachagua muundo usio wenye ubora wa hali ya juu zaidi."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Hamna: Kamwe usitumie sauti inayozingira"</string>
     <string name="surround_sound_manual_title" msgid="4935447605070985537">"Teua mwenyewe: Washa au zima kila muundo unaotumika kwenye kifaa hiki, bila kujali muundo unaotumika kwenye kifaa chako cha kutoa sauti."</string>
-    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Ukichagua, unaweza kuzima mwenyewe miundo ya sauti inayotumika kwenye vifaa vyako inayosababisha matatizo ya uchezaji. Unaweza kuwasha miundo ya sauti isiyotumika kwenye kifaa chako. Katika hali nyingine, huenda programu zikachagua muundo ambao si wenye ubora wa juu zaidi."</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Ukichagua, unaweza kuzima mwenyewe miundo ya sauti inayotumika kwenye vifaa vyako inayosababisha matatizo ya uchezaji. Unaweza kuwasha miundo ya sauti isiyotumika kwenye kifaa chako. Katika hali nyingine, huenda programu zikachagua muundo usio wenye ubora wa juu zaidi."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Je, ungependa kutumia muundo wa sauti usiotumika?"</string>
-    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Kifaa cha sauti ulichounganisha hakitumii muundo huu. Huenda hii ikasababisha hali isiyotarajiwa kwenye kifaa kama vile kelele au miatuko."</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Kifaa cha sauti ulichounganisha hakitumii muundo huu. Huenda hii ikasababisha hali isiyotarajiwa kwenye kifaa kama vile kelele au vidirisha ibukizi."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"Ghairi"</string>
     <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"Badilisha hata hivyo"</string>
     <string name="surround_sound_supported_title" msgid="4873195851187547020">"MIUNDO INAYOTUMIKA"</string>
@@ -146,8 +143,8 @@
     <string name="surround_sound_hide_formats" msgid="7770931097236868238">"Ficha miundo"</string>
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"MIUNDO INAYOTUMIKA"</string>
     <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"MIUNDO ISIYOTUMIKA"</string>
-    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Ili uwashe, badilisha uteuzi wa muundo kuwa \'Teua Mwenyewe\'."</string>
-    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Ili uzime, badilisha uteuzi wa muundo kuwa \'Teua Mwenyewe\'."</string>
+    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Ili uwashe, badilisha uteuzi wa muundo kuwa Ya Kuchagua Mwenyewe."</string>
+    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Ili uzime, badilisha uteuzi wa muundo kuwa Ya Kuchagua Mwenyewe."</string>
     <string name="display_category_title" msgid="247804007525046312">"Onyesho"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Mipangilio ya kina ya onyesho"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -157,15 +154,9 @@
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Mtiririko laini"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Ikihitajika na programu, kifaa chako kitalinganisha kasi yake ya utoaji maudhui na kasi halisi ya picha ya maudhui unayotazama, ikiwa TU TV yako inaweza kuonyesha maudhui kwa mtiririko laini."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Haina mtiririko laini"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ikihitajika na programu, kifaa chako kitalinganisha kasi yake ya utoaji maudhui na kasi halisi ya picha ya maudhui unayotazama. Huenda hii ikasababisha skrini kutoonyesha maudhui yoyote kwa muda mfupi unapoanza kucheza au unapositisha video."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ikihitajika na programu, kifaa chako kitalinganisha kasi yake ya utoaji maudhui na kasi halisi ya picha ya maudhui unayotazama. Huenda hii ikasababisha skrini kutoonyesha maudhui yoyote kwa muda mfupi unapoaanza kucheza au unapositisha video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Kamwe"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Hata ikihitajika na programu, kifaa chako kamwe hakitajaribu kulinganisha kasi yake ya utoaji maudhui na kasi halisi ya picha ya maudhui unayotazama."</string>
-    <string name="font_scale_settings_title" msgid="4114019544800225980">"Kubadilisha ukubwa wa maandishi"</string>
-    <string name="font_scale_item_detail" msgid="1558315053348778805">"Weka ukubwa kuwa <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
-    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Sampuli ya maandishi"</string>
-    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Wachawi wa Ajabu kutoka Oz"</string>
-    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Sura ya 11: Mji wa Ajabu wa Johari wa Oz"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Hata baada ya kulinda macho yao kwa miwani ya kijani, Amina na marafiki zake walishangazwa na mwangaza wa Mji wa ajabu. Mitaa ilikuwa na nyumba maridadi zilizotengenezwa kwa marumaru za kijani na kila mahali kulikuwa na johari zilizong\'aa. Walitembea kwenye njia ya marumaru, na matofali yalipokuwa yameuganishwa, kulikuwa na safu za johari zilizong\'aa kama jua. Madirisha yalitengezwa kwa vioo vya kijani. Anga la Mji na miale ya jua pia ilikuwa ya kijani. \n\nKulikuwa na watu wengi (wanaume, wanawake na watoto) ambao walikuwa wakitembea na wote walikuwa wamevalia nguo za kijani na ngozi yao ilikuwa ya kijani. Watu hawa walimtazama Amina na marafiki zake kwa mshangao. Watoto nao walitoroka na kujificha nyuma ya mama zao walipoona Simba; lakini hakuna aliyewazungumzia. Kulikuwa na maduka mengi mtaani na Amina aliona kuwa bidhaa zilizokuwemo zilikuwa za kijani. Peremende, bisi, viatu, kofia na nguo za aina zote zilikuwa za kijani. Katika sehemu fulani, mtu mmoja alikuwa akiuza juisi ya limau ya kijani, na watoto walilipa sarafu za kijani ili kuinunua. \n\nIlionekana kuwa mji huo haukuwa na farasi wala wanyama wa aina yoyote; watu walibeba bidhaa katika vikapu vya kijani. Kila mtu alionekana mchangamfu na aliyeridhika."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Uteuzi wa muundo"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Otomatiki"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Teua mwenyewe"</string>
@@ -177,14 +168,14 @@
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
-    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Ukichagua, mfumo utaruhusu programu kuteua muundo wowote wa HDR unaotumika kwenye vifaa vyako. Huenda programu zikachagua muundo ambao si wenye ubora wa juu zaidi."</string>
-    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Ukichagua, unaweza kuzima mwenyewe miundo ya HDR inayotumika kwenye vifaa vyako inayosababisha matatizo ya uchezaji. Huwezi kuwasha miundo ya HDR isiyotumika kwenye vifaa vyako. Huenda programu zikachagua muundo ambao si wenye ubora wa juu zaidi."</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Ukichagua, mfumo utaruhusu programu kuteua muundo wowote wa HDR unaotumika kwenye vifaa vyako. Huenda programu zikachagua muundo usio wenye ubora wa juu zaidi."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Ukichagua, unaweza kuzima mwenyewe miundo ya HDR inayotumika kwenye vifaa vyako inayosababisha matatizo ya uchezaji. Huwezi kuwasha miundo ya HDR isiyotumika kwenye vifaa vyako. Huenda programu zikachagua muundo usio wenye ubora wa juu zaidi."</string>
     <string name="hdr_format_info" msgid="5652559220799426076">"MAELEZO KUHUSU MUUNDO"</string>
     <string name="hdr_show_formats" msgid="171065892975445851">"Onyesha miundo"</string>
     <string name="hdr_hide_formats" msgid="8561568998525727230">"Ficha miundo"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"MIUNDO INAYOTUMIKA"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"MIUNDO ISIYOTUMIKA"</string>
-    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Ili uzime, badilisha uteuzi wa muundo kuwa \'Teua Mwenyewe\'."</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Ili uzime, badilisha uteuzi wa muundo kuwa Ya Kuchagua Mwenyewe."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Ungependa kufuta data iliyo kwenye akiba?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Hii itafuta data iliyo kwenye akiba ya programu zote."</string>
     <string name="accessories_add" msgid="413764175035531452">"Ongeza kifaa"</string>
@@ -335,7 +326,6 @@
       <item quantity="other">Programu za simu</item>
       <item quantity="one">Programu ya simu</item>
     </plurals>
-    <string name="default_browser_title" msgid="3612813200586492159">"Programu ya kivinjari"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Mafunzo"</string>
@@ -346,7 +336,7 @@
     <string name="device_name" msgid="566626587332817733">"Jina la kifaa"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Washa upya"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Maelezo ya kisheria"</string>
-    <string name="about_legal_license" msgid="4056934178111674054">"Chanzo Kingine"</string>
+    <string name="about_legal_license" msgid="4801707286720681261">"Leseni za programu huria"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Sheria za Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Data ya leseni haipatikani"</string>
     <string name="about_model" msgid="9164284529291439296">"Muundo"</string>
@@ -412,9 +402,6 @@
     <string name="license_title" msgid="4032466200355435641">"Leseni"</string>
     <string name="terms_title" msgid="192888187310800678">"Sheria na masharti"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Leseni ya Mfumo wa WebView"</string>
-    <string name="consumer_information_title" msgid="7729729568416672733">"Maelezo kwa Watumiaji"</string>
-    <string name="consumer_information_message" msgid="205236637689468764">"Maudhui unayopata kwenye Android TV yanatoka kwa washirika wengine kama vile wasanidi programu na studio za filamu, pamoja na Google. Kwa maelezo zaidi, tafadhali angalia "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
-    <string name="consumer_information_button_ok" msgid="6979480064600038080">"Sawa"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Mbaya"</item>
     <item msgid="2098818614362343532">"Mzuri Kiasi"</item>
@@ -617,22 +604,6 @@
     <item msgid="5645263357181875427">"Tumia muda unaotolewa na mipasho ya kusafirisha"</item>
     <item msgid="5501503537181350884">"Zima"</item>
   </string-array>
-    <string name="sensor_toggle_description" msgid="7415801459994303159">"Kwa ajili ya programu na huduma zote"</string>
-    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Ilifikiwa Hivi Majuzi Na"</string>
-    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Hakuna ufikiaji wa hivi majuzi"</string>
-    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Angalia zote"</string>
-    <string name="microphone" msgid="7893752847683941214">"Maikrofoni"</string>
-    <string name="mic_toggle_title" msgid="7193417007060235665">"Ufikiaji wa maikrofoni"</string>
-    <string name="open_mic_permissions" msgid="8121871594807641073">"Idhini ya programu ya kufikia maikrofoni"</string>
-    <string name="camera" msgid="1226671478936288283">"Kamera"</string>
-    <string name="camera_toggle_title" msgid="5566469574224956142">"Ufikiaji wa kamera"</string>
-    <string name="open_camera_permissions" msgid="301360297337141591">"Idhini ya programu ya kufikia kamera"</string>
-    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Ufikiaji wa Maikrofoni: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Ukiwasha, programu na huduma zote zilizoidhinishwa zinaweza kufikia maikrofoni yoyote kwenye kifaa hiki.\n\nVifaa vya sauti vyenye mipangilio maalum havitaathiriwa na kipengele hiki."</string>
-    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Ufikiaji wa Kamera: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Ukiwasha, programu na huduma zote zilizoidhinishwa zinaweza kufikia kamera yoyote kwenye kifaa hiki.\n\nVifaa vya kamera vyenye mipangilio maalum havitaathiriwa na kipengele hiki."</string>
-    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Imewashwa"</string>
-    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Imezimwa"</string>
     <string name="system_location" msgid="4057295363709016511">"Eneo"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Ruhusu programu ambazo zimekuomba idhini zitumie maelezo ya eneo lako"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Idhini ya enao"</string>
@@ -908,7 +879,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Hakuna chaguomsingi zilizowekwa"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Futa data iliyoakibishwa"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Arifa"</string>
-    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Chanzo Kingine"</string>
+    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Leseni za programu huria"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Ruhusa"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Programu haipatikani"</string>
     <string name="settings_ok" msgid="5950888975075541964">"SAWA"</string>
@@ -998,7 +969,6 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Ruhusu picha ndani ya picha"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Hujasakinisha programu yoyote inayoweza kutumia kipengele cha Picha ndani ya picha"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Ruhusu programu ifungue kidirisha cha picha ndani ya picha ukiwa umefungua programu au baada ya kuifunga (kwa mfano, ili uendelee kutazama video). Kidirisha hiki kitaonekana juu ya programu nyingine unazotumia."</string>
-    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Ruhusu programu ziweke kengele na ratiba za vitendo vinavyozingatia muda. Hatua hii huruhusu programu kuendeshwa chinichini na huenda hii ikaongeza nishati inayotumika.\n\nUkizima ruhusa hii, kengele na ratiba za vitendo vinavyozingatia muda zilizowekwa na programu hii hazitafanya kazi."</string>
     <string name="special_access" msgid="21806055758289916">"Idhini maalum ya kufikia programu"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Sauti"</string>
@@ -1029,7 +999,7 @@
     <string name="admin_profile_owner_message" msgid="5729169873349157622">"Msimamizi wako anaweza kufuatilia na kudhibiti programu na data zinazohusiana na wasifu wako wa kazini, ikiwa ni pamoja na mipangilio, ruhusa, ufikiaji wa shirika, shughuli za mtandao na maelezo ya mahali kilipo kifaa."</string>
     <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"Msimamizi wako anaweza kufuatilia na kudhibiti programu na data zinazohusiana na mtumiaji huyu, ikiwa ni pamoja na mipangilio, ruhusa, ufikiaji wa shirika, shughuli za mtandao na maelezo ya mahali kilipo kifaa."</string>
     <string name="admin_device_owner_message" msgid="1935507216776040907">"Msimamizi wako anaweza kufuatilia na kudhibiti programu na data zinazohusiana na kifaa hiki, ikiwa ni pamoja na mipangilio, ruhusa, ufikiaji wa shirika, shughuli za mtandao na maelezo ya mahali kilipo kifaa."</string>
-    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Ondoa wasifu wa kazini"</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"Ondoa wasifu wa kazi"</string>
     <string name="active_device_admin_msg" msgid="185537304726228624">"Programu ya msimamizi wa kifaa"</string>
     <string name="remove_device_admin" msgid="2623866073546295104">"Zima programu ya msimamizi katika kifaa hiki"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Ondoa programu"</string>

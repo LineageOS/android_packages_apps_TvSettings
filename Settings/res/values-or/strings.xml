@@ -32,7 +32,7 @@
     <string name="disabled" msgid="4589065923272201387">"ଅକ୍ଷମ କରାଯାଇଛି"</string>
     <string name="unavailable" msgid="1610732303812180196">"ଉପଲବ୍ଧ ନାହିଁ"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"ପରାମର୍ଶ"</string>
-    <string name="header_category_quick_settings" msgid="3785334008768367890">"କ୍ୱିକ୍ ସେଟିଂସ୍"</string>
+    <string name="header_category_quick_settings" msgid="3785334008768367890">"ଦ୍ରୁତ ସେଟିଂ"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"ସାଧାରଣ ସେଟିଂ"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"ପରାମର୍ଶକୁ ଅଗ୍ରାହ୍ୟ କରନ୍ତୁ"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"OK Google\"ର ଚିହ୍ନଟ"</string>
@@ -98,8 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"ନିକଟରେ ଖୋଲାଯାଇଥିବା ଆପ୍‌ଗୁଡ଼ିକ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"ସମସ୍ତ ଆପ୍‌କୁ ଦେଖନ୍ତୁ"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"ଅନୁମତିଗୁଡ଼ିକ"</string>
-    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
-    <string name="update_slice_title" msgid="6553763903108611747"></string>
+    <!-- no translation found for apps_security (1392489151324802853) -->
+    <skip />
     <string name="all_apps_title" msgid="3717294436135280133">"ସମସ୍ତ ଆପସ୍‌"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"ସିଷ୍ଟମ୍‍ ଆପ୍‍ ଦେଖାନ୍ତୁ"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"ଇନ୍‌ଷ୍ଟଲ୍‌ ହୋଇଥିବା ଆପ୍‌ଗୁଡ଼ିକ"</string>
@@ -124,11 +124,9 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"ଡଲ୍‌ବି ଡିଜିଟାଲ୍‍ ପ୍ଲସ୍‌"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD ସହିତ Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus ସହିତ Dolby Atmos"</string>
-    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ଧ୍ୟାନ ଦିଅ: ଆପଣଙ୍କ ଡିଭାଇସ୍ ଏହାର ସମର୍ଥିତ ଫର୍ମାଟକୁ ସଠିକଭାବେ ରିପୋର୍ଟ ନକଲେ ସ୍ୱଚାଳିତ ବିକଳ୍ପ କାମ କରିନପାରେ।"</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"ସ୍ୱଚାଳିତ: ଆପଣଙ୍କ ଅଡିଓ ଆଉଟପୁଟ୍ ଡିଭାଇସ୍ ଦ୍ୱାରା ସମର୍ଥିତ ଫର୍ମାଟଗୁଡ଼ିକୁ କେବଳ ସକ୍ଷମ କରନ୍ତୁ "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"ଏହାକୁ ଚୟନ କଲେ, ଏହି ସିଷ୍ଟମ୍ ଆପଣଙ୍କ ଡିଭାଇସ୍ ଚେନ୍ ଦ୍ୱାରା ସମର୍ଥିତ ଯେ କୌଣସି ସାଉଣ୍ଡ ଫର୍ମାଟକୁ ଚୟନ କରିବା ପାଇଁ ଆପଗୁଡ଼ିକୁ ଅନୁମତି ଦେବ। ଆପଗୁଡ଼ିକ ସର୍ବୋଚ୍ଚ-ଗୁଣବତ୍ତା ନଥିବା ଏକ ଫର୍ମାଟ୍ ବାଛିପାରେ।"</string>
@@ -160,12 +158,6 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ଯଦି ଆପଟି ଏଥିପାଇଁ ଅନୁରୋଧ କରେ, ତେବେ ଆପଣଙ୍କ ଡିଭାଇସ୍ ଆପଣ ଦେଖୁଥିବା ବିଷୟବସ୍ତୁର ମୂଳ ଫ୍ରେମ୍ ରେଟ୍ ସହ ତାହାର ଆଉଟପୁଟକୁ ମେଳ କରିବ। ଏହା ଫଳରେ ଏକ ଭିଡିଓ ପ୍ଲେବ୍ୟାକ୍ ମୋଡ୍ ଚାଲୁ କିମ୍ବା ବନ୍ଦ କରିବା ସମୟରେ ଏକ ସେକେଣ୍ଡ ପାଇଁ ଆପଣଙ୍କ ସ୍କ୍ରିନରେ କିଛି ଦେଖାଯାଇନପାରେ।"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"କେବେ ବି ନୁହେଁ"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"ଆପଟି ଏଥିପାଇଁ ଅନୁରୋଧ କଲେ ମଧ୍ୟ, ଆପଣଙ୍କ ଡିଭାଇସ୍ ଆପଣ ଦେଖୁଥିବା ବିଷୟବସ୍ତୁର ମୂଳ ଫ୍ରେମ୍ ରେଟ୍ ସହ ତାହାର ଆଉଟପୁଟକୁ କେବେ ବି ମେଳ କରିବାକୁ ଚେଷ୍ଟା କରିବ ନାହିଁ।"</string>
-    <string name="font_scale_settings_title" msgid="4114019544800225980">"ଟେକ୍ସଟ୍ ସ୍କେଲିଂ"</string>
-    <string name="font_scale_item_detail" msgid="1558315053348778805">"<xliff:g id="SCALE">%1$d</xliff:g>%% ପର୍ଯ୍ୟନ୍ତ ସ୍କେଲ୍ କରନ୍ତୁ"</string>
-    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"ସାମ୍ପଲ୍ ଟେକ୍ସଟ୍"</string>
-    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"ଦି ୱାଣ୍ଡରଫୁଲ୍ ୱିଜାର୍ଡ ଅଫ୍ ଓଜ୍"</string>
-    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"ଅଧ୍ୟାୟ 11: ଦି ୱାଣ୍ଡରଫୁଲ୍ ସିଟି ଅଫ୍ ଓଜ୍"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"ଆଖିରେ ସବୁଜ ଚଷମା ପିନ୍ଧିଥିଲେ ସୁଦ୍ଧା ଡୋରୋଥି ଓ ତା’ ସାଙ୍ଗମାନେ, ସହରର ସୁନ୍ଦରତା ଦେଖି ପ୍ରଥମେ ଚକିତ ହୋଇଯାଇଥିଲେ। ସବୁଜ ମାର୍ବଲରେ ଗଠିତ ସୁନ୍ଦର ଘରଗୁଡ଼ିକ ରାସ୍ତାର ଉଭୟ ପାର୍ଶ୍ୱରେ ଶୋଭା ପାଉଥିଲା ଏବଂ ଝଲସୁଥିବା ରତ୍ନ ସବୁଆଡ଼େ ଖଞ୍ଜାଯାଇଥିଲା। ସେମାନେ ସେହି ସବୁଜ ମାର୍ବଲ ରାସ୍ତାରେ ଚାଲି ଚାଲି ଆଗକୁ ବଢ଼ିଲେ ଏବଂ ଯେଉଁଠାରେ ଦୁଇଟି ଗଳି ପରସ୍ପର ସହିତ ଯୋଡ଼ି ହୋଇଥିଲା, ସେଠାରେ ପାଖାପାଖି ଖଞ୍ଜାଯାଇଥିବା ରତ୍ନଗୁଡ଼ିକର ଅନେକ ଧାଡ଼ି ଥିଲା ଓ ସେଗୁଡ଼ିକ ସୂର୍ଯ୍ୟାଲୋକ ପଡ଼ି ଝଲସୁଥିଲା। ଝରକାରେ ସବୁଜ ରଙ୍ଗର କାଚ ଲାଗିଥିଲା; ଏପରିକି ସମ୍ପୂର୍ଣ୍ଣ ସହରର ଆକାଶଟି ସବୁଜ ରଙ୍ଗରେ ଶୋଭା ପାଉଥିଲା ଏବଂ ସୂର୍ଯ୍ୟ କିରଣ ମଧ୍ୟ ସବୁଜ ରଙ୍ଗର ଥିଲା। \n\nସେଠାରେ ଅନେକ ଲୋକ ଥିଲେ, ପୁରୁଷ, ମହିଳା ଓ ପିଲାମାନେ ଯିବା ଆସିବା କରୁଥିଲେ ଏବଂ ସମସ୍ତେ ସବୁଜ ରଙ୍ଗର ପୋଷାକ ପିନ୍ଧିଥିଲେ ତଥା ସେମାନଙ୍କ ଚର୍ମର ରଙ୍ଗ ସବୁଜ ଥିଲା। ସେମାନେ ବିସ୍ମିତ ଆଖିରେ ଡୋରୋଥି ଓ ତା\'ର ଅଜବ ଦେଖାଯାଉଥିବା ସାଙ୍ଗକୁ ଚାହିଁଲେ ଏବଂ ପିଲାମାନେ ଯେତେବେଳେ ସିଂହକୁ ଦେଖିଲେ, ସେମାନେ ଭୟରେ ଦୌଡ଼ିଯାଇ ଯିଏ ଯାହାର ମା’ ପଛରେ ଲୁଚିଗଲେ; କିନ୍ତୁ କେହି ସେମାନଙ୍କ ସହ କଥା ହେଲେ ନାହିଁ। ରାସ୍ତାରେ ଅନେକ ଦୋକାନ ଥିଲା, ଆଉ ଡୋରୋଥି ଦେଖିଲା ଯେ, ସେଠାରେ ଥିବା ସବୁ ଜିନିଷ ସବୁଜ ରଙ୍ଗର ଥିଲା। ସବୁଜ ରଙ୍ଗର ଜୋତା, ସବୁଜ ରଙ୍ଗର ଟୋପି ଓ ସବୁ ପ୍ରକାରର ସବୁଜ ରଙ୍ଗର ପୋଷାକ ସମେତ ସବୁଜ ଚକୋଲେଟ ଓ ସବୁଜ ରଙ୍ଗର ପପ-କର୍ନ ମଧ୍ୟ ବିକ୍ରି ହେଉଥିଲା। ଗୋଟିଏ ସ୍ଥାନରେ ଜଣେ ବ୍ୟକ୍ତି ସବୁଜ ରଙ୍ଗର ଲେମ୍ବୁ ସରବତ ବିକ୍ରି କରୁଥିଲେ ଏବଂ ଯେତେବେଳେ ପିଲାମାନେ ଏହା କିଣିଲେ, ସେମାନେ ସେହି ଲୋକକୁ ସବୁଜ ପଇସା ଦେଉଥିବାର ଡୋରୋଥି ଦେଖିପାରିଲା। \n\nସେଠାରେ କୌଣସି ପ୍ରକାରର ଘୋଡ଼ା କିମ୍ୱା ଜୀବଜନ୍ତୁ ନଥିବା ପରି ଜଣାପଡ଼ୁଥିଲା; ଛୋଟ ସବୁଜ ରଙ୍ଗର ଗାଡ଼ିରେ ଲୋକମାନେ ସେମାନଙ୍କ ଜିନିଷପତ୍ର ରଖି ଠେଲିଠେଲି ନେବା ଆଣିବା କରୁଥିଲେ। ସମସ୍ତେ ଖୁସି, ସନ୍ତୁଷ୍ଟ ଓ ସମୃଦ୍ଧ ଥିବାପରି ଜଣାପଡ଼ୁଥିଲା।"</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"ଫର୍ମାଟ୍ ଚୟନ"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"ସ୍ୱଚାଳିତ"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"ମାନୁଆଲ୍"</string>
@@ -335,7 +327,6 @@
       <item quantity="other">ଫୋନ୍ ଆପ୍</item>
       <item quantity="one">ଫୋନ୍ ଆପ୍</item>
     </plurals>
-    <string name="default_browser_title" msgid="3612813200586492159">"ବ୍ରାଉଜର୍ ଆପ୍"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"ଟ୍ୟୁଟୋରିଆଲ୍"</string>
@@ -346,7 +337,7 @@
     <string name="device_name" msgid="566626587332817733">"ଡିଭାଇସ୍‌ର ନାମ"</string>
     <string name="restart_button_label" msgid="911750765086382990">"ରିଷ୍ଟାର୍ଟ"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"ଆଇନ ସୂଚନା"</string>
-    <string name="about_legal_license" msgid="4056934178111674054">"ତୃତୀୟ-ପକ୍ଷ ସୋର୍ସ"</string>
+    <string name="about_legal_license" msgid="4801707286720681261">"ଓପନ୍‌ ସୋର୍ସ ଲାଇସେନ୍ସ"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google ଲିଗାଲ୍‌"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"ଲାଇସେନ୍ସ ଡାଟା ଉପଲବ୍ଧ ନାହିଁ"</string>
     <string name="about_model" msgid="9164284529291439296">"ମଡେଲ୍‌"</string>
@@ -412,9 +403,6 @@
     <string name="license_title" msgid="4032466200355435641">"ଲାଇସେନ୍ସ"</string>
     <string name="terms_title" msgid="192888187310800678">"ନିୟମ ଓ ସର୍ତ୍ତାବଳୀ"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"ସିଷ୍ଟମ୍‌ ୱେବ୍‌‌ଭ୍ୟୁ ଲାଇସେନ୍ସ"</string>
-    <string name="consumer_information_title" msgid="7729729568416672733">"ଉପଭୋକ୍ତାଙ୍କ ସୂଚନା"</string>
-    <string name="consumer_information_message" msgid="205236637689468764">"ଆପଣ Android TVରେ ପାଇଥିବା ବିଷୟବସ୍ତୁ ଆପ୍ ଡେଭେଲପର୍ ଏବଂ ମୁଭି ଷ୍ଟୁଡିଓ ପରି ତୃତୀୟ-ପକ୍ଷ ପାର୍ଟନର୍ ତଥା Google ଠାରୁ ମଧ୍ୟ ଆସିଥାଏ। ଅଧିକ ସୂଚନା ପାଇଁ, ଦୟାକରି "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>" ଦେଖନ୍ତୁ"</string>
-    <string name="consumer_information_button_ok" msgid="6979480064600038080">"ଓକେ"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"ନିମ୍ନମାନ"</item>
     <item msgid="2098818614362343532">"ଠିକ୍‍‍ଠାକ୍‍"</item>
@@ -617,22 +605,6 @@
     <item msgid="5645263357181875427">"ଟ୍ରାନ୍ସପୋର୍ଟ୍‌ ଷ୍ଟ୍ରିମ୍‌ ଦ୍ଵାରା ପ୍ରଦାନ କରାଯାଇଥିବା ସମୟ ବ୍ୟବହାର କରନ୍ତୁ"</item>
     <item msgid="5501503537181350884">"ବନ୍ଦ ଅଛି"</item>
   </string-array>
-    <string name="sensor_toggle_description" msgid="7415801459994303159">"ସମସ୍ତ ଆପ୍ ଓ ସେବା ପାଇଁ"</string>
-    <string name="recently_accessed_by_category" msgid="6841705864715653428">"ବର୍ତ୍ତମାନ ଏହା ଦ୍ୱାରା ଆକ୍ସେସ୍ କରାଯାଇଛି"</string>
-    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"ବର୍ତ୍ତମାନ କୌଣସି ଆପ୍ ଦ୍ୱାରା ଆକ୍ସେସ୍ କରାଯାଇନାହିଁ"</string>
-    <string name="recently_accessed_show_all" msgid="5234849189704717855">"ସବୁ ଦେଖନ୍ତୁ"</string>
-    <string name="microphone" msgid="7893752847683941214">"ମାଇକ୍ରୋଫୋନ୍"</string>
-    <string name="mic_toggle_title" msgid="7193417007060235665">"ମାଇକ୍ରୋଫୋନ୍ ଆକ୍ସେସ୍"</string>
-    <string name="open_mic_permissions" msgid="8121871594807641073">"ଆପର ମାଇକ୍ରୋଫୋନକୁ ଆକ୍ସେସ୍"</string>
-    <string name="camera" msgid="1226671478936288283">"କ୍ୟାମେରା"</string>
-    <string name="camera_toggle_title" msgid="5566469574224956142">"କ୍ୟାମେରା ଆକ୍ସେସ୍"</string>
-    <string name="open_camera_permissions" msgid="301360297337141591">"ଆପର କ୍ୟାମେରାକୁ ଆକ୍ସେସ୍"</string>
-    <string name="mic_toggle_info_title" msgid="1086545614315873599">"ମାଇକ୍ରୋଫୋନ୍ ଆକ୍ସେସ୍: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4699624900513326055">"ଚାଲୁ କରାଗଲେ, ଅନୁମତି ଥିବା ସମସ୍ତ ଆପ୍ ଓ ସେବା ଏହି ଡିଭାଇସରେ ଯେ କୌଣସି ମାଇକ୍ରୋଫୋନକୁ ଆକ୍ସେସ୍ କରିପାରିବ।\n\nକଷ୍ଟମ୍ ପ୍ରୋଟୋକଲ୍ ଥିବା ଅଡିଓ ପେରିଫେରାଲଗୁଡ଼ିକ ଏହି ସେଟିଂ ଦ୍ୱାରା ପ୍ରଭାବିତ ହେବ ନାହିଁ।"</string>
-    <string name="camera_toggle_info_title" msgid="3871317082313736088">"କ୍ୟାମେରା ଆକ୍ସେସ୍: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="2999965953853204003">"ଚାଲୁ କରାଗଲେ, ଅନୁମତି ଥିବା ସମସ୍ତ ଆପ୍ ଓ ସେବା ଏହି ଡିଭାଇସରେ ଯେ କୌଣସି କ୍ୟାମେରାକୁ ଆକ୍ସେସ୍ କରିପାରିବ।\n\nକଷ୍ଟମ୍ ପ୍ରୋଟୋକଲ୍ ଥିବା କ୍ୟାମେରା ପେରିଫେରାଲଗୁଡ଼ିକ ଏହି ସେଟିଂ ଦ୍ୱାରା ପ୍ରଭାବିତ ହେବ ନାହିଁ।"</string>
-    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"ଚାଲୁ ଅଛି"</string>
-    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"ବନ୍ଦ ଅଛି"</string>
     <string name="system_location" msgid="4057295363709016511">"ଲୋକେସନ୍"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"ଆପଣଙ୍କ ଅନୁମତି ମାଗିଥିବା ଆପ୍‌ଗୁଡ଼ିକୁ ନିଜର ଲୋକେସନ୍‍ ସୂଚନା ବ୍ୟବହାର କରିବାକୁ ଦିଅନ୍ତୁ"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"ଲୋକେସନ୍ ସହମତି"</string>
@@ -767,7 +739,7 @@
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"ଅଜଣା ଉତ୍ସ"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store ବ୍ୟତୀତ ଅନ୍ୟ ଉତ୍ସରୁ ଆସିଥିବା ଆପ୍‌ର ଇନଷ୍ଟଲେସନ୍‌ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"ଅଜଣା ଉତ୍ସ ଅନୁମତି କରନ୍ତୁ"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"ଅଜଣା ଆପ୍‌ ଦ୍ୱାରା ଆପଣଙ୍କ ଡିଭାଇସ୍‌ ଏବଂ ବ୍ୟକ୍ତିଗତ ଡାଟାକୁ ନଷ୍ଟ କରାଯାଇ ପାରିବାର ସମ୍ଭାବନା ବହୁତ ଅଧିକ। ଆପଣଙ୍କ ଡିଭାଇସରେ ହେଉଥିବା କୌଣସି ପ୍ରକାର କ୍ଷତି କିମ୍ବା ସେଗୁଡ଼ିକର ବ୍ୟବହାରରୁ ହେଉଥିବା କୌଣସି ପ୍ରକାର ଡାଟାର କ୍ଷତି ପାଇଁ ଆପଣ ଦାୟୀ ରହିବାକୁ ରାଜି ହୁଅନ୍ତି।"</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"ଅଜଣା ଆପ୍‌ ଦ୍ୱାରା ଆପଣଙ୍କ ଡିଭାଇସ୍‌ ଏବଂ ବ୍ୟକ୍ତିଗତ ଡାଟାକୁ ନଷ୍ଟ କରାଯାଇ ପାରିବାର ସମ୍ଭାବନା ବହୁତ ଅଧିକ। ଆପଣଙ୍କ ଡିଭାଇସ୍‌ରେ ଘଟିବା କୌଣସି ପ୍ରକାର କ୍ଷତି କିମ୍ବା ସେଗୁଡ଼ିକର ବ୍ୟବହାରରୁ ହେବା କୌଣସି ପ୍ରକାର ଡାଟାର ହାନୀ ପାଇଁ ଆପଣ ଦାୟୀ ରହିବାକୁ ରାଜି ହୁଅନ୍ତି।"</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"ଆଦୌ ନୁହେଁ"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"DRM ବିଷୟବସ୍ତୁ ପାଇଁ"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"ସଦାବେଳେ"</string>
@@ -908,7 +880,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"କୌଣସି ପୂର୍ବ-ନିର୍ଦ୍ଧାରଣ ସେଟ୍‍ ହୋଇନାହିଁ"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"କ୍ୟାଶ୍ ଖାଲି କରନ୍ତୁ"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"ସୂଚନା"</string>
-    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"ତୃତୀୟ-ପକ୍ଷ ସୋର୍ସ"</string>
+    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"ମୁକ୍ତ ଉତ୍ସ ଲାଇସେନ୍ସ"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"ଅନୁମତିଗୁଡ଼ିକ"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"ଆପ୍ଲିକେସନ୍ ଉପଲବ୍ଧ ନାହିଁ"</string>
     <string name="settings_ok" msgid="5950888975075541964">"ଠିକ୍ ଅଛି"</string>
@@ -998,7 +970,6 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"ପିକଚର୍-ଇନ୍-ପିକଚରର ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"ଛବି-ଭିତରେ-ଛବିକୁ ଇନ୍‌ଷ୍ଟଲ୍‌ ହୋଇଥିବା କୌଣସି ଆପ୍‌ ସପୋର୍ଟ କରୁନାହିଁ"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"ଆପ୍‌ ଖୋଲା ଥିବାବେଳେ କିମ୍ୱା ଏହାକୁ ଆପଣ ଛାଡ଼ିବା ପରେ (ଉଦାହରଣସ୍ୱରୂପ, ଏକ ଭିଡିଓ ଦେଖିବା ଜାରି ରଖିବାକୁ) ଏକ ପିକଚର୍-ଇନ-ପିକଚର୍ ୱିଣ୍ଡୋ ତିଆରି କରିବା ପାଇଁ ଏହି ଆ‌ପ୍‌କୁ ଅନୁମତି ଦିଅନ୍ତୁ। ଏହି ୱିଣ୍ଡୋ, ଆପଣ ବ୍ୟବହାର କରୁଥିବା ଅନ୍ୟ ଆପ୍‌ଗୁଡ଼ିକ ଉପରେ ଦେଖାଦେବ।"</string>
-    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"ଆପଗୁଡ଼ିକୁ ଆଲାରାମ୍ ସେଟ୍ କରିବାକୁ ଏବଂ ସମୟ-ସମ୍ବେଦନଶୀଳ କାର୍ଯ୍ୟଗୁଡ଼ିକ ସିଡୁଲ୍ କରିବାକୁ ଅନୁମତି ଦିଅନ୍ତୁ। ଏହା ଆପଗୁଡ଼ିକୁ ପୃଷ୍ଠପଟରେ ଚାଲିବାକୁ ଦେଇଥାଏ, ଯାହା ଅଧିକ ପାୱାର୍ ବ୍ୟବହାର କରିପାରେ।\n\nଯଦି ଏହି ଅନୁମତି ବନ୍ଦ ଅଛି, ତେବେ ଏହି ଆପ୍ ଦ୍ୱାରା ସିଡୁଲ୍ କରାଯାଇଥିବା ପୂର୍ବରୁ ଥିବା ଆଲାରାମ୍ ଏବଂ ସମୟ-ଆଧାରିତ ଇଭେଣ୍ଟଗୁଡ଼ିକ କାମ କରିବ ନାହିଁ।"</string>
     <string name="special_access" msgid="21806055758289916">"ସ୍ୱତନ୍ତ୍ର ଆପ୍‌ ଆକ୍ସେସ୍‌"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"ଅଡିଓ"</string>
