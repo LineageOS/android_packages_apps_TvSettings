@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="about_cmupdate_settings_title">CyanogenMod अद्यतने</string>
+    <string name="about_mod_version">CyanogenMod आवृत्ती</string>
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">विकास सेटिंग्ज सक्षम करण्यापासून तुम्ही <xliff:g id="step_count">%1$d</xliff:g> पायरी अनुपस्थित आहात.</item>
+        <item quantity="other">विकास सेटिंग्ज सक्षम करण्यापासून तुम्ही <xliff:g id="step_count">%1$d</xliff:g> पायऱ्या अनुपस्थित आहात.</item>
+    </plurals>
+    <string name="show_dev_on_cm">तुम्ही विकास सेटिंग्ज सक्षम केली आहेत!</string>
+    <string name="show_dev_already_cm">गरज नाही, तुम्ही आधीच विकास सेटिंग्ज सक्षम केली आहेत.</string>
+    <string name="about_build_date">बांधणी तारीख</string>
+    <string name="about_kernel_version">कर्नेल आवृत्ती</string>
+    <string name="about_selinux_status">SELinux स्थिती</string>
+    <string name="selinux_status_disabled">अक्षम केले</string>
+    <string name="selinux_status_permissive">मुक्ताचारी</string>
+    <string name="selinux_status_enforcing">अंमलबजावणी</string>
+    <string name="accessories_add_bluetooth_inst_cm">CyanogenMod वापरण्यास सुरुवात करण्यासाठी तुमचे Bluetooth डिव्हाइस पेअरिंग मोडमध्ये असल्याची खात्री करा. Nexus Remote साठी एकाचवेळी परत आणि होम दाबून हे केले जाते.</string>
+    <string name="root_access">रूट ऍक्सेस</string>
+    <string name="root_access_warning_title">रूट ऍक्सेसला परवानगी द्यायची?</string>
+    <string name="root_access_warning_message">अनुप्रयोगांना रूट ऍक्सेसची विनंती करू देणे अतिशय धोकादायक असते आणि तुमच्या सिस्टिमच्या सुरक्षिततेशी तडजोड करू शकते!</string>
+    <string name="root_access_none">अक्षम केले</string>
+    <string name="root_access_apps">केवळ अनुप्रयोग</string>
+    <string name="root_access_adb">केवळ ADB</string>
+    <string name="root_access_all">अनुप्रयोग आणि ADB</string>
+    <string name="enable_terminal_title">स्थानिक टर्मिनल</string>
+    <string name="enable_terminal_summary">स्थानिक शेल प्रवेश देणारा टर्मिनल अॅप सक्षम करा</string>
+    <string name="system_display">प्रदर्शित करा</string>
+    <string name="system_display_overscan">जास्तस्कॅन</string>
+    <string name="system_display_overscan_description">तुमच्या स्क्रीनच्या आकारमानामध्ये बसण्यासाठी प्रदर्शन कॅलिब्रेट करा.</string>
+    <string name="system_reset_default_home">डिफॉल्ट होम स्क्रीन रीसेट करा</string>
+    <string name="system_home_settings">होम सेटिंग्ज</string>
+    <string name="reset_launcher_title">डिफॉल्ट होम स्क्रीन रीसेट करा</string>
+    <string name="reset_launcher_description">डिफॉल्ट होम स्क्रीन रीसेट करण्याद्वारे, तुम्ही एक पर्यायी होण स्क्रीन निवडू शकाल (अर्थात Trebuchet).\n\nतुम्हाला डिफॉल्ट होम स्क्रीन रीसेट करायचा आहे का?</string>
+    <string name="reset_launcher_tip">होम स्क्रीन निवड डायलॉग वर आणण्यासाठई होम बटण दाबा.</string>
+    <string name="advanced_reboot_title">प्रगत रीबूट</string>
+    <string name="advanced_reboot_summary">पुर्नप्राप्ती, बूटलोडर मध्ये रीबूट करण्यासाठी किंवा सॉफ्ट रीबूट पार पाडण्यासाठी बद्दल मेनूमध्ये पर्याय समाविष्ट करा</string>
+    <string name="reboot_recovery_button_label">पुर्नप्राप्ती</string>
+    <string name="reboot_bootloader_button_label">बूटलोडर</string>
+    <string name="reboot_soft_button_label">सॉफ्ट रीबूट</string>
+    <string name="adb_over_network">नेटवर्कवर ADB</string>
+    <string name="adb_over_network_summary">नेटवर्क इंटरफेसेसवर TCP/IP डिबगिंग सक्षम करा (Wi\u2011Fi, USB नेटवर्क्स). रीबूट केल्यावर हे सेटिंग रीसेट केले जाते</string>
+    <string name="adb_over_network_warning">चेतावनी जेव्हा नेटवर्कवर ADB सक्षम केलेले असते तेव्हा, तुमचा टिव्ही सर्व कनेक्ट केलेल्या नेटवर्क्सवर घुसखोरीसाठी तयार असतो!\n\nजेव्हा तुम्ही विश्वसनीय नेटवर्क्सवर कनेक्टेड असाल तेव्हाच केवळ हे वैशिष्ट्य वापरा.\n\nतुम्हाला हे कार्य खरोखरच सक्षम करायचे आहे का?</string>
+</resources>

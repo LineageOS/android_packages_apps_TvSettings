@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="about_cmupdate_settings_title">Ùrachaidhean CyanogenMod</string>
+    <string name="about_mod_version">An tionndadh dhe CyanogenMod</string>
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Tha thu <xliff:g id="step_count">%1$d</xliff:g> cheum air falbh o bhith a’ cur an comas roghainnean an luchd-leasachaidh.</item>
+        <item quantity="two">Tha thu <xliff:g id="step_count">%1$d</xliff:g> cheum air falbh o bhith a’ cur an comas roghainnean an luchd-leasachaidh.</item>
+        <item quantity="few">Tha thu <xliff:g id="step_count">%1$d</xliff:g> ceuman air falbh o bhith a’ cur an comas roghainnean an luchd-leasachaidh.</item>
+        <item quantity="other">Tha thu <xliff:g id="step_count">%1$d</xliff:g> ceum air falbh o bhith a’ cur an comas roghainnean an luchd-leasachaidh.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Chuir thu roghainnean an luchd-leasachaidh an comas!</string>
+    <string name="show_dev_already_cm">Cha leig thu leas, chuir thu roghainnean an luchd-leasachaidh an comas mu thràth.</string>
+    <string name="about_build_date">Ceann-là na togail</string>
+    <string name="about_kernel_version">Ceann-là an eitein</string>
+    <string name="about_selinux_status">Staid SELinux</string>
+    <string name="selinux_status_disabled">À comas</string>
+    <string name="selinux_status_permissive">Ceadachail</string>
+    <string name="selinux_status_enforcing">Teann</string>
+    <string name="accessories_add_bluetooth_inst_cm">Mus tòisich thu air CyanogenMod a chleachdadh, dèan cinnteach gu bheil an t-uidheam Bluetooth agad sa mhodh paidhreachaidh. Air Nexus Remote, nì thu seo le brùthadh air “Air ais” agus “Dachaigh” aig an aon àm.</string>
+    <string name="root_access">Inntrigeadh root</string>
+    <string name="root_access_warning_title">A bheil thu airson inntrigeadh root a cheadachadh?</string>
+    <string name="root_access_warning_message">Tha e glè chunnartach cead a thoirt do dh’aplacaidean ach an iarr iad inntrigeadh root agus dh’fhaoidte gum mill seo tèarainteachd an t-siostaim agad!</string>
+    <string name="root_access_none">À comas</string>
+    <string name="root_access_apps">Aplacaidean a-mhàin</string>
+    <string name="root_access_adb">ADB a-mhàin</string>
+    <string name="root_access_all">Aplacaidean is ADB</string>
+    <string name="enable_terminal_title">Tèirmineal ionadail</string>
+    <string name="enable_terminal_summary">Cuid an comas aplacaid tèirmineil a bheir inntrigeadh do shlige ionadail dhut</string>
+    <string name="system_display">Taisbeanadh</string>
+    <string name="system_display_overscan">Overscan</string>
+    <string name="system_display_overscan_description">Cailbhrich an taisbeanadh ach an co-fhreagair e ri meud na sgrìn agad.</string>
+    <string name="system_reset_default_home">Ath-shuidhich an sgrìn dhachaigh bhunaiteach</string>
+    <string name="system_home_settings">Roghainnean na dachaigh</string>
+    <string name="reset_launcher_title">Ath-shuidhich an sgrìn dhachaigh bhunaiteach</string>
+    <string name="reset_launcher_description">Nuair a nì thu ath-shuidheachadh air an sgrìn dhachaigh bhunaiteach, ’s urrainn dhut sgrìn dhachaigh eile a thaghadh (can Trebuchet).\n\nA bheil thu airson an sgrìn dhachaigh bhunaiteach ath-shuidheachadh?</string>
+    <string name="reset_launcher_tip">Brùth air putan na dachaigh a shealltainn còmhradh airson an sgrìn dhachaigh a thaghadh.</string>
+    <string name="advanced_reboot_title">Ath-thòiseachadh adhartach</string>
+    <string name="advanced_reboot_summary">Gabh a-staigh roghainnean sa chlàr-taice “Mu dhèidhinn” airson ath-thòiseachadh dhan mhodh aiseig, bootloader no airson ath-thòiseachadh bog</string>
+    <string name="reboot_recovery_button_label">Aiseag</string>
+    <string name="reboot_bootloader_button_label">Bootloader</string>
+    <string name="reboot_soft_button_label">Dèan ath-thòiseachadh bog</string>
+    <string name="adb_over_network">ADB thar lìonra</string>
+    <string name="adb_over_network_summary">Cuir an comas dì-bhugachadh TCP/IP air eadar-aghaidhean lìonraidh (WiFi, lìonraidhean USB). Thèid an roghainn seo ath-shuidheachadh aig àm ath-thòiseachaidh</string>
+    <string name="adb_over_network_warning">RABHADH: Nuair a bhios ADB air lìonra an comas, bidh an Tbh agad fosgailte airson briseadh a-steach o lìonra co-cheangailte sam bith!\n\nNa cleachd an gleus seo ach nuair a bhios tu air lìonra sa bheil earbsa agad.\n\nA bheil thu cinnteach gu bheil thu airson an gleus seo a chur an comas?</string>
+</resources>

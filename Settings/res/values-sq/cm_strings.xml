@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="about_cmupdate_settings_title">Përditësime të CyanogenMod</string>
+    <string name="about_mod_version">Versioni i CyanogenMod</string>
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Ju jeni edhe <xliff:g id="step_count">%1$d</xliff:g> hap larg aktivizimit të parametrave të zhvillimit.</item>
+        <item quantity="other">Ju jeni edhe <xliff:g id="step_count">%1$d</xliff:g> hap larg aktivizimit të parametrave të zhvillimit.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Ju keni aktivizuar parametrat e zhvillimit!</string>
+    <string name="show_dev_already_cm">Nuk ka më nevojë të shtypni! Parametrat e zhvillimit janë të aktivizuara.</string>
+    <string name="about_build_date">Data e ndërtimit</string>
+    <string name="about_kernel_version">Versioni i kernelit</string>
+    <string name="selinux_status_disabled">E çaktivizuar</string>
+    <string name="accessories_add_bluetooth_inst_cm">Për të përdorur CyanogenMod, sigurohu që pajisja juaj Bluetooth të jetë në profilin e çiftëzimit. Për Nexus Remote, kjo mund të kryhet duke shtypur njëkohësisht butonat Prapa dhe Home.</string>
+    <string name="root_access">Aksesi Root</string>
+    <string name="root_access_warning_title">Dëshiron të lejosh aksesin Root?</string>
+    <string name="root_access_none">I çaktivizuar</string>
+    <string name="root_access_apps">Vetëm aplikacionet</string>
+    <string name="root_access_adb">Vetëm ADB</string>
+    <string name="root_access_all">Aplikacionet dhe ADB</string>
+    <string name="system_home_settings">Parametrat e Home</string>
+    <string name="advanced_reboot_title">Rindezjet e përparuara</string>
+    <string name="advanced_reboot_summary">Përfshi në menu opsionet për t\'u rindezur në Recovery, Bootloader, ose për rindezje të shpejtë</string>
+    <string name="reboot_recovery_button_label">Recovery</string>
+    <string name="reboot_bootloader_button_label">Bootloader</string>
+    <string name="reboot_soft_button_label">Rindezje e shpejtë</string>
+    <string name="adb_over_network">ADB mbi rrjet</string>
+    <string name="adb_over_network_summary">Aktivizo debugimin TCP/IP mbi ndërfaqet e rrjetit (Wi\u2011Fi, rrjetet USB). Ky parametër do të çaktivizohet gjatë rindezjes</string>
+</resources>
