@@ -125,11 +125,11 @@
     <string name="accessories_autopair_msg">Daethpwyd o hyd i ddyfais a chaiff ei baru yn awtomatig ymhen <xliff:g id="countdown">%1$s</xliff:g> eiliad.</string>
     <string name="error_action_not_supported">Ni chefnogir y weithred hon</string>
     <string name="bluetooth_pairing_request">Cais paru Bluetooth</string>
-    <string name="bluetooth_confirm_passkey_msg">I baru gyda: &lt;b&gt;<xliff:g id="device_name">%1$s</xliff:g>&lt;/b&gt;, sicrha ei fod yn dangos yr allwedd: &lt;b&gt;<xliff:g id="passkey">%2$s</xliff:g>&lt;/b&gt;</string>
-    <string name="bluetooth_incoming_pairing_msg">Gan: &lt;b&gt;<xliff:g id="device_name">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Paru gyda\'r ddyfais hon?</string>
-    <string name="bluetooth_display_passkey_pin_msg">I baru gyda: &lt;b&gt;<xliff:g id="device_name">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Teipia\'r allwedd hon arno: &lt;b&gt;<xliff:g id="passkey">%2$s</xliff:g>&lt;/b&gt;, ac yna gwasgu Return neu Enter.</string>
-    <string name="bluetooth_enter_pin_msg">I baru gyda: &lt;b&gt;<xliff:g id="device_name">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Rho PIN y ddyfais:</string>
-    <string name="bluetooth_enter_passkey_msg">I baru gyda: &lt;b&gt;<xliff:g id="device_name">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Rho allwedd y ddyfais:</string>
+    <string name="bluetooth_confirm_passkey_msg">I baru â: &lt;b&gt;<xliff:g id="device_name">%1$s</xliff:g>&lt;/b&gt;, sicrha ei fod yn dangos yr allwedd: &lt;b&gt;<xliff:g id="passkey">%2$s</xliff:g>&lt;/b&gt;</string>
+    <string name="bluetooth_incoming_pairing_msg">Gan: &lt;b&gt;<xliff:g id="device_name">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Paru â\'r ddyfais hon?</string>
+    <string name="bluetooth_display_passkey_pin_msg">I baru â: &lt;b&gt;<xliff:g id="device_name">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Teipia\'r allwedd hon arno: &lt;b&gt;<xliff:g id="passkey">%2$s</xliff:g>&lt;/b&gt;, ac yna gwasgu Return neu Enter.</string>
+    <string name="bluetooth_enter_pin_msg">I baru â: &lt;b&gt;<xliff:g id="device_name">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Rho PIN y ddyfais:</string>
+    <string name="bluetooth_enter_passkey_msg">I baru â: &lt;b&gt;<xliff:g id="device_name">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Rho allwedd y ddyfais:</string>
     <string name="bluetooth_pin_values_hint">0000 neu 1234 fel arfer</string>
     <string name="bluetooth_pair">Paru</string>
     <string name="bluetooth_cancel">Diddymu</string>
@@ -578,11 +578,11 @@
     <string name="title_current_autofill_service">Gwasanaeth Awto-lenwi Cyfredol</string>
     <string name="title_select_autofill_service">Dewis Gwasanaeth Awto-lenwi</string>
     <string name="autofill_none">Dim</string>
-    <string name="autofill_confirmation_message">        &lt;b&gt;Sicrha dy fod yn ymddiried yn yr ap hwn.&lt;/b&gt;
-        &lt;br/&gt;
-        &lt;br/&gt;
-        Mae &lt;xliff:g id="app_name" example="Password service"&gt;%1$s&lt;/xliff:g&gt; yn defnyddio\'r hyn sydd ar dy sgrin i benderfynu pa bethau sy\'n bosib eu awto-lenwi.
-        </string>
+    <string name="autofill_confirmation_message"><![CDATA[        <b>Sicrha dy fod yn ymddiried yn yr ap hwn.</b>
+        <br/>
+        <br/>
+        Mae <xliff:g id="app_name" example="Password service">%1$s</xliff:g> yn defnyddio\'r hyn sydd ar dy sgrin i benderfynu pa bethau sy\'n bosib eu awto-lenwi.
+        ]]></string>
     <string name="computing_size">Yn cyfrifo\u2026</string>
     <string name="title_select_wifi_network">Dewisa dy rwydwaith Wi-Fi</string>
     <string name="accessories_wifi_display_rename_device">Ailenwi</string>
@@ -623,11 +623,11 @@
     </plurals>
     <plurals name="inputs_header_standby_input">
         <item quantity="zero">Dim Mewnbynnau yn Segur</item>
-        <item quantity="one">Mewnbwn sy\'n Segur</item>
-        <item quantity="two">Mewnbynnau sy\'n Segur</item>
-        <item quantity="few">Mewnbynnau sy\'n Segur</item>
-        <item quantity="many">Mewnbynnau sy\'n Segur</item>
-        <item quantity="other">Mewnbynnau sy\'n Segur</item>
+        <item quantity="one">Mewnbwn Modd Segur</item>
+        <item quantity="two">Mewnbynnau Modd Segur</item>
+        <item quantity="few">Mewnbynnau Modd Segur</item>
+        <item quantity="many">Mewnbynnau Modd Segur</item>
+        <item quantity="other">Mewnbynnau Modd Segur</item>
     </plurals>
     <plurals name="inputs_header_disconnected_input">
         <item quantity="zero">Dim Mewnbynnau heb eu Cysylltu</item>
@@ -664,7 +664,7 @@
     <string name="restricted_profile_configure_apps_description_loading">Un foment\u2026</string>
     <string name="restricted_profile_change_password_title">Newid PIN</string>
     <string name="restriction_description"><xliff:g id="description">%1$s</xliff:g>\n<xliff:g id="value">%2$s</xliff:g></string>
-    <string name="app_sees_restricted_accounts_and_controlled_by">Gall yr ap hwn gael mynediad i dy gyfrifon. Rheolwyd gan <xliff:g id="app">%1$s</xliff:g></string>
+    <string name="app_sees_restricted_accounts_and_controlled_by">Gall yr ap hwn gael mynediad at dy gyfrifon. Rheolwyd gan <xliff:g id="app">%1$s</xliff:g></string>
     <string name="pin_enter_unlock_channel">Rho PIN i wylio\'r sianel hon</string>
     <string name="pin_enter_unlock_program">Rho PIN i wylio\'r rhaglen hon</string>
     <string name="pin_enter_pin">Rho\'r PIN</string>
@@ -718,7 +718,7 @@
     <string name="privacy_automatic_restore">Adferiad awtomatig</string>
     <string name="factory_reset_device">Ailosod y ddyfais</string>
     <string name="factory_reset_description">Bydd hyn yn dileu\'r holl ddata o storfa fewnol dy ddyfais, gan gynnwys: dy gyfrif Google, data a gosodiadau apiau a\'r system, a\'r apiau wedi\'u lawrlwytho</string>
-    <string name="confirm_factory_reset_description">Dileu\'r dy holl wybodaeth bersonol a\'r apiau wedi\'u lawrlwytho? Ni ellir dadwneud hyn!</string>
+    <string name="confirm_factory_reset_description">Dileu dy holl wybodaeth bersonol a\'r apiau wedi\'u lawrlwytho? Ni ellir dadwneud hyn!</string>
     <string name="confirm_factory_reset_device">Dileu popeth</string>
     <string name="select_device_name_title">Dewisa enw ar gyfer dy <xliff:g id="devicemodel" example="Nexus Player">%1$s</xliff:g></string>
     <string name="select_device_name_description">Gall rhoi enw i\'r ddyfais helpu ei hadnabod wrth fwrw neu gysylltu â hi o ddyfeisiau eraill.</string>
@@ -751,7 +751,7 @@
     <string name="app_permission_summary_allowed">Caniateir</string>
     <string name="app_permission_summary_not_allowed">Ni chaniateir</string>
     <string name="usage_access">Mynediad at ddefnydd</string>
-    <string name="usage_access_description">Mae mynediad defnydd yn caniatáu i ap ddilyn pa apiau eraill wyt yn eu defnyddio a pha mor aml, yn ogystal â dy ddarparwr gwasanaeth, iaith y system a manylion eraill.</string>
+    <string name="usage_access_description">Mae mynediad defnydd yn caniatáu ap i ddilyn pa apiau eraill wyt yn eu defnyddio a pha mor aml, yn ogystal â dy ddarparwr gwasanaeth, iaith y system a manylion eraill.</string>
     <string name="high_power_apps">Optimeiddiad ynni</string>
     <string name="high_power_apps_description">Optimeiddio defnydd ynni apiau</string>
     <string name="high_power_apps_empty">Does dim apiau angen eu hoptimeiddio</string>
@@ -766,7 +766,7 @@
     <string name="allow_overlay_description">Caniatáu i ap ymddangos dros ben apiau eraill sy\u2019n cael eu defnyddio. Mae\'n bosib y gellir ymyrryd yn dy ddefnydd o apiau eraill neu newid sut maen nhw\'n ymddangos neu\'n ymddwyn.</string>
     <string name="write_system_settings">Addasu gosodiadau\'r system</string>
     <string name="write_settings_title">Gall addasu gosodiadau\'r system</string>
-    <string name="write_settings_description">Mae\'n caniatáu i ap addasu gosodiadau\'r system.</string>
+    <string name="write_settings_description">Mae\'n caniatáu ap i addasu gosodiadau\'r system.</string>
     <string name="write_settings_on">Iawn</string>
     <string name="write_settings_off">Na</string>
     <string name="picture_in_picture_title">Llun-mewn-llun</string>
