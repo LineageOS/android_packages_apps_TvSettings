@@ -106,14 +106,13 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"التطبيقات التي تم فتحها مؤخرًا"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"الاطّلاع على كل التطبيقات"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"الأذونات"</string>
-    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
-    <string name="update_slice_title" msgid="6553763903108611747"></string>
+    <string name="apps_security" msgid="1392489151324802853">"الأمان"</string>
     <string name="all_apps_title" msgid="3717294436135280133">"جميع التطبيقات"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"عرض تطبيقات النظام"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"التطبيقات المثبَّتة"</string>
     <string name="all_apps_other" msgid="4420174882983813158">"تطبيقات النظام"</string>
     <string name="all_apps_disabled" msgid="2776041242863791053">"التطبيقات التي تم إيقافها"</string>
-    <string name="device_daydream" msgid="2631191946958113220">"شاشة الاستراحة"</string>
+    <string name="device_daydream" msgid="2631191946958113220">"شاشة التوقف"</string>
     <string name="device_display" msgid="244634591698925025">"العرض"</string>
     <string name="device_display_sound" msgid="7399153506435649193">"العرض والصوت"</string>
     <string name="device_sound" msgid="8616320533559404963">"الصوت"</string>
@@ -132,24 +131,22 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos مع Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos مع Dolby Digital Plus"</string>
-    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"ملاحظة: قد لا يعمل الخيار \"تلقائي\" إذا لم يعلن جهازك بشكل صحيح عن التنسيقات المتوافقة معه."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"\"تلقائي\": يؤدي اختيار هذا الزر إلى تفعيل الصيغ المتوافقة فقط مع جهاز إخراج الصوت "</string>
-    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"عند الاختيار، سيسمح النظام للتطبيقات باختيار أي صيغة صوت متوافقة مع سلسلة جهازك. قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"عند الاختيار، سيسمح النظام للتطبيقات باختيار أي صيغة صوت توفّرها سلسلة جهازك. قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"\"بدون صيغ\": عدم استخدام الصوت المحيطي"</string>
     <string name="surround_sound_manual_title" msgid="4935447605070985537">"\"يدوي\": يؤدي اختيار هذا الزر إلى تفعيل أو إيقاف يدوي لكل صيغة متوافقة مع هذا الجهاز، بغض النظر عن الصيغ المتوافقة مع جهاز إخراج الصوت"</string>
-    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"عند الاختيار، يمكنك يدويًا إيقاف صيغ الصوت المتوافقة مع سلسلة جهازك وتسبب مشاكل في التشغيل. ويمكنك تفعيل صيغ الصوت غير المتوافقة مع سلسلة جهازك. في بعض الأحيان، قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"عند الاختيار، يمكنك يدويًا إيقاف صيغ الصوت التي توفّرها سلسلة جهازك وتسبب مشاكل في التشغيل. ويمكنك تفعيل صيغ الصوت التي لا توفّرها سلسلة جهازك. في بعض الأحيان، قد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"هل تريد تفعيل تنسيق الصوت غير المتوافق؟"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"لا يعلن جهازك السماعي المتصل عن توافق هذا التنسيق معه. قد يتسبب هذا في عمل جهازك بطريقة غير متوقعة، كصدور أصوات مزعجة ومرتفعة أو صوت فرقعة من جهازك."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"إلغاء"</string>
     <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"التغيير على أي حال"</string>
-    <string name="surround_sound_supported_title" msgid="4873195851187547020">"الصيغ المتوافقة"</string>
-    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"الصيغ غير المتوافقة"</string>
-    <string name="surround_sound_format_info" msgid="5671866505653542934">"معلومات الصيغ"</string>
+    <string name="surround_sound_supported_title" msgid="4873195851187547020">"التنسيقات المتوافقة"</string>
+    <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"التنسيقات غير المتوافقة"</string>
+    <string name="surround_sound_format_info" msgid="5671866505653542934">"معلومات الصيغة"</string>
     <string name="surround_sound_show_formats" msgid="1929849219042916469">"عرض الصيغ"</string>
     <string name="surround_sound_hide_formats" msgid="7770931097236868238">"إخفاء الصيغ"</string>
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"الصيغ المفعَّلة"</string>
@@ -168,12 +165,6 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ستتطابق مخرجات جهازك مع العدد الأصلي للقطات في الثانية الذي يظهر به ما تشاهده من محتوى إذا طلب التطبيق ذلك. وقد يؤدي ذلك إلى ظهور شاشة فارغة لفترة قصيرة عند الدخول إلى وضع تشغيل فيديو أو الخروج منه."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"أبدًا"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"لن تتطابق مخرجات جهازك أبدًا مع العدد الأصلي للقطات في الثانية الذي يظهر به ما تشاهده من محتوى حتى إذا طلب التطبيق ذلك."</string>
-    <string name="font_scale_settings_title" msgid="4114019544800225980">"تغيير حجم النص"</string>
-    <string name="font_scale_item_detail" msgid="1558315053348778805">"تغيير حجم الخط إلى <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
-    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"نموذج نص"</string>
-    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"ساحر أوز العجيب (The Wonderful Wizard of Oz)"</string>
-    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"الفصل ۱۱: مدينة أوز الزمرّدية العجيبة (The Wonderful Emerald City of Oz)"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"على الرغم من احتماء دورثي ورفاقها خلف نظارات خضراء، انبهرت عيونهم للوهلة الأولى بتوهج المدينة العجيبة وتألقها. كانت المنازل الرائعة أمامهم متراصة على الشوارع ومصممة جميعها من الرخام الأخضر المرصع بالزمرّد البرّاق. ساروا على رصيف من الرخام الأخضر نفسه حيث تلتقي المباني الضخمة على صفوف من الزمرد المتلألئ تحت أشعة الشمس الساطعة. كانت ألواح النوافذ الزجاجية خضراء هي أيضًا، حتى أنّ السماء وأشعة الشمس تلوّنت بالأخضر الفاتح. \n\nرأوا الكثير من الرجال والنساء والأطفال يجوبون الشوارع وجميعهم في ثياب خضراء فوق بشرة تميل إلى الأخضر. نظروا إلى دورثي ورفاقها الغريبين بتعجب، في حين أنّ الأطفال اختبأوا وراء أمهاتهم خائفين من الأسد، ولكن لم يتحدث معهم أحد. اصطفّت في الشارع المتاجر الخضراء ولاحظت دورثي أنّ كل ما فيها كان أخضر، من الحلوى الخضراء والفشار الأخضر إلى الأحذية والقبعات والملابس الخضراء. وفي أحد الأركان، وقف رجل يبيع الليموناضة الخضراء ورأت دورثي أنّ الأطفال كانوا يشترون العصير منه بعملة خضراء هي أيضًا. \n\nخلت الشوارع من الأحصنة أو أي نوع آخر من الحيوانات، وكان الرجال ينقلون أمتعتهم في عربات خضراء صغيرة يدفعونها أمامهم. وبدت ملامح السعادة والارتياح على وجوه الجميع."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"اختيار الصيغة"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"تلقائي"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"يدوي"</string>
@@ -185,9 +176,9 @@
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+‎"</string>
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
-    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"عند اختيار الزر، سيسمح النظام للتطبيقات باختيار أي صيغة من صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع سلسلة جهازك. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
-    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"عند اختيار الزر، يمكنك يدويًا إيقاف صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع سلسلة جهازك والتي تسبّب مشاكل في التشغيل. لا يمكن يدويًا تفعيل صيغ \"النطاق العالي الديناميكية\" (HDR) غير المتوافقة مع سلسلة جهازك. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
-    <string name="hdr_format_info" msgid="5652559220799426076">"معلومات الصيغ"</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"عند اختيار الزر، سيسمح النظام للتطبيقات باختيار أي صيغة من صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع شاشة العرض. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"عند اختيار الزر، يمكنك يدويًا إيقاف صيغ \"النطاق العالي الديناميكية\" (HDR) المتوافقة مع شاشة العرض والتي تسبّب مشاكل في التشغيل. لا يمكن يدويًا تفعيل صيغ \"النطاق العالي الديناميكية\" (HDR) غير المتوافقة مع شاشة العرض. وقد تختار التطبيقات صيغة ليست الأعلى جودة."</string>
+    <string name="hdr_format_info" msgid="5652559220799426076">"معلومات الصيغة"</string>
     <string name="hdr_show_formats" msgid="171065892975445851">"عرض الصيغ"</string>
     <string name="hdr_hide_formats" msgid="8561568998525727230">"إخفاء الصيغ"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"الصيغ المفعَّلة"</string>
@@ -244,7 +235,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"متّصل"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"غير متّصل"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"ليست لديك أذونات لتغيير إعدادات بلوتوث."</string>
-    <string name="send_feedback" msgid="936698637869795473">"إرسال ملاحظات"</string>
+    <string name="send_feedback" msgid="936698637869795473">"إرسال تعليق"</string>
     <string name="launch_help" msgid="2607478763131952469">"مركز المساعدة"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
     <string name="system_date_time" msgid="5922833592234018667">"التاريخ والوقت"</string>
@@ -375,7 +366,6 @@
       <item quantity="other">تطبيقات الهاتف</item>
       <item quantity="one">تطبيق الهاتف</item>
     </plurals>
-    <string name="default_browser_title" msgid="3612813200586492159">"تطبيق المتصفّح"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>، <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"برامج تعليمية"</string>
@@ -386,7 +376,7 @@
     <string name="device_name" msgid="566626587332817733">"اسم الجهاز"</string>
     <string name="restart_button_label" msgid="911750765086382990">"إعادة التشغيل"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"المعلومات القانونية"</string>
-    <string name="about_legal_license" msgid="4056934178111674054">"رمز المصدر من الجهة الخارجية"</string>
+    <string name="about_legal_license" msgid="4801707286720681261">"تراخيص البرامج المفتوحة المصدر"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"معلومات قانونية من Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"بيانات الترخيص غير متاحة"</string>
     <string name="about_model" msgid="9164284529291439296">"الطراز"</string>
@@ -472,9 +462,6 @@
     <string name="license_title" msgid="4032466200355435641">"الترخيص"</string>
     <string name="terms_title" msgid="192888187310800678">"الأحكام والشروط"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"ترخيص WebView للنظام"</string>
-    <string name="consumer_information_title" msgid="7729729568416672733">"معلومات المستهلك"</string>
-    <string name="consumer_information_message" msgid="205236637689468764">"يقدِّم المحتوى المتوفّر على Android TV شركاء خارجيون مثل مطوّري التطبيقات واستوديوهات الأفلام، فضلاً عن شركة Google نفسها. للحصول على المزيد من المعلومات، يُرجى الاطّلاع على "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>"."</string>
-    <string name="consumer_information_button_ok" msgid="6979480064600038080">"حسنًا"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"ضعيفة"</item>
     <item msgid="2098818614362343532">"متوسطة"</item>
@@ -677,22 +664,6 @@
     <item msgid="5645263357181875427">"استخدام وقت بث النقل"</item>
     <item msgid="5501503537181350884">"إيقاف"</item>
   </string-array>
-    <string name="sensor_toggle_description" msgid="7415801459994303159">"لكل التطبيقات والخدمات"</string>
-    <string name="recently_accessed_by_category" msgid="6841705864715653428">"تطبيقات حصلت مؤخّرًا على إذن بالوصول"</string>
-    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"لم يُمنح أي تطبيق الإذن بالوصول مؤخرًا."</string>
-    <string name="recently_accessed_show_all" msgid="5234849189704717855">"عرض الكل"</string>
-    <string name="microphone" msgid="7893752847683941214">"الميكروفون"</string>
-    <string name="mic_toggle_title" msgid="7193417007060235665">"الوصول إلى الميكروفون"</string>
-    <string name="open_mic_permissions" msgid="8121871594807641073">"إذن وصول التطبيق إلى الميكروفون"</string>
-    <string name="camera" msgid="1226671478936288283">"الكاميرا"</string>
-    <string name="camera_toggle_title" msgid="5566469574224956142">"الوصول إلى الكاميرا"</string>
-    <string name="open_camera_permissions" msgid="301360297337141591">"إذن وصول التطبيق إلى الكاميرا"</string>
-    <string name="mic_toggle_info_title" msgid="1086545614315873599">"الوصول إلى الميكروفون: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4699624900513326055">"في حال تشغيل الميكروفون، ستتمكن التطبيقات والخدمات التي لديها إذن من الوصول إلى أي ميكروفون على هذا الجهاز.\n\nأما الأجهزة الصوتية الملحقة المزوّدة ببروتوكول مخصّص، فلن تتأثّر بهذا الإعداد."</string>
-    <string name="camera_toggle_info_title" msgid="3871317082313736088">"الوصول إلى الكاميرا: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="2999965953853204003">"في حال تشغيل الكاميرا، ستتمكن التطبيقات والخدمات التي لديها إذن من الوصول إلى أي كاميرا على هذا الجهاز.\n\nأما الأجهزة الملحقة بالكاميرا المزوّدة ببروتوكول مخصّص، فلن تتأثّر بهذا الإعداد."</string>
-    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"مفعّل"</string>
-    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"غير مفعّل"</string>
     <string name="system_location" msgid="4057295363709016511">"الموقع الجغرافي"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"السماح للتطبيقات التي طلبت الحصول على إذن منك باستخدام معلومات موقعك"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"موافقة الموقع"</string>
@@ -984,7 +955,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"لم يتم ضبط إعدادات تلقائية"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"محو ذاكرة التخزين المؤقت"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"الإشعارات"</string>
-    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"رمز المصدر من الجهة الخارجية"</string>
+    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"تراخيص البرامج المفتوحة المصدر"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"الأذونات"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"التطبيق غير متاح"</string>
     <string name="settings_ok" msgid="5950888975075541964">"موافقة"</string>
@@ -993,7 +964,7 @@
     <string name="settings_on" msgid="7734010120323404333">"تفعيل"</string>
     <string name="settings_off" msgid="4060451657850476369">"إيقاف"</string>
     <string name="device_daydreams_none" msgid="3405655350757277348">"إيقاف الشاشة"</string>
-    <string name="device_daydreams_select" msgid="7203264446482623438">"شاشة الاستراحة"</string>
+    <string name="device_daydreams_select" msgid="7203264446482623438">"شاشة التوقف"</string>
     <string name="device_daydreams_test" msgid="7828275397550076567">"البدء الآن"</string>
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"وقت البدء"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"يبدأ عرض شاشة التوقف بعد مرور هذه الفترة من عدم النشاط. فإذا لم يتم اختيار أي شاشة توقف، يتم إيقاف شاشة الجهاز."</string>
@@ -1071,10 +1042,9 @@
     <string name="write_settings_on" msgid="71675710746513956">"نعم"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"لا"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"نافذة ضمن نافذة"</string>
-    <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"السماح بعرض نافذة ضمن النافذة"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"السماح بعرض نافذة ضمن نافذة"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"ليست هناك تطبيقات مثبَّتة تتيح عرض نافذة ضمن نافذة."</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"يمكنك السماح للتطبيقات بإنشاء نافذة ضمن نافذة أثناء استخدامها أو بعد مغادرتها (مثلاً لمواصلة مشاهدة فيديو). وستظهر هذه النافذة فوق التطبيقات الأخرى التي تستخدمها."</string>
-    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"يمكنك السماح للتطبيقات بضبط المنبّهات وتحديد موعد لتنفيذ الإجراءات العاجلة. يسمح هذا الأذن بتشغيل التطبيقات في الخلفية، ما قد يستهلك المزيد من الطاقة.\n\nإذا لم يتم منح هذا الإذن، لن تعمل المنبّهات الحالية والأحداث المستندة إلى وقت حدَّده التطبيق."</string>
     <string name="special_access" msgid="21806055758289916">"وصول خاص إلى التطبيقات"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>، <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"الصوت"</string>
