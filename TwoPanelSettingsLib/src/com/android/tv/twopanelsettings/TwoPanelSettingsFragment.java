@@ -608,7 +608,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         transaction.setCustomAnimations(R.animator.fade_in_preview_panel,
                 R.animator.fade_out_preview_panel);
         transaction.replace(frameResIds[mPrefPanelIdx + 1], previewFragment);
-        transaction.commit();
+        transaction.commitNow();
 
         // Some fragments may steal focus on creation. Reclaim focus on main fragment.
         if (getView() != null && getView().getViewTreeObserver() != null) {
@@ -638,7 +638,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         super.onResume();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("com.android.tv.settings.PREVIEW_DELAY");
-        getContext().registerReceiver(mPreviewPanelDelayReceiver, intentFilter);
+        getContext().registerReceiver(mPreviewPanelDelayReceiver, intentFilter,
+                Context.RECEIVER_EXPORTED_UNAUDITED);
         // Trap back button presses
         final TwoPanelSettingsRootView rootView = (TwoPanelSettingsRootView) getView();
         if (rootView != null) {

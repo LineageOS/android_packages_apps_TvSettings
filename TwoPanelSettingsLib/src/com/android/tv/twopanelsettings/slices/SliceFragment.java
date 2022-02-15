@@ -144,14 +144,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             ContextSingleton.getInstance().grantFullAccess(getContext(), Uri.parse(mUriString));
             getSliceLiveData().observe(this, this);
         }
+        if (TextUtils.isEmpty(mScreenTitle)) {
+            mScreenTitle = getArguments().getCharSequence(SlicesConstants.TAG_SCREEN_TITLE, "");
+        }
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public void onResume() {
-        if (TextUtils.isEmpty(mScreenTitle)) {
-            mScreenTitle = getArguments().getCharSequence(SlicesConstants.TAG_SCREEN_TITLE, "");
-        }
         super.onResume();
         if (!TextUtils.isEmpty(mUriString)) {
             getContext().getContentResolver().registerContentObserver(
@@ -299,7 +299,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         for (SliceContent contentItem : items) {
             SliceItem item = contentItem.getSliceItem();
             if (SlicesConstants.TYPE_PREFERENCE.equals(item.getSubType())
-                    || SlicesConstants.TYPE_PREFERENCE_CATEGORY.equals(item.getSubType())) {
+                    || SlicesConstants.TYPE_PREFERENCE_CATEGORY.equals(item.getSubType())
+                    || SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER.equals(
+                            item.getSubType())) {
                 Preference preference =
                         SlicePreferencesUtil.getPreference(
                                 item, mContextThemeWrapper, getClass().getCanonicalName(),
@@ -384,16 +386,20 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     }
 
     private void updatePreferenceScreen(PreferenceScreen screen, List<Preference> newPrefs) {
-        // Remove all the preferences in the screen that satisfy such two cases:
+        // Remove all the preferences in the screen that satisfy such three cases:
         // (a) Preference without key
         // (b) Preference with key which does not appear in the new list.
+        // (c) Preference with key which does appear in the new list, but the preference has changed
+        // ability to handle slices and needs to be replaced instead of re-used.
         int index = 0;
         while (index < screen.getPreferenceCount()) {
             boolean needToRemoveCurrentPref = true;
             Preference oldPref = screen.getPreference(index);
             if (oldPref != null && oldPref.getKey() != null) {
                 for (Preference newPref : newPrefs) {
-                    if (newPref.getKey() != null && newPref.getKey().equals(oldPref.getKey())) {
+                    if (newPref.getKey() != null && newPref.getKey().equals(oldPref.getKey())
+                            && (newPref instanceof HasSliceUri)
+                            == (oldPref instanceof HasSliceUri)) {
                         needToRemoveCurrentPref = false;
                         break;
                     }
@@ -423,7 +429,13 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             if (newPref.getKey() != null) {
                 for (int j = 0; j < screen.getPreferenceCount(); j++) {
                     Preference oldPref = screen.getPreference(j);
-                    if (oldPref.getKey() != null && oldPref.getKey().equals(newPref.getKey())) {
+                    // EmbeddedSlicePreference has its own slice observer
+                    // (EmbeddedSlicePreferenceHelper). Should therefore not be updated by
+                    // slice observer in SliceFragment.
+                    boolean allowUpdate = !(oldPref instanceof EmbeddedSlicePreference);
+                    boolean sameKey = oldPref.getKey() != null
+                            && oldPref.getKey().equals(newPref.getKey());
+                    if (allowUpdate && sameKey) {
                         oldPref.setIcon(newPref.getIcon());
                         oldPref.setTitle(newPref.getTitle());
                         oldPref.setSummary(newPref.getSummary());
@@ -441,7 +453,15 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                             ((HasSliceUri) oldPref)
                                     .setUri(((HasSliceUri) newPref).getUri());
                         }
+                        if ((oldPref instanceof HasCustomContentDescription)
+                                && (newPref instanceof HasCustomContentDescription)) {
+                            ((HasCustomContentDescription) oldPref).setContentDescription(
+                                    ((HasCustomContentDescription) newPref)
+                                            .getContentDescription());
+                        }
                         oldPref.setOrder(i);
+                    }
+                    if (sameKey) {
                         neededToAddNewPref = false;
                         break;
                     }

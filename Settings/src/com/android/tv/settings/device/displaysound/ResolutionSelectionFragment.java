@@ -119,7 +119,8 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
 
         createPreferences();
 
-        mUserPreferredModeIndex = lookupModeIndex(mDisplayManager.getUserPreferredDisplayMode());
+        mUserPreferredModeIndex = lookupModeIndex(
+                mDisplayManager.getGlobalUserPreferredDisplayMode());
         if (mUserPreferredModeIndex != -1) {
             selectRadioPreference(findPreference(KEY_RESOLUTION_PREFIX + mUserPreferredModeIndex));
         } else {
@@ -179,13 +180,14 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
             selectRadioPreference(preference);
 
             Display.Mode newMode = null;
-            Display.Mode previousMode = mDisplayManager.getUserPreferredDisplayMode();
+            Display.Mode previousMode =
+                    mDisplayManager.getGlobalUserPreferredDisplayMode();
             if (key.equals(KEY_RESOLUTION_SELECTION_AUTO)) {
-                mDisplayManager.clearUserPreferredDisplayMode();
+                mDisplayManager.clearGlobalUserPreferredDisplayMode();
             } else if (key.contains(KEY_RESOLUTION_PREFIX)) {
                 int modeIndex = Integer.valueOf(key.substring(KEY_RESOLUTION_PREFIX.length()));
                 newMode = mModes[modeIndex];
-                mDisplayManager.setUserPreferredDisplayMode(newMode);
+                mDisplayManager.setGlobalUserPreferredDisplayMode(newMode);
             }
             // Show the dialog after a delay of 1 second. If the dialog or any UX
             // is shown when the resolution change is under process, the dialog is lost.
@@ -218,10 +220,10 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         int modeIndex = lookupModeIndex(mode);
         if (modeIndex != -1) {
             selectRadioPreference(findPreference(KEY_RESOLUTION_PREFIX + modeIndex));
-            mDisplayManager.setUserPreferredDisplayMode(mode);
+            mDisplayManager.setGlobalUserPreferredDisplayMode(mode);
         } else {
             selectRadioPreference(findPreference(KEY_RESOLUTION_SELECTION_AUTO));
-            mDisplayManager.clearUserPreferredDisplayMode();
+            mDisplayManager.clearGlobalUserPreferredDisplayMode();
         }
     }
 

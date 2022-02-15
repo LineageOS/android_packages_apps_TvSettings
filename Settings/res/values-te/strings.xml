@@ -195,6 +195,7 @@
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"సరే"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"కాష్ చేసిన డేటాను తీసివేయాలా?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"ఇది అన్ని అను. కాష్ చేసిన డేటాను తీసివేస్తుంది."</string>
+    <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
     <string name="accessories_add" msgid="413764175035531452">"ఉపకరణాన్ని జోడించండి"</string>
     <string name="accessory_state_pairing" msgid="15908899628218319">"జత చేస్తోంది..."</string>
     <string name="accessory_state_connecting" msgid="6560241025917621212">"కనెక్ట్ అవుతోంది…"</string>
@@ -740,7 +741,7 @@
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP తనిఖీ"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI అనుకూలీకరణ"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"ఇప్పుడే రీస్టార్ట్ చేయాలా?"</string>
-    <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"ఈ సెట్టింగ్‌ను నవీకరించడానికి, మీ పరికరాన్ని పునఃప్రారంభించాలి"</string>
+    <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"ఈ సెట్టింగ్‌ను అప్‌డేట్ చేయడానికి, మీ పరికరాన్ని పునఃప్రారంభించాలి"</string>
     <string name="system_never_check" msgid="2860070727606369055">"ఎప్పటికీ తనిఖీ చేయవద్దు"</string>
     <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"DRM కంటెంట్‌కు మాత్రమే తనిఖీ చేయి"</string>
     <string name="system_always_check" msgid="384870282800221580">"ఎల్లప్పుడూ తనిఖీ చేయి"</string>
@@ -930,6 +931,8 @@
     <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"థర్డ్-పార్టీ సోర్స్"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"అనుమతులు"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"యాప్‌ అందుబాటులో లేదు"</string>
+    <string name="unused_apps_switch" msgid="6174734963758039346">"అనుమతులను తీసివేసి స్పేస్‌ను ఖాళీ చేయండి"</string>
+    <string name="unused_apps" msgid="5539166745483454543">"ఉపయోగించని యాప్‌లు"</string>
     <string name="settings_ok" msgid="5950888975075541964">"సరే"</string>
     <string name="settings_confirm" msgid="4489126458677153411">"నిర్ధారించండి"</string>
     <string name="settings_cancel" msgid="576094334743686152">"రద్దు చేయి"</string>
@@ -1010,9 +1013,12 @@
     <string name="allow_overlay_description" msgid="5152329837278240259">"మీరు ఉపయోగించే ఇతర యాప్‌లలో ఎగువ భాగంలో కనిపించడం కోసం ఒక యాప్‌ని అనుమతించండి. మీరు ఆ యాప్‌లను ఉపయోగించే సమయంలో ఇది అంతరాయం కలిగించవచ్చు లేదా అవి కనిపించే లేదా ప్రవర్తించే తీరును మార్చవచ్చు."</string>
     <string name="write_system_settings" msgid="4284654265954461890">"సిస్టమ్ సెట్టింగ్‌ల సవరణ"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"సిస్టమ్ సెట్టింగ్‌లను సవరించగలవు"</string>
-    <string name="write_settings_description" msgid="7382397926674265937">"ఈ అనుమతి సిస్టమ్ సెట్టింగ్‌లను సవరించడానికి యాప్‌ని అనుమతిస్తుంది."</string>
+    <string name="write_settings_description" msgid="7382397926674265937">"ఈ అనుమతి సిస్టమ్ సెట్టింగ్‌లను ఎడిట్ చేయడానికి యాప్‌ని అనుమతిస్తుంది."</string>
     <string name="write_settings_on" msgid="71675710746513956">"అవును"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"లేదు"</string>
+    <string name="manage_external_storage_title" msgid="8139593207533811077">"అన్ని ఫైళ్లకు యాక్సెస్"</string>
+    <string name="permit_manage_external_storage" msgid="1776899171934627417">"అన్ని ఫైళ్లను మేనేజ్‌ చేయడానికి అనుమతించండి"</string>
+    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"ఈ పరికరంలో, లేదా కనెక్ట్ చేయబడిన ఏవైనా స్టోరేజ్ వాల్యూమ్‌లలో, అన్ని ఫైళ్లను చదవడానికి, మార్చడానికి, తొలగించడానికి ఈ యాప్‌నకు అనుమతిని ఇవ్వండి. అటువంటి అనుమతిని మీరు మంజూరు చేస్తే, మీకు ప్రత్యేకంగా తెలియపరచకుండానే మీ ఫైళ్లను యాప్, యాక్సెస్ చేయవచ్చు."</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"చిత్రంలో చిత్రం"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"చిత్రంలో చిత్రాన్ని అనుమతించు"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"చిత్రంలో చిత్రానికి మద్దతిచ్చే యాప్‌లు ఏమీ ఇన్‌స్టాల్ చేయబడలేదు"</string>
@@ -1073,9 +1079,9 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"అన్నీ చూపించు"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"వెతుకుతోంది"</string>
-    <string name="channels_and_inputs_title" msgid="7484506121290830217">"ఛానెల్‌లు &amp; ఇన్‌పుట్‌లు"</string>
-    <string name="channels_and_inputs_summary" msgid="3168386051698084007">"ఛానెల్‌లు, బాహ్య ఇన్‌పుట్‌లు"</string>
-    <string name="channels_settings_title" msgid="8048956665383762510">"ఛానెల్‌లు"</string>
+    <string name="channels_and_inputs_title" msgid="7484506121290830217">"ఛానెళ్లు &amp; ఇన్‌పుట్‌లు"</string>
+    <string name="channels_and_inputs_summary" msgid="3168386051698084007">"ఛానెళ్లు, బాహ్య ఇన్‌పుట్‌లు"</string>
+    <string name="channels_settings_title" msgid="8048956665383762510">"ఛానెళ్లు"</string>
     <string name="external_inputs_settings_title" msgid="8937038060355986380">"బాహ్య ఇన్‌పుట్‌లు"</string>
     <string name="display_and_sound_vendor_summary" msgid="7661072343315403110">"పిక్చర్, స్క్రీన్, సౌండ్"</string>
     <string name="picture_settings_title" msgid="7643193630924322697">"పిక్చర్"</string>

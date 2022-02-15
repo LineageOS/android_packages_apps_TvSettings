@@ -252,6 +252,18 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
                     decor.setBackgroundResource(R.color.tp_preference_panel_background_color);
                 }
             }
+            removeAnimationClipping(view);
+        }
+    }
+
+    protected void removeAnimationClipping(View v) {
+        if (v instanceof ViewGroup) {
+            ((ViewGroup) v).setClipChildren(false);
+            ((ViewGroup) v).setClipToPadding(false);
+            for (int index = 0; index < ((ViewGroup) v).getChildCount(); index++) {
+                View child = ((ViewGroup) v).getChildAt(index);
+                removeAnimationClipping(child);
+            }
         }
     }
 
@@ -285,6 +297,19 @@ public abstract class PreferenceControllerFragmentCompat extends LeanbackPrefere
                 return vh;
             }
         };
+    }
+
+    @Override
+    public void onDisplayPreferenceDialog(Preference preference) {
+        if (getActivity() instanceof HasSettingsManager) {
+            if (mState == null || (!(preference instanceof HasKeys))) {
+                super.onDisplayPreferenceDialog(preference);
+                return;
+            }
+            mSettingsManager.onDisplayPreferenceDialog(mState, ((HasKeys) preference).getKeys());
+            return;
+        }
+        super.onDisplayPreferenceDialog(preference);
     }
 }
 

@@ -69,7 +69,8 @@ public final class ManagerUtil {
     public static final int STATE_SENSOR = 38;
     public static final int STATE_PRIVACY = 39;
     public static final int STATE_RESOLUTION_SELECTION = 40;
-
+    public static final int STATE_DEVELOPMENT = 41;
+    public static final int STATE_LEGAL = 42;
     public static final String KEY_KEYBOARD_SETTINGS = "autofillSettings";
     public static final String INFO_INTENT = "intent";
     public static final String INFO_WIFI_SIGNAL_LEVEL = "wifi_signal_level";

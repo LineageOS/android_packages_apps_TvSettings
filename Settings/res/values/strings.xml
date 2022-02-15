@@ -92,10 +92,11 @@
     <!-- Summary for main screen preference for accounts on device indicates no account is signed in[CHAR LIMIT=50] -->
     <string name="accounts_category_summary_no_account">No accounts</string>
     <!-- Summary for main screen preference for accounts on device indicates several accounts are signed in[CHAR LIMIT=50] -->
-    <plurals name="accounts_category_summary">
-        <item quantity="one"><xliff:g id="accounts_number">%1$d</xliff:g> account</item>
-        <item quantity="other"><xliff:g id="accounts_number">%1$d</xliff:g> accounts</item>
-    </plurals>
+    <string name="accounts_category_summary"> {count, plural,
+        =1    {# account}
+        other {# accounts}
+        }
+    </string>
     <!-- Summary for main screen preference for accounts on device slice [CHAR LIMIT=75] -->
     <string name="accounts_slice_summary">Media services, Assistant, Payments</string>
     <!-- Title for main screen preference for network and Internet [CHAR LIMIT=50] -->
@@ -108,13 +109,6 @@
     <string name="device_pref_category_title">Device Preferences</string>
     <!-- Title for main screen preference for remote and accessories [CHAR_LIMIT_50] -->
     <string name="remotes_and_accessories_category_title">Remotes &amp; accessories</string>
-    <!-- Summary for main screen preference for remote and accessories indicates no bluetooth device is connected [CHAR LIMIT=50] -->
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device">No connected Bluetooth devices</string>
-    <!-- Summary for main screen preference for remote and accessories indicates more than one devices connected[CHAR LIMIT=50] -->
-    <plurals name="remotes_and_accessories_category_summary">
-        <item quantity="one"><xliff:g id="accessories_number">%1$d</xliff:g> accessory</item>
-        <item quantity="other"><xliff:g id="accessories_number">%1$d</xliff:g> accessories</item>
-    </plurals>
     <!-- Title for main screen preference for display & sound [CHAR LIMIT=50] -->
     <string name="display_and_sound_category_title">Display &amp; Sound</string>
     <!-- Title for main screen preference for help and feedback [CHAR LIMIT=50] -->
@@ -674,11 +668,6 @@
     <!-- Summary of preference to manage device admin apps, informing the user that currently no device admin apps are installed and active -->
     <string name="number_of_device_admins_none">No active apps</string>
 
-    <!-- Summary of preference to manage device admin apps, informing the user how many device admin apps are installed and active -->
-    <plurals name="number_of_device_admins">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> active app</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> active apps</item>
-    </plurals>
 
     <!-- Summary for preference that has been disabled by because of the DevicePolicyAdmin, or because device encryption is enabled, or because there are credentials in the credential storage [CHAR LIMIT=50] -->
     <string name="unlock_set_unlock_disabled_summary">Disabled by admin, encryption policy, or
@@ -719,10 +708,11 @@
     <!-- Label explaining that the number of apps is an estimation. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_apps_count_estimation_info">Number of apps is estimated. It may not include apps installed outside of the Play Store.</string>
     <!-- Summary indicating the number of apps that a label (e.g. installed apps or apps granted a particular permission) refers to. The number shown is a minimum as there may be additional apps we do not know about. [CHAR LIMIT=NONE] -->
-    <plurals name="enterprise_privacy_number_packages_lower_bound">
-        <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> app</item>
-        <item quantity="other">Minimum <xliff:g id="count">%d</xliff:g> apps</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound"> {count, plural,
+        =1    {Minimum # app}
+        other {Minimum # apps}
+        }
+    </string>
     <!-- Label indicating that the admin granted one or more apps access to the device's location. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_location_access">Location permissions</string>
     <!-- Label indicating that the admin granted one or more apps access to the microphone. [CHAR LIMIT=NONE] -->
@@ -732,10 +722,11 @@
     <!-- Label indicating that the admin set one or more apps as defaults for common actions (e.g. open browser, send e-mail). [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_enterprise_set_default_apps">Default apps</string>
     <!-- Summary indicating the number of apps that a label (e.g. installed apps or apps granted a particular permission) refers to. [CHAR LIMIT=NONE] -->
-    <plurals name="enterprise_privacy_number_packages">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> app</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> apps</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages"> {count, plural,
+        =1    {# app}
+        other {# apps}
+        }
+    </string>
     <!-- Label explaining that the current input method was set by the admin. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_input_method">Default keyboard</string>
     <!-- Summary indicating the input method set by the admin. [CHAR LIMIT=NONE] -->
@@ -755,10 +746,11 @@
     <!-- Label explaining that the admin installed trusted CA certificates in work profile. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_ca_certs_work">Trusted credentials in your work profile</string>
     <!-- Summary indicating the number of trusted CA certificates installed by the admin. The number shown is a minimum as there may be additional CA certificates we do not know about. [CHAR LIMIT=NONE] -->
-    <plurals name="enterprise_privacy_number_ca_certs">
-        <item quantity="one">Minimum <xliff:g id="count">%d</xliff:g> CA certificate</item>
-        <item quantity="other">Minimum <xliff:g id="count">%d</xliff:g> CA certificates</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs"> {count, plural,
+        =1    {# CA certificate}
+        other {# CA certificates}
+        }
+    </string>
     <!-- Label explaining that the admin can lock the device and change the user's password. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_lock_device">Admin can lock the device and reset password</string>
     <!-- Label explaining that the admin can wipe the device remotely. [CHAR LIMIT=NONE] -->
@@ -768,10 +760,11 @@
     <!-- Label explaining that the admin configured the work profile to wipe itself when the password is mistyped too many times. [CHAR LIMIT=NONE] -->
     <string name="enterprise_privacy_failed_password_wipe_work">Failed password attempts before deleting work profile data</string>
     <!-- Summary indicating the number of mistyped passwords after which the device or work profile wipes itself. [CHAR LIMIT=NONE] -->
-    <plurals name="enterprise_privacy_number_failed_password_wipe">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> attempt</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> attempts</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe"> {count, plural,
+        =1    {# attempt}
+        other {# attempts}
+        }
+    </string>
     <!-- Message indicating that the device is enterprise-managed by a Device Owner [CHAR LIMIT=NONE] -->
     <string name="do_disclosure_generic">This device is managed by your organization.</string>
     <!-- Message indicating that the device is enterprise-managed by a Device Owner [CHAR LIMIT=NONE] -->
@@ -783,26 +776,29 @@
 
     <!-- Strings for displaying which applications were set as default for specific actions. -->
     <!-- Title for the apps that have been set as default handlers of camera-related intents. [CHAR LIMIT=30] -->
-    <plurals name="default_camera_app_title">
-        <item quantity="one">Camera app</item>
-        <item quantity="other">Camera apps</item>
-    </plurals>
+    <string name="default_camera_app_title"> {count, plural,
+        =1    {Camera app}
+        other {Camera apps}
+        }
+    </string>
     <!-- Title for the app that has been set as default handler of calendar-related intents. [CHAR LIMIT=30] -->
     <string name="default_calendar_app_title">Calendar app</string>
     <!-- Title for the app that has been set as default handler of contacts-related intents. [CHAR LIMIT=30] -->
     <string name="default_contacts_app_title">Contacts app</string>
     <!-- Title for the apps that have been set as default handlers of new email intents. [CHAR LIMIT=30] -->
-    <plurals name="default_email_app_title">
-        <item quantity="one">Email client app</item>
-        <item quantity="other">Email client apps</item>
-    </plurals>
+    <string name="default_email_app_title"> {count, plural,
+        =1    {Email client app}
+        other {Email client apps}
+        }
+    </string>
     <!-- Title for the app that has been set as default handler of geo-related intents. [CHAR LIMIT=30] -->
     <string name="default_map_app_title">Map app</string>
     <!-- Title for the apps that have been set as default handlers of call-related intents. [CHAR LIMIT=30] -->
-    <plurals name="default_phone_app_title">
-        <item quantity="one">Phone app</item>
-        <item quantity="other">Phone apps</item>
-    </plurals>
+    <string name="default_phone_app_title"> {count, plural,
+        =1    {Phone app}
+        other {Phone apps}
+        }
+    </string>
     <!-- Title for Default Browser settings [CHAR LIMIT=30] -->
     <string name="default_browser_title">Browser app</string>
     <!-- Template for concatenating two app names -->
@@ -849,10 +845,11 @@
     <!-- Preference which shows build version. [CHAR LIMIT=50] -->
     <string name="about_build">Android TV OS build</string>
     <!-- Device Info screen. Countdown for user taps to enable development settings [CHAR LIMIT=NONE] -->
-    <plurals name="show_dev_countdown">
-        <item quantity="one">You are now <xliff:g id="step_count">%1$d</xliff:g> step away from being a developer</item>
-        <item quantity="other">You are now <xliff:g id="step_count">%1$d</xliff:g> steps away from being a developer</item>
-    </plurals>
+    <string name="show_dev_countdown"> {count, plural,
+        =1    {You are now # step away from being a developer}
+        other {You are now # steps away from being a developer}
+        }
+    </string>
     <!-- Preference which shows ads settings. [CHAR LIMIT=50] -->
     <string name="about_ads">Ads</string>
     <!-- Ads info description outlining the Ads settings options [CHAR LIMIT=NONE] -->
@@ -888,27 +885,11 @@
     <!-- Button to close the SSL CA cert warning dialog box, meaning the user is done reading.  [CHAR LIMIT=NONE] -->
     <string name="done_button">Done</string>
     <!-- Title of Dialog warning users of SSL monitoring. [CHAR LIMIT=NONE] -->
-    <plurals name="ssl_ca_cert_dialog_title">
-        <item quantity="one">Trust or remove certificate</item>
-        <item quantity="other">Trust or remove certificates</item>
-    </plurals>
-    <!-- Text of message to show to device owner user whose administrator has installed a SSL CA Cert.  [CHAR LIMIT=NONE] -->
-    <plurals name="ssl_ca_cert_info_message_device_owner">
-        <item quantity="one"><xliff:g id="managing_domain">%s</xliff:g> has installed a certificate authority on your device, which may allow them to monitor your device network activity, including emails, apps, and secure websites.\n\nFor more information about this certificate, contact your admin.</item>
-        <item quantity="other"><xliff:g id="managing_domain">%s</xliff:g> has installed certificate authorities on your device, which may allow them to monitor your device network activity, including emails, apps, and secure websites.\n\nFor more information about these certificates, contact your admin.</item>
-    </plurals>
-    <!-- Text of message to show to work profile users whose administrator has installed a SSL CA Cert.  [CHAR LIMIT=NONE] -->
-    <plurals name="ssl_ca_cert_info_message">
-        <item quantity="one"><xliff:g id="managing_domain">%s</xliff:g> has installed a certificate authority for your work profile, which may allow them to monitor work network activity, including emails, apps, and secure websites.\n\nFor more information about this certificate, contact your admin.</item>
-        <item quantity="other"><xliff:g id="managing_domain">%s</xliff:g> has installed certificate authorities for your work profile, which may allow them to monitor work network activity, including emails, apps, and secure websites.\n\nFor more information about these certificates, contact your admin.</item>
-    </plurals>
-    <!-- Text of warning to show to users that have a SSL CA Cert installed.  [CHAR LIMIT=NONE] -->
-    <string name="ssl_ca_cert_warning_message">A third party is capable of monitoring your network activity, including emails, apps, and secure websites.\n\nA trusted credential installed on your device is making this possible.</string>
-    <!-- Label on button that will take the user to the Trusted Credentials settings page.  [CHAR LIMIT=NONE]-->
-    <plurals name="ssl_ca_cert_settings_button">
-        <item quantity="one">Check certificate</item>
-        <item quantity="other">Check certificates</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title"> {count, plural,
+        =1    {Trust or remove certificate}
+        other {Trust or remove certificates}
+        }
+    </string>
 
     <!-- About screen, title of the item to go into the device status screen -->
     <string name="device_status">Status</string>
@@ -1967,20 +1948,23 @@
     <!-- Description of TV auto power on [CHAR LIMIT=50] -->
     <string name="inputs_tv_auto_on_desc">Power on the TV with HDMI device</string>
     <!-- Header for connected TV input(s) [CHAR LIMIT=30] -->
-    <plurals name="inputs_header_connected_input">
-        <item quantity="one">Connected Input</item>
-        <item quantity="other">Connected Inputs</item>
-    </plurals>
+    <string name="inputs_header_connected_input"> {count, plural,
+        =1    {Connected Input}
+        other {Connected Inputs}
+        }
+    </string>
     <!-- Header for standby TV input(s) [CHAR LIMIT=30] -->
-    <plurals name="inputs_header_standby_input">
-        <item quantity="one">Standby Input</item>
-        <item quantity="other">Standby Inputs</item>
-    </plurals>
+    <string name="inputs_header_standby_input"> {count, plural,
+        =1    {Standby Input}
+        other {Standby Inputs}
+        }
+    </string>
     <!-- Header for disconnected TV input(s) [CHAR LIMIT=30] -->
-    <plurals name="inputs_header_disconnected_input">
-        <item quantity="one">Not Connected Input</item>
-        <item quantity="other">Not Connected Inputs</item>
-    </plurals>
+    <string name="inputs_header_disconnected_input"> {count, plural,
+        =1    {Not Connected Input}
+        other {Not Connected Inputs}
+        }
+    </string>
 
     <!-- Summary for add restricted profile entry in the choice dialog [CHAR LIMIT=none] -->
     <string name="user_add_profile_item_summary">Restrict access to apps and other content in your account</string>
@@ -2008,11 +1992,6 @@
     <string name="restricted_profile_configure_title" >Settings</string>
     <!-- Title for action to configure apps for a restricted profile [CHAR LIMIT=100] -->
     <string name="restricted_profile_configure_apps_title" >Allowed apps</string>
-    <!-- Description for action to configure apps for a restricted profile indicating number of allow apps will be ready in a moment [CHAR LIMIT=100] -->
-    <plurals name="restricted_profile_configure_apps_description">
-        <item quantity="one">1 app allowed</item>
-        <item quantity="other">%d apps allowed</item>
-    </plurals>
     <!-- An action label indicating the package will be or is allowed [CHAR LIMIT=100] -->
     <string name="restricted_profile_allowed" >Allowed</string>
     <!-- An action label indicating the package will be or is not allowed [CHAR LIMIT=100] -->
@@ -2316,6 +2295,14 @@
     <!-- Summary of app not allowed to write system settings [CHAR LIMIT=45] -->
     <string name="write_settings_off">No</string>
 
+    <!-- Manage External Storage settings title [CHAR LIMIT=40] -->
+    <string name="manage_external_storage_title">All files access</string>
+    <!-- Label for a setting which controls whether an app can manage external storage [CHAR LIMIT=45] -->
+    <string name="permit_manage_external_storage">Allow access to manage all files</string>
+    <!-- Description for a setting which controls whether an app can manage external storage
+         [CHAR LIMIT=NONE] -->
+    <string name="allow_manage_external_storage_description">Allow this app to read, modify and delete all files on this device or any connected storage volumes. If granted, app may access files without your explicit knowledge.</string>
+
     <!-- Special access > Title for managing Picture-in-picture settings. [CHAR LIMIT=50] -->
     <string name="picture_in_picture_title">Picture-in-picture</string>
     <!-- Apps > App Details > Picture-in-picture > Switch title. [CHAR LIMIT=NONE] -->
@@ -2401,6 +2388,9 @@
     <!-- Slice uri and title for "Ambient mode" -->
     <string name="ambient_slice_uri" translatable="false" />
     <string name="ambient_settings_title" translatable="false" />
+
+    <!-- Slice uri for "Channels & Inputs" -->
+    <string name="channels_and_inputs_slice_uri" translatable="false"/>
 
     <!-- Slice uri for "Connected devices" -->
     <string name="connected_devices_slice_uri" translatable="false"/>

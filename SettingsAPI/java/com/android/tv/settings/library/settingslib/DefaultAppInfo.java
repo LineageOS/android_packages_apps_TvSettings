@@ -25,7 +25,6 @@ import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.RemoteException;
-import android.util.IconDrawableFactory;
 
 
 /**
@@ -95,32 +94,7 @@ public class DefaultAppInfo extends CandidateInfo {
 
     @Override
     public Drawable loadIcon() {
-        final IconDrawableFactory factory = IconDrawableFactory.newInstance(mContext);
-        if (componentName != null) {
-            try {
-                final ComponentInfo componentInfo = getComponentInfo();
-                final ApplicationInfo appInfo = mPm.getApplicationInfoAsUser(
-                        componentName.getPackageName(), 0, userId);
-                if (componentInfo != null) {
-                    return factory.getBadgedIcon(componentInfo, appInfo, userId);
-                } else {
-                    return factory.getBadgedIcon(appInfo);
-                }
-            } catch (PackageManager.NameNotFoundException e) {
-                return null;
-            }
-        }
-        if (packageItemInfo != null) {
-            try {
-                final ApplicationInfo appInfo = mPm.getApplicationInfoAsUser(
-                        packageItemInfo.packageName, 0, userId);
-                return factory.getBadgedIcon(packageItemInfo, appInfo, userId);
-            } catch (PackageManager.NameNotFoundException e) {
-                return null;
-            }
-        } else {
-            return null;
-        }
+        return null;
     }
 
     @Override

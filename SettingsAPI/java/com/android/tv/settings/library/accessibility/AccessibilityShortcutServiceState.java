@@ -185,4 +185,9 @@ public class AccessibilityShortcutServiceState implements State {
         }
         mUIUpdateCallback.notifyUpdate(getStateIdentifier(), mScreen);
     }
+
+    @Override
+    public void onDisplayDialogPreference(String[] key) {
+
+    }
 }

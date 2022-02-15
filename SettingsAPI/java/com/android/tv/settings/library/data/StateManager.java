@@ -36,6 +36,7 @@ import static com.android.tv.settings.library.ManagerUtil.STATE_HDR_FORMAT_SELEC
 import static com.android.tv.settings.library.ManagerUtil.STATE_HIGH_POWER;
 import static com.android.tv.settings.library.ManagerUtil.STATE_KEYBOARD;
 import static com.android.tv.settings.library.ManagerUtil.STATE_LANGUAGE;
+import static com.android.tv.settings.library.ManagerUtil.STATE_LEGAL;
 import static com.android.tv.settings.library.ManagerUtil.STATE_LOCATION;
 import static com.android.tv.settings.library.ManagerUtil.STATE_MATCH_CONTENT_FRAME;
 import static com.android.tv.settings.library.ManagerUtil.STATE_NETWORK;
@@ -56,6 +57,7 @@ import android.content.Context;
 
 import com.android.tv.settings.library.State;
 import com.android.tv.settings.library.UIUpdateCallback;
+import com.android.tv.settings.library.about.LegalState;
 import com.android.tv.settings.library.accessibility.AccessibilityServiceState;
 import com.android.tv.settings.library.accessibility.AccessibilityShortcutServiceState;
 import com.android.tv.settings.library.accessibility.AccessibilityShortcutState;
@@ -204,6 +206,9 @@ public class StateManager {
                 break;
             case STATE_RESOLUTION_SELECTION:
                 state = new ResolutionSelectionState(context, uiUpdateCallback);
+                break;
+            case STATE_LEGAL:
+                state = new LegalState(context, uiUpdateCallback);
                 break;
             default:
                 // no-op

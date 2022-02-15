@@ -43,6 +43,7 @@ import android.content.pm.ProviderInfo;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.icu.text.MessageFormat;
 import android.net.Uri;
 import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
@@ -63,6 +64,7 @@ import com.android.settingslib.suggestions.SuggestionControllerMixinCompat;
 import com.android.tv.settings.HotwordSwitchController.HotwordStateListener;
 import com.android.tv.settings.accounts.AccountsFragment;
 import com.android.tv.settings.accounts.AccountsUtil;
+import com.android.tv.settings.connectivity.ActiveNetworkProvider;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.SliceUtils;
@@ -71,7 +73,10 @@ import com.android.tv.settings.system.SecurityFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
@@ -110,6 +115,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     @VisibleForTesting
     static final String KEY_DISPLAY_AND_SOUND = "display_and_sound";
     private static final String KEY_CHANNELS_AND_INPUTS = "channels_and_inputs";
+    private static final String KEY_CHANNELS_AND_INPUTS_SLICE = "channels_and_inputs_slice";
 
     private static final String ACTION_ACCOUNTS = "com.android.tv.settings.ACCOUNTS";
     @VisibleForTesting
@@ -129,6 +135,8 @@ public class MainFragment extends PreferenceControllerFragment implements
             updateAccessoryPref();
         }
     };
+
+    private ActiveNetworkProvider mActiveNetworkProvider;
 
     public static MainFragment newInstance() {
         return new MainFragment();
@@ -159,6 +167,7 @@ public class MainFragment extends PreferenceControllerFragment implements
     public void onCreate(Bundle savedInstanceState) {
         mSuggestionQuickSettingPrefsContainer.onCreate();
         if (isWifiScanOptimisationEnabled()) {
+            mActiveNetworkProvider = new ActiveNetworkProvider(getContext());
             mConnectivityListenerOptional = Optional.empty();
         } else {
             mConnectivityListenerOptional = Optional.of(new ConnectivityListener(
@@ -185,9 +194,34 @@ public class MainFragment extends PreferenceControllerFragment implements
         mSuggestionQuickSettingPrefsContainer.showOrHideQuickSettings();
         updateAccountPref();
         updateAccessoryPref();
-        updateConnectivity();
+        if (isWifiScanOptimisationEnabled()) {
+            updateConnectivityType();
+        } else {
+            updateConnectivity();
+        }
         updateBasicModeSuggestion();
+        updateChannelsAndInputs();
         return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    private void updateConnectivityType() {
+        final Preference networkPref = findPreference(KEY_NETWORK);
+        if (networkPref == null) {
+            return;
+        }
+
+        if (mActiveNetworkProvider.isTypeCellular()) {
+            networkPref.setIcon(R.drawable.ic_cell_signal_4_white);
+        } else if (mActiveNetworkProvider.isTypeEthernet()) {
+            networkPref.setIcon(R.drawable.ic_ethernet_white);
+            networkPref.setSummary(R.string.connectivity_summary_ethernet_connected);
+        } else if (mActiveNetworkProvider.isTypeWifi()) {
+            networkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
+            networkPref.setSummary(mActiveNetworkProvider.getSsid());
+        } else {
+            networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
+            networkPref.setSummary(R.string.connectivity_summary_wifi_disabled);
+        }
     }
 
     @Override
@@ -526,8 +560,13 @@ public class MainFragment extends PreferenceControllerFragment implements
                 if (accounts.length == 1) {
                     accountsPref.setSummary(accounts[0].name);
                 } else {
-                    accountsPref.setSummary(getResources().getQuantityString(
-                            R.plurals.accounts_category_summary, accounts.length, accounts.length));
+                    MessageFormat msgFormat = new MessageFormat(
+                            getContext().getResources().getString(
+                                    R.string.accounts_category_summary),
+                            Locale.getDefault());
+                    Map<String, Object> arguments = new HashMap<>();
+                    arguments.put("count", accounts.length);
+                    accountsPref.setSummary(msgFormat.format(arguments));
                 }
             }
         }
@@ -544,6 +583,21 @@ public class MainFragment extends PreferenceControllerFragment implements
             basicModeSuggestion.setVisible(true);
         } else {
             basicModeSuggestion.setVisible(false);
+        }
+    }
+
+    private void updateChannelsAndInputs() {
+        Preference channelsAndInputsPreference = findPreference(KEY_CHANNELS_AND_INPUTS);
+        SlicePreference channelsAndInputsSlicePreference =
+                (SlicePreference) findPreference(KEY_CHANNELS_AND_INPUTS_SLICE);
+        if (channelsAndInputsSlicePreference != null
+                && FlavorUtils.isTwoPanel(getContext())
+                && SliceUtils.isSliceProviderValid(
+                getContext(), channelsAndInputsSlicePreference.getUri())) {
+            channelsAndInputsSlicePreference.setVisible(true);
+            if (channelsAndInputsPreference != null) {
+                channelsAndInputsPreference.setVisible(false);
+            }
         }
     }
 
