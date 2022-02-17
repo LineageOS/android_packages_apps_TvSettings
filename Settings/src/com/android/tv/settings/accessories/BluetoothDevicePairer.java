@@ -19,7 +19,6 @@ package com.android.tv.settings.accessories;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.IBluetoothA2dp;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -308,7 +307,7 @@ public class BluetoothDevicePairer {
 
         // Add Bluetooth a2dp on if the service is running and the
         // setting profile_supported_a2dp is set to true.
-        Intent intent = new Intent(IBluetoothA2dp.class.getName());
+        Intent intent = new Intent("android.bluetooth.IBluetoothA2dp");
         ComponentName comp = intent.resolveSystemService(mContext.getPackageManager(), 0);
         if (comp != null) {
             int enabledState = mContext.getPackageManager().getComponentEnabledSetting(comp);
