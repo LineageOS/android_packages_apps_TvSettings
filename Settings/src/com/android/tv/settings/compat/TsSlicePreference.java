@@ -19,7 +19,7 @@ package com.android.tv.settings.compat;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.android.tv.settings.library.util.SliceUtils;
+import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 public class TsSlicePreference extends SlicePreference implements HasKeys {
