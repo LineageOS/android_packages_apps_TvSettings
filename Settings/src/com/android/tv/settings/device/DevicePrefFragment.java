@@ -58,11 +58,11 @@ import com.android.tv.settings.about.RebootConfirmFragment;
 import com.android.tv.settings.library.settingslib.AutofillHelper;
 import com.android.tv.settings.library.settingslib.DefaultAppInfo;
 import com.android.tv.settings.library.settingslib.InputMethodHelper;
-import com.android.tv.settings.library.util.SliceUtils;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.privacy.PrivacyToggle;
 import com.android.tv.settings.privacy.SensorFragment;
 import com.android.tv.settings.system.SecurityFragment;
+import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 

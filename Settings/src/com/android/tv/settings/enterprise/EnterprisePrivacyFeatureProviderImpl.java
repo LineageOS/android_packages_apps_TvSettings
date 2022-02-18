@@ -33,7 +33,7 @@ import android.text.SpannableStringBuilder;
 import android.text.style.ClickableSpan;
 import android.view.View;
 
-import com.android.tv.settings.library.util.ResourcesUtil;
+import com.android.tv.settings.util.ResourcesUtil;
 
 import java.util.Date;
 import java.util.List;

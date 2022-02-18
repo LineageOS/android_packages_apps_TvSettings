@@ -32,7 +32,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 
-
 import com.android.tv.settings.SettingsFragmentProvider;
 import com.android.tv.settings.basic.BasicModeFeatureProvider;
 import com.android.tv.settings.basic.BasicModeFeatureProviderImpl;
@@ -40,8 +39,8 @@ import com.android.tv.settings.enterprise.EnterprisePrivacyFeatureProvider;
 import com.android.tv.settings.enterprise.EnterprisePrivacyFeatureProviderImpl;
 import com.android.tv.settings.enterprise.apps.ApplicationFeatureProvider;
 import com.android.tv.settings.enterprise.apps.ApplicationFeatureProviderImpl;
-import com.android.tv.settings.library.help.SupportFeatureProvider;
-import com.android.tv.settings.library.help.SupportFeatureProviderImpl;
+import com.android.tv.settings.help.SupportFeatureProvider;
+import com.android.tv.settings.help.SupportFeatureProviderImpl;
 import com.android.tv.settings.library.startup.startup.StartupVerificationFeatureProvider;
 import com.android.tv.settings.library.startup.startup.StartupVerificationFeatureProviderImpl;
 import com.android.tv.settings.system.LeanbackPickerDialogFragment;

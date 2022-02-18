@@ -24,7 +24,7 @@ import com.android.tv.settings.SettingsFragmentProvider;
 import com.android.tv.settings.basic.BasicModeFeatureProvider;
 import com.android.tv.settings.enterprise.EnterprisePrivacyFeatureProvider;
 import com.android.tv.settings.enterprise.apps.ApplicationFeatureProvider;
-import com.android.tv.settings.library.help.SupportFeatureProvider;
+import com.android.tv.settings.help.SupportFeatureProvider;
 import com.android.tv.settings.library.startup.startup.StartupVerificationFeatureProvider;
 
 /** Interface for feature controllers. Allows customization of the settings app. */

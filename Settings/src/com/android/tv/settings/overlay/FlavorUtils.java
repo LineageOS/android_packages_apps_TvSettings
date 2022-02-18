@@ -22,7 +22,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.android.tv.settings.library.util.ResourcesUtil;
+import com.android.tv.settings.util.ResourcesUtil;
 
 
 /** An Util class that manages logic related to build flavor and feature. */
