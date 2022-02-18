@@ -37,8 +37,8 @@ import com.android.tv.settings.library.enterprise.EnterprisePrivacyFeatureProvid
 import com.android.tv.settings.library.enterprise.apps.ApplicationFeatureProvider;
 import com.android.tv.settings.library.enterprise.apps.EnterpriseDefaultApps;
 import com.android.tv.settings.library.enterprise.apps.UserAppInfo;
-import com.android.tv.settings.library.overlay.FeatureFactory;
-import com.android.tv.settings.library.overlay.FlavorUtils;
+import com.android.tv.settings.overlay.FeatureFactory;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;

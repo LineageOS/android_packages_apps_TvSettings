@@ -20,7 +20,7 @@ import android.content.Context;
 
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.tv.settings.library.enterprise.EnterprisePrivacyFeatureProvider;
-import com.android.tv.settings.library.overlay.FlavorUtils;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 public class AlwaysOnVpnManagedProfilePreferenceController extends AbstractPreferenceController {
 
