@@ -20,8 +20,8 @@ import androidx.annotation.Keep;
 
 import com.android.tv.settings.basic.BasicModeFeatureProvider;
 import com.android.tv.settings.basic.BasicModeFeatureProviderImplX;
-import com.android.tv.settings.library.startup.startup.StartupVerificationFeatureProvider;
-import com.android.tv.settings.library.startup.startup.StartupVerificationFeatureProviderImplX;
+import com.android.tv.settings.startup.StartupVerificationFeatureProvider;
+import com.android.tv.settings.startup.StartupVerificationFeatureProviderImplX;
 
 /** Implementation of {@FeatureFactory} that can be utilized with resource overlay. */
 @Keep
