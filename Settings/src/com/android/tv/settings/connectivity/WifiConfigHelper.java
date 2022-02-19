@@ -254,6 +254,7 @@ public final class WifiConfigHelper {
 
                 // If the SSID and the security match, that's our network.
                 String configuredSsid = WifiInfo.sanitizeSsid(configuredNetwork.SSID);
+
                 if (TextUtils.equals(configuredSsid, ssid)) {
                     int configuredSecurity = WifiSecurityUtil.getSecurity(configuredNetwork);
                     if (configuredSecurity == security) {
