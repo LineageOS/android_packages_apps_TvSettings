@@ -22,8 +22,6 @@ import static android.app.AppOpsManager.MODE_IGNORED;
 import static android.app.AppOpsManager.OPSTR_AUTO_REVOKE_PERMISSIONS_IF_UNUSED;
 import static android.provider.DeviceConfig.NAMESPACE_APP_HIBERNATION;
 
-import static com.android.tv.settings.library.util.LibUtils.PROPERTY_APP_HIBERNATION_ENABLED;
-import static com.android.tv.settings.library.util.LibUtils.PROPERTY_HIBERNATION_TARGETS_PRE_S_APPS;
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
 import android.app.AppOpsManager;
@@ -37,11 +35,19 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.preference.SwitchPreference;
 
+import com.android.internal.annotations.VisibleForTesting;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 
 public class HibernationSwitchPreference extends SwitchPreference
         implements AppOpsManager.OnOpChangedListener {
+    @VisibleForTesting
+    public static final String PROPERTY_APP_HIBERNATION_ENABLED =
+            "app_hibernation_enabled";
+
+    public static final String PROPERTY_HIBERNATION_TARGETS_PRE_S_APPS =
+            "app_hibernation_targets_pre_s_apps";
+
     private static final String TAG = "HibernationSwitchPreference";
     private String mPackageName;
     private final AppOpsManager mAppOpsManager;
@@ -49,6 +55,7 @@ public class HibernationSwitchPreference extends SwitchPreference
     private boolean mIsPackageSet;
     private boolean mIsPackageExemptByDefault;
     private final Context mContext;
+
 
     public HibernationSwitchPreference(Context context, ApplicationsState.AppEntry entry) {
         super(context);
