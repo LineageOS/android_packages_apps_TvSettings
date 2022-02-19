@@ -42,7 +42,6 @@ import com.android.settingslib.RestrictedPreference;
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.library.network.WifiHelper;
 
 import java.util.List;
 
@@ -206,7 +205,7 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
                     return false;
                 });
 
-        boolean canModifyNetwork = !WifiHelper.isNetworkLockedDown(
+        boolean canModifyNetwork = !WifiConfigHelper.isNetworkLockedDown(
                 getContext(), wifiConfiguration);
         if (canModifyNetwork) {
             mProxySettingsPref.setDisabledByAdmin(null);
