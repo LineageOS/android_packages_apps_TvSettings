@@ -57,7 +57,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.about.RebootConfirmFragment;
 import com.android.tv.settings.autofill.AutofillHelper;
-import com.android.tv.settings.library.settingslib.InputMethodHelper;
+import com.android.tv.settings.inputmethod.InputMethodHelper;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.privacy.PrivacyToggle;
 import com.android.tv.settings.privacy.SensorFragment;
