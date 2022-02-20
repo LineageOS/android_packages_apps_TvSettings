@@ -25,7 +25,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.android.tv.settings.library.util.ResourcesUtil;
+import com.android.tv.settings.util.ResourcesUtil;
 
 import java.util.List;
 

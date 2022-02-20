@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.compat;
+package com.android.tv.settings.system.development.audio;
 
-/** Implement this to add multiple key for Preference. */
-public interface HasKeys {
-    void setKeys(String[] keys);
-
-    String[] getKeys();
+/** Represents an error in an audio recording thread. */
+public class AudioReaderException extends Exception {
+    public AudioReaderException(Throwable cause) {
+        super(cause);
+    }
 }

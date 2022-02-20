@@ -26,7 +26,7 @@ import android.util.Log;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 
-import com.android.tv.settings.library.util.SliceUtils;
+import com.android.tv.settings.util.SliceUtils;
 
 import java.util.ArrayList;
 import java.util.List;
