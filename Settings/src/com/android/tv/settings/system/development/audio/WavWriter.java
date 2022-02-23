@@ -51,7 +51,7 @@ public class WavWriter {
             stream.close();
             Log.i(TAG, String.format("WAV file written to %s", file.getAbsolutePath()));
         } catch (Exception e) {
-            Log.e(TAG, String.format("Error writing to file: ", e.toString()));
+            Log.e(TAG, String.format("Error writing to file: %s", e.toString()));
         }
     }
 

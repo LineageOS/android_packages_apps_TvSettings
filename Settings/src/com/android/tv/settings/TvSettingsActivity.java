@@ -36,12 +36,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.android.tv.settings.library.SettingsManager;
 import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.List;
 
-public abstract class TvSettingsActivity extends FragmentActivity implements HasSettingsManager {
+public abstract class TvSettingsActivity extends FragmentActivity {
     private static final String TAG = "TvSettingsActivity";
 
     private static final String SETTINGS_FRAGMENT_TAG =
@@ -50,7 +49,6 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
     private static final int UI_UPDATE_DELAY_MS = 200;
     private static final int REQUEST_CODE_STARTUP_VERIFICATION = 1;
 
-    public SettingsManager mSettingsManager;
     private Handler mHandler = new Handler(Looper.getMainLooper());
 
     public Fragment getVisibleFragment() {
@@ -64,11 +62,6 @@ public abstract class TvSettingsActivity extends FragmentActivity implements Has
             }
         }
         return null;
-    }
-
-    @Override
-    public SettingsManager getSettingsManager() {
-        return mSettingsManager;
     }
 
     @Override
