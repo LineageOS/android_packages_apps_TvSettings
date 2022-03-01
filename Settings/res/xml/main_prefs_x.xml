@@ -51,6 +51,12 @@
         </com.android.tv.twopanelsettings.slices.SlicePreference>
 
         <Preference
+            android:icon="@drawable/ic_photo_size_select_actual"
+            android:key="display_and_sound"
+            android:title="@string/device_display_sound"
+            android:fragment="com.android.tv.settings.device.displaysound.DisplaySoundFragment"
+            custom:isPreferenceVisible="false" />
+        <Preference
             android:icon="@drawable/ic_network"
             android:key="network"
             android:title="@string/connectivity_network_category_title"
@@ -84,12 +90,6 @@
             android:key="privacy"
             android:title="@string/privacy_category_title"
             android:fragment="com.android.tv.settings.privacy.PrivacyFragment"
-            custom:isPreferenceVisible="false" />
-        <Preference
-            android:icon="@drawable/ic_photo_size_select_actual"
-            android:key="display_and_sound"
-            android:title="@string/device_display_sound"
-            android:fragment="com.android.tv.settings.device.displaysound.DisplaySoundFragment"
             custom:isPreferenceVisible="false" />
         <Preference
             android:icon="@drawable/ic_applications"
