@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Tambahkan akun"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Akun &amp; login"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Tidak ada akun"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> akun</item>
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> akun</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# akun}other{# akun}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Layanan media, Asisten, Pembayaran"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Jaringan &amp; Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Suara"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikasi"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Preferensi Perangkat"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Remote &amp; aksesori"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Tidak ada perangkat Bluetooth yang terhubung"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> aksesori</item>
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> aksesori</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Tampilan &amp; Suara"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Bantuan &amp; Masukan"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Privasi"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Tidak tersedia"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Aplikasi admin perangkat"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Tidak ada aplikasi aktif"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikasi aktif</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikasi aktif</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Dinonaktifkan oleh admin, kebijakan enkripsi, atau penyimpanan kredensial"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Info perangkat yang dikelola"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Perubahan &amp; setelan yang dikelola oleh organisasi"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Tidak ada"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Aplikasi diinstal"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Jumlah aplikasi merupakan hasil perkiraan. Hal ini tidak termasuk aplikasi yang diinstal selain dari Play Store."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> aplikasi</item>
-      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> aplikasi</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Minimum # aplikasi}other{Minimum # aplikasi}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Izin akses lokasi"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Izin akses mikrofon"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Izin akses kamera"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Aplikasi default"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikasi</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikasi</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# aplikasi}other{# aplikasi}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Keyboard default"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Setel ke <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"VPN yang selalu aktif telah diaktifkan"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Kredensial tepercaya"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Kredensial tepercaya di profil pribadi Anda"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Kredensial tepercaya di profil kerja Anda"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> sertifikat CA</item>
-      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> sertifikat CA</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# sertifikat CA}other{# sertifikat CA}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Admin dapat mengunci perangkat dan menyetel ulang sandi"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Admin dapat menghapus semua data perangkat"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Kesalahan sandi sebelum menghapus semua data perangkat"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Kesalahan sandi sebelum menghapus data profil kerja"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> kesempatan</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> kesempatan</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# kali percobaan}other{# kali percobaan}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Perangkat ini dikelola oleh organisasi."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Perangkat ini dikelola oleh <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> ."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Pelajari lebih lanjut"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="other">Aplikasi kamera</item>
-      <item quantity="one">Aplikasi kamera</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Aplikasi kamera}other{Aplikasi kamera}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"aplikasi Kalender"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Aplikasi kontak"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="other">Aplikasi program email</item>
-      <item quantity="one">Aplikasi program email</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{Aplikasi program email}other{Aplikasi program email}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"Aplikasi peta"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="other">Aplikasi telepon</item>
-      <item quantity="one">Aplikasi telepon</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{Aplikasi telepon}other{Aplikasi telepon}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Aplikasi browser"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Versi OS Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Nomor seri"</string>
     <string name="about_build" msgid="8467840394761634575">"Versi OS Android TV"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> langkah lagi untuk menjadi pengembang</item>
-      <item quantity="one"><xliff:g id="STEP_COUNT_0">%1$d</xliff:g> langkah lagi untuk menjadi pengembang</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Anda perlu menyelesaikan # langkah lagi untuk menjadi developer}other{Anda perlu menyelesaikan # langkah lagi untuk menjadi developer}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Iklan"</string>
     <string name="ads_description" msgid="8081069475265061074">"Kelola setelan iklan, seperti mereset ID iklan."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Iklan, Kelola setelan iklan, seperti mereset ID iklan."</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Pembaruan sistem tambahan"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Jaringan mungkin dipantau"</string>
     <string name="done_button" msgid="616159688526431451">"Selesai"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="other">Percayai atau hapus sertifikat</item>
-      <item quantity="one">Percayai atau hapus sertifikat</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> telah menginstal certificate authority di perangkat Anda, yang dapat memungkinkan mereka memantau aktivitas jaringan perangkat, termasuk email, aplikasi, dan situs aman.\n\nUntuk informasi selengkapnya tentang sertifikat ini, hubungi admin.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> telah menginstal certificate authority di perangkat Anda, yang dapat memungkinkan mereka memantau aktivitas jaringan perangkat, termasuk email, aplikasi, dan situs aman.\n\nUntuk informasi selengkapnya tentang sertifikat ini, hubungi admin.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> telah menginstal certificate authority untuk profil kerja Anda, yang dapat memungkinkan mereka memantau aktivitas jaringan kerja, termasuk email, aplikasi, dan situs aman.\n\nUntuk informasi selengkapnya tentang sertifikat ini, hubungi admin.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> telah menginstal certificate authority untuk profil kerja Anda, yang dapat memungkinkan mereka memantau aktivitas jaringan kerja, termasuk email, aplikasi, dan situs aman.\n\nUntuk informasi selengkapnya tentang sertifikat ini, hubungi admin.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Pihak ketiga dapat memantau aktivitas jaringan Anda, termasuk email, aplikasi, dan situs web aman.\n\nKredensial terpercaya yang dipasang pada perangkat Anda memungkinkan hal ini."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="other">Periksa sertifikat</item>
-      <item quantity="one">Periksa sertifikat</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Percayai atau hapus sertifikat}other{Percayai atau hapus sertifikat}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Jaringan, nomor seri, dan informasi lainnya"</string>
     <string name="manual" msgid="5683935624321864999">"Manual"</string>
@@ -738,6 +686,8 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Pemantauan"</string>
     <string name="system_apps" msgid="8481888654606868074">"Aplikasi"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Tetap terjaga"</string>
+    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
+    <skip />
     <string name="system_hdcp_checking" msgid="3757586362130048838">"Pemeriksaan HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"Pengoptimalan HDMI"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Mulai ulang sekarang?"</string>
@@ -858,18 +808,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Mematikan perangkat HDMI bersama TV"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Otomatis nyalakan TV"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Menyalakan TV bersama perangkat HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="other">Input yang Terhubung</item>
-      <item quantity="one">Input yang Terhubung</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="other">Input Siaga</item>
-      <item quantity="one">Input Siaga</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="other">Input yang Tidak Terhubung</item>
-      <item quantity="one">Input yang Tidak Terhubung</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Input yang Terhubung}other{Input yang Terhubung}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Input Standby}other{Input Standby}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Input yang Tidak Terhubung}other{Input yang Tidak Terhubung}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Batasi akses ke aplikasi dan konten lain di akun Anda"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Profil Dibatasi"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Dikontrol oleh <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -883,10 +824,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Buat profil yang dibatasi"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Setelan"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Aplikasi yang diizinkan"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="other">%d aplikasi diizinkan</item>
-      <item quantity="one">1 aplikasi diizinkan</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Diizinkan"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Tidak diizinkan"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Sesuaikan pembatasan"</string>
@@ -1040,7 +977,8 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Penghemat Data"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Otomatis menyesuaikan kualitas video agar menggunakan lebih sedikit data seluler"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Penggunaan data dan notifikasi"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"Anda dapat terhubung ke internet menggunakan Wi-Fi, Ethernet, atau hotspot ponsel Anda. Untuk mendapatkan bantuan lebih lanjut, buka "<b>"g.co/network"</b>"."</string>
+    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Tindakan tidak diizinkan"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Volume tidak dapat diubah"</string>

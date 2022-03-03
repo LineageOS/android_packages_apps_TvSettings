@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"افزودن حساب"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"حساب‌ها و ورود به سیستم"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"هیچ حسابی وجود ندارد"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> حساب</item>
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> حساب</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# حساب}one{# حساب}other{# حساب}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"سرویس‌های رسانه‌ای، «دستیار»، «پرداخت‌ها»"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"شبکه و اینترنت"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"صدا"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"برنامه‌ها"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"اولویت‌های دستگاه"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"کنترل از راه دور و لوازم جانبی"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"دستگاه بلوتوث متصلی وجود ندارد"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> لوازم جانبی</item>
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> لوازم جانبی</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"نمایش و صدا"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"راهنمایی و بازخورد"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"حریم‌خصوصی"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"دردسترس نیست"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"برنامه‌های سرپرست دستگاه"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"برنامه فعالی موجود نیست"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> برنامه فعال</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> برنامه فعال</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"توسط سرپرست غیرفعال شده، طبق خط‌مشی رمزگذاری یا حافظه اطلاعات کاربردی"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"اطلاعات دستگاه مدیریت‌شده"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"تغییرات و تنظیماتی که توسط سازمان شما مدیریت می‌شوند"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"هیچ‌کدام"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"برنامه‌ها نصب‌‌ شدند"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"تعداد برنامه‌ها تخمینی است و ممکن است شامل برنامه‌های نصب‌شده از خارج از «فروشگاه Play» نباشد."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="one">حداقل <xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
-      <item quantity="other">حداقل <xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{حداقل # برنامه}one{حداقل # برنامه}other{حداقل # برنامه}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"مجوزهای دسترسی به موقعیت مکانی"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"مجوزهای دسترسی به میکروفون"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"مجوزهای دسترسی به دوربین"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"برنامه‌های پیش‌فرض"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# برنامه}one{# برنامه}other{# برنامه}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"صفحه‌کلید پیش‌فرض"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"تنظیم روی <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"«VPN همیشه روشن» روشن شد"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"اطلاعات کاربری مطمئن"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"اطلاعات کاربری مطمئن در نمایه شخصی شما"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"اطلاعات کاربری مطمئن در نمایه کاری شما"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="one">حداقل <xliff:g id="COUNT_1">%d</xliff:g> گواهینامه مرکز صدور گواهی</item>
-      <item quantity="other">حداقل <xliff:g id="COUNT_1">%d</xliff:g> گواهینامه مرکز صدور گواهی</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# گواهینامه مرکز صدور گواهی}one{# گواهینامه مرکز صدور گواهی}other{# گواهینامه مرکز صدور گواهی}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"سرپرست می‌تواند دستگاه را قفل و گذرواژه را بازنشانی کند"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"سرپرست می‌تواند همه داده‌های دستگاه را پاک کند"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"ورود گذرواژه ناموفق، پیش از حذف همه اطلاعات دستگاه"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"ورود گذرواژه ناموفق، پیش از حذف داده‌های نمایه کاری"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> تلاش</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> تلاش</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# تلاش}one{# تلاش}other{# تلاش}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"این دستگاه را سازمانتان مدیریت می‌کند."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"این دستگاه توسط <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> مدیریت می‌شود."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"بیشتر بدانید"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="one">برنامه دوربین</item>
-      <item quantity="other">برنامه‌های دوربین</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{برنامه دوربین}one{برنامه دوربین}other{برنامه‌های دوربین}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"برنامه تقویم"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"برنامه مخاطبین"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="one">برنامه کارخواه ایمیل</item>
-      <item quantity="other">برنامه‌های کارخواه ایمیل</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{برنامه کارخواه ایمیل}one{برنامه کارخواه ایمیل}other{برنامه‌های کارخواه ایمیل}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"برنامه نقشه"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="one">برنامه تلفن</item>
-      <item quantity="other">برنامه‌های تلفن</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{برنامه تلفن}one{برنامه تلفن}other{برنامه‌های تلفن}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"برنامه مرورگر"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>، <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"نسخه «سیستم‌عامل Android TV»"</string>
     <string name="about_serial" msgid="3432319328808745459">"شماره سریال"</string>
     <string name="about_build" msgid="8467840394761634575">"ساخت «سیستم‌عامل Android TV»"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="one">اکنون <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> قدم تا برنامه‌نویس شدن فاصله دارید</item>
-      <item quantity="other">اکنون <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> قدم تا برنامه‌نویس شدن فاصله دارید</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{اکنون # مرحله تا توسعه‌دهنده شدن فاصله دارید}one{اکنون # مرحله تا توسعه‌دهنده شدن فاصله دارید}other{اکنون # مرحله تا توسعه‌دهنده شدن فاصله دارید}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"آگهی‌ها"</string>
     <string name="ads_description" msgid="8081069475265061074">"تنظیمات آگهی را مدیریت کنید، مثلاً شناسه تبلیغاتی را بازنشانی کنید."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"آگهی‌ها؛ تنظیمات آگهی را مدیریت کنید، مثلاً شناسه تبلیغاتی را بازنشانی کنید."</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"به‌روزرسانی‌های دیگر سیستم"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"ممکن است شبکه پایش شود"</string>
     <string name="done_button" msgid="616159688526431451">"تمام"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="one">به گواهینامه اعتماد کنید یا آن را بردارید</item>
-      <item quantity="other">به گواهینامه‌ها اعتماد کنید یا آن‌ها را بردارید</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> مرجع صدور گواهینامه‌ای در دستگاهتان نصب کرده است که ممکن است به او اجازه دهد فعالیت‌های شبکه دستگاهتان، ازجمله ایمیل‌ها، برنامه‌ها، و وب‌سایت‌های ایمن را کنترل کند.\n\nبرای اطلاعات بیشتر درباره این گواهینامه، با سرپرست تماس بگیرید.</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> چند مرجع صدور گواهینامه در دستگاهتان نصب کرده است که ممکن است به او اجازه دهند فعالیت‌های شبکه دستگاهتان، ازجمله ایمیل‌ها، برنامه‌ها، و وب‌سایت‌های ایمن را کنترل کند.\n\nبرای اطلاعات بیشتر درباره این گواهینامه‌ها، با سرپرست تماس بگیرید.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> مرجع صدور گواهینامه‌ای برای نمایه کاری شما نصب کرده است که ممکن است به او اجازه دهد فعالیت‌های شبکه کاری، ازجمله ایمیل‌ها، برنامه‌ها، و وب‌سایت‌های ایمن را کنترل کند.\n\nبرای اطلاعات بیشتر درباره این گواهینامه، با سرپرست تماس بگیرید.</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> چند مرجع صدور گواهینامه برای نمایه کاری شما نصب کرده است که ممکن است به او اجازه دهند فعالیت‌های شبکه کاری، ازجمله ایمیل‌ها، برنامه‌ها، و وب‌سایت‌های ایمن را کنترل کند.\n\nبرای اطلاعات بیشتر درباره این گواهینامه‌ها، با سرپرست تماس بگیرید.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"شخص ثالتی می‌تواند روی فعالیت‌های شبکه شما ازجمله ایمیل‌ها، برنامه‌ها و وب‌سایت‌های ایمن نظارت داشته باشد.\n\nاعتبارنامه مطمئن نصب‌شده در دستگاهتان این کار را شدنی می‌کند."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="one">بررسی گواهینامه</item>
-      <item quantity="other">بررسی گواهینامه‌ها</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{به گواهینامه اعتماد کنید یا آن را بردارید}one{به گواهینامه اعتماد کنید یا آن را بردارید}other{به گواهینامه‌ها اعتماد کنید یا آن‌ها را بردارید}}"</string>
     <string name="device_status" msgid="8266002761193692207">"وضعیت"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"شبکه، شماره سریال و اطلاعات دیگر"</string>
     <string name="manual" msgid="5683935624321864999">"دفترچه راهنما"</string>
@@ -738,6 +686,8 @@
     <string name="system_monitoring" msgid="7997260748312620855">"نظارت"</string>
     <string name="system_apps" msgid="8481888654606868074">"برنامه‌ها"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"بیدار ماندن"</string>
+    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
+    <skip />
     <string name="system_hdcp_checking" msgid="3757586362130048838">"بررسی HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"بهینه سازی HDMI"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"اکنون بازراه‌اندازی شود؟"</string>
@@ -858,18 +808,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"خاموش کردن دستگاه‌های HDMI با تلویزیون"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"روشن شدن خودکار تلویزیون"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"روشن کردن تلویزیون با دستگاه HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="one">ورودی‌های متصل</item>
-      <item quantity="other">ورودی‌های متصل</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="one">ورودی‌های آماده‌به‌کار</item>
-      <item quantity="other">ورودی‌های آماده‌به‌کار</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="one">ورودی‌های غیرمتصل</item>
-      <item quantity="other">ورودی‌های غیرمتصل</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{ورودی متصل}one{ورودی متصل}other{ورودی‌های متصل}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{ورودی آماده‌به‌کار}one{ورودی آماده‌به‌کار}other{ورودی‌های آماده‌به‌کار}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{ورودی غیرمتصل}one{ورودی غیرمتصل}other{ورودی‌های غیرمتصل}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"دسترسی به برنامه‌ها و سایر محتوای موجود در حسابتان را محدود کنید"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"نمایه محدود شده"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"کنترل شده توسط <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -883,10 +824,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"ایجاد نمایه محدودشده"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"تنظیمات"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"برنامه‌های مجاز شده"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="one">‏%d برنامه مجاز شد</item>
-      <item quantity="other">‏%d برنامه مجاز شدند</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"مجاز شد"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"مجاز نیست"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"سفارشی کردن محدودیت‌ها"</string>
@@ -1040,7 +977,8 @@
     <string name="title_data_saver" msgid="7500278996154002792">"صرفه‌جویی داده"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"کیفیت ویدیو به‌طور خودکار تنظیم شود تا داده تلفن همراه کمتری مصرف شود"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"مصرف داده و هشدارها"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"می‌توانید بااستفاده از Wi-Fi، اترنت، یا نقطه اتصال تلفنتان به اینترنت متصل شوید. برای راهنمایی بیشتر، به "<b>"g.co/network"</b>" بروید."</string>
+    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"کنش مجاز نیست"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"نمی‌توان بلندی صدا را تغییر داد"</string>

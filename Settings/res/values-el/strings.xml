@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Προσθήκη λογαριασμού"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Λογαριασμοί και σύνδεση"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Δεν υπάρχουν λογαριασμοί"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> λογαριασμοί</item>
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> λογαριασμός</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# λογαριασμός}other{# λογαριασμοί}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Υπηρεσίες μέσων, Βοηθός, πληρωμές"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Δίκτυο και διαδίκτυο"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Ήχος"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Εφαρμογές"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Προτιμήσεις συσκευής"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Τηλεχειριστήρια και αξεσουάρ"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Δεν υπάρχουν συνδεδεμένες συσκευές Bluetooth"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> αξεσουάρ</item>
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> αξεσουάρ</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Οθόνη και ήχος"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Βοήθεια και σχόλια"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Απόρρητο"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Μη διαθέσιμη"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Εφαρμογές διαχείρισης συσκευής"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Δεν υπάρχουν ενεργές εφαρμογές"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ενεργές εφαρμογές</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ενεργή εφαρμογή</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Απενεργοποιήθηκε λόγω διαχειριστή, πολιτικής κρυπτογράφησης ή αποθηκευτικού χώρου διαπιστευτηρίων"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Πληροφορίες διαχειριζόμενης συσκευής"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Η διαχείριση των αλλαγών και των ρυθμίσεων γίνεται από τον οργανισμό σας"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Καμία"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Εγκατεστημένες εφαρμογές"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Γίνεται εκτίμηση του αριθμού των εφαρμογών. Μπορεί να μην περιλαμβάνει εφαρμογές που έχουν εγκατασταθεί εκτός του Play Store."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="other">Τουλάχιστον <xliff:g id="COUNT_1">%d</xliff:g> εφαρμογές</item>
-      <item quantity="one">Τουλάχιστον <xliff:g id="COUNT_0">%d</xliff:g> εφαρμογή</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Τουλάχιστον # εφαρμογή}other{Τουλάχιστον # εφαρμογές}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Άδειες τοποθεσίας"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Άδειες μικροφώνου"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Άδειες κάμερας"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Προεπιλεγμένες εφαρμογές"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> εφαρμογές</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> εφαρμογή</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# εφαρμογή}other{# εφαρμογές}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Προεπιλεγμένο πληκτρολόγιο"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Ορίστηκε σε <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Η λειτουργία \"Μονίμως ενεργό VPN\" είναι ενεργοποιημένη"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Αξιόπιστα διαπιστευτήρια"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Αξιόπιστα διαπιστευτήρια στο προσωπικό προφίλ σας"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Αξιόπιστα διαπιστευτήρια στο προφίλ εργασίας σας"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="other">Τουλάχιστον <xliff:g id="COUNT_1">%d</xliff:g> πιστοποιητικά CA</item>
-      <item quantity="one">Τουλάχιστον <xliff:g id="COUNT_0">%d</xliff:g> πιστοποιητικό CA</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# πιστοποιητικό CA}other{# πιστοποιητικά CA}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Ο διαχειριστής μπορεί να κλειδώσει τη συσκευή και να επαναφέρει τον κωδικό πρόσβασης"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Ο διαχειριστής μπορεί να διαγράψει όλα τα δεδομένα της συσκευής"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Αποτυχημένες προσπάθειες εισαγωγής κωδικού πρόσβασης πριν από τη διαγραφή όλων των δεδομένων της συσκευής"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Αποτυχημένες προσπάθειες εισαγωγής κωδικού πρόσβασης πριν από τη διαγραφή των δεδομένων του προφίλ εργασίας"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> προσπάθειες</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> προσπάθεια</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# προσπάθεια}other{# προσπάθειες}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Αυτή η συσκευή είναι διαχειριζόμενη από τον οργανισμό σας."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Τη συσκευή διαχειρίζεται ο οργανισμός <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Μάθετε περισσότερα"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="other">Εφαρμογές κάμερας</item>
-      <item quantity="one">Εφαρμογή κάμερας</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Εφαρμογή κάμερας}other{Εφαρμογές κάμερας}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Εφαρμογή ημερολογίου"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Εφαρμογή Επαφές"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="other">Εφαρμογές-πελάτες ηλ. ταχυδρ.</item>
-      <item quantity="one">Εφαρμογή-πελάτης ηλ. ταχυδρ.</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{Πρόγραμμα πελάτης ηλ. ταχ.}other{Προγράμματα πελάτες ηλ. ταχ.}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"Εφαρμογή χάρτη"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="other">Εφαρμογές τηλεφώνου</item>
-      <item quantity="one">Εφαρμογή τηλεφώνου</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{Εφαρμογή τηλεφώνου}other{Εφαρμογές τηλεφώνου}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Πρόγραμμα περιήγησης"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Έκδοση λειτουργικού συστήματος Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Σειριακός αριθμός"</string>
     <string name="about_build" msgid="8467840394761634575">"Έκδοση λειτουργικού συστήματος Android TV"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other">Απομένουν <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> βήματα για να γίνετε προγραμματιστής</item>
-      <item quantity="one">Απομένει <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> βήμα για να γίνετε προγραμματιστής</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Απομένει # βήμα για να γίνετε προγραμματιστής}other{Απομένουν # βήματα για να γίνετε προγραμματιστής}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Διαφημίσεις"</string>
     <string name="ads_description" msgid="8081069475265061074">"Διαχειριστείτε ρυθμίσεις διαφημίσεων (π.χ. επαναφορά αναγνωριστικού διαφήμισης)."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Διαφημίσεις, Διαχειριστείτε τις ρυθμίσεις των διαφημίσεών σας, όπως την επαναφορά του αναγνωριστικού διαφήμισης."</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Πρόσθ. ενημερ. συστήματος"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Το δίκτυο ενδέχεται να παρακολουθείται"</string>
     <string name="done_button" msgid="616159688526431451">"Τέλος"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="other">Κατάργηση ή ορισμός των πιστοποιητικών ως αξιόπιστων</item>
-      <item quantity="one">Κατάργηση ή ορισμός του πιστοποιητικού ως αξιόπιστου</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="other">Ο τομέας <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> εγκατέστησε αρχές έκδοσης πιστοποιητικών στη συσκευή σας, που ενδέχεται να του επιτρέψουν να παρακολουθεί τη δραστηριότητα δικτύου της συσκευής, συμπεριλαμβανομένων των μηνυμάτων ηλεκτρονικού ταχυδρομείου, των εφαρμογών και των ασφαλών ιστοτόπων.\n\nΓια περισσότερες πληροφορίες σχετικά με αυτά τα πιστοποιητικά, επικοινωνήστε με τον διαχειριστή σας.</item>
-      <item quantity="one">Ο τομέας <xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> εγκατέστησε μια αρχή έκδοσης πιστοποιητικών στη συσκευή σας, που ενδέχεται να του επιτρέψει να παρακολουθεί τη δραστηριότητα δικτύου της συσκευής, συμπεριλαμβανομένων των μηνυμάτων ηλεκτρονικού ταχυδρομείου, των εφαρμογών και των ασφαλών ιστοτόπων.\n\nΓια περισσότερες πληροφορίες σχετικά με αυτό το πιστοποιητικό, επικοινωνήστε με τον διαχειριστή σας.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="other">Ο τομέας <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> εγκατέστησε αρχές έκδοσης πιστοποιητικών για το προφίλ εργασίας σας, που ενδέχεται να του επιτρέψουν να παρακολουθεί τη δραστηριότητα του δικτύου εργασίας, συμπεριλαμβανομένων των μηνυμάτων ηλεκτρονικού ταχυδρομείου, των εφαρμογών και των ασφαλών ιστοτόπων.\n\nΓια περισσότερες πληροφορίες σχετικά με αυτά τα πιστοποιητικά, επικοινωνήστε με τον διαχειριστή σας.</item>
-      <item quantity="one">Ο τομέας <xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> εγκατέστησε μια αρχή έκδοσης πιστοποιητικών για το προφίλ εργασίας σας, που ενδέχεται να του επιτρέψει να παρακολουθεί τη δραστηριότητα του δικτύου εργασίας, συμπεριλαμβανομένων των μηνυμάτων ηλεκτρονικού ταχυδρομείου, των εφαρμογών και των ασφαλών ιστοτόπων.\n\nΓια περισσότερες πληροφορίες σχετικά με αυτό το πιστοποιητικό, επικοινωνήστε με τον διαχειριστή σας.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Ένα τρίτο μέρος έχει τη δυνατότητα να παρακολουθεί τη δραστηριότητα του δικτύου σας, όπως μηνύματα ηλεκτρονικού ταχυδρομείου, εφαρμογές και ασφαλείς ιστότοπους. \n\nΑυτό είναι δυνατό μέσω ενός έγκυρου διαπιστευτηρίου που έχει εγκατασταθεί στη συσκευή σας."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="other">Έλεγχος πιστοποιητικών</item>
-      <item quantity="one">Έλεγχος πιστοποιητικού</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Ορισμός ως αξιόπιστου ή κατάργηση του πιστοποιητικού}other{Ορισμός ως αξιόπιστων ή κατάργηση των πιστοποιητικών}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Κατάσταση"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Δίκτυο, σειριακοί αριθμοί και άλλες πληροφορίες"</string>
     <string name="manual" msgid="5683935624321864999">"Εγχειρίδιο χρήσης"</string>
@@ -738,6 +686,8 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Παρακολούθηση"</string>
     <string name="system_apps" msgid="8481888654606868074">"Εφαρμογές"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Παραμονή σε κανονική κατάσταση λειτουργίας"</string>
+    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
+    <skip />
     <string name="system_hdcp_checking" msgid="3757586362130048838">"Έλεγχος HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"Βελτιστοποίηση HDMI"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Επανεκκίνηση τώρα;"</string>
@@ -858,18 +808,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Απενεργοποιήστε τις συσκευές HDMI με την τηλεόραση"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Αυτόματη ενεργοπ. τηλεόρασης"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Ενεργοποιήστε την τηλεόραση με τη συσκευή HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="other">Συνδεδεμένες είσοδοι</item>
-      <item quantity="one">Συνδεδεμένη είσοδος</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="other">Είσοδοι σε αναμονή</item>
-      <item quantity="one">Είσοδος σε αναμονή</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="other">Καμία συνδεδεμένη είσοδος</item>
-      <item quantity="one">Καμία συνδεδεμένη είσοδος</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Συνδεδεμένη είσοδος}other{Συνδεδεμένες είσοδοι}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Είσοδος σε αναμονή}other{Είσοδοι σε αναμονή}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Μη συνδεδεμένη είσοδος}other{Μη συνδεδεμένες είσοδοι}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Περιορίστε την πρόσβαση σε εφαρμογές και άλλο περιεχόμενο στο λογαριασμό σας"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Περιορισμένο προφίλ"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Ελέγχονται από την εφαρμογή <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -883,10 +824,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Δημιουργία περιορισμένου προφίλ"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Ρυθμίσεις"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Επιτρεπόμενες εφαρμογές"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="other">%d επιτρεπόμενες εφαρμογές</item>
-      <item quantity="one">1 επιτρεπόμενη εφαρμογή</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Επιτρέπεται"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Δεν επιτρέπεται"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Προσαρμογή περιορισμών"</string>
@@ -1040,7 +977,8 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Εξοικονόμηση δεδομένων"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Αυτόματη προσαρμογή ποιότητας βίντεο για οικονομία δεδομένων κινητής τηλεφωνίας"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Χρήση δεδομένων και ειδοποιήσεις"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"Μπορείτε να συνδεθείτε στο διαδίκτυο μέσω Wi-Fi, Ethernet ή του σημείου πρόσβασης Wi-Fi του τηλεφώνου. Για βοήθεια, μεταβείτε στο "<b>"g.co/network"</b>"."</string>
+    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Δεν επιτρέπεται η ενέργεια"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Δεν είναι δυνατή η αλλαγή της έντασης του ήχου"</string>

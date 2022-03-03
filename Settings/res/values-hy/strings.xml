@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Ավելացրեք հաշիվ"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Հաշիվներ և մուտք"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Հաշիվներ չկան"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> հաշիվ</item>
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> հաշիվ</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# հաշիվ}one{# հաշիվ}other{# հաշիվ}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Մեդիա ծառայություններ, Օգնական, Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Ցանց և ինտերնետ"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Ձայներանգ"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Հավելվածներ"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Սարքի կարգավորումներ"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Հեռակառավարման վահանակներ և լրասարքեր"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Միացված Bluetooth սարքեր չկան"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> լրասարք</item>
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> լրասարք</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Էկրան և ձայն"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Օգնություն և հետադարձ կապ"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Գաղտնիություն"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Հասանելի չէ"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Սարքի ադմինիստրատորի հավելվածներ"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Ակտիվ հավելվածներ չկան"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ակտիվ հավելված</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ակտիվ հավելված</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Անջատված է ադմինիստրատորի, գաղտնագրման քաղաքականության կամ հավատարմագրային պահոցի կողմից"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Կառավարվող սարքի տվյալները"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Ձեր կազմակերպության կողմից կառավարվող փոփոխություններ և կարգավորումներ"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Չկա"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Տեղադրված հավելվածներ"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Հավելվածների թիվը մոտավոր է։ Հնարավոր է, որ այն չի ներառում կողմնակի աղբյուրներից տեղադրված հավելվածները։"</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="one">Նվազագույնը <xliff:g id="COUNT_1">%d</xliff:g> հավելված</item>
-      <item quantity="other">Նվազագույնը <xliff:g id="COUNT_1">%d</xliff:g> հավելված</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Նվազագույնը # հավելված}one{Նվազագույնը # հավելված}other{Նվազագույնը # հավելված}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Տեղորոշման թույլտվությունները"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Խոսափողի թույլտվությունները"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Տեսախցիկի թույլտվությունները"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Կանխադրված հավելվածները"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> հավելված</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> հավելված</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# հավելված}one{# հավելված}other{# հավելված}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Կանխադրված ստեղնաշար"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"«Միշտ միացված VPN» կարգավորումը միացված է"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Վստահելի ՀԿ հավաստագրեր"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Վստահելի ՀԿ հավաստագրեր ձեր անձնական պրոֆիլում"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Վստահելի ՀԿ հավաստագրեր ձեր աշխատանքային պրոֆիլում"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="one">Նվազագույնը <xliff:g id="COUNT_1">%d</xliff:g> CA հավաստագիր</item>
-      <item quantity="other">Նվազագույնը <xliff:g id="COUNT_1">%d</xliff:g> CA հավաստագիր</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# CA հավաստագիր}one{# CA հավաստագիր}other{# CA հավաստագիր}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Ադմինիստրատորը կարող է կողպել սարքը և վերակայել գաղտնաբառը"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Ադմինիստրատորը կարող է ջնջել սարքի բոլոր տվյալները"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Գաղտնաբառ մուտքագրելու անհաջող փորձերի քանակը, որից հետո սարքի բոլոր տվյալները կջնջվեն"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Գաղտնաբառ մուտքագրելու անհաջող փորձերի քանակը, որից հետո աշխատանքային պրոֆիլի տվյալները կջնջվեն"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> փորձ</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> փորձ</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# փորձ}one{# փորձ}other{# փորձ}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Այս սարքի կառավարիչը ձեր կազմակերպությունն է։"</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Այս սարքի կառավարիչն է <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> կազմակերպությունը։"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Մանրամասն"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="one">Տեսախցիկի հավելվածներ</item>
-      <item quantity="other">Տեսախցիկի հավելվածներ</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Տեսախցիկի հավելված}one{Տեսախցիկի հավելված}other{Տեսախցիկի հավելվածներ}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Օրացույցի հավելված"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Կոնտակտների հավելված"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="one">Փոստային հավելվածներ</item>
-      <item quantity="other">Փոստային հավելվածներ</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{Փոստային հավելված}one{Փոստային հավելված}other{Փոստային հավելվածներ}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"Քարտեզի հավելված"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="one">Հեռախոսի հավելվածներ</item>
-      <item quantity="other">Հեռախոսի հավելվածներ</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{Հեռախոսի հավելված}one{Հեռախոսի հավելված}other{Հեռախոսի հավելվածներ}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Դիտարկիչ"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Android TV-ի օպերացիոն համակարգի տարբերակ"</string>
     <string name="about_serial" msgid="3432319328808745459">"Սերիական համարը"</string>
     <string name="about_build" msgid="8467840394761634575">"Android TV-ի օպերացիոն համակարգի կառուցում"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="one">Մնաց <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> քայլ, և դուք մշակող եք</item>
-      <item quantity="other">Մնաց <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> քայլ, և դուք մշակող եք</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Մշակող դառնալու համար ձեզ մնացել է # քայլ}one{Մշակող դառնալու համար ձեզ մնացել է # քայլ}other{Մշակող դառնալու համար ձեզ մնացել է # քայլ}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Գովազդ"</string>
     <string name="ads_description" msgid="8081069475265061074">"Կառավարեք գովազդի կարգավորումները (օր․՝ վերակայեք գովազդային նույնացուցիչը)։"</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Գովազդ․ կառավարեք գովազդի կարգավորումները (օր․՝ զրոյացրեք գովազդային նույնացուցիչը)։"</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Հավելյալ թարմացումներ"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Ցանցը կարող է վերահսկվել"</string>
     <string name="done_button" msgid="616159688526431451">"Պատրաստ է"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="one">Հաստատեք կամ հեռացրեք հավաստագրերը</item>
-      <item quantity="other">Հաստատեք կամ հեռացրեք հավաստագրերը</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> տիրույթի ադմինիստրատորը ձեր սարքում տեղադրել է CA հավաստագրեր։ Դա նրան թույլ է տալիս վերահսկել ձեր գործողությունները ցանցում, այդ թվում՝ էլփոստի և հավելվածների օգտագործումը, ինչպես նաև պաշտպանված կայքերի դիտումը։\n\nԼրացուցիչ տեղեկությունների համար դիմեք ձեր ադմինիստրատորին։</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> տիրույթի ադմինիստրատորը ձեր սարքում տեղադրել է CA հավաստագրեր։ Դա նրան թույլ է տալիս վերահսկել ձեր գործողությունները ցանցում, այդ թվում՝ էլփոստի և հավելվածների օգտագործումը, ինչպես նաև պաշտպանված կայքերի դիտումը։\n\nԼրացուցիչ տեղեկությունների համար դիմեք ձեր ադմինիստրատորին։</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> տիրույթի ադմինիստրատորը ձեր աշխատանքային պրոֆիլի համար տեղադրել է CA հավաստագրեր։ Դա նրան թույլ է տալիս վերահսկել ձեր գործողությունները աշխատանքային ցանցում, այդ թվում՝ էլփոստի և հավելվածների օգտագործումը, ինչպես նաև պաշտպանված կայքերի դիտումը։\n\nԼրացուցիչ տեղեկությունների համար դիմեք ձեր ադմինիստրատորին։</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> տիրույթի ադմինիստրատորը ձեր աշխատանքային պրոֆիլի համար տեղադրել է CA հավաստագրեր։ Դա նրան թույլ է տալիս վերահսկել ձեր գործողությունները աշխատանքային ցանցում, այդ թվում՝ էլփոստի և հավելվածների օգտագործումը, ինչպես նաև պաշտպանված կայքերի դիտումը։\n\nԼրացուցիչ տեղեկությունների համար դիմեք ձեր ադմինիստրատորին։</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Երրորդ կողմն ի վիճակի է վերահսկել ձեր ցանցային գործունեությունը, այդ թվում՝ նամակները, ծրագրերը և անվտանգ կայքերը:\n\nՁեր սարքում տեղադրված վստահելի հավատարմագիրն է դա հնարավոր դարձնում:"</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="one">Ստուգել հավաստագրերը</item>
-      <item quantity="other">Ստուգել հավաստագրերը</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Հաստատեք կամ հեռացրեք հավաստագիրը}one{Հաստատեք կամ հեռացրեք հավաստագիրը}other{Հաստատեք կամ հեռացրեք հավաստագրերը}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Կարգավիճակ"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Ցանցի կարգավիճակ, հերթական համարներ և այլ տվյալներ"</string>
     <string name="manual" msgid="5683935624321864999">"Ձեռքով"</string>
@@ -738,6 +686,8 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Մոնիտորինգ"</string>
     <string name="system_apps" msgid="8481888654606868074">"Հավելվածներ"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Մնալ արթուն"</string>
+    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
+    <skip />
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP ստուգում"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI լավարկում"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Վերագործարկե՞լ հիմա"</string>
@@ -858,18 +808,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Անջատել HDMI սարքերը հեռուստացույցի հետ"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Ավտոմատ միացնել հեռուստացույցը"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Միացնել հեռուստացույցը HDMI սարքի հետ"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="one">Կապակցված մուտքեր</item>
-      <item quantity="other">Կապակցված մուտքեր</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="one">Պահուստային մուտքեր</item>
-      <item quantity="other">Պահուստային մուտքեր</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="one">Չկապակցված մուտքեր</item>
-      <item quantity="other">Չկապակցված մուտքեր</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Միացված մուտք}one{Միացված մուտք}other{Միացված մուտքեր}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Պահեստային մուտք}one{Պահեստային մուտք}other{Պահեստային մուտքեր}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Անջատված մուտք}one{Անջատված մուտք}other{Անջատված մուտքեր}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Սահմանափակել մուտքը ձեր հաշվի ծրագրերին և այլ բովանդակությանը"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Սահմանափակված պրոֆիլ"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Վերահսկվում է <xliff:g id="APP">%1$s</xliff:g>-ի կողմից"</string>
@@ -883,10 +824,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Ստեղծել սահմանափակված պրոֆիլ"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Կարգավորումներ"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Թույլատրված ծրագրեր"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="one">Թույլատրված է %d հավելված</item>
-      <item quantity="other">Թույլատրված է %d հավելված</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Թույլատրված է"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Արգելված"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Հարմարացնել սահմանափակումները"</string>
@@ -1040,7 +977,8 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Թրաֆիկի տնտեսում"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Ավտոմատ կարգավորել տեսանյութի որակը՝ թրաֆիկը տնտեսելու համար"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Թրաֆիկի օգտագործում և ծանուցումներ"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"Դուք կարող եք միանալ ինտերնետին Wi-Fi-ի, Ethernet ցանցի կամ հեռախոսի թեժ կետի միջոցով։ Լրացուցիչ օգնության համար անցեք "<b>"g.co/network"</b>" էջ։"</string>
+    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Գործողությունն արգելված է"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Հնարավոր չէ փոխել ձայնի ուժգնությունը"</string>

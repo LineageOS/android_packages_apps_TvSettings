@@ -45,25 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Pridanie účtu"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Účty a prihlasovanie"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Žiadne účty"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="few"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> účty</item>
-      <item quantity="many"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> účtu</item>
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> účtov</item>
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> účet</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# účet}few{# účty}many{# accounts}other{# účtov}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Mediálne služby, Asistent, Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Sieť a internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Zvuk"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikácie"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Predvoľby zariadenia"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Diaľkové ovládanie a príslušenstvo"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Žiadne pripojené zariadenia Bluetooth"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="few"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> príslušenstvá</item>
-      <item quantity="many"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> príslušenstva</item>
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> príslušenstiev</item>
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> príslušenstvo</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Zobrazenie a zvuk"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Pomocník a spätná väzba"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Ochrana súkromia"</string>
@@ -277,12 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Nie je k dispozícii"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Aplikácie na správu zariadenia"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Žiadne aktívne aplikácie"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aktívne aplikácie</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> active apps</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktívnych aplikácií</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aktívna aplikácia</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Zakázané správcom, pravidlom šifrovania alebo úložiskom poverení"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Informácie o spravovanom zariadení"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Zmeny a nastavenia spravované vašou organizáciou"</string>
@@ -300,22 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Žiadne"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Nainštalované aplikácie"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Počet aplikácií je odhadnutý. Nemusí zahrnovať aplikácie nainštalované mimo Obchodu Play."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="few">Minimálne <xliff:g id="COUNT_1">%d</xliff:g> aplikácie</item>
-      <item quantity="many">Minimum <xliff:g id="COUNT_1">%d</xliff:g> apps</item>
-      <item quantity="other">Minimálne <xliff:g id="COUNT_1">%d</xliff:g> aplikácií</item>
-      <item quantity="one">Minimálne <xliff:g id="COUNT_0">%d</xliff:g> aplikácia</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Minimálne # aplikácia}few{Minimálne # aplikácie}many{Minimum # apps}other{Minimálne # aplikácií}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Miestne povolenia"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Povolenia mikrofónu"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Povolenia fotoaparátu"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Predvolené aplikácie"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aplikácie</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> apps</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikácií</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikácia</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# aplikácia}few{# aplikácie}many{# apps}other{# aplikácií}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Predvolená klávesnica"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Nastavené na možnosť <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Trvalé pripojenie k sieti VPN je zapnuté"</string>
@@ -325,47 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Dôveryhodné poverenia"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Dôveryhodné poverenia vo vašom osobnom profile"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Dôveryhodné poverenia vo vašom pracovnom profile"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="few">Minimálne <xliff:g id="COUNT_1">%d</xliff:g> certifikáty CA</item>
-      <item quantity="many">Minimum <xliff:g id="COUNT_1">%d</xliff:g> CA certificates</item>
-      <item quantity="other">Minimálne <xliff:g id="COUNT_1">%d</xliff:g> certifikátov CA</item>
-      <item quantity="one">Minimálne <xliff:g id="COUNT_0">%d</xliff:g> certifikát CA</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# certifikát CA}few{# certifikáty CA}many{# CA certificates}other{# certifikátov CA}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Správca môže uzamknúť zariadenie a obnoviť heslo"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Správca môže zo zariadenia odstrániť všetky údaje"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Počet nesprávnych zadaní hesla pred odstránením všetkých dát zariadenia"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Počet nesprávnych zadaní hesla pred odstránením dát pracovného profilu"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> pokusy</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> attempts</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> pokusov</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> pokus</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# pokus}few{# pokusy}many{# attempts}other{# pokusov}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Toto zariadenie spravuje vaša organizácia."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Toto zariadenie spravuje organizácia <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Ďalšie informácie"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="few">Aplikácie na fotografovanie</item>
-      <item quantity="many">Aplikácie na fotografovanie</item>
-      <item quantity="other">Aplikácie na fotografovanie</item>
-      <item quantity="one">Aplikácia na fotografovanie</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Aplikácia kamery}few{Aplikácie kamery}many{Aplikácie kamery}other{Aplikácie kamery}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Aplikácia Kalendár"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Aplikácia Kontakty"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="few">E‑mailové aplikácie</item>
-      <item quantity="many">E‑mailové aplikácie</item>
-      <item quantity="other">E‑mailové aplikácie</item>
-      <item quantity="one">E‑mailová aplikácia</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{Aplikácia e‑mailového klienta}few{Aplikácie e‑mailového klienta}many{Aplikácie e‑mailového klienta}other{Aplikácie e‑mailového klienta}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"Aplikácia Mapa"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="few">Telefónne aplikácie</item>
-      <item quantity="many">Telefónne aplikácie</item>
-      <item quantity="other">Telefónne aplikácie</item>
-      <item quantity="one">Telefónna aplikácia</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{Telefónna aplikácia}few{Telefónne aplikácie}many{Telefónne aplikácie}other{Telefónne aplikácie}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Prehliadač"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -384,12 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Verzia operačného systému Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Sériové číslo"</string>
     <string name="about_build" msgid="8467840394761634575">"Zostava operačného systému Android TV"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="few">Ešte <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroky a bude z vás vývojár</item>
-      <item quantity="many">Ešte <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> kroku a bude z vás vývojár</item>
-      <item quantity="other">Ešte <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> krokov a bude z vás vývojár</item>
-      <item quantity="one">Ešte <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> krok a bude z vás vývojár</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Ešte # krok a bude z vás vývojár}few{Ešte # kroky a bude z vás vývojár}many{You are now # steps away from being a developer}other{Ešte # krokov a bude z vás vývojár}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Reklamy"</string>
     <string name="ads_description" msgid="8081069475265061074">"Spravujte nastavenia reklám (napr. resetovanie reklamného identifikátora)."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Reklamy, spravujte nastavenia reklám, napríklad resetovanie reklamného identifikátora."</string>
@@ -403,31 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Iné aktualizácie systému"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Sieť môže byť monitorovaná"</string>
     <string name="done_button" msgid="616159688526431451">"Hotovo"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="few">Nastavte certifikáty ako dôveryhodné alebo ich odstráňte</item>
-      <item quantity="many">Nastavte certifikáty ako dôveryhodné alebo ich odstráňte</item>
-      <item quantity="other">Nastavte certifikáty ako dôveryhodné alebo ich odstráňte</item>
-      <item quantity="one">Nastavte certifikát ako dôveryhodný alebo ho odstráňte</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="few">Doména <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> nainštalovala do vášho zariadenia certifikačnú autoritu, ktorá jej umožní monitorovať aktivitu v sieti zariadenia vrátane pošty, aplikácií a zabezpečených webov.\n\nViac o týchto certifikátoch sa dozviete od svojho správcu.</item>
-      <item quantity="many">Doména <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> nainštalovala do vášho zariadenia certifikačnú autoritu, ktorá jej umožní monitorovať aktivitu v sieti zariadenia vrátane pošty, aplikácií a zabezpečených webov.\n\nViac o týchto certifikátoch sa dozviete od svojho správcu.</item>
-      <item quantity="other">Doména <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> nainštalovala do vášho zariadenia certifikačnú autoritu, ktorá jej umožní monitorovať aktivitu v sieti zariadenia vrátane pošty, aplikácií a zabezpečených webov.\n\nViac o týchto certifikátoch sa dozviete od svojho správcu.</item>
-      <item quantity="one">Doména <xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> nainštalovala do vášho zariadenia certifikačnú autoritu, ktorá jej umožní monitorovať aktivitu v sieti zariadenia vrátane pošty, aplikácií a zabezpečených webov.\n\nViac o tomto certifikáte sa dozviete od svojho správcu.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="few">Doména <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> nainštalovala pre váš pracovný profil certifikačnú autoritu, ktorá jej môže umožniť monitorovať aktivitu v pracovnej sieti vrátane pošty, aplikácií a zabezpečených webov.\n\nViac o týchto certifikátoch sa dozviete od svojho správcu.</item>
-      <item quantity="many">Doména <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> nainštalovala pre váš pracovný profil certifikačnú autoritu, ktorá jej môže umožniť monitorovať aktivitu v pracovnej sieti vrátane pošty, aplikácií a zabezpečených webov.\n\nViac o týchto certifikátoch sa dozviete od svojho správcu.</item>
-      <item quantity="other">Doména <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> nainštalovala pre váš pracovný profil certifikačnú autoritu, ktorá jej môže umožniť monitorovať aktivitu v pracovnej sieti vrátane pošty, aplikácií a zabezpečených webov.\n\nViac o týchto certifikátoch sa dozviete od svojho správcu.</item>
-      <item quantity="one">Doména <xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> nainštalovala pre váš pracovný profil certifikačnú autoritu, ktorá jej môže umožniť monitorovať aktivitu v pracovnej sieti vrátane pošty, aplikácií a zabezpečených webov.\n\nViac o tomto certifikáte sa dozviete od svojho správcu.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Vaša aktivita v sieti, vrátane e-mailov, aplikácií a zabezpečených webov môže byť monitorovaná treťou stranou.\n\nUmožňujú to dôveryhodné poverenia nainštalované vo vašom zariadení."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="few">Skontrolovať certifikáty</item>
-      <item quantity="many">Skontrolovať certifikáty</item>
-      <item quantity="other">Skontrolovať certifikáty</item>
-      <item quantity="one">Skontrolovať certifikát</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Nastavte certifikát ako dôveryhodný alebo ho odstráňte}few{Nastavte certifikáty ako dôveryhodné alebo ich odstráňte}many{Nastavte certifikáty ako dôveryhodné alebo ich odstráňte}other{Nastavte certifikáty ako dôveryhodné alebo ich odstráňte}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Stav"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Sieť, sériové čísla a ďalšie informácie"</string>
     <string name="manual" msgid="5683935624321864999">"Ručne"</string>
@@ -768,6 +686,8 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Sledovanie"</string>
     <string name="system_apps" msgid="8481888654606868074">"Aplikácie"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Nevypínať obrazovku"</string>
+    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
+    <skip />
     <string name="system_hdcp_checking" msgid="3757586362130048838">"Kontrola HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"Optimalizácia rozhrania HDMI"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Reštartovať?"</string>
@@ -888,24 +808,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Vypnúť zariadenia HDMI s televízorom"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Auto. zapnutie televízora"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Zapnúť televízor so zariadením HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="few">Pripojené vstupy</item>
-      <item quantity="many">Pripojené vstupy</item>
-      <item quantity="other">Pripojené vstupy</item>
-      <item quantity="one">Pripojený vstup</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="few">Vstupy v úspornom režime</item>
-      <item quantity="many">Vstupy v úspornom režime</item>
-      <item quantity="other">Vstupy v úspornom režime</item>
-      <item quantity="one">Vstup v úspornom režime</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="few">Nepripojené vstupy</item>
-      <item quantity="many">Nepripojené vstupy</item>
-      <item quantity="other">Nepripojené vstupy</item>
-      <item quantity="one">Nepripojený vstup</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Pripojený vstup}few{Pripojené vstupy}many{Pripojené vstupy}other{Pripojené vstupy}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Vstup v pohotovostnom režime}few{Vstupy v pohotovostnom režime}many{Vstupy v pohotovostnom režime}other{Vstupy v pohotovostnom režime}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Nepripojený vstup}few{Nepripojené vstupy}many{Nepripojené vstupy}other{Nepripojené vstupy}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Obmedziť prístup k aplikáciám a ďalšiemu obsahu vášho účtu"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Obmedzený profil"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Ovládané aplikáciou <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -919,12 +824,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Vytvoriť obmedzený profil"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Nastavenia"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Povolené aplikácie"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="few">Boli povolené %d aplikácie</item>
-      <item quantity="many">Bolo povolenej %d aplikácie</item>
-      <item quantity="other">Bolo povolených %d aplikácií</item>
-      <item quantity="one">Bola povolená 1 aplikácia</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Povolené"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Nie je povolené"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Prispôsobiť obmedzenia"</string>
@@ -1078,7 +977,8 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Šetrič dát"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Automaticky upravovať kvalitu videí na zníženie spotreby mobilných dát"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Spotreba dát a upozornenia"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"K internetu sa môžete pripojiť cez sieť Wi-Fi, ethernet alebo hotspot telefónu. Ďalšiu pomoc získate na "<b>"g.co/network"</b>"."</string>
+    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Akcia nie je povolená"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Hlasitosť sa nedá zmeniť"</string>

@@ -45,25 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Дадаць уліковы запіс"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Уліковыя запісы і ўваход"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Няма ўліковых запісаў"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> уліковы запіс</item>
-      <item quantity="few"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> уліковыя запісы</item>
-      <item quantity="many"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> уліковых запісаў</item>
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> уліковага запісу</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# уліковы запіс}one{# уліковы запіс}few{# уліковыя запісы}many{# уліковых запісаў}other{# уліковага запісу}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Сэрвісы мультымедыя, Памочнік, Плацяжы"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Сетка і інтэрнэт"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Гук"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Праграмы"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Параметры экрана прылады"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Тэлевізійныя пульты і аксесуары"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Няма падключаных прылад Bluetooth"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> аксесуар</item>
-      <item quantity="few"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> аксесуары</item>
-      <item quantity="many"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> аксесуараў</item>
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> аксесуара</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Дысплэй і гук"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Даведка і водгукі"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Прыватнасць"</string>
@@ -277,12 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Недаступна"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Праграмы адміністратара прылады"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Няма актыўных праграм"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> актыўная праграма</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> актыўныя праграмы</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> актыўных праграм</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> актыўнай праграмы</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Адключана адміністратарам, палітыкай шыфравання ці сховішчам уліковых даных"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Інфармацыя пра прыладу пад кіраваннем"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Змяненні і налады знаходзяцца пад кіраваннем вашай арганізацыі"</string>
@@ -300,22 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Няма"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Усталяваныя праграмы"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Колькасць праграм – прыблізная. Сюды могуць не ўваходзіць праграмы, усталяваныя не з Крамы Play."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="one">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграма</item>
-      <item quantity="few">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграмы</item>
-      <item quantity="many">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграм</item>
-      <item quantity="other">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> праграмы</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Мінімум # праграма}one{Мінімум # праграма}few{Мінімум # праграмы}many{Мінімум # праграм}other{Мінімум # праграмы}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Доступ да геаданых"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Дазволы мікрафона"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Дазволы камеры"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Стандартныя праграмы"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> праграма</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> праграмы</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> праграм</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> праграмы</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# праграма}one{# праграма}few{# праграмы}many{# праграм}other{# праграмы}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Стандартная клавіятура"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Усталявана на <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Заўсёды ўключаны VPN уключаны"</string>
@@ -325,47 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Давераныя ўліковыя даныя"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Давераныя ўліковыя даныя ў вашым асабістым профілі"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Давераныя ўліковыя даныя ў вашым працоўным профілі"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="one">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> сертыфікат ЦС</item>
-      <item quantity="few">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> сертыфікаты ЦС</item>
-      <item quantity="many">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> сертыфікатаў ЦС</item>
-      <item quantity="other">Мінімум <xliff:g id="COUNT_1">%d</xliff:g> сертыфіката ЦС</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# сертыфікат ЦС}one{# сертыфікат ЦС}few{# сертыфікаты ЦС}many{# сертыфікатаў ЦС}other{# сертыфіката ЦС}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Адміністратар можа блакіраваць прыладу і скідваць пароль"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Адміністратар можа выдаляць усе даныя прылады"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Няўдалыя спробы ўводу пароля перад выдаленнем усіх даных прылады"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Няўдалыя спробы ўводу пароля перад выдаленнем даных працоўнага профілю"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> спроба</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> спробы</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> спроб</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> спробы</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# спроба}one{# спроба}few{# спробы}many{# спроб}other{# спробы}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Гэта прылада знаходзіцца пад кіраваннем вашай арганізацыі."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Гэта прылада знаходзіцца пад кіраваннем <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Даведацца больш"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="one">Праграмы \"Камера\"</item>
-      <item quantity="few">Праграмы \"Камера\"</item>
-      <item quantity="many">Праграмы \"Камера\"</item>
-      <item quantity="other">Праграмы \"Камера\"</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Праграма \"Камера\"}one{Праграмы \"Камера\"}few{Праграмы \"Камера\"}many{Праграмы \"Камера\"}other{Праграмы \"Камера\"}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Праграма \"Каляндар\""</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Праграма \"Кантакты\""</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="one">Праграмы \"Паштовы кліент\"</item>
-      <item quantity="few">Праграмы \"Паштовы кліент\"</item>
-      <item quantity="many">Праграмы \"Паштовы кліент\"</item>
-      <item quantity="other">Праграмы \"Паштовы кліент\"</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{Праграма \"Паштовы кліент\"}one{Праграмы \"Паштовы кліент\"}few{Праграмы \"Паштовы кліент\"}many{Праграмы \"Паштовы кліент\"}other{Праграмы \"Паштовы кліент\"}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"Праграма \"Карта\""</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="one">Праграмы \"Тэлефон\"</item>
-      <item quantity="few">Праграмы \"Тэлефон\"</item>
-      <item quantity="many">Праграмы \"Тэлефон\"</item>
-      <item quantity="other">Праграмы \"Тэлефон\"</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{Праграма \"Тэлефон\"}one{Праграмы \"Тэлефон\"}few{Праграмы \"Тэлефон\"}many{Праграмы \"Тэлефон\"}other{Праграмы \"Тэлефон\"}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Праграма \"Браўзер\""</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -384,12 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Версія АС Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Серыйны нумар"</string>
     <string name="about_build" msgid="8467840394761634575">"Зборка АС Android TV"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="one">Зараз вы ў <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> кроку ад таго, каб стаць распрацоўшчыкам</item>
-      <item quantity="few">Зараз вы ў <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> кроках ад таго, каб стаць распрацоўшчыкам</item>
-      <item quantity="many">Зараз вы ў <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> кроках ад таго, каб стаць распрацоўшчыкам</item>
-      <item quantity="other">Зараз вы ў <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> кроку ад таго, каб стаць распрацоўшчыкам</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Цяпер вы ў # кроку ад таго, каб стаць распрацоўшчыкам}one{Цяпер вы ў # кроку ад таго, каб стаць распрацоўшчыкам}few{Цяпер вы ў # кроках ад таго, каб стаць распрацоўшчыкам}many{Цяпер вы ў # кроках ад таго, каб стаць распрацоўшчыкам}other{Цяпер вы ў # кроку ад таго, каб стаць распрацоўшчыкам}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Рэклама"</string>
     <string name="ads_description" msgid="8081069475265061074">"Кіруйце наладамі рэкламы – скідам ідэнтыфікатараў."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Рэклама. Кіруйце наладамі рэкламы, напрыклад скідам рэкламных ідэнтыфікатараў."</string>
@@ -403,31 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Дадатковыя абнаўленні сістэмы"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"За сеткай можа назіраць"</string>
     <string name="done_button" msgid="616159688526431451">"Гатова"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="one">Давяраць сертыфікатам або выдаліць іх</item>
-      <item quantity="few">Давяраць сертыфікатам або выдаліць іх</item>
-      <item quantity="many">Давяраць сертыфікатам або выдаліць іх</item>
-      <item quantity="other">Давяраць сертыфікатам або выдаліць іх</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="one">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў на вашай прыладзе сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
-      <item quantity="few">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў на вашай прыладзе сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
-      <item quantity="many">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў на вашай прыладзе сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
-      <item quantity="other">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў на вашай прыладзе сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="one">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў для вашага працоўнага профілю сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
-      <item quantity="few">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў для вашага працоўнага профілю сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
-      <item quantity="many">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў для вашага працоўнага профілю сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
-      <item quantity="other">Адміністратар дамена \"<xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g>\" усталяваў для вашага працоўнага профілю сертыфікаты ЦС, якія дазваляюць яму кантраляваць вашы дзеянні ў працоўнай сетцы, у тым ліку выкарыстанне электроннай пошты і праграм, а таксама наведванне бяспечных вэб-сайтаў.\n\nПа дадатковую інфармацыю пра гэтыя сертыфікаты звяртайцеся да адміністратара.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Трэцяя асоба мае магчымасць маніторынгу вашай сеткавай актыўнасці, у тым ліку электроннай пошты, дадаткаў і абароненых вэб-сайтаў.\n\nГэта магчыма з-за даверанага сертыфіката, усталяванага на вашай прыладзе."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="one">Праверыць сертыфікаты</item>
-      <item quantity="few">Праверыць сертыфікаты</item>
-      <item quantity="many">Праверыць сертыфікаты</item>
-      <item quantity="other">Праверыць сертыфікаты</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Давяраць сертыфікату або выдаліць яго}one{Давяраць сертыфікатам або выдаліць іх}few{Давяраць сертыфікатам або выдаліць іх}many{Давяраць сертыфікатам або выдаліць іх}other{Давяраць сертыфікатам або выдаліць іх}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Стан"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Сетка, серыйныя нумары і іншая інфармацыя"</string>
     <string name="manual" msgid="5683935624321864999">"Уручную"</string>
@@ -768,6 +686,8 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Маніторынг"</string>
     <string name="system_apps" msgid="8481888654606868074">"Праграмы"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Прадухіляць ад пераходу ў рэжым сну"</string>
+    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
+    <skip />
     <string name="system_hdcp_checking" msgid="3757586362130048838">"Праверка HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"Аптымізацыя HDMI"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Перазапусціць?"</string>
@@ -888,24 +808,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Выключаць прылады HDMI разам з тэлевізарам"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Аўтаўключэнне тэлевізара"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Уключаць тэлевізар разам з прыладай HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="one">Падключаныя ўваходы</item>
-      <item quantity="few">Падключаныя ўваходы</item>
-      <item quantity="many">Падключаныя ўваходы</item>
-      <item quantity="other">Падключаныя ўваходы</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="one">Уваходы ў рэжыме чакання</item>
-      <item quantity="few">Уваходы ў рэжыме чакання</item>
-      <item quantity="many">Уваходы ў рэжыме чакання</item>
-      <item quantity="other">Уваходы ў рэжыме чакання</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="one">Не падключаныя ўваходы</item>
-      <item quantity="few">Не падключаныя ўваходы</item>
-      <item quantity="many">Не падключаныя ўваходы</item>
-      <item quantity="other">Не падключаныя ўваходы</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Падключаны порт уваходу}one{Падключаныя парты ўваходу}few{Падключаныя парты ўваходу}many{Падключаныя парты ўваходу}other{Падключаныя парты ўваходу}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Порт уваходу ў рэжыме чакання}one{Парты ўваходу ў рэжыме чакання}few{Парты ўваходу ў рэжыме чакання}many{Парты ўваходу ў рэжыме чакання}other{Парты ўваходу ў рэжыме чакання}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Не падключаны порт уваходу}one{Не падключаныя парты ўваходу}few{Не падключаныя парты ўваходу}many{Не падключаныя парты ўваходу}other{Не падключаныя парты ўваходу}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Абмежаваць доступ да праграм і іншага змесціва ў вашым уліковым запісе"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Профіль з абмежаваннямі"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Пад кіраваннем <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -919,12 +824,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Стварыць профіль з абмежаваннямі"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Налады"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Дазволеныя праграмы"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="one">%d праграма дазволена</item>
-      <item quantity="few">%d праграмы дазволены</item>
-      <item quantity="many">%d праграм дазволены</item>
-      <item quantity="other">%d праграмы дазволены</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Дазволены"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Забаронены"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Наладзіць абмежаванні"</string>
@@ -1078,7 +977,8 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Эканомія трафіка"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Аўтаматычна рэгуляваць якасць відэа, каб эканоміць на мабільнай перадачы даных"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Выкарыстанне трафіка і абвесткі"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"Вы можаце падключыцца да інтэрнэту з дапамогай Wi-Fi, Ethernet ці хот-спота тэлефона. Дадатковую інфармацыю шукайце на сайце "<b>"g.co/network"</b>"."</string>
+    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Дзеянне забаронена"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Не ўдалося змяніць гучнасць"</string>

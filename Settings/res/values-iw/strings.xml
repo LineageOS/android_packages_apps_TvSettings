@@ -45,25 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"הוספת חשבון"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"חשבונות וכניסה"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"אין חשבונות"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="two"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> חשבונות</item>
-      <item quantity="many"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> חשבונות</item>
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> חשבונות</item>
-      <item quantity="one">חשבון אחד (<xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g>)</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{חשבון אחד}two{# חשבונות}many{# חשבונות}other{# חשבונות}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"שירותי מדיה, Assistant,‏ Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"רשת ואינטרנט"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"צליל"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"אפליקציות"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"העדפות מכשיר"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"מכשירי שלט רחוק ואביזרים"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"אין מכשירי Bluetooth מחוברים"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="two"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> אביזרים</item>
-      <item quantity="many"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> אביזרים</item>
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> אביזרים</item>
-      <item quantity="one">אביזר אחד (<xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g>)</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"תצוגה וצליל"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"עזרה ומשוב"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"פרטיות"</string>
@@ -277,12 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"הפריט לא זמין"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"אפליקציות לניהול המכשיר"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"אין אפליקציות פעילות"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות פעילות</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות פעילות</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות פעילות</item>
-      <item quantity="one">אפליקציה פעילה אחת (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"הושבת על ידי מדיניות ההצפנה של מנהל המכשיר, או אחסון פרטי כניסה"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"פרטי מכשיר מנוהל"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"שינויים והגדרות שהארגון שלך מנהל"</string>
@@ -300,22 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"ללא"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"אפליקציות מותקנות"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"זוהי הערכה של מספר האפליקציות. ייתכן שהמספר לא כולל אפליקציות שהותקנו מחוץ לחנות Play."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="two">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
-      <item quantity="many">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
-      <item quantity="other">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
-      <item quantity="one">לפחות אפליקציה אחת (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{אפליקציה אחת לפחות}two{לפחות # אפליקציות}many{לפחות # אפליקציות}other{לפחות # אפליקציות}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"הרשאות מיקום"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"הרשאות מיקרופון"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"הרשאות מצלמה"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"אפליקציות ברירת מחדל"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> אפליקציות</item>
-      <item quantity="one">אפליקציה אחת (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{אפליקציה אחת}two{# אפליקציות}many{# אפליקציות}other{# אפליקציות}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"מקלדת המוגדרת כברירת מחדל"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g> הוגדרה"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"האפשרות \'חיבור תמידי ל-VPN\' פועלת"</string>
@@ -325,47 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"פרטי כניסה מהימנים"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"פרטי כניסה מהימנים בפרופיל האישי שלך"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"פרטי כניסה מהימנים בפרופיל העבודה שלך"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="two">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אישורי CA</item>
-      <item quantity="many">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אישורי CA</item>
-      <item quantity="other">לפחות <xliff:g id="COUNT_1">%d</xliff:g> אישורי CA</item>
-      <item quantity="one">לפחות אישור CA אחד (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{אישור CA אחד}two{# אישורי CA}many{# אישורי CA}other{# אישורי CA}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"מנהל המערכת יכול לנעול את המכשיר ולאפס את הסיסמה"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"מנהל המערכת יכול למחוק את כל הנתונים מהמכשיר"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"מספר הזנות של סיסמה שגויה לפני מחיקה של כל הנתונים מהמכשיר"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"מספר הזנות של סיסמה שגויה לפני מחיקה של כל הנתונים של פרופיל העבודה"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> ניסיונות</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> ניסיונות</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ניסיונות</item>
-      <item quantity="one">ניסיון אחד (<xliff:g id="COUNT_0">%d</xliff:g>)</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{ניסיון אחד}two{# ניסיונות}many{# ניסיונות}other{# ניסיונות}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"מכשיר זה מנוהל על ידי הארגון שלך."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"מכשיר זה מנוהל על ידי <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"מידע נוסף"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="two">אפליקציות מצלמה</item>
-      <item quantity="many">אפליקציות מצלמה</item>
-      <item quantity="other">אפליקציות מצלמה</item>
-      <item quantity="one">אפליקציית מצלמה אחת</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{אפליקציית מצלמה}two{אפליקציות מצלמה}many{אפליקציות מצלמה}other{אפליקציות מצלמה}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"אפליקציית יומן"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"אפליקציית אנשי קשר"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="two">אפליקציות של תוכנות אימייל</item>
-      <item quantity="many">אפליקציות של תוכנות אימייל</item>
-      <item quantity="other">אפליקציות של תוכנות אימייל</item>
-      <item quantity="one">אפליקציה אחת של תוכנת אימייל</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{אפליקציה של תוכנת אימייל}two{אפליקציות של תוכנת אימייל}many{אפליקציות של תוכנת אימייל}other{אפליקציות של תוכנת אימייל}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"אפליקציית מפה"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="two">אפליקציות טלפון</item>
-      <item quantity="many">אפליקציות טלפון</item>
-      <item quantity="other">אפליקציות טלפון</item>
-      <item quantity="one">אפליקציית טלפון אחת</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{אפליקציית טלפון}two{אפליקציות טלפון}many{אפליקציות טלפון}other{אפליקציות טלפון}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"אפליקציית דפדפן"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -384,12 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"גרסת מערכת הפעלה של Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"מספר סידורי"</string>
     <string name="about_build" msgid="8467840394761634575">"Build של מערכת הפעלה של Android TV"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="two">אתה כעת במרחק של <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> צעדים מלהפוך למפתח</item>
-      <item quantity="many">אתה כעת במרחק של <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> צעדים מלהפוך למפתח</item>
-      <item quantity="other">אתה כעת במרחק של <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> צעדים מלהפוך למפתח</item>
-      <item quantity="one">אתה כעת במרחק של צעד <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> מלהפוך למפתח</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{נותר עוד שלב אחד להגדרתך כמפתח}two{נותרו עוד # שלבים להגדרתך כמפתח}many{נותרו עוד # שלבים להגדרתך כמפתח}other{נותרו עוד # שלבים להגדרתך כמפתח}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"מודעות"</string>
     <string name="ads_description" msgid="8081069475265061074">"ניהול הגדרות המודעות, למשל איפוס של מזהה הפרסום."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"מודעות, ניהול הגדרות המודעות כגון איפוס של מזהה הפרסום."</string>
@@ -403,31 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"עדכוני מערכת נוספים"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"ייתכן שהרשת מנוטרת"</string>
     <string name="done_button" msgid="616159688526431451">"בוצע"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="two">קבלת מהימנות או הסרה של אישורים</item>
-      <item quantity="many">קבלת מהימנות או הסרה של אישורים</item>
-      <item quantity="other">קבלת מהימנות או הסרה של אישורים</item>
-      <item quantity="one">קבלת מהימנות או הסרה של אישור</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="two"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> התקין רשויות אישורים במכשיר שלך. ייתכן שהרשויות יאפשרו לו לנהל מעקב אחר פעילות רשת בעבודה, כולל אימיילים, אפליקציות ואתרים מאובטחים.\n\nלמידע נוסף לגבי האישורים, יש ליצור קשר עם מנהל המערכת.</item>
-      <item quantity="many"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> התקין רשויות אישורים במכשיר שלך. ייתכן שהרשויות יאפשרו לו לנהל מעקב אחר פעילות רשת בעבודה, כולל אימיילים, אפליקציות ואתרים מאובטחים.\n\nלמידע נוסף לגבי האישורים, יש ליצור קשר עם מנהל המערכת.</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> התקין רשויות אישורים במכשיר שלך. ייתכן שהרשויות יאפשרו לו לנהל מעקב אחר פעילות רשת בעבודה, כולל אימיילים, אפליקציות ואתרים מאובטחים.\n\nלמידע נוסף לגבי האישורים, יש ליצור קשר עם מנהל המערכת.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> התקין רשות אישורים אחת במכשיר שלך. ייתכן שהרשות תאפשר לו לנהל מעקב אחר פעילות רשת בעבודה, כולל אימיילים, אפליקציות ואתרים מאובטחים.\n\nלמידע נוסף לגבי האישור, יש ליצור קשר עם מנהל המערכת.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="two"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> התקין רשויות אישורים לפרופיל העבודה שלך. ייתכן שהרשויות יאפשרו לו לנהל מעקב אחר פעילות רשת בעבודה, כולל אימיילים, אפליקציות ואתרים מאובטחים.\n\nלמידע נוסף לגבי האישורים, יש ליצור קשר עם מנהל המערכת.</item>
-      <item quantity="many"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> התקין רשויות אישורים לפרופיל העבודה שלך. ייתכן שהרשויות יאפשרו לו לנהל מעקב אחר פעילות רשת בעבודה, כולל אימיילים, אפליקציות ואתרים מאובטחים.\n\nלמידע נוסף לגבי האישורים, יש ליצור קשר עם מנהל המערכת.</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> התקין רשויות אישורים לפרופיל העבודה שלך. ייתכן שהרשויות יאפשרו לו לנהל מעקב אחר פעילות רשת בעבודה, כולל אימיילים, אפליקציות ואתרים מאובטחים.\n\nלמידע נוסף לגבי האישורים, יש ליצור קשר עם מנהל המערכת.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> התקין רשות אישורים אחת לפרופיל העבודה שלך. ייתכן שהרשות תאפשר לו לנהל מעקב אחר פעילות רשת בעבודה, כולל אימיילים, אפליקציות ואתרים מאובטחים.\n\nלמידע נוסף לגבי האישור, יש ליצור קשר עם מנהל המערכת.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"צד שלישי מסוגל לעקוב אחר הפעילות שלך ברשת, כולל הודעות אימייל, אפליקציות ואתרים מאובטחים.\n\nאישור מהימן המותקן במכשיר מאפשר זאת."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="two">בדיקת אישורים</item>
-      <item quantity="many">בדיקת אישורים</item>
-      <item quantity="other">בדיקת אישורים</item>
-      <item quantity="one">בדיקת אישור אחד</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{קבלת מהימנות או הסרה של אישור}two{קבלת מהימנות או הסרה של אישורים}many{קבלת מהימנות או הסרה של אישורים}other{קבלת מהימנות או הסרה של אישורים}}"</string>
     <string name="device_status" msgid="8266002761193692207">"סטטוס"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"רשת, מספרים סידוריים ומידע נוסף"</string>
     <string name="manual" msgid="5683935624321864999">"ידני"</string>
@@ -768,6 +686,8 @@
     <string name="system_monitoring" msgid="7997260748312620855">"מעקב"</string>
     <string name="system_apps" msgid="8481888654606868074">"אפליקציות"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"הישאר ער"</string>
+    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
+    <skip />
     <string name="system_hdcp_checking" msgid="3757586362130048838">"בדיקת HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"אופטימיזציית HDMI"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"להפעיל מחדש עכשיו?"</string>
@@ -888,24 +808,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"כבה מכשירי HDNI עם הטלוויזיה"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"הפעלה אוטומטית של הטלוויזיה"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"הפעל את הטלוויזיה עם מכשיר HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="two">ערוצי קלט מחוברים</item>
-      <item quantity="many">ערוצי קלט מחוברים</item>
-      <item quantity="other">ערוצי קלט מחוברים</item>
-      <item quantity="one">ערוץ קלט מחובר</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="two">ערוצי קלט בהמתנה</item>
-      <item quantity="many">ערוצי קלט בהמתנה</item>
-      <item quantity="other">ערוצי קלט בהמתנה</item>
-      <item quantity="one">ערוץ קלט בהמתנה</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="two">ערוצי קלט לא מחוברים</item>
-      <item quantity="many">ערוצי קלט לא מחוברים</item>
-      <item quantity="other">ערוצי קלט לא מחוברים</item>
-      <item quantity="one">ערוץ קלט לא מחובר</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{כניסת קלט מחוברת}two{כניסות קלט מחוברות}many{כניסות קלט מחוברות}other{כניסות קלט מחוברות}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{כניסת קלט בהמתנה}two{כניסות קלט בהמתנה}many{כניסות קלט בהמתנה}other{כניסות קלט בהמתנה}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{כניסת קלט לא מחוברת}two{כניסות קלט לא מחוברות}many{כניסות קלט לא מחוברות}other{כניסות קלט לא מחוברות}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"הגבל גישה אל אפליקציות ותוכן אחר בחשבון שלך"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"פרופיל מוגבל"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"בשליטת <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -919,12 +824,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"יצירת פרופיל מוגבל"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"הגדרות"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"אפליקציות מותרות"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="two">%d אפליקציות מותרות</item>
-      <item quantity="many">%d אפליקציות מותרות</item>
-      <item quantity="other">%d אפליקציות מותרות</item>
-      <item quantity="one">אפליקציה אחת מותרת</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"מותרת"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"אסורה"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"התאם אישית את ההגבלות"</string>
@@ -1078,7 +977,8 @@
     <string name="title_data_saver" msgid="7500278996154002792">"חוסך הנתונים (Data Saver)"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"התאמה אוטומטית של איכות וידאו לשימוש מופחת בחבילת גלישה"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"שימוש בחבילת הגלישה והתראות"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"אפשר להתחבר לאינטרנט באמצעות Wi-Fi,‏ Ethernet או נקודה לשיתוף אינטרנט בטלפון. ניתן לקבל עזרה נוספת בכתובת "<b>"g.co/network"</b>"."</string>
+    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"הפעולה אינה מותרת"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"לא ניתן לשנות את הנפח"</string>

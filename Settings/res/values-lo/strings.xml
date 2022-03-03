@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"ເພີ່ມບັນຊີ"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"ບັນຊີ ແລະ ການເຂົ້າສູ່ລະບົບ"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"ບໍ່ມີບັນຊີ"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> ບັນຊີ</item>
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> ບັນຊີ</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# ບັນຊີ}other{# ບັນຊີ}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"ບໍລິການມີເດຍ, ຜູ້ຊ່ວຍ, ການຈ່າຍເງິນ"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"ເຄືອຂ່າຍ ແລະ ອິນເຕີເນັດ"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"ສຽງ"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ແອັບ"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"ການຕັ້ງຄ່າອຸປະກອນ"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"ຣີໂໝດ ແລະ ອຸປະກອນເສີມ"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"ບໍ່ມີອຸປະກອນ Bluetooth ທີ່ເຊື່ອມຕໍ່ໄວ້"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ອຸປະກອນເສີມ</item>
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ອຸປະກອນເສີມ</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"ການສະແດງຜົນ ແລະ ສຽງ"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"ຊ່ວຍເຫຼືອ ແລະ ຄຳຕິຊົມ"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"ຄວາມເປັນສ່ວນຕົວ"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"ບໍ່ສາມາດໃຊ້ໄດ້"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"ແອັບຜູ້ເບິ່ງແຍງລະບົບອຸປະກອນ"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"ບໍ່ມີແອັບທີ່ກຳລັງເຮັດວຽກ"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="other">ແອັບທີ່ນຳໃຊ້ຢູ່ <xliff:g id="COUNT_1">%d</xliff:g> ແອັບ</item>
-      <item quantity="one">ແອັບທີ່ນຳໃຊ້ຢູ່ <xliff:g id="COUNT_0">%d</xliff:g> ແອັບ</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"ຖືກປິດການນຳໃຊ້ໂດຍຜູ້ເບິ່ງແຍງລະບົບ, ນະໂຍບາຍການເຂົ້າລະຫັດ ຫຼື ບ່ອນຈັດເກັບຂໍ້ມູນລັບ"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"ຂໍ້ມູນອຸປະກອນທີ່ມີການຈັດການ"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"ການປ່ຽນແປງ ແລະ ການຕັ້ງຄ່າທີ່ຈັດການໂດຍອົງກອນຂອງທ່ານ"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"ບໍ່ມີ"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"ຕິດຕັ້ງແອັບແລ້ວ"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"ຈຳນວນຂອງແອັບແມ່ນເປັນການປະມານການເທົ່ານັ້ນ. ມັນອາດບໍ່ຮວມແອັບທີ່ຕິດຕັ້ງຈາກນອກ Play Store."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="other">ຂັ້ນຕ່ຳ <xliff:g id="COUNT_1">%d</xliff:g> ແອັບ</item>
-      <item quantity="one">ຂັ້ນຕ່ຳ <xliff:g id="COUNT_0">%d</xliff:g> ແອັບ</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{ຂັ້ນຕ່ຳ # ແອັບ}other{ຂັ້ນຕ່ຳ # ແອັບ}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"ສິດອະນຸຍາດສະຖານທີ່"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"ສິດອະນຸຍາດໄມໂຄຣໂຟນ"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"ສິດອະນຸຍາດກ້ອງຖ່າຍຮູບ"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"ແອັບເລີ່ມຕົ້ນ"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ແອັບ</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ແອັບ</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# ແອັບ}other{# ແອັບ}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"ແປ້ນພິມເລີ່ມຕົ້ນ"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"ຕັ້ງເປັນ <xliff:g id="APP_LABEL">%s</xliff:g> ແລ້ວ"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Always-on VPN turned on"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"ຂໍ້ມູນລັບທີ່ເຊື່ອຖື"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"ຂໍ້ມູນລັບທີ່ເຊື່ອຖືໃນໂປຣໄຟລ໌ສ່ວນຕົວຂອງທ່ານ"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"ຂໍ້ມູນລັບທີ່ເຊື່ອຖືໃນໂປຣໄຟລ໌ບ່ອນເຮັດວຽກຂອງທ່ານ"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="other">ໃບຢັ້ງຢືນ CA ຂັ້ນຕ່ຳ <xliff:g id="COUNT_1">%d</xliff:g> ໃບ</item>
-      <item quantity="one">ໃບຢັ້ງຢືນ CA ຂັ້ນຕ່ຳ <xliff:g id="COUNT_0">%d</xliff:g> ໃບ</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# ໃບຮັບຮອງ CA}other{# ໃບຮັບຮອງ CA}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"ຜູ້ເບິ່ງແຍງລະບົບສາມາດລັອກອຸປະກອນ ແລະ ຕັ້ງລະຫັດຜ່ານໃໝ່ໄດ້"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"ຜູ້ເບິ່ງແຍງສາມາດລຶບຂໍ້ມູນອຸປະກອນທັງໝົດໄດ້"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"ຈຳນວນການໃສ່ລະຫັດຜ່ານບໍ່ສຳເລັດກ່ອນຈະລຶບຂໍ້ມູນໃນອຸປະກອນທັງໝົດອອກ"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"ຈຳນວນການໃສ່ລະຫັດຜ່ານບໍ່ສຳເລັດກ່ອນຈະລຶບຂໍ້ມູນໂປຣໄຟລ໌ບ່ອນເຮັດວຽກອອກ"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="other">ພະຍາຍາມ <xliff:g id="COUNT_1">%d</xliff:g> ເທື່ອ</item>
-      <item quantity="one">ພະຍາຍາມ <xliff:g id="COUNT_0">%d</xliff:g> ເທື່ອ</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{ພະຍາຍາມ # ເທື່ອ}other{ພະຍາຍາມ # ເທື່ອ}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"ອຸປະກອນນີ້ແມ່ນຈັດການໂດຍອົງກອນຂອງທ່ານ."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"ອຸປະກອນນີ້ຖືກຈັດການໂດຍ <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"ສຶກສາເພີ່ມເຕີມ"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="other">ແອັບກ້ອງຖ່າຍຮູບ</item>
-      <item quantity="one">ແອັບກ້ອງຖ່າຍຮູບ</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{ແອັບກ້ອງຖ່າຍຮູບ}other{ແອັບກ້ອງຖ່າຍຮູບ}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"ແອັບປະຕິທິນ"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"ແອັບລາຍຊື່ຜູ້ຕິດຕໍ່"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="other">ແອັບໂປຣແກຣມອີເມວ</item>
-      <item quantity="one">ແອັບໂປຣແກຣມອີເມວ</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{ແອັບໂປຣແກຣມອີເມວ}other{ແອັບໂປຣແກຣມອີເມວ}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"ແອັບແຜນທີ່"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="other">ແອັບໂທລະສັບ</item>
-      <item quantity="one">ແອັບໂທລະສັບ</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{ແອັບໂທລະສັບ}other{ແອັບໂທລະສັບ}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"ແອັບໂປຣແກຣມທ່ອງເວັບ"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"ເວີຊັນ Android TV OS"</string>
     <string name="about_serial" msgid="3432319328808745459">"ໝາຍເລກຊີຣຽວ"</string>
     <string name="about_build" msgid="8467840394761634575">"Android TV OS build"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other">ປະ​ຈຸ​ບັນ​ທ່ານ​ຢູ່​ໄກ​ຈາກ​ການ​ເປັນ​ຜູ້​ພັດ​ທະ​ນາ <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ບາດ​ກ້າວ</item>
-      <item quantity="one">ປະ​ຈຸ​ບັນ​ທ່ານ​ຢູ່​ໄກ​ຈາກ​ການ​ເປັນ​ຜູ້​ພັດ​ທະ​ນາ <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> ບາດ​ກ້າວ</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{ຕອນນີ້ທ່ານຍັງອີກ # ຂັ້ນຕອນກໍຈະເປັນນັກພັດທະນາແລ້ວ}other{ຕອນນີ້ທ່ານຍັງອີກ # ຂັ້ນຕອນກໍຈະເປັນນັກພັດທະນາແລ້ວ}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"ໂຄສະນາ"</string>
     <string name="ads_description" msgid="8081069475265061074">"ຈັດການການຕັ້ງຄ່າໂຄສະນາ ເຊັ່ນ: ການຣີເຊັດ ID ການໂຄສະນາ."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"ໂຄສະນາ, ຈັດການການຕັ້ງຄ່າໂຄສະນາ ເຊັ່ນ: ການຣີເຊັດ ID ການໂຄສະນາຂອງທ່ານ."</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"ການອັບເດດລະບົບເພີ່ມເຕີມ"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"ການນຳໃຊ້ເຄືອຂ່າຍອາດມີການກວດສອບຕິດຕາມ"</string>
     <string name="done_button" msgid="616159688526431451">"ແລ້ວໆ"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="other">ເຊື່ອຖື ຫຼື ລຶບໃບຮັບຮອງອອກ</item>
-      <item quantity="one">ເຊື່ອຖື ຫຼື ລຶບໃບຮັບຮອງອອກ</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ໄດ້ຕິດຕັ້ງຜູ້ອອກໃບຮັບຮອງຢູ່ອຸປະກອນຂອງທ່ານແລ້ວ, ເຊິ່ງອາດອະນຸຍາດເຂົາເຈົ້າສັງເກດການການເຄື່ອນໄຫວເຄືອຂ່າຍອຸປະກອນຂອງທ່ານໄດ້, ຮວມທັງອີເມວ, ແອັບ ແລະ ເວັບໄຊທີ່ເຂົ້າລະຫັດ.\n\nສຳລັບຂໍ້ມູນເພີ່ມເຕີມກ່ຽວກັບໃບຮັບຮອງເຫຼົ່ານີ້, ກະລຸນາຕິດຕໍ່ຜູ້ເບິ່ງແຍງຂອງທ່ານ.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> ໄດ້ຕິດຕັ້ງຜູ້ອອກໃບຮັບຮອງຢູ່ອຸປະກອນຂອງທ່ານແລ້ວ, ເຊິ່ງອາດອະນຸຍາດເຂົາເຈົ້າສັງເກດການການເຄື່ອນໄຫວເຄືອຂ່າຍອຸປະກອນຂອງທ່ານໄດ້, ຮວມທັງອີເມວ, ແອັບ ແລະ ເວັບໄຊທີ່ເຂົ້າລະຫັດ.\n\nສຳລັບຂໍ້ມູນເພີ່ມເຕີມກ່ຽວກັບໃບຮັບຮອງນີ້, ກະລຸນາຕິດຕໍ່ຜູ້ເບິ່ງແຍງຂອງທ່ານ.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ໄດ້ຕິດຕັ້ງຜູ້ອອກໃບຮັບຮອງສຳລັບໂປຣໄຟລ໌ບ່ອນເຮັດວຽກຂອງທ່ານແລ້ວ, ເຊິ່ງອາດອະນຸຍາດເຂົາເຈົ້າສັງເກດການການເຄື່ອນໄຫວເຄືອຂ່າຍບ່ອນເຮັດວຽກໄດ້, ຮວມທັງອີເມວ, ແອັບ ແລະ ເວັບໄຊທີ່ເຂົ້າລະຫັດ.\n\nສຳລັບຂໍ້ມູນເພີ່ມເຕີມກ່ຽວກັບໃບຮັບຮອງເຫຼົ່ານີ້, ກະລຸນາຕິດຕໍ່ຜູ້ເບິ່ງແຍງຂອງທ່ານ.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> ໄດ້ຕິດຕັ້ງຜູ້ອອກໃບຮັບຮອງສຳລັບໂປຣໄຟລ໌ບ່ອນເຮັດວຽກຂອງທ່ານແລ້ວ, ເຊິ່ງອາດອະນຸຍາດເຂົາເຈົ້າສັງເກດການການເຄື່ອນໄຫວເຄືອຂ່າຍບ່ອນເຮັດວຽກໄດ້, ຮວມທັງອີເມວ, ແອັບ ແລະ ເວັບໄຊທີ່ເຂົ້າລະຫັດ.\n\nສຳລັບຂໍ້ມູນເພີ່ມເຕີມກ່ຽວກັບໃບຮັບຮອງນີ້, ກະລຸນາຕິດຕໍ່ຜູ້ເບິ່ງແຍງຂອງທ່ານ.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"ພາກສ່ວນທີສາມສາມາດເບິ່ງການເຄື່ອນໄຫວເຄືອຂ່າຍຂອງທ່ານໄດ້ ຮວມເຖິງອີເມວ, ແອັບຯ ແລະເວັບໄຊທີ່ເຂົ້າລະຫັດ.\n\nຂໍ້ມູນການຢືນຢັນທີ່ເຊື່ອຖືໄດ້ໃນຄອມພິວເຕີຂອງທ່ານ ອະນຸມັດໃຫ້ຂັ້ນຕອນນີ້ເປັນໄປໄດ້."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="other">ກວດສອບໃບຮັບຮອງ</item>
-      <item quantity="one">ກວດສອບໃບຮັບຮອງ</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{ເຊື່ອຖື ຫຼື ລຶບໃບຮັບຮອງອອກ}other{ເຊື່ອຖື ຫຼື ລຶບໃບຮັບຮອງອອກ}}"</string>
     <string name="device_status" msgid="8266002761193692207">"ສະຖານະ"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"ເຄືອຂ່າຍ, ເລກລໍາດັບ ແລະຂໍ້ມູນອື່ນ"</string>
     <string name="manual" msgid="5683935624321864999">"ຄູ່​ມື"</string>
@@ -738,6 +686,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"ກຳລັງກວດສອບ"</string>
     <string name="system_apps" msgid="8481888654606868074">"ແອັບຯ"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"ເປີດໜ້າຈໍຕະຫຼອດ"</string>
+    <string name="keep_screen_on_summary" msgid="4680661166009970792">"ໜ້າຈໍຈະບໍ່ນອນ"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"ການກວດສອບ HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"ການ​ປັບ​ແຕ່ງ HDMI"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"ຣີສະຕາດດຽວນີ້ບໍ?"</string>
@@ -858,18 +807,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"ປິດ​ອຸ​ປະ​ກອນ HDMI ກັບ​ໂທ​ລະ​ພາບ"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"​ເປີດ​ໂທ​ລະ​ພາບ​ອັດ​ຕະ​ໂນ​ມັດ"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"ເປີດ​ໂທ​ລະ​ພາບ​ກັບ​ອຸ​ປະ​ກອນ HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="other">ເຊື່ອມຕໍ່ສັນຍານເຂົ້າແລ້ວ</item>
-      <item quantity="one">ເຊື່ອມຕໍ່ສັນຍານເຂົ້າແລ້ວ</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="other">ສັນຍານເຂົ້າກຽມພ້ອມ</item>
-      <item quantity="one">ສັນຍານເຂົ້າກຽມພ້ອມ</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="other">ບໍ່ໄດ້ເຊື່ອມຕໍ່ສັນຍານເຂົ້າເທື່ອ</item>
-      <item quantity="one">ບໍ່ໄດ້ເຊື່ອມຕໍ່ສັນຍານເຂົ້າເທື່ອ</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{ອິນພຸດທີ່ເຊື່ອມຕໍ່ແລ້ວ}other{ອິນພຸດທີ່ເຊື່ອມຕໍ່ແລ້ວ}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{ອິນພຸດທີ່ສະແຕນບາຍ}other{ອິນພຸດທີ່ສະແຕນບາຍ}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{ອິນພຸດທີ່ບໍ່ໄດ້ເຊື່ອມຕໍ່}other{ອິນພຸດທີ່ບໍ່ໄດ້ເຊື່ອມຕໍ່}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"​ຈຳ​ກັດ​ການ​ເຂົ້າ​ເຖິງ​ແອັບຯ ແລະ ເນື້ອ​ຫາ​ຕ່າງໆ​ໃນ​ບັນ​ຊີ​ຂອງ​ທ່ານ"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"ໂປຣໄຟລ໌​ຈຳກັດ"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"​ຄວບ​ຄຸມ​ໂດຍ <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -883,10 +823,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"ສ້າງໂປຣໄຟລ໌ທີ່ຈຳກັດ"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"ການ​ຕັ້ງ​ຄ່າ"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"ແອັບຯ​ທີ່​ອະນຸຍາດ"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="other">%d ແອັບ​ຯ​ໄດ້​ຮັບ​ອະ​ນຸ​ຍາດ</item>
-      <item quantity="one">1 ແອັບ​ໄດ້​ຮັບ​ອະ​ນຸ​ຍາດ</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"ອະນຸຍາດແລ້ວ"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"ບໍ່​ອະນຸຍາດ"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"ປັບແຕ່ງ​ການ​ຈຳກັດ"</string>
@@ -1040,7 +976,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"ຕົວປະຢັດຂໍ້ມູນ"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"ປັບຄຸນນະພາບວິດີໂອເພື່ອໃຊ້ອິນເຕີເນັດມືຖືໃຫ້ໜ້ອຍລົງໂດຍອັດຕະໂນມັດ"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"ການໃຊ້ອິນເຕີເນັດ ແລະ ການເຕືອນ"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"ທ່ານສາມາດເຊື່ອມຕໍ່ຫາອິນເຕີເນັດດ້ວຍ Wi-Fi, Ethernet ຫຼື ຮັອດສະປອດຂອງໂທລະສັບທ່ານໄດ້. ສຳລັບການຊ່ວຍເຫຼືອເພີ່ມເຕີມ, ກະລຸນາໄປທີ່ "<b>"g.co/network"</b>"."</string>
+    <string name="data_saver_header_info" msgid="2706725187498535785">"ທ່ານສາມາດເຊື່ອມຕໍ່ຫາອິນເຕີເນັດດ້ວຍ Wi-Fi, Ethernet ຫຼື ຮັອດສະປອດຂອງໂທລະສັບທ່ານໄດ້."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"ບໍ່ອະນຸຍາດໃຫ້ດຳເນີນການ"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"ບໍ່ສາມາດປ່ຽນລະດັບສຽງໄດ້"</string>
