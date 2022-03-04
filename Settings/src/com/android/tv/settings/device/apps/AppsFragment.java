@@ -16,6 +16,9 @@
 
 package com.android.tv.settings.device.apps;
 
+import static android.provider.DeviceConfig.NAMESPACE_APP_HIBERNATION;
+
+import static com.android.tv.settings.library.util.LibUtils.PROPERTY_APP_HIBERNATION_ENABLED;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
 import android.app.Activity;
@@ -23,6 +26,7 @@ import android.app.Application;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
+import android.provider.DeviceConfig;
 import android.text.TextUtils;
 
 import androidx.annotation.Keep;
@@ -50,6 +54,7 @@ public class AppsFragment extends PreferenceControllerFragment {
     private static final String KEY_OVERLAY_SECURITY = "overlay_security";
     private static final String KEY_UPDATE = "update";
     private static final String TOP_LEVEL_SLICE_URI = "top_level_settings_slice_uri";
+    private static final String KEY_HIBERNATED_APPS = "see_unused_apps";
 
     public static void prepareArgs(Bundle b, String volumeUuid, String volumeName) {
         b.putString(AppsActivity.EXTRA_VOLUME_UUID, volumeUuid);
@@ -80,6 +85,7 @@ public class AppsFragment extends PreferenceControllerFragment {
         final Preference securityPreference = findPreference(KEY_SECURITY);
         final Preference overlaySecuritySlicePreference = findPreference(KEY_OVERLAY_SECURITY);
         final Preference updateSlicePreference = findPreference(KEY_UPDATE);
+        final Preference hibernatedAppsPreference = findPreference(KEY_HIBERNATED_APPS);
         if (FlavorUtils.getFeatureFactory(getContext()).getBasicModeFeatureProvider()
                 .isBasicMode(getContext())) {
             showSecurityPreference(securityPreference, overlaySecuritySlicePreference);
@@ -97,6 +103,9 @@ public class AppsFragment extends PreferenceControllerFragment {
                 updateSlicePreference.setVisible(
                         isUpdateSlicePreferenceEnabled(updateSlicePreference));
             }
+        }
+        if (hibernatedAppsPreference != null) {
+            hibernatedAppsPreference.setVisible(isHibernationEnabled());
         }
     }
 
@@ -137,6 +146,11 @@ public class AppsFragment extends PreferenceControllerFragment {
                         getContext(),
                         ((SlicePreference) updateSlicePreference).getUri(),
                                 TOP_LEVEL_SLICE_URI);
+    }
+
+    private static boolean isHibernationEnabled() {
+        return DeviceConfig.getBoolean(
+                NAMESPACE_APP_HIBERNATION, PROPERTY_APP_HIBERNATION_ENABLED, false);
     }
 
     @Override
