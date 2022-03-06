@@ -45,25 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Dodajanje računa"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Računi in prijava"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Ni računov"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> račun</item>
-      <item quantity="two"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> računa</item>
-      <item quantity="few"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> računi</item>
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> računov</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# račun}one{# račun}two{# računa}few{# računi}other{# računov}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Predstavnostne storitve, Pomočnik, Google Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Omrežje in internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Zvok"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikacije"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Nastavitve naprave"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Daljinsko upravljanje in dodatki"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Ni povezanih naprav Bluetooth"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> dodatek</item>
-      <item quantity="two"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> dodatka</item>
-      <item quantity="few"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> dodatki</item>
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> dodatkov</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Slika in zvok"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Pomoč in povratne informacije"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Zasebnost"</string>
@@ -277,12 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Ni na voljo"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Skrbniške aplikacije naprave"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Ni aktivnih aplikacij"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktivna aplikacija</item>
-      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> aktivni aplikaciji</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aktivne aplikacije</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aktivnih aplikacij</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Onemogočil skrbnik, pravilnik za šifriranje ali shramba poverilnic"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Podatki o upravljani napravi"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Spremembe in nastavitve, ki jih upravlja vaša organizacija"</string>
@@ -300,22 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Brez"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Nameščene aplikacije"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"To je ocena števila aplikacij. Morda ne vključuje aplikacij, nameščenih zunaj Trgovine Play."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="one">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> aplikacija</item>
-      <item quantity="two">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> aplikaciji</item>
-      <item quantity="few">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> aplikacije</item>
-      <item quantity="other">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> aplikacij</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Najmanj # aplikacija}one{Najmanj # aplikacija}two{Najmanj # aplikaciji}few{Najmanj # aplikacije}other{Najmanj # aplikacij}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Dovoljenja za lokacijo"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Dovoljenja za mikrofon"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Dovoljenja za fotoaparat"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Privzete aplikacije"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aplikacija</item>
-      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> aplikaciji</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> aplikacije</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikacij</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# aplikacija}one{# aplikacija}two{# aplikaciji}few{# aplikacije}other{# aplikacij}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Privzeta tipkovnica"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Nastavljeno na <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Stalno vklopljen VPN je vklopljen"</string>
@@ -325,47 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Zaupanja vredne poverilnice"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Zaupanja vredne poverilnice v vašem osebnem profilu"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Zaupanja vredne poverilnice v vašem delovnem profilu"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="one">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> potrdilo overitelja potrdil</item>
-      <item quantity="two">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> potrdili overitelja potrdil</item>
-      <item quantity="few">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> potrdila overitelja potrdil</item>
-      <item quantity="other">Najmanj <xliff:g id="COUNT_1">%d</xliff:g> potrdil overitelja potrdil</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# potrdilo overitelja potrdil}one{# potrdilo overitelja potrdil}two{# potrdili overitelja potrdil}few{# potrdila overitelja potrdil}other{# potrdil overitelja potrdil}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Skrbnik lahko zaklene napravo in ponastavi geslo"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Skrbnik lahko izbriše vse podatke v napravi"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Število neuspešnih poskusov vpisa gesla, preden se izbrišejo vsi podatki v napravi"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Število neuspešnih poskusov vpisa gesla, preden se izbrišejo podatki delovnega profila"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> poskus</item>
-      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> poskusa</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> poskusi</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> poskusov</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# poskus}one{# poskus}two{# poskusa}few{# poskusi}other{# poskusov}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"To napravo upravlja vaša organizacija."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"To napravo upravlja <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Več o tem"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="one">Fotografske aplikacije</item>
-      <item quantity="two">Fotografske aplikacije</item>
-      <item quantity="few">Fotografske aplikacije</item>
-      <item quantity="other">Fotografske aplikacije</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Fotografska aplikacija}one{Fotografske aplikacije}two{Fotografske aplikacije}few{Fotografske aplikacije}other{Fotografske aplikacije}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Aplikacija za koledar"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Aplikacija za stike"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="one">E-poštni odjemalci</item>
-      <item quantity="two">E-poštni odjemalci</item>
-      <item quantity="few">E-poštni odjemalci</item>
-      <item quantity="other">E-poštni odjemalci</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{E-poštni odjemalec}one{E-poštni odjemalci}two{E-poštni odjemalci}few{E-poštni odjemalci}other{E-poštni odjemalci}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"Aplikacija za zemljevide"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="one">Aplikacije za klicanje</item>
-      <item quantity="two">Aplikacije za klicanje</item>
-      <item quantity="few">Aplikacije za klicanje</item>
-      <item quantity="other">Aplikacije za klicanje</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{Aplikacija za klicanje}one{Aplikacije za klicanje}two{Aplikacije za klicanje}few{Aplikacije za klicanje}other{Aplikacije za klicanje}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Brskalnik"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -384,12 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Različica operacijskega sistema Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Serijska številka"</string>
     <string name="about_build" msgid="8467840394761634575">"Delovna različica operacijskega sistema Android TV"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="one"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> korak vas loči od tega, da postanete razvijalec</item>
-      <item quantity="two"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> koraka vas ločita od tega, da postanete razvijalec</item>
-      <item quantity="few"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> koraki vas ločijo od tega, da postanete razvijalec</item>
-      <item quantity="other"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> korakov vas loči od tega, da postanete razvijalec</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{# korak vas loči od tega, da postanete razvijalec.}one{# korak vas loči od tega, da postanete razvijalec.}two{# koraka vas ločita od tega, da postanete razvijalec.}few{# koraki vas ločijo od tega, da postanete razvijalec.}other{# korakov vas loči od tega, da postanete razvijalec.}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Oglasi"</string>
     <string name="ads_description" msgid="8081069475265061074">"Upravljanje nastavitev oglasov, kot je ponastavitev oglaševalskega ID-ja."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Oglasi, upravljanje nastavitev oglasov, kot je ponastavitev oglaševalskega ID-ja."</string>
@@ -403,31 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Dodatne posodobitve sist."</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Omrežje je lahko nadzorovano"</string>
     <string name="done_button" msgid="616159688526431451">"Končano"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="one">Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil</item>
-      <item quantity="two">Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil</item>
-      <item quantity="few">Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil</item>
-      <item quantity="other">Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="one">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil v vaši napravi, s čimer morda lahko spremlja omrežno dejavnost naprave, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o tem potrdilih, se obrnite na skrbnika.</item>
-      <item quantity="two">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil v vaši napravi, s čimer morda lahko spremlja omrežno dejavnost naprave, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o tem potrdilih, se obrnite na skrbnika.</item>
-      <item quantity="few">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil v vaši napravi, s čimer morda lahko spremlja omrežno dejavnost naprave, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o tem potrdilih, se obrnite na skrbnika.</item>
-      <item quantity="other">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil v vaši napravi, s čimer morda lahko spremlja omrežno dejavnost naprave, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o tem potrdilih, se obrnite na skrbnika.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="one">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil za vaš delovni profil, s čimer morda lahko spremlja dejavnost v službenem omrežju, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o teh potrdilih, se obrnite na skrbnika.</item>
-      <item quantity="two">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil za vaš delovni profil, s čimer morda lahko spremlja dejavnost v službenem omrežju, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o teh potrdilih, se obrnite na skrbnika.</item>
-      <item quantity="few">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil za vaš delovni profil, s čimer morda lahko spremlja dejavnost v službenem omrežju, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o teh potrdilih, se obrnite na skrbnika.</item>
-      <item quantity="other">Skrbnik domene <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> je namestil overitelje potrdil za vaš delovni profil, s čimer morda lahko spremlja dejavnost v službenem omrežju, vključno z e-pošto, aplikacijami in varnimi spletnimi mesti.\n\nČe želite več informacij o teh potrdilih, se obrnite na skrbnika.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Tretja oseba lahko nadzira vašo omrežno dejavnost, vključno z e-poštnimi sporočili, aplikacijami in varnimi spletnimi mesti.\n\nTo ji omogoča zaupanja vredna poverilnica, ki je nameščena v vaši napravi."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="one">Preveri potrdila</item>
-      <item quantity="two">Preveri potrdila</item>
-      <item quantity="few">Preveri potrdila</item>
-      <item quantity="other">Preveri potrdila</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Označevanje potrdila kot zaupanja vrednega ali odstranitev potrdila}one{Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil}two{Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil}few{Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil}other{Označevanje potrdil kot zaupanja vrednih ali odstranitev potrdil}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Stanje"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Omrežje, serijske številke in drugi podatki"</string>
     <string name="manual" msgid="5683935624321864999">"Priročnik"</string>
@@ -768,6 +686,8 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Nadzor"</string>
     <string name="system_apps" msgid="8481888654606868074">"Aplikacije"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Brez stanja pripravljenosti"</string>
+    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
+    <skip />
     <string name="system_hdcp_checking" msgid="3757586362130048838">"Preverjanje HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"Optimizacija HDMI-ja"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Želite znova zagnati napravo?"</string>
@@ -888,24 +808,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Izklop naprav HDMI prek televizorja"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Samodejni vklop televizorja"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Vklop televizorja z napravo HDMI"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="one">Povezani vhodi</item>
-      <item quantity="two">Povezani vhodi</item>
-      <item quantity="few">Povezani vhodi</item>
-      <item quantity="other">Povezani vhodi</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="one">Vhodi v pripravljenosti</item>
-      <item quantity="two">Vhodi v pripravljenosti</item>
-      <item quantity="few">Vhodi v pripravljenosti</item>
-      <item quantity="other">Vhodi v pripravljenosti</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="one">Nepovezani vhodi</item>
-      <item quantity="two">Nepovezani vhodi</item>
-      <item quantity="few">Nepovezani vhodi</item>
-      <item quantity="other">Nepovezani vhodi</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Povezani vhod}one{Povezani vhodi}two{Povezani vhodi}few{Povezani vhodi}other{Povezani vhodi}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Vhod v pripravljenosti}one{Vhodi v pripravljenosti}two{Vhodi v pripravljenosti}few{Vhodi v pripravljenosti}other{Vhodi v pripravljenosti}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Nepovezan vhod}one{Nepovezani vhodi}two{Nepovezani vhodi}few{Nepovezani vhodi}other{Nepovezani vhodi}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Omejitev dostopa do aplikacij in druge vsebine v računu"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Omejeni profil"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Pod nadzorom aplikacije <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -919,12 +824,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Ustvarjanje omejenega profila"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Nastavitve"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Dovoljene aplikacije"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="one">%d dovoljena aplikacija</item>
-      <item quantity="two">%d dovoljeni aplikaciji</item>
-      <item quantity="few">%d dovoljene aplikacije</item>
-      <item quantity="other">%d dovoljenih aplikacij</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Dovoljeno"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Ni dovoljeno"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Prilagoditev omejitev"</string>
@@ -1078,7 +977,8 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Varčevanje s podatki"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Samodejno prilagajanje kakovosti videa za manj prenosa podatkov v mob. omrežju"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Prenesena količina podatkov in opozorila"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"Z internetom se lahko povežete z omrežjem Wi-Fi, ethernetom ali dostopno točko telefona. Več pomoči je na voljo na "<b>"g.co/network"</b>"."</string>
+    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Dejanje ni dovoljeno"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Spreminjanje glasnosti ni mogoče"</string>

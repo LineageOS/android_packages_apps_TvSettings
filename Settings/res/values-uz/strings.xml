@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Hisobingizga kiring"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Hisoblar va tizimga kirish"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Hech qanday hisob yo‘q"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> ta hisob</item>
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> ta hisob</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# ta hisob}other{# ta hisob}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Media xizmatlar, Assistent, toʻlovlar"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Tarmoq va Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Tovush"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Ilovalar"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Qurilma parametrlari"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Pultlar va aksessuarlar"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Hech qanday ulangan Bluetooth qurilma yo‘q"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ta aksessuar</item>
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> ta aksessuar</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Displey va tovush"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Yordam/fikr-mulohaza"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Maxfiylik"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Mavjud emas"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Qurilma administratori ilovalari"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Hech qanday administrator ilovasi faol emas"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ta faol ilova</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ta faol ilova</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Administrator, shifrlash siyosati, yoki hisob ma’lumotlari ombori tomonidan o‘chirib qo‘yilgan"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Boshqariluvchi qurilma ma’lumotlari"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"O‘zgartirishlar va sozlamalar tashkilotingiz tomonidan boshqariladi"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Hech qanday"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Oʻrnatilgan ilovalar"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Ilovalar soni hisoblanmoqda. Play Market orqali oʻrnatilmagan ilovalar hisoblanmasligi mumkin."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="other">Kamida <xliff:g id="COUNT_1">%d</xliff:g> ta ilova</item>
-      <item quantity="one">Kamida <xliff:g id="COUNT_0">%d</xliff:g> ta ilova</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Kamida # ta ilova}other{Kamida # ta ilova}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Joylashuv axborotiga ruxsat"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mikrofon ruxsatnomasi"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Kamera ruxsatnomasi"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Birlamchi ilovalar"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ta ilova</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ta ilova</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# ta ilova}other{# ta ilova}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Asosiy klaviatura"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g> yorlig‘iga sozlangan"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Doimiy VPN yoqildi"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Ishonchli sertifikatlar"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Shaxsiy profilingizdagi ishonchli sertifikatlar"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Ishchi profilingizdagi ishonchli sertifikatlar"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="other">Kamida <xliff:g id="COUNT_1">%d</xliff:g> ta CA sertifikati</item>
-      <item quantity="one">Kamida <xliff:g id="COUNT_0">%d</xliff:g> ta CA sertifikati</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# ta CA sertifikati}other{# ta CA sertifikati}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Administrator qurilmani qulflashi va parolni o‘zgartirishi mumkin"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Administrator barcha qurilma ma’lumotlarini o‘chirib tashlashi mumkin"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Qurilmadagi barcha ma’lumotlar o‘chirib tashlanishi uchun necha marta parol xato kiritilishi kerak"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Ish profili ma’lumotlari o‘chirib tashlanishi uchun necha marta parol xato kiritilishi kerak"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ta urinish</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ta urinish</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# ta urinish}other{# ta urinish}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Bu – tashkilotingiz tomonidan boshqariladigan qurilma."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Bu – <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> tomonidan boshqariladigan qurilma."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Batafsil"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="other">Kamera uchun ilovalar</item>
-      <item quantity="one">Kamera uchun ilova</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Kamera uchun ilova}other{Kamera uchun ilovalar}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Taqvim ilovasi"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Kontaktlar ilovasi"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="other">Email uchun ilovalar</item>
-      <item quantity="one">Email uchun ilova</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{Email uchun ilova}other{Email uchun ilovalar}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"Xarita ilovasi"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="other">Telefon uchun ilovalar</item>
-      <item quantity="one">Telefon uchun ilova</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{Telefon uchun ilova}other{Telefon uchun ilovalar}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Brauzer ilovasi"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Android TV OT versiyasi"</string>
     <string name="about_serial" msgid="3432319328808745459">"Seriya raqami"</string>
     <string name="about_build" msgid="8467840394761634575">"Android TV OT nashri"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other">Dasturchi sifatida ro‘yxatdan o‘tishni yakunlashga <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> qadam qoldi</item>
-      <item quantity="one">Dasturchi sifatida ro‘yxatdan o‘tishni yakunlashga <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> qadam qoldi</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Dasturchi boʻlishingizga atigi # qadam qoldi.}other{Dasturchi boʻlishingizga atigi # qadam qoldi.}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Reklamalar"</string>
     <string name="ads_description" msgid="8081069475265061074">"Reklama ID tiklanishi kabi sozlamalarni boshqarish"</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Reklama, reklama ID tiklanishi kabi sozlamalarni boshqarish"</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Qo‘shimcha yangilovlar"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Tarmoq kuzatilishi mumkin"</string>
     <string name="done_button" msgid="616159688526431451">"Tayyor"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="other">Sertifikatlarni ishonchli deb belgilash yoki olib tashlash</item>
-      <item quantity="one">Sertifikatni ishonchli deb belgilash yoki olib tashlash</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> domeni administratori qurilmangiz uchun sertifikatlar oʻrnatdi. Buning yordamida qurilmaning tarmoq faoliyatini, jumladan, emaillar, ilovalar va xavfsiz saytlarni nazorat qilishi mumkin.\n\nBu sertifikatlar haqida batafsil axborot olish uchun administratorga murojaat qiling.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> domeni administratori qurilmangiz uchun sertifikat oʻrnatdi. Buning yordamida qurilmaning tarmoq faoliyatini, jumladan, emaillar, ilovalar va xavfsiz saytlarni nazorat qilishi mumkin.\n\nBu sertifikat haqida batafsil axborot olish uchun administratorga murojaat qiling.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> domeni administratori ishchi profilingiz uchun sertifikatlar oʻrnatdi. Buning yordamida korporativ tarmoq faoliyatini, jumladan, emaillar, ilovalar va xavfsiz saytlarni nazorat qilishi mumkin.\n\nBu sertifikatlar haqida batafsil axborot olish uchun administratorga murojaat qiling.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> domeni administratori ishchi profilingiz uchun sertifikat oʻrnatdi. Buning yordamida korporativ tarmoq faoliyatini, jumladan, emaillar, ilovalar va xavfsiz saytlarni nazorat qilishi mumkin.\n\nBu sertifikat haqida batafsil axborot olish uchun administratorga murojaat qiling.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Uchinchi shaxslar tarmoqdagi faoliyatlaringiz, shu jumladan, e-pochtangiz, ilovalaringiz va xavfsiz veb-saytlarni kuzatish imkoniyatiga egalar.\n\nQurilmangizga o‘rnatilgan ishonchli hisob ma‘lumotlari bunga imkon yaratib bermoqda."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="other">Sertifikatlarni tekshirish</item>
-      <item quantity="one">Sertifikatni tekshirish</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Sertifikatni ishonchli deb belgilash yoki olib tashlash}other{Sertifikatlarni ishonchli deb belgilash yoki olib tashlash}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Holati"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Tarmoq, seriya raqami va boshqa ma’lumotlar"</string>
     <string name="manual" msgid="5683935624321864999">"Qo‘llanma"</string>
@@ -738,6 +686,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Kuzatish"</string>
     <string name="system_apps" msgid="8481888654606868074">"Ilovalar"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Uyg‘oq qolish"</string>
+    <string name="keep_screen_on_summary" msgid="4680661166009970792">"Ekran hech qachon uxlamaydi"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP tekshiruvi"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI-ni optimallashtirish"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Hozir qaytadan yoqilsinmi?"</string>
@@ -858,18 +807,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"TV bilan HDMI qurilmalarini o\'chiring"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"TV ni avtomatik yoqish"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"HDMI qurilma bilan TV ni yoqish"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="other">Ulangan portlar</item>
-      <item quantity="one">Ulangan port</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="other">Kutish rejimidagi portlar</item>
-      <item quantity="one">Kutish rejimidagi port</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="other">Ulanmagan portlar</item>
-      <item quantity="one">Ulanmagan port</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{ULANGAN PORT}other{Ulangan portlar}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Kutish rejimidagi port}other{Kutish rejimidagi portlar}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Ulanmagan port}other{Ulanmagan portlar}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Hisobingizdagi ilovalar va boshqa kontentga kirishni cheklang"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Cheklangan profil"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"<xliff:g id="APP">%1$s</xliff:g> bilan boshqariladi"</string>
@@ -883,10 +823,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Imkoniyati cheklangan profil yaratish"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Sozlamalar"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Ruxsat berilgan ilovalar"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="other">%d ta ilovaga ruxsat berildi</item>
-      <item quantity="one">1 ilovaga ruxsat berildi</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Ruxsat berilgan"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Ruxsat berilmagan"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Cheklanishlarni sozlash"</string>
@@ -1040,7 +976,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Trafik tejash"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Video sifatini mobil internet trafik tejalishiga moslash"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Trafik sarfi va bildirishnomalar"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"Internetga Wi-Fi, Ethernet yoki telefon hotspoti yordamida ulanishingiz mumkin. Yordam olish uchun "<b>"g.co/network"</b>" sahifasiga tashrif buyuring."</string>
+    <string name="data_saver_header_info" msgid="2706725187498535785">"Internetga Wi-Fi, Ethernet yoki telefon hotspoti yordamida ulanishingiz mumkin."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Bu amalga ruxsat berilmagan"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Tovush balandligini o‘zgartirib bo‘lmaydi"</string>

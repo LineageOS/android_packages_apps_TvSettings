@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"新增帳戶"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"帳戶與登入"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"沒有任何帳戶"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> 個帳戶</item>
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> 個帳戶</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# 個帳戶}other{# 個帳戶}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"媒體服務、Google 助理、付款功能"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"網路與網際網路"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"音效"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"應用程式"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"裝置偏好設定"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"遙控器與配件"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"沒有已連線的藍牙裝置"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> 個配件</item>
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> 個配件</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"螢幕和音效偏好設定"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"說明和意見回饋"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"隱私權"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"不適用"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"裝置管理員應用程式"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"沒有使用中的應用程式"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 個使用中的應用程式</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 個使用中的應用程式</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"已由管理員、加密政策或認證儲存空間停用"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"受管理的裝置資訊"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"由貴機構所管理的變更內容和設定"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"無"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"已安裝的應用程式"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"應用程式數量是估計值。這個數字可能不包括從 Play 商店以外來源安裝的應用程式。"</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="other">至少有 <xliff:g id="COUNT_1">%d</xliff:g> 個應用程式</item>
-      <item quantity="one">至少有 <xliff:g id="COUNT_0">%d</xliff:g> 個應用程式</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{至少有 # 個應用程式}other{至少有 # 個應用程式}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"位置資訊權限"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"麥克風權限"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"相機權限"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"預設應用程式"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 個應用程式</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 個應用程式</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# 個應用程式}other{# 個應用程式}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"預設鍵盤"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"已設為「<xliff:g id="APP_LABEL">%s</xliff:g>」"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"已開啟「永久連線的 VPN」"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"信任的憑證"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"你的個人設定檔中安裝的信任的憑證"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"你的工作資料夾中安裝的信任的憑證"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="other">至少有 <xliff:g id="COUNT_1">%d</xliff:g> 個 CA 憑證</item>
-      <item quantity="one">至少有 <xliff:g id="COUNT_0">%d</xliff:g> 個 CA 憑證</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# 個 CA 憑證}other{# 個 CA 憑證}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"管理員可以鎖定裝置及重設密碼"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"管理員可以刪除所有裝置資料"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"輸入錯誤密碼的次數上限，超過後系統將自動刪除所有裝置資料"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"輸入錯誤密碼的次數上限，超過後系統將自動刪除工作資料夾資料"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="other">已嘗試 <xliff:g id="COUNT_1">%d</xliff:g> 次</item>
-      <item quantity="one">已嘗試 <xliff:g id="COUNT_0">%d</xliff:g> 次</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{還有 # 次機會}other{還有 # 次機會}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"這個裝置是由貴機構所管理。"</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"這個裝置是由 <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> 所管理。"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"瞭解詳情"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="other">相機應用程式</item>
-      <item quantity="one">相機應用程式</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{相機應用程式}other{相機應用程式}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"日曆應用程式"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"聯絡人應用程式"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="other">電子郵件用戶端應用程式</item>
-      <item quantity="one">電子郵件用戶端應用程式</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{電子郵件用戶端應用程式}other{電子郵件用戶端應用程式}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"地圖應用程式"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="other">電話應用程式</item>
-      <item quantity="one">電話應用程式</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{電話應用程式}other{電話應用程式}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"瀏覽器應用程式"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>、<xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>、<xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>、<xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Android TV 作業系統版本"</string>
     <string name="about_serial" msgid="3432319328808745459">"序號"</string>
     <string name="about_build" msgid="8467840394761634575">"Android TV 作業系統版本"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other">只要再 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟即可啟用開發人員設定</item>
-      <item quantity="one">只要再 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟即可啟用開發人員設定</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{再 # 個步驟即可啟用開發人員設定}other{再 # 個步驟即可啟用開發人員設定}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"廣告"</string>
     <string name="ads_description" msgid="8081069475265061074">"管理廣告設定，例如重設廣告 ID。"</string>
     <string name="ads_content_description" msgid="1006489792324920289">"廣告，可管理廣告設定，例如重設廣告 ID。"</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"其他系統更新"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"網路可能會受到監控"</string>
     <string name="done_button" msgid="616159688526431451">"完成"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="other">設為信任的憑證或移除憑證</item>
-      <item quantity="one">設為信任的憑證或移除憑證</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> 已在你的裝置上安裝憑證授權單位憑證，藉此監控裝置的網路活動，包括電子郵件、應用程式和安全的網站。\n\n如要進一步瞭解這些憑證，請與你的管理員聯絡。</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> 已在你的裝置上安裝憑證授權單位憑證，藉此監控裝置的網路活動，包括電子郵件、應用程式和安全的網站。\n\n如要進一步瞭解這個憑證，請與你的管理員聯絡。</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> 已在你的工作資料夾中安裝憑證授權單位憑證，藉此監控工作網路活動，包括電子郵件、應用程式和安全的網站。\n\n如要進一步瞭解這些憑證，請與你的管理員聯絡。</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> 已在你的工作資料夾中安裝憑證授權單位憑證，藉此監控工作網路活動，包括電子郵件、應用程式和安全的網站。\n\n如要進一步瞭解這個憑證，請與你的管理員聯絡。</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"第三方可以監控你的網路活動，包括你使用電子郵件、應用程式和加密網站的情況。\n\n這是因為你的裝置上安裝了信任的憑證。"</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="other">查看憑證</item>
-      <item quantity="one">查看憑證</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{信任或移除憑證}other{信任或移除憑證}}"</string>
     <string name="device_status" msgid="8266002761193692207">"狀態"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"網路、序號和其他資訊"</string>
     <string name="manual" msgid="5683935624321864999">"使用者手冊"</string>
@@ -720,9 +668,9 @@
     <string name="accessibility_audio_description_summary" msgid="7101676957482726702">"選取預設含有口述影像的音訊音軌"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"啟用"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"設定"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"要使用 <xliff:g id="SERVICE">%1$s</xliff:g> 嗎？"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"要使用<xliff:g id="SERVICE">%1$s</xliff:g>嗎？"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"「<xliff:g id="SERVICE">%1$s</xliff:g>」可收集您輸入的所有文字 (密碼除外)，包括信用卡號等個人資料。"</string>
-    <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"要停止 <xliff:g id="SERVICE">%1$s</xliff:g> 嗎？"</string>
+    <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"要停止<xliff:g id="SERVICE">%1$s</xliff:g>嗎？"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"如果您選取 [確定]，「<xliff:g id="SERVICE">%1$s</xliff:g>」將停止運作。"</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"文字轉語音"</string>
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"引擎設定"</string>
@@ -738,6 +686,8 @@
     <string name="system_monitoring" msgid="7997260748312620855">"監控"</string>
     <string name="system_apps" msgid="8481888654606868074">"應用程式"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"保持啟用"</string>
+    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
+    <skip />
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP 檢查"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI 最佳化"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"立即重新啟動？"</string>
@@ -820,7 +770,7 @@
     <string name="tts_rate_normal" msgid="3631458247079252628">"正常"</string>
     <string name="tts_rate_fast" msgid="5723868816257531421">"快"</string>
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"非常快"</string>
-    <string name="title_settings" msgid="780933693363320088">"<xliff:g id="NAME">%1$s</xliff:g> 設定"</string>
+    <string name="title_settings" msgid="780933693363320088">"<xliff:g id="NAME">%1$s</xliff:g>設定"</string>
     <string name="title_current_keyboard" msgid="891238509164879851">"目前的鍵盤"</string>
     <string name="title_configure" msgid="846802387014612210">"設定"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"鍵盤選項"</string>
@@ -858,18 +808,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"透過電視關閉 HDMI 裝置電源"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"電視電源自動開啟"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"透過 HDMI 裝置開啟電視電源"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="other">已連接的輸入裝置</item>
-      <item quantity="one">已連接的輸入裝置</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="other">待命中的輸入裝置</item>
-      <item quantity="one">待命中的輸入裝置</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="other">未連接的輸入裝置</item>
-      <item quantity="one">未連接的輸入裝置</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{已連結的輸入裝置}other{已連結的輸入裝置}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{待命的輸入裝置}other{待命的輸入裝置}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{未連結的輸入裝置}other{未連結的輸入裝置}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"限制他人存取您帳戶中的應用程式和其他內容"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"設有限制的個人資料"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"受到 <xliff:g id="APP">%1$s</xliff:g> 控制"</string>
@@ -883,10 +824,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"建立設有限制的個人資料"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"設定"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"允許的應用程式"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="other">允許了 %d 個應用程式</item>
-      <item quantity="one">允許了 1 個應用程式</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"允許"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"不允許"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"自訂限制"</string>
@@ -1040,7 +977,8 @@
     <string name="title_data_saver" msgid="7500278996154002792">"數據節省模式"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"自動調整影片畫質，藉此降低行動數據用量"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"數據用量和快訊"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"你可以透過 Wi-Fi、乙太網路或手機的無線基地台連上網際網路。如需詳細說明，請前往 "<b>"g.co/network"</b>"。"</string>
+    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"不允許此操作"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"無法變更音量"</string>

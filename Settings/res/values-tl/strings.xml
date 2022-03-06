@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Magdagdag ng account"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Mga account at pag-sign in"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Walang account"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> account</item>
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> na account</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# account}one{# account}other{# na account}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Mga serbisyo ng media, Assistant, Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Network at Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Tunog"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Mga App"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Mga Kagustuhan sa Device"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Mga remote at accessory"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Walang nakakonektang Bluetooth device"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> accessory</item>
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> na accessory</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Display at Tunog"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Tulong at Feedback"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Privacy"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Hindi available"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Mga app ng admin ng device"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Walang aktibong app"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> aktibong app</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> na aktibong app</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Na-disable ng admin, patakaran sa pag-encrypt, o storage ng kredensyal"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Impormasyon ng pinamamahalaang device"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Mga pagbabago at setting na pinamamahalaan ng iyong organisasyon"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Wala"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Mga naka-install na app"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Pagtatantya ang bilang ng mga app. Posibleng hindi kasama rito ang mga app na na-install sa labas ng Play Store."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="one">Minimum na <xliff:g id="COUNT_1">%d</xliff:g> app</item>
-      <item quantity="other">Minimum na <xliff:g id="COUNT_1">%d</xliff:g> na app</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Minimum na # app}one{Minimum na # app}other{Minimum na # na app}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Mga pahintulot ng lokasyon"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mga pahintulot ng mikropono"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Mga pahintulot ng camera"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Mga default na app"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> app</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> na app</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# app}one{# app}other{# na app}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Default na keyboard"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Itakda sa <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Naka-on ang palaging naka-on na VPN"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Mga pinagkakatiwalaang kredensyal"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Mga pinagkakatiwalaang kredensyal sa iyong personal na profile"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Mga pinagkakatiwalaang kredensyal sa iyong profile sa trabaho"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="one">Minimum na <xliff:g id="COUNT_1">%d</xliff:g> CA certificate</item>
-      <item quantity="other">Minimum na <xliff:g id="COUNT_1">%d</xliff:g> na CA certificate</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# CA certificate}one{# CA certificate}other{# na CA certificate}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Maaaring i-lock ng admin ang device at i-reset ang password"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Maaaring i-delete ng admin ang lahat ng data ng device"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Mga nabigong pagsubok sa paglalagay ng password bago i-delete ang lahat ng data ng device"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Mga nabigong pagsubok sa paglalagay ng password bago i-delete ang data ng profile sa trabaho"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> pagsubok</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> na pagsubok</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# pagsubok}one{# pagsubok}other{# na pagsubok}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Ang device na ito ay pinamamahalaan ng iyong organisasyon."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Pinamamahalaan ng <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> ang device na ito."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Matuto pa"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="one">Mga Camera app</item>
-      <item quantity="other">Mga Camera app</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Camera app}one{Mga Camera app}other{Mga Camera app}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"App na Kalendaryo"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"App na Mga Contact"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="one">Mga Email client app</item>
-      <item quantity="other">Mga Email client app</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{Email client app}one{Mga Email client app}other{Mga Email client app}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"App na Mapa"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="one">Mga app na Telepono</item>
-      <item quantity="other">Mga app na Telepono</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{App na Telepono}one{Mga app na Telepono}other{Mga app na Telepono}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Browser app"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Bersyon ng Android TV OS"</string>
     <string name="about_serial" msgid="3432319328808745459">"Serial number"</string>
     <string name="about_build" msgid="8467840394761634575">"Build ng Android TV OS"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="one"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hakbang na lang ang layo mo mula sa pagiging isang developer</item>
-      <item quantity="other"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> na hakbang na lang ang layo mo mula sa pagiging isang developer</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{# hakbang na lang at magiging developer ka na}one{# hakbang na lang at magiging developer ka na}other{# na hakbang na lang at magiging developer ka na}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Mga ad"</string>
     <string name="ads_description" msgid="8081069475265061074">"I-manage ang ads settings, gaya ng pag-reset sa advertising ID."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Mga Ad, Pamahalaan ang iyong mga setting ng ad, tulad ng pag-reset sa iyong advertising ID."</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Karagdagang update ng system"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Maaaring sinusubaybayan ang network"</string>
     <string name="done_button" msgid="616159688526431451">"Tapos na"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="one">Pagkatiwalaan o alisin ang mga certificate</item>
-      <item quantity="other">Pagkatiwalaan o alisin ang mga certificate</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="one">Nag-install ang <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ng mga awtoridad sa certificate sa iyong device, na puwedeng magbigay-daan ditong subaybayan ang aktibidad sa network ng device mo, kabilang ang mga email, app, at secure na website.\n\nPara sa higit pang impormasyon tungkol sa mga certificate na ito, makipag-ugnayan sa iyong admin.</item>
-      <item quantity="other">Nag-install ang <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ng mga awtoridad sa certificate sa iyong device, na puwedeng magbigay-daan ditong subaybayan ang aktibidad sa network ng device mo, kabilang ang mga email, app, at secure na website.\n\nPara sa higit pang impormasyon tungkol sa mga certificate na ito, makipag-ugnayan sa iyong admin.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="one">Nag-install ang <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ng mga awtoridad sa certificate para sa iyong profile sa trabaho, na puwedeng magbigay-daan ditong subaybayan ang aktibidad sa network ng trabaho, kabilang ang mga email, app, at secure na website.\n\nPara sa higit pang impormasyon tungkol sa mga certificate na ito, makipag-ugnayan sa iyong admin.</item>
-      <item quantity="other">Nag-install ang <xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ng mga awtoridad sa certificate para sa iyong profile sa trabaho, na puwedeng magbigay-daan ditong subaybayan ang aktibidad sa network ng trabaho, kabilang ang mga email, app, at secure na website.\n\nPara sa higit pang impormasyon tungkol sa mga certificate na ito, makipag-ugnayan sa iyong admin.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"May kakayahan ang isang third party na subaybayan ang aktibidad ng iyong network, kabilang ang mga email, apps, at mga secure website.\n\nGinagawa itong posible ng isang pinagkakatiwalaang credential na naka-install sa iyong device."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="one">Suriin ang mga certificate</item>
-      <item quantity="other">Suriin ang mga certificate</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Pagkatiwalaan o alisin ang certificate}one{Pagkatiwalaan o alisin ang mga certificate}other{Pagkatiwalaan o alisin ang mga certificate}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Network, mga serial number, at iba pang impormasyon"</string>
     <string name="manual" msgid="5683935624321864999">"Manu-mano"</string>
@@ -738,6 +686,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Pagsubaybay"</string>
     <string name="system_apps" msgid="8481888654606868074">"Apps"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Manatiling gumagana"</string>
+    <string name="keep_screen_on_summary" msgid="4680661166009970792">"Hindi kailanman magsi-sleep ang screen"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"Pagsusuri ng HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"Pag-optimize ng HDMI"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Mag-restart na ngayon?"</string>
@@ -858,18 +807,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"I-off ang mga HDMI device na nakakabit sa TV"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"I-auto power on ang TV"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"I-on ang TV na may HDMI device"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="one">Mga Nakakonektang Input</item>
-      <item quantity="other">Mga Nakakonektang Input</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="one">Mga Naka-standby na Input</item>
-      <item quantity="other">Mga Naka-standby na Input</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="one">Mga Hindi Nakakonektang Input</item>
-      <item quantity="other">Mga Hindi Nakakonektang Input</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Nakakonektang Input}one{Mga Nakakonektang Input}other{Mga Nakakonektang Input}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Naka-standby na Input}one{Mga Naka-standby na Input}other{Mga Naka-standby na Input}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Hindi Nakakonektang Input}one{Mga Hindi Nakakonektang Input}other{Mga Hindi Nakakonektang Input}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Higpitan ang pag-access sa mga app at ibang content sa iyong account"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Pinaghihigpitang Profile"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Kinokontrol ng <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -883,10 +823,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Gumawa ng pinaghihigpitang profile"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Mga Setting"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Mga pinapayagang app"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="one">%d app ang pinapayagan</item>
-      <item quantity="other">%d na app ang pinapayagan</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Pinapayagan"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Hindi pinapayagan"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"I-customize ang mga paghihigpit"</string>
@@ -1040,7 +976,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Data Saver"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Awtomatikong isaayos ang kalidad ng video para sa mas kaunting mobile data"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Paggamit ng data at mga alerto"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"Puwede kang kumonekta sa internet gamit ang Wi-Fi, Ethernet, o ang hotspot ng iyong telepono. Para sa higit pang tulong, bumisita sa "<b>"g.co/network"</b>"."</string>
+    <string name="data_saver_header_info" msgid="2706725187498535785">"Puwede kang kumonekta sa internet gamit ang Wi-Fi, Ethernet, o hotspot ng iyong telepono."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Hindi pinapayagan ang pagkilos"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Hindi mababago ang volume"</string>

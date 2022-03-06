@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Gehitu kontu bat"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Kontuak eta saio-hasiera"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Ez dago konturik"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> kontu</item>
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> kontu</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# kontu}other{# kontu}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Multimedia-zerbitzuak, Laguntzailea, ordainketak"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Sareak eta Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Soinua"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikazioak"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Gailuaren hobespenak"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Urruneko kontrolagailuak eta osagarriak"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Ez dago konektatuta Bluetooth bidezko gailurik"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> osagarri</item>
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> osagarri</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Pantaila eta soinua"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Laguntza eta iritziak"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Pribatutasuna"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Ez dago erabilgarri"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Gailua administratzeko aplikazioak"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Ez dago aplikaziorik aktibo"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikazio aktibo</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikazio aktibo</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Administratzaileak, enkriptatze-gidalerroek edo kredentzialen biltegiak desgaituta"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Gailu kudeatuaren informazioa"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Erakundeak kudeatzen dituen aldaketak eta ezarpenak"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Bat ere ez"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Instalatutako aplikazioak"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Gutxi gorabeherakoa da aplikazio kopurua. Baliteke Play Store-tik instalatu ez diren aplikazioak kontuan ez izatea."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="other">Gutxienez <xliff:g id="COUNT_1">%d</xliff:g> aplikazio</item>
-      <item quantity="one">Gutxienez <xliff:g id="COUNT_0">%d</xliff:g> aplikazio</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Gutxienez # aplikazio}other{Gutxienez # aplikazio}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Kokapena hautemateko baimenak"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mikrofonoa erabiltzeko baimenak"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Kamera erabiltzeko baimenak"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Aplikazio lehenetsiak"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aplikazio</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aplikazio</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# aplikazio}other{# aplikazio}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Teklatu lehenetsia"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Ezarri <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Beti aktibatuta egongo den VPN konexioa aktibatu da"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Kredentzial fidagarriak"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Profil pertsonaleko kredentzial fidagarriak"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Laneko profileko kredentzial fidagarriak"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="other">Gutxienez <xliff:g id="COUNT_1">%d</xliff:g> CA ziurtagiri</item>
-      <item quantity="one">Gutxienez <xliff:g id="COUNT_0">%d</xliff:g> CA ziurtagiri</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# CA ziurtagiri}other{# CA ziurtagiri}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Administratzaileak gailua blokea eta pasahitza berrezar dezake"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Administratzaileak gailuko datu guztiak ezaba ditzake"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Pasahitza idazteko egin daitezkeen saiakerak gailuko datu guztiak ezabatu aurretik"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Pasahitza idazteko egin daitezkeen saiakerak laneko profileko datuak ezabatu aurretik"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> saiakera</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> saiakera</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# saiakera}other{# saiakera}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Zure erakundeak kudeatzen du gailua."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> erakundeak kudeatzen du gailu hau."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Lortu informazio gehiago"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="other">Kamera-aplikazioak</item>
-      <item quantity="one">Kamera-aplikazioa</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Kamera-aplikazioa}other{Kamera-aplikazioak}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Egutegi-aplikazioa"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Kontaktu-aplikazioa"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="other">Posta-bezeroaren aplikazioak</item>
-      <item quantity="one">Posta-bezeroaren aplikazioa</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{Posta-bezeroaren aplikazioa}other{Posta-bezeroaren aplikazioak}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"Mapa-aplikazioa"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="other">Telefono-aplikazioak</item>
-      <item quantity="one">Telefono-aplikazioa</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{Telefono-aplikazioa}other{Telefono-aplikazioak}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Arakatzailea"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Android TV-ren sistema eragilearen bertsioa"</string>
     <string name="about_serial" msgid="3432319328808745459">"Serie-zenbakia"</string>
     <string name="about_build" msgid="8467840394761634575">"Android TV-ren sistema eragilearen konpilazioa"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other"><xliff:g id="STEP_COUNT_1">%1$d</xliff:g> urrats gelditzen zaizkizu garatzaile bihurtzeko</item>
-      <item quantity="one"><xliff:g id="STEP_COUNT_0">%1$d</xliff:g> urrats gelditzen zaizu garatzaile bihurtzeko</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{# urrats falta zaizu garatzaile izateko}other{# urrats falta zaizkizu garatzaile izateko}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Iragarkiak"</string>
     <string name="ads_description" msgid="8081069475265061074">"Kudeatu iragarkien ezarpenak; adibidez, berrezarri publizitate IDa."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Iragarkiak: kudeatu iragarkien ezarpenak; adibidez, berrezarri publizitate IDa."</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Eguneratze gehiago"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Baliteke sarea kontrolatuta egotea"</string>
     <string name="done_button" msgid="616159688526431451">"Eginda"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="other">Jo fidagarritzat edo kendu ziurtagiriak</item>
-      <item quantity="one">Jo fidagarritzat edo kendu ziurtagiria</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> domeinuak ziurtagiri-emaileak instalatu dizkizu gailuan. Hortaz, baliteke domeinuak gailuko sarean egiten duzuna gainbegiratu ahal izatea; besteak beste, posta elektronikoan, aplikazioetan eta webgune seguruetan egiten duzuna.\n\nZiurtagiri horiei buruzko informazio gehiago lortzeko, jarri harremanetan administratzailearekin.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> domeinuak ziurtagiri-emaile bat instalatu dizu gailuan. Hortaz, baliteke domeinuak gailuko sarean egiten duzuna gainbegiratu ahal izatea; besteak beste, posta elektronikoan, aplikazioetan eta webgune seguruetan egiten duzuna.\n\nZiurtagiri horri buruzko informazio gehiago lortzeko, jarri harremanetan administratzailearekin.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> domeinuak ziurtagiri-emaileak instalatu dizkizu laneko profilean. Hortaz, baliteke domeinuak laneko sarean egiten duzuna gainbegiratu ahal izatea; besteak beste, posta elektronikoan, aplikazioetan eta webgune seguruetan egiten duzuna.\n\nZiurtagiri horiei buruzko informazio gehiago lortzeko, jarri harremanetan administratzailearekin.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> domeinuak ziurtagiri-emaile bat instalatu dizu laneko profilean. Hortaz, baliteke domeinuak laneko sarean egiten duzuna gainbegiratu ahal izatea; besteak beste, posta elektronikoan, aplikazioetan eta webgune seguruetan egiten duzuna.\n\nZiurtagiri horri buruzko informazio gehiago lortzeko, jarri harremanetan administratzailearekin.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Hirugarren alderdi bat sarean bideratzen dituzun jarduerak kontrola ditzake, mezu elektronikoak, aplikazioak eta webgune seguruak barne.\n\nGailuan instalatu duzun kredentzial fidagarri batek egiten du hori posible."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="other">Ikusi ziurtagiriak</item>
-      <item quantity="one">Ikusi ziurtagiria</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Jo fidagarritzat edo kendu ziurtagiria}other{Jo fidagarritzat edo kendu ziurtagiriak}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Egoera"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Sarea, serie-zenbakiak eta bestelako informazioa"</string>
     <string name="manual" msgid="5683935624321864999">"Eskuliburua"</string>
@@ -738,6 +686,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Kontrola"</string>
     <string name="system_apps" msgid="8481888654606868074">"Aplikazioak"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Mantendu aktibo"</string>
+    <string name="keep_screen_on_summary" msgid="4680661166009970792">"Pantaila ez da inoiz itzaliko"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP egiaztapena"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI optimizazioa"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Berrabiarazi nahi duzu?"</string>
@@ -858,18 +807,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Itzali HDMI gailuak telebistaren bidez"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Piztu telebista automatikoki"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Piztu telebista HDMI gailuaren bidez"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="other">Konektatutako gailuak</item>
-      <item quantity="one">Konektatutako gailua</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="other">Inaktibo dauden gailuak</item>
-      <item quantity="one">Inaktibo dagoen gailua</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="other">Konektatu gabeko gailuak</item>
-      <item quantity="one">Konektatu gabeko gailua</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Konektatutako gailua}other{Konektatutako gailuak}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Inaktibo dagoen gailua}other{Inaktibo dauden gailuak}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Konektatu gabeko gailua}other{Konektatu gabeko gailuak}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Mugatu kontuko aplikazioetarako eta bestelako edukietarako sarbidea"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Profil murriztua"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"<xliff:g id="APP">%1$s</xliff:g> aplikazioak kontrolatua"</string>
@@ -883,10 +823,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Sortu profil murriztua"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Ezarpenak"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Baimena duten aplikazioak"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="other">%d aplikaziok daukate baimena</item>
-      <item quantity="one">Aplikazio batek dauka baimena</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Baimenduta"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Onartezina"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Murrizketa pertsonalizatuak"</string>
@@ -1040,7 +976,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Datu-aurrezlea"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Doitu automatikoki bideoen kalitatea datu-konexioa gutxiago erabiltzeko"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Datu-konexioaren erabilera eta alertak"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"Wifia, Ethernet nahiz telefonoaren wifi-gunea erabilita konekta zaitezke Internetera. Laguntza behar baduzu, joan "<b>"g.co/network"</b>" helbidera."</string>
+    <string name="data_saver_header_info" msgid="2706725187498535785">"Wifi edo Ethernet bidez, nahiz telefonoaren konexioa partekatuta konekta zaitezke Internetera."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Ezin da hori egin"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Ezin da aldatu bolumena"</string>
