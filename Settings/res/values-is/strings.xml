@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Bæta reikningi við"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Reikningar og innskráning"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Engir reikningar"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> reikningur</item>
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> reikningar</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# reikningur}one{# reikningur}other{# reikningar}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Spilunarþjónusta, hjálpari, greiðslur"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Netkerfi og internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Hljóð"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Forrit"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Kjörstillingar tækis"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Fjarstýringar og fylgihlutir"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Engin Bluetooth-tæki eru tengd"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> fylgihlutur</item>
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> fylgihlutir</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Skjár og hljóð"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hjálp og ábendingar"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Persónuvernd"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Ekki í boði"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Forrit tækjastjóra"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Engin virk forrit"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> virkt forrit</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> virk forrit</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Stjórnandi, dulkóðunarstefna eða skilríkjageymsla hefur gert óvirkt"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Upplýsingar um stjórnað tæki"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Breytingar og stillingar stýrðar af fyrirtækinu þínu"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Engin"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Uppsett forrit"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Fjöldi forrita er áætlaður. Forrit sem eru sett upp utan Play Store eru hugsanlega ekki talin með."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="one">Að lágmarki <xliff:g id="COUNT_1">%d</xliff:g> forrit</item>
-      <item quantity="other">Að lágmarki <xliff:g id="COUNT_1">%d</xliff:g> forrit</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Að lágmarki # forrit}one{Að lágmarki # forrit}other{Að lágmarki # forrit}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Heimildir staðsetningar"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Heimildir hljóðnema"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Heimildir myndavélar"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Sjálfgefin forrit"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> forrit</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> forrit</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# forrit}one{# forrit}other{# forrit}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Sjálfgefið lyklaborð"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Stilla á <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Kveikt á sívirku VPN"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Traust skilríki"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Traust skilríki á eigin sniði"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Traust skilríki á vinnusniði"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="one">Að lágmarki <xliff:g id="COUNT_1">%d</xliff:g> CA-vottorð</item>
-      <item quantity="other">Að lágmarki <xliff:g id="COUNT_1">%d</xliff:g> CA-vottorð</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# CA-vottorð}one{# CA-vottorð}other{# CA-vottorð}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Kerfisstjóri getur læst tækinu og endurstillt aðgangsorðið"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Kerfisstjóri getur eytt öllum gögnum á tækinu"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Fjöldi rangra tilrauna fyrir aðgangsorð áður en öllum gögnum á tækinu verður eytt"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Fjöldi rangra tilrauna fyrir aðgangsorð áður en öllum gögnum vinnusniðs verður eytt"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> tilraun</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> tilraunir</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# tilraun}one{# tilraun}other{# tilraunir}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Þessu tæki er stýrt af fyrirtækinu þínu."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Þessu tæki er stýrt af <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Frekari upplýsingar"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="one">Myndavélarforrit</item>
-      <item quantity="other">Myndavélarforrit</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Myndavélarforrit}one{Myndavélarforrit}other{Myndavélarforrit}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Dagatalsforrit"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Tengiliðaforrit"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="one">Póstforrit</item>
-      <item quantity="other">Póstforrit</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{Póstforrit}one{Póstforrit}other{Póstforrit}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"Kortaforrit"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="one">Símaforrit</item>
-      <item quantity="other">Símaforrit</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{Símaforrit}one{Símaforrit}other{Símaforrit}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Vafraforrit"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Útgáfa stýrikerfis Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Raðnúmer"</string>
     <string name="about_build" msgid="8467840394761634575">"Smíði stýrikerfis Android TV"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="one">Þú ert nú <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> skrefi frá því að gerast þróunaraðili</item>
-      <item quantity="other">Þú ert nú <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> skrefum frá því að gerast þróunaraðili</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Nú ertu # skrefi frá því að verða þróunaraðili}one{Nú ertu # skrefi frá því að verða þróunaraðili}other{Nú ertu # skrefum frá því að verða þróunaraðili}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Auglýsingar"</string>
     <string name="ads_description" msgid="8081069475265061074">"Stjórnaðu auglýsingastillingum, t.d. endurstillingu auglýsingakennis."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Auglýsingar, stjórnaðu auglýsingastillingum, t.d. endurstillingu auglýsingakennis."</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Viðbótarkerfisuppfærslur"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Hugsanlega er fylgst með netinu"</string>
     <string name="done_button" msgid="616159688526431451">"Lokið"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="one">Treysta vottorði eða fjarlægja það</item>
-      <item quantity="other">Treysta vottorðum eða fjarlægja þau</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> hefur sett upp CA-vottorð í tækinu þínu, sem getur gert viðkomandi kleift að fylgjast með netnotkun tækisins, þar á meðal tölvupósti, forritum og öruggum vefsvæðum.\n\nHafðu samband við stjórnandann til að fá frekari upplýsingar um þessi vottorð.</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> hefur sett upp CA-vottorð í tækinu þínu, sem getur gert viðkomandi kleift að fylgjast með netnotkun tækisins, þar á meðal tölvupósti, forritum og öruggum vefsvæðum.\n\nHafðu samband við stjórnandann til að fá frekari upplýsingar um þessi vottorð.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> hefur sett upp CA-vottorð fyrir vinnusniðið þitt, sem getur gert viðkomandi kleift að fylgjast með netnotkuninni á vinnusniðinu, þar á meðal tölvupósti, forritum og öruggum vefsvæðum.\n\nHafðu samband við stjórnandann til að fá frekari upplýsingar um þessi vottorð.</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> hefur sett upp CA-vottorð fyrir vinnusniðið þitt, sem getur gert viðkomandi kleift að fylgjast með netnotkuninni á vinnusniðinu, þar á meðal tölvupósti, forritum og öruggum vefsvæðum.\n\nHafðu samband við stjórnandann til að fá frekari upplýsingar um þessi vottorð.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Þriðji aðili getur fylgst með netvirkni þinni, þ. á m. tölvupósti, forritum og öruggum vefsvæðum.\n\nTraust vottorð sem uppsett er á tækinu þínu gerir þetta kleift."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="one">Athuga vottorð</item>
-      <item quantity="other">Athuga vottorð</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Treysta vottorði eða fjarlægja það}one{Treysta vottorðum eða fjarlægja þau}other{Treysta vottorðum eða fjarlægja þau}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Staða"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Net, raðnúmer og aðrar upplýsingar"</string>
     <string name="manual" msgid="5683935624321864999">"Handbók"</string>
@@ -738,6 +686,8 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Eftirlit"</string>
     <string name="system_apps" msgid="8481888654606868074">"Forrit"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Vaka"</string>
+    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
+    <skip />
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP-athugun"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI-fínstilling"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Endurræsa núna?"</string>
@@ -858,18 +808,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Slökkva á HDMI-tækjum ásamt sjónvarpinu"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Kveikja sjálfkrafa á sjónvarpi"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Kveikja á sjónvarpinu með HDMI-tæki"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="one">Tengd inntök</item>
-      <item quantity="other">Tengd inntök</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="one">Inntök í biðstöðu</item>
-      <item quantity="other">Inntök í biðstöðu</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="one">Ótengd inntök</item>
-      <item quantity="other">Ótengd inntök</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Tengt inntak}one{Tengt inntak}other{Tengt inntak}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Inntak í biðstöðu}one{Inntak í biðstöðu}other{Inntak í biðstöðu}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Ótengt inntak}one{Ótengt inntak}other{Ótengt inntak}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Takmarka aðgang að forritum og öðru efni á reikningnum þínum"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Takmarkaður prófíll"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Stjórnað af <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -883,10 +824,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Búa til takmarkað snið"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Stillingar"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Leyfð forrit"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="one">%d forrit leyft</item>
-      <item quantity="other">%d forrit leyfð</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Leyft"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Ekki leyft"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Sérsníða takmarkanir"</string>
@@ -1040,7 +977,8 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Gagnasparnaður"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Stilla myndgæði sjálfkrafa til að nota minna af farsímagögnum"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Gagnanotkun og tilkynningar"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"Þú getur tengst við internetið um Wi-Fi, Ethernet eða heitan reit símans. Frekari upplýsingar má finna á "<b>"g.co/network"</b>"."</string>
+    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Aðgerð ekki leyfileg"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Ekki er hægt að breyta hljóðstyrk"</string>

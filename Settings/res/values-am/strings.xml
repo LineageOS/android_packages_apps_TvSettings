@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"መለያ ያክሉ"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"መለያዎች እና በመለያ መግባት"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"ምንም መለያዎች የለም"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> መለያዎች</item>
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> መለያዎች</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# መለያ}one{# መለያዎች}other{# መለያዎች}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"የሚዲያ አገልግሎቶች፣ ረዳት፣ ክፍያዎች"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"አውታረ መረብ እና በይነመረብ"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"ድምፅ"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"መተግበሪያዎች"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"የመሣሪያ ምርጫዎች"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"ርቀት መቆጣጠሪያዎች እና መለዋወጫዎች"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"ምንም የተገናኙ የብሉቱዝ መሣሪያዎች የሉም"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ተጨማሪዎች</item>
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> ተጨማሪዎች</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"ማሳያ እና ድምጽ"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"እገዛ እና ግብረመለስ"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"ግላዊነት"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"አይገኝም"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"የመሣሪያ አስተዳደር መተግበሪያዎች"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"ምንም ገቢር መተግበሪያዎች የሉም"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ገቢር መተግበሪያዎች</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ገቢር መተግበሪያዎች</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"በአስተዳዳሪ፣ የምስጠራ መመሪያ ወይም የምስክርነት ማከማቻ ተሰናክሏል"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"የሚተዳደር መሣሪያ መረጃ"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"በእርስዎ ድርጅት የሚተዳደሩ ለውጦች እና ቅንብሮች"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"ምንም"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"የተጫኑ መተግበሪያዎች"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"የመተግበሪያዎች ብዛት የተገመተ ነው። ከPlay መደብር ውጭ የተጫኑ መተግበሪያዎችን ላያካትት ይችላል።"</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="one">ዝቅተኛ <xliff:g id="COUNT_1">%d</xliff:g> መተግበሪያዎች</item>
-      <item quantity="other">ዝቅተኛ <xliff:g id="COUNT_1">%d</xliff:g> መተግበሪያዎች</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{ቢያንስ # መተግበሪያ}one{ቢያንስ # መተግበሪያዎች}other{ቢያንስ # መተግበሪያዎች}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"የአካባቢ ፈቃዶች"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"የማይክሮፎን ፈቃዶች"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"የካሜራ ፈቃዶች"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"ነባሪ መተግበሪያዎች"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> መተግበሪያዎች</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> መተግበሪያዎች</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# መተግበሪያ}one{# መተግበሪያዎች}other{# መተግበሪያዎች}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"ነባሪ የቁልፍ ሰሌዳ"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"ወደ <xliff:g id="APP_LABEL">%s</xliff:g> አቀናብር"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"ሁልጊዜ የበራ VPN በርቷል"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"የሚታመን ማስረጃ"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"በእርስዎ የግል መገለጫ ውስጥ ያሉ የታመኑ ምስክርነቶች"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"በእርስዎ የሥራ መገለጫ ውስጥ ያሉ የታመኑ ምስክርነቶች"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="one">ዝቅተኛ <xliff:g id="COUNT_1">%d</xliff:g> CA ምስክርነቶች</item>
-      <item quantity="other">ዝቅተኛ <xliff:g id="COUNT_1">%d</xliff:g> CA ምስክርነቶች</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# CA ምስክርነት}one{# CA ምስክርነቶች}other{# CA ምስክርነቶች}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"አስተዳዳሪ መሣሪያውን መቆለፍና የይለፍ ቃል ዳግም ማስጀመር ይችላል"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"አስተዳዳሪ ሁሉንም የመሣሪያ ውሂብ መሰረዝ ይችላል"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"ሁሉም የመሣሪያ ውሂብ ከመሰረዙ በፊት ያልተሳኩ የይለፍ ቃል ሙከራዎች"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"የሥራ መገለጫ ውሂብ ከመሰረዙ በፊት ያልተሳኩ የይለፍ ቃል ሙከራዎች"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ሙከራዎች</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ሙከራዎች</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# ሙከራ}one{# ሙከራዎች}other{# ሙከራዎች}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"ይህ መሣሪያ በእርስዎ ድርጅት የሚተዳደር ነው።"</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"ይህ መሣሪያ በ<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> የሚተዳደር ነው።"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"የበለጠ መረዳት"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="one">የካሜራ መተግበሪያዎች</item>
-      <item quantity="other">የካሜራ መተግበሪያዎች</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{የካሜራ መተግበሪያ}one{የካሜራ መተግበሪያዎች}other{የካሜራ መተግበሪያዎች}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"የቀን መቁጠሪያ መተግበሪያ"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"የእውቂያዎች መተግበሪያ"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="one">የኢሜይል ደንበኛ መተግበሪያዎች</item>
-      <item quantity="other">የኢሜይል ደንበኛ መተግበሪያዎች</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{የኢሜይል ደንበኛ መተግበሪያ}one{የኢሜይል ደንበኛ መተግበሪያዎች}other{የኢሜይል ደንበኛ መተግበሪያዎች}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"የካርታ መተግበሪያ"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="one">የስልክ መተግበሪያዎች</item>
-      <item quantity="other">የስልክ መተግበሪያዎች</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{የስልክ መተግበሪያ}one{የስልክ መተግበሪያዎች}other{የስልክ መተግበሪያዎች}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"የአሳሽ መተግበሪያ"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>፣ <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>፣ <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>፣ <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"የAndroid TV ስርዓተ ስሪት"</string>
     <string name="about_serial" msgid="3432319328808745459">"መለያ ቁጥር"</string>
     <string name="about_build" msgid="8467840394761634575">"የAndroid TV ስርዓተ ክወና ግንብ"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="one">አሁን ገንቢ ለመሆን <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ደረጃዎች ይቀርዎታል</item>
-      <item quantity="other">አሁን ገንቢ ለመሆን <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ደረጃዎች ይቀርዎታል</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{አሁን ገንቢ ለመሆን # ደረጃ ይቀረዎታል}one{አሁን ገንቢ ለመሆን # ደረጃዎች ይቀሩዎታል}other{አሁን ገንቢ ለመሆን # ደረጃዎች ይቀሩዎታል}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"ማስታወቂያዎች"</string>
     <string name="ads_description" msgid="8081069475265061074">"እንደ የእርስዎን የማስተወቂያ መታወቂያን ዳግም ማስጀመር የመሳሰሉ የእርስዎን የማስታወቂያ ቅንብሮች ያስተዳድሩ።"</string>
     <string name="ads_content_description" msgid="1006489792324920289">"ማስታወቂያዎች የማስታወቂያ መታወቂያዎን ዳግም ማስጀመር የመሳሰሉ የማስታወቂያዎች ቅንብሮችዎን ያስተዳድራል።"</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"ተጨማሪ የስርዓት ዝማኔዎች"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"አውታረ መረብ በክትትል ውስጥ ሊሆን ይችላል"</string>
     <string name="done_button" msgid="616159688526431451">"ተከናውኗል"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="one">የእውቅና ማረጋገጫዎችን ይመኑ ወይም ያስወግዱ</item>
-      <item quantity="other">የእውቅና ማረጋገጫዎችን ይመኑ ወይም ያስወግዱ</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> በመሣሪያዎ ላይ የእውቅና ማረጋገጫ ባለስልጣናትን ጭነዋል፣ ይህም ኢሜይሎች፣ መተግበሪያዎች እና ደህንነታቸው የተጠበቁ ድር ጣቢያዎችም ጨምሮ የሥራ አውታረ መረብ እንቅስቃሴዎን እንዲከታተሉ ሊያስችላቸው ይችላል።\n\nስለነዚህ የእውቅና ማረጋገጫዎች የበለጠ መረጃ ለማግኘት አስተዳዳሪዎን ያነጋግሩ።</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> በመሣሪያዎ ላይ የእውቅና ማረጋገጫ ባለስልጣናትን ጭነዋል፣ ይህም ኢሜይሎች፣ መተግበሪያዎች እና ደህንነታቸው የተጠበቁ ድር ጣቢያዎችም ጨምሮ የሥራ አውታረ መረብ እንቅስቃሴዎን እንዲከታተሉ ሊያስችላቸው ይችላል።\n\nስለነዚህ የእውቅና ማረጋገጫዎች የበለጠ መረጃ ለማግኘት አስተዳዳሪዎን ያነጋግሩ።</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ለስራ መገለጫዎ የእውቅና ማረጋገጫ ባለስልጣናትን ጭነዋል፣ ይህም ኢሜይሎች፣ መተግበሪያዎች እና ደህንነታቸው የተጠበቁ ድር ጣቢያዎችም ጨምሮ የስራ አውታረ መረብ እንቅስቃሴን እንዲከታተሉ ሊያስችላቸው ይችላል።\n\nስለነዚህ የእውቅና ማረጋገጫዎች የበለጠ መረጃ ለማግኘት አስተዳዳሪዎን ያነጋግሩ።</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ለስራ መገለጫዎ የእውቅና ማረጋገጫ ባለስልጣናትን ጭነዋል፣ ይህም ኢሜይሎች፣ መተግበሪያዎች እና ደህንነታቸው የተጠበቁ ድር ጣቢያዎችም ጨምሮ የስራ አውታረ መረብ እንቅስቃሴን እንዲከታተሉ ሊያስችላቸው ይችላል።\n\nስለነዚህ የእውቅና ማረጋገጫዎች የበለጠ መረጃ ለማግኘት አስተዳዳሪዎን ያነጋግሩ።</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"ሶስተኛ ወገን ኢሜይሎች፣ መተግበሪያዎች እና ደህንነታቸው የተጠበቁ ድር ጣቢያዎችም ጨምሮ የእርስዎን የአውታረ መረብ እንቅስቃሴ የመከታተል ችሎታ አለው።\n\nበእርስዎ መሣሪያ ላይ የተጫነ አንድ የሚታመን ምስክርነት ይሄ እንዲከሰት የሚቻል እያደረገ ነው።"</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="one">የእውቅና ማረጋገጫዎችን ይፈትሹ</item>
-      <item quantity="other">የእውቅና ማረጋገጫዎችን ይፈትሹ</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{የእውቅና ማረጋገጫን ይመኑ ወይም ያስወግዱ}one{የእውቅና ማረጋገጫዎችን ይመኑ ወይም ያስወግዱ}other{የእውቅና ማረጋገጫዎችን ይመኑ ወይም ያስወግዱ}}"</string>
     <string name="device_status" msgid="8266002761193692207">"ሁኔታ"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"አውታረ መረብ፣ ተከታታይ ቁጥሮች እና ሌላ መረጃ"</string>
     <string name="manual" msgid="5683935624321864999">"መመሪያ"</string>
@@ -738,6 +686,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"መከታተል"</string>
     <string name="system_apps" msgid="8481888654606868074">"መተግበሪያዎች"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"ነቅተህ ቆይ"</string>
+    <string name="keep_screen_on_summary" msgid="4680661166009970792">"ማያ ገጽ በጭራሽ አያንቀላፋም"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"የHDCP ማረጋገጥ"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"የHDMI ማመቻቸት"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"አሁን ድጋሚ ይጀመር?"</string>
@@ -858,18 +807,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"የኤችዲኤምአይ መሣሪያዎች ከቴሌቪዥኑ ጋር አጥፋ"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"ቴሌቪዥን በራስ-ሰር አብራ"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"ቴሌቪዥኑን ከኤችዲኤምአይ መሣሪያ ጋር አብራ"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="one">የተገናኙ ግቤቶች</item>
-      <item quantity="other">የተገናኙ ግቤቶች</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="one">በመጠባበቅ ላይ ያሉ ግቤቶች</item>
-      <item quantity="other">በመጠባበቅ ላይ ያሉ ግቤቶች</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="one">ያልተገናኙ ግቤቶች</item>
-      <item quantity="other">ያልተገናኙ ግቤቶች</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{የተገናኘ ግቤት}one{የተገናኙ ግቤቶች}other{የተገናኙ ግቤቶች}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{በመጠባበቅ ላይ ያለ ግቤት}one{በመጠባበቅ ላይ ያሉ ግቤቶች}other{በመጠባበቅ ላይ ያሉ ግቤቶች}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{ያልተገናኘ ግቤት}one{ያልተገናኙ ግቤቶች}other{ያልተገናኙ ግቤቶች}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"በእርስዎ መለያ ውስጥ ያሉ የመተግበሪያዎች እና የይዘት መዳረሻ ይገድቡ"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"የተገደበ መገለጫ"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"በ<xliff:g id="APP">%1$s</xliff:g> የሚቆጣጠሩ"</string>
@@ -883,10 +823,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"የተገደበ መገለጫ ፍጠር"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"ቅንብሮች"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"የሚፈቀዱ መተግበሪያዎች"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="one">%d መተግበሪያዎች ተፈቅደዋል</item>
-      <item quantity="other">%d መተግበሪያዎች ተፈቅደዋል</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"ተፈቅዷል"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"አይፈቀድም"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"ገደቦችን ያብጁ"</string>
@@ -1040,7 +976,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"ውሂብ ቆጣቢ"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"ያነሰ የሞባይል ውሂብን ለመጠቀም የቪዲዮ ጥራትን በራስ-ሰር አስተካክል"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"የውሂብ አጠቃቀም እና ማንቂያዎች"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"በWi-Fi፣ ኤተርኔት ወይም የእርስዎ ስልክ መገናኛ ነጥብ በኩል ከበይነመረብ ጋር መገናኘት ይችላሉ። ለተጨማሪ እገዛ "<b>"g.co/network"</b>"ን ይጎብኙ።"</string>
+    <string name="data_saver_header_info" msgid="2706725187498535785">"በWi-Fi፣ ኤተርኔት ወይም በእርስዎ ስልክ መገናኛ ነጥብ በኩል ከበይነመረብ ጋር መገናኘት ይችላሉ።"</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"እርምጃ አይፈቀድም"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"የድምጽ መጠንን መለወጥ አይቻልም"</string>

@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"Account toevoegen"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Accounts en inloggen"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Geen accounts"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> accounts</item>
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_0">%1$d</xliff:g> account</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# account}other{# accounts}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Mediaservices, Assistent, betalingen"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Netwerk en internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Geluid"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Apps"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Apparaatvoorkeuren"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Afstandsbedieningen en accessoires"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"Geen verbonden Bluetooth-apparaten"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="other"><xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> accessoires</item>
-      <item quantity="one"><xliff:g id="ACCESSORIES_NUMBER_0">%1$d</xliff:g> accessoire</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Weergave en geluid"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hulp en feedback"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Privacy"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Niet beschikbaar"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Apps voor apparaatbeheer"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Geen actieve apps"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> actieve apps</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> actieve app</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Uitgezet door beheerder, versleutelingsbeleid of opslag certificaatgegevens"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Informatie over beheerd apparaat"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Wijzigingen en instellingen beheerd door je organisatie"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Geen"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Geïnstalleerde apps"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Het aantal apps is een schatting die misschien geen apps omvat die zijn geïnstalleerd buiten de Play Store om."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="other">Minimaal <xliff:g id="COUNT_1">%d</xliff:g> apps</item>
-      <item quantity="one">Minimaal <xliff:g id="COUNT_0">%d</xliff:g> app</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Minimaal # app}other{Minimaal # apps}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Toegang tot locatie"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Toegang tot microfoon"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Toegang tot camera"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Standaard-apps"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apps</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# app}other{# apps}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Standaardtoetsenbord"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Ingesteld op <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Always-on VPN ingeschakeld"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Vertrouwde certificaatgegevens"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Vertrouwde certificaatgegevens in je persoonlijke profiel"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Vertrouwde certificaatgegevens in je werkprofiel"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="other">Minimaal <xliff:g id="COUNT_1">%d</xliff:g> CA-certificaten</item>
-      <item quantity="one">Minimaal <xliff:g id="COUNT_0">%d</xliff:g> CA-certificaat</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# CA-certificaat}other{# CA-certificaten}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"Beheerder kan het apparaat vergrendelen en het wachtwoord resetten"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"Beheerder kan alle apparaatgegevens verwijderen"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Aantal mislukte wachtwoordpogingen voordat alle apparaatgegevens worden verwijderd"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Aantal mislukte wachtwoordpogingen voordat de gegevens van het werkprofiel worden verwijderd"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> pogingen</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> poging</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# poging}other{# pogingen}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Dit apparaat wordt beheerd door je organisatie."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Dit apparaat wordt beheerd door <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Meer informatie"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="other">Camera-apps</item>
-      <item quantity="one">Camera-app</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Camera-app}other{Camera-apps}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Agenda-app"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Contacten-app"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="other">E-mailclient-apps</item>
-      <item quantity="one">E-mailclient-app</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{E-mailclient-app}other{E-mailclient-apps}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"Kaart-app"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="other">Telefoon-apps</item>
-      <item quantity="one">Telefoon-app</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{Telefoon-app}other{Telefoon-apps}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"Browser-app"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"OS-versie van Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Serienummer"</string>
     <string name="about_build" msgid="8467840394761634575">"OS-build van Android TV"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="other">Je moet nog <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> stappen uitvoeren om ontwikkelaar te worden</item>
-      <item quantity="one">Je moet nog <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> stap uitvoeren om ontwikkelaar te worden</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Nog # stap en je bent ontwikkelaar}other{Nog # stappen en je bent ontwikkelaar}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Advertenties"</string>
     <string name="ads_description" msgid="8081069475265061074">"Je advertentie-instellingen beheren, zoals je advertentie-ID resetten."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Advertenties, je advertentie-instellingen beheren, zoals je advertentie-ID resetten."</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Aanvullende systeemupdates"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"Netwerk kan worden gemonitord"</string>
     <string name="done_button" msgid="616159688526431451">"Klaar"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="other">Certificaten vertrouwen of verwijderen</item>
-      <item quantity="one">Certificaat vertrouwen of verwijderen</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> heeft certificeringsinstanties (CA\'s) op je apparaat geïnstalleerd, waardoor dit domein de netwerkactiviteit van je apparaat kan bijhouden, waaronder e-mails, apps en beveiligde websites.\n\nNeem contact op met je beheerder voor meer informatie.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> heeft een certificeringsinstantie (CA) op je apparaat geïnstalleerd, waardoor dit domein de netwerkactiviteit van je apparaat kan bijhouden, waaronder e-mails, apps en beveiligde websites.\n\nNeem contact op met je beheerder voor meer informatie.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> heeft certificeringsinstanties (CA\'s) voor je werkprofiel geïnstalleerd, waardoor dit domein activiteit in het werknetwerk kan bijhouden, waaronder e-mails, apps en beveiligde websites.\n\nNeem contact op met je beheerder voor meer informatie.</item>
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_0">%s</xliff:g> heeft een certificeringsinstantie (CA) voor je werkprofiel geïnstalleerd, waardoor dit domein activiteit in het werknetwerk kan bijhouden, waaronder e-mails, apps en beveiligde websites.\n\nNeem contact op met je beheerder voor meer informatie.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"Een derde partij kan je netwerkactiviteit, waaronder e-mails, apps en beveiligde websites, bijhouden.\n\nDit is mogelijk omdat je een vertrouwd certificaat op je apparaat hebt opgeslagen."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="other">Certificaten checken</item>
-      <item quantity="one">Certificaat checken</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Certificaat vertrouwen of verwijderen}other{Certificaten vertrouwen of verwijderen}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Status"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Netwerk, serienummers en andere informatie"</string>
     <string name="manual" msgid="5683935624321864999">"Handleiding"</string>
@@ -738,6 +686,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Controleren"</string>
     <string name="system_apps" msgid="8481888654606868074">"Apps"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Stand-by"</string>
+    <string name="keep_screen_on_summary" msgid="4680661166009970792">"Het scherm gaat nooit uit"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP-controle"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI-optimalisatie"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Nu opnieuw opstarten?"</string>
@@ -858,18 +807,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"HDMI-apparaten samen uitzetten met de tv"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Tv automatisch aan"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"De tv aanzetten samen met het HDMI-apparaat"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="other">Aangesloten ingangen</item>
-      <item quantity="one">Aangesloten ingang</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="other">Stand-by-ingangen</item>
-      <item quantity="one">Stand-by-ingang</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="other">Niet-aangesloten ingangen</item>
-      <item quantity="one">Niet-aangesloten ingang</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Aangesloten ingang}other{Aangesloten ingangen}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Stand-by-ingang}other{Stand-by-ingangen}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Niet-aangesloten ingang}other{Niet-aangesloten ingangen}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Toegang tot apps en andere content in je account beperken"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Beperkt profiel"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Beheerd door <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -883,10 +823,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Beperkt profiel maken"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Instellingen"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Apps die zijn toegestaan"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="other">%d apps toegestaan</item>
-      <item quantity="one">1 app toegestaan</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Toegestaan"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Niet toegestaan"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Beperkingen aanpassen"</string>
@@ -1040,7 +976,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Databesparing"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Videokwaliteit automatisch aanpassen om minder mobiele data te gebruiken"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Datagebruik en meldingen"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"Je kunt verbinding maken met internet via wifi, ethernet of de hotspot van je telefoon. Ga naar "<b>"g.co/network"</b>" voor meer hulp."</string>
+    <string name="data_saver_header_info" msgid="2706725187498535785">"Je kunt verbinding maken met internet via wifi, ethernet of de hotspot van je telefoon."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Actie niet toegestaan"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Kan het volume niet wijzigen"</string>

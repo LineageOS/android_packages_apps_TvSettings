@@ -45,21 +45,13 @@
     <string name="add_an_account" msgid="2601275122685226096">"कोई खाता जोड़ें"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"खाते और साइन-इन"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"कोई खाता नहीं है"</string>
-    <plurals name="accounts_category_summary" formatted="false" msgid="1711483230329281167">
-      <item quantity="one"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> खाते</item>
-      <item quantity="other"><xliff:g id="ACCOUNTS_NUMBER_1">%1$d</xliff:g> खाते</item>
-    </plurals>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# खाता}one{# खाता}other{# खाते}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"मीडिया सेवाएं, Assistant, Google Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"नेटवर्क और इंटरनेट"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"आवाज़"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ऐप्लिकेशन"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"डिवाइस से जुड़ी पसंद"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"रिमोट और एक्सेसरी"</string>
-    <string name="remotes_and_accessories_category_summary_no_bluetooth_device" msgid="3604712105359656700">"कोई ब्लूटूथ डिवाइस नहीं जुड़ा है"</string>
-    <plurals name="remotes_and_accessories_category_summary" formatted="false" msgid="5219926550837712529">
-      <item quantity="one">डिवाइस के साथ काम करने वाली <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> चीज़ें</item>
-      <item quantity="other">डिवाइस के साथ काम करने वाली <xliff:g id="ACCESSORIES_NUMBER_1">%1$d</xliff:g> चीज़ें</item>
-    </plurals>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"डिसप्ले और आवाज़"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"सहायता और सुझाव"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"निजता"</string>
@@ -273,10 +265,6 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"उपलब्ध नहीं है"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"डिवाइस के एडमिन ऐप्लिकेशन का ऐक्सेस"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"कोई भी सक्रिय ऐप्लिकेशन नहीं है"</string>
-    <plurals name="number_of_device_admins" formatted="false" msgid="5825543996501454373">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> चालू ऐप्लिकेशन</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> चालू ऐप्लिकेशन</item>
-    </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"एडमिन, सुरक्षित करने की नीति या क्रेडेंशियल स्टोरेज ने बंद किया है"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"प्रबंधित डिवाइस की जानकारी"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"आपके संगठन की ओर से प्रबंधित किए जाने वाले बदलाव और सेटिंग"</string>
@@ -294,18 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"कोई नहीं"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"इंस्टॉल किए गए ऐप्लिकेशन"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"ऐप्लिकेशन की संख्या अनुमानित है. हो सकता है कि इसमें Play Store के बाहर से इंस्टॉल किए गए ऐप्लिकेशन शामिल न हों."</string>
-    <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
-      <item quantity="one">कम से कम <xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन</item>
-      <item quantity="other">कम से कम <xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{कम से कम # ऐप्लिकेशन}one{कम से कम # ऐप्लिकेशन}other{कम से कम # ऐप्लिकेशन}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"जगह की अनुमतियां"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"माइक्रोफ़ोन अनुमतियां"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"कैमरा अनुमतियां"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"डिफ़ॉल्‍ट ऐप्लिकेशन"</string>
-    <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1652060324792116347">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ऐप्लिकेशन</item>
-    </plurals>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# ऐप्लिकेशन}one{# ऐप्लिकेशन}other{# ऐप्लिकेशन}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"डिफ़ॉल्ट कीबोर्ड"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g> पर सेट किया गया है"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"हमेशा-चालू VPN चालू है"</string>
@@ -315,37 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"भरोसेमंद क्रेडेंशियल"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"आपकी निजी प्रोफ़ाइल में मौजूद भरोसेमंद क्रेडेंशियल"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"आपकी वर्क प्रोफ़ाइल में मौजूद भरोसेमंद क्रेडेंशियल"</string>
-    <plurals name="enterprise_privacy_number_ca_certs" formatted="false" msgid="4861211387981268796">
-      <item quantity="one">कम से कम <xliff:g id="COUNT_1">%d</xliff:g> CA प्रमाणपत्र</item>
-      <item quantity="other">कम से कम <xliff:g id="COUNT_1">%d</xliff:g> CA प्रमाणपत्र</item>
-    </plurals>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# CA सर्टिफ़िकेट}one{# CA सर्टिफ़िकेट}other{# CA सर्टिफ़िकेट}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"एडमिन डिवाइस को लॉक कर सकते हैं और पासवर्ड रीसेट कर सकते हैं"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"एडमिन डिवाइस का सभी डेटा मिटा सकता है"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"डिवाइस का सभी डेटा हटाने से पहले विफल रही पासवर्ड की कोशिशें"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"वर्क प्रोफ़ाइल डेटा हटाने से पहले विफल रही पासवर्ड की कोशिशें"</string>
-    <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> कोशिश</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> कोशिश</item>
-    </plurals>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# बार गलत पासवर्ड डाला गया}one{# बार गलत पासवर्ड डाला गया}other{# बार गलत पासवर्ड डाला गया}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"इस डिवाइस का प्रबंधन आपका संगठन करता है."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> इस डिवाइस को प्रबंधित करता है."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"ज़्यादा जानें"</string>
-    <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="one">कैमरा ऐप्लिकेशन</item>
-      <item quantity="other">कैमरा ऐप्लिकेशन</item>
-    </plurals>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{कैमरा ऐप्लिकेशन}one{कैमरा ऐप्लिकेशन}other{कैमरा ऐप्लिकेशन}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"कैलेंडर ऐप्लिकेशन"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"संपर्क ऐप्लिकेशन"</string>
-    <plurals name="default_email_app_title" formatted="false" msgid="5601238555065668402">
-      <item quantity="one">ईमेल क्लाइंट ऐप्लिकेशन</item>
-      <item quantity="other">ईमेल क्लाइंट ऐप्लिकेशन</item>
-    </plurals>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{ईमेल क्लाइंट वाला ऐप्लिकेशन}one{ईमेल क्लाइंट वाला ऐप्लिकेशन}other{ईमेल क्लाइंट वाले ऐप्लिकेशन}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"मैप ऐप्लिकेशन"</string>
-    <plurals name="default_phone_app_title" formatted="false" msgid="1573981201056870719">
-      <item quantity="one">फ़ोन ऐप्लिकेशन</item>
-      <item quantity="other">फ़ोन ऐप्लिकेशन</item>
-    </plurals>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{फ़ोन ऐप्लिकेशन}one{फ़ोन ऐप्लिकेशन}other{फ़ोन ऐप्लिकेशन}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"ब्राउज़र ऐप्लिकेशन"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -364,10 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Android TV का ओएस वर्शन"</string>
     <string name="about_serial" msgid="3432319328808745459">"सीरियल नंबर"</string>
     <string name="about_build" msgid="8467840394761634575">"Android TV के ओएस बिल्ड का वर्शन"</string>
-    <plurals name="show_dev_countdown" formatted="false" msgid="523455736684670250">
-      <item quantity="one">अब आप डेवलपर बनने से <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> चरण दूर हैं</item>
-      <item quantity="other">अब आप डेवलपर बनने से <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> चरण दूर हैं</item>
-    </plurals>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{अब आप डेवलपर बनने से # कदम दूर हैं}one{अब आप डेवलपर बनने से # कदम दूर हैं}other{अब आप डेवलपर बनने से # कदम दूर हैं}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"विज्ञापन"</string>
     <string name="ads_description" msgid="8081069475265061074">"विज्ञापन की सेटिंग प्रबंधित करें, जैसे कि विज्ञापन आईडी रीसेट करना."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"विज्ञापन, विज्ञापन की सेटिंग प्रबंधित करें, जैसे कि विज्ञापन आईडी रीसेट करना."</string>
@@ -381,23 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"अतिरिक्‍त सिस्‍टम अपडेट"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"नेटवर्क को मॉनीटर किया जा सकता है"</string>
     <string name="done_button" msgid="616159688526431451">"हो गया"</string>
-    <plurals name="ssl_ca_cert_dialog_title" formatted="false" msgid="8222753634330561111">
-      <item quantity="one">प्रमाणपत्र पर भरोसा करें या हटाएं</item>
-      <item quantity="other">प्रमाणपत्रों पर भरोसा करें या हटाएं</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message_device_owner" formatted="false" msgid="6128536570911468907">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ने आपके डिवाइस पर प्रमाणपत्र अनुमति को इंस्टॉल किया है. इससे उन्हें ईमेल, ऐप्लिकेशन, और सुरक्षित वेबसाइटों के साथ-साथ आपके डिवाइस पर नेटवर्क की गतिविधि की निगरानी करने की अनुमति मिल सकती है.\n\nइस प्रमाणपत्र के बारे में ज़्यादा जानने के लिए, अपने एडमिन से संपर्क करें.</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ने आपके डिवाइस पर प्रमाणपत्र अनुमतियां इंस्टॉल की हैं. इनसे उन्हें ईमेल, ऐप्लिकेशन, और सुरक्षित वेबसाइटों के साथ-साथ आपके डिवाइस पर नेटवर्क की गतिविधि की निगरानी करने की अनुमति मिल सकती है.\n\nइन प्रमाणपत्रों के बारे में ज़्यादा जानने के लिए, अपने एडमिन से संपर्क करें.</item>
-    </plurals>
-    <plurals name="ssl_ca_cert_info_message" formatted="false" msgid="5828471957724016946">
-      <item quantity="one"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ने आपकी वर्क प्रोफ़ाइल के लिए प्रमाणपत्र अनुमति को इंस्टॉल किया है. इससे उन्हें ईमेल, ऐप्लिकेशन, और सुरक्षित वेबसाइटों के साथ-साथ वर्क नेटवर्क की गतिविधि की निगरानी करने की अनुमति मिल सकती है.\n\nइस प्रमाणपत्र के बारे में ज़्यादा जानने के लिए, अपने एडमिन से संपर्क करें.</item>
-      <item quantity="other"><xliff:g id="MANAGING_DOMAIN_1">%s</xliff:g> ने आपकी वर्क प्रोफ़ाइल के लिए प्रमाणपत्र अनुमतियां इंस्टॉल की हैं. इनसे उन्हें ईमेल, ऐप्लिकेशन, और सुरक्षित वेबसाइटों के साथ-साथ वर्क नेटवर्क की गतिविधि की निगरानी करने की अनुमति मिल सकती है.\n\nइन प्रमाणपत्रों के बारे में ज़्यादा जानने के लिए, अपने एडमिन से संपर्क करें.</item>
-    </plurals>
-    <string name="ssl_ca_cert_warning_message" msgid="4837017382712096218">"एक तृतीय पक्ष ईमेल, ऐप्लिकेशन और सुरक्षित वेबसाइटों सहित आपकी नेटवर्क गतिविधि को मॉनीटर करने में सक्षम है.\n\nआपके डिवाइस पर इंस्टॉल किए गए एक विश्वसनीय क्रेंडेशियल के कारण ऐसा संभव हो रहा है."</string>
-    <plurals name="ssl_ca_cert_settings_button" formatted="false" msgid="196409967946912560">
-      <item quantity="one">प्रमाणपत्र की जांच करें</item>
-      <item quantity="other">प्रमाणपत्रों की जांच करें</item>
-    </plurals>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{सर्टिफ़िकेट पर भरोसा करें या हटाएं}one{सर्टिफ़िकेट पर भरोसा करें या हटाएं}other{सर्टिफ़िकेट पर भरोसा करें या हटाएं}}"</string>
     <string name="device_status" msgid="8266002761193692207">"स्थिति"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"नेटवर्क, सीरियल नंबर और अन्‍य जानकारी"</string>
     <string name="manual" msgid="5683935624321864999">"मैन्युअल"</string>
@@ -738,6 +686,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"निगरानी करना"</string>
     <string name="system_apps" msgid="8481888654606868074">"ऐप्स"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"सचेत रहें"</string>
+    <string name="keep_screen_on_summary" msgid="4680661166009970792">"स्क्रीन कभी भी स्लीप मोड (कम बैटरी मोड) में नहीं जाएगी"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP जाँच"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI ऑप्टिमाइज़ेशन"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"अभी फिर से चालू करें?"</string>
@@ -858,18 +807,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"TV के साथ HDMI डिवाइस बंद करें"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"TVअपने-आपचालू करें"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"HDMI डिवाइस के साथ TV चालू करें"</string>
-    <plurals name="inputs_header_connected_input" formatted="false" msgid="1179814566738084315">
-      <item quantity="one">कनेक्ट किए गए इनपुट</item>
-      <item quantity="other">कनेक्ट किए गए इनपुट</item>
-    </plurals>
-    <plurals name="inputs_header_standby_input" formatted="false" msgid="1205685426052294376">
-      <item quantity="one">स्टैंडबाय इनपुट</item>
-      <item quantity="other">स्टैंडबाय इनपुट</item>
-    </plurals>
-    <plurals name="inputs_header_disconnected_input" formatted="false" msgid="8405783081133938537">
-      <item quantity="one">कनेक्ट नहीं किए गए इनपुट</item>
-      <item quantity="other">कनेक्ट नहीं किए गए इनपुट</item>
-    </plurals>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{कनेक्ट किया गया इनपुट}one{कनेक्ट किया गया इनपुट}other{कनेक्ट किए गए इनपुट}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{स्टैंडबाय इनपुट}one{स्टैंडबाय इनपुट}other{स्टैंडबाय इनपुट}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{कनेक्ट नहीं किया गया इनपुट}one{कनेक्ट नहीं किया गया इनपुट}other{कनेक्ट नहीं किए गए इनपुट}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"अपने खाते में ऐप्स और अन्य सामग्री की ऐक्सेस प्रतिबंधित करें"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"प्रतिबंधित प्रोफ़ाइल"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"<xliff:g id="APP">%1$s</xliff:g> द्वारा नियंत्रित"</string>
@@ -883,10 +823,6 @@
     <string name="restricted_profile_create_title" msgid="700322590579894058">"प्रतिबंधित प्रोफ़ाइल बनाएं"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"सेटिंग"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"अनुमत ऐप्स"</string>
-    <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
-      <item quantity="one">%d ऐप्‍स की अनुमति है</item>
-      <item quantity="other">%d ऐप्‍स की अनुमति है</item>
-    </plurals>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"अनुमति है"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"अनुमति नहीं"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"प्रतिबंधों को कस्टमाइज़ करें"</string>
@@ -1040,7 +976,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"डेटा बचाने की सेटिंग"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"मोबाइल डेटा बचाने के लिए, वीडियो क्वालिटी को अपने-आप एडजस्ट होने दें"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"डेटा खर्च और सूचनाएं"</string>
-    <string name="data_saver_header_info" msgid="239820871940156510">"आप वाई-फ़ाई, ईथरनेट या फ़ोन के हॉटस्पॉट का इस्तेमाल करके, इंटरनेट से कनेक्ट हो सकते हैं. ज़्यादा जानकारी के लिए "<b>"g.co/network"</b>" पर जाएं."</string>
+    <string name="data_saver_header_info" msgid="2706725187498535785">"वाई-फ़ाई, ईथरनेट या फ़ोन के हॉटस्पॉट का इस्तेमाल करके, इंटरनेट से कनेक्ट किया जा सकता है."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"कार्रवाई की अनुमति नहीं"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"कॉल की आवाज़ कम या ज़्यादा नहीं की जा सकती"</string>
