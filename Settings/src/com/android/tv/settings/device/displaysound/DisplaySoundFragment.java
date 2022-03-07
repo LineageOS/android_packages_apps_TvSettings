@@ -168,7 +168,9 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
         if (defaultAudioOutputSlicePref != null) {
             defaultAudioOutputSlicePref.setVisible(
                     SliceUtils.isSliceProviderValid(getContext(),
-                        defaultAudioOutputSlicePref.getUri()));
+                        defaultAudioOutputSlicePref.getUri())
+                    && SliceUtils.isSettingsSliceEnabled(getContext(),
+                        defaultAudioOutputSlicePref.getUri(), null));
         }
     }
 
