@@ -175,13 +175,14 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
             ProxySettings proxySettings = wifiConfiguration.getIpConfiguration().getProxySettings();
             mProxySettingsPref.setSummary(proxySettings == ProxySettings.NONE
                     ? R.string.wifi_action_proxy_none : R.string.wifi_action_proxy_manual);
-            mProxySettingsPref.setIntent(EditProxySettingsActivity.createIntent(getContext(),
+            mProxySettingsPref.setIntent(EditProxySettingsActivity.createWifiIntent(getContext(),
                     networkId));
 
             IpAssignment ipAssignment = wifiConfiguration.getIpConfiguration().getIpAssignment();
             mIpSettingsPref.setSummary(ipAssignment == IpAssignment.STATIC
                     ? R.string.wifi_action_static : R.string.wifi_action_dhcp);
-            mIpSettingsPref.setIntent(EditIpSettingsActivity.createIntent(getContext(), networkId));
+            mIpSettingsPref.setIntent(EditIpSettingsActivity.createWifiIntent(getContext(),
+                    networkId));
 
             mForgetNetworkPref.setFragment(ForgetNetworkConfirmFragment.class.getName());
             ForgetNetworkConfirmFragment.prepareArgs(mForgetNetworkPref.getExtras(), mAccessPoint);
