@@ -96,10 +96,10 @@
     <string name="connectivity_hint_message" msgid="5638304246522516583">"네트워크에 연결"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"네트워크 진단"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"최근에 사용한 앱"</string>
-    <string name="apps_see_all_apps" msgid="2002886135933443688">"앱 모두 보기"</string>
+    <string name="apps_see_all_apps" msgid="2002886135933443688">"모든 앱 보기"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"권한"</string>
-    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
-    <string name="update_slice_title" msgid="6553763903108611747"></string>
+    <!-- no translation found for apps_security (1392489151324802853) -->
+    <skip />
     <string name="all_apps_title" msgid="3717294436135280133">"모든 앱"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"시스템 앱 보기"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"설치된 앱"</string>
@@ -124,11 +124,9 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD에서 제공하는 Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus에서 제공하는 Dolby Atmos"</string>
-    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"참고: 기기가 지원되는 형식을 올바르게 보고하지 않는 경우 자동 옵션이 작동하지 않을 수 있습니다."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"자동: 오디오 출력 장치에서 지원되는 형식만 사용 설정합니다 "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"선택하면 시스템에서 앱이 기기 체인에서 지원되는 모든 사운드 형식을 선택하도록 허용하게 됩니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
@@ -138,7 +136,7 @@
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"지원되지 않는 사운드 형식을 사용 설정할까요?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"연결된 오디오 기기가 이 형식을 지원하지 않습니다. 이로 인해 기기에서 큰 잡음과 같은 예기치 않은 동작이 발생할 수 있습니다."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"취소"</string>
-    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"변경"</string>
+    <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"계속 변경"</string>
     <string name="surround_sound_supported_title" msgid="4873195851187547020">"지원되는 형식"</string>
     <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"지원되지 않는 형식"</string>
     <string name="surround_sound_format_info" msgid="5671866505653542934">"형식 정보"</string>
@@ -153,19 +151,13 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"고급 소리 설정"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"게임 모드 허용"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"콘텐츠 프레임 속도 일치시키기"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"일치하는 콘텐츠 프레임 속도"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"원활한 전환 사용"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"앱에서 요청하면 TV에서 원활한 전환을 실행할 수 있는 경우에만 기기에서 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞춥니다."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"원활한 전환 사용 안함"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"앱에서 요청할 경우 기기에서 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞춥니다. 이로 인해 동영상 재생을 실행하거나 중지할 때 잠시 화면에 아무 내용도 나타나지 않을 수 있습니다."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"사용 안함"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"앱에서 요청하더라도 기기에서는 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞추려고 하지 않습니다."</string>
-    <string name="font_scale_settings_title" msgid="4114019544800225980">"텍스트 크기 조정"</string>
-    <string name="font_scale_item_detail" msgid="1558315053348778805">"<xliff:g id="SCALE">%1$d</xliff:g>%%로 크기 조정"</string>
-    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"샘플 텍스트"</string>
-    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"오즈의 마법사"</string>
-    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11장: 오즈의 멋진 에메랄드 도시"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"도로시와 친구들은 녹색 안경으로 눈을 보호하고 있었는데도 처음에는 휘황찬란한 도시에 눈이 부셨습니다. 거리에는 녹색 대리석으로 지은 아름다운 집이 늘어서 있고 어디든지 반짝이는 에메랄드가 박혀 있었습니다. 같은 녹색 대리석으로 된 도로를 따라 걷는데 블록이 만나는 곳에는 에메랄드가 줄지어 촘촘히 박혀 있어서 햇빛에 반짝거리고 있었습니다. 창문이 녹색 유리로 되어 있었으며, 도시를 덮고 있는 하늘도 녹색을 띠고 있고 햇빛도 녹색이었습니다. \n\n남녀노소 많은 사람이 걸어 다니고 있었는데 모두 녹색 옷을 입고 피부도 녹색을 띠고 있었습니다. 도로시의 별난 무리를 놀란 눈으로 쳐다보았으며 아이들은 사자를 보자 도망가서 엄마 뒤로 숨었지만, 말을 거는 사람은 없었습니다. 거리에 많은 상점이 있었으며 도로시가 들여다보니 안에 있는 모든 것이 녹색이었습니다. 녹색 사탕과 녹색 팝콘 그리고 갖가지 녹색 신발, 녹색 모자, 녹색 옷을 팔고 있었습니다. 한 남자가 녹색 레모네이드를 팔고 있는 곳이 있었는데 도로시가 보니 아이들이 레모네이드를 살 때 녹색 동전을 내고 있었습니다. \n\n말을 비롯해 어떤 동물도 없는 것 같았고, 남자들이 작은 녹색 손수레에 짐을 싣고 밀어서 운반했습니다. 모두 행복하고 만족스러우며 풍족해 보였습니다."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"형식 선택"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"자동"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"수동"</string>
@@ -177,7 +169,7 @@
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
-    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"이 옵션을 선택하면 시스템에서 앱이 기기 체인에서 지원되는 HDR 형식을 선택하도록 허용하게 됩니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
+    <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"이 옵션을 선택하면 시스템에서 앱이 기기 체인에서 지원되는 모든 HDR 형식을 선택하도록 허용하게 됩니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
     <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"이 옵션을 선택하면 기기 체인에서 지원되며 재생 관련 문제를 일으키는 HDR 형식을 수동으로 사용 중지할 수 있습니다. 기기 체인에서 지원되지 않는 HDR 형식은 강제로 사용 설정할 수 없습니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
     <string name="hdr_format_info" msgid="5652559220799426076">"형식 정보"</string>
     <string name="hdr_show_formats" msgid="171065892975445851">"형식 표시"</string>
@@ -335,7 +327,6 @@
       <item quantity="other">전화 앱</item>
       <item quantity="one">전화 앱</item>
     </plurals>
-    <string name="default_browser_title" msgid="3612813200586492159">"브라우저 앱"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"가이드"</string>
@@ -346,7 +337,7 @@
     <string name="device_name" msgid="566626587332817733">"기기 이름"</string>
     <string name="restart_button_label" msgid="911750765086382990">"다시 시작"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"법적 정보"</string>
-    <string name="about_legal_license" msgid="4056934178111674054">"제3자 출처"</string>
+    <string name="about_legal_license" msgid="4801707286720681261">"오픈소스 라이선스"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google 법적 고지"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"라이선스 데이터를 사용할 수 없습니다."</string>
     <string name="about_model" msgid="9164284529291439296">"모델"</string>
@@ -412,9 +403,6 @@
     <string name="license_title" msgid="4032466200355435641">"라이선스"</string>
     <string name="terms_title" msgid="192888187310800678">"이용약관"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"시스템 WebView 라이선스"</string>
-    <string name="consumer_information_title" msgid="7729729568416672733">"소비자 정보"</string>
-    <string name="consumer_information_message" msgid="205236637689468764">"Android TV의 콘텐츠는 Google은 물론 앱 개발자 및 영화 스튜디오와 같은 타사 파트너가 제공합니다. 자세한 내용은 "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>" 페이지를 확인하세요."</string>
-    <string name="consumer_information_button_ok" msgid="6979480064600038080">"확인"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"나쁨"</item>
     <item msgid="2098818614362343532">"양호"</item>
@@ -617,22 +605,6 @@
     <item msgid="5645263357181875427">"전송 스트림에서 제공하는 시간 정보를 사용합니다."</item>
     <item msgid="5501503537181350884">"사용 안함"</item>
   </string-array>
-    <string name="sensor_toggle_description" msgid="7415801459994303159">"모든 앱 및 서비스"</string>
-    <string name="recently_accessed_by_category" msgid="6841705864715653428">"최근 액세스한 앱"</string>
-    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"최근 액세스 없음"</string>
-    <string name="recently_accessed_show_all" msgid="5234849189704717855">"모두 보기"</string>
-    <string name="microphone" msgid="7893752847683941214">"마이크"</string>
-    <string name="mic_toggle_title" msgid="7193417007060235665">"마이크 액세스"</string>
-    <string name="open_mic_permissions" msgid="8121871594807641073">"앱의 마이크 액세스 권한"</string>
-    <string name="camera" msgid="1226671478936288283">"카메라"</string>
-    <string name="camera_toggle_title" msgid="5566469574224956142">"카메라 액세스"</string>
-    <string name="open_camera_permissions" msgid="301360297337141591">"앱의 카메라 액세스 권한"</string>
-    <string name="mic_toggle_info_title" msgid="1086545614315873599">"마이크 액세스: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4699624900513326055">"옵션을 사용 설정하면 권한을 부여받은 모든 앱 및 서비스가 기기의 마이크에 모두 액세스할 수 있습니다.\n\n맞춤 프로토콜이 지정된 오디오 주변기기는 설정의 영향을 받지 않습니다."</string>
-    <string name="camera_toggle_info_title" msgid="3871317082313736088">"카메라 액세스: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="2999965953853204003">"옵션을 사용 설정하면 권한을 부여받은 모든 앱 및 서비스가 기기의 카메라에 모두 액세스할 수 있습니다.\n\n맞춤 프로토콜이 지정된 카메라 주변기기는 설정의 영향을 받지 않습니다."</string>
-    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"사용"</string>
-    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"사용 안함"</string>
     <string name="system_location" msgid="4057295363709016511">"위치"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"사용자의 허가를 받은 앱에 사용자 위치 정보를 제공합니다."</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"위치 정보 수집"</string>
@@ -901,14 +873,14 @@
     <string name="device_apps_app_management_enable_desc" msgid="8686291003061136476">"이 앱을 사용 설정하시겠습니까?"</string>
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"사용된 저장용량"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g>에서 <xliff:g id="SIZE">%1$s</xliff:g> 사용"</string>
-    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"데이터 지우기"</string>
+    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"데이터 삭제"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"이 앱의 모든 데이터가 완전히 삭제됩니다.\n여기에는 모든 파일, 설정, 계정, 데이터베이스 등이 포함됩니다."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"기본값 지우기"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"작업에 대해 이 앱을 실행하도록 설정하세요."</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"기본값이 설정되지 않음"</string>
-    <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"캐시 지우기"</string>
+    <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"캐시 삭제"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"알림"</string>
-    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"제3자 출처"</string>
+    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"오픈소스 라이선스"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"권한"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"사용할 수 없는 애플리케이션"</string>
     <string name="settings_ok" msgid="5950888975075541964">"확인"</string>
@@ -998,7 +970,6 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"PIP 모드 허용"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"PIP 모드를 지원하는 앱이 설치되지 않았습니다."</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"앱이 열려 있을 때나 사용자가 앱에서 나갔을 때 앱에서 PIP 창을 표시하도록 허용합니다(예: 동영상 시청을 계속하기 위해). 이 창은 사용 중인 다른 앱 위에 표시됩니다."</string>
-    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"앱에서 알람을 설정하고 시간 기반 작업을 예약할 수 있도록 허용합니다. 이렇게 하면 백그라운드에서 앱 실행이 허용되어 전원 사용량이 증가할 수 있습니다.\n\n이 권한을 사용 중지하면 앱에서 예약한 기존의 알람 및 시간 기반 일정이 작동하지 않습니다."</string>
     <string name="special_access" msgid="21806055758289916">"특수 앱 액세스"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"오디오"</string>
