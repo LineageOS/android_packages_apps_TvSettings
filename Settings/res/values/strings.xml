@@ -2321,6 +2321,14 @@
         is off, existing alarms and time-based events scheduled by the app won\u2019t work.
     </string>
 
+    <!-- Special access > Title for managing turn screen on settings. [CHAR LIMIT=50] -->
+    <string name="turn_screen_on_title">Turn screen on</string>
+    <!-- Label for a setting which controls whether an app can turn the screen on [CHAR LIMIT=45] -->
+    <string name="allow_turn_screen_on">Allow turning the screen on</string>
+    <!-- Description for a setting which controls whether an app can turn the screen on
+         [CHAR LIMIT=NONE] -->
+    <string name="allow_turn_screen_on_description">Allow an app to turn the screen on. If granted, the app may turn on the screen at any time without your explicit intent.</string>
+
     <!-- [CHAR_LIMIT=60] Label for special access screen -->
     <string name="special_access">Special app access</string>
 
