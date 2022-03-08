@@ -1444,6 +1444,11 @@
     <string name="mic_toggle_title">Microphone access</string>
     <!-- Title for setting that opens the microphone permissions overview for all apps [CHAR LIMIT=50]-->
     <string name="open_mic_permissions">App access to microphone</string>
+    <!-- Title for info box warning that microphone hardware switch is turned off [CHAR LIMIT=50]-->
+    <string name="microphone_physical_privacy_enabled_title">Microphone access blocked</string>
+    <!-- Content for info box warning that microphone hardware switch is turned off [CHAR LIMIT=250]-->
+    <string name="microphone_physical_privacy_enabled_text">To unblock, move the privacy switch on
+        your device to the microphone on position to allow microphone access.</string>
 
     <!-- Title for Camera settings [CHAR LIMIT=30] -->
     <string name="camera">Camera</string>
@@ -1451,6 +1456,12 @@
     <string name="camera_toggle_title">Camera access</string>
     <!-- Title for setting that opens the camera permissions overview for all apps [CHAR LIMIT=50]-->
     <string name="open_camera_permissions">App access to camera</string>
+
+    <!-- Title for info box warning that camera hardware switch is turned off [CHAR LIMIT=50]-->
+    <string name="camera_physical_privacy_enabled_title">Camera access blocked</string>
+    <!-- Content for info box warning that camera hardware switch is turned off [CHAR LIMIT=250]-->
+    <string name="camera_physical_privacy_enabled_text">To unblock, move the privacy switch on your
+        device to the camera on position to allow camera access.</string>
 
     <!-- Title of the info panel that is shown on the side when the microphone toggle is selected.
     The sensor_state is one of the following strings: sensor_toggle_info_on or sensor_toggle_info_off [CHAR LIMIT=30]-->
