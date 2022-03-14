@@ -18,7 +18,6 @@ package com.android.tv.settings.connectivity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.IpConfiguration;
 import android.net.wifi.WifiConfiguration;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -47,26 +46,10 @@ public class EditProxySettingsActivity extends InstrumentedActivity implements
 
     private static final int NETWORK_ID_ETHERNET = WifiConfiguration.INVALID_NETWORK_ID;
     private static final String EXTRA_NETWORK_ID = "network_id";
-    private static final String EXTRA_IFACE = "interface_name";
-    private static final String EXTRA_IP_CONFIG = "ip_config";
 
-    /**
-     * Create a new Intent for WiFi network.
-     */
-    public static Intent createWifiIntent(Context context, int networkId) {
+    public static Intent createIntent(Context context, int networkId) {
         return new Intent(context, EditProxySettingsActivity.class)
                 .putExtra(EXTRA_NETWORK_ID, networkId);
-    }
-
-    /**
-     * Create a new Intent for Ethernet network.
-     */
-    public static Intent createEthernetIntent(Context context, String iface,
-            IpConfiguration initialConfig) {
-        return new Intent(context, EditProxySettingsActivity.class)
-                .putExtra(EXTRA_NETWORK_ID, NETWORK_ID_ETHERNET)
-                .putExtra(EXTRA_IFACE, iface)
-                .putExtra(EXTRA_IP_CONFIG, initialConfig);
     }
 
     private State mSaveState;
@@ -87,13 +70,11 @@ public class EditProxySettingsActivity extends InstrumentedActivity implements
         mSaveState = new SaveState(this);
         mSaveSuccessState = new SaveSuccessState(this);
         mSaveFailedState = new SaveFailedState(this);
-        final Intent intent = getIntent();
-        int networkId = intent.getIntExtra(EXTRA_NETWORK_ID, NETWORK_ID_ETHERNET);
+        int networkId = getIntent().getIntExtra(EXTRA_NETWORK_ID, NETWORK_ID_ETHERNET);
         NetworkConfiguration netConfig;
         if (networkId == NETWORK_ID_ETHERNET) {
-            final String iface = intent.getStringExtra(EXTRA_IFACE);
-            final IpConfiguration initialConfig = intent.getParcelableExtra(EXTRA_IP_CONFIG);
-            netConfig = new EthernetConfig(this, iface, initialConfig);
+            netConfig = new EthernetConfig(this);
+            ((EthernetConfig) netConfig).load();
         } else {
             final UserManager userManager = UserManager.get(this);
             if (userManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_WIFI)) {
