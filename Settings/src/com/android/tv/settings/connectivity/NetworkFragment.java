@@ -31,7 +31,6 @@ import android.content.pm.ResolveInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
-import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -186,11 +185,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mEthernetCategory = (PreferenceCategory) findPreference(KEY_ETHERNET);
         mEthernetStatusPref = findPreference(KEY_ETHERNET_STATUS);
         mEthernetProxyPref = findPreference(KEY_ETHERNET_PROXY);
-        mEthernetProxyPref.setIntent(EditProxySettingsActivity.createIntent(getContext(),
-                WifiConfiguration.INVALID_NETWORK_ID));
         mEthernetDhcpPref = findPreference(KEY_ETHERNET_DHCP);
-        mEthernetDhcpPref.setIntent(EditIpSettingsActivity.createIntent(getContext(),
-                WifiConfiguration.INVALID_NETWORK_ID));
 
         if (!mIsWifiHardwarePresent) {
             mEnableWifiPref.setVisible(false);
@@ -329,12 +324,24 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mEthernetCategory.setVisible(ethernetAvailable);
         mEthernetStatusPref.setVisible(ethernetAvailable);
         mEthernetProxyPref.setVisible(ethernetAvailable);
+        if (ethernetAvailable) {
+            mEthernetProxyPref.setIntent(EditProxySettingsActivity.createEthernetIntent(
+                    getContext(),
+                    mConnectivityListener.getEthernetInterfaceName(),
+                    mConnectivityListener.getEthernetIpConfiguration()));
+        }
         mEthernetProxyPref.setOnPreferenceClickListener(
                 preference -> {
                     logEntrySelected(TvSettingsEnums.NETWORK_ETHERNET_PROXY_SETTINGS);
                     return false;
                 });
+
         mEthernetDhcpPref.setVisible(ethernetAvailable);
+        if (ethernetAvailable) {
+            mEthernetDhcpPref.setIntent(EditIpSettingsActivity.createEthernetIntent(getContext(),
+                    mConnectivityListener.getEthernetInterfaceName(),
+                    mConnectivityListener.getEthernetIpConfiguration()));
+        }
         mEthernetDhcpPref.setOnPreferenceClickListener(
                 preference -> {
                     logEntrySelected(TvSettingsEnums.NETWORK_ETHERNET_IP_SETTINGS);
