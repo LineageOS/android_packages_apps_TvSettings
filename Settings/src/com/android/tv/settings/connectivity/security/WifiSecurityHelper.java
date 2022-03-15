@@ -141,7 +141,7 @@ public class WifiSecurityHelper {
 
             case AccessPoint.SECURITY_SAE:
                 config.setSecurityParams(WifiConfiguration.SECURITY_TYPE_SAE);
-                if (password.length() != 0) {
+                if (length != 0) {
                     config.preSharedKey = '"' + password + '"';
                 }
                 break;
