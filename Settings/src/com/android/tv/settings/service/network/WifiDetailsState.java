@@ -221,7 +221,7 @@ public class WifiDetailsState implements State,
             mProxySettingsPref.setSummary(proxySettings == IpConfiguration.ProxySettings.NONE
                     ? mContext.getString(R.string.wifi_action_proxy_none)
                     : mContext.getString(R.string.wifi_action_proxy_manual));
-            mProxySettingsPref.setIntent(EditProxySettingsActivity.createIntent(mContext,
+            mProxySettingsPref.setIntent(EditProxySettingsActivity.createWifiIntent(mContext,
                     networkId));
 
             IpConfiguration.IpAssignment ipAssignment =
@@ -229,7 +229,7 @@ public class WifiDetailsState implements State,
             mIpSettingsPref.setSummary(ipAssignment == IpConfiguration.IpAssignment.STATIC
                     ? mContext.getString(R.string.wifi_action_static)
                     : mContext.getString(R.string.wifi_action_dhcp));
-            mIpSettingsPref.setIntent(EditIpSettingsActivity.createIntent(mContext, networkId));
+            mIpSettingsPref.setIntent(EditIpSettingsActivity.createWifiIntent(mContext, networkId));
 
             // TODO : use full activity to replace this
 //            mForgetNetworkPref.setFragment(WifiDetailsFragment.ForgetNetworkConfirmFragment
