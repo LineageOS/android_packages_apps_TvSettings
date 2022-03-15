@@ -25,7 +25,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.SwitchPreference;
 
-import lineageos.preference.LineageSecureSettingSwitchPreference;
+import lineageos.preference.LineageGlobalSettingListPreference;
 import lineageos.providers.LineageSettings;
 import lineageos.trust.TrustInterface;
 
@@ -41,7 +41,7 @@ public class TVTrustPreferences extends SettingsPreferenceFragment {
     private Preference mSecurityPatchesPref;
     private Preference mEncryptionPref;
     private PreferenceCategory mToolsCategory;
-    private LineageSecureSettingSwitchPreference mUsbRestrictorPref;
+    private LineageGlobalSettingListPreference mUsbRestrictorPref;
 
     private PreferenceCategory mWarnScreen;
     private SwitchPreference mWarnSELinuxPref;
