@@ -40,7 +40,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settingslib.applications.ApplicationsState;
@@ -71,8 +70,6 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
     private static final String KEY_NOTIFICATIONS = "notifications";
     private static final String KEY_PERMISSIONS = "permissions";
     private static final String KEY_LICENSES = "licenses";
-    private static final String KEY_HIBERNATION_CATEGORY = "hibernationCategory";
-    private static final String KEY_HIBERNATION_SWITCH = "hibernationSwitch";
 
     // Intent action implemented by apps that have open source licenses to display under settings
     private static final String VIEW_LICENSES_ACTION = "com.android.tv.settings.VIEW_LICENSES";
@@ -97,9 +94,6 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
     private ClearCachePreference mClearCachePreference;
     private ClearDefaultsPreference mClearDefaultsPreference;
     private NotificationsPreference mNotificationsPreference;
-    private HibernationSwitchPreference mHibernationSwitchPreference;
-
-    private PreferenceCategory mHibernationCategory;
 
     private final Handler mHandler = new Handler();
     private Runnable mBailoutRunnable = () -> {
@@ -140,19 +134,12 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
         if (mEnableDisablePreference != null) {
             mEnableDisablePreference.refresh();
         }
-
-        if (mHibernationSwitchPreference != null) {
-            mHibernationSwitchPreference.onResume();
-        }
     }
 
     @Override
     public void onPause() {
         super.onPause();
         mHandler.removeCallbacks(mBailoutRunnable);
-        if (mHibernationSwitchPreference != null) {
-            mHibernationSwitchPreference.onPause();
-        }
     }
 
     @Override
@@ -409,28 +396,6 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
                 });
         permissionsPreference.setIntent(new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS)
                 .putExtra(Intent.EXTRA_PACKAGE_NAME, mPackageName));
-
-        if (mHibernationCategory == null) {
-            mHibernationCategory = new PreferenceCategory(this.getPreferenceManager().getContext());
-            mHibernationCategory.setKey(KEY_HIBERNATION_CATEGORY);
-            mHibernationCategory.setTitle(R.string.unused_apps);
-            getPreferenceScreen().addPreference(mHibernationCategory);
-        }
-        // Enable Hibernation
-        if (mHibernationSwitchPreference == null) {
-            mHibernationSwitchPreference = new HibernationSwitchPreference(themedContext, mEntry);
-            mHibernationSwitchPreference.setKey(KEY_HIBERNATION_SWITCH);
-            replacePreference(mHibernationSwitchPreference);
-        } else {
-            mHibernationSwitchPreference.setEntry(mEntry);
-        }
-        setHibernationVisibility(
-                mHibernationSwitchPreference.shouldBeVisible());
-    }
-
-    private void setHibernationVisibility(boolean visible) {
-        mHibernationSwitchPreference.setVisible(visible);
-        mHibernationCategory.setVisible(visible);
     }
 
     private void replacePreference(Preference preference) {
