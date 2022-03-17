@@ -31,13 +31,17 @@ import java.util.Optional;
  */
 public class ActiveNetworkProvider {
     private final Context mContext;
-    @Nullable private final NetworkInfo mNetworkInfo;
+    private final ConnectivityManager mConnectivityManager;
+    @Nullable private NetworkInfo mNetworkInfo;
 
-    public ActiveNetworkProvider(Context context) {
-        this.mContext = context;
-        final ConnectivityManager connectivityManager = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
-        mNetworkInfo = connectivityManager.getActiveNetworkInfo();
+    ActiveNetworkProvider(Context context) {
+        mContext = context;
+        mConnectivityManager = context.getSystemService(ConnectivityManager.class);
+        mNetworkInfo = null;
+    }
+
+    void updateActiveNetwork() {
+        mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
     }
 
     public boolean isConnected() {
