@@ -29,6 +29,13 @@
         android:key="see_all_apps"
         android:title="@string/apps_see_all_apps"
         android:fragment="com.android.tv.settings.device.apps.AllAppsFragmentCompat"/>
+
+    <TsPreference
+        android:key="see_unused_apps"
+        android:title="@string/unused_apps">
+        <intent android:action="android.intent.action.MANAGE_UNUSED_APPS"/>
+    </TsPreference>
+
     <com.android.tv.settings.compat.TsPreferenceCategory
         android:key="permissions"
         android:title="@string/apps_permissions_category_title">
