@@ -72,13 +72,6 @@
     <!-- TODO: implement this -->
     <!--android:fragment="com.android.settings.applications.RunningServices" />-->
 
-    <PreferenceScreen
-        android:key="convert_to_file_encryption"
-        android:title="@string/convert_to_file_encryption"
-        android:summary="@string/convert_to_file_encryption_enabled" />
-    <!-- TODO: implement this-->
-    <!--android:fragment="com.android.settings.applications.ConvertToFbe" />-->
-
     <com.android.tv.settings.system.development.ColorModePreference
         android:key="color_mode"
         android:title="@string/picture_color_mode"
