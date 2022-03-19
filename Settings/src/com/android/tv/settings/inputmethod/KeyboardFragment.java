@@ -22,13 +22,16 @@ import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.hardware.input.InputManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.text.TextUtils;
 import android.util.ArraySet;
+import android.util.Log;
 import android.view.inputmethod.InputMethodInfo;
 
 import androidx.annotation.Keep;
+import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -39,24 +42,31 @@ import com.android.settingslib.applications.DefaultAppInfo;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.autofill.AutofillHelper;
+import com.android.tv.settings.library.util.ThreadUtils;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 /**
- * Fragment for managing IMEs and Autofills
+ * Fragment for managing IMEs, Autofills and physical keyboards
  */
 @Keep
-public class KeyboardFragment extends SettingsPreferenceFragment {
+public class KeyboardFragment extends SettingsPreferenceFragment implements
+        InputManager.InputDeviceListener {
     private static final String TAG = "KeyboardFragment";
+    private static final boolean DEBUG = false;
 
     // Order of input methods, make sure they are inserted between 1 (currentKeyboard) and
     // 3 (manageKeyboards).
     private static final int INPUT_METHOD_PREFERENCE_ORDER = 2;
+
+    // Order of physical keyboard setting, in the end
+    private static final int PHYSICAL_KEYBOARD_PREFERENCE_ORDER = 5;
 
     @VisibleForTesting
     static final String KEY_KEYBOARD_CATEGORY = "keyboardCategory";
@@ -65,6 +75,8 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     static final String KEY_CURRENT_KEYBOARD = "currentKeyboard";
 
     private static final String KEY_KEYBOARD_SETTINGS_PREFIX = "keyboardSettings:";
+
+    private static final String KEY_PHYSICAL_KEYBOARD_SETTINGS_PREFIX = "physicalKeyboardSettings:";
 
     @VisibleForTesting
     static final String KEY_AUTOFILL_CATEGORY = "autofillCategory";
@@ -75,6 +87,8 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     private static final String KEY_AUTOFILL_SETTINGS_PREFIX = "autofillSettings:";
 
     private PackageManager mPm;
+
+    private InputManager mIm;
 
     /**
      * @return New fragment instance
@@ -87,6 +101,7 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         mPm = context.getPackageManager();
+        mIm = Objects.requireNonNull(context.getSystemService(InputManager.class));
     }
 
     @Override
@@ -107,6 +122,13 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     public void onResume() {
         super.onResume();
         updateUi();
+        mIm.registerInputDeviceListener(this, null);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mIm.unregisterInputDeviceListener(this);
     }
 
     @VisibleForTesting
@@ -118,10 +140,10 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     private void updateKeyboards() {
         updateCurrentKeyboardPreference(findPreference(KEY_CURRENT_KEYBOARD));
         updateKeyboardsSettings();
+        scheduleUpdatePhysicalKeyboards(getPreferenceContext());
     }
 
     private void updateCurrentKeyboardPreference(ListPreference currentKeyboardPref) {
-        final PackageManager packageManager = getContext().getPackageManager();
         List<InputMethodInfo> enabledInputMethodInfos = InputMethodHelper
                 .getEnabledSystemInputMethodList(getContext());
         final List<CharSequence> entries = new ArrayList<>(enabledInputMethodInfos.size());
@@ -131,7 +153,7 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
         final String defaultId = InputMethodHelper.getDefaultInputMethodId(getContext());
 
         for (final InputMethodInfo info : enabledInputMethodInfos) {
-            entries.add(info.loadLabel(packageManager));
+            entries.add(info.loadLabel(mPm));
             final String id = info.getId();
             values.add(id);
             if (TextUtils.equals(id, defaultId)) {
@@ -152,12 +174,11 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
 
     private void updateKeyboardsSettings() {
         final Context preferenceContext = getPreferenceContext();
-        final PackageManager packageManager = getContext().getPackageManager();
         List<InputMethodInfo> enabledInputMethodInfos = InputMethodHelper
                 .getEnabledSystemInputMethodList(getContext());
-
         PreferenceScreen preferenceScreen = getPreferenceScreen();
-        final Set<String> enabledInputMethodKeys = new ArraySet<>(enabledInputMethodInfos.size());
+        final Set<String> enabledInputMethodKeys = new ArraySet<>(
+                enabledInputMethodInfos.size());
         // Add per-IME settings
         for (final InputMethodInfo info : enabledInputMethodInfos) {
             final String uri = InputMethodHelper.getInputMethodsSettingsUri(getContext(), info);
@@ -179,7 +200,7 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
                 preferenceScreen.addPreference(preference);
             }
             preference.setTitle(getContext().getString(R.string.title_settings,
-                    info.loadLabel(packageManager)));
+                    info.loadLabel(mPm)));
             preference.setKey(key);
             if (useSlice) {
                 ((SlicePreference) preference).setUri(uri);
@@ -189,13 +210,68 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
             }
             enabledInputMethodKeys.add(key);
         }
+        removeDisabledPreferencesFromScreen(preferenceScreen, enabledInputMethodKeys,
+                KEY_KEYBOARD_SETTINGS_PREFIX);
+    }
 
+    void scheduleUpdatePhysicalKeyboards(Context context) {
+        ThreadUtils.postOnBackgroundThread(() -> {
+            final List<PhysicalKeyboardHelper.DeviceInfo> newPhysicalKeyboards =
+                    PhysicalKeyboardHelper.getPhysicalKeyboards(context);
+            ThreadUtils.postOnMainThread(() -> updatePhysicalKeyboards(newPhysicalKeyboards));
+        });
+    }
+
+    private void updatePhysicalKeyboards(
+            @NonNull List<PhysicalKeyboardHelper.DeviceInfo> newPhysicalKeyboards) {
+        final PreferenceScreen preferenceScreen = getPreferenceScreen();
+        if (DEBUG) {
+            Log.d(TAG, "updatePhysicalKeyboards: " + newPhysicalKeyboards.toString());
+        }
+        final Set<String> enabledPhysicalKeyboardKeys = new ArraySet<>(newPhysicalKeyboards.size());
+        // Add a setting per physical keyboard device
+        for (PhysicalKeyboardHelper.DeviceInfo deviceInfo :
+                newPhysicalKeyboards) {
+            String key = KEY_PHYSICAL_KEYBOARD_SETTINGS_PREFIX
+                    + deviceInfo.mDeviceIdentifier.getDescriptor();
+            Preference pref = preferenceScreen.findPreference(key);
+            if (pref == null) {
+                pref = new Preference(getPreferenceContext());
+                pref.setOrder(PHYSICAL_KEYBOARD_PREFERENCE_ORDER);
+                preferenceScreen.addPreference(pref);
+            }
+            pref.setKey(key);
+            pref.setTitle(getPreferenceContext().getString(
+                    com.android.settingslib.R.string.physical_keyboard_title));
+            pref.setSummary(deviceInfo.getSummary());
+            KeyboardLayoutSelectionFragment.prepareArgs(pref.getExtras(),
+                    deviceInfo.mDeviceIdentifier,
+                    deviceInfo.mDeviceName,
+                    deviceInfo.mDeviceId,
+                    deviceInfo.mCurrentLayoutDescriptor);
+            pref.setFragment(KeyboardLayoutSelectionFragment.class.getName());
+            enabledPhysicalKeyboardKeys.add(key);
+        }
+        removeDisabledPreferencesFromScreen(preferenceScreen, enabledPhysicalKeyboardKeys,
+                KEY_PHYSICAL_KEYBOARD_SETTINGS_PREFIX);
+    }
+
+    /**
+     * Removes all preferences which start with the key prefix and are not among the enabled keys
+     * from the preference screen.
+     *
+     * @param preferenceScreen The preference screen.
+     * @param enabledKeys The set of enabled keys.
+     * @param keyPrefix The prefix for the keys to be removed.
+     */
+    private void removeDisabledPreferencesFromScreen(PreferenceScreen preferenceScreen,
+            Set<String> enabledKeys, String keyPrefix) {
         for (int i = 0; i < preferenceScreen.getPreferenceCount(); ) {
             final Preference preference = preferenceScreen.getPreference(i);
             final String key = preference.getKey();
             if (!TextUtils.isEmpty(key)
-                    && key.startsWith(KEY_KEYBOARD_SETTINGS_PREFIX)
-                    && !enabledInputMethodKeys.contains(key)) {
+                    && key.startsWith(keyPrefix)
+                    && !enabledKeys.contains(key)) {
                 preferenceScreen.removePreference(preference);
             } else {
                 i++;
@@ -224,7 +300,6 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
             updateAutofillSettings(candidates);
             getPreferenceScreen().setTitle(R.string.system_keyboard_autofill);
         }
-
     }
 
     private List<DefaultAppInfo> getAutofillCandidates() {
@@ -283,5 +358,20 @@ public class KeyboardFragment extends SettingsPreferenceFragment {
     @Override
     protected int getPageId() {
         return TvSettingsEnums.SYSTEM_KEYBOARD;
+    }
+
+    @Override
+    public void onInputDeviceAdded(int deviceId) {
+        scheduleUpdatePhysicalKeyboards(getPreferenceContext());
+    }
+
+    @Override
+    public void onInputDeviceRemoved(int deviceId) {
+        scheduleUpdatePhysicalKeyboards(getPreferenceContext());
+    }
+
+    @Override
+    public void onInputDeviceChanged(int deviceId) {
+        scheduleUpdatePhysicalKeyboards(getPreferenceContext());
     }
 }
