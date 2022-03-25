@@ -161,6 +161,7 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
+            android:permission="android.permission.NETWORK_SETTINGS"
             android:theme="@style/Theme.SettingsConnectivity" >
             <intent-filter>
                 <action android:name="com.android.settings.wifi.action.WIFI_CONNECTION_SETTINGS"/>
