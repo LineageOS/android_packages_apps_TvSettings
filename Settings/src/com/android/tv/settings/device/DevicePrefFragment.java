@@ -93,6 +93,8 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     private static final String KEY_CAMERA = "camera";
     private static final String KEY_FASTPAIR_SETTINGS_SLICE = "fastpair_slice";
     private static final String KEY_OVERLAY_INTERNAL_SETTINGS_SLICE = "overlay_internal";
+    private static final String KEY_ASSISTANT_BROADCAST = "assistant_broadcast";
+    private static final String RES_TOP_LEVEL_ASSISTANT_SLICE_URI = "top_level_assistant_slice_uri";
 
     private Preference mSoundsPref;
     private TwoStatePreference mSoundsSwitchPref;
@@ -140,6 +142,14 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
                 findPreference(KEY_MIC), SensorFragment.TOGGLE_EXTRA);
         PrivacyToggle.CAMERA_TOGGLE.preparePreferenceWithSensorFragment(getContext(),
                 findPreference(KEY_CAMERA), SensorFragment.TOGGLE_EXTRA);
+
+        final Preference assistantBroadcastPreference = findPreference(KEY_ASSISTANT_BROADCAST);
+        if (assistantBroadcastPreference != null && SliceUtils.isSettingsSliceEnabled(
+                getContext(),
+                ((SlicePreference) assistantBroadcastPreference).getUri(),
+                RES_TOP_LEVEL_ASSISTANT_SLICE_URI)) {
+            assistantBroadcastPreference.setVisible(true);
+        }
     }
 
     @Override
