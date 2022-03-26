@@ -30,13 +30,13 @@ import java.util.Optional;
  * Provides information about the currently connected network synchronously.
  */
 public class ActiveNetworkProvider {
-    private final Context mContext;
     private final ConnectivityManager mConnectivityManager;
+    private final Optional<WifiManager> mWifiManagerOptional;
     @Nullable private NetworkInfo mNetworkInfo;
 
     ActiveNetworkProvider(Context context) {
-        mContext = context;
         mConnectivityManager = context.getSystemService(ConnectivityManager.class);
+        mWifiManagerOptional = Optional.ofNullable(context.getSystemService(WifiManager.class));
         mNetworkInfo = null;
     }
 
@@ -61,12 +61,16 @@ public class ActiveNetworkProvider {
         return isConnected() && mNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI;
     }
 
+    public boolean isWifiEnabled() {
+        return mWifiManagerOptional.map(WifiManager::isWifiEnabled).orElse(false);
+    }
+
     @Nullable
     public String getSsid() {
         if (!isTypeWifi()) {
             return null;
         }
-        return Optional.ofNullable(mContext.getSystemService(WifiManager.class))
+        return mWifiManagerOptional
                 .map(WifiManager::getConnectionInfo)
                 .map(WifiInfo::getSSID)
                 .map(ActiveNetworkProvider::sanitizeSsid)
