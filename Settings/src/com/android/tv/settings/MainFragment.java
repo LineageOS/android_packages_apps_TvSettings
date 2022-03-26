@@ -221,8 +221,13 @@ public class MainFragment extends PreferenceControllerFragment implements
             networkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
             networkPref.setSummary(activeNetworkProvider.getSsid());
         } else {
-            networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
-            networkPref.setSummary(R.string.connectivity_summary_wifi_disabled);
+            if (activeNetworkProvider.isWifiEnabled()) {
+                networkPref.setIcon(R.drawable.ic_wifi_not_connected);
+                networkPref.setSummary(R.string.connectivity_summary_no_network_connected);
+            } else {
+                networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
+                networkPref.setSummary(R.string.connectivity_summary_wifi_disabled);
+            }
         }
     }
 
