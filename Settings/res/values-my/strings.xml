@@ -98,8 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"မကြာသေးမီက ဖွင့်ထားသော အက်ပ်များ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"အက်ပ်အားလုံးကိုကြည့်ရန်"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"ခွင့်ပြုချက်များ"</string>
-    <!-- no translation found for apps_security (1392489151324802853) -->
-    <skip />
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"အက်ပ်အားလုံး"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"စနစ်အက်ပ်များ ပြသရန်"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"ထည့်ထားသည့် အက်ပ်များ"</string>
@@ -124,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby ဒစ်ဂျစ်တယ် Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos with Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos with Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"မှတ်ချက်- သင့်စက်က ၎င်းပံ့ပိုးထားသော ဖော်မက်များကို မှန်ကန်စွာ အသိမပေးလျှင် \'အလိုအလျောက်\' လုပ်ဆောင်ချက် အလုပ်လုပ်မည် မဟုတ်ပါ။"</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"အလိုအလျောက်- သင့်အသံထုတ်ယူသည့် ကိရိယာက ပံ့ပိုးထားသော ဖော်မက်များကိုသာ ဖွင့်ရန် "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"ရွေးချယ်ထားစဉ်တွင် စနစ်က အက်ပ်များကို သင်၏စက်ကွင်းဆက်က ပံ့ပိုးထားသော မည်သည့် အသံဖော်မက်ကိုမဆို ရွေးချယ်ရန် ခွင့်ပြုမည်။ အက်ပ်များက အမြင့်ဆုံးအရည်အသွေးဖော်မက် မဟုတ်သည့် ဖော်မက်ကို ရွေးချယ်နိုင်သည်။"</string>
@@ -155,9 +157,15 @@
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"တစ်ဆက်တည်း"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"အက်ပ်က ၎င်းကို တောင်းဆိုပါက သင်၏ TV သည် တစ်ဆက်တည်း ကူးပြောင်းခြင်းကို လုပ်ဆောင်နိုင်မှသာ သင့်စက်သည် ၎င်း၏ရုပ်ထွက်ကို သင်ကြည့်နေသည့် အကြောင်းအရာ၏ မူရင်းဖရိမ်ပြနှုန်းနှင့် ကိုက်ညီအောင် လုပ်ပါမည်။"</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"တစ်ဆက်တည်း မဟုတ်သော"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"အက်ပ်က ၎င်းကို တောင်းဆိုပါက သင့်စက်သည် ၎င်း၏ရုပ်ထွက်ကို သင်ကြည့်နေသည့် အကြောင်းအရာ၏ မူရင်းဖရိမ်ပြနှုန်းနှင့် ကိုက်ညီအောင် လုပ်ပါမည်။ ဤသည်က ဗီဒီယိုဖွင့်ခြင်းမှ ထွက်သောအခါ (သို့) ၎င်းသို့ဝင်သောအခါ သင့်ဖန်သားပြင်ကို တစ်စက္ကန့်ကြာ ဗလာဖြစ်သွားစေနိုင်သည်။"</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"အက်ပ်က ၎င်းကို တောင်းဆိုပါက သင့်စက်သည် ၎င်း၏ရုပ်ထွက်ကို သင်ကြည့်နေသည့် အကြောင်းအရာ၏ မူရင်းဖရိမ်ပြနှုန်းနှင့် ကိုက်ညီအောင် လုပ်ပါမည်။ ၎င်းက ဗီဒီယိုဖွင့်ခြင်းမှ ထွက်သောအခါ (သို့) ၎င်းသို့ဝင်သောအခါ သင့်ဖန်သားပြင်ကို တစ်စက္ကန့်ကြာ ဗလာဖြစ်သွားစေနိုင်သည်။"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"မည်သည့်အခါမှ"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"အက်ပ်က ၎င်းကို တောင်းဆိုသော်လည်း သင့်စက်သည် ၎င်း၏ရုပ်ထွက်ကို သင်ကြည့်နေသည့် အကြောင်းအရာ၏ မူရင်းဖရိမ်ပြနှုန်းနှင့် ကိုက်ညီအောင် မည်သည့်အခါမျှ လုပ်မည်မဟုတ်ပါ။"</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"စာသား အရွယ်ချိန်ညှိခြင်း"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"<xliff:g id="SCALE">%1$d</xliff:g>%% အထိ ချိန်ညှိချက်"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"နမူနာ စာသား"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Oz ၏ အံ့ဖွယ်ဝိဇ္ဇာ"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"အခန်း ၁၁- Oz ၏ အံ့ဖွယ် မြစိမ်းရောင်မြို့တော်"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"မျက်လုံးများကို ကာကွယ်ရန် အစိမ်းရောင်မျက်မှန်များ တပ်ထားသော်လည်း ဒေါ်ရသီနှင့် သူ့သူငယ်ချင်းများသည် အံ့ဖွယ်မြို့တော်၏ တောက်ပမှုကြောင့် မျက်စိစူးသွားပါသေးသည်။ အစိမ်းရောင်စကျင်ကျောက်များဖြင့် ဆောက်လုပ်ထားပြီး တဖိတ်ဖိတ်တောက်ပနေသည့် မြများ မြှုပ်သွင်းထားသည့် လှပသောအိမ်များကို လမ်းများတစ်လျှောက် အစီအရီ တည်ဆောက်ထားပါသည်။ နေရောင်အောက်တွင် တစ်လျှပ်လျှပ်တောက်ပနေသည့် မြများကို ခပ်စိတ်စိတ် အတန်းလိုက် စီတန်း၍ဆက်ထားပြီး ယင်းအစိမ်းရောင်စကျင်ကျောက်ဖြင့် ဆက်ခင်းထားသည့် ပလက်ဖောင်းတစ်လျှောက် သူတို့ လမ်းလျှောက်လာခဲ့ကြသည်။ ပြတင်းပေါက်မှန်အားလုံးသည် အစိမ်းရောင်ဖန်သားများဖြစ်သည်။ မြို့အထက်ရှိ ကောင်းကင်ပြင်သည်ပင်လျှင် အစိမ်းရောင်သန်းလျက်ရှိပြီး နေရောင်ခြည်သည်လည်း အစိမ်းရောင်ပင်ဖြစ်သည်။ \n\nလူများစွာရှိပြီး ယောက်ျား၊ မိန်းမနှင့် ကလေးများ လမ်းလျှောက်လျက်ရှိကာ သူတို့အားလုံးသည် အစိမ်းရောင်အဝတ်အစားများကို ဝတ်ဆင်ထား၍ အစိမ်းရောင်သန်းသည့် အသားအရေများ ရှိကြပါသည်။ သူတို့သည် ဒေါ်ရသီနှင့် ကွဲပြားခြားနားသည့် သူ့အဖော်များကို စိတ်ဝင်တစား ကြည့်နေကြပြီး ခြင်္သေ့ကို တွေ့လိုက်သည့်အခါတွင် ကလေးများက သူတို့၏ မိခင်နောက်ကျောသို့ သွားရောက် ကွယ်ဝှက်နေကြသည်။ သို့သော် မည်သူကမျှ သူတို့ကို စကားမပြောကြပါ။ လမ်းတစ်လျှောက် ဆိုင်များစွာ ရှိသည်။ ၎င်းဆိုင်များရှိ အရာအားလုံးသည် အစိမ်းရောင်များဖြစ်သည်ကို ဒေါ်ရသီ တွေ့ခဲ့ရသည်။ အစိမ်းရောင်ချိုချဉ်နှင့် အစိမ်းရောင်ပေါက်ပေါက်ဆုပ်တို့အပြင် အစိမ်းရောင်ဖိနပ်၊ အစိမ်းရောင်ဦးထုပ်နှင့် အစိမ်းရောင် အဝတ်အထည် မျိုးစုံတို့ကို ရောင်းနေကြသည်။ တစ်နေရာတွင် လူတစ်ဦးသည် အစိမ်းရောင် သံပရာရည်ကို ရောင်းချနေပြီး ကလေးများကလည်း အစိမ်းရောင် ဒင်္ဂါးပြားများဖြင့် ပေးချေနေသည်ကို ဒေါ်ရသီတွေ့ခဲ့ရသည်။ \n\nထိုနေရာတွင် မြင်းအစရှိသည့် တိရစ္ဆာန်တစ်ကောင်မျှ မတွေ့ခဲ့ရပါ။ ယောက်ျားများသည် ပစ္စည်းများကို အစိမ်းရောင်လှည်းလေးများတွင်ထည့်၍ တွန်းသွားပါသည်။ လူတိုင်းလူတိုင်းသည် ပျော်ရွှင်ကျေနပ်အားရနေပုံ ရပါသည်။"</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"ဖော်မက် ရွေးချယ်မှု"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"အလိုအလျောက်"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"ကိုယ်တိုင်"</string>
@@ -327,6 +335,7 @@
       <item quantity="other">ဖုန်း အက်ပ်များ</item>
       <item quantity="one">ဖုန်း အက်ပ်</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"ဘရောင်ဇာ အက်ပ်"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>၊ <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>၊ <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>၊ <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"အစမ်းလေ့လာမှု"</string>
@@ -337,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"ကိရိယာ အမည်"</string>
     <string name="restart_button_label" msgid="911750765086382990">"အစက ပြန်စရန်"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"ဥပဒေဆိုင်ရာ အချက်အလက်များ"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"အခမဲ့ ရင်းမြစ် လိုင်စင်များ"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"ပြင်ပကုမ္ပဏီရင်းမြစ်"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google၏ ဥပဒေရေးရာ"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"လိုင်စင် ဒေတာကို ရှာမရ"</string>
     <string name="about_model" msgid="9164284529291439296">"မော်ဒယ်"</string>
@@ -403,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"လိုင်စင်"</string>
     <string name="terms_title" msgid="192888187310800678">"သတ်မှတ်ချက်များနှင့် အခြေအနေများ"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"စနစ် WebView လိုင်စင်"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"အသုံးပြုသူ အချက်အလက်"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"Android TV တွင် သင်ရှာဖွေသည့် အကြောင်းအရာသည် အက်ပ်ရေးသူနှင့် ရုပ်ရှင်စတူဒီယိုများကဲ့သို့ ပြင်ပကုမ္ပဏီ၏ ပါတနာများအပြင် Google ကိုယ်တိုင်မှလည်း လာပါသည်။ နောက်ထပ်အချက်အလက်များအတွက် "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>" ကို ကြည့်ပါ"</string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"ညံ့"</item>
     <item msgid="2098818614362343532">"သင့်တင့်"</item>
@@ -451,7 +463,7 @@
     <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"…အတွက် လမ်းလွဲရေး ပရောက်စီ"</string>
     <string name="title_wifi_ip_settings" msgid="296029383749112888">"IP ဆက်တင်များ"</string>
     <string name="title_wifi_ip_address" msgid="5505806431042689276">"IP လိပ်စာ:"</string>
-    <string name="title_wifi_gateway" msgid="4496416267930824360">"ဝင်ပေါက်"</string>
+    <string name="title_wifi_gateway" msgid="4496416267930824360">"ဂိတ်ဝ-"</string>
     <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"ကွန်ရက် ရှေ့ဆက်ပုဒ် အရှည်:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="4563319371301555072">"DNS 2:"</string>
@@ -605,6 +617,22 @@
     <item msgid="5645263357181875427">"သယ်ယူပို့ဆောင်ရေးမှ ထောက်ပံ့သည့် အချိန်ကိုအသုံးပြုရန်"</item>
     <item msgid="5501503537181350884">"ပိတ်ပါ"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"အက်ပ်နှင့် ဝန်ဆောင်မှုအားလုံးအတွက်"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"အောက်ပါသည် မကြာသေးမီက ဝင်သုံးထားသည်"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"မကြာသေးမီက သုံးစွဲမှုများ မရှိပါ"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"အားလုံးကြည့်ရန်"</string>
+    <string name="microphone" msgid="7893752847683941214">"မိုက်ခရိုဖုန်း"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"မိုက်ခရိုဖုန်းသုံးခွင့်"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"မိုက်ခရိုဖုန်းသို့ အက်ပ် ဝင်သုံးခွင့်"</string>
+    <string name="camera" msgid="1226671478936288283">"ကင်မရာ"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"ကင်မရာသုံးခွင့်"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"ကင်မရာသို့ အက်ပ် ဝင်သုံးခွင့်"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"မိုက်ခရိုဖုန်းသုံးခွင့်- <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"ဖွင့်ထားသည့်အခါ ခွင့်ပြုထားသည့် အက်ပ်နှင့် ဝန်ဆောင်မှုအားလုံးသည် ဤစက်ရှိ မည်သည့်မိုက်ခရိုဖုန်းကိုမဆို သုံးနိုင်သည်။\n\nစိတ်ကြိုက်ပရိုတိုကောပါသည့် အသံ ချိတ်ဆက်ပစ္စည်းများသည် ဤဆက်တင်ကြောင့် အကျိုးသက်ရောက်မှုမရှိပါ။"</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"ကင်မရာသုံးခွင့်- <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"ဖွင့်ထားသည့်အခါ ခွင့်ပြုထားသည့် အက်ပ်နှင့် ဝန်ဆောင်မှုအားလုံးသည် ဤစက်ရှိ မည်သည့်ကင်မရာကိုမဆို သုံးနိုင်သည်။\n\nစိတ်ကြိုက်ပရိုတိုကောပါသည့် ကင်မရာ ချိတ်ဆက်ပစ္စည်းများသည် ဤဆက်တင်ကြောင့် အကျိုးသက်ရောက်မှုမရှိပါ။"</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"ဖွင့်"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"ပိတ်"</string>
     <string name="system_location" msgid="4057295363709016511">"တည်နေရာ"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"သင်၏ ခွင့်ပြုချက်ကို တောင်းခံခဲ့ကြသည့် အက်ပ်များက သင်၏ တည်နေရာ အချက်အလက်များကို အသုံးပြုကြပါစေ။"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"တည်နေရာ သဘောတူခွင့်ပြုချက်"</string>
@@ -625,14 +653,14 @@
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google သည် ဒီအင်္ဂါရပ်ကို Google Now နှင့် Google မြေပုံများလို ထုတ်ကုန်များ ထဲမှာ အသုံးပြုပါသည်။ တည်နေရာ အစီရင်ခံမှုကို ဖွင့်ထားခြင်းက သင့် ကိရိယာ၏ နောက်ဆုံး တည်နေရာ ဒေတာကို Google အကောင့်နှင့် ဆက်နွှယ်လျက် အသုံးပြုခြင်း နှင့် သိုလှောင်ခြင်းကို ခွင့်ပြုသည်။"</string>
     <string name="location_history_desc" msgid="926674012916014270">"တည်နေရာ မှတ်တမ်းကို ဒီအကောင့် အတွက် ဖွင့်ထားလျှင်၊ Google သည် သင်၏ အက်ပ်များ သုံးနိုင်ဖို့ သင့်ကိရိယာ၏ တည်နေရာကို သိုလှောင်ပေးသည်။\n\nဥပမာ၊ Google မြေပုံများက သင့်အား လမ်းညွှန်းမှုများကို ပေးနိုင်သလို၊ Google Now က ယာဉ်ကူးပြောင်းမှု အကြောင်းကို အသိပေးနိုင်သည်။ \n\nသင်သည် တည်နေရာ မှတ်တမ်းကို အချိန်မရွေး ပိတ်ပစ်နိုင်သည်၊ သို့သော် ထိုသို့ လုပ်မှုက ၎င်းကို ဖျက်မည် မဟုတ်ပါ။ သင်၏ တည်နေရာ မှတ်တမ်းကို ကြည့်ရန် နှင့် စီမံကွပ်ကဲရန်၊ maps.google.com/locationhistory ကို ဝင်ကြည့်ပါ။"</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"တည်နေရာ မှတ်တမ်း ဖျက်ရန်"</string>
-    <string name="delete_location_history_desc" msgid="4035229731487113147">"၎င်းက ဒီ Google အကောင့် အတွက် ဒီကိရိယာ ထံမှ သိုလှောင်ခဲ့သည့် တည်နေရာ မှတ်တမ်း အားလုံးကို ဖျက်ပစ်မည်။ သင်သည် ဒီဖျက်မှုကို ပြန်မပြင်နိုင်ပါ။ အချို့ အက်ပ်များ၊ Google ယခု အပါအဝင်၊ အလုပ်လုပ်မှု ရပ်တန့်ကြမည်။"</string>
+    <string name="delete_location_history_desc" msgid="4035229731487113147">"၎င်းက ဤ Google အကောင့်အတွက် ဤကိရိယာမှ သိုလှောင်ခဲ့သည့် တည်နေရာမှတ်တမ်း အားလုံးကို ဖျက်ပစ်မည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။ Google Now အပါအဝင်  အချို့အက်ပ်များ အလုပ်လုပ်တော့မည် မဟုတ်ပါ။"</string>
     <string name="system_services" msgid="5754310941186053151">"ဝန်ဆောင်မှုများ"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"ဝန်ဆောင်မှု ဆက်တင်များ"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ဖြူမဲခြားနားချက် မြင့် စာသား"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"အများသုံးစွဲနိုင်မှု ဖြတ်လမ်းလင့်ခ်"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"အများသုံးစွဲနိုင်မှု ဖြတ်လမ်းလင့်ခ်ကို ဖွင့်မည်"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"ဖြတ်လမ်းလင့်ခ် ဝန်ဆောင်မှု"</string>
-    <string name="accessibility_shortcut_description" msgid="2050424178481510046">"ဖြတ်လမ်းလင့်ခ် ဖွင့်ထားလျှင် အနောက်နှင့် အောက်သို့ ခလုတ်နှစ်ခုစလုံးကို ၃ စက္ကန့်ကြာသည့်တိုင် ဖိထားခြင်းဖြင့် အများသုံးစွဲနိုင်မှုဆိုင်ရာ ဝန်ဆောင်မှုများ စတင်ပါလိမ့်မည်။"</string>
+    <string name="accessibility_shortcut_description" msgid="2050424178481510046">"ဖြတ်လမ်းလင့်ခ် ဖွင့်ထားလျှင် အနောက်နှင့် အောက်သို့ ခလုတ်နှစ်ခုစလုံးကို ၃ စက္ကန့်ကြာဖိထားခြင်းဖြင့် အများသုံးနိုင်သည့် ဝန်ဆောင်မှုများ စတင်ပါမည်။"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"စာတန်းများ"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"ဗီဒီယိုမှာ အပိတ် စာတန်း စာသား အတွက် ဆက်တင်များ"</string>
     <string name="captions_display" msgid="2598662495450633375">"မြင်ကွင်း"</string>
@@ -880,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"မူရင်း သတ်မှတ်မထားပါ။"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"ကက်ရှကို ဖယ်ရှားရန်"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"အကြောင်းကြားချက်များ"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"အခမဲ့ရင်းမြစ် လိုင်စင်များ"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"ပြင်ပကုမ္ပဏီရင်းမြစ်"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"ခွင့်ပြုချက်များ"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"အက်ပ်ကိုဖွင့်၍မရပါ"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
@@ -963,13 +991,14 @@
     <string name="allow_overlay_description" msgid="5152329837278240259">"သင်သုံးနေသော အခြားအက်ပ်များ၏ အပေါ်၌ နောက်အက်ပ်တစ်ခုအား ပြသခွင့်ပြုပါ။ ၎င်းသည် ထိုအက်ပ်များအသုံးပြုရာ၌ အနှောင့်အယှက်ဖြစ်စေနိုင်သည် သို့မဟုတ် ၎င်းတို့၏ အသွင်အပြင် သို့မဟုတ် အပြုအမူတို့ကို ပြောင်းလဲစေနိုင်သည်။"</string>
     <string name="write_system_settings" msgid="4284654265954461890">"စက်စနစ် ဆက်တင်များ ပြုပြင်ခြင်း"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"စနစ်ဆက်တင်များ ပြင်နိုင်ခြင်း"</string>
-    <string name="write_settings_description" msgid="7382397926674265937">"ဤခွင့်ပြုချက်သည် အက်ပ်ကို စက်စနစ် ဆက်တင်များအား ပြုပြင်ခွင့်ပေးသည်။"</string>
+    <string name="write_settings_description" msgid="7382397926674265937">"ဤခွင့်ပြုချက်က အက်ပ်ကို စနစ်ဆက်တင်များ ပြင်ခွင့်ပေးသည်။"</string>
     <string name="write_settings_on" msgid="71675710746513956">"Yes"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"No"</string>
-    <string name="picture_in_picture_title" msgid="2636935591386702348">"တစ်ခုပေါ်တစ်ခုထပ်၍ ဖွင့်ခြင်း"</string>
-    <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"တစ်ခုပေါ်တစ်ခုထပ်၍ ဖွင့်ခွင့်ပြုရန်"</string>
-    <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"ထည့်သွင်းထားသည့် အက်ပ်တစ်ခုမျှ တစ်ခုပေါ်တစ်ခုထပ်၍ ဖွင့်ခြင်းကို ခွင့်မပြုပါ"</string>
-    <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"အက်ပ်ဖွင့်ထားစဉ် သို့မဟုတ် ထွက်လိုက်စဉ်တွင် အက်ပ်များအား တစ်ခုပေါ်တစ်ခုထပ်၍ ဖွင့်သည့် ဝင်းဒိုးတစ်ခု ပြုလုပ်ခွင့်ပြုပါ (ဥပမာ ဗီဒီယိုဆက်ကြည့်ရန်)။ ဤဝင်းဒိုးကို သင်သုံးနေသော အခြားအက်ပ်များ၏အပေါ်တွင် ပြသပါလိမ့်မည်။"</string>
+    <string name="picture_in_picture_title" msgid="2636935591386702348">"နှစ်ခုထပ်၍ကြည့်ခြင်း"</string>
+    <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"နှစ်ခုထပ်၍ကြည့်ခြင်း ခွင့်ပြုရန်"</string>
+    <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"ထည့်သွင်းထားသည့် အက်ပ်တစ်ခုမျှ နှစ်ခုထပ်၍ကြည့်ခြင်းကို ခွင့်မပြုပါ"</string>
+    <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"အက်ပ်ဖွင့်ထားစဉ် သို့မဟုတ် ထွက်လိုက်စဉ်တွင် အက်ပ်များအား နှစ်ခုထပ်၍ကြည့်သည့် ဝင်းဒိုးတစ်ခု ပြုလုပ်ခွင့်ပြုပါ (ဥပမာ ဗီဒီယိုဆက်ကြည့်ရန်)။ ဤဝင်းဒိုးကို သင်သုံးနေသော အခြားအက်ပ်များ၏အပေါ်တွင် ပြသပါလိမ့်မည်။"</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"နှိုးစက်သတ်မှတ်ရန်နှင့် အချိန်တိကျရန် လိုအပ်သည့် လုပ်ဆောင်ချက်များ အစီအစဉ်ဆွဲရန် အက်ပ်များကို ခွင့်ပြုပါ။ ၎င်းက အက်ပ်များကို နောက်ခံတွင် လုပ်ဆောင်ခွင့်ပေးပြီး ပါဝါပိုသုံးနိုင်သည်။\n\nဤခွင့်ပြုချက်ကို ပိတ်ထားပါက ဤအက်ပ်ဖြင့် အစီအစဉ်ဆွဲထားသော လက်ရှိနှိုးစက်နှင့် အချိန်သတ်မှတ်ထားသည့် အစီအစဉ်များ အလုပ်လုပ်တော့မည် မဟုတ်ပါ။"</string>
     <string name="special_access" msgid="21806055758289916">"အက်ပ် အထူးအသုံးပြုခွင့်"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>၊ <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"အသံ"</string>

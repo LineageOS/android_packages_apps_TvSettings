@@ -98,7 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"சமீபத்தில் திறந்த ஆப்ஸ்"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"எல்லா ஆப்ஸையும் காட்டு"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"அனுமதிகள்"</string>
-    <string name="apps_security" msgid="1392489151324802853">"பாதுகாப்பு"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"எல்லா ஆப்ஸும்"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"சிஸ்டம் ஆப்ஸைக் காட்டு"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"நிறுவிய ஆப்ஸ்"</string>
@@ -123,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHDயுடன் கூடிய Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plusஸுடன் கூடிய Dolby Atmos"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"குறிப்பு: ஆதரிக்கும் வடிவங்களை சாதனம் சரியாக குறிப்பிடவில்லை எனில், \'தானியங்கு\' செயல்படாமல் போகலாம்."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"தானியங்கு: ஆடியோ அவுட்புட் சாதனத்தால் ஆதரிக்கப்படும் வடிவங்களை மட்டும் இயக்குதல் "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"இந்த பட்டனைத் தேர்வுசெய்தால், உங்கள் சாதனச் செயினால் ஆதரிக்கப்படும் எந்த ஒலி வடிவத்தையும் தேர்ந்தெடுக்க ஆப்ஸை சிஸ்டம் அனுமதிக்கும். உயர்தரமற்ற வடிவத்தை ஆப்ஸ் தேர்வுசெய்யக்கூடும்."</string>
@@ -157,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ஆப்ஸ் கோரினால், நீங்கள் பார்த்துக் கொண்டிருக்கும் வீடியோவின் அசல் ஃபிரேம் வீதத்துடன் திரையின் ஃபிரேமை உங்கள் சாதனம் பொருத்தும். இதனால், வீடியோவின் இயக்கத்திலிருந்து வெளியேறும்போதோ உள்நுழையும்போதோ திரை ஒரு நொடி மறைந்து தெரியக்கூடும்."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"ஒருபோதும் வேண்டாம்"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"நீங்கள் பார்த்துக் கொண்டிருக்கும் வீடியோவின் அசல் ஃபிரேம் வீதத்துடன் திரையின் ஃபிரேமைப் பொருத்துவதற்கு ஆப்ஸே கோரினாலும் அதை உங்கள் சாதனம் ஒருபோதும் முயற்சிக்காது."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"எழுத்து அளவு"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"<xliff:g id="SCALE">%1$d</xliff:g>%% அளவில் பொருத்துதல்"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"மாதிரி உரை"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"தி வொண்டர்ஃபுல் விசார்டு ஆஃப் ஓஸ்"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"அத்தியாயம் 11: தி வொண்டர்ஃபுல் எமரால்டு சிட்டி ஆஃப் ஓஸ்"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"டோரத்தியும் அவளின் நண்பர்களும் பச்சை நிறக் கண்ணாடிகளை அணிந்திருந்தபோதும், முதல் பார்வையிலேயே எழில்கொஞ்சும் நகரத்தின் அழகில் மயங்கினர். பச்சை நிறச் சலவைக் கற்களால் கட்டப்பட்ட அழகிய வீடுகள் தெருக்களில் அணிவகுத்து நின்றன. அத்துடன் திரும்பும் இடமெல்லாம் மின்னும் மரகதக் கற்களால் அலங்கரிக்கப்பட்டிருந்தன. அவர்கள் அதே பச்சை நிறச் சலவைக் கல்லால் அமைக்கப்பட்டிருந்த நடைபாதையில் நடந்து சென்றனர். அதில் இணைக்கப்பட்டிருந்த தடுப்புகள் மரகதக் கற்களைக் கொண்டு நெருக்கமாகக் கட்டப்பட்டிருந்தன. அவை சூரியனின் ஒளிக்கதிர்களால் பளபளத்தன. ஜன்னல் கண்ணாடிகள் பச்சை நிறக் கண்ணாடியால் கட்டப்பட்டிருந்தன. நகரத்தின் மேலே உள்ள வானமும் பச்சை நிறச் சாயலில் இருந்தது, அத்துடன் சூரியனும் பச்சை நிற ஒளிக்கதிர்களை வீசியது. \n\nஅங்கே நிறைய மனிதர்கள் இருந்தனர். ஆண்கள், பெண்கள், குழந்தைகள் என அனைவரும் நடந்து கொண்டிருந்தனர். அவர்கள் பச்சை நிற ஆடைகளை அணிந்திருந்தனர், அவர்களின் சருமமும் பச்சை நிறத்தில் இருந்தது. டோரத்தியையும் அவளுடன் இருந்த விசித்திரமான நண்பர்களையும் அவர்கள் பிரமிப்புடன் பார்த்தனர். சிங்கத்தைப் பார்த்தவுடன் குழந்தைகள் அனைவரும் ஓடிச்சென்று தங்கள் அம்மாக்களின் பின்னால் ஒளிந்துகொண்டனர். ஆனால் யாரும் அவர்களுடன் பேசவில்லை. அந்தத் தெருவில் நிறைய கடைகள் இருந்தன. அந்தக் கடைகளில் எல்லாமே பச்சை நிறத்தில் இருப்பதை டோரத்தி பார்த்தாள். பச்சை நிற மிட்டாய், பச்சை நிறப் பாப்கார்ன், பச்சை நிறக் காலணிகள், பச்சை நிறத் தொப்பிகள், அனைத்து விதமான பச்சை நிற உடைகள் ஆகியவை விற்பனைக்கு வைக்கப்பட்டிருந்தன. அங்கே ஒருவன் பச்சை நிற எலுமிச்சை ஜூஸ் விற்றுக் கொண்டிருந்தான். அதைப் பச்சை நிற நாணயங்களைக் கொடுத்து குழந்தைகள் வாங்கிச் செல்வதை டோரத்தி பார்த்தாள். \n\nஅங்கே குதிரைகளோ எந்த விதமான விலங்குகளோ இல்லை. முன்புறமாகத் தள்ளிச்செல்லக்கூடிய பச்சை நிறக் கூடைகளில் இவற்றை மனிதர்களே சுமந்து சென்றனர். அனைவரும் மகிழ்ச்சியாகவும் திருப்தியாகவும் செழிப்பாகவும் இருந்தனர்."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"வடிவத்தைத் தேர்ந்தெடுத்தல்"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"தானியங்கு"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"கைமுறை"</string>
@@ -273,7 +282,7 @@
     <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"மிகச் சமீபத்திய பாதுகாப்புப் பதிவு"</string>
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"எதுவுமில்லை"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"நிறுவிய ஆப்ஸ்"</string>
-    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"ஆப்ஸின் எண்ணிக்கை கணிப்பின் அடிப்படையிலானது. இதில் Play ஸ்டோரிலிருந்து நிறுவப்படாத ஆப்ஸ் சேர்க்கப்படாமல் இருக்கலாம்."</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"ஆப்ஸின் எண்ணிக்கை கணிப்பின் அடிப்படையிலானது. இதில் Play Storeரிலிருந்து நிறுவப்படாத ஆப்ஸ் சேர்க்கப்படாமல் இருக்கலாம்."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="3891649682522079620">
       <item quantity="other">குறைந்தது <xliff:g id="COUNT_1">%d</xliff:g> ஆப்ஸ்</item>
       <item quantity="one">குறைந்தது <xliff:g id="COUNT_0">%d</xliff:g> ஆப்ஸ்</item>
@@ -326,6 +335,7 @@
       <item quantity="other">ஃபோன் ஆப்ஸ்</item>
       <item quantity="one">ஃபோன் ஆப்ஸ்</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"உலாவி ஆப்ஸ்"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"பயிற்சிகள்"</string>
@@ -336,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"சாதனத்தின் பெயர்"</string>
     <string name="restart_button_label" msgid="911750765086382990">"மீண்டும் தொடங்கு"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"சட்டத் தகவல்"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"ஓப்பன் சோர்ஸ் உரிமங்கள்"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"மூன்றாம் தரப்பு சோர்ஸ்"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google சட்டம்"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"உரிமத் தரவு கிடைக்கவில்லை"</string>
     <string name="about_model" msgid="9164284529291439296">"மாடல்"</string>
@@ -402,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"உரிமம்"</string>
     <string name="terms_title" msgid="192888187310800678">"விதிமுறைகளும் நிபந்தனைகளும்"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"சிஸ்டம் WebView உரிமம்"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"நுகர்வோருக்கான தகவல்கள்"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"Android TVயில் நீங்கள் பார்க்கும் உள்ளடக்கம் ஆப்ஸ் டெவெலப்பர்கள், திரைப்பட ஸ்டுடியோக்கள் போன்ற மூன்றாம் தரப்புக் கூட்டாளர்களிடமிருந்தும் Googleளிடமிருந்தும் பெறப்படுகின்றன. மேலும் தகவல்களுக்கு "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>" என்ற பக்கத்தைப் பார்க்கவும்"</string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"சரி"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"மோசம்"</item>
     <item msgid="2098818614362343532">"சுமார்"</item>
@@ -550,7 +563,7 @@
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"இதற்குச் சிறிது நேரம் ஆகலாம். டிரைவை அகற்ற வேண்டாம்."</string>
     <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"தரவை நகர்த்த வேண்டிய சேமிப்பகத்தைத் தேர்வுசெய்யவும்"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"தரவை <xliff:g id="NAME">%1$s</xliff:g>க்கு நகர்த்தவும்"</string>
-    <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"படங்கள், கோப்புகள் மற்றும் பயன்பாட்டுத் தரவு ஆகியவற்றை <xliff:g id="NAME">%1$s</xliff:g>க்கு நகர்த்தும். இதற்குச் சில நிமிடங்கள் ஆகலாம். நகர்த்தும் போது சில ஆப்ஸ் சரியாகச் செயல்படாது."</string>
+    <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"படங்கள், ஃபைல்கள்  மற்றும் பயன்பாட்டுத் தரவு ஆகியவற்றை <xliff:g id="NAME">%1$s</xliff:g>க்கு நகர்த்தும். இதற்குச் சில நிமிடங்கள் ஆகலாம். நகர்த்தும் போது சில ஆப்ஸ் சரியாகச் செயல்படாது."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="7512917600174814567">"இப்போதே நகர்த்து"</string>
     <string name="storage_wizard_migrate_confirm_action_move_later" msgid="6379986754827551474">"பிறகு நகர்த்து"</string>
     <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"தரவு <xliff:g id="NAME">%1$s</xliff:g>க்கு நகர்த்தப்பட்டது"</string>
@@ -604,6 +617,22 @@
     <item msgid="5645263357181875427">"டிரான்ஸ்போர்ட் ஸ்ட்ரீம் வழங்கும் நேரத்தைப் பயன்படுத்து"</item>
     <item msgid="5501503537181350884">"முடக்கு"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"அனைத்து ஆப்ஸுக்கும் சேவைகளுக்கும்"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"சமீபத்தில் அணுகிய ஆப்ஸ்"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"சமீபத்திய அணுகல் எதுவுமில்லை"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"அனைத்தையும் காட்டு"</string>
+    <string name="microphone" msgid="7893752847683941214">"மைக்ரோஃபோன்"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"மைக்ரோஃபோன் அணுகல்"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"மைக்ரோஃபோனுக்கான ஆப்ஸ் அணுகல்"</string>
+    <string name="camera" msgid="1226671478936288283">"கேமரா"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"கேமரா அணுகல்"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"கேமராவுக்கான ஆப்ஸ் அணுகல்"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"மைக்ரோஃபோன் அணுகல்: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"இயக்கப்பட்டிருக்கும்போது, இந்தச் சாதனத்திலுள்ள எந்த மைக்ரோஃபோனையும் அனுமதியுள்ள அனைத்து ஆப்ஸும் சேவைகளும் அணுகலாம்.\n\nபிரத்தியேக நெறிமுறையைக் கொண்டுள்ள ஆடியோ சாதனங்கள் இந்த அமைப்பினால் பாதிக்கப்படாது."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"கேமரா அணுகல்: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"இயக்கப்பட்டிருக்கும்போது, இந்தச் சாதனத்திலுள்ள எந்தக் கேமராவையும் அனுமதியுள்ள அனைத்து ஆப்ஸும் சேவைகளும் அணுகலாம்.\n\nபிரத்தியேக நெறிமுறையைக் கொண்டுள்ள கேமரா சாதனங்கள் இந்த அமைப்பினால் பாதிக்கப்படாது."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"இயக்கப்பட்டுள்ளது"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"முடக்கப்பட்டுள்ளது"</string>
     <string name="system_location" msgid="4057295363709016511">"இருப்பிடம்"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"உங்கள் அனுமதியைக் கேட்ட ஆப்ஸ் உங்களின் இருப்பிடத் தகவலைப் பயன்படுத்தும்"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"இட ஒப்புதல்"</string>
@@ -622,7 +651,7 @@
     <string name="location_reporting" msgid="3552501333650895634">"இருப்பிட அறிக்கையிடல்"</string>
     <string name="location_history" msgid="4055660203090513120">"இதுவரை சென்ற இடங்கள்"</string>
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google Now மற்றும் Google Maps போன்ற தயாரிப்புகளில் Google இந்த அம்சத்தைப் பயன்படுத்துகிறது. இருப்பிட அறிக்கையிடலை இயக்குவது, இந்த அம்சத்தைப் பயன்படுத்தும் எந்தவொரு Google தயாரிப்பும் உங்கள் Google கணக்குடன் தொடர்புடைய சாதனத்தின் மிகச் சமீபத்திய இருப்பிடத் தரவைப் பயன்படுத்த, சேமிக்க அனுமதிக்கிறது."</string>
-    <string name="location_history_desc" msgid="926674012916014270">"இந்தக் கணக்கிற்கு இருப்பிட வரலாறு இயக்கப்படும் போது, உங்கள் ஆப்ஸ் பயன்படுத்துவதற்குச் சாதன இருப்பிடத் தரவை Google சேமிக்கலாம்.\n\nஎடுத்துக்காட்டாக, Google Maps வழிகளை வழங்கலாம், Google Now வழக்கமான பயணத்தில் உள்ள ட்ராஃபிக் பற்றி அறிவிக்கலாம்.\n\nஎந்த நேரத்திலும் இருப்பிட வரலாற்றை நீங்கள் முடக்கலாம், ஆனால் அவ்வாறு செய்வது சேமித்தத் தரவை நீக்காது. இருப்பிட வரலாற்றைக் கண்டு நிர்வகிக்க maps.google.com/locationhistoryஐப் பார்வையிடவும்."</string>
+    <string name="location_history_desc" msgid="926674012916014270">"இந்தக் கணக்கிற்கு \'இதுவரை சென்ற இடங்கள்\' அம்சம் இயக்கப்படும் போது, உங்கள் ஆப்ஸ் பயன்படுத்துவதற்குச் சாதன இருப்பிடத் தரவை Google சேமிக்கலாம்.\n\nஎடுத்துக்காட்டாக, Google Maps வழிகளை வழங்கலாம், Google Now வழக்கமான பயணத்தில் உள்ள ட்ராஃபிக் பற்றி அறிவிக்கலாம்.\n\nஎந்த நேரத்திலும் இருப்பிட வரலாற்றை நீங்கள் முடக்கலாம், ஆனால் அவ்வாறு செய்வது சேமித்தத் தரவை நீக்காது. இதுவரை சென்ற இடங்களைக் கண்டு நிர்வகிக்க maps.google.com/locationhistoryஐப் பார்வையிடவும்."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"இட வரலாற்றை நீக்கு"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Google கணக்கிற்காகச் சாதனத்தில் சேமிக்கப்பட்ட எல்லா இட வரலாற்றையும் இது நீக்கும். இதைத் திரும்பப்பெற முடியாது. Google Now உட்பட சில செயல்பாடுகள் செயல்படுவது நிறுத்தப்படும்."</string>
     <string name="system_services" msgid="5754310941186053151">"சேவைகள்"</string>
@@ -644,7 +673,7 @@
     <string name="captions_textsize" msgid="7161136610669343510">"உரையின் அளவு"</string>
     <string name="captions_captionstyle" msgid="6650139717545516071">"தலைப்பின் நடை"</string>
     <string name="captions_customoptions" msgid="7691004663572161126">"பிரத்தியேக விருப்பங்கள்"</string>
-    <string name="captions_fontfamily" msgid="1026632786438880997">"எழுத்துரு குடும்பம்"</string>
+    <string name="captions_fontfamily" msgid="1026632786438880997">"எழுத்து வடிவக் குடும்பம்"</string>
     <string name="captions_textcolor" msgid="1566679779609140317">"உரையின் வண்ணம்"</string>
     <string name="captions_edgetype" msgid="4875636291904824401">"விளிம்பின் வகை"</string>
     <string name="captions_edgecolor" msgid="2779925179084237336">"விளிம்பின் வண்ணம்"</string>
@@ -736,7 +765,7 @@
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"முக்கிய தொடரிழையில் நீண்ட நேரம் செயல்படும்போது திரையைக் காட்சிப்படுத்து"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"adb shell dumpsys gfxinfo இல் ரெண்டரிங் நேரத்தை அளவிடலாம்"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"அறியப்படாத மூலங்கள்"</string>
-    <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play ஸ்டோர் அல்லாத, பிற மூலங்களிலிருந்து ஆப்ஸை நிறுவ அனுமதி"</string>
+    <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store அல்லாத, பிற மூலங்களிலிருந்து ஆப்ஸை நிறுவ அனுமதி"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"அறியப்படாத மூலங்களை அனுமதி"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"உங்கள் சாதனம் மற்றும் தனிப்பட்ட தரவு ஆகியவை அறியப்படாத மூலங்களிலிருந்து பெற்ற ஆப்ஸால் தாக்குதலுக்கு உள்ளாகக்கூடும். இந்தப் பயன்பாடுகளைப் பயன்படுத்தியதன் விளைவாக உங்கள் சாதனம் பாதிக்கப்பட்டால் அல்லது தரவை இழந்தால் அதற்கு நீங்கள் மட்டுமே பொறுப்பு என்பதை ஒப்புக்கொள்கிறீர்கள்."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"ஒருபோதும் வேண்டாம்"</string>
@@ -873,13 +902,13 @@
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"பயன்படுத்திய சேமிப்பிடம்"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g> இல் <xliff:g id="SIZE">%1$s</xliff:g> பயன்படுத்தப்பட்டது"</string>
     <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"தரவை அழி"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"ஆப்ஸின் எல்லா தரவும் நிரந்தரமாக நீக்கப்படும்.\nஇதில் எல்லா கோப்புகளும் அமைப்புகளும் கணக்குகளும் தரவுத்தளங்களும் மேலும் பலவும் அடங்கும்."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"ஆப்ஸின் எல்லா தரவும் நிரந்தரமாக நீக்கப்படும்.\nஇதில் எல்லா ஃபைல்களும் அமைப்புகளும் கணக்குகளும் தரவுத்தளங்களும் மேலும் பலவும் அடங்கும்."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"இயல்புநிலைகளை அழி"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"சிலவற்றிற்கு ஆப்ஸை தொடங்க, அமைக்கவும்"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"இயல்புநிலைகள் அமைக்கப்படவில்லை"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"தற்காலிகச் சேமிப்பை அழி"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"அறிவிப்புகள்"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"ஓப்பன் சோர்ஸ் உரிமங்கள்"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"மூன்றாம் தரப்பு சோர்ஸ்"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"அனுமதிகள்"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"ஆப்ஸ் இல்லை"</string>
     <string name="settings_ok" msgid="5950888975075541964">"சரி"</string>
@@ -907,9 +936,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"கணக்கைக் காப்புப்பிரதியெடு"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"தானாக மீட்டெடு"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"சாதனத்தை மீட்டமை"</string>
-    <string name="factory_reset_description" msgid="6697396335158766785">"இது உங்கள் சாதனத்தை இயல்புநிலை அமைப்புகளுக்கு மீட்டெடுப்பதுடன் அனைத்துத் தரவு, கணக்குகள், கோப்புகள், பதிவிறக்கிய ஆப்ஸ் ஆகியவற்றையும் அழிக்கும்."</string>
-    <string name="factory_reset_info_description" msgid="5098454670833183487">"இது உங்கள் சாதனத்தை இயல்புநிலை அமைப்புகளுக்கு மீட்டெடுப்பதுடன் அனைத்துத் தரவு, கணக்குகள், கோப்புகள், பதிவிறக்கிய ஆப்ஸ் ஆகியவற்றையும் அழிக்கும்."</string>
-    <string name="factory_reset_content_description" msgid="1677022688420116803">"ஆரம்பநிலைக்கு மீட்டமைத்தல், இது உங்கள் சாதனத்தை இயல்புநிலை அமைப்புகளுக்கு மீட்டெடுப்பதுடன் அனைத்துத் தரவு, கணக்குகள், கோப்புகள், பதிவிறக்கிய ஆப்ஸ் ஆகியவற்றையும் அழிக்கும்."</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"இது உங்கள் சாதனத்தை இயல்புநிலை அமைப்புகளுக்கு மீட்டெடுப்பதுடன் அனைத்துத் தரவு, கணக்குகள், ஃபைல்கள் , பதிவிறக்கிய ஆப்ஸ் ஆகியவற்றையும் அழிக்கும்."</string>
+    <string name="factory_reset_info_description" msgid="5098454670833183487">"இது உங்கள் சாதனத்தை இயல்புநிலை அமைப்புகளுக்கு மீட்டெடுப்பதுடன் அனைத்துத் தரவு, கணக்குகள், ஃபைல்கள் , பதிவிறக்கிய ஆப்ஸ் ஆகியவற்றையும் அழிக்கும்."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"ஆரம்பநிலைக்கு மீட்டமைத்தல், இது உங்கள் சாதனத்தை இயல்புநிலை அமைப்புகளுக்கு மீட்டெடுப்பதுடன் அனைத்துத் தரவு, கணக்குகள், ஃபைல்கள் , பதிவிறக்கிய ஆப்ஸ் ஆகியவற்றையும் அழிக்கும்."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"உங்களின் தனிப்பட்ட தகவல்கள், பதிவிறக்கிய ஆப்ஸ் போன்ற அனைத்தையும் இந்தச் சாதனத்தில் இருந்து அழிக்கவா? இதைச் செயல்தவிர்க்க இயலாது!"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"எல்லாம் அழி"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g>க்கான பெயரைத் தேர்ந்தெடுக்கவும்"</string>
@@ -969,6 +998,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"பிக்ச்சர்-இன்-பிக்ச்சரை அனுமதி"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"நிறுவியுள்ள ஆப்ஸ் எதிலும் பிக்ச்சர்-இன்-பிக்ச்சர் அம்சம் இயங்காது"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"ஆப்ஸ் திறந்திருக்கும்போது அல்லது அதிலிருந்து நீங்கள் வெளியேறும்போது (வீடியோவைத் தொடர்ந்து பார்ப்பதற்காக), பிக்ச்சர்-இன்-பிக்ச்சர் சாளரத்தை உருவாக்குவதற்கு, ஆப்ஸை அனுமதிக்கும். இந்தச் சாளரம் நீங்கள் பயன்படுத்தும் பிற ஆப்ஸின் மேல் காட்டப்படும்."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"அலாரங்களை அமைக்கவும் குறிப்பிட்ட கால இடைவெளியில் செயல்களைத் திட்டமிடவும் ஆப்ஸை அனுமதிக்கும். இது ஆப்ஸ் பின்னணியில் இயங்குவதை அனுமதிக்கும் என்பதால் அதிக பேட்டரியைப் பயன்படுத்தக்கூடும்.\n\nஇந்த அனுமதி முடக்கப்பட்டிருந்தால் ஆப்ஸ் மூலம் ஏற்கெனவே அமைத்துள்ள அலாரங்களும் திட்டமிடப்பட்ட நேர அடிப்படையிலான நிகழ்வுகளும் வேலை செய்யாது."</string>
     <string name="special_access" msgid="21806055758289916">"பயன்பாட்டிற்கான சிறப்பு அணுகல்"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"ஆடியோ"</string>

@@ -19,7 +19,7 @@
     <string name="settings_app_name" msgid="7931201304065140909">"Cài đặt"</string>
     <string name="launcher_settings_app_name" msgid="1459269619779675736">"Cài đặt"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Mạng"</string>
-    <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Tiểu sử bị hạn chế"</string>
+    <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Hồ sơ bị hạn chế"</string>
     <string name="general_action_yes" msgid="1303080504548165355">"Có"</string>
     <string name="general_action_no" msgid="674735073031386948">"Không"</string>
     <string name="action_on_title" msgid="1074972820237738324">"Bật"</string>
@@ -68,7 +68,7 @@
     <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Trợ lý Google"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Thanh toán và mua hàng"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Cài đặt ứng dụng"</string>
-    <string name="privacy_category_summary" msgid="3534434883380511043">"Vị trí, Sử dụng và chẩn đoán, Quảng cáo"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"Vị trí, Dữ liệu sử dụng và chẩn đoán, Quảng cáo"</string>
     <string name="add_account" msgid="7386223854837017129">"Thêm tài khoản"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Xóa tài khoản"</string>
     <string name="account_sync" msgid="4315295293211313989">"Chọn ứng dụng được đồng bộ hóa"</string>
@@ -98,8 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Ứng dụng đã mở gần đây"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Xem tất cả ứng dụng"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Quyền"</string>
-    <!-- no translation found for apps_security (1392489151324802853) -->
-    <skip />
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Mọi ứng dụng"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Hiển thị ứng dụng hệ thống"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Ứng dụng đã cài đặt"</string>
@@ -124,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Sử dụng Dolby Atmos với Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Sử dụng Dolby Atmos với Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Lưu ý: Tùy chọn Tự động có thể không hoạt động nếu thiết bị không báo cáo chính xác các định dạng được hỗ trợ."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Tự động: Chỉ bật những định dạng mà thiết bị đầu ra âm thanh của bạn hỗ trợ "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Khi bạn chọn nút này, hệ thống sẽ cho phép các ứng dụng chọn định dạng âm thanh bất kỳ được màn hình đầu ra của bạn hỗ trợ. Các ứng dụng có thể chọn một định dạng không phải là định dạng có chất lượng cao nhất."</string>
@@ -158,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Nếu ứng dụng yêu cầu, thiết bị của bạn sẽ khớp đầu ra của màn hình với tốc độ khung hình gốc của nội dung bạn đang xem. Việc này có thể khiến màn hình không hiển thị nội dung trong giây lát khi bạn thoát hoặc vào chế độ phát video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Không bao giờ"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Ngay cả khi ứng dụng yêu cầu, thiết bị của bạn sẽ không bao giờ tìm cách khớp đầu ra của màn hình với tốc độ khung hình gốc của nội dung bạn đang xem."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Chuyển tỷ lệ chữ"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Chuyển tỷ lệ thành <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Văn bản mẫu"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Phù thủy xứ Oz"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Chương 11: Thành phố ngọc lục bảo của xứ Oz"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Ngay cả khi đã đeo kính bảo vệ mắt màu xanh lục, lúc đầu Dorothy và bạn bè của cô vẫn bị lóa mắt bởi sự lộng lẫy của Thành phố tuyệt vời đó. Dọc phố là những ngôi nhà xinh xắn nối đuôi nhau, tất cả đều được xây bằng đá cẩm thạch xanh lục và ngọc lục bảo lấp lánh dùng để tô điểm ở mọi nơi. Ngay cả vỉa hè dưới chân họ cũng lát bằng đá cẩm thạch xanh lục và các viên gạch lát được ghép với nhau bằng những hàng ngọc lục bảo, đặt sát gần nhau và lấp lánh dưới ánh mặt trời. Các tấm cửa sổ bằng kính màu xanh lục, ngay cả bầu trời phía trên Thành phố cũng có sắc xanh lục và các tia nắng cũng màu xanh lục. \n\nNhiều người, đàn ông, phụ nữ và trẻ em, đi dạo ở đây và họ đều khoác trên mình những bộ quần áo màu xanh lục và có làn da màu hơi xanh lục. Họ nhìn Dorothy và những người bạn kỳ lạ của cô bằng con mắt ngạc nhiên, còn bọn trẻ bỏ chạy và nấp phía sau lưng mẹ khi chúng nhìn thấy Sư tử, nhưng không ai nói với họ lời nào. Có nhiều cửa hàng trên phố và Dorothy thấy mọi thứ trong các cửa hàng đó đều có màu xanh lục. Kẹo, bỏng ngô, giày dép, mũ và quần áo đủ loại được bày bán đều có màu xanh lục. Một người đàn ông trên phố đang bán nước chanh màu xanh lục và khi bọn trẻ mua nước chanh, Dorothy quan sát thấy chúng trả cho ông ấy những đồng xu màu xanh lục. \n\nDường như ở đó không có ngựa hay bất kỳ loài động vật nào, người dân ở đó chở đồ trên những chiếc xe đẩy hàng nhỏ màu xanh lục. Mọi người có vẻ rất hạnh phúc, mãn nguyện và thịnh vượng."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Lựa chọn định dạng"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Tự động"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Thủ công"</string>
@@ -248,7 +256,7 @@
     <string name="system_accessibility" msgid="3081009195560501010">"Hỗ trợ tiếp cận"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"Tùy chọn nhà phát triển"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Không có"</string>
-    <string name="system_diagnostic" msgid="1654842813331919958">"Sử dụng và chẩn đoán"</string>
+    <string name="system_diagnostic" msgid="1654842813331919958">"Dữ liệu sử dụng và chẩn đoán"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"Không có ứng dụng quản trị thiết bị nào"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Đã bị quản trị viên vô hiệu hóa"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Không có"</string>
@@ -327,6 +335,7 @@
       <item quantity="other">Các ứng dụng điện thoại</item>
       <item quantity="one">Ứng dụng điện thoại</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Ứng dụng trình duyệt"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Hướng dẫn"</string>
@@ -337,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"Tên thiết bị"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Khởi động lại"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Thông tin pháp lý"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Giấy phép nguồn mở"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"Nguồn của bên thứ ba"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Chính sách pháp lý của Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Hiện không có dữ liệu về giấy phép"</string>
     <string name="about_model" msgid="9164284529291439296">"Kiểu máy"</string>
@@ -403,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"Giấy phép"</string>
     <string name="terms_title" msgid="192888187310800678">"Điều khoản và điều kiện"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Giấy phép WebView hệ thống"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Thông tin cho người tiêu dùng"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"Nội dung bạn thấy trên Android TV là nội dung của đối tác bên thứ ba (chẳng hạn như các nhà phát triển ứng dụng hoặc hãng phim) hoặc của chính Google. Để biết thêm thông tin, hãy xem tại "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Kém"</item>
     <item msgid="2098818614362343532">"Khá tốt"</item>
@@ -605,6 +617,22 @@
     <item msgid="5645263357181875427">"Sử dụng thời gian do luồng vận chuyển cung cấp"</item>
     <item msgid="5501503537181350884">"Tắt"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Đối với tất cả các ứng dụng và dịch vụ"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Các ứng dụng truy cập gần đây"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Không có ứng dụng nào truy cập gần đây"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Xem tất cả"</string>
+    <string name="microphone" msgid="7893752847683941214">"Micrô"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Quyền truy cập vào micrô"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Quyền truy cập của ứng dụng vào micrô"</string>
+    <string name="camera" msgid="1226671478936288283">"Máy ảnh"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Quyền truy cập vào máy ảnh"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Quyền truy cập của ứng dụng vào máy ảnh"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Quyền truy cập vào micrô: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Khi bạn bật chế độ này, tất cả các ứng dụng và dịch vụ có quyền đều có thể truy cập vào micrô trên thiết bị này.\n\nCác thiết bị âm thanh ngoại vi có giao thức tùy chỉnh sẽ không chịu ảnh hưởng của chế độ cài đặt này."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Quyền truy cập vào máy ảnh: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Khi bạn bật chế độ này, tất cả các ứng dụng và dịch vụ có quyền đều có thể truy cập vào máy ảnh trên thiết bị này.\n\nCác thiết bị ngoại vi của máy ảnh có giao thức tùy chỉnh sẽ không chịu ảnh hưởng của chế độ cài đặt này."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Đang bật"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Đang tắt"</string>
     <string name="system_location" msgid="4057295363709016511">"Vị trí"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Cho phép các ứng dụng đã yêu cầu bạn cho phép sử dụng thông tin vị trí của bạn"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Đồng ý vị trí"</string>
@@ -624,7 +652,7 @@
     <string name="location_history" msgid="4055660203090513120">"Lịch sử Vị trí"</string>
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google sử dụng tính năng này trong các sản phẩm như Google Hiện hành và Google Maps. Bật Báo cáo Vị trí cho phép bất kỳ sản phẩm nào của Google sử dụng tính năng này lưu trữ và sử dụng dữ liệu vị trí gần đây nhất của thiết bị liên quan đến tài khoản Google của bạn."</string>
     <string name="location_history_desc" msgid="926674012916014270">"Khi Lịch sử Vị trí được bật cho tài khoản này, Google có thể lưu trữ dữ liệu vị trí của thiết bị của bạn để sử dụng bằng ứng dụng của bạn.\n\nVí dụ: Google Maps có thể cung cấp cho bạn chỉ đường và Google Hiện hành có thể thông báo cho bạn về giao thông của tuyến đường đi làm.\n\nBạn có thể tắt Lịch sử Vị trí bất cứ lúc nào, tuy nhiên, làm như vậy không xóa Lịch sử Vị trí. Để xem và quản lý Lịch sử Vị trí của bạn, hãy truy cập maps.google.com/locationhistory."</string>
-    <string name="delete_location_history_title" msgid="707559064715633152">"Xóa lịch sử vị trí"</string>
+    <string name="delete_location_history_title" msgid="707559064715633152">"Xóa nhật ký vị trí"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Thao tác này sẽ xóa tất cả Lịch sử Vị trí đã được lưu trữ từ thiết bị này cho tài khoản Google này. Bạn không thể hoàn tác việc xóa này. Một số ứng dụng, kể cả Google Hiện hành, sẽ ngừng hoạt động."</string>
     <string name="system_services" msgid="5754310941186053151">"Dịch vụ"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Cài đặt dịch vụ"</string>
@@ -830,8 +858,8 @@
     <string name="restriction_location_enable_title" msgid="2552780806199464266">"Vị trí"</string>
     <string name="restriction_location_enable_summary" msgid="3719330231217994482">"Cho phép ứng dụng sử dụng thông tin vị trí của bạn"</string>
     <string name="restricted_profile_switch_to" msgid="6193201935877168764">"Chuyển sang cấu hình bị hạn chế"</string>
-    <string name="restricted_profile_switch_out" msgid="3589381233390753413">"Thoát cấu hình bị hạn chế"</string>
-    <string name="restricted_profile_delete_title" msgid="7153982195273379506">"Xóa cấu hình bị hạn chế"</string>
+    <string name="restricted_profile_switch_out" msgid="3589381233390753413">"Thoát hồ sơ bị hạn chế"</string>
+    <string name="restricted_profile_delete_title" msgid="7153982195273379506">"Xóa hồ sơ bị hạn chế"</string>
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Tạo hồ sơ bị hạn chế"</string>
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Cài đặt"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Ứng dụng được phép"</string>
@@ -880,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Chưa đặt mặc định"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Xóa bộ nhớ đệm"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Thông báo"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Giấy phép nguồn mở"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Nguồn của bên thứ ba"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Quyền"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Ứng dụng không khả dụng"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
@@ -953,7 +981,7 @@
     <string name="high_power_system" msgid="6263052626979462255">"Tính năng tối ưu hóa năng lượng không có sẵn"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Quyền truy cập thông báo"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"Không có ứng dụng đã cài đặt nào yêu cầu quyền truy cập thông báo."</string>
-    <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Các ứng dụng này sẽ có thể đọc tất cả thông báo, bao gồm cả thông tin cá nhân như tên liên hệ và nội dung của thông báo bạn nhận được. Các ứng dụng này cũng có thể loại bỏ thông báo hoặc kích hoạt nút hành động trong các thông báo đó."</string>
+    <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Các ứng dụng này sẽ có thể đọc tất cả thông báo, bao gồm cả thông tin cá nhân như tên của người liên hệ và nội dung của thông báo bạn nhận được. Các ứng dụng này cũng có thể loại bỏ thông báo hoặc kích hoạt các nút thao tác trong những thông báo đó."</string>
     <string name="default_notification_access_package_summary" msgid="1354775994781420222">"Do hệ thống yêu cầu"</string>
     <string name="directory_access" msgid="7338555825237012006">"Quyền truy cập vào thư mục"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Các ứng dụng này có quyền truy cập vào một số thư mục nhất định."</string>
@@ -962,7 +990,7 @@
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Cho hiển thị trên ứng dụng khác"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Cho phép một ứng dụng hiển thị trên các ứng dụng khác mà bạn đang sử dụng. Điều này có thể ảnh hưởng đến cách bạn sử dụng các ứng dụng đó hoặc thay đổi cách chúng xuất hiện hoặc hoạt động."</string>
     <string name="write_system_settings" msgid="4284654265954461890">"Sửa đổi các chế độ cài đặt hệ thống"</string>
-    <string name="write_settings_title" msgid="2361816483383105754">"Có thể sửa đổi các tùy chọn cài đặt của hệ thống"</string>
+    <string name="write_settings_title" msgid="2361816483383105754">"Có thể sửa đổi các chế độ cài đặt hệ thống"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"Quyền này cho phép ứng dụng sửa đổi các chế độ cài đặt hệ thống."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Có"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Không"</string>
@@ -970,6 +998,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Cho phép hình trong hình"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Không có ứng dụng đã cài đặt nào hỗ trợ chế độ Hình trong hình"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Cho phép ứng dụng tạo cửa sổ hình trong hình khi ứng dụng đang mở hoặc sau khi bạn rời khỏi ứng dụng đó (chẳng hạn như để tiếp tục xem video). Cửa sổ này sẽ hiển thị trên các ứng dụng khác mà bạn đang sử dụng."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Cho phép các ứng dụng đặt chuông báo và lên lịch cho các thao tác cần chính xác về thời gian. Chế độ này cho phép ứng dụng chạy ở chế độ nền và có thể tiêu tốn nhiều điện hơn.\n\nNếu bạn không cấp quyền này, các chuông báo và sự kiện mà ứng dụng đã đặt lịch sẽ không hoạt động."</string>
     <string name="special_access" msgid="21806055758289916">"Quyền truy cập đặc biệt"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Âm thanh"</string>
@@ -1008,7 +1037,7 @@
     <string name="select_device_admin_msg" msgid="8475934459999710332">"Ứng dụng quản trị thiết bị"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"Kích hoạt ứng dụng quản trị thiết bị?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Kích hoạt ứng dụng quản trị thiết bị này"</string>
-    <string name="device_admin_warning" msgid="7399916080685200660">"Kích hoạt ứng dụng quản trị này sẽ cho phép ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> thực hiện các thao tác sau:"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Khi bạn kích hoạt ứng dụng quản trị này, ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> sẽ có thể thực hiện các thao tác sau:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> sẽ quản lý và giám sát thiết bị này."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"Ứng dụng quản trị này đang hoạt động và cho phép ứng dụng <xliff:g id="APP_NAME">%1$s</xliff:g> thực hiện các thao tác sau:"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Bằng cách tiếp tục, người dùng sẽ được quản lý bởi quản trị viên của bạn, người này cũng có thể lưu trữ dữ liệu được liên kết, ngoài thông tin cá nhân của bạn. \n\nQuản trị viên của bạn có thể giám sát và quản lý cài đặt, quyền truy cập, ứng dụng và dữ liệu được liên kết với người dùng này, bao gồm cả hoạt động mạng và thông tin vị trí của thiết bị."</string>

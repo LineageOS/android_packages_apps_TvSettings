@@ -98,7 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"برنامه‌های اخیراً بازشده"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"مشاهده همه برنامه‌ها"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"مجوزها"</string>
-    <string name="apps_security" msgid="1392489151324802853">"امنیت"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"همه برنامه‌ها"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"نمایش‌ برنامه‌های سیستم"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"برنامه‌های نصب‌شده"</string>
@@ -123,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos به‌همراه Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos به‌همراه Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"توجه: اگر دستگاه قالب‌هایی را که پشتیبانی می‌کند به‌درستی گزارش نکند، شاید گزینه «خودکار» عمل نکند."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"خودکار: فقط قالب‌هایی که دستگاه خروجی صدا از آن‌ها پشتیبانی می‌کند فعال شود "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"وقتی انتخاب شده باشد، سیستم به برنامه‌ها اجازه می‌دهد هر قالب صدایی را که در زنجیره دستگاه‌هایتان پشتیبانی می‌شود انتخاب کنند. برنامه‌ها ممکن است قالبی را انتخاب کنند که بالاترین کیفیت را نداشته باشد."</string>
@@ -133,7 +136,7 @@
     <string name="surround_sound_manual_title" msgid="4935447605070985537">"دستی: قالب‌هایی که این دستگاه از آن‌ها پشتیبانی می‌کند به‌صورت انتخابی فعال یا غیرفعال شود، بدون درنظر گرفتن اینکه دستگاه خروجی صدا از چه قالبی پشتیبانی می‌کند."</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"وقتی انتخاب شده باشد، می‌توانید قالب‌های صدایی را که در زنجیره دستگاهتان پشتیبانی می‌شود، اما باعث بروز مشکلات بازپخش می‌شود، دستی غیرفعال کنید. می‌توانید قالب‌های صدایی را که در زنجیره دستگاهتان پشتیبانی نمی‌شود فعال کنید. در برخی موارد، ممکن است برنامه‌ها قالبی را انتخاب کنند که باکیفیت‌ترین قالب نباشد."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"قالب صدای پشتیبانی‌نشده فعال شود؟"</string>
-    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"دستگاه صوتی متصل شما برای این قالب پشتیبانی گزارش نمی‌کند. این کار ممکن است باعث عملکردهای غیرمنتظره (مثل صداهای بلند یا نمایان شدن بالاپر) در دستگاه شود."</string>
+    <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"دستگاه صوتی متصل شما پشتیبانی از این قالب را گزارش نکرده است. این کار ممکن است باعث عملکردهای غیرمنتظره (مثل صداهای بلند یا نمایان شدن بالاپر) در دستگاه شود."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"لغو"</string>
     <string name="surround_sound_enable_unsupported_dialog_ok" msgid="7466983147896640444">"در هرصورت تغییر کند"</string>
     <string name="surround_sound_supported_title" msgid="4873195851187547020">"قالب‌های پشتیبانی‌شده"</string>
@@ -157,11 +160,17 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"اگر برنامه درخواست کند، دستگاهتان خروجی‌اش را با نرخ فریم اصلی محتوایی که تماشا می‌کنید هماهنگ خواهد کرد. در چنین شرایطی، وقتی از بازپخش ویدیو خارج می‌شوید یا به آن وارد می‌شود، ممکن است صفحه‌تان لحظه‌ای خالی شود."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"هرگز"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"حتی اگر برنامه درخواست کند، دستگاهتان هیچ‌گاه خروجی‌اش را با نرخ فریم اصلی محتوایی که تماشا می‌کنید هماهنگ نخواهد کرد."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"مقیاس‌گذاری نوشتار"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"مقیاس‌گذاری به <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"نوشتار نمونه"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"جادوگر شهر اوز"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"فصل ۱۱: شهر زمردی شگفت‌انگیز اوز"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"با وجودی که دورتی و دوستانش عینک‌هایی سبز به چشم داشتند چشمانشان در اولین نگاه از درخشندگی این شهر فوق‌العاده خیره شد. خیابان‌ها با ردیف خانه‌هایی که همه از مرمر سبز ساخته شده بودند و در همه جای آن با زمردهای درخشنده تزئین شده بود می‌درخشید. آن‌ها در پیاده‌رویی از همان مرمر سبز راه می‌رفتند و سنگفرش‌های پیاده‌رو با ردیف‌های زمردی که نزدیک به هم قرار گرفته بودند و در نور خورشید می‌درخشیدند به هم پیوسته بود. قاب‌های پنجره‌ها از شیشه سبز بود؛ حتی آسمان بالای شهر رنگ‌مایه سبز داشت و اشعه خورشید سبزرنگ بود. \n\nمردم زیادی از مرد و زن و بچه در اطراف راه می‌رفتند که همه لباس‌های سبزی پوشیده بودند و پوست بدنشان ته رنگ سبزی داشت. آن‌ها به دوروتی و دوستان عجیبش با تعجب نگاه می‌کردند. بچه‌ها به‌محض دیدن شیر همه فرار کردند و پشت سر مادرانشان پنهان شدند؛ اما هیچ‌کس با آن‌ها صحبت نکرد. تعداد زیادی مغازه در خیابان بود و دوروتی متوجه شد که همه‌چیز در این مغازه‌ها به رنگ سبز است. آبنبات سبز و پف فیل سبز برای فروش گذاشته شده بود، همین‌طور همه مدل کفش، کلاه و لباس که همه به رنگ سبز بودند. در جایی مردی لیموناد سبز می‌فروخت و وقتی بچه‌ها از او خرید می‌کردند دوروتی دید که پول آن را با سکه‌هایی سبزرنگ پرداختند. \n\nبه‌نظر می‌رسید که اسب یا حیوان دیگری در آنجا نیست؛ مردها چیزها را با گاری‌های کوچک سبزی به این طرف و آن طرف حمل می‌کردند و گاری را در جلوشان هل می‌دادند. به‌نظر می‌رسید همه شاد و راضی و مرفه بودند."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"انتخاب قالب‌بندی"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"خودکار"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"دستی"</string>
     <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"استفاده از قالب‌های گزارش‌شده دستگاه"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"قالب‌ها را به‌صورت دستی از قالب‌های دردسترس انتخاب کنید"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"انتخاب دستی قالب از بین قالب‌های دردسترس"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"قالب‌های پشتیبانی‌شده"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"قالب‌های پشتیبانی‌نشده"</string>
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
@@ -326,6 +335,7 @@
       <item quantity="one">برنامه تلفن</item>
       <item quantity="other">برنامه‌های تلفن</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"برنامه مرورگر"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>، <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>، <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"آموزش‌های گام‌به‌گام"</string>
@@ -336,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"نام دستگاه"</string>
     <string name="restart_button_label" msgid="911750765086382990">"راه‌اندازی مجدد"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"اطلاعات حقوقی"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"مجوزهای متن‌باز"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"منبع شخص ثالث"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"شرایط حقوقی Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"داده مجوز در دسترس نیست"</string>
     <string name="about_model" msgid="9164284529291439296">"مدل"</string>
@@ -402,14 +412,17 @@
     <string name="license_title" msgid="4032466200355435641">"مجوز"</string>
     <string name="terms_title" msgid="192888187310800678">"شرایط و مقررات"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"مجوز وب‌نمای سیستم"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"اطلاعات مصرف‌کننده"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"منبع محتوایی که در Android TV می‌بینید شرکای شخص ثالث (مثلاً توسعه‌دهندگان برنامه و استودیوهای فیلم) و همچنین خود Google است. برای اطلاعات بیشتر، لطفاً به "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>" مراجعه کنید"</string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"تأیید"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"ضعیف"</item>
     <item msgid="2098818614362343532">"متوسط"</item>
     <item msgid="2713050260700175954">"خوب"</item>
     <item msgid="6005053494500517261">"عالی"</item>
   </string-array>
-    <string name="title_mac_address" msgid="7511588678922209883">"نشانی MAC دستگاه"</string>
-    <string name="title_randomized_mac_address" msgid="3359532498635833471">"نشانی MAC تصادفی"</string>
+    <string name="title_mac_address" msgid="7511588678922209883">"«نشانی واد» دستگاه"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"«نشانی واد» تصادفی"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"قدرت سیگنال"</string>
     <string name="title_random_mac_settings" msgid="6685812569356353378">"حریم‌خصوصی"</string>
   <string-array name="random_mac_settings_entries">
@@ -604,6 +617,22 @@
     <item msgid="5645263357181875427">"اسفتاده از زمان ارائه‌شده از جریان انتقال"</item>
     <item msgid="5501503537181350884">"خاموش"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"برای همه برنامه‌ها و سرویس‌ها"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"این برنامه‌ها اخیراً دسترسی داشته‌اند:"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"دسترسی جدیدی وجود ندارد"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"مشاهده همه"</string>
+    <string name="microphone" msgid="7893752847683941214">"میکروفون"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"دسترسی میکروفون"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"دسترسی برنامه به میکروفون"</string>
+    <string name="camera" msgid="1226671478936288283">"دوربین"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"دسترسی به دوربین"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"دسترسی برنامه به دوربین"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"دسترسی به میکروفون: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"وقتی روشن باشد، همه برنامه‌ها و سرویس‌هایی که اجازه دارند می‌توانند به هر میکروفونی در این دستگاه دسترسی داشته باشند.\n\nلوازم جانبی صوتی که پروتکلی سفارشی دارند تحت‌تأثیر این تنظیم قرار نمی‌گیرند."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"دسترسی به دوربین: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"وقتی روشن باشد، همه برنامه‌ها و سرویس‌هایی که اجازه دارند می‌توانند به هر دوربینی در این دستگاه دسترسی داشته باشند.\n\nلوازم جانبی دوربینی که پروتکلی سفارشی دارند تحت‌تأثیر این تنظیم قرار نمی‌گیرند."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"روشن"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"خاموش"</string>
     <string name="system_location" msgid="4057295363709016511">"مکان"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"به برنامه‌هایی که از شما کسب اجازه کرده‌اند اجازه داده شود از اطلاعات مکانی شما استفاده کنند"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"رضایت مکان"</string>
@@ -721,7 +750,7 @@
     <string name="system_enable_traces" msgid="108745519968154528">"فعال کردن ردیابی"</string>
     <string name="system_dont_keep_activities" msgid="4641165963339846161">"فعالیت‌ها را ادامه ندهید"</string>
     <string name="system_background_process_limit" msgid="1985373407150771045">"محدودیت پردازش در پس‌زمینه"</string>
-    <string name="system_show_all_anrs" msgid="5353216640638263217">"نمایش تمام ANRها"</string>
+    <string name="system_show_all_anrs" msgid="5353216640638263217">"نمایش تمام برنامه‌هایی که پاسخ نمی‌دهند"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"غیرفعال کردن حالت خواب"</string>
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"استفاده فقط برای محتوای DRM"</string>
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"بهینه‌سازی نمایشگر برای حداکثر وضوح تصویر یا حداکثر نرخ فریم. تنها برای نمایشگرهای Ultra HD کاربرد دارد. با تغییر این تنظیم دستگاه شما راه‌اندازی مجدد می‌شود."</string>
@@ -879,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"پیش‌فرضی تنظیم نشده است"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"پاک کردن حافظه پنهان"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"اعلان‌ها"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"مجوزهای متن‌باز"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"منبع شخص ثالث"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"مجوزها"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"برنامه دردسترس نیست"</string>
     <string name="settings_ok" msgid="5950888975075541964">"تأیید"</string>
@@ -969,6 +998,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"مجاز کردن تصویردرتصویر"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"هیچ برنامه نصب‌شده‌ای از تصویردرتصویر پشتیبانی نمی‌کند"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"به برنامه‌ها اجازه دهید هنگامی که این برنامه باز است یا پس از اینکه از آن خارج شدید (مثلاً برای ادامه تماشای ویدیو)، پنجره تصویردرتصویر ایجاد کند. این پنجره روی سایر برنامه‌هایی که درحال استفاده‌اید نمایش داده می‌شود."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"به برنامه‌ها اجازه می‌دهد زنگ ساعت تنظیم کنند و کنش‌های حساس به زمان زمان‌بندی کنند. این تنظیم به برنامه‌ها اجازه می‌دهد در پس‌زمینه اجرا شوند که می‌تواند مصرف باتری را افزایش دهد.\n\nاگر این اجازه خاموش باشد، زنگ‌های ساعت موجود و رویدادهای زمان‌محوری که این برنامه زمان‌بندی کرده است، کار نخواهند کرد."</string>
     <string name="special_access" msgid="21806055758289916">"دسترسی ویژه به برنامه"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>، <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"صدا"</string>
