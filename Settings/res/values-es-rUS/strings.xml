@@ -98,8 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Apps abiertas recientemente"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Ver todas las apps"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Permisos"</string>
-    <!-- no translation found for apps_security (1392489151324802853) -->
-    <skip />
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Todas las apps"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Mostrar apps del sistema"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Apps instaladas"</string>
@@ -124,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos con Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: La opción Automático puede no funcionar si no se indican correctamente los formatos admitidos."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automático: Solo permite los formatos que admite el dispositivo de salida de audio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Si eliges esta opción, el sistema permitirá que las apps seleccionen cualquier formato de sonido que sea compatible con la cadena del dispositivo. Las apps podrán elegir un formato que no sea el de mayor calidad."</string>
@@ -144,7 +146,7 @@
     <string name="surround_sound_hide_formats" msgid="7770931097236868238">"Ocultar formatos"</string>
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"FORMATOS HABILITADOS"</string>
     <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"FORMATOS INHABILITADOS"</string>
-    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Para poder habilitarlo, cambia la selección de formato a fin de que sea manual."</string>
+    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Para poder habilitarlo, cambia la selección de formato a manual."</string>
     <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Para poder inhabilitarlo, cambia la selección de formato a fin de que sea manual."</string>
     <string name="display_category_title" msgid="247804007525046312">"Pantalla"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Configuración de pantalla avanzada"</string>
@@ -158,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si la app lo solicita, el dispositivo hará coincidir la velocidad de fotogramas resultante con la original del contenido, lo que puede provocar que la pantalla quede en blanco por un segundo al salir o ingresar a una reproducción de video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nunca"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Aunque la app lo solicite, el dispositivo nunca hará coincidir la velocidad de fotogramas resultante con la original del contenido que estás mirando."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Ajuste de texto"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Escalar al <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Texto de muestra"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"El maravilloso mago de Oz"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Capítulo 11: La maravillosa Ciudad Esmeralda de Oz"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Aunque contaban con la protección de los lentes verdes, en un primer momento, Dorothy y sus amigos se sintieron encandilados por el brillo de la maravillosa ciudad. Las calles estaban bordeadas por hermosas casas de mármol verde y adornadas con esmeraldas brillantes. Caminaron por pavimento del mismo mármol verde y, donde se unían las calles, había filas de esmeraldas juntas que brillaban con el sol. Los vidrios de las ventanas eran verdes y hasta el cielo sobre la ciudad y los rayos del sol tenían un matiz verde. \n\nHabía muchas personas caminando: hombres, mujeres y niños, todos vestidos de verde y de piel verdosa. Miraban a Dorothy y a sus extraños acompañantes con asombro. Los niños corrían despavoridos detrás de sus madres cuando veían al León, pero nadie les hablaba. Había muchas tiendas en la calle, y Dorothy vio que todo lo que vendían era verde: caramelos verdes, palomitas de maíz verdes, zapatos verdes, sombreros verdes y ropa verde de todo tipo. En una tienda, un hombre vendía limonada verde y Dorothy observó que los niños que la compraban pagaban con monedas verdes. \n\nParecía no haber caballos ni animales de ningún tipo. Los hombres cargaban objetos en pequeñas carretas verdes que llevaban delante de ellos. Todos parecían felices, contentos y afortunados."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Selección de formato"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automático"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
@@ -327,6 +335,7 @@
       <item quantity="other">Apps de Teléfono</item>
       <item quantity="one">App de Teléfono</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"App de navegador"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Instructivos"</string>
@@ -337,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"Nombre del dispositivo"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Reiniciar"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Información legal"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Licencias de código abierto"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"Fuente externa"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Avisos legales de Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Los datos de licencia no están disponibles."</string>
     <string name="about_model" msgid="9164284529291439296">"Modelo"</string>
@@ -403,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"Licencia"</string>
     <string name="terms_title" msgid="192888187310800678">"Condiciones de uso"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Licencia de WebView del sistema"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Información del consumidor"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"El contenido que encuentras en Android TV proviene de socios externos, como desarrolladores de apps y estudios cinematográficos, así como de Google. Para más información, visita "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Baja"</item>
     <item msgid="2098818614362343532">"Aceptable"</item>
@@ -605,6 +617,22 @@
     <item msgid="5645263357181875427">"Usar hora del dispositivo de transmisión"</item>
     <item msgid="5501503537181350884">"Desactivar"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Para todas las apps y servicios"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Accesos recientes:"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"No hubo accesos recientes"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Ver todo"</string>
+    <string name="microphone" msgid="7893752847683941214">"Micrófono"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Acceso al micrófono"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Accesos de las apps al micrófono"</string>
+    <string name="camera" msgid="1226671478936288283">"Cámara"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Acceso a la cámara"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Accesos de las apps a la cámara"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Acceso al micrófono: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Cuando se activa, todos los servicios y las apps con los permisos correspondientes pueden acceder a cualquiera de los micrófonos de este dispositivo.\n\nLos periféricos del audio con protocolo personalizado no se verán afectados por este parámetro de configuración."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Acceso a la cámara: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Cuando se activa, todos los servicios y las apps con los permisos correspondientes pueden acceder a cualquiera de las cámaras de este dispositivo.\n\nLos periféricos de la cámara con protocolo personalizado no se verán afectados por este parámetro de configuración."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Sí"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"No"</string>
     <string name="system_location" msgid="4057295363709016511">"Ubicación"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Permitir que las aplicaciones que solicitaron permiso usen la información de tu ubicación"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Consentimiento de ubicación"</string>
@@ -880,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"No hay configuraciones predeterminadas"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Borrar memoria caché"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Notificaciones"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Licencias de código abierto"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Fuente externa"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Permisos"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"La aplicación no está disponible"</string>
     <string name="settings_ok" msgid="5950888975075541964">"Aceptar"</string>
@@ -970,6 +998,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Permitir pantalla en pantalla"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Ninguna de las apps instaladas es compatible con el modo de imagen en imagen"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Permite que las apps creen una ventana de pantalla en pantalla mientras estén abiertas o después de que hayas salido de ellas (por ejemplo, para seguir viendo un video). Esta ventana se muestra sobre otras apps que estés usando."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Permite que las apps establezcan alarmas y programen acciones para horarios específicos. De esta manera, las apps pueden ejecutarse en segundo plano, lo que podría aumentar el consumo de batería.\n\nSi se desactiva este permiso, no funcionarán las alarmas ni los eventos basados en el tiempo existentes que programe esta app."</string>
     <string name="special_access" msgid="21806055758289916">"Acceso especial de apps"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audio"</string>

@@ -35,8 +35,8 @@
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Ezarpen bizkorrak"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Ezarpen orokorrak"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Baztertu iradokizuna"</string>
-    <string name="hotwording_title" msgid="2606899304616599026">"\"OK Google\" hautematea"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Hitz egin Google-ren Laguntzailea eginbideari edonoiz"</string>
+    <string name="hotwording_title" msgid="2606899304616599026">"\"Hey Google\" hautematea"</string>
+    <string name="hotwording_summary" msgid="2170375928302175449">"Hitz egin Google-ren Laguntzailea zerbitzuari edonoiz"</string>
     <string name="header_category_device" msgid="3023893663454705969">"Gailua"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Hobespenak"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Urruneko kontrolagailua eta osagarriak"</string>
@@ -98,7 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Azkenaldian irekitako aplikazioak"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Ikusi aplikazio guztiak"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Baimenak"</string>
-    <string name="apps_security" msgid="1392489151324802853">"Segurtasuna"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Aplikazio guztiak"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Erakutsi sistemaren aplikazioak"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Instalatutako aplikazioak"</string>
@@ -123,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos, Dolby TrueHD-rekin"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos, Dolby Digital Plus-ekin"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Oharra: baliteke Automatikoa aukerak ez funtzionatzea gailuak ez badu behar bezala jakinarazten zein formatu onartzen dituen."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatikoa: gaitu audioaren irteera-gailuak onartzen dituen formatuak soilik. "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Hautatuz gero, gailu-kateak onartutako edozein soinu-formatu hautatzeko aukera emango die sistemak aplikazioei. Baliteke aplikazioek kalitate handienekoa ez den formatu bat aukeratzea."</string>
@@ -157,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Aplikazioak eskatzen badu, ikusten ari zaren edukiaren jatorrizko irudi-abiadurarekin bat-etorraraziko du gailuak bere irteera. Ondorioz, baliteke segundo batez pantailan ezer ez agertzea bideoa erreproduzitzen duzunean edo erreproduzitzeari uzten diozunean."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Inoiz ez"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Aplikazioak eskatu arren, gailuak ez du bat-etorraraziko bere irteera ikusten ari zaren edukiaren jatorrizko irudi-abiadurarekin."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Testuaren tamaina"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Aldatu eskala (%% <xliff:g id="SCALE">%1$d</xliff:g>)"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Testu-lagina"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Ozeko azti miragarria"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11. kapitulua: Esmeraldazko Oz hiri harrigarria"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Begiak betaurreko berdeekin babestuta bazituzten ere, Dorothy eta haren lagunak txundituta geratu ziren Hiri zoragarri haren distira lehenbizikoz ikustean. Kaleak etxe ederrez josita zeuden; marmol berdezkoak ziren, eta esmeralda distiratsuz zeuden apainduta. Marmol berde hartaz egindako espaloian ibili ziren, eta lauzen junturak esmeraldazko errenkadak zirela nabaritu zuten, bata bestearen ondoan estu-estu jarriak, eguzkitan dir-dir egiten. Leihoen kristalak berdeak ziren. Hiria estaltzen zuen zeruak kutsu berdea zuen, eta berdeak ziren eguzki-izpiak ere. \n\nJende asko zebilen hara eta hona: gizonak, emakumeak eta haurrak, guztiak berdez jantziak eta azal berdexkakoak. Zalantzaz begiratzen zieten Dorothyri eta haren lagun talde xelebreari, eta haurrak amaren atzean ezkutatzen ziren lehoia ikusi bezain laster. Hala ere, inork ez zien txintik ere esan. Denda asko zeuden kalean, eta salgai guztiak berdeak zirela atzeman zuen Dorothyk. Gozoki berdeak eta krispeta berdeak eros zitezkeen, baita zapata berdeak, kapela berdeak eta askotariko jantzi berdeak ere. Gizon bat limonada berdea saltzen ari zen, eta haur batzuek erosi ziotenean, txanpon berdeekin ordaindu zutela ikusi zuen Dorothyk. \n\nEz zegoen zaldirik edo inolako animaliarik; gizonek orgatxo berdeak bultzatuta eramaten zituzten gauzak batetik bestera. Denak zeuden pozik, alai eta zoriontsu."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Formatu-hautapena"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatikoa"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Eskuzkoa"</string>
@@ -326,6 +335,7 @@
       <item quantity="other">Telefono-aplikazioak</item>
       <item quantity="one">Telefono-aplikazioa</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Arakatzailea"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Tutorialak"</string>
@@ -336,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"Gailuaren izena"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Berrabiarazi"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Lege-informazioa"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Kode irekiko lizentziak"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"Hirugarrenen kode irekiko lizentziak"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google-ren lege-oharrak"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Lizentziaren datuak ez daude erabilgarri"</string>
     <string name="about_model" msgid="9164284529291439296">"Modeloa"</string>
@@ -402,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"Lizentzia"</string>
     <string name="terms_title" msgid="192888187310800678">"Zehaztapenak eta baldintzak"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Sistemaren WebView lizentzia"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Bezeroentzako informazioa"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"Android TV-ko edukia hirugarrenen bazkideek (esate baterako, aplikazio-garatzaileek eta zinema-estudioek) eta Google-k berak eskaintzen dute. Informazio gehiago lortzeko, joan "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>" helbidera."</string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"Ados"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Eskasa"</item>
     <item msgid="2098818614362343532">"Hala holakoa"</item>
@@ -494,7 +507,7 @@
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Ataka eremuak ezin du hutsik egon"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"Ostalaria eremua hutsik badago, utzi Ataka eremua hutsik"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Atakak ez du balio"</string>
-    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Arakatzaileak HTTP proxya erabiltzen du, baina agian beste aplikazioek ez dute erabiliko."</string>
+    <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Arakatzaileak HTTP proxya erabiltzen du; beste aplikazioek, ordea, agian ezingo dute erabili."</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"Idatzi balio duen ataka bat.\nAdibidez: <xliff:g id="ID_1">8080</xliff:g>"</string>
     <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Idatzi kanpo utzitako domeinuen zerrenda bat komaz bereizita, edo utzi hutsik.\nAdibidez: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"Idatzi balio duen ostalari-izen bat.\nAdibidez: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
@@ -535,7 +548,7 @@
     <string name="storage_removable_storage_section" msgid="280332107650735088">"Memoria aldagarria"</string>
     <string name="storage_reset_section" msgid="3896575204828589494">"Berrezarri"</string>
     <string name="storage_mount_success" msgid="4459298609971461753">"Muntatu da <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
-    <string name="storage_mount_failure" msgid="8521666906216755903">"Ezin izan da muntatu <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
+    <string name="storage_mount_failure" msgid="8521666906216755903">"Ezin izan da instalatu <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
     <string name="storage_mount_adopted" msgid="8880688040694403520">"Berriro konektatu da USB bidezko memoria"</string>
     <string name="storage_unmount_success" msgid="8024867595129715661">"Modu seguruan atera da <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
     <string name="storage_unmount_failure" msgid="2228448194484319930">"Ezin izan da atera modu seguruan <xliff:g id="NAME">%1$s</xliff:g> memoria-unitatea"</string>
@@ -594,7 +607,7 @@
     <string name="desc_set_time_zone" msgid="4926392006501180047">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
     <string name="system_set_time_format" msgid="902518158066450918">"Erabili 24 orduko formatua"</string>
     <string name="desc_set_time_format" msgid="8688587526768572230">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
-    <string name="system_auto_date_time" msgid="8458199433555868708">"Data eta ordu automatikoa"</string>
+    <string name="system_auto_date_time" msgid="8458199433555868708">"Data eta ordu automatikoak"</string>
   <string-array name="auto_date_time_entries">
     <item msgid="8119837829162871025">"Erabili sareak emandako ordua"</item>
     <item msgid="369146066143710034">"Desaktibatuta"</item>
@@ -604,6 +617,22 @@
     <item msgid="5645263357181875427">"Erabili datu-jarioak emandako ordua"</item>
     <item msgid="5501503537181350884">"Desaktibatuta"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Aplikazio eta zerbitzu guztietarako"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Duela gutxi atzitu dutenak"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Ez dute atzitu azkenaldian"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Ikusi guztiak"</string>
+    <string name="microphone" msgid="7893752847683941214">"Mikrofonoa"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Mikrofonoa atzitzeko baimena"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Aplikazioen mikrofono-atzitzeak"</string>
+    <string name="camera" msgid="1226671478936288283">"Kamera"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Kamera atzitzeko baimena"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Aplikazioen kamera-atzitzeak"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofonoa atzitzeko baimena: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Aktibatuta dagoenean, gailu honetako edozein mikrofono atzitu ahalko dute horretarako baimena daukaten aplikazio eta zerbitzu guztiek.\n\nEzarpen honek ez die eragingo protokolo pertsonalizatu bat daukaten audio-gailu periferikoei."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kamera atzitzeko baimena: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Aktibatuta dagoenean, gailu honetako edozein kamera atzitu ahalko dute horretarako baimena daukaten aplikazio eta zerbitzu guztiek.\n\nEzarpen honek ez die eragingo protokolo pertsonalizatu bat daukaten kamera periferikoei."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"aktibatuta"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"desaktibatuta"</string>
     <string name="system_location" msgid="4057295363709016511">"Kokapena"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Utzi baimena eskatu dizuten aplikazioei zure kokapenaren informazioa erabiltzen"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Kokapena erabiltzeko baimena"</string>
@@ -702,7 +731,7 @@
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Baimendu kokapen faltsuak sortzea"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Hautatu arazteko aplikazioa"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Itxaron araztaileari"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Egiaztatu USBko aplikazioak"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Egiaztatu USB bidezko aplikazioak"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Egiaztatu ADB/ADT bidez instalatutako aplikazioak portaera kaltegarriak atzemateko"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Wi-Fi sareetan saioa hasteko modu xehatua"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Gaitu wifi-sareetan saioa hasteko modu xehatua"</string>
@@ -842,17 +871,17 @@
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Onartezina"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Murrizketa pertsonalizatuak"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="3293508876131962699">"Unetxo bat…"</string>
-    <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"Aldatu PIN kodea"</string>
+    <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"Aldatu PINa"</string>
     <string name="restriction_description" msgid="2053112392083722259">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
     <string name="app_sees_restricted_accounts_and_controlled_by" msgid="1261056180558324892">"Aplikazio honek zure kontuak atzi ditzake. <xliff:g id="APP">%1$s</xliff:g> aplikazioak kontrolatzen du."</string>
-    <string name="pin_enter_unlock_channel" msgid="243855138978654080">"Kanal hau ikusi nahi baduzu, idatzi PIN kodea."</string>
-    <string name="pin_enter_unlock_program" msgid="275489015420025531">"Telesaio hau ikusi nahi baduzu, idatzi PIN kodea."</string>
-    <string name="pin_enter_pin" msgid="5020029261153234751">"Idatzi PIN kodea"</string>
-    <string name="pin_enter_new_pin" msgid="1930944619313642621">"Aldatu PIN kodea"</string>
-    <string name="pin_enter_again" msgid="7615050143778858658">"Idatzi PIN kodea berriro"</string>
-    <string name="pin_enter_old_pin" msgid="5665265735227617942">"Idatzi lehengo PIN kodea"</string>
-    <string name="pin_enter_wrong_seconds" msgid="3014013615537066237">"Bost aldiz idatzi duzu oker PIN kodea.\nSaiatu berriro <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> segundo barru."</string>
-    <string name="pin_toast_wrong" msgid="4297542365877164402">"PIN kodea ez da zuzena. Saiatu berriro."</string>
+    <string name="pin_enter_unlock_channel" msgid="243855138978654080">"Kanal hau ikusi nahi baduzu, idatzi PINa."</string>
+    <string name="pin_enter_unlock_program" msgid="275489015420025531">"Telesaio hau ikusi nahi baduzu, idatzi PINa."</string>
+    <string name="pin_enter_pin" msgid="5020029261153234751">"Idatzi PINa"</string>
+    <string name="pin_enter_new_pin" msgid="1930944619313642621">"Aldatu PINa"</string>
+    <string name="pin_enter_again" msgid="7615050143778858658">"Idatzi PINa berriro"</string>
+    <string name="pin_enter_old_pin" msgid="5665265735227617942">"Idatzi lehengo PINa"</string>
+    <string name="pin_enter_wrong_seconds" msgid="3014013615537066237">"Bost aldiz idatzi duzu oker PINa.\nSaiatu berriro <xliff:g id="RELATIVE_TIME_SPAN">%1$d</xliff:g> segundo barru."</string>
+    <string name="pin_toast_wrong" msgid="4297542365877164402">"Okerra da PINa. Saiatu berriro."</string>
     <string name="pin_toast_not_match" msgid="2439298696342975155">"PIN kodeak ez datoz bat. Saiatu berriro."</string>
     <string name="wifi_setup_input_password" msgid="8510003548463241234">"Idatzi <xliff:g id="SSID">%1$s</xliff:g> pasahitza"</string>
     <string name="wifi_setup_description" msgid="6843574399437584520">"Aurrera egiteko, hautatu <xliff:g id="WIFI_SUBMIT_ICON">%1$s</xliff:g>."</string>
@@ -879,7 +908,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Ez da ezarri balio lehenetsirik"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Garbitu cachea"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Jakinarazpenak"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Kode irekiko lizentziak"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Hirugarrenen kode irekiko lizentziak"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Baimenak"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Aplikazioa ez dago erabilgarri"</string>
     <string name="settings_ok" msgid="5950888975075541964">"Ados"</string>
@@ -969,6 +998,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Eman pantaila txiki gainjarria erabiltzeko baimena"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Ez dago instalatuta pantaila txiki gainjarriarekin bateragarria den aplikaziorik"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Eman pantaila txiki gainjarri bat sortzeko baimena aplikazioei, aplikazioa irekita dagoenean nahiz hartatik irtetean (adibidez, bideoak ikusten jarraitzeko). Erabiltzen ari zaren beste aplikazioen gaienean erakutsiko da leiho hori."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Eman alarmak ezartzeko eta orduaren araberako beste ekintza batzuk programatzeko baimena aplikazioei. Hala, aplikazioek atzeko planoan funtzionatuko dute, eta litekeena da bateria gehiago kontsumitzea.\n\nEz baduzu ematen baimen hori, ez dute funtzionatuko aplikazio horien bidez programatutako alarmek eta orduaren araberako ekintzek."</string>
     <string name="special_access" msgid="21806055758289916">"Aplikazio-baimen bereziak"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audioa"</string>
@@ -990,7 +1020,7 @@
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Ezin da hori egin"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Ezin da aldatu bolumena"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="8642280178608881544">"Ez da onartzen deiak egitea"</string>
-    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"Ez da onartzen SMS mezuak bidaltzea"</string>
+    <string name="disabled_by_policy_title_sms" msgid="5721045390560951358">"Ez da onartzen SMSak bidaltzea"</string>
     <string name="disabled_by_policy_title_camera" msgid="6576557964422257426">"Ez da onartzen kamera erabiltzea"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="5774035841010091253">"Ez da onartzen pantaila-argazkiak ateratzea"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"Ezin da ireki aplikazioa"</string>
@@ -1007,7 +1037,7 @@
     <string name="select_device_admin_msg" msgid="8475934459999710332">"Gailua administratzeko aplikazioak"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"Gailua administratzeko aplikazioa aktibatu?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Aktibatu gailua administratzeko aplikazioa"</string>
-    <string name="device_admin_warning" msgid="7399916080685200660">"Gailua administratzeko aplikazio hau aktibatzen baduzu, <xliff:g id="APP_NAME">%1$s</xliff:g> izeneko aplikazioak eragiketa hauek egiteko baimena izango du:"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Gailua administratzeko aplikazio hau aktibatzen baduzu, <xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioak eragiketa hauek egiteko baimena izango du:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> arduratuko da gailua kudeatu eta kontrolatzeaz."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"Gailua administratzeko aplikazio hau aktibo dago eta eragiketa hauek egiteko baimena ematen dio <xliff:g id="APP_NAME">%1$s</xliff:g> aplikazioari:"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Aurrera eginez gero, administratzaileak kudeatuko dizu erabiltzaile-kontua, eta erlazionatutako datuak gorde ahal izango ditu zure datu pertsonalez gain.\n\nEra berean, erabiltzaile-kontu honekin erlazionatutako ezarpenak, sarbidea, aplikazioak eta datuak gainbegiratu eta kudeatu ahal izango ditu (esaterako, sareko jarduerak), baita gailuaren kokapen-informazioa ere."</string>
@@ -1020,7 +1050,7 @@
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> aplikazioarekin erabili behar den gailua"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"Ez da aurkitu gailurik. Ziurtatu gailuak piztuta daudela eta konekta daitezkeela."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"Saiatu berriro"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Arazoren bat izan da. Aplikazioak bertan behera utzi du gailu bat aukeratzeko eskaera."</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"Arazo bat izan da. Aplikazioak bertan behera utzi du gailu bat aukeratzeko eskaera."</string>
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Konektatu da"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Erakutsi guztiak"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Bilatzen"</string>
