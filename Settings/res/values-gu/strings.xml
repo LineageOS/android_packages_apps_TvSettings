@@ -16,8 +16,8 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="settings_app_name" msgid="7931201304065140909">"સેટિંગ્સ"</string>
-    <string name="launcher_settings_app_name" msgid="1459269619779675736">"સેટિંગ્સ"</string>
+    <string name="settings_app_name" msgid="7931201304065140909">"સેટિંગ"</string>
+    <string name="launcher_settings_app_name" msgid="1459269619779675736">"સેટિંગ"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"નેટવર્ક"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"પ્રતિબંધિત પ્રોફાઇલ"</string>
     <string name="general_action_yes" msgid="1303080504548165355">"હા"</string>
@@ -36,7 +36,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"સામાન્ય સેટિંગ"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"સૂચન છોડી દો"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"ઓકે Google\" શોધ"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Google આસિસ્ટંટ સાથે ગમે ત્યારે વાત કરો"</string>
+    <string name="hotwording_summary" msgid="2170375928302175449">"Google Assistant સાથે ગમે ત્યારે વાત કરો"</string>
     <string name="header_category_device" msgid="3023893663454705969">"ઉપકરણ"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"પસંદગીઓ"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"રિમોટ અને ઍક્સેસરી"</string>
@@ -98,8 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"તાજેતરમાં ખોલેલી ઍપ"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"બધી ઍપ જુઓ"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"પરવાનગીઓ"</string>
-    <!-- no translation found for apps_security (1392489151324802853) -->
-    <skip />
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"બધી ઍપ"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"સિસ્ટમ ઍપ બતાવો"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"ઇન્સ્ટૉલ કરેલ ઍપ"</string>
@@ -124,9 +124,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD સાથે Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus સાથે Dolby Atmos"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"નોંધ: જો તમારું ડિવાઇસ તેને સપોર્ટ કરતા ફૉર્મેટની યોગ્ય રીતે જાણ ન કરે, તો કદાચ ઑટો વિકલ્પ કામ ન કરે."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"ઑટોમૅટિક રીતે: તમારું ઑડિયો આઉટપુટ ડિવાઇસ સપોર્ટ કરે, માત્ર તે જ ફૉર્મેટ ચાલુ કરો "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"જ્યારે આ પસંદ કરેલું હોય ત્યારે, સિસ્ટમ ઍપને તમે જોડેલા ડિવાઇસ દ્વારા સપોર્ટ કરવામાં આવતા કોઈપણ સાઉન્ડ ફૉર્મેટને પસંદ કરવાની મંજૂરી આપશે. ઍપ દ્વારા ઉચ્ચતમ ગુણવત્તાનું ફૉર્મેટ ન હોય તેવા ફૉર્મેટની પસંદગી કરવામાં આવી શકે છે."</string>
@@ -158,6 +160,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"જો ઍપ તેની વિનંતી કરે, તો તમારું ડિવાઇસ તમે જોઈ રહ્યાં છો તે કન્ટેન્ટના ઑરિજિનલ ફ્રેમ રેટ સાથે તેના આઉટપુટનો મેળ કરશે. આના લીધે, જ્યારે તમે વીડિયો પ્લેબૅક ચાલુ અથવા બંધ કરો, ત્યારે તમારી સ્ક્રીન પર થોડી સેકન્ડ માટે કંઈપણ ન દેખાય તેવું બની શકે છે."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"ક્યારેય નહીં"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"જો ઍપ તેની વિનંતી કરે, તો પણ તમારું ડિવાઇસ તમે જોઈ રહ્યાં છો તે કન્ટેન્ટના ઑરિજિનલ ફ્રેમ રેટ સાથે તેના આઉટપુટનો મેળ કરવાનો ક્યારેય પ્રયાસ કરશે નહીં."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"ટેક્સ્ટ સ્કેલિંગ"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"<xliff:g id="SCALE">%1$d</xliff:g>%% સુધી સ્કેલ કરો"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"ટેક્સ્ટના કદનો નમૂનો"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"ધ વન્ડરફુલ વિઝાર્ડ ઑફ ઓઝ"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"ચૅપ્ટર 11: ધ વન્ડરફુલ એમરલ્ડ સિટી ઑફ ઓઝ"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"લીલા રંગના ચશ્મા પહેર્યા હોવા છતાં પણ ડોરોથી અને તેના મિત્રો આ અદ્દભુત શહેરના ભપકાદાર દેખાવથી આશ્ચર્યચકિત થઈ ગયા હતા. શેરીઓ લીલા રંગના માર્બલથી બનેલા એક હરોળમાં આવેલા સુંદર મકાનોથી સજ્જ હતી અને સર્વત્ર ચમકતા નીલમ જડેલા હતા. તેઓ એ જ લીલા માર્બલ પર ચાલવા લાગ્યા, જ્યાં પાસે-પાસે રાખેલા બ્લૉક એકબીજા સાથે જોડાઈ રહ્યાં હતા. તે નીલમની પંક્તિઓ હતી અને સૂરજના પ્રકાશમાં ચમકી રહી હતી, બારીઓના કાંચ લીલા રંગના હતા, એટલું જ નહીં શહેરની ઉપર આકાશની રંગછટા પણ લીલા રંગની હતી અને સૂર્યના કિરણો પણ લીલા રંગના હતા. \n\nત્યાં ઘણા પુરુષો, સ્ત્રીઓ અને બાળકો હતા, એ બધા લોકો ચાલી રહ્યાં હતા અને તેમણે લીલા રંગના કપડાં પહેર્યા હતા, એટલું જ નહીં તેમની ત્વચા પણ લીલા રંગની હતી. તેઓ વિસ્મય પામેલી નજરોથી ડોરોથી તેમજ તેના વિચિત્ર મિત્રોને જોઈ રહ્યાં હતા અને જ્યારે બાળકોએ સિંહને જોયો તો તે બધા ત્યાંથી નાસી છુટ્યા અને તેમની માતાની પાછળ જઈને સંતાઈ ગયા, પરંતુ કોઈએ પણ તેમની સાથે વાત કરી નહીં. શેરીમાં કેટલીક દુકાનો હતી અને ડોરોથીએ જોયું તો તેમાં મૂકેલી બધી જ વસ્તુઓ લીલા રંગની હતી. લીલા રંગની કૅન્ડી અને લીલા રંગના પૉપ-કોર્ન વેચાઈ રહ્યાં હતા. સાથે જ લીલા રંગના જૂતાં, લીલા રંગની ટોપીઓ અને ભાતભાતના કપડાં પણ લીલા રંગના હતા. એક જગ્યાએ તો એક માણસ લીલા રંગનું લીંબુનું શરબત વેચી રહ્યો હતો અને જ્યારે બાળકોએ તે ખરીદ્યું ત્યારે ડોરોથીએ જોયું કે તેમણે તેના માટે લીલા રંગના સિક્કા આપ્યા. \n\nત્યાં ન તો ઘોડા હતા કે ન કોઈ પ્રાણી, માણસો તેમની સામે નાના લીલા રંગના ગાડામાં સામાન અહીંથી ત્યાં લઈ જઈ રહ્યાં હતા. બધા જ ખુશ, સંતુષ્ટ અને સમૃદ્ધ લાગી રહ્યાં હતા."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"ફૉર્મેટની પસંદગી"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"ઑટોમૅટિક રીતે"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"મેન્યુઅલ"</string>
@@ -227,7 +235,7 @@
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"બ્લૂટૂથ ઍડ્રેસ"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"કનેક્ટ કરેલું"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"ડિસ્કનેક્ટ કર્યું"</string>
-    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"તમારી પાસે બ્લૂટૂથ સેટિંગ્સ બદલવાની પરવાનગી નથી."</string>
+    <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"તમારી પાસે બ્લૂટૂથ સેટિંગ બદલવાની પરવાનગી નથી."</string>
     <string name="send_feedback" msgid="936698637869795473">"પ્રતિસાદ મોકલો"</string>
     <string name="launch_help" msgid="2607478763131952469">"સહાયતા કેન્દ્ર"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -249,7 +257,7 @@
     <string name="system_developer_options" msgid="8480844257066475479">"વિકાસકર્તાનાં વિકલ્પો"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"કોઈ નહીં"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"વપરાશ અને નિદાન"</string>
-    <string name="no_device_admins" msgid="4628974717150185625">"કોઈ ઉપકરણ વ્યવસ્થાપક ઍપ્લિકેશનો ઉપલબ્ધ નથી"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"કોઈ ડિવાઇસ વ્યવસ્થાપક ઍપ ઉપલબ્ધ નથી"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"વ્યવસ્થાપકે અક્ષમ કરેલ"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"ઉપલબ્ધ નથી"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"ઉપકરણ વ્યવસ્થાપક ઍપ્લિકેશનો"</string>
@@ -260,9 +268,9 @@
     </plurals>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"વ્યવસ્થાપક, એન્ક્રિપ્શન પૉલિસી કે ઓળખપત્ર સ્ટોરેજ દ્વારા બંધ કરાયેલ"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"સંચાલિત ઉપકરણની માહિતી"</string>
-    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"ફેરફારો અને સેટિંગ્સ તમારી સંસ્થા દ્વારા સંચાલિત કરવામાં આવે છે"</string>
-    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"ફેરફારો અને સેટિંગ્સ <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> દ્વારા સંચાલિત કરવામાં આવે છે"</string>
-    <string name="enterprise_privacy_header" msgid="9221881402582661521">"તમારા કાર્ય ડેટાની ઍક્સેસ પ્રદાન કરવા માટે, તમારી સંસ્થા સેટિંગ્સમાં ફેરફાર કરી શકે છે અને તમારા ઉપકરણમાં સૉફ્ટવેર ઇન્સ્ટૉલ કરી શકે છે.\n\nવધુ વિગતો માટે, તમારી સંસ્થાના વ્યવસ્થાપકનો સંપર્ક કરો."</string>
+    <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"ફેરફારો અને સેટિંગ તમારી સંસ્થા દ્વારા મેનેજ કરવામાં આવે છે"</string>
+    <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"ફેરફારો અને સેટિંગ <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> દ્વારા મેનેજ કરવામાં આવે છે"</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"તમારા ઑફિસના ડેટાનો ઍક્સેસ આપવા માટે, તમારી સંસ્થા સેટિંગમાં ફેરફાર કરી શકે છે અને તમારા ડિવાઇસમાં સૉફ્ટવેર ઇન્સ્ટૉલ કરી શકે છે.\n\nવધુ વિગતો માટે, તમારી સંસ્થાના વ્યવસ્થાપકનો સંપર્ક કરો."</string>
     <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"તમારી સંસ્થા જોઈ શકે તે માહિતીના પ્રકારો"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"તમારી સંસ્થાના વ્યવસ્થાપક દ્વારા કરવામાં આવેલા ફેરફારો"</string>
     <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"આ ઉપકરણ માટે તમારી ઍક્સેસ"</string>
@@ -301,20 +309,20 @@
       <item quantity="other">ઓછામાં ઓછા <xliff:g id="COUNT_1">%d</xliff:g> CA પ્રમાણપત્ર</item>
     </plurals>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"વ્યવસ્થાપક ઉપકરણને લૉક કરી શકે છે અને પાસવર્ડ ફરીથી સેટ કરી શકે છે"</string>
-    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"વ્યવસ્થાપક ઉપકરણમાંનો બધો ડેટા કાઢી નાખી શકે છે"</string>
+    <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"વ્યવસ્થાપક ડિવાઇસમાંનો બધો ડેટા કાઢી નાખી શકે છે"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"ઉપકરણમાંનો બધો ડેટા કાઢી નાખતા પહેલાં, પાસવર્ડના પ્રયાસો નિષ્ફળ થયા"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"કાર્ય પ્રોફાઇલનો ડેટા કાઢી નાખતા પહેલાં, પાસવર્ડના પ્રયાસો નિષ્ફળ થયા"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="8317320334895448341">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> પ્રયાસ</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> પ્રયાસ</item>
     </plurals>
-    <string name="do_disclosure_generic" msgid="8390478119591845948">"આ ઉપકરણ તમારી સંસ્થા દ્વારા સંચાલિત થાય છે."</string>
+    <string name="do_disclosure_generic" msgid="8390478119591845948">"આ ડિવાઇસ તમારી સંસ્થા દ્વારા સંચાલિત થાય છે."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"આ ઉપકરણનું સંચાલન <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> દ્વારા થાય છે"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"વધુ જાણો"</string>
     <plurals name="default_camera_app_title" formatted="false" msgid="3870902175441923391">
-      <item quantity="one">કૅમેરા ઍપ</item>
-      <item quantity="other">કૅમેરા ઍપ</item>
+      <item quantity="one">Camera ઍપ</item>
+      <item quantity="other">Camera ઍપ</item>
     </plurals>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"કૅલેન્ડર ઍપ્લિકેશન"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"સંપર્ક ઍપ્લિકેશન"</string>
@@ -327,6 +335,7 @@
       <item quantity="one">ફોન ઍપ</item>
       <item quantity="other">ફોન ઍપ</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"બ્રાઉઝર ઍપ"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"ટ્યૂટોરિયલ"</string>
@@ -337,7 +346,7 @@
     <string name="device_name" msgid="566626587332817733">"ડિવાઇસનું નામ"</string>
     <string name="restart_button_label" msgid="911750765086382990">"પુનઃપ્રારંભ કરો"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"કાનૂની માહિતી"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"ખુલ્લા સ્રોત લાઇસન્સ"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"ત્રીજા પક્ષ તરફથી સૉર્સ કોડ"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google કાનૂની"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"લાઇસન્સ ડેટા અનુપલબ્ધ છે"</string>
     <string name="about_model" msgid="9164284529291439296">"મૉડલ"</string>
@@ -390,7 +399,7 @@
     <string name="oem_lock_info_message" msgid="2165887409937351689">"ઉપકરણ સુરક્ષા સુવિધા ચાલુ કરવા માટે કૃપા કરીને ઉપકરણને ફરી શરૂ કરો."</string>
     <string name="automatic_storage_manager_freed_bytes" msgid="1654574152815129396">"<xliff:g id="SIZE">%1$s</xliff:g> કુલ ઉપલબ્ધ\n\n<xliff:g id="DATE">%2$s</xliff:g> ના રોજ છેલ્લે ચાલ્યું"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"સાધન ID"</string>
-    <string name="baseband_version" msgid="5618116741093274294">"બેઝબેન્ડ સંસ્કરણ"</string>
+    <string name="baseband_version" msgid="5618116741093274294">"બેઝબેન્ડ વર્ઝન"</string>
     <string name="kernel_version" msgid="7265509054070001542">"કર્નલ વર્ઝન"</string>
     <string name="status_unavailable" msgid="2033933928980193334">"અનુપલબ્ધ"</string>
     <string name="device_status_title" msgid="9051569510258883673">"સ્થિતિ"</string>
@@ -403,6 +412,9 @@
     <string name="license_title" msgid="4032466200355435641">"લાઇસન્સ"</string>
     <string name="terms_title" msgid="192888187310800678">"નિયમો અને શરતો"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"સિસ્ટમ વેબવ્યૂ લાઇસન્સ"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"ઉપભોક્તાની માહિતી"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"તમને Android ટીવી પર જે કન્ટેન્ટ મળે છે, તે ઍપ ડેવલપર અને મૂવી સ્ટુડિયો જેવા ત્રીજા પક્ષના ભાગીદારો તેમજ Google તરફથી પણ આવે છે. વધુ માહિતી માટે, કૃપા કરીને "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>" જુઓ"</string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"ઓકે"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"નબળી"</item>
     <item msgid="2098818614362343532">"ઠીક"</item>
@@ -444,19 +456,19 @@
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"<xliff:g id="SSID">%1$s</xliff:g> શોધી શકાયું નથી"</string>
     <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Wi-Fi પાસવર્ડ માન્ય નથી"</string>
     <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Wi-Fi નેટવર્કે કનેક્શન સ્વીકાર્યું નથી"</string>
-    <string name="title_wifi_advanced_options" msgid="371185991282743258">"શું <xliff:g id="SSID">%1$s</xliff:g> પ્રોક્સી અને IP સેટિંગ્સને ગોઠવીએ?"</string>
+    <string name="title_wifi_advanced_options" msgid="371185991282743258">"શું <xliff:g id="SSID">%1$s</xliff:g> પ્રૉક્સી અને IP સેટિંગને ગોઠવીએ?"</string>
     <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"પ્રોક્સી સેટિંગ"</string>
-    <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"પ્રોક્સી હોસ્ટનું નામ:"</string>
-    <string name="title_wifi_proxy_port" msgid="566244407030390328">"પ્રોક્સી પોર્ટ:"</string>
-    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"આ માટે પ્રોક્સી બાયપાસ કરો:"</string>
+    <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"પ્રૉક્સી હોસ્ટનું નામ:"</string>
+    <string name="title_wifi_proxy_port" msgid="566244407030390328">"પ્રૉક્સી પોર્ટ:"</string>
+    <string name="title_wifi_proxy_bypass" msgid="8752756240663231435">"આના માટેની બાયપાસ પ્રૉક્સી:"</string>
     <string name="title_wifi_ip_settings" msgid="296029383749112888">"IP સેટિંગ"</string>
     <string name="title_wifi_ip_address" msgid="5505806431042689276">"IP સરનામું:"</string>
     <string name="title_wifi_gateway" msgid="4496416267930824360">"ગેટવે:"</string>
     <string name="title_wifi_network_prefix_length" msgid="3200370297772096824">"નેટવર્ક પ્રીફિક્સની લંબાઈ:"</string>
     <string name="title_wifi_dns1" msgid="1585965227665007553">"DNS 1:"</string>
     <string name="title_wifi_dns2" msgid="4563319371301555072">"DNS 2:"</string>
-    <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"પ્રોક્સી સેટિંગ્સ માન્ય નથી"</string>
-    <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP સેટિંગ્સ માન્ય નથી"</string>
+    <string name="title_wifi_proxy_settings_invalid" msgid="7698883245005941665">"પ્રૉક્સી સેટિંગ માન્ય નથી"</string>
+    <string name="title_wifi_ip_settings_invalid" msgid="7283801973512992014">"IP સેટિંગ માન્ય નથી"</string>
     <string name="title_wifi_known_network" msgid="6162483884727898697">"<xliff:g id="SSID">%1$s</xliff:g>, સાચવેલ નેટવર્ક છે"</string>
     <string name="title_wifi_scan_qr_code" msgid="7485605625055717874">"જોડાવા માટે QR કોડ સ્કૅન કરો"</string>
     <string name="wifi_action_try_again" msgid="8920677153891141148">"ફરી પ્રયાસ કરો"</string>
@@ -523,7 +535,7 @@
     <string name="storage_media_cache_usage" msgid="6397941751551207630">"કૅશ કરેલ ડેટા"</string>
     <string name="storage_eject" msgid="3268870873944951902">"બહાર કાઢો"</string>
     <string name="storage_format" msgid="5360900929128087085">"કાઢી નાખો અને ફોર્મેટ કરો"</string>
-    <string name="storage_format_as_private" msgid="77945551149326052">"ઉપકરણ સ્ટોરેજ તરીકે કાઢી નાખો અને ફોર્મેટ કરો"</string>
+    <string name="storage_format_as_private" msgid="77945551149326052">"ડિવાઇસ સ્ટોરેજ તરીકે કાઢી નાખો અને ફૉર્મેટ કરો"</string>
     <string name="storage_format_as_public" msgid="6745112917895223463">"દૂર કરવા યોગ્ય સ્ટોરેજ તરીકે કાઢી નાખો અને ફોર્મેટ કરો"</string>
     <string name="storage_format_for_private" msgid="5380138334184923252">"ઉપકરણ સ્ટોરેજ તરીકે ફોર્મેટ કરો"</string>
     <string name="storage_not_connected" msgid="4327902652748552794">"કનેક્ટ થયેલ નથી"</string>
@@ -566,7 +578,7 @@
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="7763611380573099978">"<xliff:g id="NAME">%1$s</xliff:g> માં સ્ટોર કરેલ ઍપ્લિકેશનો અને ડેટા"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="5741521038349239359">"<xliff:g id="SIZE">%1$s</xliff:g> ઉપલબ્ધ"</string>
     <string name="storage_wizard_eject_private_title" msgid="1336088625197134497">"ઉપકરણ સ્ટોરેજ બહાર કાઢો"</string>
-    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"આ ઉપકરણ સ્ટોરેજ બહાર કાઢી નાખવા પર તેના પર રહેલ ઍપ્લિકેશનો કાર્ય કરવાનું બંધ કરી દેશે. આ USB ડ્રાઇવને તે આ ઉપકરણ પર જ કાર્ય કરે તે માટે ફોર્મેટ કરેલ છે. તે કોઈપણ અન્ય પર કાર્ય કરશે નહીં."</string>
+    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"આ ડિવાઇસ સ્ટોરેજ બહાર કાઢી નાખવા પર તેના પર રહેલી ઍપનો કાર્ય કરવાનું બંધ કરી દેશે. આ USB ડ્રાઇવને તે આ ડિવાઇસ પર જ કાર્ય કરે તે માટે ફૉર્મેટ કરેલું છે. તે કોઈપણ અન્ય પર કાર્ય કરશે નહીં."</string>
     <string name="storage_wizard_eject_progress_title" msgid="6025569356827683446">"<xliff:g id="NAME">%1$s</xliff:g> બહાર કાઢી રહ્યાં છે…"</string>
     <string name="storage_wizard_move_app_title" msgid="6504922588346440942">"સ્ટોરેજ ઉપયોગમાં લેવાયો"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7058465372227392453">"<xliff:g id="NAME">%1$s</xliff:g> ને ખસેડી રહ્યાં છે…"</string>
@@ -605,6 +617,22 @@
     <item msgid="5645263357181875427">"પરિવહન સ્ટ્રીમ-પ્રદેય સમયનો ઉપયોગ કરો"</item>
     <item msgid="5501503537181350884">"બંધ"</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"બધી ઍપ અને સેવાઓ માટે"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"આના દ્વારા તાજેતરમાં ઉપયોગ કરવામાં આવ્યો"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"તાજેતરમાં કોઈ ઍપ દ્વારા ઍક્સેસ થયો નથી"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"બધું જુઓ"</string>
+    <string name="microphone" msgid="7893752847683941214">"માઇક્રોફોન"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"માઇક્રોફોનનો ઍક્સેસ"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"ઍપ દ્વારા માઇક્રોફોનનો ઍક્સેસ"</string>
+    <string name="camera" msgid="1226671478936288283">"કૅમેરા"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"કૅમેરાનો ઍક્સેસ"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"ઍપ દ્વારા કૅમેરાનો ઍક્સેસ"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"માઇક્રોફોનનો ઍક્સેસ: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"જ્યારે ચાલુ કરવામાં આવે, ત્યારે પરવાનગી ધરાવતી બધી ઍપ અને સેવાઓ આ ડિવાઇસ પરના કોઈપણ માઇક્રોફોનને ઍક્સેસ કરી શકે છે.\n\nકસ્ટમ પ્રોટોકૉલવાળા ઑડિયો પેરિફેરલ પર આ સેટિંગની કોઈ અસર નહીં થાય."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"કૅમેરાનો ઍક્સેસ: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"જ્યારે ચાલુ કરવામાં આવે, ત્યારે પરવાનગી ધરાવતી બધી ઍપ અને સેવાઓ આ ડિવાઇસ પરના કોઈપણ કૅમેરાને ઍક્સેસ કરી શકે છે.\n\nકસ્ટમ પ્રોટોકૉલવાળા કૅમેરા પેરિફેરલ પર આ સેટિંગની કોઈ અસર નહીં થાય."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"ચાલુ છે"</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"બંધ છે"</string>
     <string name="system_location" msgid="4057295363709016511">"સ્થાન"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"તે ઍપ્લિકેશનોને તમારા ઉપકરણના સ્થાનનો ઉપયોગ કરવા દો કે જેમણે તમારી પરવાનગી માગી છે"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"સ્થાન સંમતિ"</string>
@@ -622,19 +650,19 @@
     <string name="third_party_location_services_title" msgid="2826218400381676508">"3જા પક્ષની સ્થાન સેવાઓ"</string>
     <string name="location_reporting" msgid="3552501333650895634">"સ્થાનની જાણ કરવી"</string>
     <string name="location_history" msgid="4055660203090513120">"સ્થાન ઇતિહાસ"</string>
-    <string name="location_reporting_desc" msgid="1580018652781674608">"Google, આ સુવિધાનો ઉપયોગ Google Now અને Google નકશા જેવા ઉત્પાદનોમાં કરે છે. સ્થાનની જાણ કરવીને ચાલુ કરવું, કોઈપણ Google ઉત્પાદન કે જે આ સુવિધાનો ઉપયોગ કરે છે તેને તમારા Google એકાઉન્ટના જોડાણમાં તમારા ઉપકરણના સૌથી તાજેતરના સ્થાન ડેટાને સ્ટોર કરવા અને ઉપયોગમાં લેવા દે છે."</string>
-    <string name="location_history_desc" msgid="926674012916014270">"જ્યારે આ એકાઉન્ટ માટે સ્થાન ઇતિહાસ ચાલુ કરેલ હોય, ત્યારે Google, તમારી ઍપ્લિકેશનો દ્વારા ઉપયોગ માટે તમારા ઉપકરણના સ્થાન ડેટાને સ્ટોર કરી શકે છે.\n\nઉદાહરણ તરીકે, Google નકશા તમને દિશા નિર્દેશો આપી શકે છે અને Google Now તમને સફરમાં રહેલ ટ્રાફિક વિશે માહિતગાત કરી શકે છે.\n\nતમે કોઈપણ સમયે સ્થાન ઇતિહાસને બંધ કરી શકો છો, પરંતુ આવું કરવું તેને કાઢી નાખશે નહીં. તમારા સ્થાન ઇતિહાસને જોવા અને સંચાલિત કરવા માટે, maps.google.com/locationhistory ની મુલાકાત લો."</string>
+    <string name="location_reporting_desc" msgid="1580018652781674608">"Google, આ સુવિધાનો ઉપયોગ Google Now અને Google Maps જેવી પ્રોડક્ટમાં કરે છે. સ્થાનની જાણ કરવાનું ચાલુ કરવાથી, કોઈપણ Google પ્રોડક્ટ કે જે આ સુવિધાનો ઉપયોગ કરે છે તેને તમારા Google એકાઉન્ટના જોડાણમાં તમારા ડિવાઇસના સૌથી તાજેતરના સ્થાન ડેટાને સ્ટોર કરવા અને ઉપયોગમાં લેવા દે છે."</string>
+    <string name="location_history_desc" msgid="926674012916014270">"જ્યારે આ એકાઉન્ટ માટે સ્થાન ઇતિહાસ ચાલુ કરેલ હોય, ત્યારે Google, તમારી ઍપ્લિકેશનો દ્વારા ઉપયોગ માટે તમારા ડિવાઇસના સ્થાન ડેટાને સ્ટોર કરી શકે છે.\n\nઉદાહરણ તરીકે, Google Maps તમને દિશાનિર્દેશો આપી શકે છે અને Google Now તમને સફરમાં રહેલ ટ્રાફિક વિશે માહિતગાત કરી શકે છે.\n\nતમે કોઈપણ સમયે સ્થાન ઇતિહાસને બંધ કરી શકો છો, પરંતુ આવું કરવું તેને કાઢી નાખશે નહીં. તમારા સ્થાન ઇતિહાસને જોવા અને મેનેજ કરવા માટે, maps.google.com/locationhistoryની મુલાકાત લો."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"સ્થાન ઇતિહાસ કાઢી નાખો"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"આ, આ Google એકાઉન્ટ માટે આ ઉપકરણમાંથી સ્ટોર કરેલ તમામ સ્થાન ઇતિહાસને કાઢી નાખશે. તમે આ કાઢી નાખવાની ક્રિયાને પૂર્વવત્ કરી શકતાં નથી. Google Now સહિત કેટલીક ઍપ્લિકેશનો કામ કરવાનું બંધ કરી દેશે."</string>
     <string name="system_services" msgid="5754310941186053151">"સેવાઓ"</string>
-    <string name="accessibility_service_settings" msgid="3251334786870932423">"સેવા સેટિંગ્સ"</string>
+    <string name="accessibility_service_settings" msgid="3251334786870932423">"સેવા સેટિંગ"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ઉચ્ચ કોન્ટ્રાસ્ટ ટેક્સ્ટ"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"ઍક્સેસિબિલિટી શૉર્ટકટ"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"ઍક્સેસિબિલિટી શૉર્ટકટ સક્ષમ કરો"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"શૉર્ટકટ સેવા"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"જ્યારે શૉર્ટકટ ચાલુ હોય, ત્યારે ઍક્સેસિબિલિટી સુવિધા શરૂ કરવા પાછળ અને નીચેના બન્ને બટનને 3 સેકન્ડ સુધી દબાવી રાખી શકો છો."</string>
-    <string name="accessibility_captions" msgid="3411554568812306549">"ઉપશીર્ષકો"</string>
-    <string name="accessibility_captions_description" msgid="3827820027578548160">"વિડિઓ પર ઉપશીર્ષક ટેક્સ્ટ ઓવરલે માટે સેટિંગ્સ"</string>
+    <string name="accessibility_captions" msgid="3411554568812306549">"કૅપ્શન"</string>
+    <string name="accessibility_captions_description" msgid="3827820027578548160">"વીડિયો પર ઉપશીર્ષક ટેક્સ્ટ ઓવરલે માટે સેટિંગ"</string>
     <string name="captions_display" msgid="2598662495450633375">"પ્રદર્શન"</string>
     <string name="captions_display_on" msgid="480438033345455728">"ચાલુ"</string>
     <string name="captions_display_off" msgid="87881163874948539">"બંધ"</string>
@@ -737,7 +765,7 @@
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"જ્યારે મુખ્ય થ્રેડ પર ઍપ્લિકેશનો લાંબી કામગીરીઓ કરે ત્યારે સ્ક્રીનને ફ્લેશ કરો"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"adb shell dumpsys gfxinfo માં રીડિંગ સમય માપો"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"અજાણ્યા સ્રોતો"</string>
-    <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play સ્ટોર સિવાયનાં અન્ય સ્રોતોથી ઍપ્લિકેશનોનાં ઇન્સ્ટૉલેશનની મંજૂરી આપો"</string>
+    <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Play Store સિવાયનાં અન્ય સ્રોતોથી ઍપ્લિકેશનોનાં ઇન્સ્ટૉલેશનની મંજૂરી આપો"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"અજાણ્યા સ્રોતોને મંજૂરી આપો"</string>
     <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"તમારું ડિવાઇસ અને વ્યક્તિગત ડેટા અજાણ્યા સ્રોતોની ઍપ દ્વારા હુમલા માટે વધુ સંવેદનશીલ છે. તમે સંમત થાઓ છો કે આ ઍપનાં ઉપયોગ કરવાથી તમારા ડિવાઇસને થતી કોઈપણ ક્ષતિ કે ડેટાના નુકસાન માટે એકમાત્ર તમે જ જવાબદાર છો."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"ક્યારેય નહીં"</string>
@@ -793,7 +821,7 @@
     <string name="noAppsGoBack" msgid="2538480554615467065">"પાછળ"</string>
     <string name="inputs_inputs" msgid="8639408473661259307">"ઇનપુટ"</string>
     <string name="inputs_header_cec" msgid="4139015942980115323">"કન્ઝ્યુમર ઇલેક્ટ્રોનિક કન્ટ્રોલ (CEC)"</string>
-    <string name="inputs_cec_settings" msgid="5948357769198260080">"ઉપકરણ નિયંત્રણ સેટિંગ્સ"</string>
+    <string name="inputs_cec_settings" msgid="5948357769198260080">"ડિવાઇસ નિયંત્રણ સેટિંગ"</string>
     <string name="inputs_blu_ray" msgid="6561004081102615775">"બ્લૂ-રે"</string>
     <string name="inputs_cable" msgid="8274665772422377063">"કેબલ"</string>
     <string name="inputs_dvd" msgid="1452146927899250552">"DVD"</string>
@@ -833,7 +861,7 @@
     <string name="restricted_profile_switch_out" msgid="3589381233390753413">"પ્રતિબંધિત પ્રોફાઇલથી બહાર નીકળો"</string>
     <string name="restricted_profile_delete_title" msgid="7153982195273379506">"પ્રતિબંધિત પ્રોફાઇલ કાઢી નાખો"</string>
     <string name="restricted_profile_create_title" msgid="700322590579894058">"પ્રતિબંધિત પ્રોફાઇલ બનાવો"</string>
-    <string name="restricted_profile_configure_title" msgid="3327502517511010296">"સેટિંગ્સ"</string>
+    <string name="restricted_profile_configure_title" msgid="3327502517511010296">"સેટિંગ"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"મંજૂર ઍપ્લિકેશનો"</string>
     <plurals name="restricted_profile_configure_apps_description" formatted="false" msgid="7923692208224457728">
       <item quantity="one">%d ઍપ્લિકેશન મંંજૂર કરી</item>
@@ -874,13 +902,13 @@
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"ઉપયોગ કરેલો સ્ટોરેજ"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g> માં <xliff:g id="SIZE">%1$s</xliff:g> ઉપયોગમાં"</string>
     <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"ડેટા સાફ કરો"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"આ તમામ ઍપ્લિકેશનોનો ડેટા કાયમીરૂપે કાઢી નાખવામાં આવશે.\nઆમાં તમામ ફાઇલો, સેટિંગ્સ, એકાઉન્ટ, ડેટાબેસ વગેરેનો સમાવેશ થાય છે."</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"આ તમામ ઍપનો ડેટા કાયમ માટે ડિલીટ કરવામાં આવશે.\nઆમાં તમામ ફાઇલો, સેટિંગ, એકાઉન્ટ, ડેટાબેઝ વગેરેનો સમાવેશ થાય છે."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"ડિફૉલ્ટ સાફ કરો"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"કેટલીક ક્રિયાઓ માટે આ ઍપને લોંચ કરવા માટે સેટ કરો"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"કોઈ ડિફૉલ્ટ સેટ કરેલ નથી"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"કૅશ સાફ કરો"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"સૂચનાઓ"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"ઓપન સૉર્સ લાઇસન્સ"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"ત્રીજા પક્ષ તરફથી સૉર્સ કોડ"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"પરવાનગીઓ"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"ઍપ્લિકેશન અનુપલબ્ધ છે"</string>
     <string name="settings_ok" msgid="5950888975075541964">"ઓકે"</string>
@@ -903,7 +931,7 @@
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"કૃપા કરીને <xliff:g id="SLEEP_TIME">%1$s</xliff:g>ના સેટિંગમાં કરેલો ફેરફાર કન્ફર્મ કરો, સંભવ છે કે આને કારણે ઊર્જાનો તમારો વપરાશ વધી જાય."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"બેકઅપ લેવાયેલ ડેટા અત્યારે કોઇ એકાઉન્ટ સ્ટોર કરી રહ્યું નથી"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
-    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wi-Fi પાસવર્ડ, બુકમાર્ક અન્ય સેટિંગ્સ અને ઍપ્લિકેશન ડેટાનું બૅકઅપ લેવાનું રોકીએ અને Google સર્વર પરની બધી કૉપિ કાઢી નાખીએ?"</string>
+    <string name="backup_erase_dialog_message" msgid="222169533402624861">"વાઇ-ફાઇ પાસવર્ડ, બુકમાર્ક અન્ય સેટિંગ અને ઍપ ડેટાનું બૅકઅપ લેવાનું રોકીએ અને Google સર્વર પરની બધી કૉપિ કાઢી નાખીએ?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"મારા ડેટાનું બેક અપ લો"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"બેકઅપ એકાઉન્ટ"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"સ્વયંચાલિત પુનઃસ્થાપના"</string>
@@ -944,7 +972,7 @@
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"મંજૂરી છે"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"મંજૂરી નથી"</string>
     <string name="usage_access" msgid="8402350645248312782">"વપરાશ ઍક્સેસ"</string>
-    <string name="usage_access_description" msgid="3276026988575551587">"વપરાશ ઍક્સેસ કોઈ એપ્લિકેશનને તમે કઈ અન્ય એપ્લિકેશન્સનો અને કેટલીવાર ઉપયોગ કરી રહ્યાં છો તેમજ તમારા કેરીઅર, ભાષા સેટિંગ્સ અને અન્ય વિગતોને ટ્રેક કરવાની મંજૂરી આપે છે."</string>
+    <string name="usage_access_description" msgid="3276026988575551587">"વપરાશનો ઍક્સેસ કોઈ ઍપને તમે કઈ અન્ય ઍપ અને કેટલીવાર ઉપયોગ કરી રહ્યાં છો તેમજ તમારા કૅરિઅર, ભાષા સેટિંગ અને અન્ય વિગતોને ટ્રૅક કરવાની મંજૂરી આપે છે."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"ઊર્જા ઑપ્ટિમાઇઝેશન"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"ઍપની ઊર્જા વપરાશને ઑપ્ટિમાઇઝ કરો"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"કોઈપણ ઍપને ઑપ્ટિમાઇઝ કરવાની જરૂર નથી"</string>
@@ -968,8 +996,9 @@
     <string name="write_settings_off" msgid="6730113471695092167">"ના"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"ચિત્ર-માં-ચિત્ર"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"ચિત્રમાં-ચિત્રને મંજૂરી આપો"</string>
-    <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"ઇન્સ્ટૉલ કરેલી કોઈપણ ઍપ ચિત્ર-માં-ચિત્રને સમર્થન આપતી નથી"</string>
+    <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"ઇન્સ્ટૉલ કરેલી કોઈપણ ઍપ ચિત્ર-માં-ચિત્રને સપોર્ટ કરતી નથી"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"જ્યારે ઍપ ખુલ્લી હોય અથવા તમે તેમાંથી બહાર આવી ગયા હોય (ઉદાહરણ તરીકે, વીડિઓ જોવાનું ચાલુ રાખવા માટે), ત્યારે ઍપને ચિત્ર-માં-ચિત્ર વિંડો બનાવવાની મંજૂરી આપો. આ વિંડો તમે ઉપયોગ કરતા હોય તે અન્ય ઍપની સૌથી ઉપર પ્રદર્શિત થાય છે."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"ઍપને અલાર્મ સેટ કરવાની અને સમય આધારિત ઍક્શન શેડ્યૂલ કરવાની મંજૂરી આપો. આ ઍપને બૅકગ્રાઉન્ડમાં ચાલવા દે છે, જેને કારણે પાવરનો વધુ વપરાશ થઈ શકે છે.\n\nજો આ પરવાનગી બંધ હોય, તો આ ઍપ દ્વારા શેડ્યૂલ કરવામાં આવેલા હાલના અલાર્મ અને સમય આધારિત ઇવેન્ટ કામ કરશે નહીં."</string>
     <string name="special_access" msgid="21806055758289916">"ઍપનો વિશિષ્ટ ઍક્સેસ"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"ઑડિયો"</string>
@@ -997,23 +1026,23 @@
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"આ ઍપ ખોલી શકાતી નથી"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"જો તમને કોઈ પ્રશ્નો હોય, તો તમારા IT વ્યવસ્થાપકનો સંપર્ક કરો"</string>
     <string name="admin_support_more_info" msgid="9053232166115098434">"વધુ વિગતો"</string>
-    <string name="admin_profile_owner_message" msgid="5729169873349157622">"તમારા વ્યવસ્થાપક સેટિંગ્સ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ઉપકરણની સ્થાન માહિતી સહિત તમારી કાર્યાલયની પ્રોફાઇલ સાથે સંકળાયેલ ઍપ્લિકેશનો અને ડેટાનું નિયમન અને સંચાલન કરી શકે છે."</string>
-    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"તમારા વ્યવસ્થાપક સેટિંગ્સ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ઉપકરણની સ્થાન માહિતી સહિત આ વપરાશકર્તા સાથે સંકળાયેલ ઍપ્લિકેશનો અને ડેટાને મૉનિટર અને સંચાલિત કરી શકે છે."</string>
-    <string name="admin_device_owner_message" msgid="1935507216776040907">"તમારા વ્યવસ્થાપક સેટિંગ્સ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ઉપકરણની સ્થાન માહિતી સહિત આ ઉપકરણ સાથે સંકળાયેલ ઍપ્લિકેશનો અને ડેટાને મૉનિટર અને સંચાલિત કરી શકે છે."</string>
-    <string name="remove_managed_profile_label" msgid="8950011141359605612">"ઑફિસની પ્રોફાઇલ દૂર કરો"</string>
-    <string name="active_device_admin_msg" msgid="185537304726228624">"ડિવાઇસ વ્યવસ્થાપક ઍપ્લિકેશન"</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"તમારા વ્યવસ્થાપક સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ડિવાઇસની સ્થાન માહિતી સહિત તમારી ઑફિસની પ્રોફાઇલ સાથે સંકળાયેલ ઍપ અને ડેટાને મૉનિટર અને મેનેજ કરી શકે છે."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"તમારા વ્યવસ્થાપક સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ડિવાઇસની સ્થાન માહિતી સહિત આ વપરાશકર્તા સાથે સંકળાયેલ ઍપ અને ડેટાને મૉનિટર અને મેનેજ કરી શકે છે."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"તમારા વ્યવસ્થાપક સેટિંગ, પરવાનગીઓ, કૉર્પોરેટ ઍક્સેસ, નેટવર્ક પ્રવૃત્તિ અને ડિવાઇસની સ્થાન માહિતી સહિત આ ડિવાઇસ સાથે સંકળાયેલ ઍપ અને ડેટાને મૉનિટર અને મેનેજ કરી શકે છે."</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"ઑફિસની પ્રોફાઇલ કાઢી નાખો"</string>
+    <string name="active_device_admin_msg" msgid="185537304726228624">"ડિવાઇસ વ્યવસ્થાપક ઍપ"</string>
     <string name="remove_device_admin" msgid="2623866073546295104">"આ ઉપકરણ વ્યવસ્થાપક ઍપ્લિકેશનને નિષ્ક્રિય કરો"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"ઍપ્લિકેશન અનઇન્સ્ટૉલ કરો"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"નિષ્ક્રિય અને અનઇન્સ્ટૉલ કરો"</string>
-    <string name="select_device_admin_msg" msgid="8475934459999710332">"ઉપકરણ વ્યવસ્થાપક ઍપ્લિકેશનો"</string>
-    <string name="add_device_admin_msg" msgid="5390773166682603421">"ડિવાઇસ વ્યવસ્થાપક ઍપ્લિકેશન સક્રિય કરીએ?"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"ડિવાઇસ વ્યવસ્થાપક ઍપ"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"ડિવાઇસ વ્યવસ્થાપક ઍપ સક્રિય કરીએ?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"આ ઉપકરણ વ્યવસ્થાપક ઍપ્લિકેશન સક્રિય કરો"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"આ વ્યવસ્થાપક ઍપ્લિકેશનને સક્રિય કરવું ઍપ્લિકેશન <xliff:g id="APP_NAME">%1$s</xliff:g>ને નીચેની ક્રિયાઓ કરવાની મંજૂરી આપશે:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"આ ડિવાઇસને <xliff:g id="APP_NAME">%1$s</xliff:g> દ્વારા મેનેજ અને મોનિટર કરવામાં આવશે."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"આ વ્યવસ્થાપક ઍપ્લિકેશન સક્રિય છે અને ઍપ્લિકેશન <xliff:g id="APP_NAME">%1$s</xliff:g>ને નીચેની ક્રિયાઓ કરવાની મંજૂરી આપે છે:"</string>
-    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"આગળ વધવાથી, તમારા વપરાશકર્તાને તમારા વ્યવસ્થાપક દ્વારા સંચાલિત કરવામાં આવશે કે જેઓ વ્યક્તિગત ડેટા ઉપરાંત સંકળાયેલ ડેટાને પણ સંગ્રહિત કરી શકે છે.\n\nતમારા વ્યવસ્થાપક સેટિંગ્સ, ઍક્સેસ, ઍપ્લિકેશનો અને નેટવર્ક પ્રવૃત્તિ અને તમારા ઉપકરણની સ્થાન માહિતી સહિત, વપરાશકર્તાથી સંબંધિત ડેટાને મૉનિટર અને સંચાલિત કરી શકે છે."</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"આગળ વધવાથી, તમારા વપરાશકર્તાને તમારા વ્યવસ્થાપક દ્વારા મેનેજ કરવામાં આવશે કે જેઓ વ્યક્તિગત ડેટા ઉપરાંત સંકળાયેલ ડેટાને પણ સ્ટોર કરી શકે છે.\n\nતમારા વ્યવસ્થાપક સેટિંગ, ઍક્સેસ, ઍપ અને નેટવર્ક પ્રવૃત્તિ અને તમારા ડિવાઇસની સ્થાન માહિતી સહિત, વપરાશકર્તાથી સંબંધિત ડેટાને મૉનિટર અને મેનેજ કરી શકે છે."</string>
     <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"બગ રિપોર્ટ શેર કરીએ?"</string>
-    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"તમારા IT વ્યવસ્થાપક એ આ ઉપકરણની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ્લિકેશનો અને ડેટા શેર કરવામાં આવી શકે છે."</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"તમારા IT વ્યવસ્થાપકે આ ડિવાઇસની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ અને ડેટા શેર કરવામાં આવી શકે છે."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"તમારા IT વ્યવસ્થાપક એ આ ઉપકરણની સમસ્યા નિવારણમાં સહાય માટે બગ રિપોર્ટની વિનંતી કરી છે. ઍપ્લિકેશનો અને ડેટા શેર કરવામાં આવી શકે છે અને તમારા ઉપકરણને અસ્થાયી રૂપે ધીમું કરી શકે છે."</string>
     <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"આ બગ રિપોર્ટ તમારા IT વ્યવસ્થાપક સાથે શેર કરવામાં આવી રહ્યો છે. વધુ વિગતો માટે તેમનો સંપર્ક કરો."</string>
     <string name="share_remote_bugreport_action" msgid="6760197666368262892">"શેર કરો"</string>
