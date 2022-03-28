@@ -152,8 +152,16 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
                     return true;
                 }
             case KEY_ALLOW_TURN_SCREEN_OFF:
-                updateTimeOut((boolean) newValue, Integer.parseInt(mSleepTimePref.getValue()));
-                return true;
+                boolean allowTurnScreenOffWithWakeLock = (boolean) newValue;
+                if (!allowTurnScreenOffWithWakeLock) {
+                    // Some regions require a warning to be presented.
+                    showConfirmDisableAllowTurnScreenOffDialog();
+                    return false;
+                } else {
+                    updateTimeOut(true /* allowTurnScreenOffWithWakeLock */,
+                            Integer.parseInt(mSleepTimePref.getValue()));
+                    return true;
+                }
             default:
                 return false;
         }
@@ -235,6 +243,25 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
             if (getCallbackFragment() instanceof TwoPanelSettingsFragment) {
                 ((TwoPanelSettingsFragment) getCallbackFragment()).refocusPreference(this);
             }
+        }
+    }
+
+    private void showConfirmDisableAllowTurnScreenOffDialog() {
+        new AlertDialog.Builder(getContext())
+                .setTitle(R.string.device_energy_saver_disable_allow_turning_screen_off_title)
+                .setMessage(R.string.device_energy_saver_disable_allow_turning_screen_off_text)
+                .setPositiveButton(R.string.settings_confirm,
+                        (dialog, which) -> confirmDisableAllowTurnScreenOff())
+                .setNegativeButton(R.string.settings_cancel, (dialog, which) -> dialog.dismiss())
+                .create()
+                .show();
+    }
+
+    private void confirmDisableAllowTurnScreenOff() {
+        if (mAllowTurnScreenOffWithWakeLockPref != null && mSleepTimePref != null) {
+            updateTimeOut(false /* allowTurnScreenOffWithWakeLock */,
+                    Integer.parseInt(mSleepTimePref.getValue()));
+            mAllowTurnScreenOffWithWakeLockPref.setChecked(false);
         }
     }
 
