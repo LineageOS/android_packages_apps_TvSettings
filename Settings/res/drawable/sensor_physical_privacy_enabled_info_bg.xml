@@ -14,8 +14,17 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/sensor_physical_privacy_enabled_info_background" />
-    <corners android:radius="@dimen/sensor_physical_privacy_enabled_info_radius" />
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sensor_physical_privacy_enabled_info_background_focused"/>
+            <corners android:radius="@dimen/sensor_physical_privacy_enabled_info_radius"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sensor_physical_privacy_enabled_info_background"/>
+            <corners android:radius="@dimen/sensor_physical_privacy_enabled_info_radius"/>
+        </shape>
+    </item>
+</selector>

@@ -38,6 +38,8 @@ public enum PrivacyToggle {
             R.string.camera_physical_privacy_enabled_title,
             R.string.camera_physical_privacy_enabled_text,
             R.drawable.ic_camera_off_base,
+            R.drawable.camera_physical_privacy_enabled_panel_image,
+            R.string.camera_physical_privacy_enabled_panel_text,
             R.string.open_camera_permissions,
             "android.permission-group.CAMERA",
             SensorPrivacyManager.Sensors.CAMERA,
@@ -53,6 +55,8 @@ public enum PrivacyToggle {
             R.string.microphone_physical_privacy_enabled_title,
             R.string.microphone_physical_privacy_enabled_text,
             R.drawable.ic_mic_off_base,
+            R.drawable.microphone_physical_privacy_enabled_panel_image,
+            R.string.microphone_physical_privacy_enabled_panel_text,
             R.string.open_mic_permissions,
             "android.permission-group.MICROPHONE",
             SensorPrivacyManager.Sensors.MICROPHONE,
@@ -76,6 +80,10 @@ public enum PrivacyToggle {
     public final int physicalPrivacyEnabledInfoText;
     @DrawableRes
     public final int physicalPrivacyEnabledIcon;
+    @DrawableRes
+    public final int physicalPrivacyEnabledInfoPanelImage;
+    @StringRes
+    public final int physicalPrivacyEnabledInfoPanelText;
 
     public final String permissionsGroupName;
     @Sensor
@@ -88,7 +96,9 @@ public enum PrivacyToggle {
             @StringRes int toggleInfoTitle, @StringRes int toggleInfoText,
             @StringRes int physicalPrivacyEnabledInfoTitle,
             @StringRes int physicalPrivacyEnabledInfoText,
-            @DrawableRes int physicalPrivacyEnabledIcon, @StringRes int appPermissionsTitle,
+            @DrawableRes int physicalPrivacyEnabledIcon,
+            @DrawableRes int physicalPrivacyEnabledInfoPanelImage,
+            @StringRes int physicalPrivacyEnabledInfoPanelText, @StringRes int appPermissionsTitle,
             String permissionsGroupName, @Sensor int sensor, int[] appOps,
             String deviceConfigName) {
         this.screenTitle = screenTitle;
@@ -98,6 +108,8 @@ public enum PrivacyToggle {
         this.physicalPrivacyEnabledInfoTitle = physicalPrivacyEnabledInfoTitle;
         this.physicalPrivacyEnabledInfoText = physicalPrivacyEnabledInfoText;
         this.physicalPrivacyEnabledIcon = physicalPrivacyEnabledIcon;
+        this.physicalPrivacyEnabledInfoPanelImage = physicalPrivacyEnabledInfoPanelImage;
+        this.physicalPrivacyEnabledInfoPanelText = physicalPrivacyEnabledInfoPanelText;
         this.appPermissionsTitle = appPermissionsTitle;
         this.permissionsGroupName = permissionsGroupName;
         this.sensor = sensor;

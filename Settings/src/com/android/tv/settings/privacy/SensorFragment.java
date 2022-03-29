@@ -20,16 +20,21 @@ import static android.hardware.SensorPrivacyManager.Sources.SETTINGS;
 import static android.hardware.SensorPrivacyManager.TOGGLE_TYPE_HARDWARE;
 import static android.hardware.SensorPrivacyManager.TOGGLE_TYPE_SOFTWARE;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.SensorPrivacyManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewTreeObserver;
 
 import androidx.annotation.Keep;
+import androidx.leanback.widget.VerticalGridView;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
@@ -87,6 +92,7 @@ public class SensorFragment extends SettingsPreferenceFragment {
         super.onViewCreated(view, savedInstanceState);
         mSensorPrivacyManager.addSensorPrivacyListener(mToggle.sensor,
                 mPrivacyChangedListener);
+        updateSensorPrivacyState();
     }
 
     @Override
@@ -109,10 +115,23 @@ public class SensorFragment extends SettingsPreferenceFragment {
         mPhysicalPrivacyEnabledInfo = new Preference(themedContext);
         mPhysicalPrivacyEnabledInfo.setLayoutResource(
                 R.layout.sensor_physical_privacy_enabled_info);
-        mPhysicalPrivacyEnabledInfo.setSelectable(false);
+        mPhysicalPrivacyEnabledInfo.setSelectable(true);
         mPhysicalPrivacyEnabledInfo.setTitle(mToggle.physicalPrivacyEnabledInfoTitle);
         mPhysicalPrivacyEnabledInfo.setSummary(mToggle.physicalPrivacyEnabledInfoText);
         mPhysicalPrivacyEnabledInfo.setIcon(mToggle.physicalPrivacyEnabledIcon);
+
+        // Use InfoFragment when using 2-panel settings
+        if (FlavorUtils.getFlavor(getContext()) == FLAVOR_CLASSIC) {
+            mPhysicalPrivacyEnabledInfo.setFragment(PhysicalPrivacyUnblockFragment.class.getName());
+            mPhysicalPrivacyEnabledInfo.getExtras().putObject(
+                    PhysicalPrivacyUnblockFragment.TOGGLE_EXTRA, mToggle);
+        } else {
+            mPhysicalPrivacyEnabledInfo.setFragment(
+                    PhysicalPrivacyUnblockInfoFragment.class.getName());
+            mPhysicalPrivacyEnabledInfo.getExtras().putObject(
+                    PhysicalPrivacyUnblockInfoFragment.TOGGLE_EXTRA, mToggle);
+        }
+
         screen.addPreference(mPhysicalPrivacyEnabledInfo);
     }
 
@@ -152,7 +171,33 @@ public class SensorFragment extends SettingsPreferenceFragment {
         }
         // If privacy is enabled, the sensor access is turned off
         mSensorToggle.setChecked(!softwarePrivacyEnabled && !physicalPrivacyEnabled);
+        mSensorToggle.setEnabled(!physicalPrivacyEnabled);
         mPhysicalPrivacyEnabledInfo.setVisible(physicalPrivacyEnabled);
+
+        if (physicalPrivacyEnabled) {
+            selectPreference(mPhysicalPrivacyEnabledInfo);
+        }
+    }
+
+    private void selectPreference(Preference preference) {
+        scrollToPreference(preference);
+        if (getListView() instanceof VerticalGridView) {
+            VerticalGridView listView = (VerticalGridView) getListView();
+            PreferenceGroupAdapter adapter = (PreferenceGroupAdapter) (listView.getAdapter());
+
+            ViewTreeObserver.OnPreDrawListener listener = new ViewTreeObserver.OnPreDrawListener() {
+                @Override
+                public boolean onPreDraw() {
+                    listView.post(() -> {
+                        int position = adapter.getPreferenceAdapterPosition(preference);
+                        listView.setSelectedPositionSmooth(position);
+                    });
+                    listView.getViewTreeObserver().removeOnPreDrawListener(this);
+                    return true;
+                }
+            };
+            listView.getViewTreeObserver().addOnPreDrawListener(listener);
+        }
     }
 
     /**
