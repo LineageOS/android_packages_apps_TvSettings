@@ -400,9 +400,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         if (!mUm.isAdminUser()) {
             disableForUser(mEnableAdb);
             disableForUser(mClearAdbKeys);
-            disableForUser(mEnableAdbRoot);
             disableForUser(mEnableTerminal);
             disableForUser(mPassword);
+        }
+
+        if (!mADBRootService.isSupported() || !mUm.isAdminUser()) {
+            disableForUser(mEnableAdbRoot);
         }
 
         mDebugAppPref = findPreference(DEBUG_APP_KEY);
