@@ -37,6 +37,7 @@ public class LegalFragment extends SettingsPreferenceFragment {
 
     private static final String KEY_TERMS = "terms";
     private static final String KEY_LICENSE = "license";
+    private static final String KEY_LINEAGE_LICENSE = "lineage_license";
     private static final String KEY_COPYRIGHT = "copyright";
     private static final String KEY_WEBVIEW_LICENSE = "webview_license";
     private static final String KEY_ADS = "ads";
@@ -51,6 +52,8 @@ public class LegalFragment extends SettingsPreferenceFragment {
                 findPreference(KEY_TERMS), PreferenceUtils.FLAG_SET_TITLE);
         PreferenceUtils.resolveSystemActivityOrRemove(context, screen,
                 findPreference(KEY_LICENSE), PreferenceUtils.FLAG_SET_TITLE);
+        PreferenceUtils.resolveSystemActivityOrRemove(context, screen,
+                findPreference(KEY_LINEAGE_LICENSE), PreferenceUtils.FLAG_SET_TITLE);
         PreferenceUtils.resolveSystemActivityOrRemove(context, screen,
                 findPreference(KEY_COPYRIGHT), PreferenceUtils.FLAG_SET_TITLE);
         PreferenceUtils.resolveSystemActivityOrRemove(context, screen,
