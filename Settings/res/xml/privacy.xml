@@ -49,9 +49,10 @@
         android:title="@string/privacy_account_settings_category"
         android:visible="false" />
 
-    <!-- Trust interface -->
-    <org.lineageos.internal.lineageparts.LineagePartsPreference
-        android:key="trust_interface" />
+    <Preference
+        android:key="trust"
+        android:title="@string/trust_title"
+        android:fragment="com.android.tv.settings.privacy.TVTrustPreferences" />
 
     <com.android.tv.twopanelsettings.slices.SlicePreference
         android:key="assistant"
