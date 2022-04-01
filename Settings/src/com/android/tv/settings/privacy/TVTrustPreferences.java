@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2020 The LineageOS Project
+ * Copyright (C) 2021-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@ package com.android.tv.settings.privacy;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.provider.Settings;
 
@@ -217,12 +216,6 @@ public class TVTrustPreferences extends SettingsPreferenceFragment {
             mInterface.removeNotificationForFeature(feature);
         }
         return success;
-    }
-
-
-    private boolean isTelephony() {
-        PackageManager pm = getContext().getPackageManager();
-        return pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY);
     }
 
     @Override
