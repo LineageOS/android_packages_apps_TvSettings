@@ -132,6 +132,12 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         RadioPreference pref = new RadioPreference(getContext());
         pref.setTitle(getContext().getString(R.string.resolution_selection_auto_title));
         pref.setKey(KEY_RESOLUTION_SELECTION_AUTO);
+
+        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
+        Display.Mode autoMode = display.getSystemPreferredDisplayMode();
+        pref.setSummary(ResolutionSelectionUtils.getResolutionString(
+                        autoMode.getPhysicalWidth(), autoMode.getPhysicalHeight()) + " "
+                + ResolutionSelectionUtils.getRefreshRateString(autoMode.getRefreshRate()));
         mResolutionPreferenceCategory.addPreference(pref);
 
         for (int i = 0; i < mModes.length; i++) {
