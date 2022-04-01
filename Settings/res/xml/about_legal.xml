@@ -37,6 +37,13 @@
         <intent android:action="android.settings.LICENSE" />
     </PreferenceScreen>
 
+    <!-- LineageOS License information -->
+    <PreferenceScreen
+        android:key="lineage_license"
+        android:title="@string/lineagelicense_title">
+        <intent android:action="lineageos.settings.LINEAGE_LICENSE" />
+    </PreferenceScreen>
+
     <!-- Terms and conditions -->
     <PreferenceScreen
         android:key="terms"
