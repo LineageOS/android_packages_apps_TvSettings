@@ -98,8 +98,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Az utoljára megnyitott alkalmazások"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Összes alkalmazás megjelenítése"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Engedélyek"</string>
-    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
-    <string name="update_slice_title" msgid="6553763903108611747"></string>
+    <!-- no translation found for apps_security (1392489151324802853) -->
+    <skip />
     <string name="all_apps_title" msgid="3717294436135280133">"Összes alkalmazás"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Rendszeralkalmazások megjelenítése"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Telepített alkalmazások"</string>
@@ -124,11 +124,9 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos Dolby TrueHD-val"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos Dolby Digital Plus-szal"</string>
-    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Megjegyzés: Az Automatikus beállítás nem működik, ha eszköze nem jelzi helyesen a támogatott formátumait."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatikus: Csak a hangkimeneti eszköz által támogatott formátumok engedélyezése "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kiválasztása esetén a rendszer lehetővé teszi az alkalmazások számára bármilyen olyan hangformátum használatát, amelyet támogat az eszközlánc. Előfordulhat, hogy az alkalmazások nem a legjobb minőséget biztosító formátumot választják ki."</string>
@@ -153,19 +151,13 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Speciális hangbeállítások"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Játékmód engedélyezése"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Tartalom képkocka-sebességének egyeztetése"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Tartalom képkockasebességének használata"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Zökkenőmentes"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Ha az alkalmazás engedélyt kér rá, az eszköze az éppen nézett tartalom eredeti képkockasebességéhez igazítja a kimenetet, de CSAK akkor, ha a tévéje képes a zökkenőmentes átmenetre."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Nem zökkenőmentes"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ha az alkalmazás engedélyt kér rá, az eszköze az éppen nézett tartalom eredeti képkockasebességéhez igazítja a kimenetet. Ennek következtében előfordulhat, hogy képernyője egy másodpercre elsötétül, amikor elindul vagy véget ér a videólejátszás."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Soha"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Még ha az alkalmazás engedélyt kér is rá, az eszköze akkor sem fogja megpróbálni az éppen nézett tartalom eredeti képkockasebességéhez igazítani a kimenetet."</string>
-    <string name="font_scale_settings_title" msgid="4114019544800225980">"Szöveg nagyítása"</string>
-    <string name="font_scale_item_detail" msgid="1558315053348778805">"Szövegméretezés: <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
-    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Mintaszöveg"</string>
-    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Óz, a csodák csodája"</string>
-    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11. fejezet: A csodálatos Smaragdváros"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Dorothyt és barátait még a zöld szemüvegen át is lenyűgözte a csodálatos Város tündöklése. Az utcákat zöld márványból épült és ragyogó smaragdokkal kirakott, gyönyörű házak sora szegélyezte. Az utak ugyanebből a zöld márványból készültek, az utcaköveket pedig sűrűn rakott smaragdsorok választották el, amelyek csak úgy sziporkáztak a napfényben. Az ablaktáblák zöld üvegből voltak, az ég zöldes színben tündökölt a Város fölött, és még a napsugarak is zöld színben játszottak. \n\nRengeteg ember járkált mindenfelé, férfiak, nők, gyerekek, mind zöld ruhákban, zöldes árnyalatú volt a bőrük is. Csodálkozó szemekkel néztek Dorothyra és furcsa kísérőire, és amikor a gyerekek meglátták az Oroszlánt, elszaladtak, és anyjuk mögé bújtak. De senki sem szólt hozzájuk. Az utcán sok bolt állt, és Dorothy észrevette, hogy ezekben is minden zöld. Lehetett kapni zöld cukorkát és zöld pattogatott kukoricát, zöld cipőt, zöld kalapot és mindenféle zöld ruhát. Az egyik helyen egy férfi zöld limonádét árult, és Dorothy látta, hogy a gyerekek zöld pennykkel fizetnek érte. \n\nNem voltak sehol lovak vagy más állatok; az emberek mindent kis zöld kocsikon hordtak, amelyet maguk előtt toltak. Mindenki boldognak, elégedettnek és jómódúnak tűnt."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Formátumválasztás"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatikus"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Kézi"</string>
@@ -335,7 +327,6 @@
       <item quantity="other">Telefonalkalmazások</item>
       <item quantity="one">Telefonalkalmazás</item>
     </plurals>
-    <string name="default_browser_title" msgid="3612813200586492159">"Böngészőalkalmazás"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Útmutatók"</string>
@@ -346,7 +337,7 @@
     <string name="device_name" msgid="566626587332817733">"Eszköz neve"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Újraindítás"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Jogi információk"</string>
-    <string name="about_legal_license" msgid="4056934178111674054">"Harmadik félhez tartozó forrás"</string>
+    <string name="about_legal_license" msgid="4801707286720681261">"Nyílt forráskódú licencek"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Google – jogi szabályozás"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"A licencadatok nem érhetők el"</string>
     <string name="about_model" msgid="9164284529291439296">"Modell"</string>
@@ -412,9 +403,6 @@
     <string name="license_title" msgid="4032466200355435641">"Licenc"</string>
     <string name="terms_title" msgid="192888187310800678">"Általános Szerződési Feltételek"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"WebView-rendszerlicenc"</string>
-    <string name="consumer_information_title" msgid="7729729568416672733">"Fogyasztói információ"</string>
-    <string name="consumer_information_message" msgid="205236637689468764">"Az Android TV-n található tartalmak harmadik felektől (pl. alkalmazásfejlesztőktől és filmstúdióktól), valamint a Google-tól származnak. További információ: "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>"."</string>
-    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Gyenge"</item>
     <item msgid="2098818614362343532">"Közepes"</item>
@@ -617,22 +605,6 @@
     <item msgid="5645263357181875427">"Adatfolyam által meghatározott idő használata"</item>
     <item msgid="5501503537181350884">"Kikapcsolva"</item>
   </string-array>
-    <string name="sensor_toggle_description" msgid="7415801459994303159">"Minden alkalmazásnál és szolgáltatásnál"</string>
-    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Legutóbb a következő fért hozzá:"</string>
-    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Nincs friss hozzáférés"</string>
-    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Összes megtekintése"</string>
-    <string name="microphone" msgid="7893752847683941214">"Mikrofon"</string>
-    <string name="mic_toggle_title" msgid="7193417007060235665">"Mikrofon-hozzáférés"</string>
-    <string name="open_mic_permissions" msgid="8121871594807641073">"Alkalmazások mikrofon-hozzáférése"</string>
-    <string name="camera" msgid="1226671478936288283">"Kamera"</string>
-    <string name="camera_toggle_title" msgid="5566469574224956142">"Kamera-hozzáférés"</string>
-    <string name="open_camera_permissions" msgid="301360297337141591">"Alkalmazások kamera-hozzáférése"</string>
-    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofon-hozzáférés: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Ha be van kapcsolva, minden engedéllyel rendelkező alkalmazás és szolgáltatás hozzáférhet az eszköz összes mikrofonjához.\n\nAz egyéni protokollal rendelkező hangperifériákat ez a beállítás nem érinti."</string>
-    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kamera-hozzáférés: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Ha be van kapcsolva, minden engedéllyel rendelkező alkalmazás és szolgáltatás hozzáférhet az eszköz összes kamerájához.\n\nAz egyéni protokollal rendelkező kameraperifériákat ez a beállítás nem érinti."</string>
-    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Be"</string>
-    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Ki"</string>
     <string name="system_location" msgid="4057295363709016511">"Hely"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Engedélyezze az engedélyt kérő alkalmazásoknak a helyadatok használatát"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Hozzájárulás a helyadatok küldéséhez"</string>
@@ -908,7 +880,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Nincs beállítva alapértelmezett érték"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"A gyorsítótár törlése"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Értesítések"</string>
-    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Harmadik félhez tartozó forrás"</string>
+    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Nyílt forráskódú licencek"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Engedélyek"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Az alkalmazást nem lehet elindítani"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
@@ -998,7 +970,6 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Kép a képben engedélyezése"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"A telepített alkalmazások nem támogatják a kép a képben funkciót"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Engedélyezi, hogy az alkalmazások kép a képben ablakot hozzanak létre, amikor meg vannak nyitva, vagy miután Ön kilépett belőlük (például azért, hogy tovább nézzen egy videót). Az említett ablak az Ön által használt többi alkalmazás fölött jelenik meg."</string>
-    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Lehetővé teszi az alkalmazásoknak, hogy ébresztéseket állítsanak be, valamint időérzékeny feladatokat ütemezzenek. Ezzel engedélyezi az alkalmazásoknak, hogy a háttérben fussanak, ami megnövekedett akkumulátorhasználattal járhat.\n\nHa ez az engedély ki van kapcsolva, az alkalmazás által beállított ébresztések és ütemezett időérzékeny események nem fognak működni."</string>
     <string name="special_access" msgid="21806055758289916">"Különleges alkalmazás-hozzáférés"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Hanganyag"</string>
