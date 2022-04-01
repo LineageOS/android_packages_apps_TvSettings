@@ -21,7 +21,11 @@ import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected
 import android.app.AlertDialog;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemProperties;
+import android.util.Log;
 
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
@@ -35,11 +39,16 @@ import com.android.tv.settings.overlay.FlavorUtils;
 @Keep
 public class LegalFragment extends SettingsPreferenceFragment {
 
+    private static final String LOG_TAG = "LegalFragment";
+
     private static final String KEY_TERMS = "terms";
     private static final String KEY_LICENSE = "license";
+    private static final String KEY_LINEAGE_LICENSE = "lineage_license";
     private static final String KEY_COPYRIGHT = "copyright";
     private static final String KEY_WEBVIEW_LICENSE = "webview_license";
     private static final String KEY_ADS = "ads";
+
+    private static final String PROPERTY_LINEAGE_LICENSE_URL = "ro.lineagelegal.url";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -71,6 +80,16 @@ public class LegalFragment extends SettingsPreferenceFragment {
         switch (preference.getKey()) {
             case KEY_LICENSE:
                 logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_LEGAL_INFO_OPEN_SOURCE);
+                break;
+            case KEY_LINEAGE_LICENSE:
+                final Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_DEFAULT);
+                intent.setData(Uri.parse(SystemProperties.get(PROPERTY_LINEAGE_LICENSE_URL)));
+                try {
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Log.e(LOG_TAG, "Unable to start activity " + intent.toString());
+                }
                 break;
             case KEY_TERMS:
                 logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_LEGAL_INFO_GOOGLE_LEGAL);
