@@ -737,6 +737,17 @@
         </activity>
 
         <activity
+            android:name=".about.LineageLicenseActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="@string/lineagelicense_title">
+            <intent-filter>
+                <action android:name="lineageos.settings.LINEAGE_LICENSE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".name.DeviceNameSettingsActivity"
             android:theme="@style/GuidedStepFragmentThemeTwoPanel"
             android:configChanges="keyboardHidden|navigation"
