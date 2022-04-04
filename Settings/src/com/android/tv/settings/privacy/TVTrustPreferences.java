@@ -67,12 +67,12 @@ public class TVTrustPreferences extends SettingsPreferenceFragment {
         mWarnSELinuxPref = mWarnScreen.findPreference("trust_warning_selinux");
         mWarnKeysPref = mWarnScreen.findPreference("trust_warning_keys");
 
-        mSELinuxPref.setOnPreferenceClickListener(p ->
-                showInfo(R.string.trust_feature_selinux_explain));
-        mSecurityPatchesPref.setOnPreferenceClickListener(p ->
-                showInfo(R.string.trust_feature_security_patches_explain));
-        mEncryptionPref.setOnPreferenceClickListener(p ->
-                showInfo(R.string.trust_feature_encryption_explain));
+        mSELinuxPref.setOnPreferenceClickListener(p -> showInfo(
+                org.lineageos.platform.internal.R.string.trust_feature_selinux_explain));
+        mSecurityPatchesPref.setOnPreferenceClickListener(p -> showInfo(
+                org.lineageos.platform.internal.R.string.trust_feature_security_patches_explain));
+        mEncryptionPref.setOnPreferenceClickListener(p -> showInfo(
+                org.lineageos.platform.internal.R.string.trust_feature_encryption_explain));
 
         mWarnSELinuxPref.setOnPreferenceChangeListener((p, v) ->
                 onWarningChanged((Boolean) v, TrustInterface.TRUST_WARN_SELINUX));
@@ -112,11 +112,13 @@ public class TVTrustPreferences extends SettingsPreferenceFragment {
         int icon;
         int summary;
         if (level == TrustInterface.TRUST_FEATURE_LEVEL_GOOD) {
-            icon = R.drawable.ic_trust_selinux_good;
-            summary = R.string.trust_feature_selinux_value_enforcing;
+            icon = org.lineageos.platform.internal.R.drawable.ic_trust_selinux_good;
+            summary = org.lineageos.platform.internal
+                    .R.string.trust_feature_selinux_value_enforcing;
         } else {
-            icon = R.drawable.ic_trust_selinux_bad;
-            summary = R.string.trust_feature_selinux_value_disabled;
+            icon = org.lineageos.platform.internal.R.drawable.ic_trust_selinux_bad;
+            summary = org.lineageos.platform.internal
+                    .R.string.trust_feature_selinux_value_disabled;
         }
         mSELinuxPref.setIcon(icon);
         mSELinuxPref.setSummary(getContext().getString(summary));
@@ -129,25 +131,28 @@ public class TVTrustPreferences extends SettingsPreferenceFragment {
         if (vendor == TrustInterface.ERROR_UNDEFINED) {
             switch (platform) {
                 case TrustInterface.TRUST_FEATURE_LEVEL_GOOD:
-                    icon = R.drawable.ic_trust_security_patches_good;
+                    icon = org.lineageos.platform.internal
+                            .R.drawable.ic_trust_security_patches_good;
                     break;
                 case TrustInterface.TRUST_FEATURE_LEVEL_POOR:
-                    icon = R.drawable.ic_trust_security_patches_poor;
+                    icon = org.lineageos.platform.internal
+                            .R.drawable.ic_trust_security_patches_poor;
                     break;
                 default:
-                    icon = R.drawable.ic_trust_security_patches_bad;
+                    icon = org.lineageos.platform.internal
+                            .R.drawable.ic_trust_security_patches_bad;
                     break;
             }
         } else {
             if (platform == TrustInterface.TRUST_FEATURE_LEVEL_GOOD
                     && vendor ==  TrustInterface.TRUST_FEATURE_LEVEL_GOOD) {
-                icon = R.drawable.ic_trust_security_patches_good;
+                icon = org.lineageos.platform.internal.R.drawable.ic_trust_security_patches_good;
             } else if (platform == TrustInterface.TRUST_FEATURE_LEVEL_POOR
                     || (platform == TrustInterface.TRUST_FEATURE_LEVEL_GOOD
                     && vendor != TrustInterface.TRUST_FEATURE_LEVEL_GOOD)) {
-                icon = R.drawable.ic_trust_security_patches_poor;
+                icon = org.lineageos.platform.internal.R.drawable.ic_trust_security_patches_poor;
             } else {
-                icon = R.drawable.ic_trust_security_patches_bad;
+                icon = org.lineageos.platform.internal.R.drawable.ic_trust_security_patches_bad;
             }
         }
 
@@ -157,8 +162,9 @@ public class TVTrustPreferences extends SettingsPreferenceFragment {
         // TMP: do not enforce vendor check
         String summary = summaryV == 0
                 ? context.getString(summaryP)
-                : context.getString(R.string.trust_feature_security_patches_value_base,
-                context.getString(summaryP), context.getString(summaryV));
+                : context.getString(org.lineageos.platform.internal
+                        .R.string.trust_feature_security_patches_value_base,
+                        context.getString(summaryP), context.getString(summaryV));
 
         mSecurityPatchesPref.setIcon(icon);
         mSecurityPatchesPref.setSummary(summary);
@@ -167,11 +173,14 @@ public class TVTrustPreferences extends SettingsPreferenceFragment {
     private int getSummaryForSecurityPatchLevel(int level) {
         switch (level) {
             case TrustInterface.TRUST_FEATURE_LEVEL_GOOD:
-                return R.string.trust_feature_security_patches_value_new;
+                return org.lineageos.platform.internal
+                        .R.string.trust_feature_security_patches_value_new;
             case TrustInterface.TRUST_FEATURE_LEVEL_POOR:
-                return R.string.trust_feature_security_patches_value_medium;
+                return org.lineageos.platform.internal
+                        .R.string.trust_feature_security_patches_value_medium;
             case TrustInterface.TRUST_FEATURE_LEVEL_BAD:
-                return R.string.trust_feature_security_patches_value_old;
+                return org.lineageos.platform.internal
+                        .R.string.trust_feature_security_patches_value_old;
             default:
                 return 0;
         }
@@ -183,16 +192,19 @@ public class TVTrustPreferences extends SettingsPreferenceFragment {
         boolean isLegacy = getContext().getResources()
                 .getBoolean(org.lineageos.platform.internal.R.bool.config_trustLegacyEncryption);
         if (level == TrustInterface.TRUST_FEATURE_LEVEL_GOOD) {
-            icon = R.drawable.ic_trust_encryption_good;
-            summary = R.string.trust_feature_encryption_value_enabled;
+            icon = org.lineageos.platform.internal.R.drawable.ic_trust_encryption_good;
+            summary = org.lineageos.platform.internal
+                    .R.string.trust_feature_encryption_value_enabled;
         } else if (level == TrustInterface.TRUST_FEATURE_LEVEL_POOR) {
-            icon = R.drawable.ic_trust_encryption_poor;
-            summary = R.string.trust_feature_encryption_value_nolock;
+            icon = org.lineageos.platform.internal.R.drawable.ic_trust_encryption_poor;
+            summary = org.lineageos.platform.internal
+                    .R.string.trust_feature_encryption_value_nolock;
         } else {
             icon = isLegacy
-                ? R.drawable.ic_trust_encryption_poor
-                : R.drawable.ic_trust_encryption_bad;
-            summary = R.string.trust_feature_encryption_value_disabled;
+                ? org.lineageos.platform.internal.R.drawable.ic_trust_encryption_poor
+                : org.lineageos.platform.internal.R.drawable.ic_trust_encryption_bad;
+            summary = org.lineageos.platform.internal
+                    .R.string.trust_feature_encryption_value_disabled;
         }
         mEncryptionPref.setIcon(icon);
         mEncryptionPref.setSummary(getContext().getString(summary));
