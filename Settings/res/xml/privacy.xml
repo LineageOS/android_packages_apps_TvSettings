@@ -51,7 +51,7 @@
 
     <Preference
         android:key="trust"
-        android:title="@string/trust_title"
+        android:title="@*lineageos.platform:string/trust_feature_name"
         android:fragment="com.android.tv.settings.privacy.TVTrustPreferences" />
 
     <com.android.tv.twopanelsettings.slices.SlicePreference
