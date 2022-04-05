@@ -256,7 +256,7 @@
     <string name="system_inputs" msgid="5552840337357572096">"ఇన్‌పుట్‌లు"</string>
     <string name="system_inputs_devices" msgid="2158421111699829399">"ఇన్‌పుట్‌లు &amp; పరికరాలు"</string>
     <string name="system_home_theater_control" msgid="6228949628173590310">"హోమ్ థియేటర్ నియంత్రణ"</string>
-    <string name="system_accessibility" msgid="3081009195560501010">"యాక్సెస్‌ సామర్థ్యం"</string>
+    <string name="system_accessibility" msgid="3081009195560501010">"యాక్సెసిబిలిటీ"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"డెవలపర్ ఎంపికలు"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"ఏదీ లేదు"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"వినియోగం &amp; విశ్లేషణలు"</string>
@@ -358,8 +358,8 @@
     <string name="oem_lock_info_message" msgid="2165887409937351689">"దయచేసి పరికర రక్షణ ఫీచర్‌ని ప్రారంభించడానికి పరికరాన్ని మళ్లీ ప్రారంభించండి."</string>
     <string name="automatic_storage_manager_freed_bytes" msgid="1654574152815129396">"మొత్తం <xliff:g id="SIZE">%1$s</xliff:g> అందుబాటులో ఉంచబడింది\n\nచివరిగా <xliff:g id="DATE">%2$s</xliff:g>న అమలు చేయబడింది"</string>
     <string name="fcc_equipment_id" msgid="6731077083927000108">"ఉపకరణ ID"</string>
-    <string name="baseband_version" msgid="5618116741093274294">"బేస్‌బ్యాండ్ సంస్కరణ"</string>
-    <string name="kernel_version" msgid="7265509054070001542">"కెర్నల్ సంస్కరణ"</string>
+    <string name="baseband_version" msgid="5618116741093274294">"బేస్‌బ్యాండ్ వెర్షన్‌"</string>
+    <string name="kernel_version" msgid="7265509054070001542">"కెర్నల్ వెర్షన్‌"</string>
     <string name="status_unavailable" msgid="2033933928980193334">"అందుబాటులో లేదు"</string>
     <string name="device_status_title" msgid="9051569510258883673">"స్టేటస్‌"</string>
     <string name="battery_status_title" msgid="8850166742025222210">"బ్యాటరీ స్టేటస్‌"</string>
@@ -590,9 +590,13 @@
     <string name="microphone" msgid="7893752847683941214">"మైక్రోఫోన్"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"మైక్రోఫోన్ యాక్సెస్"</string>
     <string name="open_mic_permissions" msgid="8121871594807641073">"మైక్రోఫోన్‌కు యాప్ యాక్సెస్"</string>
+    <string name="microphone_physical_privacy_enabled_title" msgid="6135130916399886772">"మైక్రోఫోన్ యాక్సెస్ బ్లాక్ చేయబడింది"</string>
+    <string name="microphone_physical_privacy_enabled_text" msgid="401238365312924088">"అన్‌బ్లాక్ చేయడానికి, మైక్రోఫోన్ యాక్సెస్‌ను అనుమతించడానికి మీ పరికరంలోని గోప్యతా స్విచ్‌ను మైక్రోఫోన్‌ను ఆన్ చేయండి స్థానానికి తరలించండి."</string>
     <string name="camera" msgid="1226671478936288283">"కెమెరా"</string>
     <string name="camera_toggle_title" msgid="5566469574224956142">"కెమెరా యాక్సెస్"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"కెమెరాకు యాప్ యాక్సెస్"</string>
+    <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"కెమెరా యాక్సెస్ బ్లాక్ చేయబడింది"</string>
+    <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"అన్‌బ్లాక్ చేయడానికి, కెమెరా యాక్సెస్‌ను అనుమతించడానికి మీ పరికరంలోని గోప్యతా స్విచ్‌ను కెమెరాను ఆన్ చేయండి స్థానంలోకి తరలించండి."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"మైక్రోఫోన్ యాక్సెస్: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="mic_toggle_info_content" msgid="4699624900513326055">"ఆన్ చేసినప్పుడు, అన్ని యాప్‌లు, సర్వీస్‌లు అనుమతితో ఈ పరికరంలోని ఏదైనా మైక్రోఫోన్‌ను యాక్సెస్ చేయగలవు.\n\nఅనుకూల ప్రోటోకాల్‌తో ఆడియో పెరిఫెరల్‌లు ఈ సెట్టింగ్ ద్వారా ప్రభావితం కావు."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"కెమెరా యాక్సెస్: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
@@ -620,7 +624,7 @@
     <string name="location_history_desc" msgid="926674012916014270">"ఈ ఖాతాకు లొకేషన్ హిస్టరీని ఆన్ చేసినప్పుడు, మీ యాప్‌లు ఉపయోగించడం కోసం Google మీ పరికరం లొకేషన్ డేటాను స్టోర్ చేస్తుంది.\n\nఉదాహరణకు, Google Maps మీకు దిశలను అందించగలదు అలాగే Google Now రోజువారీ ప్రయాణ మార్గంలోని రద్దీ గురించి మీకు తెలియజేయగలదు.\n\nమీరు లొకేషన్ హిస్టరీని ఎప్పుడైనా ఆఫ్ చేయవచ్చు, అయితే అలా చేయడం వలన హిస్టరీ ఏదీ తొలగించబడదు. మీ లొకేషన్ హిస్టరీని చూడటానికి, మేనేజ్ చేయడానికి, maps.google.com/locationhistoryని సందర్శించండి."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"లొకేషన్ హిస్టరీని తొలగించండి"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"ఇది ఈ Google ఖాతా కోసం ఈ పరికరంలో స్టోర్ చేయబడిన మొత్తం లొకేషన్ హిస్టరీని తొలగిస్తుంది. మీరు ఈ తొలగింపును రద్దు చేయలేరు. Google Nowతో సహా కొన్ని యాప్‌లు పని చేయకుండా ఆపివేయబడతాయి."</string>
-    <string name="system_services" msgid="5754310941186053151">"సేవలు"</string>
+    <string name="system_services" msgid="5754310941186053151">"స‌ర్వీస్‌లు"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"సేవా సెట్టింగ్‌లు"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"అధిక కాంట్రాస్ట్ టెక్స్ట్"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"యాక్సెసిబిలిటీ షార్ట్‌కట్"</string>
@@ -665,7 +669,7 @@
     <string name="color_yellow" msgid="3519470952904560404">"పసుపు రంగు"</string>
     <string name="color_magenta" msgid="2377854703399624607">"మెజెంటా రంగు"</string>
     <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"ఆడియో వివరణ"</string>
-    <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"సపోర్ట్ ఉన్న సినిమాలు, షోలలో స్క్రీన్‌పై ఏమి జరుగుతుందో అనే వివరణను వినండి"</string>
+    <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"సపోర్ట్ ఉన్న సినిమాల్లో, షోలలో స్క్రీన్‌పై ఏమి జరుగుతోంది అన్న‌ వివరణను వినండి"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"ఎనేబుల్ చేయండి"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"కాన్ఫిగరేషన్"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"\'<xliff:g id="SERVICE">%1$s</xliff:g>\'ను ఉపయోగించాలా?"</string>
@@ -844,7 +848,7 @@
     <string name="label_done_key" msgid="8576286462300373440">"పూర్తయింది"</string>
     <string name="wifi_setup_connection_success" msgid="3301901673876973474">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
     <string name="wifi_setup_save_success" msgid="6862510218032734919">"విజయవంతంగా సేవ్ చేయబడింది"</string>
-    <string name="device_apps_app_management_version" msgid="2119174719194899740">"సంస్కరణ <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
+    <string name="device_apps_app_management_version" msgid="2119174719194899740">"వెర్షన్‌ <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"తెరువు"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"నిర్బంధ ఆపివేత"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"మీరు యాప్‌ను నిర్బంధంగా ఆపివేస్తే, అది సరిగ్గా పని చేయకపోవచ్చు."</string>
@@ -867,7 +871,6 @@
     <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"థర్డ్-పార్టీ సోర్స్"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"అనుమతులు"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"యాప్‌ అందుబాటులో లేదు"</string>
-    <string name="unused_apps_switch" msgid="6174734963758039346">"అనుమతులను తీసివేసి స్పేస్‌ను ఖాళీ చేయండి"</string>
     <string name="unused_apps" msgid="5539166745483454543">"ఉపయోగించని యాప్‌లు"</string>
     <string name="settings_ok" msgid="5950888975075541964">"సరే"</string>
     <string name="settings_confirm" msgid="4489126458677153411">"నిర్ధారించండి"</string>
