@@ -15,36 +15,17 @@
  */
 
 import android.content.pm.UserInfo;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.os.UserHandle;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserInfoCompat implements Parcelable {
+public class UserInfoCompat {
     UserInfo mUserInfo;
-
+    public int id;
     public int restrictedProfileParentId;
-    public static final int NO_PROFILE_GROUP_ID = UserHandle.USER_NULL;
+    public static final int NO_PROFILE_GROUP_ID = UserInfo.NO_PROFILE_GROUP_ID;
 
-    protected UserInfoCompat(Parcel in) {
-        mUserInfo = in.readParcelable(UserInfo.class.getClassLoader());
-        restrictedProfileParentId = in.readInt();
-        id = in.readInt();
-    }
-
-    public static final Creator<UserInfoCompat> CREATOR = new Creator<UserInfoCompat>() {
-        @Override
-        public UserInfoCompat createFromParcel(Parcel in) {
-            return new UserInfoCompat(in);
-        }
-
-        @Override
-        public UserInfoCompat[] newArray(int size) {
-            return new UserInfoCompat[size];
-        }
-    };
 
     public UserHandle getUserHandle() {
         return mUserInfo.getUserHandle();
@@ -52,8 +33,12 @@ public class UserInfoCompat implements Parcelable {
 
     UserInfoCompat(UserInfo userInfo) {
         mUserInfo = userInfo;
-        id = userInfo.id;
+        id = mUserInfo.id;
         restrictedProfileParentId = userInfo.restrictedProfileParentId;
+    }
+
+    public int getId() {
+        return mUserInfo.id;
     }
 
     public boolean isManagedProfile() {
@@ -68,23 +53,11 @@ public class UserInfoCompat implements Parcelable {
         return mUserInfo.isAdmin();
     }
 
-    public int id;
-
     static List<UserInfoCompat> convert(List<UserInfo> infos) {
         List<UserInfoCompat> list = new ArrayList<>();
         for (UserInfo info : infos) {
             list.add(new UserInfoCompat(info));
         }
         return list;
-    }
-
-    @Override
-    public int describeContents() {
-        return mUserInfo.describeContents();
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        mUserInfo.writeToParcel(dest, flags);
     }
 }
