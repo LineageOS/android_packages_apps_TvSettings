@@ -49,4 +49,8 @@
             android:key="alarms_and_reminders"
             android:title="@string/alarms_and_reminders_title"
             android:fragment="com.android.tv.settings.device.apps.specialaccess.AlarmsAndReminders" />
+    <Preference
+        android:key="turn_screen_on"
+        android:title="@string/turn_screen_on_title"
+        android:fragment="com.android.tv.settings.device.apps.specialaccess.TurnScreenOn" />
 </PreferenceScreen>

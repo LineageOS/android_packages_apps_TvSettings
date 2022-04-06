@@ -664,8 +664,8 @@
     <string name="color_cyan" msgid="3172130225116530998">"Κυανό"</string>
     <string name="color_yellow" msgid="3519470952904560404">"Κίτρινο"</string>
     <string name="color_magenta" msgid="2377854703399624607">"Ματζέντα"</string>
-    <string name="accessibility_toggle_audio_description_preference_title" msgid="7745131783977112530">"Περιγραφή ήχου"</string>
-    <string name="accessibility_audio_description_summary" msgid="7101676957482726702">"Επιλ. ηχ. επένδ. με περιγρ. ήχου από προεπιλογή"</string>
+    <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"Περιγραφή ήχου"</string>
+    <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"Ακούστε μια περιγραφή για το τι συμβαίνει στην οθόνη σε υποστηριζόμενες ταινίες και εκπομπές"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Ενεργοποίηση"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Διαμόρφωση"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Χρήση - <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
@@ -686,8 +686,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Παρακολούθηση"</string>
     <string name="system_apps" msgid="8481888654606868074">"Εφαρμογές"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Παραμονή σε κανονική κατάσταση λειτουργίας"</string>
-    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
-    <skip />
+    <string name="keep_screen_on_summary" msgid="4680661166009970792">"Η οθόνη δεν θα μεταβαίνει ποτέ σε κατάσταση αδράνειας"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"Έλεγχος HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"Βελτιστοποίηση HDMI"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Επανεκκίνηση τώρα;"</string>
@@ -961,6 +960,9 @@
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Καμία από τις εγκατεστημένες εφαρμογές δεν υποστηρίζει τη λειτουργία picture-in-picture"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Να επιτρέπεται στις εφαρμογές να δημιουργούν ένα παράθυρο picture-in-picture ενώ η εφαρμογή είναι ανοικτή ή αφού αποχωρήσετε από αυτήν (για παράδειγμα, για να συνεχίσετε να παρακολουθείτε κάποιο βίντεο). Αυτό το παράθυρο εμφανίζεται στην κορυφή άλλων εφαρμογών που χρησιμοποιείτε."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Να επιτρέπεται σε εφαρμογές να ρυθμίζουν ξυπνητήρια και να προγραμματίζουν ενέργειες που εξαρτώνται από την ώρα. Αυτό επιτρέπει στις εφαρμογές να εκτελούνται στο παρασκήνιο, το οποίο μπορεί να έχει ως αποτέλεσμα την κατανάλωση περισσότερης ενέργειας.\n\nΑν αυτή η άδεια είναι απενεργοποιημένη, τα υπάρχοντα ξυπνητήρια και τα συμβάντα που βασίζονται στην ώρα και έχουν προγραμματιστεί από την εφαρμογή δεν θα λειτουργούν."</string>
+    <string name="turn_screen_on_title" msgid="5293798529284629011">"Ενεργοποίηση οθόνης"</string>
+    <string name="allow_turn_screen_on" msgid="4903401106871656521">"Να επιτρέπεται η ενεργοποίηση της οθόνης"</string>
+    <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Επιτρέψτε σε μια εφαρμογή να ενεργοποιεί την οθόνη. Αν παραχωρήσετε την άδεια, η εφαρμογή ενδέχεται να ενεργοποιεί την οθόνη ανά πάσα στιγμή, χωρίς να εκφράσετε σαφή πρόθεση."</string>
     <string name="special_access" msgid="21806055758289916">"Ειδική πρόσβαση εφαρμογής"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Ήχος"</string>
@@ -977,8 +979,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Εξοικονόμηση δεδομένων"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Αυτόματη προσαρμογή ποιότητας βίντεο για οικονομία δεδομένων κινητής τηλεφωνίας"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Χρήση δεδομένων και ειδοποιήσεις"</string>
-    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
-    <skip />
+    <string name="data_saver_header_info" msgid="2706725187498535785">"Μπορείτε να συνδεθείτε στο διαδίκτυο μέσω Wi-Fi, Ethernet ή του σημείου πρόσβασης Wi-Fi του τηλεφώνου σας."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Δεν επιτρέπεται η ενέργεια"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Δεν είναι δυνατή η αλλαγή της έντασης του ήχου"</string>

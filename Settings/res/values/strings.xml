@@ -652,6 +652,9 @@
     <string name="system_diagnostic">Usage &amp; diagnostics</string>
     <string name="cast_settings_title" translatable="false" />
     <string name="cast_settings_slice_uri" translatable="false" />
+    <string name="assistant_broadcast_title" translatable="false" />
+    <string name="assistant_broadcast_slice_uri" translatable="false" />
+    <string name="top_level_assistant_slice_uri" translatable="false" />
 
     <!-- Message when there are no available device admin apps to display -->
     <string name="no_device_admins">No device admin apps available</string>
@@ -1444,6 +1447,13 @@
     <string name="mic_toggle_title">Microphone access</string>
     <!-- Title for setting that opens the microphone permissions overview for all apps [CHAR LIMIT=50]-->
     <string name="open_mic_permissions">App access to microphone</string>
+    <!-- Title for info box warning that microphone hardware switch is turned off [CHAR LIMIT=50]-->
+    <string name="microphone_physical_privacy_enabled_title">Microphone access blocked</string>
+    <!-- Content for info box warning that microphone hardware switch is turned off [CHAR LIMIT=250]-->
+    <string name="microphone_physical_privacy_enabled_text">To unblock, move the privacy switch on
+        your device to the microphone on position to allow microphone access.</string>
+    <!-- Content text for info panel shown when the microphone hardware switch is turned off. [CHAR LIMIT=500]-->
+    <string name="microphone_physical_privacy_enabled_panel_text" translatable="false">@string/microphone_physical_privacy_enabled_text</string>
 
     <!-- Title for Camera settings [CHAR LIMIT=30] -->
     <string name="camera">Camera</string>
@@ -1451,6 +1461,14 @@
     <string name="camera_toggle_title">Camera access</string>
     <!-- Title for setting that opens the camera permissions overview for all apps [CHAR LIMIT=50]-->
     <string name="open_camera_permissions">App access to camera</string>
+
+    <!-- Title for info box warning that camera hardware switch is turned off [CHAR LIMIT=50]-->
+    <string name="camera_physical_privacy_enabled_title">Camera access blocked</string>
+    <!-- Content for info box warning that camera hardware switch is turned off [CHAR LIMIT=250]-->
+    <string name="camera_physical_privacy_enabled_text">To unblock, move the privacy switch on your
+        device to the camera on position to allow camera access.</string>
+    <!-- Content text for info panel shown when the camera hardware switch is turned off. [CHAR LIMIT=500]-->
+    <string name="camera_physical_privacy_enabled_panel_text" translatable="false">@string/camera_physical_privacy_enabled_text</string>
 
     <!-- Title of the info panel that is shown on the side when the microphone toggle is selected.
     The sensor_state is one of the following strings: sensor_toggle_info_on or sensor_toggle_info_off [CHAR LIMIT=30]-->
@@ -1614,9 +1632,9 @@
     <string name="color_magenta">Magenta</string>
 
     <!-- Title for the accessibility preference to audio description. [CHAR LIMIT=35] -->
-    <string name="accessibility_toggle_audio_description_preference_title">Audio Description</string>
-    <!-- Summary for the accessibility preference to audio description. [CHAR LIMIT=35] -->
-    <string name="accessibility_audio_description_summary">Select audio sound track with audio description by default</string>
+    <string name="accessibility_toggle_audio_description_preference_title">Audio description</string>
+    <!-- Summary for the accessibility preference to audio description. [CHAR LIMIT=150] -->
+    <string name="accessibility_audio_description_summary">Hear a description of what\u2019s happening on screen in supported movies and shows</string>
 
     <!-- Title for accessibility service status [CHAR LIMIT=50] -->
     <string name="system_accessibility_status">Enable</string>
@@ -2093,8 +2111,6 @@
     <string name="device_apps_app_management_permissions">Permissions</string>
     <!-- Application management toast message when an app cannot be launched [CHAR LIMIT=100]-->
     <string name="device_apps_app_management_not_available">Application unavailable</string>
-    <!-- Label of a switch preference that controls whether the system will remove the permissions and free up space when the app has not been used for months [CHAR LIMIT=40]-->
-    <string name="unused_apps_switch">Remove permissions and free up space</string>
     <!-- Label for showing apps that have not been used for months. [CHAR LIMIT=40]-->
     <string name="unused_apps">Unused apps</string>
     <!-- General settings choice for agreeing to the displayed action [CHAR LIMIT=40] -->

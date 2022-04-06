@@ -664,8 +664,8 @@
     <string name="color_cyan" msgid="3172130225116530998">"මයුර නිල්"</string>
     <string name="color_yellow" msgid="3519470952904560404">"කහ"</string>
     <string name="color_magenta" msgid="2377854703399624607">"දම්පාට තද රතු"</string>
-    <string name="accessibility_toggle_audio_description_preference_title" msgid="7745131783977112530">"ශ්‍රව්‍ය විස්තරය"</string>
-    <string name="accessibility_audio_description_summary" msgid="7101676957482726702">"පෙරනිමියෙන් ශ්‍රව්‍ය විස්තරය සහිත ශ්‍රව්‍ය හඬ ඛණ්ඩය තෝරන්න"</string>
+    <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"ශ්‍රව්‍ය විස්තරය"</string>
+    <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"සහාය දක්වන චිත්‍රපට සහ සංදර්ශනවල තිරය මත සිදු වන දේ පිළිබඳ විස්තරයක් අසන්න"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"සබල කරන්න"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"වින්‍යාසය"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"<xliff:g id="SERVICE">%1$s</xliff:g> භාවිත කරන්න ද?"</string>
@@ -686,8 +686,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"නිරීක්ෂණය"</string>
     <string name="system_apps" msgid="8481888654606868074">"යෙදුම්"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"අවදියෙන් සිටින්න"</string>
-    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
-    <skip />
+    <string name="keep_screen_on_summary" msgid="4680661166009970792">"තිරය කිසිදා නිද්‍රාවට පත් නොවනු ඇත"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP පරික්ෂාව"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI ප්‍රශස්තිකරණය"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"දැන් නැවත අරඹන්න ද?"</string>
@@ -961,6 +960,9 @@
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"පින්තූරය-තුළ-පින්තූරය සඳහා ස්ථාපනය කළ යෙදුම් සහාය නොදක්වයි"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"මෙම යෙදුම විවෘතව තිබෙන අතරතුර හෝ එයින් ඉවත් වන විට පින්තූරය-තුළ-පින්තූරය කවුළුවක් සැදීමට ඉඩ දෙන්න (උදාහරණයකට, වීඩියෝව දිගටම බැලීමට). මෙම කවුළුව ඔබ භාවිතා කරන අනෙක් යෙදුම් උඩින් පෙන්වයි."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"එලාම සැකසීමට සහ කාල සංවේදී ක්‍රියා කාල සටහන්ගත කිරීමට යෙදුම්වලට ඉඩ දෙන්න. මෙය පසුබිමේ ධාවනය වීමට යෙදුම්වලට ඉඩ දෙයි, එය වැඩි බලය වැඩියෙන් භාවිත කළ හැකිය.\n\nමෙම අවසරය ක්‍රියාවිරහිත නම්, යෙදුම මඟින් සැලසුම් කර ඇති තිබෙන එලාම සහ වේලාව පදනම් කර ගත් සිදුවීම් ක්‍රියා නොකරනු ඇත."</string>
+    <string name="turn_screen_on_title" msgid="5293798529284629011">"තිරය ක්‍රියාත්මක කරන්න"</string>
+    <string name="allow_turn_screen_on" msgid="4903401106871656521">"තිරය ක්‍රියාත්මක කිරීමට ඉඩ දෙන්න"</string>
+    <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"යෙදුමකට තිරය ක්‍රියාත්මක කිරීමට ඉඩ දෙන්න. ඉඩ දුනහොත්, යෙදුම ඔබගේ පැහැදිලි අභිප්‍රායෙන් තොරව ඕනෑම වේලාවක තිරය ක්‍රියාත්මක කළ හැකිය."</string>
     <string name="special_access" msgid="21806055758289916">"විශේෂ යෙදුම් ප්‍රවේශය"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"ශ්‍රව්‍ය"</string>
@@ -977,8 +979,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"දත්ත සුරැකුම"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"ජංගම දත්ත අඩුවෙන් භාවිත කිරීමට වීඩියෝ ගුණත්වය ස්වයංක්‍රීයව ගළපන්න"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"දත්ත භාවිතය සහ ඇඟවීම්"</string>
-    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
-    <skip />
+    <string name="data_saver_header_info" msgid="2706725187498535785">"ඔබට Wi-Fi, ඊතර්නෙට් හෝ ඔබගේ දුරකථනයෙහි හොට්ස්පොට් සමග අන්තර්ජාලයට සම්බන්ධ විය හැකිය."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"ක්‍රියාවට ඉඩ නොදේ"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"හඬ පරිමාව වෙනස් කළ නොහැකිය"</string>

@@ -66,6 +66,7 @@ import com.android.tv.settings.accounts.AccountsFragment;
 import com.android.tv.settings.accounts.AccountsUtil;
 import com.android.tv.settings.connectivity.ActiveNetworkProvider;
 import com.android.tv.settings.connectivity.ConnectivityListener;
+import com.android.tv.settings.connectivity.ConnectivityListenerLite;
 import com.android.tv.settings.library.overlay.FlavorUtils;
 import com.android.tv.settings.library.util.SliceUtils;
 import com.android.tv.settings.suggestions.SuggestionPreference;
@@ -136,7 +137,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         }
     };
 
-    private ActiveNetworkProvider mActiveNetworkProvider;
+    private ConnectivityListenerLite mConnectivityListenerLite;
 
     public static MainFragment newInstance() {
         return new MainFragment();
@@ -167,7 +168,8 @@ public class MainFragment extends PreferenceControllerFragment implements
     public void onCreate(Bundle savedInstanceState) {
         mSuggestionQuickSettingPrefsContainer.onCreate();
         if (isWifiScanOptimisationEnabled()) {
-            mActiveNetworkProvider = new ActiveNetworkProvider(getContext());
+            mConnectivityListenerLite = new ConnectivityListenerLite(
+                    getContext(), this::updateConnectivityType, getLifecycle());
             mConnectivityListenerOptional = Optional.empty();
         } else {
             mConnectivityListenerOptional = Optional.of(new ConnectivityListener(
@@ -195,7 +197,7 @@ public class MainFragment extends PreferenceControllerFragment implements
         updateAccountPref();
         updateAccessoryPref();
         if (isWifiScanOptimisationEnabled()) {
-            updateConnectivityType();
+            mConnectivityListenerLite.handleConnectivityChange();
         } else {
             updateConnectivity();
         }
@@ -204,23 +206,28 @@ public class MainFragment extends PreferenceControllerFragment implements
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
-    private void updateConnectivityType() {
+    private void updateConnectivityType(ActiveNetworkProvider activeNetworkProvider) {
         final Preference networkPref = findPreference(KEY_NETWORK);
         if (networkPref == null) {
             return;
         }
 
-        if (mActiveNetworkProvider.isTypeCellular()) {
+        if (activeNetworkProvider.isTypeCellular()) {
             networkPref.setIcon(R.drawable.ic_cell_signal_4_white);
-        } else if (mActiveNetworkProvider.isTypeEthernet()) {
+        } else if (activeNetworkProvider.isTypeEthernet()) {
             networkPref.setIcon(R.drawable.ic_ethernet_white);
             networkPref.setSummary(R.string.connectivity_summary_ethernet_connected);
-        } else if (mActiveNetworkProvider.isTypeWifi()) {
+        } else if (activeNetworkProvider.isTypeWifi()) {
             networkPref.setIcon(R.drawable.ic_wifi_signal_4_white);
-            networkPref.setSummary(mActiveNetworkProvider.getSsid());
+            networkPref.setSummary(activeNetworkProvider.getSsid());
         } else {
-            networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
-            networkPref.setSummary(R.string.connectivity_summary_wifi_disabled);
+            if (activeNetworkProvider.isWifiEnabled()) {
+                networkPref.setIcon(R.drawable.ic_wifi_not_connected);
+                networkPref.setSummary(R.string.connectivity_summary_no_network_connected);
+            } else {
+                networkPref.setIcon(R.drawable.ic_wifi_signal_off_white);
+                networkPref.setSummary(R.string.connectivity_summary_wifi_disabled);
+            }
         }
     }
 

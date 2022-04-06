@@ -594,9 +594,9 @@
     <string name="camera_toggle_title" msgid="5566469574224956142">"Pääsy kameraan"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"Sovelluksen pääsy kameraan"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Pääsy mikrofoniin: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Kun lupa on päällä, kaikki sovellukset ja palvelut, joilla se on, voivat käyttää kaikkia laitteen mikrofoneja.\n\nTämä asetus ei vaikuta audiolisälaitteisiin, joilla on oma protokolla."</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Kun lupa on päällä, kaikki sovellukset ja palvelut, joilla se on, saavat pääsyoikeuden kaikkiin laitteen mikrofoneihin.\n\nTämä asetus ei vaikuta audiolisälaitteisiin, joilla on oma protokolla."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Pääsy kameraan: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Kun lupa on päällä, kaikki sovellukset ja palvelut, joilla se on, voivat käyttää kaikkia laitteen kameroita.\n\nTämä asetus ei vaikuta kameralisälaitteisiin, joilla on oma protokolla."</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Kun lupa on päällä, kaikki sovellukset ja palvelut, joilla se on, saavat pääsyoikeuden kaikkiin laitteen kameroihin.\n\nTämä asetus ei vaikuta kameralisälaitteisiin, joilla on oma protokolla."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Päällä"</string>
     <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Poissa päältä"</string>
     <string name="system_location" msgid="4057295363709016511">"Sijainti"</string>
@@ -664,8 +664,8 @@
     <string name="color_cyan" msgid="3172130225116530998">"Turkoosi"</string>
     <string name="color_yellow" msgid="3519470952904560404">"Keltainen"</string>
     <string name="color_magenta" msgid="2377854703399624607">"Magenta"</string>
-    <string name="accessibility_toggle_audio_description_preference_title" msgid="7745131783977112530">"Audiokuvaus"</string>
-    <string name="accessibility_audio_description_summary" msgid="7101676957482726702">"Valitse audion ääniraita, jossa on oletuksena audiokuvaus"</string>
+    <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"Audiokuvaus"</string>
+    <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"Kuule kuvaus tapahtumista näytöllä"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Ota käyttöön"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Määritykset"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Käytetäänkö <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
@@ -686,8 +686,7 @@
     <string name="system_monitoring" msgid="7997260748312620855">"Valvonta"</string>
     <string name="system_apps" msgid="8481888654606868074">"Sovellukset"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Pysy käynnissä"</string>
-    <!-- no translation found for keep_screen_on_summary (4680661166009970792) -->
-    <skip />
+    <string name="keep_screen_on_summary" msgid="4680661166009970792">"Näyttö ei koskaan sammu"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP-tarkistus"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI-optimointi"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Käynnistetäänkö uudelleen?"</string>
@@ -961,6 +960,9 @@
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Mikään asennettu sovellus ei tue kuva kuvassa ‑toimintoa."</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Anna sovelluksille lupa luoda Kuva kuvassa ‑ikkuna, kun sovellus on auki tai kun olet poistunut siitä (esimerkiksi takaisin katsomaan videota). Tämä ikkuna näytetään muiden sovellusten ikkunoiden päällä."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Anna sovellusten lisätä herätyksiä ja ajoittaa kiireellisiä tapahtumia. Näin sovellukset voivat toimia taustalla, mikä voi kuluttaa enemmän virtaa.\n\nIlman tätä lupaa sovellusten ajoittamat herätykset ja aikaan perustuvat tapahtumat eivät toimi."</string>
+    <string name="turn_screen_on_title" msgid="5293798529284629011">"Käynnistä näyttö"</string>
+    <string name="allow_turn_screen_on" msgid="4903401106871656521">"Salli näytön käynnistäminen"</string>
+    <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Salli sovelluksen käynnistää näyttö. Jos sovellus saa luvan, se voi käynnistää näytön itsenäisesti milloin tahansa."</string>
     <string name="special_access" msgid="21806055758289916">"Erityisoikeudet"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Ääni"</string>
@@ -977,8 +979,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Data Saver"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Säädä videoiden laatua automaattisesti mobiilidatan käytön vähentämiseksi"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Datan käyttö ja ilmoitukset"</string>
-    <!-- no translation found for data_saver_header_info (2706725187498535785) -->
-    <skip />
+    <string name="data_saver_header_info" msgid="2706725187498535785">"Voit yhdistää verkkoon langattomasti, Ethernetillä tai puhelimesi hotspotilla."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Toiminto ei ole sallittu"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Äänenvoimakkuutta ei voi muuttaa"</string>

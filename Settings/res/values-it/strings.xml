@@ -45,7 +45,7 @@
     <string name="add_an_account" msgid="2601275122685226096">"Aggiungi un account"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"Account e accesso"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Nessun account"</string>
-    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# account}one{# account}other{# account}}"</string>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# account}other{# account}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Servizi multimediali, Assistente, Pagamenti"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"Rete e Internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Suono"</string>
@@ -282,12 +282,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Nessuna azione"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"App installate"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Il numero di app è una stima che potrebbe non includere le app installate da fonti diverse dal Play Store."</string>
-    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Almeno # app}one{Almeno # app}other{Almeno # app}}"</string>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Almeno # app}other{Almeno # app}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Autorizzazioni di accesso alla posizione"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Autorizzazioni microfono"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Autorizzazioni fotocamera"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"App predefinite"</string>
-    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# app}one{# app}other{# app}}"</string>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# app}other{# app}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Tastiera predefinita"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Metodo impostato: <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"Opzione VPN sempre attiva attivata"</string>
@@ -297,22 +297,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"Credenziali attendibili"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"Credenziali attendibili nel profilo personale"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"Credenziali attendibili nel profilo di lavoro"</string>
-    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# certificato CA}one{# certificato CA}other{# certificati CA}}"</string>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# certificato CA}other{# certificati CA}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"L\'amministratore può bloccare il dispositivo e reimpostare la password"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"L\'amministratore può eliminare tutti i dati del dispositivo"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"Tentativi di inserimento della password non riusciti prima dell\'eliminazione di tutti i dati del dispositivo"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"Tentativi di inserimento della password non riusciti prima dell\'eliminazione dei dati del profilo di lavoro"</string>
-    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# tentativo}one{# tentativo}other{# tentativi}}"</string>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# tentativo}other{# tentativi}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Questo dispositivo è gestito dalla tua organizzazione."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Questo dispositivo è gestito da <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Ulteriori informazioni"</string>
-    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{App fotocamera}one{App fotocamera}other{App fotocamera}}"</string>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{App fotocamera}other{App fotocamera}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"App di calendario"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"App di contatti"</string>
-    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{App client di posta}one{App client di posta}other{App client di posta}}"</string>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{App client di posta}other{App client di posta}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"App di mappe"</string>
-    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{App telefono}one{App telefono}other{App telefono}}"</string>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{App telefono}other{App telefono}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"App browser"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -331,7 +331,7 @@
     <string name="about_version" msgid="6223547403835399861">"Versione sistema operativo Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"Numero di serie"</string>
     <string name="about_build" msgid="8467840394761634575">"Build sistema operativo Android TV"</string>
-    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Ti manca # passaggio per diventare sviluppatore}one{Ti manca # passaggio per diventare sviluppatore}other{Ti mancano # passaggi per diventare sviluppatore}}"</string>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Ti manca # passaggio per diventare sviluppatore}other{Ti mancano # passaggi per diventare sviluppatore}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Annunci"</string>
     <string name="ads_description" msgid="8081069475265061074">"Gestisci le impostazioni degli annunci, ad esempio reimpostando il tuo ID pubblicità."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Annunci, Gestisci le impostazioni degli annunci, ad esempio reimpostando il tuo ID pubblicità."</string>
@@ -345,7 +345,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"Ulteriori aggiornamenti di sistema"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"La rete potrebbe essere monitorata"</string>
     <string name="done_button" msgid="616159688526431451">"Fine"</string>
-    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Considera attendibile il certificato o rimuovilo}one{Considera attendibile il certificato o rimuovilo}other{Considera attendibili i certificati o rimuovili}}"</string>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{Considera attendibile il certificato o rimuovilo}other{Considera attendibili i certificati o rimuovili}}"</string>
     <string name="device_status" msgid="8266002761193692207">"Stato"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Rete, numeri di serie e altre informazioni"</string>
     <string name="manual" msgid="5683935624321864999">"Manuale"</string>
@@ -664,8 +664,8 @@
     <string name="color_cyan" msgid="3172130225116530998">"Ciano"</string>
     <string name="color_yellow" msgid="3519470952904560404">"Giallo"</string>
     <string name="color_magenta" msgid="2377854703399624607">"Magenta"</string>
-    <string name="accessibility_toggle_audio_description_preference_title" msgid="7745131783977112530">"Descrizione audio"</string>
-    <string name="accessibility_audio_description_summary" msgid="7101676957482726702">"Seleziona tracce con descrizione audio per impostazione predefinita"</string>
+    <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"Descrizione audio"</string>
+    <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"Ascolta la descrizione di ciò che accade sullo schermo in film e programmi supportati"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Attiva"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Configurazione"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Utilizzare <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
@@ -807,9 +807,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Scollega dispositivi HDMI dalla TV"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Alimentaz. automat. TV attiva"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Collega la TV al dispositivo HDMI"</string>
-    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Ingresso collegato}one{Ingresso collegato}other{Ingressi collegati}}"</string>
-    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Ingresso in standby}one{Ingresso in standby}other{Ingressi in standby}}"</string>
-    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Ingresso non collegato}one{Ingresso non collegato}other{Ingressi non collegati}}"</string>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{Ingresso collegato}other{Ingressi collegati}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{Ingresso in standby}other{Ingressi in standby}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{Ingresso non collegato}other{Ingressi non collegati}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"Limita l\'accesso ad app e altri contenuti nel tuo account"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"Profilo con limitazioni"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"Controllata da <xliff:g id="APP">%1$s</xliff:g>"</string>
@@ -960,6 +960,9 @@
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Nessuna app installata supporta la modalità Picture in picture"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Consenti alle app di creare una finestra Picture in picture quando l\'app è aperta o dopo l\'uscita (ad esempio, per continuare a guardare un video). Questa finestra viene visualizzata sopra le altre app in uso."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Consenti alle app di impostare sveglie e programmare azioni per le quali il fattore temporale è decisivo. Le app potranno così essere eseguite in background, comportando un consumo maggiore della batteria.\n\nSe questa autorizzazione viene disattivata, le sveglie esistenti e gli eventi basati sull\'orario programmati dalle app non funzioneranno."</string>
+    <string name="turn_screen_on_title" msgid="5293798529284629011">"Attiva lo schermo"</string>
+    <string name="allow_turn_screen_on" msgid="4903401106871656521">"Consenti l\'attivazione dello schermo"</string>
+    <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Consenti a un\'app di attivare lo schermo. Se la autorizzi, l\'app può attivare lo schermo in qualsiasi momento senza la tua autorizzazione esplicita."</string>
     <string name="special_access" msgid="21806055758289916">"Accesso speciale per le app"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audio"</string>
