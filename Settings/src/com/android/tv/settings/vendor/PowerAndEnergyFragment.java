@@ -19,19 +19,33 @@ package com.android.tv.settings.vendor;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
+import androidx.preference.Preference;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.customization.CustomizationConstants;
 import com.android.tv.settings.customization.Partner;
 import com.android.tv.settings.customization.PartnerPreferencesMerger;
+import com.android.tv.settings.library.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 /** A vendor version power and energy settings. */
 @Keep
 public class PowerAndEnergyFragment extends SettingsPreferenceFragment {
+    private static final String KEY_ECO_SETTINGS = "eco_settings";
+
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
         setPreferencesFromResource(R.xml.power_and_energy_vendor, null);
+
+        final Preference ecoSettingsPreference = findPreference(KEY_ECO_SETTINGS);
+        if (ecoSettingsPreference != null && SliceUtils.isSettingsSliceEnabled(
+                getContext(),
+                ((SlicePreference) ecoSettingsPreference).getUri(),
+                null)) {
+            ecoSettingsPreference.setVisible(true);
+        }
+
         if (Partner.getInstance(getContext()).isCustomizationPackageProvided()) {
             PartnerPreferencesMerger.mergePreferences(
                     getContext(),

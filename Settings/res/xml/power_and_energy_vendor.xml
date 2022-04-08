@@ -32,4 +32,12 @@
         android:key="energysaver"
         android:title="@string/device_energy_saver"/>
 
+    <com.android.tv.twopanelsettings.slices.SlicePreference
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        android:key="eco_settings"
+        android:title="@string/device_eco_settings"
+        android:icon="@drawable/ic_settings_eco"
+        custom:isPreferenceVisible="false"
+        custom:uri="@string/eco_settings_slice_uri"/>
+
 </PreferenceScreen>

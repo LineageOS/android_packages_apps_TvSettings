@@ -241,6 +241,8 @@
     <string name="device_calibration">Calibration</string>
     <!-- Preference which changes energy saver settings. [CHAR LIMIT=50] -->
     <string name="device_energy_saver">Energy saver</string>
+    <!-- Preference which changes eco settings. [CHAR LIMIT=50] -->
+    <string name="device_eco_settings">Eco settings</string>
     <!-- Preference which shows internal settings. [CHAR LIMIT=50] -->
     <string name="overlay_internal_slice_title"/>
     <string name="overlay_internal_slice_uri" translatable="false"/>
@@ -2151,6 +2153,16 @@
     <string name="device_energy_saver_confirmation_title">Confirm Energy Saver setting</string>
     <!-- The description of dialog asking users to confirm long screen off delay. [CHAR LIMIT=250] -->
     <string name="device_energy_saver_confirmation_text">Please confirm new setting to <xliff:g id="sleep_time" example="8 hours">%1$s</xliff:g>, which has the potential for increased energy use.</string>
+    <!-- The title of the "Limit network connection in standby" toggle. [CHAR LIMIT=40] -->
+    <string name="limit_network_in_standby_toggle_title">Limit network connection in standby</string>
+    <!-- The subtitle of the "Limit network connection in standby" toggle. [CHAR LIMIT=60] -->
+    <string name="limit_network_in_standby_toggle_summary">Uses less energy in standby mode</string>
+    <!-- The info text for the "Limit network connection in standby" toggle. [CHAR LIMIT=NONE] -->
+    <string name="limit_network_in_standby_toggle_info">Your TV will be disconnected from your network when in standby mode, except to receive automatic updates. This may decrease your TV’s energy use, though it also means you may not be able to use functions like Cast and Google Assistant while in standby.</string>
+    <!-- The title of the confirmation dialog when disabling "Limit network connection in standby". [CHAR LIMIT=60] -->
+    <string name="limit_network_in_standby_confirm_title">Allow network connection in standby</string>
+    <!-- The message of the confirmation dialog when disabling "Limit network connection in standby". [CHAR LIMIT=NONE] -->
+    <string name="limit_network_in_standby_confirm_message">Allowing network connection in standby will increase standby energy use.</string>
     <!-- Default summary text of the "Configure backup account" setting [CHAR LIMIT=80] -->
     <string name="backup_configure_account_default_summary">No account is currently storing backed up data</string>
     <!-- Dialog title for confirmation to erase backup data from server -->
@@ -2578,6 +2590,8 @@
     <!-- Title of power on behavior item [CHAR LIMIT=60] -->
     <string name="power_on_behavior">Power on behavior</string>
     <string name="power_boot_resume_slice_uri" translatable="false" />
+    <!-- Slice Uri for Eco settings [CHAR LIMIT=NONE] -->
+    <string name="eco_settings_slice_uri" translatable="false">content://com.android.tv.settings.device.sliceprovider/eco_settings</string>
     <!-- Title of the Reset section, which lets user select from factory reset or other reset related operations. [CHAR LIMIT=60] -->
     <string name="reset_options_title">Reset</string>
 
