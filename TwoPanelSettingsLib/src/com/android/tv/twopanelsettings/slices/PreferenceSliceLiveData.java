@@ -71,9 +71,21 @@ public final class PreferenceSliceLiveData {
             mSliceViewManager = SliceViewManager.getInstance(context);
             mUri = uri;
             mIntent = null;
+            // TODO: Check if uri points at a Slice?
+        }
+
+        @Override
+        protected void onActive() {
             AsyncTask.execute(mUpdateSlice);
             if (mUri != null) {
                 mSliceViewManager.registerSliceCallback(mUri, mSliceCallback);
+            }
+        }
+
+        @Override
+        protected void onInactive() {
+            if (mUri != null) {
+                mSliceViewManager.unregisterSliceCallback(mUri, mSliceCallback);
             }
         }
 
