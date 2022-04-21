@@ -183,6 +183,14 @@ public class BluetoothDevicePairer {
                 isCompatible = true;
             }
 
+            if ((sources & InputDevice.SOURCE_MOUSE) == InputDevice.SOURCE_MOUSE) {
+                isCompatible = true;
+            }
+
+            if ((sources & InputDevice.SOURCE_JOYSTICK) == InputDevice.SOURCE_JOYSTICK) {
+                isCompatible = true;
+            }
+
             if ((sources & InputDevice.SOURCE_KEYBOARD) == InputDevice.SOURCE_KEYBOARD) {
                 boolean isValidKeyboard = true;
                 String keyboardName = device.getName();
