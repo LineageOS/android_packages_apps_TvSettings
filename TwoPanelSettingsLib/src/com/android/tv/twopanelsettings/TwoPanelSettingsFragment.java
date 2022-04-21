@@ -738,6 +738,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
         @Override
         public boolean onKey(View v, int keyCode, KeyEvent event) {
+            if (!isAdded()) {
+                Log.d(TAG, "Fragment not attached yet.");
+                return true;
+            }
             Fragment prefFragment =
                     getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
 
@@ -784,6 +788,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     private void forward() {
+        if (!isAdded()) {
+            Log.d(TAG, "Fragment not attached yet.");
+            return;
+        }
         final TwoPanelSettingsRootView rootView = (TwoPanelSettingsRootView) getView();
         if (shouldPerformClick()) {
             rootView.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,
@@ -819,6 +827,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     private boolean back(boolean isKeyBackPressed) {
+        if (!isAdded()) {
+            Log.d(TAG, "Fragment not attached yet.");
+            return true;
+        }
         if (mIsNavigatingBack) {
             mHandler.postDelayed(new Runnable() {
                 @Override
