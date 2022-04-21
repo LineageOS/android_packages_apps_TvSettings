@@ -595,6 +595,9 @@ public class AddAccessoryActivity extends FragmentActivity
                 case BluetoothDevicePairer.STATUS_ERROR:
                     state = "BluetoothDevicePairer.STATUS_ERROR";
                     break;
+                case BluetoothDevicePairer.STATUS_SUCCEED_BREDRMOUSE:
+                    state = "BluetoothDevicePairer.STATUS_SUCCEED_BREDRMOUSE";
+                    break;
             }
             long time = mBluetoothPairer.getNextStageTime() - SystemClock.elapsedRealtime();
             Log.d(TAG, "Update received, number of devices:" + numDevices + " state: " +
@@ -662,6 +665,16 @@ public class AddAccessoryActivity extends FragmentActivity
                     clearDeviceList();
                 }
                 break;
+            case BluetoothDevicePairer.STATUS_SUCCEED_BREDRMOUSE:
+                // Pairing complete
+                mCurrentTargetStatus = getString(R.string.accessory_state_paired);
+                mMsgHandler.sendEmptyMessage(MSG_UPDATE_VIEW);
+                mMsgHandler.sendEmptyMessageDelayed(MSG_PAIRING_COMPLETE,
+                        DONE_MESSAGE_TIMEOUT);
+                mDone = true;
+                // Done, return here and just wait for the message
+                // to close the activity
+                return;
         }
 
         mCurrentTargetAddress = address;
