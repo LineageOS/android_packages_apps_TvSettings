@@ -137,21 +137,23 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         Display.Mode autoMode = display.getSystemPreferredDisplayMode();
         pref.setSummary(ResolutionSelectionUtils.getResolutionString(
                         autoMode.getPhysicalWidth(), autoMode.getPhysicalHeight()) + " "
-                + ResolutionSelectionUtils.getRefreshRateString(autoMode.getRefreshRate()));
+                + ResolutionSelectionUtils.getRefreshRateString(
+                        getContext().getResources(), autoMode.getRefreshRate()));
         mResolutionPreferenceCategory.addPreference(pref);
 
         for (int i = 0; i < mModes.length; i++) {
-            mResolutionPreferenceCategory.addPreference(createResolutionPreference(
-                    ResolutionSelectionUtils.getResolutionString(
-                            mModes[i].getPhysicalWidth(), mModes[i].getPhysicalHeight()),
-                    ResolutionSelectionUtils.getRefreshRateString(mModes[i].getRefreshRate()),
-                    i));
+            mResolutionPreferenceCategory.addPreference(createResolutionPreference(mModes[i], i));
         }
     }
 
     /** Returns a radio preference for each display mode. */
-    private RadioPreference createResolutionPreference(
-            String title, String summary, int resolution) {
+    private RadioPreference createResolutionPreference(Display.Mode mode, int resolution) {
+        String title = ResolutionSelectionUtils.getResolutionString(
+                mode.getPhysicalWidth(), mode.getPhysicalHeight())
+                + " (" + ResolutionSelectionUtils.getRefreshRateString(
+                        getContext().getResources(), mode.getRefreshRate()) + ")";
+
+        String summary = mode.getPhysicalWidth() + " x " + mode.getPhysicalHeight();
         RadioPreference pref = new RadioPreference(getContext());
         pref.setTitle(title);
         pref.setSummary(summary);
