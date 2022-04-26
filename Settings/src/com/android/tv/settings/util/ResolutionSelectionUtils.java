@@ -17,6 +17,7 @@
 package com.android.tv.settings.util;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.view.Display;
 
 import com.android.tv.settings.R;
@@ -28,12 +29,13 @@ public class ResolutionSelectionUtils {
      * Returns the refresh rate converted to a string. If the refresh rate has only 0s after the
      * floating point, they are removed. The unit "Hz" is added to end of refresh rate.
      */
-    public static String getRefreshRateString(float refreshRate) {
+    public static String getRefreshRateString(Resources resources, float refreshRate) {
         float roundedRefreshRate = Math.round(refreshRate * 100.0f) / 100.0f;
         if (roundedRefreshRate % 1 == 0) {
-            return ((int) roundedRefreshRate) + " Hz";
+            return ((int) roundedRefreshRate) + " "
+                    + resources.getString(R.string.resolution_selection_hz);
         } else {
-            return roundedRefreshRate + " Hz";
+            return roundedRefreshRate + " " + resources.getString(R.string.resolution_selection_hz);
         }
     }
 
@@ -58,7 +60,7 @@ public class ResolutionSelectionUtils {
             return context.getString(R.string.resolution_selection_auto_title);
         }
         String modeString = getResolutionString(mode.getPhysicalWidth(), mode.getPhysicalHeight());
-        modeString += " " + getRefreshRateString(mode.getRefreshRate());
+        modeString += " " + getRefreshRateString(context.getResources(), mode.getRefreshRate());
         return modeString;
     }
 }
