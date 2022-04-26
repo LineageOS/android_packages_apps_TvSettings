@@ -115,22 +115,22 @@ public class ResolutionSelectionFragmentTest {
         Preference modePreference = fragment.getPreferenceScreen().getPreference(0);
         assertThat(getChildrenTitles(modePreference)).containsExactly(
                 fragment.getContext().getString(R.string.resolution_selection_auto_title),
-                "4k",
-                "4k",
-                "576p",
-                "800p",
-                "800p",
-                "600p",
-                "600p");
+                "4k (60 Hz)",
+                "4k (59.94 Hz)",
+                "576p (60 Hz)",
+                "800p (120 Hz)",
+                "800p (60 Hz)",
+                "600p (120 Hz)",
+                "600p (59.94 Hz)");
 
         assertThat(getChildrenSummaries(modePreference)).containsExactly(
-                "60 Hz",
-                "59.94 Hz",
-                "60 Hz",
-                "120 Hz",
-                "60 Hz",
-                "120 Hz",
-                "59.94 Hz");
+                "2160 x 2160",
+                "2160 x 2160",
+                "576 x 576",
+                "800 x 1200",
+                "800 x 1200",
+                "600 x 800",
+                "600 x 800");
     }
 
     @Test
