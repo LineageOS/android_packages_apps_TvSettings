@@ -56,11 +56,6 @@ public class AddAccessoryActivity extends FragmentActivity
     private static final boolean DEBUG = false;
     private static final String TAG = "AddAccessoryActivity";
 
-    static final String ACTION_CONNECT_INPUT =
-            "com.google.android.intent.action.CONNECT_INPUT";
-
-    private static final String INTENT_EXTRA_NO_INPUT_MODE = "no_input_mode";
-
     private static final String SAVED_STATE_PREFERENCE_FRAGMENT =
             "AddAccessoryActivity.PREFERENCE_FRAGMENT";
     private static final String SAVED_STATE_CONTENT_FRAGMENT =
@@ -69,6 +64,11 @@ public class AddAccessoryActivity extends FragmentActivity
             "AddAccessoryActivity.BLUETOOTH_DEVICES";
 
     private static final String ADDRESS_NONE = "NONE";
+
+    public static final String ACTION_CONNECT_INPUT =
+            "com.google.android.intent.action.CONNECT_INPUT";
+
+    public static final String INTENT_EXTRA_NO_INPUT_MODE = "no_input_mode";
 
     private static final int AUTOPAIR_COUNT = 10;
 
@@ -336,7 +336,7 @@ public class AddAccessoryActivity extends FragmentActivity
         if (ACTION_CONNECT_INPUT.equals(intent.getAction()) &&
                 (intent.getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) == 0) {
 
-            KeyEvent event = intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT);
+            KeyEvent event = intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT, KeyEvent.class);
             if (event != null && event.getKeyCode() == KeyEvent.KEYCODE_PAIRING) {
                 if (event.getAction() == KeyEvent.ACTION_UP) {
                     onHwKeyEvent(false);
