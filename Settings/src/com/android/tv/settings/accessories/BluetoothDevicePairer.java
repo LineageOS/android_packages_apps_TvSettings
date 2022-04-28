@@ -98,6 +98,11 @@ public class BluetoothDevicePairer {
      * Device has been paired with, we are opening a connection to the device.
      */
     public static final int STATUS_CONNECTING = 4;
+    /**
+     * BR/EDR mice need to be handled separately because of the unique
+     * connection establishment sequence.
+     */
+    public static final int STATUS_SUCCEED_BREDRMOUSE = 5;
 
 
     public interface EventListener {
@@ -180,6 +185,14 @@ public class BluetoothDevicePairer {
             }
 
             if ((sources & InputDevice.SOURCE_GAMEPAD) == InputDevice.SOURCE_GAMEPAD) {
+                isCompatible = true;
+            }
+
+            if ((sources & InputDevice.SOURCE_MOUSE) == InputDevice.SOURCE_MOUSE) {
+                isCompatible = true;
+            }
+
+            if ((sources & InputDevice.SOURCE_JOYSTICK) == InputDevice.SOURCE_JOYSTICK) {
                 isCompatible = true;
             }
 
@@ -596,7 +609,17 @@ public class BluetoothDevicePairer {
     }
 
     private void onBonded() {
-        openConnection();
+        BluetoothDevice target = getTargetDevice();
+        if (!(target.getBluetoothClass().getDeviceClass()
+                    == BluetoothClass.Device.PERIPHERAL_POINTING)
+                || !(target.getType() == BluetoothDevice.DEVICE_TYPE_CLASSIC)) {
+            openConnection();
+        } else if (target.isConnected()) {
+            setStatus(STATUS_SUCCEED_BREDRMOUSE);
+        } else {
+            Log.w(TAG, "There was an error connect by BR/EDR Mouse.");
+            setStatus(STATUS_ERROR);
+        }
     }
 
     private void openConnection() {
