@@ -126,4 +126,31 @@ public final class PartnerResourcesParser {
         parseGenericPreferenceAttributes(name, preference);
         return preference;
     }
+
+    String[] getOrderedPreferences() {
+        final List<String> orderedPreferences = new ArrayList<>();
+        iteratePreferences(orderedPreferences,
+                String.format("%s_preferences", mSettingsScreen));
+        return orderedPreferences.toArray(String[]::new);
+    }
+
+    private void iteratePreferences(List<String> orderedPreferences, String preferencesResource) {
+        final String[] preferences = Partner.getInstance(mContext).getArray(preferencesResource);
+        if (preferences == null) {
+            Log.i(TAG, "Ordered preference list not found");
+            return;
+        }
+        for (final String preference : preferences) {
+            orderedPreferences.add(preference);
+            // Check to see if it is a PreferenceGroup, in which case, recursively
+            // iterate through the PreferenceGroup to list all its Preferences
+            final String nestedPreferencesResource = String.format(
+                    "%s_%s_preferences", mSettingsScreen, preference);
+            final String[] nestedPreferences = Partner.getInstance(mContext)
+                    .getArray(nestedPreferencesResource);
+            if (nestedPreferences != null && nestedPreferences.length > 0) {
+                iteratePreferences(orderedPreferences, nestedPreferencesResource);
+            }
+        }
+    }
 }
