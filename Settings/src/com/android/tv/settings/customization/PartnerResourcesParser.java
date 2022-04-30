@@ -38,6 +38,8 @@ public final class PartnerResourcesParser {
     private final Context mContext;
     private final String mSettingsScreen;
 
+    static final String PREFERENCE_GROUP_END_INDICATOR = "=";
+
     /**
      * Create an instance of the parser for the particular settings screen
      * @param context TvSettings application context
@@ -152,5 +154,9 @@ public final class PartnerResourcesParser {
                 iteratePreferences(orderedPreferences, nestedPreferencesResource);
             }
         }
+        // This is necessary to know when a nested PreferenceGroup ends
+        // so the preferences after this are correctly added to the
+        // parent PreferenceGroup
+        orderedPreferences.add(PREFERENCE_GROUP_END_INDICATOR);
     }
 }
