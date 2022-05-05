@@ -30,4 +30,6 @@ public final class CustomizationConstants {
     public static final String DISPLAY_PREVIEW_SCREEN = "preview_display";
 
     public static final String DEVICE_SCREEN = "device";
+
+    public static final String ABOUT_SCREEN = "device_info";
 }

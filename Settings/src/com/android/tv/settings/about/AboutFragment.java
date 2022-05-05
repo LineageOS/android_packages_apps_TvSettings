@@ -59,6 +59,9 @@ import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.customization.CustomizationConstants;
+import com.android.tv.settings.customization.Partner;
+import com.android.tv.settings.customization.PartnerPreferencesMerger;
 import com.android.tv.settings.name.DeviceManager;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference;
@@ -141,6 +144,13 @@ public class AboutFragment extends SettingsPreferenceFragment {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(getPreferenceScreenResId(), null);
         final PreferenceScreen screen = getPreferenceScreen();
+        if (Partner.getInstance(getContext()).isCustomizationPackageProvided()) {
+            PartnerPreferencesMerger.mergePreferences(
+                    getContext(),
+                    screen,
+                    CustomizationConstants.ABOUT_SCREEN
+            );
+        }
 
         refreshDeviceName();
         final Preference deviceNamePref = findPreference(KEY_DEVICE_NAME);
