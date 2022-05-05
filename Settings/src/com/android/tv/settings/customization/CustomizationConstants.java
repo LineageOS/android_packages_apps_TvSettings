@@ -32,4 +32,6 @@ public final class CustomizationConstants {
     public static final String DEVICE_SCREEN = "device";
 
     public static final String ABOUT_SCREEN = "device_info";
+
+    public static final String RESET_OPTIONS_SCREEN = "reset_options";
 }
