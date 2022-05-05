@@ -26,4 +26,6 @@ public final class CustomizationConstants {
     public static final String MAIN_SCREEN = "main";
 
     public static final String CHANNELS_AND_INPUTS_SCREEN = "channels_and_inputs";
+
+    public static final String DISPLAY_PREVIEW_SCREEN = "preview_display";
 }
