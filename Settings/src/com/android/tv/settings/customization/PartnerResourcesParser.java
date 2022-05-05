@@ -32,7 +32,7 @@ import java.util.List;
  * Reads the preference meta-data provided in the customization apk and builds
  * the listed preferences if any.
  */
-public final class PartnerResourcesParser {
+final class PartnerResourcesParser {
     private static final String TAG = "PartnerResourcesParser";
 
     private final Context mContext;
@@ -46,7 +46,7 @@ public final class PartnerResourcesParser {
      * @param settingsScreen String identifier for the settings screen for which
      *                      the meta data has to be read
      */
-    public PartnerResourcesParser(Context context, String settingsScreen) {
+    PartnerResourcesParser(Context context, String settingsScreen) {
         mContext = context;
         mSettingsScreen = settingsScreen;
     }
