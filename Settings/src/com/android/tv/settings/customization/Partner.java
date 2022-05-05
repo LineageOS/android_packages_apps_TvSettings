@@ -110,4 +110,14 @@ public final class Partner {
         }
         return mResources.getDrawable(id, theme);
     }
+
+    @Nullable
+    public String[] getArray(String name) {
+        final Integer id = getIdentifier(name, "array");
+        if (id == null) {
+            Log.i(TAG, "Unable to find resource id of array: " + name);
+            return null;
+        }
+        return mResources.getStringArray(id);
+    }
 }

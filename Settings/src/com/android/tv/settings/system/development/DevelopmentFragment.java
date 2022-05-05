@@ -35,12 +35,14 @@ import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.database.ContentObserver;
 import android.hardware.usb.UsbManager;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.NetworkRequest;
+import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.BatteryManager;
 import android.os.Build;
@@ -283,6 +285,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private final Handler mHandler = new Handler(Looper.getMainLooper());
     private final NetworkCallback mNetworkCallback = new NetworkCallback();
+    private ContentObserver mToggleContentObserver;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -307,6 +310,17 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 (AudioMetrics.Data data) -> updateAudioRecordingMetrics(data));
 
         mConnectivityManager = getContext().getSystemService(ConnectivityManager.class);
+
+        mToggleContentObserver = new ContentObserver(new Handler(Looper.myLooper())) {
+            @Override
+            public void onChange(boolean selfChange, Uri uri) {
+                updateWirelessDebuggingPreference();
+            }
+        };
+        mContentResolver.registerContentObserver(
+                Settings.Global.getUriFor(Settings.Global.ADB_WIFI_ENABLED),
+                false,
+                mToggleContentObserver);
 
         super.onCreate(icicle);
     }
@@ -465,7 +479,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
 
         mWirelessDebugging = findPreference(TOGGLE_ADB_WIRELESS_KEY);
-        updateWirelessDebuggingPreference();
     }
 
     private void removePreference(String key) {
@@ -633,6 +646,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     public void onDestroy() {
         super.onDestroy();
         dismissDialogs();
+        mContentResolver.unregisterContentObserver(mToggleContentObserver);
     }
 
     void updateSwitchPreference(SwitchPreference switchPreference, boolean value) {
