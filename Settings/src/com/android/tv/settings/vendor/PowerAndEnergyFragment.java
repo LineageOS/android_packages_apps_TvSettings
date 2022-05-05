@@ -22,6 +22,9 @@ import androidx.annotation.Keep;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.customization.CustomizationConstants;
+import com.android.tv.settings.customization.Partner;
+import com.android.tv.settings.customization.PartnerPreferencesMerger;
 
 /** A vendor version power and energy settings. */
 @Keep
@@ -29,5 +32,12 @@ public class PowerAndEnergyFragment extends SettingsPreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
         setPreferencesFromResource(R.xml.power_and_energy_vendor, null);
+        if (Partner.getInstance(getContext()).isCustomizationPackageProvided()) {
+            PartnerPreferencesMerger.mergePreferences(
+                    getContext(),
+                    getPreferenceScreen(),
+                    CustomizationConstants.POWER_AND_ENERGY_SCREEN
+            );
+        }
     }
 }
