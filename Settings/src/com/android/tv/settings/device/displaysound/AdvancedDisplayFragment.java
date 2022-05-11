@@ -22,6 +22,7 @@ import static com.android.tv.settings.util.InstrumentationUtils.logToggleInterac
 
 import android.app.tvsettings.TvSettingsEnums;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.provider.Settings;
 import android.text.TextUtils;
 
@@ -38,6 +39,7 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 @Keep
 public class AdvancedDisplayFragment extends SettingsPreferenceFragment {
     private static final String KEY_GAME_MODE = "game_mode";
+    private static final String KEY_RGB_MODE = "rgb_hdmi_colorspace";
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
@@ -53,6 +55,9 @@ public class AdvancedDisplayFragment extends SettingsPreferenceFragment {
                     TvSettingsEnums.DISPLAY_SOUND_ADVANCED_DISPLAY_GAME_MODE,
                     ((SwitchPreference) preference).isChecked());
             setGameModeStatus(((SwitchPreference) preference).isChecked() ? 1 : 0);
+        } else if (TextUtils.equals(preference.getKey(), KEY_RGB_MODE)) {
+            boolean checked = ((SwitchPreference) preference).isChecked();
+            SystemProperties.set("hdmi.colorspace", checked ? "rgb" : "444");
         }
         return super.onPreferenceTreeClick(preference);
     }

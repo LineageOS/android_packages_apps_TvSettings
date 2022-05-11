@@ -27,4 +27,8 @@
         android:key="hdr_format_selection"
         android:persistent="true"
         android:title="@string/hdr_format_selection_title"/>
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
+        android:key="rgb_hdmi_colorspace"
+        android:title="@string/hdmi_colorspace"
+        android:summary="@string/hdmi_colorspace_summary"/>
 </PreferenceScreen>
