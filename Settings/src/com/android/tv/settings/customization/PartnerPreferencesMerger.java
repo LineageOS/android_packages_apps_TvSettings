@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.customization;
 
+import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
@@ -36,7 +37,7 @@ public final class PartnerPreferencesMerger {
     private static final String TAG = "PartnerPreferencesMerger";
 
     public static void mergePreferences(
-            PartnerResourcesParser partnerResourcesParser, PreferenceScreen preferenceScreen) {
+            Context context, PreferenceScreen preferenceScreen, String settingsScreen) {
         /*
         High level algorithm of adding new preferences in the desired order
         1. Build partner provided new preferences if any.
@@ -55,6 +56,8 @@ public final class PartnerPreferencesMerger {
         5. Iterate through the ordered array in step 3, recursively adding preferences
         in all PreferenceGroups.
          */
+        final PartnerResourcesParser partnerResourcesParser = new PartnerResourcesParser(
+                context, settingsScreen);
         for (final Preference newPartnerPreference : partnerResourcesParser.buildPreferences()) {
             preferenceScreen.addPreference(newPartnerPreference);
         }
