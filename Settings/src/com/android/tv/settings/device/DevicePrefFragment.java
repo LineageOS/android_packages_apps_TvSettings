@@ -57,6 +57,9 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.about.RebootConfirmFragment;
 import com.android.tv.settings.autofill.AutofillHelper;
+import com.android.tv.settings.customization.CustomizationConstants;
+import com.android.tv.settings.customization.Partner;
+import com.android.tv.settings.customization.PartnerPreferencesMerger;
 import com.android.tv.settings.inputmethod.InputMethodHelper;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.privacy.PrivacyToggle;
@@ -123,6 +126,13 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(getPreferenceScreenResId(), null);
+        if (Partner.getInstance(getContext()).isCustomizationPackageProvided()) {
+            PartnerPreferencesMerger.mergePreferences(
+                    getContext(),
+                    getPreferenceScreen(),
+                    CustomizationConstants.DEVICE_SCREEN
+            );
+        }
         mSoundsPref = findPreference(KEY_SOUNDS);
         mSoundsSwitchPref = findPreference(KEY_SOUNDS_SWITCH);
         if (mSoundsSwitchPref != null) {

@@ -67,6 +67,9 @@ import com.android.tv.settings.accounts.AccountsUtil;
 import com.android.tv.settings.connectivity.ActiveNetworkProvider;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.connectivity.ConnectivityListenerLite;
+import com.android.tv.settings.customization.CustomizationConstants;
+import com.android.tv.settings.customization.Partner;
+import com.android.tv.settings.customization.PartnerPreferencesMerger;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
@@ -234,6 +237,13 @@ public class MainFragment extends PreferenceControllerFragment implements
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(getPreferenceScreenResId(), null);
+        if (Partner.getInstance(getContext()).isCustomizationPackageProvided()) {
+            PartnerPreferencesMerger.mergePreferences(
+                    getContext(),
+                    getPreferenceScreen(),
+                    CustomizationConstants.MAIN_SCREEN
+            );
+        }
         if (isRestricted()) {
             Preference appPref = findPreference(KEY_APPLICATIONS);
             if (appPref != null) {

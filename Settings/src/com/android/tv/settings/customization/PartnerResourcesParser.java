@@ -32,11 +32,13 @@ import java.util.List;
  * Reads the preference meta-data provided in the customization apk and builds
  * the listed preferences if any.
  */
-public final class PartnerResourcesParser {
+final class PartnerResourcesParser {
     private static final String TAG = "PartnerResourcesParser";
 
     private final Context mContext;
     private final String mSettingsScreen;
+
+    static final String PREFERENCE_GROUP_END_INDICATOR = "=";
 
     /**
      * Create an instance of the parser for the particular settings screen
@@ -44,7 +46,7 @@ public final class PartnerResourcesParser {
      * @param settingsScreen String identifier for the settings screen for which
      *                      the meta data has to be read
      */
-    public PartnerResourcesParser(Context context, String settingsScreen) {
+    PartnerResourcesParser(Context context, String settingsScreen) {
         mContext = context;
         mSettingsScreen = settingsScreen;
     }
@@ -152,5 +154,9 @@ public final class PartnerResourcesParser {
                 iteratePreferences(orderedPreferences, nestedPreferencesResource);
             }
         }
+        // This is necessary to know when a nested PreferenceGroup ends
+        // so the preferences after this are correctly added to the
+        // parent PreferenceGroup
+        orderedPreferences.add(PREFERENCE_GROUP_END_INDICATOR);
     }
 }
