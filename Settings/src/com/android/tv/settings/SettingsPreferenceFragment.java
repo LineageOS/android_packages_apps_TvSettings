@@ -29,6 +29,7 @@ import android.animation.AnimatorInflater;
 import android.annotation.CallSuper;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -58,6 +59,8 @@ import com.android.tv.settings.util.SettingsPreferenceUtil;
 import com.android.tv.settings.widget.SettingsViewModel;
 import com.android.tv.settings.widget.TsPreference;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
+
+import java.util.Collections;
 
 /**
  * A {@link LeanbackPreferenceFragmentCompat} that has hooks to observe fragment lifecycle events
@@ -137,6 +140,14 @@ public abstract class SettingsPreferenceFragment extends LeanbackPreferenceFragm
                     getActivity().getWindow().setTitle(getPreferenceScreen().getTitle());
                     view.sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED);
                 }
+
+                // Only the one-panel settings should be set as unrestricted keep-clear areas
+                // because they are a side panel, so the PiP can be moved next to it.
+                view.addOnLayoutChangeListener((v, l, t, r, b, oldL, oldT, oldR, oldB) -> {
+                    view.setUnrestrictedPreferKeepClearRects(
+                            Collections.singletonList(new Rect(0, 0, r - l, b - t)));
+                });
+
             }
             removeAnimationClipping(view);
         }
