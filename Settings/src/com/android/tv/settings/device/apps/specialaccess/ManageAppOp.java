@@ -23,6 +23,7 @@ import android.content.pm.IPackageManager;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.os.UserHandle;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -118,9 +119,9 @@ public abstract class ManageAppOp extends SettingsPreferenceFragment
      */
     public abstract String getPermission();
 
-    private boolean hasRequestedAppOpPermission(String permission, String packageName) {
+    private boolean hasRequestedAppOpPermission(String permission, String packageName, int userId) {
         try {
-            String[] packages = mIPackageManager.getAppOpPermissionPackages(permission);
+            String[] packages = mIPackageManager.getAppOpPermissionPackages(permission, userId);
             return ArrayUtils.contains(packages, packageName);
         } catch (RemoteException exc) {
             Log.e(TAG, "PackageManager dead. Cannot get permission info");
@@ -144,7 +145,8 @@ public abstract class ManageAppOp extends SettingsPreferenceFragment
 
     private PermissionState createPermissionStateFor(String packageName, int uid) {
         return new PermissionState(
-                hasRequestedAppOpPermission(getPermission(), packageName),
+                hasRequestedAppOpPermission(
+                        getPermission(), packageName, UserHandle.getUserId(uid)),
                 hasPermission(uid),
                 getAppOpMode(uid, packageName));
     }
