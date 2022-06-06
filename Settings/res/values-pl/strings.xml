@@ -102,7 +102,8 @@
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Niedawno otwierane aplikacje"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"Zobacz wszystkie aplikacje"</string>
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"Uprawnienia"</string>
-    <string name="apps_security" msgid="1392489151324802853">"Zabezpieczenia"</string>
+    <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
+    <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Wszystkie aplikacje"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Pokaż aplikacje systemowe"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Zainstalowane aplikacje"</string>
@@ -127,9 +128,11 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos z Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos z Dolby Digital Plus"</string>
+    <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Uwaga: opcja Automatycznie może nie działać, jeśli urządzenie nie zgłasza poprawnie swoich formatów."</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatycznie: włączaj tylko formaty obsługiwane przez urządzenie wyjściowe audio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Kiedy włączysz tę opcję, system umożliwi aplikacjom wybór dowolnego formatu dźwięku obsługiwanego przez urządzenie. Aplikacje mogą wybrać format, który nie zapewnia najwyższej jakości."</string>
@@ -147,8 +150,8 @@
     <string name="surround_sound_hide_formats" msgid="7770931097236868238">"Ukryj formaty"</string>
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"WŁĄCZONE FORMATY"</string>
     <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"WYŁĄCZONE FORMATY"</string>
-    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Aby włączyć tę opcję, zmień wybór formatu na Ręczny."</string>
-    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Aby wyłączyć tę opcję, zmień wybór formatu na Ręczny."</string>
+    <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Aby włączyć tę opcję, zmień wybór formatu na Ręcznie."</string>
+    <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Aby wyłączyć tę opcję, zmień wybór formatu na Ręcznie."</string>
     <string name="display_category_title" msgid="247804007525046312">"Wyświetlacz"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Zaawansowane ustawienia wyświetlacza"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
@@ -161,6 +164,12 @@
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Jeśli aplikacja o to poprosi, urządzenie będzie dopasowywać sygnał wyjściowy do pierwotnej liczby klatek oglądanych treści. Może to spowodować, że gdy włączysz lub wyłączysz odtwarzanie, obraz na sekundę zniknie."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nigdy"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Nawet jeśli aplikacja o to poprosi, urządzenie nigdy nie będzie próbowało dopasować sygnału wyjściowego do pierwotnej liczby klatek oglądanych treści."</string>
+    <string name="font_scale_settings_title" msgid="4114019544800225980">"Skalowanie tekstu"</string>
+    <string name="font_scale_item_detail" msgid="1558315053348778805">"Skaluj do <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
+    <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Przykładowy tekst"</string>
+    <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Czarnoksiężnik z Krainy Oz"</string>
+    <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Rozdział 11: Szmaragdowe Miasto"</string>
+    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Mimo że Dorotka i jej przyjaciele mieli na nosach ochronne zielone okulary, odruchowo zmrużyli oczy, gdy pierwszy raz ujrzeli lśniące wspaniale Szmaragdowe Miasto. Wzdłuż ulic stały równo piękne domy z zielonego marmuru, wysadzane połyskującymi szmaragdami. Chodniki wykonane były z tego samego budulca, a w spojeniach płyt skrzyły się w słońcu całe rzędy osadzonych ciasno szmaragdów. Szyby w oknach były z zielonego szkła. Nawet niebo nad Miastem i promienie słońca miały zielonkawe zabarwienie. \n\nWokół kręciło się mnóstwo ludzi – mężczyzn, kobiet i dzieci – ubranych na zielono. Również ich skóra miała zielony odcień. Patrzyli na Dorotkę i jej barwną kompanię wielkimi, zdziwionymi oczami, a dzieci na widok Lwa uciekały i chowały się za swoimi mamami. Nikt jednak nie odezwał się do nich nawet słowem. Przy ulicy nie brakowało różnych sklepów i Dorotka zauważyła, że cały ich asortyment był zielony: zielone cukierki, zielona prażona kukurydza, zielone buty, zielone kapelusze, wszelkiego rodzaju zielone ubrania. Przy jednym ze stoisk jakiś pan sprzedawał zieloną lemoniadę, za którą dzieci płaciły – jak dostrzegła Dorotka – zielonymi monetami. \n\nNigdzie nie było widać ani koni, ani żadnych innych zwierząt. Do transportu używano zielonych wózeczków, które mieszkańcy pchali przed sobą. Wszyscy wydawali się szczęśliwi, radośni i zadowoleni z życia."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Wybór formatu"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatycznie"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ręcznie"</string>
@@ -179,7 +188,7 @@
     <string name="hdr_hide_formats" msgid="8561568998525727230">"Ukryj formaty"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"WŁĄCZONE FORMATY"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"WYŁĄCZONE FORMATY"</string>
-    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Aby wyłączyć tę opcję, zmień wybór formatu na Ręczny."</string>
+    <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"Aby wyłączyć tę opcję, zmień wybór formatu na Ręcznie."</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Wyczyścić dane z pamięci podręcznej?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Usuwasz dane z pamięci podr. wszystkich aplikacji."</string>
     <string name="accessories_add" msgid="413764175035531452">"Dodaj akcesoria"</string>
@@ -346,6 +355,7 @@
       <item quantity="other">Aplikacje telefonu</item>
       <item quantity="one">Aplikacja telefonu</item>
     </plurals>
+    <string name="default_browser_title" msgid="3612813200586492159">"Przeglądarka"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
     <string name="tutorials" msgid="7880770425872110455">"Samouczki"</string>
@@ -356,7 +366,7 @@
     <string name="device_name" msgid="566626587332817733">"Nazwa urządzenia"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Uruchom ponownie"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"Informacje prawne"</string>
-    <string name="about_legal_license" msgid="4801707286720681261">"Licencje open source"</string>
+    <string name="about_legal_license" msgid="4056934178111674054">"Źródło zewnętrzne"</string>
     <string name="about_terms_of_service" msgid="8514826341101557623">"Informacje prawne Google"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"Dane licencji są niedostępne"</string>
     <string name="about_model" msgid="9164284529291439296">"Model"</string>
@@ -409,7 +419,7 @@
     </plurals>
     <string name="device_status" msgid="8266002761193692207">"Stan"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"Sieć, numery seryjne i inne informacje"</string>
-    <string name="manual" msgid="5683935624321864999">"Instrukcja"</string>
+    <string name="manual" msgid="5683935624321864999">"Ręcznie"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Informacje prawne"</string>
     <string name="device_feedback" msgid="4871903271442960465">"Prześlij opinię o tym urządzeniu"</string>
     <string name="oem_unlock_enable_disabled_summary_bootloader_unlocked" msgid="4641790432171693921">"Program rozruchowy jest już odblokowany"</string>
@@ -432,6 +442,9 @@
     <string name="license_title" msgid="4032466200355435641">"Licencja"</string>
     <string name="terms_title" msgid="192888187310800678">"Warunki korzystania z usługi"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Systemowa licencja na WebView"</string>
+    <string name="consumer_information_title" msgid="7729729568416672733">"Informacje dla konsumenta"</string>
+    <string name="consumer_information_message" msgid="205236637689468764">"Treści dostępne na Androidzie TV pochodzą zarówno od partnerów zewnętrznych, takich jak deweloperzy aplikacji czy studia filmowe, jak i bezpośrednio od Google. Więcej informacji znajdziesz na stronie "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
+    <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Słaba"</item>
     <item msgid="2098818614362343532">"Dostateczna"</item>
@@ -634,6 +647,22 @@
     <item msgid="5645263357181875427">"Użyj czasu podanego przez strumień transportu"</item>
     <item msgid="5501503537181350884">"Wył."</item>
   </string-array>
+    <string name="sensor_toggle_description" msgid="7415801459994303159">"Wszystkie aplikacje i usługi"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Aplikacje, które ostatnio miały dostęp"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Brak niedawnego dostępu"</string>
+    <string name="recently_accessed_show_all" msgid="5234849189704717855">"Pokaż wszystko"</string>
+    <string name="microphone" msgid="7893752847683941214">"Mikrofon"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Dostęp do mikrofonu"</string>
+    <string name="open_mic_permissions" msgid="8121871594807641073">"Dostęp aplikacji do mikrofonu"</string>
+    <string name="camera" msgid="1226671478936288283">"Aparat"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Dostęp do aparatu"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Dostęp aplikacji do aparatu"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Dostęp do mikrofonu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Gdy włączysz tę opcję, wszystkie aplikacje i usługi z przyznanymi uprawnieniami będą mogły korzystać z dowolnego mikrofonu tego urządzenia.\n\nTo ustawienie nie ma wpływu na peryferyjne urządzenia audio używające niestandardowego protokołu."</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Dostęp do aparatu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Gdy włączysz tę opcję, wszystkie aplikacje i usługi z przyznanymi uprawnieniami będą mogły korzystać z dowolnego aparatu i mikrofonu tego urządzenia.\n\nTo ustawienie nie ma wpływu na peryferyjne aparaty używające niestandardowego protokołu."</string>
+    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Wł."</string>
+    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Wył."</string>
     <string name="system_location" msgid="4057295363709016511">"Lokalizacja"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Zezwalaj aplikacjom, które zapytały o pozwolenie, na korzystanie z informacji o lokalizacji."</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Zgoda na usługę lokalizacyjną"</string>
@@ -732,17 +761,17 @@
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Pozorowanie lokalizacji"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Wybierz aplikację do debugowania"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Poczekaj na debugera"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Zweryfikuj aplikacje przez USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Sprawdź, czy aplikacje zainstalowane przez ADB/ADT nie zachowują się w szkodliwy sposób"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Weryfikuj aplikacje przez USB"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Sprawdzaj, czy aplikacje zainstalowane przez ADB/ADT nie zachowują się w szkodliwy sposób"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Szczegółówe rejestrowanie Wi-Fi"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Włącz szczegółowy zapis danych o Wi-Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Pokaż dotknięcia"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"Lokalizacja wskaźnika"</string>
-    <string name="system_show_layout_bounds" msgid="8803080672553699649">"Pokaż granice układu"</string>
+    <string name="system_show_layout_bounds" msgid="8803080672553699649">"Pokazuj granice układu"</string>
     <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"Pokaż zmiany widoku z GPU"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Pokaż warstwę sprzętową"</string>
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"Pokaż przerysowywanie GPU"</string>
-    <string name="system_show_surface_updates" msgid="7680759813613585278">"Pokaż zmiany powierzchni"</string>
+    <string name="system_show_surface_updates" msgid="7680759813613585278">"Pokazuj zmiany powierzchni"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"Skala animacji okna"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"Skala animacji przejścia"</string>
     <string name="system_animator_duration_scale" msgid="3829445237130423625">"Skala długości animacji"</string>
@@ -758,7 +787,7 @@
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Włącz zapisywanie w dzienniku snoopingu interfejsu HCI Bluetooth"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Tryb debugowania, gdy podłączone jest USB"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Debugowana aplikacja czeka na przyłączenie debugera."</string>
-    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Pokaż granice przycięcia, marginesy itd."</string>
+    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Pokazuj granice przycięcia, marginesy itd."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Podświetlaj elementy w oknach, jeśli są rysowane przez GPU"</string>
     <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Podświetlaj aktualizowane warstwy sprzętowe na zielono"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Najlepszy-najg.: nieb., ziel., jasnoczerw., czerw."</string>
@@ -917,7 +946,7 @@
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Nie ustawiono wartości domyślnych"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Wyczyść pamięć podręczną"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Powiadomienia"</string>
-    <string name="device_apps_app_management_licenses" msgid="5554510375160907076">"Licencje open source"</string>
+    <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Źródło zewnętrzne"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Uprawnienia"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Aplikacja niedostępna"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
@@ -928,7 +957,7 @@
     <string name="device_daydreams_none" msgid="3405655350757277348">"Wyłącz ekran"</string>
     <string name="device_daydreams_select" msgid="7203264446482623438">"Wygaszacz ekranu"</string>
     <string name="device_daydreams_test" msgid="7828275397550076567">"Włącz teraz"</string>
-    <string name="device_daydreams_sleep" msgid="6847770718407377357">"Włącz wygaszacz"</string>
+    <string name="device_daydreams_sleep" msgid="6847770718407377357">"Kiedy włączać"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Wygaszacz ekranu włączy się po tym okresie braku aktywności. Jeśli nie wybierzesz wygaszacza, ekran po prostu się wyłączy."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Po <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> braku aktywności"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Wyłączaj ekran"</string>
@@ -1007,6 +1036,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Pozwól na tryb obraz w obrazie"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Żadna zainstalowana aplikacja nie obsługuje trybu obrazu w obrazie"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Pozwala aplikacjom na tworzenie okna typu obraz w obrazie, gdy są otwarte lub gdy je opuścisz (np. aby kontynuować oglądanie filmu). To okno wyświetla się nad innymi używanymi aplikacjami."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Zezwalaj aplikacjom na ustawianie alarmów i planowanie działań, w przypadku których istotny jest czas. Aplikacje będą mogły działać w tle, co może zwiększyć wykorzystanie baterii.\n\nJeśli nie włączysz tych uprawnień, dotychczas ustawione alarmy i zaplanowane wydarzenia z aplikacji nie będą działać."</string>
     <string name="special_access" msgid="21806055758289916">"Aplikacje ze specjalnym dostępem"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Dźwięk"</string>
@@ -1043,7 +1073,7 @@
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Odinstaluj aplikację"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Dezaktywuj i odinstaluj"</string>
     <string name="select_device_admin_msg" msgid="8475934459999710332">"Aplikacje do zarządzania urządzeniem"</string>
-    <string name="add_device_admin_msg" msgid="5390773166682603421">"Aktywować aplikację do administrowania urządzeniem?"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Aktywować tę aplikację?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Aktywuj tę aplikację do administrowania urządzeniem"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"Aktywowanie tej aplikacji do zarządzania pozwoli aplikacji <xliff:g id="APP_NAME">%1$s</xliff:g> wykonywać te operacje:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Aplikacja <xliff:g id="APP_NAME">%1$s</xliff:g> będzie zarządzać tym urządzeniem i je monitorować."</string>
