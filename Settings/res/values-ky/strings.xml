@@ -103,7 +103,7 @@
     <string name="all_apps_title" msgid="3717294436135280133">"Бардык колдонмолор"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Тутум колдонмолорун көрсөтүү"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Орнотулган колдонмолор"</string>
-    <string name="all_apps_other" msgid="4420174882983813158">"Тутум колдонмолору"</string>
+    <string name="all_apps_other" msgid="4420174882983813158">"Системанын колдонмолору"</string>
     <string name="all_apps_disabled" msgid="2776041242863791053">"Өчүрүлгөн колдонмолор"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Көшөгө"</string>
     <string name="device_display" msgid="244634591698925025">"Көрсөтүү"</string>
@@ -341,7 +341,7 @@
     <string name="tutorials" msgid="7880770425872110455">"Үйрөткүчтөр"</string>
     <string name="about_system_update" msgid="7421264399111367755">"Системанын жаңыртуусу"</string>
     <string name="system_update_description" msgid="998883510488461766">"Муну менен тутум программасы эң акыркы версияга жаңырат. Түзмөгүңүз өчүп күйөт."</string>
-    <string name="system_update_content_description" msgid="5702888187682876466">"Тутумду жаңыртуу. Муну менен тутум программасы эң акыркы версияга жаңырат. Түзмөгүңүз өчүп күйөт."</string>
+    <string name="system_update_content_description" msgid="5702888187682876466">"Системаны жаңыртуу. Муну менен тутум программасы эң акыркы версияга жаңырат. Түзмөгүңүз өчүп күйөт."</string>
     <string name="about_preference" msgid="9112690446998150670">"Түзмөк жөнүндө"</string>
     <string name="device_name" msgid="566626587332817733">"Түзмөктүн аталышы"</string>
     <string name="restart_button_label" msgid="911750765086382990">"Өчүрүп күйгүзүү"</string>
@@ -411,7 +411,7 @@
     <string name="copyright_title" msgid="5879660711078649518">"Автордук укук"</string>
     <string name="license_title" msgid="4032466200355435641">"Уруксаттама"</string>
     <string name="terms_title" msgid="192888187310800678">"Пайдалануу шарттары"</string>
-    <string name="webview_license_title" msgid="5370270485188947540">"WebView тутум уруксаттамасы"</string>
+    <string name="webview_license_title" msgid="5370270485188947540">"System WebView уруксаттамасы"</string>
     <string name="consumer_information_title" msgid="7729729568416672733">"Кардарга арналган маалымат"</string>
     <string name="consumer_information_message" msgid="205236637689468764">"Android TV кызматындагы мазмун колдонмолорду иштеп чыгуучулар жана киностудиялар сыяктуу үчүнчү тарапттагы өнөктөштөр тарабынан камсыздалат. Көбүрөөк маалымат алуу үчүн "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a>" бөлүмүнө өтүңүз"</string>
     <string name="consumer_information_button_ok" msgid="6979480064600038080">"Макул"</string>
@@ -929,7 +929,7 @@
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Мультимедианы ойнотуу учурунда"</string>
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Кубатты үнөмдөгүч жөндөөсүн ырастаңыз"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Батареянын кубатын көбүрөөк сарптай турган <xliff:g id="SLEEP_TIME">%1$s</xliff:g> деп коюлган жаңы жөндөөнү ырастаңыз."</string>
-    <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Дайындардын камдык көчүрмөсүн сактап жаткан каттоо эсеби жок"</string>
+    <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Дайындардын камдык көчүрмөсүн сактап жаткан аккаунт жок"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wi-Fi сырсөздөрүнүн, кыстармалардын жана башка жөндөөлөрдүн, ошондой эле колдонмолордун дайындарынын камдык көчүрмөлөрүн сактоо аракети токтотулуп, Google серверлериндеги бардык көчүрмөлөр өчүрүлсүнбү?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Дайындарымдын камдык көчүрмөсүн сактоо"</string>
@@ -986,8 +986,8 @@
     <string name="directory_access" msgid="7338555825237012006">"Каталогго мүмкүнчүлүк алуу"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Бул колдонмолордун айрым каталогдорго кирүүгө уруксаттары бар."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
-    <string name="system_alert_window_settings" msgid="5790572489650085051">"Башка терезелердин үстүнөн көрсөтүү"</string>
-    <string name="permit_draw_overlay" msgid="5312730681030266735">"Башка терезелердин үстүнөн көрсөтүүгө уруксат"</string>
+    <string name="system_alert_window_settings" msgid="5790572489650085051">"Башка колдонмолордун үстүнөн көрсөтүү"</string>
+    <string name="permit_draw_overlay" msgid="5312730681030266735">"Башка колдонмолордун үстүнөн көрсөтүүгө уруксат"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Колдонмону башка терезелердин үстүнөн көрсөтүүгө уруксат бериңиз. Бирок башка колдонмолорду пайдаланууга тоскоол болуп же алардын интерфейсин бузуп салышы мүмкүн."</string>
     <string name="write_system_settings" msgid="4284654265954461890">"Системанын жөндөөлөрүн өзгөртүү"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"Системанын жөндөөлөрүн өзгөртө алат"</string>
@@ -1040,7 +1040,7 @@
     <string name="device_admin_warning" msgid="7399916080685200660">"Түзмөктү башкарган колдонмо иштетилгенде, <xliff:g id="APP_NAME">%1$s</xliff:g> төмөнкү аракеттерди аткара алат:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Бул түзмөк <xliff:g id="APP_NAME">%1$s</xliff:g> аркылуу башкарылып, көзөмөлдөнөт."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"Түзмөктү башкарган колдонмо иштетилип, <xliff:g id="APP_NAME">%1$s</xliff:g> төмөнкү аракеттерди аткара алат:"</string>
-    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Улантсаңыз, профилиңизди администратор башкарып, ал жеке дайын-даректериңиз менен кошо башка тийиштүү дайындарды да сактап турат.\n\nАдминистратор бул колдонуучунун жөндөөлөрүн, кирүү мүмкүнчүлүгүн, колдонмолорду жана дайындарды, ошондой эле тармактагы аракеттер менен түзмөгүңүздүн жайгашкан жери тууралуу маалыматты көзөмөлдөп, башкара алат."</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Улантсаңыз, профилиңизди администратор башкарып, ал жеке дайын-даректериңиз менен кошо башка тийиштүү дайындарды да сактап турат.\n\nАдминистратор бул колдонуучунун жөндөөлөрүн, кирүү мүмкүнчүлүгүн, колдонмолорду жана алардагы нерселерди, ошондой эле тармактагы аракеттер менен түзмөгүңүздүн жайгашкан жери тууралуу маалыматты көзөмөлдөп, башкара алат."</string>
     <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Мүчүлүштүк тууралуу баяндама бөлүшүлсүнбү?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Бул түзмөктүн бузулууларын аныктап оңдоо үчүн IT администраторуңуз мүчүлүштүктөр тууралуу маалыматты сурап жатат. Колдонмолор менен дайындар бөлүшүлүшү мүмкүн."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Бул түзмөктүн бузулууларын аныктап оңдоо үчүн IT администраторуңуз мүчүлүштүктөр тууралуу маалыматты сурап жатат. Колдонмолор менен дайындар бөлүшүлүп, түзмөгүңүз жайыраак иштеп калышы мүмкүн."</string>
