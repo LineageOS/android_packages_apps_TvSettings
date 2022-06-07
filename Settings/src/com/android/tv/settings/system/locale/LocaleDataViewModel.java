@@ -21,7 +21,6 @@ import android.content.Context;
 import android.os.RemoteException;
 import android.util.Log;
 
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.android.internal.app.LocaleStore;
@@ -35,27 +34,25 @@ import java.util.Set;
 /** ViewModel to provide data for locale selection. */
 public class LocaleDataViewModel extends ViewModel {
     private static final String TAG = "LocaleDataViewModel";
-    private MutableLiveData<Locale> mCurrentLocale;
     private final Map<LocaleStore.LocaleInfo, ArrayList<LocaleStore.LocaleInfo>> mLocaleMap =
             new HashMap<>();
+    static final boolean TRANSLATED_ONLY = true;
 
-    public MutableLiveData<Locale> getCurrentLocale() {
-        if (mCurrentLocale == null) {
-            try {
-                mCurrentLocale = new MutableLiveData<>(
-                        ActivityManager.getService().getConfiguration()
-                                .getLocales().get(0));
-            } catch (RemoteException e) {
-                Log.e(TAG, "Could not retrieve locale", e);
-            }
+    public static Locale getCurrentLocale() {
+        try {
+            return ActivityManager.getService().getConfiguration()
+                                .getLocales().get(0);
+        } catch (RemoteException e) {
+            Log.e(TAG, "Could not retrieve locale", e);
+            return null;
         }
-        return mCurrentLocale;
     }
 
     public void addLocaleInfoList(LocaleStore.LocaleInfo localeInfo, Context context,
             Set<String> langTagsToIgnore) {
         ArrayList<LocaleStore.LocaleInfo> localeInfoWithCountryList = new ArrayList<>(
-                LocaleStore.getLevelLocales(context, langTagsToIgnore, localeInfo, false));
+                LocaleStore.getLevelLocales(
+                        context, langTagsToIgnore, localeInfo, TRANSLATED_ONLY));
         mLocaleMap.put(localeInfo, localeInfoWithCountryList);
     }
 

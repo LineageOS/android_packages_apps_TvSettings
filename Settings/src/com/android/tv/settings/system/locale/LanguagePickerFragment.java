@@ -16,12 +16,16 @@
 
 package com.android.tv.settings.system.locale;
 
+import static com.android.tv.settings.system.locale.LocaleDataViewModel.TRANSLATED_ONLY;
+
 import android.app.ActivityManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.LocaleList;
+import android.os.Looper;
 import android.util.Log;
 
 import androidx.annotation.Keep;
@@ -34,7 +38,6 @@ import com.android.internal.app.LocaleStore;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.system.LanguageFragment;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -50,10 +53,10 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
     private LocaleDataViewModel mLocaleDataViewModel;
     private static final boolean DEBUG = Build.isDebuggable();
     static final String KEY_LOCALE_INFO = "locale_info";
+    private Handler mHandler = new Handler(Looper.getMainLooper());
 
-
-    public static LanguageFragment newInstance() {
-        return new LanguageFragment();
+    public static LanguagePickerFragment newInstance() {
+        return new LanguagePickerFragment();
     }
 
     @Override
@@ -64,26 +67,25 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
                 getPreferenceManager().createPreferenceScreen(themedContext);
         screen.setTitle(R.string.system_language);
 
-        Locale currentLocale = mLocaleDataViewModel.getCurrentLocale().getValue();
-        mLocaleDataViewModel.getCurrentLocale().observe(this, this::updateUI);
+        Locale currentLocale = LocaleDataViewModel.getCurrentLocale();
         final Set<String> langTagsToIgnore = new HashSet<>();
-        boolean translatedOnly = false;
         mLocaleInfos = new ArrayList<>(LocaleStore.getLevelLocales(
-                getContext(), langTagsToIgnore, null, translatedOnly));
+                getContext(), langTagsToIgnore, null, TRANSLATED_ONLY));
         final Locale sortingLocale = Locale.getDefault();
         final LocaleHelper.LocaleInfoComparator comp =
                 new LocaleHelper.LocaleInfoComparator(sortingLocale, false);
         mLocaleInfos.sort(comp);
-        Preference activePref = null;
         for (LocaleStore.LocaleInfo localeInfo : mLocaleInfos) {
             mLocaleDataViewModel.addLocaleInfoList(localeInfo, getActivity(), langTagsToIgnore);
+            if (localeInfo.isSuggested()) {
+                continue;
+            }
             ArrayList<LocaleStore.LocaleInfo> localeInfoWithCountryList = mLocaleDataViewModel
                     .getLocaleInfoList(localeInfo);
             if (localeInfoWithCountryList != null && localeInfoWithCountryList.size() <= 1) {
                 RadioPreference preference = new RadioPreference(getContext());
                 preference.setTitle(localeInfo.getFullNameNative());
                 if (localeInfo.getLocale().equals(currentLocale)) {
-                    activePref = preference;
                     preference.setChecked(true);
                 } else {
                     preference.setChecked(false);
@@ -98,47 +100,53 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
                 preference.getExtras().putAll(CountryPickerFragment.prepareArgs(localeInfo));
                 preference.setFragment(CountryPickerFragment.class.getName());
                 screen.addPreference(preference);
-
+                preference.getExtras().putSerializable(KEY_LOCALE_INFO, localeInfo);
             }
-        }
-
-        if (activePref != null && savedInstanceState == null) {
-            scrollToPreference(activePref);
         }
 
         setPreferenceScreen(screen);
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        Locale currentLocale = LocaleDataViewModel.getCurrentLocale();
+        for (int i = 0; i < getPreferenceScreen().getPreferenceCount(); i++) {
+            Preference pref = getPreferenceScreen().getPreference(i);
+            LocaleStore.LocaleInfo localeInfo = (LocaleStore.LocaleInfo)
+                    pref.getExtras().getSerializable(KEY_LOCALE_INFO);
+                if (localeInfo.getLocale() != null
+                        && localeInfo.getLocale().getLanguage().equals(
+                                currentLocale.getLanguage())) {
+                    if (DEBUG) {
+                        Log.d(TAG, "Scroll to active locale: " + localeInfo.getLocale());
+                    }
+                    mHandler.post(() -> scrollToPreference(pref));
+                }
+            }
+    }
+
+    @Override
     public boolean onPreferenceTreeClick(Preference preference) {
+        if (DEBUG) {
+            Log.d(TAG, "Preference clicked: " + preference.getTitle());
+        }
         if (preference instanceof RadioPreference) {
             RadioPreference localePref = (RadioPreference) preference;
+            if (!localePref.isChecked()) {
+                localePref.setChecked(true);
+                return true;
+            }
             LocaleStore.LocaleInfo localeInfo = localePref.getExtras()
                     .getSerializable(KEY_LOCALE_INFO, LocaleStore.LocaleInfo.class);
             if (localeInfo != null) {
                 getContext().getSystemService(ActivityManager.class)
                         .setDeviceLocales(new LocaleList(localeInfo.getLocale()));
-                mLocaleDataViewModel.getCurrentLocale().setValue(localeInfo.getLocale());
             }
+            localePref.clearOtherRadioPreferences(getPreferenceScreen());
             return true;
         }
         return super.onPreferenceTreeClick(preference);
-    }
-
-    private void updateUI(Locale locale) {
-        if (DEBUG) {
-            Log.d(TAG, "Updating UI, Locale changed to:" + locale);
-        }
-        for (int i = 0; i < getPreferenceScreen().getPreferenceCount(); i++) {
-            Preference pref = getPreferenceScreen().getPreference(i);
-            if (pref instanceof RadioPreference) {
-                LocaleStore.LocaleInfo localeInfo = (LocaleStore.LocaleInfo)
-                        pref.getExtras().getSerializable(KEY_LOCALE_INFO);
-                if (localeInfo.getLocale() != null && localeInfo.getLocale().equals(locale)) {
-                    ((RadioPreference) pref).clearOtherRadioPreferences(getPreferenceScreen());
-                }
-            }
-        }
     }
 
     @Override
