@@ -295,6 +295,14 @@
             android:title="@string/record_audio"
             android:summaryOn="@string/record_audio_summary_on"
             android:summaryOff="@string/record_audio_summary_off"/>
+        <ListPreference
+            android:key="record_audio_source"
+            android:title="@string/record_audio_source_title"
+            android:dialogTitle="@string/record_audio_source_dialog_title"
+            android:summary="%s"
+            android:defaultValue="0"
+            android:entries="@array/record_audio_source_entries"
+            android:entryValues="@array/record_audio_source_values" />
         <Preference
             android:key="play_recorded_audio"
             android:title="@string/play_recorded_audio_title"/>

@@ -18,7 +18,6 @@ package com.android.tv.settings.system.development.audio;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;
-import android.media.MediaRecorder;
 import android.util.Log;
 
 import java.nio.ShortBuffer;
@@ -52,12 +51,14 @@ public class AudioReader implements Runnable {
     /**
      * @param metrics Object for storing metrics.
      */
-    public AudioReader(AudioMetrics metrics) throws AudioReaderException {
+    public AudioReader(int audioSource, AudioMetrics metrics) throws AudioReaderException {
         this.mMetrics = metrics;
 
         mMinBufferSize =
                 AudioRecord.getMinBufferSize(AudioDebug.SAMPLE_RATE, AudioFormat.CHANNEL_IN_DEFAULT,
                         AudioDebug.ENCODING);
+
+        Log.i(TAG, String.format("Using AudioSource: %d", audioSource));
         try {
             mAudioRecord =
                     new AudioRecord.Builder()
@@ -66,7 +67,7 @@ public class AudioReader implements Runnable {
                                             .setSampleRate(AudioDebug.SAMPLE_RATE)
                                             .setEncoding(AudioDebug.ENCODING)
                                             .build())
-                            .setAudioSource(MediaRecorder.AudioSource.VOICE_RECOGNITION)
+                            .setAudioSource(audioSource)
                             .setBufferSizeInBytes(2 * mMinBufferSize)
                             .build();
         } catch (UnsupportedOperationException | IllegalArgumentException e) {

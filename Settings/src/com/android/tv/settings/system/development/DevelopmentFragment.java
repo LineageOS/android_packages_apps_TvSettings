@@ -37,6 +37,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.ContentObserver;
 import android.hardware.usb.UsbManager;
+import android.media.MediaRecorder.AudioSource;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
@@ -135,6 +136,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private static final String TIME_TO_START_READ_KEY = "time_to_start_read";
     private static final String TIME_TO_VALID_AUDIO_KEY = "time_to_valid_audio";
     private static final String EMPTY_AUDIO_DURATION_KEY = "empty_audio_duration";
+    private static final String RECORDED_AUDIO_SOURCE_KEY = "record_audio_source";
     private static final String FORCE_MSAA_KEY = "force_msaa";
     private static final String TRACK_FRAME_TIME_KEY = "track_frame_time";
     private static final String SHOW_NON_RECTANGULAR_CLIP_KEY = "show_non_rect_clip";
@@ -253,6 +255,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private Preference mTimeToStartRead;
     private Preference mTimeToValidAudio;
     private Preference mEmptyAudioDuration;
+    private ListPreference mRecordAudioSource;
 
     private SwitchPreference mImmediatelyDestroyActivities;
 
@@ -451,6 +454,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mTimeToValidAudio.setVisible(false);
         mEmptyAudioDuration = findPreference(EMPTY_AUDIO_DURATION_KEY);
         mEmptyAudioDuration.setVisible(false);
+        mRecordAudioSource = addListPreference(RECORDED_AUDIO_SOURCE_KEY);
+        mRecordAudioSource.setVisible(false);
         mForceResizable = findAndInitSwitchPref(FORCE_RESIZABLE_KEY);
 
         mImmediatelyDestroyActivities = (SwitchPreference) findPreference(
@@ -706,6 +711,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         updateSimulateColorSpace();
         updateUSBAudioOptions();
         updateForceResizableOptions();
+        updateAudioRecordingOptions();
     }
 
     private void resetDangerousOptions() {
@@ -1255,14 +1261,19 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private void writeRecordAudioOptions() {
         if (mRecordAudio.isChecked()) {
+            mRecordAudioSource.setVisible(true);
             try {
-                mAudioDebug.startRecording();
+                int recordAudioSource = Integer.parseInt(mRecordAudioSource.getValue());
+                mAudioDebug.startRecording(recordAudioSource);
             } catch (AudioReaderException e) {
                 mRecordAudio.setChecked(false);
                 Toast errorToast = Toast.makeText(getContext(),
                         getString(R.string.show_audio_recording_start_failed), Toast.LENGTH_SHORT);
                 errorToast.show();
                 Log.e(TAG, "Unable to start recording audio from the microphone", e);
+                // Revert the audio source to one that must work.
+                mRecordAudioSource.setValue(Integer.toString(AudioSource.DEFAULT));
+                updateAudioRecordingOptions();
             }
         } else {
             mAudioDebug.stopRecording();
@@ -1294,6 +1305,11 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         if (preference.isVisible()) {
             preference.setSummary(AudioMetrics.msTimestampToString(ts));
         }
+    }
+
+    private void updateAudioRecordingOptions() {
+        // Keep the summary matching the selected source
+        mRecordAudioSource.setSummary(mRecordAudioSource.getEntry());
     }
 
     private void playRecordedAudio() {
@@ -1780,6 +1796,9 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             return true;
         } else if (preference == mBtHciSnoopLog) {
             writeBtHciSnoopLogOptions(newValue);
+            return true;
+        } else if (preference == mRecordAudioSource) {
+            /* Just keep the value in the preference, but accept the change */
             return true;
         }
         return false;

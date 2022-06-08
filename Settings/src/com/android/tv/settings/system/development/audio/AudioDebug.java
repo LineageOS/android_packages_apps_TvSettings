@@ -70,14 +70,14 @@ public class AudioDebug {
     }
 
     /** Starts recording audio. */
-    public void startRecording() throws AudioReaderException {
+    public void startRecording(int audioSource) throws AudioReaderException {
         if (mAudioReader != null) {
             mAudioReader.stop();
         }
 
         mMetrics.start();
 
-        mAudioReader = new AudioReader(mMetrics);
+        mAudioReader = new AudioReader(audioSource, mMetrics);
         mAudioReader.addListener((ShortBuffer buffer) -> onAudioRecorded(buffer));
 
         Thread audioReaderThread = new Thread(mAudioReader);
