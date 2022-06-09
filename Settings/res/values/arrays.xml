@@ -288,4 +288,53 @@
     <string-array name="customized_ignored_system_alert_window_packages" translatable="false">
     </string-array>
 
+    <!-- titles for available MediaRecorder.AudioSource's -->
+    <string-array name="record_audio_source_entries" translatable="false">
+        <!-- Do not translate. -->
+        <item>DEFAULT</item>
+        <!-- Do not translate. -->
+        <item>MIC</item>
+        <!-- Do not translate. -->
+        <item>VOICE_UPLINK</item>
+        <!-- Do not translate. -->
+        <item>VOICE_DOWNLINK</item>
+        <!-- Do not translate. -->
+        <item>VOICE_CALL</item>
+        <!-- Do not translate. -->
+        <item>CAMCORDER</item>
+        <!-- Do not translate. -->
+        <item>VOICE_RECOGNITION</item>
+        <!-- Do not translate. -->
+        <item>VOICE_COMMUNICATION</item>
+        <!-- Do not translate. -->
+        <item>UNPROCESSED</item>
+        <!-- Do not translate. -->
+        <item>VOICE_PERFORMANCE</item>
+    </string-array>
+
+    <!-- values for available MediaRecorder.AudioSource's -->
+    <string-array name="record_audio_source_values" translatable="false">
+        <!-- Do not translate. -->
+        <item>0</item>
+        <!-- Do not translate. -->
+        <item>1</item>
+        <!-- Do not translate. -->
+        <item>2</item>
+        <!-- Do not translate. -->
+        <item>3</item>
+        <!-- Do not translate. -->
+        <item>4</item>
+        <!-- Do not translate. -->
+        <item>5</item>
+        <!-- Do not translate. -->
+        <item>6</item>
+        <!-- Do not translate. -->
+        <item>7</item>
+        <!-- Do not translate. --><!-- Value 8 is REMOTE_SUBMIX, which is internal -->
+        <item>9</item>
+        <!-- Do not translate. -->
+        <item>10</item>
+    </string-array>
+
+
 </resources>
