@@ -59,6 +59,7 @@
         android:icon="@drawable/ic_settings_system_daydream"
         android:key="ambient_settings"
         android:title="@string/device_daydream"
+        custom:isPreferenceVisible="false"
         custom:uri="@string/ambient_slice_uri"/>
     <Preference
         android:fragment="com.android.tv.settings.vendor.PowerAndEnergyFragment"
