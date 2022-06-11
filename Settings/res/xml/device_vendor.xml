@@ -34,7 +34,7 @@
         android:key="date_time"
         android:title="@string/system_date_time"/>
     <Preference
-        android:fragment="com.android.tv.settings.system.LanguageFragment"
+        android:fragment="com.android.tv.settings.system.locale.LanguagePickerFragment"
         android:icon="@drawable/ic_language"
         android:key="language"
         android:title="@string/system_language"/>
@@ -59,6 +59,7 @@
         android:icon="@drawable/ic_settings_system_daydream"
         android:key="ambient_settings"
         android:title="@string/device_daydream"
+        custom:isPreferenceVisible="false"
         custom:uri="@string/ambient_slice_uri"/>
     <Preference
         android:fragment="com.android.tv.settings.vendor.PowerAndEnergyFragment"
