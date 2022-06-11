@@ -59,7 +59,7 @@
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Configuración de la cuenta"</string>
     <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Asistente de Google"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Pago y compras"</string>
-    <string name="privacy_app_settings_category" msgid="858250971978879266">"Ajustes de la aplicación"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Ajustes de aplicaciones"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Ubicación, uso y diagnóstico, y anuncios"</string>
     <string name="add_account" msgid="7386223854837017129">"Añadir cuenta"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Quitar cuenta"</string>
@@ -124,10 +124,10 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: La opción Automático quizá no funcione si tu dispositivo no indica bien qué formatos admite."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automático: habilitar únicamente los formatos compatibles con el dispositivo de salida de audio "</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automático: habilitar solo los formatos compatibles con el dispositivo de salida de audio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Si se selecciona, el sistema permitirá que las aplicaciones elijan cualquier formato de sonido compatible con tu cadena de dispositivos. Es posible que las aplicaciones no elijan el formato de la máxima calidad."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Ninguno: no usar nunca sonido envolvente"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: habilitar o inhabilitar de forma selectiva cada formato compatible con este dispositivo, lo sea también o no con tu dispositivo de salida de audio"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: habilitar o inhabilitar de forma selectiva cada formato compatible con este dispositivo, sin importar si es compatible o no con el dispositivo de salida de audio"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Si está seleccionado, puedes inhabilitar manualmente los formatos de sonido compatibles con tu cadena de dispositivos que causen problemas en la reproducción y habilitar los que no sean compatibles. En algunos casos, es posible que las aplicaciones no elijan el formato de la máxima calidad."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"¿Habilitar formato de sonido no compatible?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"El dispositivo de audio conectado no indica que sea compatible con este formato. Quizá emita sonidos fuertes o se comporte de otra manera no esperada."</string>
@@ -145,15 +145,15 @@
     <string name="display_category_title" msgid="247804007525046312">"Pantalla"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Ajustes avanzados de la pantalla"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI‑CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Ajustes avanzados del sonido"</string>
-    <string name="game_mode_title" msgid="7280816243531315755">"Permitir el modo de juego"</string>
+    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Ajustes avanzados de sonido"</string>
+    <string name="game_mode_title" msgid="7280816243531315755">"Permitir modo de juego"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Adaptarse a la velocidad de fotogramas del contenido"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Solo si la transición es fluida"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si la aplicación lo solicita, tu dispositivo intentará mostrar en su velocidad de fotogramas original el contenido que ves solo si tu televisor puede usarla de forma fluida."</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si la aplicación lo solicita, tu dispositivo intentará hacer coincidir la imagen con la velocidad de fotogramas original del contenido que veas, pero SOLO si tu televisor puede mostrar una transición fluida."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Aunque la transición no sea fluida"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si la aplicación lo solicita, tu dispositivo intentará mostrar en su velocidad de fotogramas original el contenido que ves. Esta opción puede provocar que la pantalla se ponga en blanco durante un segundo al iniciar o termina la reproducción del vídeo."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nunca"</string>
-    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Aunque la aplicación lo solicite, tu dispositivo nunca intentará mostrar en su velocidad de fotogramas original el contenido que ves."</string>
+    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Aunque la aplicación lo solicite, tu dispositivo nunca intentará mostrar el contenido que veas en su velocidad de fotogramas original."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Ajuste de texto"</string>
     <string name="font_scale_item_detail" msgid="1558315053348778805">"Ajustar al <xliff:g id="SCALE">%1$d</xliff:g> %%"</string>
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Texto de ejemplo"</string>
@@ -163,8 +163,8 @@
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Selección de formato"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automático"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Usar formatos que indica el dispositivo"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Elegir manualmente formatos disponibles"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Usa los formatos disponibles para el dispositivo"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Elige manualmente los formatos disponibles"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"FORMATOS COMPATIBLES"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"FORMATOS NO COMPATIBLES"</string>
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
@@ -612,7 +612,7 @@
     <string name="location_no_recent_apps" msgid="7033474075806435793">"Ninguna aplicación ha solicitado la ubicación recientemente"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Uso de batería elevado"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Poco uso de batería"</string>
-    <string name="location_mode_wifi_description" msgid="84697248707903061">"Usar Wi‑Fi para estimar la ubicación"</string>
+    <string name="location_mode_wifi_description" msgid="84697248707903061">"Usa el Wi‑Fi para estimar la ubicación"</string>
     <string name="location_status" msgid="3037321737386011224">"Estado de ubicación"</string>
     <string name="location_services" msgid="551503779736382878">"Servicios de ubicación"</string>
     <string name="on" msgid="4899322147062342542">"Activado"</string>
