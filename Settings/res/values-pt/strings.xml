@@ -124,10 +124,10 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos com Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Obs: \"Automático\" pode não funcionar se o dispositivo não informar os formatos compatíveis corretos."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automático: ativar apenas os formatos compatíveis com o dispositivo de saída de áudio "</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automático: ativar apenas os formatos com suporte no dispositivo de saída de áudio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Quando selecionado, o sistema permitirá que apps escolham qualquer formato de som compatível com sua cadeia de dispositivos. Os apps podem escolher um formato que não seja o de maior qualidade."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Nenhum: nunca usar o som surround"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: ativar ou desativar seletivamente cada formato compatível com este dispositivo, independentemente do que é compatível com o dispositivo de saída de áudio"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: ativar ou desativar cada formato com suporte neste dispositivo, independentemente do suporte do dispositivo de saída de áudio"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Quando selecionado, você poderá desativar manualmente formatos de som compatíveis com sua cadeia de dispositivos que estão causando problemas de reprodução. Os formatos não compatíveis podem ser ativados. Em alguns casos, os apps poderão escolher um formato que não seja o de maior qualidade."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Ativar formato de som não compatível?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"O dispositivo de áudio conectado não informou ser compatível com o formato. Isso pode causar comportamentos inesperados, como ruídos altos ou estalos."</string>
@@ -143,11 +143,11 @@
     <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Para ativar, mude a seleção de formato para \"Manual\"."</string>
     <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Para desativar, mude a seleção de formato para \"Manual\"."</string>
     <string name="display_category_title" msgid="247804007525046312">"Tela"</string>
-    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Configurações de tela avançadas"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Configurações avançadas de tela"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Configurações de som avançadas"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Permitir modo jogo"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Frame rate do conteúdo correspondente"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Ajuste de frame rate do conteúdo"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Uniforme"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Se o app solicitar, o dispositivo usará um frame rate igual ao original do conteúdo que você está assistindo, mas APENAS se a TV puder fazer uma transição uniforme."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Não uniforme"</string>
@@ -164,7 +164,7 @@
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automático"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
     <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Usar os formatos informados pelo dispositivo"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Escolher manualmente dentre os formatos disponíveis"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Escolher manualmente um dos formatos disponíveis"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"FORMATOS COMPATÍVEIS"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"FORMATOS NÃO COMPATÍVEIS"</string>
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
@@ -172,7 +172,7 @@
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
     <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Quando selecionado, o sistema permitirá que os apps escolham qualquer formato HDR compatível com sua cadeia de dispositivos. Os apps podem escolher um formato que não seja o de maior qualidade."</string>
-    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Quando selecionado, você poderá desativar manualmente formatos HDR compatíveis com sua cadeia de dispositivos que estejam causando problemas de reprodução. Os formatos não compatíveis com sua cadeia não podem ser ativados à força. Os apps podem escolher um formato que não seja o de maior qualidade."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Quando selecionado, você pode desativar manualmente formatos HDR com suporte nos dispositivos que estão causando problemas de reprodução. Os formatos sem suporte na sua rede não podem ser ativados à força. Os apps podem escolher um formato que não é o de maior qualidade."</string>
     <string name="hdr_format_info" msgid="5652559220799426076">"INFORMAÇÕES DE FORMATO"</string>
     <string name="hdr_show_formats" msgid="171065892975445851">"Mostrar formatos"</string>
     <string name="hdr_hide_formats" msgid="8561568998525727230">"Ocultar formatos"</string>
@@ -402,7 +402,7 @@
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Redes disponíveis"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Adicionar nova rede"</string>
     <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Conexão rápida"</string>
-    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"A conexão rápida ajuda você a se conectar rapidamente a uma rede Wi-Fi com a leitura de um código QR no seu smartphone."</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"A conexão rápida encontra e conecta uma rede Wi-Fi via código QR no smartphone."</string>
     <string name="security_type" msgid="2297615092250075696">"Tipo de segurança"</string>
     <string name="other_network" msgid="5299289104661858596">"Outra rede..."</string>
     <string name="skip_network" msgid="3095529090560000692">"Ignorar"</string>
@@ -951,7 +951,7 @@
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Sobrepor a outros apps"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Permitir sobreposição a outros apps"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Permite que um app seja sobreposto a outros apps que você esteja usando. Ele pode interferir no uso que você faz desses apps ou alterar a forma como eles aparecem ou se comportam."</string>
-    <string name="write_system_settings" msgid="4284654265954461890">"Modificar config. do sistema"</string>
+    <string name="write_system_settings" msgid="4284654265954461890">"Mudar configuração do sistema"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"Muda configurações do sistema"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"Permite que um app modifique configurações do sistema."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Sim"</string>
@@ -967,7 +967,7 @@
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Ligar tela"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"Permitir que a tela seja ligada"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Permitir que um app ligue a tela. Se permitido, o app vai poder ligar a tela a qualquer momento sem uma intent explícita."</string>
-    <string name="special_access" msgid="21806055758289916">"Acesso especial a apps"</string>
+    <string name="special_access" msgid="21806055758289916">"Acesso especial para apps"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Áudio"</string>
     <string name="record_audio" msgid="5035689290259575229">"Gravar áudio"</string>
