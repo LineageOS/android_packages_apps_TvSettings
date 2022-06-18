@@ -59,7 +59,7 @@
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Configuración de la cuenta"</string>
     <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Asistente de Google"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Pago y compras"</string>
-    <string name="privacy_app_settings_category" msgid="858250971978879266">"Configuración de la app"</string>
+    <string name="privacy_app_settings_category" msgid="858250971978879266">"Configuración de apps"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Ubicación, Uso y Diagnóstico, Anuncios"</string>
     <string name="add_account" msgid="7386223854837017129">"Agregar cuenta"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Eliminar cuenta"</string>
@@ -82,7 +82,7 @@
     <string name="connectivity_summary_no_network_connected" msgid="6111160695454212460">"No se estableció conexión con ninguna red"</string>
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"La conexión Wi-Fi está desactivada"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Búsqueda siempre disponible"</string>
-    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Permitir que los servicios de ubicación y otras apps de Google busquen redes aunque la conexión Wi-Fi esté desactivada"</string>
+    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Permite que los servicios de ubicación y otras apps de Google busquen redes aunque la conexión Wi-Fi esté desactivada."</string>
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Búsqueda siempre disponible: Permite que los servicios de ubicación y otras apps de Google busquen redes, incluso si la conexión Wi-Fi está desactivada."</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Conectarse a una red"</string>
@@ -148,9 +148,9 @@
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Configuración de sonido avanzada"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Habilitar modo de juego"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Igualar velocidad de fotogramas del contenido"</string>
-    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Sin problemas"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si la app lo solicita, el dispositivo hará coincidir la velocidad de fotogramas resultante con la original del contenido SOLO si la TV puede realizar una transición óptima."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"No optimizar"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Fluida"</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si la app lo solicita, el dispositivo hará coincidir la velocidad de fotogramas resultante con la original del contenido SOLO si la TV puede realizar una transición fluida."</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"No fluida"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si la app lo solicita, el dispositivo hará coincidir la velocidad de fotogramas resultante con la original del contenido, lo que puede provocar que la pantalla quede en blanco por un segundo al salir o ingresar a una reproducción de video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nunca"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Aunque la app lo solicite, el dispositivo nunca hará coincidir la velocidad de fotogramas resultante con la original del contenido que estás mirando."</string>
@@ -172,7 +172,7 @@
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
     <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"Si eliges esta opción, el sistema permitirá que las apps seleccionen cualquier formato HDR que sea compatible con la cadena del dispositivo. Las apps podrán elegir un formato que no sea el de mayor calidad."</string>
-    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Podrás inhabilitar de forma manual los formatos HDR compatibles con cadena del dispositivo que tengan problemas de reproducción. No podrás forzar la habilitación de formatos HDR no compatibles con la cadena del dispositivo. Las apps podrán elegir un formato que no sea el de mayor calidad."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Podrás inhabilitar de forma manual los formatos HDR compatibles con la cadena del dispositivo que tengan problemas de reproducción. No podrás forzar la habilitación de formatos HDR no compatibles con la cadena del dispositivo. Las apps podrán elegir un formato que no sea el de mayor calidad."</string>
     <string name="hdr_format_info" msgid="5652559220799426076">"INFORMACIÓN DEL FORMATO"</string>
     <string name="hdr_show_formats" msgid="171065892975445851">"Mostrar formatos"</string>
     <string name="hdr_hide_formats" msgid="8561568998525727230">"Ocultar formatos"</string>
@@ -402,7 +402,7 @@
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Redes disponibles"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Agregar red nueva"</string>
     <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Conexión rápida"</string>
-    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Conexión rápida te permite conectarte al instante a una red Wi-Fi escaneando el código QR en tu teléfono."</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Conexión rápida te permite conectarte al instante a una red Wi-Fi si escaneas el código QR en tu teléfono."</string>
     <string name="security_type" msgid="2297615092250075696">"Tipo de seguridad"</string>
     <string name="other_network" msgid="5299289104661858596">"Otra red..."</string>
     <string name="skip_network" msgid="3095529090560000692">"Omitir"</string>
@@ -586,7 +586,7 @@
   </string-array>
     <string name="sensor_toggle_description" msgid="7415801459994303159">"Para todas las apps y servicios"</string>
     <string name="recently_accessed_by_category" msgid="6841705864715653428">"Accesos recientes:"</string>
-    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"No hubo accesos recientes"</string>
+    <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Sin accesos recientes"</string>
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Ver todo"</string>
     <string name="microphone" msgid="7893752847683941214">"Micrófono"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"Acceso al micrófono"</string>
@@ -595,7 +595,7 @@
     <string name="microphone_physical_privacy_enabled_text" msgid="401238365312924088">"Para desbloquearlo, mueve el interruptor de privacidad del dispositivo a la posición de micrófono activado para permitir el acceso al micrófono."</string>
     <string name="camera" msgid="1226671478936288283">"Cámara"</string>
     <string name="camera_toggle_title" msgid="5566469574224956142">"Acceso a la cámara"</string>
-    <string name="open_camera_permissions" msgid="301360297337141591">"Accesos de las apps a la cámara"</string>
+    <string name="open_camera_permissions" msgid="301360297337141591">"Acceso de las apps a la cámara"</string>
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Acceso a la cámara bloqueado"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Para desbloquearlo, mueve el interruptor de privacidad del dispositivo a la posición de cámara activada para permitir el acceso a la cámara."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Acceso al micrófono: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
@@ -908,7 +908,7 @@
   <string-array name="rooms">
     <item msgid="6590829789532602097">"Android TV"</item>
     <item msgid="1140506340411482365">"TV de la sala de estar"</item>
-    <item msgid="6448060889026244632">"TV de la sala familiar"</item>
+    <item msgid="6448060889026244632">"TV de la sala de estar"</item>
     <item msgid="3336274213215419228">"TV del dormitorio"</item>
   </string-array>
     <string name="custom_room" msgid="6798144004583173563">"Ingresar nombre personalizado…"</string>
@@ -983,7 +983,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Ahorro de datos"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Ajustar automáticamente la calidad de video para usar menos datos móviles"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Uso de datos y alertas"</string>
-    <string name="data_saver_header_info" msgid="2706725187498535785">"Puedes conectarte a Internet mediante una red Wi-Fi, Ethernet o el hotspot del teléfono."</string>
+    <string name="data_saver_header_info" msgid="2706725187498535785">"Puedes conectarte a Internet con una red Wi-Fi, Ethernet o el hotspot del teléfono."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Acción no permitida"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"No se puede cambiar el volumen"</string>
