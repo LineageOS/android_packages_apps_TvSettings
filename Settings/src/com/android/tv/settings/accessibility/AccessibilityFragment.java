@@ -55,6 +55,8 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
     private static final String TOGGLE_HIGH_TEXT_CONTRAST_KEY = "toggle_high_text_contrast";
     private static final String TOGGLE_AUDIO_DESCRIPTION_KEY = "toggle_audio_description";
     private static final String ACCESSIBILITY_SERVICES_KEY = "system_accessibility_services";
+    private static final String TOGGLE_BOLD_TEXT_KEY = "toggle_bold_text";
+    private static final int BOLD_TEXT_ADJUSTMENT = 500;
 
     private PreferenceGroup mServicesPref;
     private AccessibilityManager.AccessibilityStateChangeListener
@@ -101,6 +103,12 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
                 getContext().getContentResolver(),
                 Settings.Secure.ENABLED_ACCESSIBILITY_AUDIO_DESCRIPTION_BY_DEFAULT, 0) == 1);
 
+        final TwoStatePreference boldTextPreference =
+                (TwoStatePreference) findPreference(TOGGLE_BOLD_TEXT_KEY);
+        boldTextPreference.setChecked(Settings.Secure.getInt(
+                getContext().getContentResolver(),
+                Settings.Secure.FONT_WEIGHT_ADJUSTMENT, 0) == BOLD_TEXT_ADJUSTMENT);
+
         mServicesPref = (PreferenceGroup) findPreference(ACCESSIBILITY_SERVICES_KEY);
         if (mServicesPref != null) {
             refreshServices(mServicesPref);
@@ -129,6 +137,14 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.ENABLED_ACCESSIBILITY_AUDIO_DESCRIPTION_BY_DEFAULT,
                     (((SwitchPreference) preference).isChecked() ? 1 : 0));
+            return true;
+        } else if (TextUtils.equals(preference.getKey(), TOGGLE_BOLD_TEXT_KEY)) {
+            logToggleInteracted(
+                    TvSettingsEnums.SYSTEM_A11Y_BOLD_TEXT,
+                    ((SwitchPreference) preference).isChecked());
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.FONT_WEIGHT_ADJUSTMENT,
+                    (((SwitchPreference) preference).isChecked() ? BOLD_TEXT_ADJUSTMENT : 0));
             return true;
         } else {
             return super.onPreferenceTreeClick(preference);
