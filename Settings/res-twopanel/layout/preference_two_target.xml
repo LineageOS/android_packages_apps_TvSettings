@@ -81,7 +81,7 @@ packages/SettingsLib/TwoTargetPreference/res/layout/preference_two_target.xml --
         android:duplicateParentState="true"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="6dp"
-        android:background="@color/tp_preference_item_secondary_text_default_color"/>
+        android:background="@color/tp_preference_item_secondary_text_color_selector"/>
 
     <!-- Preference should place its actual preference widget here. -->
     <LinearLayout android:id="@android:id/widget_frame"
