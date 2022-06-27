@@ -16,10 +16,10 @@
 
 package com.android.tv.settings.connectivity;
 
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
-import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.library.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
@@ -50,8 +50,8 @@ import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RestrictedPreferenceAdapter;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.overlay.FlavorUtils;
-import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.settings.library.overlay.FlavorUtils;
+import com.android.tv.settings.library.util.SliceUtils;
 import com.android.tv.settings.widget.CustomContentDescriptionSwitchPreference;
 import com.android.tv.settings.widget.TvAccessPointPreference;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
@@ -298,7 +298,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mCollapsePref.setVisible(wifiEnabled && mWifiNetworksCategory.shouldShowCollapsePref());
         mAddPref.setVisible(wifiEnabled);
         if (mAddEasyConnectPref != null) {
-            mAddEasyConnectPref.setVisible(wifiEnabled && mWifiManager.isEasyConnectSupported());
+            mAddEasyConnectPref.setVisible(isEasyConnectEnabled());
         }
 
         if (!wifiEnabled) {
@@ -483,5 +483,16 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     @Override
     protected int getPageId() {
         return TvSettingsEnums.NETWORK;
+    }
+
+    private boolean isEasyConnectEnabled() {
+        final boolean wifiEnabled = mIsWifiHardwarePresent
+                && mConnectivityListener.isWifiEnabledOrEnabling();
+
+        if (!wifiEnabled || !mWifiManager.isEasyConnectSupported()) {
+            return false;
+        }
+
+        return getContext().getResources().getBoolean(R.bool.config_easyconnect_enabled);
     }
 }
