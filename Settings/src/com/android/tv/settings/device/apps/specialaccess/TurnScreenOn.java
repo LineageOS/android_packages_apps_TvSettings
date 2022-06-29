@@ -20,7 +20,9 @@ import android.Manifest;
 import android.app.ActivityManager;
 import android.app.AppOpsManager;
 import android.app.tvsettings.TvSettingsEnums;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.util.Log;
@@ -57,16 +59,15 @@ public class TurnScreenOn extends SettingsPreferenceFragment
                 }
 
                 @Override
-                public boolean filterApp(ApplicationsState.AppEntry info) {
-                    info.extraInfo = mAppOpsManager.checkOpNoThrow(AppOpsManager.OP_TURN_SCREEN_ON,
-                            info.info.uid, info.info.packageName) == AppOpsManager.MODE_ALLOWED;
-                    return !ManageAppOp.shouldIgnorePackage(
-                            getContext(),
-                            info.info.packageName, /* customizedIgnoredPackagesArray= */ 0)
-                            && !info.info.isPrivilegedApp()
+                public boolean filterApp(ApplicationsState.AppEntry entry) {
+                    entry.extraInfo = mAppOpsManager.checkOpNoThrow(AppOpsManager.OP_TURN_SCREEN_ON,
+                            entry.info.uid, entry.info.packageName) == AppOpsManager.MODE_ALLOWED;
+                    return !ManageAppOp.shouldIgnorePackage(getContext(), entry.info.packageName,
+                            /* customizedIgnoredPackagesArray= */ 0)
+                            && !entry.info.isPrivilegedApp()
                             && ActivityManager.getCurrentUser() == UserHandle.getUserId(
-                            info.info.uid)
-                            && checkPackageHasWakeLockPermission(info.info.packageName);
+                                    entry.info.uid)
+                            && hasTurnScreenOnPermission(entry.info);
                 }
             });
 
@@ -89,9 +90,15 @@ public class TurnScreenOn extends SettingsPreferenceFragment
         mManageApplicationsController.updateAppList();
     }
 
-    private boolean checkPackageHasWakeLockPermission(String packageName) {
-        return getContext().getPackageManager().checkPermission(Manifest.permission.WAKE_LOCK,
-                packageName) == PackageManager.PERMISSION_GRANTED;
+    private boolean hasTurnScreenOnPermission(ApplicationInfo appInfo) {
+        String permission = Manifest.permission.TURN_SCREEN_ON;
+        if (appInfo.targetSdkVersion <= Build.VERSION_CODES.TIRAMISU) {
+            // Because android.permission.TURN_SCREEN_ON doesn't exist on old releases we can filter
+            // by android.permission.WAKE_LOCK which is required to acquire a wake lock.
+            permission = Manifest.permission.WAKE_LOCK;
+        }
+        return getContext().getPackageManager().checkPermission(permission, appInfo.packageName)
+                == PackageManager.PERMISSION_GRANTED;
     }
 
     @NonNull
@@ -100,7 +107,7 @@ public class TurnScreenOn extends SettingsPreferenceFragment
             ApplicationsState.AppEntry entry) {
         final TwoStatePreference switchPref = (SwitchPreference) preference;
         switchPref.setTitle(entry.label);
-        switchPref.setKey(entry.info.packageName);
+        switchPref.setKey("package:" + entry.info.uid + ":" + entry.info.packageName);
         switchPref.setIcon(entry.icon);
         switchPref.setChecked((Boolean) entry.extraInfo);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
