@@ -135,10 +135,11 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
 
         Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
         Display.Mode autoMode = display.getSystemPreferredDisplayMode();
-        pref.setSummary(ResolutionSelectionUtils.getResolutionString(
-                        autoMode.getPhysicalWidth(), autoMode.getPhysicalHeight()) + " "
-                + ResolutionSelectionUtils.getRefreshRateString(
-                        getContext().getResources(), autoMode.getRefreshRate()));
+        final String summary = getResources().getString(R.string.resolution_display_mode,
+                ResolutionSelectionUtils.getResolutionString(
+                        autoMode.getPhysicalWidth(), autoMode.getPhysicalHeight()),
+                ResolutionSelectionUtils.getRefreshRateString(autoMode.getRefreshRate()));
+        pref.setSummary(summary);
         mResolutionPreferenceCategory.addPreference(pref);
 
         for (int i = 0; i < mModes.length; i++) {
@@ -148,10 +149,10 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
 
     /** Returns a radio preference for each display mode. */
     private RadioPreference createResolutionPreference(Display.Mode mode, int resolution) {
-        String title = ResolutionSelectionUtils.getResolutionString(
-                mode.getPhysicalWidth(), mode.getPhysicalHeight())
-                + " (" + ResolutionSelectionUtils.getRefreshRateString(
-                        getContext().getResources(), mode.getRefreshRate()) + ")";
+        final String title = getResources().getString(R.string.resolution_display_mode,
+                ResolutionSelectionUtils.getResolutionString(
+                        mode.getPhysicalWidth(), mode.getPhysicalHeight()),
+                ResolutionSelectionUtils.getRefreshRateString(mode.getRefreshRate()));
 
         String summary = mode.getPhysicalWidth() + " x " + mode.getPhysicalHeight();
         RadioPreference pref = new RadioPreference(getContext());
