@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Սեղմեք «Եղավ»՝ %1$s լուծաչափն այս պահից սկսած օգտագործելու համար։"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Չեղարկել"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"Եղավ"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Հց"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Ջնջե՞լ քեշավորված տվյալները:"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Սա կմաքրի բոլոր ծրագրերի քեշավորված տվյալները:"</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -608,7 +609,7 @@
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Տեղադրության մասին տվյալների հավաքում"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Ռեժիմ"</string>
     <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Տեղադրության վերջին հարցումներ"</string>
-    <string name="location_no_recent_apps" msgid="7033474075806435793">"Վերջին ժամանակաշրջանում հավելվածները տեղադրության հարցում չեն արել"</string>
+    <string name="location_no_recent_apps" msgid="7033474075806435793">"Վերջերս ոչ մի հավելված տեղադրության հարցում չի արել"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Մարտկոցի լիցքի բարձր ծախսում"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Մարտկոցի լիցքի ցածր ծախսում"</string>
     <string name="location_mode_wifi_description" msgid="84697248707903061">"Տեղադրությունը որոշել Wi-Fi-ի օգնությամբ"</string>
@@ -655,9 +656,9 @@
     <string name="captions_windowshow" msgid="6002072054703167886">"Ցույց տալ պատուհանը"</string>
     <string name="captions_windowcolor" msgid="7460430328878876648">"Պատուհանի գույնը"</string>
     <string name="captions_windowopacity" msgid="8645082670322789314">"Պատուհանի թափանցիկությունը"</string>
-    <string name="captions_style_0" msgid="169414884289770256">"Սպիտակը սևի վրա"</string>
-    <string name="captions_style_1" msgid="8236052739817535538">"Սևը սպիտակի վրա"</string>
-    <string name="captions_style_2" msgid="456353889540431910">"Դեղինը սևի վրա"</string>
+    <string name="captions_style_0" msgid="169414884289770256">"Սպիտակ՝ սևի վրա"</string>
+    <string name="captions_style_1" msgid="8236052739817535538">"Սև՝ սպիտակի վրա"</string>
+    <string name="captions_style_2" msgid="456353889540431910">"Դեղին՝ սևի վրա"</string>
     <string name="captions_style_3" msgid="3860050153620761166">"Դեղինը կապույտի վրա"</string>
     <string name="captions_style_custom" msgid="9062905566459387931">"Հատուկ"</string>
     <string name="color_white" msgid="4188877187457167678">"Սպիտակ"</string>
@@ -778,7 +779,7 @@
     <string name="title_configure" msgid="846802387014612210">"Կազմաձևել"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Ստեղնաշարի կարգավորումներ"</string>
     <string name="title_current_autofill_service" msgid="9029001041887283153">"Ինքնալրացման ընթացիկ ծառայությունը"</string>
-    <string name="title_select_autofill_service" msgid="696559582725756848">"Ընտրեք ինքնալցման ծառայությունը"</string>
+    <string name="title_select_autofill_service" msgid="696559582725756848">"Ընտրեք ինքնալրացման ծառայությունը"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Ոչ մեկը"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Համոզվեք, որ վստահում եք այս հավելվածին&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Password service&gt;%1$s&lt;/xliff:g&gt; ծառայությունն օգտագործում է էկրանի բովանդակությունը՝ որոշելու, թե ինչը կարող է ինքնալցվել:"</string>
     <string name="computing_size" msgid="8623916230485437579">"Հաշվարկվում է…"</string>
@@ -957,7 +958,7 @@
     <string name="write_settings_off" msgid="6730113471695092167">"Ոչ"</string>
     <string name="manage_external_storage_title" msgid="8139593207533811077">"Բոլոր ֆայլերի հասանելիություն"</string>
     <string name="permit_manage_external_storage" msgid="1776899171934627417">"Բոլոր ֆայլերը կառավարելու թույլտվություն տալ"</string>
-    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"Դուք կարող եք թույլատրել այս հավելվածին կարդալ, փոփոխել և ջնջել այս սարքի կամ միացված կրիչների բոլոր ֆայլերը։ Եթե թույլատրեք, հավելվածը կկարողանա օգտվել ֆայլերից՝ առանց ձեր իմացության։"</string>
+    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"Դուք կարող եք թույլատրել այս հավելվածին կարդալ, փոփոխել և ջնջել այս սարքի կամ միացված կրիչների բոլոր ֆայլերը։ Եթե թույլատրեք, հավելվածը կկարողանա օգտվել ֆայյլերից առանց ձեր իմացության։"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"«Նկար նկարի մեջ» ռեժիմ"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Թույլատրել «նկար նկարի մեջ» ռեժիմը"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Տեղադրված հավելվածները չեն աջակցում «նկար նկարի մեջ» ռեժիմը"</string>
@@ -1008,10 +1009,10 @@
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> հավելվածը կկառավարի և կվերահսկի այս սարքը։"</string>
     <string name="device_admin_status" msgid="5467001937240455367">"Ադմինիստրատորի այս հավելվածը ակտիվ է և թույլ է տալիս <xliff:g id="APP_NAME">%1$s</xliff:g>-ին կատարել հետևյալ գործողությունները`"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Շարունակելու դեպքում օգտատերը կկառավարվի ձեր ադմինիստրատորի կողմից, որը, ձեր անձնական տվյալներից բացի, կկարողանա պահել նաև դրա հետ առնչվող տվյալները:\n\nՁեր ադմինիստրատորը կարող է վերահսկել և կառավարել կարգավորումները, մուտքը, հավելվածները և այս օգտատիրոջ հետ առնչվող տվյալները, ներառյալ ցանցային գործունեությունը և ձեր սարքի տեղադրության տվյալները:"</string>
-    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Տրամադրե՞լ վրիպակի զեկույցը:"</string>
-    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ՏՏ ադմինիստրատորին անհրաժեշտ է վրիպակի զեկույց: Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ:"</string>
-    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ՏՏ ադմինիստրատորին անհրաժեշտ է վրիպակի զեկույց: Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ, իսկ սարքի աշխատանքը կարող է ժամանակավորապես դանդաղել:"</string>
-    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Այս վրիպակի զեկույցը տրամադրվում է ձեր ՏՏ ադմինիստրատորին: Կապվեք նրա հետ՝ լրացուցիչ տեղեկություններ ստանալու համար:"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Կիսվե՞լ վրիպակի մասին հաղորդմամբ"</string>
+    <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ՏՏ ադմինիստրատորին անհրաժեշտ է վրիպակի մասին հաղորդում: Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ:"</string>
+    <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Այս սարքի անսարքությունների վերացման նպատակով ձեր ՏՏ ադմինիստրատորին անհրաժեշտ է վրիպակի մասին հաղորդում: Կարող են տրամադրվել տեղեկություններ ձեր հավելվածների մասին և այլ տվյալներ, իսկ սարքի աշխատանքը կարող է ժամանակավորապես դանդաղել:"</string>
+    <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Վրիպակի մասին այս հաղորդումը տրամադրվում է ձեր ՏՏ ադմինիստրատորին: Կապվեք նրա հետ՝ լրացուցիչ տեղեկություններ ստանալու համար:"</string>
     <string name="share_remote_bugreport_action" msgid="6760197666368262892">"Տրամադրել"</string>
     <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"Մերժել"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"Սարք <xliff:g id="APPNAME">%1$s</xliff:g> հավելվածի հետ օգտագործելու համար"</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Սնուցում և էներգիա"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Կարգավիճակը միացման ժամանակ"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Վերակայել"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Ethernet-ի զուգակցման կոդ"</string>
 </resources>

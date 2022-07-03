@@ -147,13 +147,13 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Paramètres audio avancés"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Autoriser le mode Jeu"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Faire correspondre à fréquence d\'images du contenu"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Ajuster en fonction de la fréquence d\'images du contenu"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Fluide"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si l\'appli le demande, votre appareil fera correspondre sa sortie à la fréquence d\'images d\'origine du contenu que vous regardez, uniquement si votre TV peut effectuer une transition fluide."</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si l\'appli le demande, votre appareil ajustera sa sortie en fonction de la fréquence d\'images d\'origine du contenu que vous regardez, uniquement si votre TV peut effectuer une transition fluide."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Non fluide"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si l\'appli le demande, votre appareil fera correspondre sa sortie à la fréquence d\'images d\'origine du contenu que vous regardez. Votre écran risque alors d\'être vide pendant une seconde lors du démarrage ou de l\'arrêt d\'une vidéo."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si l\'appli le demande, votre appareil ajustera sa sortie en fonction de la fréquence d\'images d\'origine du contenu que vous regardez. Votre écran risque alors d\'être vide pendant une seconde lors du démarrage ou de l\'arrêt d\'une vidéo."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Jamais"</string>
-    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Même si l\'appli le demande, votre appareil n\'essaiera jamais de faire correspondre sa sortie à la fréquence d\'images d\'origine du contenu que vous regardez."</string>
+    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Même si l\'appli le demande, votre appareil n\'essaiera jamais d\'ajuster sa sortie en fonction de la fréquence d\'images d\'origine du contenu que vous regardez."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Mise à l\'échelle du texte"</string>
     <string name="font_scale_item_detail" msgid="1558315053348778805">"Ajuster à <xliff:g id="SCALE">%1$d</xliff:g> %%"</string>
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Exemple de texte"</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Sélectionnez \"OK\" pour utiliser %1$s à partir de maintenant."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Annuler"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Effacer les données mises en cache ?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Les données en cache des applis seront effacées."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -680,7 +681,7 @@
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Configuration du moteur de synthèse vocale"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Énoncer les mots de passe"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"Moteur préféré"</string>
-    <string name="system_speech_rate" msgid="6553204071403872669">"Cadence"</string>
+    <string name="system_speech_rate" msgid="6553204071403872669">"Débit"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"Écouter un extrait"</string>
     <string name="system_install_voice_data" msgid="8016395777968958673">"Installer les données vocales"</string>
     <string name="system_general" msgid="687760148454147771">"Général"</string>
@@ -962,7 +963,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Autoriser le Picture-in-picture"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Aucune application installée n\'est compatible avec le mode Picture-in-picture"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Autorisez les applications à créer une fenêtre Picture-in-picture lorsqu\'elles sont ouvertes ou après les avoir quittées (par exemple, pour continuer de regarder une vidéo). Cette fenêtre se superpose aux autres applications en cours d\'utilisation."</string>
-    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Autorisez les applis à définir des alarmes et à planifier des actions soumises à un délai. Cela leur permet de s\'exécuter en arrière-plan, ce qui peut consommer plus de batterie.\n\nSi cette autorisation est désactivée, les alarmes existantes et les événements basés sur l\'heure planifiés par l\'appli ne fonctionneront pas."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Autoriser les applis à définir des alarmes et à programmer des actions à certaines heures. Elle s\'exécutera alors en arrière-plan, ce qui peut solliciter davantage la batterie.\n\nSi l\'autorisation est désactivée, les alarmes existantes et les événements programmés par l\'appli ne fonctionneront pas."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Activer l\'écran"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"Autoriser l\'activation de l\'écran"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Autoriser une appli à activer l\'écran. Si l\'autorisation est accordée, l\'appli peut activer l\'écran à tout moment sans votre intention explicite."</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Alimentation et énergie"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Comportement au démarrage"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Réinitialiser"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Code d\'association Ethernet"</string>
 </resources>
