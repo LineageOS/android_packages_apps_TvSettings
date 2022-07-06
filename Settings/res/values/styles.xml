@@ -428,4 +428,13 @@
         <item name="android:layout_width">48dp</item>
         <item name="android:visibility">visible</item>
     </style>
+
+    <!-- Style for the palette textviews for accessibility color correction -->
+    <style name="ColorCorrectionPaletteTextViewStyle">
+        <item name="android:fontFamily">@string/font_sans_serif</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
 </resources>
