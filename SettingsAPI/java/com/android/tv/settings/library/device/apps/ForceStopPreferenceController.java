@@ -89,12 +89,13 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
                     mAppEntry.info.packageName});
             intent.putExtra(Intent.EXTRA_UID, mAppEntry.info.uid);
             intent.putExtra(Intent.EXTRA_USER_HANDLE, UserHandle.getUserId(mAppEntry.info.uid));
-            mContext.sendOrderedBroadcast(intent, null, new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-                    mPreferenceCompat.setVisible(getResultCode() != Activity.RESULT_CANCELED);
-                }
-            }, null, Activity.RESULT_CANCELED, null, null);
+            mContext.sendOrderedBroadcast(intent,
+                    android.Manifest.permission.HANDLE_QUERY_PACKAGE_RESTART, new BroadcastReceiver() {
+                        @Override
+                        public void onReceive(Context context, Intent intent) {
+                            mPreferenceCompat.setVisible(getResultCode() != Activity.RESULT_CANCELED);
+                        }
+                    }, null, Activity.RESULT_CANCELED, null, null);
         }
         super.update();
     }
