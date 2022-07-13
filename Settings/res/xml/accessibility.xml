@@ -33,6 +33,11 @@
             android:title="@string/accessibility_toggle_high_text_contrast_preference_title"
             android:summary="@string/experimental_preference"/>
 
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
+        android:key="toggle_bold_text"
+        android:persistent="true"
+        android:title="@string/accessibility_toggle_bold_text_preference_title" />
+
     <Preference
             android:key="text_to_speech"
             android:title="@string/system_accessibility_tts_output"
@@ -48,7 +53,6 @@
         android:persistent="true"
         android:title="@string/accessibility_toggle_audio_description_preference_title"
         android:summary="@string/accessibility_audio_description_summary"/>
-
 
     <PreferenceCategory
             android:key="system_accessibility_services"
