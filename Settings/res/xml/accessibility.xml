@@ -16,7 +16,9 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/system_accessibility">
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:key="accessibility_preference_screen"
+    android:title="@string/system_accessibility">
 
     <Preference
             android:key="captions"
@@ -49,9 +51,20 @@
             android:fragment="com.android.tv.settings.accessibility.AccessibilityShortcutFragment"/>
 
     <Preference
-            android:key="color_correction"
-            android:title="@string/accessibility_color_correction"
-            android:fragment="com.android.tv.settings.accessibility.AccessibilityColorCorrectionPreferenceFragment"/>
+        android:key="color_correction_only_twopanel"
+        android:title="@string/accessibility_color_correction"
+        android:fragment="com.android.tv.settings.accessibility.AccessibilityColorCorrectionPreferenceFragment"
+        custom:isPreferenceVisible="false" />
+
+    <Preference
+        android:key="color_correction_only_classic"
+        android:title="@string/accessibility_color_correction"
+        custom:isPreferenceVisible="false">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.tv.settings.accessibility.AccessibilityColorCorrectionActivity"
+            android:targetPackage="com.android.tv.settings"/>
+    </Preference>
 
     <com.android.tv.settings.widget.SwitchWithSoundPreference
         android:key="toggle_audio_description"

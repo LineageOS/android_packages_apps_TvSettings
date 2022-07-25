@@ -1144,6 +1144,18 @@
         </activity>
 
         <activity
+            android:name=".accessibility.AccessibilityColorCorrectionActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:theme="@style/TvSettingsActivityTheme">
+            <intent-filter android:priority="1" >
+                <action android:name="android.settings.ACCESSIBILITY_COLOR_CORRECTION_TV_OEM_LINK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".oemlink.AccessibilityServiceActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"

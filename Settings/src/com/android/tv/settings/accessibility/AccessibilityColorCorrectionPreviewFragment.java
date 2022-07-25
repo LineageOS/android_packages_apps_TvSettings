@@ -30,15 +30,18 @@ import android.widget.TextView;
 import androidx.annotation.Keep;
 import androidx.annotation.ColorInt;
 import androidx.annotation.IntDef;
+import androidx.core.text.TextUtilsCompat;
 
 import com.android.tv.twopanelsettings.R;
 import com.android.tv.twopanelsettings.slices.InfoFragment;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Locale;
 
 /**
  * {@link InfoFragment} for the preview pane of accessibility color correction
@@ -46,17 +49,22 @@ import java.util.stream.Collectors;
 @Keep
 public class AccessibilityColorCorrectionPreviewFragment extends InfoFragment {
 
+    public static AccessibilityColorCorrectionPreviewFragment newInstance() {
+        return new AccessibilityColorCorrectionPreviewFragment();
+    }
+
     @Override
     public View onCreateView(
         LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view =
-            inflater.inflate(R.xml.accessibility_color_correction_preview, container, false);
+
+        int layoutId = FlavorUtils.isTwoPanel(getContext())
+            ? R.layout.color_correction_preview_twopanel
+            : R.layout.color_correction_preview_classic;
+        View view = inflater.inflate(layoutId, container, false);
 
         ViewGroup paletteView = view.findViewById(R.id.palette_view);
-
         int[] paletteColors = getPaletteColors();
         int[] paletteItemIds = getPaletteItemIds();
-
         for (int i = 0; i < paletteItemIds.length; i++) {
             TextView textView = (TextView) view.findViewById(paletteItemIds[i]);
             textView.setBackground(createGradientDrawable(paletteView, paletteColors[i]));
@@ -83,18 +91,23 @@ public class AccessibilityColorCorrectionPreviewFragment extends InfoFragment {
 
     private GradientDrawable createGradientDrawable(ViewGroup rootView, @ColorInt int color) {
         GradientDrawable gradientDrawable = new GradientDrawable();
-        Orientation orientation =
-            rootView.getLayoutDirection() == View.LAYOUT_DIRECTION_RTL
-                ? Orientation.RIGHT_LEFT
-                : Orientation.LEFT_RIGHT;
-        gradientDrawable.setOrientation(orientation);
+        gradientDrawable.setOrientation(getOrientationFromLocale());
 
-        int defaultColor =
-            getContext().getColor(R.color.color_correction_palette_gradient_background);
+        int backgroundColorId = FlavorUtils.isTwoPanel(getContext())
+            ? R.color.color_correction_palette_gradient_background_twopanel
+            : R.color.lb_preference_decor_list_background;
+        int defaultColor = getContext().getColor(backgroundColorId);
         int[] gradientColors = new int[] {defaultColor, color};
         float[] gradientOffsets = new float[] {0.2f, 0.5f};
         gradientDrawable.setColors(gradientColors, gradientOffsets);
         return gradientDrawable;
+    }
+
+    private Orientation getOrientationFromLocale() {
+        Locale locale = Locale.getDefault();
+        return TextUtilsCompat.getLayoutDirectionFromLocale(locale) == View.LAYOUT_DIRECTION_RTL
+                ? Orientation.RIGHT_LEFT
+                : Orientation.LEFT_RIGHT;
     }
 
     @Override
