@@ -77,12 +77,14 @@ public class ForceStopPreference extends AppActionPreference {
                     mEntry.info.packageName });
             intent.putExtra(Intent.EXTRA_UID, mEntry.info.uid);
             intent.putExtra(Intent.EXTRA_USER_HANDLE, UserHandle.getUserId(mEntry.info.uid));
-            getContext().sendOrderedBroadcast(intent, null, new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-                    setVisible(getResultCode() != Activity.RESULT_CANCELED);
-                }
-            }, null, Activity.RESULT_CANCELED, null, null);
+            getContext().sendOrderedBroadcast(intent,
+                    android.Manifest.permission.HANDLE_QUERY_PACKAGE_RESTART,
+                        new BroadcastReceiver() {
+                        @Override
+                        public void onReceive(Context context, Intent intent) {
+                            setVisible(getResultCode() != Activity.RESULT_CANCELED);
+                        }
+                    }, null, Activity.RESULT_CANCELED, null, null);
         }
         this.setOnPreferenceClickListener(
                 preference -> {
