@@ -48,6 +48,11 @@
             android:title="@string/accessibility_shortcut"
             android:fragment="com.android.tv.settings.accessibility.AccessibilityShortcutFragment"/>
 
+    <Preference
+            android:key="color_correction"
+            android:title="@string/accessibility_color_correction"
+            android:fragment="com.android.tv.settings.accessibility.AccessibilityColorCorrectionPreferenceFragment"/>
+
     <com.android.tv.settings.widget.SwitchWithSoundPreference
         android:key="toggle_audio_description"
         android:persistent="true"
