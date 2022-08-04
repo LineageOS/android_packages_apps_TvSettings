@@ -171,6 +171,18 @@ public class ResetActivity extends FragmentActivity {
             if (shouldWipePersistentDataBlock(pdbManager)) {
                 new AsyncTask<Void, Void, Void>() {
                     @Override
+                    protected void onPreExecute() {
+                        // Disable actions in the fragment as the wipe of the persistent
+                        // data block can take some time on some devices.
+                        int position = 0;
+                        for (GuidedAction action: getActions()) {
+                             action.setEnabled(false);
+                             notifyActionChanged(position);
+                             ++position;
+                        }
+                    }
+
+                    @Override
                     protected Void doInBackground(Void... params) {
                         pdbManager.wipe();
                         return null;
