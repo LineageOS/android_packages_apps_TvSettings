@@ -631,6 +631,24 @@
     <string name="accessibility_service_settings" msgid="3251334786870932423">"സേവന ക്രമീകരണങ്ങള്‍"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ദൃശ്യതീവ്രതയേറിയ ടെക്‌സ്റ്റ്"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"ബോൾഡ് ടെക്സ്റ്റ്"</string>
+    <string name="accessibility_color_correction" msgid="6765093204922184119">"നിറം ശരിയാക്കൽ"</string>
+    <string name="color_correction_usage" msgid="4160611639548748657">"നിറം ശരിയാക്കൽ ഉപയോഗിക്കുക"</string>
+    <string name="color_correction_color_mode" msgid="5081377780734779169">"വർണ്ണ മോഡ്"</string>
+    <string name="color_correction_mode_deuteranomaly" msgid="1513793544554228224">"പച്ച നിറത്തോടുള്ള വർണ്ണാന്ധത"</string>
+    <string name="color_correction_mode_deuteranomaly_summary" msgid="5991561481464520986">"ചുവപ്പ്-പച്ച"</string>
+    <string name="color_correction_mode_protanomaly" msgid="8105793166015115037">"ചുവപ്പ് നിറത്തോടുള്ള വർണ്ണാന്ധത"</string>
+    <string name="color_correction_mode_protanomaly_summary" msgid="3247619910784115563">"ചുവപ്പ്-പച്ച"</string>
+    <string name="color_correction_mode_tritanomaly" msgid="757769418392736089">"നീല നിറത്തോടുള്ള വർണ്ണാന്ധത"</string>
+    <string name="color_correction_mode_tritanomaly_summary" msgid="137712354510881252">"നീല-മഞ്ഞ"</string>
+    <string name="color_correction_mode_grayscale" msgid="2592973844160514484">"ഗ്രേസ്‌കെയിൽ"</string>
+    <string name="palette_color_red" msgid="507196433434979086">"ചുവപ്പ്"</string>
+    <string name="palette_color_orange" msgid="6209196069366109835">"ഓറഞ്ച്"</string>
+    <string name="palette_color_yellow" msgid="298466132578870590">"മഞ്ഞ"</string>
+    <string name="palette_color_green" msgid="4904783063036825668">"പച്ച"</string>
+    <string name="palette_color_cyan" msgid="3212217287628948203">"സിയാൻ"</string>
+    <string name="palette_color_blue" msgid="8836682634988540630">"നീല"</string>
+    <string name="palette_color_purple" msgid="2123828754639683555">"പര്‍പ്പിള്‍"</string>
+    <string name="palette_color_gray" msgid="4014534773994261194">"ചാരനിറം"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"ഉപയോഗസഹായി കുറുക്കുവഴി"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"ഉപയോഗസഹായി കുറുക്കുവഴി പ്രവർത്തനക്ഷമമാക്കുക"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"കുറുക്കുവഴി സേവനം"</string>
@@ -894,6 +912,8 @@
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"മീഡിയ പ്ലേബാക്ക് ചെയ്യുമ്പോൾ"</string>
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"എനർജി സേവർ ക്രമീകരണം സ്ഥിരീകരിക്കുക"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"കൂടുതൽ വൈദ്യുതി ഉപയോഗിക്കാൻ സാധ്യതയുള്ള <xliff:g id="SLEEP_TIME">%1$s</xliff:g> ആയി പുതിയ ക്രമീകരണം സജ്ജീകരിക്കണോ എന്ന് സ്ഥിരീകരിക്കുക."</string>
+    <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"എനർജി സേവർ ക്രമീകരണം പ്രവർത്തനരഹിതമാക്കുക"</string>
+    <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"കണ്ടുകൊണ്ടിരിക്കുമ്പോൾ ഡിസ്പ്ലേ ഓഫായി പോകുന്നതിൽ നിന്ന് തടയാൻ സ്ഥിരീകരിക്കുക, ഇത് ഊർജ്ജ ഉപഭോഗം കൂട്ടാനുള്ള സാധ്യതയുണ്ട്."</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"സ്റ്റാൻഡ്ബൈയിൽ പരിമിത നെറ്റ്‌വർക്ക് കണക്ഷൻ"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"സ്റ്റാൻഡ്ബൈ മോഡിൽ ഊർജ്ജ ഉപയോഗം കുറയ്ക്കുന്നു"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"സ്റ്റാൻഡ്ബൈ മോഡിലായിരിക്കുമ്പോൾ നിങ്ങളുടെ നെറ്റ്‌വർക്കിൽ നിന്ന് ടിവി കണക്ഷൻ വിച്ഛേദിക്കും, എന്നിരുന്നാലും സ്വയമേവയുള്ള അപ്ഡേറ്റുകൾ തുടർന്നും ലഭിക്കും. ഇത് നിങ്ങളുടെ ടിവിയുടെ ഊർജ്ജ ഉപയോഗം കുറയ്ക്കാൻ സഹായിക്കും, അതായത് സ്റ്റാൻഡ്ബൈ മോഡിൽ ആയിരിക്കുമ്പോൾ Cast, Google Assistant എന്നിവ പോലുള്ള ഫംഗ്ഷനുകൾ ഉപയോഗിക്കാനായേക്കില്ല എന്നുകൂടിയാണ് ഇതിനർത്ഥം."</string>
