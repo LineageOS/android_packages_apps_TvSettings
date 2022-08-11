@@ -34,6 +34,7 @@ import android.view.accessibility.AccessibilityManager;
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
@@ -43,6 +44,7 @@ import com.android.settingslib.RestrictedPreference;
 import com.android.settingslib.accessibility.AccessibilityUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.List;
 import java.util.Set;
@@ -56,6 +58,9 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
     private static final String TOGGLE_AUDIO_DESCRIPTION_KEY = "toggle_audio_description";
     private static final String ACCESSIBILITY_SERVICES_KEY = "system_accessibility_services";
     private static final String TOGGLE_BOLD_TEXT_KEY = "toggle_bold_text";
+    private static final String PREFERENCE_SCREEN_KEY = "accessibility_preference_screen";
+    private static final String COLOR_CORRECTION_TWOPANEL_KEY = "color_correction_only_twopanel";
+    private static final String COLOR_CORRECTION_CLASSIC_KEY = "color_correction_only_classic";
     private static final int BOLD_TEXT_ADJUSTMENT = 500;
 
     private PreferenceGroup mServicesPref;
@@ -108,6 +113,11 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
         boldTextPreference.setChecked(Settings.Secure.getInt(
                 getContext().getContentResolver(),
                 Settings.Secure.FONT_WEIGHT_ADJUSTMENT, 0) == BOLD_TEXT_ADJUSTMENT);
+
+        Preference colorCorrectionPreferenceToSetVisible = FlavorUtils.isTwoPanel(getContext())
+                ? (Preference) findPreference(COLOR_CORRECTION_TWOPANEL_KEY)
+                : (Preference) findPreference(COLOR_CORRECTION_CLASSIC_KEY);
+        colorCorrectionPreferenceToSetVisible.setVisible(true);
 
         mServicesPref = (PreferenceGroup) findPreference(ACCESSIBILITY_SERVICES_KEY);
         if (mServicesPref != null) {
