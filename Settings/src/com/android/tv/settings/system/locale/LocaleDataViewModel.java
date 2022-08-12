@@ -36,7 +36,7 @@ public class LocaleDataViewModel extends ViewModel {
     private static final String TAG = "LocaleDataViewModel";
     private final Map<LocaleStore.LocaleInfo, ArrayList<LocaleStore.LocaleInfo>> mLocaleMap =
             new HashMap<>();
-    static final boolean TRANSLATED_ONLY = true;
+    static final boolean TRANSLATED_ONLY = false;
 
     public static Locale getCurrentLocale() {
         try {
