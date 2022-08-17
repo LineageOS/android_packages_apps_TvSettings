@@ -117,11 +117,6 @@
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
         custom:isPreferenceVisible="false"
         custom:uri="@string/overlay_internal_slice_uri"/>
-    <Preference
-        android:fragment="com.android.tv.settings.accessibility.AccessibilityFragment"
-        android:icon="@drawable/ic_accessibility_new"
-        android:key="accessibility"
-        android:title="@string/system_accessibility"/>
     <com.android.tv.settings.LongClickPreference
         android:icon="@drawable/ic_restart_alt"
         android:key="reboot"
