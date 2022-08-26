@@ -84,4 +84,46 @@
 
     <!-- Determines whether the device should optimise wifi scanning. -->
     <bool name="wifi_scan_optimisation_enabled">false</bool>
+
+    <!-- List containing the component names of pre-installed screen reader services. -->
+    <string-array name="config_preinstalled_screen_reader_services" translatable="false">
+        <item>@string/accessibility_screen_reader_flattened_component_name</item>
+    </string-array>
+
+    <!-- List containing the component names of pre-installed display services. -->
+    <string-array name="config_preinstalled_display_services" translatable="false">
+        <!--
+        <item>com.example.package.first/com.example.class.FirstService</item>
+        <item>com.example.package.second/com.example.class.SecondService</item>
+        -->
+    </string-array>
+
+    <!-- List containing the component names of pre-installed interaction control services. -->
+    <string-array name="config_preinstalled_interaction_control_services" translatable="false">
+        <item>com.google.android.marvin.talkback/com.android.switchaccess.SwitchAccessService</item>
+    </string-array>
+
+    <!-- List containing the component names of pre-installed audio & onscreen text services. -->
+    <string-array name="config_preinstalled_audio_and_onscreen_text_services" translatable="false">
+        <!--
+        <item>com.example.package.first/com.example.class.FirstService</item>
+        <item>com.example.package.second/com.example.class.SecondService</item>
+        -->
+    </string-array>
+
+    <!-- List containing the component names of pre-installed experimental services. -->
+    <string-array name="config_preinstalled_experimental_services" translatable="false">
+        <!--
+        <item>com.example.package.first/com.example.class.FirstService</item>
+        <item>com.example.package.second/com.example.class.SecondService</item>
+        -->
+    </string-array>
+
+    <!-- List containing the component names of pre-installed additional services. -->
+    <string-array name="config_preinstalled_additional_services" translatable="false">
+        <!--
+        <item>com.example.package.first/com.example.class.FirstService</item>
+        <item>com.example.package.second/com.example.class.SecondService</item>
+        -->
+    </string-array>
 </resources>
