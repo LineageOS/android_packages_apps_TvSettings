@@ -2195,13 +2195,7 @@
     <!-- Energy saver choice for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=30] -->
     <string name="device_energy_saver_screen_off">Turn off display</string>
     <!-- Energy saver summary for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=NONE] -->
-    <string name="device_energy_saver_screen_off_description">After <xliff:g id="sleep_description" example="4 hours">%1$s</xliff:g></string>
-    <!-- Energy saver dialog title for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=30] -->
-    <string name="device_energy_saver_screen_off_dialog_title">Turn off display after</string>
-    <!-- Energy saver choice for allow turning screen off during media playback [CHAR LIMIT=NONE] -->
-    <string name="device_energy_saver_allow_turning_screen_off">Allow turning screen off</string>
-    <!-- Energy saver description for allow turning screen off during media playback [CHAR LIMIT=NONE] -->
-    <string name="device_energy_saver_allow_turning_screen_off_description">During media playback</string>
+    <string name="device_energy_saver_timeout_description"><xliff:g id="sleep_description" example="4 hours">%1$s</xliff:g></string>
     <!-- The title of dialog asking users to confirm long screen off delay. [CHAR LIMIT =70] -->
     <string name="device_energy_saver_confirmation_title">Confirm Energy Saver setting</string>
     <!-- The description of dialog asking users to confirm long screen off delay. [CHAR LIMIT=250] -->
@@ -2211,6 +2205,10 @@
     <!-- The description of dialog asking users to confirm disabling turning the screen off during media playback. [CHAR LIMIT=250] -->
     <string name="device_energy_saver_disable_allow_turning_screen_off_text">Please confirm to prevent the display from turning off while watching, which has the potential for increased energy use.</string>
     <!-- The title of the "Limit network connection in standby" toggle. [CHAR LIMIT=40] -->
+    <!-- Energy saver choice for configuring the time before the device goes to full sleep after a period of inactivity. [CHAR LIMIT=60] -->
+    <string name="device_energy_saver_sleep_timeout">When inactive</string>
+    <!-- Energy saver choice for configuring the time before the device goes to full sleep due to user inattentiveness even if the system is holding wakelocks. [CHAR LIMIT=60] -->
+    <string name="device_energy_saver_attentive_timeout">When watching</string>
     <string name="limit_network_in_standby_toggle_title">Limit network connection in standby</string>
     <!-- The subtitle of the "Limit network connection in standby" toggle. [CHAR LIMIT=60] -->
     <string name="limit_network_in_standby_toggle_summary">Uses less energy in standby mode</string>
