@@ -499,8 +499,8 @@
     <string name="storage_format_as_public" msgid="6745112917895223463">"Ташыма сактагыч катары тазалоо жана форматтоо"</string>
     <string name="storage_format_for_private" msgid="5380138334184923252">"Түзмөктүн сактагычы катары форматтоо"</string>
     <string name="storage_not_connected" msgid="4327902652748552794">"Туташкан жок"</string>
-    <string name="storage_migrate" msgid="9137556600192167701">"Дайындарды ушул сактагычка көчүрүү"</string>
-    <string name="storage_migrate_away" msgid="7880100961434638430">"Дайындарды башка сактагычка көчүрүү"</string>
+    <string name="storage_migrate" msgid="9137556600192167701">"Маалыматтарды ушул сактагычка көчүрүү"</string>
+    <string name="storage_migrate_away" msgid="7880100961434638430">"Маалыматтарды башка сактагычка көчүрүү"</string>
     <string name="storage_no_apps" msgid="95566375753627272">"Камдык көчүрмөсүн сактай турган колдонмолор жок"</string>
     <string name="storage_forget" msgid="4671975563260507003">"Бул түзмөктүн сактагычы унутулсун"</string>
     <string name="storage_forget_wall_of_text" msgid="230454348256179142">"Бул дискте камтылган колдонмолор же дайындарды колдонуу үчүн аны кайра сайыңыз. Же түзмөк жеткиликтүү эмес болсо, бул сактагычты унутууну тандасаңыз болот.\n\nЭгер Унутууну тандасаңыз, дискте камтылган бардык дайындар биротоло жоголот.\n\nКолдонмолорду кийинчерээк кайра орнотсоңуз болот, бирок бул дискте сакталган дайындар жоголот."</string>
@@ -528,13 +528,13 @@
     <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"Бул USB картасы форматталгандан кийин, аны башка түзмөктөрдө колдоно берсеңиз болот. Бардык дайындар жок боло тургандыктан, алгач, колдонмолорду башка түзмөктүн сактагычына жылдырып, камдык көчүрмөлөрүн сактап коюңуз."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"USB диск форматталууда…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"Бул бир аз убакыт талап кылынышы мүмкүн. Дискти чыгарбай туруңуз."</string>
-    <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"Дайындарды көчүрө турган сактагычты тандаңыз"</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"Маалыматтар көчүрүлө турган сактагычты тандаңыз"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"Дайындарды <xliff:g id="NAME">%1$s</xliff:g> ичине жылдыруу"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"Сүрөттөрүңүз, файлдарыңыз жана колдонмо дайындарын <xliff:g id="NAME">%1$s</xliff:g> ичине жылдырыңыз. Ал бир нече мүнөт созулушу мүмкүн. Жылдыруу учурунда айрым колдонмолор туура иштебей калат."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="7512917600174814567">"Азыр жылдыруу"</string>
     <string name="storage_wizard_migrate_confirm_action_move_later" msgid="6379986754827551474">"Кийинчерээк жылдыруу"</string>
     <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"Дайындар <xliff:g id="NAME">%1$s</xliff:g> ичине ооштурулду"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="8580347235983040966">"Дайындар <xliff:g id="NAME">%1$s</xliff:g> ичине ооштурулбай койду"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="8580347235983040966">"Маалыматтар <xliff:g id="NAME">%1$s</xliff:g> картасына көчпөй койду"</string>
     <string name="storage_wizard_migrate_progress_title" msgid="2623480667090826800">"Дайындар <xliff:g id="NAME">%1$s</xliff:g> ичине жылдырылууда…"</string>
     <string name="storage_wizard_migrate_progress_description" msgid="4023358325977284145">"Бул бир аз убакытты талап кылышы мүмкүн. Дискти чыгарбай туруңуз.\nЖылдыруу учурунда айрым колдонмолор туура иштебей калат."</string>
     <string name="storage_wizard_format_slow_title" msgid="7640229918512394316">"Бул диск өтө жай иштейт окшойт."</string>
@@ -862,7 +862,7 @@
     <string name="device_apps_app_management_enable_desc" msgid="8686291003061136476">"Бул колдонмону иштеткиңиз келеби?"</string>
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"Колдонулган эстутум"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g> ичинен <xliff:g id="SIZE">%1$s</xliff:g> колдонулат"</string>
-    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Дайын-даректерди өчүрүү"</string>
+    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Маалыматты өчүрүү"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Бул колдонмонун файлдар, жөндөөлөр, каттоо эсептери, маалыматтар базасы \nсыяктуу бардык маалыматтары биротоло жок болот."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"Демейки жөндөөлөрдү тазалап салуу"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Бул колдонмо айрым аракеттер үчүн ишке киргизилет деп коюлган"</string>
