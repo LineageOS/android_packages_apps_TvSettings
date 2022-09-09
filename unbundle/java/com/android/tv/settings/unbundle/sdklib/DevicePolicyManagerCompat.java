@@ -135,9 +135,9 @@ public class DevicePolicyManagerCompat {
         this.mManager.setActiveAdmin(policyReceiver, refreshing);
     }
 
-    public boolean setProfileOwner(@NonNull ComponentName admin, @Deprecated String ownerName,
-            int userHandle) throws IllegalArgumentException {
-        return this.mManager.setProfileOwner(admin, ownerName, userHandle);
+    public boolean setProfileOwner(@NonNull ComponentName admin, int userHandle)
+            throws IllegalArgumentException {
+        return this.mManager.setProfileOwner(admin, userHandle);
     }
 
     public void uninstallPackageWithActiveAdmins(String packageName) {
