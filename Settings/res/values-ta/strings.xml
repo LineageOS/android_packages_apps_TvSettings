@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"ஒலி"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ஆப்ஸ்"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"சாதன விருப்பத்தேர்வுகள்"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"அணுகல்தன்மை"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"ரிமோட்கள் &amp; துணைக்கருவிகள்"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"டிஸ்ப்ளேவும் சத்தமும்"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"உதவி &amp; கருத்து"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"இந்தக் கணக்கிற்கு \'இதுவரை சென்ற இடங்கள்\' அம்சம் இயக்கப்படும் போது, உங்கள் ஆப்ஸ் பயன்படுத்துவதற்குச் சாதன இருப்பிடத் தரவை Google சேமிக்கலாம்.\n\nஎடுத்துக்காட்டாக, Google Maps வழிகளை வழங்கலாம், Google Now வழக்கமான பயணத்தில் உள்ள ட்ராஃபிக் பற்றி அறிவிக்கலாம்.\n\nஎந்த நேரத்திலும் இருப்பிட வரலாற்றை நீங்கள் முடக்கலாம், ஆனால் அவ்வாறு செய்வது சேமித்தத் தரவை நீக்காது. இதுவரை சென்ற இடங்களைக் கண்டு நிர்வகிக்க maps.google.com/locationhistoryஐப் பார்வையிடவும்."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"இட வரலாற்றை நீக்கு"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Google கணக்கிற்காகச் சாதனத்தில் சேமிக்கப்பட்ட எல்லா இட வரலாற்றையும் இது நீக்கும். இதைத் திரும்பப்பெற முடியாது. Google Now உட்பட சில செயல்பாடுகள் செயல்படுவது நிறுத்தப்படும்."</string>
-    <string name="system_services" msgid="5754310941186053151">"சேவைகள்"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"ஸ்கிரீன் ரீடர்கள்"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"டிஸ்ப்ளே"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"ஊடாடல் கட்டுப்பாடுகள்"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"ஆடியோ &amp; திரையில் காட்டப்படும் வார்த்தைகள்"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"பரிசோதனை"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"சேவைகள்"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"சேவை அமைப்புகள்"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"அதிக ஒளி மாறுபாடுடைய உரை"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"தடிமன் எழுத்துகள்"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"கலர் கரெக்‌ஷன்"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"செயல்படாத நேரத்திற்குப் பின், ஸ்கிரீன் சேவர் இயங்கும். ஸ்கிரீன் சேவர் எதுவும் தேர்ந்தெடுக்கப்படவில்லை எனில், திரை அணைந்துவிடும்."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"செயல்படாத <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>க்குப் பின்"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"திரையை ஆஃப் செய்"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>க்குப் பின்"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"இதன்பின் டிஸ்ப்ளேவை ஆஃப் செய்:"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"திரையை ஆஃப் செய்ய அனுமதி"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"மீடியா பிளேபேக்கின்போது"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"எனர்ஜி சேமிப்பான் அமைப்பை உறுதிசெய்தல்"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"மின்சாரப் பயன்பாடு அதிகரிக்க வாய்ப்புள்ளதால் <xliff:g id="SLEEP_TIME">%1$s</xliff:g>க்கான புதிய அமைப்பை உறுதிசெய்க."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"எனர்ஜி சேமிப்பான் அமைப்பை முடக்குதல்"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"எனர்ஜியின் பயன்பாடு அதிகரிக்கக்கூடும் என்பதால் பார்த்துக்கொண்டிருக்கும்போது திரை முடக்கப்படுவதைத் தடுக்க வேண்டுமா என்பதை உறுதிசெய்யுங்கள்."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"காத்திருப்பில் நெட்வொர்க் இணைப்பு வரம்பு"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"காத்திருப்புப் பயன்முறையில் மின் உபயோகம் குறைவாக இருக்கும்"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"காத்திருப்புப் பயன்முறையில் இருக்கும்போது தானியங்குப் புதுப்பிப்புகளைப் பெறுவதற்கு மட்டும் நெட்வொர்க்குடன் உங்கள் டிவி இணைக்கப்படும். இது உங்கள் டிவி பயன்படுத்தும் மின்சாரத்தின் அளவை குறைக்கக்கூடும். ஆனால் காத்திருப்புப் பயன்முறையின்போது அலைபரப்பு, Google Assistant போன்ற செயல்பாடுகளை உங்களால் பயன்படுத்த முடியாமலும் போகக்கூடும்."</string>

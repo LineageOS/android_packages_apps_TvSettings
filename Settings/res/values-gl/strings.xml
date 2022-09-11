@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Son"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplicacións"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Preferencias do dispositivo"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Accesibilidade"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Mandos a distancia e accesorios"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Pantalla e son"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Axuda e comentarios"</string>
@@ -337,8 +336,8 @@
     <string name="about_build" msgid="8467840394761634575">"Compilación do sistema operativo de Android TV"</string>
     <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Agora estás a # paso de converterte na persoa encargada de programar}other{Agora estás a # pasos de converterte na persoa encargada de programar}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Anuncios"</string>
-    <string name="ads_description" msgid="8081069475265061074">"Xestiona a túa configuración de anuncios. Aquí poderás, por exemplo, restablecer o teu código de identificación de publicidade."</string>
-    <string name="ads_content_description" msgid="1006489792324920289">"Anuncios. Xestiona a túa configuración de anuncios. Aquí poderás, por exemplo, restablecer o teu código de identificación de publicidade."</string>
+    <string name="ads_description" msgid="8081069475265061074">"Xestiona a túa configuración de anuncios. Aquí poderás, por exemplo, restablecer o teu identificador de publicidade."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Anuncios. Xestiona a túa configuración de anuncios. Aquí poderás, por exemplo, restablecer o teu identificador de publicidade."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Agora xa es programador."</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Non é necesario, xa es un programador"</string>
     <string name="device_info_default" msgid="2374506935205518448">"Descoñecido"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Cando o historial de localización está activado para esta conta, Google pode almacenar os datos de localización do teu dispositivo para que os utilicen as túas aplicacións.\n\nPor exemplo, Google Maps pode facilitarche indicacións e Google Now informarte acerca do tráfico do teu desprazamento diario.\n\nPodes desactivar o historial de localización cando queiras, pero ao facelo non se eliminará. Para ver e xestionar o teu historial de localización, visita a páxina maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Eliminar historial de localización"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Eliminaranse todos os datos que o historial de localización almacenou deste dispositivo nesta Conta de Google. Esta acción non se pode desfacer. Algunhas aplicacións, incluída Google Now, deixarán de funcionar."</string>
-    <string name="system_services" msgid="5754310941186053151">"Servizos"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Lectores de pantalla"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Pantalla"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Controis de interacción"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Audio e texto na pantalla"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Experimental"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Servizos"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Configuración dos servizos"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Texto de alto contraste"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Texto en grosa"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Corrección da cor"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"O protector de pantalla comezará transcorrido este período de inactividade. Se non se selecciona ningún protector de pantalla, a pantalla apagarase."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Despois de <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> de inactividade"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Apagar pantalla"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Despois de <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Apagar a pantalla despois de"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Permitir apagar a pantalla"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Durante a reprodución de contido multimedia"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Confirmar configuración de aforro de enerxía"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Confirma que a nova configuración é <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, o cal pode aumentar o consumo enerxético."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Desactivar a configuración de aforro de enerxía"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Confirma para evitar que a pantalla se apague mentres ves contido nela, o que podería aumentar o consumo enerxético."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limitar conexión de rede en espera"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Consome menos enerxía no modo de espera"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"A televisión desconectarase da rede no modo de espera (agás para recibir actualizacións automáticas). Aínda que isto pode supoñer unha redución do consumo enerxético, tamén é posible que non poidas usar determinadas funcións nese modo, como Google Cast ou o Asistente de Google."</string>

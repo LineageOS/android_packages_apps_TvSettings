@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Hang"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Alkalmazások"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Eszközbeállítások"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Kisegítő lehetőségek"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Távvezérlők és tartozékok"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Hang és kijelző"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Súgó és visszajelzés"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Ha a Helyelőzmények be van kapcsolva ennél a fióknál, akkor a Google tárolhatja eszközének helyadatait, hogy alkalmazásai használhassák azokat.\n\nPéldául a Google Térkép útvolnalterveket jeleníthet meg, a Google Asszisztens pedig tájékoztathatja a munkahelyre vezető úton várható forgalomról.\n\nBármikor kikapcsolhatja a Helyelőzményeket, ezzel azonban nem törlődnek a helyadatok. A Helyelőzmények megtekintéséhez és kezeléséhez keresse fel a maps.google.com/locationhistory címet."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Helyelőzmények törlése"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Ezzel törli a helyelőzményeket; a művelet nem vonható vissza. Egyes alkalmazások nem működnek majd."</string>
-    <string name="system_services" msgid="5754310941186053151">"Szolgáltatások"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Képernyőolvasók"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Kijelző"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Interakcióvezérlők"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Hang és képernyőn megjelenő szöveg"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Kísérleti"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Szolgáltatások"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Szolgáltatás beállításai"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Nagy kontrasztú szöveg"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Félkövér szöveg"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Színjavítás"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"A képernyővédő a tétlenség ezen időtartama után aktiválódik. Ha nem választott ki képernyővédőt, a kijelző kikapcsol."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> inaktivitás után"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"A kijelző kikapcsolása"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> után"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Kijelző kikapcsolása"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"A képernyő kikapcsolásának engedélyezése"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Médialejátszás közben"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Energiatakarékos beállítás megerősítése"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Kérjük, erősítse meg az új beállítást (<xliff:g id="SLEEP_TIME">%1$s</xliff:g>), amely megnövekedett energiafogyasztással járhat."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Energiatakarékos beállítás kikapcsolása"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Erősítse meg, hogy nem szeretné, ha a kijelző nézés közben kikapcsoljon. Ez megnövekedett energiafelhasználással járhat."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Hálózat korlátozása készenléti módban"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Kevesebb energiát fogyaszt készenléti módban"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Tévéjé lecsatlakozik a hálózatról készenléti állapotban, és csak automatikus frissítéseket fogad. Ezzel csökkentheti tévéje energiafogyasztását, viszont így előfordulhat, hogy készenléti módban nem használhat majd olyan funkciókat, mint az átküldés vagy a Google Segéd."</string>

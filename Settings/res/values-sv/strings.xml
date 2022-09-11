@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Ljud"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Appar"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Enhetsinställningar"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Tillgänglighet"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Fjärrkontroller och tillbehör"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Skärm och ljud"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hjälp och feedback"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"När platshistoriken har aktiverats för kontot kan Google lagra enhetens platsdata för användning i dina appar.\n\nTill exempel kan du få vägbeskrivningar från Google Maps, och från Google Nu kan du få information om pendlingstrafiken.\n\nDu kan när som helst inaktivera platshistoriken, men det innebär inte att den raderas. Om du vill visa och hantera platshistoriken besöker du maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Ta bort platshistorik"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"All platshistorik från enheten som sparats i kontot tas bort. Åtgärden går inte att ångra. Vissa appar, som Google Nu, slutar fungera."</string>
-    <string name="system_services" msgid="5754310941186053151">"Tjänster"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Skärmläsare"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Skärm"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Interaktionsinställningar"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Ljud och text på skärmen"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Experimentellt"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Tjänster"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Tjänstinställningar"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Text med hög kontrast"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Fetstil"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Färgkorrigering"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Skärmsläckaren startas när du har varit inaktiv så här länge. Om du inte har valt någon skärmsläckare stängs skärmen av."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Efter att ha varit inaktiv i <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Stäng av skärmen"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Efter <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Stäng av skärmen efter"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Tillåt att skärmen stängs av"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Under medieuppspelning"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Bekräfta inställning för energisparläge"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Bekräfta den nya inställningen <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, som kan leda till ökad energiförbrukning."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Inaktivera inställning för energisparläge"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Bekräfta att skärmen inte ska inaktiveras medan du tittar på något. Detta kan leda till ökad energiförbrukning."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Begränsa nätverksanslutning i viloläge"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Använder mindre energi i viloläge"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Tv:n kopplas från nätverket i viloläge, förutom när den tar emot automatiska uppdateringar. Detta kan minska tv:ns energianvändning, men det innebär också att du kanske inte kan använda funktioner som Cast och Google Assistent i viloläge."</string>

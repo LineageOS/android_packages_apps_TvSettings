@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Tunog"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Mga App"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Mga Kagustuhan sa Device"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Accessibility"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Mga remote at accessory"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Display at Tunog"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Tulong at Feedback"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Kapag naka-on ang History ng Lokasyon para sa account na ito, maiimbak ng Google ang data ng lokasyon ng iyong device upang magamit ng iyong mga app.\n\nHalimbawa, maaari kang bigyan ng Google Maps ng mga direksyon, at ipapaalam naman sa iyo ng Google Now ang tungkol sa trapiko sa pag-commute.\n\nMaaari mong i-off anumang oras ang History ng Lokasyon, ngunit hindi nito ito made-delete. Upang tingnan at pamahalaan ang iyong History ng Lokasyon, bisitahin ang maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Tanggalin ang kasaysayan ng lokasyon"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Tatanggalin nito ang lahat ng inimbak ng Kasaysayan ng Lokasyon mula sa device na ito para sa Google Account na ito. Hindi mo mababawi ang pagtatanggal na ito. Hindi na gagana ang ilang apps, kasama na ang Google Now."</string>
-    <string name="system_services" msgid="5754310941186053151">"Mga Serbisyo"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Mga Screen Reader"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Display"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Mga Kontrol sa Pakikipag-ugnayan"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Audio at Text sa Screen"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Pang-eksperimento"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Mga Serbisyo"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Mga setting ng serbisyo"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Text na high contrast"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Bold text"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Pagtatama ng kulay"</string>
@@ -907,14 +912,14 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Magsisimula ang screen saver pagkatapos ng panahon ng kawalan ng aktibidad na ito. Kung walang piniling screen saver, mag-o-off ang display."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Pagkalipas ng <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> na walang aktibidad"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"I-off ang display"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Pagkalipas ng <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"I-off display pagkalipas ng"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Payagan ang pag-off sa screen"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Sa pag-playback ng media"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Kumpirmahin ang setting na Energy Saver"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Pakikumpirma ang bagong setting sa <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, na posibleng makapagpataas ng paggamit ng kuryente."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"I-disable ang setting na pantipid ng kuryente"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Pakikumpirma para mapigilan ang pag-off ng display habang nanonood, na posibleng makapagpataas ng paggamit ng kuryente."</string>
+    <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Kapag hindi aktibo"</string>
+    <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"Kapag nanonood"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limitahan ang koneksyon ng network sa standby"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Mas kaunting energy ang ginagamit habang nasa standby mode"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Madidiskonekta ang iyong TV sa network mo kapag nasa standby mode, maliban kung para tumanggap ng mga awtomatikong update. Puwede nitong bawasan ang paggamit ng energy ng iyong TV, pero nangangahulugan din itong may mga function kang hindi magagamit tulad ng Cast at Google Assistant habang nasa standby."</string>

@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Tingulli"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikacionet"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Preferencat e pajisjes"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Qasshmëria"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Telekomandat dhe aksesorët"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Ekrani dhe tingulli"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Ndihmë dhe komente"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Kur \"Historiku i vendndodhjeve\" është i aktivizuar për këtë llogari, Google mund të ruajë të dhënat e vendndodhjes së pajisjes tënde për përdorim nga aplikacionet e tua.\n\nPër shembull, Google Maps mund të të japin udhëzime dhe \"Google Tani\" mund të të informojë për trafikun për udhëtimet e përditshme.\n\nMund ta çaktivizosh \"Historikun e vendndodhjeve\" në çdo kohë, por ky veprim nuk e fshin atë. Për të parë dhe menaxhuar \"Historikun e vendndodhjeve\", vizito maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Fshi historikun e vendndodhjeve"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Kjo do të fshijë të gjithë \"Historikun e vendndodhjeve\" të ruajtur nga kjo pajisje për këtë llogari të Google. Këtë fshirje nuk mund ta zhbësh. Disa aplikacione, duke përfshirë \"Google Tani\", nuk do të funksionojnë më."</string>
-    <string name="system_services" msgid="5754310941186053151">"Shërbimet"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Lexuesit e ekranit"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Ekrani"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Kontrollet e ndërveprimeve"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Audioja dhe teksti në ekran"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Eksperimentale"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Shërbimet"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Cilësimet e shërbimit"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Tekst me kontrast të lartë"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Tekst i trashësuar"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Korrigjimi i ngjyrës"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Mbrojtësi i ekranit fillon pas kësaj periudhe pa aktivitet. Nëse nuk është zgjedhur asnjë mbrojtës ekrani, ekrani do të çaktivizohet."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Pas <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> pa aktivitet"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Fik ekranin"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Pas <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Fik ekranin pas"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Lejo fikjen e ekranit"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Gjatë luajtjes së medias"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Konfirmo cilësimin e \"Kursyesit të energjisë\""</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Konfirmo që cilësimi i ri është <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, i cili ka mundësi të konsumojë më shumë energji."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Çaktivizo cilësimin e kursyesit të energjisë"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Konfirmo për të parandaluar fikjen e ekranit gjatë shikimit, pasi kjo ka mundësi të konsumojë më shumë energji."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Kufizo lidhjen me rrjetin në gatishmëri"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Përdor më pak energji në modalitetin e gatishmërisë"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Televizori do të shkëputet nga rrjeti kur të jetë në modalitetin e gatishmërisë, me përjashtim të marrjes së përditësimeve automatike. Kjo mund të ulë përdorimin e energjisë së televizorit, megjithëse nënkupton gjithashtu që mund të mos jesh në gjendje të përdorësh funksione si Google Cast dhe \"Asistenti i Google\" ndërkohë që është në gatishmëri."</string>

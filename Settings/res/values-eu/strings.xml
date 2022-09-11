@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Soinua"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikazioak"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Gailuaren hobespenak"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Erabilerraztasuna"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Urruneko kontrolagailuak eta osagarriak"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Pantaila eta soinua"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Laguntza eta iritziak"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Kontu honen Kokapen-historia aktibatuta dagoenean, Google-k gailuaren kokapen-datuak gorde ditzake aplikazioek erabil ditzaten.\n\nAdibidez, Google Maps-ek jarraibideak eman diezazkizuke eta Google Now aplikazioak, berriz, eguneroko joan-etorrietan aurki dezakezun trafikoaren berri eman diezazuke.\n\nEdonoiz desaktiba dezakezu Kokapen-historia, baina horrek ez du ezabatuko. Kokapen-historia ikusteko eta kudeatzeko, joan maps.google.com/locationhistory helbidera."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Ezabatu kokapen-historia"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Honekin, Kokapen-historiak kontu honetarako gorde duen gailuko guztia ezabatuko da. Ezin duzu ezabatzea desegin. Zenbait aplikaziok (besteak beste, Google Now aplikazioak) funtzionatzeari utziko diote."</string>
-    <string name="system_services" msgid="5754310941186053151">"Zerbitzuak"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Pantaila-irakurgailuak"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Pantaila"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Interakzioa kontrolatzeko aukerak"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Audioa eta pantailako testua"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Esperimentala"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Zerbitzuak"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Zerbitzuaren ezarpenak"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Kontraste handiko testua"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Testu lodia"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Koloreen zuzenketa"</string>
@@ -858,7 +863,7 @@
     <string name="restriction_description" msgid="2053112392083722259">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
     <string name="app_sees_restricted_accounts_and_controlled_by" msgid="1261056180558324892">"Aplikazio honek zure kontuak atzi ditzake. <xliff:g id="APP">%1$s</xliff:g> aplikazioak kontrolatzen du."</string>
     <string name="pin_enter_unlock_channel" msgid="243855138978654080">"Kanal hau ikusi nahi baduzu, idatzi PINa."</string>
-    <string name="pin_enter_unlock_program" msgid="275489015420025531">"Telesaio hau ikusi nahi baduzu, idatzi PINa."</string>
+    <string name="pin_enter_unlock_program" msgid="275489015420025531">"Saio hau ikusi nahi baduzu, idatzi PINa."</string>
     <string name="pin_enter_pin" msgid="5020029261153234751">"Idatzi PINa"</string>
     <string name="pin_enter_new_pin" msgid="1930944619313642621">"Aldatu PINa"</string>
     <string name="pin_enter_again" msgid="7615050143778858658">"Idatzi PINa berriro"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Tarte horretan inaktibo egon ondoren agertzen da pantaila-babeslea. Pantaila-babeslerik hautatzen ez bada, itzali egiten da pantaila."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> inaktibo egon ondoren"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Itzali pantaila"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> eta gero"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Itzali pantaila denbora hau eta gero"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Onartu pantaila itzaltzea"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Multimedia-edukia erreproduzitzean"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Berretsi Energia-aurreztailea moduaren ezarpena"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Berretsi beste ezarpen bat denbora honetarako: <xliff:g id="SLEEP_TIME">%1$s</xliff:g>. Baliteke energia gehiago kontsumitzea modu horrek."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Desgaitu energia-aurreztailea moduaren ezarpena"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Berretsi pantaila itzaltzea eragozteko multimedia-edukia ikusi bitartean (baliteke energia gehiago kontsumitzea modu horrek)."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Mugatu sarerako konexioak egonean moduan"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Energia gutxiago kontsumitzen du egonean moduan"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Egonean moduan, telebista ez da sarera konektatuta egongo eguneratze automatikoak jasotzeko ez bada. Horrela energia gutxiago kontsumituko du, baina ezingo dituzu erabili funtzioetako batzuk; esate baterako Cast eta Google Laguntzailea."</string>

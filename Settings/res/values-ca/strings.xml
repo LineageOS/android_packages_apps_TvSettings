@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"So"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplicacions"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Preferències del dispositiu"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Accessibilitat"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Comandaments i accessoris"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Pantalla i so"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Ajuda i suggeriments"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Si l\'historial d\'ubicacions està activat per a aquest compte, Google pot desar les dades d\'ubicació del dispositiu perquè les teves aplicacions les utilitzin.\n\nPer exemple, Google Maps et pot donar indicacions i Google Now et pot informar sobre l\'estat del trànsit al trajecte de casa a la feina.\n\nPots desactivar l\'historial d\'ubicacions en qualsevol moment, però aquesta acció no n\'esborra les dades. Per consultar i gestionar l\'historial d\'ubicacions, accedeix a maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Suprimeix l\'historial d\'ubicacions"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Així se suprimirà tot l\'historial d\'ubicacions d\'aquest dispositiu que hi hagi emmagatzemat en aquest compte de Google. L\'acció no es pot desfer. Algunes aplicacions, com ara Google Now, deixaran de funcionar."</string>
-    <string name="system_services" msgid="5754310941186053151">"Serveis"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Lectors de pantalla"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Pantalla"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Controls d\'interacció"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Àudio i text en pantalla"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Experimental"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Serveis"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Configuració del servei"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Text d\'alt contrast"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Text en negreta"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Correcció de color"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"L\'estalvi de pantalla s\'inicia després d\'aquest període d\'inactivitat. Si no se\'n selecciona cap, la pantalla s\'apaga."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> d\'inactivitat"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Desactiva la pantalla"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Després de: <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Temps per desactivar la pantalla"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Permet desactivar la pantalla"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Durant la reproducció de contingut multimèdia"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Confirma la configuració d\'Estalvi d\'energia"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Confirma que la nova configuració és <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, que pot incrementar l\'ús d\'energia."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Desactiva l\'opció de configuració d\'estalvi d\'energia"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Confirma que vols evitar que la pantalla es desactivi mentre mires contingut, cosa que pot incrementar l\'ús d\'energia."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limita la connexió a la xarxa en espera"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Consumeix menys energia en mode d\'espera"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"El televisor es desconnectarà de la xarxa quan estigui en mode d\'espera, excepte per rebre actualitzacions automàtiques. Això pot disminuir el consum d\'energia del televisor, però també implica que pot ser que no puguis utilitzar funcions com Cast i l\'Assistent de Google en mode d\'espera."</string>

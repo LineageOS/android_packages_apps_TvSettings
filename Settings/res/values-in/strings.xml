@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Suara"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Aplikasi"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Preferensi Perangkat"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Aksesibilitas"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Remote &amp; aksesori"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Tampilan &amp; Suara"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Bantuan &amp; Masukan"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Saat Histori Lokasi diaktifkan untuk akun ini, Google dapat menyimpan data lokasi perangkat Anda untuk digunakan oleh aplikasi Anda.\n\nMisalnya, Google Maps dapat memberi rute dan Google Now dapat memberi informasi tentang lalu lintas perjalanan.\n\nAnda dapat menonaktifkan Histori Lokasi kapan saja, namun menonaktifkannya tidak akan menghapusnya. Untuk melihat dan mengelola Histori Lokasi Anda, kunjungi maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Hapus histori lokasi"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Tindakan ini akan menghapus semua Histori Lokasi yang tersimpan dari perangkat untuk Akun Google ini. Anda tidak dapat mengurungkan penghapusan. Beberapa aplikasi, termasuk Google Now, akan berhenti bekerja."</string>
-    <string name="system_services" msgid="5754310941186053151">"Layanan"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Pembaca Layar"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Layar"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Kontrol Interaksi"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Audio &amp; Teks di Layar"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Eksperimental"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Layanan"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Setelan layanan"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Teks kontras tinggi"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Teks tebal"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Koreksi warna"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Screen saver dimulai setelah periode tidak aktif ini. Jika tidak ada screen saver yang dipilih, layar akan dimatikan."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Setelah tidak aktif selama <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Matikan layar"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Setelah <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Matikan layar setelah"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Izinkan mematikan layar"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Selama pemutaran media"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Konfirmasi setelan Penghemat Energi"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Konfirmasi setelan baru ke <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, yang memiliki potensi peningkatan penggunaan energi."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Nonaktifkan setelan penghemat energi"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Konfirmasi untuk mencegah layar dinonaktifkan saat menonton, yang berpotensi meningkatkan penggunaan energi."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Batasi koneksi jaringan di mode standby"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Menggunakan lebih sedikit energi dalam mode standby"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"TV akan diputus dari jaringan saat dalam mode standby, kecuali untuk menerima update otomatis. Hal ini dapat meningkatkan penggunaan energi TV. Selain itu, Anda mungkin tidak dapat menggunakan fungsi seperti Cast dan Asisten Google saat dalam mode standby."</string>
@@ -924,7 +931,7 @@
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Berhenti mencadangkan sandi Wi-Fi, bookmark, setelan lainnya, dan data aplikasi, serta hapus semua salinan di server Google?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Cadangkan data saya"</string>
-    <string name="privacy_backup_account" msgid="4527813051841860610">"Akun cadangan"</string>
+    <string name="privacy_backup_account" msgid="4527813051841860610">"Akun pencadangan"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Pemulihan otomatis"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Reset perangkat"</string>
     <string name="factory_reset_description" msgid="6697396335158766785">"Tindakan ini akan memulihkan perangkat ke setelan default dan menghapus semua data, akun, file, dan aplikasi yang didownload."</string>

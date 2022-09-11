@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Hljóð"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Forrit"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Kjörstillingar tækis"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Aðgengi"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Fjarstýringar og fylgihlutir"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Skjár og hljóð"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hjálp og ábendingar"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Þegar kveikt er á staðsetningarferli fyrir þennan reikning getur Google vistað staðsetningargögn tækisins og gert þau aðgengileg öðrum forritum.\n\nGoogle kort geta t.a.m. gefið þér leiðarlýsingu og Google Now getur sagt þér hvernig umferðin er á leiðinni.\n\nÞú getur slökkt á staðsetningarferlinum hvenær sem er en við það er honum ekki eytt. Til að skoða og hafa umsjón með staðsetningarferlinum skaltu fara á maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Eyða staðsetningarferli"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Þetta eyðir öllum vistuðum staðsetningarferli frá þessu tæki fyrir þennan Google reikning. Ekki er hægt að afturkalla þessa eyðingu. Sum forrit, svo sem Google Now, munu hætta að virka."</string>
-    <string name="system_services" msgid="5754310941186053151">"Þjónusta"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Skjálesarar"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Skjástilling"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Gagnvirknistýringar"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Hljóð og skjátexti"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Á tilraunastigi"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Þjónusta"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Stillingar þjónustu"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Texti með miklum birtuskilum"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Feitletra texta"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Litaleiðrétting"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Skjávari birtist eftir svona langt aðgerðaleysi. Ef enginn skjávari er valinn er slökkt á skjánum."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Eftir <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> án aðgerða"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Slökkva á skjá"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Eftir <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Slökkva á skjá eftir"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Leyfa að slökkt sé á skjánum"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Meðan á efnisspilun stendur"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Staðfestu orkusparnaðarstilingu"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Staðfestu nýja stillingu á <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, sem gæti haft í för með sér aukna orkunotkun."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Slökkva á orkusparnaðarstillingu"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Staðfestu til að koma í veg fyrir að skjárinn slökkvi á sér í miðju áhorfi, sem getur leitt til meiri orkunotkunar."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Takmarka nettengingu í biðstöðu"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Notar minni orku í biðstöðu"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Sjónvarpið mun aftengjast netinu þegar það er í biðstöðu, nema til að móttaka sjálfvirkar uppfærslur. Þetta getur minnkað orkunotkun sjónvarpsins en getur einnig þýtt að þú getir ekki notað eiginleika á borð við Cast og Google hjálpara á meðan það er í biðstöðu."</string>

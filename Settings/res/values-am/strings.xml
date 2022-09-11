@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"ድምፅ"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"መተግበሪያዎች"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"የመሣሪያ ምርጫዎች"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"ተደራሽነት"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"ርቀት መቆጣጠሪያዎች እና መለዋወጫዎች"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"ማሳያ እና ድምጽ"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"እገዛ እና ግብረመለስ"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"ለዚህ መለያ የአካባቢ ታሪክ ሲበራ Google የመሣሪያዎ አካባቢ ውሂብ ሌሎች መተግበሪያዎች እንዲጠቀሙበት ሊያከማቸው ይችላል።\n\nለምሳሌ፣ Google ካርታዎች አቅጣጫዎችን ሊሰጡዎት ይችላል፣ እና Google Now ስለመጓጓዣ ትራፊክ መረጃ ሊሰጠዎት ይችላል።\n\nየአካባቢን ታሪክ በማንኛውም ጊዜ ማጥፋት ይችላሉ፣ ነገር ግን ይህን ማድረግ አይሰርዘውም። የአካባቢ ታሪክዎን ለመመልከት እና ለማቀናበር maps.google.com/locationhistoryን ይጎብኙ።"</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"የአካባቢ ታሪክን ሰርዝ"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"ይሄ ሁሉንም የዚህ Google መለያ የአካባቢ ታሪክ ከዚህ መሣሪያ ያስወግደዋል። ይህን ስረዛ ሊቀለብሱት አይችሉም። Google Nowን ጨምሮ አንዳንድ መተግበሪያዎች መስራት ያቆማሉ።"</string>
-    <string name="system_services" msgid="5754310941186053151">"አገልግሎቶች"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"የማያ ገጽ አንባቢዎች"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"ማሳያ"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"የመስተጋብር መቆጣጠሪያዎች"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"ኦዲዮ እና የማያ ገጽ ላይ ጽሑፍ"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"የሙከራ"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"አገልግሎቶች"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"የአገልግሎት ቅንብሮች"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ከፍተኛ ንጽጽር ጽሁፍ"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"ደማቅ ጽሁፍ"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"የቀለም ማስተካከያ"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"ማያ ገጽ ማቆያ ከዚህ እንቅስቃሴ-አልባ ጊዜ በኋላ ይጀመራል። ምንም ማያ ገጽ ማቆያ ካልተመረጠ ማሳያው ይጠፋል።"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"ከ<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> እንቅስቃሴ-አልባነት በኋላ"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ማሳያን አጥፋ"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"ከ<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> በኋላ"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"ከዚህ ጊዜ በኋላ ማሳያን አጥፋ፦"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"ማያ ገጽን ማጥፋት ፍቀድ"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"በሚዲያ መልሶ ማጫወት ጊዜ"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"የኃይል ቆጣቢ ቅንብሩን ያረጋግጡ"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"እባክዎ አዲሱን የ<xliff:g id="SLEEP_TIME">%1$s</xliff:g> ቅንብር ያረጋግጡ፣ ይህ የበለጠ የኃይል ፍጆታ ሊኖረው ይችላል።"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"የኃይል ቆጣቢ ቅንብርን ያሰናክሉ"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"በማየት ላይ ሳሉ ማሳያው እንዳይጠፋ ለመከላከል እባክዎ ያረጋግጡ፣ ይህ የበለጠ የኃይል ፍጆታ ሊኖረው ይችላል።"</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"የአውታረ መረብ ግንኙነትን በተጠባባቂነት ፍቀድ"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"የተጠባባቂ ሁነታ ላይ ያነሰ ኃይል ይጠቀማል"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"በተጠባባቂ ሁነታ ጊዜ የራስ-ሰር ዝማኔዎችን ለመቀበል ካልሆነ በስተቀር ቲቪዎ ከአውታረ መረብዎ ጋር ያለው ግንኙነት ይቋረጣል። እንደ Cast እና Google ረዳት ያሉ ተግባሮችን በተጠባባቂነት መጠቀም አይችሉም ማለት ሊሆን ቢችልም የእርስዎን የቲቪ ኃይል ፍጆታን ሊቀንስ ይችላል።"</string>
