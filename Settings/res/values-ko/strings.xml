@@ -627,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"이 계정에서 위치 기록을 사용하면 Google에서 기기의 위치 데이터를 저장하여 앱에서 이 데이터를 사용할 수 있습니다. \n\n예를 들어, Google 지도를 사용하여 길을 찾고 Google Now를 사용하여 출퇴근길 교통정보를 확인할 수 있습니다.\n\n언제든지 위치 기록을 사용 중지할 수 있지만, 사용 중지해도 위치 기록이 삭제되지는 않습니다. 위치 기록을 보거나 관리하려면 maps.google.com/locationhistory 페이지를 방문하세요."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"위치 기록 삭제"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"이 Google 계정을 사용하여 이 기기에 저장된 모든 위치 기록이 삭제됩니다. 삭제한 후에는 실행취소할 수 없습니다. Google Now를 비롯한 일부 앱의 작동이 중단됩니다."</string>
-    <string name="system_services" msgid="5754310941186053151">"서비스"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"스크린 리더"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"디스플레이"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"상호작용 관리 기능"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"오디오 및 화면에 있는 텍스트"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"실험적 기능"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"서비스"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"서비스 설정"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"고대비 텍스트"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"텍스트 굵게 표시"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"색상 보정"</string>
@@ -906,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"화면 보호기는 비활성 상태가 지속되면 실행됩니다. 화면 보호기를 선택하지 않은 경우에는 디스플레이가 꺼집니다."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> 동안 동작이 없을 때"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"화면 끄기"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> 후"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"다음 시간 후 화면 끄기"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"화면 끄기 허용"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"미디어 재생 중"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"에너지 절약 모드 설정 확인"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"새 설정에서 에너지 사용을 늘릴 수 있는 시간(<xliff:g id="SLEEP_TIME">%1$s</xliff:g>)을 확인하세요."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"에너지 절약 모드 설정 끄기"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"영상을 보는 동안 화면이 꺼지지 않도록 설정합니다. 설정하지 않으면 에너지 사용량이 증가할 수 있습니다."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"대기 모드에서 네트워크 연결 제한"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"대기 모드에서 전력 사용량이 감소합니다"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"대기 모드에서는 TV가 네트워크에 연결하지 않습니다(자동 업데이트를 수신하는 경우 제외). 이로 인해 TV의 전력 사용량이 감소할 수 있으나 대기 모드에서 Google Cast, Google 어시스턴트와 같은 기능을 사용하지 못할 수 있습니다."</string>

@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"آواز"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ایپس"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"آلہ کی ترجیحات"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"ایکسیسبیلٹی"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"ریموٹس اور لوازمات"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"ڈسپلے اور آواز"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"مدد اور تاثرات"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"اس اکاؤنٹ کیلئے مقام کی سرگزشت آن کر دیے جانے پر، Google آپ کی ایپس کے ذریعے استعمال کیلئے آپ کے آلہ کے مقام کا ڈیٹا اسٹور کر سکتا ہے۔\n\nمثلاً، Google Maps آپ کو ڈائریکشنز دے سکتا ہے اور Google Now روزانہ کے دو طرفہ سفر کے بارے میں آپ کو مطلع کر سکتا ہے۔\n\nآپ کسی بھی وقت مقام کی سرگزشت آف کر سکتے ہیں لیکن ایسا کرنے سے یہ حذف نہیں ہوگی۔ اپنے مقام کی سرگزشت دیکھنے اور اس کا نظم کرنے کیلئے، maps.google.com/locationhistory ملاحظہ کریں۔"</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"مقام کی سرگزشت حذف کریں"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"اس سے اس Google اکاؤنٹ کیلئے اس آلہ سے اسٹور کردہ سبھی مقام کی سرگزشت حذف ہو جائے گی۔ آپ اس تنسیخ کو واپس نہیں لا سکتے ہیں۔ Google Now سمیت کچھ ایپس کام کرنا بند کر دیں گی۔"</string>
-    <string name="system_services" msgid="5754310941186053151">"سروسز"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"اسکرین ریڈرز"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"ڈسپلے"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"انٹرایکشن کنٹرولز"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"آڈیو اور اسکرین پر موجود ٹیکسٹ"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"تجرباتی"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"سروسز"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"سروس کی ترتیبات"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"اعلی تناسب امتزاج والا ٹیکسٹ"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"بولڈ ٹیکسٹ"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"رنگ کی اصلاح"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"غیر فعالیت کے اس دورانیے کے بعد اسکرین سیور شروع ہو جاتا ہے۔ اگر کوئی اسکرین سیور منتخب نہیں ہے تو ڈسپلے آف ہو جاتا ہے۔"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"غیرفعالیت کے <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> کے بعد"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ڈسپلے آف کریں"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> کے بعد"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"کے بعد ڈسپلے آف کریں"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"سکرین آف کرنے کی اجازت دیں"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"میڈیا پلے بیک کے دوران"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"اینرجی سیور کی ترتیبات کی توثیق کریں"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"براہ کرم نئی ترتیب کی توثیق <xliff:g id="SLEEP_TIME">%1$s</xliff:g> پر کریں، جس میں اینرجی کے استعمال میں اضافہ کا امکان موجود ہے۔"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"توانائی بچانے والی ترتیب کو غیر فعال کریں"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"براہ کرم توثیق کریں کہ دیکھتے ہوئے ڈسپلے کو بند ہونے سے روکیں، جس میں توانائی کے استعمال میں اضافے کا امکان ہے۔"</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"اسٹینڈ بائی میں نیٹ ورک کنکشن محدود کریں"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"اسٹینڈ بائی وضع میں کم توانائی استعمال کرتا ہے"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"اسٹینڈ بائی وضع میں ہونے پر سوائے خودکار اپ ڈیٹس موصول کرنے کے، آپ کا TV آپ کے نیٹ ورک سے غیر منسلک ہو جائے گا۔ اس سے آپ کے TV کی توانائی کے استعمال میں کمی واقع ہو سکتی ہے، حالانکہ اس کا مطلب یہ بھی ہے کہ اسٹینڈ بائی میں رہتے ہوئے ہو سکتا ہے کہ آپ Cast اور Google اسسٹنٹ جیسے فنکشنز استعمال کرنے کے قابل نہ ہوں۔"</string>

@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Sauti"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Programu"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Mapendeleo ya Kifaa"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Zana za ufikivu"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Vidhibiti mbali na vifaa vya ziada"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Onyesho na Sauti"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Usaidizi na Maoni"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Historia ya Mahali inapowashwa kwa akaunti hii, Google inaweza kuhifadhi data ya eneo la kifaa chako kwa matumizi na programu zako.\n\nKwa mfano, Ramani za Google acn inakupa maelekezo na Google Msaidizi inaweza kukuarifu kuhusu trafiki ya safari.\n\nUnaweza kuzima Historia ya Mahali wakati wowote, lakini kufanya hivyo hakutaifuta. Ili utazame na kusimamia Historia ya Mahali pako, tembelea maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Futa historia ya mahali"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Hii itafuta yote ambayo Historia ya Mahali imehifadhi kutoka kwa kifaa hiki kwa hii Akaunti ya Google. Huwezi kutengua kufuta huku. Baadhi ya programu, ikiwa ni pamoja na Google Msaidizi, zitaacha kufanya kazi."</string>
-    <string name="system_services" msgid="5754310941186053151">"Huduma"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Visoma Skrini"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Skrini"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Vidhibiti vya Mawasiliano"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Sauti na Maandishi kwenye Skrini"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Ya majaribio"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Huduma"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Mipangilio ya huduma"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Maandishi yenye utofautishaji bora"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Herufi nzito"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Usahihishaji wa rangi"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Itaanzisha taswira ya skrini baada ya kipindi cha hali tuli. Skrini ya kifaa chako itazimika ikiwa hujachagua taswira ya skrini."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Baada ya <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> za kutotumika"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Zima skrini"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Baada ya <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Zima skrini baada ya"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Ruhusu uzimaji skrini"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Wakati wa kucheza maudhui"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Thibitisha mipangilio ya Kiokoa Nishati"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Tafadhali thibitisha kuwa ungependa iwe <xliff:g id="SLEEP_TIME">%1$s</xliff:g>. Huenda hii ikaongeza kiwango cha nishati kinachotumika."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Zima mipangilio ya kiokoa nishati"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Tafadhali thibitisha ili uzuie skrini isizime unapotazama maudhui, hatua ambayo huenda ikaongeza kiwango cha nishati inayotumika."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Dhibiti muunganisho wa mtandao katika hali tuli"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Hutumia nishati kidogo katika hali tuli"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"TV yako itatenganishwa na mtandao wako ikiwa kwenye hali tuli, isipokuwa kupokea masasiho ya kiotomatiki. Huenda hali hii ikapunguza matumizi ya nishati ya TV yako, ingawaje inaweza kumaanisha hutaweza kutumia utendaji kama vile Cast na Mratibu wa Google, hali tuli inapotumika."</string>

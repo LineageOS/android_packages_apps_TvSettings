@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Geluid"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Apps"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Apparaatvoorkeuren"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Toegankelijkheid"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Afstandsbedieningen en accessoires"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Weergave en geluid"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hulp en feedback"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Wanneer \'Locatiegeschiedenis\' voor dit account aanstaat, kan Google de locatiegegevens van je apparaat opslaan voor gebruik door je apps.\n\nGoogle Maps kan je bijvoorbeeld routebeschrijvingen bieden en Google Now kan je informeren over woon-werkverkeer.\n\nJe kunt de Locatiegeschiedenis op elk gewenst moment uitzetten, maar de geschiedenis wordt hierdoor niet verwijderd. Als je je Locatiegeschiedenis wilt bekijken en beheren, ga je naar maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Locatiegeschiedenis verwijderen"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Hiermee wordt alle Locatiegeschiedenis voor dit apparaat in dit Google-account gewist. Je kunt dit niet ongedaan maken. Sommige apps, waaronder Google Now, werken niet meer."</string>
-    <string name="system_services" msgid="5754310941186053151">"Services"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Schermlezers"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Scherm"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Interactieopties"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Audio en tekst op het scherm"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Experimenteel"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Services"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Service-instellingen"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Tekst met hoog contrast"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Vetgedrukte tekst"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Kleurcorrectie"</string>
@@ -907,14 +912,14 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"De schermbeveiliging wordt aangezet zodra het apparaat gedurende deze tijd inactief is. Als er geen schermbeveiliging is ingesteld, wordt het scherm uitgezet."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Na <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> inactiviteit"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Scherm uitzetten"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Na <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Scherm uitzetten na"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Uitzetten van scherm toestaan"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Tijdens afspelen van media"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Energiebesparingsinstelling bevestigen"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Bevestig dat je dit wilt instellen op <xliff:g id="SLEEP_TIME">%1$s</xliff:g>. Hierdoor zou je meer energie kunnen verbruiken."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Instelling voor energiebesparing uitzetten"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Bevestig dat je wilt voorkomen dat het scherm uitgaat terwijl je kijkt. Hierdoor kan het energiegebruik toenemen."</string>
+    <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Indien inactief"</string>
+    <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"Tijdens het kijken"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Netwerkverbinding beperken in stand-by"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Gebruikt minder energie in stand-bymodus"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"De verbinding van je tv met het netwerk wordt verbroken in de stand-bymodus, behalve om automatische updates te ontvangen. Hierdoor kan het energiegebruik van je tv afnemen, maar dit betekent ook dat je bepaalde functies zoals casten en de Google Assistent niet kunt gebruiken in de stand-bymodus."</string>

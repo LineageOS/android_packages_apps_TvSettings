@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Lyd"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Apps"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Enhedspræferencer"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Hjælpefunktioner"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Fjernbetjeninger og tilbehør"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Skærm og lyd"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hjælp og feedback"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Når Lokationshistorik er slået til for denne konto, kan Google gemme enhedens lokationsdata, så dine apps kan bruge dem.\n\nGoogle Maps kan f.eks. give dig rutevejledning, og Google Nu kan informere dig om pendlertrafik.\n\nDu kan til enhver tid slå Lokationshistorik fra, men det vil ikke slette den. Du kan se og administrere din Lokationshistorik på maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Slet Lokationshistorik"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Dette vil slette alt, som Lokationshistorik har gemt fra denne enhed for denne Google-konto. Du kan ikke fortryde denne sletning. Nogle apps, herunder Google Nu, vil stoppe med at virke."</string>
-    <string name="system_services" msgid="5754310941186053151">"Tjenester"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Skærmlæsere"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Skærm"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Interaktionsstyring"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Lyd og tekst på skærmen"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Eksperimentel"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Tjenester"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Tjenesteindstillinger"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Tekst med høj kontrast"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Fed tekst"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Farvekorrigering"</string>
@@ -908,14 +913,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Pauseskærmen starter efter dette tidsrum uden aktivitet. Hvis der ikke er valgt nogen pauseskærm, slukkes displayet."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Efter <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>s inaktivitet"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Sluk skærmen"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Efter <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Sluk skærmen efter"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Gør det muligt at slukke skærmen"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"I løbet af medieafspilning"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Bekræft indstillinger for energisparefunktionen"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Bekræft nye indstillinger for <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, der har potentiale for at øge energiforbruget."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Deaktiver indstillingen for energisparefunktion"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Bekræft, at du vil forhindre skærmen i at slukke under afspilning. Det kan øge energiforbruget."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Begræns netværksforbindelsen i standby"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Bruger mindre energi i standbytilstand"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Dit fjernsyns forbindelse til netværket afbrydes, når det er i standbytilstand, bortset fra når det skal modtage automatiske opdateringer. Dette kan reducere fjernsynets energiforbrug, selvom det også betyder, at du muligvis ikke kan bruge funktioner som f.eks. Cast og Google Assistent, når du er i standbytilstand."</string>

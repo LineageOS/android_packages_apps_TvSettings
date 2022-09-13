@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"အသံ"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"အက်ပ်များ"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"စက် ရွေးချယ်စရာများ"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"အများသုံးနိုင်မှု"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"အဝေးထိန်းခလုတ်နှင့် ဆက်စပ်ပစ္စည်းများ"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"ဖန်သားပြင်ပြသမှုနှင့် အသံ"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"အကူအညီနှင့် အကြံပြုချက်"</string>
@@ -496,7 +495,7 @@
     <string name="storage_music_usage" msgid="5362871290115089474">"အသံ"</string>
     <string name="storage_media_misc_usage" msgid="3404230292054880339">"အထွေထွေ"</string>
     <string name="storage_media_cache_usage" msgid="6397941751551207630">"ကက်ရှ်လုပ်ထားသော ဒေတာ"</string>
-    <string name="storage_eject" msgid="3268870873944951902">"ထုတ်မည်"</string>
+    <string name="storage_eject" msgid="3268870873944951902">"ထုတ်ရန်"</string>
     <string name="storage_format" msgid="5360900929128087085">"ဖျက်မည်နှင့် ပုံစံချမည်"</string>
     <string name="storage_format_as_private" msgid="77945551149326052">"စက်ပစ္စည်းသိုလှောင်ခန်းအဖြစ် ဖျက်ပြီး ဖောမတ်ချပါ"</string>
     <string name="storage_format_as_public" msgid="6745112917895223463">"ရွှေ့လျား၍ရသော သိုလှောင်ခန်းအဖြစ် ဖျက်ပြီး ဖောမတ်ချပါ"</string>
@@ -560,7 +559,7 @@
     <string name="storage_new_action_browse" msgid="3355241742574072658">"ရှာကြည့်ရန်..."</string>
     <string name="storage_new_action_adopt" msgid="6809707961170895964">"စက်ပစ္စည်းသိုလှောင်ခန်းအဖြစ် စနစ်ထည့်သွင်းပါ"</string>
     <string name="storage_new_action_format_public" msgid="1964662216574764811">"ဖြုတ်၍ရသော သိုလှောင်မှဒ"</string>
-    <string name="storage_new_action_eject" msgid="919249291814300000">"ထုတ်မည်"</string>
+    <string name="storage_new_action_eject" msgid="919249291814300000">"ထုတ်ရန်"</string>
     <string name="storage_missing_title" msgid="9068915586235805818">"<xliff:g id="NAME">%1$s</xliff:g> ဖယ်ရှားလိုက်ပါပြီ"</string>
     <string name="storage_missing_description" msgid="6835620703133204249">"ဒရိုက်အား ပြန်လည်မချိတ်ဆက်မှီအထိ အချို့အပ်ဖ်များသည် ရနိုင်မည်မဟုတ်ပါ သို့မဟုတ် ပုံမှန်အလုပ်လုပ်မည်မဟုတ်ပါ။"</string>
     <string name="insufficient_storage" msgid="4175940286022466535">"သိမ်းဆည်းရန်နေရာအလုံအလောက်မရှိပါ"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"တည်နေရာ မှတ်တမ်းကို ဒီအကောင့် အတွက် ဖွင့်ထားလျှင်၊ Google သည် သင်၏ အက်ပ်များ သုံးနိုင်ဖို့ သင့်ကိရိယာ၏ တည်နေရာကို သိုလှောင်ပေးသည်။\n\nဥပမာ၊ Google မြေပုံများက သင့်အား လမ်းညွှန်းမှုများကို ပေးနိုင်သလို၊ Google Now က ယာဉ်ကူးပြောင်းမှု အကြောင်းကို အသိပေးနိုင်သည်။ \n\nသင်သည် တည်နေရာ မှတ်တမ်းကို အချိန်မရွေး ပိတ်ပစ်နိုင်သည်၊ သို့သော် ထိုသို့ လုပ်မှုက ၎င်းကို ဖျက်မည် မဟုတ်ပါ။ သင်၏ တည်နေရာ မှတ်တမ်းကို ကြည့်ရန် နှင့် စီမံကွပ်ကဲရန်၊ maps.google.com/locationhistory ကို ဝင်ကြည့်ပါ။"</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"တည်နေရာ မှတ်တမ်း ဖျက်ရန်"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"၎င်းက ဤ Google အကောင့်အတွက် ဤကိရိယာမှ သိုလှောင်ခဲ့သည့် တည်နေရာမှတ်တမ်း အားလုံးကို ဖျက်ပစ်မည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။ Google Now အပါအဝင်  အချို့အက်ပ်များ အလုပ်လုပ်တော့မည် မဟုတ်ပါ။"</string>
-    <string name="system_services" msgid="5754310941186053151">"ဝန်ဆောင်မှုများ"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"ဖန်သားပြင်ဖတ် အက်ပ်များ"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"ဖန်သားပြင်"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"ပြန်လှန်တုံ့ပြန်မှု ထိန်းချုပ်စနစ်များ"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"အသံနှင့် ဖန်သားပြင်ပေါ်ရှိ စာသား"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"စမ်းသပ်ဆဲ"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"ဝန်ဆောင်မှုများ"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"ဝန်ဆောင်မှု ဆက်တင်များ"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ဖြူမဲခြားနားချက် မြင့် စာသား"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"စာလုံးထူ စာသား"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"အရောင် အမှန်ပြင်ခြင်း"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"အသုံးမပြုသည့် ဤအချိန်ကာလပြီးနောက် ဖန်သားပြင်အသုံးပြုမှု ချွေတာမှုစနစ်ကို စတင်ပါမည်။ ဖန်သားပြင်အသုံးပြုမှု ချွေတာမှုစနစ်တစ်ခုကို ရွေးချယ်ထားခြင်း မရှိလျှင်၊ ဖန်သားပြင် ပိတ်သွားပါမည်။"</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ကြာ လှုပ်ရှားမှုမရှိလျှင်"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ဖန်သားပြင်ပြသမှုကို ပိတ်ရန်"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> ပြီးနောက်"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"ဖန်သားပြင်ပြသမှုပိတ်ရန် အချိန်"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"ဖန်သားပြင်ပိတ်ခြင်းကို ခွင့်ပြုရန်"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"မီဒီယာဖွင့်ခြင်းအတွင်း"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"\'စွမ်းအင်ချွေတာမှု\' ဆက်တင်ကို အတည်ပြုပါ"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"စွမ်းအင်သုံးစွဲမှု များပြားနိုင်ခြေရှိသည့်အတွက် ဆက်တင်အသစ်ကို <xliff:g id="SLEEP_TIME">%1$s</xliff:g> အဖြစ် အတည်ပြုပေးပါ။"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"စွမ်းအင်ချွေတာမှုဆက်တင် ပိတ်ခြင်း"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"ကြည့်ရှုနေစဉ် ဖန်သားပြင်ပိတ်ခြင်းကို တားမြစ်ရန် အတည်ပြုပါ။ ၎င်းက စွမ်းအင်ကို ပိုသုံးနိုင်ချေရှိသည်။"</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"အရန်သင့်မုဒ်တွင်ကွန်ရက်ချိတ်ဆက်မှုကန့်သတ်ခြင်း"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"အရန်သင့်မုဒ်တွင် စွမ်းအင်လျှော့သုံးသည်"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"အလိုအလျှောက် အပ်ဒိတ်ရယူခြင်းများမှလွဲ၍ အရန်သင့်မုဒ်တွင် TV ကို ကွန်ရက်ချိတ်ဆက်မှုဖြုတ်မည်။ ၎င်းက TV ၏ စွမ်းအင်သုံးစွဲမှု လျော့ကျစေနိုင်သော်လည် အရန်သင့်မုဒ်တွင် ‘ကာစ်လုပ်ခြင်း’ နှင့် Google Assistant ကဲ့သို့ အင်္ဂါရပ်များကို မသုံးနိုင်ပါ။"</string>

@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Skaņa"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Lietotnes"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Ierīces preferences"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Pieejamība"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Tālvadības ierīces un piederumi"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Displejs un skaņa"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Palīdzība un atsauksmes"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Kad šim kontam ir ieslēgta atrašanās vietu vēsture, Google var saglabāt jūsu ierīces atrašanās vietas datus izmantošanai jūsu lietotnēs.\n\nPiemēram, varat saņemt norādes pakalpojumā Google Maps, kā arī pakalpojumā “Google tagad” saņemt informāciju par satiksmi.\n\nJebkurā brīdī varat izslēgt atrašanās vietu vēsturi, taču ar šo darbību tā netiks dzēsta. Lai skatītu un pārvaldītu atrašanās vietu vēsturi, apmeklējiet vietni maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Atrašanās vietu vēstures dzēšana"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Šādi tiks dzēsta visa šīs ierīces atrašanās vietu vēsture saistībā ar šo Google kontu. Dzēšanu nevar atsaukt. Dažas lietotnes, tostarp “Google tagad”, vairs nedarbosies."</string>
-    <string name="system_services" msgid="5754310941186053151">"Pakalpojumi"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Ekrāna lasītāji"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Displejs"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Mijiedarbības vadīklas"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Audio un ekrānā redzamais teksts"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Eksperimentāls"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Pakalpojumi"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Pakalpojumu iestatījumi"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Liela kontrasta teksts"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Teksts treknrakstā"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Krāsu korekcija"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Ja šajā laika posmā ierīce nav bijusi aktīva, tiek aktivizēts ekrānsaudzētājs. Ja ekrānsaudzētājs nav atlasīts, displejs tiek izslēgts."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Pēc šāda neaktivitātes posma: <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Izslēgt displeju"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Pēc šāda perioda: <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Displeja izslēgšana"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Atļaut izslēgt ekrānu"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Multivides atskaņošanas laikā"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Enerģijas taupīšanas iestatījuma apstiprināšana"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Apstipriniet iestatījumu jaunajam laikam (<xliff:g id="SLEEP_TIME">%1$s</xliff:g>), kurā iespējams enerģijas lietojuma pieaugums."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Enerģijas taupīšanas iestatījuma atspējošana"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Lūdzu, apstipriniet atspējošanu, lai displejs netiktu izslēgts skatīšanās laikā. Tādējādi var būt iespējams enerģijas lietojuma pieaugums."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Ierobežot tīkla savienojumu gaidstāvē"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Patērē mazāk enerģijas gaidstāves režīmā"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Televizors būs atvienots no tīkla gaidstāves režīmā, izņemot automātisko atjauninājumu saņemšanai. Tādējādi var samazināties televizora enerģijas patēriņš, tomēr nevarēsiet izmantot tādas funkcijas kā Cast un Google asistents."</string>

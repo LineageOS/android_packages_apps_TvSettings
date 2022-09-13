@@ -627,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Kada je Istorija lokacija uključena za ovaj nalog, Google može da čuva podatke o lokaciji sa uređaja da bi ih aplikacije koristile.\n\nNa primer, Google mape mogu da vam daju uputstva, a Google trenutno može da vas obaveštava o saobraćaju na redovnom putovanju.\n\nMožete da isključite Istoriju lokacija u bilo kom trenutku, ali time je nećete izbrisati. Da biste pregledali Istoriju lokacija i upravljali njom, posetite maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Izbriši Istoriju lokacija"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Ovim ćete izbrisati sve sačuvane podatke Istorije lokacija sa ovog uređaja za ovaj Google nalog. Ne možete da opozovete ovo. Neke aplikacije, uključujući Google trenutno, prestaće da funkcionišu."</string>
-    <string name="system_services" msgid="5754310941186053151">"Usluge"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Čitači ekrana"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Ekran"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Kontrole interakcije"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Zvuk i tekst na ekranu"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Eksperimentalno"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Usluge"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Podešavanja usluge"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Tekst visokog kontrasta"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Podebljani tekst"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Korekcija boja"</string>
@@ -906,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Čuvar ekrana se pokreće posle ovog perioda neaktivnosti. Ako nikakav čuvar ekrana nije izabran, ekran se isključuje."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Posle <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> neaktivnosti"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Isključi ekran"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Posle <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Isključi ekran posle"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Dozvoli isključivanje ekrana"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Tokom reprodukcije medija"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Potvrdite podešavanje Uštede energije"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Potvrdite novo podešavanje na <xliff:g id="SLEEP_TIME">%1$s</xliff:g>. Ono može da poveća potrošnju energije."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Onemogućite podešavanje uštede energije"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Potvrdite da biste sprečili da se ekran isključuje dok gledate, što može da izazove povećanu potrošnju energije."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Ograniči mrežnu vezu u režimu mirovanja"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Koristi manje energije u režimu mirovanja"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Veza između TV-a i mreže će se prekinuti u režimu mirovanja, osim za dobijanje automatskih ažuriranja. To može da smanji potrošnju energije TV-a, ali takođe znači da nećete moći da koristite funkcije kao što su Prebacivanje i Google pomoćnik u režimu mirovanja."</string>

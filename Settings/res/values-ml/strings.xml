@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"ശബ്‌ദം"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ആപ്പുകൾ"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"ഉപകരണ മുൻഗണനകൾ"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"ഉപയോഗസഹായി"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"റിമോട്ടുകളും ആക്‌സസറികളും"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"ഡിസ്‌പ്ലേയും ശബ്‌ദവും"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"സഹായവും ഫീഡ്‌ബാക്കും"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"ഈ അക്കൗണ്ടിനായി ലൊക്കേഷൻ ചരിത്രം ഓണായിരിക്കുമ്പോൾ, നിങ്ങളുടെ ആപ്പുകൾക്ക് ഉപയോഗിക്കുന്നതിനായി Google-ന് നിങ്ങളുടെ ഉപകരണത്തിന്റെ ലൊക്കേഷൻ ഡാറ്റ സംഭരിക്കാനാകും.\n\nഉദാഹരണത്തിന്, Google Maps-ന് വഴികൾ നൽകാനും Google Now എന്നതിന് യാത്രാമാർഗത്തിലെ ട്രാഫിക്കിനെക്കുറിച്ച് അറിയിക്കാനുമാകും.\n\nഎപ്പോൾ വേണമെങ്കിലും നിങ്ങൾക്ക് ലൊക്കേഷൻ ചരിത്രം ഓഫാക്കാനാകുമെങ്കിലും അങ്ങനെ ചെയ്യുന്നത് അതിനെ ഇല്ലാതാക്കുന്നില്ല. നിങ്ങളുടെ ലൊക്കേഷൻ ചരിത്രം കാണാനും നിയന്ത്രിക്കാനും, maps.google.com/locationhistory സന്ദർശിക്കുക."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"ലൊക്കേഷൻ ചരിത്രം ഇല്ലാതാക്കുക"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"ഈ Google അക്കൗണ്ടിനായി ഈ ഉപകരണത്തിൽ സംഭരിച്ച എല്ലാ ലൊക്കേഷൻ ചരിത്രത്തെയും ഇത് ഇല്ലാതാക്കും. ഈ ഇല്ലാതാക്കൽ നിങ്ങൾക്ക് പഴയപടിയാക്കാനാവില്ല. \'Google നൗ\' ഉൾപ്പടെയുള്ള ചില അപ്ലിക്കേഷനുകൾ പ്രവർത്തനം നിർത്തും."</string>
-    <string name="system_services" msgid="5754310941186053151">"സേവനങ്ങള്‍"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"സ്‌ക്രീൻ റീഡറുകൾ"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"ഡിസ്‌പ്ലേ"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"ഇടപെടൽ നിയന്ത്രണങ്ങൾ"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"ഓഡിയോയും സ്‌ക്രീനിലെ ടെക്‌സ്‌റ്റും"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"പരീക്ഷണാത്മകം"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"സേവനങ്ങൾ"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"സേവന ക്രമീകരണങ്ങള്‍"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ദൃശ്യതീവ്രതയേറിയ ടെക്‌സ്റ്റ്"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"ബോൾഡ് ടെക്സ്റ്റ്"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"നിറം ശരിയാക്കൽ"</string>
@@ -907,14 +912,14 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"ഈ നിഷ്‌ക്രിയത്വ കാലയളവിനുശേഷം സ്ക്രീൻ സേവർ ആരംഭിക്കുന്നു. സ്ക്രീൻ സേവറൊന്നും തിരഞ്ഞെടുത്തില്ലെങ്കിൽ, ഡിസ്പ്ലേ ഓഫാകുന്നതാണ്."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> നിഷ്‌ക്രിയത്വത്തിന് ശേഷം"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ഡിസ്പ്ലേ ഓഫാക്കുക"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"<xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>-ന് ശേഷം"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"ശേഷം ഡിസ്‌പ്ലേ ഓഫാക്കുക"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"സ്‌ക്രീൻ ഓഫാകാൻ അനുവദിക്കുക"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"മീഡിയ പ്ലേബാക്ക് ചെയ്യുമ്പോൾ"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"എനർജി സേവർ ക്രമീകരണം സ്ഥിരീകരിക്കുക"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"കൂടുതൽ വൈദ്യുതി ഉപയോഗിക്കാൻ സാധ്യതയുള്ള <xliff:g id="SLEEP_TIME">%1$s</xliff:g> ആയി പുതിയ ക്രമീകരണം സജ്ജീകരിക്കണോ എന്ന് സ്ഥിരീകരിക്കുക."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"എനർജി സേവർ ക്രമീകരണം പ്രവർത്തനരഹിതമാക്കുക"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"കണ്ടുകൊണ്ടിരിക്കുമ്പോൾ ഡിസ്പ്ലേ ഓഫായി പോകുന്നതിൽ നിന്ന് തടയാൻ സ്ഥിരീകരിക്കുക, ഇത് ഊർജ്ജ ഉപഭോഗം കൂട്ടാനുള്ള സാധ്യതയുണ്ട്."</string>
+    <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"നിർജ്ജീവമായിരിക്കുമ്പോൾ"</string>
+    <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"കാണുമ്പോൾ"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"സ്റ്റാൻഡ്ബൈയിൽ പരിമിത നെറ്റ്‌വർക്ക് കണക്ഷൻ"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"സ്റ്റാൻഡ്ബൈ മോഡിൽ ഊർജ്ജ ഉപയോഗം കുറയ്ക്കുന്നു"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"സ്റ്റാൻഡ്ബൈ മോഡിലായിരിക്കുമ്പോൾ നിങ്ങളുടെ നെറ്റ്‌വർക്കിൽ നിന്ന് ടിവി കണക്ഷൻ വിച്ഛേദിക്കും, എന്നിരുന്നാലും സ്വയമേവയുള്ള അപ്ഡേറ്റുകൾ തുടർന്നും ലഭിക്കും. ഇത് നിങ്ങളുടെ ടിവിയുടെ ഊർജ്ജ ഉപയോഗം കുറയ്ക്കാൻ സഹായിക്കും, അതായത് സ്റ്റാൻഡ്ബൈ മോഡിൽ ആയിരിക്കുമ്പോൾ Cast, Google Assistant എന്നിവ പോലുള്ള ഫംഗ്ഷനുകൾ ഉപയോഗിക്കാനായേക്കില്ല എന്നുകൂടിയാണ് ഇതിനർത്ഥം."</string>

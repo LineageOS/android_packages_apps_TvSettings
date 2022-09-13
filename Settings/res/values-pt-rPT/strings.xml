@@ -627,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Quando o Histórico de localizações está ativado para esta conta, a Google pode armazenar os dados de localização do dispositivo para serem utilizados pelas suas aplicações.\n\nPor exemplo, o Google Maps pode dar-lhe direções e o Google Now pode informá-lo(a) acerca do trânsito para o trabalho.\n\nPode desativar o Histórico de localizações em qualquer momento, mas ao fazê-lo, não o elimina. Para ver e gerir o seu Histórico de localizações, aceda a maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Eliminar o histórico de localizações"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Isto eliminará todo o Histórico de localizações armazenado neste dispositivo para esta Conta Google. Não pode anular esta eliminação. Algumas aplicações, incluindo o Google Now, deixarão de funcionar."</string>
-    <string name="system_services" msgid="5754310941186053151">"Serviços"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Leitores de ecrã"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Ecrã"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Controlos de interação"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Áudio e texto no ecrã"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Experimental"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Serviços"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Definições de serviços"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Texto de alto contraste"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Texto em negrito"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Correção da cor"</string>
@@ -906,14 +912,14 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"A proteção de ecrã é iniciada após este período de inatividade. Se não for selecionada qualquer proteção de ecrã, o ecrã desliga-se."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Após <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> de inatividade"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Desligar o ecrã"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Após <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Desligar o ecrã após"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Permitir desligar o ecrã"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Durante a reprodução de multimédia"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Confirme a definição de Poupança de energia"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Confirme a nova definição para <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, que poderá aumentar a utilização de energia."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Desative a definição de poupança de energia"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Confirme para impedir que o ecrã se desligue enquanto estiver a ver algo, o que pode aumentar a utilização de energia."</string>
+    <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Quando está inativo"</string>
+    <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"Quando está a ver"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limitar lig. de rede no modo de espera"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Usa menos energia no modo de espera"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"A TV vai ser desligada da rede quando estiver em modo de espera, exceto para receber atualizações automáticas. Esta definição pode diminuir a utilização de energia da TV, embora também signifique que pode não conseguir usar funções como o Cast e o Assistente Google no modo de espera."</string>

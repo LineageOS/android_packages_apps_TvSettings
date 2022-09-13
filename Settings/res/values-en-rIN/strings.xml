@@ -627,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"When Location History is turned on for this account, Google can store your device\'s location data for use by your apps.\n\nFor example, Google Maps can give you directions, and Google Now can inform you about commute traffic.\n\nYou can turn off Location History at any time, but doing so doesn\'t delete it. To view and manage your Location History, visit maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Delete location history"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"This will delete all Location History has stored from this device for this Google Account. You can\'t undo this deletion. Some apps, including Google Now, will stop working."</string>
-    <string name="system_services" msgid="5754310941186053151">"Services"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Screen readers"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Display"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Interaction controls"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Audio &amp; on-screen text"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Experimental"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Services"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Service settings"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"High-contrast text"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Bold text"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Colour correction"</string>
@@ -906,14 +912,14 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Screen saver begins after this period of inactivity. If no screen saver is selected, the display turns off."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"After <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> of inactivity"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Turn off display"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"After <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Turn off display after"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Allow turning screen off"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"During media playback"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Confirm energy saver setting"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Please confirm new setting to <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, which has the potential for increased energy use."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Disable energy saver setting"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Please confirm to prevent the display from turning off while watching, which has the potential for increased energy use."</string>
+    <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"When inactive"</string>
+    <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"When watching"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limit network connection in standby"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Uses less energy in standby mode"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Your TV will be disconnected from your network when in standby mode, except to receive automatic updates. This may decrease your TV’s energy use, though it also means you may not be able to use functions such as Cast and Google Assistant while in standby."</string>

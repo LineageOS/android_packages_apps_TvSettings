@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Klank"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Programme"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Toestelvoorkeure"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Toeganklikheid"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Afstandbeheerders en toebehore"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Skerm en klank"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Hulp en terugvoer"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Wanneer Ligginggeskiedenis vir hierdie rekening aangeskakel is, kan Google jou toestel se liggingdata berg vir gebruik deur jou programme.\n\nGoogle Maps kan jou byvoorbeeld rigtingaanwysings gee en Google Nou kan jou inlig oor pendelverkeer.\n\nJy kan Ligginggeskiedenis enige tyd afskakel, maar dit sal dit nie uitvee nie. Om jou Ligginggeskiedenis te bekyk en te bestuur, besoek maps.google.com/locationhistory"</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Vee ligginggeskiedenis uit"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Dit sal alle ligginggeskiedenis vir hierdie Google-rekening wat vanaf hierdie toestel gestoor is, uitvee. Jy kan nie hierdie uitvee ontdoen nie. Sommige programme, insluitend Google Now, sal ophou werk."</string>
-    <string name="system_services" msgid="5754310941186053151">"Dienste"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Skermlesers"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Skerm"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Interaksiekontroles"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Oudio en teks op skerm"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Eksperimenteel"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Dienste"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Diensinstellings"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Hoëkontrasteks"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Teks in vetdruk"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Kleurregstelling"</string>
@@ -907,14 +912,14 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Sluimerskerm begin na hierdie periode van onaktiwiteit. As geen sluimerskerm gekies is nie, sal die skerm afskakel."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Na <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> van onaktiwiteit"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Skakel skerm af"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Ná <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Skakel skerm af ná"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Laat toe dat skerm afskakel"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Tydens mediaterugspeel"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Bevestig Energiebespaarder-instelling"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Bevestig asseblief nuwe instelling vir <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, wat die potensiaal het om energieverbruik te verhoog."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Deaktiveer energiebespaarderinstelling"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Bevestig asseblief om te verhoed dat die skerm afskakel terwyl jy kyk, wat moontlik tot verhoogde energiegebruik kan lei."</string>
+    <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Wanneer toestel onaktief is"</string>
+    <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"Wanneer gebruiker kyk"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Beperk netwerkverbinding in bystandmodus"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Gebruik minder energie in bystandmodus"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Jou TV sal in bystandmodus van jou netwerk ontkoppel wees, behalwe om outomatiese opdaterings te ontvang. Dit kan jou TV se energiegebruik verminder, hoewel dit ook beteken dat jy nie funksies soos Cast en Google Assistent sal kan gebruik terwyl dit in bystandmodus is nie."</string>
@@ -996,7 +1001,7 @@
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Skakel skerm aan"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"Laat toe dat die skerm aangeskakel word"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Laat \'n program toe om die skerm aan te skakel. As toestemming gegee word, kan die program die skerm enige tyd aanskakel sonder jou uitdruklike bedoeling."</string>
-    <string name="special_access" msgid="21806055758289916">"Spesiale programtoegang"</string>
+    <string name="special_access" msgid="21806055758289916">"Spesiale apptoegang"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Oudio"</string>
     <string name="record_audio" msgid="5035689290259575229">"Neem oudio op"</string>

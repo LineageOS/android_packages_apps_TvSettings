@@ -51,8 +51,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"Гук"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Праграмы"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Параметры экрана прылады"</string>
-    <!-- no translation found for accessibility_category_title (1552664829936369592) -->
-    <skip />
+    <string name="accessibility_category_title" msgid="1552664829936369592">"Спецыяльныя магчымасці"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Тэлевізійныя пульты і аксесуары"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Дысплэй і гук"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Даведка і водгукі"</string>
@@ -112,7 +111,7 @@
     <string name="device_factory_reset" msgid="1110189450013225971">"Скід да заводскіх налад"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Каліброўка"</string>
     <string name="device_energy_saver" msgid="1105023232841036991">"Эканомія энергіі"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Налады Экарэжыму"</string>
+    <string name="device_eco_settings" msgid="8478430139722946388">"Налады экарэжыму"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Прылады"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Выбар фарматаў"</string>
@@ -628,8 +627,14 @@
     <string name="location_history_desc" msgid="926674012916014270">"Калі для гэтага ўліковага запісу ўключана \"Гісторыя месцазнаходжанняў\", Google зможа захоўваць даныя пра ваша месцазнаходжанне, каб вашы праграмы маглі карыстацца імі.\n\nНапрыклад, Карты Google могуць падказваць вам маршруты, а Google Асістэнт – даваць інфармацыю пра дарожны рух на штодзённым маршруце.\n\nВы можаце выключыць \"Гісторыю месцазнаходжанняў\" у любы час, але пры гэтым яна не будзе выдалена. Для прагляду і кіравання вашай \"Гісторыяй месцазнаходжанняў\" наведайце maps.google.com/locationhistory."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Выдаліць гісторыю месцазнаходжанняў"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"У выніку гэтага будзе выдалена ўся \"Гісторыя месцазнаходжанняў\", захаваная з гэтай прылады для дадзенага ўліковага запісу Google Асістэнта. Выдаленне нельга будзе скасаваць. Некаторыя праграмы, у тым ліку Google Асістэнт, больш не будуць працаваць."</string>
-    <string name="system_services" msgid="5754310941186053151">"Сэрвісы"</string>
+    <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Праграмы чытання з экрана"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Дысплэй"</string>
+    <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Кіраванне прыладай"</string>
+    <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Аўдыя і тэкст на экране"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Эксперыментальны паказчык"</string>
+    <string name="accessibility_services_category_title" msgid="8813843874978910442">"Сэрвісы"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Налады службы"</string>
+    <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Высокая кантрастнасць тэксту"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Тлусты шрыфт"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Карэкцыя колераў"</string>
@@ -907,14 +912,16 @@
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Экранная застаўка ўключаецца пасля гэтага перыяду бяздзейнасці. Калі экранная застаўка не выбрана, дысплэй выключаецца."</string>
     <string name="device_daydreams_sleep_summary" msgid="3081688734381995693">"Пасля <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g> бяздзейнасці"</string>
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Выключыць дысплэй"</string>
-    <string name="device_energy_saver_screen_off_description" msgid="4469679706899396071">"Праз <xliff:g id="SLEEP_DESCRIPTION">%1$s</xliff:g>"</string>
-    <string name="device_energy_saver_screen_off_dialog_title" msgid="4092476553760123309">"Выключыць дысплэй праз"</string>
-    <string name="device_energy_saver_allow_turning_screen_off" msgid="3832490233158066073">"Дазволіць выключэнне экрана"</string>
-    <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Падчас прайгравання мультымедыя"</string>
+    <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
+    <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Пацвердзіце наладу Эканоміі энергіі"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Пацвердзіце новую наладу \"<xliff:g id="SLEEP_TIME">%1$s</xliff:g>\". Гэта можа павысіць спажыванне энергіі."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Адключыць наладу эканоміі зараду"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Пацвердзіце, каб папярэдзіць выключэнне дысплэя ў час прагляду. Гэта можа павялічыць спажыванне энергіі."</string>
+    <!-- no translation found for device_energy_saver_sleep_timeout (1841900768718452039) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_attentive_timeout (3649486668821348087) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Абмежаваць падключэнне да сеткі ў рэжыме чакання"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Спажывае менш энергіі ў рэжыме чакання"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"У рэжыме чакання тэлевізар, калі ён не атрымлівае аўтаматычных абнаўленняў, будзе адключацца ад сеткі. Гэта можа знізіць энергаспажыванне тэлевізара, аднак гэта таксама азначае, што ў рэжыме чакання вы не зможаце выкарыстоўваць такія функцыі, як Cast і Памочнік Google."</string>
