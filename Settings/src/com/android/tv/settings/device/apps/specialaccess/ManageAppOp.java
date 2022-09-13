@@ -37,6 +37,7 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -221,5 +222,11 @@ public abstract class ManageAppOp extends SettingsPreferenceFragment
         empty.setTitle(R.string.noApplications);
         empty.setEnabled(false);
         return empty;
+    }
+
+    public List<ApplicationsState.AppEntry> findEntriesUsingPackageName(String packageName) {
+        return mManageApplicationsController.getApps().stream()
+                .filter(entry -> entry.info.packageName.equals(packageName))
+                .collect(Collectors.toList());
     }
 }

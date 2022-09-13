@@ -35,6 +35,9 @@ import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * Fragment for managing which apps are granted PIP access
  */
@@ -116,15 +119,26 @@ public class PictureInPicture extends SettingsPreferenceFragment
         switchPref.setIcon(entry.icon);
         switchPref.setChecked((Boolean) entry.extraInfo);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
-            mAppOpsManager.setMode(AppOpsManager.OP_PICTURE_IN_PICTURE,
-                    entry.info.uid,
-                    entry.info.packageName,
-                    (Boolean) newValue ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
+            findEntriesUsingPackageName(entry.info.packageName)
+                    .forEach(packageEntry -> setPiPMode(entry, (Boolean) newValue));
             return true;
         });
         switchPref.setSummaryOn(R.string.app_permission_summary_allowed);
         switchPref.setSummaryOff(R.string.app_permission_summary_not_allowed);
         return switchPref;
+    }
+
+    private void setPiPMode(ApplicationsState.AppEntry entry, boolean newValue) {
+        mAppOpsManager.setMode(AppOpsManager.OP_PICTURE_IN_PICTURE,
+                entry.info.uid,
+                entry.info.packageName,
+                newValue ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
+    }
+
+    private List<ApplicationsState.AppEntry> findEntriesUsingPackageName(String packageName) {
+        return mManageApplicationsController.getApps().stream()
+                .filter(entry -> entry.info.packageName.equals(packageName))
+                .collect(Collectors.toList());
     }
 
     @NonNull

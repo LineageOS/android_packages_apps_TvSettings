@@ -61,11 +61,8 @@ public class AllFilesAccess extends ManageAppOp {
         switchPref.setKey(entry.info.packageName);
         switchPref.setIcon(entry.icon);
         switchPref.setOnPreferenceChangeListener((pref, grant) -> {
-            pref.getContext().getSystemService(AppOpsManager.class)
-                    .setMode(getAppOpsOpCode(), entry.info.uid, entry.info.packageName,
-                            (Boolean) grant
-                                    ? AppOpsManager.MODE_ALLOWED
-                                    : AppOpsManager.MODE_ERRORED);
+            findEntriesUsingPackageName(entry.info.packageName)
+                    .forEach(packageEntry -> setMode(entry, (Boolean) grant));
             return true;
         });
         switchPref.setSummary(getPreferenceSummary(entry));
@@ -94,6 +91,12 @@ public class AllFilesAccess extends ManageAppOp {
         } else {
             return null;
         }
+    }
+
+    private void setMode(ApplicationsState.AppEntry entry, boolean grant) {
+        getContext().getSystemService(AppOpsManager.class)
+                .setMode(getAppOpsOpCode(), entry.info.uid, entry.info.packageName,
+                        grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
     }
 
     @Override
