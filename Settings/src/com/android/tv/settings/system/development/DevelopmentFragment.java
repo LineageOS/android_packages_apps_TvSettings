@@ -499,7 +499,9 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             mColorModePreference = null;
         }
 
-        mWirelessDebugging = findPreference(TOGGLE_ADB_WIRELESS_KEY);
+        // Hide wireless debugging in favor of adb over network
+        removePreference(TOGGLE_ADB_WIRELESS_KEY);
+        mWirelessDebugging = null;
     }
 
     private void removePreference(String key) {
