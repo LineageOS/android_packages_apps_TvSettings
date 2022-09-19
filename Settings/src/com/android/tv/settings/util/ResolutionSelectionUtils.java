@@ -21,7 +21,6 @@ import android.view.Display;
 
 import com.android.tv.settings.R;
 
-import java.text.NumberFormat;
 
 /** This utility class for Resolution Setting **/
 public class ResolutionSelectionUtils {
@@ -35,7 +34,7 @@ public class ResolutionSelectionUtils {
         if (roundedRefreshRate % 1 == 0) {
             return Integer.toString((int) roundedRefreshRate);
         } else {
-            return NumberFormat.getInstance().format(roundedRefreshRate);
+            return Float.toString(roundedRefreshRate);
         }
     }
 
