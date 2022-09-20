@@ -484,6 +484,11 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
 
         mWirelessDebugging = findPreference(TOGGLE_ADB_WIRELESS_KEY);
+        if (FlavorUtils.isTwoPanel(getContext())) {
+            mWirelessDebugging.setFragment(WirelessDebuggingInfoFragment.class.getName());
+        } else {
+            mWirelessDebugging.setFragment(WirelessDebuggingFragment.class.getName());
+        }
     }
 
     private void removePreference(String key) {
@@ -1865,8 +1870,14 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
 
         if (!isNetworkConnected()) {
+            if (FlavorUtils.isTwoPanel(getContext())) {
+                mWirelessDebugging.setFragment(WirelessDebuggingInfoFragment.class.getName());
+            }
             mWirelessDebugging.setSummary(R.string.connectivity_summary_no_network_connected);
         } else {
+            if (FlavorUtils.isTwoPanel(getContext())) {
+                mWirelessDebugging.setFragment(WirelessDebuggingFragment.class.getName());
+            }
             boolean enabled = Settings.Global.getInt(mContentResolver,
                     Settings.Global.ADB_WIFI_ENABLED, 1) != 0;
             if (enabled) {
