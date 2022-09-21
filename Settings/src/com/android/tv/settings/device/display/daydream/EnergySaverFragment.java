@@ -48,7 +48,10 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
     private static final String KEY_ATTENTIVE_TIME = "attentiveTime";
     private static final int DEFAULT_SLEEP_TIME_MS = (int) (20 * DateUtils.MINUTE_IN_MILLIS);
     private static final int DEFAULT_ATTENTIVE_TIME_MS = (int) (4 * DateUtils.HOUR_IN_MILLIS);
-    private static final int WARNING_THRESHOLD_SLEEP_TIME_MS = (int) (4 * DateUtils.HOUR_IN_MILLIS);
+    private static final int WARNING_THRESHOLD_SLEEP_TIME_MS =
+            (int) (20 * DateUtils.MINUTE_IN_MILLIS);
+    private static final int WARNING_THRESHOLD_ATTENTIVE_TIME_MS =
+            (int) (4 * DateUtils.HOUR_IN_MILLIS);
     private ListPreference mSleepTimePref;
     private ListPreference mAttentiveTimePref;
     private RestrictedPreferenceAdapter<ListPreference> mRestrictedSleepTime;
@@ -118,7 +121,7 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
                 }
             case KEY_ATTENTIVE_TIME:
                 final int attentiveTime = Integer.parseInt((String) newValue);
-                if (attentiveTime == -1) {
+                if (attentiveTime > WARNING_THRESHOLD_ATTENTIVE_TIME_MS || attentiveTime == -1) {
                     showConfirmDisableAllowTurnScreenOffDialog(attentiveTime);
                     return false;
                 }
@@ -131,8 +134,8 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
 
     private void showConfirmDisableAllowTurnScreenOffDialog(int attentiveTime) {
         new AlertDialog.Builder(getContext())
-                .setTitle(R.string.device_energy_saver_disable_allow_turning_screen_off_title)
-                .setMessage(R.string.device_energy_saver_disable_allow_turning_screen_off_text)
+                .setTitle(R.string.device_energy_saver_confirmation_title)
+                .setMessage(getAttentiveConfirmationDialogDescription(attentiveTime))
                 .setPositiveButton(R.string.settings_confirm,
                         (dialog, which) -> confirmAttentiveSleepTime(attentiveTime))
                 .setNegativeButton(R.string.settings_cancel,
@@ -209,6 +212,20 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
             }
         }
         return getString(R.string.device_energy_saver_confirmation_text, sleepTimeText);
+    }
+
+    private String getAttentiveConfirmationDialogDescription(int newAttentiveTime) {
+        String attentiveTimeText = null;
+        String[] optionsValues = getResources().getStringArray(
+                R.array.device_energy_saver_attentive_timeout_values);
+        String[] optionsStrings = getResources().getStringArray(
+                R.array.device_energy_saver_attentive_timeout_entries);
+        for (int i = 0; i < optionsValues.length; i++) {
+            if (newAttentiveTime == Integer.parseInt(optionsValues[i])) {
+                attentiveTimeText = optionsStrings[i];
+            }
+        }
+        return getString(R.string.device_energy_saver_confirmation_text, attentiveTimeText);
     }
 
     private void confirmNewSleepTime(int newSleepTime) {
