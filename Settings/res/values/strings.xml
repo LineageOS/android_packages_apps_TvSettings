@@ -51,6 +51,10 @@
     <string name="disabled">Disabled</string>
     <!-- Title indicating a certain setting is unavailable [CHAR LIMIT = 30] -->
     <string name="unavailable">Unavailable</string>
+    <!-- Strings for Dialog allow button [CHAR LIMIT = 30] -->
+    <string name="allow">Allow</string>
+    <!-- Strings for Dialog deny button [CHAR LIMIT = 30] -->
+    <string name="deny">Deny</string>
 
     <!-- Top level headers -->
     <skip />
@@ -2477,6 +2481,11 @@
 
     <!-- Header info to educate users that they can connect to the internet via Wi-Fi, Ethernet, and phone's hotspot. [CHAR LIMIT=NONE] -->
     <string name="data_saver_header_info">You can connect to the internet with Wi-Fi, Ethernet, or your phone\'s hotspot."</string>
+
+    <!-- Title of dialog shown to the user whether to allow an app to enable discovery mode. [CHAR LIMIT=100] -->
+    <string name="bluetooth_ask_discovery_title">Make visible to other Bluetooth devices?</string>
+    <!-- Message of dialog shown to the user whether to allow an app to enable discovery mode. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_ask_discovery_message">An app wants to make your TV visible to other Bluetooth devices for <xliff:g id="timeout">%1$d</xliff:g> seconds.</string>
 
     <!-- Package name of slice rendering app -->
     <string name="slice_rendering_app" translatable="false"/>
