@@ -16,6 +16,8 @@
 
 package com.android.tv.settings;
 
+import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
+
 import static com.android.tv.settings.overlay.FlavorUtils.ALL_FLAVORS_MASK;
 
 import android.content.Intent;
@@ -67,6 +69,9 @@ public abstract class TvSettingsActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
+
         if ((FlavorUtils.getFlavor(this) & getAvailableFlavors()) == 0) {
             Log.w(TAG, "Activity is not supported in current flavor");
             finish();
