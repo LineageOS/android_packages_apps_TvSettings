@@ -387,7 +387,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_SWITCH_OUT:
                 mRestrictedProfile.exitUser();
-                getActivity().finish();
+                mUiThreadHandler.post(() -> getActivity().finish());
                 break;
             case PIN_MODE_RESTRICTED_PROFILE_CHANGE_PASSWORD:
                 // do nothing

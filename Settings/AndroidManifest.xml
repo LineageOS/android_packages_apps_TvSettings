@@ -927,8 +927,8 @@
             android:excludeFromRecents="true"
             android:exported="true"
             android:label="@string/bluetooth_permission_request"
-            android:permission="android.permission.BLUETOOTH"
-            android:theme="@android:style/Theme.NoDisplay">
+            android:permission="android.permission.BLUETOOTH_ADVERTISE"
+            android:theme="@style/TvSettingsActivityTheme">
             <intent-filter android:priority="1">
                 <action android:name="android.bluetooth.adapter.action.REQUEST_DISCOVERABLE"/>
                 <action android:name="android.bluetooth.adapter.action.REQUEST_ENABLE"/>
