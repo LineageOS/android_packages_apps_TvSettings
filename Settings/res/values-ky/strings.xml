@@ -55,7 +55,7 @@
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"Дисплей жана добуш"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Жардам жана пикир билдирүү"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Купуялык"</string>
-    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Түзмөктү тууралоо"</string>
+    <string name="privacy_device_settings_category" msgid="5018334603278648524">"Түзмөктүн жөндөөлөрү"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Аккаунттун жөндөөлөрү"</string>
     <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Жардамчы"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Төлөм жана сатып алуулар"</string>
@@ -185,7 +185,6 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Мындан ары %1$s колдонуу үчүн \"Жарайт\" баскычын басыңыз."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Жокко чыгаруу"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"Макул"</string>
-    <string name="resolution_selection_hz" msgid="4425902505388495637">"Герц"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Кеш берилиштери тазалансынбы?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Бул бардык колдонмолордун кештелген берилиштерин тазалайт."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -270,7 +269,7 @@
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Башкарылган түзмөк жөнүндө маалымат"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Өзгөртүүлөр жана жөндөөлөр уюмуңуз тарабынан башкарылат"</string>
     <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"Өзгөртүүлөр жана жөндөөлөр <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> тарабынан башкарылат"</string>
-    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Жумушка байланыштуу нерселерди жеткиликтүү кылуу үчүн уюмуңуз параметрлерди өзгөртүп, түзмөгүңүзгө ар кандай программаларды орнотушу мүмкүн. \n\nКененирээк маалымат алгыңыз келсе, уюмуңуздун IT администраторуна кайрылыңыз."</string>
+    <string name="enterprise_privacy_header" msgid="9221881402582661521">"Жумуш дайындарына кирүүгө уруксат берүү үчүн, уюмуңуз жөндөөлөрдү өзгөртүп, түзмөгүңүзгө программа орнотушу мүмкүн. \n\nКененирээк маалымат алуу үчүн, уюмуңуздун администратору менен байланышыңыз."</string>
     <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"Уюмуңуз көрө алган маалыматтын түрлөрү"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"Уюмуңуздун администратору киргизген өзгөртүүлөр"</string>
     <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"Бул түзмөккө кирүү мүмкүнчүлүгүңүз"</string>
@@ -499,8 +498,8 @@
     <string name="storage_format_as_public" msgid="6745112917895223463">"Ташыма сактагыч катары тазалоо жана форматтоо"</string>
     <string name="storage_format_for_private" msgid="5380138334184923252">"Түзмөктүн сактагычы катары форматтоо"</string>
     <string name="storage_not_connected" msgid="4327902652748552794">"Туташкан жок"</string>
-    <string name="storage_migrate" msgid="9137556600192167701">"Маалыматтарды ушул сактагычка көчүрүү"</string>
-    <string name="storage_migrate_away" msgid="7880100961434638430">"Маалыматтарды башка сактагычка көчүрүү"</string>
+    <string name="storage_migrate" msgid="9137556600192167701">"Дайындарды ушул сактагычка көчүрүү"</string>
+    <string name="storage_migrate_away" msgid="7880100961434638430">"Дайындарды башка сактагычка көчүрүү"</string>
     <string name="storage_no_apps" msgid="95566375753627272">"Камдык көчүрмөсүн сактай турган колдонмолор жок"</string>
     <string name="storage_forget" msgid="4671975563260507003">"Бул түзмөктүн сактагычы унутулсун"</string>
     <string name="storage_forget_wall_of_text" msgid="230454348256179142">"Бул дискте камтылган колдонмолор же дайындарды колдонуу үчүн аны кайра сайыңыз. Же түзмөк жеткиликтүү эмес болсо, бул сактагычты унутууну тандасаңыз болот.\n\nЭгер Унутууну тандасаңыз, дискте камтылган бардык дайындар биротоло жоголот.\n\nКолдонмолорду кийинчерээк кайра орнотсоңуз болот, бирок бул дискте сакталган дайындар жоголот."</string>
@@ -528,13 +527,13 @@
     <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"Бул USB картасы форматталгандан кийин, аны башка түзмөктөрдө колдоно берсеңиз болот. Бардык дайындар жок боло тургандыктан, алгач, колдонмолорду башка түзмөктүн сактагычына жылдырып, камдык көчүрмөлөрүн сактап коюңуз."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"USB диск форматталууда…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"Бул бир аз убакыт талап кылынышы мүмкүн. Дискти чыгарбай туруңуз."</string>
-    <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"Маалыматтар көчүрүлө турган сактагычты тандаңыз"</string>
+    <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"Дайындарды көчүрө турган сактагычты тандаңыз"</string>
     <string name="storage_wizard_migrate_confirm_title" msgid="5086390005970210697">"Дайындарды <xliff:g id="NAME">%1$s</xliff:g> ичине жылдыруу"</string>
     <string name="storage_wizard_migrate_confirm_description" msgid="918834441157741482">"Сүрөттөрүңүз, файлдарыңыз жана колдонмо дайындарын <xliff:g id="NAME">%1$s</xliff:g> ичине жылдырыңыз. Ал бир нече мүнөт созулушу мүмкүн. Жылдыруу учурунда айрым колдонмолор туура иштебей калат."</string>
     <string name="storage_wizard_migrate_confirm_action_move_now" msgid="7512917600174814567">"Азыр жылдыруу"</string>
     <string name="storage_wizard_migrate_confirm_action_move_later" msgid="6379986754827551474">"Кийинчерээк жылдыруу"</string>
     <string name="storage_wizard_migrate_toast_success" msgid="6153579567666607584">"Дайындар <xliff:g id="NAME">%1$s</xliff:g> ичине ооштурулду"</string>
-    <string name="storage_wizard_migrate_toast_failure" msgid="8580347235983040966">"Маалыматтар <xliff:g id="NAME">%1$s</xliff:g> картасына көчпөй койду"</string>
+    <string name="storage_wizard_migrate_toast_failure" msgid="8580347235983040966">"Дайындар <xliff:g id="NAME">%1$s</xliff:g> ичине ооштурулбай койду"</string>
     <string name="storage_wizard_migrate_progress_title" msgid="2623480667090826800">"Дайындар <xliff:g id="NAME">%1$s</xliff:g> ичине жылдырылууда…"</string>
     <string name="storage_wizard_migrate_progress_description" msgid="4023358325977284145">"Бул бир аз убакытты талап кылышы мүмкүн. Дискти чыгарбай туруңуз.\nЖылдыруу учурунда айрым колдонмолор туура иштебей калат."</string>
     <string name="storage_wizard_format_slow_title" msgid="7640229918512394316">"Бул диск өтө жай иштейт окшойт."</string>
@@ -683,7 +682,7 @@
     <string name="system_preferred_engine" msgid="3545505072652708443">"Артыкчылыктуу шайман"</string>
     <string name="system_speech_rate" msgid="6553204071403872669">"Кеп ыргагы"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"Үлгүнү ойнотуу"</string>
-    <string name="system_install_voice_data" msgid="8016395777968958673">"Үнгө байланыштуу нерселерди орнотуу"</string>
+    <string name="system_install_voice_data" msgid="8016395777968958673">"Үн дайындарын орнотуу"</string>
     <string name="system_general" msgid="687760148454147771">"Жалпы"</string>
     <string name="system_debugging" msgid="1576324426385458481">"Мүчүлүштүктөрдү таап оңдоо"</string>
     <string name="system_input" msgid="4457152980514604873">"Киргизүү"</string>
@@ -862,8 +861,8 @@
     <string name="device_apps_app_management_enable_desc" msgid="8686291003061136476">"Бул колдонмону иштеткиңиз келеби?"</string>
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"Колдонулган эстутум"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g> ичинен <xliff:g id="SIZE">%1$s</xliff:g> колдонулат"</string>
-    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Маалыматты өчүрүү"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Бул колдонмонун файлдар, жөндөөлөр, каттоо эсептери, маалыматтар базасы \nсыяктуу бардык маалыматтары биротоло жок болот."</string>
+    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Дайын-даректерди өчүрүү"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Бул колдонмонун файлдар, жөндөөлөр, каттоо эсептери, дайындар базасы \nсыяктуу бардык маалыматтары биротоло жок болот."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"Демейки жөндөөлөрдү тазалап салуу"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Бул колдонмо айрым аракеттер үчүн ишке киргизилет деп коюлган"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Демейки жөндөөлөр коюлган жок"</string>
@@ -891,7 +890,7 @@
     <string name="device_energy_saver_allow_turning_screen_off_description" msgid="6369746832941270786">"Мультимедианы ойнотуу учурунда"</string>
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Кубатты үнөмдөгүч жөндөөсүн ырастаңыз"</string>
     <string name="device_energy_saver_confirmation_text" msgid="3157546670441493125">"Батареянын кубатын көбүрөөк сарптай турган <xliff:g id="SLEEP_TIME">%1$s</xliff:g> деп коюлган жаңы жөндөөнү ырастаңыз."</string>
-    <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Дайындардын камдык көчүрмөсүн сактап жаткан аккаунт жок"</string>
+    <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Дайындардын камдык көчүрмөсүн сактап жаткан каттоо эсеби жок"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"Wi-Fi сырсөздөрүнүн, кыстармалардын жана башка жөндөөлөрдүн, ошондой эле колдонмолордун дайындарынын камдык көчүрмөлөрүн сактоо аракети токтотулуп, Google серверлериндеги бардык көчүрмөлөр өчүрүлсүнбү?"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Дайындарымдын камдык көчүрмөсүн сактоо"</string>
@@ -922,7 +921,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Колдонмо уруксаттары"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_1">%2$d</xliff:g> ичинен <xliff:g id="COUNT_0">%1$d</xliff:g> колдонмого уруксат бар"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetooth\'ду күйгүзүүнү өтүнүү"</string>
-    <string name="security_patch" msgid="8924741264829495392">"Android TV OS коопсуздук системасынын жаңыртуу"</string>
+    <string name="security_patch" msgid="8924741264829495392">"Android TV OS коопсуздук тутумунун жаңыртуу"</string>
     <string name="choose_application" msgid="2375936782103669988">"Колдонмо тандаңыз"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Сынамык)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Кайра жандырып, коопсуз режимге өтүү"</string>
@@ -948,8 +947,8 @@
     <string name="directory_access" msgid="7338555825237012006">"Каталогго мүмкүнчүлүк алуу"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Бул колдонмолордун айрым каталогдорго кирүүгө уруксаттары бар."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
-    <string name="system_alert_window_settings" msgid="5790572489650085051">"Башка колдонмолордун үстүнөн көрсөтүү"</string>
-    <string name="permit_draw_overlay" msgid="5312730681030266735">"Башка колдонмолордун үстүнөн көрсөтүүгө уруксат"</string>
+    <string name="system_alert_window_settings" msgid="5790572489650085051">"Башка терезелердин үстүнөн көрсөтүү"</string>
+    <string name="permit_draw_overlay" msgid="5312730681030266735">"Башка терезелердин үстүнөн көрсөтүүгө уруксат"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Колдонмону башка терезелердин үстүнөн көрсөтүүгө уруксат бериңиз. Бирок башка колдонмолорду пайдаланууга тоскоол болуп же алардын интерфейсин бузуп салышы мүмкүн."</string>
     <string name="write_system_settings" msgid="4284654265954461890">"Системанын жөндөөлөрүн өзгөртүү"</string>
     <string name="write_settings_title" msgid="2361816483383105754">"Системанын жөндөөлөрүн өзгөртө алат"</string>
@@ -1008,7 +1007,7 @@
     <string name="device_admin_warning" msgid="7399916080685200660">"Түзмөктү башкарган колдонмо иштетилгенде, <xliff:g id="APP_NAME">%1$s</xliff:g> төмөнкү аракеттерди аткара алат:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Бул түзмөк <xliff:g id="APP_NAME">%1$s</xliff:g> аркылуу башкарылып, көзөмөлдөнөт."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"Түзмөктү башкарган колдонмо иштетилип, <xliff:g id="APP_NAME">%1$s</xliff:g> төмөнкү аракеттерди аткара алат:"</string>
-    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Улантсаңыз, профилиңизди администратор башкарып, ал жеке дайын-даректериңиз менен кошо башка тийиштүү дайындарды да сактап турат.\n\nАдминистратор бул колдонуучунун жөндөөлөрүн, кирүү мүмкүнчүлүгүн, колдонмолорду жана алардагы нерселерди, ошондой эле тармактагы аракеттер менен түзмөгүңүздүн жайгашкан жери тууралуу маалыматты көзөмөлдөп, башкара алат."</string>
+    <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Улантсаңыз, профилиңизди администратор башкарып, ал жеке дайын-даректериңиз менен кошо башка тийиштүү дайындарды да сактап турат.\n\nАдминистратор бул колдонуучунун жөндөөлөрүн, кирүү мүмкүнчүлүгүн, колдонмолорду жана дайындарды, ошондой эле тармактагы аракеттер менен түзмөгүңүздүн жайгашкан жери тууралуу маалыматты көзөмөлдөп, башкара алат."</string>
     <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Мүчүлүштүк тууралуу баяндама бөлүшүлсүнбү?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"Бул түзмөктүн бузулууларын аныктап оңдоо үчүн IT администраторуңуз мүчүлүштүктөр тууралуу маалыматты сурап жатат. Колдонмолор менен дайындар бөлүшүлүшү мүмкүн."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"Бул түзмөктүн бузулууларын аныктап оңдоо үчүн IT администраторуңуз мүчүлүштүктөр тууралуу маалыматты сурап жатат. Колдонмолор менен дайындар бөлүшүлүп, түзмөгүңүз жайыраак иштеп калышы мүмкүн."</string>
@@ -1031,7 +1030,6 @@
     <string name="screen_settings_title" msgid="7806908869190824434">"Экран"</string>
     <string name="sound_settings_title" msgid="9149367966117889465">"Добуш"</string>
     <string name="power_and_energy" msgid="4638182439670702556">"Кубат жана энергия"</string>
-    <string name="power_on_behavior" msgid="927607372303160716">"Сыналгы күйүп тургандагы иштөө режими"</string>
+    <string name="power_on_behavior" msgid="927607372303160716">"Күйүк болгондогу тартиптер"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Кайра коюу"</string>
-    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Ethernet жупташтыруучу коду"</string>
 </resources>
