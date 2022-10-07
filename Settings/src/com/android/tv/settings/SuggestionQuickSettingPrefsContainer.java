@@ -13,7 +13,6 @@ import android.util.Log;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.suggestions.SuggestionControllerMixinCompat;
@@ -22,6 +21,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.suggestions.SuggestionPreference;
 import com.android.tv.settings.system.SecurityFragment;
+import com.android.tv.settings.widget.SwitchWithSoundPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +39,7 @@ public class SuggestionQuickSettingPrefsContainer  {
     private HotwordSwitchController mHotwordSwitchController;
     private TakeBugReportController mTakeBugReportController;
     private PreferenceCategory mQuickSettingsList;
-    private SwitchPreference mHotwordSwitch;
+    private SwitchWithSoundPreference mHotwordSwitch;
     private Preference mTakeBugReportPreference;
     private MainFragment mainFragment;
 
@@ -211,7 +211,7 @@ public class SuggestionQuickSettingPrefsContainer  {
         mQuickSettingsList.setOrder(1); // at top, but below suggested settings
         mainFragment.getPreferenceScreen().addPreference(mQuickSettingsList);
         if (mHotwordSwitchController != null && mHotwordSwitchController.isAvailable()) {
-            mHotwordSwitch = new SwitchPreference(
+            mHotwordSwitch = new SwitchWithSoundPreference(
                     mainFragment.getPreferenceManager().getContext());
             mHotwordSwitch.setKey(HotwordSwitchController.KEY_HOTWORD_SWITCH);
             mHotwordSwitch.setOnPreferenceClickListener(preference -> {

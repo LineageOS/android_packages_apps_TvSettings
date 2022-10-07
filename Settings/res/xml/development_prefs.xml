@@ -253,7 +253,7 @@
             android:entries="@array/show_non_rect_clip_entries"
             android:entryValues="@array/show_non_rect_clip_values" />
 
-        <SwitchPreference
+        <com.android.tv.settings.widget.SwitchWithSoundPreference
             android:key="window_blurs"
             android:title="@string/window_blurs"/>
 
