@@ -31,6 +31,10 @@
     <string name="enabled" msgid="5127188665060746381">"Slått på"</string>
     <string name="disabled" msgid="4589065923272201387">"Slått av"</string>
     <string name="unavailable" msgid="1610732303812180196">"Utilgjengelig"</string>
+    <!-- no translation found for allow (6982558814345894019) -->
+    <skip />
+    <!-- no translation found for deny (8291577308813053917) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"Forslag"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Hurtiginnstillinger"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Generelle innstillinger"</string>
@@ -77,15 +81,15 @@
 %1$s</xliff:g>"</string>
     <string name="sync_failed" msgid="2998289556481804047">"Synkroniseringen mislyktes"</string>
     <string name="sync_active" msgid="1621239982176888680">"Synkroniserer"</string>
-    <string name="connectivity_wifi" msgid="1138689464484009184">"Wi-Fi"</string>
+    <string name="connectivity_wifi" msgid="1138689464484009184">"Wifi"</string>
     <string name="connectivity_ethernet" msgid="4270588618633681766">"Ethernet"</string>
     <string name="connectivity_summary_ethernet_connected" msgid="2612843587731520061">"Ethernet er tilkoblet"</string>
     <string name="connectivity_summary_no_network_connected" msgid="6111160695454212460">"Ingen nettverk er tilkoblet"</string>
-    <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi er slått av"</string>
+    <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wifi er slått av"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Skanning er alltid tilgjengelig"</string>
-    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Tillat at Googles posisjonstjeneste og andre apper skanner etter nettverk, selv når Wi-Fi er slått av"</string>
-    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Skanning er alltid tilgjengelig, Tillater at Googles posisjonstjeneste og andre apper skanner etter nettverk, selv når Wi-Fi er slått av"</string>
-    <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
+    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Tillat at Googles posisjonstjeneste og andre apper skanner etter nettverk, selv når Wifi er slått av"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Skanning er alltid tilgjengelig, Tillater at Googles posisjonstjeneste og andre apper skanner etter nettverk, selv når Wifi er slått av"</string>
+    <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wifi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Koble til nettverk"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Nettverksdiagnostikk"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"Nylig åpnede apper"</string>
@@ -394,7 +398,7 @@
     <string name="mac_address_not_available" msgid="2992935344891853369">"Ikke tilgjengelig"</string>
     <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Tilfeldig valgt MAC-adresse"</string>
     <string name="title_ip_address" msgid="705842159484772807">"IP-adresse"</string>
-    <string name="title_ssid" msgid="255328048344188682">"Skriv inn navnet på Wi-Fi-nettverket"</string>
+    <string name="title_ssid" msgid="255328048344188682">"Skriv inn navnet på Wifi-nettverket"</string>
     <string name="title_internet_connection" msgid="7502414094881828069">"Internett-forbindelse"</string>
     <string name="connected" msgid="4981532275162345997">"Tilkoblet"</string>
     <string name="not_connected" msgid="475810896484271663">"Ikke tilkoblet"</string>
@@ -404,7 +408,7 @@
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Tilgjengelige nettverk"</string>
     <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Legg til et nytt nettverk"</string>
     <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Rask tilkobling"</string>
-    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Med rask tilkobling kan du koble raskt til Wi-Fi-nettverket ved å skanne QR-koden på telefonen."</string>
+    <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Med rask tilkobling kan du koble raskt til wifi-nettverket ved å skanne QR-koden på telefonen."</string>
     <string name="security_type" msgid="2297615092250075696">"Type sikkerhet"</string>
     <string name="other_network" msgid="5299289104661858596">"Annet nettverk"</string>
     <string name="skip_network" msgid="3095529090560000692">"Hopp over"</string>
@@ -416,8 +420,8 @@
     <string name="title_wifi_could_not_save" msgid="7549912968719395764">"Kunne ikke lagre konfigurasjonen for <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect" msgid="6654031057635481872">"Kunne ikke koble til <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_could_not_connect_timeout" msgid="7825788623604214601">"Fant ikke <xliff:g id="SSID">%1$s</xliff:g>"</string>
-    <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Wi-Fi-passordet er ikke gyldig"</string>
-    <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Wi-Fi-nettverket godtok ikke tilkoblingen"</string>
+    <string name="title_wifi_could_not_connect_authentication_failure" msgid="6626386897327862432">"Wifi-passordet er ikke gyldig"</string>
+    <string name="title_wifi_could_not_connect_ap_reject" msgid="5182833781690447828">"Wifi-nettverket godtok ikke tilkoblingen"</string>
     <string name="title_wifi_advanced_options" msgid="371185991282743258">"Vil du konfigurere <xliff:g id="SSID">%1$s</xliff:g>-innstillingene for IP og proxy-tjeneren?"</string>
     <string name="title_wifi_proxy_settings" msgid="1933444342984660569">"Innstillinger for proxy-tjener"</string>
     <string name="title_wifi_proxy_hostname" msgid="1242297002220870385">"Proxy-tjenerens vertsnavn:"</string>
@@ -440,7 +444,7 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Koble til"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Glem nettverket"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Dette sletter informasjonen som brukes til å koble til dette nettverket, inkludert lagrede passord"</string>
-    <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Koble til et Wi-Fi-nettverk ved å skanne QR-koden fra en mobiltelefon og følge veiledningen.\n \n Fra en "<b>"Android-telefon"</b>" går du til Innstillinger -&gt; Nettverk og internett -&gt; Wi-Fi -&gt; Velg et Wi-Fi-nettverk -&gt; Avansert -&gt; Legg til en enhet og skanner QR-koden."</string>
+    <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Koble til et Wifi-nettverk ved å skanne QR-koden fra en mobiltelefon og følge veiledningen.\n \n Fra en "<b>"Android-telefon"</b>" går du til Innstillinger -&gt; Nettverk og internett -&gt; Wifi -&gt; Velg et Wifi-nettverk -&gt; Avansert -&gt; Legg til en enhet og skanner QR-koden."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Trykk på tilbakeknappen for å avbryte"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Fortsett"</string>
@@ -482,7 +486,7 @@
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Nettverket er ikke tilkoblet"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Allerede koblet til <xliff:g id="SSID">%1$s</xliff:g>. Ønsker du å koble til et annet nettverk?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"et ukjent nettverk"</string>
-    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Du har ikke tillatelse til å endre Wi-Fi-nettverk."</string>
+    <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Du har ikke tillatelse til å endre Wifi-nettverk."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Avbryt"</string>
     <string name="storage_title" msgid="6637715914885228193">"Lagring"</string>
@@ -614,7 +618,7 @@
     <string name="location_no_recent_apps" msgid="7033474075806435793">"Ingen apper har bedt om posisjonen din i det siste"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Høy batteribruk"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Lav batteribruk"</string>
-    <string name="location_mode_wifi_description" msgid="84697248707903061">"Bruk Wi-Fi for å beregne posisjonen"</string>
+    <string name="location_mode_wifi_description" msgid="84697248707903061">"Bruk Wifi for å beregne posisjonen"</string>
     <string name="location_status" msgid="3037321737386011224">"Posisjonsstatus"</string>
     <string name="location_services" msgid="551503779736382878">"Posisjonstjenester"</string>
     <string name="on" msgid="4899322147062342542">"På"</string>
@@ -734,8 +738,8 @@
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Vent på feilsøkingsverktøyet"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Bekreft apper via USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Sjekk om det er skadelig atferd i apper som er installert via ADB/ADT"</string>
-    <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Detaljert loggføring for Wi-Fi"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Slå på detaljert Wi-Fi-loggføring"</string>
+    <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Detaljert loggføring for wifi"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Slå på detaljert Wifi-loggføring"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Vis berøringer"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"Pekerplassering"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"Vis layoutgrenser"</string>
@@ -810,7 +814,7 @@
     <string name="autofill_none" msgid="1615056985649424207">"Ingen"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Stoler du på dennne appen?&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Passordtjeneste&gt;%1$s&lt;/xliff:g&gt; bruker det som er på skjermen, til å fastslå hva som kan fylles ut automatisk."</string>
     <string name="computing_size" msgid="8623916230485437579">"Beregner ..."</string>
-    <string name="title_select_wifi_network" msgid="935820896444071617">"Velg Wi-Fi-nettverk"</string>
+    <string name="title_select_wifi_network" msgid="935820896444071617">"Velg Wifi-nettverk"</string>
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Gi nytt navn"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"Wifi-skjerm"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"PIN-kode kreves"</string>
@@ -1023,7 +1027,11 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Datasparing"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Juster videokvalitet automatisk for å bruke mindre mobildata"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Databruk og -varsler"</string>
-    <string name="data_saver_header_info" msgid="2706725187498535785">"Du kan koble til internett med Wi-Fi, Ethernet eller telefonens wifi-sone."</string>
+    <string name="data_saver_header_info" msgid="2706725187498535785">"Du kan koble til internett med wifi, Ethernet eller telefonens wifi-sone."</string>
+    <!-- no translation found for bluetooth_ask_discovery_title (4955540555242269694) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_discovery_message (8609666862877703398) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Handlingen er ikke tillatt"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Kan ikke endre volumet"</string>

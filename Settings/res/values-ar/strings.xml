@@ -31,6 +31,10 @@
     <string name="enabled" msgid="5127188665060746381">"مفعّل"</string>
     <string name="disabled" msgid="4589065923272201387">"غير مفعّل"</string>
     <string name="unavailable" msgid="1610732303812180196">"غير متاح"</string>
+    <!-- no translation found for allow (6982558814345894019) -->
+    <skip />
+    <!-- no translation found for deny (8291577308813053917) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"الاقتراحات"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"الإعدادات السريعة"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"الإعدادات العامة"</string>
@@ -915,18 +919,14 @@
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"تأكيد إعداد \"توفير الطاقة\""</string>
-    <!-- no translation found for device_energy_saver_confirmation_text (1253846259965911752) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"مواصلة تشغيل شاشة العرض لمدة <xliff:g id="SLEEP_TIME">%1$s</xliff:g> قد يؤدي إلى زيادة استهلاك الطاقة."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"إيقاف إعداد أداة \"توفير الطاقة\""</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"يُرجى التأكُّد من منع إيقاف العرض أثناء المشاهدة، الأمر الذي قد يؤدي إلى احتمال استهلاك المزيد من الطاقة."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"في حال عدم النشاط"</string>
     <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"أثناء المشاهدة"</string>
-    <!-- no translation found for device_energy_saver_category_title (2604826113821035545) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_sleep_timeout_dialog_title (1223814536589471788) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_attentive_timeout_dialog_title (1654557070579253248) -->
-    <skip />
+    <string name="device_energy_saver_category_title" msgid="2604826113821035545">"إيقاف التلفزيون تلقائيًا"</string>
+    <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"إيقاف التلفزيون تلقائيًا في حال عدم نشاطه"</string>
+    <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"إيقاف التلفزيون تلقائيًا أثناء المشاهدة"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"تقييد الاتصال بالشبكة في وضع الاستعداد"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"يستخدم طاقة أقل في وضع الاستعداد."</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"سيتمّ قطع اتصال تلفزيونك بالشبكة عندما يكون في وضع الاستعداد، ويُستثنى من ذلك تلقّي التحديثات التلقائية. قد يؤدي ذلك إلى تقليل استهلاك التلفزيون للطاقة، على الرغم من أنه يعني أيضًا أنك قد لا تتمكّن من استخدام وظائف مثل \"البث\" و\"مساعد Google\" وأنت في وضع الاستعداد."</string>
@@ -983,7 +983,7 @@
     <string name="high_power_off" msgid="3588854600942236231">"يستخدم طاقة أقل"</string>
     <string name="high_power_system" msgid="6263052626979462255">"تحسين الطاقة غير متوفر"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"الوصول إلى الإشعارات"</string>
-    <string name="no_notification_listeners" msgid="5119406452675724448">"لم تطلب أي تطبيقات مثبّتة حق الوصول إلى الإشعارات."</string>
+    <string name="no_notification_listeners" msgid="5119406452675724448">"لم تطلب أي تطبيقات مثبّتة الإذن بالوصول إلى الإشعارات."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"سيكون بإمكان هذه التطبيقات قراءة جميع الإشعارات، بما في ذلك المعلومات الشخصية مثل أسماء جهات الاتصال ونص الرسائل التي تتلقاها. وسيكون بإمكانها أيضًا تجاهل الإشعارات أو تفعيل الأزرار داخل هذه الإشعارات."</string>
     <string name="default_notification_access_package_summary" msgid="1354775994781420222">"مطلوب من النظام"</string>
     <string name="directory_access" msgid="7338555825237012006">"الوصول إلى الدليل"</string>
@@ -1028,6 +1028,10 @@
     <string name="summary_data_saver" msgid="6793558728898207405">"ضبط جودة الفيديو تلقائيًا لتقليل استخدام بيانات الجوّال"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"التنبيهات واستخدام البيانات"</string>
     <string name="data_saver_header_info" msgid="2706725187498535785">"يمكنك الاتصال بالإنترنت باستخدام شبكة Wi-Fi أو إيثرنت أو نقطة اتصال هاتفك."</string>
+    <!-- no translation found for bluetooth_ask_discovery_title (4955540555242269694) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_discovery_message (8609666862877703398) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"غير مسموح بهذا الإجراء"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"يتعذّر تغيير مستوى الصوت."</string>

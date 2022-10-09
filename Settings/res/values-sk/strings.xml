@@ -31,6 +31,8 @@
     <string name="enabled" msgid="5127188665060746381">"Aktivované"</string>
     <string name="disabled" msgid="4589065923272201387">"Deaktivované"</string>
     <string name="unavailable" msgid="1610732303812180196">"Nedostupné"</string>
+    <string name="allow" msgid="6982558814345894019">"Povoliť"</string>
+    <string name="deny" msgid="8291577308813053917">"Odmietnuť"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"Návrhy"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Rýchle nastavenia"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Všeobecné nastavenia"</string>
@@ -915,18 +917,14 @@
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Potvrďte nastavenie šetriča energie"</string>
-    <!-- no translation found for device_energy_saver_confirmation_text (1253846259965911752) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Ak necháte obrazovku zapnutú <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, spotreba energie môže stúpnuť"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Deaktivovanie šetriča energie"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Potvrďte, že sa obrazovka pri pozeraní nemá vypínať (môže to spôsobiť vyššiu spotrebu energie)."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Pri neaktivite"</string>
     <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"Pri pozeraní"</string>
-    <!-- no translation found for device_energy_saver_category_title (2604826113821035545) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_sleep_timeout_dialog_title (1223814536589471788) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_attentive_timeout_dialog_title (1654557070579253248) -->
-    <skip />
+    <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Automatické vypínanie televízora"</string>
+    <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Automatické vypínanie televízora pri nečinnosti"</string>
+    <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Automatické vypínanie televízora pri pozeraní"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Obmedziť pripoj. k sieti v pohot. režime"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Znížiť spotrebu energie v pohotovostnom režime"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Televízor sa v pohotovostnom režime odpojí od siete. Bude prijímať iba automatické aktualizácie. Môže to znížiť spotrebu energie, ale v pohotovostnom režime zrejme nebudete môcť používať určité funkcie, ako sú prenosy a Asistent Google."</string>
@@ -1028,6 +1026,8 @@
     <string name="summary_data_saver" msgid="6793558728898207405">"Automaticky upravovať kvalitu videí na zníženie spotreby mobilných dát"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Spotreba dát a upozornenia"</string>
     <string name="data_saver_header_info" msgid="2706725187498535785">"K internetu sa môžete pripojiť cez sieť Wi-Fi, ethernet alebo hotspot telefónu."</string>
+    <string name="bluetooth_ask_discovery_title" msgid="4955540555242269694">"Chcete zapnúť jeho viditeľnosť pre iné zariadenia s rozhraním Bluetooth?"</string>
+    <string name="bluetooth_ask_discovery_message" msgid="8609666862877703398">"Aplikácia chce na <xliff:g id="TIMEOUT">%1$d</xliff:g> s zapnúť viditeľnosť televízora pre iné zariadenia s rozhraním Bluetooth."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"Akcia nie je povolená"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"Hlasitosť sa nedá zmeniť"</string>
