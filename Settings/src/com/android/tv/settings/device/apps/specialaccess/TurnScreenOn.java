@@ -38,6 +38,9 @@ import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * Fragment for managing which apps are allowed to turn the screen on
  */
@@ -111,24 +114,35 @@ public class TurnScreenOn extends SettingsPreferenceFragment
         switchPref.setIcon(entry.icon);
         switchPref.setChecked((Boolean) entry.extraInfo);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
-            int newMode =
-                    (Boolean) newValue ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED;
-            if (DEBUG) {
-                Log.d(TAG, "setting OP_TURN_SCREEN_ON to " + newMode
-                        + ", uid=" + entry.info.uid
-                        + ", packageName=" + entry.info.packageName
-                        + ", userId=" + UserHandle.getUserId(entry.info.uid)
-                        + ", currentUser=" + ActivityManager.getCurrentUser());
-            }
-            mAppOpsManager.setMode(AppOpsManager.OP_TURN_SCREEN_ON,
-                    entry.info.uid,
-                    entry.info.packageName,
-                    newMode);
+            findEntriesUsingPackageName(entry.info.packageName)
+                    .forEach(packageEntry -> setTurnScreenOnMode(packageEntry, (Boolean) newValue));
             return true;
         });
         switchPref.setSummaryOn(R.string.app_permission_summary_allowed);
         switchPref.setSummaryOff(R.string.app_permission_summary_not_allowed);
         return switchPref;
+    }
+
+    private void setTurnScreenOnMode(ApplicationsState.AppEntry entry, boolean newValue) {
+        int newMode =
+                (Boolean) newValue ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED;
+        if (DEBUG) {
+            Log.d(TAG, "setting OP_TURN_SCREEN_ON to " + newMode
+                    + ", uid=" + entry.info.uid
+                    + ", packageName=" + entry.info.packageName
+                    + ", userId=" + UserHandle.getUserId(entry.info.uid)
+                    + ", currentUser=" + ActivityManager.getCurrentUser());
+        }
+        mAppOpsManager.setMode(AppOpsManager.OP_TURN_SCREEN_ON,
+                entry.info.uid,
+                entry.info.packageName,
+                newMode);
+    }
+
+    private List<ApplicationsState.AppEntry> findEntriesUsingPackageName(String packageName) {
+        return mManageApplicationsController.getApps().stream()
+                .filter(entry -> entry.info.packageName.equals(packageName))
+                .collect(Collectors.toList());
     }
 
     @NonNull

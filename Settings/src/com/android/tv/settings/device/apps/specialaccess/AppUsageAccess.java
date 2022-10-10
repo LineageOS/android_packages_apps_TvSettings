@@ -65,7 +65,8 @@ public class AppUsageAccess extends ManageAppOp
         switchPref.setKey(entry.info.packageName);
         switchPref.setIcon(entry.icon);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
-            setAppUsageAccess(entry, (Boolean) newValue);
+            findEntriesUsingPackageName(entry.info.packageName)
+                    .forEach(packageEntry -> setAppUsageAccess(packageEntry, (Boolean) newValue));
             return true;
         });
 
