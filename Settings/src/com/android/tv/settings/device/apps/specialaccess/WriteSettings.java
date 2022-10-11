@@ -69,7 +69,8 @@ public class WriteSettings extends ManageAppOp {
         switchPref.setKey(entry.info.packageName);
         switchPref.setIcon(entry.icon);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
-            setWriteSettingsAccess(entry, (Boolean) newValue);
+            findEntriesUsingPackageName(entry.info.packageName).forEach(
+                    packageEntry -> setWriteSettingsAccess(packageEntry, (Boolean) newValue));
             return true;
         });
 

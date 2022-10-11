@@ -69,7 +69,9 @@ public class AlarmsAndReminders extends ManageAppOp {
         switchPref.setKey(entry.info.packageName);
         switchPref.setIcon(entry.icon);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
-            setAlarmsAndRemindersAccess(entry, (Boolean) newValue);
+            findEntriesUsingPackageName(entry.info.packageName)
+                    .forEach(packageEntry -> setAlarmsAndRemindersAccess(
+                            packageEntry, (Boolean) newValue));
             return true;
         });
 

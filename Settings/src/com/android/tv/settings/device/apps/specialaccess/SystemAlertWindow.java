@@ -74,7 +74,9 @@ public class SystemAlertWindow extends ManageAppOp {
         switchPref.setKey(entry.info.packageName);
         switchPref.setIcon(entry.icon);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
-            setSystemAlertWindowAccess(entry, (Boolean) newValue);
+            findEntriesUsingPackageName(entry.info.packageName)
+                    .forEach(packageEntry -> setSystemAlertWindowAccess(
+                            packageEntry, (Boolean) newValue));
             return true;
         });
 
