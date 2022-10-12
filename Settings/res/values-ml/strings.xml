@@ -31,6 +31,10 @@
     <string name="enabled" msgid="5127188665060746381">"പ്രവർത്തനക്ഷമമാക്കി"</string>
     <string name="disabled" msgid="4589065923272201387">"പ്രവർത്തനരഹിതമാക്കി"</string>
     <string name="unavailable" msgid="1610732303812180196">"ലഭ്യമല്ല"</string>
+    <!-- no translation found for allow (6982558814345894019) -->
+    <skip />
+    <!-- no translation found for deny (8291577308813053917) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"നിർദ്ദേശങ്ങൾ"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"ദ്രുത ക്രമീകരണം"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"പൊതു ക്രമീകരണം"</string>
@@ -915,18 +919,14 @@
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"എനർജി സേവർ ക്രമീകരണം സ്ഥിരീകരിക്കുക"</string>
-    <!-- no translation found for device_energy_saver_confirmation_text (1253846259965911752) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"<xliff:g id="SLEEP_TIME">%1$s</xliff:g> സമയത്തേക്ക് നിങ്ങളുടെ ഡിസ്പ്ലേ ഓണായിരിക്കുന്നത് വൈദ്യുതി ഉപഭോഗം വർദ്ധിപ്പിച്ചേക്കാം"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"എനർജി സേവർ ക്രമീകരണം പ്രവർത്തനരഹിതമാക്കുക"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"കണ്ടുകൊണ്ടിരിക്കുമ്പോൾ ഡിസ്പ്ലേ ഓഫായി പോകുന്നതിൽ നിന്ന് തടയാൻ സ്ഥിരീകരിക്കുക, ഇത് ഊർജ്ജ ഉപഭോഗം കൂട്ടാനുള്ള സാധ്യതയുണ്ട്."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"നിർജ്ജീവമായിരിക്കുമ്പോൾ"</string>
     <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"കാണുമ്പോൾ"</string>
-    <!-- no translation found for device_energy_saver_category_title (2604826113821035545) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_sleep_timeout_dialog_title (1223814536589471788) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_attentive_timeout_dialog_title (1654557070579253248) -->
-    <skip />
+    <string name="device_energy_saver_category_title" msgid="2604826113821035545">"ടിവി സ്വയമേവ ഓഫാക്കുക"</string>
+    <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"നിർജ്ജീവമായിരിക്കുമ്പോൾ സ്വയമേവ ഓഫാക്കുക"</string>
+    <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"കാണുമ്പോൾ ടിവി സ്വയമേവ ഓഫാക്കുക"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"സ്റ്റാൻഡ്ബൈയിൽ പരിമിത നെറ്റ്‌വർക്ക് കണക്ഷൻ"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"സ്റ്റാൻഡ്ബൈ മോഡിൽ ഊർജ്ജ ഉപയോഗം കുറയ്ക്കുന്നു"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"സ്റ്റാൻഡ്ബൈ മോഡിലായിരിക്കുമ്പോൾ നിങ്ങളുടെ നെറ്റ്‌വർക്കിൽ നിന്ന് ടിവി കണക്ഷൻ വിച്ഛേദിക്കും, എന്നിരുന്നാലും സ്വയമേവയുള്ള അപ്ഡേറ്റുകൾ തുടർന്നും ലഭിക്കും. ഇത് നിങ്ങളുടെ ടിവിയുടെ ഊർജ്ജ ഉപയോഗം കുറയ്ക്കാൻ സഹായിക്കും, അതായത് സ്റ്റാൻഡ്ബൈ മോഡിൽ ആയിരിക്കുമ്പോൾ Cast, Google Assistant എന്നിവ പോലുള്ള ഫംഗ്ഷനുകൾ ഉപയോഗിക്കാനായേക്കില്ല എന്നുകൂടിയാണ് ഇതിനർത്ഥം."</string>
@@ -1028,6 +1028,10 @@
     <string name="summary_data_saver" msgid="6793558728898207405">"കുറഞ്ഞ മൊബെെൽ ഡാറ്റ ഉപയോഗിക്കുന്നതിന്, വീഡിയോ നിലവാരം സ്വയമേവ ക്രമീകരിക്കുക"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"ഡാറ്റാ ഉപയോഗവും മുന്നറിയിപ്പുകളും"</string>
     <string name="data_saver_header_info" msgid="2706725187498535785">"വെെഫെെ, ഇതർനെറ്റ്, അല്ലെങ്കിൽ ഫോണിന്റെ ഹോട്ട്‌സ്‌പോട്ട് ഉപയോഗിച്ച് ഇന്റർനെറ്റിലേക്ക് കണക്റ്റ് ചെയ്യാം."</string>
+    <!-- no translation found for bluetooth_ask_discovery_title (4955540555242269694) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_discovery_message (8609666862877703398) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"പ്രവർത്തനം അനുവദനീയമല്ല"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"വോളിയം മാറ്റാനാകില്ല"</string>

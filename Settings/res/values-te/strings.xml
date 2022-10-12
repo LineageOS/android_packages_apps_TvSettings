@@ -31,6 +31,10 @@
     <string name="enabled" msgid="5127188665060746381">"ఎనేబుల్ చేయబడింది"</string>
     <string name="disabled" msgid="4589065923272201387">"డిజేబుల్ చేయబడింది"</string>
     <string name="unavailable" msgid="1610732303812180196">"అందుబాటులో లేదు"</string>
+    <!-- no translation found for allow (6982558814345894019) -->
+    <skip />
+    <!-- no translation found for deny (8291577308813053917) -->
+    <skip />
     <string name="header_category_suggestions" msgid="106077820663753645">"సూచనలు"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"శీఘ్ర సెట్టింగ్‌లు"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"సాధారణ సెట్టింగ్‌లు"</string>
@@ -668,7 +672,7 @@
     <string name="captions_configure" msgid="711991018642931958">"కాన్ఫిగర్ చేయి"</string>
     <string name="captions_language" msgid="5905918439449912646">"భాష"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"ఆటోమేటిక్"</string>
-    <string name="captions_textsize" msgid="7161136610669343510">"వచన పరిమాణం"</string>
+    <string name="captions_textsize" msgid="7161136610669343510">"వచన సైజ్‌"</string>
     <string name="captions_captionstyle" msgid="6650139717545516071">"క్యాప్షన్‌ శైలి"</string>
     <string name="captions_customoptions" msgid="7691004663572161126">"అనుకూల ఎంపికలు"</string>
     <string name="captions_fontfamily" msgid="1026632786438880997">"ఫాంట్ కుటుంబం"</string>
@@ -915,18 +919,14 @@
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"ఎనర్జీ సేవర్ సెట్టింగ్‌ను నిర్ధారించండి"</string>
-    <!-- no translation found for device_energy_saver_confirmation_text (1253846259965911752) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"<xliff:g id="SLEEP_TIME">%1$s</xliff:g> పాటు మీ డిస్‌ప్లేను ఆన్‌లో ఉంచడం వల్ల శక్తి వినియోగం పెరగవచ్చు"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"ఎనర్జీ సేవర్ సెట్టింగ్‌ను డిజేబుల్ చేయండి"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"దయచేసి డిస్‌ప్లేను చూస్తున్నప్పుడు డిస్‌ప్లే ఆఫ్ కాకుండా నిరోధించడానికి, ఎనర్జీ వినియోగం పెరిగే అవకాశం ఉంది అని నిర్ధారించండి."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"యాక్టివ్‌గా ఉన్నప్పుడు"</string>
     <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"చూస్తున్నప్పుడు"</string>
-    <!-- no translation found for device_energy_saver_category_title (2604826113821035545) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_sleep_timeout_dialog_title (1223814536589471788) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_attentive_timeout_dialog_title (1654557070579253248) -->
-    <skip />
+    <string name="device_energy_saver_category_title" msgid="2604826113821035545">"టీవీని ఆటోమేటిక్‌గా ఆఫ్ చేయండి"</string>
+    <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"ఇన్‌యాక్టివ్‌గా ఉన్నప్పుడు టీవీని ఆటోమేటిక్‌గా ఆఫ్ చేయండి"</string>
+    <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"చూస్తున్నప్పుడు టీవీని ఆటోమేటిక్‌గా ఆఫ్ చేయండి"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"స్టాండ్‌బై మోడ్‌లో నెట్‌వర్క్ కనెక్షన్‌ను పరిమితం చేయండి"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"స్టాండ్‌బై మోడ్‌లో తక్కువ ఎనర్జీ ఉపయోగించబడుతుంది"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"స్టాండ్‌బై మోడ్‌లో ఉన్నప్పుడు ఆటోమేటిక్ అప్‌డేట్‌లను అందుకోవడం మినహా, మీ టీవీ మీ నెట్‌వర్క్ నుండి డిస్‌కనెక్ట్ చేయబడుతుంది. ఇది మీ టీవీ ఎనర్జీ వినియోగాన్ని తగ్గించవచ్చు, అయితే స్టాండ్‌బై మోడ్‌లో ఉన్నప్పుడు మీరు ప్రసారం, Google Assistant వంటి ఫంక్షన్‌లను ఉపయోగించలేకపోవచ్చు."</string>
@@ -1028,6 +1028,10 @@
     <string name="summary_data_saver" msgid="6793558728898207405">"తక్కువ మొబైల్ డేటాను ఉపయోగించడానికి వీడియో క్వాలిటీని ఆటోమేటిక్‌గా సర్దుబాటు చేయండి"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"డేటా వినియోగం మరియు హెచ్చరికలు"</string>
     <string name="data_saver_header_info" msgid="2706725187498535785">"మీరు Wi-Fi, ఈథర్‌నెట్ లేదా మీ ఫోన్ హాట్‌స్పాట్ ద్వారా ఇంటర్నెట్‌కు కనక్ట్ కావచ్చు."</string>
+    <!-- no translation found for bluetooth_ask_discovery_title (4955540555242269694) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_discovery_message (8609666862877703398) -->
+    <skip />
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"చర్య అనుమతించబడదు"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"వాల్యూమ్‌ని మార్చలేరు"</string>

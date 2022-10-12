@@ -31,6 +31,8 @@
     <string name="enabled" msgid="5127188665060746381">"ચાલુ છે"</string>
     <string name="disabled" msgid="4589065923272201387">"બંધ છે"</string>
     <string name="unavailable" msgid="1610732303812180196">"ઉપલબ્ધ નથી"</string>
+    <string name="allow" msgid="6982558814345894019">"મંજૂરી આપો"</string>
+    <string name="deny" msgid="8291577308813053917">"નકારો"</string>
     <string name="header_category_suggestions" msgid="106077820663753645">"સૂચનો"</string>
     <string name="header_category_quick_settings" msgid="3785334008768367890">"ઝડપી સેટિંગ"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"સામાન્ય સેટિંગ"</string>
@@ -915,18 +917,14 @@
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
     <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"ઊર્જા બચતનું સેટિંગ કન્ફર્મ કરો"</string>
-    <!-- no translation found for device_energy_saver_confirmation_text (1253846259965911752) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"તમારું ડિસ્પ્લે <xliff:g id="SLEEP_TIME">%1$s</xliff:g> માટે ચાલુ રાખી મૂકવાથી ઊર્જાનો વપરાશ વધી શકે છે"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"ઊર્જા બચતનું સેટિંગ બંધ કરો"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"મીડિયા પ્લેબૅક જોતી વખતે ડિસ્પ્લેને બંધ થતું અટકાવવા માટે કૃપા કરીને કન્ફર્મ કરો, જેનાથી ઉર્જાનો વપરાશ વધવાની સંભાવના છે."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"નિષ્ક્રિય હોય ત્યારે"</string>
     <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"જોતી વખતે"</string>
-    <!-- no translation found for device_energy_saver_category_title (2604826113821035545) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_sleep_timeout_dialog_title (1223814536589471788) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_attentive_timeout_dialog_title (1654557070579253248) -->
-    <skip />
+    <string name="device_energy_saver_category_title" msgid="2604826113821035545">"ઑટોમૅટિક રીતે ટીવી બંધ કરો"</string>
+    <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"નિષ્ક્રિય હોય ત્યારે ઑટોમૅટિક રીતે ટીવી બંધ કરો"</string>
+    <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"ટીવી જોતી વખતે તેને ઑટોમૅટિક રીતે બંધ કરો"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"સ્ટેન્ડબાયમાં નેટવર્ક કનેક્શન સીમિત કરો"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"સ્ટેન્ડબાય મોડમાં ઓછી ઊર્જાનો વપરાશ કરે છે"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"સ્ટેન્ડબાય મોડ દરમિયાન તમારા ટીવીને તમારા નેટવર્કથી ડિસ્કનેક્ટ કરવામાં આવશે, જોકે તમને ઑટોમૅટિક અપડેટ પ્રાપ્ત થતી રહેશે. આમ કરવાથી તમારું ટીવી કદાચ ઓછી ઊર્જાનો વપરાશ કરે, જોકે તેનો અર્થ એ પણ થાય છે કે સ્ટેન્ડબાય મોડ દરમિયાન તમે કાસ્ટ કરવા જેવી સુવિધાઓ અને Google Assistantનો ઉપયોગ કરી શકશો નહીં."</string>
@@ -1028,6 +1026,8 @@
     <string name="summary_data_saver" msgid="6793558728898207405">"મોબાઇલ ડેટાનો ઓછો ઉપયોગ કરવા માટે વીડિયો ક્વૉલિટી ઑટોમૅટિક રીતે ગોઠવો"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"ડેટા વપરાશ અને અલર્ટ"</string>
     <string name="data_saver_header_info" msgid="2706725187498535785">"તમે વાઇ-ફાઇ, ઇથરનેટ કેબલ અથવા તમારા ફોનના હૉટસ્પૉટ વડે ઇન્ટરનેટ સાથે કનેક્ટ કરી શકો છો."</string>
+    <string name="bluetooth_ask_discovery_title" msgid="4955540555242269694">"શું અન્ય બ્લૂટૂથ ડિવાઇસને બતાવીએ?"</string>
+    <string name="bluetooth_ask_discovery_message" msgid="8609666862877703398">"કોઈ ઍપ તમારા ટીવીને <xliff:g id="TIMEOUT">%1$d</xliff:g> સેકન્ડ માટે અન્ય બ્લૂટૂથ ડિવાઇસ પર બતાવવા માગે છે."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
     <string name="disabled_by_policy_title" msgid="2220484346213756472">"ક્રિયાને મંજૂરી નથી"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="4229779946666263271">"વૉલ્યૂમ બદલી શકાતું નથી"</string>
