@@ -96,6 +96,7 @@
         <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.8</item>
+        <item name="android:alertDialogTheme">@style/TvSettingsDialog</item>
     </style>
 
     <style name="Theme.Settings.BluetoothPairing" parent="@style/SettingsStyle.TextAppearanceMedium">
@@ -438,5 +439,14 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:textDirection">locale</item>
         <item name="android:textAlignment">gravity</item>
+    </style>
+    <style name="TvSettingsDialog" parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:windowTitleStyle">@style/DialogWindowTitleStyle</item>
+    </style>
+
+    <style name="DialogWindowTitleStyle">
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">@string/preference_title_text_font</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 </resources>
