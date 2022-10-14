@@ -491,9 +491,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         for (int i = 0; i < screen.getPreferenceCount(); i++) {
             Preference screenPref = screen.getPreference(i);
             if (screenPref instanceof TwoStatePreference
-                    && twoStatePreferenceIsCheckedByOrder.get(i) != null) {
+                    && twoStatePreferenceIsCheckedByOrder.get(screenPref.getOrder()) != null) {
                 ((TwoStatePreference) screenPref)
-                        .setChecked(twoStatePreferenceIsCheckedByOrder.get(i));
+                        .setChecked(twoStatePreferenceIsCheckedByOrder.get(screenPref.getOrder()));
             }
         }
         removeAnimationClipping(getView());
