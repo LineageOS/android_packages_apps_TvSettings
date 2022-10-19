@@ -93,6 +93,7 @@ public class AddAccountWithTypeActivity extends FragmentActivity {
         }
     }
 
+    @SuppressWarnings("MissingSuperCall") // TODO: fix me
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // User selected an account type, so kick off the add account flow for that.
