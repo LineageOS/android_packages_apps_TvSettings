@@ -62,9 +62,9 @@ public class SensorFragment extends SettingsPreferenceFragment {
     private static final int MAX_RECENT_APPS_COLLAPSED = 2;
     private List<Preference> mAllRecentAppPrefs;
 
-    private static final String SENSOR_TOGGLE_KEY = "sensor_toggle";
+    protected static final String SENSOR_TOGGLE_KEY = "sensor_toggle";
     private PrivacyToggle mToggle;
-    private SwitchPreference mSensorToggle;
+    protected SwitchPreference mSensorToggle;
     private Preference mPhysicalPrivacyEnabledInfo;
 
     private SensorPrivacyManager mSensorPrivacyManager;
@@ -103,11 +103,16 @@ public class SensorFragment extends SettingsPreferenceFragment {
 
         addPhysicalPrivacyEnabledInfo(screen, themedContext);
         addSensorToggleWithInfo(screen, themedContext);
+        addHardwareToggle(screen, themedContext);
         addRecentAppsGroup(screen, themedContext);
         addPermissionControllerPreference(screen, themedContext);
         updateSensorPrivacyState();
 
         setPreferenceScreen(screen);
+    }
+
+    protected void addHardwareToggle(PreferenceScreen screen, Context themedContext) {
+        // no-op
     }
 
     private void addPhysicalPrivacyEnabledInfo(PreferenceScreen screen, Context themedContext) {
