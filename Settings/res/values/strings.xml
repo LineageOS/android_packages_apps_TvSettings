@@ -1457,6 +1457,8 @@
     <string name="microphone">Microphone</string>
     <!-- Title of the toggle that enables / disables microphone access for all apps [CHAR LIMIT=30] -->
     <string name="mic_toggle_title">Microphone access</string>
+    <!-- Title of the toggle that enables / disables microphone access on the remote [CHAR LIMIT=60] -->
+    <string name="mic_remote_toggle_title">Microphone access on your remote</string>
     <!-- Title for setting that opens the microphone permissions overview for all apps [CHAR LIMIT=50]-->
     <string name="open_mic_permissions">App access to microphone</string>
     <!-- Title for info box warning that microphone hardware switch is turned off [CHAR LIMIT=50]-->
@@ -1487,9 +1489,27 @@
     <string name="mic_toggle_info_title">Microphone Access:
         <xliff:g id="sensor_state" example="On">%s</xliff:g></string>
     <!-- Message shown in an info panel on the side when the microphone toggle is selected. [CHAR LIMIT=NONE] -->
-    <string name="mic_toggle_info_content">When turned on, all apps and services with permission can
-        access any microphone on this device.\n\nAudio peripherals with a custom protocol will not
-        be affected by this setting.
+    <string name="mic_toggle_info_content">When turned on, all apps and services that are allowed to
+        use the microphone will be able to access it.\n\nWhen turned off, no apps or services will
+        be able to access the microphone. But you may still be able to talk to your Google Assistant
+        by pressing the Assistant button on your remote.\n\nAudio devices using custom protocols for
+        communicating with the TV may not be affected by this setting.
+    </string>
+
+    <!-- Title of the info panel that is shown on the side when the microphone on the remote toggle is selected and enabled. [CHAR LIMIT=60]-->
+    <string name="mic_remote_toggle_on_info_title">Microphone enabled on remote</string>
+    <!-- Message shown in an info panel on the side when the microphone toggle is selected and enabled. [CHAR LIMIT=NONE] -->
+    <string name="mic_remote_toggle_on_info_content">Google Assistant is able to access the
+        microphone on your remote. You will be able to talk to your Assistant by pressing the Google
+        Assistant button on your remote.
+    </string>
+
+    <!-- Title of the info panel that is shown on the side when the microphone on the remote toggle is selected and disabled. [CHAR LIMIT=60]-->
+    <string name="mic_remote_toggle_off_info_title">Microphone disabled on remote</string>
+    <!-- Message shown in an info panel on the side when the microphone toggle is selected and disabled. [CHAR LIMIT=NONE] -->
+    <string name="mic_remote_toggle_off_info_content">You will not be able to talk to your Google
+        Assistant using your remote. To be able to use the Google Assistant button, enable
+        microphone access.
     </string>
 
     <!-- Title of the info panel that is shown on the side when the camera toggle is selected.
