@@ -114,6 +114,7 @@ public class BluetoothDevicePairer {
 
     public interface BluetoothConnector {
         void openConnection(BluetoothAdapter adapter);
+        void dispose();
     }
 
     public interface OpenConnectionCallback {
@@ -286,6 +287,7 @@ public class BluetoothDevicePairer {
     private final ArrayList<BluetoothDeviceCriteria> mBluetoothDeviceCriteria = new ArrayList<>();
     private InputDeviceCriteria mInputDeviceCriteria;
     private int mDefaultScanMode = SCAN_MODE_NOT_SET;
+    private BluetoothConnector mBTConnector = null;
 
     /**
      * Should be instantiated on a thread with a Looper, perhaps the main thread!
@@ -425,6 +427,10 @@ public class BluetoothDevicePairer {
             mContext.unregisterReceiver(mBluetoothStateReceiver);
         }
         stopScanning();
+        if (mBTConnector != null) {
+            mBTConnector.dispose();
+        }
+
     }
 
     /**
@@ -624,10 +630,10 @@ public class BluetoothDevicePairer {
 
     private void openConnection() {
         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
-        BluetoothConnector btConnector = getBluetoothConnector();
-        if (btConnector != null) {
+        mBTConnector = getBluetoothConnector();
+        if (mBTConnector != null) {
             setStatus(STATUS_CONNECTING);
-            btConnector.openConnection(adapter);
+            mBTConnector.openConnection(adapter);
         } else {
             Log.w(TAG, "There was an error getting the BluetoothConnector.");
             setStatus(STATUS_ERROR);
