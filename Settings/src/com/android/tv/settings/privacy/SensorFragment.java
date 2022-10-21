@@ -115,6 +115,10 @@ public class SensorFragment extends SettingsPreferenceFragment {
         // no-op
     }
 
+    protected void updateHardwareToggle() {
+        // no-nop
+    }
+
     private void addPhysicalPrivacyEnabledInfo(PreferenceScreen screen, Context themedContext) {
         mPhysicalPrivacyEnabledInfo = new Preference(themedContext);
         mPhysicalPrivacyEnabledInfo.setLayoutResource(
@@ -181,6 +185,7 @@ public class SensorFragment extends SettingsPreferenceFragment {
         if (physicalPrivacyEnabled) {
             selectPreference(mPhysicalPrivacyEnabledInfo);
         }
+        updateHardwareToggle();
     }
 
     private void selectPreference(Preference preference) {
