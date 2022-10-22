@@ -22,7 +22,6 @@ import android.app.AppOpsManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.util.Log;
@@ -94,14 +93,8 @@ public class TurnScreenOn extends SettingsPreferenceFragment
     }
 
     private boolean hasTurnScreenOnPermission(ApplicationInfo appInfo) {
-        String permission = Manifest.permission.TURN_SCREEN_ON;
-        if (appInfo.targetSdkVersion <= Build.VERSION_CODES.TIRAMISU) {
-            // Because android.permission.TURN_SCREEN_ON doesn't exist on old releases we can filter
-            // by android.permission.WAKE_LOCK which is required to acquire a wake lock.
-            permission = Manifest.permission.WAKE_LOCK;
-        }
-        return getContext().getPackageManager().checkPermission(permission, appInfo.packageName)
-                == PackageManager.PERMISSION_GRANTED;
+        return getContext().getPackageManager().checkPermission(Manifest.permission.TURN_SCREEN_ON,
+                appInfo.packageName) == PackageManager.PERMISSION_GRANTED;
     }
 
     @NonNull
