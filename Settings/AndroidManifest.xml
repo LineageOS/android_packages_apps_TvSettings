@@ -1266,6 +1266,15 @@
             </intent-filter>
         </receiver>
 
+        <receiver
+            android:name=".PreBootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
         <activity android:name=".RemoteBugreportActivity"
             android:excludeFromRecents="true"
             android:exported="true"

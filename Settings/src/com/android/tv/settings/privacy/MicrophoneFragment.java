@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.privacy;
 
+import static android.provider.Settings.Global.RECEIVE_EXPLICIT_USER_INTERACTION_AUDIO_ENABLED;
+
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_SUMMARY;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
@@ -25,6 +27,7 @@ import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
+import android.provider.Settings;
 
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
@@ -46,6 +49,7 @@ public class MicrophoneFragment extends SensorFragment {
     private static final String MIC_REMOTE_TOGGLE_KEY = "mic_remote_toggle";
     private static final String MIC_REMOTE_TOGGLE_INFO_KEY = "mic_remote_toggle_info";
     private SwitchPreference mMicRemoteToggle;
+    private static final int DEFAULT_MIC_REMOTE_TOGGLE_STATE = 1;
 
     @Override
     protected final void addHardwareToggle(PreferenceScreen screen, Context themedContext) {
@@ -59,6 +63,7 @@ public class MicrophoneFragment extends SensorFragment {
         mMicRemoteToggle.setFragment(InfoFragment.class.getCanonicalName());
         mMicRemoteToggle.setKey(MIC_REMOTE_TOGGLE_KEY);
         mMicRemoteToggle.setTitle(themedContext.getString(R.string.mic_remote_toggle_title));
+        mMicRemoteToggle.setChecked(getMicRemoteToggleState());
         Bundle b = mMicRemoteToggle.getExtras();
         b.putParcelable(EXTRA_PREFERENCE_INFO_TITLE_ICON,
                 Icon.createWithResource(themedContext, R.drawable.ic_info_outline_base));
@@ -71,6 +76,19 @@ public class MicrophoneFragment extends SensorFragment {
             toggleInfo.setSelectable(false);
             category.addPreference(toggleInfo);
         }
+    }
+
+    private boolean getMicRemoteToggleState() {
+        return Settings.Global.getInt(
+                getActivity().getContentResolver(),
+                RECEIVE_EXPLICIT_USER_INTERACTION_AUDIO_ENABLED,
+                DEFAULT_MIC_REMOTE_TOGGLE_STATE) == 1;
+    }
+
+    private void setMicRemoteToggleState(boolean enabled) {
+        Settings.Global.putInt(getActivity().getContentResolver(),
+                RECEIVE_EXPLICIT_USER_INTERACTION_AUDIO_ENABLED,
+                enabled ? 1 : 0);
     }
 
     @Override
@@ -111,6 +129,7 @@ public class MicrophoneFragment extends SensorFragment {
                     ((SwitchPreference) preference).isChecked());
             return true;
         } else if (MIC_REMOTE_TOGGLE_KEY.equals(preference.getKey())) {
+            setMicRemoteToggleState(mMicRemoteToggle.isChecked());
             updateHardwareToggle();
             if (getParentFragment() instanceof TwoPanelSettingsFragment) {
                 ((TwoPanelSettingsFragment) getParentFragment()).refocusPreferenceForceRefresh(
