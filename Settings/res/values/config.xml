@@ -60,6 +60,9 @@
         be able to turn it back on and have to perform FDR. -->
     <bool name="show_bluetooth_toggle">false</bool>
 
+    <!--  mDelayManualPairing  -->
+    <integer name="config_delay_manual_pairing">5000</integer>
+
     <!-- The list of supported HDR formats. This list is overlaid by OEMs to specify
          the HDR formats supported by their device. -->
     <integer-array name="config_deviceSupportedHdrFormats">
