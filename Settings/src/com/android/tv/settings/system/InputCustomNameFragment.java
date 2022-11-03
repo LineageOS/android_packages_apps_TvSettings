@@ -23,6 +23,7 @@ import androidx.annotation.NonNull;
 import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
+import androidx.leanback.widget.GuidedActionsStylist;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.util.AccessibilityHelper;
@@ -61,6 +62,21 @@ public class InputCustomNameFragment extends GuidedStepSupportFragment {
                 null,
                 getContext().getDrawable(R.drawable.ic_input_132dp)
         );
+    }
+
+    @Override
+    public GuidedActionsStylist onCreateActionsStylist() {
+        return new GuidedActionsStylist() {
+            @Override
+            public int onProvideItemLayoutId() {
+                return R.layout.guided_step_input_action;
+            }
+            @Override
+            protected void setupImeOptions(GuidedActionsStylist.ViewHolder vh,
+                    GuidedAction action) {
+                // keep defaults
+            }
+        };
     }
 
     @Override

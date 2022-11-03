@@ -62,6 +62,11 @@ public class DeviceNameSetCustomFragment extends GuidedStepSupportFragment {
             public int onProvideItemLayoutId() {
                 return R.layout.guided_step_input_action;
             }
+            @Override
+            protected void setupImeOptions(GuidedActionsStylist.ViewHolder vh,
+                    GuidedAction action) {
+                // keep defaults
+            }
         };
     }
 
