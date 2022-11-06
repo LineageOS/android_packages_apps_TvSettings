@@ -594,8 +594,7 @@
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Xem tất cả"</string>
     <string name="microphone" msgid="7893752847683941214">"Micrô"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"Quyền truy cập vào micrô"</string>
-    <!-- no translation found for mic_remote_toggle_title (7153283895012570080) -->
-    <skip />
+    <string name="mic_remote_toggle_title" msgid="7153283895012570080">"Quyền truy cập micrô trên điều khiển từ xa"</string>
     <string name="open_mic_permissions" msgid="8121871594807641073">"Quyền truy cập của ứng dụng vào micrô"</string>
     <string name="microphone_physical_privacy_enabled_title" msgid="6135130916399886772">"Đã chặn quyền truy cập micrô"</string>
     <string name="microphone_physical_privacy_enabled_text" msgid="401238365312924088">"Để bỏ chặn, hãy chuyển nút quyền riêng tư trên thiết bị sang vị trí bật micrô để cho phép truy cập micrô."</string>
@@ -605,16 +604,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Đã chặn quyền truy cập máy ảnh"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Để bỏ chặn, hãy chuyển nút quyền riêng tư trên thiết bị sang vị trí bật máy ảnh để cho phép truy cập máy ảnh."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Quyền truy cập vào micrô: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <!-- no translation found for mic_toggle_info_content (3187791167208947239) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_on_info_title (8503441878870972046) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_on_info_content (2715872916376493679) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_off_info_title (4902909833546393713) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_off_info_content (8062526350553191004) -->
-    <skip />
+    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Khi micrô bật, tất cả ứng dụng và dịch vụ được phép sử dụng micrô đều có thể truy cập vào micrô.\n\nKhi micrô tắt, không ứng dụng hay dịch vụ nào có thể truy cập vào micrô. Tuy nhiên, bạn vẫn có thể trò chuyện với Trợ lý Google bằng cách nhấn nút Trợ lý trên điều khiển từ xa.\n\nChế độ cài đặt này không ảnh hưởng đến các thiết bị âm thanh sử dụng giao thức tuỳ chỉnh để giao tiếp với TV."</string>
+    <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Micrô trên điều khiển từ xa đã bật"</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Trợ lý Google có thể truy cập vào micrô trên điều khiển từ xa của bạn. Bạn có thể trò chuyện với Trợ lý bằng cách nhấn nút Trợ lý Google trên điều khiển từ xa."</string>
+    <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Micrô trên điều khiển từ xa đã tắt"</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"Bạn không thể sử dụng điều khiển từ xa để trò chuyện với Trợ lý Google. Để sử dụng nút Trợ lý Google, bạn phải cấp quyền truy cập micrô."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Quyền truy cập vào máy ảnh: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Khi bạn bật chế độ này, tất cả các ứng dụng và dịch vụ có quyền đều có thể truy cập vào máy ảnh trên thiết bị này.\n\nCác thiết bị ngoại vi của máy ảnh có giao thức tùy chỉnh sẽ không chịu ảnh hưởng của chế độ cài đặt này."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Đang bật"</string>
@@ -764,7 +758,7 @@
     <string name="system_enable_traces" msgid="108745519968154528">"Bật theo dõi"</string>
     <string name="system_dont_keep_activities" msgid="4641165963339846161">"Không tiếp tục các hoạt động"</string>
     <string name="system_background_process_limit" msgid="1985373407150771045">"Giới hạn quá trình nền"</string>
-    <string name="system_show_all_anrs" msgid="5353216640638263217">"Hiển thị tất cả ANR"</string>
+    <string name="system_show_all_anrs" msgid="5353216640638263217">"Hiển thị tất cả các lỗi ANR"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Tắt chế độ ngủ"</string>
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"Chỉ dùng cho nội dung DRM"</string>
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"Tối ưu hóa hiển thị để có độ phân giải tối đa hoặc tốc độ khung hình tối đa. Thao tác này chỉ ảnh hưởng đến màn hình có độ phân giải siêu cao. Thay đổi cài đặt này sẽ khởi động lại thiết bị của bạn."</string>

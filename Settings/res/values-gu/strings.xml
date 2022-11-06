@@ -594,8 +594,7 @@
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"બધું જુઓ"</string>
     <string name="microphone" msgid="7893752847683941214">"માઇક્રોફોન"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"માઇક્રોફોનનો ઍક્સેસ"</string>
-    <!-- no translation found for mic_remote_toggle_title (7153283895012570080) -->
-    <skip />
+    <string name="mic_remote_toggle_title" msgid="7153283895012570080">"તમારા રિમોટ પર માઇક્રોફોનનો ઍક્સેસ"</string>
     <string name="open_mic_permissions" msgid="8121871594807641073">"ઍપ દ્વારા માઇક્રોફોનનો ઍક્સેસ"</string>
     <string name="microphone_physical_privacy_enabled_title" msgid="6135130916399886772">"માઇક્રોફોનનો ઍક્સેસ બ્લૉક કરવામાં આવ્યો છે"</string>
     <string name="microphone_physical_privacy_enabled_text" msgid="401238365312924088">"અનબ્લૉક કરવા માટે, માઇક્રોફોનના ઍક્સેસની મંજૂરી આપવા, તમારા ડિવાઇસ પરના પ્રાઇવસી સ્વિચને \'માઇક્રોફોન ચાલુ છે\' ધરાવતી સ્થિતિ પર ખસેડો."</string>
@@ -605,16 +604,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"કૅમેરાનો ઍક્સેસ બ્લૉક કરવામાં આવ્યો છે"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"અનબ્લૉક કરવા માટે, કૅમેરાના ઍક્સેસની મંજૂરી આપવા, તમારા ડિવાઇસ પરના પ્રાઇવસી સ્વિચને \'કૅમેરા ચાલુ છે\' ધરાવતી સ્થિતિ પર ખસેડો."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"માઇક્રોફોનનો ઍક્સેસ: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <!-- no translation found for mic_toggle_info_content (3187791167208947239) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_on_info_title (8503441878870972046) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_on_info_content (2715872916376493679) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_off_info_title (4902909833546393713) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_off_info_content (8062526350553191004) -->
-    <skip />
+    <string name="mic_toggle_info_content" msgid="3187791167208947239">"જ્યારે ચાલુ કરવામાં આવે, ત્યારે માઇક્રોફોનનો ઉપયોગ કરવાની મંજૂરી ધરાવતી બધી ઍપ અને સેવાઓ તેનો ઍક્સેસ કરી શકશે.\n\nજ્યારે બંધ કરવામાં આવે, ત્યારે કોઈપણ ઍપ કે સેવાઓ માઇક્રોફોનનો ઍક્સેસ કરી શકશે નહીં. પણ તમે તમારા રિમોટ પર Assistantનું બટન દબાવીને હજી પણ કદાચ તમારા Google Assistant સાથે વાત કરી શકો.\n\nટીવી સાથે સંચાર કરવા માટે કસ્ટમ પ્રોટોકૉલનો ઉપયોગ કરતા ઑડિયો ડિવાઇસ પર કદાચ આ સેટિંગની અસર ન થાય."</string>
+    <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"રિમોટ પર માઇક્રોફોન સુવિધા ચાલુ કરી"</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistant તમારા રિમોટ પર માઇક્રોફોન ઍક્સેસ કરી શકે છે. તમે તમારા રિમોટ પર Google Assistantનું બટન દબાવીને તમારા Assistant સાથે વાત કરી શકશો."</string>
+    <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"રિમોટ પર માઇક્રોફોન સુવિધા બંધ કરેલી છે"</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"તમે તમારા રિમોટનો ઉપયોગ કરીને તમારા Google Assistantનો ઉપયોગ કરી શકશો નહીં. Google Assistant બટનનો ઉપયોગ કરવા માટે, માઇક્રોફોનનો ઍક્સેસ ચાલુ કરો."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"કૅમેરાનો ઍક્સેસ: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"જ્યારે ચાલુ કરવામાં આવે, ત્યારે પરવાનગી ધરાવતી બધી ઍપ અને સેવાઓ આ ડિવાઇસ પરના કોઈપણ કૅમેરાને ઍક્સેસ કરી શકે છે.\n\nકસ્ટમ પ્રોટોકૉલવાળા કૅમેરા પેરિફેરલ પર આ સેટિંગની કોઈ અસર નહીં થાય."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"ચાલુ છે"</string>
