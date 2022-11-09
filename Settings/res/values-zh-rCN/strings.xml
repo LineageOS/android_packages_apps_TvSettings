@@ -594,8 +594,7 @@
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"查看全部"</string>
     <string name="microphone" msgid="7893752847683941214">"麦克风"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"麦克风使用权限"</string>
-    <!-- no translation found for mic_remote_toggle_title (7153283895012570080) -->
-    <skip />
+    <string name="mic_remote_toggle_title" msgid="7153283895012570080">"对遥控器上麦克风的使用权限"</string>
     <string name="open_mic_permissions" msgid="8121871594807641073">"应用的麦克风使用权限"</string>
     <string name="microphone_physical_privacy_enabled_title" msgid="6135130916399886772">"已禁用麦克风使用权限"</string>
     <string name="microphone_physical_privacy_enabled_text" msgid="401238365312924088">"若要取消禁用，请将设备上的隐私保护开关移到“麦克风已启用”位置，以允许使用麦克风。"</string>
@@ -605,16 +604,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"已禁用摄像头使用权限"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"若要取消禁用，请将设备上的隐私保护开关移到“摄像头已启用”位置，以允许使用摄像头。"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"麦克风使用权限：<xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <!-- no translation found for mic_toggle_info_content (3187791167208947239) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_on_info_title (8503441878870972046) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_on_info_content (2715872916376493679) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_off_info_title (4902909833546393713) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_off_info_content (8062526350553191004) -->
-    <skip />
+    <string name="mic_toggle_info_content" msgid="3187791167208947239">"此开关处于开启状态时，所有获准使用麦克风的应用和服务都能够使用麦克风。\n\n此开关处于关闭状态时，任何应用或服务都无法使用麦克风。但您仍能与 Google 助理对话，只需按遥控器上的 Google 助理按钮即可。\n\n使用自定义协议与电视通信的音频设备可能不受此设置的影响。"</string>
+    <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"遥控器上的麦克风已启用"</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google 助理能够使用您遥控器上的麦克风。您只需按遥控器上的 Google 助理按钮即可与 Google 助理对话。"</string>
+    <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"遥控器上的麦克风已停用"</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"您将无法使用遥控器与 Google 助理对话。若要能使用 Google 助理按钮，请启用麦克风使用权限。"</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"摄像头使用权限：<xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"开启后，具有权限的所有应用和服务均可使用此设备上的任何摄像头。\n\n此设置将不会影响采用自定义协议的摄像头外围设备。"</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"开启"</string>
