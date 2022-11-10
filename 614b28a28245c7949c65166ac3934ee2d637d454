@@ -16,6 +16,29 @@
       "message": "Wireless debugging still shows in dev options. I\u0027m kinda at a loss how to make that disappear in lieu of this replacement setting.",
       "revId": "614b28a28245c7949c65166ac3934ee2d637d454",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50b440da_db4d141d",
+        "filename": "Settings/res/xml/development_prefs.xml",
+        "patchSetId": 13
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2022-11-10T07:40:34Z",
+      "side": 1,
+      "message": "Should be lineage:replacesKey and add xmlns:lineage\u003d\"http://schemas.android.com/apk/res/lineageos.platform\".",
+      "range": {
+        "startLine": 101,
+        "startChar": 12,
+        "endLine": 101,
+        "endChar": 32
+      },
+      "revId": "614b28a28245c7949c65166ac3934ee2d637d454",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
