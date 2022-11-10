@@ -37,7 +37,7 @@
     <string name="header_category_quick_settings" msgid="3785334008768367890">"Snelle instellingen"</string>
     <string name="header_category_general_settings" msgid="3897615781153506434">"Algemene instellingen"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Deze suggestie afwijzen"</string>
-    <string name="hotwording_title" msgid="2606899304616599026">"\'Oké Google\'-detectie"</string>
+    <string name="hotwording_title" msgid="2606899304616599026">"\'Hey Google\'-detectie"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Praat tegen de Google Assistent wanneer je wilt"</string>
     <string name="header_category_device" msgid="3023893663454705969">"Apparaat"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Voorkeuren"</string>
@@ -594,8 +594,7 @@
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Alles tonen"</string>
     <string name="microphone" msgid="7893752847683941214">"Microfoon"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"Microfoontoegang"</string>
-    <!-- no translation found for mic_remote_toggle_title (7153283895012570080) -->
-    <skip />
+    <string name="mic_remote_toggle_title" msgid="7153283895012570080">"Toegang tot microfoon op je afstandsbediening"</string>
     <string name="open_mic_permissions" msgid="8121871594807641073">"App-toegang tot microfoon"</string>
     <string name="microphone_physical_privacy_enabled_title" msgid="6135130916399886772">"Microfoontoegang geblokkeerd"</string>
     <string name="microphone_physical_privacy_enabled_text" msgid="401238365312924088">"Als je de blokkering wilt opheffen, zet je de privacyschakelaar op je apparaat op de positie Microfoon aan om microfoontoegang toe te staan."</string>
@@ -605,16 +604,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Cameratoegang geblokkeerd"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Als je de blokkering wilt opheffen, zet je de privacyschakelaar op je apparaat op de positie Camera aan om cameratoegang toe te staan."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Microfoontoegang: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <!-- no translation found for mic_toggle_info_content (3187791167208947239) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_on_info_title (8503441878870972046) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_on_info_content (2715872916376493679) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_off_info_title (4902909833546393713) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_off_info_content (8062526350553191004) -->
-    <skip />
+    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Als deze schakelaar aanstaat, hebben alle apps en services die de microfoon mogen gebruiken toegang tot de microfoon.\n\nStaat de schakelaar uit, dan hebben apps en services geen toegang tot de microfoon. Je kunt nog wel met de Google Assistent praten door op de Assistent-knop op de afstandsbediening te drukken.\n\nDeze instelling is misschien niet van invloed op audioapparaten die aangepaste protocollen gebruiken voor communicatie met de tv."</string>
+    <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Microfoon aangezet op afstandsbediening"</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"De Google Assistent heeft toegang tot de microfoon op je afstandsbediening. Je kunt met de Assistent praten door op de Google Assistent-knop op de afstandsbediening te drukken."</string>
+    <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Microfoon uitgezet op afstandsbediening"</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"Je kunt niet met de Google Assistent praten via je afstandsbediening. Als je de Google Assistent-knop wilt gebruiken, zet je toegang tot de microfoon aan."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Cameratoegang: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Als deze schakelaar aanstaat, hebben alle apps en services met toestemming toegang tot elke camera op dit apparaat.\n\nDeze instelling is niet van invloed op camera-randapparaten met een aangepast protocol."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Aan"</string>

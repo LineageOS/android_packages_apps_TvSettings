@@ -594,8 +594,7 @@
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"အားလုံးကြည့်ရန်"</string>
     <string name="microphone" msgid="7893752847683941214">"မိုက်ခရိုဖုန်း"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"မိုက်ခရိုဖုန်းသုံးခွင့်"</string>
-    <!-- no translation found for mic_remote_toggle_title (7153283895012570080) -->
-    <skip />
+    <string name="mic_remote_toggle_title" msgid="7153283895012570080">"သင့်အဝေးထိန်းခလုတ်ရှိ မိုက်ခရိုဖုန်းသုံးခွင့်"</string>
     <string name="open_mic_permissions" msgid="8121871594807641073">"မိုက်ခရိုဖုန်းသို့ အက်ပ် ဝင်သုံးခွင့်"</string>
     <string name="microphone_physical_privacy_enabled_title" msgid="6135130916399886772">"မိုက်ခရိုဖုန်းသုံးခွင့် ပိတ်ထားသည်"</string>
     <string name="microphone_physical_privacy_enabled_text" msgid="401238365312924088">"ပြန်ဖွင့်ရန်အတွက် မိုက်ခရိုဖုန်းသုံးခွင့်ပေးရန် သင့်စက်ပေါ်ရှိ ကိုယ်ရေးအချက်အလက်လုံခြုံမှု ခလုတ်ကို မိုက်ခရိုဖုန်းဖွင့်သည့် အနေအထားသို့ ရွှေ့ရမည်။"</string>
@@ -605,16 +604,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"ကင်မရာသုံးခွင့် ပိတ်ထားသည်"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"ပြန်ဖွင့်ရန်အတွက် ကင်မရာသုံးခွင့်ပေးရန် သင့်စက်ပေါ်ရှိ ကိုယ်ရေးအချက်အလက်လုံခြုံမှု ခလုတ်ကို ကင်မရာဖွင့်သည့် အနေအထားသို့ ရွှေ့ရမည်။"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"မိုက်ခရိုဖုန်းသုံးခွင့်- <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <!-- no translation found for mic_toggle_info_content (3187791167208947239) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_on_info_title (8503441878870972046) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_on_info_content (2715872916376493679) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_off_info_title (4902909833546393713) -->
-    <skip />
-    <!-- no translation found for mic_remote_toggle_off_info_content (8062526350553191004) -->
-    <skip />
+    <string name="mic_toggle_info_content" msgid="3187791167208947239">"ဖွင့်ထားလျှင် မိုက်ခရိုဖုန်းသုံးခွင့်ရှိသော အက်ပ်နှင့် ဝန်ဆောင်မှုအားလုံးက ၎င်းကို သုံးနိုင်မည်။\n\nပိတ်ထားလျှင် အက်ပ်နှင့် ဝန်ဆောင်မှုများက ၎င်းကို သုံးနိုင်မည်မဟုတ်ပါ။ သို့သော် အဝေးထိန်းခလုတ်ရှိ Google Assistant ခလုတ်နှိပ်ပြီး Assistant ကို စကားပြောနိုင်မည်။\n\nဤဆက်တင်ကြောင့် TV နှင့် ဆက်သွယ်ရန် အထူးပရိုတိုကောများ သုံးထားသော ‘အသံစက်ပစ္စည်းများ’ အပေါ် သက်ရောက်မှုမရှိပါ။"</string>
+    <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"အဝေးထိန်းခလုတ်တွင် မိုက်ခရိုဖုန်း ဖွင့်ထားသည်"</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistant က အဝေးထိန်းခလုတ်ဖြင့် မိုက်ခရိုဖုန်းသုံးနိုင်သည်။ အဝေးထိန်းခလုတ်ရှိ Google Assistant ခလုတ်နှိပ်ပြီး Assistant ကို စကားပြောနိုင်မည်။"</string>
+    <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"အဝေးထိန်းခလုတ်တွင် မိုက်ခရိုဖုန်း ပိတ်ထားသည်"</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"အဝေးထိန်းခလုတ်သုံး၍ Google Assistant ကို စကားပြောနိုင်မည်မဟုတ်ပါ။ Google Assistant ခလုတ်သုံးရန် မိုက်ခရိုဖုန်းသုံးခွင့်ပြုပါ။"</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"ကင်မရာသုံးခွင့်- <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"ဖွင့်ထားသည့်အခါ ခွင့်ပြုထားသည့် အက်ပ်နှင့် ဝန်ဆောင်မှုအားလုံးသည် ဤစက်ရှိ မည်သည့်ကင်မရာကိုမဆို သုံးနိုင်သည်။\n\nစိတ်ကြိုက်ပရိုတိုကောပါသည့် ကင်မရာ ချိတ်ဆက်ပစ္စည်းများသည် ဤဆက်တင်ကြောင့် အကျိုးသက်ရောက်မှုမရှိပါ။"</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"ဖွင့်"</string>
@@ -639,7 +633,7 @@
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google သည် ဒီအင်္ဂါရပ်ကို Google Now နှင့် Google မြေပုံများလို ထုတ်ကုန်များ ထဲမှာ အသုံးပြုပါသည်။ တည်နေရာ အစီရင်ခံမှုကို ဖွင့်ထားခြင်းက သင့် ကိရိယာ၏ နောက်ဆုံး တည်နေရာ ဒေတာကို Google အကောင့်နှင့် ဆက်နွှယ်လျက် အသုံးပြုခြင်း နှင့် သိုလှောင်ခြင်းကို ခွင့်ပြုသည်။"</string>
     <string name="location_history_desc" msgid="926674012916014270">"တည်နေရာ မှတ်တမ်းကို ဒီအကောင့် အတွက် ဖွင့်ထားလျှင်၊ Google သည် သင်၏ အက်ပ်များ သုံးနိုင်ဖို့ သင့်ကိရိယာ၏ တည်နေရာကို သိုလှောင်ပေးသည်။\n\nဥပမာ၊ Google မြေပုံများက သင့်အား လမ်းညွှန်းမှုများကို ပေးနိုင်သလို၊ Google Now က ယာဉ်ကူးပြောင်းမှု အကြောင်းကို အသိပေးနိုင်သည်။ \n\nသင်သည် တည်နေရာ မှတ်တမ်းကို အချိန်မရွေး ပိတ်ပစ်နိုင်သည်၊ သို့သော် ထိုသို့ လုပ်မှုက ၎င်းကို ဖျက်မည် မဟုတ်ပါ။ သင်၏ တည်နေရာ မှတ်တမ်းကို ကြည့်ရန် နှင့် စီမံကွပ်ကဲရန်၊ maps.google.com/locationhistory ကို ဝင်ကြည့်ပါ။"</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"တည်နေရာ မှတ်တမ်း ဖျက်ရန်"</string>
-    <string name="delete_location_history_desc" msgid="4035229731487113147">"၎င်းက ဤ Google အကောင့်အတွက် ဤကိရိယာမှ သိုလှောင်ခဲ့သည့် တည်နေရာမှတ်တမ်း အားလုံးကို ဖျက်ပစ်မည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။ Google Now အပါအဝင်  အချို့အက်ပ်များ အလုပ်လုပ်တော့မည် မဟုတ်ပါ။"</string>
+    <string name="delete_location_history_desc" msgid="4035229731487113147">"၎င်းက ဤ Google အကောင့်အတွက် ဤကိရိယာမှ သိုလှောင်ခဲ့သည့် Location History အားလုံးကို ဖျက်ပစ်မည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။ Google Now အပါအဝင်  အချို့အက်ပ်များ အလုပ်လုပ်တော့မည် မဟုတ်ပါ။"</string>
     <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"ဖန်သားပြင်ဖတ် အက်ပ်များ"</string>
     <string name="accessibility_display_category_title" msgid="593444602101558017">"ဖန်သားပြင်"</string>
     <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"ပြန်လှန်တုံ့ပြန်မှု ထိန်းချုပ်စနစ်များ"</string>
