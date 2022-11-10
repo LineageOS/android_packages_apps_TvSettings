@@ -25,6 +25,7 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.util.AccessibilityHelper;
 
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class InputCustomNameFragment extends GuidedStepSupportFragment {
     private static final String ARG_DEFAULT_NAME = "default_name";
 
     private CharSequence mName;
+    private GuidedAction mEditAction;
 
     public static void prepareArgs(@NonNull Bundle args, CharSequence defaultName,
             CharSequence currentName) {
@@ -62,39 +64,34 @@ public class InputCustomNameFragment extends GuidedStepSupportFragment {
     }
 
     @Override
-    public void onCreateButtonActions(@NonNull List<GuidedAction> actions,
-            Bundle savedInstanceState) {
-        actions.add(new GuidedAction.Builder(getContext())
-                .clickAction(GuidedAction.ACTION_ID_OK)
-                .build());
-        actions.add(new GuidedAction.Builder(getContext())
-                .clickAction(GuidedAction.ACTION_ID_CANCEL)
-                .build());
-    }
-
-    @Override
     public void onCreateActions(@NonNull List<GuidedAction> actions,
             Bundle savedInstanceState) {
-        actions.add(new GuidedAction.Builder(getContext())
+        mEditAction = new GuidedAction.Builder(getContext())
                 .title(mName)
                 .editable(true)
-                .build());
+                .build();
+        actions.add(mEditAction);
     }
 
     @Override
-    public void onGuidedActionClicked(GuidedAction action) {
-        if (action.getId() == GuidedAction.ACTION_ID_OK) {
-            ((Callback) getTargetFragment()).onSetCustomName(mName);
-            getFragmentManager().popBackStack();
-        } else if (action.getId() == GuidedAction.ACTION_ID_CANCEL) {
-            getFragmentManager().popBackStack();
-        }
+    public void onResume() {
+        super.onResume();
+        openInEditMode(mEditAction);
     }
 
     @Override
     public long onGuidedActionEditedAndProceed(GuidedAction action) {
         mName = action.getTitle();
+        ((Callback) getTargetFragment()).onSetCustomName(mName);
+        getFragmentManager().popBackStack();
         return GuidedAction.ACTION_ID_OK;
+    }
+
+    @Override
+    public void onGuidedActionEditCanceled(GuidedAction action) {
+        // We need to ensure the IME is closed before navigating back. See b/233207859.
+        AccessibilityHelper.dismissKeyboard(getActivity(), getView());
+        getFragmentManager().popBackStack();
     }
 
     public interface Callback {
