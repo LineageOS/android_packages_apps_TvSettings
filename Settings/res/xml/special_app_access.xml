@@ -38,6 +38,10 @@
             android:title="@string/system_alert_window_settings"
             android:fragment="com.android.tv.settings.device.apps.specialaccess.SystemAlertWindow" />
     <Preference
+            android:key="media_management_apps"
+            android:title="@string/media_management_apps_title"
+            android:fragment="com.android.tv.settings.device.apps.specialaccess.MediaManagementApps" />
+    <Preference
             android:key="write_settings"
             android:title="@string/write_system_settings"
             android:fragment="com.android.tv.settings.device.apps.specialaccess.WriteSettings" />
