@@ -18,6 +18,7 @@ package com.android.tv.settings.library.device.apps;
 
 import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
+import android.apphibernation.AppHibernationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -75,8 +76,15 @@ public class ForceStopPreferenceController extends AppActionPreferenceController
         i.putExtra(EXTRA_GUIDANCE_BREADCRUMB, getAppName());
         mPreferenceCompat.setIntent(i);
 
+        AppHibernationManager ahm = mContext.getSystemService(
+                AppHibernationManager.class);
+        boolean isPackageHibernated = ahm.isHibernatingForUser(mAppEntry.info.packageName);
+
         if (dpm.packageHasActiveAdmins(mAppEntry.info.packageName)) {
             // User can't force stop device admin.
+            mPreferenceCompat.setVisible(false);
+        } else if (isPackageHibernated) {
+            // Hibernated apps are always stopped.
             mPreferenceCompat.setVisible(false);
         } else if ((mAppEntry.info.flags & ApplicationInfo.FLAG_STOPPED) == 0) {
             // If the app isn't explicitly stopped, then always show the
