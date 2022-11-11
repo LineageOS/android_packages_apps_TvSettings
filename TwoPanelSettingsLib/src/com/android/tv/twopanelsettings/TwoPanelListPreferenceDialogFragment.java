@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.leanback.widget.VerticalGridView;
 import androidx.preference.DialogPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.MultiSelectListPreference;
@@ -102,6 +103,34 @@ public class TwoPanelListPreferenceDialogFragment extends
                 mainFrame.setOutlineProvider(null);
             }
         }
+
+        if (!mMultiCopy) {
+            VerticalGridView verticalGridView =
+                    (VerticalGridView) getView().findViewById(android.R.id.list);
+            // focus to initial value
+            if (verticalGridView != null) {
+                verticalGridView.setSelectedPosition(getSelectionPositionInSingleSelectionMode());
+            }
+        }
+    }
+
+    /**
+     * Return initial selection position in single selection mode. If the list fragment is not in
+     * single selection mode or we can not find selected position, the function will return
+     * {@link RecyclerView.NO_POSITION}.
+     * @return initial selection position.
+     */
+    private int getSelectionPositionInSingleSelectionMode() {
+        // This function is intended for single selection.
+        if (mMultiCopy) {
+            return RecyclerView.NO_POSITION;
+        }
+        for (int i = 0; i < mEntryValuesCopy.length; i++) {
+            if (mEntryValuesCopy[i].equals(mInitialSelectionCopy)) {
+                return i;
+            }
+        }
+        return RecyclerView.NO_POSITION;
     }
 
     protected void removeAnimationClipping(View v) {
