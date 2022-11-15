@@ -266,6 +266,7 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
                 setFragment(StorageFragment.class.getName());
                 StorageFragment.prepareArgs(getExtras(), volumeInfo);
             } else {
+                setFragment(null);
                 setSummary(context.getString(R.string.storage_unmount_success, description));
             }
         }
