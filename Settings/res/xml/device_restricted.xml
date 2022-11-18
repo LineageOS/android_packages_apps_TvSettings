@@ -23,7 +23,7 @@
         android:key="about_device"
         android:title="@string/about_preference"/>
     <Preference
-        android:fragment="com.android.tv.settings.system.LanguageFragment"
+        android:fragment="com.android.tv.settings.system.locale.LanguagePickerFragment"
         android:icon="@drawable/ic_language"
         android:key="language"
         android:title="@string/system_language"/>
