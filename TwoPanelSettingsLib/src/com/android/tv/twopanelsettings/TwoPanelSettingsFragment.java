@@ -765,6 +765,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             }
 
             if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_BACK) {
+                if (event.getRepeatCount() > 0) {
+                    // Ignore long press on back button.
+                    return false;
+                }
                 return back(true);
             }
 
