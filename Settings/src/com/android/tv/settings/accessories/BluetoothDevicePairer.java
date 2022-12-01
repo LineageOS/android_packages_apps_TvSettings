@@ -38,6 +38,7 @@ import com.android.tv.settings.util.bluetooth.BluetoothScanner;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import com.android.tv.settings.R;
 
 /**
  * Monitors available Bluetooth devices and manages process of pairing
@@ -494,10 +495,16 @@ public class BluetoothDevicePairer {
 
         mHandler.removeCallbacksAndMessages(null);
 
-        mNextStageTimestamp = SystemClock.elapsedRealtime() +
-                (mAutoMode ? DELAY_AUTO_PAIRING : DELAY_MANUAL_PAIRING);
-        mHandler.sendEmptyMessageDelayed(MSG_PAIR,
-                mAutoMode ? DELAY_AUTO_PAIRING : DELAY_MANUAL_PAIRING);
+        int delay = DELAY_AUTO_PAIRING;
+        if (!mAutoMode) {
+            delay = mContext.getResources().getInteger(R.integer.config_delay_manual_pairing);
+            if (delay < 0) {
+                delay = DELAY_MANUAL_PAIRING;
+            }
+        }
+
+        mNextStageTimestamp = SystemClock.elapsedRealtime() + delay;
+        mHandler.sendEmptyMessageDelayed(MSG_PAIR, delay);
 
         setStatus(STATUS_WAITING_TO_PAIR);
     }
