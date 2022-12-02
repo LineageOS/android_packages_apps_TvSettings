@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.vendor;
 
+import android.content.Intent;
 import android.hardware.display.DisplayManager;
 import android.os.Bundle;
 import android.view.Display;
@@ -24,6 +25,7 @@ import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
+import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.customization.CustomizationConstants;
@@ -40,6 +42,12 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
     private DisplayManager mDisplayManager;
     private Display.Mode mCurrentMode = null;
     private static final String KEY_RESOLUTION_TITLE = "resolution_selection";
+    private static final String KEY_MATCH_CONTENT_FRAME_RATE = "match_content_frame_rate";
+    private static final String KEY_RESOLUTION_SELECTION = "resolution_selection";
+    private static final String KEY_ADVANCED_DISPLAY_SETTINGS = "advanced_display_settings";
+    private static final String KEY_ADVANCED_PICTURE_SETTINGS = "advanced_sound_settings";
+    private static final String KEY_VENDOR_PICTURE = "picture_vendor_settings";
+    private static final String KEY_VENDOR_SOUND = "sound_vendor_settings";
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
@@ -61,6 +69,7 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
         } else {
             removeResolutionPreference();
         }
+        updatePictureAndSound();
     }
 
     @VisibleForTesting
@@ -96,5 +105,60 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
         if (resolutionPreference != null) {
             getPreferenceScreen().removePreference(resolutionPreference);
         }
+    }
+
+    private void updatePictureAndSound() {
+        final Preference pictureSettingPreference = findPreference(KEY_VENDOR_PICTURE);
+        final Preference soundSettingPreference = findPreference(KEY_VENDOR_SOUND);
+
+        final boolean isVendorPictureIntentHandled =
+                isVendorPrefIntentHandled(pictureSettingPreference);
+        final boolean isVendorSoundIntentHandled =
+                isVendorPrefIntentHandled(soundSettingPreference);
+
+        final boolean hideBuiltinSettings =
+                isVendorPictureIntentHandled || isVendorSoundIntentHandled;
+        String[] builtinSettingsKeys =
+                new String[]{KEY_MATCH_CONTENT_FRAME_RATE, KEY_RESOLUTION_SELECTION,
+                        KEY_ADVANCED_DISPLAY_SETTINGS, KEY_ADVANCED_PICTURE_SETTINGS};
+
+        if (hideBuiltinSettings) {
+            for (String builtinSettingsKey : builtinSettingsKeys) {
+                Preference pref = findPreference(builtinSettingsKey);
+                if (pref != null) pref.setVisible(false);
+            }
+
+            // Finish full-screen TvSettings activity after navigate to vendor's one-panel activity
+            // to keep the background playback playing
+            Preference.OnPreferenceClickListener handleIntentAndFinishActivityCallback =
+                    preference -> {
+                        Intent intent = preference.getIntent();
+                        if (intent != null) {
+                            getContext().startActivity(intent);
+                            getActivity().finish();
+                        }
+                        return true;
+                    };
+
+            if (isVendorPictureIntentHandled) {
+                pictureSettingPreference.setVisible(true);
+                pictureSettingPreference.setOnPreferenceClickListener(
+                        handleIntentAndFinishActivityCallback);
+            }
+            if (isVendorSoundIntentHandled) {
+                soundSettingPreference.setVisible(true);
+                soundSettingPreference.setOnPreferenceClickListener(
+                        handleIntentAndFinishActivityCallback);
+            }
+        }
+    }
+
+    private boolean isVendorPrefIntentHandled(Preference pref) {
+        if (pref != null) {
+            Intent intent = pref.getIntent();
+            return intent != null
+                    && MainFragment.systemIntentIsHandled(getContext(), intent) != null;
+        }
+        return false;
     }
 }
