@@ -207,7 +207,8 @@ public class SystemSoundsPlayer implements LifecycleObserver {
                 // error while loading sound, remove it from map to mark it as unloaded
                 Integer effectId = 0;
                 for (; effectId < mEffectIdToSoundPoolId.size(); effectId++) {
-                    if (mEffectIdToSoundPoolId.get(effectId) == sampleId) {
+                    Integer soundPoolId = mEffectIdToSoundPoolId.get(effectId);
+                    if (soundPoolId != null && soundPoolId == sampleId) {
                         break;
                     }
                 }
