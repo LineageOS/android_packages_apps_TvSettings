@@ -281,12 +281,17 @@ public class StorageFragment extends SettingsPreferenceFragment {
     private class StorageEventListener extends android.os.storage.StorageEventListener {
         @Override
         public void onVolumeStateChanged(VolumeInfo vol, int oldState, int newState) {
-            mVolumeInfo = vol;
-            if (isResumed()) {
-                if (mVolumeInfo.isMountedReadable()) {
-                    refresh();
-                } else {
-                    navigateBack();
+            // Only update volume when there is no existing volume information, or new volume
+            // information has same id as existing volume.
+            if (mVolumeInfo == null
+                    || (vol != null && TextUtils.equals(vol.getId(), mVolumeInfo.getId()))) {
+                mVolumeInfo = vol;
+                if (isResumed()) {
+                    if (mVolumeInfo.isMountedReadable()) {
+                        refresh();
+                    } else {
+                        navigateBack();
+                    }
                 }
             }
         }
