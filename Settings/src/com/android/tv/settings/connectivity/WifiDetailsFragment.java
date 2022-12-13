@@ -247,17 +247,14 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
             return;
         }
         mMacAddressPref.setTitle(
-                (mAccessPoint.getConfig().macRandomizationSetting
-                        == WifiConfiguration.RANDOMIZATION_PERSISTENT)
+                (mConnectivityListener.isWifiMacAddressRandomized(mAccessPoint))
                         ? R.string.title_randomized_mac_address
                         : R.string.title_mac_address);
     }
 
     private void updateRandomMacPref() {
         mRandomMacPref.setVisible(mConnectivityListener.isMacAddressRandomizationSupported());
-        boolean isMacRandomized =
-                (mConnectivityListener.getWifiMacRandomizationSetting(mAccessPoint)
-                        == WifiConfiguration.RANDOMIZATION_PERSISTENT);
+        boolean isMacRandomized = mConnectivityListener.isWifiMacAddressRandomized(mAccessPoint);
         mRandomMacPref.setValue(isMacRandomized ? VALUE_MAC_RANDOM : VALUE_MAC_DEVICE);
         if (mAccessPoint.isEphemeral() || mAccessPoint.isPasspoint()
                 || mAccessPoint.isPasspointConfig()) {
