@@ -47,7 +47,7 @@
     <string name="add_an_account" msgid="2601275122685226096">"הוספת חשבון"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"חשבונות וכניסה"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"אין חשבונות"</string>
-    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{חשבון אחד}two{# חשבונות}many{# חשבונות}other{# חשבונות}}"</string>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{חשבון אחד}one{# חשבונות}two{# חשבונות}other{# חשבונות}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"שירותי מדיה, Assistant,‏ Payments"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"רשת ואינטרנט"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"צליל"</string>
@@ -122,8 +122,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <!-- no translation found for surround_sound_format_dts_uhd (4340749818133578788) -->
-    <skip />
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos עם Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos עם Dolby Digital Plus"</string>
@@ -288,12 +287,12 @@
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"ללא"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"אפליקציות מותקנות"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"זוהי הערכה של מספר האפליקציות. ייתכן שהמספר לא כולל אפליקציות שהותקנו מחוץ לחנות Play."</string>
-    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{אפליקציה אחת לפחות}two{לפחות # אפליקציות}many{לפחות # אפליקציות}other{לפחות # אפליקציות}}"</string>
+    <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{אפליקציה אחת לפחות}one{לפחות # אפליקציות}two{לפחות # אפליקציות}other{לפחות # אפליקציות}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"הרשאות מיקום"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"הרשאות מיקרופון"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"הרשאות מצלמה"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"אפליקציות ברירת מחדל"</string>
-    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{אפליקציה אחת}two{# אפליקציות}many{# אפליקציות}other{# אפליקציות}}"</string>
+    <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{אפליקציה אחת}one{# אפליקציות}two{# אפליקציות}other{# אפליקציות}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"מקלדת המוגדרת כברירת מחדל"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g> הוגדרה"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"האפשרות \'חיבור תמידי ל-VPN\' פועלת"</string>
@@ -303,22 +302,22 @@
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"פרטי כניסה מהימנים"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"פרטי כניסה מהימנים בפרופיל האישי שלך"</string>
     <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"פרטי כניסה מהימנים בפרופיל העבודה שלך"</string>
-    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{אישור CA אחד}two{# אישורי CA}many{# אישורי CA}other{# אישורי CA}}"</string>
+    <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{אישור CA אחד}one{# אישורי CA}two{# אישורי CA}other{# אישורי CA}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"מנהל המערכת יכול לנעול את המכשיר ולאפס את הסיסמה"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"מנהל המערכת יכול למחוק את כל הנתונים מהמכשיר"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"מספר הזנות של סיסמה שגויה לפני מחיקה של כל הנתונים מהמכשיר"</string>
     <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"מספר הזנות של סיסמה שגויה לפני מחיקה של כל הנתונים של פרופיל העבודה"</string>
-    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{ניסיון אחד}two{# ניסיונות}many{# ניסיונות}other{# ניסיונות}}"</string>
+    <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{ניסיון אחד}one{# ניסיונות}two{# ניסיונות}other{# ניסיונות}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"מכשיר זה מנוהל על ידי הארגון שלך."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"מכשיר זה מנוהל על ידי <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="learn_more" msgid="820336467414665686">"מידע נוסף"</string>
-    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{אפליקציית מצלמה}two{אפליקציות מצלמה}many{אפליקציות מצלמה}other{אפליקציות מצלמה}}"</string>
+    <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{אפליקציית מצלמה}one{אפליקציות מצלמה}two{אפליקציות מצלמה}other{אפליקציות מצלמה}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"אפליקציית יומן"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"אפליקציית אנשי קשר"</string>
-    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{אפליקציה של תוכנת אימייל}two{אפליקציות של תוכנת אימייל}many{אפליקציות של תוכנת אימייל}other{אפליקציות של תוכנת אימייל}}"</string>
+    <string name="default_email_app_title" msgid="3712283056326496555">"{count,plural, =1{אפליקציה של תוכנת אימייל}one{אפליקציות של תוכנת אימייל}two{אפליקציות של תוכנת אימייל}other{אפליקציות של תוכנת אימייל}}"</string>
     <string name="default_map_app_title" msgid="9051013257374474801">"אפליקציית מפה"</string>
-    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{אפליקציית טלפון}two{אפליקציות טלפון}many{אפליקציות טלפון}other{אפליקציות טלפון}}"</string>
+    <string name="default_phone_app_title" msgid="4833449131501871644">"{count,plural, =1{אפליקציית טלפון}one{אפליקציות טלפון}two{אפליקציות טלפון}other{אפליקציות טלפון}}"</string>
     <string name="default_browser_title" msgid="3612813200586492159">"אפליקציית דפדפן"</string>
     <string name="app_names_concatenation_template_2" msgid="5297284354915830297">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>"</string>
     <string name="app_names_concatenation_template_3" msgid="4932774380339466733">"<xliff:g id="FIRST_APP_NAME">%1$s</xliff:g>, <xliff:g id="SECOND_APP_NAME">%2$s</xliff:g>, <xliff:g id="THIRD_APP_NAME">%3$s</xliff:g>"</string>
@@ -337,7 +336,7 @@
     <string name="about_version" msgid="6223547403835399861">"גרסת מערכת הפעלה של Android TV"</string>
     <string name="about_serial" msgid="3432319328808745459">"מספר סידורי"</string>
     <string name="about_build" msgid="8467840394761634575">"Build של מערכת הפעלה של Android TV"</string>
-    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{נותר עוד שלב אחד להגדרתך כמפתח}two{נותרו עוד # שלבים להגדרתך כמפתח}many{נותרו עוד # שלבים להגדרתך כמפתח}other{נותרו עוד # שלבים להגדרתך כמפתח}}"</string>
+    <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{נותר עוד שלב אחד להגדרתך כמפתח}one{נותרו עוד # שלבים להגדרתך כמפתח}two{נותרו עוד # שלבים להגדרתך כמפתח}other{נותרו עוד # שלבים להגדרתך כמפתח}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"מודעות"</string>
     <string name="ads_description" msgid="8081069475265061074">"ניהול הגדרות המודעות, למשל איפוס של מזהה הפרסום."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"מודעות, ניהול הגדרות המודעות כגון איפוס של מזהה הפרסום."</string>
@@ -351,7 +350,7 @@
     <string name="additional_system_update_settings_list_item_title" msgid="1839534735929143986">"עדכוני מערכת נוספים"</string>
     <string name="ssl_ca_cert_warning" msgid="7836390021162211069">"ייתכן שהרשת מנוטרת"</string>
     <string name="done_button" msgid="616159688526431451">"בוצע"</string>
-    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{קבלת מהימנות או הסרה של אישור}two{קבלת מהימנות או הסרה של אישורים}many{קבלת מהימנות או הסרה של אישורים}other{קבלת מהימנות או הסרה של אישורים}}"</string>
+    <string name="sl_ca_cert_dialog_title" msgid="5104377991202801698">"{count,plural, =1{קבלת מהימנות או הסרה של אישור}one{קבלת מהימנות או הסרה של אישורים}two{קבלת מהימנות או הסרה של אישורים}other{קבלת מהימנות או הסרה של אישורים}}"</string>
     <string name="device_status" msgid="8266002761193692207">"סטטוס"</string>
     <string name="device_status_summary" msgid="3270932829412434985">"רשת, מספרים סידוריים ומידע נוסף"</string>
     <string name="manual" msgid="5683935624321864999">"ידני"</string>
@@ -847,9 +846,9 @@
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"כבה מכשירי HDNI עם הטלוויזיה"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"הפעלה אוטומטית של הטלוויזיה"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"הפעל את הטלוויזיה עם מכשיר HDMI"</string>
-    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{כניסת קלט מחוברת}two{כניסות קלט מחוברות}many{כניסות קלט מחוברות}other{כניסות קלט מחוברות}}"</string>
-    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{כניסת קלט בהמתנה}two{כניסות קלט בהמתנה}many{כניסות קלט בהמתנה}other{כניסות קלט בהמתנה}}"</string>
-    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{כניסת קלט לא מחוברת}two{כניסות קלט לא מחוברות}many{כניסות קלט לא מחוברות}other{כניסות קלט לא מחוברות}}"</string>
+    <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{כניסת קלט מחוברת}one{כניסות קלט מחוברות}two{כניסות קלט מחוברות}other{כניסות קלט מחוברות}}"</string>
+    <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{כניסת קלט בהמתנה}one{כניסות קלט בהמתנה}two{כניסות קלט בהמתנה}other{כניסות קלט בהמתנה}}"</string>
+    <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{כניסת קלט לא מחוברת}one{כניסות קלט לא מחוברות}two{כניסות קלט לא מחוברות}other{כניסות קלט לא מחוברות}}"</string>
     <string name="user_add_profile_item_summary" msgid="3211866291940617804">"הגבל גישה אל אפליקציות ותוכן אחר בחשבון שלך"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"פרופיל מוגבל"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"בשליטת <xliff:g id="APP">%1$s</xliff:g>"</string>
