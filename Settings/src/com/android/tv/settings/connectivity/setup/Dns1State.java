@@ -133,6 +133,14 @@ public class Dns1State implements State {
         }
 
         @Override
+        public void onResume() {
+            super.onResume();
+            // FrameLayout (action_fragment) gained focus in super.onResume(), so the next call is
+            // needed to request focus back to EditText. Then we can use keyboard immediately.
+            openInEditMode(mAction);
+        }
+
+        @Override
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                 mAdvancedOptionsFlowInfo.put(AdvancedOptionsFlowInfo.DNS1,
