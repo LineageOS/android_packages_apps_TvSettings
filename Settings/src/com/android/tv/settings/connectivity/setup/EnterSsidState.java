@@ -125,6 +125,14 @@ public class EnterSsidState implements State {
         }
 
         @Override
+        public void onResume() {
+            super.onResume();
+            // FrameLayout (action_fragment) gained focus in super.onResume(), so the next call is
+            // needed to request focus back to EditText. Then we can use keyboard immediately.
+            openInEditMode(mAction);
+        }
+
+        @Override
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             mUserChoiceInfo.put(UserChoiceInfo.SSID, action.getTitle().toString());
             mStateMachine.getListener().onComplete(StateMachine.CONTINUE);
