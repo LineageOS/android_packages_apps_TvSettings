@@ -369,6 +369,10 @@
     <string name="match_content_frame_rate_seamless_summary">If the app requests it, your device
         will match its output to the original frame rate of the content you’re watching,
         ONLY if your TV can perform a seamless transition.  </string>
+    <!-- Summary is seamless frame rate switching is not supported on connected display [CHAR LIMIT=250] -->
+    <string name="match_content_frame_rate_seamless_not_supported_summary">Your connected display
+        does not support seamless refresh rate transitions. This option will have no effect unless
+        you change to a display that supports it.</string>
     <!-- Preference to force a display's frame rate to always match the content's frame rate. [CHAR LIMIT=80] -->
     <string name="match_content_frame_rate_non_seamless">Non-seamless</string>
     <!-- Summary for preference to force a display's frame rate to always match the content's frame rate. [CHAR LIMIT=250] -->
