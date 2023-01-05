@@ -22,8 +22,10 @@ import static com.android.tv.settings.util.InstrumentationUtils.logToggleInterac
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.hardware.display.DisplayManager;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.Display;
 
 import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
@@ -154,6 +156,11 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
         return TvSettingsEnums.DISPLAY_SOUND_MATCH_CONTENT_FRAMERATE;
     }
 
+    @VisibleForTesting
+    DisplayManager getDisplayManager() {
+        return getContext().getSystemService(DisplayManager.class);
+    }
+
     private int getCurrentSettingValue() {
         int defaultSetting = isSeamlessSwitchingSupported()
                 ? Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY
@@ -197,8 +204,14 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
     private void createInfoFragments() {
         Preference seamlessPreference = findPreference(KEY_MATCH_CONTENT_FRAME_RATE_SEAMLESS);
         if (seamlessPreference != null) {
-            seamlessPreference.setFragment(
-                    MatchContentFrameRateInfo.SeamlessInfoFragment.class.getName());
+            if (getDisplayManager().getDisplay(Display.DEFAULT_DISPLAY)
+                    .getMode().getAlternativeRefreshRates().length != 0) {
+                seamlessPreference.setFragment(
+                        MatchContentFrameRateInfo.SeamlessInfoFragment.class.getName());
+            } else {
+                seamlessPreference.setFragment(
+                        MatchContentFrameRateInfo.SeamlessUnsupportedInfoFragment.class.getName());
+            }
         }
 
         Preference nonSeamlessPreference = findPreference(
