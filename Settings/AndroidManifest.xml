@@ -637,9 +637,14 @@
             android:excludeFromRecents="true"
             android:exported="true"
             android:theme="@style/TvSettingsActivityTheme">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.INPUT_METHOD_SETTINGS"/>
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-                <action android:name="android.settings.INPUT_METHOD_SETTINGS"/>
                 <category android:name="android.intent.category.VOICE_LAUNCH"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
