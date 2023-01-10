@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import static com.android.tv.settings.device.displaysound.ResolutionSelectionInfo.HDR_TYPES_ARRAY;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -140,6 +142,8 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
                         autoMode.getPhysicalWidth(), autoMode.getPhysicalHeight()),
                 ResolutionSelectionUtils.getRefreshRateString(autoMode.getRefreshRate()));
         pref.setSummary(summary);
+        pref.setFragment(ResolutionSelectionInfo.HDRInfoFragment.class.getName());
+        pref.getExtras().putIntArray(HDR_TYPES_ARRAY, autoMode.getSupportedHdrTypes());
         mResolutionPreferenceCategory.addPreference(pref);
 
         for (int i = 0; i < mModes.length; i++) {
@@ -159,6 +163,8 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         pref.setTitle(title);
         pref.setSummary(summary);
         pref.setKey(KEY_RESOLUTION_PREFIX + resolution);
+        pref.setFragment(ResolutionSelectionInfo.HDRInfoFragment.class.getName());
+        pref.getExtras().putIntArray(HDR_TYPES_ARRAY, mode.getSupportedHdrTypes());
         return pref;
     }
 
