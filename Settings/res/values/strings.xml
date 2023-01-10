@@ -472,9 +472,17 @@
     <string name="resolution_selection_auto_title">Automatic</string>
     <!-- Title for dialog that is shown when user changes the resolution. [CHAR LIMIT=150]-->
     <string name="resolution_selection_dialog_title">Resolution has been changed</string>
+    <!-- Title for dialog that is shown when user changes the resolution and Dolby Vision is not
+    supported. [CHAR LIMIT=150]-->
+    <string name="resolution_selection_with_mode_dialog_title">Change resolution to %1$s?</string>
     <!-- Description for dialog that is shown when user changes the resolution.
         [CHAR LIMIT=300]-->
     <string name="resolution_selection_dialog_desc">Select OK to use %1$s from now on.</string>
+    <!-- Description for dialog that is shown when user changes the resolution to a mode that doesn't
+        support Dolby Vision.[CHAR LIMIT=300]-->
+    <string name="resolution_selection_disabled_dolby_vision_dialog_desc">Dolby Vision is not
+        supported at %1$s and will be disabled in \"Advanced Display Settings\"
+        </string>
     <!-- Description of resolution mode that is shown on the side panel when user is scrolling
         through resolution modes. It lists all HDR types that this mode supports.
         [CHAR LIMIT=300]-->
