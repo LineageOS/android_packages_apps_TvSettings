@@ -118,8 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <!-- no translation found for surround_sound_format_dts_uhd (4340749818133578788) -->
-    <skip />
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos med Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos med Dolby Digital Plus"</string>
@@ -152,7 +151,7 @@
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Sömlöst"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Om appen begär det matchar enheten utdatan med den ursprungliga bildfrekvensen av det du tittar på, ENDAST om tv:n har stöd för sömlös övergång."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Inte sömlöst"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Om appen begär det matchar enheten utdatan med den ursprungliga bildfrekvensen av det du tittar på. Detta kan leda till att skärmen blir svart i någon sekund när du avslutar eller startar videouppspelning."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Om appen begär det matchar enheten utdatan med den ursprungliga bildfrekvensen av det du tittar på. Dettas kan leda till att skärmen blir svart i någon sekund när du avslutar eller startar videouppspelning."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Aldrig"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Enheten försöker aldrig matcha utdatan med den ursprungliga bildfrekvensen av det du tittar på, även om appen begär det."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Textskalning"</string>
@@ -186,7 +185,6 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Välj OK om du vill använda %1$s i fortsättningen."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Avbryt"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
-    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vill du ta bort cachelagrad data?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Cachelagrad data tas bort i alla appar."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -228,7 +226,7 @@
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Fjärrkontroll"</string>
     <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"Inställningar för fjärrstyrning"</string>
     <string name="bluetooth_ir_entry_title" msgid="6927284710576530479">"Konfigurera fjärrkontrollsknappar"</string>
-    <string name="bluetooth_ir_entry_subtitle" msgid="4606207128353416151">"Styr volymen, av/på-knappen och val av ingångskälla på tv:ar, mottagare och soundbar-högtalare"</string>
+    <string name="bluetooth_ir_entry_subtitle" msgid="4606207128353416151">"Styr volymen, strömbrytaren och val av ingångskälla på tv:ar, mottagare och soundbar-högtalare"</string>
     <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"Anslut"</string>
     <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"Anslut till %1$s"</string>
     <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"Koppla från"</string>
@@ -908,9 +906,9 @@
     <string name="select_device_name_description" msgid="8528185095614986580">"Ge enheten ett namn så att det blir lättare att identifiera den när du castar eller ansluter till den från andra enheter."</string>
   <string-array name="rooms">
     <item msgid="6590829789532602097">"Android-TV"</item>
-    <item msgid="1140506340411482365">"Tv:n i vardagsrummet"</item>
+    <item msgid="1140506340411482365">"TV:n i vardagsrummet"</item>
     <item msgid="6448060889026244632">"TV:n i familjerummet"</item>
-    <item msgid="3336274213215419228">"Tv:n i sovrummet"</item>
+    <item msgid="3336274213215419228">"TV:n i sovrummet"</item>
   </string-array>
     <string name="custom_room" msgid="6798144004583173563">"Ange eget namn …"</string>
     <string name="device_rename_title" msgid="9070021379000499270">"Byt namn på <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
@@ -1034,5 +1032,4 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Ström och energi"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Beteende när tv:n slås på"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Återställ"</string>
-    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Ethernet-kopplingskod"</string>
 </resources>

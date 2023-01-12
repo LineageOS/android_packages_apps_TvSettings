@@ -118,15 +118,14 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <!-- no translation found for surround_sound_format_dts_uhd (4340749818133578788) -->
-    <skip />
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"使用 Dolby Atmos 搭配 Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"使用 Dolby Atmos 搭配 Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"注意：如果裝置未正確回報支援的格式，「自動」選項可能會無法運作。"</string>
     <string name="surround_sound_auto_title" msgid="4892922385727913277">"自動：僅啟用音訊輸出裝置支援的格式 "</string>
-    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"如果選取這個選項，系統將允許應用程式選取裝置系統支援的任何音效格式。應用程式不一定會選擇最高音質的格式。"</string>
+    <string name="surround_sound_auto_summary" msgid="7073023654150720285">"如果選取這個選項，系統將允許應用程式選取裝置鏈支援的任何音效格式。應用程式不一定會選擇最高音質的格式。"</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"無：一律不使用環場音效"</string>
     <string name="surround_sound_manual_title" msgid="4935447605070985537">"手動：選擇啟用或停用這部裝置支援的各種格式，而不考慮音訊輸出裝置是否支援相關格式。"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"如果選取這個選項，當裝置系統支援的音效格式造成播放問題時，你就可以手動停用該格式。你也可以啟用裝置系統不支援的音效格式。在某些情況下，應用程式不一定會選擇最高音質的格式。"</string>
@@ -186,7 +185,6 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"選取 [確定] 就能立即使用 %1$s。"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"取消"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"確定"</string>
-    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"清除快取資料？"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"這項操作會清除所有應用程式的快取資料。"</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -1034,5 +1032,4 @@
     <string name="power_and_energy" msgid="4638182439670702556">"開關和電源"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"開機行為"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"重設"</string>
-    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"乙太網路配對碼"</string>
 </resources>

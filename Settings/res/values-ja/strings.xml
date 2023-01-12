@@ -118,8 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"ドルビー デジタル プラス"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <!-- no translation found for surround_sound_format_dts_uhd (4340749818133578788) -->
-    <skip />
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"ドルビー アトモス / ドルビー TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"ドルビー TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"ドルビー アトモス / ドルビー デジタルプラス"</string>
@@ -186,7 +185,6 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"これから %1$s を使用するには、[OK] を選択してください。"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"キャンセル"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
-    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"キャッシュデータを削除しますか？"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"すべてのアプリのキャッシュデータが削除されます。"</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -206,7 +204,7 @@
     <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Bluetooth ペア設定。"</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"アクセサリを検索しています…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Bluetooth デバイスをペアリングする前に、デバイスがペアリング モードになっていることを確認してください。"</string>
-    <string name="accessories_autopair_msg" msgid="2501824457418285019">"デバイスが見つかりました。<xliff:g id="COUNTDOWN">%1$s</xliff:g>秒以内にペア設定が自動的に始まります"</string>
+    <string name="accessories_autopair_msg" msgid="2501824457418285019">"デバイスが見つかりました。<xliff:g id="COUNTDOWN">%1$s</xliff:g>秒以内にペア設定が自動的に開始します"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"この操作はサポートされていません"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Bluetoothのペア設定リクエスト"</string>
     <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;をペアに設定する場合、パスキー（&lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;）が表示されていることを確認してください"</string>
@@ -730,7 +728,7 @@
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"DRMコンテンツのみに使用"</string>
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"最大解像度または最大フレームレートの表示を最適化します。この影響を受けるのはUltra HDディスプレイのみです。変更するとデバイスを再起動します。"</string>
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Bluetooth HCIスヌープログを有効にする"</string>
-    <string name="system_desc_usb_debugging" msgid="5672275208185222785">"USB 接続時にデバッグモードにする"</string>
+    <string name="system_desc_usb_debugging" msgid="5672275208185222785">"USB 接続時はデバッグモードにする"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"アプリは実行前にデバッガのアタッチを待機します"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"クリップの境界線、マージンなどを表示する"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"GPUでの描画時にウィンドウ内の表示を点滅させる"</string>
@@ -1034,5 +1032,4 @@
     <string name="power_and_energy" msgid="4638182439670702556">"電源と省エネ設定"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"電源オン時の画面"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"リセット"</string>
-    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"イーサネット ペア設定コード"</string>
 </resources>

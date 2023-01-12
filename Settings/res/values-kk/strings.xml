@@ -118,8 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <!-- no translation found for surround_sound_format_dts_uhd (4340749818133578788) -->
-    <skip />
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos with Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos with Dolby Digital Plus"</string>
@@ -186,7 +185,6 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Қазірден бастап %1$s рұқсатын пайдалану үшін \"Жарайды\" түймесін басыңыз."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Бас тарту"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"Жарайды"</string>
-    <string name="resolution_selection_hz" msgid="4425902505388495637">"Гц"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Кэштелген деректер өшірілсін бе?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Бұл барлық қолданбалардың кэштелген деректерін тазартады."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -261,12 +259,12 @@
     <string name="system_accessibility" msgid="3081009195560501010">"Арнайы мүмкіндіктер"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"Әзірлеуші опциялары"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Жоқ"</string>
-    <string name="system_diagnostic" msgid="1654842813331919958">"Пайдалану және диагностика"</string>
+    <string name="system_diagnostic" msgid="1654842813331919958">"Пайдалану және диагностикалау"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"Құрылғы әкімшісі қолданбалары жоқ"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Әкімші өшірген"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Қолжетімсіз"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"Құрылғы әкімшісінің қолданбалары"</string>
-    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Істеп тұрған қолданбалар жоқ"</string>
+    <string name="number_of_device_admins_none" msgid="2734299122299837459">"Қосулы қолданбалар жоқ"</string>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Әкімші, шифрлау саясаты немесе тіркелкі деректерінің жады өшірген"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Басқарылатын құрылғы ақпараты"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"Ұйым басқаратын өзгерістер мен параметрлер"</string>
@@ -623,7 +621,7 @@
     <string name="location_reporting" msgid="3552501333650895634">"Геодерек жіберу"</string>
     <string name="location_history" msgid="4055660203090513120">"Локация тарихы"</string>
     <string name="location_reporting_desc" msgid="1580018652781674608">"Google бұл мүмкіндікті Google Now және Google Карталар сияқты өнімдерде пайдаланады. Геодерек жіберу функциясын қосу осы мүмкіндікті пайдаланатын кез келген Google өніміне құрылғының Google аккаунтымен байланысты ең соңғы орын деректерін сақтауға және пайдалануға мүмкіндік береді."</string>
-    <string name="location_history_desc" msgid="926674012916014270">"Осы аккаунт үшін орындар тарихы қосулы болса, Google құрылғының орын деректерін қолданбалар пайдалануы үшін сақтай алады.\n\nМысалы, Google Карталар сізге бағыттар бере алады және  give Google Now жұмысқа бару жолындағы жол қозғалысы туралы хабарлай алады.\n\nЛокация тарихын кез келген уақытта өшіруге болады, бірақ бұлай істеу оны жоймайды. Локация тарихын көру және басқару үшін maps.google.com/locationhistory бетіне кіріңіз."</string>
+    <string name="location_history_desc" msgid="926674012916014270">"Осы аккаунт үшін орындар тарихы қосулы болса, Google құрылғының орын деректерін қолданбалар пайдалануы үшін сақтай алады.\n\nМысалы, Google Карталар сізге бағыттар бере алады және  give Google Now жұмысқа бару жолындағы жол қозғалысы туралы хабарлай алады.\n\nОрналасу тарихын кез келген уақытта өшіруге болады, бірақ бұлай істеу оны жоймайды. Орналасу тарихын көру және басқару үшін maps.google.com/locationhistory бетіне кіріңіз."</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"Орындар тарихын жою"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Бұл осы құрылғыдан осы Google аккаунты үшін сақталған бүкіл орындар тарихын жояды. Бұл жоюды болдырмау мүмкін емес. Кейбір қолданбалар, соның ішінде, Google Now, жұмысын тоқтатады."</string>
     <string name="system_services" msgid="5754310941186053151">"Қызметтер"</string>
@@ -930,12 +928,12 @@
     <string name="reboot_safemode_confirm" msgid="5745977150299953603">"Қауіпсіз режимге қосылғыңыз келе ме?"</string>
     <string name="reboot_safemode_desc" msgid="2919933461408942799">"Бұл орнатылған барлық үшінші тарап қолданбаларын өшіреді. Олар қайта жүктелген кезде қалпына келеді."</string>
     <string name="capturing_bugreport" msgid="832512801903486821">"Қате туралы есеп жасалуда"</string>
-    <string name="available_virtual_keyboard_category" msgid="7445262027711560629">"Қолжетімді виртуалдық пернетақталар"</string>
+    <string name="available_virtual_keyboard_category" msgid="7445262027711560629">"Қолжетімді виртуалды пернетақталар"</string>
     <string name="manage_keyboards" msgid="7983890675377321912">"Пернетақталарды басқару"</string>
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"Рұқсат етілген"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"Рұқсат етілмеген"</string>
     <string name="usage_access" msgid="8402350645248312782">"Пайдалану тарихын көру"</string>
-    <string name="usage_access_description" msgid="3276026988575551587">"Пайдалану тарихын көру рұқсаты қолданбаға сіз пайдаланатын басқа қолданбаларды және қаншалықты жиі пайдаланатыңыз туралы ақпаратты, сондай-ақ операторды, тіл параметрлерін және басқа мәліметтерді бақылауға мүмкіндік береді."</string>
+    <string name="usage_access_description" msgid="3276026988575551587">"Пайдалану тарихын көру мүмкіндігі қолданбаға сіз пайдаланатын басқа қолданбаларды және қаншалықты жиі пайдаланатыңыз туралы ақпаратты, сондай-ақ операторды, тіл параметрлерін және басқа мәліметтерді бақылауға мүмкіндік береді."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Қуат үнемдеу"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Қолданбалардың қуат тұтынуын оңтайландыру"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"Оңтайландыру қажет емес"</string>
@@ -964,7 +962,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"\"Суреттегі сурет\" режиміне рұқсат беру"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Орнатылған қолданбалардың ешқайсысы \"суреттегі сурет\" режимін қолдамайды"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Қолданба ашық болғанда не одан шыққанда (мысалы, бейнені әрі қарай көру үшін), қолданбаларға \"суреттегі сурет\" терезесін ашуға мүмкіндік береді. Бұл терезе ашылған басқа қолданбалардың үстінен шығады."</string>
-    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Қолданбаларға оятқыштарды орнатуға және уақытқа қатысты басқа да әрекеттерді жоспарлауға рұқсат береді. Мұндайда қолданба фондық режимде жұмыс істейді, сондықтан қуат шығыны артуы мүмкін.\n\nБұл рұқсат өшірулі болса, осы қолданбада жоспарланған ағымдағы оятқыштар мен уақытқа байланысты іс-шаралар жұмыс істемейді."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Қолданбаларға оятқыштарды орнатуға және уақытқа қатысты басқа да әрекеттерді жоспарлауға рұқсат береді. Мұндайда қолданба фондық режимде жұмыс істейді, сондықтан қуат шығыны артуы мүмкін.\n\nБұл рұқсат өшірулі болса, осы қолданбада жоспарланған ағымдағы оятқыштар мен уақытқа негізделген іс-шаралар жұмыс істемейді."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Экранды қосу"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"Экранды қосуға рұқсат беру"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Қолданбаның экранды қосуына рұқсат береді. Рұқсат берілсе, қолданба кез келген уақытта экранды өздігінен қосуы мүмкін."</string>
@@ -1034,5 +1032,4 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Қуат және энергия"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Қосылу кезіндегі әрекет"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Қайтару"</string>
-    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Ethernet жұптау коды"</string>
 </resources>

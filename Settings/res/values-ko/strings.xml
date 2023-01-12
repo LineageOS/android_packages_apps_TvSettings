@@ -118,8 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <!-- no translation found for surround_sound_format_dts_uhd (4340749818133578788) -->
-    <skip />
+    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD에서 제공하는 Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus에서 제공하는 Dolby Atmos"</string>
@@ -129,7 +128,7 @@
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"선택하면 시스템에서 앱이 기기 체인에서 지원되는 모든 사운드 형식을 선택하도록 허용하게 됩니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"사용 안함: 서라운드 사운드를 사용하지 않음"</string>
     <string name="surround_sound_manual_title" msgid="4935447605070985537">"수동: 오디오 출력 장치의 지원 여부와 무관하게 이 기기에서 지원되는 각 형식을 선택적으로 사용 또는 사용 중지합니다"</string>
-    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"선택하면 재생 관련 문제를 일으키는 기기 체인에서 지원하는 사운드 형식을 직접 사용 중지할 수 있습니다. 기기 체인에서 지원하지 않는 사운드 형식을 사용 설정할 수 있습니다. 경우에 따라 앱에서 최고 품질이 아닌 형식을 선택할 가능성이 있습니다."</string>
+    <string name="surround_sound_manual_summary" msgid="5155535847461070572">"선택하면 기기 체인에서 지원되며 재생 관련 문제를 일으키는 사운드 형식을 직접 사용 중지할 수 있습니다. 기기 체인에서 지원되지 않는 사운드 형식은 사용 설정됩니다. 경우에 따라 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"지원되지 않는 사운드 형식을 사용 설정할까요?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"연결된 오디오 기기가 이 형식을 지원하지 않습니다. 이로 인해 기기에서 큰 잡음과 같은 예기치 않은 동작이 발생할 수 있습니다."</string>
     <string name="surround_sound_enable_unsupported_dialog_cancel" msgid="3499147437078761105">"취소"</string>
@@ -173,7 +172,7 @@
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
     <string name="hdr_format_dolby_vision" msgid="7367264615042999587">"Dolby Vision"</string>
     <string name="hdr_format_selection_auto_summary" msgid="7384637194191436727">"이 옵션을 선택하면 시스템에서 앱이 기기 체인에서 지원되는 HDR 형식을 선택하도록 허용하게 됩니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
-    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"선택하면 재생 관련 문제를 일으키는 기기 체인에서 지원하는 HDR 형식을 수동으로 사용 중지할 수 있습니다. 기기 체인에서 지원하지 않는 HDR 형식은 강제로 사용 설정할 수 없습니다. 앱에서 최고 품질이 아닌 형식을 선택할 가능성이 있습니다."</string>
+    <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"이 옵션을 선택하면 기기 체인에서 지원되며 재생 관련 문제를 일으키는 HDR 형식을 수동으로 사용 중지할 수 있습니다. 기기 체인에서 지원되지 않는 HDR 형식은 강제로 사용 설정할 수 없습니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
     <string name="hdr_format_info" msgid="5652559220799426076">"형식 정보"</string>
     <string name="hdr_show_formats" msgid="171065892975445851">"형식 표시"</string>
     <string name="hdr_hide_formats" msgid="8561568998525727230">"형식 숨기기"</string>
@@ -186,7 +185,6 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"지금부터 %1$s 해상도를 사용하려면 확인을 선택하세요."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"취소"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"확인"</string>
-    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"캐시된 데이터를 지우시겠습니까?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"모든 앱의 캐시된 데이터가 지워집니다."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -1034,5 +1032,4 @@
     <string name="power_and_energy" msgid="4638182439670702556">"전원 및 에너지"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"전원이 켜질 때 동작"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"초기화"</string>
-    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"이더넷 페어링 코드"</string>
 </resources>
