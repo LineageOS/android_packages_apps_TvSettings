@@ -103,17 +103,18 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
                 if (getSleepTimeEntryId(newSleepTime) != -1) {
                     logEntrySelected(getSleepTimeEntryId(newSleepTime));
                 }
-                if (newSleepTime > WARNING_THRESHOLD_SLEEP_TIME_MS || newSleepTime == -1) {
-                    // Some regions require a warning to be presented.
+                if (showStandbyTimeout() && isTimeLargerThan(
+                        newSleepTime, getAttentiveSleepTime())) {
                     new AlertDialog.Builder(getContext())
-                            .setTitle(R.string.device_energy_saver_confirmation_title)
-                            .setMessage(getConfirmationDialogDescription(newSleepTime))
-                            .setPositiveButton(R.string.settings_confirm,
-                                    (dialog, which) -> confirmNewSleepTime(newSleepTime))
-                            .setNegativeButton(R.string.settings_cancel,
-                                    (dialog, which) -> dialog.dismiss())
+                            .setMessage(R.string.device_energy_saver_validation_sleep)
+                            .setPositiveButton(
+                                    R.string.settings_ok, (dialog, which) -> dialog.dismiss())
                             .create()
                             .show();
+                    return false;
+                }  else if (newSleepTime > WARNING_THRESHOLD_SLEEP_TIME_MS || newSleepTime == -1) {
+                    // Some regions require a warning to be presented.
+                    showConfirmChangeSettingDialog(false, newSleepTime);
                     return false;
                 } else {
                     confirmNewSleepTime(newSleepTime);
@@ -121,8 +122,17 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
                 }
             case KEY_ATTENTIVE_TIME:
                 final int attentiveTime = Integer.parseInt((String) newValue);
-                if (attentiveTime > WARNING_THRESHOLD_ATTENTIVE_TIME_MS || attentiveTime == -1) {
-                    showConfirmDisableAllowTurnScreenOffDialog(attentiveTime);
+                if (isTimeLargerThan(getSleepTime(), attentiveTime)) {
+                    new AlertDialog.Builder(getContext())
+                            .setMessage(R.string.device_energy_saver_validation_attentive)
+                            .setPositiveButton(
+                                    R.string.settings_ok, (dialog, which) -> dialog.dismiss())
+                            .create()
+                            .show();
+                    return false;
+                } else if (attentiveTime > WARNING_THRESHOLD_ATTENTIVE_TIME_MS
+                        || attentiveTime == -1) {
+                    showConfirmChangeSettingDialog(true, attentiveTime);
                     return false;
                 }
                 confirmAttentiveSleepTime(attentiveTime);
@@ -132,12 +142,31 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
         }
     }
 
-    private void showConfirmDisableAllowTurnScreenOffDialog(int attentiveTime) {
+    private boolean isTimeLargerThan(int x, int y) {
+        if (x == -1 && y == -1) {
+            return false;
+        }
+        if (x == -1) {
+            return true;
+        }
+        if (y == -1) {
+            return false;
+        }
+        return x > y;
+    }
+
+    private void showConfirmChangeSettingDialog(boolean isAttentiveTimer, int newTime) {
         new AlertDialog.Builder(getContext())
                 .setTitle(R.string.device_energy_saver_confirmation_title)
-                .setMessage(getAttentiveConfirmationDialogDescription(attentiveTime))
+                .setMessage(R.string.device_energy_saver_confirmation_message)
                 .setPositiveButton(R.string.settings_confirm,
-                        (dialog, which) -> confirmAttentiveSleepTime(attentiveTime))
+                        (dialog, which) -> {
+                            if (isAttentiveTimer) {
+                                confirmAttentiveSleepTime(newTime);
+                            } else {
+                                confirmNewSleepTime(newTime);
+                            }
+                        })
                 .setNegativeButton(R.string.settings_cancel,
                         (dialog, which) -> dialog.dismiss())
                 .create()
@@ -198,34 +227,6 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
             }
         }
         return validatedTimeout;
-    }
-
-    private String getConfirmationDialogDescription(int newSleepTime) {
-        String sleepTimeText = null;
-        String[] optionsValues = getResources().getStringArray(
-                R.array.device_energy_saver_sleep_timeout_values);
-        String[] optionsStrings = getResources().getStringArray(
-                R.array.device_energy_saver_sleep_timeout_entries);
-        for (int i = 0; i < optionsValues.length; i++) {
-            if (newSleepTime == Integer.parseInt(optionsValues[i])) {
-                sleepTimeText = optionsStrings[i];
-            }
-        }
-        return getString(R.string.device_energy_saver_confirmation_text, sleepTimeText);
-    }
-
-    private String getAttentiveConfirmationDialogDescription(int newAttentiveTime) {
-        String attentiveTimeText = null;
-        String[] optionsValues = getResources().getStringArray(
-                R.array.device_energy_saver_attentive_timeout_values);
-        String[] optionsStrings = getResources().getStringArray(
-                R.array.device_energy_saver_attentive_timeout_entries);
-        for (int i = 0; i < optionsValues.length; i++) {
-            if (newAttentiveTime == Integer.parseInt(optionsValues[i])) {
-                attentiveTimeText = optionsStrings[i];
-            }
-        }
-        return getString(R.string.device_energy_saver_confirmation_text, attentiveTimeText);
     }
 
     private void confirmNewSleepTime(int newSleepTime) {
