@@ -246,7 +246,7 @@
     <!-- Preference which sets the device's display calibration. [CHAR LIMIT=50] -->
     <string name="device_calibration">Calibration</string>
     <!-- Preference which changes energy saver settings. [CHAR LIMIT=50] -->
-    <string name="device_energy_saver">Energy saver</string>
+    <string name="device_energy_saver">Power &amp; Energy</string>
     <!-- Preference which changes eco settings. [CHAR LIMIT=50] -->
     <string name="device_eco_settings">Eco settings</string>
     <!-- Preference which shows internal settings. [CHAR LIMIT=50] -->
@@ -2225,9 +2225,9 @@
     <!-- Energy saver summary for configuring the time before the device's screen goes off after dreaming [CHAR LIMIT=NONE] -->
     <string name="device_energy_saver_timeout_description"><xliff:g id="sleep_description" example="4 hours">%1$s</xliff:g></string>
     <!-- The title of dialog asking users to confirm long screen off delay. [CHAR LIMIT =70] -->
-    <string name="device_energy_saver_confirmation_title">Confirm Energy Saver setting</string>
+    <string name="device_energy_saver_confirmation_title">Confirm power &amp; energy setting</string>
     <!-- The description of dialog asking users to confirm long screen off delay. [CHAR LIMIT=250] -->
-    <string name="device_energy_saver_confirmation_text">Leaving your display on for <xliff:g id="sleep_time" example="8 hours">%1$s</xliff:g> may increase energy use</string>
+    <string name="device_energy_saver_confirmation_message">Leaving your TV on for a long period of time may increase energy use</string>
     <!-- The title of dialog asking users to confirm disabling turning the screen off during media playback. [CHAR LIMIT=70] -->
     <string name="device_energy_saver_disable_allow_turning_screen_off_title">Disable energy saver setting</string>
     <!-- The description of dialog asking users to confirm disabling turning the screen off during media playback. [CHAR LIMIT=250] -->
@@ -2242,6 +2242,10 @@
     <string name="device_energy_saver_sleep_timeout_dialog_title">Automatically turn off TV when inactive</string>
     <!-- Energy saver dialog title for configuring the time before the device goes to full even if system is holding wakelocks. [CHAR LIMIT=NONE] -->
     <string name="device_energy_saver_attentive_timeout_dialog_title">Automatically turn off TV when watching</string>
+    <!-- Energy saver dialog confirmation error message when sleep timer is longer than inattentive timer. [CHAR LIMIT=NONE] -->
+    <string name="device_energy_saver_validation_sleep">\"When inactive\" timer must be shorter than \"When watching\" timer</string>
+    <!-- Energy saver dialog confirmation error message when inattentive timer is shorter than sleep timer. [CHAR LIMIT=NONE] -->
+    <string name="device_energy_saver_validation_attentive">\"When watching\" timer must be longer than \"When inactive\" timer</string>
     <!-- The title of the "Limit network connection in standby" toggle. [CHAR LIMIT=40] -->
     <string name="limit_network_in_standby_toggle_title">Limit network connection in standby</string>
     <!-- The subtitle of the "Limit network connection in standby" toggle. [CHAR LIMIT=60] -->
