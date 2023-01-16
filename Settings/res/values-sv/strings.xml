@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Säkerhetskopiera och återställ"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Återställ standardinställningarna"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrering"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Strömsparläge"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Eko-inställningar"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Enheter"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Matcha innehållets bildfrekvens"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Sömlöst"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Om appen begär det matchar enheten utdatan med den ursprungliga bildfrekvensen av det du tittar på, ENDAST om tv:n har stöd för sömlös övergång."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Din anslutna skärm har inte stöd för sömlösa övergångar mellan uppdateringsfrekvenser. Det här alternativet har ingen effekt såvida du inte byter till en kompatibel skärm."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Inte sömlöst"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Om appen begär det matchar enheten utdatan med den ursprungliga bildfrekvensen av det du tittar på. Detta kan leda till att skärmen blir svart i någon sekund när du avslutar eller startar videouppspelning."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Aldrig"</string>
@@ -821,7 +823,7 @@
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Byt namn"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"wifi-skärm"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"En PIN-kod måste anges"</string>
-    <string name="whichApplication" msgid="4510042089342879264">"Slutför åtgärd genom att använda"</string>
+    <string name="whichApplication" msgid="4510042089342879264">"Slutför åtgärd med"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Vill du alltid använda det här alternativet?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"Använd alltid"</string>
     <string name="justOnceOption" msgid="6714005843102804865">"Bara en gång"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Stäng av skärmen"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Bekräfta inställning för energisparläge"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Om du lämnar skärmen på i <xliff:g id="SLEEP_TIME">%1$s</xliff:g> kan energiförbrukningen öka"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Inaktivera inställning för energisparläge"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Bekräfta att skärmen inte ska inaktiveras medan du tittar på något. Detta kan leda till ökad energiförbrukning."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Vid inaktivitet"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Stäng av tv:n automatiskt"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Stäng av tv:n automatiskt när den är inaktiv"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Stäng av tv:n automatiskt när du tittar"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Begränsa nätverksanslutning i viloläge"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Använder mindre energi i viloläge"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Tv:n kopplas från nätverket i viloläge, förutom när den tar emot automatiska uppdateringar. Detta kan minska tv:ns energianvändning, men det innebär också att du kanske inte kan använda funktioner som Cast och Google Assistent i viloläge."</string>

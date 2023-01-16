@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Pravljenje rezervne kopije i vraćanje"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Resetovanje na fabrička podešavanja"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibracija"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Ušteda energije"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Eko podešavanja"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Uređaji"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Koristi brzinu kadrova sadržaja"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Neprimetno"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Ako aplikacija to traži, uređaj će usklađivati brzinu kadrova sadržaja koji prikazuje sa originalnom brzinom kadrova sadržaja koji gledate SAMO pod uslovom da TV može da obavi neprimetan prelaz."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Povezani ekran ne podržava neprimetne promene učestalosti osvežavanja. Ova opcija neće imati efekta ako ne pređete na ekran koji je podržava."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Nije neprimetno"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ako aplikacija to traži, uređaj će usklađivati brzinu kadrova sadržaja koji prikazuje sa originalnom brzinom kadrova sadržaja koji gledate. Zbog toga će ekran možda nakratko biti prazan kada zaustavljate ili počinjete reprodukciju videa."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nikad"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Isključi ekran"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Potvrdite podešavanje Uštede energije"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Ako ekran ostane uključen <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, to može da poveća potrošnju energije"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Onemogućite podešavanje uštede energije"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Potvrdite da biste sprečili da se ekran isključuje dok gledate, što može da izazove povećanu potrošnju energije."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Tokom neaktivnosti"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Automatski isključi TV"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Automatsko isključivanje TV-a pri neaktivnosti"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Automatsko isključivanje TV-a pri gledanju"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Ograniči mrežnu vezu u režimu mirovanja"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Koristi manje energije u režimu mirovanja"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Veza između TV-a i mreže će se prekinuti u režimu mirovanja, osim za dobijanje automatskih ažuriranja. To može da smanji potrošnju energije TV-a, ali takođe znači da nećete moći da koristite funkcije kao što su Prebacivanje i Google pomoćnik u režimu mirovanja."</string>

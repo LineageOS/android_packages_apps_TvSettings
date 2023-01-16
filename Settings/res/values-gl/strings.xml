@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Copia de seguranza e restauración"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Restablecemento dos datos de fábrica"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Calibración"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Aforrador de enerxía"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Configuración do modo Eco"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Dispositivos"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Facer coincidir cos fps do contido"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Non facer coincidir"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Se a aplicación o solicita, o dispositivo fará que a saída coincida cos fotogramas por segundo orixinais do contido que esteas vendo, pero só se a televisión permite que se realice a transición sen complicacións."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"A pantalla conectada non é compatible coas transicións de frecuencia de actualización fluídas. Esta opción non terá efecto a menos que cambies a unha pantalla que sexa compatible."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Facer coincidir"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Se a aplicación o solicita, o dispositivo fará que a saída coincida cos fotogramas por segundo orixinais do contido que esteas vendo. Ten en conta que a pantalla pode quedar sen imaxe durante un segundo ao iniciar ou deter a reprodución de vídeos."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nunca"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Apagar pantalla"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Confirmar configuración de aforro de enerxía"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Deixar a pantalla acesa durante <xliff:g id="SLEEP_TIME">%1$s</xliff:g> pode consumir máis enerxía"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Desactivar a configuración de aforro de enerxía"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Confirma para evitar que a pantalla se apague mentres ves contido nela, o que podería aumentar o consumo enerxético."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Cando estea inactivo"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Apagar a televisión automaticamente"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Apagar a televisión automaticamente cando estea inactiva"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Apagar a televisión automaticamente cando se estea vendo"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limitar conexión de rede en espera"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Consome menos enerxía no modo de espera"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"A televisión desconectarase da rede no modo de espera (agás para recibir actualizacións automáticas). Aínda que isto pode supoñer unha redución do consumo enerxético, tamén é posible que non poidas usar determinadas funcións nese modo, como Google Cast ou o Asistente de Google."</string>

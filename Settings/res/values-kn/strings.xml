@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"ಬ್ಯಾಕಪ್ ಮಾಡಿ &amp; ಮರುಸ್ಥಾಪಿಸಿ"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"ಫ್ಯಾಕ್ಟರಿ ಡೇಟಾ ರಿಸೆಟ್"</string>
     <string name="device_calibration" msgid="2907914144048739705">"ಕ್ಯಾಲಿಬರೇಶನ್"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"ಎನರ್ಜಿ ಸೇವರ್ ಮೋಡ್"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"ಪರಿಸರ-ಸ್ನೇಹಿ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"ಸಾಧನಗಳು"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"ವಿಷಯ ಫ್ರೇಮ್ ರೇಟ್ ಅನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"ತಡೆರಹಿತ"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"ಆ್ಯಪ್ ಅದನ್ನು ವಿನಂತಿಸಿದರೆ, ನಿಮ್ಮ ಟಿವಿ ತಡೆರಹಿತ ಪರಿವರ್ತನೆ ಮಾಡಲು ಸಾಧ್ಯವಾದರೆ ಮಾತ್ರ, ನಿಮ್ಮ ಸಾಧನವು ಅದರ ಔಟ್‌ಪುಟ್ ಅನ್ನು ನೀವು ವೀಕ್ಷಿಸುತ್ತಿರುವ ವಿಷಯದ ಮೂಲ ಫ್ರೇಮ್ ರೇಟ್‌ಗೆ ಮಾತ್ರ ಹೊಂದಿಸುತ್ತದೆ."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"ನಿಮ್ಮ ಕನೆಕ್ಟ್ ಮಾಡಿದ ಡಿಸ್‌ಪ್ಲೇ ತಡೆರಹಿತ ರಿಫ್ರೆಶ್ ರೇಟ್ ಪರಿವರ್ತನೆಗಳನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ. ನೀವು ಅದನ್ನು ಬೆಂಬಲಿಸುವ ಡಿಸ್‌ಪ್ಲೇಗೆ ಬದಲಾಯಿಸದ ಹೊರತು ಈ ಆಯ್ಕೆಯು ಯಾವುದೇ ಪರಿಣಾಮವನ್ನು ಬೀರುವುದಿಲ್ಲ."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"ತಡೆರಹಿತವಲ್ಲದ"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ಆ್ಯಪ್ ಅದನ್ನು ವಿನಂತಿಸಿದರೆ, ನಿಮ್ಮ ಸಾಧನವು ಅದರ ಔಟ್‌ಪುಟ್ ಅನ್ನು ನೀವು ವೀಕ್ಷಿಸುತ್ತಿರುವ ವಿಷಯದ ಮೂಲ ಫ್ರೇಮ್ ರೇಟ್‌ಗೆ ಹೊಂದಿಸುತ್ತದೆ. ವೀಡಿಯೊ ಪ್ಲೇಬ್ಯಾಕ್‌ನಿಂದ ನಿರ್ಗಮಿಸುವಾಗ ಅಥವಾ ಪ್ರವೇಶಿಸುವಾಗ ಇದು ನಿಮ್ಮ ಸ್ಕ್ರೀನ್ ಒಂದು ಸೆಕೆಂಡ್‌ಗೆ ನಿಷ್ಕ್ರಿಯವಾಗಲು ಕಾರಣವಾಗಬಹುದು."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"ಎಂದಿಗೂ ಇಲ್ಲ"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ಡಿಸ್‌ಪ್ಲೇ ಅನ್ನು ಆಫ್‌ ಮಾಡಿ"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"ಎನರ್ಜಿ ಸೇವರ್ ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ದೃಡೀಕರಿಸಿ"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"ನಿಮ್ಮ ಡಿಸ್‌ಪ್ಲೇಯನ್ನು <xliff:g id="SLEEP_TIME">%1$s</xliff:g> ವರೆಗೆ ಆನ್‌ನಲ್ಲಿ ಇಡುವುದರಿಂದ ಎನರ್ಜಿ ಬಳಕೆಯು ಹೆಚ್ಚಾಗಬಹುದು"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"ಎನರ್ಜಿ ಸೇವರ್ ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"ವೀಕ್ಷಿಸುವಾಗ ಡಿಸ್‌ಪ್ಲೇ ಆಫ್ ಆಗುವುದನ್ನು ತಡೆಯಲು ಖಚಿತಪಡಿಸಿ ಏಕೆಂದರೆ ಅದು ಹೆಚ್ಚಿನ ಶಕ್ತಿಯನ್ನು ಬಳಸಬಹುದು."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"ನಿಷ್ಕ್ರಿಯವಾಗಿರುವಾಗ"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"ಟಿವಿಯನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆಫ್ ಮಾಡಿ"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"ನಿಷ್ಕ್ರಿಯವಾಗಿರುವಾಗ ಟಿವಿಯನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆಫ್ ಮಾಡಿ"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"ವೀಕ್ಷಿಸುವಾಗ ಟಿವಿಯನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆಫ್ ಮಾಡಿ"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ಮೋಡ್‌ನಲ್ಲಿ ನೆಟ್‌ವರ್ಕ್ ಕನೆಕ್ಷನ್ ಅನ್ನು ಮಿತಿಗೊಳಿಸಿ"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ಮೋಡ್‌ನಲ್ಲಿ ಕಡಿಮೆ ವಿದ್ಯುತ್ ಅನ್ನು ಬಳಸುತ್ತದೆ"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"ಸ್ವಯಂಚಾಲಿತ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಸ್ವೀಕರಿಸುವುದನ್ನು ಹೊರತುಪಡಿಸಿ, ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ಮೋಡ್‌ನಲ್ಲಿದ್ದಾಗ ನಿಮ್ಮ ಟಿವಿಯನ್ನು ನಿಮ್ಮ ನೆಟ್‌ವರ್ಕ್‌ನಿಂದ ಡಿಸ್‌ಕನೆಕ್ಟ್ ಮಾಡಲಾಗುತ್ತದೆ. ಇದು ನಿಮ್ಮ ಟಿವಿಯ ವಿದ್ಯುತ್ ಬಳಕೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಬಹುದು, ಇದರರ್ಥ ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ಮೋಡ್‌ನಲ್ಲಿದ್ದಾಗ ಬಿತ್ತರಿಸುವುದು ಹಾಗೂ Google Assistant ನಂತಹ ಕಾರ್ಯಗಳನ್ನು ಬಳಸಲು ನಿಮಗೆ ಸಾಧ್ಯವಾಗದಿರಬಹುದು."</string>

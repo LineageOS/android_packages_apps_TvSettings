@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Рэзервовае капіраванне і аднаўленне"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Скід да заводскіх налад"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Каліброўка"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Эканомія энергіі"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Налады экарэжыму"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Прылады"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Узгадняць з частатой кадраў змесціва"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Плаўнасць з\'яўляецца абавязковай"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Калі праграма адправіць адпаведны запыт, прылада будзе суадносіць выходны сігнал з зыходнай частатой кадраў змесціва, якое вы праглядаеце, ТОЛЬКІ пры ўмове, што на экране тэлевізара будзе забяспечана плаўнасць рухаў."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Падключаны дысплэй не падтрымлівае плаўную змену частаты абнаўлення. Каб гэты параметр працаваў, перайдзіце на дысплэй, які яго падтрымлівае."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Плаўнасць не з\'яўляецца абавязковай"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Калі праграма адправіць адпаведны запыт, прылада будзе суадносіць выходны сігнал з зыходнай частатой кадраў змесціва, якое вы праглядаеце. У выніку экран можа на секунду пагаснуць, калі вы будзеце ўключаць ці выключаць прайграванне відэа."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Ніколі"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Выключыць дысплэй"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Пацвердзіце наладу Эканоміі энергіі"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Калі не выключаць дысплэй <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, можа павялічыцца спажыванне энергіі"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Адключыць наладу эканоміі зараду"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Пацвердзіце, каб папярэдзіць выключэнне дысплэя ў час прагляду. Гэта можа павялічыць спажыванне энергіі."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"У час бяздзейнасці"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Аўтаматычна выключаць тэлевізар"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Аўтаматычна выключаць тэлевізар падчас бяздзеяння"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Аўтаматычна выключаць тэлевізар падчас прагляду"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Абмежаваць падключэнне да сеткі ў рэжыме чакання"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Спажывае менш энергіі ў рэжыме чакання"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"У рэжыме чакання тэлевізар, калі ён не атрымлівае аўтаматычных абнаўленняў, будзе адключацца ад сеткі. Гэта можа знізіць энергаспажыванне тэлевізара, аднак гэта таксама азначае, што ў рэжыме чакання вы не зможаце выкарыстоўваць такія функцыі, як Cast і Памочнік Google."</string>

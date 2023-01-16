@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"បម្រុងទុក និងស្ដារ"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"កំណត់ទិន្នន័យដូចចេញពីរោងចក្រ"</string>
     <string name="device_calibration" msgid="2907914144048739705">"ការ​ក្រិត​តាម​ខ្នាត"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"កម្មវិធី​សន្សំសំចៃ​ថាមពល"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"ការកំណត់​អេកូ"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"ឧបករណ៍"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"ផ្គូផ្គង​អត្រាស៊ុម​របស់ខ្លឹមសារ"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"រលូន"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"ប្រសិនបើកម្មវិធីស្នើសុំវា ឧបករណ៍​របស់អ្នក​នឹងផ្គូផ្គង​លទ្ធផល​របស់វា​ជាមួយ​អត្រាស៊ុមដើម​នៃខ្លឹមសារ​ដែលអ្នក​កំពុងមើល​ លុះត្រាតែទូរទស្សន៍របស់អ្នកអាចធ្វើចលនាផ្លាស់ប្ដូរដោយរលូនប៉ុណ្ណោះ។"</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"ផ្ទាំងអេក្រង់ដែលបានភ្ជាប់របស់អ្នកមិនអាចភ្ជាប់ឈុតឆាកក្នុងអត្រាផ្ទុកឡើងវិញដ៏រលូនបានទេ។ ជម្រើសនេះនឹងមិនមានប្រសិទ្ធភាពឡើយ ប្រសិនបើអ្នកមិនប្ដូរទៅប្រើផ្ទាំងអេក្រង់ដែលអាចភ្ជាប់ឈុតឆាកក្នុងអត្រាផ្ទុកឡើងវិញដ៏រលូនទេ។"</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"មិនរលូន"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ប្រសិនបើកម្មវិធីស្នើសុំវា ឧបករណ៍​របស់អ្នក​នឹងផ្គូផ្គង​លទ្ធផល​របស់វា​ជាមួយ​អត្រាស៊ុមដើម​នៃខ្លឹមសារ​ដែលអ្នក​កំពុងមើល​។ ការធ្វើបែបនេះអាចបណ្ដាលឱ្យអេក្រង់របស់អ្នកងងឹតមួយភ្លែត នៅពេលចាកចេញ ឬចូលចាក់វីដេអូ។"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"កុំឱ្យសោះ"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"បិទ​ផ្ទាំង​អេក្រង់"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"បញ្ជាក់ការកំណត់​កម្មវិធីសន្សំសំចៃ​ថាមពល"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"ការទុកផ្ទាំងអេក្រង់របស់អ្នកឱ្យនៅបើកចោលរយៈពេល <xliff:g id="SLEEP_TIME">%1$s</xliff:g> អាចបង្កើនការប្រើប្រាស់ថាមពល"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"បិទការកំណត់កម្មវិធីសន្សំសំចៃថាមពល"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"សូមបញ្ជាក់ ដើម្បីទប់ស្កាត់កុំឱ្យបិទការបង្ហាញខណៈពេលកំពុងមើល ដែលអាចនឹងធ្វើឱ្យការប្រើប្រាស់ថាមពលមានការកើនឡើង។"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"ពេលអសកម្ម"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"បិទទូរទស្សន៍ដោយស្វ័យប្រវត្តិ"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"បិទទូរទស្សន៍ដោយស្វ័យប្រវត្តិនៅពេលអសកម្ម"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"បិទទូរទស្សន៍ដោយស្វ័យប្រវត្តិនៅពេលកំពុងមើល"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"ដាក់កំហិតការតភ្ជាប់បណ្ដាញក្នុងមុខងារសម្ងំ"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"ប្រើ​ថាមពលតិចជាង​នៅក្នុង​មុខងារសម្ងំ"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"ទូរទស្សន៍របស់អ្នក​នឹងត្រូវផ្ដាច់ចេញពីបណ្ដាញរបស់អ្នក នៅពេលស្ថិតនៅក្នុង​មុខងារសម្ងំ លើកលែង​ចំពោះការទទួលការដំឡើងកំណែ​ដោយស្វ័យប្រវត្តិ។ ការធ្វើបែបនេះ​អាចបន្ថយការប្រើប្រាស់​ថាមពល​របស់ទូរទស្សន៍អ្នក ប៉ុន្តែក៏មានន័យថា អ្នកមិនអាចប្រើ​មុខងារដូចជា Cast និង Google Assistant នៅពេលស្ថិតក្នុង​មុខងារសម្ងំ​ផងដែរ។"</string>
@@ -963,7 +971,7 @@
     <string name="change_setting" msgid="7211706374208138343">"ផ្លាស់ប្ដូរ"</string>
     <string name="keep_settings" msgid="703474489210093961">"កុំ​ផ្លាស់ប្ដូរ"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"ការអនុញ្ញាត"</string>
-    <string name="device_apps_permissions" msgid="8421323706003063878">"សិទ្ធិ​កម្មវិធី"</string>
+    <string name="device_apps_permissions" msgid="8421323706003063878">"ការអនុញ្ញាតកម្មវិធី"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"បានអនុញ្ញាតកម្មវិធី <xliff:g id="COUNT_0">%1$d</xliff:g> នៃ <xliff:g id="COUNT_1">%2$d</xliff:g>"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"សំណើ​សិទ្ធិ​ប៊្លូធូស"</string>
     <string name="security_patch" msgid="8924741264829495392">"កម្រិតបំណះសុវត្ថិភាព​ប្រព័ន្ធប្រតិបត្តិការ Android TV"</string>

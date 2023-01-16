@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Varundamine ja taastamine"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Tehase andmetele lähtestamine"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibreerimine"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Energiasäästja"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Ökonoomse režiimi seaded"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Seadmed"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Vastenda sisu kaadrisagedusega"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Sujuv"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Kui rakendus seda taotleb, vastendab teie seade väljundi vaadatava sisu algse kaadrisagedusega AINULT siis, kui teie teler on sujuvaks üleviimiseks suuteline."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Teie ühendatud ekraan ei toeta värskendussageduse sujuvat üleviimist. Sellel valikul ei ole mõju, kui te ei võta kasutusele ekraani, mis seda funktsiooni toetab."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Mittesujuv"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Kui rakendus seda taotleb, vastendab teie seade väljundi vaadatava sisu algse kaadrisagedusega. Seetõttu võib ekraanikuva video taasesitusest väljumisel või sellele lülitumisel hetkeks tühi olla."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Mitte kunagi"</string>
@@ -884,7 +886,7 @@
     <string name="wifi_setup_connection_success" msgid="3301901673876973474">"Ühendamine õnnestus"</string>
     <string name="wifi_setup_save_success" msgid="6862510218032734919">"Salvestamine õnnestus"</string>
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Versioon <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
-    <string name="device_apps_app_management_open" msgid="4249743535677261897">"Avamine"</string>
+    <string name="device_apps_app_management_open" msgid="4249743535677261897">"Ava"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Sundpeata"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Kui sundpeatate rakenduse, võib see toimida valesti."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Desinstalli"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Lülita ekraan välja"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Kinnitage energiasäästja seade"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Kui jätate ekraani perioodiks <xliff:g id="SLEEP_TIME">%1$s</xliff:g> sisselülitatuks, võib see suurendada energiakasutust"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Keelake energiasäästja seade"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Kinnitage, et vältida vaatamise ajal ekraani väljalülitumist. See võib suurendada energiakasutust."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Passiivne"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Teleri automaatne väljalülitamine"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Lülita teler automaatselt välja, kui see on inaktiivne"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Lülita teler automaatselt välja, kui seda vaadatakse"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Ooterežiimis võrguühenduse piiramine"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Kasutab ooterežiimis vähem energiat"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Teie teleri ühendus võrguga võidakse ooterežiimis katkestada (v.a automaatsete värskenduste saamiseks). See võib vähendada teie teleri energiakasutust, kui tähendab ka seda, et te ei saa ooterežiimis võib-olla kasutada funktsioone, nagu Ülekandmine ja Google\'i assistent."</string>

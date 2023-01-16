@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Резервно копие и възстановяване"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Възстановяване на фабричните настройки"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калибриране"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Икономия на енергия"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Настройки за икономичния режим"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Устройства"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Намиране на съответствие на скоростта на кадрите на съдърж."</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Безпроблемно"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Ако приложението поиска това, устройството ви ще намери съответствие между изхода си и оригиналната скорост на кадрите на съдържанието, което гледате, САМО ако телевизорът ви може да извърши безпроблемен преход."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Свързаният ви екран не поддържа функцията за автоматична промяна на честотата на опресняване. Тя няма да има ефект, освен ако не преминете към екран, който я поддържа."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Небезпроблемно"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ако прилож. поиска това, у-вото ви ще намери съответствие между изхода си и оригиналната скорост на кадрите на съдърж., което гледате. Възможно е екранът ви да остане празен за секунда при приключ./стартиране на възпроизвеждането на видеосъдържание."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Никога"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Изключване на екрана"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Потвърждаване на настройката за пестене на енергия"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Когато оставите дисплея си включен в продължение на <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, използването на електроенергия може да се увеличи"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Деактивиране на настройката за пестене на енергия"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Моля, потвърдете, за да предотвратите изключването на екрана, докато гледате, което може да доведе до по-голям разход на енергия."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"При неактивност"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Автоматично изключване на телевизора"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Автоматично изключване на телевизора при неактивност"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Автоматично изключване на телевизора при гледане"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Огранич. на връзката с мрежата в режим на готовност"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Използва по-малко електроенергия в режим на готовност"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"В режим на готовност връзката на телевизора ви с мрежата ще бъде прекратена – освен за получаването на автоматични актуализации. Това може да намали използването на електроенергия от телевизора ви, но също така означава, че в режим на готовност може да не сте в състояние да използвате различни функции, като например Google Cast и Асистент."</string>

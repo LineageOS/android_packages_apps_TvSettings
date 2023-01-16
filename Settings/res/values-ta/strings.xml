@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"காப்புப்பிரதி &amp; மீட்டெடுத்தல்"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"தரவின் ஆரம்பநிலை மீட்டமைப்பு"</string>
     <string name="device_calibration" msgid="2907914144048739705">"அளவுக்குறியீடு"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"எனர்ஜி சேமிப்பான்"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"சுற்றுச்சூழல் அமைப்புகள்"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"சாதனங்கள்"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"வீடியோவின் ஃபிரேம் வீதத்தைப் பொருத்து"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"தடையற்ற ஒளிபரப்பு"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"ஆப்ஸ் கோரினால், டிவியில் தடையற்ற ஒளிபரப்புக்கான வசதி இருந்தால் மட்டுமே நீங்கள் பார்த்துக் கொண்டிருக்கும் வீடியோவின் அசல் ஃபிரேம் வீதத்துடன் திரையின் ஃபிரேமை உங்கள் சாதனம் பொருத்தும்."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"இணைக்கப்பட்ட உங்கள் டிஸ்பிளேயில் \'புதுப்பிக்கும் விகிதத்தைத்\' தடையின்றி மாற்றுவதற்கான வசதியில்லை. இந்த வசதியுள்ள டிஸ்பிளேயுடன் இணைக்காதபட்சத்தில் இந்த விருப்பத்தைப் பயன்படுத்த முடியாது."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"எப்போதும் தடையற்ற ஒளிபரப்பு"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ஆப்ஸ் கோரினால், நீங்கள் பார்த்துக் கொண்டிருக்கும் வீடியோவின் அசல் ஃபிரேம் வீதத்துடன் திரையின் ஃபிரேமை உங்கள் சாதனம் பொருத்தும். இதனால், வீடியோவின் இயக்கத்திலிருந்து வெளியேறும்போதோ உள்நுழையும்போதோ திரை ஒரு நொடி மறைந்து தெரியக்கூடும்."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"ஒருபோதும் வேண்டாம்"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"திரையை ஆஃப் செய்"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"எனர்ஜி சேமிப்பான் அமைப்பை உறுதிசெய்தல்"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"உங்கள் டிவி டிஸ்ப்ளேவை <xliff:g id="SLEEP_TIME">%1$s</xliff:g> மணிநேரம் ஆனில் வைத்திருப்பது மின்சாரப் பயன்பாட்டை அதிகரிக்கக்கூடும்"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"எனர்ஜி சேமிப்பான் அமைப்பை முடக்குதல்"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"எனர்ஜியின் பயன்பாடு அதிகரிக்கக்கூடும் என்பதால் பார்த்துக்கொண்டிருக்கும்போது திரை முடக்கப்படுவதைத் தடுக்க வேண்டுமா என்பதை உறுதிசெய்யுங்கள்."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"செயல்பாட்டில் இல்லாதபோது"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"டிவியைத் தானாக ஆஃப் செய்தல்"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"டிவி செயலில் இல்லாதபோது தானாகவே ஆஃப் செய்தல்"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"டிவி பார்க்கும்போது தானாகவே ஆஃப் செய்தல்"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"காத்திருப்பில் நெட்வொர்க் இணைப்பு வரம்பு"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"காத்திருப்புப் பயன்முறையில் மின் உபயோகம் குறைவாக இருக்கும்"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"காத்திருப்புப் பயன்முறையில் இருக்கும்போது தானியங்குப் புதுப்பிப்புகளைப் பெறுவதற்கு மட்டும் நெட்வொர்க்குடன் உங்கள் டிவி இணைக்கப்படும். இது உங்கள் டிவி பயன்படுத்தும் மின்சாரத்தின் அளவை குறைக்கக்கூடும். ஆனால் காத்திருப்புப் பயன்முறையின்போது அலைபரப்பு, Google Assistant போன்ற செயல்பாடுகளை உங்களால் பயன்படுத்த முடியாமலும் போகக்கூடும்."</string>

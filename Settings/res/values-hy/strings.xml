@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Պահուստավորում և վերականգնում"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Վերակայել բոլոր տվյալները"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Չափաբերում"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Էներգիայի տնտեսում"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Էկո ռեժիմի կարգավորումներ"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Սարքեր"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Համապատասխանեցնել բովանդակության կադրերի հաճախականությունը"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Սահուն"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Երբ հավելվածը պահանջում է, սարքը կհամապատասխանեցնի իր հաճախականությունը նվագարկվող տեսանյութի կադրերի հաճախականությանը ՄԻԱՅՆ ԱՅՆ ԴԵՊՔՈՒՄ, եթե ձեր հեռուստացույցն աջակցում է սահուն անցում։"</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Ձեր միացված էկրանը չի աջակցում թարմացման հաճախականության սահուն անցումներ։ Այս կարգավորումը չի գործի, մինչև որ չանցնեք այն աջակցող էկրանի։"</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Ոչ սահուն"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Երբ հավելվածը պահանջում է, սարքը կհամապատասխանեցնի իր հաճախականությունը նվագարկվող տեսանյութի կադրերի հաճախականությանը։ Տեսանյութի նվագարկման սկզբում և վերջում էկրանը մի պահ կարող է սպիտակել։"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Երբեք"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Անջատել էկրանը"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Հաստատեք էներգիայի տնտեսման կարգավորումը"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Եթե էկրանը <xliff:g id="SLEEP_TIME">%1$s</xliff:g> միացված թողնեք, էլեկտրաէներգիայի սպառումը կարող է ավելանալ"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Անջատեք էներգիայի տնտեսման կարգավորումը"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Խնդրում ենք հաստատել, որպեսզի էկրանը չանջատվի դիտման ժամանակ (կարող է ավելի շատ էներգիա սպառվել)։"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Երբ ակտիվ չէ"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Հեռուստացույցի ավտոմատ անջատում"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Հեռուստացույցի ավտոմատ անջատում ոչ ակտիվ լինելու դեպքում"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Հեռուստացույցի ավտոմատ անջատում դիտելու ընթացքում"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Սահմանափակեք կապը սպասման ռեժիմում"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Ավելի քիչ էներգիա օգտագործեք սպասման ռեժիմում"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Ձեր հեռուստացույցը սպասման ռեժիմում կանջատվի ցանցից՝ բացի այն դեպքերից, երբ ավտոմատ թարմացումներ ստանա։ Հեռուստացույցի կողմից էլեկտրաէներգիայի օգտագործումը կարող է նվազել, սակայն դա նաև նշանակում է, որ հնարավոր է՝ սպասման ռեժիմում դուք չեք կարողանա օգտվել գործառույթներից, ինչպիսիք են հեռարձակումը և Google Օգնականը։"</string>

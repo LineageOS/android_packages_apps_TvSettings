@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"বেকআপ আৰু পুনঃস্থাপন"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"ফেক্টৰী ডেটা ৰিছেট"</string>
     <string name="device_calibration" msgid="2907914144048739705">"ক্ৰমাংকণ"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"শক্তি সঞ্চয়কাৰী"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"ইক’ৰ ছেটিং"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"ডিভাইচ"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"সমলৰ ফ্ৰে\'মৰ হাৰ মিলাওক"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"বাধাহীন"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"এপ্‌টোৱে ইয়াৰ বাবে অনুৰোধ কৰিলে, আপোনাৰ ডিভাইচটোৱে আপুনি চাই থকা সমলৰ মূল ফ্ৰে’মৰ হাৰৰ সৈতে ইয়াৰ আউটপুট মিলাব, এনে তেতিয়াহে হ’ব যেতিয়া আপোনাৰ টিভিটোৱে এটা বাধাহীন পৰিৱৰ্তন সম্পাদন কৰিব পাৰিব।"</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"আপোনাৰ সংযুক্ত ডিছপ্লে’খনে বাধাহীন ৰিফ্ৰে’শ্বৰ হাৰৰ ট্ৰানজিশ্বনসমূহ সমৰ্থন নকৰে। আপুনি এইটো সমৰ্থন কৰা এখন ডিছপ্লে’লৈ সলনি নকৰালৈকে এই বিকল্পটোৰ কোনো প্ৰভাৱ নাথাকিব।"</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"বাধাহীন নহয়"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"এপ্‌টোৱে ইয়াৰ বাবে অনুৰোধ কৰিলে, আপোনাৰ ডিভাইচটোৱে আপুনি চাই থকা সমলৰ মূল ফ্ৰে’মৰ হাৰৰ সৈতে ইয়াৰ আউটপুট মিলাব। ইয়াৰ ফলত এটা ভিডিঅ’ প্লে’বেক আৰম্ভ কৰোঁতে অথবা তাৰপৰা বাহিৰ হওঁতে এক ছেকেণ্ডৰ বাবে আপোনাৰ স্ক্ৰীনখনত একো নোহোৱা হৈ পৰিব পাৰে।"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"কেতিয়াও নহয়"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ডিছপ্লে’ অফ কৰক"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"শক্তি সঞ্চয়কাৰী ছেটিং নিশ্চিত কৰক"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"<xliff:g id="SLEEP_TIME">%1$s</xliff:g>লৈকে আপোনাৰ ডিছপ্লে’ অন কৰি থোৱাটোৱে শক্তিৰ ব্যৱহাৰ বৃদ্ধি কৰিব পাৰে"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"শক্তি সঞ্চয়কাৰী ছেটিং অক্ষম কৰক"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"কিবা চাই থকাৰ সময়ত ডিছপ্লে’খন অফ হৈ যোৱাটো বন্ধ কৰিবলৈ নিশ্চিত কৰক, যিয়ে অধিক শক্তি খৰচ কৰাৰ সম্ভাৱনা আছে।"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"নিষ্ক্ৰিয় হৈ থাকোঁতে"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"টিভিটো স্বয়ংক্ৰিয়ভাৱে বন্ধ হোৱাৰ সুবিধা"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"নিষ্ক্ৰিয় হৈ থাকোঁতে টিভিটো স্বয়ংক্ৰিয়ভাৱে বন্ধ হোৱাৰ সুবিধাটো ছেট কৰক"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"চাই থাকোঁতে টিভিটো স্বয়ংক্ৰিয়ভাৱে বন্ধ হোৱাৰ সুবিধাটো ছেট কৰক"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"ষ্টেণ্ডবাই ম’ডত নেটৱৰ্কৰ সংযোগ সীমিত কৰক"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"ষ্টেণ্ডবাই ম’ডত কম শক্তি ব্যৱহাৰ কৰে"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"ষ্টেণ্ডবাই ম’ডত থাকিলে স্বয়ংক্ৰিয় আপডে’টসমূহ গ্ৰহণ কৰাৰ বাহিৰে আপোনাৰ নেটৱৰ্কৰ পৰা আপোনাৰ টিভিৰ সংযোগ বিচ্ছিন্ন কৰা হ’ব। এইটোৱে আপোনাৰ টিভিৰ শক্তিৰ ব্যৱহাৰ কমাব, যদিও এইটোৱে ইয়াকো বুজাই যে আপুনি ষ্টেণ্ডবাই ম’ডত থকাৰ অৱস্থাত Cast আৰু Google Assistantৰ দৰে ফাংশ্বনসমূহ ব্যৱহাৰ কৰিব নোৱাৰে।"</string>
