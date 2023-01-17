@@ -21,7 +21,6 @@ import static com.android.tv.settings.util.InstrumentationUtils.logToggleInterac
 
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.hardware.display.DisplayManager;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -85,8 +84,7 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
 
     @VisibleForTesting
     boolean isSeamlessSwitchingSupported() {
-        return getContext().getPackageManager().hasSystemFeature(
-                PackageManager.FEATURE_SEAMLESS_REFRESH_RATE_SWITCHING);
+        return getDisplayManager().supportsSeamlessRefreshRateSwitching();
     }
 
     @VisibleForTesting
