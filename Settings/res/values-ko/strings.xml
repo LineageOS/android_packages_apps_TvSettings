@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"백업 및 복원"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"초기화"</string>
     <string name="device_calibration" msgid="2907914144048739705">"보정"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"에너지 절약"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"절전 설정"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"기기"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"콘텐츠 프레임 속도 일치시키기"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"원활한 전환 사용"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"앱에서 요청하면 TV에서 원활한 전환을 실행할 수 있는 경우에만 기기에서 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞춥니다."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"연결된 디스플레이에서 원활한 화면 재생 빈도 전환을 지원하지 않습니다. 이를 지원하는 디스플레이로 변경하지 않는 한 이 옵션은 아무런 영향을 미치지 않습니다."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"원활한 전환 사용 안함"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"앱에서 요청할 경우 기기에서 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞춥니다. 이로 인해 동영상 재생을 실행하거나 중지할 때 잠시 화면에 아무 내용도 나타나지 않을 수 있습니다."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"사용 안함"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"화면 끄기"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"에너지 절약 모드 설정 확인"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"디스플레이를 <xliff:g id="SLEEP_TIME">%1$s</xliff:g> 동안 켜두면 에너지 사용량이 증가할 수 있습니다."</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"에너지 절약 모드 설정 끄기"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"영상을 보는 동안 화면이 꺼지지 않도록 설정합니다. 설정하지 않으면 에너지 사용량이 증가할 수 있습니다."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"절전 모드 시"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"자동으로 TV 끄기"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"사용 중이 아닐 때 자동으로 TV 끄기"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"시청 중에 자동으로 TV 끄기"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"대기 모드에서 네트워크 연결 제한"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"대기 모드에서 전력 사용량이 감소합니다"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"대기 모드에서는 TV가 네트워크에 연결하지 않습니다(자동 업데이트를 수신하는 경우 제외). 이로 인해 TV의 전력 사용량이 감소할 수 있으나 대기 모드에서 Google Cast, Google 어시스턴트와 같은 기능을 사용하지 못할 수 있습니다."</string>

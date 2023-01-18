@@ -99,7 +99,7 @@
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Näytä järjestelmäsovellukset"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Asennetut sovellukset"</string>
     <string name="all_apps_other" msgid="4420174882983813158">"Järjestelmäsovellukset"</string>
-    <string name="all_apps_disabled" msgid="2776041242863791053">"Käytöstä poistetut sovellukset"</string>
+    <string name="all_apps_disabled" msgid="2776041242863791053">"Käytöstä poistetut"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Näytönsäästäjä"</string>
     <string name="device_display" msgid="244634591698925025">"Näyttö"</string>
     <string name="device_display_sound" msgid="7399153506435649193">"Näyttö ja ääni"</string>
@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Varmuuskopiointi ja palautus"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Tehdasasetuksien palauttaminen"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrointi"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Virransäästö"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Ekoasetukset"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Laitteet"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Valitse sama kuvanopeus kuin sisällöllä"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Saumaton"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"VAIN jos televisiosi voi tehdä saumattoman siirtymän, laite täsmää äänen katsomasi sisällön alkuperäiseen kuvanopeuteen sovelluksen pyytäessä."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Yhdistetty näyttö ei tue saumattomia päivittymistiheyden vaihtoja. Asetuksella ei ole vaikutusta, ellet vaihda sitä tukevaan näyttöön."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Ei-saumaton"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Jos sovellus pyytää sitä, laite täsmää äänen katsomasi sisällön alkuperäiseen kuvanopeuteen. Tämä voi saada näytön pimenemään hetkeksi avattaessa ja suljettaessa videon toistoa."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Ei koskaan"</string>
@@ -821,7 +823,7 @@
     <string name="accessories_wifi_display_rename_device" msgid="8803397194143132061">"Nimeä uudelleen"</string>
     <string name="accessories_wifi_display_enable" msgid="2385467074170316302">"Wi-Fi-näyttö"</string>
     <string name="accessories_wifi_display_pin_required" msgid="5434960694140426664">"PIN-koodi vaaditaan"</string>
-    <string name="whichApplication" msgid="4510042089342879264">"Tee toiminto käyttäen sovellusta"</string>
+    <string name="whichApplication" msgid="4510042089342879264">"Tee toiminto käyttäen:"</string>
     <string name="alwaysUseQuestion" msgid="2643084054296937138">"Käytetäänkö valintaa aina tälle toiminnolle?"</string>
     <string name="alwaysUseOption" msgid="8799609235198714441">"Käytä aina"</string>
     <string name="justOnceOption" msgid="6714005843102804865">"Vain kerran"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Sammuta näyttö"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Vahvista virransäästön asetus"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Jos näyttö on päällä <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, energiankulutus voi kasvaa"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Poista virransäästöasetus käytöstä"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Vahvista, että haluat estää näytön sammumisen katselun aikana, vaikka se saattaa lisätä energiankulutusta."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Ei-aktiivisena"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Television automaattinen sammuttaminen"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Television automaattinen sammuttaminen, kun se on epäaktiivinen"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Television automaattinen sammuttaminen katseltaessa"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Rajoita verkkoyhteyttä lepotilassa"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Käytä vähemmän energiaa lepotilassa"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Verkkoyhteys katkaistaan, kun televisio on lepotilassa (ei koske automaattisia päivityksiä). Tämä voi vähentää television energiankulutusta, mutta et ehkä voi käyttää lepotilassa joitakin ominaisuuksia, esim. Castia ja Google Assistantia."</string>

@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"バックアップと復元"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"データの初期化"</string>
     <string name="device_calibration" msgid="2907914144048739705">"キャリブレーション"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"省エネツール"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"エコ設定"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"デバイス"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"コンテンツのフレームレートを合わせる"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"シームレス"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"視聴中のテレビでシームレスな移行が可能である場合に限り、アプリからリクエストがあった場合、デバイスは、再生しているコンテンツのオリジナルのフレームレートに出力を合わせます。"</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"接続済みのディスプレイがリフレッシュ レートのシームレスな移行をサポートしていません。対応のディスプレイに変更しない限り、このオプションは機能しません。"</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"非シームレス"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"アプリからリクエストがあった場合、デバイスは、再生しているコンテンツのオリジナルのフレームレートに出力を合わせます。そのため、動画再生の開始時または終了時に画面が一瞬空白になる場合があります。"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"なし"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"画面を OFF にする"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"省エネ設定の確認"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"ディスプレイを <xliff:g id="SLEEP_TIME">%1$s</xliff:g> ON のままにすると、エネルギー使用量が増えます"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"省エネ設定を無効にする"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"エネルギーの使用が増える可能性あがるため、再生中にディスプレイがオフにならないよう、設定をご確認ください。"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"動作していないとき"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"テレビを自動的に OFF にする"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"使用していないときにテレビを自動的に OFF にする"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"視聴時にテレビを自動的に OFF にする"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"スタンバイ時のネットワーク接続を制限"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"スタンバイ モード時のエネルギー使用量を節約します"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"スタンバイ モード時は、自動アップデートを受信する場合を除き、テレビとネットワークの接続を解除します。スタンバイ時のテレビのエネルギー使用量を減らせますが、キャストや Google アシスタントなどの機能を利用することはできなくなります。"</string>

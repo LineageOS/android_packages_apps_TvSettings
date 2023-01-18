@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Varnostno kopiranje in obnovitev"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Ponastavitev na tovarniške nastavitve"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Umerjanje"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Varčevanje z energijo"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Nastavitve načina »Eko«"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Naprave"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Ujemanje s številom sličic v sekundi vsebine"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Brez prekinitev"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Če to zahteva aplikacija, bo naprava svoj izhod uskladila z izvirnim številom sličic v sekundi vsebine, ki jo gledate, SAMO v primeru, če lahko televizor opravi prehod brez prekinitev."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Povezani zaslon ne podpira nemotenih preklopov hitrosti osveževanja. Ta možnost ne bo imela učinka, če ne preklopite na zaslon, ki jo podpira."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"S prekinitvami"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Če to zahteva aplikacija, bo naprava svoj izhod uskladila z izvirnim številom sličic v sekundi vsebine, ki jo gledate. Zaradi tega bo med začetkom ali ustavitvijo predvajanja videoposnetka zaslon za nekaj sekund morda prazen."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nikoli"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Izklop zaslona"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Potrdite nastavitev za varčevanje z energijo"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Če pustite zaslon vklopljen <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, lahko pride do povečanja porabe energije."</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Onemogočite nastavitev za varčevanje z energijo"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Potrdite, če želite preprečiti, da se zaslon med gledanjem izklopi, vendar lahko to povzroči povečanje porabe energije."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Ob nedejavnosti"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Samodejni izklop televizorja"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Samodejni izklop televizorja, ko je nedejaven"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Samodejni izklop televizorja med gledanjem"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Omejitev omrežne povezave v načinu pripravljenosti"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Manjša poraba energije v načinu pripravljenosti"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Ko bo televizor v načinu pripravljenosti, bo povezava z omrežjem prekinjena, razen za prejemanje samodejnih posodobitev. Tako bo televizor morda porabil manj energije, vendar to pomeni tudi, da v načinu pripravljenosti morda ne boste mogli uporabljati funkcij, kot sta Predvajanje in Pomočnik Google."</string>

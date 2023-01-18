@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Sikkerhetskopiering og gjenoppretting"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Tilbakestilling til fabrikkstandard"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrering"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Strømsparing"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Eco-innstillinger"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Enheter"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Match innholdets bildefrekvens"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Sømløs"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Hvis appen ber om det, kommer enheten til å matche utgangen til den opprinnelige bildefrekvensen til innholdet du ser på, men BARE hvis TV-en kan utføre sømløs overgang."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Den tilkoblede skjermen støtter ikke sømløse overganger av oppdateringsfrekvens. Dette alternativet har ingen effekt med mindre du bytter til en skjerm som støtter det."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Ikke-sømløs"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Hvis appen ber om det, kommer enheten til å matche utgangen til den opprinnelige bildefrekvensen til innholdet du ser på. Dette kan føre til at skjermen blir tom i et øyeblikk når du avslutter eller starter videoavspilling."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Aldri"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Slå av skjermen"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Bekreft innstillingen for batterisparing"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Hvis du lar skjermen stå på i <xliff:g id="SLEEP_TIME">%1$s</xliff:g>, kan det øke energiforbruket"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Deaktiver innstillingen for batterisparing"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Du må bekrefte dette for å unngå at skjermen slår seg av mens du ser på noe. Dette kan føre til at det brukes mer strøm."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Når enheten er inaktiv"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Slå TV-en av automatisk"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Slå TV-en av automatisk når den er inaktiv"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Slå TV-en av automatisk når du ser på noe"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Begrens nettverkstilkobling i hvilemodus"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Bruker mindre energi i hvilemodus"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"TV-en kobles fra nettverket når den er i hvilemodus, med unntak av når den mottar automatiske oppdateringer. Dette kan redusere TV-ens energibruk, men det betyr også at du muligens ikke kan bruke funksjoner som Cast og Google-assistenten når den er i hvilemodus."</string>

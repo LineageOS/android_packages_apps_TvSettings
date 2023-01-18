@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"ବ୍ୟାକଅପ୍ ନିଅନ୍ତୁ ଏବଂ ରିଷ୍ଟୋର୍ କରନ୍ତୁ"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"ଫ୍ୟାକ୍ଟୋରୀ ଡାଟା ରିସେଟ୍‌"</string>
     <string name="device_calibration" msgid="2907914144048739705">"କାଲିବ୍ରାସନ୍‍"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"ଏନର୍ଜି ସେଭର୍"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"ପରିବେଶ-ଅନୁକୂଳ ସେଟିଂସ"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"ଡିଭାଇସଗୁଡ଼ିକ"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"ବିଷୟବସ୍ତୁ ଫ୍ରେମ୍ ରେଟ୍ ମେଳ କରନ୍ତୁ"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"ବାଧାହୀନ"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"ଯଦି ଆପଟି ଏଥିପାଇଁ ଅନୁରୋଧ କରେ, ତେବେ ଆପଣଙ୍କ ଟିଭି ବାଧାହୀନ ଟ୍ରାଞ୍ଜିସନ୍ ସମ୍ପାଦନ କରିପାରିଲେ ହିଁ କେବଳ ଆପଣଙ୍କ ଡିଭାଇସ୍ ଆପଣ ଦେଖୁଥିବା ବିଷୟବସ୍ତୁର ମୂଳ ଫ୍ରେମ୍ ରେଟ୍ ସହ ତାହାର ଆଉଟପୁଟକୁ ମେଳ କରିବ।"</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"କନେକ୍ଟ ଥିବା ଆପଣଙ୍କ ଡିସପ୍ଲେ ବାଧାରହିତ ରିଫ୍ରେସ ରେଟ ଟ୍ରାଞ୍ଜିସନକୁ ସମର୍ଥନ କରେ ନାହିଁ। ଏହାକୁ ସମର୍ଥନ କରୁଥିବା ଏକ ଡିସପ୍ଲେକୁ ଆପଣ ପରିବର୍ତ୍ତନ ନକଲେ, ଏହି ବିକଳ୍ପର କୌଣସି ପ୍ରଭାବ ରହିବ ନାହିଁ।"</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"ବାଧାହୀନ-ନୁହେଁ"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ଯଦି ଆପଟି ଏଥିପାଇଁ ଅନୁରୋଧ କରେ, ତେବେ ଆପଣଙ୍କ ଡିଭାଇସ୍ ଆପଣ ଦେଖୁଥିବା ବିଷୟବସ୍ତୁର ମୂଳ ଫ୍ରେମ୍ ରେଟ୍ ସହ ତାହାର ଆଉଟପୁଟକୁ ମେଳ କରିବ। ଏହା ଫଳରେ ଏକ ଭିଡିଓ ପ୍ଲେବ୍ୟାକ୍ ମୋଡ୍ ଚାଲୁ କିମ୍ବା ବନ୍ଦ କରିବା ସମୟରେ ଏକ ସେକେଣ୍ଡ ପାଇଁ ଆପଣଙ୍କ ସ୍କ୍ରିନରେ କିଛି ଦେଖାଯାଇନପାରେ।"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"କେବେ ବି ନୁହେଁ"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ଡିସପ୍ଲେ ବନ୍ଦ କରନ୍ତୁ"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"ଏନର୍ଜି ସେଭର୍ ସେଟିଂ ସୁନିଶ୍ଚିତ କରନ୍ତୁ"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"ଆପଣଙ୍କ ଡିସପ୍ଲେକୁ <xliff:g id="SLEEP_TIME">%1$s</xliff:g> ପାଇଁ ଚାଲୁ ଅବସ୍ଥାରେ ଛାଡ଼ିଦେବା ଫଳରେ ଏହା ଏନର୍ଜି ବ୍ୟବହାରକୁ ବଢ଼ାଇଦେଇପାରେ"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"ଏନର୍ଜି ସେଭର ସେଟିଂ ସୁନିଶ୍ଚିତ କରନ୍ତୁ"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"ଏନର୍ଜି ବ୍ୟବହାର ବଢ଼ାଇବାର ସାମର୍ଥ୍ୟ ଥିବା ମିଡ଼ିଆ ପ୍ଲେବ୍ୟାକ ଦେଖିବା ସମୟରେ ଡିସପ୍ଲେ ବନ୍ଦ ହେବାରୁ ପ୍ରତିରୋଧ କରିବାକୁ ଦୟାକରି ସୁନିଶ୍ଚିତ କରନ୍ତୁ।"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"ନିଷ୍କ୍ରିୟ ଥିବା ସମୟରେ"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"ଟିଭିକୁ ସ୍ୱଚାଳିତ ଭାବେ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"ନିଷ୍କ୍ରିୟ ଥିବା ସମୟରେ ଟିଭିକୁ ସ୍ୱଚାଳିତ ଭାବେ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"ଦେଖିବା ସମୟରେ ଟିଭିକୁ ସ୍ୱଚାଳିତ ଭାବେ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"ଷ୍ଟାଣ୍ଡବାଏରେ ନେଟୱାର୍କ କନେକ୍ସନକୁ ସୀମିତ କର"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"ଷ୍ଟାଣ୍ଡବାଏ ମୋଡରେ କମ୍ ଏନର୍ଜି ବ୍ୟବହାର କରେ"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"ଷ୍ଟାଣ୍ଡବାଏ ମୋଡରେ ଥିବା ସମୟରେ, ସ୍ୱଚାଳିତ ଅପଡେଟଗୁଡ଼ିକ ପାଇବା ବ୍ୟତୀତ, ଆପଣଙ୍କ ଟିଭି ଆପଣଙ୍କର ନେଟୱାର୍କରୁ ବିଚ୍ଛିନ୍ନ ହୋଇଯିବ। ଯଦିଓ ଏହାର ଅର୍ଥ ମଧ୍ୟ ହେଉଛି ଷ୍ଟାଣ୍ଡବାଏରେ ଥିବା ସମୟରେ Cast ଏବଂ Google Assistant ପରି ଫଙ୍କସନକୁ ବ୍ୟବହାର କରିବାରେ ଆପଣ ସକ୍ଷମ ହୋଇନପାରନ୍ତି, ଏହା ଆପଣଙ୍କ ଟିଭିର ଏନର୍ଜି ବ୍ୟବହାରକୁ କମ୍ କରିପାରେ।"</string>

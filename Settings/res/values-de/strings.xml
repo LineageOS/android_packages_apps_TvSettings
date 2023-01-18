@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Sicherung &amp; Wiederherstellung"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Zurücksetzen auf Werkseinstellungen"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrierung"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Energiesparmodus"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Stromspareinstellungen"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Geräte"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"An Framerate des Inhalts anpassen"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Nahtlos"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Wenn die App es anfordert, wird die Ausgabe deines Geräts an die Original-Framerate des aktuellen Inhalts angepasst. Das gilt allerdings NUR, wenn dein Fernseher einen nahtlosen Wechsel unterstützt."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Der verbundene Bildschirm unterstützt keine nahtlose Umstellung der Aktualisierungsrate. Diese Option greift erst, wenn du einen Bildschirm verwendest, der sie unterstützt."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Nicht nahtlos"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Wenn die App es anfordert, wird die Ausgabe deines Geräts an die Original-Framerate des aktuellen Inhalts angepasst. Das kann dazu führen, dass der Bildschirm beim Beenden oder Starten einer Videowiedergabe vorübergehend schwarz wird."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nie"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Display deaktivieren"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Einstellung für Energiesparmodus bestätigen"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Wenn du den Bildschirm <xliff:g id="SLEEP_TIME">%1$s</xliff:g> eingeschaltet lässt, kann das den Stromverbrauch erhöhen"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Energiesparmodus deaktivieren"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Bitte bestätige, dass der Bildschirm während der Medienwiedergabe nicht ausgeschaltet werden soll. Diese Einstellung führt möglicherweise zu erhöhtem Energieverbrauch."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Bei Inaktivität"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Fernseher automatisch ausschalten"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Fernseher bei Inaktivität automatisch ausschalten"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Fernseher beim Zuschauen automatisch ausschalten"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Netzwerkzugriff im Stand-by beschränken"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Weniger Stromverbrauch im Stand-by-Modus"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Dein Fernseher wird im Stand-by-Modus vom Netzwerk getrennt und verbindet sich nur noch für automatische Updates. Das kann den Stromverbrauch des Fernsehers senken, bedeutet aber auch, dass du Funktionen wie Cast und Google Assistant im Stand-by-Modus möglicherweise nicht nutzen kannst."</string>

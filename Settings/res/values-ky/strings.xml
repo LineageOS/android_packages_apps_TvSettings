@@ -16,8 +16,8 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="settings_app_name" msgid="7931201304065140909">"Жөндөөлөр"</string>
-    <string name="launcher_settings_app_name" msgid="1459269619779675736">"Жөндөөлөр"</string>
+    <string name="settings_app_name" msgid="7931201304065140909">"Параметрлер"</string>
+    <string name="launcher_settings_app_name" msgid="1459269619779675736">"Параметрлер"</string>
     <string name="launcher_network_app_name" msgid="8311763462169735002">"Тармак"</string>
     <string name="launcher_restricted_profile_app_name" msgid="3324091425480935205">"Чектелген профиль"</string>
     <string name="general_action_yes" msgid="1303080504548165355">"Ооба"</string>
@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Калыбына келтирүү жана камдык көчүрмөнү сактоо"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Баштапкы абалга кайтаруу"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калибрдөө аяктады"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"Кубатты үнөмдөгүч"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"Эко параметрлери"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Түзмөктөр"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Мазмундун кадрлар жыштыгын дал келтирүү"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Үзгүлтүксүз"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Эгер колдонмо суранса, түзмөгүңүз ойнотулуп жаткан видеонун баштапкы кадрларынын жыштыгын тууралайт. Бул TV үзгүлтүксүз өтүүнү аткара алса гана мүмкүн."</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Туташкан экранда жаңыруу жыштыгына жай которулуу мүмкүн эмес. Бул параметрди иштетүү үчүн колдоого алынган экранга өтүңүз."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Үзгүлтүксүз эмес"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Эгер колдонмо суранса, түзмөгүңүз ойнотулуп жаткан видеонун баштапкы кадрларынын жыштыгын тууралайт. Видеону ойноткучка кирип же чыгып жатканда экран бир секундга өчүп калышы мүмкүн."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Эч качан"</string>
@@ -860,7 +862,7 @@
     <string name="restricted_profile_switch_out" msgid="3589381233390753413">"Чектелген профилден чыгуу"</string>
     <string name="restricted_profile_delete_title" msgid="7153982195273379506">"Чектелген профилди жок кылуу"</string>
     <string name="restricted_profile_create_title" msgid="700322590579894058">"Чектелген профиль түзүү"</string>
-    <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Жөндөөлөр"</string>
+    <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Параметрлер"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Уруксат берилген колдонмолор"</string>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Уруксат бар"</string>
     <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Уруксат жок"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Дисплейди өчүрүү"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"Кубатты үнөмдөгүч жөндөөсүн ырастаңыз"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"Экран <xliff:g id="SLEEP_TIME">%1$s</xliff:g> күйүк бойдон калса, электр кубатын көбүрөөк керектеши мүмкүн"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Кубатты үнөмдөгүч параметрин өчүрүү"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Көрүп жатканда экрандын өчүп калуусунун алдын алуу үчүн ырастаңыз. Бул энергиянын көбүрөөк сарпталышына алып келет."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Иштебей турганда"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Сыналгыны автоматтык түрдө өчүрүү"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Жигерсиз турган сыналгыны автоматтык түрдө өчүрүү"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Көрүп жатканда сыналгыны автоматтык түрдө өчүрүү"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Көшүү режиминде тармакка туташууну чектөө"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Көшүү режиминде электр энергиясын азыраак колдонот"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Көшүү режиминде сыналгыңыз тармактан ажыратылат, бирок автоматтык жаңыртууларды ала берет. Мында сыналгыңыз электр энергиясын азыраак колдонуп, бирок көшүү режиминде Cast жана Google Жардамчы сыяктуу функцияларды колдоно албай калышыңыз мүмкүн."</string>

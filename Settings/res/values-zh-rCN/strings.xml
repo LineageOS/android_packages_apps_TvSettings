@@ -112,7 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"备份和恢复"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"恢复出厂设置"</string>
     <string name="device_calibration" msgid="2907914144048739705">"校准"</string>
-    <string name="device_energy_saver" msgid="1105023232841036991">"节能模式"</string>
+    <!-- no translation found for device_energy_saver (5560942970290949739) -->
+    <skip />
     <string name="device_eco_settings" msgid="8478430139722946388">"节能设置"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"设备"</string>
@@ -154,6 +155,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"匹配内容的帧速率"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"流畅"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"如果应用要求，您的设备会将输出的帧速率调整为您所观看内容的原始帧速率，前提是您的电视可以执行流畅转换。"</string>
+    <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"您连接的显示屏不支持流畅切换刷新率。您需要换用支持该功能的显示屏，此选项才能发挥作用。"</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"非流畅"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"如果应用要求，您的设备会将输出的帧速率调整为您所观看内容的原始帧速率。这样一来，当视频开始播放或结束播放时，屏幕可能会短暂出现空白画面。"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"永不"</string>
@@ -921,8 +923,10 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"关闭显示屏"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="3888708298070409591">"确认节能模式设置"</string>
-    <string name="device_energy_saver_confirmation_text" msgid="1253846259965911752">"让显示屏连续保持开启 <xliff:g id="SLEEP_TIME">%1$s</xliff:g>可能会使耗电量增加"</string>
+    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
+    <skip />
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"停用节能模式设置"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"请确认是否要停用在播放媒体时关闭显示屏的设置，停用此设置可能会使耗电量增加。"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"在闲置时"</string>
@@ -930,6 +934,10 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"自动将电视关机"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"在电视处于闲置状态时自动将其关机"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"在电视播放节目期间自动将其关机"</string>
+    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
+    <skip />
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"在待机模式下限制网络连接"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"待机模式下可减少能耗"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"除非收到自动更新，否则电视在待机模式下会断开网络连接。这可能会减少电视的能耗，但也意味着待机模式下，您可能无法使用投屏和 Google 助理等功能。"</string>
