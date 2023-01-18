@@ -16,6 +16,10 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import static android.view.Display.HdrCapabilities.HDR_TYPE_DOLBY_VISION;
+
+import static com.android.tv.settings.device.displaysound.ResolutionSelectionInfo.HDR_TYPES_ARRAY;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -41,6 +45,7 @@ import com.android.tv.settings.util.ResolutionSelectionUtils;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -60,6 +65,7 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
     private Display.Mode[] mModes;
     private int mUserPreferredModeIndex;
     private PreferenceCategory mResolutionPreferenceCategory;
+    private Display.Mode mAutoMode;
 
     static final Set<Integer> STANDARD_RESOLUTIONS_IN_ORDER = Set.of(2160, 1080, 720, 576, 480);
     static final int DIALOG_TIMEOUT_MILLIS = 12000;
@@ -134,12 +140,14 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         pref.setKey(KEY_RESOLUTION_SELECTION_AUTO);
 
         Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
-        Display.Mode autoMode = display.getSystemPreferredDisplayMode();
+        mAutoMode = display.getSystemPreferredDisplayMode();
         final String summary = getResources().getString(R.string.resolution_display_mode,
                 ResolutionSelectionUtils.getResolutionString(
-                        autoMode.getPhysicalWidth(), autoMode.getPhysicalHeight()),
-                ResolutionSelectionUtils.getRefreshRateString(autoMode.getRefreshRate()));
+                        mAutoMode.getPhysicalWidth(), mAutoMode.getPhysicalHeight()),
+                ResolutionSelectionUtils.getRefreshRateString(mAutoMode.getRefreshRate()));
         pref.setSummary(summary);
+        pref.setFragment(ResolutionSelectionInfo.HDRInfoFragment.class.getName());
+        pref.getExtras().putIntArray(HDR_TYPES_ARRAY, mAutoMode.getSupportedHdrTypes());
         mResolutionPreferenceCategory.addPreference(pref);
 
         for (int i = 0; i < mModes.length; i++) {
@@ -159,6 +167,8 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         pref.setTitle(title);
         pref.setSummary(summary);
         pref.setKey(KEY_RESOLUTION_PREFIX + resolution);
+        pref.setFragment(ResolutionSelectionInfo.HDRInfoFragment.class.getName());
+        pref.getExtras().putIntArray(HDR_TYPES_ARRAY, mode.getSupportedHdrTypes());
         return pref;
     }
 
@@ -189,18 +199,18 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
             selectRadioPreference(preference);
 
             Display.Mode newMode = null;
-            Display.Mode previousMode =
-                    mDisplayManager.getGlobalUserPreferredDisplayMode();
+            Display.Mode previousMode = mDisplayManager.getGlobalUserPreferredDisplayMode();
             if (key.equals(KEY_RESOLUTION_SELECTION_AUTO)) {
                 mDisplayManager.clearGlobalUserPreferredDisplayMode();
             } else if (key.contains(KEY_RESOLUTION_PREFIX)) {
-                int modeIndex = Integer.valueOf(key.substring(KEY_RESOLUTION_PREFIX.length()));
+                int modeIndex = Integer.parseInt(key.substring(KEY_RESOLUTION_PREFIX.length()));
                 newMode = mModes[modeIndex];
                 mDisplayManager.setGlobalUserPreferredDisplayMode(newMode);
             }
+            // if newMode is null, it means it is the automatic mode
+            Display.Mode finalNewMode = Objects.requireNonNullElse(newMode, mAutoMode);
             // Show the dialog after a delay of 1 second. If the dialog or any UX
             // is shown when the resolution change is under process, the dialog is lost.
-            Display.Mode finalNewMode = newMode;
             new Handler().postDelayed(new Runnable() {
                 public void run() {
                     showWarningDialogOnResolutionChange(finalNewMode, previousMode);
@@ -238,11 +248,23 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
 
     private void showWarningDialogOnResolutionChange(
             Display.Mode currentMode, Display.Mode previousMode) {
-        final String dialogDescription =
-                getResources().getString(R.string.resolution_selection_dialog_desc,
-                        ResolutionSelectionUtils.modeToString(currentMode, getContext()));
+        // if previousMode is null, it means it is the automatic mode.
+        // Set it here and not in the caller like the currentMode because we need the null ref in
+        // this method in case the user decides to cancel and revert back to the original mode.
+        // If it is null, it will revert back to the automatic mode which is the correct behavior.
+        // if we actually set it to the correct mode, we will instead revert back to that mode
+        // instead of the automatic mode which wasn't the originally set mode
+        Display.Mode finalPreviousMode = Objects.requireNonNullElse(previousMode, mAutoMode);
+        String resolutionString = ResolutionSelectionUtils.modeToString(currentMode, getContext());
+        boolean dolbyVisionSupportDroppedOnNewMode = !hdrTypesContainsDolbyVision(
+                currentMode.getSupportedHdrTypes())
+                && hdrTypesContainsDolbyVision(finalPreviousMode.getSupportedHdrTypes());
+        final String dialogDescription = descriptionForNewMode(resolutionString,
+                dolbyVisionSupportDroppedOnNewMode);
+        final String title = titleForNewMode(resolutionString, dolbyVisionSupportDroppedOnNewMode);
+
         AlertDialog dialog = new AlertDialog.Builder(getContext())
-                .setTitle(R.string.resolution_selection_dialog_title)
+                .setTitle(title)
                 .setMessage(dialogDescription)
                 .setPositiveButton(
                         R.string.resolution_selection_dialog_ok,
@@ -275,6 +297,7 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
                                 TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) + 1
                         ));
                     }
+
                     @Override
                     public void onFinish() {
                         if (((AlertDialog) dialog).isShowing()) {
@@ -285,5 +308,30 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
             }
         });
         dialog.show();
+    }
+
+    private String titleForNewMode(String resolutionString,
+            boolean dolbyVisionSupportDroppedOnNewMode) {
+        return dolbyVisionSupportDroppedOnNewMode ?
+                getResources().getString(R.string.resolution_selection_with_mode_dialog_title,
+                        resolutionString)
+                : getResources().getString(R.string.resolution_selection_dialog_title);
+
+    }
+
+    private String descriptionForNewMode(String resolutionString,
+            boolean dolbyVisionSupportDroppedOnNewMode) {
+        return dolbyVisionSupportDroppedOnNewMode ?
+                getResources().getString(
+                        R.string.resolution_selection_disabled_dolby_vision_dialog_desc,
+                        resolutionString)
+                : getResources().getString(R.string
+                                .resolution_selection_dialog_desc,
+                        resolutionString);
+    }
+
+    private boolean hdrTypesContainsDolbyVision(int[] hdrTypes) {
+        return Arrays.stream(hdrTypes).anyMatch(
+                hdr -> hdr == HDR_TYPE_DOLBY_VISION);
     }
 }
