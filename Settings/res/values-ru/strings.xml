@@ -112,8 +112,7 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Резервное копирование и восстановление"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Сброс настроек"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калибровка"</string>
-    <!-- no translation found for device_energy_saver (5560942970290949739) -->
-    <skip />
+    <string name="device_energy_saver" msgid="5560942970290949739">"Питание и энергопотребление"</string>
     <string name="device_eco_settings" msgid="8478430139722946388">"Настройки экономичного режима"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Устройства"</string>
@@ -173,6 +172,8 @@
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Выбрать форматы вручную из списка доступных"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"ПОДДЕРЖИВАЕМЫЕ ФОРМАТЫ"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"НЕПОДДЕРЖИВАЕМЫЕ ФОРМАТЫ"</string>
+    <!-- no translation found for hdr_format_sdr (7211377112392255102) -->
+    <skip />
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
@@ -188,7 +189,13 @@
     <string name="resolution_selection_title" msgid="2873993320284587853">"Разрешение"</string>
     <string name="resolution_selection_auto_title" msgid="4738671207331027385">"Автоматически"</string>
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"Разрешение изменено"</string>
+    <!-- no translation found for resolution_selection_with_mode_dialog_title (5011192408613100514) -->
+    <skip />
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Нажмите ОК, чтобы использовать разрешение %1$s."</string>
+    <!-- no translation found for resolution_selection_disabled_dolby_vision_dialog_desc (7952404018654828187) -->
+    <skip />
+    <!-- no translation found for resolution_hdr_description_info (7378290600353021584) -->
+    <skip />
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Отмена"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ОК"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Гц"</string>
@@ -313,6 +320,10 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Этим устройством управляет ваша организация."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Этим устройством управляет <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <!-- no translation found for word_separator (3175619900852797955) -->
+    <skip />
+    <!-- no translation found for space_separator (4169645647388594972) -->
+    <skip />
     <string name="learn_more" msgid="820336467414665686">"Подробнее"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Приложение камеры}one{Приложения камеры}few{Приложения камеры}many{Приложения камеры}other{Приложения камеры}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Календарь"</string>
@@ -923,10 +934,9 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Выключать экран"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <!-- no translation found for device_energy_saver_confirmation_title (7614859812773584773) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_message" msgid="7789453187001013951">"Если оставить телевизор включенным на долгое время, энергопотребление может увеличиться."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Отключите параметр энергосбережения"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Подтвердите изменение, чтобы предотвратить отключение экрана во время просмотра. Возможно, это повлечет увеличение расхода энергии."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"При бездействии"</string>
@@ -934,10 +944,8 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Автоматическое отключение телевизора"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Автоматическое отключение телевизора, если отсутствуют действия"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Автоматическое отключение телевизора при просмотре"</string>
-    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
-    <skip />
+    <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"У таймера \"При бездействии\" значение должно быть меньше, чем у таймера \"При просмотре\""</string>
+    <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"У таймера \"При просмотре\" значение должно быть больше, чем у таймера \"При бездействии\""</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Ограничение сети в режиме ожидания"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Сокращает расход энергии в режиме ожидания"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"В режиме ожидания телевизор отключится от сети, если не запланировано автоматических обновлений системы. Это может уменьшить энергопотребление, но некоторые функции (например, Google Cast и Ассистент) станут недоступны."</string>

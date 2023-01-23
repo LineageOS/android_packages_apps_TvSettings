@@ -112,8 +112,7 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"بیک اپ لیں اور بحال کریں"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"فیکٹری ڈیٹا ری سیٹ"</string>
     <string name="device_calibration" msgid="2907914144048739705">"کیلیبریشن"</string>
-    <!-- no translation found for device_energy_saver (5560942970290949739) -->
-    <skip />
+    <string name="device_energy_saver" msgid="5560942970290949739">"پاور اور توانائی"</string>
     <string name="device_eco_settings" msgid="8478430139722946388">"ایکو کی ترتیبات"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"آلات"</string>
@@ -173,6 +172,7 @@
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"دستیاب فارمیٹس سے دستی طور پر فارمیٹس منتخب کریں"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"تعاون یافتہ فارمیٹس"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"غیر تعاون یافتہ فارمیٹس"</string>
+    <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"+HDR10"</string>
@@ -188,7 +188,10 @@
     <string name="resolution_selection_title" msgid="2873993320284587853">"ریزولیوشن"</string>
     <string name="resolution_selection_auto_title" msgid="4738671207331027385">"خودکار"</string>
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"ریزولیوشن کو تبدیل کر دیا گیا ہے"</string>
+    <string name="resolution_selection_with_mode_dialog_title" msgid="5011192408613100514">"ریزولیوشن کو ‎%1$s میں تبدیل کریں؟"</string>
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"اب سے ‏%1$s کا استعمال کرنے کے لیے \'ٹھیک ہے\' کو منتخب کریں۔"</string>
+    <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"Dolby ویژن ‎%1$s پر تعاون یافتہ نہیں ہے اور \"جدید ترین ڈسپلے کی ترتیبات\" میں غیر فعال ہو جائے گا"</string>
+    <string name="resolution_hdr_description_info" msgid="7378290600353021584">"یہ وضع ‎%1$s کو سپورٹ کرتی ہے۔ کچھ TVs پر، HDR کے مزید فارمیٹس کو فعال کرنے کے لیے آپ کو بہتر کردہ HDMI کو آن کرنا پڑ سکتا ہے۔ یہ دیکھنے کے لیے اپنے TV کی ترتیبات چیک کریں کہ آیا یہ تعاون یافتہ ہے یا نہیں۔"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"منسوخ کریں"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ٹھیک ہے"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
@@ -313,6 +316,8 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"یہ آلہ آپ کی تنظیم کے زیر انتظام ہے۔"</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"یہ آلہ <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> کے زیر انتظام ہے۔"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="word_separator" msgid="3175619900852797955">","</string>
+    <string name="space_separator" msgid="4169645647388594972">" ⁠"</string>
     <string name="learn_more" msgid="820336467414665686">"مزید جانیں"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{کیمرا ایپ}other{کیمرا ایپس}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"کیلنڈر ایپ"</string>
@@ -923,10 +928,8 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ڈسپلے آف کریں"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="7614859812773584773">"پاور اور توانائی کی ترتیب کی تصدیق کریں"</string>
+    <string name="device_energy_saver_confirmation_message" msgid="7789453187001013951">"اپنے TV کو زیادہ وقفے کے لیے آن کر کے چھوڑنے پر توانی کا استعمال بڑھ سکتا ہے"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"توانائی بچانے والی ترتیب کو غیر فعال کریں"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"براہ کرم توثیق کریں کہ دیکھتے ہوئے ڈسپلے کو بند ہونے سے روکیں، جس میں توانائی کے استعمال میں اضافے کا امکان ہے۔"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"غیر فعال ہرنے پر"</string>
@@ -934,10 +937,8 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"خودکار طور پر TV بند کریں"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"غیر فعال ہونے پر خودکار طور پر TV بند کریں"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"دیکھتے وقت خودکار طور پر TV بند کریں"</string>
-    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
-    <skip />
+    <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"\"غیر فعال ہونے کے وقت\" کا ٹائمر \"دیکھنے کے وقت\" کے ٹائمر سے کم ہونا چاہیے"</string>
+    <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\"دیکھنے کے وقت\" کا ٹائمر \"غیر فعال ہونے کے وقت\" کے ٹائمر سے زیادہ ہونا چاہیے"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"اسٹینڈ بائی میں نیٹ ورک کنکشن محدود کریں"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"اسٹینڈ بائی وضع میں کم توانائی استعمال کرتا ہے"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"اسٹینڈ بائی وضع میں ہونے پر سوائے خودکار اپ ڈیٹس موصول کرنے کے، آپ کا TV آپ کے نیٹ ورک سے غیر منسلک ہو جائے گا۔ اس سے آپ کے TV کی توانائی کے استعمال میں کمی واقع ہو سکتی ہے، حالانکہ اس کا مطلب یہ بھی ہے کہ اسٹینڈ بائی میں رہتے ہوئے ہو سکتا ہے کہ آپ Cast اور Google اسسٹنٹ جیسے فنکشنز استعمال کرنے کے قابل نہ ہوں۔"</string>

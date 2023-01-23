@@ -112,8 +112,7 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"バックアップと復元"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"データの初期化"</string>
     <string name="device_calibration" msgid="2907914144048739705">"キャリブレーション"</string>
-    <!-- no translation found for device_energy_saver (5560942970290949739) -->
-    <skip />
+    <string name="device_energy_saver" msgid="5560942970290949739">"電源と省エネ設定"</string>
     <string name="device_eco_settings" msgid="8478430139722946388">"エコ設定"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"デバイス"</string>
@@ -173,6 +172,7 @@
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"利用可能な形式から手動で形式を選択します"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"サポートされている形式"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"サポートされていない形式"</string>
+    <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
@@ -188,7 +188,10 @@
     <string name="resolution_selection_title" msgid="2873993320284587853">"解像度"</string>
     <string name="resolution_selection_auto_title" msgid="4738671207331027385">"自動"</string>
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"解像度を変更しました"</string>
+    <string name="resolution_selection_with_mode_dialog_title" msgid="5011192408613100514">"解像度を %1$s に変更しますか？"</string>
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"これから %1$s を使用するには、[OK] を選択してください。"</string>
+    <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"ドルビー ビジョンは %1$s ではサポートされていないため、[ディスプレイの詳細設定] で無効になります"</string>
+    <string name="resolution_hdr_description_info" msgid="7378290600353021584">"このモードは %1$s をサポートしています。テレビによっては、拡張 HDMI を ON にして他の HDR 形式を有効にする必要があります。テレビの設定で、この機能に対応しているかどうかをご確認ください。"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"キャンセル"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
@@ -313,6 +316,8 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"このデバイスは組織によって管理されています。"</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"このデバイスは <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> により管理されています。"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="word_separator" msgid="3175619900852797955">"、"</string>
+    <string name="space_separator" msgid="4169645647388594972">" ⁠"</string>
     <string name="learn_more" msgid="820336467414665686">"詳細"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{カメラアプリ}other{カメラアプリ}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"カレンダー アプリ"</string>
@@ -923,10 +928,8 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"画面を OFF にする"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="7614859812773584773">"電源と省エネ設定の確認"</string>
+    <string name="device_energy_saver_confirmation_message" msgid="7789453187001013951">"テレビを長時間 ON にしておくと電気使用量が増える可能性があります"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"省エネ設定を無効にする"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"エネルギーの使用が増える可能性あがるため、再生中にディスプレイがオフにならないよう、設定をご確認ください。"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"動作していないとき"</string>
@@ -934,10 +937,8 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"テレビを自動的に OFF にする"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"使用していないときにテレビを自動的に OFF にする"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"視聴時にテレビを自動的に OFF にする"</string>
-    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
-    <skip />
+    <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"[動作していないとき] タイマーは [視聴しているとき] タイマーより短くしてください"</string>
+    <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"[視聴しているとき] タイマーは [動作していないとき] タイマーより長くしてください"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"スタンバイ時のネットワーク接続を制限"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"スタンバイ モード時のエネルギー使用量を節約します"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"スタンバイ モード時は、自動アップデートを受信する場合を除き、テレビとネットワークの接続を解除します。スタンバイ時のテレビのエネルギー使用量を減らせますが、キャストや Google アシスタントなどの機能を利用することはできなくなります。"</string>

@@ -112,8 +112,7 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Нөөцлөх &amp; сэргээх"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Үйлдвэрээс гарсан төлөвт"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Тааруулалт"</string>
-    <!-- no translation found for device_energy_saver (5560942970290949739) -->
-    <skip />
+    <string name="device_energy_saver" msgid="5560942970290949739">"Цэнэг болон Эрчим хүч"</string>
     <string name="device_eco_settings" msgid="8478430139722946388">"Эко тохиргоо"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Төхөөрөмжүүд"</string>
@@ -173,6 +172,8 @@
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Форматуудыг боломжтой форматуудаас гар аргаар сонгох"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"ДЭМЖДЭГ ФОРМАТУУД"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"ДЭМЖДЭГГҮЙ ФОРМАТУУД"</string>
+    <!-- no translation found for hdr_format_sdr (7211377112392255102) -->
+    <skip />
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
@@ -188,7 +189,13 @@
     <string name="resolution_selection_title" msgid="2873993320284587853">"Нягтрал"</string>
     <string name="resolution_selection_auto_title" msgid="4738671207331027385">"Автомат"</string>
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"Нягтралыг өөрчилсөн"</string>
+    <!-- no translation found for resolution_selection_with_mode_dialog_title (5011192408613100514) -->
+    <skip />
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Одооноос %1$s-г ашиглахын тулд OK-г сонгоно уу."</string>
+    <!-- no translation found for resolution_selection_disabled_dolby_vision_dialog_desc (7952404018654828187) -->
+    <skip />
+    <!-- no translation found for resolution_hdr_description_info (7378290600353021584) -->
+    <skip />
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Цуцлах"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Гц"</string>
@@ -313,6 +320,10 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Энэ төхөөрөмжийг таны байгууллага удирдаж байна."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Энэ төхөөрөмжийг <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> удирддаг"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <!-- no translation found for word_separator (3175619900852797955) -->
+    <skip />
+    <!-- no translation found for space_separator (4169645647388594972) -->
+    <skip />
     <string name="learn_more" msgid="820336467414665686">"Дэлгэрэнгүй үзэх"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Камерын апп}other{Камерын аппууд}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Хуанлины апп"</string>
@@ -923,10 +934,9 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Дэлгэцийг унтраах"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <!-- no translation found for device_energy_saver_confirmation_title (7614859812773584773) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_message" msgid="7789453187001013951">"ТВ-гээ удаан хугацаагаар асаалттай орхих нь эрчим хүчний хэрэглээг нэмэгдүүлж болзошгүй"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Эрчим хүч хэмнэгч тохиргоог идэвхгүй болгох"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Үзэж байх явцад дэлгэц унтрахаас сэргийлэхийн тулд баталгаажуулна уу. Энэ нь эрчим хүчний хэрэглээг нэмэгдүүлэх магадлалтай."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Идэвхгүй үед"</string>
@@ -934,10 +944,8 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Зурагт автоматаар унтраах"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Идэвхгүй үед зурагтыг автоматаар унтраах"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Зурагт үзэж байхад автоматаар унтраах"</string>
-    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
-    <skip />
+    <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"\"Идэвхгүй үеийн\" цаг хэмжигч нь \"Үзэх үеийн\" цаг хэмжигчээс богино байх ёстой"</string>
+    <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\"Үзэх үеийн\" цаг хэмжигч нь \"Идэвхгүй үеийн\" цаг хэмжигчээс урт байх ёстой"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Зогсолтод сүлжээний холболтыг хязгаарлах"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Зогсолтын горимд илүү бага эрчим хүч ашиглана"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Зогсолтын горимд байх үед автомат шинэчэлтүүдийг хүлээн авахаас бусад тохиолдолд таны ТВ-ийг сүлжээнээс тань салгана. Энэ нь таны ТВ-ийн эрчим хүчний ашиглалтыг багасгаж магадгүй хэдий ч энэ нь та мөн зогсолтын горимд байх үед Cast болон Google Туслах зэрэг функцийг ашиглах боломжгүй байж магадгүй гэсэн үг юм."</string>

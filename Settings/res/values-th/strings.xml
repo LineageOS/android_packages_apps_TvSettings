@@ -112,8 +112,7 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"การสำรองและคืนค่าข้อมูล"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"รีเซ็ตข้อมูลเป็นค่าเริ่มต้น"</string>
     <string name="device_calibration" msgid="2907914144048739705">"การเทียบมาตรฐาน"</string>
-    <!-- no translation found for device_energy_saver (5560942970290949739) -->
-    <skip />
+    <string name="device_energy_saver" msgid="5560942970290949739">"กำลังไฟฟ้าและพลังงาน"</string>
     <string name="device_eco_settings" msgid="8478430139722946388">"การตั้งค่าอีโค"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"อุปกรณ์"</string>
@@ -173,6 +172,7 @@
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"เลือกรูปแบบด้วยตนเองจากรูปแบบที่พร้อมใช้งาน"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"รูปแบบที่รองรับ"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"รูปแบบที่ไม่รองรับ"</string>
+    <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
@@ -188,7 +188,10 @@
     <string name="resolution_selection_title" msgid="2873993320284587853">"ความละเอียด"</string>
     <string name="resolution_selection_auto_title" msgid="4738671207331027385">"อัตโนมัติ"</string>
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"เปลี่ยนความละเอียดแล้ว"</string>
+    <string name="resolution_selection_with_mode_dialog_title" msgid="5011192408613100514">"เปลี่ยนความละเอียดเป็น %1$s ไหม"</string>
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"เลือก \"ตกลง\" เพื่อเริ่มใช้ %1$s"</string>
+    <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"Dolby Vision ไม่รองรับ %1$s และจะถูกปิดใน \"การตั้งค่าจอแสดงผลขั้นสูง\""</string>
+    <string name="resolution_hdr_description_info" msgid="7378290600353021584">"โหมดนี้รองรับ %1$s ในทีวีบางเครื่อง คุณอาจต้องเปิด HDMI ที่ได้รับการปรับปรุงเพื่อเปิดใช้งานรูปแบบ HDR เพิ่มเติม ไปที่การตั้งค่าของทีวีเพื่อดูว่ารับรองฟีเจอร์นี้ไหม"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"ยกเลิก"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ตกลง"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
@@ -313,6 +316,8 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"อุปกรณ์นี้จัดการโดยองค์กรของคุณ"</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"อุปกรณ์เครื่องนี้จัดการโดย <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="word_separator" msgid="3175619900852797955">","</string>
+    <string name="space_separator" msgid="4169645647388594972">" ⁠"</string>
     <string name="learn_more" msgid="820336467414665686">"ดูข้อมูลเพิ่มเติม"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{แอปกล้อง}other{แอปกล้อง}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"แอปปฏิทิน"</string>
@@ -923,10 +928,8 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"ปิดจอแสดงผล"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="7614859812773584773">"ตรวจสอบการตั้งค่ากำลังไฟฟ้าและพลังงาน"</string>
+    <string name="device_energy_saver_confirmation_message" msgid="7789453187001013951">"การเปิดทีวีทิ้งไว้เป็นเวลานานอาจเพิ่มการใช้พลังงาน"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"ปิดใช้การตั้งค่าโหมดประหยัดพลังงาน"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"โปรดยืนยันเพื่อป้องกันไม่ให้จอแสดงผลปิดขณะรับชม ซึ่งอาจทำให้มีการใช้พลังงานเพิ่มขึ้น"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"เมื่อไม่ได้ใช้งาน"</string>
@@ -934,10 +937,8 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"ปิดทีวีโดยอัตโนมัติ"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"ปิดทีวีโดยอัตโนมัติเมื่อไม่ได้ใช้งาน"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"ปิดทีวีโดยอัตโนมัติเมื่อรับชม"</string>
-    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
-    <skip />
+    <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"ตัวจับเวลา \"เมื่อไม่ได้ใช้งาน\" จะต้องสั้นกว่าตัวจับเวลา \"เมื่อรับชม\""</string>
+    <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"ตัวจับเวลา \"เมื่อรับชม\" ต้องนานกว่าตัวจับเวลา \"เมื่อไม่ได้ใช้งาน\""</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"จำกัดการเชื่อมต่อเครือข่ายในโหมดสแตนด์บาย"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"ใช้พลังงานน้อยลงในโหมดสแตนด์บาย"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"เมื่ออยู่ในโหมดสแตนด์บาย ทีวีจะยกเลิกการเชื่อมต่อกับเครือข่าย ยกเว้นในกรณีที่ต้องรับการอัปเดตอัตโนมัติ การดำเนินการนี้อาจช่วยลดการใช้พลังงานของทีวีได้ แต่เมื่ออยู่ในโหมดสแตนด์บาย คุณก็อาจใช้ฟังก์ชันต่างๆ เช่น แคสต์และ Google Assistant ไม่ได้เช่นกัน"</string>
