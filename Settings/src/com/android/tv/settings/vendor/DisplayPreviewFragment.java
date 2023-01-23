@@ -16,14 +16,18 @@
 
 package com.android.tv.settings.vendor;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+
 import android.content.Intent;
 import android.hardware.display.DisplayManager;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Display;
 
 import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
+import androidx.preference.SwitchPreference;
 
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
@@ -31,6 +35,9 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.customization.CustomizationConstants;
 import com.android.tv.settings.customization.Partner;
 import com.android.tv.settings.customization.PartnerPreferencesMerger;
+import com.android.tv.settings.device.displaysound.PreferredDynamicRangeInfo;
+import com.android.tv.settings.device.displaysound.PreferredDynamicRangeUtils;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.ResolutionSelectionUtils;
 
 import java.util.Objects;
@@ -48,6 +55,7 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
     private static final String KEY_ADVANCED_PICTURE_SETTINGS = "advanced_sound_settings";
     private static final String KEY_VENDOR_PICTURE = "picture_vendor_settings";
     private static final String KEY_VENDOR_SOUND = "sound_vendor_settings";
+    private static final String KEY_DYNAMIC_RANGE = "match_content_dynamic_range";
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
@@ -67,9 +75,22 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
             updateResolutionTitleDescription(ResolutionSelectionUtils.modeToString(
                     mCurrentMode, getContext()));
         } else {
-            removeResolutionPreference();
+            removePreference(findPreference(KEY_RESOLUTION_TITLE));
         }
         updatePictureAndSound();
+        SwitchPreference dynamicRangePreference = findPreference(KEY_DYNAMIC_RANGE);
+        if (mDisplayManager.getSupportedHdrOutputTypes().length == 0) {
+            removePreference(dynamicRangePreference);
+            return;
+        }
+        if (dynamicRangePreference != null) {
+            dynamicRangePreference.setChecked(
+                    PreferredDynamicRangeUtils.getMatchContentDynamicRangeStatus(mDisplayManager));
+        }
+        // Do not show sidebar info texts in case of 1 panel settings.
+        if (FlavorUtils.getFlavor(getContext()) != FLAVOR_CLASSIC) {
+            createInfoFragments();
+        }
     }
 
     @VisibleForTesting
@@ -93,6 +114,16 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
         }
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (TextUtils.equals(preference.getKey(), KEY_DYNAMIC_RANGE)) {
+            final SwitchPreference dynamicPref = (SwitchPreference) preference;
+            PreferredDynamicRangeUtils.setMatchContentDynamicRangeStatus(mDisplayManager,
+                    dynamicPref.isChecked());
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
     private void updateResolutionTitleDescription(String summary) {
         Preference titlePreference = findPreference(KEY_RESOLUTION_TITLE);
         if (titlePreference != null) {
@@ -100,10 +131,9 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
         }
     }
 
-    private void removeResolutionPreference() {
-        Preference resolutionPreference = findPreference(KEY_RESOLUTION_TITLE);
-        if (resolutionPreference != null) {
-            getPreferenceScreen().removePreference(resolutionPreference);
+    private void removePreference(Preference preference) {
+        if (preference != null) {
+            getPreferenceScreen().removePreference(preference);
         }
     }
 
@@ -160,5 +190,13 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
                     && MainFragment.systemIntentIsHandled(getContext(), intent) != null;
         }
         return false;
+    }
+
+    private void createInfoFragments() {
+        Preference dynamicRangePref = findPreference(KEY_DYNAMIC_RANGE);
+        if (dynamicRangePref != null) {
+            dynamicRangePref.setFragment(
+                    PreferredDynamicRangeInfo.MatchContentDynamicRangeInfoFragment.class.getName());
+        }
     }
 }

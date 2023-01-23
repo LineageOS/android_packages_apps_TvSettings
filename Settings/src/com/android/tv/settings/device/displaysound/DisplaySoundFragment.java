@@ -36,6 +36,7 @@ import android.view.Display;
 import androidx.annotation.Keep;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
+import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
 import com.android.tv.settings.R;
@@ -59,6 +60,7 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
     private static final String KEY_DEFAULT_AUDIO_OUTPUT_SETTINGS_SLICE =
             "default_audio_output_settings";
     private static final String KEY_RESOLUTION_TITLE = "resolution_selection";
+    private static final String KEY_DYNAMIC_RANGE = "match_content_dynamic_range";
 
     private AudioManager mAudioManager;
     private HdmiControlManager mHdmiControlManager;
@@ -112,7 +114,21 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
             updateResolutionTitleDescription(ResolutionSelectionUtils.modeToString(
                     mCurrentMode, getContext()));
         } else {
-            removeResolutionPreference();
+            removePreference(findPreference(KEY_RESOLUTION_TITLE));
+        }
+
+        SwitchPreference dynamicRangePreference = findPreference(KEY_DYNAMIC_RANGE);
+        if (mDisplayManager.getSupportedHdrOutputTypes().length == 0) {
+            removePreference(dynamicRangePreference);
+            return;
+        }
+        if (dynamicRangePreference != null) {
+            dynamicRangePreference.setChecked(
+                    PreferredDynamicRangeUtils.getMatchContentDynamicRangeStatus(mDisplayManager));
+        }
+        // Do not show sidebar info texts in case of 1 panel settings.
+        if (FlavorUtils.getFlavor(getContext()) != FLAVOR_CLASSIC) {
+            createInfoFragments();
         }
     }
 
@@ -129,6 +145,11 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
             final TwoStatePreference soundPref = (TwoStatePreference) preference;
             logToggleInteracted(TvSettingsEnums.DISPLAY_SOUND_SYSTEM_SOUNDS, soundPref.isChecked());
             setSoundEffectsEnabled(soundPref.isChecked());
+        }
+        if (TextUtils.equals(preference.getKey(), KEY_DYNAMIC_RANGE)) {
+            final SwitchPreference dynamicPref = (SwitchPreference) preference;
+            PreferredDynamicRangeUtils.setMatchContentDynamicRangeStatus(mDisplayManager,
+                    dynamicPref.isChecked());
         }
         return super.onPreferenceTreeClick(preference);
     }
@@ -207,10 +228,17 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
         }
     }
 
-    private void removeResolutionPreference() {
-        Preference resolutionPreference = findPreference(KEY_RESOLUTION_TITLE);
-        if (resolutionPreference != null) {
-            getPreferenceScreen().removePreference(resolutionPreference);
+    private void removePreference(Preference preference) {
+        if (preference != null) {
+            getPreferenceScreen().removePreference(preference);
+        }
+    }
+
+    private void createInfoFragments() {
+        Preference dynamicRangePref = findPreference(KEY_DYNAMIC_RANGE);
+        if (dynamicRangePref != null) {
+            dynamicRangePref.setFragment(
+                    PreferredDynamicRangeInfo.MatchContentDynamicRangeInfoFragment.class.getName());
         }
     }
 }
