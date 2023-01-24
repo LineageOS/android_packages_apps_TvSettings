@@ -112,8 +112,7 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"백업 및 복원"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"초기화"</string>
     <string name="device_calibration" msgid="2907914144048739705">"보정"</string>
-    <!-- no translation found for device_energy_saver (5560942970290949739) -->
-    <skip />
+    <string name="device_energy_saver" msgid="5560942970290949739">"전원 및 에너지"</string>
     <string name="device_eco_settings" msgid="8478430139722946388">"절전 설정"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"기기"</string>
@@ -173,6 +172,8 @@
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"사용 가능한 형식 중에 직접 선택"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"지원되는 형식"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"지원되지 않는 형식"</string>
+    <!-- no translation found for hdr_format_sdr (7211377112392255102) -->
+    <skip />
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
@@ -188,7 +189,13 @@
     <string name="resolution_selection_title" msgid="2873993320284587853">"해상도"</string>
     <string name="resolution_selection_auto_title" msgid="4738671207331027385">"자동"</string>
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"해상도 변경됨"</string>
+    <!-- no translation found for resolution_selection_with_mode_dialog_title (5011192408613100514) -->
+    <skip />
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"지금부터 %1$s 해상도를 사용하려면 확인을 선택하세요."</string>
+    <!-- no translation found for resolution_selection_disabled_dolby_vision_dialog_desc (7952404018654828187) -->
+    <skip />
+    <!-- no translation found for resolution_hdr_description_info (7378290600353021584) -->
+    <skip />
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"취소"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"확인"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
@@ -313,6 +320,10 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"조직에서 관리하는 기기입니다."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g>에서 관리하는 기기입니다."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <!-- no translation found for word_separator (3175619900852797955) -->
+    <skip />
+    <!-- no translation found for space_separator (4169645647388594972) -->
+    <skip />
     <string name="learn_more" msgid="820336467414665686">"자세히 알아보기"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{카메라 앱}other{카메라 앱}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"캘린더 앱"</string>
@@ -923,10 +934,9 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"화면 끄기"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <!-- no translation found for device_energy_saver_confirmation_title (7614859812773584773) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_message" msgid="7789453187001013951">"TV를 오랫동안 켜 놓으면 에너지 사용량이 증가할 수 있습니다."</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"에너지 절약 모드 설정 끄기"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"영상을 보는 동안 화면이 꺼지지 않도록 설정합니다. 설정하지 않으면 에너지 사용량이 증가할 수 있습니다."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"절전 모드 시"</string>
@@ -934,10 +944,8 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"자동으로 TV 끄기"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"사용 중이 아닐 때 자동으로 TV 끄기"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"시청 중에 자동으로 TV 끄기"</string>
-    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
-    <skip />
+    <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"\'절전 모드 시\' 타이머 시간은 \'시청 시\' 타이머 시간보다 짧아야 합니다."</string>
+    <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\'시청 시\' 타이머 시간은 \'절전 모드 시\' 타이머 시간보다 길어야 합니다."</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"대기 모드에서 네트워크 연결 제한"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"대기 모드에서 전력 사용량이 감소합니다"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"대기 모드에서는 TV가 네트워크에 연결하지 않습니다(자동 업데이트를 수신하는 경우 제외). 이로 인해 TV의 전력 사용량이 감소할 수 있으나 대기 모드에서 Google Cast, Google 어시스턴트와 같은 기능을 사용하지 못할 수 있습니다."</string>
