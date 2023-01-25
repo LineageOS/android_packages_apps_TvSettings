@@ -112,8 +112,7 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Sigurnosna kopija i vraćanje"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Vraćanje na fabričke postavke"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibracija"</string>
-    <!-- no translation found for device_energy_saver (5560942970290949739) -->
-    <skip />
+    <string name="device_energy_saver" msgid="5560942970290949739">"Napajanje i energija"</string>
     <string name="device_eco_settings" msgid="8478430139722946388">"Eko postavke"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Uređaji"</string>
@@ -173,6 +172,7 @@
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Ručno odaberite neke od dostupnih formata"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"PODRŽANI FORMATI"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"NEPODRŽANI FORMATI"</string>
+    <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
@@ -188,7 +188,10 @@
     <string name="resolution_selection_title" msgid="2873993320284587853">"Rezolucija"</string>
     <string name="resolution_selection_auto_title" msgid="4738671207331027385">"Automatski"</string>
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"Rezolucija je promijenjena"</string>
+    <string name="resolution_selection_with_mode_dialog_title" msgid="5011192408613100514">"Promijeniti rezoluciju u %1$s?"</string>
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Odaberite Uredu da ubuduće koristite %1$s."</string>
+    <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"Dolby Vision nije podržan na %1$s i onemogućit će se u meniju \"Napredne postavke ekrana\""</string>
+    <string name="resolution_hdr_description_info" msgid="7378290600353021584">"Ovaj način rada podržava %1$s. Na nekim TV-ima ćete možda morati uključiti Poboljšani HDMI da omogućite više HDR formata. Provjerite postavke TV-a da vidite je li ovo podržano."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Otkaži"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"Uredu"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
@@ -313,6 +316,8 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Ovim uređajem upravlja vaša organizacija."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Ovim uređajem upravlja <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="word_separator" msgid="3175619900852797955">","</string>
+    <string name="space_separator" msgid="4169645647388594972">" ⁠"</string>
     <string name="learn_more" msgid="820336467414665686">"Saznajte više"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Aplikacija za kameru}one{Aplikacije za kameru}few{Aplikacije za kameru}other{Aplikacije za kameru}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Aplikacija za kalendar"</string>
@@ -376,7 +381,7 @@
     <string name="legal_information" msgid="1087445528481370874">"Pravne informacije"</string>
     <string name="copyright_title" msgid="5879660711078649518">"Autorska prava"</string>
     <string name="license_title" msgid="4032466200355435641">"Licenca"</string>
-    <string name="terms_title" msgid="192888187310800678">"Odredbe i uslovi"</string>
+    <string name="terms_title" msgid="192888187310800678">"Uslovi i odredbe"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Sistemske WebView licence"</string>
     <string name="consumer_information_title" msgid="7729729568416672733">"Informacije za potrošače"</string>
     <string name="consumer_information_message" msgid="205236637689468764">"Sadržaj koji se nalazi na Android TV-u pružaju partneri trećih strana kao što su programeri aplikacija i filmski studiji, kao i sam Google. Više informacija potražite na "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
@@ -923,10 +928,8 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Isključi ekran"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="7614859812773584773">"Potvrdite postavku napajanja i energije"</string>
+    <string name="device_energy_saver_confirmation_message" msgid="7789453187001013951">"Ako ostavite TV uključenim duže vrijeme, može doći do povećanja potrošnje energije"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Onemogućite postavku za uštedu energije"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Potvrdite kako biste spriječili da se ekran isključi tokom gledanja, što može povećati potrošnju energije."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Tokom neaktivnosti"</string>
@@ -934,10 +937,8 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Automatski isključite TV"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Automatski isključite TV kada nije aktivan"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Automatski isključite TV kada gledate"</string>
-    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
-    <skip />
+    <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"Tajmer \"Tokom gledanja\" mora kraće trajati od tajmera \"Kada je ne neaktivno\""</string>
+    <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"Tajmer \"Tokom gledanja\" mora duže trajati od tajmera \"Tokom neaktivnosti\""</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Ograniči mrežnu vezu u stanju mirovanja"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Koristi manje energije u načinu rada mirovanja"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"TV će prekinuti vezu s mrežom kada stupi u način rada mirovanja, osim kada prima automatska ažuriranja. Na taj način se može smanjiti potrošnja energije TV-a, ali također nećete moći koristiti funkcije kao što je Emitiranje i Google Asistent dok je u stanju mirovanja."</string>

@@ -112,8 +112,7 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Պահուստավորում և վերականգնում"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Վերակայել բոլոր տվյալները"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Չափաբերում"</string>
-    <!-- no translation found for device_energy_saver (5560942970290949739) -->
-    <skip />
+    <string name="device_energy_saver" msgid="5560942970290949739">"Սնուցում և էներգիա"</string>
     <string name="device_eco_settings" msgid="8478430139722946388">"Էկո ռեժիմի կարգավորումներ"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Սարքեր"</string>
@@ -173,6 +172,8 @@
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Ձեռքով ընտրեք ձևաչափեր հասանելի տարբերակներից"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"ԱՋԱԿՑՎՈՂ ՁԵՎԱՉԱՓԵՐ"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"ՉԱՋԱԿՑՎՈՂ ՁԵՎԱՉԱՓԵՐ"</string>
+    <!-- no translation found for hdr_format_sdr (7211377112392255102) -->
+    <skip />
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
@@ -188,7 +189,13 @@
     <string name="resolution_selection_title" msgid="2873993320284587853">"Լուծաչափ"</string>
     <string name="resolution_selection_auto_title" msgid="4738671207331027385">"Ավտոմատ"</string>
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"Լուծաչափը փոխվել է"</string>
+    <!-- no translation found for resolution_selection_with_mode_dialog_title (5011192408613100514) -->
+    <skip />
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Սեղմեք «Եղավ»՝ %1$s լուծաչափն այս պահից սկսած օգտագործելու համար։"</string>
+    <!-- no translation found for resolution_selection_disabled_dolby_vision_dialog_desc (7952404018654828187) -->
+    <skip />
+    <!-- no translation found for resolution_hdr_description_info (7378290600353021584) -->
+    <skip />
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Չեղարկել"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"Եղավ"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Հց"</string>
@@ -313,6 +320,10 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Այս սարքի կառավարիչը ձեր կազմակերպությունն է։"</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Այս սարքի կառավարիչն է <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> կազմակերպությունը։"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <!-- no translation found for word_separator (3175619900852797955) -->
+    <skip />
+    <!-- no translation found for space_separator (4169645647388594972) -->
+    <skip />
     <string name="learn_more" msgid="820336467414665686">"Մանրամասն"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Տեսախցիկի հավելված}one{Տեսախցիկի հավելված}other{Տեսախցիկի հավելվածներ}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Օրացույցի հավելված"</string>
@@ -923,10 +934,9 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Անջատել էկրանը"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_title (8080594690804254206) -->
+    <!-- no translation found for device_energy_saver_confirmation_title (7614859812773584773) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_message (7789453187001013951) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_message" msgid="7789453187001013951">"Եթե հեռուստացույցը երկար ժամանակ միացված թողնեք, էլեկտրաէներգիայի սպառումը կարող է ավելանալ"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Անջատեք էներգիայի տնտեսման կարգավորումը"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Խնդրում ենք հաստատել, որպեսզի էկրանը չանջատվի դիտման ժամանակ (կարող է ավելի շատ էներգիա սպառվել)։"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Երբ ակտիվ չէ"</string>
@@ -934,10 +944,8 @@
     <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Հեռուստացույցի ավտոմատ անջատում"</string>
     <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Հեռուստացույցի ավտոմատ անջատում ոչ ակտիվ լինելու դեպքում"</string>
     <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Հեռուստացույցի ավտոմատ անջատում դիտելու ընթացքում"</string>
-    <!-- no translation found for device_energy_saver_validation_sleep (7490897287741107840) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_validation_attentive (1461105528087097435) -->
-    <skip />
+    <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"«Անգործունության ժամանակ» ժամաչափը պետք է «Դիտելու ժամանակ» ժամաչափից ավելի կարճ լինի"</string>
+    <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"«Դիտելու ժամանակ» ժամաչափը պետք է «Անգործունության ժամանակ» ժամաչափից ավելի երկար լինի"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Սահմանափակեք կապը սպասման ռեժիմում"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Ավելի քիչ էներգիա օգտագործեք սպասման ռեժիմում"</string>
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Ձեր հեռուստացույցը սպասման ռեժիմում կանջատվի ցանցից՝ բացի այն դեպքերից, երբ ավտոմատ թարմացումներ ստանա։ Հեռուստացույցի կողմից էլեկտրաէներգիայի օգտագործումը կարող է նվազել, սակայն դա նաև նշանակում է, որ հնարավոր է՝ սպասման ռեժիմում դուք չեք կարողանա օգտվել գործառույթներից, ինչպիսիք են հեռարձակումը և Google Օգնականը։"</string>

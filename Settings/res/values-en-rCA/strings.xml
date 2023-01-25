@@ -172,6 +172,7 @@
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Choose formats manually from available formats"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"SUPPORTED FORMATS"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"UNSUPPORTED FORMATS"</string>
+    <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
@@ -187,7 +188,10 @@
     <string name="resolution_selection_title" msgid="2873993320284587853">"Resolution"</string>
     <string name="resolution_selection_auto_title" msgid="4738671207331027385">"Automatic"</string>
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"Resolution has been changed"</string>
+    <string name="resolution_selection_with_mode_dialog_title" msgid="5011192408613100514">"Change resolution to %1$s?"</string>
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Select OK to use %1$s from now on."</string>
+    <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"Dolby Vision is not supported at %1$s and will be disabled in \"Advanced Display Settings\""</string>
+    <string name="resolution_hdr_description_info" msgid="7378290600353021584">"This mode supports %1$s. On some TVs, you may need to turn on Enhanced HDMI to enable more HDR formats. Check your TV settings to see if this is supported."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Cancel"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
@@ -312,6 +316,8 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"This device is managed by your organization."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"This device is managed by <xliff:g id="ORGANIZATION_NAME">%s</xliff:g>."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
+    <string name="word_separator" msgid="3175619900852797955">","</string>
+    <string name="space_separator" msgid="4169645647388594972">" "</string>
     <string name="learn_more" msgid="820336467414665686">"Learn more"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Camera app}other{Camera apps}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Calendar app"</string>
@@ -922,7 +928,7 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"Turn off display"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <string name="device_energy_saver_confirmation_title" msgid="8080594690804254206">"Confirm power &amp; energy setting"</string>
+    <string name="device_energy_saver_confirmation_title" msgid="7614859812773584773">"Confirm Power &amp; Energy setting"</string>
     <string name="device_energy_saver_confirmation_message" msgid="7789453187001013951">"Leaving your TV on for a long period of time may increase energy use"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"Disable energy saver setting"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Please confirm to prevent the display from turning off while watching, which has the potential for increased energy use."</string>
