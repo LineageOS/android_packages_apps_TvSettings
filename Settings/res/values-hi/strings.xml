@@ -172,8 +172,7 @@
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"मौजूदा फ़ॉर्मैट की सूची में से मैन्युअल तौर पर चुनें"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"डिवाइस पर काम करने वाले फ़ॉर्मैट"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"डिवाइस पर काम न करने वाले फ़ॉर्मैट"</string>
-    <!-- no translation found for hdr_format_sdr (7211377112392255102) -->
-    <skip />
+    <string name="hdr_format_sdr" msgid="7211377112392255102">"एसडीआर"</string>
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
     <string name="hdr_format_hlg" msgid="454510079939620321">"HLG"</string>
     <string name="hdr_format_hdr10plus" msgid="4371652089162162876">"HDR10+"</string>
@@ -189,13 +188,10 @@
     <string name="resolution_selection_title" msgid="2873993320284587853">"रिज़ॉल्यूशन"</string>
     <string name="resolution_selection_auto_title" msgid="4738671207331027385">"अपने-आप"</string>
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"रिज़ॉल्यूशन बदल दिया गया है"</string>
-    <!-- no translation found for resolution_selection_with_mode_dialog_title (5011192408613100514) -->
-    <skip />
+    <string name="resolution_selection_with_mode_dialog_title" msgid="5011192408613100514">"क्या रिज़ॉल्यूशन को बदलकर %1$s पर सेट करना है?"</string>
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"अब से %1$s रिज़ॉल्यूशन का इस्तेमाल करने के लिए, \'ठीक है\' चुनें."</string>
-    <!-- no translation found for resolution_selection_disabled_dolby_vision_dialog_desc (7952404018654828187) -->
-    <skip />
-    <!-- no translation found for resolution_hdr_description_info (7378290600353021584) -->
-    <skip />
+    <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"Dolby Vision का इस्तेमाल %1$s में नहीं किया जा सकता. इसे \"Advanced Display Settings\" में बंद कर दिया जाएगा"</string>
+    <string name="resolution_hdr_description_info" msgid="7378290600353021584">"इस मोड में %1$s का इस्तेमाल किया जा सकता है. कुछ टीवी पर, एचडीआर के ज़्यादा फ़ॉर्मैट चालू करने के लिए, बेहतर एचडीएमआई की सेटिंग चालू करने की ज़रूरत होती है. अपने टीवी की सेटिंग में जाकर देखें कि क्या यह विकल्प उपलब्ध है."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"अभी नहीं"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ठीक है"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"हर्ट्ज़"</string>
@@ -320,10 +316,8 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"इस डिवाइस का प्रबंधन आपका संगठन करता है."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> इस डिवाइस को प्रबंधित करता है."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
-    <!-- no translation found for word_separator (3175619900852797955) -->
-    <skip />
-    <!-- no translation found for space_separator (4169645647388594972) -->
-    <skip />
+    <string name="word_separator" msgid="3175619900852797955">","</string>
+    <string name="space_separator" msgid="4169645647388594972">" ⁠"</string>
     <string name="learn_more" msgid="820336467414665686">"ज़्यादा जानें"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{कैमरा ऐप्लिकेशन}one{कैमरा ऐप्लिकेशन}other{कैमरा ऐप्लिकेशन}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"कैलेंडर ऐप्लिकेशन"</string>
@@ -934,8 +928,7 @@
     <string name="device_energy_saver_screen_off" msgid="6908468996426629480">"डिसप्ले बंद करें"</string>
     <!-- no translation found for device_energy_saver_timeout_description (3206609135199137514) -->
     <skip />
-    <!-- no translation found for device_energy_saver_confirmation_title (7614859812773584773) -->
-    <skip />
+    <string name="device_energy_saver_confirmation_title" msgid="7614859812773584773">"पावर और ऊर्जा की सेटिंग की पुष्टि करें"</string>
     <string name="device_energy_saver_confirmation_message" msgid="7789453187001013951">"अपने टीवी को लंबे समय तक चालू रखने पर ऊर्जा की खपत ज़्यादा हो सकती है"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_title" msgid="1468097048101593731">"बैटरी बचाने की सेटिंग बंद करें"</string>
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"कृपया पुष्टि करें कि आपको मीडिया देखते समय, डिसप्ले बंद न होने की सेटिंग चालू करनी है. ध्यान रखें कि ऐसा करने से बैटरी ज़्यादा खर्च हो सकती है."</string>
