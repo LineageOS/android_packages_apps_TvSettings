@@ -147,14 +147,24 @@ public class ShieldMtpActivity extends Activity {
             if (context.getResources().getBoolean(R.bool.has_convertible_port)) {
                 Log.i(ShieldMtpActivity.TAG, "start to initialize USB settings on boot complete.");
                 String currentMode = ConvertiblePort.getConvertiblePortSetting(context);
+
+                if (new File("/proc/device-tree/chosen/nvidia,safe_mode_adb").exists()) {
+                    currentMode = ShieldMtpActivity.DEVICE_MODE;
+                    Log.i(ShieldMtpActivity.TAG, "setting USB as DEVICE on boot due to safe_mode_adb.");
+                } else if (!(currentMode.equals(ShieldMtpActivity.DEVICE_MODE) ||
+                             currentMode.equals(ShieldMtpActivity.HOST_MODE))) {
+                    currentMode = ShieldMtpActivity.HOST_MODE;
+                    Log.i(ShieldMtpActivity.TAG, "setting USB as HOST on boot due to unset property.");
+                }
+
                 if (currentMode.equals(ShieldMtpActivity.HOST_MODE)) {
-                    if (!new File("/proc/device-tree/chosen/nvidia,safe_mode_adb").exists() && !ShieldMtpActivity.setPortMode(context, currentMode, false)) {
+                    if (!ShieldMtpActivity.setPortMode(context, currentMode, false)) {
                         Log.e(ShieldMtpActivity.TAG, "failed to initialize USB as HOST on boot.");
                     }
-                } else if (!currentMode.equals(ShieldMtpActivity.DEVICE_MODE)) {
-                    Log.w(ShieldMtpActivity.TAG, "Invalid system property value: " + currentMode);
-                } else if (!ShieldMtpActivity.setPortMode(context, currentMode, false)) {
-                    Log.e(ShieldMtpActivity.TAG, "failed to initialize USB as DEVICE on boot.");
+                } else if (currentMode.equals(ShieldMtpActivity.DEVICE_MODE)) {
+                    if (!ShieldMtpActivity.setPortMode(context, currentMode, false)) {
+                        Log.e(ShieldMtpActivity.TAG, "failed to initialize USB as DEVICE on boot.");
+                    }
                 }
             }
         }
