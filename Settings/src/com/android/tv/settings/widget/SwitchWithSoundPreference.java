@@ -40,6 +40,9 @@ public class SwitchWithSoundPreference extends SwitchPreference {
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
+        if (mSystemSoundsPlayer == null) {
+            return;
+        }
         // disable default click sound effect played by android.view.View#performClick()
         holder.itemView.setSoundEffectsEnabled(false);
     }
@@ -48,6 +51,9 @@ public class SwitchWithSoundPreference extends SwitchPreference {
     protected void onClick() {
         boolean checkedBeforeClick = isChecked();
         super.onClick();
+        if (mSystemSoundsPlayer == null) {
+            return;
+        }
         if (isChecked() != checkedBeforeClick) {
             if (isChecked()) {
                 mSystemSoundsPlayer.playSoundEffect(SystemSoundsPlayer.FX_SELECT);
