@@ -34,11 +34,11 @@ import android.util.Log;
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.applications.ServiceListing;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.widget.SwitchWithSoundPreference;
 
 import java.util.List;
 
@@ -122,7 +122,8 @@ public class NotificationAccess extends SettingsPreferenceFragment {
                 Log.w(TAG, "can't find package name", e);
             }
             final String summary = service.loadLabel(mPackageManager).toString();
-            final SwitchPreference pref = new SwitchPreference(getPreferenceManager().getContext());
+            final SwitchWithSoundPreference pref = new SwitchWithSoundPreference(
+                    getPreferenceManager().getContext());
             pref.setPersistent(false);
             pref.setIcon(mIconDrawableFactory.getBadgedIcon(service, service.applicationInfo,
                     UserHandle.getUserId(service.applicationInfo.uid)));

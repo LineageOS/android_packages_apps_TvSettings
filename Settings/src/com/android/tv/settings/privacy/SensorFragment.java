@@ -37,12 +37,12 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.device.apps.AppManagementFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.widget.SwitchWithSoundPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,7 +64,7 @@ public class SensorFragment extends SettingsPreferenceFragment {
 
     protected static final String SENSOR_TOGGLE_KEY = "sensor_toggle";
     private PrivacyToggle mToggle;
-    protected SwitchPreference mSensorToggle;
+    protected SwitchWithSoundPreference mSensorToggle;
     private Preference mPhysicalPrivacyEnabledInfo;
 
     private SensorPrivacyManager mSensorPrivacyManager;
@@ -148,7 +148,7 @@ public class SensorFragment extends SettingsPreferenceFragment {
      * one-panel mode).
      */
     private void addSensorToggleWithInfo(PreferenceScreen screen, Context themedContext) {
-        mSensorToggle = new SwitchPreference(themedContext);
+        mSensorToggle = new SwitchWithSoundPreference(themedContext);
         screen.addPreference(mSensorToggle);
         mSensorToggle.setKey(SENSOR_TOGGLE_KEY);
         mSensorToggle.setTitle(mToggle.toggleTitle);

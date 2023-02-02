@@ -24,13 +24,13 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.fuelgauge.PowerAllowlistBackend;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.widget.SwitchWithSoundPreference;
 
 /**
  * Fragment for managing power save allowlist
@@ -82,7 +82,7 @@ public class HighPower extends SettingsPreferenceFragment implements
     @Override
     public Preference bindPreference(@NonNull Preference preference,
             ApplicationsState.AppEntry entry) {
-        final TwoStatePreference switchPref = (SwitchPreference) preference;
+        final TwoStatePreference switchPref = (SwitchWithSoundPreference) preference;
         switchPref.setTitle(entry.label);
         switchPref.setKey(entry.info.packageName);
         switchPref.setIcon(entry.icon);
@@ -121,7 +121,7 @@ public class HighPower extends SettingsPreferenceFragment implements
     @NonNull
     @Override
     public Preference createAppPreference() {
-        return new SwitchPreference(getPreferenceManager().getContext());
+        return new SwitchWithSoundPreference(getPreferenceManager().getContext());
     }
 
     @NonNull

@@ -31,8 +31,22 @@ import com.android.tv.settings.TvSettingsApplication;
 public class SwitchWithSoundPreference extends SwitchPreference {
     private final SystemSoundsPlayer mSystemSoundsPlayer;
 
+    public SwitchWithSoundPreference(Context context, AttributeSet attrs, int defStyleAttr,
+            int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        TvSettingsApplication app = (TvSettingsApplication) context.getApplicationContext();
+        mSystemSoundsPlayer = app.getSystemSoundsPlayer();
+    }
+
+
     public SwitchWithSoundPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
+        TvSettingsApplication app = (TvSettingsApplication) context.getApplicationContext();
+        mSystemSoundsPlayer = app.getSystemSoundsPlayer();
+    }
+
+    public SwitchWithSoundPreference(Context context) {
+        super(context);
         TvSettingsApplication app = (TvSettingsApplication) context.getApplicationContext();
         mSystemSoundsPlayer = app.getSystemSoundsPlayer();
     }
