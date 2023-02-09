@@ -246,9 +246,9 @@
     <!-- Preference which sets the device's display calibration. [CHAR LIMIT=50] -->
     <string name="device_calibration">Calibration</string>
     <!-- Preference which changes energy saver settings. [CHAR LIMIT=50] -->
-    <string name="device_energy_saver">Power &amp; Energy</string>
-    <!-- Preference which changes eco settings. [CHAR LIMIT=50] -->
-    <string name="device_eco_settings">Eco settings</string>
+    <string name="device_energy_saver">Shut-Off Timer</string>
+    <!-- Summary of the preference which changes energy saver settings. [CHAR LIMIT=80] -->
+    <string name="device_energy_saver_summary">Set timers to turn TV off and save energy</string>
     <!-- Preference which shows internal settings. [CHAR LIMIT=50] -->
     <string name="overlay_internal_slice_title"/>
     <string name="overlay_internal_slice_uri" translatable="false"/>
@@ -2772,8 +2772,6 @@
     <!-- Title of power on behavior item [CHAR LIMIT=60] -->
     <string name="power_on_behavior">Power on behavior</string>
     <string name="power_boot_resume_slice_uri" translatable="false" />
-    <!-- Slice Uri for Eco settings [CHAR LIMIT=NONE] -->
-    <string name="eco_settings_slice_uri" translatable="false">content://com.android.tv.settings.device.sliceprovider/eco_settings</string>
     <!-- Title of the Reset section, which lets user select from factory reset or other reset related operations. [CHAR LIMIT=60] -->
     <string name="reset_options_title">Reset</string>
 

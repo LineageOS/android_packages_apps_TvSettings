@@ -60,6 +60,7 @@ import com.android.tv.settings.autofill.AutofillHelper;
 import com.android.tv.settings.customization.CustomizationConstants;
 import com.android.tv.settings.customization.Partner;
 import com.android.tv.settings.customization.PartnerPreferencesMerger;
+import com.android.tv.settings.device.eco.PowerAndEnergyFragment;
 import com.android.tv.settings.inputmethod.InputMethodHelper;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.privacy.PrivacyToggle;
@@ -98,6 +99,8 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
     private static final String KEY_OVERLAY_INTERNAL_SETTINGS_SLICE = "overlay_internal";
     private static final String KEY_ASSISTANT_BROADCAST = "assistant_broadcast";
     private static final String KEY_AMBIENT_SETTINGS = "ambient_settings";
+    private static final String KEY_ENERGY_SAVER = "energysaver";
+    private static final String KEY_POWER_AND_ENERGY = "power_and_energy";
     private static final String RES_TOP_LEVEL_ASSISTANT_SLICE_URI = "top_level_assistant_slice_uri";
 
     private Preference mSoundsPref;
@@ -195,6 +198,7 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
         updateFastpairSettings();
         updateKeyboardAutofillSettings();
         updateAmbientSettings();
+        updatePowerAndEnergySettings();
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS));
         hideIfIntentUnhandled(findPreference(KEY_USAGE));
@@ -405,6 +409,20 @@ public class DevicePrefFragment extends SettingsPreferenceFragment implements
                 ambientSlicePref.setVisible(true);
             }
         }
+    }
+
+    private void updatePowerAndEnergySettings() {
+        final Preference energySaverPref = findPreference(KEY_ENERGY_SAVER);
+        final Preference powerAndEnergyPref = findPreference(KEY_POWER_AND_ENERGY);
+
+        if (energySaverPref == null || powerAndEnergyPref == null) {
+            return;
+        }
+
+        boolean showPowerAndEnergy =
+                !PowerAndEnergyFragment.hasOnlyEnergySaverPreference(getContext());
+        powerAndEnergyPref.setVisible(showPowerAndEnergy);
+        energySaverPref.setVisible(!showPowerAndEnergy);
     }
 
     @Override
