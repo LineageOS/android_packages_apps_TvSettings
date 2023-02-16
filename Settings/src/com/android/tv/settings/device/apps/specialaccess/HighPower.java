@@ -53,7 +53,8 @@ public class HighPower extends SettingsPreferenceFragment implements
                         @Override
                         public boolean filterApp(ApplicationsState.AppEntry info) {
                             info.extraInfo =
-                                    mPowerAllowlistBackend.isAllowlisted(info.info.packageName);
+                                    mPowerAllowlistBackend.isAllowlisted(
+                                            info.info.packageName, info.info.uid);
                             return !ManageAppOp.shouldIgnorePackage(getContext(),
                                     info.info.packageName, 0);
                         }
@@ -99,19 +100,19 @@ public class HighPower extends SettingsPreferenceFragment implements
                 } else {
                     mPowerAllowlistBackend.addApp(pkg);
                 }
-                updateSummary(pref);
+                updateSummary(pref, entry.info.uid);
                 return true;
             });
         }
-        updateSummary(switchPref);
+        updateSummary(switchPref, entry.info.uid);
         return switchPref;
     }
 
-    private void updateSummary(Preference preference) {
+    private void updateSummary(Preference preference, int uid) {
         final String pkg = preference.getKey();
         if (mPowerAllowlistBackend.isSysAllowlisted(pkg)) {
             preference.setSummary(R.string.high_power_system);
-        } else if (mPowerAllowlistBackend.isAllowlisted(pkg)) {
+        } else if (mPowerAllowlistBackend.isAllowlisted(pkg, uid)) {
             preference.setSummary(R.string.high_power_on);
         } else {
             preference.setSummary(R.string.high_power_off);
