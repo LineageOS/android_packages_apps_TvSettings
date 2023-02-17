@@ -360,6 +360,16 @@
     <string name="advanced_sound_settings_title">Advanced sound settings</string>
     <!-- Title for preference to allow game mode for display. [CHAR LIMIT=50] -->
     <string name="game_mode_title">Allow game mode</string>
+    <!-- Title for preference for disabling/enabling HDR conversion. [CHAR LIMIT=120] -->
+    <string name="match_content_dynamic_range_title">Match content dynamic range</string>
+    <!-- Summary for preference for disabling/enabling HDR conversion. [CHAR LIMIT=500] -->
+    <string name="match_content_dynamic_range_summary">When enabling this option, the system will
+        switch between different dynamic range formats to match the content. This may cause a black
+        screen during a format switch.\n\nClick Advanced Display settings for more dynamic range
+        options.
+    </string>
+    <!-- Title for preference for HDR conversion. [CHAR LIMIT=120] -->
+    <string name="preferred_dynamic_range_title">Preferred dynamic range</string>
     <!-- Title for preference for forcing a display's frame
     rate to match the content's frame rate. [CHAR LIMIT=60] -->
     <string name="match_content_frame_rate_title">Match content frame rate</string>
