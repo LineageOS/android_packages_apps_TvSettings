@@ -151,6 +151,9 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Definições de som avançadas"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Permitir modo de jogo"</string>
+    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Faça a correspondência com a amplitude dinâmica do conteúdo"</string>
+    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Ao ativar esta opção, o sistema vai alternar entre diferentes formatos de amplitude dinâmica para corresponder ao conteúdo. Isto pode resultar num ecrã preto durante uma mudança de formato.\n\nClique em Definições de visualização avançadas para obter mais opções de amplitude dinâmica."</string>
+    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Amplitude dinâmica preferida"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Igualar a velocidade de frames do conteúdo"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Sem interrupções"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Se a app o solicitar, o dispositivo irá fazer corresponder a respetiva saída à velocidade de frames original do conteúdo que está a ver APENAS se a sua TV conseguir efetuar uma transição sem interrupções."</string>
@@ -218,11 +221,11 @@
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Foi encontrado um dispositivo e será automaticamente sincronizado dentro de <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Esta ação não é suportada"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Pedido de sincronização de Bluetooth"</string>
-    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, certifique-se de que apresenta esta chave de acesso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
+    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, certifique-se de que apresenta esta token de acesso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Sincronizar com este dispositivo?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Introduza no dispositivo: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt; e, em seguida, prima Enter."</string>
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza o PIN obrigatório do dispositivo:"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza a chave de acesso obrigatória do dispositivo:"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza a token de acesso obrigatória do dispositivo:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Geralmente, 0000 ou 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Sincronizar"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancelar"</string>
@@ -738,16 +741,16 @@
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Pretende reiniciar agora?"</string>
     <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"Para alterar esta definição, é necessário reiniciar o dispositivo"</string>
     <string name="system_never_check" msgid="2860070727606369055">"Nunca verificar"</string>
-    <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Verificar apenas conteúdo DRM"</string>
-    <string name="system_always_check" msgid="384870282800221580">"Verificar sempre"</string>
+    <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Rever apenas conteúdo DRM"</string>
+    <string name="system_always_check" msgid="384870282800221580">"Rever sempre"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Registo HCI Bluetooth"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Endereço de email"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"Depuração USB"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Permitir locais fictícios"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Selecionar app a depurar"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Aguardar pelo depurador"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Verificar apps por USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Verificar se existem comportamentos prejudiciais nas aplicações instaladas via ADB/ADT"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Rever apps por USB"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Rever se existem comportamentos prejudiciais nas aplicações instaladas via ADB/ADT"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Registo detalhado de Wi-Fi"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Ativar o registo detalhado de Wi-Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Apresentar toques"</string>
