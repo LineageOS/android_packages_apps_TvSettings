@@ -151,6 +151,12 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Avancerade ljudinställningar"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Tillåt spelläge"</string>
+    <!-- no translation found for match_content_dynamic_range_title (2794980556561655838) -->
+    <skip />
+    <!-- no translation found for match_content_dynamic_range_summary (2255683926227355398) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_title (5064883672337010588) -->
+    <skip />
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Matcha innehållets bildfrekvens"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Sömlöst"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Om appen begär det matchar enheten utdatan med den ursprungliga bildfrekvensen av det du tittar på, ENDAST om tv:n har stöd för sömlös övergång."</string>
@@ -384,7 +390,7 @@
     <string name="terms_title" msgid="192888187310800678">"Användarvillkor"</string>
     <string name="webview_license_title" msgid="5370270485188947540">"Systemet WebView-licens"</string>
     <string name="consumer_information_title" msgid="7729729568416672733">"Konsumentinformation"</string>
-    <string name="consumer_information_message" msgid="205236637689468764">"Innehållet som finns på Android TV tillhandahålls både av Google och av tredjepartspartner såsom apputvecklare och filmbolag. Du hittar mer information på "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
+    <string name="consumer_information_message" msgid="205236637689468764">"Innehållet som finns på Android TV tillhandahålls både av Google och av tredjepartspartners såsom apputvecklare och filmbolag. Du hittar mer information på "<a href="g.co/tv/androidtvinfo">"g.co/tv/androidtvinfo"</a></string>
     <string name="consumer_information_button_ok" msgid="6979480064600038080">"OK"</string>
   <string-array name="wifi_signal_strength">
     <item msgid="4475363344103354364">"Dålig"</item>
@@ -934,9 +940,9 @@
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"Bekräfta att skärmen inte ska inaktiveras medan du tittar på något. Detta kan leda till ökad energiförbrukning."</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"Vid inaktivitet"</string>
     <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"Vid uppspelning"</string>
-    <string name="device_energy_saver_category_title" msgid="2604826113821035545">"Stäng av tv:n automatiskt"</string>
-    <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="1223814536589471788">"Stäng av tv:n automatiskt när den är inaktiv"</string>
-    <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="1654557070579253248">"Stäng av tv:n automatiskt när du tittar"</string>
+    <string name="device_energy_saver_category_title" msgid="170076161677525986">"Stäng av automatiskt"</string>
+    <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="6588352532253294558">"Stäng av automatiskt vid inaktivitet"</string>
+    <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="3273988875711109352">"Stäng av automatiskt vid uppspelning"</string>
     <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"Timern för Vid inaktivitet måste vara kortare än timern för Vid uppspelning"</string>
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"Timern för Vid uppspelning måste vara längre än timern för Vid inaktivitet"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Begränsa nätverksanslutning i viloläge"</string>
