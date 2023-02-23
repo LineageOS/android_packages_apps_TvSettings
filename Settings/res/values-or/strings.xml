@@ -151,6 +151,9 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"ଉନ୍ନତ ସାଉଣ୍ଡ ସେଟିଂସ"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"ଗେମ୍ ମୋଡକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"ବିଷୟବସ୍ତୁର ଡାଇନାମିକ ରେଞ୍ଜ ମେଳ କରନ୍ତୁ"</string>
+    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"ଏହି ବିକଳ୍ପକୁ ସକ୍ଷମ କରିବା ସମୟରେ ବିଷୟବସ୍ତୁ ମେଳ କରିବା ପାଇଁ ଏହି ସିଷ୍ଟମଟି ବିଭିନ୍ନ ଡାଇନାମିକ ରେଞ୍ଜ ଫର୍ମାଟ ମଧ୍ୟରେ ସ୍ୱିଚ କରିବ। ଏକ ଫର୍ମାଟ ସ୍ୱିଚ ସମୟରେ ଏହା ଯୋଗୁଁ ସ୍କ୍ରିନ କଳା ହୋଇପାରେ।\n\nଅଧିକ ଡାଇନାମିକ ରେଞ୍ଜ ବିକଳ୍ପ ପାଇଁ ଉନ୍ନତ ଡିସପ୍ଲେ ସେଟିଂସରେ କ୍ଲିକ କରନ୍ତୁ।"</string>
+    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"ପସନ୍ଦର ଡାଇନାମିକ ରେଞ୍ଜ"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"ବିଷୟବସ୍ତୁ ଫ୍ରେମ୍ ରେଟ୍ ମେଳ କରନ୍ତୁ"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"ବାଧାହୀନ"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"ଯଦି ଆପଟି ଏଥିପାଇଁ ଅନୁରୋଧ କରେ, ତେବେ ଆପଣଙ୍କ ଟିଭି ବାଧାହୀନ ଟ୍ରାଞ୍ଜିସନ୍ ସମ୍ପାଦନ କରିପାରିଲେ ହିଁ କେବଳ ଆପଣଙ୍କ ଡିଭାଇସ୍ ଆପଣ ଦେଖୁଥିବା ବିଷୟବସ୍ତୁର ମୂଳ ଫ୍ରେମ୍ ରେଟ୍ ସହ ତାହାର ଆଉଟପୁଟକୁ ମେଳ କରିବ।"</string>
@@ -934,12 +937,9 @@
     <string name="device_energy_saver_disable_allow_turning_screen_off_text" msgid="6334963903866002164">"ଏନର୍ଜି ବ୍ୟବହାର ବଢ଼ାଇବାର ସାମର୍ଥ୍ୟ ଥିବା ମିଡ଼ିଆ ପ୍ଲେବ୍ୟାକ ଦେଖିବା ସମୟରେ ଡିସପ୍ଲେ ବନ୍ଦ ହେବାରୁ ପ୍ରତିରୋଧ କରିବାକୁ ଦୟାକରି ସୁନିଶ୍ଚିତ କରନ୍ତୁ।"</string>
     <string name="device_energy_saver_sleep_timeout" msgid="1841900768718452039">"ନିଷ୍କ୍ରିୟ ଥିବା ସମୟରେ"</string>
     <string name="device_energy_saver_attentive_timeout" msgid="3649486668821348087">"ଦେଖିବା ସମୟରେ"</string>
-    <!-- no translation found for device_energy_saver_category_title (170076161677525986) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_sleep_timeout_dialog_title (6588352532253294558) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_attentive_timeout_dialog_title (3273988875711109352) -->
-    <skip />
+    <string name="device_energy_saver_category_title" msgid="170076161677525986">"ସ୍ୱତଃ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <string name="device_energy_saver_sleep_timeout_dialog_title" msgid="6588352532253294558">"ନିଷ୍କ୍ରିୟ ଥିବା ସମୟରେ ସ୍ୱତଃ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <string name="device_energy_saver_attentive_timeout_dialog_title" msgid="3273988875711109352">"ଦେଖିବା ସମୟରେ ସ୍ୱତଃ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"\"ନିଷ୍କ୍ରିୟ ଥିବା ସମୟରେ\" ଟାଇମର \"ଦେଖିବା ସମୟରେ\" ଟାଇମର ଅପେକ୍ଷା କମ ସମୟର ହେବା ଆବଶ୍ୟକ"</string>
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\"ଦେଖିବା ସମୟରେ\" ଟାଇମର \"ନିଷ୍କ୍ରିୟ ଥିବା ସମୟରେ\" ଟାଇମର ଅପେକ୍ଷା ଅଧିକ ସମୟର ହେବା ଆବଶ୍ୟକ"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"ଷ୍ଟାଣ୍ଡବାଏରେ ନେଟୱାର୍କ କନେକ୍ସନକୁ ସୀମିତ କର"</string>
