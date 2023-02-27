@@ -118,8 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <!-- no translation found for surround_sound_format_dts_uhd (4340749818133578788) -->
-    <skip />
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos, Dolby TrueHD-rekin"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos, Dolby Digital Plus-ekin"</string>
@@ -283,7 +282,7 @@
     <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Azken segurtasun-erregistroa"</string>
     <string name="enterprise_privacy_none" msgid="6660670916934417519">"Bat ere ez"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7244796629052581085">"Instalatutako aplikazioak"</string>
-    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Gutxi gorabeherakoa da aplikazio kopurua. Baliteke Play Store-tik instalatu ez diren aplikazioak kontuan ez izatea."</string>
+    <string name="enterprise_privacy_apps_count_estimation_info" msgid="3875568975752197381">"Aplikazio kopurua estimazio bat da. Baliteke Play Store-tik instalatu ez diren aplikazioak kontuan ez izatea."</string>
     <string name="enterprise_privacy_number_packages_lower_bound" msgid="4518330667109848939">"{count,plural, =1{Gutxienez # aplikazio}other{Gutxienez # aplikazio}}"</string>
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Kokapena hautemateko baimenak"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Mikrofonoa erabiltzeko baimenak"</string>
@@ -590,18 +589,18 @@
     <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Ez dute atzitu azkenaldian"</string>
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Ikusi guztiak"</string>
     <string name="microphone" msgid="7893752847683941214">"Mikrofonoa"</string>
-    <string name="mic_toggle_title" msgid="7193417007060235665">"Mikrofonoa atzitzeko baimena"</string>
+    <string name="mic_toggle_title" msgid="7193417007060235665">"Mikrofonoa erabiltzeko baimena"</string>
     <string name="open_mic_permissions" msgid="8121871594807641073">"Aplikazioen mikrofono-atzitzeak"</string>
     <string name="microphone_physical_privacy_enabled_title" msgid="6135130916399886772">"Mikrofonorako sarbidea blokeatuta dago"</string>
     <string name="microphone_physical_privacy_enabled_text" msgid="401238365312924088">"Hura desblokeatzeko, ezarri gailuaren pribatutasun-etengailua mikrofonoa aktibatuta egon dadin, kamerarako sarbidea emateko."</string>
     <string name="camera" msgid="1226671478936288283">"Kamera"</string>
-    <string name="camera_toggle_title" msgid="5566469574224956142">"Kamera atzitzeko baimena"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"Kamera erabiltzeko baimena"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"Aplikazioen kamera-atzitzeak"</string>
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Kamerarako sarbidea blokeatuta dago"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Hura desblokeatzeko, ezarri gailuaren pribatutasun-etengailua kamera aktibatuta egon dadin, kamerarako sarbidea emateko."</string>
-    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofonoa atzitzeko baimena: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofonoa erabiltzeko baimena: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="mic_toggle_info_content" msgid="4699624900513326055">"Aktibatuta dagoenean, gailu honetako edozein mikrofono atzitu ahalko dute horretarako baimena daukaten aplikazio eta zerbitzu guztiek.\n\nEzarpen honek ez die eragingo protokolo pertsonalizatu bat daukaten audio-gailu periferikoei."</string>
-    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kamera atzitzeko baimena: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
+    <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kamera erabiltzeko baimena: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Aktibatuta dagoenean, gailu honetako edozein kamera atzitu ahalko dute horretarako baimena daukaten aplikazio eta zerbitzu guztiek.\n\nEzarpen honek ez die eragingo protokolo pertsonalizatu bat daukaten kamera periferikoei."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"aktibatuta"</string>
     <string name="sensor_toggle_info_off" msgid="7546772458177469821">"desaktibatuta"</string>
@@ -964,7 +963,7 @@
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Eman pantaila txiki gainjarria erabiltzeko baimena"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Ez dago instalatuta pantaila txiki gainjarriarekin bateragarria den aplikaziorik"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Eman pantaila txiki gainjarri bat sortzeko baimena aplikazioei, aplikazioa irekita dagoenean nahiz hartatik irtetean (adibidez, bideoak ikusten jarraitzeko). Erabiltzen ari zaren beste aplikazioen gaienean erakutsiko da leiho hori."</string>
-    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Eman alarmak ezartzeko eta orduaren araberako beste ekintza batzuk programatzeko baimena aplikazioei. Hala, aplikazioek atzeko planoan funtzionatuko dute, eta litekeena da bateria gehiago kontsumitzea.\n\nEz baduzu ematen baimen hori, ez dute funtzionatuko aplikazio horien bidez programatutako alarmek eta orduaren araberako ekintzek."</string>
+    <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Eman alarmak ezartzeko eta orduaren araberako beste ekintza batzuk programatzeko baimena aplikazioei. Hala, aplikazioek atzeko planoan funtzionatuko dute, eta litekeena da bateria gehiago kontsumitzea.\n\nBaimen hori ematen ez baduzu, ez dute funtzionatuko aplikazio horien bidez programatutako alarmek eta orduaren araberako ekintzek."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Piztu pantaila"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"Eman pantaila pizteko baimena"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Eman pantaila pizteko baimena aplikazioei. Baimena emanez gero, aplikazioek edonoiz piztu ahal izango dute pantaila, zuk halako asmorik izan ez arren."</string>
