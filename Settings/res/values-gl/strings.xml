@@ -118,7 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos con Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Se queres utilizar %1$s a partir de agora, selecciona Aceptar."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Cancelar"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"Aceptar"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Queres borrar os datos da caché?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Isto borrará datos da caché para as aplicacións"</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -275,7 +276,7 @@
     <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"O teu acceso a este dispositivo"</string>
     <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"Datos asociados coa túa conta do traballo, como o correo electrónico e o calendario"</string>
     <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"Lista das aplicacións do teu dispositivo"</string>
-    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Cantidade de tempo investido e datos consumidos en cada aplicación"</string>
+    <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"Tempo de uso e datos consumidos para cada aplicación"</string>
     <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"Rexistro do tráfico de rede máis recente"</string>
     <string name="enterprise_privacy_bug_reports" msgid="2393617117911211486">"Informe de erros máis recente"</string>
     <string name="enterprise_privacy_security_logs" msgid="2573545327989145361">"Rexistro de seguranza máis recente"</string>
@@ -333,8 +334,8 @@
     <string name="about_build" msgid="8467840394761634575">"Compilación do sistema operativo de Android TV"</string>
     <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Agora estás a # paso de converterte na persoa encargada de programar}other{Agora estás a # pasos de converterte na persoa encargada de programar}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Anuncios"</string>
-    <string name="ads_description" msgid="8081069475265061074">"Xestiona a túa configuración de anuncios. Aquí poderás, por exemplo, restablecer o teu código de identificación de publicidade."</string>
-    <string name="ads_content_description" msgid="1006489792324920289">"Anuncios. Xestiona a túa configuración de anuncios. Aquí poderás, por exemplo, restablecer o teu código de identificación de publicidade."</string>
+    <string name="ads_description" msgid="8081069475265061074">"Xestiona a túa configuración de anuncios. Aquí poderás, por exemplo, restablecer o teu identificador de publicidade."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Anuncios. Xestiona a túa configuración de anuncios. Aquí poderás, por exemplo, restablecer o teu identificador de publicidade."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Agora xa es programador."</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Non é necesario, xa es un programador"</string>
     <string name="device_info_default" msgid="2374506935205518448">"Descoñecido"</string>
@@ -918,7 +919,7 @@
     <string name="change_setting" msgid="7211706374208138343">"Cambiar"</string>
     <string name="keep_settings" msgid="703474489210093961">"Non cambiar"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"Permisos"</string>
-    <string name="device_apps_permissions" msgid="8421323706003063878">"Permisos aplicacións"</string>
+    <string name="device_apps_permissions" msgid="8421323706003063878">"Permisos de aplicacións"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_0">%1$d</xliff:g> de <xliff:g id="COUNT_1">%2$d</xliff:g> aplicacións con permiso"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Solicitude de permiso de Bluetooth"</string>
     <string name="security_patch" msgid="8924741264829495392">"Nivel de parche de seguranza do SO de Android TV"</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Acendido e enerxía"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Comportamento do acendido"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Restablecemento"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Código de vinculación de Ethernet"</string>
 </resources>

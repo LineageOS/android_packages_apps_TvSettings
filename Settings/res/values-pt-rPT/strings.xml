@@ -118,7 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos com Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos com Dolby Digital Plus"</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Selecione OK para utilizar %1$s a partir de agora."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Cancelar"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Pretende limpar os dados em cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Isto limpa os dados em cache de todas as app"</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -207,11 +208,11 @@
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Foi encontrado um dispositivo e será automaticamente sincronizado dentro de <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Esta ação não é suportada"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Pedido de sincronização de Bluetooth"</string>
-    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, certifique-se de que apresenta esta chave de acesso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
+    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, certifique-se de que apresenta esta token de acesso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Sincronizar com este dispositivo?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Introduza no dispositivo: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt; e, em seguida, prima Enter."</string>
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza o PIN obrigatório do dispositivo:"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza a chave de acesso obrigatória do dispositivo:"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza a token de acesso obrigatória do dispositivo:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Geralmente, 0000 ou 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Sincronizar"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancelar"</string>
@@ -385,8 +386,8 @@
     <string name="title_signal_strength" msgid="5047116893338315998">"Intensidade do sinal"</string>
     <string name="title_random_mac_settings" msgid="6685812569356353378">"Privacidade"</string>
   <string-array name="random_mac_settings_entries">
-    <item msgid="3457228452595715533">"Utilizar MAC aleatório (predefinição)"</item>
-    <item msgid="2490415280467390067">"Utilizar MAC do dispositivo"</item>
+    <item msgid="3457228452595715533">"Usar MAC aleatório (predefinição)"</item>
+    <item msgid="2490415280467390067">"Usar MAC do dispositivo"</item>
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"Não disponível"</string>
     <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"MAC aleatório"</string>
@@ -696,16 +697,16 @@
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Pretende reiniciar agora?"</string>
     <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"Para alterar esta definição, é necessário reiniciar o dispositivo"</string>
     <string name="system_never_check" msgid="2860070727606369055">"Nunca verificar"</string>
-    <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Verificar apenas conteúdo DRM"</string>
-    <string name="system_always_check" msgid="384870282800221580">"Verificar sempre"</string>
+    <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Rever apenas conteúdo DRM"</string>
+    <string name="system_always_check" msgid="384870282800221580">"Rever sempre"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Registo HCI Bluetooth"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Endereço de email"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"Depuração USB"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Permitir locais fictícios"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Selecionar app a depurar"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Aguardar pelo depurador"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Verificar apps por USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Verificar se existem comportamentos prejudiciais nas aplicações instaladas via ADB/ADT"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Rever apps por USB"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Rever se existem comportamentos prejudiciais nas aplicações instaladas via ADB/ADT"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Registo detalhado de Wi-Fi"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Ativar o registo detalhado de Wi-Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Apresentar toques"</string>
@@ -871,7 +872,7 @@
     <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"Origem de terceiros"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"Autorizações"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"Aplicação indisponível"</string>
-    <string name="unused_apps" msgid="5539166745483454543">"Apps não utilizadas"</string>
+    <string name="unused_apps" msgid="5539166745483454543">"Apps não usadas"</string>
     <string name="settings_ok" msgid="5950888975075541964">"OK"</string>
     <string name="settings_confirm" msgid="4489126458677153411">"Confirmar"</string>
     <string name="settings_cancel" msgid="576094334743686152">"Cancelar"</string>
@@ -900,7 +901,7 @@
     <string name="factory_reset_description" msgid="6697396335158766785">"Esta ação restaura as predefinições do seu dispositivo e apaga todos os dados, contas, ficheiros e apps transferidas."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Esta ação restaura as predefinições do seu dispositivo e apaga todos os dados, contas, ficheiros e apps transferidas."</string>
     <string name="factory_reset_content_description" msgid="1677022688420116803">"Reposição de fábrica, Esta ação restaura as predefinições do seu dispositivo e apaga todos os dados, contas, ficheiros e apps transferidas."</string>
-    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Pretende apagar todas as informações pessoais e apps transferidas neste dispositivo? Não é possível reverter esta ação."</string>
+    <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Apagar todas as informações pessoais e apps transferidas neste dispositivo? Não é possível reverter esta ação."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Apagar tudo"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"Escolha um nome para o seu <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="select_device_name_description" msgid="8528185095614986580">"Atribua um nome ao seu dispositivo para ser mais fácil identificá-lo aquando da transmissão ou ligação ao mesmo a partir de outros dispositivos."</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Alimentação e energia"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Comportamento ao ligar"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Reposição"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Código de sincronização da Ethernet"</string>
 </resources>
