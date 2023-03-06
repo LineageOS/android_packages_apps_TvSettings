@@ -83,10 +83,6 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
             removePreference(dynamicRangePreference);
             return;
         }
-        if (dynamicRangePreference != null) {
-            dynamicRangePreference.setChecked(
-                    PreferredDynamicRangeUtils.getMatchContentDynamicRangeStatus(mDisplayManager));
-        }
         // Do not show sidebar info texts in case of 1 panel settings.
         if (FlavorUtils.getFlavor(getContext()) != FLAVOR_CLASSIC) {
             createInfoFragments();
@@ -122,6 +118,16 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
                     dynamicPref.isChecked());
         }
         return super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
+    public void onResume() {
+        SwitchPreference dynamicRangePreference = findPreference(KEY_DYNAMIC_RANGE);
+        if (dynamicRangePreference != null) {
+            dynamicRangePreference.setChecked(
+                    PreferredDynamicRangeUtils.getMatchContentDynamicRangeStatus(mDisplayManager));
+        }
+        super.onResume();
     }
 
     private void updateResolutionTitleDescription(String summary) {
