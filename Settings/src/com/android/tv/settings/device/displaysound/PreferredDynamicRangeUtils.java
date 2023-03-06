@@ -16,8 +16,13 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import static android.view.Display.HdrCapabilities.HDR_TYPE_DOLBY_VISION;
+
 import android.hardware.display.DisplayManager;
 import android.hardware.display.HdrConversionMode;
+import android.view.Display;
+
+import java.util.Arrays;
 
 /**
  * Helper methods to set and get dynamic range setting.
@@ -40,5 +45,21 @@ public class PreferredDynamicRangeUtils {
                 : new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_SYSTEM);
 
         displayManager.setHdrConversionMode(mode);
+    }
+
+    /** Returns if Dolby vision is supported by the device */
+    public static boolean isDolbyVisionSupported(Display.Mode[] modes) {
+        for (int i = 0; i < modes.length; i++) {
+            if (isDolbyVisionSupported(modes[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** Returns if Dolby vision is supported by the device in case of a specific mode */
+    public static boolean isDolbyVisionSupported(Display.Mode mode) {
+        return Arrays.stream(mode.getSupportedHdrTypes()).anyMatch(
+                hdr -> hdr == HDR_TYPE_DOLBY_VISION);
     }
 }
