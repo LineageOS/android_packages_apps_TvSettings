@@ -722,7 +722,7 @@
             android:showWhenLocked="true"
             android:taskAffinity=""
             android:turnScreenOn="true">
-            <intent-filter>
+            <intent-filter android:priority="1">
                 <action android:name="com.google.android.intent.action.CONNECT_INPUT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
