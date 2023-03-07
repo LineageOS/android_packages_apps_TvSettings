@@ -52,7 +52,7 @@ public class AddAccountWithTypeActivity extends Activity {
                     Log.e(TAG, "Failed to retrieve add account intent from authenticator");
                     setResultAndFinish(Activity.RESULT_CANCELED);
                 } else {
-                    startActivityForResult(addAccountIntent, REQUEST_ADD_ACCOUNT);
+                    startActivityForResult(new Intent(addAccountIntent), REQUEST_ADD_ACCOUNT);
                 }
             } catch (IOException|AuthenticatorException|OperationCanceledException e) {
                 Log.e(TAG, "Failed to get add account intent: ", e);
