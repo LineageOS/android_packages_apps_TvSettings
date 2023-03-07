@@ -122,10 +122,6 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
             removePreference(dynamicRangePreference);
             return;
         }
-        if (dynamicRangePreference != null) {
-            dynamicRangePreference.setChecked(
-                    PreferredDynamicRangeUtils.getMatchContentDynamicRangeStatus(mDisplayManager));
-        }
         // Do not show sidebar info texts in case of 1 panel settings.
         if (FlavorUtils.getFlavor(getContext()) != FLAVOR_CLASSIC) {
             createInfoFragments();
@@ -137,6 +133,12 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
         super.onResume();
         // Update the subtitle of CEC setting when navigating back to this page.
         updateCecPreference();
+
+        SwitchPreference dynamicRangePreference = findPreference(KEY_DYNAMIC_RANGE);
+        if (dynamicRangePreference != null) {
+            dynamicRangePreference.setChecked(
+                    PreferredDynamicRangeUtils.getMatchContentDynamicRangeStatus(mDisplayManager));
+        }
     }
 
     @Override

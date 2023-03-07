@@ -42,6 +42,15 @@ public class PreferredDynamicRangeInfo {
         }
     }
 
+    /** A class that hosts {@link InfoFragment} for system hdr selection preference */
+    public static class PreferredDynamicRangeSystemInfoFragment
+            extends PreferredDynamicRangeInfo.BaseInfoFragment {
+        @Override
+        protected int getSummaryResId() {
+            return R.string.preferred_dynamic_range_selection_system_summary;
+        }
+    }
+
     private abstract static class BaseInfoFragment extends InfoFragment {
 
         protected abstract int getSummaryResId();
