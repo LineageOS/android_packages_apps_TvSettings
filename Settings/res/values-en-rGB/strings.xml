@@ -154,6 +154,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Match content dynamic range"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"When enabling this option, the system will switch between different dynamic range formats to match the content. This may cause a black screen during a format switch.\n\nClick Advanced Display settings for more dynamic range options."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Preferred dynamic range"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"System-preferred conversion"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Lets the system manage the format conversion"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"When this option is selected, the system will determine a suitable dynamic range to be sent to your display and convert content to this dynamic range as needed."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Always matches content\'s format"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Force conversion"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Forces conversion to preferred format"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Force conversion to a preferred format. Forcing conversion may affect other settings in Display mode or HDR format."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Always to SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Always to <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Do you want to force the HDR output?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"By default, the conversion will be forced to <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Your display will run at 1080p 60 Hz resolution. This option is not compatible with your display when running at the 4K 60 Hz resolution."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Match content frame rate"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Seamless"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"If the app requests it, your device will match its output to the original frame rate of the content that you’re watching, ONLY if your TV can perform a seamless transition."</string>
