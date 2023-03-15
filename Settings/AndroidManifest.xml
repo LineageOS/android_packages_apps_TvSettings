@@ -95,7 +95,7 @@
             android:exported="true"
             android:label="@string/settings_app_name"
             android:theme="@style/TvSettingsActivityTheme">
-            <intent-filter>
+            <intent-filter android:priority="1">
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.settings.SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -722,7 +722,7 @@
             android:showWhenLocked="true"
             android:taskAffinity=""
             android:turnScreenOn="true">
-            <intent-filter>
+            <intent-filter android:priority="1">
                 <action android:name="com.google.android.intent.action.CONNECT_INPUT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
