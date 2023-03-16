@@ -154,30 +154,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Adatta a intervallo dinamico dei contenuti"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Quando attivi questa opzione, il sistema passerà da uno dei diversi formati di intervallo dinamico all\'altro affinché i contenuti corrispondano. Questa operazione potrebbe causare la visualizzazione di una schermata nera durante il passaggio dei formati.\n\nFai clic su Impostazioni display avanzate per altre opzioni di intervallo dinamico."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Intervallo dinamico preferito"</string>
-    <!-- no translation found for preferred_dynamic_range_selection_system_title (4505030483876080996) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5712920601553613576) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_system_summary (4509062596428781094) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (4831260397179583737) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_title (4448836594133973103) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1418542349290684513) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_summary (8381058061765216239) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_sdr_title (3135104063034317252) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_hdr_title (1032587815433139859) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_title (6865110024863661702) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_desc (7758323258282201656) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_desc_4k30_issue (4938418395391206131) -->
-    <skip />
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversione preferita dal sistema"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Consente al sistema di gestire la conversione del formato"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Se viene selezionata questa opzione, sarà il sistema a stabilire un intervallo dinamico adatto da inviare al display e a convertire i contenuti in questo intervallo, se necessario."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Corrisponde sempre al formato dei contenuti"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Forza conversione"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Forza la conversione nel formato preferito"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Forza la conversione in un formato preferito. Questa impostazione potrebbe incidere su altre impostazioni in Modalità di visualizzazione o Formato HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Sempre in SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Sempre in <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Vuoi forzare l\'output HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Per impostazione predefinita, verrà effettuata la conversione a <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Per il tuo display verrà usata la risoluzione di 1080p a 60 Hz. Questa opzione non è compatibile se per il display viene usata la risoluzione 4K a 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Adatta alla frequenza fotogrammi dei contenuti"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Fluida"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Se l\'app lo richiede, l\'output del dispositivo corrisponderà alla frequenza fotogrammi originale dei contenuti che stai guardando, SOLTANTO se la TV può effettuare una transizione fluida."</string>
@@ -977,7 +965,7 @@
     <string name="privacy_backup_data" msgid="3604057980102997914">"Backup dei miei dati"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"Account di backup"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Ripristino automatico"</string>
-    <string name="factory_reset_device" msgid="6509900821515094361">"Reimposta dispositivo"</string>
+    <string name="factory_reset_device" msgid="6509900821515094361">"Resetta dispositivo"</string>
     <string name="factory_reset_description" msgid="6697396335158766785">"Verranno ripristinate le impostazioni predefinite del dispositivo e verranno cancellati tutti i dati, gli account, i file e le app scaricate."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Verranno ripristinate le impostazioni predefinite del dispositivo e verranno cancellati tutti i dati, gli account, i file e le app scaricate."</string>
     <string name="factory_reset_content_description" msgid="1677022688420116803">"Ripristino dati di fabbrica, Verranno ripristinate le impostazioni predefinite del dispositivo e verranno cancellati tutti i dati, gli account, i file e le app scaricate."</string>

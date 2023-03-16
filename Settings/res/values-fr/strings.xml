@@ -154,30 +154,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Faire correspondre à la plage dynamique du contenu"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Lorsque cette option est activée, le système passe d\'un format de plage dynamique à un autre en fonction du contenu. Cela peut entraîner l\'affichage d\'un écran noir pendant un changement de format.\n\nCliquez sur \"Paramètres d\'affichage avancés\" pour obtenir plus d\'options de plage dynamique."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Plage dynamique préférée"</string>
-    <!-- no translation found for preferred_dynamic_range_selection_system_title (4505030483876080996) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5712920601553613576) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_system_summary (4509062596428781094) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (4831260397179583737) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_title (4448836594133973103) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1418542349290684513) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_summary (8381058061765216239) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_sdr_title (3135104063034317252) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_hdr_title (1032587815433139859) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_title (6865110024863661702) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_desc (7758323258282201656) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_desc_4k30_issue (4938418395391206131) -->
-    <skip />
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversion choisie par le système"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Laisse le système gérer la conversion du format"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Lorsque cette option est sélectionnée, le système détermine une plage dynamique adaptée à envoyer à votre écran et convertit le contenu dans cette plage si besoin."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Respecte toujours le format du contenu"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Forcer la conversion"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Force la conversion dans le format choisi"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Forcez la conversion dans le format choisi. Forcer la conversion peut avoir des répercussions sur d\'autres paramètres en mode d\'affichage ou avec le format HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Toujours en SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Toujours en <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Voulez-vous forcer la sortie HDR ?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Par défaut, la conversion sera forcée en <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Votre écran fonctionnera avec une résolution 1080p de 60 Hz. Cette option n\'est pas compatible avec une résolution 4K de 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Ajuster en fonction de la fréquence d\'images du contenu"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Fluide"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si l\'appli le demande, votre appareil ajustera sa sortie en fonction de la fréquence d\'images d\'origine du contenu que vous regardez, uniquement si votre TV peut effectuer une transition fluide."</string>

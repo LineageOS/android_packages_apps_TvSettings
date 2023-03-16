@@ -154,36 +154,24 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Намиране на съответствие на динамичния обхват на съдържанието"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Когато активирате тази опция, системата ще премине през различните формати за динамичен обхват, за да намери съответствие за съдържанието. По време на превключването екранът може да стане черен.\n\nЗа още опции за динамичен обхват кликнете върху разширените настройки за дисплея."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Предпочитан динамичен обхват"</string>
-    <!-- no translation found for preferred_dynamic_range_selection_system_title (4505030483876080996) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5712920601553613576) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_system_summary (4509062596428781094) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (4831260397179583737) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_title (4448836594133973103) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1418542349290684513) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_summary (8381058061765216239) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_sdr_title (3135104063034317252) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_hdr_title (1032587815433139859) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_title (6865110024863661702) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_desc (7758323258282201656) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_desc_4k30_issue (4938418395391206131) -->
-    <skip />
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Намиране на съответствие на скоростта на кадрите на съдърж."</string>
-    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Безпроблемно"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Предпочитано от системата преобразуване"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Преобразуването на формата да се управлява от системата"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Когато е избрана тази опция, системата ще определя подходящ динамичен обхват за сигнала към екрана ви и при необходимост ще преобразува съдържанието към този динамичен обхват."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Винаги съответства на формата на съдържанието"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Принудително преобразуване"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Принудително преобразуване към предпочитания формат"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Принудително преобразуване към предпочитан формат. Принудителното преобразуване може да засегне други настройки в „Режим на показване“ или в секцията за HDR форматите."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Винаги към SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Винаги към <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Искате ли принудително да се зададе изходящ HDR формат?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"По подразбиране преобразуването принудително ще бъде към <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Екранът ви ще работи с разделителна способност 1080p (60 Hz). Тази опция не е съвместима с екрана ви, когато работи с разделителна способност 4K (60 Hz)."</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Съответствие със скоростта на кадрите на съдържанието"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Плавно"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Ако приложението поиска това, устройството ви ще намери съответствие между изхода си и оригиналната скорост на кадрите на съдържанието, което гледате, САМО ако телевизорът ви може да извърши безпроблемен преход."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Свързаният ви екран не поддържа функцията за автоматична промяна на честотата на опресняване. Тя няма да има ефект, освен ако не преминете към екран, който я поддържа."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Небезпроблемно"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ако прилож. поиска това, у-вото ви ще намери съответствие между изхода си и оригиналната скорост на кадрите на съдърж., което гледате. Възможно е екранът ви да остане празен за секунда при приключ./стартиране на възпроизвеждането на видеосъдържание."</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Неплавно"</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ако прилож. поиска това, у-вото ви ще намери съответствие между изходните си данни и оригиналната скорост на кадрите на съдърж., което гледате. Екранът може да остане празен за секунда при приключ./стартиране на възпроизвеждането на видеосъдържание."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Никога"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Дори ако приложението поиска това, устройството ви никога няма да опита да намери съответствие между изхода си и оригиналната скорост на кадрите на съдържанието, което гледате."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Промяна на мащаба на текста"</string>

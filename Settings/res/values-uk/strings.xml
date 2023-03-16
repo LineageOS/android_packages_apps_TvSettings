@@ -154,31 +154,19 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Враховувати динамічний діапазон контенту"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Якщо цю опцію ввімкнено, система перемикатиметься між різними форматами динамічного діапазону з урахуванням контенту. Під час перемикання формату екран може ставати чорним.\n\nЩоб переглянути інші опції динамічного діапазону, натисніть \"Додаткові налаштування екрана\"."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Бажаний динамічний діапазон"</string>
-    <!-- no translation found for preferred_dynamic_range_selection_system_title (4505030483876080996) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5712920601553613576) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_system_summary (4509062596428781094) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (4831260397179583737) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_title (4448836594133973103) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1418542349290684513) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_summary (8381058061765216239) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_sdr_title (3135104063034317252) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_hdr_title (1032587815433139859) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_title (6865110024863661702) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_desc (7758323258282201656) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_desc_4k30_issue (4938418395391206131) -->
-    <skip />
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Відповідно до частоти кадрів контенту"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Системна конвертація"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Дозвольте системі керувати конвертацією формату"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Якщо ви виберете цю опцію, система визначатиме відповідний динамічний діапазон, який передаватиметься на ваш екран, і за потреби конвертуватиме контент у цей динамічний діапазон."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Завжди відповідає формату контенту"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Примусова конвертація"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Відео примусово конвертуватиметься в потрібний формат"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Відео примусово конвертуватиметься в потрібний формат. Примусова конвертація може впливати на інші параметри режиму відображення або формату HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Завжди в SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Завжди в <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Здійснювати примусову конвертацію у формат форматі HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"За умовчанням контент конвертуватиметься у формат <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Ваш екран працюватиме з роздільною здатністю 1080p 60 Гц. Ця опція не підтримується, якщо екран працює з роздільною здатністю 4K 60 Гц."</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Допасування до частоти кадрів контенту"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Плавний перехід"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Якщо цього вимагає додаток, пристрій відтворюватиме зображення без зміни частоти кадрів, ЛИШЕ якщо телевізор може виконати плавний перехід."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Підключений екран не підтримує плавну зміну частоти оновлення. Вибір цієї опції не дасть результату, якщо ви не використовуватимете екран, який підтримує цю функцію."</string>

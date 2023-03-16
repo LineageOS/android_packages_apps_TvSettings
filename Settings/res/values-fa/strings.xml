@@ -154,30 +154,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"مطابقت دادن بازه پویای محتوا"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"هنگام فعال کردن این گزینه، سیستم بین قالب‌های مختلف بازه پویا جابه‌جا می‌شود تا با محتوا مطابقت پیدا کند. به‌همین دلیل ممکن است درطول تغییر قالب، صفحه سیاهی ببینید.\n\nبرای گزینه‌های بازه پویای بیشتر، روی «تنظیمات پیشرفته نمایشگر» کلیک کنید."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"بازه پویای ترجیحی"</string>
-    <!-- no translation found for preferred_dynamic_range_selection_system_title (4505030483876080996) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5712920601553613576) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_system_summary (4509062596428781094) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (4831260397179583737) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_title (4448836594133973103) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1418542349290684513) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_summary (8381058061765216239) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_sdr_title (3135104063034317252) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_selection_force_hdr_title (1032587815433139859) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_title (6865110024863661702) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_desc (7758323258282201656) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_force_dialog_desc_4k30_issue (4938418395391206131) -->
-    <skip />
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"تبدیل ترجیحی سیستم"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"به سیستم اجازه داده می‌شود تبدیل قالب را مدیریت کند"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"وقتی این گزینه انتخاب شود، سیستم محدوده پویای مناسبی را برای ارسال به صفحه‌نمایش شما تعیین می‌کند و درصورت نیاز محتوا را به این محدوده پویا تبدیل می‌کند."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"همیشه با قالب محتوا مطابقت دارد"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"تبدیل اجباری"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"تبدیل به قالب ترجیحی را اجباری می‌کند"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"تبدیل به قالب ترجیحی را اجباری می‌کند. تبدیل اجباری ممکن است بر دیگر تنظیمات در «حالت نمایش» یا «قالب HDR» تأثیر بگذارد."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"همیشه به SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"همیشه به <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"آیا می‌خواهید خروجی HDR را اجباری کنید؟"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"به‌طور پیش‌فرض، تبدیل به‌صورت اجباری به <xliff:g id="HDR_TYPE">%s</xliff:g> انجام می‌شود."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"صفحه‌نمایش شما با وضوح ۱۰۸۰ پیکسل و ۶۰ هرتز کار می‌کند. وقتی صفحه‌نمایش شما با وضوح 4K و ۶۰ هرتز کار می‌کند، این گزینه با آن سازگار نیست."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"مطابقت دادن نرخ فریم محتوا"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"یکپارچه"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"اگر برنامه درخواست کند، تنها درصورتی‌که تلویزیونتان بتواند انتقال یکپارچه را اجرا کند، دستگاهتان خروجی‌اش را با نرخ فریم اصلی محتوایی که تماشا می‌کنید هماهنگ خواهد کرد."</string>
@@ -775,8 +763,8 @@
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"منتظر اشکال‌زدا"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"تأیید برنامه‌ها ازطریق USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"‫بررسی برنامه‌های نصب شده از طریق ADB/ADT از نظر رفتار مضر"</string>
-    <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"گزارش‌گیری طولانی Wi‑Fi"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"فعال کردن گزارش‌گیری طولانی Wi‑Fi"</string>
+    <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"گزارش‌گیری مفصل Wi‑Fi"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"فعال کردن گزارش‌گیری مفصل Wi‑Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"نمایش تعداد لمسها"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"محل اشاره‌گر"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"نمایش محدوده‌های طرح‌بندی"</string>
