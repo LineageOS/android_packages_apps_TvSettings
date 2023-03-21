@@ -57,9 +57,9 @@
         custom:isPreferenceVisible="false"
         custom:uri="@string/ambient_slice_uri"/>
     <Preference
-        android:fragment="com.android.tv.settings.vendor.PowerAndEnergyFragment"
-        android:icon="@drawable/ic_settings_energy_saver"
-        android:key="energysaver"
+        android:fragment="com.android.tv.settings.device.eco.PowerAndEnergyFragment"
+        android:icon="@drawable/ic_settings_eco_leaf"
+        android:key="power_and_energy"
         android:title="@string/power_and_energy"/>
     <Preference
         android:fragment="com.android.tv.settings.system.development.DevelopmentFragment"
