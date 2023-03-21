@@ -248,6 +248,7 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
 
     private void showWarningDialogOnResolutionChange(
             Display.Mode currentMode, Display.Mode previousMode) {
+        final CountDownTimer[] timerTask = {null};
         // if previousMode is null, it means it is the automatic mode.
         // Set it here and not in the caller like the currentMode because we need the null ref in
         // this method in case the user decides to cancel and revert back to the original mode.
@@ -271,6 +272,7 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
+                                timerTask[0].cancel();
                             }
                         })
                 .setNegativeButton(
@@ -279,6 +281,7 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
                             public void onClick(DialogInterface dialog, int which) {
                                 setUserPreferredMode(previousMode);
                                 dialog.dismiss();
+                                timerTask[0].cancel();
                             }
                         })
                 .create();
@@ -289,7 +292,7 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
                 final Button cancelButton =
                         ((AlertDialog) dialog).getButton(AlertDialog.BUTTON_NEGATIVE);
                 final CharSequence negativeButtonText = cancelButton.getText();
-                new CountDownTimer(DIALOG_TIMEOUT_MILLIS, 1000) {
+                timerTask[0] = new CountDownTimer(DIALOG_TIMEOUT_MILLIS, 1000) {
                     @Override
                     public void onTick(long millisUntilFinished) {
                         cancelButton.setText(String.format("%s (%d)", negativeButtonText,
@@ -300,14 +303,21 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
 
                     @Override
                     public void onFinish() {
-                        if (((AlertDialog) dialog).isShowing()) {
+
+                        if (((AlertDialog) dialog).isShowing() && isActivityEnable()) {
                             dialog.dismiss();
                         }
                     }
-                }.start();
+                };
+                timerTask[0].start();
             }
         });
         dialog.show();
+    }
+
+    public boolean isActivityEnable(){
+        return getActivity()!=null && !getActivity().isDestroyed()
+                && !getActivity().isFinishing()&& isAdded();
     }
 
     private String titleForNewMode(String resolutionString,
