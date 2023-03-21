@@ -24,6 +24,12 @@
         android:key="about_device"
         android:title="@string/about_preference"/>
     <Preference
+        android:fragment="com.android.tv.settings.device.eco.PowerAndEnergyFragment"
+        android:icon="@drawable/ic_settings_eco_leaf"
+        android:key="power_and_energy"
+        custom:isPreferenceVisible="false"
+        android:title="@string/power_and_energy"/>
+    <Preference
         android:fragment="com.android.tv.settings.system.DateTimeFragment"
         android:icon="@drawable/ic_access_time"
         android:key="date_time"
@@ -59,12 +65,6 @@
         android:icon="@drawable/ic_settings_energy_saver"
         android:key="energysaver"
         android:title="@string/device_energy_saver"/>
-    <Preference
-        android:fragment="com.android.tv.settings.device.eco.PowerAndEnergyFragment"
-        android:icon="@drawable/ic_settings_eco_leaf"
-        android:key="power_and_energy"
-        custom:isPreferenceVisible="false"
-        android:title="@string/power_and_energy"/>
     <Preference
         android:fragment="com.android.tv.settings.system.development.DevelopmentFragment"
         android:icon="@drawable/ic_developer_mode"
