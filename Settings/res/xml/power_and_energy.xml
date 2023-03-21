@@ -19,25 +19,25 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:title="@string/power_and_energy">
 
-    <com.android.tv.twopanelsettings.slices.SlicePreference
-        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
-        android:key="power_and_energy_settings"
-        android:title="@string/power_on_behavior"
-        android:icon="@drawable/ic_settings_power"
-        custom:uri="@string/power_boot_resume_slice_uri"/>
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
+        android:key="limit_network_in_standby"
+        android:fragment="com.android.tv.settings.device.eco.LimitNetworkInStandbyInfoFragment"
+        android:title="@string/limit_network_in_standby_toggle_title"
+        android:summary="@string/limit_network_in_standby_toggle_summary"/>
 
     <Preference
+        android:key="shutofftimer"
         android:fragment="com.android.tv.settings.device.display.daydream.EnergySaverFragment"
         android:icon="@drawable/ic_settings_energy_saver"
-        android:key="energysaver"
-        android:title="@string/device_energy_saver"/>
+        android:title="@string/device_energy_saver"
+        android:summary="@string/device_energy_saver_summary"/>
 
     <com.android.tv.twopanelsettings.slices.SlicePreference
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
-        android:key="eco_settings"
-        android:title="@string/device_eco_settings"
-        android:icon="@drawable/ic_settings_eco"
+        android:key="power_on_behavior"
+        android:title="@string/power_on_behavior"
+        android:icon="@drawable/ic_settings_power"
         custom:isPreferenceVisible="false"
-        custom:uri="@string/eco_settings_slice_uri"/>
+        custom:uri="@string/power_boot_resume_slice_uri"/>
 
 </PreferenceScreen>
