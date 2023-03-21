@@ -84,6 +84,12 @@
         android:key="energysaver"
         android:title="@string/device_energy_saver"/>
     <Preference
+        android:fragment="com.android.tv.settings.device.eco.PowerAndEnergyFragment"
+        android:icon="@drawable/ic_settings_eco_leaf"
+        custom:isPreferenceVisible="false"
+        android:key="power_and_energy"
+        android:title="@string/power_and_energy"/>
+    <Preference
         android:fragment="com.android.tv.settings.system.development.DevelopmentFragment"
         android:icon="@drawable/ic_settings_developeroptions"
         android:key="developer"

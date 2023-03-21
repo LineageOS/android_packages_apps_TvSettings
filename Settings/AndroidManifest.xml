@@ -1246,15 +1246,6 @@
             android:exported="false">
         </receiver>
 
-        <provider
-            android:name=".device.EcoSettingsSliceProvider"
-            android:authorities="com.android.tv.settings.device.sliceprovider"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.app.slice.category.SLICE"/>
-            </intent-filter>
-        </provider>
         <activity
             android:name=".device.LimitNetworkInStandbyConfirmationDialogActivity"
             android:theme="@style/Transparent"
