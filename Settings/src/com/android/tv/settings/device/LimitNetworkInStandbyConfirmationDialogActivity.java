@@ -46,10 +46,4 @@ public class LimitNetworkInStandbyConfirmationDialogActivity extends Activity {
         powerManager.setLowPowerStandbyEnabled(false);
         finish();
     }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        EcoSettingsSliceProvider.updateEcoSettings(this);
-    }
 }
