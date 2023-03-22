@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Sigurnosna kopija i vraćanje"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Vraćanje na tvorničko stanje"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibracija"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Napajanje i energija"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Eko postavke"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Uređaji"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Odaberite formate"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Usklađivanje s dinamičkim rasponom sadržaja"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Kad je ova opcija omogućena, sustav će se prebacivati između različitih formata dinamičkog raspona kako bi se podudarao sa sadržajem. Tijekom promjene formata može se pojaviti crni zaslon.\n\nKliknite postavke naprednog prikaza da biste vidjeli više opcija dinamičkog raspona."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Preferirani dinamički raspon"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Pretvaranje koje preferira sustav"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Omogućuje sustavu da upravlja pretvaranjem formata"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Kada se ta opcija odabere, sustav će odrediti prikladan dinamički raspon koji će se poslati na vaš zaslon i prema potrebi pretvorit će sadržaj na taj dinamički raspon."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Uvijek se podudara s formatom sadržaja"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Nametanje pretvaranja"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Nameće pretvaranje u preferirani format"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Nametanje pretvaranja u preferirani format. Nametanje pretvaranja može utjecati na druge postavke u načinu zaslona ili HDR format."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Uvijek u SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Uvijek u <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Želite li nametnuti HDR izlaz?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Prema zadanim postavkama nametnut će se pretvaranje u <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Razlučivost vašeg zaslona bit će 1080 p 60 Hz. Ta opcija nije kompatibilna s vašim zaslonom pri razlučivosti 4k 60Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Usklađivanje s brojem sličica u sekundi sadržaja"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Bez prekida"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Ako aplikacija to zahtijeva, uređaj će uskladiti izlaz s izvornim brojem sličica u sekundi sadržaja koji gledate, no SAMO ako vaš televizor može izvršiti prijelaz bez prekida."</string>

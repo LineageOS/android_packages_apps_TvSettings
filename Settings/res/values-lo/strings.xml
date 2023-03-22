@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"ການສຳຮອງ ແລະ ຂໍ້ມູນ"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"ຣີເຊັດຄ່າຈາກໂຮງງານ"</string>
     <string name="device_calibration" msgid="2907914144048739705">"ການ​ປັບ​ທຽບ"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"ການເປີດປິດ ແລະ ພະລັງງານ"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"ການຕັ້ງຄ່າ Eco"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"ອຸປະກອນ"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"ເລືອກຮູບແບບ"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"ຈັບຄູ່ໄລຍະໄດນາມິກຂອງເນື້ອຫາ"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"ເມື່ອເປີດໃຊ້ຕົວເລືອກນີ້, ລະບົບຈະສະຫຼັບລະຫວ່າງຮູບແບບໄລຍະໄດນາມິກທີ່ແຕກຕ່າງກັນເພື່ອໃຫ້ກົງກັບເນື້ອຫາ. ສິ່ງນີ້ອາດຈະເຮັດໃຫ້ໜ້າຈໍສີດໍາໃນລະຫວ່າງການສະຫຼັບຮູບແບບ.\n\nຄລິກທີ່ການຕັ້ງຄ່າຂັ້ນສູງສໍາລັບຕົວເລືອກໄລຍະໄດນາມິກເພີ່ມເຕີມ."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"ໄລຍະໄດນາມິກທີ່ຕ້ອງການ"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"ການປ່ຽນຄ່າຕາມຄວາມຕ້ອງການຂອງລະບົບ"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"ໃຫ້ລະບົບການຈັດການຮູບແບບການປ່ຽນຄ່າ"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"ເມື່ອຕົວເລືອກນີ້ຖືກເລືອກ, ລະບົບຈະກໍານົດຂອບເຂດໄດນາມິກທີ່ເໝາະສົມເພື່ອຖືກສົ່ງໄປຫາການສະແດງຂອງທ່ານ ແລະ ປ່ຽນແປງເນື້ອຫາໄປສູ່ໄລຍະໄດນາມິກນີ້ຕາມຄວາມຕ້ອງການ."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"ກົງກັບຮູບແບບຂອງເນື້ອຫາຕະຫຼອດ"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"ບັງຄັບການປ່ຽນຄ່າ"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"ບັງຄັບການປ່ຽນຄ່າເປັນຮູບແບບທີ່ຕ້ອງການ"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"ບັງຄັບການປ່ຽນຄ່າເປັນຮູບແບບທີ່ຕ້ອງການ. ການບັງຄັບການປ່ຽນຄ່າອາດຈະສົ່ງຜົນກະທົບຕໍ່ການຕັ້ງຄ່າອື່ນໃນໂໝດສະແດງຜົນ ຫຼື ຮູບແບບ HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"ເປັນ SDR ຕະຫຼອດ"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"ເປັນ <xliff:g id="HDR_TYPE">%s</xliff:g> ຕະຫຼອດ"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"ທ່ານຕ້ອງການບັງຄັບເອົາພຸດ HDR ບໍ?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"ໂດຍຄ່າເລີ່ມຕົ້ນການປ່ຽນຄ່າຈະຖືກບັງຄັບໃຫ້ <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"ຈໍສະແດງຜົນຂອງທ່ານຈະເຮັດວຽກຢູ່ທີ່ຄວາມລະອຽດ 1080p 60Hz. ຕົວເລືອກນີ້ເຂົ້າກັນບໍ່ໄດ້ກັບຈໍສະແດງຜົນຂອງທ່ານເມື່ອເຮັດວຽກຢູ່ທີ່ຄວາມລະອຽດ 4k 60Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"ເຮັດໃຫ້ກົງກັບອັດຕາເຟຣມເນື້ອຫາ"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"ຕໍ່ເນື່ອງ"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"ຫາກແອັບຮ້ອງຂໍມັນ, ອຸປະກອນຂອງທ່ານຈະຈັບຄູ່ເອົ້າພຸດຂອງມັນກັບອັດຕາເຟຣມຕົ້ນສະບັບຂອງເນື້ອຫາທີ່ທ່ານກຳລັງເບິ່ງ, ສະເພາະໃນກໍລະນີທີ່ໂທລະທັດຂອງທ່ານສາມາດສົ່ງຜ່ານໄດ້ຢ່າງຕໍ່ເນື່ອງເທົ່ານັ້ນ."</string>

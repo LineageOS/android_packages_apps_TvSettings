@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Պահուստավորում և վերականգնում"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Վերակայել բոլոր տվյալները"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Չափաբերում"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Սնուցում և էներգիա"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Էկո ռեժիմի կարգավորումներ"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Սարքեր"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Ընտրեք ձևաչափերը"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Համապատասխանեցնել բովանդակության դինամիկ դիապազոնը"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Երբ այս պարամետրը միացված է, համակարգը փոխարկաբար կօգտագործի դինամիկ դիապազոնի տարբեր ձևաչափեր՝ բովանդակությանը համապատասխանելու համար։ Ձևաչափի փոփոխման ժամանակ էկրանը կարող է սևանալ։\n\nԴինամիկ դիապազոնի այլ տարբերակներ տեսնելու համար անցեք էկրանի լրացուցիչ կարգավորումներ։"</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Նախընտրելի դինամիկ դիապազոն"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Ձևաչափի ավտոմատ կարգավորում"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Թող համակարգը կառավարի ձևաչափի փոխարկումը"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Եթե միացնեք այս պարամետրը, համակարգը կորոշի ձեր էկրանին համապատասխան դինամիկ դիապազոնը և, անհրաժեշտության դեպքում, կցուցադրի բովանդակությունը այդ դիապազոնում։"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Միշտ համապատասխանում է բովանդակության ձևաչափին"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Հարկադիր փոխակերպում"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Տեսանյութը հարկադրաբար կվերածվի անհրաժեշտ ձևաչափի"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Տեսանյութը հարկադրաբար կվերածվի անհրաժեշտ ձևաչափի։ Ձևաչափի հարկադիր փոխակերպումը կարող է ազդել ցուցադրման ռեժիմի կամ HDR ձևաչափի այլ կարգավորումների վրա։"</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Միշտ SDR ձևաչափով"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Միշտ <xliff:g id="HDR_TYPE">%s</xliff:g> ձևաչափով"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Հարկադրաբար վերածե՞լ HDR ձևաչափի"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Ըստ կանխադրման՝ բովանդակությունը հարկադրաբար կվերածվի <xliff:g id="HDR_TYPE">%s</xliff:g> ձևաչափի։"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Ձեր էկրանի լուծաչափը կլինի 1080 պիքսել, իսկ թարմացման արագությունը՝ 60 Հց։ Այս գործառույթը չի աջակցվում 4K լուծաչափով և թարմացման 60 Հց արագությամբ սարքերում։"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Համապատասխանեցնել բովանդակության կադրերի հաճախականությունը"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Սահուն"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Երբ հավելվածը պահանջում է, սարքը կհամապատասխանեցնի իր հաճախականությունը նվագարկվող տեսանյութի կադրերի հաճախականությանը ՄԻԱՅՆ ԱՅՆ ԴԵՊՔՈՒՄ, եթե ձեր հեռուստացույցն աջակցում է սահուն անցում։"</string>

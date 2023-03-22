@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Creează și restabilește copii de rezervă"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Revenire la setările din fabrică"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Calibrare"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Alimentare și energie"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Setări Eco"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Dispozitive"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Selectează formatele"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Intervalul dinamic al conținutului recomandat"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Când activezi opțiunea, sistemul va comuta între diferite formate de intervale dinamice, în funcție de conținut Acest lucru poate provoca un ecran negru la comutarea formatului.\n\nDă clic pe Setări de afișare avansate pentru mai multe opțiuni de interval dinamic."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Intervalul dinamic preferat"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversie preferată de sistem"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Permite ca sistemul să gestioneze conversia formatului"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Când se selectează opțiunea, sistemul va stabili un interval dinamic potrivit de trimis spre ecran și va converti conținutul în acest interval dinamic după caz."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Corespunde întotdeauna cu formatul conținutului"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Forțează conversia"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Forțează conversia în formatul preferat"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Forțează conversia într-un format preferat. Forțarea conversiei poate afecta alte setări în Modul Display sau în format HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Întotdeauna în SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Întotdeauna în <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Forțezi ieșirea HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"În mod prestabilit, conversia va fi forțată să <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Ecranul va folosi rezoluția de 1080p 60 Hz. Opțiunea nu este compatibilă cu ecranul când rulează la rezoluție 4k 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Potrivește cu rata de cadre a conținutului"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Perfectă"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Dacă aplicația solicită acest lucru, dispozitivul își va potrivi ieșirea cu rata de cadre inițială a conținutului pe care îl vizionezi NUMAI dacă televizorul poate face o tranziție perfectă."</string>

@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Рэзервовае капіраванне і аднаўленне"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Скід да заводскіх налад"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Каліброўка"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Сілкаванне і энергія"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Налады экарэжыму"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Прылады"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Выбар фарматаў"</string>
@@ -154,11 +156,23 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Прыводзіць у адпаведнасць з дынамічным дыяпазонам змесціва"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Калі гэты параметр уключаны, сістэма пераключае фарматы дынамічнага дыяпазону ў адпаведнасці са змесцівам. Падчас змены фармату можа паказвацца чорны экран.\n\nНацісніце \"Пашыраныя налады дысплэя\", каб перайсці ў дадатковыя налады дынамічнага дыяпазону."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Прыярытэтны дынамічны дыяпазон"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Прыярытэтная ў сістэме размова"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Дазвольце сістэме кіраваць фарматам размовы"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Калі выбраны гэты параметр, сістэма будзе выяўляць устойлівы дынамічны дыяпазон для адпраўкі на ваш дысплэй і, пры неабходнасці, пераўтвараць змесціва ў гэты дынамічны дыяпазон."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Заўсёды падбірае фармат змесціва"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Прымусова перавесці размову"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Прымусова пераводзіць размову ў прыярытэтны фармат"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Прымусова пераводзіць размову ў прыярытэтны фармат. Прымусовы перавод размовы можа закрануць іншыя налады ў рэжыме дысплэя ці фармаце HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Заўсёды ў SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Заўсёды ў <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Прымусова перавесці ў фармат HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Стандартна размова будзе прымусова адкрывацца ў <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Ваш дысплэй будзе мець раздзяляльнасць 1080p 60 Гц. Гэты параметр несумяшчальны з вашым дысплэем пры выкарыстанні раздзяляльнасці 4k 60 Гц."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Узгадняць з частатой кадраў змесціва"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Плаўнасць з\'яўляецца абавязковай"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Калі праграма адправіць адпаведны запыт, прылада будзе суадносіць выходны сігнал з зыходнай частатой кадраў змесціва, якое вы праглядаеце, ТОЛЬКІ пры ўмове, што на экране тэлевізара будзе забяспечана плаўнасць рухаў."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Падключаны дысплэй не падтрымлівае плаўную змену частаты абнаўлення. Каб гэты параметр працаваў, перайдзіце на дысплэй, які яго падтрымлівае."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Плаўнасць не з\'яўляецца абавязковай"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Без плаўнага пераходу"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Калі праграма адправіць адпаведны запыт, прылада будзе суадносіць выходны сігнал з зыходнай частатой кадраў змесціва, якое вы праглядаеце. У выніку экран можа на секунду пагаснуць, калі вы будзеце ўключаць ці выключаць прайграванне відэа."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Ніколі"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Нават калі праграма адправіць адпаведны запыт, прылада ніколі не будзе імкнуцца суадносіць выходны сігнал з зыходнай частатой кадраў змесціва, якое вы праглядаеце."</string>

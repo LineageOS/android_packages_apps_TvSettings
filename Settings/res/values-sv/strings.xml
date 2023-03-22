@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Säkerhetskopiera och återställ"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Återställ standardinställningarna"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrering"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Ström och energi"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Eko-inställningar"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Enheter"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Välj format"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Matcha innehållets dynamiska omfång"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"När du aktiverar det här alternativet byter systemet mellan olika format för dynamiskt omfång för att matcha innehållet. Du kan se en svart skärm under formatbytet.\n\nKlicka på Avancerade skärminställningar för att se fler alternativ för dynamiskt omfång."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Önskat dynamiskt omfång"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Systemföredragen konvertering"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Låter systemet hantera formatkonverteringen"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"När det här alternativet är valt bestämmer systemet ett passande dynamiskt intervall som skickas till din skärm för att konvertera innehåll till detta dynamiska intervall efter behov."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Matchar alltid innehållets format"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Tvångskonvertera"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Tvångskonverterar till önskat format"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Tvångskonvertera till önskat format. Tvångskonverterar du kan det påverka andra inställningar för skärmläget eller HDR-format."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Alltid till SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Alltid till <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Vill du tvångskonvertera HDR-utmatningen?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Som standard tvångskonverteras den till <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Din skärm kommer att köras med upplösningen 1080p 60 Hz. Det här alternativet är inte kompatibelt med din skärm när den körs med upplösningen 4K 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Matcha innehållets bildfrekvens"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Sömlöst"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Om appen begär det matchar enheten utdatan med den ursprungliga bildfrekvensen av det du tittar på, ENDAST om tv:n har stöd för sömlös övergång."</string>

@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"백업 및 복원"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"초기화"</string>
     <string name="device_calibration" msgid="2907914144048739705">"보정"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"전원 및 에너지"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"절전 설정"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"기기"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"형식 선택"</string>
@@ -154,13 +156,25 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"다이내믹 레인지 콘텐츠와 맞춤"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"이 옵션을 사용 설정하면 시스템에서 콘텐츠에 맞추어 다이내믹 레인지 형식을 전환합니다. 형식을 전환하는 중 검은색 화면이 표시될 수 있습니다.\n\n고급 디스플레이 설정을 클릭하여 더 많은 다이내믹 레인지 옵션을 확인하세요."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"선호하는 다이내믹 레인지"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"시스템 선호 전환"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"시스템에서 형식 전환을 관리하도록 함"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"이 옵션이 선택되면 시스템에서 디스플레이에 전송할 적절한 동적 범위를 결정하고 필요에 따라 콘텐츠를 이 동적 범위로 전환합니다."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"항상 콘텐츠 형식에 맞춤"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"강제 전환"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"원하는 형식으로 강제로 전환됩니다."</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"원하는 형식으로 강제로 전환됩니다. 강제로 전환하면 디스플레이 모드 또는 HDR 형식의 다른 설정에 영향을 미칠 수도 있습니다."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"항상 SDR로 전환"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"항상 <xliff:g id="HDR_TYPE">%s</xliff:g> 형식으로 전환"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"강제로 HDR을 출력하시겠습니까?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"기본적으로 <xliff:g id="HDR_TYPE">%s</xliff:g> 형식으로 강제 전환됩니다."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"디스플레이가 1,080p 60Hz 해상도에서 실행됩니다. 이 옵션은 4k 60Hz에서 실행될 때 내 디스플레이와 호환되지 않습니다."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"콘텐츠 프레임 속도 일치시키기"</string>
-    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"원활한 전환 사용"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"콘텐츠 프레임 속도에 맞추기"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"앱에서 요청하면 TV에서 원활한 전환을 실행할 수 있는 경우에만 기기에서 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞춥니다."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"연결된 디스플레이에서 원활한 화면 재생 빈도 전환을 지원하지 않습니다. 이를 지원하는 디스플레이로 변경하지 않는 한 이 옵션은 아무런 영향을 미치지 않습니다."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"원활한 전환 사용 안함"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"항상 콘텐츠 프레임 속도에 맞추기"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"앱에서 요청할 경우 기기에서 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞춥니다. 이로 인해 동영상 재생을 실행하거나 중지할 때 잠시 화면에 아무 내용도 나타나지 않을 수 있습니다."</string>
-    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"사용 안함"</string>
+    <string name="match_content_frame_rate_never" msgid="1678354793095148423">"콘텐츠 프레임 속도에 맞추지 않음"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"앱에서 요청하더라도 기기에서는 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞추려고 하지 않습니다."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"텍스트 크기 조정"</string>
     <string name="font_scale_item_detail" msgid="1558315053348778805">"<xliff:g id="SCALE">%1$d</xliff:g>%%로 크기 조정"</string>

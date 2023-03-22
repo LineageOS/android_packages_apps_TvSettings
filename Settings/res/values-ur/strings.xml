@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"بیک اپ لیں اور بحال کریں"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"فیکٹری ڈیٹا ری سیٹ"</string>
     <string name="device_calibration" msgid="2907914144048739705">"کیلیبریشن"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"پاور اور توانائی"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"ایکو کی ترتیبات"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"آلات"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"فارمیٹس منتخب کریں"</string>
@@ -154,11 +156,23 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"مماثل مواد کا ڈائنیمک رینج"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"اس اختیار کو فعال کرنے پر، یہ سسٹم مواد سے مماثل کرنے کے لیے مختلف ڈائنیمک رینج فارمیٹس کے مابین سوئچ ہو جائے گا۔ فارمیٹ سوئچ کے دوران اس سے اسکرین سیاہ ہو سکتی ہے۔\n\nمزید ڈائنیمک رینج اختیارات کے لیے جدید ترین ڈسپلے کی ترتیبات پر کلک کریں۔"</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"ترجیحی ڈائنیمک رینج"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"مماثل مواد کا فریم ریٹ"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"سسٹم کی ترجیحی تبدیلی"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"آئیے سسٹم فارمیٹ کی تبدیلی کا نظم کریں"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"جب یہ اختیار منتخب کیا جائے گا تو سسٹم آپ کے ڈسپلے پر بھیجے جانے کے لیے ایک مناسب ڈائنیمک رینج کا تعین کرے گا اور ضرورت کے مطابق مواد کو اس ڈائنیمک رینج میں تبدیل کر دے گا۔"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"ہمیشہ مواد کے فارمیٹ سے مماثل ہوتا ہے"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"زبردستی تبدیلی"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"ترجیحی فارمیٹ میں زبردستی تبدیلی کرتا ہے"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"ترجیحی فارمیٹ میں زبردستی تبدیلی۔ زبردستی تبدیلی کا اثر ڈسپلے وضع یا HDR فارمیٹ میں دیگر ترتیبات پر پڑ سکتا ہے۔"</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"ہمیشہ SDR میں"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"ہمیشہ <xliff:g id="HDR_TYPE">%s</xliff:g> میں"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"کیا آپ زبردستی HDR آؤٹ پٹ کرنا چاہتے ہیں؟"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"بطور ڈیفالٹ <xliff:g id="HDR_TYPE">%s</xliff:g> میں زبردستی تبدیلی کی جائے گی۔"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"آپ کا ڈسپلے 1080p 60Hz ریزولیوشن پر چلے گا۔ 4k 60Hz ریزولیوشن پر چلنے پر یہ اختیار آپ کے ڈسپلے کے ساتھ موافقت نہیں رکھتا ہے۔"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"مواد کا فریم ریٹ مماثل بنائیں"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"مناسب"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"اگر ایپ اس کی درخواست کرتی ہے تو آپ کا آلہ اس کے آؤٹ پٹ کو اس مواد کے اصل فریم ریٹ سے مماثل کرے گا جس کو آپ دیکھ رہے ہیں، صرف اس صورت میں جب آپ کا TV ایک مناسب منتقلی کو انجام دے سکتا ہے۔"</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"آپ کا منسلک کردہ ڈسپلے ہموار ریفریش ریٹ ٹرانزیشنز کو سپورٹ نہیں کرتا ہے۔ اس اختیار کا کوئی اثر نہیں ہوگا جب تک کہ آپ کسی ایسے ڈسپلے میں تبدیل نہیں کرتے جو اسے سپورٹ کرتا ہو۔"</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"غیر مناسب"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"غیر ہموار"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"اگر ایپ اس کی درخواست کرتی ہے تو آپ کا آلہ اس کے آؤٹ پٹ کو اس مواد کے اصل فریم ریٹ سے مماثل کرے گا جس کو آپ دیکھ رہے ہیں۔ ویڈیو پلے بیک سے باہر نکلنے یا داخل ہونے کے دوران ہو سکتا ہے ایک سیکنڈ کے لیے آپ کی اسکرین خالی ہو جائے۔"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"کبھی نہیں"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"اگر ایپ اس کی درخواست کرتی ہے تو بھی آپ کا آلہ کبھی اس کے آؤٹ پٹ کو اس مواد کے اصل فریم ریٹ سے مماثل کرنے کی کوشش نہیں کرے گا جس کو آپ دیکھ رہے ہیں۔"</string>

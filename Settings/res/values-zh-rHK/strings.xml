@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"備份和還原"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"回復原廠設定"</string>
     <string name="device_calibration" msgid="2907914144048739705">"校正"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"電源和能源"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"節能設定"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"裝置"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"選取格式"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"配合內容的動態範圍"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"啟用這個選項後，系統會因應內容切換匹配的動態範圍格式。切換格式時螢幕可能會全黑。\n\n點擊「進階顯示」設定查看更多動態範圍選項。"</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"偏好的動態範圍"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"系統自動轉換"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"由系統管理格式轉換"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"選取這個選項，系統就會向螢幕傳送合適的動態範圍，並按需要將內容轉換至該動態範圍。"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"一律採用內容的格式"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"強制轉換"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"強制轉換至偏好格式"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"強制轉換至您偏好的格式。強制轉換可能會影響「顯示模式」或「HDR 格式」內的其他設定。"</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"一律轉換至 SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"一律轉換至 <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"要強制輸出 HDR 格式嗎？"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"根據預設，格式會強制轉換至 <xliff:g id="HDR_TYPE">%s</xliff:g>。"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"您的螢幕將採用 1080p 60Hz 解像度。此選項不支援採用 4K 60Hz 解像度的螢幕。"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"配合內容的影格速率"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"流暢"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"如果應用程式要求，您的裝置會根據您正觀看內容的原來影格速率輸出內容 (只限電視可流暢轉換時)。"</string>
@@ -673,7 +687,7 @@
     <string name="palette_color_purple" msgid="2123828754639683555">"紫色"</string>
     <string name="palette_color_gray" msgid="4014534773994261194">"灰色"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"無障礙功能快速鍵"</string>
-    <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"啟用無障礙功能快速鍵"</string>
+    <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"啟用無障礙功能捷徑"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"快速鍵服務"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"啟用快速鍵後，同時按下返回和向下按鈕 3 秒即可啟動無障礙功能。"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"字幕"</string>
