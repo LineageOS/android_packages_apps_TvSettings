@@ -2782,4 +2782,15 @@
 
     <!-- Adb wireless pairing device dialog ethernet pairing code label [CHAR LIMIT=60] -->
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label">Ethernet pairing code</string>
+
+    <!-- Title for energy modes preference -->
+    <string name="energy_modes">Energy Modes</string>
+    <!-- Title for energy mode selection confirmation dialog -->
+    <string name="energy_modes_summary">Improve energy efficiency when TV is not in use</string>
+    <!-- Header for list of features enabled in the selected energy mode -->
+    <string name="energy_mode_enables">Enables:</string>
+    <!-- Warning that selecting a higher energy mode may increase power consumption -->
+    <string name="energy_mode_eco_hint">Note that this mode may increase the power consumption of the device.</string>
+    <!-- Title for energy mode selection confirmation dialog -->
+    <string name="energy_modes_confirmation_title">Enable \"<xliff:g id="energyModeName" example="Essential network features">%s</xliff:g>\"</string>
 </resources>

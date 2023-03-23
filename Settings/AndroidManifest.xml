@@ -1304,6 +1304,11 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".device.eco.EnergyModeConfirmationActivity"
+            android:theme="@style/Theme.Reset"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true" />
+
         <receiver
             android:name=".GlobalKeyReceiver"
             android:exported="true">
