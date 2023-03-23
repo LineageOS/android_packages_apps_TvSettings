@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.device.eco;
 
+import static com.android.tv.settings.device.eco.EnergyModesHelper.isLowPowerStandbySupported;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -39,6 +41,7 @@ import com.android.tv.twopanelsettings.slices.SlicePreference;
 @Keep
 public class PowerAndEnergyFragment extends SettingsPreferenceFragment {
     private static final String KEY_LIMIT_NETWORK = "limit_network_in_standby";
+    private static final String KEY_ENERGY_MODES = "energy_modes";
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
@@ -59,11 +62,17 @@ public class PowerAndEnergyFragment extends SettingsPreferenceFragment {
     private void updateLowPowerStandbyPreferences() {
         final Context context = getContext();
         final Preference limitNetworkPreference = findPreference(KEY_LIMIT_NETWORK);
+        final Preference energyModesPreference = findPreference(KEY_ENERGY_MODES);
 
+        final EnergyModesHelper energyModesHelper = new EnergyModesHelper(context);
         final boolean lowPowerStandbySupported = isLowPowerStandbySupported(context);
+        final boolean enableEnergyModes = energyModesHelper.areEnergyModesAvailable();
 
         if (limitNetworkPreference != null) {
-            limitNetworkPreference.setVisible(lowPowerStandbySupported);
+            limitNetworkPreference.setVisible(lowPowerStandbySupported && !enableEnergyModes);
+        }
+        if (energyModesPreference != null) {
+            energyModesPreference.setVisible(lowPowerStandbySupported && enableEnergyModes);
         }
 
         if (limitNetworkPreference != null && limitNetworkPreference.isVisible()) {
@@ -107,15 +116,10 @@ public class PowerAndEnergyFragment extends SettingsPreferenceFragment {
         return super.onPreferenceTreeClick(preference);
     }
 
-    private static boolean isLowPowerStandbySupported(Context context) {
-        final PowerManager powerManager = context.getSystemService(PowerManager.class);
-        return powerManager.isLowPowerStandbySupported();
-    }
-
     /** Returns whether this fragment will only present the EnergySaver preference */
     public static boolean hasOnlyEnergySaverPreference(Context context) {
         if (isLowPowerStandbySupported(context)) {
-            // Has "Limit Network in Standby" preference
+            // Has "Limit Network in Standby" / Energy Modes preference
             return false;
         }
 
