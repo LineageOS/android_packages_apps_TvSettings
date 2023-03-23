@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Сақтық көшірме жасау және қалпына келтіру"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Зауыттық деректерді қалпына келтіру"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калибрлеу"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Қуат және энергия"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Eco параметрлері"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Құрылғылар"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Форматтарды таңдау"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Контенттің динамикалық ауқымын сәйкестендіру"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Бұл опция таңдалғанда, жүйе контентпен сәйкестену үшін әр түрлі динамикалық ауқым форматтары арасында ауысады. Формат ауысқанда, қара экран қосылуы мүмкін.\n\nДинамикалық ауқымның толық опцияларын қарау үшін дисплейдің қосымша параметрлеріне өтіңіз."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Қажетті динамикалық ауқым"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Жүйеге қолайлы конверсия"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Жүйенің формат конверсиясын басқаруына жол беру"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Осы опция таңдалған кезде жүйе дисплейге жіберілетін аралықты анықтайды және керек жағдайда мазмұнды осы динамикалық аралықта түрлендіреді"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Әрқашан мазмұнның форматына сәйкес келеді"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Мәжбүрлі конверсия"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Қолайлы форматты мәжбүрлі конверсиялау"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Қолайлы форматты мәжбүрлі конверсиялау Конверсяны мәжбүрлеу Display Mode немесе HDR фарматындағы басқа параметрлерге әсер етуі мүмкін"</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Әрқашан SDR-да"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Әрқашан <xliff:g id="HDR_TYPE">%s</xliff:g>-те"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"HDR шығысын мәжбүрлі түрде алғыңыз келе ме?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Әдепкі бойынша конверсия <xliff:g id="HDR_TYPE">%s</xliff:g> түрлендіруге мәжбүр болады."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Сіздің дисплейіңіз 1080p 60Hz ажыратымдылығында жұмыс жасайды. Бұл опция 4k 60Hz ажыратымдылығында жұмыс жасаған кезде дисплейніңізбен үйлесімді болмайды."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Контенттің кадр жиілігін сәйкестендіру"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Үздіксіз"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Теледидарыңыз үздіксіз тасымалдай алған жағдайда ҒАНА, қолданба сұраған кезде, құрылғыңыз өзінің шығыс кадр жиілігін көріп жатқан мазмұныңыздың түпнұсқа кадр жиілігіне сәйкестендіреді."</string>

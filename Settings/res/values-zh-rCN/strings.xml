@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"备份和恢复"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"恢复出厂设置"</string>
     <string name="device_calibration" msgid="2907914144048739705">"校准"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"开关和电源"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"节能设置"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"设备"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"选择格式"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"匹配内容的动态范围"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"启用这个选项后，系统会在各种动态范围格式之间切换以匹配内容。这可能会导致在格式切换期间出现黑屏。\n\n您可点击“高级显示设置”以查看更多动态范围选项。"</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"偏好的动态范围"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"系统自动转换"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"让系统管理格式转换"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"如果选择这个选项，系统会决定要发送至您显示屏的合适动态范围，并根据需要将内容转换至此动态范围。"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"一律采用内容本身的格式"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"强制转换"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"强制转换至您偏好的格式"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"强制转换至您偏好的格式。如果强制进行转换，显示模式或 HDR 格式的其他设置可能会受到影响。"</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"一律转换至 SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"一律转换至<xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"要强制进行 HDR 输出操作吗？"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"默认情况下，系统会强制转换至<xliff:g id="HDR_TYPE">%s</xliff:g>。"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"您的显示屏将采用 1080p 60Hz 分辨率。这个选项不支持采用 4K 60Hz 分辨率的显示屏。"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"匹配内容的帧速率"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"流畅"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"如果应用要求，您的设备会将输出的帧速率调整为您所观看内容的原始帧速率，前提是您的电视可以执行流畅转换。"</string>

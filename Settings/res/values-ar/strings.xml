@@ -41,7 +41,7 @@
     <string name="hotwording_summary" msgid="2170375928302175449">"التواصل مع \"مساعد Google\" في أي وقت"</string>
     <string name="header_category_device" msgid="3023893663454705969">"الجهاز"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"الإعدادات المفضّلة"</string>
-    <string name="header_category_accessories" msgid="6479803330480847199">"وحدة التحكم عن بُعد والأجهزة الملحقة"</string>
+    <string name="header_category_accessories" msgid="6479803330480847199">"جهاز التحكم عن بُعد والأجهزة الملحقة"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"شخصي"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"الاتصال بالشبكة"</string>
     <string name="add_an_account" msgid="2601275122685226096">"إضافة حساب"</string>
@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"الاحتفاظ بنسخة احتياطية والاستعادة"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"إعادة الضبط على الإعدادات الأصلية"</string>
     <string name="device_calibration" msgid="2907914144048739705">"المعايرة"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"التشغيل والطاقة"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"إعدادات وضع درجات الحرارة الاقتصادية"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"الأجهزة"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"اختيار الصيغ"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"مطابقة النطاق الديناميكي للمحتوى"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"عند تفعيل هذا الخيار، سينتقل النظام بين تنسيقات النطاق الديناميكي المختلفة لمطابقة المحتوى. قد يتسبب هذا في ظهور شاشة سوداء أثناء تبديل التنسيق.\n\nانقر على \"إعدادات العرض المتقدمة\" لمزيد من خيارات النطاق الديناميكي."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"النطاق الديناميكي المفضّل"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"التحويل إلى النطاق الديناميكي الذي يفضّله النظام"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"يسمح هذا الخيار للنظام بإدارة تنسيق التحويل."</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"عند تحديد هذا الخيار، سيحدِّد النظام النطاق الديناميكي المناسب لإرساله إلى شاشتك وسيتم تحويل المحتوى إلى هذا النطاق الديناميكي حسب الحاجة."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"تتم مطابقة تنسيق المحتوى دائمًا."</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"فرض التحويل"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"يعمل هذا الخيار على فرض التحويل إلى التنسيق الذي تفضّله."</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"يتم فرض التحويل إلى التنسيق الذي تفضّله. قد يؤثّر فرض التحويل في الإعدادات الأخرى في \"وضع العرض\" أو \"تنسيق النطاق العالي الديناميكية\"."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"التحويل إلى النطاق العادي الديناميكية (SDR) دومًا"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"التحويل إلى \"<xliff:g id="HDR_TYPE">%s</xliff:g>\" دومًا"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"هل تريد فرض تشغيل إخراج النطاق العالي الديناميكية (HDR)؟"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"سيتم فرض التحويل تلقائيًا إلى \"<xliff:g id="HDR_TYPE">%s</xliff:g>\"."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"سيتم تشغيل شاشتك بدقة 1080p و60 هرتز. لا يتوافق هذا الخيار مع شاشتك عند تشغيلها بدقة 4K و60 هرتز."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"مطابقة عدد اللقطات في الثانية للمحتوى"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"انتقال سلس"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"بناءً على طلب التطبيق وشريطة توفّر إمكانية الانتقال السلس في التلفزيون الخاص بك، ستتطابق مخرجات جهازك مع العدد الأصلي للقطات في الثانية الذي يظهر به ما تشاهده من محتوى."</string>
@@ -673,7 +687,7 @@
     <string name="palette_color_purple" msgid="2123828754639683555">"بنفسجي"</string>
     <string name="palette_color_gray" msgid="4014534773994261194">"رمادي"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"اختصار \"سهولة الاستخدام\""</string>
-    <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"تفعيل اختصار \"سهولة الاستخدام\""</string>
+    <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"تفعيل اختصار تسهيل الاستخدام"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"خدمة الاختصار"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"عند تفعيل الاختصار، سيؤدّي الضغط على زر الرجوع وزر الاتجاه للأسفل معًا لمدة 3 ثوانٍ إلى بدء ميزة من ميزات \"سهولة الاستخدام\"."</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"الترجمة والشرح"</string>

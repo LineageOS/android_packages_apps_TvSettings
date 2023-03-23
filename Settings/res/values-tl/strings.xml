@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Pag-backup at Pag-restore"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Pag-reset ng factory data"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Pag-calibrate"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Power at Kuryente"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Mga eco setting"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Mga Device"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Pumili ng mga format"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Tumugma sa dynamic range ng content"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Kapag na-enable ang opsyong ito, lilipat ang system sa pagitan ng iba\'t ibang format ng dynamic range para tumugma sa content. Posibleng magdulot ito ng black screen habang lumilipat ng format.\n\nI-click ang mga setting sa Advanced na Display para sa higit pang opsyon sa dynamic range."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Gustong dynamic range"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversion na mas gusto ng system"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Hinahayaan ang system na pamahalaan ang conversion ng format"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Kapag pinili ang opsyong ito, tutukoy ang system ng naaangkop na dynamic na saklaw na ipapadala sa iyong display at iko-convert nito ang content sa dynamic na saklaw na ito gaya ng kinakailangan."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Palaging itugma sa format ng content"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Ipilit ang conversion"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Pinipilit ang conversion sa mas gustong format"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Ipilit ang conversion sa mas gustong format. Kapag pinilit ang conversion, posibleng maapektuhan ang iba pang setting sa Display Mode o HDR Format."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Palaging sa SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Palaging sa <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Gusto mong bang ipilit ang HDR output?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Bilang default, ipipilit sa <xliff:g id="HDR_TYPE">%s</xliff:g> ang conversion."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Gagana ang iyong display sa 1080p 60Hz resolution. Hindi compatible ang opsyong ito sa iyong display kapag gumagana sa 4k 60Hz resolution."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Itugma ang frame rate ng content"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Seamless"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Kung hihingin ito ng app, itutugma ng iyong device ang output nito sa orihinal na frame rate ng content na pinapanood mo, pero sa kaso LANG na makakagawa ng seamless na transition ang iyong TV."</string>

@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Còpia de seguretat i restauració"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Restabliment de les dades de fàbrica"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Calibratge"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Potència i energia"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Configuració ecològica"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Dispositius"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Selecciona els formats"</string>
@@ -154,12 +156,24 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Iguala amb el rang dinàmic del contingut"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"En activar aquesta opció, el sistema canviarà entre els diferents formats de rang dinàmic per igualar-lo amb el del contingut. És possible que la pantalla es torni negra durant el canvi de format.\n\nFes clic a Configuració avançada de la pantalla per a més opcions de rang dinàmic."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Rang dinàmic preferit"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Adapta als fotogrames per segon del contingut"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversió preferida pel sistema"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Permet que el sistema gestioni la conversió del format"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"En seleccionar aquesta opció, el sistema determinarà un rang dinàmic adequat perquè s\'enviï a la teva pantalla i converteixi el contingut en aquest rang dinàmic segons calgui."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Sempre coincideix amb el format del contingut"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Força la conversió"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Força la conversió a un format preferit"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Força la conversió a un format preferit. Aquesta acció pot afectar altres opcions de configuració del mode de visualització o del format HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Sempre a SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Sempre a <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Vols forçar la sortida HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"De manera predeterminada, la conversió es forçarà a <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"La pantalla s\'executarà amb una resolució de 1080p a 60Hz. Aquesta opció no és compatible amb la teva pantalla quan s\'executa amb una resolució de 4K a 60Hz."</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Fes coincidir amb els FPS del contingut"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Transició continua"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si l\'aplicació ho sol·licita, el dispositiu mostrarà el contingut que estàs mirant amb els fotogrames per segon del vídeo original, NOMÉS si el televisor pot efectuar una transició continua."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"La pantalla connectada no admet transicions amb una freqüència d\'actualització sense interrupcions. Aquesta opció no tindrà efecte tret que canviïs a una pantalla compatible."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Transició no continua"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si l\'aplicació ho sol·licita, el dispositiu mostrarà el contingut que estàs mirant amb els fotogrames per segon del vídeo original. Això pot provocar que la pantalla es quedi en blanc un segon en entrar a la reproducció d\'un vídeo o sortir-ne."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si l\'aplicació ho sol·licita, el dispositiu farà coincidir la sortida amb els fotogrames per segon originals del contingut que estàs mirant. Això pot provocar que la pantalla es quedi en blanc un segon en entrar a la reproducció d\'un vídeo o sortir-ne."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Mai"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Encara que l\'aplicació ho sol·liciti, el dispositiu mai no provarà de mostrar el contingut que estàs mirant amb els fotogrames per segon del vídeo original."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Ajust del text"</string>

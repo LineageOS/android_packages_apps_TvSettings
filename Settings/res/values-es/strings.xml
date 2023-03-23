@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Copia de seguridad y restauración"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Restablecer estado de fábrica"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Calibración"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Alimentación y energía"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Ajustes de Eco"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Dispositivos"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Seleccionar formatos"</string>
@@ -154,12 +156,24 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Adaptarse al rango dinámico del contenido"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Al habilitar esta opción, el sistema cambiará entre los diferentes formatos de rango dinámico para adaptarse al contenido. La pantalla puede quedarse en negro durante el cambio de formato.\n\nHaz clic en Ajustes avanzados de la pantalla para ver más opciones de rango dinámico."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Rango dinámico preferido"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversión preferida por el sistema"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Permite que el sistema gestione la conversión del formato"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Al seleccionar esta opción, el sistema determinará un rango dinámico adecuado para que se envíe a tu pantalla y convertirá el contenido en dicho rango dinámico según sea necesario."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Siempre coincide con el formato del contenido"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Forzar conversión"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Fuerza la conversión al formato preferido"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Fuerza la conversión al formato preferido. Forzar la conversión puede afectar a otros ajustes en el modo de visualización o en el formato HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Siempre a SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Siempre a <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"¿Quieres forzar la salida HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"De forma predeterminada, la conversión se forzará a <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Tu pantalla se ejecutará con una resolución de 1080p a 60 Hz. Esta opción no es compatible con tu pantalla cuando se ejecuta con una resolución de 4K a 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Adaptarse a la velocidad de fotogramas del contenido"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Solo si la transición es fluida"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si la aplicación lo solicita, tu dispositivo intentará hacer coincidir la imagen con la velocidad de fotogramas original del contenido que veas, pero SOLO si tu televisor puede mostrar una transición fluida."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"La pantalla que has conectado no es compatible con las transiciones de tasa de refresco fluidas. Esta opción no tendrá ningún efecto a menos que cambies a una pantalla compatible."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Aunque la transición no sea fluida"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si la aplicación lo solicita, tu dispositivo intentará mostrar en su velocidad de fotogramas original el contenido que ves. Esta opción puede provocar que la pantalla se ponga en blanco durante un segundo al iniciar o termina la reproducción del vídeo."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si la aplicación lo solicita, tu dispositivo intentará mostrar el contenido que veas en su velocidad de fotogramas original. Esto puede provocar que la pantalla se ponga en blanco durante un segundo al iniciar o terminar la reproducción del vídeo."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nunca"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Aunque la aplicación lo solicite, tu dispositivo nunca intentará mostrar el contenido que veas en su velocidad de fotogramas original."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Ajuste de texto"</string>
@@ -745,7 +759,7 @@
     <string name="system_always_check" msgid="384870282800221580">"Comprobar siempre"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Registro de Bluetooth HCI"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Dirección de correo"</string>
-    <string name="system_usb_debugging" msgid="2158285492172755923">"Depuración USB"</string>
+    <string name="system_usb_debugging" msgid="2158285492172755923">"Depuración por USB"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Ubicaciones simuladas"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Aplicación para depurar"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Esperar al depurador"</string>
@@ -1023,7 +1037,7 @@
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Encender pantalla"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"Permitir encender la pantalla"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Permite que una aplicación encienda la pantalla. Si das este permiso, la aplicación puede encender la pantalla en cualquier momento sin que se lo pidas."</string>
-    <string name="special_access" msgid="21806055758289916">"Aplicaciones con accesos especiales"</string>
+    <string name="special_access" msgid="21806055758289916">"aplicaciones con accesos especiales"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audio"</string>
     <string name="record_audio" msgid="5035689290259575229">"Grabar audio"</string>

@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Резервное копирование и восстановление"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Сброс настроек"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калибровка"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Питание и энергопотребление"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Настройки экономичного режима"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Устройства"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Выбор форматов"</string>
@@ -154,12 +156,24 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Приводить в соответствие с динамическим диапазоном контента"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Если включить этот параметр, устройство будет переключаться на формат динамического диапазона, который используется в контенте. Во время смены формата экран может погаснуть.\n\nДополнительные параметры динамического диапазона находятся в разделе \"Расширенные настройки экрана\"."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Предпочтительный динамический диапазон"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Автоматическая настройка формата"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Формат автоматически выбирается системой"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Если включить этот параметр, то при необходимости система будет определять динамический диапазон, подходящий для вашего экрана, и выводить контент в этом диапазоне."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Выбор формата по параметрам контента"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Принудительное изменение формата"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Принудительно устанавливается предпочтительный формат"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Принудительно устанавливается предпочтительный формат. Это может повлиять на другие настройки в режиме отображения или при использовании формата HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Всегда в формате SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Всегда в формате <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Выводить контент принудительно в формате HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Формат контента будет принудительно меняться на <xliff:g id="HDR_TYPE">%s</xliff:g> по умолчанию."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Разрешение вашего экрана составит 1080 пкс, а частота обновления – 60 Гц. Эта функция не поддерживается на устройствах с разрешением 4K и частотой обновления 60 ГЦ."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Использовать частоту кадров контента"</string>
-    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Согласовывать частоту кадров"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Только с плавным переходом"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Устройство переключит формат вывода изображения в соответствии с исходной частотой кадров воспроизводимого видео, если поступит соответствующий запрос от приложения, но ТОЛЬКО при условии, что телевизор может осуществить плавный переход."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Подключенный экран не поддерживает плавные переходы частоты обновления. Чтобы этот параметр работал, замените экран на совместимый."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Не согласовывать частоту кадров"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Устройство переключит формат вывода изображения в соответствии с исходной частотой кадров видео, если поступит соответствующий запрос от приложения. При этом в начале воспроизведения видео или после его просмотра экран может ненадолго погаснуть."</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Даже без плавного перехода"</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Если поступит запрос от приложения, устройство установит для экрана частоту обновления, соответствующую исходной частоте кадров в контенте, который вы смотрите. Из-за этого в начале и в конце воспроизведения видео экран может на секунду погаснуть."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Никогда"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Устройство не будет переключать формат вывода изображения в соответствии с исходной частотой кадров воспроизводимого видео, даже если поступит соответствующий запрос от приложения."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Масштабирование текста"</string>

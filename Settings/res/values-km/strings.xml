@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"បម្រុងទុក និងស្ដារ"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"កំណត់ទិន្នន័យដូចចេញពីរោងចក្រ"</string>
     <string name="device_calibration" msgid="2907914144048739705">"ការ​ក្រិត​តាម​ខ្នាត"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"កម្លាំង និង​ថាមពល"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"ការកំណត់​អេកូ"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"ឧបករណ៍"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"ជ្រើសរើស​ទម្រង់"</string>
@@ -154,14 +156,26 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"ផ្គូផ្គងកម្រិតឌីណាមិកខ្លឹមសារ"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"នៅពេលបើក​ជម្រើសនេះ ប្រព័ន្ធនឹងប្ដូររវាង​ទម្រង់កម្រិត​ឌីណាមិកផ្សេងៗ ដើម្បីឱ្យត្រូវគ្នានឹង​ខ្លឹមសារ។ ការធ្វើបែបនេះ​អាចបណ្ដាលឱ្យ​អេក្រង់ពណ៌ខ្មៅ ក្នុងអំឡុងពេល​ប្ដូរទម្រង់។\n\nចុច​ការកំណត់​ផ្ទាំងអេក្រង់កម្រិតខ្ពស់ ដើម្បីទទួលបាន​ជម្រើសកម្រិតឌីណាមិក​ច្រើនទៀត។"</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"កម្រិតឌីណាមិក​ដែលចង់បាន"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"ផ្គូផ្គង​អត្រាស៊ុម​របស់ខ្លឹមសារ"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"ការបំប្លែងជាអាទិភាពនៃប្រព័ន្ធ"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"សូមឱ្យប្រព័ន្ធគ្រប់គ្រងការបំប្លែងទម្រង់"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"នៅពេលជម្រើសនេះត្រូវបានជ្រើសរើស ប្រព័ន្ធនឹងកំណត់ចន្លោះឌីណាមិកសមរម្យមួយដែលត្រូវបានផ្ញើទៅកាន់ផ្ទាំងអេក្រង់របស់អ្នក ហើយបំប្លែងខ្លឹមសារទៅជា​ចន្លោះឌីណាមិកនេះតាមតម្រូវការ។"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"ត្រូវគ្នានឹងទម្រង់ខ្លឹមសារជានិច្ច"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"បង្ខំការបំប្លែង"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"បង្ខំការបំប្លែងទៅជាទម្រង់ដែលពេញចិត្ត"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"បង្ខំការបំប្លែងទៅជាទម្រង់ដែលពេញចិត្ត។ ការបង្ខំការបំប្លែងអាចប៉ះពាល់ដល់ការកំណត់ផ្សេងទៀតនៅក្នុងមុខងារផ្ទាំងអេក្រង់ ឬទម្រង់ HDR។"</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"ទៅជា SDR ជានិច្ច"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"ទៅជា <xliff:g id="HDR_TYPE">%s</xliff:g> ជានិច្ច"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"តើអ្នកចង់បង្ខំធាតុចេញកម្រិត HDR មែនទេ?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"តាមលំនាំដើម កា​របំប្លែងនឹងត្រូវបានបង្ខំឱ្យទៅជា <xliff:g id="HDR_TYPE">%s</xliff:g>។"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"ផ្ទាំងអេក្រង់របស់អ្នកនឹងដំណើរការក្នុងកម្រិតគុណភាព 1080p 60Hz។ ជម្រើសនេះមិនត្រូវគ្នាជាមួយផ្ទាំងអេក្រង់របស់អ្នកទេ នៅពេលដំណើរការក្នុងកម្រិតគុណភាព 4k 60Hz។"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"ផ្គូផ្គង​អត្រាហ្វ្រេមរបស់ខ្លឹមសារ"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"រលូន"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"ប្រសិនបើកម្មវិធីស្នើសុំវា ឧបករណ៍​របស់អ្នក​នឹងផ្គូផ្គង​លទ្ធផល​របស់វា​ជាមួយ​អត្រាស៊ុមដើម​នៃខ្លឹមសារ​ដែលអ្នក​កំពុងមើល​ លុះត្រាតែទូរទស្សន៍របស់អ្នកអាចធ្វើចលនាផ្លាស់ប្ដូរដោយរលូនប៉ុណ្ណោះ។"</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"ប្រសិនបើកម្មវិធីស្នើសុំវា ឧបករណ៍​របស់អ្នក​នឹងផ្គូផ្គង​ធាតុចេញ​របស់វា​ជាមួយ​អត្រាហ្វ្រេមដើម​នៃខ្លឹមសារ​ដែលអ្នក​កំពុងមើល​ លុះត្រាតែទូរទស្សន៍របស់អ្នកអាចដើរយ៉ាងរលូនប៉ុណ្ណោះ។"</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"ផ្ទាំងអេក្រង់ដែលបានភ្ជាប់របស់អ្នកមិនអាចភ្ជាប់ឈុតឆាកក្នុងអត្រាផ្ទុកឡើងវិញដ៏រលូនបានទេ។ ជម្រើសនេះនឹងមិនមានប្រសិទ្ធភាពឡើយ ប្រសិនបើអ្នកមិនប្ដូរទៅប្រើផ្ទាំងអេក្រង់ដែលអាចភ្ជាប់ឈុតឆាកក្នុងអត្រាផ្ទុកឡើងវិញដ៏រលូនទេ។"</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"មិនរលូន"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ប្រសិនបើកម្មវិធីស្នើសុំវា ឧបករណ៍​របស់អ្នក​នឹងផ្គូផ្គង​លទ្ធផល​របស់វា​ជាមួយ​អត្រាស៊ុមដើម​នៃខ្លឹមសារ​ដែលអ្នក​កំពុងមើល​។ ការធ្វើបែបនេះអាចបណ្ដាលឱ្យអេក្រង់របស់អ្នកងងឹតមួយភ្លែត នៅពេលចាកចេញ ឬចូលចាក់វីដេអូ។"</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ប្រសិនបើកម្មវិធីស្នើសុំវា ឧបករណ៍​របស់អ្នក​នឹងផ្គូផ្គង​ធាតុចេញ​របស់វា​ជាមួយ​អត្រាហ្វ្រេមដើម​នៃខ្លឹមសារ​ដែលអ្នក​កំពុងមើល​។ ការធ្វើបែបនេះអាចបណ្ដាលឱ្យអេក្រង់របស់អ្នកងងឹតមួយភ្លែត នៅពេលចាកចេញ ឬចូលចាក់វីដេអូ។"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"កុំឱ្យសោះ"</string>
-    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"ទោះបីជាកម្មវិធីស្នើសុំវាក៏ដោយ ឧបករណ៍​របស់អ្នក​នឹងមិនព្យាយាមផ្គូផ្គង​លទ្ធផល​របស់វា​ជាមួយ​អត្រាស៊ុមដើម​នៃខ្លឹមសារ​ដែលអ្នក​កំពុងមើលទេ។"</string>
+    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"ទោះបីកម្មវិធីស្នើសុំវាក៏ដោយ ឧបករណ៍​របស់អ្នក​នឹងមិនព្យាយាមផ្គូផ្គង​ធាតុចេញ​របស់វា​ជាមួយ​អត្រាហ្វ្រេមដើម​នៃខ្លឹមសារ​ដែលអ្នក​កំពុងមើលទេ។"</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"ការប្ដូរទំហំអក្សរ"</string>
     <string name="font_scale_item_detail" msgid="1558315053348778805">"ប្ដូរទំហំទៅ <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"អត្ថបទគំរូ"</string>
