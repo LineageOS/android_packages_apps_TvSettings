@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Tworzenie i przywracanie kopii zapasowej"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Przywracanie danych fabrycznych"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibracja"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Zasilanie i energia"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Ustawienia trybu Eko"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Urządzenia"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Wybierz formaty"</string>
@@ -154,7 +156,19 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Dopasuj do zakresu dynamicznego treści"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Po włączeniu tej opcji system będzie się przełączał między różnymi formatami zakresu dynamicznego zależnie od treści. Może to spowodować wyświetlenie czarnego ekranu podczas zmiany formatu.\n\nAby zobaczyć więcej opcji zakresu dynamicznego, kliknij Zaawansowane ustawienia wyświetlacza."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Preferowany zakres dynamiczny"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Dopasuj do liczby klatek treści"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Konwersja preferowana przez system"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Zezwalaj systemowi na zarządzanie konwersją formatu"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Po wybraniu tej opcji odpowiedni to system będzie określać zakres dynamiczny wysyłany do wyświetlacza. W razie potrzeby treść zostanie przekonwertowana na ten zakres."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Zawsze zgodnie z formatem treści"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Wymuszaj konwersję"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Wymusza konwersję na preferowany format"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Wymuszaj konwersję na preferowany format. Wymuszanie konwersji może mieć wpływ na inne ustawienia trybu wyświetlania lub formatu HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Zawsze na SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Zawsze na <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Czy chcesz wymusić sygnał HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Domyślnie wymuszona będzie konwersja <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Obraz będzie wyświetlany w rozdzielczości 1080p przy 60 Hz. Ta opcja nie jest zgodna z Twoim wyświetlaczem w przypadku obrazu w rozdzielczości 4K przy 60 Hz."</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Dostosuj do liczby klatek oglądanych treści"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Płynnie"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Jeśli aplikacja o to poprosi, urządzenie będzie dopasowywać sygnał wyjściowy do pierwotnej liczby klatek oglądanych treści, TYLKO jeśli telewizor może to zrobić płynnie."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Podłączony wyświetlacz nie obsługuje płynnej zmiany częstotliwości odświeżania. Ta opcja nie zadziała, dopóki nie podłączysz wyświetlacza, który ją obsługuje."</string>

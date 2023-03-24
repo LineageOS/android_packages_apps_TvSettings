@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Нөөцлөх &amp; сэргээх"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Үйлдвэрээс гарсан төлөвт"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Тааруулалт"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Цэнэг болон Эрчим хүч"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Эко тохиргоо"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Төхөөрөмжүүд"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Формат сонгох"</string>
@@ -154,11 +156,23 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Контентын динамик мужийг тааруулах"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Энэ сонголтыг идэвхжүүлэх үед систем контенттой тааруулахын тулд динамикийн мужийн өөр өөр форматын хооронд сэлгэнэ. Энэ нь формат сэлгэх үед дэлгэцийг хар болгоход хүргэж магадгүй.\n\nДинамик мужийн бусад сонголт авах бол Дэлгэцийн дэвшилтэт тохиргоог товшино уу."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Сонгосон динамик муж"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Системийн сонгосон хувиралт"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Системд форматын хувиралтыг удирдахыг зөвшөөрнө үү"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Энэ сонголтыг сонгосон үед систем таны дэлгэц рүү илгээх тохирох динамик мужийг тодорхойлж, шаардлагатай бол контентыг энэ динамик муж руу хувиргана."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Үргэлж контентын форматтай таруулна"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Хувиралтыг хүчлэх"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Хувиралтыг сонгосон формат руу хүчилнэ"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Хувиралтыг сонгосон формат рүү хүчилнэ. Хувиралтыг хүчлэх нь Дэлгэцийн горим эсвэл HDR форматын бусад тохиргоонд нөлөөлж магадгүй."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Үргэлж SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Үргэлж <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Та HDR гаралтыг хүчлэхийг хүсэж байна уу?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Өгөгдмөлөөр хувиралтыг <xliff:g id="HDR_TYPE">%s</xliff:g> болгож хүчилнэ."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Таны дэлгэц 1080p 60Hz нягтралтайгаар ажиллана. Таны дэлгэц 4000 60Hz нягтралтайгаар ажиллаж байгаа үед энэ сонголт тохиромжгүй."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Контентын фрэймийн хурдыг тааруулах"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Саадгүй"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Хэрэв апп ингэх хүсэлт тавьсан бол таны төхөөрөмж ЗӨВХӨН таны ТВ саадгүй шилжилт гүйцэтгэх боломжтой тохиолдолд гаралтаа таны үзэж буй контентын эх фрэймийн хурдтай тааруулна."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Таны холбогдсон дэлгэц нь сэргээх хурдны тасралтгүй шилжилтийг дэмждэггүй. Хэрэв та үүнийг дэмждэг дэлгэц рүү шилжихгүй бол энэ сонголт ямар ч нөлөө үзүүлэхгүй."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Саадгүй бус"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Саадтай"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Апп ингэх хүсэлт тавьсан тохиолдолд таны төхөөрөмж гаралтаа таны үзэж буй контентын эх фрэймийн хурдтай тааруулна. Энэ нь видеог дахин тоглуулах явцаас гарах эсвэл үүнд орох үед таны дэлгэцийг секундийн турш хоосон болгож болно."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Хэзээ ч үгүй"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Апп ингэх хүсэлт тавьсан байлаа ч таны төхөөрөмж гаралтаа таны үзэж буй контентын эх фрэймийн хурдтай тааруулах гэж хэзээ ч оролдохгүй."</string>

@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Cópia de segurança e restauro"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Reposição de dados de fábrica"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Calibração"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Alimentação e energia"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Definições do modo Eco"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Dispositivos"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Selecionar formatos"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Faça a correspondência com a amplitude dinâmica do conteúdo"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Ao ativar esta opção, o sistema vai alternar entre diferentes formatos de amplitude dinâmica para corresponder ao conteúdo. Isto pode resultar num ecrã preto durante uma mudança de formato.\n\nClique em Definições de visualização avançadas para obter mais opções de amplitude dinâmica."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Amplitude dinâmica preferida"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversão preferida do sistema"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Permite que o sistema faça a gestão da conversão do formato"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Quando esta opção está selecionada, o sistema vai determinar uma amplitude dinâmica adequada para ser enviada para o seu ecrã e converter o conteúdo nesta amplitude dinâmica conforme necessário."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Corresponde sempre ao formato do conteúdo"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Force a conversão"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Força a conversão no formato preferido"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Force a conversão no formato preferido. Forçar a conversão pode afetar outras definições no Modo de apresentação ou formato HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Sempre para SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Sempre para <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Quer forçar a saída HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Por predefinição, a conversão vai ser forçada para <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"O ecrã vai ter uma resolução 1080p a 60 Hz. Esta opção não é compatível com o seu ecrã na resolução 4K a 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Igualar a velocidade de frames do conteúdo"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Sem interrupções"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Se a app o solicitar, o dispositivo irá fazer corresponder a respetiva saída à velocidade de frames original do conteúdo que está a ver APENAS se a sua TV conseguir efetuar uma transição sem interrupções."</string>
@@ -171,7 +185,7 @@
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Seleção de formato"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automático"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Utilizar os formatos do dispositivo indicados"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Usar os formatos do dispositivo indicados"</string>
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Escolher os formatos manualmente a partir dos formatos disponíveis"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"FORMATOS SUPORTADOS"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"FORMATOS NÃO SUPORTADOS"</string>
@@ -225,7 +239,7 @@
     <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Sincronizar com este dispositivo?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Introduza no dispositivo: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt; e, em seguida, prima Enter."</string>
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza o PIN obrigatório do dispositivo:"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza a token de acesso obrigatória do dispositivo:"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza o token de acesso obrigatória do dispositivo:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Geralmente, 0000 ou 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Sincronizar"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancelar"</string>
@@ -586,16 +600,16 @@
     <string name="system_set_time" msgid="7179243042276057341">"Definir hora"</string>
     <string name="system_set_time_zone" msgid="6471564469883225195">"Definir fuso horário"</string>
     <string name="desc_set_time_zone" msgid="4926392006501180047">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
-    <string name="system_set_time_format" msgid="902518158066450918">"Utilizar formato de 24 horas"</string>
+    <string name="system_set_time_format" msgid="902518158066450918">"Usar formato de 24 horas"</string>
     <string name="desc_set_time_format" msgid="8688587526768572230">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="8458199433555868708">"Data e hora automáticas"</string>
   <string-array name="auto_date_time_entries">
-    <item msgid="8119837829162871025">"Utilizar hora fornecida pela rede"</item>
+    <item msgid="8119837829162871025">"Usar hora fornecida pela rede"</item>
     <item msgid="369146066143710034">"Desativado"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
-    <item msgid="1010003447137304123">"Utilizar hora fornecida pela rede"</item>
-    <item msgid="5645263357181875427">"Utilizar hora fornecida pelo fluxo contínuo de transporte"</item>
+    <item msgid="1010003447137304123">"Usar hora fornecida pela rede"</item>
+    <item msgid="5645263357181875427">"Usar hora fornecida pelo fluxo contínuo de transporte"</item>
     <item msgid="5501503537181350884">"Desativado"</item>
   </string-array>
     <string name="sensor_toggle_description" msgid="7415801459994303159">"Para todas as apps e serviços"</string>
@@ -631,7 +645,7 @@
     <string name="location_no_recent_apps" msgid="7033474075806435793">"Nenhuma aplicação solicitou a localização recentemente"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Utilização de bateria elevada"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Utilização de bateria baixa"</string>
-    <string name="location_mode_wifi_description" msgid="84697248707903061">"Utilizar Wi-Fi para calcular a localização"</string>
+    <string name="location_mode_wifi_description" msgid="84697248707903061">"Usar Wi-Fi para calcular a localização"</string>
     <string name="location_status" msgid="3037321737386011224">"Estado de localização"</string>
     <string name="location_services" msgid="551503779736382878">"Serviços de localização"</string>
     <string name="on" msgid="4899322147062342542">"Ativado"</string>
@@ -717,7 +731,7 @@
     <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"Ouça uma descrição do que se passa no ecrã em filmes e programas suportados"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Ativar"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Configuração"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Utilizar <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Usar <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"O <xliff:g id="SERVICE">%1$s</xliff:g> poderá recolher todo o texto que digita, exceto palavras-passe. Isto inclui dados pessoais como números de cartões de crédito."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Parar <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Ao selecionar OK, para o <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
@@ -770,7 +784,7 @@
     <string name="system_background_process_limit" msgid="1985373407150771045">"Limite do processo em 2.º plano"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"Mostrar todos os ANRs"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Desativar suspensão"</string>
-    <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"Utilizar apenas para conteúdo DRM"</string>
+    <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"Usar apenas para conteúdo DRM"</string>
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"Otimize o visor para obter a máxima resolução ou a máxima velocidade de fotogramas. Esta ação apenas afeta os visores Ultra HD. Se alterar esta definição, reiniciará o dispositivo."</string>
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Ativar registo de monitorização HCI Bluetooth"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Modo de depuração com USB ligado"</string>

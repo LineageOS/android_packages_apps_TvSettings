@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Sauvegarder et restaurer"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Rétablir la configuration par défaut"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Étalonnage"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Alimentation et énergie"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Paramètres éco"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Appareils"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Sélectionner les options"</string>
@@ -151,12 +153,21 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Paramètres sonores avancés"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Autoriser le mode Jeu"</string>
-    <!-- no translation found for match_content_dynamic_range_title (2794980556561655838) -->
-    <skip />
-    <!-- no translation found for match_content_dynamic_range_summary (2255683926227355398) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_title (5064883672337010588) -->
-    <skip />
+    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Faire correspondre la gamme dynamique à celle du contenu"</string>
+    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Lorsque cette option est activée, le système passera d\'une gamme dynamique à une autre pour s\'adapter au contenu. Cela peut engendrer un écran noir lors d\'un changement de format.\n\nCliquez sur Paramètres d\'affichage avancés pour accéder à d\'autres options de gamme dynamique."</string>
+    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Gamme dynamique préférée"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversion préférée par le système"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Permet au système de gérer la conversion du format"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Lorsque cette option est sélectionnée, le système déterminera une gamme dynamique appropriée à envoyer à votre écran et convertira le contenu à cette gamme dynamique si nécessaire."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Toujours faire correspondre le format à celui du contenu"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Forcer la conversion"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"La conversion au format préféré sera forcée"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Forcer la conversion à un format préféré. Forcer la conversion peut avoir une incidence sur d\'autres paramètres du mode d\'affichage ou du format HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Toujours au format SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Toujours au format <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Voulez-vous forcer la sortie HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Par défaut, la conversion sera forcée au format <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Votre écran affichera une résolution de 1080p à 60 Hz. Cette option n\'est pas compatible avec votre écran lorsqu\'il affiche une résolution de 4K à 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Faire correspondre la fréquence d\'images"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Transparent"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si l\'application le demande, votre appareil fera correspondre sa sortie à la fréquence d\'images d\'origine du contenu que vous regardez, uniquement si votre téléviseur peut effectuer une transition transparente."</string>

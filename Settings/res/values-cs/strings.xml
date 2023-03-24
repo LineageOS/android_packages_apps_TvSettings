@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Zálohování a obnovení"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Obnovení továrních dat"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrace"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Výkon a energie"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Nastavení Eko"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Zařízení"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Vybrat formáty"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Sladit dynamický rozsah obsahu"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Když povolíte tuto možnost, systém bude přepínat mezi různými formáty dynamického rozsahu podle obsahu. Při přepínání formátu může obrazovka zčernat.\n\nDalší možnosti dynamického rozsahu najdete v sekci Rozšířená nastavení obrazu."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Preferovaný dynamický rozsah"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Převod preferovaný systémem"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Nechá správu převodu formátu na systému"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Když je vybrána tato možnost, určí systém vhodný dynamický rozsah k odeslání na váš displej, a podle potřeby obsah převede do tohoto dynamického rozsahu."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Vždy odpovídá formátu obsahu"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Vynutit převod"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Vynutí převod do preferovaného formátu"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Vynutit převod do preferovaného formátu. Vynucení převodu může mít dopad na další nastavení v sekci Režim zobrazení nebo Formát HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Vždy do SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Vždy do <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Chcete vynutit výstup HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Ve výchozím nastavení bude vynucen převod do formátu <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Váš displej poběží v rozlišení 1080p 60 Hz. Tato možnost není kompatibilní s vaším displejem při rozlišení 4k 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Sladit snímkovou frekvenci obsahu"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Synchronizované"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Zařízení se pokusí srovnat svůj výstup s původní snímkovou frekvencí sledovaného obsahu (pokud o to aplikace požádá a POUZE v případě, že vaše televize podporuje plynulý přechod na synchronizované zobrazení)."</string>

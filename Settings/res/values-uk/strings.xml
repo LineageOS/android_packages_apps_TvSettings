@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Резервне копіювання й відновлення"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Відновлення заводських налаштувань"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калібрування"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Живлення й енергія"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Налаштування режиму \"Еко\""</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Пристрої"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Вибрати формати"</string>
@@ -154,7 +156,19 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Враховувати динамічний діапазон контенту"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Якщо цю опцію ввімкнено, система перемикатиметься між різними форматами динамічного діапазону з урахуванням контенту. Під час перемикання формату екран може ставати чорним.\n\nЩоб переглянути інші опції динамічного діапазону, натисніть \"Додаткові налаштування екрана\"."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Бажаний динамічний діапазон"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Відповідно до частоти кадрів контенту"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Системна конвертація"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Дозвольте системі керувати конвертацією формату"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Якщо ви виберете цю опцію, система визначатиме відповідний динамічний діапазон, який передаватиметься на ваш екран, і за потреби конвертуватиме контент у цей динамічний діапазон."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Завжди відповідає формату контенту"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Примусова конвертація"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Відео примусово конвертуватиметься в потрібний формат"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Відео примусово конвертуватиметься в потрібний формат. Примусова конвертація може впливати на інші параметри режиму відображення або формату HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Завжди в SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Завжди в <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Здійснювати примусову конвертацію у формат форматі HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"За умовчанням контент конвертуватиметься у формат <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Ваш екран працюватиме з роздільною здатністю 1080p 60 Гц. Ця опція не підтримується, якщо екран працює з роздільною здатністю 4K 60 Гц."</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Допасування до частоти кадрів контенту"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Плавний перехід"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Якщо цього вимагає додаток, пристрій відтворюватиме зображення без зміни частоти кадрів, ЛИШЕ якщо телевізор може виконати плавний перехід."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Підключений екран не підтримує плавну зміну частоти оновлення. Вибір цієї опції не дасть результату, якщо ви не використовуватимете екран, який підтримує цю функцію."</string>
@@ -472,9 +486,9 @@
     <string name="wifi_ip_settings_invalid_dns" msgid="5111100342560120360">"Введіть дійсну DNS-адресу"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="2726889303835927777">"Введіть довжину префікса мережі від 0 до 32"</string>
     <string name="wifi_ip_address_description" msgid="7109677764979198618">"Введіть дійсну IP-адресу.\nПриклад: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
-    <string name="wifi_dns1_description" msgid="2287252520192279195">"Введіть дійсну IP-адресу або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
-    <string name="wifi_dns2_description" msgid="6495565714252833784">"Введіть дійсну IP-адресу або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
-    <string name="wifi_gateway_description" msgid="8902481147103929271">"Введіть дійсну IP-адресу або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2287252520192279195">"Введіть дійсну IP-адресу або залиште поле порожнім.\nПриклад: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="6495565714252833784">"Введіть дійсну IP-адресу або залиште поле порожнім.\nПриклад: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="8902481147103929271">"Введіть дійсну IP-адресу або залиште поле порожнім.\nПриклад: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
     <string name="wifi_network_prefix_length_description" msgid="2670994968279018896">"Введіть префікс мережі дійсної довжини.\nПриклад: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="5629893736174170157">"Ім’я хосту недійсне"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="1762079966901078116">"Список виключень недійсний. Введіть список виключених доменів через кому."</string>
@@ -483,7 +497,7 @@
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Порт недійсний"</string>
     <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Проксі-сервер HTTP використовується веб-переглядачем, але недоступний для інших додатків"</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"Введіть дійсний номер порту.\nПриклад: <xliff:g id="ID_1">8080</xliff:g>"</string>
-    <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Введіть виключені домени через кому або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Введіть виключені домени через кому або залиште поле порожнім.\nПриклад: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"Введіть дійсне ім’я хосту.\nПриклад: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="title_wifi_eap_method" msgid="4351752615786996226">"Виберіть метод EAP для мережі <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_phase2_authentication" msgid="1167205033305931574">"Виберіть другий етап автентифікації для мережі <xliff:g id="SSID">%1$s</xliff:g>"</string>

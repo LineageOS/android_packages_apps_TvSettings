@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Калыбына келтирүү жана камдык көчүрмөнү сактоо"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Баштапкы абалга кайтаруу"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калибрдөө аяктады"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Кубат жана энергия"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Эко параметрлери"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Түзмөктөр"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Форматтарды тандоо"</string>
@@ -154,12 +156,24 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Контенттин динамикалык диапазонуна дал келтирүү"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Бул параметр иштетилсе, контентке дал келүү үчүн тутум ар түрдүү динамикалык диазапондун форматтарына которулат. Форматка которулуп жатканда экран карарып калышы мүмкүн.\n\nДинамикалык диапазондун варианттарын көрүү үчүн Экрандын өркүндөтүлгөн параметрлерине өтүңүз."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Тандалган динамикалык диапазон"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Мазмундун кадрлар жыштыгын дал келтирүү"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Тутум тарабынан тандалган формат"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Формат өзгөртүүсүн тутум башкарсын"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Бул параметр тандалганда, тутум ылайыктуу динамикалык диапазонду таап, экраныңыздын форматына жараша мазмун форматын өзгөртүшү мүмкүн."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Ар дайым мазмундун форматына дал келет"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Башка форматка өзгөртүү"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Тандалган форматка өзгөртөт"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Тандалган форматка өзгөртүлсүн. Өзгөртүү Көрсөтүү режиминдеги же HDR форматындагы башка жөндөөлөргө таасир этиши мүмкүн."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Ар дайым SDR сакталсын"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Ар дайым <xliff:g id="HDR_TYPE">%s</xliff:g> форматы сакталсын"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"HDR форматына өзгөртүүнү улантасызбы?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Демейки шартта формат <xliff:g id="HDR_TYPE">%s</xliff:g> форматына өзгөртүлөт."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Экраныңыз 1080p 60 Гц дааналыгында көрсөтүлөт. Экраныңыз 4K 60 Гц дааналыгында көрсөтүлсө, бул параметр туура келбейт."</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Контенттин кадрлар жыштыгын колдонуу"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Үзгүлтүксүз"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Эгер колдонмо суранса, түзмөгүңүз ойнотулуп жаткан видеонун баштапкы кадрларынын жыштыгын тууралайт. Бул TV үзгүлтүксүз өтүүнү аткара алса гана мүмкүн."</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Эгер колдонмо суранса, түзмөгүңүз видеону баштапкы кадрлар жыштыгы боюнча көрсөтөт, бирок ал үчүн сыналгы үзгүлтүксүз өтүшү керек."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Туташкан экранда жаңыруу жыштыгына жай которулуу мүмкүн эмес. Бул параметрди иштетүү үчүн колдоого алынган экранга өтүңүз."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Үзгүлтүксүз эмес"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Эгер колдонмо суранса, түзмөгүңүз ойнотулуп жаткан видеонун баштапкы кадрларынын жыштыгын тууралайт. Видеону ойноткучка кирип же чыгып жатканда экран бир секундга өчүп калышы мүмкүн."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Эгер колдонмо суранса, түзмөгүңүз видеону баштапкы кадрлар жыштыгы боюнча көрсөтөт. Видео көрүнүп жатканда же көрүнүп бүткөндөн кийин экран бир азга өчүп калышы мүмкүн."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Эч качан"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Колдонмо суранган учурда да, түзмөгүңүз ойнотулуп жаткан видеонун баштапкы кадрларынын жыштыгын тууралоого эч качан аракет кылбайт."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Тексттин өлчөмүн тууралоо"</string>

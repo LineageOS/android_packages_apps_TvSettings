@@ -26,6 +26,12 @@
         android:summary="@string/limit_network_in_standby_toggle_summary"/>
 
     <Preference
+        android:key="energy_modes"
+        android:fragment="com.android.tv.settings.device.eco.EnergyModesFragment"
+        android:icon="@drawable/ic_settings_eco"
+        android:title="@string/energy_modes"/>
+
+    <Preference
         android:key="shutofftimer"
         android:fragment="com.android.tv.settings.device.display.daydream.EnergySaverFragment"
         android:icon="@drawable/ic_settings_energy_saver"

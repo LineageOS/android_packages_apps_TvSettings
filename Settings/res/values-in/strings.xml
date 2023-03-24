@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Pencadangan &amp; Pemulihan"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Reset ke setelan pabrik"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrasi"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Daya &amp; Energi"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Setelan hemat energi"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Perangkat"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Pilih format"</string>
@@ -154,12 +156,24 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Sesuaikan rentang dinamis konten"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Saat mengaktifkan opsi ini, sistem akan beralih antara format rentang dinamis yang berbeda untuk menyesuaikan konten. Hal ini dapat menyebabkan layar hitam selama peralihan format.\n\nKlik setelan Tampilan Lanjutan untuk melihat opsi rentang dinamis lainnya."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Rentang dinamis pilihan"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Konversi pilihan sistem"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Memungkinkan sistem mengelola konversi format"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Saat opsi ini dipilih, sistem akan menentukan rentang dinamis yang sesuai untuk ditampilkan di layar Anda dan mengonversi konten ke rentang dinamis ini sesuai kebutuhan."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Selalu sesuaikan format konten"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Paksa konversi"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Memaksa konversi ke format pilihan"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Paksa konversi ke format pilihan. Memaksa konversi dapat memengaruhi setelan lain di Mode Tampilan atau Format HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Selalu konversi ke SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Selalu konversi ke <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Ingin memaksa output HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Secara default, konversi akan dipaksa ke <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Layar Anda akan berjalan pada resolusi 1080p 60 Hz. Opsi ini tidak kompatibel dengan layar Anda saat berjalan pada resolusi 4k 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Sesuaikan kecepatan frame konten"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Lancar"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Jika aplikasi memintanya, perangkat akan mencocokkan outputnya ke kecepatan frame asli konten yang sedang Anda tonton, HANYA jika TV dapat melakukan transisi yang lancar."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Layar yang terhubung tidak mendukung transisi kecepatan refresh yang lancar. Opsi ini tidak akan berpengaruh kecuali jika Anda menggunakan layar yang mendukungnya."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Tidak lancar"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Jika aplikasi memintanya, perangkat akan mencocokkan outputnya ke kecepatan frame asli konten yang sedang Anda tonton. Hal ini dapat menyebabkan layar kosong sebentar saat keluar dari atau masuk ke pemutaran video."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Jika aplikasi memintanya, perangkat akan menyesuaikan outputnya agar cocok dengan kecepatan frame asli dari konten yang sedang Anda tonton. Hal ini dapat membuat layar kosong sebentar saat Anda keluar dari atau masuk ke pemutaran video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Jangan pernah"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Meskipun aplikasi memintanya, perangkat tidak akan mencoba mencocokkan outputnya ke kecepatan frame asli konten yang sedang Anda tonton."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Penskalaan teks"</string>

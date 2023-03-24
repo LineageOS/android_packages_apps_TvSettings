@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"காப்புப்பிரதி &amp; மீட்டெடுத்தல்"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"தரவின் ஆரம்பநிலை மீட்டமைப்பு"</string>
     <string name="device_calibration" msgid="2907914144048739705">"அளவுக்குறியீடு"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"பவர் &amp; எனர்ஜி"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"சுற்றுச்சூழல் அமைப்புகள்"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"சாதனங்கள்"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"வடிவங்களைத் தேர்ந்தெடுக்கவும்"</string>
@@ -154,11 +156,23 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"உள்ளடக்கத்திற்குப் பொருந்தும் டைனமிக் வரம்பு"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"இந்த விருப்பத்தை இயக்கும்போது, உள்ளடக்கத்துடன் பொருந்துவதற்காகப் பல்வேறு டைனமிக் வரம்பு வடிவங்களுக்கிடையே இந்த அமைப்பு மாறும். வடிவங்களுக்கிடையே மாறும்போது திரை கருப்பாக மாறக்கூடும்.\n\nகூடுதல் டைனமிக் வரம்பு விருப்பங்கள் காட்டப்பட, மேம்பட்ட காட்சி அமைப்புகளைக் கிளிக் செய்யவும்."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"விருப்பமான டைனமிக் வரம்பு"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"வீடியோவின் ஃபிரேம் வீதத்தைப் பொருத்து"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"சிஸ்டம் பரிந்துரைக்கும் வடிவமைப்பு மாற்றம்"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"வடிவமைப்பு மாற்றத்தை நிர்வகிக்க சிஸ்டத்தை அனுமதிக்கும்"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"இந்த விருப்பம் தேர்ந்தெடுக்கப்பட்டிருக்கும்போது, உங்கள் டிஸ்ப்ளேக்கு அனுப்ப வேண்டிய பொருத்தமான டைனமிக் ரேஞ்சை சிஸ்டம் தீர்மானிக்கும். அதன் பிறகு, தேவைக்கேற்ப இந்த டைனமிக் ரேஞ்சிற்கு உள்ளடக்கத்தை மாற்றும்."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"எப்போதும் உள்ளடக்கத்தின் வடிவமைப்போடு பொருந்தும்"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"வடிவமைப்பை மாற்றுதல்"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"விருப்பமான வடிவமைப்பிற்கு மாற்றும்"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"விருப்பமான வடிவமைப்பிற்கு மாற்றும். வடிவமைப்பை மாற்றுவது காட்சிப் பயன்முறையிலோ HDR வடிவத்திலோ உள்ள மற்ற அமைப்புகளில் மாற்றத்தை ஏற்படுத்தக்கூடும்."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"எப்போதும் SDR வடிவமைப்பிற்கு மாற்றுதல்"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"எப்போதும் <xliff:g id="HDR_TYPE">%s</xliff:g> வடிவமைப்பிற்கு மாற்றுதல்"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"HDR அவுட்புட்டை மாற்ற வேண்டுமா?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"இயல்பாக, <xliff:g id="HDR_TYPE">%s</xliff:g> வடிவமைப்பிற்கு மாற்றப்படும்."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"உங்கள் டிஸ்ப்ளே 1080பி. 60Hz தெளிவுத்திறனில் இயங்கும். 4k 60Hz தெளிவுத்திறனில் இயங்கும்போது உங்கள் டிஸ்பிளேயுடன் இந்த விருப்பம் இணக்கமாக இருக்காது."</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"வீடியோவின் ஃபிரேம் வீதத்துடன் பொருத்துதல்"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"தடையற்ற ஒளிபரப்பு"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"ஆப்ஸ் கோரினால், டிவியில் தடையற்ற ஒளிபரப்புக்கான வசதி இருந்தால் மட்டுமே நீங்கள் பார்த்துக் கொண்டிருக்கும் வீடியோவின் அசல் ஃபிரேம் வீதத்துடன் திரையின் ஃபிரேமை உங்கள் சாதனம் பொருத்தும்."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"இணைக்கப்பட்ட உங்கள் டிஸ்பிளேயில் \'புதுப்பிக்கும் விகிதத்தைத்\' தடையின்றி மாற்றுவதற்கான வசதியில்லை. இந்த வசதியுள்ள டிஸ்பிளேயுடன் இணைக்காதபட்சத்தில் இந்த விருப்பத்தைப் பயன்படுத்த முடியாது."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"எப்போதும் தடையற்ற ஒளிபரப்பு"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"தடங்கலுடன்"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"ஆப்ஸ் கோரினால், நீங்கள் பார்த்துக் கொண்டிருக்கும் வீடியோவின் அசல் ஃபிரேம் வீதத்துடன் திரையின் ஃபிரேமை உங்கள் சாதனம் பொருத்தும். இதனால், வீடியோவின் இயக்கத்திலிருந்து வெளியேறும்போதோ உள்நுழையும்போதோ திரை ஒரு நொடி மறைந்து தெரியக்கூடும்."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"ஒருபோதும் வேண்டாம்"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"நீங்கள் பார்த்துக் கொண்டிருக்கும் வீடியோவின் அசல் ஃபிரேம் வீதத்துடன் திரையின் ஃபிரேமைப் பொருத்துவதற்கு ஆப்ஸே கோரினாலும் அதை உங்கள் சாதனம் ஒருபோதும் முயற்சிக்காது."</string>

@@ -132,4 +132,33 @@
         <item>com.example.package.second/com.example.class.SecondService</item>
         -->
     </string-array>
+
+    <!-- Energy modes -->
+    <bool name="config_energy_mode_low_enabled">true</bool>
+    <string-array name="config_energy_mode_low_exemptPackages" translatable="false">
+    </string-array>
+    <string-array name="config_energy_mode_low_additionalExemptPackages" translatable="false" />
+    <integer name="config_energy_mode_low_allowedReasons">1</integer>
+    <integer name="config_energy_mode_low_additionalAllowedReasons">0</integer>
+    <string-array name="config_energy_mode_low_allowedFeatures" translatable="false">
+    </string-array>
+    <string-array name="config_energy_mode_low_additionalAllowedFeatures" translatable="false" />
+
+    <bool name="config_energy_mode_moderate_enabled">true</bool>
+    <string-array name="config_energy_mode_moderate_exemptPackages" translatable="false" />
+    <string-array name="config_energy_mode_moderate_additionalExemptPackages" translatable="false" />
+    <integer name="config_energy_mode_moderate_allowedReasons">7</integer>
+    <integer name="config_energy_mode_moderate_additionalAllowedReasons">0</integer>
+    <string-array name="config_energy_mode_moderate_allowedFeatures" translatable="false" />
+    <string-array name="config_energy_mode_moderate_additionalAllowedFeatures" translatable="false" />
+
+    <bool name="config_energy_mode_high_enabled">true</bool>
+    <string-array name="config_energy_mode_high_exemptPackages" translatable="false" />
+    <string-array name="config_energy_mode_high_additionalExemptPackages" translatable="false" />
+    <integer name="config_energy_mode_high_allowedReasons">7</integer>
+    <integer name="config_energy_mode_high_additionalAllowedReasons">0</integer>
+    <string-array name="config_energy_mode_high_allowedFeatures" translatable="false" />
+    <string-array name="config_energy_mode_high_additionalAllowedFeatures" translatable="false" />
+
+    <bool name="config_energy_mode_unrestricted_enabled">false</bool>
 </resources>

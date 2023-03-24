@@ -112,8 +112,10 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Copias de seguridad y restablecimiento"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Restablecimiento de la configuración de fábrica"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Calibración"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Encendido y consumo"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Configuración de Eco"</string>
+    <!-- no translation found for device_energy_saver (6611757996220443028) -->
+    <skip />
+    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
+    <skip />
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Dispositivos"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Seleccionar formatos"</string>
@@ -154,6 +156,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Coincidir con el rango dinámico del contenido"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Si se habilita esta opción, el sistema cambiará entre los diferentes formatos de rango dinámico para coincidir con el contenido. Esto puede provocar una pantalla negra durante el cambio de formato.\n\nHaz clic en Configuración de pantalla avanzada para ver más opciones de rango dinámico."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Rango dinámico preferido"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversión preferida por el sistema"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Deja que el sistema se ocupe de la conversión del formato"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Cuando está opción está seleccionada, el sistema determina un intervalo dinámico apropiado para enviar a tu pantalla y convierte el contenido a este rango dinámico según sea necesario."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Siempre hacer coincidir con el formato del contenido"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Forzar la conversión"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Fuerza la conversión al formato preferido"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Fuerza la conversión a un formato preferido. Forzar la conversión podría afectar otras opciones de configuración en el modo de pantalla o con el formato HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Siempre a SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Siempre a <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"¿Quieres forzar la compatibilidad con HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"De forma predeterminada, la conversión se forzará a <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"La pantalla funcionará con una resolución de 1080p/60 Hz Esta opción no es compatible con tu pantalla cuando funciona con la resolución de 4K/60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Igualar velocidad de fotogramas del contenido"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Fluida"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si la app lo solicita, el dispositivo hará coincidir la velocidad de fotogramas resultante con la original del contenido SOLO si la TV puede realizar una transición fluida."</string>
