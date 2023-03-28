@@ -16,15 +16,19 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import static android.content.DialogInterface.OnClickListener;
+import static android.hardware.display.HdrConversionMode.HDR_CONVERSION_FORCE;
+import static android.hardware.display.HdrConversionMode.HDR_CONVERSION_UNSUPPORTED;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_DOLBY_VISION;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HDR10;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HDR10_PLUS;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HLG;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_INVALID;
 
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.createAlertDialog;
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.findPreferredHdrConversionFormat;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.hardware.display.DisplayManager;
 import android.hardware.display.HdrConversionMode;
@@ -90,7 +94,7 @@ public class PreferredDynamicRangeFragment  extends SettingsPreferenceFragment {
         if (pref != null) {
             selectRadioPreference(pref);
         }
-        setPreferredDynamicRangeForceFragment(
+        showPreferredDynamicRangeRadioPreference(
                 mHdrConversionMode.getConversionMode() == HdrConversionMode.HDR_CONVERSION_FORCE
         );
         // Do not show sidebar info texts in case of 1 panel settings.
@@ -121,7 +125,7 @@ public class PreferredDynamicRangeFragment  extends SettingsPreferenceFragment {
                     mHdrConversionMode = new HdrConversionMode(
                             HdrConversionMode.HDR_CONVERSION_SYSTEM);
                     mDisplayManager.setHdrConversionMode(mHdrConversionMode);
-                    setPreferredDynamicRangeForceFragment(false);
+                    showPreferredDynamicRangeRadioPreference(false);
                     break;
                 }
                 case KEY_DYNAMIC_RANGE_SELECTION_PASSTHROUGH: {
@@ -132,7 +136,7 @@ public class PreferredDynamicRangeFragment  extends SettingsPreferenceFragment {
                     mHdrConversionMode =
                             new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_PASSTHROUGH);
                     mDisplayManager.setHdrConversionMode(mHdrConversionMode);
-                    setPreferredDynamicRangeForceFragment(false);
+                    showPreferredDynamicRangeRadioPreference(false);
                     break;
                 }
                 case KEY_DYNAMIC_RANGE_SELECTION_FORCE: {
@@ -199,51 +203,31 @@ public class PreferredDynamicRangeFragment  extends SettingsPreferenceFragment {
 
     //oldPref is preference to restore in case user selects Cancel from the dialog.
     private void showWarningDialogOnDynamicRangeSelectionForce(Preference oldPref) {
-        // Select the first HDR output mode returned by getSupportedHdrOutputTypes
-        int selectedFormat = mDisplayManager.getSupportedHdrOutputTypes()[0];
+        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
+        int selectedFormat = findPreferredHdrConversionFormat(mDisplayManager, display.getMode());
         String dialogDescription =
                 getResources().getString(R.string.preferred_dynamic_range_force_dialog_desc,
                         getFormatString(selectedFormat));
-        final Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
-        Display.Mode currentMode = display.getMode();
-        boolean is4k60HzMode = (currentMode.getPhysicalHeight() == 2160
-                || currentMode.getPhysicalWidth() == 2160)
-                && currentMode.getRefreshRate() >= 59.9;
-        // If HDR output mode returned by getSupportedHdrOutputTypes is DolbyVision, the active mode
-        // is greater than 4k30Hz, and the TV has does not support DolbyVision at this mode,
-        // add this information in dialog.
-        if (is4k60HzMode && mDisplayManager.getSupportedHdrOutputTypes()[0]
-                == HDR_TYPE_DOLBY_VISION) {
-            if (!PreferredDynamicRangeUtils.isDolbyVisionSupported(currentMode)
-                    && PreferredDynamicRangeUtils.isDolbyVisionSupported(
-                    display.getSupportedModes())) {
-                dialogDescription += getContext().getString(
-                        R.string.preferred_dynamic_range_force_dialog_desc_4k30_issue);
+        String title =
+                getResources().getString(R.string.preferred_dynamic_range_force_dialog_title);
+        OnClickListener onOkClicked = (dialog, which) -> {
+            int hdrConversionMode = selectedFormat == HDR_TYPE_INVALID
+                    ? HDR_CONVERSION_UNSUPPORTED
+                    : HDR_CONVERSION_FORCE;
+            mHdrConversionMode = new HdrConversionMode(
+                    hdrConversionMode, selectedFormat);
+            mDisplayManager.setHdrConversionMode(mHdrConversionMode);
+            showPreferredDynamicRangeRadioPreference(true);
+            dialog.dismiss();
+            onPreferenceTreeClick(findPreference(KEY_DYNAMIC_RANGE_SELECTION_FORCE));
+        };
+        OnClickListener onCancelClicked = (dialog, which) -> {
+            if (oldPref != null) {
+                selectRadioPreference(oldPref);
             }
-        }
-        new AlertDialog.Builder(getContext())
-                .setTitle(R.string.preferred_dynamic_range_force_dialog_title)
-                .setMessage(dialogDescription)
-                .setPositiveButton(
-                        R.string.settings_confirm,
-                        (dialog, which) -> {
-                            mHdrConversionMode = new HdrConversionMode(
-                                    HdrConversionMode.HDR_CONVERSION_FORCE, selectedFormat);
-                            mDisplayManager.setHdrConversionMode(mHdrConversionMode);
-                            setPreferredDynamicRangeForceFragment(true);
-                            dialog.dismiss();
-                            onPreferenceTreeClick(
-                                    findPreference(KEY_DYNAMIC_RANGE_SELECTION_FORCE));
-                        })
-                .setNegativeButton(
-                        R.string.settings_cancel,
-                        (dialog, which) -> {
-                            if (oldPref != null) {
-                                selectRadioPreference(oldPref);
-                            }
-                            dialog.dismiss();
-                        })
-                .create()
+            dialog.dismiss();
+        };
+        createAlertDialog(getContext(), title, dialogDescription, onOkClicked, onCancelClicked)
                 .show();
     }
 
@@ -262,7 +246,7 @@ public class PreferredDynamicRangeFragment  extends SettingsPreferenceFragment {
         }
     }
 
-    private void setPreferredDynamicRangeForceFragment(boolean shouldSet) {
+    private void showPreferredDynamicRangeRadioPreference(boolean shouldSet) {
         Preference pref = findPreference(KEY_DYNAMIC_RANGE_SELECTION_FORCE);
         String fragment = shouldSet ? PREFERRED_DYNAMIC_RANGE_FORCE_FRAGMENT : null;
         mShowWarningDialog = !shouldSet;
