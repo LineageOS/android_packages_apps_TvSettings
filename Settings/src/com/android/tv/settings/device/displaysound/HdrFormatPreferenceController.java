@@ -18,6 +18,7 @@ package com.android.tv.settings.device.displaysound;
 
 import android.content.Context;
 import android.hardware.display.DisplayManager;
+import android.hardware.display.HdrConversionMode;
 
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
@@ -93,11 +94,24 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
 
         Set<Integer> disabledHdrTypes = toSet(mDisplayManager.getUserDisabledHdrTypes());
         if (enabled) {
-            disabledHdrTypes.remove(mHdrType);
+            disabledHdrTypes.remove(Integer.valueOf(mHdrType));
+            mDisplayManager.setUserDisabledHdrTypes(toArray(disabledHdrTypes));
         } else {
-            disabledHdrTypes.add(mHdrType);
+            disabledHdrTypes.add(Integer.valueOf(mHdrType));
+            mDisplayManager.setUserDisabledHdrTypes(toArray(disabledHdrTypes));
+            // If HDR output type is mHdrType, change the HDR output type. This can happen in 2
+            // cases:
+            // mHdrType is selected by implementation in case of AUTO - re-calling
+            // setHdrConversionMode will handle this as mHdrType is no longer permissible coz of
+            // setUserDisabledHdrTypes
+            // mHdrType is selected by user by using FORCE. Change the preferred strategy to AUTO
+            // and mHdrType is no longer permissible coz of setUserDisabledHdrTypes
+            if (mDisplayManager.getHdrConversionModeSetting().getPreferredHdrOutputType()
+                    == mHdrType) {
+                mDisplayManager.setHdrConversionMode(
+                        new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_SYSTEM));
+            }
         }
-        mDisplayManager.setUserDisabledHdrTypes(toArray(disabledHdrTypes));
     }
 
     private int[] toArray(Set<Integer> set) {
