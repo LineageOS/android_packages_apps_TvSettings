@@ -2521,6 +2521,102 @@
         priority="4"
         summary="Using hardcoded color"
         explanation="Hardcoded color values are bad because theme changes cannot be uniformly applied.Instead use the theme specific colors such as `?android:attr/textColorPrimary` in attributes.&#xA;This ensures that a theme change from a light to a dark theme can be uniformlyapplied across the app."
+        errorLine1="        android:textColor=&quot;#F1F3F4&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="Settings/res/layout/full_screen_dialog.xml"
+            line="36"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardCodedColor"
+        severity="Error"
+        message="Avoid using hardcoded color"
+        category="Correctness"
+        priority="4"
+        summary="Using hardcoded color"
+        explanation="Hardcoded color values are bad because theme changes cannot be uniformly applied.Instead use the theme specific colors such as `?android:attr/textColorPrimary` in attributes.&#xA;This ensures that a theme change from a light to a dark theme can be uniformlyapplied across the app."
+        errorLine1="        android:textColor=&quot;#DBE8EAED&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="Settings/res/layout/full_screen_dialog.xml"
+            line="47"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardCodedColor"
+        severity="Error"
+        message="Avoid using hardcoded color"
+        category="Correctness"
+        priority="4"
+        summary="Using hardcoded color"
+        explanation="Hardcoded color values are bad because theme changes cannot be uniformly applied.Instead use the theme specific colors such as `?android:attr/textColorPrimary` in attributes.&#xA;This ensures that a theme change from a light to a dark theme can be uniformlyapplied across the app."
+        errorLine1="            android:textColor=&quot;#DBE8EAED&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="Settings/res/layout/full_screen_dialog.xml"
+            line="73"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardCodedColor"
+        severity="Error"
+        message="Avoid using hardcoded color"
+        category="Correctness"
+        priority="4"
+        summary="Using hardcoded color"
+        explanation="Hardcoded color values are bad because theme changes cannot be uniformly applied.Instead use the theme specific colors such as `?android:attr/textColorPrimary` in attributes.&#xA;This ensures that a theme change from a light to a dark theme can be uniformlyapplied across the app."
+        errorLine1="            &lt;solid android:color=&quot;#0E0E0A&quot; />"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="Settings/res/drawable/full_screen_dialog_background.xml"
+            line="20"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="HardCodedColor"
+        severity="Error"
+        message="Avoid using hardcoded color"
+        category="Correctness"
+        priority="4"
+        summary="Using hardcoded color"
+        explanation="Hardcoded color values are bad because theme changes cannot be uniformly applied.Instead use the theme specific colors such as `?android:attr/textColorPrimary` in attributes.&#xA;This ensures that a theme change from a light to a dark theme can be uniformlyapplied across the app."
+        errorLine1="                android:startColor=&quot;#66193B71&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="Settings/res/drawable/full_screen_dialog_background.xml"
+            line="26"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardCodedColor"
+        severity="Error"
+        message="Avoid using hardcoded color"
+        category="Correctness"
+        priority="4"
+        summary="Using hardcoded color"
+        explanation="Hardcoded color values are bad because theme changes cannot be uniformly applied.Instead use the theme specific colors such as `?android:attr/textColorPrimary` in attributes.&#xA;This ensures that a theme change from a light to a dark theme can be uniformlyapplied across the app."
+        errorLine1="                android:endColor=&quot;#00193B71&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="Settings/res/drawable/full_screen_dialog_background.xml"
+            line="27"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardCodedColor"
+        severity="Error"
+        message="Avoid using hardcoded color"
+        category="Correctness"
+        priority="4"
+        summary="Using hardcoded color"
+        explanation="Hardcoded color values are bad because theme changes cannot be uniformly applied.Instead use the theme specific colors such as `?android:attr/textColorPrimary` in attributes.&#xA;This ensures that a theme change from a light to a dark theme can be uniformlyapplied across the app."
         errorLine1="    &lt;solid android:color=&quot;@color/guided_step_text_input_item_background_focused&quot; />"
         errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
