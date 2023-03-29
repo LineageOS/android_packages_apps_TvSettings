@@ -112,8 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Varnostno kopiranje in obnovitev"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Ponastavitev na tovarniške nastavitve"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Umerjanje"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Napajanje in energija"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Nastavitve načina »Eko«"</string>
+    <string name="device_energy_saver" msgid="6611757996220443028">"Časovnik za izklop"</string>
+    <string name="device_energy_saver_summary" msgid="5306058475316008429">"Nastavitev časovnikov za izklop televizorja in varčevanje z energijo"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Naprave"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Izbira oblik zvoka"</string>
@@ -154,6 +154,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Ujemanje dinamičnega razpona vsebine"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Če omogočite to možnost, bo sistem preklapljal med različnimi oblikami zapisa dinamičnega razpona, da se bodo ujemale z vsebino. Med preklopom oblike zapisa je lahko prikazan črn zaslon.\n\nČe želite več možnosti dinamičnega razpona, kliknite možnost dodatnih nastavitev prikaza."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Prednostni dinamični razpon"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Sistemska pretvorba"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Sistemu omogoči upravljanje pretvorbe oblike."</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Če je ta možnost izbrana, sistem določi ustrezni dinamični razpon, ki je poslan v zaslon, in po potrebi vsebino pretvori v ta dinamični razpon."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Vedno se prilagodi obliki vsebine."</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Vsiljenje pretvorbe"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Vsili pretvorbo v prednostno obliko."</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Vsiljenje pretvorbe v prednostno obliko. Vsiljena pretvorba morda vpliva na druge nastavitve v načinu prikaza ali obliki HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Vedno v SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Vedno v <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Ali želite vsiliti prikaz HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Pretvorba bo privzeto vsiljeno nastavljena na <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Zaslon bo v ločljivosti 1080p 60 Hz. Ta možnost ni združljiva z vašim zaslonom, če je nastavljen na ločljivost 4k 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Ujemanje s številom sličic v sekundi vsebine"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Brez prekinitev"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Če to zahteva aplikacija, bo naprava svoj izhod uskladila z izvirnim številom sličic v sekundi vsebine, ki jo gledate, SAMO v primeru, če lahko televizor opravi prehod brez prekinitev."</string>
@@ -193,7 +205,7 @@
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"Ločljivost je spremenjena"</string>
     <string name="resolution_selection_with_mode_dialog_title" msgid="5011192408613100514">"Želite spremeniti ločljivost na %1$s?"</string>
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Izberite »V redu«, če želite od zdaj naprej uporabljati %1$s."</string>
-    <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"Dolby Vision pri ločljivosti %1$s ni podprt in bo v »Dodatnih nastavitvah zaslona« onemogočen."</string>
+    <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"Dolby Vision pri ločljivosti %1$s ni podprt in bo v možnosti »Dodatne nastavitve slike« onemogočen."</string>
     <string name="resolution_hdr_description_info" msgid="7378290600353021584">"Ta način podpira %1$s. V nekaterih televizorjih morate morda vklopiti izboljšan HDMI, če želite omogočiti več oblik HDR-ja. V nastavitvah televizorja si oglejte, ali je to podprto."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Prekliči"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"V redu"</string>
@@ -1095,4 +1107,14 @@
     <string name="power_on_behavior" msgid="927607372303160716">"Delovanje ob vklopu"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Ponastavi"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Koda za seznanjanje za ethernet"</string>
+    <!-- no translation found for energy_modes (1331693860386361744) -->
+    <skip />
+    <!-- no translation found for energy_modes_summary (7196407759836930799) -->
+    <skip />
+    <!-- no translation found for energy_mode_enables (357960364751477627) -->
+    <skip />
+    <!-- no translation found for energy_mode_eco_hint (1461517905015359947) -->
+    <skip />
+    <!-- no translation found for energy_modes_confirmation_title (4520280098781914825) -->
+    <skip />
 </resources>

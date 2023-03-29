@@ -112,8 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"การสำรองและคืนค่าข้อมูล"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"รีเซ็ตข้อมูลเป็นค่าเริ่มต้น"</string>
     <string name="device_calibration" msgid="2907914144048739705">"การเทียบมาตรฐาน"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"กำลังไฟฟ้าและพลังงาน"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"การตั้งค่าอีโค"</string>
+    <string name="device_energy_saver" msgid="6611757996220443028">"ตัวจับเวลาปิด"</string>
+    <string name="device_energy_saver_summary" msgid="5306058475316008429">"ตั้งตัวจับเวลาเพื่อปิดทีวีและประหยัดพลังงาน"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"อุปกรณ์"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"เลือกรูปแบบ"</string>
@@ -154,6 +154,18 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"จับคู่ช่วงไดนามิกของเนื้อหา"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"เมื่อเปิดใช้ตัวเลือกนี้ ระบบจะสลับเปลี่ยนระหว่างรูปแบบช่วงไดนามิกเพื่อให้ตรงตามเนื้อหา ซึ่งอาจจะทำให้จอดำได้ในระหว่างที่เปลี่ยน\n\nคลิกที่การตั้งค่า \"การแสดงผลขั้นสูง\" เพื่อดูช่วงไดนามิกอื่นๆ เพิ่ม"</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"ช่วงไดนามิกที่ต้องการ"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"การแปลงตามที่ระบบต้องการ"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"ให้ระบบจัดการการแปลงรูปแบบ"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"เมื่อเลือกตัวเลือกนี้ ระบบจะกำหนดช่วงไดนามิกที่เหมาะสมเพื่อส่งไปยังจอแสดงผลของคุณและแปลงเนื้อหาเป็นช่วงไดนามิกนี้ตามต้องการ"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"ตรงกับรูปแบบของเนื้อหาเสมอ"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"การบังคับให้แปลง"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"บังคับให้แปลงเป็นรูปแบบที่ต้องการ"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"บังคับให้แปลงเป็นรูปแบบที่ต้องการ การบังคับให้แปลงอาจส่งผลต่อการตั้งค่าอื่นๆ ในโหมดการแสดงผลหรือรูปแบบ HDR"</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"เป็นแบบ SDR เสมอ"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"เป็นแบบ <xliff:g id="HDR_TYPE">%s</xliff:g> เสมอ"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"คุณต้องการบังคับเอาต์พุต HDR ไหม"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"ระบบจะบังคับการแปลงเป็น <xliff:g id="HDR_TYPE">%s</xliff:g> โดยค่าเริ่มต้น"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"จอแสดงผลจะแสดงที่ความละเอียด 1080p 60Hz ตัวเลือกนี้ใช้ไม่ได้กับจอแสดงผลของคุณเมื่อแสดงที่ความละเอียด 4K 60Hz"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"จับคู่อัตราเฟรมของเนื้อหา"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"ราบรื่น"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"อุปกรณ์จะจับคู่เอาต์พุตของตัวเองกับอัตราเฟรมดั้งเดิมของเนื้อหาที่คุณรับชมอยู่หากแอปส่งคำขอ ในกรณีที่ทีวีทำการส่งผ่านได้อย่างราบรื่นเท่านั้น"</string>
@@ -1095,4 +1107,9 @@
     <string name="power_on_behavior" msgid="927607372303160716">"ลักษณะการทำงานเมื่อเปิดเครื่อง"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"รีเซ็ต"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"รหัสการจับคู่อีเทอร์เน็ต"</string>
+    <string name="energy_modes" msgid="1331693860386361744">"โหมดพลังงาน"</string>
+    <string name="energy_modes_summary" msgid="7196407759836930799">"ปรับปรุงประสิทธิภาพการใช้พลังงานเมื่อไม่ได้ใช้งานทีวี"</string>
+    <string name="energy_mode_enables" msgid="357960364751477627">"ฟีเจอร์ที่เปิดใช้"</string>
+    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"โปรดทราบว่าโหมดนี้อาจทำให้อุปกรณ์ใช้พลังงานมากขึ้น"</string>
+    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"เปิดใช้ \"<xliff:g id="ENERGYMODENAME">%s</xliff:g>\""</string>
 </resources>

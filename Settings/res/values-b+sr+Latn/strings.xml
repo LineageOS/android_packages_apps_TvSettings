@@ -112,8 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Pravljenje rezervne kopije i vraćanje"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Resetovanje na fabrička podešavanja"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibracija"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Napajanje i energija"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Eko podešavanja"</string>
+    <string name="device_energy_saver" msgid="6611757996220443028">"Tajmer za isključivanje"</string>
+    <string name="device_energy_saver_summary" msgid="5306058475316008429">"Podesite tajmere za isključivanje TV-a i uštedu energije"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Uređaji"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Izaberite formate"</string>
@@ -154,11 +154,23 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Koristi isti dinamički opseg sadržaja"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Kada omogućite ovu opciju, sistem će menjati format dinamičkog opsega radi podudaranja sa sadržajem. To može da izazove crni ekran tokom promene formata.\n\nKliknite na Napredna podešavanja ekrana za više opcija dinamičkog opsega."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Željeni dinamički opseg"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Sistemska konverzija"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Omogućava sistemu da upravlja konverzijom formata"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Kada je ova opcija izabrana, sistem određuje odgovarajući dinamički opseg koji će poslati na ekran i prema potrebi će konvertovati sadržaj u taj dinamički opseg."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Uvek se podudara s formatom sadržaja"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Nametni konverziju"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Nameće se konverzija u željeni format"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Nameće konverziju u željeni format. Nametanje konverzije može da utiče na druga podešavanja u režim prikaza ili HDR format."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Uvek u SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Uvek u <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Želite da nametnete HDR izlaz?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Podrazumevano nametnuće se konverzija u <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Rezolucija ekrana biće 1080 piksela na 60 Hz. Ta opcija nije kompatibilna sa vašim ekranom rezolucije 4K na 60 Hz."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Koristi brzinu kadrova sadržaja"</string>
-    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Neprimetno"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Bez prekida"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Ako aplikacija to traži, uređaj će usklađivati brzinu kadrova sadržaja koji prikazuje sa originalnom brzinom kadrova sadržaja koji gledate SAMO pod uslovom da TV može da obavi neprimetan prelaz."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Povezani ekran ne podržava neprimetne promene učestalosti osvežavanja. Ova opcija neće imati efekta ako ne pređete na ekran koji je podržava."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Nije neprimetno"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"S prekidima"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ako aplikacija to traži, uređaj će usklađivati brzinu kadrova sadržaja koji prikazuje sa originalnom brzinom kadrova sadržaja koji gledate. Zbog toga će ekran možda nakratko biti prazan kada zaustavljate ili počinjete reprodukciju videa."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nikad"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Čak i ako aplikacija to traži, uređaj nikada neće pokušavati da uskladi brzinu kadrova sadržaja koji prikazuje sa originalnom brzinom kadrova sadržaja koji gledate."</string>
@@ -1095,4 +1107,9 @@
     <string name="power_on_behavior" msgid="927607372303160716">"Ponašanje pri uključivanju"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Resetuj"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Kôd za uparivanje za eternet"</string>
+    <string name="energy_modes" msgid="1331693860386361744">"Režimi potrošnje energije"</string>
+    <string name="energy_modes_summary" msgid="7196407759836930799">"Poboljšajte efikasnost energije kada se TV ne koristi"</string>
+    <string name="energy_mode_enables" msgid="357960364751477627">"Omogućava:"</string>
+    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Imajte na umu da ovaj režim može da poveća potrošnju energije na uređaju."</string>
+    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Omogućite režim <xliff:g id="ENERGYMODENAME">%s</xliff:g>"</string>
 </resources>
