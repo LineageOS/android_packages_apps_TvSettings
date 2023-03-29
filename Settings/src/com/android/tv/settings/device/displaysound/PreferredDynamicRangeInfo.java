@@ -51,6 +51,97 @@ public class PreferredDynamicRangeInfo {
         }
     }
 
+    /** A class that hosts {@link InfoFragment} for force DV selection preference */
+    public static class ForceDVInfoFragment extends PreferredDynamicRangeInfo.ForceInfoFragment {
+        @Override
+        protected int getSummaryResId() {
+            return R.string.dynamic_range_selection_force_dv_summary;
+        }
+
+        @Override
+        protected int getTitleResId() {
+            return R.string.dynamic_range_selection_force_dv_title;
+        }
+    }
+
+    /** A class that hosts {@link InfoFragment} for force HDR10 selection preference */
+    public static class ForceHdrInfoFragment extends PreferredDynamicRangeInfo.ForceInfoFragment {
+        @Override
+        protected int getSummaryResId() {
+            return R.string.dynamic_range_selection_force_hdr10_summary;
+        }
+
+        @Override
+        protected int getTitleResId() {
+            return R.string.dynamic_range_selection_force_hdr10_title;
+        }
+    }
+
+    /** A class that hosts {@link InfoFragment} for force HLG selection preference */
+    public static class ForceHlgInfoFragment extends PreferredDynamicRangeInfo.ForceInfoFragment {
+        @Override
+        protected int getSummaryResId() {
+            return R.string.dynamic_range_selection_force_hlg_summary;
+        }
+
+        @Override
+        protected int getTitleResId() {
+            return R.string.dynamic_range_selection_force_hlg_title;
+        }
+    }
+
+    /** A class that hosts {@link InfoFragment} for force HDR10+ selection preference */
+    public static class ForceHdr10PlusInfoFragment
+            extends PreferredDynamicRangeInfo.ForceInfoFragment {
+        @Override
+        protected int getSummaryResId() {
+            return R.string.dynamic_range_selection_force_hdr10plus_summary;
+        }
+
+        @Override
+        protected int getTitleResId() {
+            return R.string.dynamic_range_selection_force_hdr10plus_title;
+        }
+    }
+
+    /** A class that hosts {@link InfoFragment} for force SDR selection preference */
+    public static class ForceSdrInfoFragment extends PreferredDynamicRangeInfo.BaseInfoFragment {
+        @Override
+        protected int getSummaryResId() {
+            return R.string.dynamic_range_selection_force_sdr_summary;
+        }
+
+        @Override
+        public View onCreateView(
+                LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View view = super.onCreateView(inflater, container, savedInstanceState);
+            ((TextView) view.findViewById(R.id.info_title)).setText(
+                    R.string.dynamic_range_selection_force_sdr_title);
+            view.findViewById(R.id.info_title).setVisibility(View.VISIBLE);
+            ((TextView) view.findViewById(R.id.info_summary)).setText(getSummaryResId());
+            view.findViewById(R.id.info_summary).setVisibility(View.VISIBLE);
+            return view;
+        }
+    }
+
+    /** A class that hosts {@link InfoFragment} for force hdr selection preference */
+    public abstract static class ForceInfoFragment extends BaseInfoFragment {
+        protected abstract int getSummaryResId();
+
+        protected abstract int getTitleResId();
+
+        @Override
+        public View onCreateView(
+                LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View view = super.onCreateView(inflater, container, savedInstanceState);
+            ((TextView) view.findViewById(R.id.info_title)).setText(getTitleResId());
+            view.findViewById(R.id.info_title).setVisibility(View.VISIBLE);
+            ((TextView) view.findViewById(R.id.info_summary)).setText(getSummaryResId());
+            view.findViewById(R.id.info_summary).setVisibility(View.VISIBLE);
+            return view;
+        }
+    }
+
     private abstract static class BaseInfoFragment extends InfoFragment {
 
         protected abstract int getSummaryResId();
