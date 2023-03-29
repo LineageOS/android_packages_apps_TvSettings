@@ -20,7 +20,8 @@ import static android.view.Display.HdrCapabilities.HDR_TYPE_DOLBY_VISION;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HDR10;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HDR10_PLUS;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HLG;
-import static android.view.Display.HdrCapabilities.HDR_TYPE_INVALID;
+
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
 
 import android.content.Context;
 import android.hardware.display.DisplayManager;
@@ -36,6 +37,9 @@ import androidx.preference.PreferenceGroup;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.FlavorUtils;
+
+import java.util.Set;
 
 /**
  * This Fragment is responsible for selecting the dynamic range preference in case
@@ -88,11 +92,13 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
                 mDisplayManager.setAreUserDisabledHdrTypesAllowed(false);
                 mDisplayManager.setUserDisabledHdrTypes(getDeviceSupportedHdrTypes());
             } else if (key.contains(KEY_HDR_FORMAT_PREFIX)) {
-                if (mDisplayManager.getHdrConversionModeSetting().equals(new HdrConversionMode(
-                        HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_INVALID))) {
-                    mDisplayManager.setAreUserDisabledHdrTypesAllowed(true);
-                }
                 String hdrType = key.substring(KEY_HDR_FORMAT_PREFIX.length());
+                // Enable the particular HDR type in Format Selection menu, if it is chosen
+                // as force conversion type and is disabled.
+                Set<Integer> disabledHdrTypes = PreferredDynamicRangeUtils.toSet(
+                            mDisplayManager.getUserDisabledHdrTypes());
+                mDisplayManager.setUserDisabledHdrTypes(
+                        PreferredDynamicRangeUtils.toArray(disabledHdrTypes));
                 mDisplayManager.setHdrConversionMode(new HdrConversionMode(
                         HdrConversionMode.HDR_CONVERSION_FORCE, Integer.parseInt(hdrType)));
             }
@@ -119,12 +125,19 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
                     getContext().getString(getFormatPreferenceTitleId(mHdrTypes[i]))));
             pref.setKey(KEY_HDR_FORMAT_PREFIX + mHdrTypes[i]);
             getPreferenceGroup().addPreference(pref);
+
+            if (FlavorUtils.getFlavor(getContext()) != FLAVOR_CLASSIC) {
+                pref.setFragment(getInfoClassName(mHdrTypes[i]));
+            }
         }
         RadioPreference pref = new RadioPreference(getContext());
         pref.setTitle(
                 getContext().getString(R.string.preferred_dynamic_range_selection_force_sdr_title));
         pref.setKey(KEY_DYNAMIC_RANGE_SELECTION_SDR);
         getPreferenceGroup().addPreference(pref);
+        if (FlavorUtils.getFlavor(getContext()) != FLAVOR_CLASSIC) {
+            pref.setFragment(PreferredDynamicRangeInfo.ForceSdrInfoFragment.class.getName());
+        }
 
         final int selectedHdrType =
                 mDisplayManager.getHdrConversionModeSetting().getPreferredHdrOutputType();
@@ -159,5 +172,25 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
     @VisibleForTesting
     int[] getDeviceSupportedHdrTypes() {
         return getContext().getResources().getIntArray(R.array.config_deviceSupportedHdrFormats);
+    }
+
+    private String getInfoClassName(int hdrType) {
+        switch(hdrType){
+            case HDR_TYPE_DOLBY_VISION: {
+                return PreferredDynamicRangeInfo.ForceDVInfoFragment.class.getName();
+            }
+            case HDR_TYPE_HDR10: {
+                return PreferredDynamicRangeInfo.ForceHdrInfoFragment.class.getName();
+            }
+            case HDR_TYPE_HLG: {
+                return PreferredDynamicRangeInfo.ForceHlgInfoFragment.class.getName();
+            }
+            case HDR_TYPE_HDR10_PLUS: {
+                return PreferredDynamicRangeInfo.ForceHdr10PlusInfoFragment.class.getName();
+            }
+            default: {
+                return "";
+            }
+        }
     }
 }
