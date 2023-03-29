@@ -112,10 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Varmuuskopiointi ja palautus"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Tehdasasetuksien palauttaminen"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrointi"</string>
-    <!-- no translation found for device_energy_saver (6611757996220443028) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
-    <skip />
+    <string name="device_energy_saver" msgid="6611757996220443028">"Sammuttamisen ajastin"</string>
+    <string name="device_energy_saver_summary" msgid="5306058475316008429">"Aseta ajastimia TV:n sammuttamiselle ja säästä energiaa"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Laitteet"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Valitse muodot"</string>
@@ -207,7 +205,7 @@
     <string name="resolution_selection_dialog_title" msgid="4029798035133645272">"Resoluutio on vaihdettu"</string>
     <string name="resolution_selection_with_mode_dialog_title" msgid="5011192408613100514">"Muutetaanko resoluutioksi %1$s?"</string>
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Valitse OK, jos haluat, että %1$s on käytössä tästä lähtien."</string>
-    <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"%1$s ei tue Dolby Visionia. Se poistetaan käytöstä Lisäasetuksista."</string>
+    <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"%1$s ei tue Dolby Visionia. Se poistetaan käytöstä Näytön lisäasetuksista."</string>
     <string name="resolution_hdr_description_info" msgid="7378290600353021584">"%1$s on tuettu tässä tilassa. Parannettu HDMI pitää laittaa päälle joillain televisioilla, jotta saat käyttöön enemmän HDR-muotoja. Tarkista, tuetaanko tätä TV:n asetuksista."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Peru"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
@@ -1109,4 +1107,9 @@
     <string name="power_on_behavior" msgid="927607372303160716">"Käynnistymistoiminta"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Nollaa"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Ethernetin yhdistämiskoodi"</string>
+    <string name="energy_modes" msgid="1331693860386361744">"Energiatilat"</string>
+    <string name="energy_modes_summary" msgid="7196407759836930799">"Lisää energiatehokkuutta, kun TV ei ole käytössä"</string>
+    <string name="energy_mode_enables" msgid="357960364751477627">"Ottaa käyttöön nämä:"</string>
+    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Huomaa, että tämä tila voi lisätä laitteen virrankulutusta."</string>
+    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Ota <xliff:g id="ENERGYMODENAME">%s</xliff:g> käyttöön"</string>
 </resources>
