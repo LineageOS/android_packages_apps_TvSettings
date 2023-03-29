@@ -114,25 +114,25 @@ public class PreferredDynamicRangeFragment  extends SettingsPreferenceFragment {
             // is done because when SDR is chosen, we disable all HDR types.
             switch (key) {
                 case KEY_DYNAMIC_RANGE_SELECTION_SYSTEM: {
+                    if (mDisplayManager.getHdrConversionModeSetting().equals(new HdrConversionMode(
+                            HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_INVALID))) {
+                        mDisplayManager.setAreUserDisabledHdrTypesAllowed(true);
+                    }
                     mHdrConversionMode = new HdrConversionMode(
                             HdrConversionMode.HDR_CONVERSION_SYSTEM);
                     mDisplayManager.setHdrConversionMode(mHdrConversionMode);
                     setPreferredDynamicRangeForceFragment(false);
-                    if (mHdrConversionMode.equals(new HdrConversionMode(
-                            HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_INVALID))) {
-                        mDisplayManager.setAreUserDisabledHdrTypesAllowed(true);
-                    }
                     break;
                 }
                 case KEY_DYNAMIC_RANGE_SELECTION_PASSTHROUGH: {
+                    if (mDisplayManager.getHdrConversionModeSetting().equals(new HdrConversionMode(
+                            HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_INVALID))) {
+                        mDisplayManager.setAreUserDisabledHdrTypesAllowed(true);
+                    }
                     mHdrConversionMode =
                             new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_PASSTHROUGH);
                     mDisplayManager.setHdrConversionMode(mHdrConversionMode);
                     setPreferredDynamicRangeForceFragment(false);
-                    if (mHdrConversionMode.equals(new HdrConversionMode(
-                            HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_INVALID))) {
-                        mDisplayManager.setAreUserDisabledHdrTypesAllowed(true);
-                    }
                     break;
                 }
                 case KEY_DYNAMIC_RANGE_SELECTION_FORCE: {

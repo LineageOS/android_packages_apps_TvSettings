@@ -23,6 +23,8 @@ import android.hardware.display.HdrConversionMode;
 import android.view.Display;
 
 import java.util.Arrays;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Helper methods to set and get dynamic range setting.
@@ -61,5 +63,15 @@ public class PreferredDynamicRangeUtils {
     public static boolean isDolbyVisionSupported(Display.Mode mode) {
         return Arrays.stream(mode.getSupportedHdrTypes()).anyMatch(
                 hdr -> hdr == HDR_TYPE_DOLBY_VISION);
+    }
+
+    /** Converts set to int array */
+    public static int[] toArray(Set<Integer> set) {
+        return set.stream().mapToInt(Integer::intValue).toArray();
+    }
+
+    /** Converts int array to set */
+    public static Set<Integer> toSet(int[] array) {
+        return Arrays.stream(array).boxed().collect(Collectors.toSet());
     }
 }
