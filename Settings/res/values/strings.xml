@@ -410,12 +410,48 @@
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue">Your display will run at
         1080p 60Hz resolution. This option is not compatible with your display when running at the
         4k 60Hz resolution.</string>
+    <!-- Title for preference for HDR conversion force [CHAR LIMIT=200] -->
+    <string name="dynamic_range_selection_force_dv_title">Always force conversion to Dolby Vision
+    </string>
+    <!-- Summary for preference for HDR conversion force - DV [CHAR LIMIT=500] -->
+    <string name="dynamic_range_selection_force_dv_summary">If Dolby Vision is disabled in HDR
+        Formats in the Advanced Display Settings, forcing conversion to Dolby Vision will re-enable
+        it.
+    </string>
+    <!-- Title for preference for HDR conversion force - HDR 10[CHAR LIMIT=200] -->
+    <string name="dynamic_range_selection_force_hdr10_title">Always force conversion to HDR10
+    </string>
+    <!-- Summary for preference for HDR conversion force - HDR 10 [CHAR LIMIT=500] -->
+    <string name="dynamic_range_selection_force_hdr10_summary">If HDR10 is disabled in HDR
+        Formats in the Advanced Display Settings, forcing conversion to HDR10 will re-enable it.
+    </string>
+    <!-- Title for preference for HDR conversion force - HLG [CHAR LIMIT=200] -->
+    <string name="dynamic_range_selection_force_hlg_title">Always force conversion to HLG
+    </string>
+    <!-- Summary for preference for HDR conversion force - HLG [CHAR LIMIT=500] -->
+    <string name="dynamic_range_selection_force_hlg_summary">If HLG is disabled in HDR
+        Formats in the Advanced Display Settings, forcing conversion to HLG will re-enable it.
+    </string>
+    <!-- Title for preference for HDR conversion force - HDR10+ [CHAR LIMIT=200] -->
+    <string name="dynamic_range_selection_force_hdr10plus_title">Always force conversion to HDR10+
+    </string>
+    <!-- Summary for preference for HDR conversion force - DV [CHAR LIMIT=500] -->
+    <string name="dynamic_range_selection_force_hdr10plus_summary">If HDR10+ is disabled in HDR
+        Formats in the Advanced Display Settings, forcing conversion to HDR10+ will re-enable it.
+    </string>
+    <!-- Title for preference for HDR conversion force - SDR [CHAR LIMIT=200] -->
+    <string name="dynamic_range_selection_force_sdr_title">Always force conversion to SDR
+    </string>
+    <!-- Summary for preference for HDR conversion force - SRD [CHAR LIMIT=500] -->
+    <string name="dynamic_range_selection_force_sdr_summary">Forcing conversion to SDR will disable all
+        formats in the HDR Formats in Advanced Display Settings.
+    </string>
 
     <!-- Title for preference for forcing a display's frame
     rate to match the content's frame rate. [CHAR LIMIT=60] -->
     <string name="match_content_frame_rate_title">Match content frame rate</string>
     <!-- Default preference for a display's frame rate to match the content's frame rate. [CHAR LIMIT=80] -->
-    <string name="match_content_frame_rate_seamless">Seamless</string>
+    <string name="match_content_frame_rate_seamless">Seamless-only</string>
     <!-- Summary for default preference for a display's frame rate to match the content's frame rate. [CHAR LIMIT=250] -->
     <string name="match_content_frame_rate_seamless_summary">If the app requests it, your device
         will match its output to the original frame rate of the content you’re watching,
@@ -425,7 +461,7 @@
         does not support seamless refresh rate transitions. This option will have no effect unless
         you change to a display that supports it.</string>
     <!-- Preference to force a display's frame rate to always match the content's frame rate. [CHAR LIMIT=80] -->
-    <string name="match_content_frame_rate_non_seamless">Non-seamless</string>
+    <string name="match_content_frame_rate_non_seamless">Always</string>
     <!-- Summary for preference to force a display's frame rate to always match the content's frame rate. [CHAR LIMIT=250] -->
     <string name="match_content_frame_rate_non_seamless_summary">If the app requests it, your
         device will match its output to the original frame rate of the content you’re watching.
