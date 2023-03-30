@@ -139,8 +139,14 @@ public class BluetoothDevicesService extends Service {
                         }
                         break;
                     case BluetoothA2dp.ACTION_CONNECTION_STATE_CHANGED:
-                        int state = intent.getIntExtra(BluetoothProfile.EXTRA_STATE, -1);
-                        mHandler.post(() -> onA2dpConnectionStateChanged(device.getName(), state));
+                        final int state = intent.getIntExtra(BluetoothProfile.EXTRA_STATE, -1);
+                        mHandler.post(() -> {
+                            onA2dpConnectionStateChanged(device.getName(), state);
+                            if (state == BluetoothProfile.STATE_CONNECTED
+                                    || state == BluetoothProfile.STATE_DISCONNECTED) {
+                                onDeviceUpdated(device);
+                            }
+                        });
                         break;
                     case BluetoothDevice.ACTION_ACL_CONNECTED:
                         Log.i(TAG, "acl connected " + device);
