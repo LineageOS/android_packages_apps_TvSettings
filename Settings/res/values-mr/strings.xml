@@ -112,10 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"बॅकअप घ्या आणि रिस्टोअर करा"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"फॅक्‍टरी डेटा रीसेट"</string>
     <string name="device_calibration" msgid="2907914144048739705">"कॅलिब्रेशन"</string>
-    <!-- no translation found for device_energy_saver (6611757996220443028) -->
-    <skip />
-    <!-- no translation found for device_energy_saver_summary (5306058475316008429) -->
-    <skip />
+    <string name="device_energy_saver" msgid="6611757996220443028">"टायमर बंद करा"</string>
+    <string name="device_energy_saver_summary" msgid="5306058475316008429">"टीव्ही बंद करण्यासाठी आणि ऊर्जा वाचवण्यासाठी टायमर सेट करा"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"डिव्हाइस"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"फॉरमॅट निवडा"</string>
@@ -237,7 +235,7 @@
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"ब्लूटूथ जोडणी विनंती"</string>
     <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"याच्याशी जोडण्यासाठी: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, ते ही पासकी दर्शवित असल्याचे सुनिश्चित करा: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"यावरून: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;या डिव्हाइससह जोडायचे?"</string>
-    <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"यासह जोडण्यासाठी: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;यावर टाइप करा: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, नंतर परत या किंवा Enter दाबा."</string>
+    <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"यासह जोडण्यासाठी: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;यावर टाइप करा: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;, नंतर परत या किंवा एंटर प्रेस करा."</string>
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"यासह जोडण्यासाठी: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;डिव्हाइसचा आवश्यक पिन टाइप करा:"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"यासह जोडण्‍यासाठी: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;डिव्‍हाइसची आवश्‍यक असलेली पासकी टाईप करा:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"सामान्यतः 0000 किंवा 1234"</string>
@@ -467,7 +465,7 @@
     <string name="wifi_forget_network" msgid="4634016112624305571">"नेटवर्क विसरा"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"सेव्ह केलेल्या संकेतशब्दाच्या समावेशासह, या नेटवर्कशी कनेक्ट करण्यासाठी वापरलेली माहिती साफ करते"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" मोबाइल फोनने QR कोड स्कॅन करून वाय-फायमध्ये सामील व्हा आणि सूचना फॉलो करा.\n \n "<b>"Android फोन"</b>" यामध्ये सेटिंग्ज &gt; नेटवर्क आणि इंटरनेट &gt; वाय-फाय &gt; वाय-फाय निवडा &gt; प्रगत &gt; डिव्हाइस जोडा वर जा आणि त्यानंतर QR कोड स्कॅन करा."</string>
-    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"रद्द करण्यासाठी मागे जा बटण दाबा"</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"रद्द करण्यासाठी मागे जा बटण प्रेस करा"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ठीक आहे"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"सुरू ठेवा"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"नेटवर्क बदला"</string>
@@ -628,9 +626,9 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"कॅमेरा अ‍ॅक्सेस ब्लॉक केलेला आहे"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"अनब्लॉक करण्यासाठी, तुमच्या डिव्हाइसवरील प्रायव्हसी स्विच हा कॅमेरा ॲक्सेस करण्याची अनुमती देण्यासाठी, कॅमेरा सुरू करण्याच्या स्थानावर आणा."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"मायक्रोफोनचा अ‍ॅक्सेस: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"सुरू केला असेल, तेव्हा मायक्रोफोन वापरण्याची अनुमती असलेली सर्व अ‍ॅप्स आणि सेवा तो अ‍ॅक्सेस करू शकतील.\n\nबंद केला असेल, तेव्हा कोणतीही अ‍ॅप्स व सेवा मायक्रोफोन वापरू शकणार नाहीत. पण तरीही तुमच्या रिमोटवरील Assistant बटण दाबून तुम्ही Google Assistant शी बोलू शकता.\n\nटीव्हीसोबत संपर्क साधण्यासाठी कस्टम प्रोटोकॉल वापरणाऱ्या ऑडिओ डिव्हाइसवर या सेटिंगमुळे कदाचित परिणाम होणार नाही."</string>
+    <string name="mic_toggle_info_content" msgid="3187791167208947239">"सुरू केला असेल, तेव्हा मायक्रोफोन वापरण्याची अनुमती असलेली सर्व अ‍ॅप्स आणि सेवा तो अ‍ॅक्सेस करू शकतील.\n\nबंद केला असेल, तेव्हा कोणतीही अ‍ॅप्स व सेवा मायक्रोफोन वापरू शकणार नाहीत. पण तरीही तुमच्या रिमोटवरील Assistant बटण प्रेस करून तुम्ही Google Assistant शी बोलू शकता.\n\nटीव्हीसोबत संपर्क साधण्यासाठी कस्टम प्रोटोकॉल वापरणाऱ्या ऑडिओ डिव्हाइसवर या सेटिंगमुळे कदाचित परिणाम होणार नाही."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"रिमोटवर मायक्रोफोन सुरू केला आहे"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistant तुमच्या रिमोटवरील मायक्रोफोन अ‍ॅक्सेस करू शकते. तुम्ही तुमच्या रिमोटवरील Google Assistant बटण दाबून Assistant शी बोलू शकाल."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistant तुमच्या रिमोटवरील मायक्रोफोन अ‍ॅक्सेस करू शकते. तुम्ही तुमच्या रिमोटवरील Google Assistant बटण प्रेस करून Assistant शी बोलू शकाल."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"रिमोटवर मायक्रोफोन बंद केला आहे"</string>
     <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"तुमचा रिमोट वापरून तुम्ही Google Assistant शी बोलू शकणार नाही. Google Assistant बटण वापरता येण्यासाठी, मायक्रोफोनचा अ‍ॅक्सेस सुरू करा."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"कॅमेराचा अ‍ॅक्सेस: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
@@ -689,7 +687,7 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"अ‍ॅक्सेसिबिलिटी शॉर्टकट"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"प्रवेशयोग्यता शॉर्टकट सक्षम करा"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"शॉर्टकट सेवा"</string>
-    <string name="accessibility_shortcut_description" msgid="2050424178481510046">"शॉर्टकट सुरू असताना प्रवेशसुलभता वैशिष्ट्य सुरू करण्यासाठी तुम्‍ही मागे आणि खाली ही दोन्ही बटणे ३ सेकंदांपर्यंत दाबून ठेवू शकता."</string>
+    <string name="accessibility_shortcut_description" msgid="2050424178481510046">"शॉर्टकट सुरू असताना प्रवेशसुलभता वैशिष्ट्य सुरू करण्यासाठी तुम्‍ही मागे आणि खाली ही दोन्ही बटणे ३ सेकंदांपर्यंत प्रेस करून ठेवू शकता."</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"कॅप्शन"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"व्हिडिओवर उपशीर्षक मजकूर आच्छादनासाठी सेटिंग्ज"</string>
     <string name="captions_display" msgid="2598662495450633375">"प्रदर्शन"</string>
@@ -1109,4 +1107,14 @@
     <string name="power_on_behavior" msgid="927607372303160716">"सुरू असतानाचे वर्तन"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"रीसेट करा"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"इथरनेट पेअरिंग कोड"</string>
+    <!-- no translation found for energy_modes (1331693860386361744) -->
+    <skip />
+    <!-- no translation found for energy_modes_summary (7196407759836930799) -->
+    <skip />
+    <!-- no translation found for energy_mode_enables (357960364751477627) -->
+    <skip />
+    <!-- no translation found for energy_mode_eco_hint (1461517905015359947) -->
+    <skip />
+    <!-- no translation found for energy_modes_confirmation_title (4520280098781914825) -->
+    <skip />
 </resources>
