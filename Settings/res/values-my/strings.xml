@@ -112,8 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"အရန်သိမ်းခြင်းနှင့် ပြန်ယူခြင်း"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"စက်ရုံထုတ် အခြေအနေ ပြန်ယူခြင်း"</string>
     <string name="device_calibration" msgid="2907914144048739705">"စံကိုက်ညှိမှု"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"ပါဝါနှင့် စွမ်းအင်"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"အီကို ဆက်တင်များ"</string>
+    <string name="device_energy_saver" msgid="6611757996220443028">"တိုင်မာ ပိတ်ရန်"</string>
+    <string name="device_energy_saver_summary" msgid="5306058475316008429">"TV ပိတ်ပြီး စွမ်းအင်ချွေတာရန် တိုင်မာများ သတ်မှတ်ပါ"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"စက်များ"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"ပုံစံများ ရွေးရန်"</string>
@@ -154,12 +154,24 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"အကြောင်းအရာ အရောင်အပိုင်းအခြား ကိုက်ညီမှု"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"ဤရွေးစရာကို ဖွင့်ထားသောအခါ စနစ်သည် အကြောင်းအရာနှင့် ကိုက်ညီစေရန် အရောင်အပိုင်းအခြား ဖော်မက်အမျိုးမျိုးကြား ပြောင်းမည်။ ၎င်းက ဖော်မက်ပြောင်းလဲမှုအတွင်း အမည်းရောင်စခရင်ကို ဖြစ်စေနိုင်သည်။\n\nနောက်ထပ် အရောင်အပိုင်းအခြား ရွေးစရာများအတွက် ‘အဆင့်မြင့် ဖန်သားပြင်’ ဆက်တင်များကို နှိပ်ပါ။"</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"ဦးစားပေး အရောင်အပိုင်းအခြား"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"စနစ်ဦးစားပေး ပြောင်းလဲမှု"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"စနစ်အား ဖော်မက်ပြောင်းလဲမှုကို စီမံခွင့်ပြုပါ"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"၎င်းကို ရွေးထားသောအခါ စနစ်သည် သင့်ဖန်သားပြင်သို့ပို့ရန် သင့်တော်သော အရောင်အပိုင်းအခြားကို ဆုံးဖြတ်ပေးပြီး အကြောင်းအရာကို ဤအရောင်အပိုင်းအခြားသို့ လိုသလိုပြောင်းပေးမည်။"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"အကြောင်းအရာ၏ ဖော်မက်ကို အမြဲတမ်း ကိုက်ညီအောင်လုပ်သည်"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"ပြောင်းလဲမှု လုပ်ခိုင်းခြင်း"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"ပြောင်းလဲမှုကို ဦးစားပေးဖော်မက်အဖြစ် လုပ်ခိုင်းသည်"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"ပြောင်းလဲမှုကို ဦးစားပေးဖော်မက်အဖြစ် လုပ်ခိုင်းပါ။ ပြောင်းလဲမှုလုပ်ခိုင်းပါက ‘ပြသခြင်းမုဒ်’ (သို့) ‘HDR ဖော်မက်’ ရှိ အခြားဆက်တင်များကို သက်ရောက်နိုင်သည်။"</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"အမြဲတမ်း SDR အဖြစ်"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"အမြဲတမ်း <xliff:g id="HDR_TYPE">%s</xliff:g> အဖြစ်"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"HDR အထွက်ကို မဖြစ်မနေလုပ်မလား။"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"မူရင်းသတ်မှတ်ချက်အရ ပြောင်းလဲမှုကို <xliff:g id="HDR_TYPE">%s</xliff:g> အဖြစ် လုပ်ခိုင်းမည်။"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"သင့်ဖန်သားပြင်သည် 1080p 60Hz ပုံရိပ်ပြတ်သားကိန်းဖြင့် လုပ်ဆောင်မည်။ ဖန်သားပြင်သည် ၄k 60Hz ပုံရိပ်ပြတ်သားကိန်းဖြင့် လုပ်ဆောင်သောအခါ ဤရွေးစရာကို တွဲမသုံးနိုင်ပါ။"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"အကြောင်းအရာ၏ ဖရိန်ပြနှုန်းကို တူညီအောင်ညှိခြင်း"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"တစ်ဆက်တည်း"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"အက်ပ်က ၎င်းကို တောင်းဆိုပါက သင်၏ TV သည် တစ်ဆက်တည်း ကူးပြောင်းခြင်းကို လုပ်ဆောင်နိုင်မှသာ သင့်စက်သည် ၎င်း၏ရုပ်ထွက်ကို သင်ကြည့်နေသည့် အကြောင်းအရာ၏ မူရင်းဖရိမ်ပြနှုန်းနှင့် ကိုက်ညီအောင် လုပ်ပါမည်။"</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"သင်ချိတ်ဆက်ထားသော ဖန်သားပြင်သည် ချောမွေ့သော ပြန်လည်စတင်နှုန်း ကူးပြောင်းမှုများကို မပံ့ပိုးပါ။ ဤရွေးစရာကို ပံ့ပိုးသော ဖန်သားပြင်ကို မပြောင်းလဲဘဲ ၎င်းက သက်ရောက်မည်မဟုတ်ပါ။"</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"တစ်ဆက်တည်း မဟုတ်သော"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"အက်ပ်က ၎င်းကို တောင်းဆိုပါက သင့်စက်သည် ၎င်း၏ရုပ်ထွက်ကို သင်ကြည့်နေသည့် အကြောင်းအရာ၏ မူရင်းဖရိမ်ပြနှုန်းနှင့် ကိုက်ညီအောင် လုပ်ပါမည်။ ၎င်းက ဗီဒီယိုဖွင့်ခြင်းမှ ထွက်သောအခါ (သို့) ၎င်းသို့ဝင်သောအခါ သင့်ဖန်သားပြင်ကို တစ်စက္ကန့်ကြာ ဗလာဖြစ်သွားစေနိုင်သည်။"</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"အက်ပ်က ၎င်းကို တောင်းဆိုပါက သင့်စက်သည် ၎င်း၏ရုပ်ထွက်ကို သင်ကြည့်နေသည့် အကြောင်းအရာ၏ မူရင်းဖရိမ်ပြနှုန်းနှင့် ကိုက်ညီအောင် လုပ်ပါမည်။ ပြန်ဖွင့်နေသော ဗီဒီယိုမှ ထွက် (သို့) ဝင်သောအခါ သင့်ဖန်သားပြင်သည် တစ်စက္ကန့်ခန့် ဗလာဖြစ်သွားနိုင်သည်။"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"မည်သည့်အခါမှ"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"အက်ပ်က ၎င်းကို တောင်းဆိုသော်လည်း သင့်စက်သည် ၎င်း၏ရုပ်ထွက်ကို သင်ကြည့်နေသည့် အကြောင်းအရာ၏ မူရင်းဖရိမ်ပြနှုန်းနှင့် ကိုက်ညီအောင် မည်သည့်အခါမျှ လုပ်မည်မဟုတ်ပါ။"</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"စာသား အရွယ်ချိန်ညှိခြင်း"</string>
@@ -672,8 +684,8 @@
     <string name="palette_color_blue" msgid="8836682634988540630">"အပြာရောင်"</string>
     <string name="palette_color_purple" msgid="2123828754639683555">"ခရမ်းရောင်"</string>
     <string name="palette_color_gray" msgid="4014534773994261194">"မီးခိုးရောင်"</string>
-    <string name="accessibility_shortcut" msgid="5856158637840030531">"အများသုံးစွဲနိုင်မှု ဖြတ်လမ်းလင့်ခ်"</string>
-    <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"အများသုံးစွဲနိုင်မှု ဖြတ်လမ်းလင့်ခ်ကို ဖွင့်မည်"</string>
+    <string name="accessibility_shortcut" msgid="5856158637840030531">"အများသုံးနိုင်မှု ဖြတ်လမ်းလင့်ခ်"</string>
+    <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"အများသုံးနိုင်မှု ဖြတ်လမ်းလင့်ခ်ကို ဖွင့်မည်"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"ဖြတ်လမ်းလင့်ခ် ဝန်ဆောင်မှု"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"ဖြတ်လမ်းလင့်ခ် ဖွင့်ထားလျှင် အနောက်နှင့် အောက်သို့ ခလုတ်နှစ်ခုစလုံးကို ၃ စက္ကန့်ကြာဖိထားခြင်းဖြင့် အများသုံးနိုင်သည့် ဝန်ဆောင်မှုများ စတင်ပါမည်။"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"စာတန်းများ"</string>
@@ -1095,4 +1107,14 @@
     <string name="power_on_behavior" msgid="927607372303160716">"ပါဝါဖွင့်ထားချိန် အပြုအမူ"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"ပြင်ဆင်သတ်မှတ်ခြင်း"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"အီသာနက် အတူတွဲချိတ်ရန် ကုဒ်"</string>
+    <!-- no translation found for energy_modes (1331693860386361744) -->
+    <skip />
+    <!-- no translation found for energy_modes_summary (7196407759836930799) -->
+    <skip />
+    <!-- no translation found for energy_mode_enables (357960364751477627) -->
+    <skip />
+    <!-- no translation found for energy_mode_eco_hint (1461517905015359947) -->
+    <skip />
+    <!-- no translation found for energy_modes_confirmation_title (4520280098781914825) -->
+    <skip />
 </resources>

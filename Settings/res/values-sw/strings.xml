@@ -112,8 +112,8 @@
     <string name="device_backup_restore" msgid="3634531946308269398">"Kipengele cha Kuhifadhi na Kurejesha Nakala"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Kurejesha data iliyotoka nayo kiwandani"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Marekebisho"</string>
-    <string name="device_energy_saver" msgid="5560942970290949739">"Umeme na Nishati"</string>
-    <string name="device_eco_settings" msgid="8478430139722946388">"Mipangilio ya Kuokoa Nishati"</string>
+    <string name="device_energy_saver" msgid="6611757996220443028">"Zima Kipima Muda"</string>
+    <string name="device_energy_saver_summary" msgid="5306058475316008429">"Weka vipima muda ili kuzima TV na kuokoa nishati"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Vifaa"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Chagua miundo"</string>
@@ -154,11 +154,23 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Linganisha mfululizo wa ubadilikaji wa maudhui"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Unapowasha chaguo hili, mfumo utabadilisha kati ya miundo tofauti ya mfululizo wa ubadilikaji ili kulingansha maudhui. Hali hii inaweza kusababisha skrini nyeusi wakati wa kubadilisha muundo.\n\nBofya mipangilio ya Kina ya Skrini ili upate chaguo zaidi za mfululizo wa ubadilikaji."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Mfululizo wa ubadilikaji unaopendelewa"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Kasi ya picha ya kulinganisha maudhui"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Ubadilishaji unaopendelewa na mfumo"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Huruhusu mfumo kudhibiti ubadilishaji wa muundo"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Ukiteua chaguo hili, mfumo utabainisha masafa yanayobadilika yanayofaa kutumwa kwenye skrini yako na kubadilisha maudhui kuwa katika masafa haya yanayobadilika kadiri inavyohitajika."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Hulingana na muundo wa maudhui wakati wote"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Kulazimisha ubadilishaji"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Italazimisha ubadilishaji uwe katika muundo unaopendelewa"</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Lazimisha ubadilishaji uwe katika muundo unaopendelewa. Kulazimisha ubadilishaji huenda kukaathiri mipangilio mingine ya Hali ya Skrini au Muundo wa HDR."</string>
+    <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Wakati wote iwe SDR"</string>
+    <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Wakati wote huwa <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
+    <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Je, ungependa kulazimisha matumizi ya mfumo wa HDR?"</string>
+    <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Kwa chaguomsingi, ubadilishaji utalazimishwa kuwa <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
+    <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Skrini yako itaonyesha katika ubora wa 1080p 60Hz. Chaguo hili halioani na skrini yako linapoonyesha katika ubora wa 4k 60Hz."</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Kulinganisha kasi ya maudhui"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Mtiririko laini"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Ikihitajika na programu, kifaa chako kitalinganisha kasi yake ya utoaji maudhui na kasi halisi ya picha ya maudhui unayotazama, ikiwa TU TV yako inaweza kuonyesha maudhui kwa mtiririko laini."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Skrini yako uliyounganisha haionyeshi kwa urahisi kipengele cha uhamishaji kiwango cha kuonyesha upya. Chaguo hili halitakuwa na matokeo mazuri isipokuwa ubadilishe ili utumie skrini inayoonyesha."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Haina mtiririko laini"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Bila mtiririko laini"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ikihitajika na programu, kifaa chako kitalinganisha kasi yake ya utoaji maudhui na kasi halisi ya picha ya maudhui unayotazama. Huenda hii ikasababisha skrini kutoonyesha maudhui yoyote kwa muda mfupi unapoanza kucheza au unapositisha video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Kamwe"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Hata ikihitajika na programu, kifaa chako kamwe hakitajaribu kulinganisha kasi yake ya utoaji maudhui na kasi halisi ya picha ya maudhui unayotazama."</string>
@@ -1095,4 +1107,9 @@
     <string name="power_on_behavior" msgid="927607372303160716">"Mipangilio inayotumika unapowasha"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Weka upya"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Msimbo wa kuoanisha wa ethaneti"</string>
+    <string name="energy_modes" msgid="1331693860386361744">"Hali za Nishati"</string>
+    <string name="energy_modes_summary" msgid="7196407759836930799">"Boresha ufanisi wa nishati wakati TV haitumiki"</string>
+    <string name="energy_mode_enables" msgid="357960364751477627">"Huwasha:"</string>
+    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Kumbuka kuwa hali hii inaweza kuongeza utumiaji wa nishati kwenye kifaa."</string>
+    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Washa \"<xliff:g id="ENERGYMODENAME">%s</xliff:g>\""</string>
 </resources>
