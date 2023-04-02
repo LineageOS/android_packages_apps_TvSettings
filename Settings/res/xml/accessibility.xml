@@ -27,6 +27,15 @@
                 android:targetPackage="com.android.tv.settings"/>
     </Preference>
 
+    <Preference
+            android:key="captions"
+            android:title="@string/livedisplay_settings">
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.tv.settings.system.LiveDisplayActivity"
+                android:targetPackage="com.android.tv.settings"/>
+    </Preference>
+
     <com.android.tv.settings.widget.SwitchWithSoundPreference
             android:key="toggle_high_text_contrast"
             android:persistent="true"
