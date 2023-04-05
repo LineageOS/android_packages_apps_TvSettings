@@ -16,31 +16,28 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- no translation found for energy_mode_low_title (2408371934616917432) -->
-    <skip />
-    <!-- no translation found for energy_mode_low_subtitle (3541491740634993554) -->
-    <skip />
-    <!-- no translation found for energy_mode_low_info (7336221780506353827) -->
-    <skip />
-    <!-- no translation found for energy_mode_low_features:0 (4976202876230149030) -->
+    <string name="energy_mode_low_title" msgid="2408371934616917432">"Сүлжээний үндсэн онцлогууд"</string>
+    <string name="energy_mode_low_subtitle" msgid="3541491740634993554">"Эрчим хүчний бага хэрэглээ"</string>
+    <string name="energy_mode_low_info" msgid="7336221780506353827">"ТВ-ийг ашиглаагүй үед сүлжээний холболтыг унтраана уу."</string>
+  <string-array name="energy_mode_low_features">
+    <item msgid="4976202876230149030">"Чухал шинэчлэлт болон ажиллагаа"</item>
+  </string-array>
     <string name="energy_mode_low_eco_hint" msgid="2421460758847643655"></string>
-    <!-- no translation found for energy_mode_moderate_title (6131212898797802584) -->
-    <skip />
-    <!-- no translation found for energy_mode_moderate_subtitle (8452759001885415587) -->
-    <skip />
-    <!-- no translation found for energy_mode_moderate_info (8606735947366228051) -->
-    <skip />
-    <!-- no translation found for energy_mode_moderate_features:0 (2654586107956150296) -->
-    <!-- no translation found for energy_mode_moderate_features:1 (8724721267222341891) -->
+    <string name="energy_mode_moderate_title" msgid="6131212898797802584">"Санал болгосон сүлжээний онцлогууд"</string>
+    <string name="energy_mode_moderate_subtitle" msgid="8452759001885415587">"Эрчим хүчний оновчилсон хэрэглээ"</string>
+    <string name="energy_mode_moderate_info" msgid="8606735947366228051">"ТВ-ийг сүлжээгээр (сүлжээнд холбогдсон зогсолт) сэрээдэг онцлогуудыг асаана."</string>
+  <string-array name="energy_mode_moderate_features">
+    <item msgid="2654586107956150296">"[Insert feature 1]"</item>
+    <item msgid="8724721267222341891">"[Insert feature 2]"</item>
+  </string-array>
     <string name="energy_mode_moderate_eco_hint" msgid="252189162446856286"></string>
-    <!-- no translation found for energy_mode_high_title (4428472238583662129) -->
-    <skip />
-    <!-- no translation found for energy_mode_high_subtitle (3146607061198429672) -->
-    <skip />
-    <!-- no translation found for energy_mode_high_info (3151321275701804406) -->
-    <skip />
-    <!-- no translation found for energy_mode_high_features:0 (3018897868803319747) -->
-    <!-- no translation found for energy_mode_high_features:1 (170760143032597722) -->
+    <string name="energy_mode_high_title" msgid="4428472238583662129">"Сүлжээний нэмэлт онцлогууд"</string>
+    <string name="energy_mode_high_subtitle" msgid="3146607061198429672">"Эрчим хүчний нэмэгдсэн хэрэглээ"</string>
+    <string name="energy_mode_high_info" msgid="3151321275701804406">"Санал болгосон онцлогуудаас гадна энэ сонголт нь ТВ-ийг ашиглаагүй үед нэмэлт онцлогуудыг асаадаг бөгөөд энэ нь эрчим хүчний хэрэглээг нэмэгдүүлж магадгүй."</string>
+  <string-array name="energy_mode_high_features">
+    <item msgid="3018897868803319747">"[Insert feature 1]"</item>
+    <item msgid="170760143032597722">"[Insert feature 2]"</item>
+  </string-array>
     <!-- no translation found for energy_mode_high_eco_hint (3266580507783627848) -->
     <skip />
 </resources>
