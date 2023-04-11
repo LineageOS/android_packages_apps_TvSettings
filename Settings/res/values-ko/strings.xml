@@ -166,33 +166,21 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"강제로 HDR을 출력하시겠습니까?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"기본적으로 <xliff:g id="HDR_TYPE">%s</xliff:g> 형식으로 강제 전환됩니다."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"디스플레이가 1,080p 60Hz 해상도에서 실행됩니다. 이 옵션은 4k 60Hz에서 실행될 때 내 디스플레이와 호환되지 않습니다."</string>
-    <!-- no translation found for dynamic_range_selection_force_dv_title (8070148109262327094) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_dv_summary (1052851029985095562) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_title (1221688206945051384) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_summary (7784573527636502784) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_title (3976190987768712696) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_summary (5371949016689544001) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_title (1305556000063625735) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_summary (918038386222537401) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_title (1063579223517652945) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_summary (2874771365465898941) -->
-    <skip />
+    <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"항상 Dolby Vision으로 강제 전환"</string>
+    <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"고급 디스플레이 설정의 HDR 포맷에서 Dolby Vision이 사용 중지되어 있을 때 Dolby Vision으로 강제 전환하면 다시 사용 설정됩니다."</string>
+    <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"항상 HDR10으로 강제 전환"</string>
+    <string name="dynamic_range_selection_force_hdr10_summary" msgid="7784573527636502784">"고급 디스플레이 설정의 HDR 포맷에서 HDR10이 사용 중지되어 있을 때 HDR10으로 강제 전환하면 다시 사용 설정됩니다."</string>
+    <string name="dynamic_range_selection_force_hlg_title" msgid="3976190987768712696">"항상 HLG로 강제 전환"</string>
+    <string name="dynamic_range_selection_force_hlg_summary" msgid="5371949016689544001">"고급 디스플레이 설정의 HDR 포맷에서 HLG가 사용 중지되어 있을 때 HLG로 강제 전환하면 다시 사용 설정됩니다."</string>
+    <string name="dynamic_range_selection_force_hdr10plus_title" msgid="1305556000063625735">"항상 HDR10+로 강제 전환"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_summary" msgid="918038386222537401">"고급 디스플레이 설정의 HDR 포맷에서 HDR10+가 사용 중지되어 있을 때 HDR10+로 강제 전환하면 다시 사용 설정됩니다."</string>
+    <string name="dynamic_range_selection_force_sdr_title" msgid="1063579223517652945">"항상 SDR로 강제 전환"</string>
+    <string name="dynamic_range_selection_force_sdr_summary" msgid="2874771365465898941">"SDR로 강제 전환하면 고급 디스플레이 설정의 HDR 포맷에서 모든 포맷이 사용 중지됩니다."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"콘텐츠 프레임 속도 일치시키기"</string>
-    <!-- no translation found for match_content_frame_rate_seamless (5577846750811067585) -->
-    <skip />
+    <string name="match_content_frame_rate_seamless" msgid="5577846750811067585">"자동만"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"앱에서 요청하면 TV에서 원활한 전환을 실행할 수 있는 경우에만 기기에서 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞춥니다."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"연결된 디스플레이에서 원활한 화면 재생 빈도 전환을 지원하지 않습니다. 이를 지원하는 디스플레이로 변경하지 않는 한 이 옵션은 아무런 영향을 미치지 않습니다."</string>
-    <!-- no translation found for match_content_frame_rate_non_seamless (2702658727234710031) -->
-    <skip />
+    <string name="match_content_frame_rate_non_seamless" msgid="2702658727234710031">"항상"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"앱에서 요청할 경우 기기에서 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞춥니다. 이로 인해 동영상 재생을 실행하거나 중지할 때 잠시 화면에 아무 내용도 나타나지 않을 수 있습니다."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"콘텐츠 프레임 속도에 맞추지 않음"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"앱에서 요청하더라도 기기에서는 시청 중인 콘텐츠의 원래 프레임 속도에 출력을 맞추려고 하지 않습니다."</string>

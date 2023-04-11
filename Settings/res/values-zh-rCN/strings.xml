@@ -166,33 +166,21 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"要强制进行 HDR 输出操作吗？"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"默认情况下，系统会强制转换至<xliff:g id="HDR_TYPE">%s</xliff:g>。"</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"您的显示屏将采用 1080p 60Hz 分辨率。这个选项不支持采用 4K 60Hz 分辨率的显示屏。"</string>
-    <!-- no translation found for dynamic_range_selection_force_dv_title (8070148109262327094) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_dv_summary (1052851029985095562) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_title (1221688206945051384) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_summary (7784573527636502784) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_title (3976190987768712696) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_summary (5371949016689544001) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_title (1305556000063625735) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_summary (918038386222537401) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_title (1063579223517652945) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_summary (2874771365465898941) -->
-    <skip />
+    <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"始终强制转换成“杜比视界”"</string>
+    <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"如果“高级显示设置”的“HDR 格式”中“杜比视界”处于停用状态，强制转换成“杜比视界”将重新启用此格式。"</string>
+    <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"始终强制转换成“HDR10”"</string>
+    <string name="dynamic_range_selection_force_hdr10_summary" msgid="7784573527636502784">"如果“高级显示设置”的“HDR 格式”中“HDR10”处于停用状态，强制转换成“HDR10”将重新启用此格式。"</string>
+    <string name="dynamic_range_selection_force_hlg_title" msgid="3976190987768712696">"始终强制转换成“HLG”"</string>
+    <string name="dynamic_range_selection_force_hlg_summary" msgid="5371949016689544001">"如果“高级显示设置”的“HDR 格式”中“HLG”处于停用状态，强制转换成“HLG”将重新启用此格式。"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_title" msgid="1305556000063625735">"始终强制转换成“HDR10+”"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_summary" msgid="918038386222537401">"如果“高级显示设置”的“HDR 格式”中“HDR10+”处于停用状态，强制转换成“HDR10+”将重新启用此格式。"</string>
+    <string name="dynamic_range_selection_force_sdr_title" msgid="1063579223517652945">"始终强制转换成“SDR”"</string>
+    <string name="dynamic_range_selection_force_sdr_summary" msgid="2874771365465898941">"如果强制转换成“SDR”，“高级显示设置”的“HDR 格式”中的所有格式都将被停用。"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"匹配内容的帧速率"</string>
-    <!-- no translation found for match_content_frame_rate_seamless (5577846750811067585) -->
-    <skip />
+    <string name="match_content_frame_rate_seamless" msgid="5577846750811067585">"仅限“流畅”"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"如果应用要求，您的设备会将输出的帧速率调整为您所观看内容的原始帧速率，前提是您的电视可以执行流畅转换。"</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"您连接的显示屏不支持流畅切换刷新率。您需要换用支持该功能的显示屏，此选项才能发挥作用。"</string>
-    <!-- no translation found for match_content_frame_rate_non_seamless (2702658727234710031) -->
-    <skip />
+    <string name="match_content_frame_rate_non_seamless" msgid="2702658727234710031">"始终"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"如果应用要求，您的设备会将输出的帧速率调整为您所观看内容的原始帧速率。这样一来，当视频开始播放或结束播放时，屏幕可能会短暂出现空白画面。"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"永不"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"即使应用要求，您的设备也绝不会尝试将输出的帧速率调整为您所观看内容的原始帧速率。"</string>
@@ -682,7 +670,7 @@
     <string name="accessibility_display_category_title" msgid="593444602101558017">"显示"</string>
     <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"互动控制"</string>
     <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"音频和屏幕上的文字"</string>
-    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"实验性"</string>
+    <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"实验性功能"</string>
     <string name="accessibility_services_category_title" msgid="8813843874978910442">"服务"</string>
     <string name="accessibility_service_settings" msgid="3251334786870932423">"服务设置"</string>
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
@@ -748,7 +736,7 @@
     <string name="color_yellow" msgid="3519470952904560404">"黄色"</string>
     <string name="color_magenta" msgid="2377854703399624607">"紫红色"</string>
     <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"语音描述"</string>
-    <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"听取有关当前屏幕画面内容的语音说明（仅限支持该设置的电影或电视节目）"</string>
+    <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"以语音的形式描述当前画面呈现的内容（仅限支持该设置的电影或电视节目）"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"启用"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"配置"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"要使用<xliff:g id="SERVICE">%1$s</xliff:g>吗？"</string>
