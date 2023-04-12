@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.getMatchContentDynamicRangeStatus;
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.setMatchContentDynamicRangeStatus;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
@@ -136,8 +138,7 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
 
         SwitchPreference dynamicRangePreference = findPreference(KEY_DYNAMIC_RANGE);
         if (dynamicRangePreference != null) {
-            dynamicRangePreference.setChecked(
-                    PreferredDynamicRangeUtils.getMatchContentDynamicRangeStatus(mDisplayManager));
+            dynamicRangePreference.setChecked(getMatchContentDynamicRangeStatus(mDisplayManager));
         }
     }
 
@@ -150,8 +151,7 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
         }
         if (TextUtils.equals(preference.getKey(), KEY_DYNAMIC_RANGE)) {
             final SwitchPreference dynamicPref = (SwitchPreference) preference;
-            PreferredDynamicRangeUtils.setMatchContentDynamicRangeStatus(mDisplayManager,
-                    dynamicPref.isChecked());
+            setMatchContentDynamicRangeStatus(mDisplayManager, dynamicPref.isChecked());
         }
         return super.onPreferenceTreeClick(preference);
     }
