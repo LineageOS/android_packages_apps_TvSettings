@@ -23,9 +23,8 @@ import static android.view.Display.HdrCapabilities.HDR_TYPE_HLG;
 
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.createAlertDialog;
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.doesCurrentModeNotSupportDvBecauseLimitedTo4k30;
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.enableHdrType;
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.findMode1080p60;
-import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.toArray;
-import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.toSet;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
 
 import android.content.Context;
@@ -44,8 +43,6 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
-
-import java.util.Set;
 
 /**
  * This Fragment is responsible for selecting the dynamic range preference in case
@@ -108,7 +105,7 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
                 } else {
                     mDisplayManager.setHdrConversionMode(new HdrConversionMode(
                             HdrConversionMode.HDR_CONVERSION_FORCE, preferredHdrOutputType));
-                    enableHdrType(preferredHdrOutputType);
+                    enableHdrType(mDisplayManager, preferredHdrOutputType);
                     selectRadioPreference(preference);
                 }
             }
@@ -168,19 +165,13 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
             mDisplayManager.setHdrConversionMode(new HdrConversionMode(
                     HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_DOLBY_VISION));
             selectRadioPreference(preference);
-            enableHdrType(HDR_TYPE_DOLBY_VISION);
+            enableHdrType(mDisplayManager, HDR_TYPE_DOLBY_VISION);
             dialog.dismiss();
         };
 
         DialogInterface.OnClickListener onCancelClicked = (dialog, which) -> dialog.dismiss();
         createAlertDialog(getContext(), title, dialogDescription, onOkClicked, onCancelClicked)
                 .show();
-    }
-
-    private void enableHdrType(int hdrType) {
-        Set<Integer> disabledHdrTypes = toSet(mDisplayManager.getUserDisabledHdrTypes());
-        disabledHdrTypes.remove(hdrType);
-        mDisplayManager.setUserDisabledHdrTypes(toArray(disabledHdrTypes));
     }
 
     /**
