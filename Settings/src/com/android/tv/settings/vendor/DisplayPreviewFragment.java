@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.vendor;
 
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.getMatchContentDynamicRangeStatus;
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.setMatchContentDynamicRangeStatus;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
 
 import android.content.Intent;
@@ -36,7 +38,6 @@ import com.android.tv.settings.customization.CustomizationConstants;
 import com.android.tv.settings.customization.Partner;
 import com.android.tv.settings.customization.PartnerPreferencesMerger;
 import com.android.tv.settings.device.displaysound.PreferredDynamicRangeInfo;
-import com.android.tv.settings.device.displaysound.PreferredDynamicRangeUtils;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.ResolutionSelectionUtils;
 
@@ -114,8 +115,7 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
     public boolean onPreferenceTreeClick(Preference preference) {
         if (TextUtils.equals(preference.getKey(), KEY_DYNAMIC_RANGE)) {
             final SwitchPreference dynamicPref = (SwitchPreference) preference;
-            PreferredDynamicRangeUtils.setMatchContentDynamicRangeStatus(mDisplayManager,
-                    dynamicPref.isChecked());
+            setMatchContentDynamicRangeStatus(mDisplayManager, dynamicPref.isChecked());
         }
         return super.onPreferenceTreeClick(preference);
     }
@@ -124,8 +124,7 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
     public void onResume() {
         SwitchPreference dynamicRangePreference = findPreference(KEY_DYNAMIC_RANGE);
         if (dynamicRangePreference != null) {
-            dynamicRangePreference.setChecked(
-                    PreferredDynamicRangeUtils.getMatchContentDynamicRangeStatus(mDisplayManager));
+            dynamicRangePreference.setChecked(getMatchContentDynamicRangeStatus(mDisplayManager));
         }
         super.onResume();
     }
