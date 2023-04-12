@@ -127,6 +127,18 @@ public class DisplaySoundUtils {
         return HDR_TYPE_INVALID;
     }
 
+    static void enableHdrType(DisplayManager displayManager, int hdrType) {
+        Set<Integer> disabledHdrTypes = toSet(displayManager.getUserDisabledHdrTypes());
+        disabledHdrTypes.remove(hdrType);
+        displayManager.setUserDisabledHdrTypes(toArray(disabledHdrTypes));
+    }
+
+    static void disableHdrType(DisplayManager displayManager, int hdrType) {
+        Set<Integer> disabledHdrTypes = toSet(displayManager.getUserDisabledHdrTypes());
+        disabledHdrTypes.add(hdrType);
+        displayManager.setUserDisabledHdrTypes(toArray(disabledHdrTypes));
+    }
+
     /** Converts set to int array */
     public static int[] toArray(Set<Integer> set) {
         return set.stream().mapToInt(Integer::intValue).toArray();
