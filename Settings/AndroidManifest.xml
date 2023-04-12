@@ -1304,6 +1304,9 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".device.eco.EnergyModesService"
+            android:exported="true" />
+
         <activity android:name=".device.eco.EnergyModeConfirmationActivity"
             android:theme="@style/Theme.Reset"
             android:configChanges="keyboard|keyboardHidden|navigation"
