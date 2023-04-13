@@ -16,14 +16,20 @@
 
 package com.android.tv.settings.device.displaysound;
 
+import static android.content.DialogInterface.OnClickListener;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_DOLBY_VISION;
+import static android.view.Display.HdrCapabilities.HDR_TYPE_INVALID;
 
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.createAlertDialog;
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.doesCurrentModeNotSupportDvBecauseLimitedTo4k30;
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.findPreferredHdrConversionFormat;
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.isHdrFormatSupported;
 import static com.android.tv.settings.device.displaysound.ResolutionSelectionInfo.HDR_TYPES_ARRAY;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.hardware.display.DisplayManager;
+import android.hardware.display.HdrConversionMode;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -45,6 +51,7 @@ import com.android.tv.settings.util.ResolutionSelectionUtils;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -209,11 +216,12 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
             }
             // if newMode is null, it means it is the automatic mode
             Display.Mode finalNewMode = Objects.requireNonNullElse(newMode, mAutoMode);
+            Display.Mode finalPreviousMode = Objects.requireNonNullElse(previousMode, mAutoMode);
             // Show the dialog after a delay of 1 second. If the dialog or any UX
             // is shown when the resolution change is under process, the dialog is lost.
             new Handler().postDelayed(new Runnable() {
                 public void run() {
-                    showWarningDialogOnResolutionChange(finalNewMode, previousMode);
+                    showWarningDialogOnResolutionChange(finalNewMode, finalPreviousMode);
                 }
             }, DIALOG_START_MILLIS);
         }
@@ -249,70 +257,67 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
     private void showWarningDialogOnResolutionChange(
             Display.Mode currentMode, Display.Mode previousMode) {
         final CountDownTimer[] timerTask = {null};
-        // if previousMode is null, it means it is the automatic mode.
-        // Set it here and not in the caller like the currentMode because we need the null ref in
-        // this method in case the user decides to cancel and revert back to the original mode.
-        // If it is null, it will revert back to the automatic mode which is the correct behavior.
-        // if we actually set it to the correct mode, we will instead revert back to that mode
-        // instead of the automatic mode which wasn't the originally set mode
-        Display.Mode finalPreviousMode = Objects.requireNonNullElse(previousMode, mAutoMode);
         String resolutionString = ResolutionSelectionUtils.modeToString(currentMode, getContext());
-        boolean dolbyVisionSupportDroppedOnNewMode = !hdrTypesContainsDolbyVision(
-                currentMode.getSupportedHdrTypes())
-                && hdrTypesContainsDolbyVision(finalPreviousMode.getSupportedHdrTypes());
+        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
+        boolean doesCurrentModeNotSupportDvBecauseLimitedTo4k30 =
+                isHdrFormatSupported(previousMode, HDR_TYPE_DOLBY_VISION)
+                && doesCurrentModeNotSupportDvBecauseLimitedTo4k30(display);
         final String dialogDescription = descriptionForNewMode(resolutionString,
-                dolbyVisionSupportDroppedOnNewMode);
-        final String title = titleForNewMode(resolutionString, dolbyVisionSupportDroppedOnNewMode);
+                doesCurrentModeNotSupportDvBecauseLimitedTo4k30);
+        final String title = titleForNewMode(resolutionString,
+                doesCurrentModeNotSupportDvBecauseLimitedTo4k30);
 
-        AlertDialog dialog = new AlertDialog.Builder(getContext())
-                .setTitle(title)
-                .setMessage(dialogDescription)
-                .setPositiveButton(
-                        R.string.resolution_selection_dialog_ok,
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                                timerTask[0].cancel();
-                            }
-                        })
-                .setNegativeButton(
-                        R.string.resolution_selection_dialog_cancel,
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                setUserPreferredMode(previousMode);
-                                dialog.dismiss();
-                                timerTask[0].cancel();
-                            }
-                        })
-                .create();
+        OnClickListener onOkClicked = (dialog, which) -> {
+            changeHdrConversionFormatToOneSupportedByMode(display.getMode());
+            dialog.dismiss();
+            timerTask[0].cancel();
+        };
+        OnClickListener onCancelClicked = (dialog, which) -> {
+            setUserPreferredMode(previousMode);
+            dialog.dismiss();
+            timerTask[0].cancel();
+        };
 
-        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
-            @Override
-            public void onShow(final DialogInterface dialog) {
-                final Button cancelButton =
-                        ((AlertDialog) dialog).getButton(AlertDialog.BUTTON_NEGATIVE);
-                final CharSequence negativeButtonText = cancelButton.getText();
-                timerTask[0] = new CountDownTimer(DIALOG_TIMEOUT_MILLIS, 1000) {
-                    @Override
-                    public void onTick(long millisUntilFinished) {
-                        cancelButton.setText(String.format("%s (%d)", negativeButtonText,
-                                //add one to timeout so it never displays zero
-                                TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) + 1
-                        ));
+        AlertDialog dialog = createAlertDialog(getContext(), title, dialogDescription, onOkClicked,
+                onCancelClicked);
+
+        dialog.setOnShowListener(dialog1 -> {
+            final Button cancelButton =
+                    ((AlertDialog) dialog1).getButton(AlertDialog.BUTTON_NEGATIVE);
+            final CharSequence negativeButtonText = cancelButton.getText();
+            timerTask[0] = new CountDownTimer(DIALOG_TIMEOUT_MILLIS, 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    cancelButton.setText(String.format(Locale.getDefault(),
+                            "%s (%d)", negativeButtonText,
+                            //add one to timeout so it never displays zero
+                            TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) + 1
+                    ));
+                }
+
+                @Override
+                public void onFinish() {
+                    if (((AlertDialog) dialog1).isShowing() && isActivityEnable()) {
+                        dialog1.dismiss();
                     }
-
-                    @Override
-                    public void onFinish() {
-
-                        if (((AlertDialog) dialog).isShowing() && isActivityEnable()) {
-                            dialog.dismiss();
-                        }
-                    }
-                };
-                timerTask[0].start();
-            }
+                }
+            };
+            timerTask[0].start();
         });
         dialog.show();
+    }
+
+    private void changeHdrConversionFormatToOneSupportedByMode(Display.Mode currentMode) {
+        int preferredHdrFormat = mDisplayManager.getHdrConversionMode().getPreferredHdrOutputType();
+        if (preferredHdrFormat != HDR_TYPE_INVALID
+                && !isHdrFormatSupported(currentMode, preferredHdrFormat)) {
+            int newPreferredHdrFormat = findPreferredHdrConversionFormat(mDisplayManager,
+                    currentMode);
+            if (newPreferredHdrFormat != HDR_TYPE_INVALID) {
+                mDisplayManager.setHdrConversionMode(new HdrConversionMode(
+                        HdrConversionMode.HDR_CONVERSION_FORCE, newPreferredHdrFormat));
+            }
+        }
     }
 
     public boolean isActivityEnable(){
@@ -338,10 +343,5 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
                 : getResources().getString(R.string
                                 .resolution_selection_dialog_desc,
                         resolutionString);
-    }
-
-    private boolean hdrTypesContainsDolbyVision(int[] hdrTypes) {
-        return Arrays.stream(hdrTypes).anyMatch(
-                hdr -> hdr == HDR_TYPE_DOLBY_VISION);
     }
 }

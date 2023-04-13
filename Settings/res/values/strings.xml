@@ -410,6 +410,12 @@
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue">Your display will run at
         1080p 60Hz resolution. This option is not compatible with your display when running at the
         4k 60Hz resolution.</string>
+    <!-- Sidebar description indicating that Dolby Vision selection is not allowed because current display mode[CHAR LIMIT=300] -->
+    <string name="selection_dolby_vision_not_supported_sidebar">Dolby Vision is not supported at the current
+        resolution. If you enable Dolby Vision manually, the resolution of your display will
+        be changed to 1080p 60Hz</string>
+    <!-- Dialog title for manually enabling Dolby Vision when display does not support it[CHAR LIMIT=300] -->
+    <string name="manual_dolby_vision_format_on_4k60_title">Change resolution to 1080p 60Hz?</string>
     <!-- Title for preference for HDR conversion force [CHAR LIMIT=200] -->
     <string name="dynamic_range_selection_force_dv_title">Always force conversion to Dolby Vision
     </string>
