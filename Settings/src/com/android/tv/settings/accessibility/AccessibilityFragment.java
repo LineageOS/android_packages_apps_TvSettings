@@ -61,10 +61,12 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
     private static final String TOGGLE_BOLD_TEXT_KEY = "toggle_bold_text";
     private static final String COLOR_CORRECTION_TWOPANEL_KEY = "color_correction_only_twopanel";
     private static final String COLOR_CORRECTION_CLASSIC_KEY = "color_correction_only_classic";
+    private static final String ACCESSIBILITY_SHORTCUT_KEY = "accessibility_shortcut";
     private static final int BOLD_TEXT_ADJUSTMENT = 500;
     private static final int FIRST_PREFERENCE_IN_CATEGORY_INDEX = -1;
 
     PreferenceCategory mServicesPrefCategory;
+    PreferenceCategory mControlsPrefCategory;
 
     private final Map<ComponentName, PreferenceCategory>
             mServiceComponentNameToPreferenceCategoryMap = new ArrayMap<>();
@@ -154,6 +156,7 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
         colorCorrectionPreferenceToSetVisible.setVisible(true);
 
         mServicesPrefCategory = findPreference(AccessibilityCategory.SERVICES.getKey());
+        mControlsPrefCategory = findPreference(AccessibilityCategory.INTERACTION_CONTROLS.getKey());
         populateServiceToPreferenceCategoryMaps();
         refreshServices();
         AccessibilityManager am = (AccessibilityManager)
@@ -215,6 +218,13 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
                 AccessibilityUtils.getEnabledServicesFromSettings(getActivity());
         final List<String> permittedServices = dpm.getPermittedAccessibilityServices(
                 UserHandle.myUserId());
+
+        if (installedServiceInfos.size() == 0) {
+            Preference pref = mControlsPrefCategory.findPreference(ACCESSIBILITY_SHORTCUT_KEY);
+            if (pref != null) {
+                mControlsPrefCategory.removePreference(pref);
+            }
+        }
 
         final boolean accessibilityEnabled = Settings.Secure.getInt(
                 getActivity().getContentResolver(),
@@ -278,6 +288,7 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
             prefCategory.addPreference(servicePref);
         }
         mServicesPrefCategory.setVisible(mServicesPrefCategory.getPreferenceCount() != 0);
+        mControlsPrefCategory.setVisible(mControlsPrefCategory.getPreferenceCount() != 0);
     }
 
     @Override
