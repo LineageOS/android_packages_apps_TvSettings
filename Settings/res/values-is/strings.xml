@@ -166,11 +166,21 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Viltu þvinga HDR-úttakið?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Umbreytingin verður sjálfkrafa þvinguð í <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Skjárinn mun nota 1080p 60 Hz upplausn. Þessi valkostur er ekki samhæfur skjánum hjá þér þegar 4k 60 Hz upplausn er notuð."</string>
+    <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Alltaf þvinga skipti yfir í Dolby Vision"</string>
+    <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Ef slökkt er á Dolby Vision á HDR-sniði í ítarlegum skjástillingum verður kveikt á því aftur ef skipt er yfir í Dolby Vision með þvingun."</string>
+    <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Alltaf þvinga skipti yfir í HDR10"</string>
+    <string name="dynamic_range_selection_force_hdr10_summary" msgid="7784573527636502784">"Ef slökkt er á HDR10 á HDR-sniði í ítarlegum skjástillingum verður kveikt á því aftur ef skipt er yfir í HDR10 með þvingun."</string>
+    <string name="dynamic_range_selection_force_hlg_title" msgid="3976190987768712696">"Alltaf þvinga skipti yfir í HLG"</string>
+    <string name="dynamic_range_selection_force_hlg_summary" msgid="5371949016689544001">"Ef slökkt er á HLG á HDR-sniði í ítarlegum skjástillingum verður kveikt á því aftur ef skipt er yfir í HLG með þvingun."</string>
+    <string name="dynamic_range_selection_force_hdr10plus_title" msgid="1305556000063625735">"Alltaf þvinga skipti yfir í HDR10+"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_summary" msgid="918038386222537401">"Ef slökkt er á HDR10+ á HDR-sniði í ítarlegum skjástillingum verður kveikt á því aftur ef skipt er yfir í HDR10+ með þvingun."</string>
+    <string name="dynamic_range_selection_force_sdr_title" msgid="1063579223517652945">"Alltaf þvinga skipti yfir í SDR"</string>
+    <string name="dynamic_range_selection_force_sdr_summary" msgid="2874771365465898941">"Ef skipt er yfir í SDR með þvingun verður slökkt á öllum sniðum í HDR-sniðum í ítarlegum skjástillingum."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Samræma rammatíðni efnis"</string>
-    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Snurðulaust"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5577846750811067585">"Aðeins snurðulaust"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Tækið þitt mun nota sömu rammatíðni og var upprunalega notuð í efninu sem þú horfir á ef forritið biður um það en AÐEINS ef sjónvarpið ræður við snurðulausar skiptingar."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Skjárinn sem er tengdur styður ekki flettingu með hnökralausri endurnýjunartíðni. Valkosturinn hefur engin áhrif nema þú skiptir yfir í skjá sem styður hana."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Ekki snurðulaust"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="2702658727234710031">"Alltaf"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Tækið þitt mun nota sömu rammatíðni og var upprunalega notuð í efninu sem þú horfir á ef forritið biður um það. Þetta gæti valdið því að allt hverfi af skjánum í augnablik þegar þú byrjar eða hættir að spila myndskeið."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Aldrei"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Tækið þitt mun aldrei reyna að nota sömu rammatíðni og var upprunalega notuð í efninu sem þú horfir á, jafnvel þótt forritið biðji um það."</string>
@@ -1107,14 +1117,9 @@
     <string name="power_on_behavior" msgid="927607372303160716">"Hegðun þegar kveikt er"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Endurstilla"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Ethernet-pörunarkóði"</string>
-    <!-- no translation found for energy_modes (1331693860386361744) -->
-    <skip />
-    <!-- no translation found for energy_modes_summary (7196407759836930799) -->
-    <skip />
-    <!-- no translation found for energy_mode_enables (357960364751477627) -->
-    <skip />
-    <!-- no translation found for energy_mode_eco_hint (1461517905015359947) -->
-    <skip />
-    <!-- no translation found for energy_modes_confirmation_title (4520280098781914825) -->
-    <skip />
+    <string name="energy_modes" msgid="1331693860386361744">"Orkustillingar"</string>
+    <string name="energy_modes_summary" msgid="7196407759836930799">"Bæta orkunotkun þegar sjónvarpið er ekki í notkun"</string>
+    <string name="energy_mode_enables" msgid="357960364751477627">"Virkjar:"</string>
+    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Athugaðu að þessi stilling kann að auka orkunotkun tækisins."</string>
+    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Kveikja á „<xliff:g id="ENERGYMODENAME">%s</xliff:g>“"</string>
 </resources>

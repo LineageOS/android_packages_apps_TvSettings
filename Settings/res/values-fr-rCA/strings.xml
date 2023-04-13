@@ -166,11 +166,21 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Voulez-vous forcer la sortie HDR?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Par défaut, la conversion sera forcée au format <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Votre écran affichera une résolution de 1080p à 60 Hz. Cette option n\'est pas compatible avec votre écran lorsqu\'il affiche une résolution de 4K à 60 Hz."</string>
+    <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Toujours forcer la conversion en Dolby Vision"</string>
+    <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Si Dolby Vision est désactivé dans les formats HDR dans les paramètres d\'affichage avancés, forcer la conversion en Dolby Vision le réactivera."</string>
+    <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Toujours forcer la conversion en HDR10"</string>
+    <string name="dynamic_range_selection_force_hdr10_summary" msgid="7784573527636502784">"Si HDR10 est désactivé dans les formats HDR dans les paramètres d\'affichage avancés, forcer la conversion en HDR10 le réactivera."</string>
+    <string name="dynamic_range_selection_force_hlg_title" msgid="3976190987768712696">"Toujours forcer la conversion en HLG"</string>
+    <string name="dynamic_range_selection_force_hlg_summary" msgid="5371949016689544001">"Si HLG est désactivé dans les formats HDR dans les paramètres d\'affichage avancés, forcer la conversion en HLG le réactivera."</string>
+    <string name="dynamic_range_selection_force_hdr10plus_title" msgid="1305556000063625735">"Toujours forcer la conversion en HDR10+"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_summary" msgid="918038386222537401">"Si HDR10+ est désactivé dans les formats HDR dans les paramètres d\'affichage avancés, forcer la conversion en HDR10+ le réactivera."</string>
+    <string name="dynamic_range_selection_force_sdr_title" msgid="1063579223517652945">"Toujours forcer la conversion en SDR"</string>
+    <string name="dynamic_range_selection_force_sdr_summary" msgid="2874771365465898941">"Forcer la conversion en SDR désactivera tous les formats dans les formats HDR dans les paramètres d\'affichage avancés."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Faire correspondre la fréquence d\'images"</string>
-    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Transparent"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5577846750811067585">"Uniquement sans interruption"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si l\'application le demande, votre appareil fera correspondre sa sortie à la fréquence d\'images d\'origine du contenu que vous regardez, uniquement si votre téléviseur peut effectuer une transition transparente."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Votre écran connecté ne prend pas en charge les transitions fluides de la fréquence d\'actualisation. Cette option n\'aura aucun effet si vous ne passez pas à un écran qui la prend en charge."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Non transparent"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="2702658727234710031">"Toujours"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si l\'application le demande, votre appareil fera correspondre sa sortie à la fréquence d\'images d\'origine du contenu que vous regardez. Votre écran risque alors d\'être vide pendant une seconde lors du démarrage ou de l\'arrêt d\'une vidéo."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Jamais"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Même si l\'application le demande, votre appareil n\'essaiera jamais de faire correspondre sa sortie à la fréquence d\'images d\'origine du contenu que vous regardez."</string>
@@ -1107,14 +1117,9 @@
     <string name="power_on_behavior" msgid="927607372303160716">"Comportement lorsque le téléviseur est allumé"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Réinitialiser"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Code d\'association Ethernet"</string>
-    <!-- no translation found for energy_modes (1331693860386361744) -->
-    <skip />
-    <!-- no translation found for energy_modes_summary (7196407759836930799) -->
-    <skip />
-    <!-- no translation found for energy_mode_enables (357960364751477627) -->
-    <skip />
-    <!-- no translation found for energy_mode_eco_hint (1461517905015359947) -->
-    <skip />
-    <!-- no translation found for energy_modes_confirmation_title (4520280098781914825) -->
-    <skip />
+    <string name="energy_modes" msgid="1331693860386361744">"Modes de consommation d\'énergie"</string>
+    <string name="energy_modes_summary" msgid="7196407759836930799">"Améliorer l\'efficacité énergétique lorsque le téléviseur n\'est pas en cours d\'utilisation"</string>
+    <string name="energy_mode_enables" msgid="357960364751477627">"Active :"</string>
+    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Notez que ce mode peut augmenter la consommation d\'énergie de l\'appareil."</string>
+    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Activer « <xliff:g id="ENERGYMODENAME">%s</xliff:g> »"</string>
 </resources>

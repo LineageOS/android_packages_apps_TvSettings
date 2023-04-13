@@ -166,11 +166,21 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Forțezi ieșirea HDR?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"În mod prestabilit, conversia va fi forțată să <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Ecranul va folosi rezoluția de 1080p 60 Hz. Opțiunea nu este compatibilă cu ecranul când rulează la rezoluție 4k 60 Hz."</string>
+    <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Forțează întotdeauna conversia la Dolby Vision"</string>
+    <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Dacă Dolby Vision este dezactivat în Formatele HDR din Setările de afișare avansate, forțarea conversiei la Dolby Vision îl va reactiva."</string>
+    <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Forțează întotdeauna conversia la HDR10"</string>
+    <string name="dynamic_range_selection_force_hdr10_summary" msgid="7784573527636502784">"Dacă HDR10 este dezactivat în Formatele HDR din Setările de afișare avansate, forțarea conversiei la HDR10 îl va reactiva."</string>
+    <string name="dynamic_range_selection_force_hlg_title" msgid="3976190987768712696">"Forțează întotdeauna conversia la HLG"</string>
+    <string name="dynamic_range_selection_force_hlg_summary" msgid="5371949016689544001">"Dacă HLG este dezactivat în Formatele HDR din Setările de afișare avansate, forțarea conversiei la HLG îl va reactiva."</string>
+    <string name="dynamic_range_selection_force_hdr10plus_title" msgid="1305556000063625735">"Forțează întotdeauna conversia la HDR10+"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_summary" msgid="918038386222537401">"Dacă HDR10+ este dezactivat în Formatele HDR din Setările de afișare avansate, forțarea conversiei la HDR10+ îl va reactiva."</string>
+    <string name="dynamic_range_selection_force_sdr_title" msgid="1063579223517652945">"Forțează întotdeauna conversia la SDR"</string>
+    <string name="dynamic_range_selection_force_sdr_summary" msgid="2874771365465898941">"Forțarea conversiei la SDR va dezactiva toate formatele din Formate HDR din Setări de afișare avansate."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Potrivește cu rata de cadre a conținutului"</string>
-    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Perfectă"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5577846750811067585">"Exclusiv fără întreruperi"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Dacă aplicația solicită acest lucru, dispozitivul își va potrivi ieșirea cu rata de cadre inițială a conținutului pe care îl vizionezi NUMAI dacă televizorul poate face o tranziție perfectă."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Ecranul conectat nu acceptă tranzițiile fluide privind rata de actualizare. Opțiunea nu va avea niciun efect dacă nu treci la un ecran care o acceptă."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Imperfectă"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="2702658727234710031">"Întotdeauna"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Dacă aplicația solicită acest lucru, dispozitivul își va potrivi ieșirea cu rata de cadre inițială a conținutului pe care îl vizionezi. Aceasta poate face ca ecranul să se golească timp de o secundă când se termină sau începe redarea unui clip."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Niciodată"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Chiar dacă aplicația solicită acest lucru, dispozitivul nu va încerca niciodată să își potrivească ieșirea cu rata de cadre inițială a conținutului pe care îl vizionezi."</string>
@@ -1107,14 +1117,9 @@
     <string name="power_on_behavior" msgid="927607372303160716">"Comportament la pornire"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Resetează"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Codul de conectare prin Ethernet"</string>
-    <!-- no translation found for energy_modes (1331693860386361744) -->
-    <skip />
-    <!-- no translation found for energy_modes_summary (7196407759836930799) -->
-    <skip />
-    <!-- no translation found for energy_mode_enables (357960364751477627) -->
-    <skip />
-    <!-- no translation found for energy_mode_eco_hint (1461517905015359947) -->
-    <skip />
-    <!-- no translation found for energy_modes_confirmation_title (4520280098781914825) -->
-    <skip />
+    <string name="energy_modes" msgid="1331693860386361744">"Moduri de energie"</string>
+    <string name="energy_modes_summary" msgid="7196407759836930799">"Îmbunătățește eficiența energetică atunci când televizorul nu este folosit"</string>
+    <string name="energy_mode_enables" msgid="357960364751477627">"Activează:"</string>
+    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Reține că acest mod poate mări consumul de energie al dispozitivului."</string>
+    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Activează <xliff:g id="ENERGYMODENAME">%s</xliff:g>"</string>
 </resources>
