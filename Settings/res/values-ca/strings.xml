@@ -166,33 +166,21 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Vols forçar la sortida HDR?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"De manera predeterminada, la conversió es forçarà a <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"La pantalla s\'executarà amb una resolució de 1080p a 60Hz. Aquesta opció no és compatible amb la teva pantalla quan s\'executa amb una resolució de 4K a 60Hz."</string>
-    <!-- no translation found for dynamic_range_selection_force_dv_title (8070148109262327094) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_dv_summary (1052851029985095562) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_title (1221688206945051384) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_summary (7784573527636502784) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_title (3976190987768712696) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_summary (5371949016689544001) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_title (1305556000063625735) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_summary (918038386222537401) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_title (1063579223517652945) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_summary (2874771365465898941) -->
-    <skip />
+    <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Força sempre la conversió a Dolby Vision"</string>
+    <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Si Dolby Vision no està activat als formats HDR de la configuració avançada de la pantalla, forçant la conversió a Dolby Vision es tornarà a activar."</string>
+    <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Força sempre la conversió a HDR10"</string>
+    <string name="dynamic_range_selection_force_hdr10_summary" msgid="7784573527636502784">"Si HDR10 no està activat als formats HDR de la configuració avançada de la pantalla, forçant la conversió a HDR10 es tornarà a activar."</string>
+    <string name="dynamic_range_selection_force_hlg_title" msgid="3976190987768712696">"Força sempre la conversió a HLG"</string>
+    <string name="dynamic_range_selection_force_hlg_summary" msgid="5371949016689544001">"Si HLG no està activat als formats HDR de la configuració avançada de la pantalla, forçant la conversió a HLG es tornarà a activar."</string>
+    <string name="dynamic_range_selection_force_hdr10plus_title" msgid="1305556000063625735">"Força sempre la conversió a HDR10+"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_summary" msgid="918038386222537401">"Si HDR10+ no està activat als formats HDR de la configuració avançada de la pantalla, forçant la conversió a HDR10+ es tornarà a activar."</string>
+    <string name="dynamic_range_selection_force_sdr_title" msgid="1063579223517652945">"Força sempre la conversió a SDR"</string>
+    <string name="dynamic_range_selection_force_sdr_summary" msgid="2874771365465898941">"Si forces la conversió a SDR, es desactivaran tots els formats als formats HDR de la configuració avançada de la pantalla."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Fes coincidir amb els FPS del contingut"</string>
-    <!-- no translation found for match_content_frame_rate_seamless (5577846750811067585) -->
-    <skip />
+    <string name="match_content_frame_rate_seamless" msgid="5577846750811067585">"Només transicions fluides"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si l\'aplicació ho sol·licita, el dispositiu mostrarà el contingut que estàs mirant amb els fotogrames per segon del vídeo original, NOMÉS si el televisor pot efectuar una transició continua."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"La pantalla connectada no admet transicions amb una freqüència d\'actualització sense interrupcions. Aquesta opció no tindrà efecte tret que canviïs a una pantalla compatible."</string>
-    <!-- no translation found for match_content_frame_rate_non_seamless (2702658727234710031) -->
-    <skip />
+    <string name="match_content_frame_rate_non_seamless" msgid="2702658727234710031">"Sempre"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si l\'aplicació ho sol·licita, el dispositiu farà coincidir la sortida amb els fotogrames per segon originals del contingut que estàs mirant. Això pot provocar que la pantalla es quedi en blanc un segon en entrar a la reproducció d\'un vídeo o sortir-ne."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Mai"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Encara que l\'aplicació ho sol·liciti, el dispositiu mai no provarà de mostrar el contingut que estàs mirant amb els fotogrames per segon del vídeo original."</string>

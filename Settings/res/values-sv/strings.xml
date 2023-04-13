@@ -166,33 +166,21 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Vill du tvångskonvertera HDR-utmatningen?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Som standard tvångskonverteras den till <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Din skärm kommer att köras med upplösningen 1080p 60 Hz. Det här alternativet är inte kompatibelt med din skärm när den körs med upplösningen 4K 60 Hz."</string>
-    <!-- no translation found for dynamic_range_selection_force_dv_title (8070148109262327094) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_dv_summary (1052851029985095562) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_title (1221688206945051384) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_summary (7784573527636502784) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_title (3976190987768712696) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_summary (5371949016689544001) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_title (1305556000063625735) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_summary (918038386222537401) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_title (1063579223517652945) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_summary (2874771365465898941) -->
-    <skip />
+    <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Tvångskonvertera alltid till Dolby Vision"</string>
+    <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Om du tvångskonverterar till Dolby Vision när det är inaktiverat i HDR Formats i avancerade skärminställningar återaktiveras Dolby Vision."</string>
+    <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Tvångskonvertera alltid till HDR10"</string>
+    <string name="dynamic_range_selection_force_hdr10_summary" msgid="7784573527636502784">"Om du tvångskonverterar till HDR10 när det är inaktiverat i HDR Formats i avancerade skärminställningar återaktiveras HDR10."</string>
+    <string name="dynamic_range_selection_force_hlg_title" msgid="3976190987768712696">"Tvångskonvertera alltid till HLG"</string>
+    <string name="dynamic_range_selection_force_hlg_summary" msgid="5371949016689544001">"Om du tvångskonverterar till HLG när det är inaktiverat i HDR Formats i avancerade skärminställningar återaktiveras HLG."</string>
+    <string name="dynamic_range_selection_force_hdr10plus_title" msgid="1305556000063625735">"Tvångskonvertera alltid till HDR10+"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_summary" msgid="918038386222537401">"Om du tvångskonverterar till HDR10+ när det är inaktiverat i HDR Formats i avancerade skärminställningar återaktiveras HDR10+."</string>
+    <string name="dynamic_range_selection_force_sdr_title" msgid="1063579223517652945">"Tvångskonvertera alltid till SDR"</string>
+    <string name="dynamic_range_selection_force_sdr_summary" msgid="2874771365465898941">"Om du tvångskonverterar till SDR inaktiveras alla format i HDR Formats i avancerade skärminställningar."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Matcha innehållets bildfrekvens"</string>
-    <!-- no translation found for match_content_frame_rate_seamless (5577846750811067585) -->
-    <skip />
+    <string name="match_content_frame_rate_seamless" msgid="5577846750811067585">"Endast sömlös"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Om appen begär det matchar enheten utdatan med den ursprungliga bildfrekvensen av det du tittar på, ENDAST om tv:n har stöd för sömlös övergång."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Din anslutna skärm har inte stöd för sömlösa övergångar mellan uppdateringsfrekvenser. Det här alternativet har ingen effekt såvida du inte byter till en kompatibel skärm."</string>
-    <!-- no translation found for match_content_frame_rate_non_seamless (2702658727234710031) -->
-    <skip />
+    <string name="match_content_frame_rate_non_seamless" msgid="2702658727234710031">"Alltid"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Om appen begär det matchar enheten utdatan med den ursprungliga bildfrekvensen av det du tittar på. Detta kan leda till att skärmen blir svart i någon sekund när du avslutar eller startar videouppspelning."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Aldrig"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Enheten försöker aldrig matcha utdatan med den ursprungliga bildfrekvensen av det du tittar på, även om appen begär det."</string>

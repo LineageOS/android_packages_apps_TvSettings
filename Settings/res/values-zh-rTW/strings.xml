@@ -166,33 +166,21 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"要強制進行高動態範圍輸出作業嗎？"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"系統預設會強制轉換為「<xliff:g id="HDR_TYPE">%s</xliff:g>」格式。"</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"你的螢幕將採用 1080p 60Hz 解析度。這個選項不支援採用 4K 60Hz 解析度的螢幕。"</string>
-    <!-- no translation found for dynamic_range_selection_force_dv_title (8070148109262327094) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_dv_summary (1052851029985095562) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_title (1221688206945051384) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_summary (7784573527636502784) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_title (3976190987768712696) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_summary (5371949016689544001) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_title (1305556000063625735) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_summary (918038386222537401) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_title (1063579223517652945) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_summary (2874771365465898941) -->
-    <skip />
+    <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"一律強制轉換成 Dolby Vision"</string>
+    <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"當「進階顯示設定」&gt;「HDR 格式」中的 Dolby Vision 處於停用狀態時，如果強制轉換成 Dolby Vision，就會將其重新啟用。"</string>
+    <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"一律強制轉換成 HDR10"</string>
+    <string name="dynamic_range_selection_force_hdr10_summary" msgid="7784573527636502784">"當「進階顯示設定」&gt;「HDR 格式」中的 HDR10 處於停用狀態時，如果強制轉換成 HDR10，就會將其重新啟用。"</string>
+    <string name="dynamic_range_selection_force_hlg_title" msgid="3976190987768712696">"一律強制轉換成 HLG"</string>
+    <string name="dynamic_range_selection_force_hlg_summary" msgid="5371949016689544001">"當「進階顯示設定」&gt;「HDR 格式」中的 HLG 處於停用狀態時，如果強制轉換成 HLG，就會重新將其啟用。"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_title" msgid="1305556000063625735">"一律強制轉換成 HDR10+"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_summary" msgid="918038386222537401">"當「進階顯示設定」&gt;「HDR 格式」中的 HDR10+ 處於停用狀態時，如果強制轉換成 HDR10+，就會將其重新啟用。"</string>
+    <string name="dynamic_range_selection_force_sdr_title" msgid="1063579223517652945">"一律強制轉換成 SDR"</string>
+    <string name="dynamic_range_selection_force_sdr_summary" msgid="2874771365465898941">"如果強制轉換成 SDR，「進階顯示設定」&gt;「HDR 格式」中的所有格式將遭到停用。"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"採用內容影格速率"</string>
-    <!-- no translation found for match_content_frame_rate_seamless (5577846750811067585) -->
-    <skip />
+    <string name="match_content_frame_rate_seamless" msgid="5577846750811067585">"只在可順暢轉換時變更影格速率"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"如果應用程式要求，而且你的電視支援流暢轉換，你的裝置就會依據所觀看內容的原始影格速率輸出畫面。"</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"你連接的螢幕不支援流暢切換刷新率。如果未改用支援的螢幕，這個選項就不會發揮作用。"</string>
-    <!-- no translation found for match_content_frame_rate_non_seamless (2702658727234710031) -->
-    <skip />
+    <string name="match_content_frame_rate_non_seamless" msgid="2702658727234710031">"一律根據內容變更影格速率"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"如果應用程式要求，你的裝置會依據所觀看內容的原始影格速率輸出畫面。這可能會讓螢幕在影片開始或結束播放時，短暫出現空白畫面。"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"一律不採用"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"即使應用程式要求，你的裝置也絕不會依據所觀看內容的原始影格速率輸出畫面。"</string>
