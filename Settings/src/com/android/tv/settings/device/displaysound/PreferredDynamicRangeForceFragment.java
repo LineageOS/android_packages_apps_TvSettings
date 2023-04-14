@@ -169,7 +169,10 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
             dialog.dismiss();
         };
 
-        DialogInterface.OnClickListener onCancelClicked = (dialog, which) -> dialog.dismiss();
+        DialogInterface.OnClickListener onCancelClicked = (dialog, which) -> {
+            ((RadioPreference) preference).setChecked(false);
+            dialog.dismiss();
+        };
         createAlertDialog(getContext(), title, dialogDescription, onOkClicked, onCancelClicked)
                 .show();
     }

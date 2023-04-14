@@ -22,8 +22,8 @@ import static android.view.Display.HdrCapabilities.HDR_TYPE_INVALID;
 
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.createAlertDialog;
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.doesCurrentModeNotSupportDvBecauseLimitedTo4k30;
-import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.findPreferredHdrConversionFormat;
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.isHdrFormatSupported;
+import static com.android.tv.settings.device.displaysound.PreferredDynamicRangeFragment.selectForceHdrConversion;
 import static com.android.tv.settings.device.displaysound.ResolutionSelectionInfo.HDR_TYPES_ARRAY;
 
 import android.app.AlertDialog;
@@ -298,6 +298,7 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
                 @Override
                 public void onFinish() {
                     if (((AlertDialog) dialog1).isShowing() && isActivityEnable()) {
+                        setUserPreferredMode(previousMode);
                         dialog1.dismiss();
                     }
                 }
@@ -311,12 +312,10 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         int preferredHdrFormat = mDisplayManager.getHdrConversionMode().getPreferredHdrOutputType();
         if (preferredHdrFormat != HDR_TYPE_INVALID
                 && !isHdrFormatSupported(currentMode, preferredHdrFormat)) {
-            int newPreferredHdrFormat = findPreferredHdrConversionFormat(mDisplayManager,
-                    currentMode);
-            if (newPreferredHdrFormat != HDR_TYPE_INVALID) {
-                mDisplayManager.setHdrConversionMode(new HdrConversionMode(
-                        HdrConversionMode.HDR_CONVERSION_FORCE, newPreferredHdrFormat));
-            }
+            HdrConversionMode systemHdrConversionMode = new HdrConversionMode(
+                    HdrConversionMode.HDR_CONVERSION_SYSTEM);
+            mDisplayManager.setHdrConversionMode(systemHdrConversionMode);
+            selectForceHdrConversion(mDisplayManager);
         }
     }
 
