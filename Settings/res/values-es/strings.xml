@@ -166,33 +166,21 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"¿Quieres forzar la salida HDR?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"De forma predeterminada, la conversión se forzará a <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Tu pantalla se ejecutará con una resolución de 1080p a 60 Hz. Esta opción no es compatible con tu pantalla cuando se ejecuta con una resolución de 4K a 60 Hz."</string>
-    <!-- no translation found for dynamic_range_selection_force_dv_title (8070148109262327094) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_dv_summary (1052851029985095562) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_title (1221688206945051384) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_summary (7784573527636502784) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_title (3976190987768712696) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_summary (5371949016689544001) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_title (1305556000063625735) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_summary (918038386222537401) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_title (1063579223517652945) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_summary (2874771365465898941) -->
-    <skip />
+    <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Forzar siempre la conversión a Dolby Vision"</string>
+    <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Si Dolby Vision está inhabilitado en los formatos HDR de los ajustes avanzados de la pantalla y se fuerza la conversión a Dolby Vision, se volverá a habilitar."</string>
+    <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Forzar siempre la conversión a HDR10"</string>
+    <string name="dynamic_range_selection_force_hdr10_summary" msgid="7784573527636502784">"Si HDR10 está inhabilitado en los formatos HDR de los ajustes avanzados de la pantalla y se fuerza la conversión a HDR10, se volverá a habilitar."</string>
+    <string name="dynamic_range_selection_force_hlg_title" msgid="3976190987768712696">"Forzar siempre la conversión a HLG"</string>
+    <string name="dynamic_range_selection_force_hlg_summary" msgid="5371949016689544001">"Si HLG está inhabilitado en los formatos HDR de los ajustes avanzados de la pantalla y se fuerza la conversión a HLG, se volverá a habilitar."</string>
+    <string name="dynamic_range_selection_force_hdr10plus_title" msgid="1305556000063625735">"Forzar siempre la conversión a HDR10+"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_summary" msgid="918038386222537401">"Si HDR10+ está inhabilitado en los formatos HDR de los ajustes avanzados de la pantalla y se fuerza la conversión a HDR10+, se volverá a habilitar."</string>
+    <string name="dynamic_range_selection_force_sdr_title" msgid="1063579223517652945">"Forzar siempre la conversión a SDR"</string>
+    <string name="dynamic_range_selection_force_sdr_summary" msgid="2874771365465898941">"Si se fuerza la conversión a SDR, se inhabilitarán todos los formatos HDR de los ajustes avanzados de la pantalla."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Adaptarse a la velocidad de fotogramas del contenido"</string>
-    <!-- no translation found for match_content_frame_rate_seamless (5577846750811067585) -->
-    <skip />
+    <string name="match_content_frame_rate_seamless" msgid="5577846750811067585">"Solo transición fluida"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si la aplicación lo solicita, tu dispositivo intentará hacer coincidir la imagen con la velocidad de fotogramas original del contenido que veas, pero SOLO si tu televisor puede mostrar una transición fluida."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"La pantalla que has conectado no es compatible con las transiciones de tasa de refresco fluidas. Esta opción no tendrá ningún efecto a menos que cambies a una pantalla compatible."</string>
-    <!-- no translation found for match_content_frame_rate_non_seamless (2702658727234710031) -->
-    <skip />
+    <string name="match_content_frame_rate_non_seamless" msgid="2702658727234710031">"Siempre"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si la aplicación lo solicita, tu dispositivo intentará mostrar el contenido que veas en su velocidad de fotogramas original. Esto puede provocar que la pantalla se ponga en blanco durante un segundo al iniciar o terminar la reproducción del vídeo."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nunca"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Aunque la aplicación lo solicite, tu dispositivo nunca intentará mostrar el contenido que veas en su velocidad de fotogramas original."</string>
@@ -1057,7 +1045,7 @@
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Encender pantalla"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"Permitir encender la pantalla"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Permite que una aplicación encienda la pantalla. Si das este permiso, la aplicación puede encender la pantalla en cualquier momento sin que se lo pidas."</string>
-    <string name="special_access" msgid="21806055758289916">"aplicaciones con accesos especiales"</string>
+    <string name="special_access" msgid="21806055758289916">"Acceso especial de aplicaciones"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Audio"</string>
     <string name="record_audio" msgid="5035689290259575229">"Grabar audio"</string>

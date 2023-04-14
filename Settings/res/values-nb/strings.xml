@@ -166,33 +166,21 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Vil du tvinge HDR-utdata?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Som standard blir konverteringen tvunget til <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Skjermen kjøres med 1080p-oppløsning og 60 Hz. Dette alternativet er ikke kompatibelt med skjermen når den kjører med 4k-oppløsning og 60 Hz."</string>
-    <!-- no translation found for dynamic_range_selection_force_dv_title (8070148109262327094) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_dv_summary (1052851029985095562) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_title (1221688206945051384) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10_summary (7784573527636502784) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_title (3976190987768712696) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hlg_summary (5371949016689544001) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_title (1305556000063625735) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_hdr10plus_summary (918038386222537401) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_title (1063579223517652945) -->
-    <skip />
-    <!-- no translation found for dynamic_range_selection_force_sdr_summary (2874771365465898941) -->
-    <skip />
+    <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Tving alltid konvertering til Dolby Vision"</string>
+    <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Hvis Dolby Vision er deaktivert i HDR-formater i Avanserte skjerminnstillinger og du tvinger konvertering til Dolby Vision, aktiveres det igjen."</string>
+    <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Tving alltid konvertering til HDR10"</string>
+    <string name="dynamic_range_selection_force_hdr10_summary" msgid="7784573527636502784">"Hvis HDR10 er deaktivert i HDR-formater i Avanserte skjerminnstillinger og du tvinger konvertering til HDR10, aktiveres det igjen."</string>
+    <string name="dynamic_range_selection_force_hlg_title" msgid="3976190987768712696">"Tving alltid konvertering til HLG"</string>
+    <string name="dynamic_range_selection_force_hlg_summary" msgid="5371949016689544001">"Hvis HLG er deaktivert i HDR-formater i Avanserte skjerminnstillinger og du tvinger konvertering til HLG, aktiveres det igjen."</string>
+    <string name="dynamic_range_selection_force_hdr10plus_title" msgid="1305556000063625735">"Tving alltid konvertering til HDR10+"</string>
+    <string name="dynamic_range_selection_force_hdr10plus_summary" msgid="918038386222537401">"Hvis HDR10+ er deaktivert i HDR-formater i Avanserte skjerminnstillinger og du tvinger konvertering til HDR10+, aktiveres det igjen."</string>
+    <string name="dynamic_range_selection_force_sdr_title" msgid="1063579223517652945">"Tving alltid konvertering til SDR"</string>
+    <string name="dynamic_range_selection_force_sdr_summary" msgid="2874771365465898941">"Hvis du tvinger konvertering til SDR, deaktiveres alle formatene i HDR-formatene i Avanserte skjerminnstillinger."</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Match innholdets bildefrekvens"</string>
-    <!-- no translation found for match_content_frame_rate_seamless (5577846750811067585) -->
-    <skip />
+    <string name="match_content_frame_rate_seamless" msgid="5577846750811067585">"Bare sømløs"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Hvis appen ber om det, kommer enheten til å matche utgangen til den opprinnelige bildefrekvensen til innholdet du ser på, men BARE hvis TV-en kan utføre sømløs overgang."</string>
     <string name="match_content_frame_rate_seamless_not_supported_summary" msgid="98559950465123792">"Den tilkoblede skjermen støtter ikke sømløse overganger av oppdateringsfrekvens. Dette alternativet har ingen effekt med mindre du bytter til en skjerm som støtter det."</string>
-    <!-- no translation found for match_content_frame_rate_non_seamless (2702658727234710031) -->
-    <skip />
+    <string name="match_content_frame_rate_non_seamless" msgid="2702658727234710031">"Alltid"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Hvis appen ber om det, kommer enheten til å matche utgangen til den opprinnelige bildefrekvensen til innholdet du ser på. Dette kan føre til at skjermen blir tom i et øyeblikk når du avslutter eller starter videoavspilling."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Aldri"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Selv om appen ber om det, kommer enheten aldri til å prøve å matche utgangen til den opprinnelige bildefrekvensen til innholdet du ser på."</string>
@@ -486,7 +474,7 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Koble til"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Glem nettverket"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Dette sletter informasjonen som brukes til å koble til dette nettverket, inkludert lagrede passord"</string>
-    <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Koble til et Wifi-nettverk ved å skanne QR-koden fra en mobiltelefon og følge veiledningen.\n \n Fra en "<b>"Android-telefon"</b>" går du til Innstillinger -&gt; Nettverk og internett -&gt; Wifi -&gt; Velg et Wifi-nettverk -&gt; Avansert -&gt; Legg til en enhet og skanner QR-koden."</string>
+    <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Koble til et wifi-nettverk ved å skanne QR-koden fra en mobiltelefon og følge veiledningen.\n \n Fra en "<b>"Android-telefon"</b>" går du til Innstillinger -&gt; Nettverk og internett -&gt; Wifi -&gt; Velg et wifi-nettverk -&gt; Avansert -&gt; Legg til en enhet og skanner QR-koden."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Trykk på tilbakeknappen for å avbryte"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Fortsett"</string>
