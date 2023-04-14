@@ -18,6 +18,7 @@ package com.android.tv.settings.device.eco;
 
 import android.annotation.ArrayRes;
 import android.annotation.BoolRes;
+import android.annotation.ColorRes;
 import android.annotation.DrawableRes;
 import android.annotation.IntegerRes;
 import android.annotation.NonNull;
@@ -26,6 +27,7 @@ import android.annotation.StringRes;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.PowerManager;
+import android.os.PowerManager.LowPowerStandbyPolicy;
 import android.provider.DeviceConfig;
 import android.util.ArraySet;
 
@@ -57,6 +59,8 @@ public final class EnergyModesHelper {
         public final int titleRes;
         @StringRes
         public final int subtitleRes;
+        @ColorRes
+        public final int colorRes;
         @DrawableRes
         public final int iconRes;
         @StringRes
@@ -83,8 +87,8 @@ public final class EnergyModesHelper {
 
         public EnergyMode(@StringRes int identifierRes, boolean ecoHighlighted,
                 boolean enableLowPowerStandby, @BoolRes int enabledRes, @StringRes int titleRes,
-                @StringRes int subtitleRes, @DrawableRes int iconRes, @StringRes int infoTextRes,
-                @ArrayRes int featuresRes, @StringRes int ecoHintRes,
+                @StringRes int subtitleRes, int colorRes, @DrawableRes int iconRes,
+                @StringRes int infoTextRes, @ArrayRes int featuresRes, @StringRes int ecoHintRes,
                 @DrawableRes int ecoHintIconRes, @ArrayRes int baseExemptPackagesRes,
                 @ArrayRes int vendorExemptPackagesRes, @IntegerRes int baseAllowedReasonsRes,
                 @IntegerRes int vendorAllowedReasonsRes, @ArrayRes int baseAllowedFeaturesRes,
@@ -94,6 +98,7 @@ public final class EnergyModesHelper {
             this.enabledRes = enabledRes;
             this.titleRes = titleRes;
             this.subtitleRes = subtitleRes;
+            this.colorRes = colorRes;
             this.iconRes = iconRes;
             this.infoTextRes = infoTextRes;
             this.featuresRes = featuresRes;
@@ -116,7 +121,8 @@ public final class EnergyModesHelper {
             R.bool.energy_mode_low_enabled,
             R.string.energy_mode_low_title,
             R.string.energy_mode_low_subtitle,
-            R.drawable.ic_settings_eco_leaf,
+            R.color.energy_mode_low_color,
+            R.drawable.energy_mode_low_icon,
             R.string.energy_mode_low_info,
             R.array.energy_mode_low_features,
             R.string.energy_mode_low_eco_hint,
@@ -135,7 +141,8 @@ public final class EnergyModesHelper {
             R.bool.energy_mode_moderate_enabled,
             R.string.energy_mode_moderate_title,
             R.string.energy_mode_moderate_subtitle,
-            R.drawable.ic_settings_energy_mode_moderate,
+            R.color.energy_mode_moderate_color,
+            R.drawable.energy_mode_moderate_icon,
             R.string.energy_mode_moderate_info,
             R.array.energy_mode_moderate_features,
             R.string.energy_mode_moderate_eco_hint,
@@ -154,7 +161,8 @@ public final class EnergyModesHelper {
             R.bool.energy_mode_high_enabled,
             R.string.energy_mode_high_title,
             R.string.energy_mode_high_subtitle,
-            R.drawable.ic_settings_energy_mode_high,
+            R.color.energy_mode_high_color,
+            R.drawable.energy_mode_high_icon,
             R.string.energy_mode_high_info,
             R.array.energy_mode_high_features,
             R.string.energy_mode_high_eco_hint,
@@ -173,16 +181,16 @@ public final class EnergyModesHelper {
             R.bool.energy_mode_unrestricted_enabled,
             R.string.energy_mode_high_title,
             R.string.energy_mode_high_subtitle,
-            R.drawable.ic_settings_energy_mode_high,
+            R.color.energy_mode_high_color,
+            R.drawable.energy_mode_high_icon,
             R.string.energy_mode_high_info,
             R.array.energy_mode_high_features,
             R.string.energy_mode_high_eco_hint,
             R.drawable.ic_bolt,
             0, 0, 0, 0, 0, 0);
 
-    public static EnergyMode[] ENERGY_MODES =
-            new EnergyMode[]{MODE_LOW_ENERGY, MODE_MODERATE_ENERGY, MODE_HIGH_ENERGY,
-                    MODE_UNRESTRICTED};
+    public static EnergyMode[] ENERGY_MODES = new EnergyMode[] {
+            MODE_LOW_ENERGY, MODE_MODERATE_ENERGY, MODE_HIGH_ENERGY, MODE_UNRESTRICTED };
 
     public EnergyModesHelper(Context context) {
         mContext = context;
@@ -321,70 +329,70 @@ public final class EnergyModesHelper {
         return string.split(",");
     }
 
-    private PowerManager.LowPowerStandbyPolicy getPolicy(EnergyMode mode) {
-        final Resources resources = mContext.getResources();
-        final String identifier = mContext.getString(mode.identifierRes);
-
+    private LowPowerStandbyPolicy getPolicy(EnergyMode mode) {
         if (!mode.enableLowPowerStandby) {
-            return new PowerManager.LowPowerStandbyPolicy(
-                    identifier,
+            return new LowPowerStandbyPolicy(
+                    mContext.getString(mode.identifierRes),
                     Collections.emptySet(),
                     0,
                     Collections.emptySet());
         }
 
-        final String[] baseExemptPackages = resources.getStringArray(mode.baseExemptPackagesRes);
-        final String[] deviceConfigExemptPackagesOverrides = getDeviceConfigStringArray(
-                "policy_" + identifier + "_exempt_packages");
-        final String[] vendorExemptPackages = resources.getStringArray(
-                mode.vendorExemptPackagesRes);
-        final Set<String> exemptPackages = combine(
-                deviceConfigExemptPackagesOverrides != null
-                        ? deviceConfigExemptPackagesOverrides
-                        : baseExemptPackages,
-                        vendorExemptPackages);
+        return new LowPowerStandbyPolicy(
+                mContext.getString(mode.identifierRes),
+                getExemptPackages(mode),
+                getAllowedReasons(mode),
+                getAllowedFeatures(mode));
+    }
+
+    @NonNull
+    private Set<String> getExemptPackages(EnergyMode mode) {
+        final String identifier = mContext.getString(mode.identifierRes);
+        final Set<String> exemptPackages = combineStringArrays(mode.baseExemptPackagesRes,
+                "policy_" + identifier + "_exempt_packages", mode.vendorExemptPackagesRes);
+        return exemptPackages;
+    }
+
+    @NonNull
+    Set<String> getAllowedFeatures(EnergyMode mode) {
+        final String identifier = mContext.getString(mode.identifierRes);
+        final Set<String> allowedFeatures = combineStringArrays(mode.baseAllowedFeaturesRes,
+                "policy_" + identifier + "_allowed_features", mode.vendorAllowedFeaturesRes);
+        return allowedFeatures;
+    }
+
+    private Set<String> combineStringArrays(@ArrayRes int baseArrayRes, String baseOverrideKey,
+            @ArrayRes int vendorArrayRes) {
+        final Resources resources = mContext.getResources();
+        final String[] baseArray = resources.getStringArray(baseArrayRes);
+        final String[] baseOverrideArray = getDeviceConfigStringArray(baseOverrideKey);
+        final String[] vendorArray = resources.getStringArray(vendorArrayRes);
+
+        ArraySet<String> result = new ArraySet<>();
+        result.addAll(new ArraySet<>(baseOverrideArray != null
+                ? baseOverrideArray
+                : baseArray));
+        result.addAll(new ArraySet<>(vendorArray));
+        return result;
+    }
+
+    private int getAllowedReasons(EnergyMode mode) {
+        final Resources resources = mContext.getResources();
+        final String identifier = mContext.getString(mode.identifierRes);
 
         final int baseAllowedReasons = resources.getInteger(mode.baseAllowedReasonsRes);
         final int deviceConfigAllowedReasonOverride = DeviceConfig.getInt(
                 NAMESPACE_LOW_POWER_STANDBY, "policy_" + identifier + "_allowed_reasons", -1);
         final int vendorAllowedReasons = resources.getInteger(mode.vendorAllowedReasonsRes);
-        final int allowedReasons = (
-                (deviceConfigAllowedReasonOverride != -1
-                        ? deviceConfigAllowedReasonOverride
-                        : baseAllowedReasons) | vendorAllowedReasons);
-
-        final String[] baseAllowedFeatures = resources.getStringArray(mode.baseAllowedFeaturesRes);
-        final String[] deviceConfigAllowedFeaturesOverrides = getDeviceConfigStringArray(
-                "policy_" + identifier + "_allowed_features");
-        final String[] vendorAllowedFeatures = resources.getStringArray(
-                mode.vendorAllowedFeaturesRes);
-        final Set<String> allowedFeatures = combine(
-                deviceConfigAllowedFeaturesOverrides != null
-                        ? deviceConfigAllowedFeaturesOverrides
-                        : baseAllowedFeatures,
-                vendorAllowedFeatures);
-
-        return new PowerManager.LowPowerStandbyPolicy(
-                identifier,
-                exemptPackages,
-                allowedReasons,
-                allowedFeatures);
-    }
-
-    private Set<String> combine(String[] a, String[] b) {
-        ArraySet<String> result = new ArraySet<>();
-        if (a != null) {
-            result.addAll(new ArraySet<>(a));
-        }
-        if (b != null) {
-            result.addAll(new ArraySet<>(b));
-        }
-        return result;
+        final int allowedReasons = ((deviceConfigAllowedReasonOverride != -1
+                ? deviceConfigAllowedReasonOverride
+                : baseAllowedReasons) | vendorAllowedReasons);
+        return allowedReasons;
     }
 
     /** Sets the given energy mode in the system. */
     public void setEnergyMode(@NonNull EnergyMode energyMode) {
-        PowerManager.LowPowerStandbyPolicy policy = getPolicy(energyMode);
+        LowPowerStandbyPolicy policy = getPolicy(energyMode);
         PowerManager powerManager = mContext.getSystemService(PowerManager.class);
         powerManager.setLowPowerStandbyEnabled(energyMode.enableLowPowerStandby);
         powerManager.setLowPowerStandbyPolicy(policy);
@@ -442,15 +450,14 @@ public final class EnergyModesHelper {
         }
 
         PowerManager powerManager = mContext.getSystemService(PowerManager.class);
-        final PowerManager.LowPowerStandbyPolicy currentPolicy =
-                powerManager.getLowPowerStandbyPolicy();
+        final LowPowerStandbyPolicy currentPolicy = powerManager.getLowPowerStandbyPolicy();
         if (currentPolicy == null) {
             return null;
         }
 
         final EnergyMode matchingEnergyMode = getEnergyMode(currentPolicy.getIdentifier());
         EnergyMode targetEnergyMode = matchingEnergyMode;
-        if (matchingEnergyMode == null || !isEnergyModeEnabled(matchingEnergyMode)) {
+        if (!isEnergyModeEnabled(matchingEnergyMode)) {
             if (matchingEnergyMode == MODE_HIGH_ENERGY && isEnergyModeEnabled(MODE_UNRESTRICTED)) {
                 targetEnergyMode = MODE_UNRESTRICTED;
             } else if (matchingEnergyMode == MODE_UNRESTRICTED && isEnergyModeEnabled(
@@ -464,33 +471,4 @@ public final class EnergyModesHelper {
         setEnergyMode(targetEnergyMode);
         return targetEnergyMode;
     }
-
-    @Nullable
-    private EnergyMode getCurrentEnergyMode() {
-        if (!areEnergyModesAvailable()) {
-            return null;
-        }
-
-        PowerManager powerManager = mContext.getSystemService(PowerManager.class);
-        final PowerManager.LowPowerStandbyPolicy currentPolicy =
-                powerManager.getLowPowerStandbyPolicy();
-        if (currentPolicy == null) {
-            return null;
-        }
-
-        final EnergyMode matchingEnergyMode = getEnergyMode(currentPolicy.getIdentifier());
-        if (isEnergyModeEnabled(matchingEnergyMode)) {
-            return matchingEnergyMode;
-        }
-
-        if (matchingEnergyMode == MODE_HIGH_ENERGY && isEnergyModeEnabled(MODE_UNRESTRICTED)) {
-            return MODE_UNRESTRICTED;
-        } else if (matchingEnergyMode == MODE_UNRESTRICTED && isEnergyModeEnabled(
-                MODE_HIGH_ENERGY)) {
-            return MODE_HIGH_ENERGY;
-        }
-
-        return getDefaultEnergyMode();
-    }
 }
-

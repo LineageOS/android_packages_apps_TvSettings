@@ -18,6 +18,9 @@ package com.android.tv.settings.device.eco;
 
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -98,7 +101,16 @@ public class EnergyModesFragment extends SettingsPreferenceFragment {
         radioPreference.setRadioGroup(RADIO_GROUP_ENERGY_MODES);
 
         if (mode.iconRes != 0) {
-            radioPreference.setIcon(mode.iconRes);
+            final LayerDrawable compoundIcon =
+                    ((LayerDrawable) getContext().getDrawable(R.drawable.compound_icon));
+
+            final Drawable icon = getContext().getDrawable(mode.iconRes);
+            final ColorStateList colorStateList = getContext().getResources()
+                    .getColorStateList(R.color.preference_icon_color, getContext().getTheme());
+            icon.setTintList(colorStateList);
+
+            compoundIcon.setDrawableByLayerId(R.id.foreground, icon);
+            radioPreference.setIcon(compoundIcon);
         }
 
         radioPreference.setFragment(EnergyModeInfoFragment.class.getName());
