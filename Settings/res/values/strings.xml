@@ -592,8 +592,8 @@
     <string name="resolution_selection_hz">Hz</string>
     <!-- String for display mode. Example after substitution: 4k (60 Hz) [CHAR LIMIT=100]-->
     <string name="resolution_display_mode">
-        <xliff:g id="resolution" example="1080p, 4k etc">%1$s</xliff:g> (
-        <xliff:g id="refresh-rate" example="60, 59.94 etc">%2$s</xliff:g> Hz)</string>
+        <xliff:g id="resolution" example="1080p, 4k etc">%1$s</xliff:g>
+        (<xliff:g id="refresh-rate" example="60, 59.94 etc">%2$s</xliff:g> Hz)</string>
 
     <!-- Title of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
     <string name="device_storage_clear_cache_title">Clear cached data?</string>
