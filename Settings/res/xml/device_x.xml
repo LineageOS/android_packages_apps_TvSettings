@@ -25,7 +25,7 @@
         android:title="@string/about_preference"/>
     <Preference
         android:fragment="com.android.tv.settings.device.eco.PowerAndEnergyFragment"
-        android:icon="@drawable/ic_settings_eco_leaf"
+        android:icon="@drawable/ic_settings_power_and_energy"
         android:key="power_and_energy"
         custom:isPreferenceVisible="false"
         android:title="@string/power_and_energy"/>
