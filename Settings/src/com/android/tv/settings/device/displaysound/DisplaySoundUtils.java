@@ -17,10 +17,6 @@
 package com.android.tv.settings.device.displaysound;
 
 import static android.view.Display.HdrCapabilities.HDR_TYPE_DOLBY_VISION;
-import static android.view.Display.HdrCapabilities.HDR_TYPE_HDR10;
-import static android.view.Display.HdrCapabilities.HDR_TYPE_HDR10_PLUS;
-import static android.view.Display.HdrCapabilities.HDR_TYPE_HLG;
-import static android.view.Display.HdrCapabilities.HDR_TYPE_INVALID;
 
 import android.annotation.Nullable;
 import android.app.AlertDialog;
@@ -42,9 +38,6 @@ import java.util.stream.Collectors;
  * @hide
  */
 public class DisplaySoundUtils {
-
-    private static final int[] HDR_TYPES_PREFERENCE_ORDER = {HDR_TYPE_DOLBY_VISION,
-            HDR_TYPE_HDR10_PLUS, HDR_TYPE_HDR10, HDR_TYPE_HLG};
 
     /** Gets the match-content dynamic range status */
     public static boolean getMatchContentDynamicRangeStatus(DisplayManager displayManager) {
@@ -115,16 +108,6 @@ public class DisplaySoundUtils {
                 .setPositiveButton(R.string.resolution_selection_dialog_ok, onOkClicked)
                 .setNegativeButton(R.string.resolution_selection_dialog_cancel, onCancelClicked)
                 .create();
-    }
-
-    static int findPreferredHdrConversionFormat(DisplayManager displayManager, Display.Mode mode) {
-        Set<Integer> disabledHdrTypes = toSet(displayManager.getUserDisabledHdrTypes());
-        for (Integer hdrFormat : HDR_TYPES_PREFERENCE_ORDER) {
-            if (isHdrFormatSupported(mode, hdrFormat) && !disabledHdrTypes.contains(hdrFormat)) {
-                return hdrFormat;
-            }
-        }
-        return HDR_TYPE_INVALID;
     }
 
     static void enableHdrType(DisplayManager displayManager, int hdrType) {
