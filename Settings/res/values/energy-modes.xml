@@ -17,6 +17,10 @@
     <!-- Energy modes -->
     <eat-comment />
 
+    <!-- Whether to show "Energy Mode" options when Low Power Standby is supported.
+         If false, falls back to a toggle to enable/disable Low Power Standby if LPS is supported. -->
+    <bool name="enable_energy_modes">true</bool>
+
     <!-- Energy mode: Low -->
     <eat-comment />
 
