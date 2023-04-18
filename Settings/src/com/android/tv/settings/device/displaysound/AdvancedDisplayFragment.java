@@ -52,7 +52,6 @@ public class AdvancedDisplayFragment extends SettingsPreferenceFragment {
         Preference dynamicRangePreference = findPreference(KEY_DYNAMIC_RANGE);
         if (getDisplayManager().getSupportedHdrOutputTypes().length == 0) {
             removePreference(dynamicRangePreference);
-            return;
         }
     }
 
