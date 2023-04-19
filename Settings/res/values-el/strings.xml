@@ -166,6 +166,8 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Θέλετε να γίνει επιβολή της εξόδου σε Υψηλό δυναμικό εύρος (HDR);"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Από προεπιλογή, θα γίνει επιβολή της μετατροπής σε <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Η οθόνη σας θα λειτουργεί σε ανάλυση 1080p 60Hz. Αυτή η επιλογή δεν είναι συμβατή με την οθόνη σας όταν λειτουργεί σε ανάλυση 4K 60Hz."</string>
+    <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Το Dolby Vision δεν υποστηρίζεται στην τρέχουσα ανάλυση. Αν ενεργοποιήσετε το Dolby Vision με μη αυτόματο τρόπο, η ανάλυση της οθόνης θα αλλάξει σε 1080p 60 Hz"</string>
+    <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Θέλετε να αλλάξετε την ανάλυση σε 1080p 60 Hz;"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Να επιβάλλεται πάντα μετατροπή σε Dolby Vision"</string>
     <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Αν το Dolby Vision είναι απενεργοποιημένο στην ενότητα Μορφές Υψηλού δυναμικού εύρους (HDR) στις Σύνθετες ρυθμίσεις οθόνης, η επιβολή της μετατροπής σε Dolby Vision θα το ενεργοποιήσει ξανά."</string>
     <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Να επιβάλλεται πάντα μετατροπή σε HDR10"</string>
@@ -220,7 +222,8 @@
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Ακύρωση"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ΟΚ"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
-    <string name="resolution_display_mode" msgid="1862830706980223728">"<xliff:g id="RESOLUTION">%1$s</xliff:g> ( <xliff:g id="REFRESH_RATE">%2$s</xliff:g> Hz)"</string>
+    <!-- no translation found for resolution_display_mode (6633857172598855480) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Να διαγραφούν τα δεδομένα κρυφής μνήμης;"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Διαγραφή κρυφής μνήμης όλων των εφαρμογών."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>

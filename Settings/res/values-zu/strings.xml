@@ -166,6 +166,8 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Ingabe ufuna ukuphoqa ukuphuma kwe-HDR?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Ngokuzenzakalela ukuguqulwa kuzophoqelelwa ku-<xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Isibonisi sakho sizosebenza ngokucaca okungu-1080p 60Hz. Lokhu ongakukhetha akuhambelani nesibonisi sakho lapho usebenza ekuxazululeni kwesinqumo se-4k 60Hz."</string>
+    <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"I-Dolby Vision ayisekelwe ekulungisweni kwamanje. Uma unika amandla i-Dolby Vision ngesandla, ukulungiswa kwesibonisi sakho kuzoshintshwa kube ngu-1080p 60Hz"</string>
+    <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Shintsha ukulungiswa kube ngu-1080p 60Hz?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Njalo phoqa ukuguqulwa ku-Dolby Vision"</string>
     <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Uma i-Dolby Vision ikhutshaziwe Kumafomethi e-HDR Kumasethingi Okubonisa Athuthukisiwe, ukuphoqelela ukuguqulwa ku-Dolby Vision kuzokunika amandla kabusha."</string>
     <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Njalo phoqa ukuguqulwa ku-HDR10"</string>
@@ -220,7 +222,8 @@
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Khansela"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"KULUNGILE"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"I-Hz"</string>
-    <string name="resolution_display_mode" msgid="1862830706980223728">"I-<xliff:g id="RESOLUTION">%1$s</xliff:g> ( <xliff:g id="REFRESH_RATE">%2$s</xliff:g> Hz)"</string>
+    <!-- no translation found for resolution_display_mode (6633857172598855480) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Sula idatha efakwe kunqolobane?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Lokhu kuzosula idatha efakwe kunqolobane yazo zonke izinhlelo zokusebenza."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -298,7 +301,7 @@
     <string name="no_device_admins" msgid="4628974717150185625">"Azikho izinhlelo zokusebenza zomlawuli wedivayisi ezitholakalayo"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Kukhutshazwe umlawuli"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Ayitholakali"</string>
-    <string name="manage_device_admin" msgid="5714217234035017983">"Izinhlelo zokusebenza zomlawuli wedivayisi"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Ama-app omlawuli wedivayisi"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Azikho izinhlelo zokusebenza ezisebenzayo"</string>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Kukhutshazwe umlawuli, inqubomgomo yokubethela, noma isitoreji sezitifiketi"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Ulwazi lwedivayisi oluphethwe"</string>
@@ -321,7 +324,7 @@
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Izimvume zendawo"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Izimvume zemakrofoni"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Izimvume zekhamera"</string>
-    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Izinhlelo zokusebenza ezizenzakalelayo"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Ama-app azenzekelayo"</string>
     <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{i-app engu-#}one{ama-app angu-#}other{ama-app angu-#}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Ikhibhodi ezenzakalelayo"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Sethela ku-<xliff:g id="APP_LABEL">%s</xliff:g>"</string>
@@ -1085,7 +1088,7 @@
     <string name="remove_device_admin" msgid="2623866073546295104">"Yekisa ukusebenza lolu hlelo lokusebenza lomlawuli wedivayisi"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Khipha uhlelo lokusebenza"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Yekisa futhi ukhiphe"</string>
-    <string name="select_device_admin_msg" msgid="8475934459999710332">"Izinhlelo zokusebenza zomlawuli wedivayisi"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Ama-app omlawuli wedivayisi"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"Sebenzisa uhlelo lokusebenza lomlawuli wedivayisi?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Sebenzisa lolu hlelo lokusebenza lomlawuli wedivayisi"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"Ukusebenzisa lolu hlelo lokusebenza lomlawuli kuzovumela uhlelo lokusebenza <xliff:g id="APP_NAME">%1$s</xliff:g> ukwenza imisebenzi elandelayo:"</string>

@@ -166,6 +166,8 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"మీరు HDR అవుట్‌పుట్‌ను నిర్బంధంగా చేయాలనుకుంటున్నారా?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"ఆటోమేటిక్‌గా మార్పిడి నిర్బంధంగా <xliff:g id="HDR_TYPE">%s</xliff:g>కి అవుతుంది."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"మీ డిస్‌ప్లే 1080p 60Hz రిజల్యూషన్‌తో రన్ అవుతుంది.‌ 4k 60Hz రిజల్యూషన్‌లో రన్ అవుతున్నప్పుడు ఈ ఎంపిక మీ డిస్‌ప్లేకి అనుకూలంగా ఉండదు."</string>
+    <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"ప్రస్తుత రిజల్యూషన్‌లో Dolby Visionకు సపోర్ట్ లేదు. మీరు Dolby Visionను మాన్యువల్‌గా ఎనేబుల్ చేస్తే, మీ డిస్‌ప్లే రిజల్యూషన్ 1080p 60Hzకు మార్చబడుతుంది"</string>
+    <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"రిజల్యూషన్‌ను 1080p 60Hzకు మార్చాలా?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"ఎల్లప్పుడూ Dolby Visionకు నిర్బంధంగా మార్పిడి చేయండి"</string>
     <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"అధునాతన డిస్‌ప్లే సెట్టింగ్‌లలో HDR ఫార్మాట్‌లలోని Dolby Vision డిసేబుల్ చేయబడితే, దానిని Dolby Visionకు నిర్బంధ మార్పిడి చేయడం వలన అది మళ్లీ ఎనేబుల్ చేయబడుతుంది."</string>
     <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"ఎల్లప్పుడూ HDR10కు నిర్బంధంగా మార్పిడి చేయండి"</string>
@@ -220,7 +222,8 @@
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"రద్దు చేయండి"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"సరే"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
-    <string name="resolution_display_mode" msgid="1862830706980223728">"<xliff:g id="RESOLUTION">%1$s</xliff:g> ( <xliff:g id="REFRESH_RATE">%2$s</xliff:g> Hz)"</string>
+    <!-- no translation found for resolution_display_mode (6633857172598855480) -->
+    <skip />
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"కాష్ చేసిన డేటాను తీసివేయాలా?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"ఇది అన్ని అను. కాష్ చేసిన డేటాను తీసివేస్తుంది."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -263,13 +266,13 @@
     <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"రిమోట్ కంట్రోల్ సెట్టింగ్‌లు"</string>
     <string name="bluetooth_ir_entry_title" msgid="6927284710576530479">"రిమోట్ బటన్‌లను సెటప్ చేయండి"</string>
     <string name="bluetooth_ir_entry_subtitle" msgid="4606207128353416151">"వాల్యూమ్, పవర్, టీవీలలో ఇన్‌పుట్, రిసీవర్‌లు అలాగే సౌండ్‌బార్‌లను కంట్రోల్ చేయండి"</string>
-    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"కనెక్ట్ చేయి"</string>
+    <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"కనెక్ట్ చేయండి"</string>
     <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"%1$sకు కనెక్ట్ అవ్వండి"</string>
     <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"డిస్‌కనెక్ట్ చేయి"</string>
     <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"%1$s నుండి డిస్‌కనెక్ట్ చేయండి"</string>
-    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"పేరు మార్చు"</string>
+    <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"పేరు మార్చండి"</string>
     <string name="bluetooth_rename" msgid="7791922876280337194">"కనెక్ట్ చేసిన మీ పరికరం పేరు మార్చండి"</string>
-    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"విస్మరించు"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"విస్మరించండి"</string>
     <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"%1$sను విస్మరించండి"</string>
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"బ్లూటూత్ అడ్రస్"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"కనెక్ట్ చేయబడింది"</string>
@@ -471,7 +474,7 @@
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"అందుబాటులో ఉన్న నెట్‌వర్క్‌లను చూడండి"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g>కి కనెక్ట్ చేస్తోంది"</string>
     <string name="wifi_saving" msgid="320653339670641708">"<xliff:g id="SSID">%1$s</xliff:g> కాన్ఫిగరేషన్‌ను సేవ్ చేస్తోంది"</string>
-    <string name="wifi_connect" msgid="2206086690065242121">"కనెక్ట్ చేయి"</string>
+    <string name="wifi_connect" msgid="2206086690065242121">"కనెక్ట్ చేయండి"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"నెట్‌వర్క్‌ను విస్మరించు"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"ఇది సేవ్ చేసిన పాస్‌వర్డ్‌తో సహా ఈ నెట్‌వర్క్‌కి కనెక్ట్ చేయడా. ఉపయో. సమాచారాన్ని క్లియర్ చేస్తుంది"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" మీ మొబైల్ ఫోన్‌లో QR కోడ్‌ను స్కాన్ చేయడం ద్వారా Wi-Fiకి కనెక్ట్ అవండి, సూచనను ఫాలో చేయండి.\n \n Android ఫోన్ "<b>"లో"</b>" సెట్టింగ్‌లు -&gt; నెట్‌వర్క్ &amp; ఇంటర్నెట్ -&gt; Wi-Fiకి వెళ్లండి -&gt; Wi-Fi -&gt; అధునాతనంను ఎంచుకోండి -&gt; పరికరాన్ని జోడించి, ఆపై QR కోడ్‌ను స్కాన్ చేయండి."</string>
