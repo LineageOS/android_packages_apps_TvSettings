@@ -147,8 +147,12 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
             preference.setChecked(true);
             enableHdrType(mDisplayManager, HDR_TYPE_DOLBY_VISION);
             dialog.dismiss();
+
         };
-        OnClickListener onCancelClicked = (dialog, which) -> dialog.dismiss();
+        OnClickListener onCancelClicked = (dialog, which) -> {
+            dialog.dismiss();
+            preference.setChecked(false);
+        };
         createAlertDialog(mContext, title, dialogDescription, onOkClicked, onCancelClicked)
                 .show();
     }
