@@ -24,6 +24,7 @@ import static org.mockito.Mockito.verify;
 
 import android.hardware.display.DisplayManager;
 import android.hardware.display.HdrConversionMode;
+import android.view.Display;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -46,7 +47,13 @@ import java.util.stream.IntStream;
 
 @RunWith(RobolectricTestRunner.class)
 public class PreferredDynamicRangeFragmentTest {
-    @Mock private DisplayManager mDisplayManager;
+    private static final Display.Mode TEST_MODE = new Display.Mode(0, 0, 0, 0, new float[0],
+            new int[]{2, 3});
+
+    @Mock
+    private DisplayManager mDisplayManager;
+    @Mock
+    private Display mDisplay;
 
     @Before
     public void setUp() {
@@ -109,13 +116,10 @@ public class PreferredDynamicRangeFragmentTest {
     @Test
     public void testDynamicRangeForcePreferenceScreen_returnsCorrectDescriptions() {
         PreferredDynamicRangeForceFragment fragment =
-                createPreferredDynamicRangeForceFragmentWith(new int[] {1, 2, 3});
+                createPreferredDynamicRangeForceFragmentWith(new int[]{1, 2, 3});
         assertThat(fragment.getPreferenceScreen().getPreferenceCount()).isEqualTo(1);
         Preference dynamicRangePreference = fragment.getPreferenceScreen().getPreference(0);
         assertThat(getChildrenTitles(dynamicRangePreference)).containsExactly(
-                fragment.getContext().getString(
-                        R.string.preferred_dynamic_range_selection_force_hdr_title,
-                        fragment.getContext().getString(R.string.hdr_format_dolby_vision)),
                 fragment.getContext().getString(
                         R.string.preferred_dynamic_range_selection_force_hdr_title,
                         fragment.getContext().getString(R.string.hdr_format_hdr10)),
@@ -127,10 +131,12 @@ public class PreferredDynamicRangeFragmentTest {
     }
 
     private PreferredDynamicRangeFragment createPreferredDynamicRangeFragment() {
-        return createPreferredDynamicRangeFragmentWith(new int[] {1, 2, 3});
+        return createPreferredDynamicRangeFragmentWith(new int[]{1, 2, 3});
     }
 
     private PreferredDynamicRangeFragment createPreferredDynamicRangeFragmentWith(int[] hdrTypes) {
+        doReturn(mDisplay).when(mDisplayManager).getDisplay(Display.DEFAULT_DISPLAY);
+        doReturn(new Display.Mode[]{TEST_MODE}).when(mDisplay).getSupportedModes();
         doReturn(hdrTypes).when(mDisplayManager).getSupportedHdrOutputTypes();
         doReturn(new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_PASSTHROUGH))
                 .when(mDisplayManager).getHdrConversionModeSetting();
@@ -146,6 +152,8 @@ public class PreferredDynamicRangeFragmentTest {
 
     private PreferredDynamicRangeForceFragment createPreferredDynamicRangeForceFragmentWith(
             int[] hdrTypes) {
+        doReturn(mDisplay).when(mDisplayManager).getDisplay(Display.DEFAULT_DISPLAY);
+        doReturn(new Display.Mode[]{TEST_MODE}).when(mDisplay).getSupportedModes();
         doReturn(hdrTypes).when(mDisplayManager).getSupportedHdrOutputTypes();
         doReturn(new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_PASSTHROUGH))
                 .when(mDisplayManager).getHdrConversionModeSetting();
