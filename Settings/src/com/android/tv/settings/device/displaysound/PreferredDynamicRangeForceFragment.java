@@ -44,6 +44,10 @@ import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * This Fragment is responsible for selecting the dynamic range preference in case
  * {@link HdrConversionMode#HDR_CONVERSION_FORCE} is selected.
@@ -69,8 +73,30 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
     @Override
     public void onAttach(Context context) {
         mDisplayManager = getDisplayManager();
-        mHdrTypes = mDisplayManager.getSupportedHdrOutputTypes();
+        mHdrTypes = getIntersectingDeviceAndDisplayHdrTypes();
         super.onAttach(context);
+    }
+
+    private int[] getIntersectingDeviceAndDisplayHdrTypes() {
+        Set<Integer> displaySupportedHdrTypes = new HashSet<>();
+        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
+        Arrays.stream(display.getSupportedModes()).forEach(mode -> Arrays.stream(
+                mode.getSupportedHdrTypes()).forEach(displaySupportedHdrTypes::add));
+
+        int[] deviceSupportedHdrOutputTypes = mDisplayManager.getSupportedHdrOutputTypes();
+        Set<Integer> intersectingHdrTypes = new HashSet<>();
+        for (Integer hdrType : deviceSupportedHdrOutputTypes) {
+            if (displaySupportedHdrTypes.contains(hdrType)) {
+                intersectingHdrTypes.add(hdrType);
+            }
+        }
+
+        int[] mergedArray = new int[intersectingHdrTypes.size()];
+        int index = 0;
+        for (Integer hdrType : intersectingHdrTypes) {
+            mergedArray[index++] = hdrType;
+        }
+        return mergedArray;
     }
 
     @Override
