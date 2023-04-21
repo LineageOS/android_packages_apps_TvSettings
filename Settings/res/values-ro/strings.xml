@@ -100,7 +100,7 @@
     <string name="all_apps_installed" msgid="8217778476185598971">"Aplicații instalate"</string>
     <string name="all_apps_other" msgid="4420174882983813158">"Aplicații de sistem"</string>
     <string name="all_apps_disabled" msgid="2776041242863791053">"Aplicații dezactivate"</string>
-    <string name="device_daydream" msgid="2631191946958113220">"Economizor de ecran"</string>
+    <string name="device_daydream" msgid="2631191946958113220">"Screensaver"</string>
     <string name="device_display" msgid="244634591698925025">"Afișaj"</string>
     <string name="device_display_sound" msgid="7399153506435649193">"Afișare și sunet"</string>
     <string name="device_sound" msgid="8616320533559404963">"Sunet"</string>
@@ -166,10 +166,8 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Forțezi ieșirea HDR?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"În mod prestabilit, conversia va fi forțată să <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Ecranul va folosi rezoluția de 1080p 60 Hz. Opțiunea nu este compatibilă cu ecranul când rulează la rezoluție 4k 60 Hz."</string>
-    <!-- no translation found for selection_dolby_vision_not_supported_sidebar (8994591316574824115) -->
-    <skip />
-    <!-- no translation found for manual_dolby_vision_format_on_4k60_title (4172263676512376500) -->
-    <skip />
+    <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Dolby Vision nu este acceptat la rezoluția actuală. Dacă activezi manual Dolby Vision, rezoluția ecranului se va schimba la 1080p 60 Hz"</string>
+    <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Schimbi rezoluția la 1080p 60 Hz?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Forțează întotdeauna conversia la Dolby Vision"</string>
     <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Dacă Dolby Vision este dezactivat în Formatele HDR din Setările de afișare avansate, forțarea conversiei la Dolby Vision îl va reactiva."</string>
     <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Forțează întotdeauna conversia la HDR10"</string>
@@ -224,8 +222,7 @@
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Anulează"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
-    <!-- no translation found for resolution_display_mode (6633857172598855480) -->
-    <skip />
+    <string name="resolution_display_mode" msgid="6633857172598855480">"<xliff:g id="RESOLUTION">%1$s</xliff:g> (<xliff:g id="REFRESH_RATE">%2$s</xliff:g> Hz)"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Ștergi datele memorate în cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Datele din cache ale aplicațiilor vor fi șterse."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -950,7 +947,7 @@
     <string name="settings_on" msgid="7734010120323404333">"Activat"</string>
     <string name="settings_off" msgid="4060451657850476369">"Dezactivat"</string>
     <string name="device_daydreams_none" msgid="3405655350757277348">"Dezactivează ecranul"</string>
-    <string name="device_daydreams_select" msgid="7203264446482623438">"Economizor de ecran"</string>
+    <string name="device_daydreams_select" msgid="7203264446482623438">"Screensaver"</string>
     <string name="device_daydreams_test" msgid="7828275397550076567">"Începe acum"</string>
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Când pornește"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Economizorul de ecran începe după această perioadă de inactivitate. Dacă nu este selectat niciun economizor de ecran, ecranul se va dezactiva."</string>
