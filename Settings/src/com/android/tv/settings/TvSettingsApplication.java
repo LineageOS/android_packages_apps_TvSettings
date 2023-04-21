@@ -20,6 +20,8 @@ import android.app.Application;
 
 import androidx.annotation.Nullable;
 
+import com.android.tv.settings.device.eco.EnergyModesStatsLogJobService;
+
 /**
  * Application class that instantiates system sound player singleton so sound effects are only
  * loaded once and shared between components.
@@ -33,6 +35,8 @@ public class TvSettingsApplication extends Application {
         if (getResources().getBoolean(R.bool.config_enableSystemSounds)) {
             mSystemSoundsPlayer = new SystemSoundsPlayer(this);
         }
+
+        EnergyModesStatsLogJobService.scheduleEnergyModesStatsLog(this);
     }
 
     @Nullable
