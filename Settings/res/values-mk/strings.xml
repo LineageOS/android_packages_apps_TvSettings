@@ -97,7 +97,7 @@
     <string name="all_apps_installed" msgid="8217778476185598971">"Инсталирани апликации"</string>
     <string name="all_apps_other" msgid="4420174882983813158">"Системски апликации"</string>
     <string name="all_apps_disabled" msgid="2776041242863791053">"Оневозможени апликации"</string>
-    <string name="device_daydream" msgid="2631191946958113220">"Заштитник на екран"</string>
+    <string name="device_daydream" msgid="2631191946958113220">"Штедач на екран"</string>
     <string name="device_display" msgid="244634591698925025">"Приказ"</string>
     <string name="device_display_sound" msgid="7399153506435649193">"Екран и звук"</string>
     <string name="device_sound" msgid="8616320533559404963">"Звук"</string>
@@ -118,7 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos со Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos со Dolby Digital Plus"</string>
@@ -137,7 +137,7 @@
     <string name="surround_sound_unsupported_title" msgid="2302820271700954900">"НЕПОДДРЖАНИ ФОРМАТИ"</string>
     <string name="surround_sound_format_info" msgid="5671866505653542934">"ИНФОРМАЦИИ ЗА ФОРМАТОТ"</string>
     <string name="surround_sound_show_formats" msgid="1929849219042916469">"Прикажи ги форматите"</string>
-    <string name="surround_sound_hide_formats" msgid="7770931097236868238">"Сокриј ги форматите"</string>
+    <string name="surround_sound_hide_formats" msgid="7770931097236868238">"Скриј ги форматите"</string>
     <string name="surround_sound_enabled_formats" msgid="5159269040069877148">"ОВОЗМОЖЕНИ ФОРМАТИ"</string>
     <string name="surround_sound_disabled_formats" msgid="2250466936859455802">"ОНЕВОЗМОЖЕНИ ФОРМАТИ"</string>
     <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"За да овозможите, променете го изборот на форматот на „Рачно“."</string>
@@ -175,7 +175,7 @@
     <string name="hdr_format_selection_manual_summary" msgid="7886959642083639353">"Кога е избрано, рачно може да ги оневозможите HDR-форматите што синџирот на уреди ги поддржува, а предизвикуваат проблеми со репродукцијата. Не може присилно да се овозможат HDR-форматите што вашиот синџир на уреди не ги поддржува. Апликациите може да изберат формат што не е со највисок квалитет."</string>
     <string name="hdr_format_info" msgid="5652559220799426076">"ИНФОРМАЦИИ ЗА ФОРМАТОТ"</string>
     <string name="hdr_show_formats" msgid="171065892975445851">"Прикажи ги форматите"</string>
-    <string name="hdr_hide_formats" msgid="8561568998525727230">"Сокриј ги форматите"</string>
+    <string name="hdr_hide_formats" msgid="8561568998525727230">"Скриј ги форматите"</string>
     <string name="hdr_enabled_formats" msgid="8527870623949982774">"ОВОЗМОЖЕНИ ФОРМАТИ"</string>
     <string name="hdr_disabled_formats" msgid="4758522849421497896">"ОНЕВОЗМОЖЕНИ ФОРМАТИ"</string>
     <string name="hdr_enabled_format_info_clicked" msgid="1466675962665861040">"За да оневозможите, променете го изборот на форматот на „Рачно“."</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Изберете „Во ред“ за да користите %1$s отсега, па натаму."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Откажи"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"Во ред"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Исчисти кеширани податоци?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Ова ќе исчисти кеширани податоци за сите аплик."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -263,7 +264,7 @@
     <string name="no_device_admins" msgid="4628974717150185625">"Не се достапни апликации за администраторот на уредот"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Оневозможено од администраторот"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Не е достапно"</string>
-    <string name="manage_device_admin" msgid="5714217234035017983">"Апликации за администраторот"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"Администраторски апликации"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"Нема активни апликации"</string>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"Оневозм. од админ., шифрир. или складир. акредит."</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"Информации за управуваниот уред"</string>
@@ -399,7 +400,7 @@
     <string name="wifi_setting_see_all" msgid="5048103047976316675">"Погледни ги сите"</string>
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"Види помалку"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"Достапни мрежи"</string>
-    <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Додај нова мрежа"</string>
+    <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"Додајте нова мрежа"</string>
     <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"Брзо поврзување"</string>
     <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"Брзото поврзување ви помага брзо да се поврзете со Wi-Fi со скенирање QR-код на телефонот."</string>
     <string name="security_type" msgid="2297615092250075696">"Тип на безбедност"</string>
@@ -546,7 +547,7 @@
     <string name="storage_wizard_eject_private_title" msgid="1336088625197134497">"Извадете ја меморијата на уредот"</string>
     <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"Апликациите од меморијата на овој уред ќе престанат да работат штом таа се извади. USB-дискот е форматиран да работи само на овој уред. Нема да работи на ниеден друг."</string>
     <string name="storage_wizard_eject_progress_title" msgid="6025569356827683446">"Се вади <xliff:g id="NAME">%1$s</xliff:g>…"</string>
-    <string name="storage_wizard_move_app_title" msgid="6504922588346440942">"Искористена меморија"</string>
+    <string name="storage_wizard_move_app_title" msgid="6504922588346440942">"Искористен простор"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7058465372227392453">"Се преместува <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="7673347796805764888">"Не отстранувајте го дискот за време на преместувањето.\nАпликацијата <xliff:g id="APPNAME">%1$s</xliff:g> на уредов нема да биде достапна додека преместувањето не заврши."</string>
     <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"Заборави ја меморијата на уредот?"</string>
@@ -802,7 +803,7 @@
     <string name="inputs_aux" msgid="5331442342029867329">"Aux"</string>
     <string name="inputs_custom_name" msgid="2649826613531559538">"Приспособено име"</string>
     <string name="inputs_custom_name_description_fmt" msgid="2879134265596928298">"Внесете име за влезот <xliff:g id="INPUT">%1$s</xliff:g>."</string>
-    <string name="inputs_hide" msgid="9223355763198742416">"Сокриј"</string>
+    <string name="inputs_hide" msgid="9223355763198742416">"Скриј"</string>
     <string name="inputs_show" msgid="2937435050499142756">"Прикажи го овој влез"</string>
     <string name="input_header_names" msgid="5903234218909970550">"Име"</string>
     <string name="inputs_hdmi_control" msgid="650355636965841054">"Контрола на HDMI"</string>
@@ -859,7 +860,7 @@
     <string name="device_apps_app_management_disable_desc" msgid="9143166267511427607">"Дали сакате да ја оневозможите апликацијата?"</string>
     <string name="device_apps_app_management_enable" msgid="9173340340253029114">"Овозможи"</string>
     <string name="device_apps_app_management_enable_desc" msgid="8686291003061136476">"Дали сакате да ја овозможите апликацијата?"</string>
-    <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"Искористена меморија"</string>
+    <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"Искористен простор"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="SIZE">%1$s</xliff:g> искористено на <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Избриши податоци"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Сите податоци на оваа апликација ќе бидат трајно избришани.\nОва ги опфаќа сите датотеки, поставки, сметки, бази на податоци итн."</string>
@@ -878,7 +879,7 @@
     <string name="settings_on" msgid="7734010120323404333">"Вклучено"</string>
     <string name="settings_off" msgid="4060451657850476369">"Исклучено"</string>
     <string name="device_daydreams_none" msgid="3405655350757277348">"Исклучи го екранот"</string>
-    <string name="device_daydreams_select" msgid="7203264446482623438">"Заштитник на екран"</string>
+    <string name="device_daydreams_select" msgid="7203264446482623438">"Штедач на екран"</string>
     <string name="device_daydreams_test" msgid="7828275397550076567">"Започни сега"</string>
     <string name="device_daydreams_sleep" msgid="6847770718407377357">"Кога да започне"</string>
     <string name="device_daydreams_sleep_description" msgid="6237610484915504587">"Заштитникот на екран започнува по овој период на неактивност. Ако не е избран заштитник на екран, екранот се исклучува."</string>
@@ -918,8 +919,8 @@
     <string name="change_setting" msgid="7211706374208138343">"Промени"</string>
     <string name="keep_settings" msgid="703474489210093961">"Не променувај"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"Дозволи"</string>
-    <string name="device_apps_permissions" msgid="8421323706003063878">"Дозволи за апликацијата"</string>
-    <string name="app_permissions_group_summary" msgid="6818210080117761117">"Со дозвола: <xliff:g id="COUNT_0">%1$d</xliff:g> од <xliff:g id="COUNT_1">%2$d</xliff:g> апликации"</string>
+    <string name="device_apps_permissions" msgid="8421323706003063878">"Дозволи за апликации"</string>
+    <string name="app_permissions_group_summary" msgid="6818210080117761117">"Апликации со дозвола: <xliff:g id="COUNT_0">%1$d</xliff:g> од <xliff:g id="COUNT_1">%2$d</xliff:g>"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Барање за дозвола на Bluetooth"</string>
     <string name="security_patch" msgid="8924741264829495392">"Ниво на безбедносна лепенка на OS на Android TV"</string>
     <string name="choose_application" msgid="2375936782103669988">"Изберете ја апликацијата"</string>
@@ -932,8 +933,8 @@
     <string name="manage_keyboards" msgid="7983890675377321912">"Управување со тастатури"</string>
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"Со дозвола"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"Без дозвола"</string>
-    <string name="usage_access" msgid="8402350645248312782">"Пристап за користење"</string>
-    <string name="usage_access_description" msgid="3276026988575551587">"Пристапот за користење овозможува апликацијата да следи кои други апликации ги користите и колку често, како и операторот, поставките за јазик и други детали."</string>
+    <string name="usage_access" msgid="8402350645248312782">"Пристап до подат. за користење"</string>
+    <string name="usage_access_description" msgid="3276026988575551587">"Пристапот до податоци за користењето овозможува апликацијата да следи кои други апликации ги користите и колку често, како и операторот, поставките за јазик и други детали."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Оптимизација на енергијата"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Оптимизирајте ја употребата на енергија на апликациите"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"Нема апликации што треба да се оптимизираат"</string>
@@ -956,7 +957,7 @@
     <string name="write_settings_on" msgid="71675710746513956">"Да"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Не"</string>
     <string name="manage_external_storage_title" msgid="8139593207533811077">"Пристап до сите датотеки"</string>
-    <string name="permit_manage_external_storage" msgid="1776899171934627417">"Дозволете пристап за управување со датотеки"</string>
+    <string name="permit_manage_external_storage" msgid="1776899171934627417">"Дозволи пристап за управување со датотеки"</string>
     <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"Дозволете апликацијава да ги чита, менува и брише сите датотеки на уредов или на поврзаните мемориски уреди. Ако се дозволи, апликацијата може да пристапува до датотеките без ваше изречно знаење."</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Слика во слика"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Дозволи слика во слика"</string>
@@ -1001,7 +1002,7 @@
     <string name="remove_device_admin" msgid="2623866073546295104">"Деактивирај ја апликацијата за администраторот на уредот"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Деинсталирај ја апликацијата"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Деактивирај и деинсталирај"</string>
-    <string name="select_device_admin_msg" msgid="8475934459999710332">"Апликации за администраторот"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"Администраторски апликации"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"Да се активира аплик. за администратор?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Активирај ја апликацијата за администраторот на уредот"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"Со активирање на апликацијата за администраторот ќе се дозволи апликацијата <xliff:g id="APP_NAME">%1$s</xliff:g> да ги извршува следниве операции:"</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Напојување и енергија"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Однесување кога е вклучен"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Ресетирај"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Код за спарување преку Ethernet"</string>
 </resources>

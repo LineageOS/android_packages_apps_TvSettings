@@ -42,7 +42,7 @@
     <string name="header_category_accessories" msgid="6479803330480847199">"रिमोट र एसेसोरिज"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"व्यक्तिगत"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"नेटवर्कमा कनेक्ट गर्नुहोस्"</string>
-    <string name="add_an_account" msgid="2601275122685226096">"खाता थप्नुहोस्"</string>
+    <string name="add_an_account" msgid="2601275122685226096">"खाता हाल्नुहोस्"</string>
     <string name="accounts_category_title" msgid="7286858931427579845">"खाता र साइन इनका गर्ने कार्यहरू"</string>
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"कुन पनि खाता छैन"</string>
     <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# खाता}other{# वटा खाता}}"</string>
@@ -61,7 +61,7 @@
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"भुक्तानी तथा खरिदहरू"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"एपका सेटिङहरू"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"स्थान, प्रयोग र निदान, विज्ञापनहरू"</string>
-    <string name="add_account" msgid="7386223854837017129">"खाता थप्नुहोस्"</string>
+    <string name="add_account" msgid="7386223854837017129">"खाता हाल्नुहोस्"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"खाता हटाउनुहोस्"</string>
     <string name="account_sync" msgid="4315295293211313989">"सिंक गरिएको एपहरू छनौट गर्नुहोस्"</string>
     <string name="sync_now" msgid="4335217984374620551">"अहिले सिंक्रोनाइजेसन गर्नुहोस्"</string>
@@ -118,7 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"\'Dolby TrueHD सहितको Dolby Atmos\' साउन्ड फर्म्याट"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"\'Dolby Digital Plus सहितको Dolby Atmos\' साउन्ड फर्म्याट"</string>
@@ -185,11 +185,12 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"अबदेखि %1$s प्रयोग गर्न \'ठिक छ\' चयन गर्नुहोस्।"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"रद्द गर्नुहोस्"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ठिक छ"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"हर्ज"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"केस गरिएको डेटा हटाउने हो?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"यसले सबै अनुप्रयोगहरूको लागि केस गरिएको डेटा हटाउँछ।"</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
     <string name="accessories_add" msgid="413764175035531452">"अतिरक्त सामानहरू थप्नुहोस्"</string>
-    <string name="accessory_state_pairing" msgid="15908899628218319">"जोडा बाँध्दै..."</string>
+    <string name="accessory_state_pairing" msgid="15908899628218319">"कनेक्ट गरिँदै छ..."</string>
     <string name="accessory_state_connecting" msgid="6560241025917621212">"जडान हुँदै..."</string>
     <string name="accessory_state_error" msgid="8353621828816824428">"पेयर हुन सकेन"</string>
     <string name="accessory_state_canceled" msgid="4794837663402063770">"रद्द गरियो"</string>
@@ -248,7 +249,7 @@
     <string name="system_keyboard" msgid="1514460705385401872">"किबोर्ड"</string>
     <string name="system_keyboard_autofill" msgid="8530944165814838255">"किबोर्ड तथा अटोफिल सेवा"</string>
     <string name="system_autofill" msgid="6983989261108020046">"स्वतः भरण"</string>
-    <string name="system_home" msgid="2149349845791104094">"गृह स्क्रिन"</string>
+    <string name="system_home" msgid="2149349845791104094">"होम स्क्रिन"</string>
     <string name="system_search" msgid="3170169128257586925">"खोजी गर्नुहोस्"</string>
     <string name="system_google" msgid="945985164023885276">"Google"</string>
     <string name="system_security" msgid="1012999639810957132">"सुरक्षा र प्रतिबन्धहरू"</string>
@@ -260,10 +261,10 @@
     <string name="system_developer_options" msgid="8480844257066475479">"विकासकर्ताका विकल्पहरू"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"कुनै पनि होइन"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"उपयोग र निदान"</string>
-    <string name="no_device_admins" msgid="4628974717150185625">"डिभाइसका एडमिन एपहरू उपलब्ध छैनन्"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"डिभाइसका एड्मिन एपहरू उपलब्ध छैनन्"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"एडमिनले अफ गरेको छ"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"उपलब्ध छैन"</string>
-    <string name="manage_device_admin" msgid="5714217234035017983">"डिभाइसका एडमिन एपहरू"</string>
+    <string name="manage_device_admin" msgid="5714217234035017983">"डिभाइसका एड्मिन एपहरू"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"कुनै सक्रिय एपहरू छैनन्"</string>
     <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"प्रशासक, इन्क्रिप्सन नीति वा प्रामाणिक भण्डारणद्वारा असक्षम पारिएको छ"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"व्यवस्थित गरिएको यन्त्रको जानकारी"</string>
@@ -399,7 +400,7 @@
     <string name="wifi_setting_see_all" msgid="5048103047976316675">"सबै हेर्नुहोस्"</string>
     <string name="wifi_setting_see_fewer" msgid="8585364493300703467">"अझ थोरै हेर्नुहोस्"</string>
     <string name="wifi_setting_available_networks" msgid="2096957819727319750">"उपलब्ध नेटवर्कहरू"</string>
-    <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"नयाँ नेटवर्क थप्नुहोस्"</string>
+    <string name="wifi_setting_other_options_add_network" msgid="6490215784178866978">"नयाँ नेटवर्क हाल्नुहोस्"</string>
     <string name="wifi_setting_other_options_add_network_via_easyconnect" msgid="2869989555950644533">"छिटो कनेक्ट गर्ने सुविधा"</string>
     <string name="wifi_setting_other_options_add_network_via_easyconnect_info_summary" msgid="4564538591168691865">"तपाईं छिटो कनेक्ट गर्ने सुविधाको सहायताले आफ्नो फोनमार्फत QR कोड स्क्यान गरेर सो फोन तुरुन्तै आफ्नो Wi-Fi मा कनेक्ट गर्न सक्नुहुन्छ।"</string>
     <string name="security_type" msgid="2297615092250075696">"सुरक्षाको प्रकार"</string>
@@ -640,7 +641,7 @@
     <string name="captions_configure" msgid="711991018642931958">"कन्फिगर गर्नुहोस्"</string>
     <string name="captions_language" msgid="5905918439449912646">"भाषा"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"डिफल्ट भाषा"</string>
-    <string name="captions_textsize" msgid="7161136610669343510">"पाठ आकार"</string>
+    <string name="captions_textsize" msgid="7161136610669343510">"पाठको आकार"</string>
     <string name="captions_captionstyle" msgid="6650139717545516071">"क्याप्सनको शैली"</string>
     <string name="captions_customoptions" msgid="7691004663572161126">"आफू अनुकूल विकल्प"</string>
     <string name="captions_fontfamily" msgid="1026632786438880997">"फन्ट परिवार"</string>
@@ -850,23 +851,23 @@
     <string name="wifi_setup_save_success" msgid="6862510218032734919">"सफलतापूर्वक सेभ गरियो"</string>
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"संस्करण <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"खोल्नुहोस्"</string>
-    <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"दबाब रोक्नुहोस्"</string>
+    <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"जबरजस्ती बन्द गर्नुहोस्"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"तपाईंले एप बन्द गर्न बल गर्नुभयो भने, यसले चाहेअनुसार काम नगर्न सक्छ।"</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"स्थापना हटाउनुहोस्"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"अद्यावधिकहरूको स्थापना रद्द गर्नुहोस्"</string>
+    <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"अपडेटहरू अनइन्स्टल गर्नुहोस्"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="4508586498292236706">"यस Android प्रणाली एपमा भएका सम्पूर्ण अद्यावधिकहरूको स्थापना हटाइने छ।"</string>
-    <string name="device_apps_app_management_disable" msgid="819003297535493633">"अक्षम गर्नुहोस्"</string>
+    <string name="device_apps_app_management_disable" msgid="819003297535493633">"निष्क्रिय पार्नुहोस्"</string>
     <string name="device_apps_app_management_disable_desc" msgid="9143166267511427607">"तपाईं यो एप अक्षम गर्न चाहनुहुन्छ?"</string>
     <string name="device_apps_app_management_enable" msgid="9173340340253029114">"सक्षम गर्नुहोस्"</string>
     <string name="device_apps_app_management_enable_desc" msgid="8686291003061136476">"तपाईं यो एप सक्षम गर्न चाहनुहुन्छ?"</string>
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"प्रयोग भएको भण्डारण"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g> मा प्रयोग <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"डाटा खाली गर्नुहोस्"</string>
+    <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"डेटा हटाउनुहोस्"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"यी सबै एप डेटा पुर्न रूपमा मेटाइने छ। \nजसमा सबै फाइलहरू, सेटिङहरू, खाताहरू, डेटाबेस आदि पर्दछन्।"</string>
-    <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"पूर्वनिर्धारितहरू मेटाउनुहोस्"</string>
+    <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"डिफल्ट कारबाहीहरू मेट्नुहोस्"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"केही कारवाहीका लागि यो एप सुरु गर्न सेट भयो"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"कुनै पनि पूर्वनिर्धारितहरू सेट छैनन्"</string>
-    <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"क्यास खाली गर्नुहोस्"</string>
+    <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"क्यास हटाउनुहोस्"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"सूचनाहरू"</string>
     <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"तेस्रो पक्षीय स्रोत"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"अनुमतिहरू"</string>
@@ -955,7 +956,7 @@
     <string name="write_settings_description" msgid="7382397926674265937">"यस अनुमतिले एपलाई प्रणालीसम्बन्धी सेटिङहरू परिमार्जन गर्न दिन्छ।"</string>
     <string name="write_settings_on" msgid="71675710746513956">"छ"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"छैन"</string>
-    <string name="manage_external_storage_title" msgid="8139593207533811077">"सबै फाइलहरूमाथिको पहुँच"</string>
+    <string name="manage_external_storage_title" msgid="8139593207533811077">"सबै फाइल हेर्ने तथा प्रयोग गर्ने अनुमति"</string>
     <string name="permit_manage_external_storage" msgid="1776899171934627417">"सबै फाइलहरूको व्यवस्थापन गर्ने अनुमति दिइयोस्"</string>
     <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"यो एपलाई यो डिभाइस वा जोडिएको कुनै भण्डारणमा रहेका सबै फाइलहरू पढ्ने, परिमार्जन गर्ने तथा मेट्ने अनुमति दिनुहोस्। अनुमति दिइएका खण्डमा यो एपले तपाईंको स्पष्ट अनुमतिविनै फाइलहरू प्रयोग गर्नसक्छ।"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Picture-in-picture"</string>
@@ -1001,7 +1002,7 @@
     <string name="remove_device_admin" msgid="2623866073546295104">"यो डिभाइसको एडमिन एप डिएक्टिभेट गर्नुहोस्"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"एपको स्थापना रद्द गर्नुहोस्"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"निष्क्रिय पार्नुहोस् तथा स्थापना रद्द गर्नुहोस्"</string>
-    <string name="select_device_admin_msg" msgid="8475934459999710332">"डिभाइसका एडमिन एपहरू"</string>
+    <string name="select_device_admin_msg" msgid="8475934459999710332">"डिभाइसका एड्मिन एपहरू"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"डिभाइसको एडमिन एप एक्टिभेट गर्ने हो?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"यो डिभाइसको एडमिन एप एक्टिभेट गर्नुहोस्"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"तपाईंले यो एडमिन एप एक्टिभेट गर्नुभयो भने <xliff:g id="APP_NAME">%1$s</xliff:g> ले निम्न कार्य गर्ने अनुमति पाउने छ:"</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"पावर तथा इनर्जी"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"पावर अन हुँदा देखिने मोड"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"रिसेट गर्नुहोस्"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"इथरनेट कनेक्सन कोड"</string>
 </resources>

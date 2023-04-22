@@ -118,7 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos med Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos med Dolby Digital Plus"</string>
@@ -148,9 +148,9 @@
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Avancerede lydindstillinger"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Tillad spiltilstand"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Match indholdets billedfrekvens"</string>
-    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Problemfri"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Afbrydelsesfri"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Hvis appen anmoder om det, justerer din enhed outputtet efter den oprindelige billedfrekvens for det indhold, du ser. Dette kan KUN gennemføres, hvis dit fjernsyn kan udføre en problemfri overgang."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Ikke problemfri"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Ikke afbrydelsesfri"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Hvis appen anmoder om det, justerer din enhed outputtet efter den oprindelige billedfrekvens for det indhold, du ser. Dette kan medføre, at din skærm bliver sort i et sekunds tid, når du afslutter eller starter en videoafspilning."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Aldrig"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Selvom appen anmoder om det, forsøger din enhed aldrig at justere outputtet efter den oprindelige billedfrekvens for det indhold, du ser."</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Vælg OK for at bruge %1$s fremover."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Annuller"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Vil du rydde cachelagrede data?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Dette vil rydde cachelagrede data for alle apps."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -704,7 +705,7 @@
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Tillad imiterede lokationer"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Vælg app til fejlretning"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Vent på fejlfinder"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Bekræft apps via USB"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Verificer apps via USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Tjek om apps, der er installeret via ADB/ADT, har skadelig adfærd"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Detaljeret Wi-Fi-logføring"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Aktivér detaljeret Wi-Fi-logføring"</string>
@@ -1033,4 +1034,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Strøm og energi"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Adfærd, når fjernsynet tændes"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Nulstil"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Ethernet-parringskode"</string>
 </resources>

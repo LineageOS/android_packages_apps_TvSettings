@@ -47,7 +47,7 @@
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Nessun account"</string>
     <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# account}other{# account}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Servizi multimediali, Assistente, Pagamenti"</string>
-    <string name="connectivity_network_category_title" msgid="8226264889892008114">"Rete e Internet"</string>
+    <string name="connectivity_network_category_title" msgid="8226264889892008114">"Rete e internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Suono"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"App"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Preferenze del dispositivo"</string>
@@ -112,22 +112,22 @@
     <string name="device_energy_saver" msgid="1105023232841036991">"Risparmio energetico"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Dispositivi"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Seleziona i formati"</string>
+    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Selezione dei formati"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Audio surround"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos con Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: Automatico può non funzionare se il dispositivo non segnala correttamente formati supportati."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatica. Vengono attivati soltanto i formati supportati dal tuo dispositivo di output audio. "</string>
+    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatica: attiva solo i formati supportati dal tuo dispositivo di output audio "</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Se selezioni questa opzione, il sistema consentirà alle app di selezionare qualsiasi formato audio supportato dalla tua catena di dispositivi. Le app potrebbero scegliere un formato di qualità non ottimale."</string>
-    <string name="surround_sound_none_title" msgid="1600095173519889326">"Nessuno: l\'audio surround non viene mai usato"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manuale. Viene attivato o disattivato selettivamente ogni formato supportato da questo dispositivo, a prescindere dai formati supportati dal tuo dispositivo di output audio."</string>
+    <string name="surround_sound_none_title" msgid="1600095173519889326">"Nessuna: non usare mai l\'audio surround"</string>
+    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manuale: attiva o disattiva selettivamente ogni formato supportato da questo dispositivo, a prescindere dai formati supportati dal tuo dispositivo di output audio"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Se selezioni questa opzione, puoi disattivare manualmente i formati audio supportati dalla tua catena di dispositivi che causano problemi di riproduzione. Puoi attivare formati audio non supportati dalla catena di dispositivi. A volte le app potrebbero scegliere un formato di qualità non ottimale."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Vuoi attivare il formato audio non supportato?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"I dispositivi audio collegati non segnalano il supporto di questo formato. Potrebbero verificarsi comportamenti imprevisti del dispositivo quali rumori forti o scoppi."</string>
@@ -149,7 +149,7 @@
     <string name="game_mode_title" msgid="7280816243531315755">"Consenti modalità di gioco"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Adatta alla frequenza fotogrammi dei contenuti"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Fluida"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Se l\'app lo richiede, l\'output del dispositivo corrisponderà alla alla frequenza fotogrammi originale dei contenuti che stai guardando, SOLTANTO se la TV può effettuare una transizione fluida."</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Se l\'app lo richiede, l\'output del dispositivo corrisponderà alla frequenza fotogrammi originale dei contenuti che stai guardando, SOLTANTO se la TV può effettuare una transizione fluida."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Non fluida"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Se l\'app lo richiede, l\'output del dispositivo corrisponderà alla frequenza fotogrammi originale dei contenuti che stai guardando. Lo schermo potrebbe oscurarsi per un secondo quando attivi o disattivi la riproduzione di un video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Mai"</string>
@@ -163,8 +163,8 @@
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Selezione del formato"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatica"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuale"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Usa formati segnalati dal dispositivo"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Scegli manualmente i formati dai formati disponibili"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Usa i formati indicati dal dispositivo"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Scegli manualmente i formati tra quelli disponibili"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"FORMATI SUPPORTATI"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"FORMATI NON SUPPORTATI"</string>
     <string name="hdr_format_hdr10" msgid="8063543267227491062">"HDR10"</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Seleziona OK per usare %1$s d\'ora in poi."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Annulla"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Cancellare i dati memorizzati nella cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Ciò cancella tutti i dati delle app nella cache."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -437,7 +438,7 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Collega"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Elimina rete"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Verranno cancellate le informazioni utilizzate per connettersi alla rete, inclusa la password salvata"</string>
-    <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Collegati a una rete Wi-Fi scansionando il codice QR da un telefono cellulare e segui le istruzioni.\n \n Su un "<b>"telefono Android"</b>", vai a Impostazioni -&gt; Rete e Internet -&gt; Wi-Fi -&gt; seleziona una rete Wi-Fi -&gt; Avanzate -&gt; Aggiungi dispositivo e scansiona il codice QR."</string>
+    <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Collegati a una rete Wi-Fi scansionando il codice QR da un telefono cellulare e segui le istruzioni.\n \n Su un "<b>"telefono Android"</b>", vai a Impostazioni -&gt; Rete e internet -&gt; Wi-Fi -&gt; seleziona una rete Wi-Fi -&gt; Avanzate -&gt; Aggiungi dispositivo e scansiona il codice QR."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Premi il pulsante Indietro per annullare"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continua"</string>
@@ -584,7 +585,7 @@
     <item msgid="5501503537181350884">"OFF"</item>
   </string-array>
     <string name="sensor_toggle_description" msgid="7415801459994303159">"Per tutte le app e tutti i servizi"</string>
-    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Accesso recente da parte di:"</string>
+    <string name="recently_accessed_by_category" msgid="6841705864715653428">"Accessi recenti:"</string>
     <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Nessun accesso recente"</string>
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Mostra tutto"</string>
     <string name="microphone" msgid="7893752847683941214">"Microfono"</string>
@@ -598,9 +599,9 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Accesso alla fotocamera bloccato"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Per sbloccarlo, sposta l\'interruttore per la privacy del dispositivo sulla posizione della fotocamera attiva."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Accesso al microfono: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Se attivi questa opzione, tutte le app e tutti i servizi autorizzati possono accedere a qualsiasi microfono su questo dispositivo.\n\nQuesta impostazione non verrà applicata per periferiche audio con un protocollo personalizzato."</string>
+    <string name="mic_toggle_info_content" msgid="4699624900513326055">"Se attivi questa opzione, tutte le app e tutti i servizi autorizzati potranno accedere a qualsiasi microfono su questo dispositivo.\n\nQuesta impostazione non influirà sulle periferiche audio con un protocollo personalizzato."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Accesso alla videocamera: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Se attivi questa opzione, tutte le app e tutti i servizi autorizzati possono accedere a qualsiasi videocamera su questo dispositivo.\n\nQuesta impostazione non verrà applicata per videocamere con un protocollo personalizzato."</string>
+    <string name="camera_toggle_info_content" msgid="2999965953853204003">"Se attivi questa opzione, tutte le app e tutti i servizi autorizzati potranno accedere a qualsiasi videocamera su questo dispositivo.\n\nQuesta impostazione non influirà sulle videocamere con un protocollo personalizzato."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"On"</string>
     <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Off"</string>
     <string name="system_location" msgid="4057295363709016511">"Geolocalizzazione"</string>
@@ -611,7 +612,7 @@
     <string name="location_no_recent_apps" msgid="7033474075806435793">"Nessuna applicazione ha richiesto la posizione di recente"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Elevato utilizzo della batteria"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Basso utilizzo della batteria"</string>
-    <string name="location_mode_wifi_description" msgid="84697248707903061">"Utilizza Wi-Fi per stimare la posizione"</string>
+    <string name="location_mode_wifi_description" msgid="84697248707903061">"Usa il Wi-Fi per stimare la posizione"</string>
     <string name="location_status" msgid="3037321737386011224">"Stato posizione"</string>
     <string name="location_services" msgid="551503779736382878">"Servizi di geolocalizzazione"</string>
     <string name="on" msgid="4899322147062342542">"Attivo"</string>
@@ -777,7 +778,7 @@
     <string name="title_current_keyboard" msgid="891238509164879851">"Tastiera corrente"</string>
     <string name="title_configure" msgid="846802387014612210">"Configura"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Opzioni tastiera"</string>
-    <string name="title_current_autofill_service" msgid="9029001041887283153">"Compilazione automatica attuale"</string>
+    <string name="title_current_autofill_service" msgid="9029001041887283153">"Servizio di compilazione automatica attuale"</string>
     <string name="title_select_autofill_service" msgid="696559582725756848">"Seleziona il servizio di compilazione automatica"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Nessuno"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Verifica che questa app sia attendibile&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Il servizio Password&gt;%1$s&lt;/xliff:g&gt; usa ciò che appare sullo schermo per stabilire quali contenuti possono essere compilati automaticamente."</string>
@@ -896,7 +897,7 @@
     <string name="privacy_backup_data" msgid="3604057980102997914">"Backup dei miei dati"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"Account di backup"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Ripristino automatico"</string>
-    <string name="factory_reset_device" msgid="6509900821515094361">"Reimposta dispositivo"</string>
+    <string name="factory_reset_device" msgid="6509900821515094361">"Resetta dispositivo"</string>
     <string name="factory_reset_description" msgid="6697396335158766785">"Verranno ripristinate le impostazioni predefinite del dispositivo e verranno cancellati tutti i dati, gli account, i file e le app scaricate."</string>
     <string name="factory_reset_info_description" msgid="5098454670833183487">"Verranno ripristinate le impostazioni predefinite del dispositivo e verranno cancellati tutti i dati, gli account, i file e le app scaricate."</string>
     <string name="factory_reset_content_description" msgid="1677022688420116803">"Ripristino dati di fabbrica, Verranno ripristinate le impostazioni predefinite del dispositivo e verranno cancellati tutti i dati, gli account, i file e le app scaricate."</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Alimentazione ed energia"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Comportamento all\'accensione"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Reimposta"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Codice di accoppiamento Ethernet"</string>
 </resources>

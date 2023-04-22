@@ -118,7 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD کے ساتھ Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus کے ساتھ Dolby Atmos"</string>
@@ -147,10 +147,10 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"جدید ترین صوتی ترتیبات"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"گیم وضع کی اجازت"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"مماثل مواد کا فریم ریٹ"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"مواد کا فریم ریٹ مماثل بنائیں"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"مناسب"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"اگر ایپ اس کی درخواست کرتی ہے تو آپ کا آلہ اس کے آؤٹ پٹ کو اس مواد کے اصل فریم ریٹ سے مماثل کرے گا جس کو آپ دیکھ رہے ہیں، صرف اس صورت میں جب آپ کا TV ایک مناسب منتقلی کو انجام دے سکتا ہے۔"</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"غیر مناسب"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"غیر ہموار"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"اگر ایپ اس کی درخواست کرتی ہے تو آپ کا آلہ اس کے آؤٹ پٹ کو اس مواد کے اصل فریم ریٹ سے مماثل کرے گا جس کو آپ دیکھ رہے ہیں۔ ویڈیو پلے بیک سے باہر نکلنے یا داخل ہونے کے دوران ہو سکتا ہے ایک سیکنڈ کے لیے آپ کی اسکرین خالی ہو جائے۔"</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"کبھی نہیں"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"اگر ایپ اس کی درخواست کرتی ہے تو بھی آپ کا آلہ کبھی اس کے آؤٹ پٹ کو اس مواد کے اصل فریم ریٹ سے مماثل کرنے کی کوشش نہیں کرے گا جس کو آپ دیکھ رہے ہیں۔"</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"اب سے ‏%1$s کا استعمال کرنے کے لیے \'ٹھیک ہے\' کو منتخب کریں۔"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"منسوخ کریں"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ٹھیک ہے"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"کیش کیا ہوا ڈیٹا صاف کریں؟"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"یہ سبھی ایپس کیلئے کیش کیے ہوئے ڈیٹا کو صاف کر دے گا۔"</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -700,7 +701,7 @@
     <string name="system_always_check" msgid="384870282800221580">"ہمیشہ چیک کریں"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"بلوٹوتھ HCI لاگنگ"</string>
     <string name="system_email_address" msgid="3725494874473757217">"ای میل پتہ"</string>
-    <string name="system_usb_debugging" msgid="2158285492172755923">"USB ڈیبگ کرنا"</string>
+    <string name="system_usb_debugging" msgid="2158285492172755923">"USB ڈیبگنگ"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"فرضی مقامات کی اجازت دیں"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"ڈیبگ ایپ منتخب کریں"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"ڈیبگر کا انتظار کریں"</string>
@@ -957,7 +958,7 @@
     <string name="write_settings_off" msgid="6730113471695092167">"نہیں"</string>
     <string name="manage_external_storage_title" msgid="8139593207533811077">"سبھی فائلز کی رسائی"</string>
     <string name="permit_manage_external_storage" msgid="1776899171934627417">"سبھی فائلز کا نظم کرنے کیلئے رسائی کی اجازت دیں"</string>
-    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"اس ایپ کو اس آلہ یا کسی منسلک اسٹوریج والیوم کی تمام فائلز کو پڑھنے، بڑا کرنے اور حذف کرنے کی اجازت دیں۔ اگر اجازت دی گئی تو، ایپ آپ کی صَرِيح معلومات کے بغیر فائلز تک رسائی حاصل کر سکتی ہے۔"</string>
+    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"اس ایپ کو اس آلہ یا کسی منسلک اسٹوریج والیوم کی تمام فائلز کو پڑھنے، اس میں ترمیم کرنے اور حذف کرنے کی اجازت دیں۔ اگر اجازت دی گئی تو ایپ آپ کو بتائے بغیر فائلز تک رسائی حاصل کر سکتی ہے۔"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"تصویر میں تصویر"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"تصویر میں تصویر کی اجازت دیں"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"کوئی بھی انسٹال کردہ ایپ تصویر میں تصویر کو سپورٹ نہیں کرتی ہے"</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"پاور اور توانائی"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"برتاؤ پر پاور"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"ری سیٹ کریں"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"ایتھرنیٹ سے جوڑا بنانے کا کوڈ"</string>
 </resources>

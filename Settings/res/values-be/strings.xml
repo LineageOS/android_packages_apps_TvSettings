@@ -118,7 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos з Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos з Dolby Digital Plus"</string>
@@ -150,7 +150,7 @@
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Узгадняць з частатой кадраў змесціва"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Плаўнасць з\'яўляецца абавязковай"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Калі праграма адправіць адпаведны запыт, прылада будзе суадносіць выходны сігнал з зыходнай частатой кадраў змесціва, якое вы праглядаеце, ТОЛЬКІ пры ўмове, што на экране тэлевізара будзе забяспечана плаўнасць рухаў."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Плаўнасць не з\'яўляецца абавязковай"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Без плаўнага пераходу"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Калі праграма адправіць адпаведны запыт, прылада будзе суадносіць выходны сігнал з зыходнай частатой кадраў змесціва, якое вы праглядаеце. У выніку экран можа на секунду пагаснуць, калі вы будзеце ўключаць ці выключаць прайграванне відэа."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Ніколі"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Нават калі праграма адправіць адпаведны запыт, прылада ніколі не будзе імкнуцца суадносіць выходны сігнал з зыходнай частатой кадраў змесціва, якое вы праглядаеце."</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Выберыце ОК, каб адразу ж выкарыстоўваць %1$s."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Скасаваць"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ОК"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Гц"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Ачысціць кэшаваныя даныя?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Гэта ачысціць кэшаваныя даныя для ўсіх праграм."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -225,7 +226,7 @@
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Аксесуары"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Дыстанцыйнае кіраванне"</string>
     <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"Налады пульта дыстанцыйнага кіравання"</string>
-    <string name="bluetooth_ir_entry_title" msgid="6927284710576530479">"Наладзіць кнопкі пульта кіравання"</string>
+    <string name="bluetooth_ir_entry_title" msgid="6927284710576530479">"Наладзіць кнопкі пульта ДК"</string>
     <string name="bluetooth_ir_entry_subtitle" msgid="4606207128353416151">"Кіраванне гучнасцю, сілкаваннем, уваходнымі сігналамі на тэлевізарах, рэсіверах і гукавых панэлях"</string>
     <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"Падключыць"</string>
     <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"Падключыцца да %1$s"</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Сілкаванне і энергія"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Налады ўключэння"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Скінуць"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Код спалучэння ппраз Ethernet"</string>
 </resources>

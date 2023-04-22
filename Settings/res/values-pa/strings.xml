@@ -118,7 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby TrueHD ਦੇ ਨਾਲ Dolby Atmos"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus ਦੇ ਨਾਲ Dolby Atmos"</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"ਹੁਣ ਤੋਂ %1$s ਵਰਤਣ ਲਈ \'ਠੀਕ ਹੈ\' ਚੁਣੋ।"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"ਰੱਦ ਕਰੋ"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ਠੀਕ ਹੈ"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"ਕੀ ਕੈਸ਼ ਕੀਤਾ ਡਾਟਾ ਹਟਾਉਣਾ ਹੈ?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"ਇਹ ਸਾਰੀਆਂ ਐਪਾਂ ਲਈ ਕੈਸ਼ ਕੀਤਾ ਡਾਟਾ ਕਲੀਅਰ ਕਰ ਦੇਵੇਗਾ।"</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -863,10 +864,10 @@
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"<xliff:g id="VOLUME">%2$s</xliff:g> ਵਿੱਚ <xliff:g id="SIZE">%1$s</xliff:g> ਦੀ ਵਰਤੋਂ ਕੀਤੀ ਗਈ"</string>
     <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"ਡਾਟਾ ਕਲੀਅਰ ਕਰੋ"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"ਇਸ ਐਪ ਦਾ ਸਾਰਾ  ਡਾਟਾ  ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾਇਆ ਜਾਏਗਾ।\nਇਸ ਵਿੱਚ ਸਾਰੀਆਂ ਫ਼ਾਈਲਾਂ, ਸੈਟਿੰਗਾਂ, ਖਾਤੇ,  ਡਾਟਾ ਬੇਸ ਆਦਿ ਸ਼ਾਮਲ ਹਨ।"</string>
-    <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਕਿਰਿਆਵਾਂ ਹਟਾਓ"</string>
+    <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਕਾਰਵਾਈਆਂ ਕਲੀਅਰ ਕਰੋ"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"ਕੁਝ ਕਾਰਵਾਈਆਂ ਲਈ ਇਸ ਐਪ ਨੂੰ ਲਾਂਚ ਕਰਨਾ ਸੈੱਟ ਕਰੋ"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"ਕੋਈ ਪੂਰਵ-ਨਿਰਧਾਰਤ ਸੈੱਟ ਨਹੀਂ ਕੀਤੇ"</string>
-    <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"ਕੈਸ਼ ਕਲੀਅਰ ਕਰੋ"</string>
+    <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"ਕੈਸ਼ੇ ਕਲੀਅਰ ਕਰੋ"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"ਸੂਚਨਾਵਾਂ"</string>
     <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"ਤੀਜੀ-ਧਿਰ ਦਾ ਸਰੋਤ"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"ਇਜਾਜ਼ਤਾਂ"</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"ਪਾਵਰ ਅਤੇ ਊਰਜਾ"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"ਪਾਵਰ ਚਾਲੂ ਹੋਣ \'ਤੇ ਵਰਤਾਅ"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"ਰੀਸੈੱਟ ਕਰੋ"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"ਈਥਰਨੈੱਟ ਜੋੜਾਬੱਧਕਰਨ ਕੋਡ"</string>
 </resources>

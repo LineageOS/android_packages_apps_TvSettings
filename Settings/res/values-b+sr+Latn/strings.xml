@@ -118,7 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos sa tehnologijom Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos sa tehnologijom Dolby Digital Plus"</string>
@@ -148,9 +148,9 @@
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Napredna podešavanja zvuka"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Dozvoli režim za igre"</string>
     <string name="match_content_frame_rate_title" msgid="153291168560947689">"Koristi brzinu kadrova sadržaja"</string>
-    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Neprimetno"</string>
+    <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Bez prekida"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Ako aplikacija to traži, uređaj će usklađivati brzinu kadrova sadržaja koji prikazuje sa originalnom brzinom kadrova sadržaja koji gledate SAMO pod uslovom da TV može da obavi neprimetan prelaz."</string>
-    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Nije neprimetno"</string>
+    <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"S prekidima"</string>
     <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Ako aplikacija to traži, uređaj će usklađivati brzinu kadrova sadržaja koji prikazuje sa originalnom brzinom kadrova sadržaja koji gledate. Zbog toga će ekran možda nakratko biti prazan kada zaustavljate ili počinjete reprodukciju videa."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nikad"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Čak i ako aplikacija to traži, uređaj nikada neće pokušavati da uskladi brzinu kadrova sadržaja koji prikazuje sa originalnom brzinom kadrova sadržaja koji gledate."</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Izaberite Potvrdi da biste koristili %1$s od sada."</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Otkaži"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"Potvrdi"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Želite li da obrišete keširane podatke?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Biće obrisani keširani podaci za sve aplikacije."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -853,7 +854,7 @@
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Prinudno zaustavi"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Ako prinudno zaustavite aplikaciju, možda će se ponašati neočekivano."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Deinstaliraj"</string>
-    <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Deinstalirajte ažuriranja"</string>
+    <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Deinstaliraj ažuriranja"</string>
     <string name="device_apps_app_management_uninstall_updates_desc" msgid="4508586498292236706">"Sva ažuriranja ove Android sistemske aplikacije biće deinstalirana."</string>
     <string name="device_apps_app_management_disable" msgid="819003297535493633">"Onemogući"</string>
     <string name="device_apps_app_management_disable_desc" msgid="9143166267511427607">"Želite li da onemogućite ovu aplikaciju?"</string>
@@ -969,7 +970,7 @@
     <string name="special_access" msgid="21806055758289916">"Poseban pristup aplikacija"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Zvuk"</string>
-    <string name="record_audio" msgid="5035689290259575229">"Snimi zvuk"</string>
+    <string name="record_audio" msgid="5035689290259575229">"Snimaj zvuk"</string>
     <string name="record_audio_summary_on" msgid="8724494646461335090">"Onemogućite da biste zaustavili snimanje zvuka"</string>
     <string name="record_audio_summary_off" msgid="1392440365091422816">"Omogućite da biste odmah počeli da snimate zvuk"</string>
     <string name="play_recorded_audio_title" msgid="4627717067151602729">"Pusti snimljeni zvuk"</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Napajanje i energija"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Ponašanje pri uključivanju"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Resetuj"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Kôd za uparivanje za eternet"</string>
 </resources>

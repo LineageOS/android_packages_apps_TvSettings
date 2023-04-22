@@ -118,7 +118,7 @@
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
     <string name="surround_sound_format_dts" msgid="8331816247117135587">"DTS"</string>
     <string name="surround_sound_format_dts_hd" msgid="4268947520371740146">"DTS-HD"</string>
-    <string name="surround_sound_format_dts_uhd" msgid="2844983210044263719">"DTS-UHD"</string>
+    <string name="surround_sound_format_dts_uhd" msgid="4340749818133578788">"DTS:X"</string>
     <string name="surround_sound_format_dolby_mat" msgid="3029804841912462928">"Dolby Atmos mit Dolby TrueHD"</string>
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos mit Dolby Digital Plus"</string>
@@ -147,13 +147,13 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Erweiterte Toneinstellungen"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Spielmodus zulassen"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Inhalts-Framerate anpassen"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"An Framerate des Inhalts anpassen"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Nahtlos"</string>
-    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Wenn die App es anfordert, wird die Ausgabe deines Geräts an die ursprüngliche Framerate des aktuellen Inhalts angepasst. Das gilt allerdings NUR, wenn dein Fernseher einen nahtlosen Übergang unterstützt."</string>
+    <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Wenn die App es anfordert, wird die Ausgabe deines Geräts an die Original-Framerate des aktuellen Inhalts angepasst. Das gilt allerdings NUR, wenn dein Fernseher einen nahtlosen Wechsel unterstützt."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Nicht nahtlos"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Wenn die App es anfordert, wird die Ausgabe deines Geräts an die ursprüngliche Framerate des aktuellen Inhalts angepasst. Das kann dazu führen, dass der Bildschirm beim Beenden oder Starten einer Videowiedergabe vorübergehend schwarz wird."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Wenn die App es anfordert, wird die Ausgabe deines Geräts an die Original-Framerate des aktuellen Inhalts angepasst. Das kann dazu führen, dass der Bildschirm beim Beenden oder Starten einer Videowiedergabe vorübergehend schwarz wird."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Nie"</string>
-    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Selbst wenn die App es anfordert, wird die Ausgabe deines Geräts nie an die ursprüngliche Framerate des aktuellen Inhalts angepasst."</string>
+    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Selbst wenn die App es anfordert, wird die Ausgabe deines Geräts nie an die Original-Framerate des aktuellen Inhalts angepasst."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Textskalierung"</string>
     <string name="font_scale_item_detail" msgid="1558315053348778805">"Auf <xliff:g id="SCALE">%1$d</xliff:g> %% skalieren"</string>
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Beispieltext"</string>
@@ -185,6 +185,7 @@
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Wähle „OK“ aus, um die neue Auflösung %1$s von jetzt an zu verwenden"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Abbrechen"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
+    <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Daten im Cache löschen?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Daten im Cache werden für alle Apps gelöscht."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
@@ -246,8 +247,8 @@
     <string name="system_language" msgid="5516099388471974346">"Sprache"</string>
     <string name="language_empty_list_user_restricted" msgid="5430199913998605436">"Du bist nicht berechtigt, die Sprache des Geräts zu ändern."</string>
     <string name="system_keyboard" msgid="1514460705385401872">"Tastatur"</string>
-    <string name="system_keyboard_autofill" msgid="8530944165814838255">"Tastatur &amp; Automatisches Ausfüllen"</string>
-    <string name="system_autofill" msgid="6983989261108020046">"Automatisches Ausfüllen"</string>
+    <string name="system_keyboard_autofill" msgid="8530944165814838255">"Tastatur &amp; Autofill"</string>
+    <string name="system_autofill" msgid="6983989261108020046">"Autofill"</string>
     <string name="system_home" msgid="2149349845791104094">"Startbildschirm"</string>
     <string name="system_search" msgid="3170169128257586925">"Suche"</string>
     <string name="system_google" msgid="945985164023885276">"Google"</string>
@@ -628,9 +629,9 @@
     <string name="accessibility_service_settings" msgid="3251334786870932423">"Diensteinstellungen"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Text mit hohem Kontrast"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Bedienungshilfe-Kurzbefehl"</string>
-    <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Bedienungshilfe-Tastenkombination aktivieren"</string>
+    <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Kurzbefehl für Bedienungshilfen aktivieren"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Verknüpfter Dienst"</string>
-    <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Wenn die Tastenkombination aktiviert ist, kannst du die Bedienungshilfe starten, indem du die Zurück-Taste und die Taste „Leiser“ drei Sekunden lang gedrückt hältst."</string>
+    <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Wenn die Tastenkombination aktiviert ist, kannst du die Bedienungshilfe starten, indem du die Zurück-Taste und die Nach-Unten-Taste drei Sekunden lang gedrückt hältst."</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Untertitel"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Einstellungen für Untertitel-Overlays in einem Video"</string>
     <string name="captions_display" msgid="2598662495450633375">"Anzeigen"</string>
@@ -777,8 +778,8 @@
     <string name="title_current_keyboard" msgid="891238509164879851">"Aktuelle Tastatur"</string>
     <string name="title_configure" msgid="846802387014612210">"Konfigurieren"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Tastaturoptionen"</string>
-    <string name="title_current_autofill_service" msgid="9029001041887283153">"Aktueller Dienst für automatisches Ausfüllen"</string>
-    <string name="title_select_autofill_service" msgid="696559582725756848">"Dienst für automatisches Ausfüllen auswählen"</string>
+    <string name="title_current_autofill_service" msgid="9029001041887283153">"Aktueller Autofill-Service"</string>
+    <string name="title_select_autofill_service" msgid="696559582725756848">"Autofill-Service auswählen"</string>
     <string name="autofill_none" msgid="1615056985649424207">"Keinen Dienst für automatisches Ausfüllen"</string>
     <string name="autofill_confirmation_message" msgid="3840267789160192558">"&lt;b&gt;Nur für vertrauenswürdige Apps&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Passwortdienst&gt;%1$s&lt;/xliff:g&gt; greift auf die Displayanzeige zu, um zu bestimmen, welche Felder automatisch ausgefüllt werden können. Automatisches Ausfüllen sollte daher nur für vertrauenswürdige Apps zugelassen werden."</string>
     <string name="computing_size" msgid="8623916230485437579">"Berechnung..."</string>
@@ -1032,4 +1033,5 @@
     <string name="power_and_energy" msgid="4638182439670702556">"Stromversorgung &amp; Energie"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"Nach dem Einschalten"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Zurücksetzen"</string>
+    <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Ethernet-Kopplungscode"</string>
 </resources>
