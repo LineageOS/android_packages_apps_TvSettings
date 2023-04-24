@@ -204,6 +204,7 @@
     <string name="manual">Â llaw</string>
     <string name="regulatory_information">Gwybodaeth reoliadol</string>
     <string name="device_feedback">Anfon adborth am y ddyfais hon</string>
+    <string name="fcc_equipment_id">ID Offer</string>
     <string name="baseband_version">Fersiwn Baseband</string>
     <string name="kernel_version">Fersiwn cnewyllyn</string>
     <string name="status_unavailable">Dim ar gael</string>
@@ -391,7 +392,7 @@
     <string name="storage_new_action_eject">Dadfowntio</string>
     <string name="storage_missing_title">Tynnwyd <xliff:g id="name" example="SD Card">%1$s</xliff:g></string>
     <string name="storage_missing_description">Bydd rhai apiau ddim ar gael neu ddim yn gweithio\'n gywir hyd nes bod y gyriant yn cael ei ailgysylltu.</string>
-    <string name="insufficient_storage">Dim digon o gof yn weddill.</string>
+    <string name="insufficient_storage">Dim digon o le i storio.</string>
     <string name="does_not_exist">Dyw\u2019r ap ddim yn bodoli.</string>
     <string name="invalid_location">Dyw\u2019r lleoliad gosod ddim yn ddilys.</string>
     <string name="system_package">Ni ellir gosod diweddariadau system ar storfeydd allanol.</string>
@@ -419,7 +420,7 @@
     <string name="system_desc_location">Caniatáu i apiau sydd wedi gofyn am dy ganiatâd i ddefnyddio gwybodaeth dy leoliad</string>
     <string name="system_network_location_confirm">Caniatâd lleoliad</string>
     <string name="location_mode_title">Modd</string>
-    <string name="location_category_recent_location_requests">Ceisiadau lleoliad diweddar</string>
+    <string name="location_category_recent_location_requests">Ceisiadau diweddar am leoliad</string>
     <string name="location_no_recent_apps">Does dim apiau wedi gofyn am leoliad yn ddiweddar</string>
     <string name="location_high_battery_use">Defnydd batri uchel</string>
     <string name="location_low_battery_use">Defnydd batri isel</string>
@@ -503,7 +504,7 @@
     <string name="system_hdcp_checking">Gwirio HDCP</string>
     <string name="system_hdmi_optimization">Optimeiddiad HDMI</string>
     <string name="system_reboot_confirm">Ailgychwyn nawr?</string>
-    <string name="system_desc_reboot_confirm">I ddiweddaru\'r gosodiad hwn, rhaid ail-gychwyn y system</string>
+    <string name="system_desc_reboot_confirm">I ddiweddaru\'r gosodiad hwn, rhaid ailgychwyn y system</string>
     <string name="system_shutdown_confirm">Cau lawr nawr?</string>
     <string name="system_never_check">Gwirio byth</string>
     <string name="system_check_for_drm_content_only">Gwirio am gynnwys DRM yn unig</string>
@@ -688,7 +689,7 @@
     <string name="restricted_profile_configure_apps_description_loading">Un foment\u2026</string>
     <string name="restricted_profile_change_password_title">Newid PIN</string>
     <string name="restriction_description"><xliff:g id="description">%1$s</xliff:g>\n<xliff:g id="value">%2$s</xliff:g></string>
-    <string name="app_sees_restricted_accounts_and_controlled_by">Gall yr ap hwn gael mynediad at dy gyfrifon. Rheolwyd gan <xliff:g id="app">%1$s</xliff:g></string>
+    <string name="app_sees_restricted_accounts_and_controlled_by">Gall yr ap hwn gael at dy gyfrifon. Rheolwyd gan <xliff:g id="app">%1$s</xliff:g></string>
     <string name="pin_enter_unlock_channel">Rho PIN i wylio\'r sianel hon</string>
     <string name="pin_enter_unlock_program">Rho PIN i wylio\'r rhaglen hon</string>
     <string name="pin_enter_pin">Rho\'r PIN</string>
@@ -771,8 +772,8 @@
     <string name="choose_application">Dewisa ap</string>
     <string name="experimental_preference">(Arbrofol)</string>
     <string name="reboot_safemode_action">Ailgychwyn i\'r modd diogel</string>
-    <string name="reboot_safemode_confirm">Wyt ti am ail-ddechrau\'r ddyfais ym modd diogel?</string>
-    <string name="reboot_safemode_desc">Bydd hyn yn analluogi\'r holl apiau trydydd parti sydd wedi eu gosod. Byddan nhw\'n cael eu hadfer pan fyddi di\'n ail-ddechrau eto.</string>
+    <string name="reboot_safemode_confirm">Wyt ti am ailgychwyn y ddyfais ym modd diogel?</string>
+    <string name="reboot_safemode_desc">Bydd hyn yn analluogi\'r holl apiau trydydd parti sydd wedi eu gosod. Byddan nhw\'n cael eu hadfer pan fyddi di\'n ailgychwyn eto.</string>
     <string name="capturing_bugreport">Yn cipio adroddiad gwall</string>
     <string name="available_virtual_keyboard_category">Bysellfyrddau rhithwir ar gael</string>
     <string name="manage_keyboards">Rheoli bysellfyrddau</string>
@@ -781,14 +782,14 @@
     <string name="usage_access">Mynediad at ddefnydd</string>
     <string name="usage_access_description">Mae mynediad defnydd yn caniatáu ap i ddilyn pa apiau eraill wyt yn eu defnyddio a pha mor aml, yn ogystal â dy ddarparwr gwasanaeth, iaith y system a manylion eraill.</string>
     <string name="high_power_apps">Optimeiddiad ynni</string>
-    <string name="high_power_apps_description">Optimeiddio defnydd ynni apiau</string>
+    <string name="high_power_apps_description">Optimeiddio defnydd apiau o\'r batri</string>
     <string name="high_power_apps_empty">Does dim apiau angen eu hoptimeiddio</string>
     <string name="high_power_on">Heb ei optimeiddio</string>
-    <string name="high_power_off">Yn optimeiddio defnydd ynni</string>
+    <string name="high_power_off">Defnydd ynni optimaidd</string>
     <string name="high_power_system">Optimeiddiad pŵer ddim ar gael</string>
     <string name="manage_notification_access_title">Mynediad at hysbysiadau</string>
     <string name="no_notification_listeners">Does dim apiau a osodwyd wedi gofyn am fynediad at hysbysiadau.</string>
-    <string name="notification_listener_security_warning_summary">Mi fydd yn bosib i\'r apiau hyn darllen pob hysbysiad, gan gynnwys gwybodaeth bersonol fel enwau cyswllt a chynnwys negeseuon rwyt yn eu derbyn. Mi fyddan hefyd yn gallu diystyru hysbysiadau neu ddewis gweithredu\'r botymau maen nhw\'n eu cynnwys.    </string>
+    <string name="notification_listener_security_warning_summary">Mi fydd yn bosib i\'r apiau hyn darllen pob hysbysiad, gan gynnwys gwybodaeth bersonol fel enwau cyswllt a chynnwys negeseuon rwyt yn eu derbyn. Mi fyddan hefyd yn gallu diystyru hysbysiadau neu dewis gweithredu\'r botymau maen nhw\'n eu cynnwys.    </string>
     <string name="directory_access">Mynediad at gyfeiriadur</string>
     <string name="directory_access_description">Mae gan yr apiau hyn ganiatâd i edrych yn rhai cyfeiriaduron.</string>
     <string name="directory_on_volume"><xliff:g id="volume" example="SD Card">%1$s</xliff:g> (<xliff:g id="directory" example="Movies">%2$s</xliff:g>)</string>
