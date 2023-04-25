@@ -15,86 +15,104 @@
   ~ limitations under the License.
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/main_frame1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:transitionGroup="false">
-
-    <RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_frame1"
+        android:layout_gravity="bottom"
+        android:importantForAccessibility="yes"
         android:layout_width="@dimen/settings_info_fragment_bottom_section_width"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:focusable="true"
-        android:importantForAccessibility="yes"
+        android:transitionGroup="false"
         android:layout_marginBottom="@dimen/settings_info_fragment_bottom_section_margin_bottom"
-        android:paddingEnd="@dimen/settings_info_fragment_bottom_section_padding_end" >
+        android:paddingEnd="@dimen/settings_info_fragment_bottom_section_padding_end">
 
-        <ImageView
-            android:id="@+id/info_title_icon"
-            android:layout_width="@dimen/settings_info_fragment_title_icon_width"
-            android:layout_height="@dimen/settings_info_fragment_title_icon_width"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:focusable="false"
-            android:importantForAccessibility="no"
-            android:layout_marginEnd="@dimen/settings_info_fragment_title_icon_margin_end"
-            android:clickable="false" />
+    <ImageView
+        android:id="@+id/info_title_icon"
+        android:layout_width="@dimen/settings_info_fragment_title_icon_width"
+        android:layout_height="@dimen/settings_info_fragment_title_icon_width"
+        android:tint="@color/info_title_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/info_title_barrier"
+        android:focusable="false"
+        android:importantForAccessibility="no"
+        android:clickable="false" />
 
-        <TextView
-            android:id="@+id/info_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/info_title_icon"
-            android:layout_alignParentTop="true"
-            android:layout_alignWithParentIfMissing="true"
-            android:layout_marginBottom="@dimen/settings_info_fragment_title_margin_bottom"
-            android:focusable="false"
-            android:importantForAccessibility="yes"
-            android:maxLines="2"
-            android:ellipsize="end"
-            style="@style/TwoPanelInfoTitleTextStyle"/>
+    <TextView
+        android:id="@+id/info_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/settings_info_fragment_title_icon_margin_end"
+        android:ellipsize="end"
+        android:focusable="false"
+        android:importantForAccessibility="yes"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/info_title_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/info_title_barrier"
+        style="@style/TwoPanelInfoTitleTextStyle" />
 
-        <TextView
-            android:id="@+id/info_summary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/info_title_icon"
-            android:layout_below="@id/info_title"
-            android:layout_alignWithParentIfMissing="true"
-            android:layout_marginBottom="@dimen/settings_info_fragment_title_margin_bottom"
-            android:focusable="false"
-            android:importantForAccessibility="yes"
-            android:maxLines="12"
-            android:ellipsize="end"
-            style="@style/TwoPanelInfoSummaryTextStyle"/>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/info_title_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="info_title_icon,info_title"
+        />
 
-        <ImageView
-            android:id="@+id/eco_hint_icon"
-            android:layout_width="@dimen/settings_info_fragment_title_icon_width"
-            android:layout_height="@dimen/settings_info_fragment_title_icon_width"
-            android:layout_alignParentStart="true"
-            android:layout_below="@id/info_summary"
-            android:focusable="false"
-            android:importantForAccessibility="no"
-            android:layout_marginEnd="@dimen/settings_info_fragment_title_icon_margin_end"
-            android:tint="@color/eco_hint_color"
-            android:clickable="false" />
+    <TextView
+        android:id="@+id/info_summary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/settings_info_fragment_title_margin_bottom"
+        android:ellipsize="end"
+        android:focusable="false"
+        android:importantForAccessibility="yes"
+        android:maxLines="12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/info_title"
+        app:layout_constraintTop_toBottomOf="@id/info_title_barrier"
+        app:layout_constraintBottom_toBottomOf="@id/eco_hint_barrier"
+        style="@style/TwoPanelInfoSummaryTextStyle" />
 
-        <TextView
-            android:id="@+id/eco_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/eco_hint_icon"
-            android:layout_below="@id/info_summary"
-            android:layout_alignWithParentIfMissing="true"
-            android:focusable="false"
-            android:importantForAccessibility="yes"
-            android:maxLines="12"
-            android:ellipsize="end"
-            style="@style/EcoHintTextStyle"/>
-    </RelativeLayout>
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/eco_hint_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/info_summary"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="eco_hint,eco_hint_icon"
+        />
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/eco_hint_icon"
+        android:layout_width="@dimen/settings_info_fragment_title_icon_width"
+        android:layout_height="@dimen/settings_info_fragment_title_icon_width"
+        android:layout_marginTop="@dimen/settings_eco_info_fragment_hint_margin_top"
+        android:clickable="false"
+        android:focusable="false"
+        android:importantForAccessibility="no"
+        android:tint="@color/eco_hint_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eco_hint_barrier" />
+
+    <TextView
+        android:id="@+id/eco_hint"
+        style="@style/EcoHintTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginTop="@dimen/settings_eco_info_fragment_hint_margin_top"
+        android:ellipsize="end"
+        android:focusable="false"
+        android:importantForAccessibility="yes"
+        android:maxLines="12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/info_title"
+        app:layout_constraintTop_toBottomOf="@id/eco_hint_barrier" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
