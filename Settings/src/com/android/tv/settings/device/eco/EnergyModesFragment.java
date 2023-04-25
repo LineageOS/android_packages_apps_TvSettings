@@ -187,7 +187,7 @@ public class EnergyModesFragment extends SettingsPreferenceFragment {
             ecoHintIcon.setImageResource(mode.ecoHintIconRes);
 
             if (mode.ecoHighlighted) {
-                titleIcon.setImageResource(R.drawable.ic_leaf);
+                titleIcon.setImageResource(R.drawable.ic_eco_leaf);
             } else {
                 titleIcon.setImageResource(R.drawable.ic_info_outline_base);
             }
