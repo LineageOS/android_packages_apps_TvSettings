@@ -131,6 +131,13 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mDisplayManager.unregisterDisplayListener(this);
+    }
+
+
+    @Override
     public void onResume() {
         super.onResume();
         // Update the subtitle of CEC setting when navigating back to this page.
