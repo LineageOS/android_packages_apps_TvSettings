@@ -297,7 +297,7 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
 
                 @Override
                 public void onFinish() {
-                    if (((AlertDialog) dialog1).isShowing() && isActivityEnable()) {
+                    if (((AlertDialog) dialog1).isShowing()) {
                         setUserPreferredMode(previousMode);
                         dialog1.dismiss();
                     }
@@ -317,11 +317,6 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
             mDisplayManager.setHdrConversionMode(systemHdrConversionMode);
             selectForceHdrConversion(mDisplayManager);
         }
-    }
-
-    public boolean isActivityEnable(){
-        return getActivity()!=null && !getActivity().isDestroyed()
-                && !getActivity().isFinishing()&& isAdded();
     }
 
     private String titleForNewMode(String resolutionString,

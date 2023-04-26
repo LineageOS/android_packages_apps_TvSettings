@@ -166,10 +166,8 @@
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Выводить контент принудительно в формате HDR?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Формат контента будет принудительно меняться на <xliff:g id="HDR_TYPE">%s</xliff:g> по умолчанию."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Разрешение вашего экрана составит 1080 пкс, а частота обновления – 60 Гц. Эта функция не поддерживается на устройствах с разрешением 4K и частотой обновления 60 ГЦ."</string>
-    <!-- no translation found for selection_dolby_vision_not_supported_sidebar (8994591316574824115) -->
-    <skip />
-    <!-- no translation found for manual_dolby_vision_format_on_4k60_title (4172263676512376500) -->
-    <skip />
+    <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Dolby Vision не поддерживается для текущего разрешения. Если включить Dolby Vision вручную, разрешение экрана изменится на 1080p (60 Гц)."</string>
+    <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Изменить разрешение на 1080p (60 Гц)?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Принудительно конвертировать в формат Dolby Vision"</string>
     <string name="dynamic_range_selection_force_dv_summary" msgid="1052851029985095562">"Если формат Dolby Vision был выключен в расширенных настройках экрана, принудительная конвертация повторно активирует его"</string>
     <string name="dynamic_range_selection_force_hdr10_title" msgid="1221688206945051384">"Принудительно конвертировать в формат HDR10"</string>
@@ -224,8 +222,7 @@
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Отмена"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ОК"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Гц"</string>
-    <!-- no translation found for resolution_display_mode (6633857172598855480) -->
-    <skip />
+    <string name="resolution_display_mode" msgid="6633857172598855480">"<xliff:g id="RESOLUTION">%1$s</xliff:g> (<xliff:g id="REFRESH_RATE">%2$s</xliff:g> Гц)"</string>
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Очистить кеш?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Будут удалены данные всех приложений."</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
