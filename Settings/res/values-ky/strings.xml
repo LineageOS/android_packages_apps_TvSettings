@@ -160,7 +160,7 @@
     <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Ар дайым мазмундун форматына дал келет"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Башка форматка өзгөртүү"</string>
     <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Тандалган форматка өзгөртөт"</string>
-    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Тандалган форматка өзгөртүлсүн. Өзгөртүү Көрсөтүү режиминдеги же HDR форматындагы башка жөндөөлөргө таасир этиши мүмкүн."</string>
+    <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Тандалган форматка өзгөртүлсүн. Өзгөртүү Көрсөтүү режиминдеги же HDR форматындагы башка параметрлерге таасир этиши мүмкүн."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Ар дайым SDR сакталсын"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Ар дайым <xliff:g id="HDR_TYPE">%s</xliff:g> форматы сакталсын"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"HDR форматына өзгөртүүнү улантасызбы?"</string>
@@ -390,7 +390,7 @@
     <string name="manual" msgid="5683935624321864999">"Кол менен"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"Башкаруучу маалыматтар"</string>
     <string name="device_feedback" msgid="4871903271442960465">"Түзмөк тууралуу пикир билдирүү"</string>
-    <string name="oem_unlock_enable_disabled_summary_bootloader_unlocked" msgid="4641790432171693921">"Иш тутумун жүктөгүчтүн кулпусу мурунтан эле ачылган"</string>
+    <string name="oem_unlock_enable_disabled_summary_bootloader_unlocked" msgid="4641790432171693921">"Иш системасын жүктөгүчтүн кулпусу мурунтан эле ачылган"</string>
     <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"Адегенде Интернетке туташыңыз"</string>
     <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"Интернетке туташыңыз же операторуңуз менен байланышыңыз"</string>
     <string name="oem_unlock_enable_disabled_summary_sim_locked_device" msgid="5634005787486307657">"Байланыш оператору кулпулаган түзмөктөрдө жеткиликтүү эмес"</string>
@@ -476,7 +476,7 @@
     <string name="wifi_connect" msgid="2206086690065242121">"Туташуу"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"Тармак унутулсун"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Ушуну менен бул тармакка туташуу үчүн колдонулган маалымат, ошондой эле сакталган сырсөз тазаланат"</string>
-    <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Мобилдик телефондун камерасы менен QR кодун скандап, Wi-Fi тармагына туташып, нускамаларды аткарыңыз.\n \n "<b>"Android телефонунан"</b>" Жөндөөлөргө -&gt; Тармак жана Интернет -&gt; Wi-Fi -&gt; бөлүмүнө өтүп, Wi-Fi -&gt; Өркүндөтүлгөн -&gt; Түзмөктү кошууну тандап, QR кодун скандаңыз."</string>
+    <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Мобилдик телефондун камерасы менен QR кодун скандап, Wi-Fi тармагына туташып, нускамаларды аткарыңыз.\n \n "<b>"Android телефонунан"</b>" Параметрлерге -&gt; Тармак жана Интернет -&gt; Wi-Fi -&gt; бөлүмүнө өтүп, Wi-Fi -&gt; Өркүндөтүлгөн -&gt; Түзмөктү кошууну тандап, QR кодун скандаңыз."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Жокко чыгаруу үчүн \"Артка\" баскычын басыңыз"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Улантуу"</string>
@@ -978,9 +978,9 @@
     <string name="privacy_backup_account" msgid="4527813051841860610">"Камдык көчүрмө каттоо эсеби"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Авто калыбына келтирүү"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"Түзмөктү баштапкы абалга келтирүү"</string>
-    <string name="factory_reset_description" msgid="6697396335158766785">"Бул аракет түзмөгүңүздү демейки жөндөөлөргө кайтарып, бардык маалыматты, аккаунттарды, файлдарды жана жүктөлүп алынган колдонмолорду өчүрөт."</string>
-    <string name="factory_reset_info_description" msgid="5098454670833183487">"Бул аракет түзмөгүңүздү демейки жөндөөлөргө кайтарып, бардык маалыматты, аккаунттарды, файлдарды жана жүктөлүп алынган колдонмолорду өчүрөт."</string>
-    <string name="factory_reset_content_description" msgid="1677022688420116803">"Баштапкы абалга кайтаруу. Бул аракет түзмөгүңүздү демейки жөндөөлөргө кайтарып, бардык маалыматты, аккаунттарды, файлдарды жана жүктөлүп алынган колдонмолорду өчүрөт."</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"Бул аракет түзмөгүңүздү демейки параметрлерге кайтарып, бардык маалыматты, аккаунттарды, файлдарды жана жүктөлүп алынган колдонмолорду өчүрөт."</string>
+    <string name="factory_reset_info_description" msgid="5098454670833183487">"Бул аракет түзмөгүңүздү демейки параметрлерге кайтарып, бардык маалыматты, аккаунттарды, файлдарды жана жүктөлүп алынган колдонмолорду өчүрөт."</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"Баштапкы абалга кайтаруу. Бул аракет түзмөгүңүздү демейки параметрлерге кайтарып, бардык маалыматты, аккаунттарды, файлдарды жана жүктөлүп алынган колдонмолорду өчүрөт."</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"Жеке маалыматыңыз менен жүктөп алган колдонмолоруңузду өчүрөсүзбү? Аларды кайра калыбына келтире албайсыз."</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"Баарын өчүрүү"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> үчүн ат тандаңыз"</string>
