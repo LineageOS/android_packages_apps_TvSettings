@@ -754,7 +754,7 @@
     <string name="system_install_voice_data" msgid="8016395777968958673">"Instal data suara"</string>
     <string name="system_general" msgid="687760148454147771">"Umum"</string>
     <string name="system_debugging" msgid="1576324426385458481">"Proses debug"</string>
-    <string name="system_input" msgid="4457152980514604873">"Masukan"</string>
+    <string name="system_input" msgid="4457152980514604873">"Input"</string>
     <string name="system_drawing" msgid="5802739024643871942">"Gambar"</string>
     <string name="system_monitoring" msgid="7997260748312620855">"Pemantauan"</string>
     <string name="system_apps" msgid="8481888654606868074">"Aplikasi"</string>
@@ -774,7 +774,7 @@
     <string name="system_select_debug_app" msgid="6200987902307533721">"Memilih aplikasi debug"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Tunggu debugger"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Memverifikasi aplikasi melalui USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Memeriksa perilaku berbahaya pada aplikasi yang terinstal melalui ADB/ADT"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Periksa keberadaan perilaku berbahaya di aplikasi yang diinstal melalui ADB/ADT"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Pencatatan log panjang Wi-Fi"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Mengaktifkan pencatatan log panjang Wi-Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Menampilkan sentuhan"</string>
@@ -783,7 +783,7 @@
     <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"Menampilkan pembaruan tampilan GPU"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Menampilkan lapisan hardware"</string>
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"Menampilkan kelebihan GPU"</string>
-    <string name="system_show_surface_updates" msgid="7680759813613585278">"Menampilkan pembaruan permukaan"</string>
+    <string name="system_show_surface_updates" msgid="7680759813613585278">"Tampilkan pembaruan permukaan"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"Skala animasi jendela"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"Skala animasi transisi"</string>
     <string name="system_animator_duration_scale" msgid="3829445237130423625">"Skala durasi animator"</string>
@@ -791,7 +791,7 @@
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Rendering GPU profil"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"Mengaktifkan jejak"</string>
     <string name="system_dont_keep_activities" msgid="4641165963339846161">"Jangan simpan kegiatan"</string>
-    <string name="system_background_process_limit" msgid="1985373407150771045">"Batas proses latar belakang"</string>
+    <string name="system_background_process_limit" msgid="1985373407150771045">"Batas proses di belakang"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"Menampilkan semua ANR"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Menonaktifkan mode tidur"</string>
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"Digunakan untuk konten DRM saja"</string>
@@ -799,12 +799,12 @@
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Aktifkan pencatatan log pengintaian HCI Bluetooth"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Mode debug ketika USB terhubung"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Aplikasi yang di-debug menunggu debugger menempel sebelum berjalan"</string>
-    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Menampilkan batas klip, margin, dll."</string>
+    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Tampilkan batas klip, margin, dll."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Mengedipkan tampilan dalam jendela saat digambar dengan GPU"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Lapisan hardware berkedip hijau saat memperbarui"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Buat lapisan hardware berkedip hijau saat update"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Terbaik-terburuk: biru, hijau, merah terang, merah"</string>
-    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Mengedipkan seluruh permukaan jendela saat memperbarui"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Layar berkedip saat apl berjalan lama di utas utama"</string>
+    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Buat seluruh permukaan jendela berkedip saat diperbarui"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Buat layar berkedip saat aplikasi berjalan lama di thread utama"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Mengukur waktu rendering di adb shell dumpsys gfxinfo"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Sumber tidak dikenal"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Izinkan penginstalan aplikasi dari sumber selain Google Play Store"</string>
