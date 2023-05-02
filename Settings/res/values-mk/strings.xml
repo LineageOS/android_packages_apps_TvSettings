@@ -296,7 +296,7 @@
     <string name="system_home_theater_control" msgid="6228949628173590310">"Контрола на домашно кино"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"Опции на програмер"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Ништо"</string>
-    <string name="system_diagnostic" msgid="1654842813331919958">"Употреба и дијагностика"</string>
+    <string name="system_diagnostic" msgid="1654842813331919958">"Користење и дијагностика"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"Не се достапни апликации за администраторот на уредот"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"Оневозможено од администраторот"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"Не е достапно"</string>
@@ -749,7 +749,7 @@
     <string name="system_accessibility_tts_engine_config" msgid="4757760652785865532">"Конфигурација на двигателот за говор"</string>
     <string name="system_speak_passwords" msgid="8556036524146404052">"Изговарај лозинки"</string>
     <string name="system_preferred_engine" msgid="3545505072652708443">"Претпочитан софтвер"</string>
-    <string name="system_speech_rate" msgid="6553204071403872669">"Брзина на говор"</string>
+    <string name="system_speech_rate" msgid="6553204071403872669">"Брзина на говорот"</string>
     <string name="system_play_sample" msgid="3934369914309865584">"Пушти примерок"</string>
     <string name="system_install_voice_data" msgid="8016395777968958673">"Инсталирај гласовни податоци"</string>
     <string name="system_general" msgid="687760148454147771">"Општа"</string>
@@ -776,7 +776,7 @@
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Потврди апликации преку USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Провери апликации инсталирани преку ADB/ADT за штетно однесување"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Вербално пријавување на Wi‑Fi"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Овозможи вербално пријавување на Wi‑Fi"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Овозможи детално евидентирање за Wi-Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Прикажи допири"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"Локација на покажувач"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"Прикажи граници на слој"</string>
@@ -784,9 +784,9 @@
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Прикажи слој на хардвер"</string>
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"Прикажи GPU пречекорување"</string>
     <string name="system_show_surface_updates" msgid="7680759813613585278">"Прикажи ажуририрања на површина"</string>
-    <string name="system_window_animation_scale" msgid="685477540250939659">"Опсег на анимација на прозор"</string>
-    <string name="system_transition_animation_scale" msgid="7266380208347453619">"Степен на преодна анимација"</string>
-    <string name="system_animator_duration_scale" msgid="3829445237130423625">"Скала за времетраење на аниматор"</string>
+    <string name="system_window_animation_scale" msgid="685477540250939659">"Брзина на анимации за прозорци"</string>
+    <string name="system_transition_animation_scale" msgid="7266380208347453619">"Брзина на преодни анимации"</string>
+    <string name="system_animator_duration_scale" msgid="3829445237130423625">"Брзина на општи анимации"</string>
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"Овозможен е строг режим"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Прикажување профил на GPU"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"Овозможи траги"</string>
@@ -822,12 +822,12 @@
     <string name="enable_opengl_traces_none" msgid="4718084947494592040">"Нема"</string>
   <string-array name="animation_scale_entries">
     <item msgid="5408992662476056082">"Анимацијата е исклучена"</item>
-    <item msgid="6818290063799857019">"Опсег на анимација 0,5x"</item>
-    <item msgid="8257959452691080724">"Опсег на анимација 1x"</item>
-    <item msgid="4781052272686018414">"Опсег на анимација 1,5x"</item>
-    <item msgid="2272016945160227610">"Опсег на анимација 2x"</item>
-    <item msgid="5015441793276576312">"Опсег на анимација 5x"</item>
-    <item msgid="1290233583371556415">"Опсег на анимација 10x"</item>
+    <item msgid="6818290063799857019">"Брзина на анимации 0,5x"</item>
+    <item msgid="8257959452691080724">"Брзина на анимации 1x"</item>
+    <item msgid="4781052272686018414">"Брзина на анимации 1,5x"</item>
+    <item msgid="2272016945160227610">"Брзина на анимации 2x"</item>
+    <item msgid="5015441793276576312">"Брзина на анимации 5x"</item>
+    <item msgid="1290233583371556415">"Брзина на анимации 10x"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="8845064783618702239">"Исклучено"</string>
     <string name="track_frame_time_bars" msgid="5841531515222229632">"На екранот како цртички"</string>
