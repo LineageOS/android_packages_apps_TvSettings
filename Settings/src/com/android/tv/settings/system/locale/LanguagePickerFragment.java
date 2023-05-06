@@ -43,6 +43,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /** Language picker settings screen for locale selection. */
 @Keep
@@ -75,9 +76,13 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
         final LocaleHelper.LocaleInfoComparator comp =
                 new LocaleHelper.LocaleInfoComparator(sortingLocale, false);
         mLocaleInfos.sort(comp);
+        final Set<LocaleStore.LocaleInfo> notSuggestedLocales =
+                mLocaleInfos.stream().filter(
+                        localeInfo -> !localeInfo.isSuggested()).collect(Collectors.toSet());
         for (LocaleStore.LocaleInfo localeInfo : mLocaleInfos) {
             mLocaleDataViewModel.addLocaleInfoList(localeInfo, getActivity(), langTagsToIgnore);
-            if (localeInfo.isSuggested()) {
+            if (localeInfo.isSuggested()
+                    && containsSuggestedLocale(notSuggestedLocales, localeInfo)) {
                 continue;
             }
             ArrayList<LocaleStore.LocaleInfo> localeInfoWithCountryList = mLocaleDataViewModel
@@ -107,6 +112,13 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
         setPreferenceScreen(screen);
     }
 
+    private static boolean containsSuggestedLocale(Set<LocaleStore.LocaleInfo> localeInfos,
+            LocaleStore.LocaleInfo suggestedLocaleInfo) {
+        return localeInfos.stream().anyMatch(localeInfo -> localeInfo.getLocale().getLanguage()
+                        .equals(suggestedLocaleInfo.getLocale().getLanguage())
+                && localeInfo.getLocale().getScript().equals(
+                        suggestedLocaleInfo.getLocale().getScript()));
+    }
     @Override
     public void onResume() {
         super.onResume();
