@@ -1307,6 +1307,18 @@
         <service android:name=".device.eco.EnergyModesService"
             android:exported="true" />
 
+        <activity
+            android:name=".device.eco.EnergyModesActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:theme="@style/TvSettingsActivityTheme">
+            <intent-filter android:priority="1" >
+                <action android:name="com.google.android.tv.settings.energymodes"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
         <activity android:name=".device.eco.EnergyModeConfirmationActivity"
             android:theme="@style/Theme.Reset"
             android:configChanges="keyboard|keyboardHidden|navigation"
