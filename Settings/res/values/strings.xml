@@ -579,7 +579,7 @@
     <!-- Description of resolution mode that is shown on the side panel when user is scrolling
         through resolution modes. It lists all HDR types that this mode supports.
         [CHAR LIMIT=300]-->
-    <string name="resolution_hdr_description_info">This mode supports %1$s. On some TVs, you may
+    <string name="resolution_hdr_description_info">This mode supports: %1$s\nOn some TVs, you may
         need to turn on Enhanced HDMI to enable more HDR formats. Check your TV settings to see if
         this is supported.</string>
     <!-- Cancel button title for dialog that is shown when user changes the resolution.
@@ -899,10 +899,8 @@
     <string name="do_disclosure_with_name">This device is managed by <xliff:g id="organization_name" example="Foo, Inc.">%s</xliff:g>.</string>
     <!-- Message indicating that the device is enterprise-managed: Space that separates the main text and the "learn more" link that follows it. [CHAR LIMIT=NONE] -->
     <string name="do_disclosure_learn_more_separator">" "</string>
-    <!-- A word separator (e.g. a comma), indicating a pause between parts of a sentence or separating items in a list. [CHAR LIMIT=NONE] -->
-    <string name="word_separator">,</string>
-    <!-- A space, used for separating words -->
-    <string name="space_separator">" "</string>
+    <!-- An HDR capability[CHAR LIMIT=NONE] -->
+    <string name="hdr_capability">- %1$s</string>
     <!-- Button label to allow the user to view additional information [CHAR LIMIT=NONE BACKUP_MESSAGE_ID=2416766240581561009] -->
     <string name="learn_more">Learn more</string>
 
