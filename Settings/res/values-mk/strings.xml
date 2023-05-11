@@ -344,7 +344,7 @@
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> управува со уредов."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="word_separator" msgid="3175619900852797955">","</string>
-    <string name="space_separator" msgid="4169645647388594972">" U+2060⁠"</string>
+    <string name="space_separator" msgid="4169645647388594972">" U+2060"</string>
     <string name="learn_more" msgid="820336467414665686">"Дознајте повеќе"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Апликација за камера}one{Апликации за камера}other{Апликации за камера}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Апликацијата „Календар“"</string>
@@ -760,14 +760,14 @@
     <string name="system_apps" msgid="8481888654606868074">"Апликации"</string>
     <string name="system_stay_awake" msgid="5935117574414511413">"Остани во активен режим"</string>
     <string name="keep_screen_on_summary" msgid="4680661166009970792">"Екранот никогаш нема да биде во режим во мирување"</string>
-    <string name="system_hdcp_checking" msgid="3757586362130048838">"Проверување HDCP"</string>
+    <string name="system_hdcp_checking" msgid="3757586362130048838">"Проверка со HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI оптимизација"</string>
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Рестартирај сега?"</string>
     <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"За да ја ажурирате оваа поставка, потребно е рестартирање на вашиот уред"</string>
     <string name="system_never_check" msgid="2860070727606369055">"Никогаш не проверувај"</string>
     <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Провери само DRM содржина"</string>
     <string name="system_always_check" msgid="384870282800221580">"Секогаш проверувај"</string>
-    <string name="system_bt_hci_log" msgid="1891838112637932603">"Најава на Bluetooth HCI"</string>
+    <string name="system_bt_hci_log" msgid="1891838112637932603">"Евиденција за Bluetooth HCI"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Адреса за е-пошта"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"Отстранување грешки преку USB"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Овозможи лажни локации"</string>
@@ -779,7 +779,7 @@
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Овозможи детално евидентирање за Wi-Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Прикажи допири"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"Локација на покажувач"</string>
-    <string name="system_show_layout_bounds" msgid="8803080672553699649">"Прикажи граници на слој"</string>
+    <string name="system_show_layout_bounds" msgid="8803080672553699649">"Прикажи граници на распоред"</string>
     <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"Прикажи ажурирање со GPU"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Прикажи слој на хардвер"</string>
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"Прикажи GPU пречекорување"</string>
@@ -796,12 +796,12 @@
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Оневозможи режим на штедење"</string>
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"Користи само за DRM содржина"</string>
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"Оптимизирај го екранот за максимална резолуција или максимална брзина на приказ на кадри. Ова влијае само врз Ултра HD-екрани. Менувањето на оваа поставка ќе предизвика рестартирање на вашиот уред."</string>
-    <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Овозможи Bluetooth HCI за евиденција на пресретнување пакети"</string>
+    <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Овозможи евиденција за Bluetooth HCI"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Режим за отстранување грешки кога е поврзано USB"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Пред да се изврши, апликацијата во која се отстрануваат грешки чека да се закачи програмата за отстранување грешки"</string>
-    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Прикажи граници на клип, маргини итн."</string>
+    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Прикажувај граници на исечок, маргини итн."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Осветли прегледи во прозорците при цртање со GPU"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Осветли слоеви на хардвер со зелено при нивно ажурирање"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Осветлувај ги хардверските слоеви со зелено кога се ажурираат"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Од најдобро кон најлошо: сино, зелено, светло црвено, црвено"</string>
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Осветли површини на прозорци при нивно ажурирање"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Осветли екран при долги операции на главна нишка"</string>
