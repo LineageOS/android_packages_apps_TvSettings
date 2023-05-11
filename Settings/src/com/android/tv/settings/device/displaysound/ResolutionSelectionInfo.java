@@ -44,28 +44,32 @@ public class ResolutionSelectionInfo {
     public static class HDRInfoFragment extends ResolutionSelectionInfo.BaseInfoFragment {
 
         private String hdrTypesAsString(int[] hdrTypes) {
-            StringBuilder supportedTypes = new StringBuilder(
-                    getResources().getString(R.string.hdr_format_sdr));
+            StringBuilder supportedTypes = new StringBuilder(System.lineSeparator()).append(
+                    getResources().getString(R.string.hdr_capability,
+                            getResources().getString(R.string.hdr_format_sdr)));
             for (int supportedType : hdrTypes) {
-                supportedTypes.append(getResources().getString(R.string.word_separator))
-                        .append(getResources().getString(
-                                R.string.space_separator));
+                supportedTypes.append(System.lineSeparator());
                 switch (supportedType) {
                     case HDR_TYPE_DOLBY_VISION:
                         supportedTypes
-                                .append(getResources().getString(R.string.hdr_format_dolby_vision));
+                                .append(getResources().getString(R.string.hdr_capability,
+                                        getResources().getString(
+                                                R.string.hdr_format_dolby_vision)));
                         break;
                     case HDR_TYPE_HDR10:
                         supportedTypes
-                                .append(getResources().getString(R.string.hdr_format_hdr10));
+                                .append(getResources().getString(R.string.hdr_capability,
+                                        getResources().getString(R.string.hdr_format_hdr10)));
                         break;
                     case HDR_TYPE_HLG:
                         supportedTypes
-                                .append(getResources().getString(R.string.hdr_format_hlg));
+                                .append(getResources().getString(R.string.hdr_capability,
+                                        getResources().getString(R.string.hdr_format_hlg)));
                         break;
                     case HDR_TYPE_HDR10_PLUS:
                         supportedTypes
-                                .append(getResources().getString(R.string.hdr_format_hdr10plus));
+                                .append(getResources().getString(R.string.hdr_capability,
+                                        getResources().getString(R.string.hdr_format_hdr10plus)));
                         break;
                 }
             }
