@@ -1304,6 +1304,9 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".device.eco.EnergyModesStatsLogJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
         <service android:name=".device.eco.EnergyModesService"
             android:exported="true" />
 
