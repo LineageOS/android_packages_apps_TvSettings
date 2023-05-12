@@ -330,7 +330,7 @@ public final class EnergyModesHelper {
         return string.split(",");
     }
 
-    private LowPowerStandbyPolicy getPolicy(EnergyMode mode) {
+    LowPowerStandbyPolicy getPolicy(EnergyMode mode) {
         if (!mode.enableLowPowerStandby) {
             return new LowPowerStandbyPolicy(
                     mContext.getString(mode.identifierRes),
