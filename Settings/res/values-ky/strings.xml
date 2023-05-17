@@ -96,7 +96,7 @@
     <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
     <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"Бардык колдонмолор"</string>
-    <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Тутум колдонмолорун көрсөтүү"</string>
+    <string name="all_apps_show_system_apps" msgid="1260688031005374302">"Система колдонмолорун көрсөтүү"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"Орнотулган колдонмолор"</string>
     <string name="all_apps_other" msgid="4420174882983813158">"Системанын колдонмолору"</string>
     <string name="all_apps_disabled" msgid="2776041242863791053">"Өчүрүлгөн колдонмолор"</string>
@@ -105,7 +105,7 @@
     <string name="device_display_sound" msgid="7399153506435649193">"Дисплей жана добуш"</string>
     <string name="device_sound" msgid="8616320533559404963">"Үн"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Айланадагы үндөр"</string>
-    <string name="device_sound_effects" msgid="2000295001122684957">"Тутум добуштары"</string>
+    <string name="device_sound_effects" msgid="2000295001122684957">"Система добуштары"</string>
     <string name="device_apps" msgid="2134756632245008919">"Колдонмолор"</string>
     <string name="device_storage" msgid="8540243547121791073">"Сактагыч"</string>
     <string name="device_reset" msgid="6115282675800077867">"Баштапкы абалга кайтаруу"</string>
@@ -154,7 +154,7 @@
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Контенттин динамикалык диапазонуна дал келтирүү"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Бул параметр иштетилсе, контентке дал келүү үчүн тутум ар түрдүү динамикалык диазапондун форматтарына которулат. Форматка которулуп жатканда экран карарып калышы мүмкүн.\n\nДинамикалык диапазондун варианттарын көрүү үчүн Экрандын өркүндөтүлгөн параметрлерине өтүңүз."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Тандалган динамикалык диапазон"</string>
-    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Тутум тарабынан тандалган формат"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Система тарабынан тандалган формат"</string>
     <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Формат өзгөртүүсүн тутум башкарсын"</string>
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Бул параметр тандалганда, тутум ылайыктуу динамикалык диапазонду таап, экраныңыздын форматына жараша мазмун форматын өзгөртүшү мүмкүн."</string>
     <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Ар дайым мазмундун форматына дал келет"</string>
@@ -218,7 +218,8 @@
     <string name="resolution_selection_with_mode_dialog_title" msgid="5011192408613100514">"Резолюция %1$s болуп өзгөрсүнбү?"</string>
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"Мындан ары %1$s колдонуу үчүн \"Жарайт\" баскычын басыңыз."</string>
     <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"%1$s режиминде Dolby Vision колдоого алынбайт жана \"Экрандын өркүндөтүлгөн параметрлеринде\" өчүрүлөт"</string>
-    <string name="resolution_hdr_description_info" msgid="7378290600353021584">"Бул режимде %1$s колдоого алынат. Айрым сыналгыларда кошумча HDR форматтарын иштетүү үчүн Жакшыртылган HDMI\'ды күйгүзүү керектелиши мүмкүн. Сыналгынын параметрлерине өтүп, анын колдоого алынарын текшериңиз."</string>
+    <!-- no translation found for resolution_hdr_description_info (2408761621976850238) -->
+    <skip />
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"Жокко чыгаруу"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"Жарайт"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Герц"</string>
@@ -343,8 +344,8 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"Бул түзмөк уюмуңуз тарабынан башкарылат."</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Бул түзмөк <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> тарабынан башкарылат."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
-    <string name="word_separator" msgid="3175619900852797955">","</string>
-    <string name="space_separator" msgid="4169645647388594972">" ⁠"</string>
+    <!-- no translation found for hdr_capability (3331021013422460270) -->
+    <skip />
     <string name="learn_more" msgid="820336467414665686">"Кеңири маалымат"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Камера колдонмосу}other{Камера колдонмолору}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Жылнаама колдонмосу"</string>
@@ -1024,7 +1025,7 @@
     <string name="manage_notification_access_title" msgid="8659254371564990084">"Эскертмелерге уруксат"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"Орнотулган колдонмолор үчүн билдирмелерди колдонууга уруксат суралган жок."</string>
     <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"Бул колдонмолор билдирмелердин баарын, ошону менен катар байланыштардын аты-жөнү жана алынган билдирүүлөр сыяктуу жеке маалыматты окуй алышат. Мындан тышкары, алар бул билдирмелерди жок кылып же алардагы баскычтарды баса алышат."</string>
-    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"Тутум талап кылат"</string>
+    <string name="default_notification_access_package_summary" msgid="1354775994781420222">"Система талап кылат"</string>
     <string name="directory_access" msgid="7338555825237012006">"Каталогго мүмкүнчүлүк алуу"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"Бул колдонмолордун айрым каталогдорго кирүүгө уруксаттары бар."</string>
     <string name="directory_on_volume" msgid="5628089584970521703">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
