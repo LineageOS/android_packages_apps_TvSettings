@@ -218,7 +218,7 @@
     <string name="resolution_selection_with_mode_dialog_title" msgid="5011192408613100514">"रिजोल्युसन बदलेर %1$s बनाउने हो?"</string>
     <string name="resolution_selection_dialog_desc" msgid="3667357611495669701">"अबदेखि %1$s प्रयोग गर्न \'ठिक छ\' चयन गर्नुहोस्।"</string>
     <string name="resolution_selection_disabled_dolby_vision_dialog_desc" msgid="7952404018654828187">"%1$s मा Dolby Vision प्रयोग गर्न मिल्दैन र Dolby Vision \"डिस्प्लेसम्बन्धी उन्नत सेटिङ\" मा अफ गरिने छ"</string>
-    <string name="resolution_hdr_description_info" msgid="7378290600353021584">"यो मोडमा %1$s प्रयोग गर्न मिल्छ। केही टिभीमा तपाईंले HDR का थप फर्म्याटहरू प्रयोग गर्नका निम्ति परिष्कृत HDMI अन गर्नु पर्ने हुन सक्छ। यो फर्म्याट प्रयोग गर्न मिल्छ कि मिल्दैन भन्ने कुरा जान्न टिभीका सेटिङ जाँच्नुहोस्।"</string>
+    <string name="resolution_hdr_description_info" msgid="2408761621976850238">"यो मोडमा %1$s प्रयोग गर्न सकिन्छ\nकेही टिभीमा तपाईंले HDR का थप फर्म्याटहरू प्रयोग गर्नका निम्ति परिष्कृत HDMI अन गर्नु पर्ने हुन सक्छ। यो फर्म्याट प्रयोग गर्न मिल्छ कि मिल्दैन भन्ने कुरा जान्न टिभीका सेटिङ जाँच्नुहोस्।"</string>
     <string name="resolution_selection_dialog_cancel" msgid="3683616572317946129">"रद्द गर्नुहोस्"</string>
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"ठिक छ"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"हर्ज"</string>
@@ -343,8 +343,7 @@
     <string name="do_disclosure_generic" msgid="8390478119591845948">"तपाईंको संगठनले यस यन्त्रलाई व्यवस्थापन गर्दछ।"</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"यो डिभाइस <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> ले व्यवस्थापन गर्दछ।"</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
-    <string name="word_separator" msgid="3175619900852797955">","</string>
-    <string name="space_separator" msgid="4169645647388594972">" ⁠"</string>
+    <string name="hdr_capability" msgid="3331021013422460270">"- %1$s"</string>
     <string name="learn_more" msgid="820336467414665686">"थप जान्नुहोस्"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{क्यामेरा एप}other{क्यामेरा एपहरू}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"पात्रो एप"</string>
@@ -1103,7 +1102,7 @@
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"<xliff:g id="APPNAME">%1$s</xliff:g> प्रयोग गरिने यन्त्र"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"कुनै पनि यन्त्र फेला परेन। यन्त्रहरू सक्रिय गरिएका छन् र जोड्नका लागि उपलब्ध छन् भन्ने कुरा सुनिश्चित गर्नुहोस्।"</string>
     <string name="network_connection_timeout_dialog_ok" msgid="5374522862360880609">"फेरि प्रयास गर्नुहोस्"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"केही चिज गडबड भयो। यो एपले कुनै यन्त्र छनौट गर्नेसम्बन्धी अनुरोध रद्द गरेको छ।"</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="3346121178275518630">"कुनै समस्या आयो। यो एपले कुनै यन्त्र छनौट गर्नेसम्बन्धी अनुरोध रद्द गरेको छ।"</string>
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"सफलतापूर्वक जोडियो"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"सबै देखाउनुहोस्"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"खोज्दै"</string>
