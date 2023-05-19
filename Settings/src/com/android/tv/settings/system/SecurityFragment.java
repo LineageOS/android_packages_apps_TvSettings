@@ -221,6 +221,7 @@ public class SecurityFragment extends SettingsPreferenceFragment
 
         mManageDeviceAdminPref = findPreference(KEY_MANAGE_DEVICE_ADMIN);
         mEnterprisePrivacyPref = findPreference(KEY_ENTERPRISE_PRIVACY);
+        refresh();
     }
 
     private void refresh() {
