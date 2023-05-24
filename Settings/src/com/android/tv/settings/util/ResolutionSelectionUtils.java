@@ -16,25 +16,35 @@
 
 package com.android.tv.settings.util;
 
+import static java.math.RoundingMode.HALF_UP;
+
 import android.content.Context;
+import android.icu.number.LocalizedNumberFormatter;
+import android.icu.number.NumberFormatter;
 import android.view.Display;
 
 import com.android.tv.settings.R;
+
+import java.util.Locale;
 
 
 /** This utility class for Resolution Setting **/
 public class ResolutionSelectionUtils {
 
     /**
-     * Returns the refresh rate converted to a string. If the refresh rate has only 0s after the
-     * floating point, they are removed. The unit "Hz" is added to end of refresh rate.
+     * Returns the refresh rate converted to a string in the local language. If the refresh rate has
+     * only 0s after the floating point, they are removed.
+     * The unit "Hz" is added to end of refresh rate.
      */
     public static String getRefreshRateString(float refreshRate) {
-        float roundedRefreshRate = Math.round(refreshRate * 100.0f) / 100.0f;
+        LocalizedNumberFormatter localizedNumberFormatter = NumberFormatter.with().roundingMode(
+                HALF_UP).locale(Locale.getDefault());
+        double roundedRefreshRate = Math.round(refreshRate * 100.0f) / 100.0f;
         if (roundedRefreshRate % 1 == 0) {
-            return Integer.toString((int) roundedRefreshRate);
+            return localizedNumberFormatter.format(roundedRefreshRate).toString();
         } else {
-            return Float.toString(roundedRefreshRate);
+            return String.format(Locale.getDefault(), "%.2f",
+                    localizedNumberFormatter.format(roundedRefreshRate).toBigDecimal());
         }
     }
 
@@ -63,5 +73,16 @@ public class ResolutionSelectionUtils {
                         mode.getPhysicalWidth(), mode.getPhysicalHeight()),
                 ResolutionSelectionUtils.getRefreshRateString(mode.getRefreshRate()));
         return modeString;
+    }
+
+    /**
+     * Returns the resolution mode converted to a string in the local language.
+     * Format: width + " x " + height
+     */
+    public static String getResolutionSummary(int physicalWidth, int physicalHeight) {
+        LocalizedNumberFormatter localizedNumberFormatter = NumberFormatter.with().locale(
+                Locale.getDefault());
+        return localizedNumberFormatter.format(physicalWidth).toString() + " x "
+                + localizedNumberFormatter.format(physicalHeight).toString();
     }
 }
