@@ -49,6 +49,8 @@ import java.util.List;
 public class NotificationAccess extends SettingsPreferenceFragment {
     private static final String TAG = "NotificationAccess";
 
+    private static final int MAX_CN_LENGTH = 500;
+
     private static final String HEADER_KEY = "header";
 
     private static final String DEFAULT_PACKAGES_SEPARATOR = ":";
@@ -76,6 +78,12 @@ public class NotificationAccess extends SettingsPreferenceFragment {
                 .setIntentAction(NotificationListenerService.SERVICE_INTERFACE)
                 .setPermission(android.Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE)
                 .setNoun("notification listener")
+                .setValidator(info -> {
+                    if (info.getComponentName().flattenToString().length() > MAX_CN_LENGTH) {
+                        return false;
+                    }
+                    return true;
+                 })
                 .build();
         mServiceListing.addCallback(this::updateList);
     }
