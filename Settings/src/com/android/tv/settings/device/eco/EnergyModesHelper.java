@@ -410,7 +410,7 @@ public final class EnergyModesHelper {
         if (!areEnergyModesAvailable()) {
             return null;
         }
-        return getEnergyModes().get(0);
+        return getEnergyMode(mContext.getString(R.string.default_energy_mode));
     }
 
     /**
@@ -466,6 +466,10 @@ public final class EnergyModesHelper {
                 targetEnergyMode = MODE_HIGH_ENERGY;
             } else {
                 targetEnergyMode = getDefaultEnergyMode();
+                if (targetEnergyMode == null) {
+                    // Fall back to lowest energy mode if default is not set or invalid
+                    targetEnergyMode = getEnergyModes().get(0);
+                }
             }
         }
 
