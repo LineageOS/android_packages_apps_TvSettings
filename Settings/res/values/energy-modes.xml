@@ -21,6 +21,9 @@
          If false, falls back to a toggle to enable/disable Low Power Standby if LPS is supported. -->
     <bool name="enable_energy_modes">true</bool>
 
+    <!-- The default energy mode, used if none has been set yet. -->
+    <string name="default_energy_mode" translatable="false">@null</string>
+
     <!-- Energy mode: Low -->
     <eat-comment />
 
