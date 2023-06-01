@@ -417,36 +417,40 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                     // EmbeddedSlicePreference has its own slice observer
                     // (EmbeddedSlicePreferenceHelper). Should therefore not be updated by
                     // slice observer in SliceFragment.
+                    // The order will however still need to be updated, as this can not be handled
+                    // by EmbeddedSlicePreferenceHelper.
                     boolean allowUpdate = !(oldPref instanceof EmbeddedSlicePreference);
                     boolean sameKey = oldPref.getKey() != null
                             && oldPref.getKey().equals(newPref.getKey());
-                    if (allowUpdate && sameKey) {
-                        oldPref.setIcon(newPref.getIcon());
-                        oldPref.setTitle(newPref.getTitle());
-                        oldPref.setSummary(newPref.getSummary());
-                        oldPref.setEnabled(newPref.isEnabled());
-                        oldPref.setSelectable(newPref.isSelectable());
-                        oldPref.setFragment(newPref.getFragment());
-                        oldPref.getExtras().putAll(newPref.getExtras());
-                        if ((oldPref instanceof HasSliceAction)
-                                && (newPref instanceof HasSliceAction)) {
-                            ((HasSliceAction) oldPref)
-                                    .setSliceAction(((HasSliceAction) newPref).getSliceAction());
-                        }
-                        if ((oldPref instanceof HasSliceUri)
-                                && (newPref instanceof HasSliceUri)) {
-                            ((HasSliceUri) oldPref)
-                                    .setUri(((HasSliceUri) newPref).getUri());
+                    if (sameKey) {
+                        if (allowUpdate) {
+                            oldPref.setIcon(newPref.getIcon());
+                            oldPref.setTitle(newPref.getTitle());
+                            oldPref.setSummary(newPref.getSummary());
+                            oldPref.setEnabled(newPref.isEnabled());
+                            oldPref.setSelectable(newPref.isSelectable());
+                            oldPref.setFragment(newPref.getFragment());
+                            oldPref.getExtras().putAll(newPref.getExtras());
+                            if ((oldPref instanceof HasSliceAction)
+                                    && (newPref instanceof HasSliceAction)) {
+                                ((HasSliceAction) oldPref)
+                                        .setSliceAction(
+                                                ((HasSliceAction) newPref).getSliceAction());
+                            }
+                            if ((oldPref instanceof HasSliceUri)
+                                    && (newPref instanceof HasSliceUri)) {
+                                ((HasSliceUri) oldPref)
+                                        .setUri(((HasSliceUri) newPref).getUri());
                         }
                         if ((oldPref instanceof HasCustomContentDescription)
                                 && (newPref instanceof HasCustomContentDescription)) {
                             ((HasCustomContentDescription) oldPref).setContentDescription(
                                     ((HasCustomContentDescription) newPref)
                                             .getContentDescription());
+                            }
                         }
+
                         oldPref.setOrder(i);
-                    }
-                    if (sameKey) {
                         neededToAddNewPref = false;
                         break;
                     }
