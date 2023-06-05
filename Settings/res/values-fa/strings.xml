@@ -204,7 +204,7 @@
     <string name="accessory_change_name_title" msgid="451188562035392238">"نام جدیدی برای این وسیله جانبی وارد کنید"</string>
     <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"مرتبط‌سازی بلوتوث."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"در حال جستجوی لوازم جانبی…"</string>
-    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"قبل از مرتبط کردن دستگاه‌های بلوتوث، مطمئن شوید در حالت مرتبط‌سازی باشند."</string>
+    <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"قبل از جفت کردن دستگاه‌های بلوتوث، مطمئن شوید در حالت مرتبط‌سازی باشند."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"دستگاهی یافت شد و به‌طور خودکار بعد از <xliff:g id="COUNTDOWN">%1$s</xliff:g> ثانیه مرتبط می‌شود"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"این عملکرد پشتیبانی نمی‌شود"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"درخواست مرتبط‌سازی با بلوتوث"</string>
@@ -707,8 +707,8 @@
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"منتظر اشکال‌زدا"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"تأیید برنامه‌ها ازطریق USB"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"‫بررسی برنامه‌های نصب شده از طریق ADB/ADT از نظر رفتار مضر"</string>
-    <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"گزارش‌گیری طولانی Wi‑Fi"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"فعال کردن گزارش‌گیری طولانی Wi‑Fi"</string>
+    <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"گزارش‌گیری مفصل Wi‑Fi"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"فعال کردن گزارش‌گیری مفصل Wi‑Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"نمایش تعداد لمسها"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"محل اشاره‌گر"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"نمایش محدوده‌های طرح‌بندی"</string>
@@ -829,7 +829,7 @@
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"تنظیمات"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"برنامه‌های مجاز شده"</string>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"مجاز شد"</string>
-    <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"مجاز نیست"</string>
+    <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"مجاز نبودن"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"سفارشی کردن محدودیت‌ها"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="3293508876131962699">"یک لحظه..."</string>
     <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"تغییر پین"</string>
@@ -921,18 +921,18 @@
     <string name="apps_permissions" msgid="7876407267050498394">"مجوزها"</string>
     <string name="device_apps_permissions" msgid="8421323706003063878">"اجازه‌های برنامه"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_0">%1$d</xliff:g> از <xliff:g id="COUNT_1">%2$d</xliff:g> برنامه‌های مجاز"</string>
-    <string name="bluetooth_permission_request" msgid="7788089036741496993">"درخواست مجوز بلوتوث"</string>
+    <string name="bluetooth_permission_request" msgid="7788089036741496993">"درخواست اجازه بلوتوث"</string>
     <string name="security_patch" msgid="8924741264829495392">"سطح وصله امنیتی «سیستم‌عامل Android TV»"</string>
     <string name="choose_application" msgid="2375936782103669988">"انتخاب برنامه"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(آزمایشی)"</string>
-    <string name="reboot_safemode_action" msgid="2862127510492131128">"راه‌اندازی مجدد در حالت ایمن"</string>
-    <string name="reboot_safemode_confirm" msgid="5745977150299953603">"می‌خواهید در حالت ایمن راه‌اندازی مجدد کنید؟‌"</string>
-    <string name="reboot_safemode_desc" msgid="2919933461408942799">"با این کار همه برنامه‌های شخص ثالثی که نصب کرده‌اید غیرفعال می‌شود. با راه‌اندازی مجدد سیستم، این برنامه‌ها دوباره بازیابی می‌شوند."</string>
+    <string name="reboot_safemode_action" msgid="2862127510492131128">"بازراه‌اندازی به حالت ایمن"</string>
+    <string name="reboot_safemode_confirm" msgid="5745977150299953603">"می‌خواهید به حالت ایمن بازراه‌اندازی کنید؟‌"</string>
+    <string name="reboot_safemode_desc" msgid="2919933461408942799">"با این کار همه برنامه‌های شخص ثالثی که نصب کرده‌اید غیرفعال می‌شود. با بازراه‌اندازی سیستم، این برنامه‌ها دوباره بازیابی می‌شوند."</string>
     <string name="capturing_bugreport" msgid="832512801903486821">"درحال ثبت گزارش اشکال"</string>
     <string name="available_virtual_keyboard_category" msgid="7445262027711560629">"صفحه‌کلیدهای مجازی در دسترس"</string>
     <string name="manage_keyboards" msgid="7983890675377321912">"مدیریت صفحه‌کلیدها"</string>
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"مجاز"</string>
-    <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"غیرمجاز"</string>
+    <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"مجاز نبودن"</string>
     <string name="usage_access" msgid="8402350645248312782">"دسترسی به داده‌های مصرف"</string>
     <string name="usage_access_description" msgid="3276026988575551587">"دسترسی به داده‌های مصرف اجازه ردیابی برنامه‌هایی را که استفاده می کنید، چندوقت یک‌بار از آن‌ها استفاده می کنید، همچنین شرکت مخابراتی، تنظیمات زبان، و سایر جزئیات را به برنامه می‌دهد."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"بهینه‌سازی انرژی"</string>

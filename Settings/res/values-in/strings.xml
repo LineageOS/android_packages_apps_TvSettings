@@ -151,7 +151,7 @@
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Lancar"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Jika aplikasi memintanya, perangkat akan mencocokkan outputnya ke kecepatan frame asli konten yang sedang Anda tonton, HANYA jika TV dapat melakukan transisi yang lancar."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Tidak lancar"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Jika aplikasi memintanya, perangkat akan mencocokkan outputnya ke kecepatan frame asli konten yang sedang Anda tonton. Hal ini dapat menyebabkan layar kosong sebentar saat keluar dari atau masuk ke pemutaran video."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Jika aplikasi memintanya, perangkat akan menyesuaikan outputnya agar cocok dengan kecepatan frame asli dari konten yang sedang Anda tonton. Hal ini dapat membuat layar kosong sebentar saat Anda keluar dari atau masuk ke pemutaran video."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Jangan pernah"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Meskipun aplikasi memintanya, perangkat tidak akan mencoba mencocokkan outputnya ke kecepatan frame asli konten yang sedang Anda tonton."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Penskalaan teks"</string>
@@ -670,7 +670,7 @@
     <string name="color_yellow" msgid="3519470952904560404">"Kuning"</string>
     <string name="color_magenta" msgid="2377854703399624607">"Merah keunguan"</string>
     <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"Deskripsi audio"</string>
-    <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"Dengarkan deskripsi tentang hal yang sedang terjadi di layar pada film dan acara TV yang didukung"</string>
+    <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"Dengarkan deskripsi tentang hal yang sedang terjadi di layar pada film dan acara TV yang mendukung deskripsi audio"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Aktifkan"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Konfigurasi"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Gunakan <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
@@ -686,7 +686,7 @@
     <string name="system_install_voice_data" msgid="8016395777968958673">"Instal data suara"</string>
     <string name="system_general" msgid="687760148454147771">"Umum"</string>
     <string name="system_debugging" msgid="1576324426385458481">"Proses debug"</string>
-    <string name="system_input" msgid="4457152980514604873">"Masukan"</string>
+    <string name="system_input" msgid="4457152980514604873">"Input"</string>
     <string name="system_drawing" msgid="5802739024643871942">"Gambar"</string>
     <string name="system_monitoring" msgid="7997260748312620855">"Pemantauan"</string>
     <string name="system_apps" msgid="8481888654606868074">"Aplikasi"</string>
@@ -706,7 +706,7 @@
     <string name="system_select_debug_app" msgid="6200987902307533721">"Memilih aplikasi debug"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Tunggu debugger"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Memverifikasi aplikasi melalui USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Memeriksa perilaku berbahaya pada aplikasi yang terinstal melalui ADB/ADT"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Periksa keberadaan perilaku berbahaya di aplikasi yang diinstal melalui ADB/ADT"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Pencatatan log panjang Wi-Fi"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Mengaktifkan pencatatan log panjang Wi-Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Menampilkan sentuhan"</string>
@@ -715,7 +715,7 @@
     <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"Menampilkan pembaruan tampilan GPU"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Menampilkan lapisan hardware"</string>
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"Menampilkan kelebihan GPU"</string>
-    <string name="system_show_surface_updates" msgid="7680759813613585278">"Menampilkan pembaruan permukaan"</string>
+    <string name="system_show_surface_updates" msgid="7680759813613585278">"Tampilkan pembaruan permukaan"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"Skala animasi jendela"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"Skala animasi transisi"</string>
     <string name="system_animator_duration_scale" msgid="3829445237130423625">"Skala durasi animator"</string>
@@ -723,7 +723,7 @@
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Rendering GPU profil"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"Mengaktifkan jejak"</string>
     <string name="system_dont_keep_activities" msgid="4641165963339846161">"Jangan simpan kegiatan"</string>
-    <string name="system_background_process_limit" msgid="1985373407150771045">"Batas proses latar belakang"</string>
+    <string name="system_background_process_limit" msgid="1985373407150771045">"Batas proses di belakang"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"Menampilkan semua ANR"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Menonaktifkan mode tidur"</string>
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"Digunakan untuk konten DRM saja"</string>
@@ -731,12 +731,12 @@
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Aktifkan pencatatan log pengintaian HCI Bluetooth"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Mode debug ketika USB terhubung"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Aplikasi yang di-debug menunggu debugger menempel sebelum berjalan"</string>
-    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Menampilkan batas klip, margin, dll."</string>
+    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Tampilkan batas klip, margin, dll."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Mengedipkan tampilan dalam jendela saat digambar dengan GPU"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Lapisan hardware berkedip hijau saat memperbarui"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Buat lapisan hardware berkedip hijau saat update"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Terbaik-terburuk: biru, hijau, merah terang, merah"</string>
-    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Mengedipkan seluruh permukaan jendela saat memperbarui"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Layar berkedip saat apl berjalan lama di utas utama"</string>
+    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Buat seluruh permukaan jendela berkedip saat diperbarui"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Buat layar berkedip saat aplikasi berjalan lama di thread utama"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Mengukur waktu rendering di adb shell dumpsys gfxinfo"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Sumber tidak dikenal"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Izinkan penginstalan aplikasi dari sumber selain Google Play Store"</string>
@@ -855,7 +855,7 @@
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Jika Anda menghentikan aplikasi secara paksa, mungkin fungsinya akan terganggu."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Uninstal"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Uninstal pembaruan"</string>
-    <string name="device_apps_app_management_uninstall_updates_desc" msgid="4508586498292236706">"Semua pembaruan untuk aplikasi sistem Android ini akan dicopot pemasangannya."</string>
+    <string name="device_apps_app_management_uninstall_updates_desc" msgid="4508586498292236706">"Semua update untuk aplikasi sistem Android ini akan di-uninstal."</string>
     <string name="device_apps_app_management_disable" msgid="819003297535493633">"Nonaktifkan"</string>
     <string name="device_apps_app_management_disable_desc" msgid="9143166267511427607">"Ingin menonaktifkan aplikasi ini?"</string>
     <string name="device_apps_app_management_enable" msgid="9173340340253029114">"Aktifkan"</string>
@@ -964,7 +964,7 @@
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Tidak ada aplikasi terinstal yang mendukung Picture-in-picture"</string>
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Mengizinkan aplikasi membuat jendela picture-in-picture saat aplikasi terbuka atau setelah Anda membiarkannya terbuka (misalnya, untuk melanjutkan aktivitas menonton video). Jendela ini ditampilkan di atas aplikasi lain yang sedang digunakan."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Izinkan aplikasi menyetel alarm dan menjadwalkan tindakan berjangka waktu. Hal ini memungkinkan aplikasi berjalan di latar belakang, yang dapat menggunakan lebih banyak daya.\n\nJika izin ini nonaktif, alarm dan acara berbasis waktu yang dijadwalkan oleh aplikasi tidak akan berfungsi."</string>
-    <string name="turn_screen_on_title" msgid="5293798529284629011">"Aktifkan layar"</string>
+    <string name="turn_screen_on_title" msgid="5293798529284629011">"Pengaktifan layar"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"Izinkan pengaktifan layar"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Mengizinkan aplikasi mengaktifkan layar. Jika diizinkan, aplikasi dapat mengaktifkan layar kapan saja tanpa izin eksplisit dari Anda."</string>
     <string name="special_access" msgid="21806055758289916">"Akses aplikasi khusus"</string>

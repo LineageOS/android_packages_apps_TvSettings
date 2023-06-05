@@ -147,11 +147,11 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Configuració avançada del so"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Permet el mode de joc"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Adapta als fotogrames per segon del contingut"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Fes coincidir amb els FPS del contingut"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Transició continua"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Si l\'aplicació ho sol·licita, el dispositiu mostrarà el contingut que estàs mirant amb els fotogrames per segon del vídeo original, NOMÉS si el televisor pot efectuar una transició continua."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Transició no continua"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si l\'aplicació ho sol·licita, el dispositiu mostrarà el contingut que estàs mirant amb els fotogrames per segon del vídeo original. Això pot provocar que la pantalla es quedi en blanc un segon en entrar a la reproducció d\'un vídeo o sortir-ne."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Si l\'aplicació ho sol·licita, el dispositiu farà coincidir la sortida amb els fotogrames per segon originals del contingut que estàs mirant. Això pot provocar que la pantalla es quedi en blanc un segon en entrar a la reproducció d\'un vídeo o sortir-ne."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Mai"</string>
     <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Encara que l\'aplicació ho sol·liciti, el dispositiu mai no provarà de mostrar el contingut que estàs mirant amb els fotogrames per segon del vídeo original."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Ajust del text"</string>
@@ -236,7 +236,7 @@
     <string name="bluetooth_rename" msgid="7791922876280337194">"Canvia el nom del dispositiu connectat"</string>
     <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Oblida"</string>
     <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"Oblida el dispositiu %1$s"</string>
-    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Adreça Bluetooth"</string>
+    <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Adreça de Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Connectat"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Desconnectat"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"No tens permís per canviar la configuració del Bluetooth."</string>
@@ -365,7 +365,7 @@
     <string name="device_status_title" msgid="9051569510258883673">"Estat"</string>
     <string name="battery_status_title" msgid="8850166742025222210">"Estat de la bateria"</string>
     <string name="battery_level_title" msgid="2672804570916248736">"Nivell de la bateria"</string>
-    <string name="status_bt_address" msgid="7190052214963950844">"Adreça Bluetooth"</string>
+    <string name="status_bt_address" msgid="7190052214963950844">"Adreça de Bluetooth"</string>
     <string name="status_up_time" msgid="1758102680983108313">"Temps d\'activitat"</string>
     <string name="legal_information" msgid="1087445528481370874">"Informació legal"</string>
     <string name="copyright_title" msgid="5879660711078649518">"Drets d\'autor"</string>
@@ -716,8 +716,8 @@
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Mostra la capa de programari"</string>
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"Mostra el sobredibuix de la GPU"</string>
     <string name="system_show_surface_updates" msgid="7680759813613585278">"Mostra els canvis de superfície"</string>
-    <string name="system_window_animation_scale" msgid="685477540250939659">"Escala de l\'animació de la finestra"</string>
-    <string name="system_transition_animation_scale" msgid="7266380208347453619">"Escala de l\'animació de transició"</string>
+    <string name="system_window_animation_scale" msgid="685477540250939659">"Escala d\'animació de la finestra"</string>
+    <string name="system_transition_animation_scale" msgid="7266380208347453619">"Escala d\'animació de la transició"</string>
     <string name="system_animator_duration_scale" msgid="3829445237130423625">"Escala de durada de l\'animació"</string>
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"Mode estricte activat"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Perfil de representació de GPU"</string>
@@ -736,7 +736,7 @@
     <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Il·lumina capes de maquinari en verd en actualitzar-se"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"De millor a pitjor: blau, verd, vermell clar, vermell"</string>
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Il·lumina superfície de finestres en actualitzar-se"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Il·lumina si aplicacions tarden molt al procés principal"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Il·lumina la pantalla quan les aplicacions facin operacions llargues al fil principal"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Mesura temps represen. a adb shell dumpsys gfxinfo"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Fonts desconegudes"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Permet instal·lar aplicacions que no siguin de Play Store"</string>

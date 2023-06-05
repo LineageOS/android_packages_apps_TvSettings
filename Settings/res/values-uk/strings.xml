@@ -147,13 +147,13 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Додаткові налаштування звуку"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Дозволити режим гри"</string>
-    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Відповідно до частоти кадрів контенту"</string>
+    <string name="match_content_frame_rate_title" msgid="153291168560947689">"Допасування до частоти кадрів контенту"</string>
     <string name="match_content_frame_rate_seamless" msgid="5900012519258795448">"Плавний перехід"</string>
     <string name="match_content_frame_rate_seamless_summary" msgid="2737466163964133210">"Якщо цього вимагає додаток, пристрій відтворюватиме зображення без зміни частоти кадрів, ЛИШЕ якщо телевізор може виконати плавний перехід."</string>
     <string name="match_content_frame_rate_non_seamless" msgid="1534300397118594640">"Без плавного переходу"</string>
-    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Якщо цього вимагає додаток, пристрій відтворюватиме зображення без зміни частоти кадрів. Через це зображення на екрані може на секунду зникати, коли ви вмикаєте або вимикаєте відтворення відео."</string>
+    <string name="match_content_frame_rate_non_seamless_summary" msgid="6831699459487130055">"Якщо цього вимагає додаток, пристрій відтворюватиме зображення із допасуванням до частоти кадрів контенту, який ви переглядаєте. Через це зображення на екрані може на секунду зникати, коли ви вмикаєте або вимикаєте відтворення відео."</string>
     <string name="match_content_frame_rate_never" msgid="1678354793095148423">"Ніколи"</string>
-    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Навіть якщо цього вимагає додаток, пристрій ніколи не намагатиметься відтворювати зображення без зміни частоти кадрів."</string>
+    <string name="match_content_frame_rate_never_summary" msgid="742977618080396095">"Навіть якщо цього вимагає додаток, пристрій ніколи не намагатиметься допасувати частоту кадрів контенту, який ви переглядаєте."</string>
     <string name="font_scale_settings_title" msgid="4114019544800225980">"Масштаб тексту"</string>
     <string name="font_scale_item_detail" msgid="1558315053348778805">"Масштаб: <xliff:g id="SCALE">%1$d</xliff:g>%%"</string>
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Зразок тексту"</string>
@@ -226,7 +226,7 @@
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Аксесуари"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Пульт ДК"</string>
     <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"Налаштування пульта ДК"</string>
-    <string name="bluetooth_ir_entry_title" msgid="6927284710576530479">"Налаштуйте кнопки дистанційного керування"</string>
+    <string name="bluetooth_ir_entry_title" msgid="6927284710576530479">"Налаштування кнопок дистанційного керування"</string>
     <string name="bluetooth_ir_entry_subtitle" msgid="4606207128353416151">"Керуйте гучністю, живленням і джерелами вхідного сигналу телевізора, приймача та звукової панелі"</string>
     <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"Підключити"</string>
     <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"Підключитися до пристрою %1$s"</string>
@@ -257,7 +257,7 @@
     <string name="system_inputs" msgid="5552840337357572096">"Джерела вхідного сигналу"</string>
     <string name="system_inputs_devices" msgid="2158421111699829399">"Джерела вхідного сигналу та пристрої"</string>
     <string name="system_home_theater_control" msgid="6228949628173590310">"Керування домашнім кінотеатром"</string>
-    <string name="system_accessibility" msgid="3081009195560501010">"Спеціальні можливості"</string>
+    <string name="system_accessibility" msgid="3081009195560501010">"Доступність"</string>
     <string name="system_developer_options" msgid="8480844257066475479">"Параметри розробника"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"Немає"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"Використання й діагностика"</string>
@@ -458,9 +458,9 @@
     <string name="wifi_ip_settings_invalid_dns" msgid="5111100342560120360">"Введіть дійсну DNS-адресу"</string>
     <string name="wifi_ip_settings_invalid_network_prefix_length" msgid="2726889303835927777">"Введіть довжину префікса мережі від 0 до 32"</string>
     <string name="wifi_ip_address_description" msgid="7109677764979198618">"Введіть дійсну IP-адресу.\nПриклад: <xliff:g id="ID_1">192.168.1.128</xliff:g>"</string>
-    <string name="wifi_dns1_description" msgid="2287252520192279195">"Введіть дійсну IP-адресу або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
-    <string name="wifi_dns2_description" msgid="6495565714252833784">"Введіть дійсну IP-адресу або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
-    <string name="wifi_gateway_description" msgid="8902481147103929271">"Введіть дійсну IP-адресу або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
+    <string name="wifi_dns1_description" msgid="2287252520192279195">"Введіть дійсну IP-адресу або залиште поле порожнім.\nПриклад: <xliff:g id="ID_1">8.8.8.8</xliff:g>"</string>
+    <string name="wifi_dns2_description" msgid="6495565714252833784">"Введіть дійсну IP-адресу або залиште поле порожнім.\nПриклад: <xliff:g id="ID_1">8.8.4.4</xliff:g>"</string>
+    <string name="wifi_gateway_description" msgid="8902481147103929271">"Введіть дійсну IP-адресу або залиште поле порожнім.\nПриклад: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
     <string name="wifi_network_prefix_length_description" msgid="2670994968279018896">"Введіть префікс мережі дійсної довжини.\nПриклад: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="5629893736174170157">"Ім’я хосту недійсне"</string>
     <string name="proxy_error_invalid_exclusion_list" msgid="1762079966901078116">"Список виключень недійсний. Введіть список виключених доменів через кому."</string>
@@ -469,7 +469,7 @@
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Порт недійсний"</string>
     <string name="proxy_warning_limited_support" msgid="4220553563487968684">"Проксі-сервер HTTP використовується веб-переглядачем, але недоступний для інших додатків"</string>
     <string name="proxy_port_description" msgid="6486205863098427787">"Введіть дійсний номер порту.\nПриклад: <xliff:g id="ID_1">8080</xliff:g>"</string>
-    <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Введіть виключені домени через кому або залишіть поле порожнім.\nПриклад: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
+    <string name="proxy_exclusionlist_description" msgid="5105504899364188296">"Введіть виключені домени через кому або залиште поле порожнім.\nПриклад: <xliff:g id="ID_1">example.com,mycomp.test.com,localhost</xliff:g>"</string>
     <string name="proxy_hostname_description" msgid="5520200112290557199">"Введіть дійсне ім’я хосту.\nПриклад: <xliff:g id="ID_1">proxy.example.com</xliff:g>"</string>
     <string name="title_wifi_eap_method" msgid="4351752615786996226">"Виберіть метод EAP для мережі <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="title_wifi_phase2_authentication" msgid="1167205033305931574">"Виберіть другий етап автентифікації для мережі <xliff:g id="SSID">%1$s</xliff:g>"</string>
