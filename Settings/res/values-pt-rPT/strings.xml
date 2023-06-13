@@ -163,7 +163,7 @@
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Seleção de formato"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automático"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Utilizar os formatos do dispositivo indicados"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Usar os formatos do dispositivo indicados"</string>
     <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Escolher os formatos manualmente a partir dos formatos disponíveis"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"FORMATOS SUPORTADOS"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"FORMATOS NÃO SUPORTADOS"</string>
@@ -208,11 +208,11 @@
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"Foi encontrado um dispositivo e será automaticamente sincronizado dentro de <xliff:g id="COUNTDOWN">%1$s</xliff:g> segundos"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"Esta ação não é suportada"</string>
     <string name="bluetooth_pairing_request" msgid="6120176967230348092">"Pedido de sincronização de Bluetooth"</string>
-    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, certifique-se de que apresenta esta chave de acesso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
+    <string name="bluetooth_confirm_passkey_msg" msgid="7397401633869153520">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, certifique-se de que apresenta esta token de acesso: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_incoming_pairing_msg" msgid="8587851808387685613">"De: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Sincronizar com este dispositivo?"</string>
     <string name="bluetooth_display_passkey_pin_msg" msgid="6934651048757228432">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;&lt;br&gt;Introduza no dispositivo: &lt;b&gt;<xliff:g id="PASSKEY">%2$s</xliff:g>&lt;/b&gt; e, em seguida, prima Enter."</string>
     <string name="bluetooth_enter_pin_msg" msgid="8905524093007140634">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza o PIN obrigatório do dispositivo:"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza a chave de acesso obrigatória do dispositivo:"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="889584097447402492">"Para sincronizar com: &lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;, &lt;br&gt;Introduza o token de acesso obrigatória do dispositivo:"</string>
     <string name="bluetooth_pin_values_hint" msgid="6237371515577342950">"Geralmente, 0000 ou 1234"</string>
     <string name="bluetooth_pair" msgid="2410285813728786067">"Sincronizar"</string>
     <string name="bluetooth_cancel" msgid="4415185529332987034">"Cancelar"</string>
@@ -572,16 +572,16 @@
     <string name="system_set_time" msgid="7179243042276057341">"Definir hora"</string>
     <string name="system_set_time_zone" msgid="6471564469883225195">"Definir fuso horário"</string>
     <string name="desc_set_time_zone" msgid="4926392006501180047">"<xliff:g id="OFFSET">%1$s</xliff:g>, <xliff:g id="NAME">%2$s</xliff:g>"</string>
-    <string name="system_set_time_format" msgid="902518158066450918">"Utilizar formato de 24 horas"</string>
+    <string name="system_set_time_format" msgid="902518158066450918">"Usar formato de 24 horas"</string>
     <string name="desc_set_time_format" msgid="8688587526768572230">"<xliff:g id="STATE">%1$s</xliff:g> (<xliff:g id="SAMPLE">%2$s</xliff:g>)"</string>
     <string name="system_auto_date_time" msgid="8458199433555868708">"Data e hora automáticas"</string>
   <string-array name="auto_date_time_entries">
-    <item msgid="8119837829162871025">"Utilizar hora fornecida pela rede"</item>
+    <item msgid="8119837829162871025">"Usar hora fornecida pela rede"</item>
     <item msgid="369146066143710034">"Desativado"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
-    <item msgid="1010003447137304123">"Utilizar hora fornecida pela rede"</item>
-    <item msgid="5645263357181875427">"Utilizar hora fornecida pelo fluxo contínuo de transporte"</item>
+    <item msgid="1010003447137304123">"Usar hora fornecida pela rede"</item>
+    <item msgid="5645263357181875427">"Usar hora fornecida pelo fluxo contínuo de transporte"</item>
     <item msgid="5501503537181350884">"Desativado"</item>
   </string-array>
     <string name="sensor_toggle_description" msgid="7415801459994303159">"Para todas as apps e serviços"</string>
@@ -612,7 +612,7 @@
     <string name="location_no_recent_apps" msgid="7033474075806435793">"Nenhuma aplicação solicitou a localização recentemente"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Utilização de bateria elevada"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Utilização de bateria baixa"</string>
-    <string name="location_mode_wifi_description" msgid="84697248707903061">"Utilizar Wi-Fi para calcular a localização"</string>
+    <string name="location_mode_wifi_description" msgid="84697248707903061">"Usar Wi-Fi para calcular a localização"</string>
     <string name="location_status" msgid="3037321737386011224">"Estado de localização"</string>
     <string name="location_services" msgid="551503779736382878">"Serviços de localização"</string>
     <string name="on" msgid="4899322147062342542">"Ativado"</string>
@@ -673,7 +673,7 @@
     <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"Ouça uma descrição do que se passa no ecrã em filmes e programas suportados"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Ativar"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Configuração"</string>
-    <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Utilizar <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Usar <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"O <xliff:g id="SERVICE">%1$s</xliff:g> poderá recolher todo o texto que digita, exceto palavras-passe. Isto inclui dados pessoais como números de cartões de crédito."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Parar <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Ao selecionar OK, para o <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
@@ -697,16 +697,16 @@
     <string name="system_reboot_confirm" msgid="7035370306447878560">"Pretende reiniciar agora?"</string>
     <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"Para alterar esta definição, é necessário reiniciar o dispositivo"</string>
     <string name="system_never_check" msgid="2860070727606369055">"Nunca verificar"</string>
-    <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Verificar apenas conteúdo DRM"</string>
-    <string name="system_always_check" msgid="384870282800221580">"Verificar sempre"</string>
+    <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Rever apenas conteúdo DRM"</string>
+    <string name="system_always_check" msgid="384870282800221580">"Rever sempre"</string>
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Registo HCI Bluetooth"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Endereço de email"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"Depuração USB"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Permitir locais fictícios"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Selecionar app a depurar"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Aguardar pelo depurador"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Verificar apps por USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Verificar se existem comportamentos prejudiciais nas aplicações instaladas via ADB/ADT"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Rever apps por USB"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Rever se existem comportamentos prejudiciais nas aplicações instaladas via ADB/ADT"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Registo detalhado de Wi-Fi"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Ativar o registo detalhado de Wi-Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Apresentar toques"</string>
@@ -726,7 +726,7 @@
     <string name="system_background_process_limit" msgid="1985373407150771045">"Limite do processo em 2.º plano"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"Mostrar todos os ANRs"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Desativar suspensão"</string>
-    <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"Utilizar apenas para conteúdo DRM"</string>
+    <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"Usar apenas para conteúdo DRM"</string>
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"Otimize o visor para obter a máxima resolução ou a máxima velocidade de fotogramas. Esta ação apenas afeta os visores Ultra HD. Se alterar esta definição, reiniciará o dispositivo."</string>
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Ativar registo de monitorização HCI Bluetooth"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Modo de depuração com USB ligado"</string>
