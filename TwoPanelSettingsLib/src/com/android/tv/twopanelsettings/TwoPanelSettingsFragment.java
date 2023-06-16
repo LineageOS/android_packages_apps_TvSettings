@@ -554,7 +554,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         @Override
         public void run() {
             if (mPref == mFocusedPreference) {
-                if (mListView.getScrollState() != RecyclerView.SCROLL_STATE_IDLE) {
+                if (mListView != null
+                        && mListView.getScrollState() != RecyclerView.SCROLL_STATE_IDLE) {
                     mHandler.postDelayed(this, CHECK_IDLE_STATE_MS);
                 } else {
                     handleFragmentTransactionWhenFocused(mPref, mForceFresh, mPanelIndex);
