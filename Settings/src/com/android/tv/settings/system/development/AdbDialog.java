@@ -26,6 +26,7 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.util.List;
 
@@ -59,7 +60,11 @@ public class AdbDialog extends GuidedStepSupportFragment {
     public void onGuidedActionClicked(GuidedAction action) {
         if (action.getId() == GuidedAction.ACTION_ID_YES) {
             ((Callback) getTargetFragment()).onEnableAdbConfirm();
-            getFragmentManager().popBackStack();
+        }
+        if (getParentFragment() instanceof TwoPanelSettingsFragment) {
+            TwoPanelSettingsFragment parentFragment =
+                    (TwoPanelSettingsFragment) getParentFragment();
+            parentFragment.navigateBack();
         } else {
             getFragmentManager().popBackStack();
         }
