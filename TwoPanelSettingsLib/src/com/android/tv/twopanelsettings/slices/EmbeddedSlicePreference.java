@@ -68,7 +68,7 @@ public class EmbeddedSlicePreference extends SlicePreference
         setIcon(mHelper.mNewPref.getIcon());
         if (mHelper.mNewPref instanceof HasSliceAction
                 && ((HasSliceAction) mHelper.mNewPref).getSliceAction() != null) {
-            setIntent(((HasSliceAction) mHelper.mNewPref).getSliceAction().getAction().getIntent());
+            setSliceAction(((HasSliceAction) mHelper.mNewPref).getSliceAction());
         }
     }
 
