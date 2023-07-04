@@ -215,7 +215,18 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         }
 
         final UserManager userManager = UserManager.get(getContext());
-        if (userManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_WIFI)) {
+
+        mAddPref.checkRestrictionAndSetDisabled(UserManager.DISALLOW_CONFIG_WIFI);
+        mAddEasyConnectPref.checkRestrictionAndSetDisabled(UserManager.DISALLOW_CONFIG_WIFI);
+
+        if (!mAddPref.isDisabledByAdmin()) {
+            mAddPref.checkRestrictionAndSetDisabled(UserManager.DISALLOW_ADD_WIFI_CONFIG);
+            mAddEasyConnectPref.checkRestrictionAndSetDisabled(
+                    UserManager.DISALLOW_ADD_WIFI_CONFIG);
+        }
+
+        if (userManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_WIFI)
+                || userManager.hasUserRestriction(UserManager.DISALLOW_ADD_WIFI_CONFIG)) {
             mAddPref.setFragment(null);
             mAddEasyConnectPref.setFragment(null);
 
