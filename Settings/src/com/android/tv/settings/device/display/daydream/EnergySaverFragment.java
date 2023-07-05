@@ -23,10 +23,13 @@ import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected
 
 import android.app.AlertDialog;
 import android.app.tvsettings.TvSettingsEnums;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.text.format.DateUtils;
+import android.util.Log;
 
 import androidx.annotation.Keep;
 import androidx.preference.ListPreference;
@@ -46,27 +49,30 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
     private static final String TAG = "EnergySaverFragment";
     private static final String KEY_SLEEP_TIME = "sleepTime";
     private static final String KEY_ATTENTIVE_TIME = "attentiveTime";
+
+    private static final String SHARED_PREFS_NAME = "energy_saver";
+    private static final String PREF_RESET_ATTENTIVE_TIMEOUT = "reset_attentive_timeout";
+
     private static final int DEFAULT_SLEEP_TIME_MS = (int) (20 * DateUtils.MINUTE_IN_MILLIS);
-    private static final int DEFAULT_ATTENTIVE_TIME_MS = (int) (4 * DateUtils.HOUR_IN_MILLIS);
     private static final int WARNING_THRESHOLD_SLEEP_TIME_MS =
             (int) (20 * DateUtils.MINUTE_IN_MILLIS);
     private static final int WARNING_THRESHOLD_ATTENTIVE_TIME_MS =
             (int) (4 * DateUtils.HOUR_IN_MILLIS);
+
     private ListPreference mSleepTimePref;
     private ListPreference mAttentiveTimePref;
     private RestrictedPreferenceAdapter<ListPreference> mRestrictedSleepTime;
     private RestrictedPreferenceAdapter<ListPreference> mRestrictedAttentiveTime;
+    private int mDefaultAttentiveTimeoutConfig;
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
         setPreferencesFromResource(R.xml.energy_saver, null);
+
+        mDefaultAttentiveTimeoutConfig = getResources()
+            .getInteger(com.android.internal.R.integer.config_attentiveTimeout);
+
         mSleepTimePref = findPreference(KEY_SLEEP_TIME);
-        mAttentiveTimePref = findPreference(KEY_ATTENTIVE_TIME);
-        int validatedAttentiveSleepTime = getValidatedTimeout(getAttentiveSleepTime(), false);
-        mAttentiveTimePref.setValue(String.valueOf(validatedAttentiveSleepTime));
-        if (getAttentiveSleepTime() != validatedAttentiveSleepTime) {
-            setAttentiveSleepTime(validatedAttentiveSleepTime);
-        }
         int validatedSleepTime = getValidatedTimeout(getSleepTime(), true);
         mSleepTimePref.setValue(String.valueOf(validatedSleepTime));
         if (getSleepTime() != validatedSleepTime) {
@@ -79,19 +85,27 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
                     return false;
                 });
 
+        mAttentiveTimePref = findPreference(KEY_ATTENTIVE_TIME);
         mAttentiveTimePref.setOnPreferenceChangeListener(this);
 
         mRestrictedSleepTime = RestrictedPreferenceAdapter.adapt(
                 mSleepTimePref, UserManager.DISALLOW_CONFIG_SCREEN_TIMEOUT);
         mRestrictedAttentiveTime = RestrictedPreferenceAdapter.adapt(
                 mAttentiveTimePref, UserManager.DISALLOW_CONFIG_SCREEN_TIMEOUT);
-        if (!showStandbyTimeout()) {
+
+        if (!showAttentiveSleepTimeoutSetting()) {
             mAttentiveTimePref.setVisible(false);
             mRestrictedAttentiveTime.updatePreference();
+        } else {
+            int validatedAttentiveSleepTime = getValidatedTimeout(getAttentiveSleepTime(), false);
+            mAttentiveTimePref.setValue(String.valueOf(validatedAttentiveSleepTime));
+            if (getAttentiveSleepTime() != validatedAttentiveSleepTime) {
+                setAttentiveSleepTime(validatedAttentiveSleepTime);
+            }
         }
     }
 
-    private boolean showStandbyTimeout() {
+    private boolean showAttentiveSleepTimeoutSetting() {
         return getResources().getBoolean(R.bool.config_show_standby_timeout);
     }
 
@@ -103,7 +117,7 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
                 if (getSleepTimeEntryId(newSleepTime) != -1) {
                     logEntrySelected(getSleepTimeEntryId(newSleepTime));
                 }
-                if (showStandbyTimeout() && isTimeLargerThan(
+                if (showAttentiveSleepTimeoutSetting() && isTimeLargerThan(
                         newSleepTime, getAttentiveSleepTime())) {
                     new AlertDialog.Builder(getContext())
                             .setMessage(R.string.device_energy_saver_validation_sleep)
@@ -189,13 +203,16 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
                 DEFAULT_SLEEP_TIME_MS);
     }
 
-    private int getAttentiveSleepTime() {
-        return Settings.Secure.getInt(getActivity().getContentResolver(), ATTENTIVE_TIMEOUT,
-                DEFAULT_SLEEP_TIME_MS);
-    }
-
     private void setSleepTime(int ms) {
         Settings.Secure.putInt(getActivity().getContentResolver(), SLEEP_TIMEOUT, ms);
+    }
+
+    private int getAttentiveSleepTime() {
+        return getAttentiveSleepTime(mDefaultAttentiveTimeoutConfig);
+    }
+
+    private int getAttentiveSleepTime(int def) {
+        return Settings.Secure.getInt(getActivity().getContentResolver(), ATTENTIVE_TIMEOUT, def);
     }
 
     private void setAttentiveSleepTime(int ms) {
@@ -206,7 +223,8 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
     // value to make sure that we select from the predefined options. If the value from overlay is
     // not one of the predefined options, we round it to the closest predefined value, except -1.
     private int getValidatedTimeout(int purposedTimeout, boolean isSleepTimeout) {
-        int validatedTimeout = isSleepTimeout ? DEFAULT_SLEEP_TIME_MS : DEFAULT_ATTENTIVE_TIME_MS;
+        int validatedTimeout =
+                isSleepTimeout ? DEFAULT_SLEEP_TIME_MS : mDefaultAttentiveTimeoutConfig;
         if (purposedTimeout < 0) {
             return -1;
 
@@ -262,5 +280,36 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
     @Override
     protected int getPageId() {
         return TvSettingsEnums.SYSTEM_ENERGYSAVER;
+    }
+
+    /**
+     * Fix for b/286356445:
+     * The attentive timeout was previously set incorrectly when this Fragment was created.
+     * This method resets the attentive timeout setting to its default value if the setting
+     * is not supposed to be shown and this hasn't been run before.
+     */
+    public static void resetAttentiveTimeoutIfHidden(Context context) {
+        //
+        boolean showAttentiveSleepTimeoutSetting = context.getResources().getBoolean(
+                R.bool.config_show_standby_timeout);
+        if (showAttentiveSleepTimeoutSetting) {
+            // Keep current setting, as user can change it and may have changed it
+            return;
+        }
+
+        try {
+            final SharedPreferences sharedPreferences = context.getSharedPreferences(
+                    SHARED_PREFS_NAME, Context.MODE_PRIVATE);
+            boolean hasResetAttentiveTimeout = sharedPreferences.getBoolean(
+                    PREF_RESET_ATTENTIVE_TIMEOUT, false);
+            if (!hasResetAttentiveTimeout) {
+                Settings.Secure.putString(context.getContentResolver(), ATTENTIVE_TIMEOUT, "");
+                sharedPreferences.edit()
+                        .putBoolean(PREF_RESET_ATTENTIVE_TIMEOUT, true)
+                        .apply();
+            }
+        } catch (Exception e) {
+            Log.w(TAG, "Failed to reset attentive timeout", e);
+        }
     }
 }
