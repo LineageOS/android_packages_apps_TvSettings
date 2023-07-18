@@ -70,6 +70,16 @@ public class AccountsFragment extends SettingsPreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.accounts, null);
+        refreshAllPreferences();
+    }
+
+    private void refreshAllPreferences() {
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        for (int i = 0; i < prefScreen.getPreferenceCount(); i++) {
+            final Preference preference = prefScreen.getPreference(i);
+            prefScreen.removePreference(preference);
+        }
     }
 
     @Override
