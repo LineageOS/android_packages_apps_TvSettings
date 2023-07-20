@@ -234,7 +234,7 @@ public final class EnergyModesHelper {
     private boolean areEnergyModesEnabled() {
         boolean enableEnergyModes = mContext.getResources().getBoolean(R.bool.enable_energy_modes);
         boolean customPoliciesEnabled = DeviceConfig.getBoolean(NAMESPACE_LOW_POWER_STANDBY,
-                KEY_ENABLE_POLICY, false);
+                KEY_ENABLE_POLICY, true);
 
         return enableEnergyModes && customPoliciesEnabled && isLowPowerStandbySupported(mContext);
     }
