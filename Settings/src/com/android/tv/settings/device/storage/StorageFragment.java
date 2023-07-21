@@ -97,13 +97,6 @@ public class StorageFragment extends SettingsPreferenceFragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-        mStorageManager.registerListener(mStorageEventListener);
-        startMeasurement();
-    }
-
-    @Override
     public void onResume() {
         super.onResume();
         mVolumeInfo = mStorageManager.findVolumeById(
@@ -112,12 +105,14 @@ public class StorageFragment extends SettingsPreferenceFragment {
             navigateBack();
         } else {
             refresh();
+            mStorageManager.registerListener(mStorageEventListener);
+            startMeasurement();
         }
     }
 
     @Override
-    public void onStop() {
-        super.onStop();
+    public void onPause() {
+        super.onPause();
         mStorageManager.unregisterListener(mStorageEventListener);
         stopMeasurement();
     }
