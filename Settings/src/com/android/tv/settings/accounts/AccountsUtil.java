@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.util.Log;
 
 import androidx.annotation.IntDef;
 
@@ -50,6 +51,7 @@ public class AccountsUtil {
     public static final int ACCOUNTS_FRAGMENT_RESTRICTED = 4;
 
     private static final String ACTION_ACCOUNTS = "com.android.tv.settings.ACCOUNTS";
+    private static final String TAG = "AccountsUtil";
 
     /**
      *  Get the correct accounts settings fragment based on restrictions and other features.
@@ -61,9 +63,13 @@ public class AccountsUtil {
             return ACCOUNTS_FRAGMENT_RESTRICTED;
         }
 
-        if (FlavorUtils.getFeatureFactory(context).getBasicModeFeatureProvider()
+        try {
+            if (FlavorUtils.getFeatureFactory(context).getBasicModeFeatureProvider()
                 .isBasicMode(context)) {
-            return ACCOUNTS_BASIC_MODE_FRAGMENT;
+                return ACCOUNTS_BASIC_MODE_FRAGMENT;
+            }
+        } catch (Exception e) {
+            Log.w(TAG, "Unable to determine basic mode", e);
         }
 
         // If the intent can be handled, use it.
