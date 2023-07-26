@@ -36,6 +36,7 @@ import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.testutils.ShadowStateMachine;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -48,6 +49,7 @@ import org.robolectric.annotation.Config;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = ShadowStateMachine.class)
+@Ignore // TODO(b/293309151) Find out how to mock WifiManager
 public class AddPageBasedOnNetworkStateTest {
     private WifiSetupActivity mActivity;
     private AddPageBasedOnNetworkState mAddPageBasedOnNetworkState;

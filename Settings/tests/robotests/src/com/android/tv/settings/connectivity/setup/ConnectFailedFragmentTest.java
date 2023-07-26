@@ -24,6 +24,7 @@ import android.net.wifi.WifiConfiguration;
 import androidx.lifecycle.ViewModelProviders;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
@@ -32,6 +33,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 
 @RunWith(RobolectricTestRunner.class)
+@Ignore // TODO(b/293309151) Find out how to mock WifiManager
 public class ConnectFailedFragmentTest {
 
     WifiConfiguration mWifiConfig;
