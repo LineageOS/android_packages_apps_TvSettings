@@ -46,7 +46,6 @@ import androidx.preference.PreferenceGroup;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-
 import com.google.android.collect.Lists;
 
 import java.util.ArrayList;
@@ -142,17 +141,22 @@ public class AccountSyncFragment extends SettingsPreferenceFragment implements
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.account_preference, null);
 
-        getPreferenceScreen().setTitle(mAccount.name);
+        if (accountExists(mAccount)) {
+            getPreferenceScreen().setTitle(mAccount.name);
 
-        final Preference removeAccountPref = findPreference(KEY_REMOVE_ACCOUNT);
-        removeAccountPref.setIntent(new Intent(getActivity(), RemoveAccountDialog.class)
-                .putExtra(AccountSyncActivity.EXTRA_ACCOUNT, mAccount.name));
-        removeAccountPref.setOnPreferenceClickListener(
-                preference -> {
-                    logEntrySelected(TvSettingsEnums.ACCOUNT_CLASSIC_REG_ACCOUNT_REMOVE_ACCOUNT);
-                    return false;
-                });
-
+            final Preference removeAccountPref = findPreference(KEY_REMOVE_ACCOUNT);
+            removeAccountPref.setIntent(new Intent(getActivity(), RemoveAccountDialog.class)
+                    .putExtra(AccountSyncActivity.EXTRA_ACCOUNT, mAccount.name));
+            removeAccountPref.setOnPreferenceClickListener(
+                    preference -> {
+                        logEntrySelected(
+                                TvSettingsEnums.ACCOUNT_CLASSIC_REG_ACCOUNT_REMOVE_ACCOUNT);
+                        return false;
+                    });
+        } else {
+            // Set a new message on the error screen.
+            getPreferenceScreen().setTitle(R.string.unknown_account);
+        }
         mSyncCategory = (PreferenceGroup) findPreference(KEY_SYNC_ADAPTERS);
     }
 
@@ -262,7 +266,9 @@ public class AccountSyncFragment extends SettingsPreferenceFragment implements
     }
 
     private boolean accountExists(Account account) {
-        if (account == null) return false;
+        if (account == null || account.type == null || account.name == null) {
+            return false;
+        }
 
         Account[] accounts = AccountManager.get(getActivity()).getAccountsByTypeAsUser(
                 account.type, mUserHandle);
@@ -279,18 +285,14 @@ public class AccountSyncFragment extends SettingsPreferenceFragment implements
         if (!isResumed()) {
             return;
         }
-        if (!accountExists(mAccount)) {
-            // The account was deleted
-            if (!getFragmentManager().popBackStackImmediate()) {
-                getActivity().finish();
-            }
-            return;
-        }
-        updateAccountSwitches();
         onSyncStateUpdated();
     }
 
     private void onSyncStateUpdated() {
+        if (!accountExists(mAccount)) {
+            // Error screen doesn't need to be updated.
+            return;
+        }
         // iterate over all the preferences, setting the state properly for each
         final int userId = mUserHandle.getIdentifier();
         List<SyncInfo> currentSyncs = ContentResolver.getCurrentSyncsAsUser(userId);
