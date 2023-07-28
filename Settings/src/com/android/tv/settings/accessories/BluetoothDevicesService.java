@@ -134,6 +134,7 @@ public class BluetoothDevicesService extends Service {
                 switch(action) {
                     case BluetoothHidHost.ACTION_CONNECTION_STATE_CHANGED:
                         if (device.getBondState() == BluetoothDevice.BOND_BONDED) {
+                            Log.i(TAG, "bonded " + device);
                             mHandler.post(() -> onDeviceUpdated(device));
                         }
                         break;
@@ -205,6 +206,7 @@ public class BluetoothDevicesService extends Service {
             CachedBluetoothDevice cachedDevice =
                     AccessoryUtils.getCachedBluetoothDevice(this, device);
             if (cachedDevice != null) {
+                Log.i(TAG, "connectDevice: " + device);
                 cachedDevice.connect();
             }
         }
@@ -215,6 +217,7 @@ public class BluetoothDevicesService extends Service {
             CachedBluetoothDevice cachedDevice =
                     AccessoryUtils.getCachedBluetoothDevice(this, device);
             if (cachedDevice != null) {
+                Log.i(TAG, "disconnectDevice: " + device);
                 cachedDevice.disconnect();
             }
         }
@@ -242,16 +245,23 @@ public class BluetoothDevicesService extends Service {
                 text = String.format(resStr, deviceName);
                 Toast.makeText(BluetoothDevicesService.this.getApplicationContext(),
                         text, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onA2dpConnectionStateChanged: Connected, toasting: " + text);
                 break;
             case BluetoothProfile.STATE_DISCONNECTED:
                 resStr = getResources().getString(R.string.bluetooth_device_disconnected_toast);
                 text = String.format(resStr, deviceName);
                 Toast.makeText(BluetoothDevicesService.this.getApplicationContext(),
                         text, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onA2dpConnectionStateChanged: Disconnected, toasting: " + text);
                 break;
             case BluetoothProfile.STATE_CONNECTING:
+                Log.d(TAG, "onA2dpConnectionStateChanged: Connecting");
+                break;
             case BluetoothProfile.STATE_DISCONNECTING:
+                Log.d(TAG, "onA2dpConnectionStateChanged: Disconnecting");
+                break;
             default:
+                Log.d(TAG, "onA2dpConnectionStateChanged: " + connectionStatus);
                 break;
         }
     }

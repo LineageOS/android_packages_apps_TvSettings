@@ -25,7 +25,6 @@ import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXT
 import android.app.PendingIntent;
 import android.app.admin.DevicePolicyManager;
 import android.app.tvsettings.TvSettingsEnums;
-import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.content.ComponentName;
 import android.content.Context;
