@@ -13,7 +13,10 @@ package {
 android_robolectric_test {
     name: "TvSettingsRoboTests",
 
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt",
+    ],
 
     libs: ["services.core"],
 

@@ -21,12 +21,14 @@ import android.content.Context;
 import android.os.RemoteException;
 import android.util.Log;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.lifecycle.ViewModel;
 
 import com.android.internal.app.LocaleStore;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
@@ -34,7 +36,9 @@ import java.util.Set;
 /** ViewModel to provide data for locale selection. */
 public class LocaleDataViewModel extends ViewModel {
     private static final String TAG = "LocaleDataViewModel";
-    private final Map<LocaleStore.LocaleInfo, ArrayList<LocaleStore.LocaleInfo>> mLocaleMap =
+
+    @VisibleForTesting
+    final Map<LocaleStore.LocaleInfo, List<LocaleStore.LocaleInfo>> mLocaleMap =
             new HashMap<>();
     static final boolean TRANSLATED_ONLY = false;
 
@@ -56,7 +60,7 @@ public class LocaleDataViewModel extends ViewModel {
         mLocaleMap.put(localeInfo, localeInfoWithCountryList);
     }
 
-    public ArrayList<LocaleStore.LocaleInfo> getLocaleInfoList(LocaleStore.LocaleInfo localeInfo) {
+    public List<LocaleStore.LocaleInfo> getLocaleInfoList(LocaleStore.LocaleInfo localeInfo) {
         return mLocaleMap.get(localeInfo);
     }
 }

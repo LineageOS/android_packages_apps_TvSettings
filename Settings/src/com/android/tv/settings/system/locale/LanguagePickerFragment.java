@@ -41,6 +41,7 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -85,7 +86,7 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
                     && containsSuggestedLocale(notSuggestedLocales, localeInfo)) {
                 continue;
             }
-            ArrayList<LocaleStore.LocaleInfo> localeInfoWithCountryList = mLocaleDataViewModel
+            List<LocaleStore.LocaleInfo> localeInfoWithCountryList = mLocaleDataViewModel
                     .getLocaleInfoList(localeInfo);
             if (localeInfoWithCountryList != null && localeInfoWithCountryList.size() <= 1) {
                 RadioPreference preference = new RadioPreference(getContext());
