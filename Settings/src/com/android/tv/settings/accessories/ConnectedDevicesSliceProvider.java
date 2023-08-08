@@ -36,6 +36,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
+import android.os.StrictMode;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
@@ -157,10 +158,18 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         if (DEBUG) {
             Log.d(TAG, "onBindSlice: " + sliceUri);
         }
-        if (ConnectedDevicesSliceUtils.isGeneralPath(sliceUri)) {
-            return createGeneralSlice(sliceUri);
-        } else if (ConnectedDevicesSliceUtils.isBluetoothDevicePath(sliceUri)) {
-            return createBluetoothDeviceSlice(sliceUri);
+        StrictMode.ThreadPolicy oldPolicy = StrictMode.getThreadPolicy();
+        try {
+            // Prevent StrictMode from throwing on access to shared preferences.
+            StrictMode.setThreadPolicy(
+                new StrictMode.ThreadPolicy.Builder(oldPolicy).permitDiskReads().build());
+            if (ConnectedDevicesSliceUtils.isGeneralPath(sliceUri)) {
+                return createGeneralSlice(sliceUri);
+            } else if (ConnectedDevicesSliceUtils.isBluetoothDevicePath(sliceUri)) {
+                return createBluetoothDeviceSlice(sliceUri);
+            }
+        } finally {
+            StrictMode.setThreadPolicy(oldPolicy);
         }
         return null;
     }
