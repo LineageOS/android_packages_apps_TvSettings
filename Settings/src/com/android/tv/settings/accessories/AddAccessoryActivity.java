@@ -274,6 +274,9 @@ public class AddAccessoryActivity extends FragmentActivity
         // the Secure Pairing activity.
         if (!mPairingInBackground) {
             startBluetoothPairer();
+            // bluetooth devices list is empty at this point, clear preferences
+            // to avoid delayed animation jank
+            mPreferenceFragment.clearList();
         }
 
         mPairingInBackground = false;
@@ -426,9 +429,11 @@ public class AddAccessoryActivity extends FragmentActivity
            }
         }
 
-        TransitionManager.beginDelayedTransition(findViewById(R.id.content_frame));
-
-        rearrangeViews();
+        final boolean prevEmpty = (prevNumDevices == 0);
+        if (prevEmpty != mBluetoothDevices.isEmpty()) {
+            TransitionManager.beginDelayedTransition(findViewById(R.id.content_frame));
+            rearrangeViews();
+        }
     }
 
     private void rearrangeViews() {
