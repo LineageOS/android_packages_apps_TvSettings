@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Definições da app"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Localização, Utilização e diagnósticos, Anúncios"</string>
     <string name="add_account" msgid="7386223854837017129">"Adicionar conta"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Conta desconhecida"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Remover conta"</string>
     <string name="account_sync" msgid="4315295293211313989">"Escolher apps sincronizadas"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sincronizar agora"</string>
@@ -151,15 +152,15 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Definições de som avançadas"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Permitir modo de jogo"</string>
-    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Faça a correspondência com a amplitude dinâmica do conteúdo"</string>
+    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Fazer correspondência com amplitude dinâmica do conteúdo"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Ao ativar esta opção, o sistema vai alternar entre diferentes formatos de amplitude dinâmica para corresponder ao conteúdo. Isto pode resultar num ecrã preto durante uma mudança de formato.\n\nClique em Definições de visualização avançadas para obter mais opções de amplitude dinâmica."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Amplitude dinâmica preferida"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversão preferida do sistema"</string>
     <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Permite que o sistema faça a gestão da conversão do formato"</string>
-    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Quando esta opção está selecionada, o sistema vai determinar uma amplitude dinâmica adequada para ser enviada para o seu ecrã e converter o conteúdo nesta amplitude dinâmica conforme necessário."</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Quando esta opção está selecionada, o sistema vai determinar uma amplitude dinâmica adequada para ser enviada para o seu ecrã e converter o conteúdo para esta amplitude dinâmica conforme necessário."</string>
     <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Corresponde sempre ao formato do conteúdo"</string>
-    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Force a conversão"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Força a conversão no formato preferido"</string>
+    <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Forçar conversão"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Força a conversão para o formato preferido"</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Force a conversão no formato preferido. Forçar a conversão pode afetar outras definições no Modo de apresentação ou formato HDR."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Sempre para SDR"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Sempre para <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
@@ -223,7 +224,7 @@
     <string name="resolution_selection_dialog_ok" msgid="3123351228545013492">"OK"</string>
     <string name="resolution_selection_hz" msgid="4425902505388495637">"Hz"</string>
     <string name="resolution_display_mode" msgid="6633857172598855480">"<xliff:g id="RESOLUTION">%1$s</xliff:g> (<xliff:g id="REFRESH_RATE">%2$s</xliff:g> Hz)"</string>
-    <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Pretende limpar os dados em cache?"</string>
+    <string name="device_storage_clear_cache_title" msgid="14370154552302965">"Quer limpar os dados em cache?"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"Isto limpa os dados em cache de todas as app"</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
     <string name="accessories_add" msgid="413764175035531452">"Adicionar acessório"</string>
@@ -515,7 +516,7 @@
     <string name="wifi_setup_summary_title_connected" msgid="2725439590655448489">"Está ligado a <xliff:g id="SSID">%1$s</xliff:g>"</string>
     <string name="wifi_summary_title_connected" msgid="201105022065577659">"Rede ligada"</string>
     <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"A rede não está ligada"</string>
-    <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Já está ligado(a) a <xliff:g id="SSID">%1$s</xliff:g>. Pretende ligar a uma rede diferente?"</string>
+    <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"Já está ligado(a) a <xliff:g id="SSID">%1$s</xliff:g>. Quer ligar a uma rede diferente?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"rede desconhecida"</string>
     <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Não tem autorização para alterar a rede Wi‑Fi."</string>
     <string name="title_ok" msgid="6500452958848127145">"OK"</string>
@@ -548,7 +549,7 @@
     <string name="storage_free_up_clear_cached_data" msgid="858596875459698634">"Limpe os dados em cache"</string>
     <string name="storage_free_up_clear_cached_data_summary" msgid="3111860361699185304">"Liberte <xliff:g id="SPACE">%1$s</xliff:g>"</string>
     <string name="storage_free_up_clear_cached_data_info" msgid="719348815620748812">"Limpa ficheiros temporários que ocupam espaço. Não afeta os dados guardados, como preferências de apps ou vídeos offline, e não precisa de iniciar sessão nas apps novamente."</string>
-    <string name="storage_free_up_clear_cached_data_confirm_title" msgid="5047418718048910850">"Pretende limpar os dados em cache?"</string>
+    <string name="storage_free_up_clear_cached_data_confirm_title" msgid="5047418718048910850">"Quer limpar os dados em cache?"</string>
     <string name="storage_free_up_clear_cached_data_confirm_description" msgid="4840728913914074729">"Irá limpar os dados em cache de todas as apps."</string>
     <string name="storage_free_up_uninstall_apps" msgid="7755671754934975908">"Desinstale apps"</string>
     <string name="storage_mount_success" msgid="4459298609971461753">"<xliff:g id="NAME">%1$s</xliff:g> está montado"</string>
@@ -587,8 +588,8 @@
     <string name="storage_wizard_move_app_title" msgid="6504922588346440942">"Armazenamento usado"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7058465372227392453">"A mover <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="7673347796805764888">"Não remova a unidade durante a transferência.\nA aplicação <xliff:g id="APPNAME">%1$s</xliff:g> neste dispositivo não está disponível até terminar a transferência."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"Pretende esquecer o armazenamento do dispositivo?"</string>
-    <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"Todos os dados armazenados nesta unidade serão eliminados ao selecionar \"Esquecer\". Pretende continuar?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"Quer esquecer o armazenamento do dispositivo?"</string>
+    <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"Todos os dados armazenados nesta unidade serão eliminados ao selecionar \"Esquecer\". Quer continuar?"</string>
     <string name="storage_wizard_forget_action" msgid="5609631662522950596">"Esquecer"</string>
     <string name="storage_new_title" msgid="4768955281180255038">"Unidade USB ligada"</string>
     <string name="storage_new_action_browse" msgid="3355241742574072658">"Procurar"</string>
@@ -761,7 +762,7 @@
     <string name="keep_screen_on_summary" msgid="4680661166009970792">"O ecrã nunca entrará em suspensão"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"Verificação HDCP"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"Otimização HDMI"</string>
-    <string name="system_reboot_confirm" msgid="7035370306447878560">"Pretende reiniciar agora?"</string>
+    <string name="system_reboot_confirm" msgid="7035370306447878560">"Quer reiniciar agora?"</string>
     <string name="system_desc_reboot_confirm" msgid="1567738857421128179">"Para alterar esta definição, é necessário reiniciar o dispositivo"</string>
     <string name="system_never_check" msgid="2860070727606369055">"Nunca verificar"</string>
     <string name="system_check_for_drm_content_only" msgid="6667617772587997533">"Rever apenas conteúdo DRM"</string>
@@ -994,7 +995,7 @@
     <string name="device_rename_title" msgid="9070021379000499270">"Mudar o nome deste <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="1973894029492915135">"Atualmente, este <xliff:g id="DEVICEMODEL">%1$s</xliff:g> chama-se \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="device_name_suggestion_title" msgid="3986220212759193742">"Definir o nome do dispositivo"</string>
-    <string name="device_name_suggestion_summary" msgid="4582691399302362938">"Utilize este nome ao transmitir fotos, vídeos e muito mais a partir do telemóvel."</string>
+    <string name="device_name_suggestion_summary" msgid="4582691399302362938">"Use este nome ao transmitir fotos, vídeos e muito mais a partir do telemóvel."</string>
     <string name="change_setting" msgid="7211706374208138343">"Alterar"</string>
     <string name="keep_settings" msgid="703474489210093961">"Não alterar"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"Autorizações"</string>
@@ -1005,7 +1006,7 @@
     <string name="choose_application" msgid="2375936782103669988">"Escolher aplicação"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Experimental)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Reiniciar no modo de segurança"</string>
-    <string name="reboot_safemode_confirm" msgid="5745977150299953603">"Pretende reiniciar no modo de segurança?"</string>
+    <string name="reboot_safemode_confirm" msgid="5745977150299953603">"Quer reiniciar no modo de segurança?"</string>
     <string name="reboot_safemode_desc" msgid="2919933461408942799">"Esta ação desativa todas as aplicações de terceiros instaladas. Estas são restauradas quando reiniciar novamente."</string>
     <string name="capturing_bugreport" msgid="832512801903486821">"A capturar o relatório de erro"</string>
     <string name="available_virtual_keyboard_category" msgid="7445262027711560629">"Teclados virtuais disponíveis"</string>
@@ -1093,7 +1094,7 @@
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Este dispositivo será gerido e monitorizado pela aplicação <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"Esta app de administração está ativa e permite que a app <xliff:g id="APP_NAME">%1$s</xliff:g> execute as seguintes operações:"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"Ao continuar, o utilizador será gerido pelo seu gestor, que, para além dos seus dados pessoais, também poderá armazenar dados associados.\n\nO gestor pode monitorizar e gerir as definições, o acesso, as aplicações e os dados associados a este utilizador, incluindo a atividade da rede e as informações de localização do seu dispositivo."</string>
-    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Pretende partilhar o relatório de erro?"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="2080017987692459555">"Quer partilhar o relatório de erro?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"O seu gestor de TI solicitou um relatório de erro para ajudar na resolução de problemas deste dispositivo. As aplicações e os dados podem ser partilhados."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"O seu gestor de TI solicitou um relatório de erro para ajudar na resolução de problemas deste dispositivo. As aplicações e os dados podem ser partilhados e o dispositivo pode tornar-se temporariamente mais lento."</string>
     <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"Este relatório de erro está a ser partilhado com o seu gestor de TI. Contacte-o para obter mais detalhes."</string>
@@ -1122,5 +1123,5 @@
     <string name="energy_modes_summary" msgid="7196407759836930799">"Melhore a eficiência energética quando a TV não está em utilização"</string>
     <string name="energy_mode_enables" msgid="357960364751477627">"Ativa:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Tenha em atenção que este modo pode aumentar o consumo de energia do dispositivo."</string>
-    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Ativa \"<xliff:g id="ENERGYMODENAME">%s</xliff:g>\""</string>
+    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Ativar \"<xliff:g id="ENERGYMODENAME">%s</xliff:g>\""</string>
 </resources>
