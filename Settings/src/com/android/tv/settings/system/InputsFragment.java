@@ -204,7 +204,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
                         : HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_DISABLED);
                 return true;
             case KEY_CEC_VOLUME:
-                mHdmiControlManager.setTvWakeOnOneTouchPlay(mCecVolumePref.isChecked()
+                mHdmiControlManager.setHdmiCecVolumeControlEnabled(mCecVolumePref.isChecked()
                         ? HdmiControlManager.VOLUME_CONTROL_ENABLED
                         : HdmiControlManager.VOLUME_CONTROL_DISABLED);
                 return true;
