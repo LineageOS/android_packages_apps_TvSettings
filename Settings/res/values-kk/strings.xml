@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Қолданба параметрлері"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Локация, пайдалану дерегі және диагностика, жарнамалар"</string>
     <string name="add_account" msgid="7386223854837017129">"Аккаунт қосу"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Белгісіз аккаунт"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Аккаунтты жою"</string>
     <string name="account_sync" msgid="4315295293211313989">"Синхрондалған қолданбаларды таңдау"</string>
     <string name="sync_now" msgid="4335217984374620551">"Қазір синхрондау"</string>
@@ -152,14 +153,14 @@
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Қосымша дыбыс параметрлері"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Ойын режиміне рұқсат ету"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Контенттің динамикалық ауқымын сәйкестендіру"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Бұл опция таңдалғанда, жүйе контентпен сәйкестену үшін әр түрлі динамикалық ауқым форматтары арасында ауысады. Формат ауысқанда, қара экран қосылуы мүмкін.\n\nДинамикалық ауқымның толық опцияларын қарау үшін дисплейдің қосымша параметрлеріне өтіңіз."</string>
+    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Бұл опция таңдалғанда, жүйе контентпен сәйкестену үшін әртүрлі динамикалық ауқым форматтары арасында ауысады. Формат ауысқанда, экран қараюы мүмкін.\n\nДинамикалық ауқымның басқа опцияларын көру үшін \"Қосымша дисплей параметрлері\" тармағын таңдаңыз."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Қажетті динамикалық ауқым"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Жүйеге қолайлы конверсия"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Жүйенің формат конверсиясын басқаруына жол беру"</string>
-    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Осы опция таңдалған кезде жүйе дисплейге жіберілетін аралықты анықтайды және керек жағдайда мазмұнды осы динамикалық аралықта түрлендіреді"</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Әрқашан мазмұнның форматына сәйкес келеді"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Жүйеге формат конверсиясын басқаруға рұқсат береді."</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Осы опция таңдалған кезде, жүйе дисплейге жіберілетін аралықты анықтайды және керегінше контентті осы динамикалық аралыққа түрлендіреді."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Әрқашан контенттің форматына сәйкес келеді."</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Мәжбүрлі конверсия"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Қолайлы форматты мәжбүрлі конверсиялау"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Конверсияны мәжбүрлі түрле қолайлы форматқа орнатады."</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Қолайлы форматты мәжбүрлі конверсиялау Конверсяны мәжбүрлеу Display Mode немесе HDR фарматындағы басқа параметрлерге әсер етуі мүмкін"</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Әрқашан SDR-да"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Әрқашан <xliff:g id="HDR_TYPE">%s</xliff:g>-те"</string>
@@ -1121,6 +1122,6 @@
     <string name="energy_modes" msgid="1331693860386361744">"Энергия режимдері"</string>
     <string name="energy_modes_summary" msgid="7196407759836930799">"Теледидар пайдаланылмаған кезде энергияның тиімдірек қолданылуын қамтамасыз етіңіз"</string>
     <string name="energy_mode_enables" msgid="357960364751477627">"Келесілер қосылады:"</string>
-    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Бұл режим құрылғының қуат тұтынуын арттыруы мүмкін екенін ескеріңіз."</string>
+    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Бұл режим құрылғы тұтынатын қуат мөлшерін арттыруы мүмкін екенін ескеріңіз."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"\"<xliff:g id="ENERGYMODENAME">%s</xliff:g>\" режимін қосу"</string>
 </resources>

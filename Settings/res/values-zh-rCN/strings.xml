@@ -44,10 +44,10 @@
     <string name="header_category_accessories" msgid="6479803330480847199">"遥控器和配件"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"个人"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"连接到网络"</string>
-    <string name="add_an_account" msgid="2601275122685226096">"添加帐号"</string>
-    <string name="accounts_category_title" msgid="7286858931427579845">"帐号和登录"</string>
-    <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"未登录任何帐号"</string>
-    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# 个帐号}other{# 个帐号}}"</string>
+    <string name="add_an_account" msgid="2601275122685226096">"添加账号"</string>
+    <string name="accounts_category_title" msgid="7286858931427579845">"账号和登录"</string>
+    <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"未登录任何账号"</string>
+    <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# 个账号}other{# 个账号}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"媒体服务、Google 助理、付款功能"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"网络和互联网"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"声音"</string>
@@ -59,20 +59,21 @@
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"帮助和反馈"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"隐私设置"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"设备设置"</string>
-    <string name="privacy_account_settings_category" msgid="5786591549945777400">"帐号设置"</string>
+    <string name="privacy_account_settings_category" msgid="5786591549945777400">"账号设置"</string>
     <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google 助理"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"付款和购买"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"应用设置"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"位置信息、使用情况和诊断信息、广告"</string>
-    <string name="add_account" msgid="7386223854837017129">"添加帐号"</string>
-    <string name="account_header_remove_account" msgid="8573697553061331373">"移除帐号"</string>
+    <string name="add_account" msgid="7386223854837017129">"添加账号"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"未知账号"</string>
+    <string name="account_header_remove_account" msgid="8573697553061331373">"移除账号"</string>
     <string name="account_sync" msgid="4315295293211313989">"选择要同步的应用"</string>
     <string name="sync_now" msgid="4335217984374620551">"立即同步"</string>
     <string name="sync_in_progress" msgid="8081367667406185785">"正在同步…"</string>
     <string name="last_synced" msgid="8371967816955123864">"上次同步时间：<xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="6652778349371079140">"已关闭"</string>
-    <string name="account_remove" msgid="8456848988853890155">"移除帐号"</string>
-    <string name="account_remove_failed" msgid="5654411101098531690">"无法移除帐号"</string>
+    <string name="account_remove" msgid="8456848988853890155">"移除账号"</string>
+    <string name="account_remove_failed" msgid="5654411101098531690">"无法移除账号"</string>
     <!-- no translation found for sync_item_title (5884138264243772176) -->
     <skip />
     <string name="sync_one_time_sync" msgid="1665961083810584134">"立即同步<xliff:g id="LAST_SYNC_TIME">
@@ -113,7 +114,7 @@
     <string name="device_factory_reset" msgid="1110189450013225971">"恢复出厂设置"</string>
     <string name="device_calibration" msgid="2907914144048739705">"校准"</string>
     <string name="device_energy_saver" msgid="6611757996220443028">"关机定时器"</string>
-    <string name="device_energy_saver_summary" msgid="5306058475316008429">"设置定时器，让系统助您将电视关机并节能"</string>
+    <string name="device_energy_saver_summary" msgid="5306058475316008429">"设置定时器，以定时关闭电视并节能"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"设备"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"选择格式"</string>
@@ -310,7 +311,7 @@
     <string name="enterprise_privacy_exposure_category" msgid="1555735251238636669">"贵单位可查看的信息类型"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="7750498604032318318">"贵单位的管理员所做的更改"</string>
     <string name="enterprise_privacy_device_access_category" msgid="7397106369136259850">"您对此设备的访问权限"</string>
-    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"与您的工作帐号关联的数据，例如电子邮件和日历"</string>
+    <string name="enterprise_privacy_enterprise_data" msgid="8135491104894522008">"与您的工作账号关联的数据，例如电子邮件和日历"</string>
     <string name="enterprise_privacy_installed_packages" msgid="5012554762299490994">"您设备上的应用列表"</string>
     <string name="enterprise_privacy_usage_stats" msgid="7062422823174345793">"每个应用的使用时长和数据用量"</string>
     <string name="enterprise_privacy_network_logs" msgid="305782312671493780">"最新的网络流量日志"</string>
@@ -663,10 +664,10 @@
     <string name="third_party_location_services_title" msgid="2826218400381676508">"第三方位置信息服务"</string>
     <string name="location_reporting" msgid="3552501333650895634">"位置报告"</string>
     <string name="location_history" msgid="4055660203090513120">"位置记录"</string>
-    <string name="location_reporting_desc" msgid="1580018652781674608">"Google会在Google即时和Google地图等产品中使用此功能。启用位置报告功能后，凡是使用此功能的Google产品都将可以存储和使用您设备上与您的Google帐号关联的最新位置数据。"</string>
-    <string name="location_history_desc" msgid="926674012916014270">"如果您为此帐号启用了位置记录功能，Google就可以存储您设备上的位置数据，以供您的应用使用。\n\n例如，Google地图可为您提供路线信息、Google即时可告知您上下班交通路况信息。\n\n您可以随时关闭位置记录功能，但系统并不会因此删除相关记录。要查看和管理您的位置记录，请访问maps.google.com/locationhistory。"</string>
+    <string name="location_reporting_desc" msgid="1580018652781674608">"Google会在Google即时和Google地图等产品中使用此功能。启用位置报告功能后，凡是使用此功能的Google产品都将可以存储和使用您设备上与您的Google账号关联的最新位置数据。"</string>
+    <string name="location_history_desc" msgid="926674012916014270">"如果您为此账号启用了位置记录功能，Google就可以存储您设备上的位置数据，以供您的应用使用。\n\n例如，Google地图可为您提供路线信息、Google即时可告知您上下班交通路况信息。\n\n您可以随时关闭位置记录功能，但系统并不会因此删除相关记录。要查看和管理您的位置记录，请访问maps.google.com/locationhistory。"</string>
     <string name="delete_location_history_title" msgid="707559064715633152">"删除位置记录"</string>
-    <string name="delete_location_history_desc" msgid="4035229731487113147">"该操作将删除您通过此设备存储在这个Google帐号中的所有位置记录。此删除操作无法撤消。部分应用（包括Google即时）将会因此而无法正常工作。"</string>
+    <string name="delete_location_history_desc" msgid="4035229731487113147">"该操作将删除您通过此设备存储在这个Google账号中的所有位置记录。此删除操作无法撤消。部分应用（包括Google即时）将会因此而无法正常工作。"</string>
     <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"屏幕阅读器"</string>
     <string name="accessibility_display_category_title" msgid="593444602101558017">"显示"</string>
     <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"互动控制"</string>
@@ -882,11 +883,11 @@
     <string name="inputs_header_connected_input" msgid="4323324944548164849">"{count,plural, =1{已连接的输入设备}other{已连接的输入设备}}"</string>
     <string name="inputs_header_standby_input" msgid="600117963181008144">"{count,plural, =1{待机的输入设备}other{待机的输入设备}}"</string>
     <string name="inputs_header_disconnected_input" msgid="3852361100151289264">"{count,plural, =1{已断开连接的输入设备}other{已断开连接的输入设备}}"</string>
-    <string name="user_add_profile_item_summary" msgid="3211866291940617804">"限制其他人使用您帐号中的应用和内容"</string>
+    <string name="user_add_profile_item_summary" msgid="3211866291940617804">"限制其他人使用您账号中的应用和内容"</string>
     <string name="user_new_profile_name" msgid="6637593067318708353">"受限个人资料"</string>
     <string name="user_restrictions_controlled_by" msgid="8124926446168030445">"由<xliff:g id="APP">%1$s</xliff:g>控制"</string>
     <string name="app_not_supported_in_limited" msgid="4046604594925826955">"受限个人资料无法使用此应用"</string>
-    <string name="app_sees_restricted_accounts" msgid="174038126799649152">"此应用可访问您的帐号"</string>
+    <string name="app_sees_restricted_accounts" msgid="174038126799649152">"此应用可访问您的账号"</string>
     <string name="restriction_location_enable_title" msgid="2552780806199464266">"位置信息"</string>
     <string name="restriction_location_enable_summary" msgid="3719330231217994482">"允许应用使用您的位置信息"</string>
     <string name="restricted_profile_switch_to" msgid="6193201935877168764">"进入受限个人资料"</string>
@@ -901,7 +902,7 @@
     <string name="restricted_profile_configure_apps_description_loading" msgid="3293508876131962699">"请稍候…"</string>
     <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"更改 PIN 码"</string>
     <string name="restriction_description" msgid="2053112392083722259">"<xliff:g id="DESCRIPTION">%1$s</xliff:g>\n<xliff:g id="VALUE">%2$s</xliff:g>"</string>
-    <string name="app_sees_restricted_accounts_and_controlled_by" msgid="1261056180558324892">"此应用由“<xliff:g id="APP">%1$s</xliff:g>”控制，可使用您的帐号"</string>
+    <string name="app_sees_restricted_accounts_and_controlled_by" msgid="1261056180558324892">"此应用由“<xliff:g id="APP">%1$s</xliff:g>”控制，可使用您的账号"</string>
     <string name="pin_enter_unlock_channel" msgid="243855138978654080">"输入 PIN 码即可观看此频道"</string>
     <string name="pin_enter_unlock_program" msgid="275489015420025531">"输入 PIN 码即可观看此节目"</string>
     <string name="pin_enter_pin" msgid="5020029261153234751">"输入 PIN 码"</string>
@@ -930,7 +931,7 @@
     <string name="device_apps_app_management_storage_used" msgid="6725789557993296433">"已使用的存储空间"</string>
     <string name="device_apps_app_management_storage_used_desc" msgid="8928632612101487179">"已使用 <xliff:g id="SIZE">%1$s</xliff:g> <xliff:g id="VOLUME">%2$s</xliff:g>"</string>
     <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"清除数据"</string>
-    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"系统会永久删除此应用的所有数据。\n删除的内容包括所有文件、设置、帐号、数据库等。"</string>
+    <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"系统会永久删除此应用的所有数据。\n删除的内容包括所有文件、设置、账号、数据库等。"</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"清除默认操作"</string>
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"使用此应用处理某些操作"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"没有默认操作"</string>
@@ -970,16 +971,16 @@
     <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"除非收到自动更新，否则电视在待机模式下会断开网络连接。这可能会减少电视的能耗，但也意味着待机模式下，您可能无法使用投屏和 Google 助理等功能。"</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"允许在待机模式下连接网络"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"如果允许在待机模式下连接网络，待机时的能耗就会增加。"</string>
-    <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"目前没有存储备份数据的帐号"</string>
+    <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"目前没有存储备份数据的账号"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
     <string name="backup_erase_dialog_message" msgid="222169533402624861">"要停止备份您的 WLAN 密码、书签、其他设置以及应用数据，并清除 Google 服务器上的所有副本吗？"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"备份我的数据"</string>
-    <string name="privacy_backup_account" msgid="4527813051841860610">"备份帐号"</string>
+    <string name="privacy_backup_account" msgid="4527813051841860610">"备份账号"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"自动还原"</string>
     <string name="factory_reset_device" msgid="6509900821515094361">"重置设备"</string>
-    <string name="factory_reset_description" msgid="6697396335158766785">"此操作会将您的设备恢复为默认设置，并清空所有数据、帐号、文件和已下载的应用。"</string>
-    <string name="factory_reset_info_description" msgid="5098454670833183487">"此操作会将您的设备恢复为默认设置，并清空所有数据、帐号、文件和已下载的应用。"</string>
-    <string name="factory_reset_content_description" msgid="1677022688420116803">"恢复出厂设置，此操作会将您的设备恢复为默认设置，并清空所有数据、帐号、文件和已下载的应用。"</string>
+    <string name="factory_reset_description" msgid="6697396335158766785">"此操作会将您的设备恢复为默认设置，并清空所有数据、账号、文件和已下载的应用。"</string>
+    <string name="factory_reset_info_description" msgid="5098454670833183487">"此操作会将您的设备恢复为默认设置，并清空所有数据、账号、文件和已下载的应用。"</string>
+    <string name="factory_reset_content_description" msgid="1677022688420116803">"恢复出厂设置，此操作会将您的设备恢复为默认设置，并清空所有数据、账号、文件和已下载的应用。"</string>
     <string name="confirm_factory_reset_description" msgid="1337483463207721713">"要清除此设备上的所有个人信息和已下载的应用吗？此操作无法撤消！"</string>
     <string name="confirm_factory_reset_device" msgid="4308646529880718465">"全部清除"</string>
     <string name="select_device_name_title" msgid="3045019448327493634">"为您的 <xliff:g id="DEVICEMODEL">%1$s</xliff:g> 选择名称"</string>
