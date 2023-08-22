@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.net.Uri;
@@ -40,8 +41,26 @@ public class BasicModeFeatureProviderImplX implements BasicModeFeatureProvider {
     // The string "offline_mode" is a static protocol and should not be changed in general.
     private static final String KEY_BASIC_MODE = "offline_mode";
 
+    private static final String SHARED_PREFS_NAME = "offline_mode_prefs";
+
     @Override
     public boolean isBasicMode(@NonNull Context context) {
+        SharedPreferences prefs = context.getSharedPreferences(SHARED_PREFS_NAME,
+                Context.MODE_PRIVATE);
+        if (!prefs.getBoolean(KEY_BASIC_MODE, true)) {
+            // Once device exits from basic mode, it can only reenter it via FDR, which would clear
+            // shared preferences. Use a cached value that is quicker to get vs reading from
+            // content provider.
+            return false;
+        }
+
+        boolean isBasicMode = isBasicModeFromContentProvider(context);
+        prefs.edit().putBoolean(KEY_BASIC_MODE, isBasicMode).apply();
+        return isBasicMode;
+    }
+
+
+    private boolean isBasicModeFromContentProvider(@NonNull Context context) {
         final String providerUriString = ResourcesUtil.getString(context,
                 "basic_mode_provider_uri");
         if (TextUtils.isEmpty(providerUriString)) {
