@@ -2525,7 +2525,7 @@
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="Settings/res/values/energy-modes.xml"
-            line="29"
+            line="32"
             column="5"/>
     </issue>
 
@@ -2541,7 +2541,7 @@
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="Settings/res/values/energy-modes.xml"
-            line="51"
+            line="54"
             column="5"/>
     </issue>
 
@@ -2557,7 +2557,7 @@
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="Settings/res/values/energy-modes.xml"
-            line="73"
+            line="77"
             column="5"/>
     </issue>
 
@@ -2573,7 +2573,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="TwoPanelSettingsLib/res/layout/energy_mode_info_fragment.xml"
-            line="37"
+            line="34"
             column="9"/>
     </issue>
 
@@ -2589,7 +2589,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="TwoPanelSettingsLib/res/layout/energy_mode_info_fragment.xml"
-            line="79"
+            line="97"
             column="9"/>
     </issue>
 
@@ -2925,6 +2925,22 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="Settings/res/layout/settings_list.xml"
+            line="28"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardCodedColor"
+        severity="Error"
+        message="Avoid using hardcoded color"
+        category="Correctness"
+        priority="4"
+        summary="Using hardcoded color"
+        explanation="Hardcoded color values are bad because theme changes cannot be uniformly applied.Instead use the theme specific colors such as `?android:attr/textColorPrimary` in attributes.&#xA;This ensures that a theme change from a light to a dark theme can be uniformlyapplied across the app."
+        errorLine1="        android:indeterminateTint=&quot;@color/tv_white&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="Settings/res/layout/settings_progress_bar.xml"
             line="28"
             column="9"/>
     </issue>
