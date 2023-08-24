@@ -29,7 +29,9 @@ import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A class to manage a list of apps in a {@link PreferenceGroup}. The list is configured by passing
@@ -121,7 +123,14 @@ public class ManageApplicationsController implements LifecycleObserver {
         }
     }
 
-    private void updateAppList(ArrayList<ApplicationsState.AppEntry> apps) {
+    private void updateAppList(List<ApplicationsState.AppEntry> appsWithDuplicates) {
+        List<ApplicationsState.AppEntry> apps = appsWithDuplicates
+                .stream()
+                .collect(Collectors.toMap(app ->
+                        app.info.packageName, app -> app, (v1, v2) -> v1, LinkedHashMap::new))
+                .values()
+                .stream()
+                .toList();
         mApps = apps;
         PreferenceGroup group = mCallback.getAppPreferenceGroup();
         final List<Preference> newList = new ArrayList<>(apps.size() + 1);
