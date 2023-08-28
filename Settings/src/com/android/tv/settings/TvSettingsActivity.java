@@ -70,8 +70,6 @@ public abstract class TvSettingsActivity extends FragmentActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
-
         if ((FlavorUtils.getFlavor(this) & getAvailableFlavors()) == 0) {
             Log.w(TAG, "Activity is not supported in current flavor");
             finish();

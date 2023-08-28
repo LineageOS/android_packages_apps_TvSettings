@@ -496,5 +496,18 @@ public class BluetoothPairingDialog extends DialogActivity {
 
             return v;
         }
+
+        @Override
+        public void onResume() {
+            super.onResume();
+            // Can't use OverlayWindowBlocker because this is a legacy non-androidx fragment.
+            getActivity().getWindow().setHideOverlayWindows(true);
+        }
+
+        @Override
+        public void onPause() {
+            super.onResume();
+            getActivity().getWindow().setHideOverlayWindows(false);
+        }
     }
 }
