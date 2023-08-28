@@ -2771,6 +2771,11 @@
     <!-- Bluetooth settings screen, text that appears in heading bar when scanning for devices -->
     <string name="progress_scanning">Searching</string>
 
+    <!-- Message of a dialog shown to inform that the account intent is not available. [CHAR LIMIT=100] -->
+    <string name="add_account_intent_not_available_dialog_message">Failed to retrieve add account intent from authenticator.</string>
+    <!-- Message of a dialog shown to inform that the account type is not available or failed to add account. [CHAR LIMIT=100] -->
+    <string name="add_account_failed_dialog_message">Failed to add account or the account type is not available.</string>
+
     <!-- Placeholder font for compiling. The real font will be provided by RRO. -->
     <string name="preference_title_text_font" translatable="false" />
 
