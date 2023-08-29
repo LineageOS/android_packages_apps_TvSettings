@@ -613,7 +613,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         transaction.setCustomAnimations(R.animator.fade_in_preview_panel,
                 R.animator.fade_out_preview_panel);
         transaction.replace(frameResIds[mPrefPanelIdx + 1], previewFragment);
-        transaction.commitNow();
+        transaction.commitNowAllowingStateLoss();
 
         // Some fragments may steal focus on creation. Reclaim focus on main fragment.
         if (getView() != null && getView().getViewTreeObserver() != null) {
