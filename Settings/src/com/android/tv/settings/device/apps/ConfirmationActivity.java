@@ -26,6 +26,7 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.util.GuidedActionsAlignUtil;
+import com.android.tv.settings.util.SafeIntents;
 
 import java.util.List;
 
@@ -94,12 +95,13 @@ public class ConfirmationActivity extends FragmentActivity {
 
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
+            Intent sanitizedIntent = SafeIntents.forCallback(mIntent);
             switch ((int) action.getId()) {
                 case ID_OK:
-                    getActivity().setResult(RESULT_OK, mIntent);
+                    getActivity().setResult(RESULT_OK, sanitizedIntent);
                     break;
                 case ID_CANCEL:
-                    getActivity().setResult(RESULT_CANCELED, mIntent);
+                    getActivity().setResult(RESULT_CANCELED, sanitizedIntent);
                     break;
             }
             getActivity().finish();
