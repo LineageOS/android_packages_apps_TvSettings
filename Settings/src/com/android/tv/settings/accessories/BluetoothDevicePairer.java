@@ -158,6 +158,10 @@ public class BluetoothDevicePairer {
     private final BluetoothScanner.Listener mBtListener = new BluetoothScanner.Listener() {
         @Override
         public void onDeviceAdded(BluetoothScanner.Device device) {
+            // Known devices will be handled in the partner-implemented Slice.
+            if (AccessoryUtils.isKnownDevice(mContext, device.btDevice)) {
+                return;
+            }
             if (DEBUG) {
                 Log.d(TAG, "Adding device: " + device.btDevice.getAddress());
             }
