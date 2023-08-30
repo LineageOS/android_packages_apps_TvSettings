@@ -125,6 +125,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private Preference mFocusedPreference;
     private boolean mIsWaitingForUpdatingPreview = false;
     private AudioManager mAudioManager;
+
+    private PreviewableComponentCallback mMainPanel;
+
     private final Map<VerticalGridView, OnChildViewHolderSelectedListenerTwoPanel>
             mHasOnChildViewHolderSelectedListener = new ArrayMap<>();
 
@@ -737,6 +740,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
          *                navigating forwards (deeper into the TvSettings tree).
          */
         void onArriveAtMainPanel(boolean forward);
+
+        /** Called when this fragment is no longer the main panel. */
+        default void onLeaveMainPanel() {}
     }
 
     private class RootViewOnKeyListener implements View.OnKeyListener {
@@ -1104,13 +1110,16 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                         }
                     }
                 }
-                if (fragmentToBecomeMainPanel instanceof PreviewableComponentCallback) {
+                if (mMainPanel != null && mMainPanel != fragmentToBecomeMainPanel) {
+                    mMainPanel.onLeaveMainPanel();
+                }
+                mMainPanel = null;
+                if (fragmentToBecomeMainPanel instanceof PreviewableComponentCallback previewable) {
+                    mMainPanel = previewable;
                     if (distanceToScrollToRight > 0) {
-                        ((PreviewableComponentCallback) fragmentToBecomeMainPanel)
-                                .onArriveAtMainPanel(!isRTL());
+                        previewable.onArriveAtMainPanel(!isRTL());
                     } else if (distanceToScrollToRight < 0) {
-                        ((PreviewableComponentCallback) fragmentToBecomeMainPanel)
-                                .onArriveAtMainPanel(isRTL());
+                        previewable.onArriveAtMainPanel(isRTL());
                     } // distanceToScrollToRight being 0 means no actual panel sliding; thus noop.
                 }
                 updateAccessibilityTitle(fragmentToBecomeMainPanel);
