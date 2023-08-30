@@ -194,6 +194,10 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private UserManager mUm;
     private WifiManager mWifiManager;
     private ContentResolver mContentResolver;
+
+    private boolean mLastEnabledState;
+    private boolean mHaveDebugSettings;
+
     private SwitchPreference mEnableDeveloper;
     private SwitchPreference mEnableAdb;
     private Preference mClearAdbKeys;
@@ -580,6 +584,21 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             mDisabledPrefs.remove(mKeepScreenOn);
         }
 
+        mLastEnabledState = DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(getContext());
+        mEnableDeveloper.setChecked(mLastEnabledState);
+        setPrefsEnabledState(mLastEnabledState);
+
+        if (mHaveDebugSettings && !mLastEnabledState) {
+            // Overall debugging is disabled, but there are some debug
+            // settings that are enabled.  This is an invalid state.  Switch
+            // to debug settings being enabled, so the user knows there is
+            // stuff enabled and can turn it all off if they want.
+            DevelopmentSettingsEnabler.setDevelopmentSettingsEnabled(getContext(), true);
+            mLastEnabledState = true;
+            mEnableDeveloper.setChecked(mLastEnabledState);
+            setPrefsEnabledState(mLastEnabledState);
+        }
+
         if (mColorModePreference != null) {
             mColorModePreference.startListening();
             mColorModePreference.updateCurrentAndSupported();
@@ -642,11 +661,13 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     void updateSwitchPreference(SwitchPreference switchPreference, boolean value) {
         switchPreference.setChecked(value);
+        mHaveDebugSettings |= value;
     }
 
     private void updateAllOptions() {
         final Context context = getActivity();
         final ContentResolver cr = context.getContentResolver();
+        mHaveDebugSettings = false;
         updateSwitchPreference(mEnableAdb, Settings.Global.getInt(cr,
                 Settings.Global.ADB_ENABLED, 0) != 0);
         if (mEnableTerminal != null) {
@@ -718,6 +739,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
         writeOverlayDisplayDevicesOptions(null);
         writeAppProcessLimitOptions(null);
+        mHaveDebugSettings = false;
         updateAllOptions();
         SystemPropPoker.getInstance().unblockPokes();
         SystemPropPoker.getInstance().poke();
@@ -848,6 +870,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             }
             mDebugAppPref.setSummary(getResources().getString(R.string.debug_app_set, label));
             mWaitForDebugger.setEnabled(true);
+            mHaveDebugSettings = true;
         } else {
             mDebugAppPref.setSummary(getResources().getString(R.string.debug_app_not_set));
             mWaitForDebugger.setEnabled(false);
@@ -883,6 +906,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             }
 
             mMockLocationAppPref.setSummary(getString(R.string.mock_location_app_set, label));
+            mHaveDebugSettings = true;
         } else {
             mMockLocationAppPref.setSummary(getString(R.string.mock_location_app_not_set));
         }
@@ -1458,6 +1482,9 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private void updateAnimationScaleValue(int which, ListPreference pref) {
         try {
             float scale = mWindowManager.getAnimationScale(which);
+            if (scale != 1) {
+                mHaveDebugSettings = true;
+            }
             CharSequence[] values = pref.getEntryValues();
             for (int i = 0; i < values.length; i++) {
                 float val = Float.parseFloat(values[i].toString());
@@ -1543,6 +1570,9 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             for (int i = 0; i < values.length; i++) {
                 int val = Integer.parseInt(values[i].toString());
                 if (val >= limit) {
+                    if (i != 0) {
+                        mHaveDebugSettings = true;
+                    }
                     mAppProcessLimit.setValueIndex(i);
                     mAppProcessLimit.setSummary(mAppProcessLimit.getEntries()[i]);
                     return;
@@ -1585,6 +1615,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     public void onEnableDevelopmentConfirm() {
         mEnableDeveloper.setChecked(true);
         DevelopmentSettingsEnabler.setDevelopmentSettingsEnabled(getContext(), true);
+        mLastEnabledState = true;
         setPrefsEnabledState(true);
     }
 
@@ -1629,6 +1660,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             } else {
                 resetDangerousOptions();
                 DevelopmentSettingsEnabler.setDevelopmentSettingsEnabled(getContext(), false);
+                mLastEnabledState = false;
                 setPrefsEnabledState(false);
             }
         } else if (preference == mBugreport) {
