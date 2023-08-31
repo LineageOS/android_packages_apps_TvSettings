@@ -58,6 +58,7 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.Observer;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
 import androidx.slice.Slice;
@@ -145,6 +146,18 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             mScreenTitle = getArguments().getCharSequence(SlicesConstants.TAG_SCREEN_TITLE, "");
         }
         super.onCreate(savedInstanceState);
+        getPreferenceManager().setPreferenceComparisonCallback(
+                new PreferenceManager.SimplePreferenceComparisonCallback() {
+                    @Override
+                    public boolean arePreferenceContentsTheSame(Preference preference1,
+                                                                Preference preference2) {
+                        // Should only check for the default SlicePreference objects, and ignore
+                        // other instances of slice reference classes since they all override
+                        // Preference.onBindViewHolder(PreferenceViewHolder)
+                        return preference1.getClass() == SlicePreference.class
+                                && super.arePreferenceContentsTheSame(preference1, preference2);
+                    }
+                });
     }
 
     @Override
