@@ -709,7 +709,18 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
 
         if (newTitleContainer != null) {
             newTitleContainer.setOutlineProvider(null);
-            newTitleContainer.setBackgroundResource(R.color.tp_preference_panel_background_color);
+            // Change default background for title container.
+            // In One Panel UI, there is no preview screen so tp_preference_panel_background_color
+            // is OK, but in Two Panel UI, decor_title_container background will be set to
+            // tp_preview_panel_background_color when fragment becomes preview. Using
+            // tp_preference_panel_background_color as default will cause SliceFragment's
+            // decor_title_container blinking in preview while scrolling through SlicePreference
+            // items.
+            int defaultBackgroundColorResId = R.color.tp_preference_panel_background_color;
+            if (getParentFragment() instanceof TwoPanelSettingsFragment) {
+                defaultBackgroundColorResId = R.color.tp_preview_panel_background_color;
+            }
+            newTitleContainer.setBackgroundResource(defaultBackgroundColorResId);
         }
 
         final View newContainer =
