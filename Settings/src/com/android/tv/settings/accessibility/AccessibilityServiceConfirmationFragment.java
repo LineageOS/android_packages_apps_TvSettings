@@ -21,14 +21,12 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.util.OverlayWindowBlocker;
 
 import java.util.List;
 
@@ -81,12 +79,6 @@ public class AccessibilityServiceConfirmationFragment extends GuidedStepSupportF
         args.putParcelable(ARG_COMPONENT, cn);
         args.putCharSequence(ARG_LABEL, label);
         args.putBoolean(ARG_ENABLING, enabling);
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        new OverlayWindowBlocker(this, /* isMainPanel= */ true);
     }
 
     @NonNull

@@ -34,7 +34,6 @@ import com.android.internal.util.ArrayUtils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
-import com.android.tv.settings.util.OverlayWindowBlocker;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -54,8 +53,6 @@ public abstract class ManageAppOp extends SettingsPreferenceFragment
 
     private ManageApplicationsController mManageApplicationsController;
 
-    private OverlayWindowBlocker overlayWindowBlocker;
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -67,20 +64,7 @@ public abstract class ManageAppOp extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         mIPackageManager = ActivityThread.getPackageManager();
         mAppOpsManager = getContext().getSystemService(AppOpsManager.class);
-        overlayWindowBlocker = new OverlayWindowBlocker(this);
         super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    public void onArriveAtMainPanel(boolean forward) {
-        super.onArriveAtMainPanel(false);
-        overlayWindowBlocker.setMainPanel(true);
-    }
-
-    @Override
-    public void onLeaveMainPanel() {
-        super.onLeaveMainPanel();
-        overlayWindowBlocker.setMainPanel(false);
     }
 
     /**
