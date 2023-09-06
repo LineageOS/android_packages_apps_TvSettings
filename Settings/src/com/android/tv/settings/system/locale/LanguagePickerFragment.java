@@ -132,9 +132,6 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
 
     private void createPreferences(PreferenceScreen screen) {
         hideProgressBar();
-        if (getView() == null) {
-            return;
-        }
         final Set<LocaleStore.LocaleInfo> notSuggestedLocales =
                 mLocaleInfos.stream().filter(
                         localeInfo -> !localeInfo.isSuggested()).collect(Collectors.toSet());
