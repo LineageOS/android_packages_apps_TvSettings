@@ -372,8 +372,8 @@
     <string name="about_build" msgid="8467840394761634575">"Android TV OS куралышы"</string>
     <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Сиздин иштеп чыгуучу болушуңузга # кадам калды}other{Сиздин иштеп чыгуучу болушуңузга # кадам калды}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Жарнамалар"</string>
-    <string name="ads_description" msgid="8081069475265061074">"Жарнама параметрлерин башкарып, жарнама идентификаторун баштапкы абалга келтирүү сыяктуу аракеттерди аткара аласыз."</string>
-    <string name="ads_content_description" msgid="1006489792324920289">"Жарнамалар. Жарнама параметрлерин башкарып, жарнама идентификаторун баштапкы абалга келтирүү сыяктуу аракеттерди аткара аласыз."</string>
+    <string name="ads_description" msgid="8081069475265061074">"Жарнама параметрлерин башкарып, жарнама идентификаторун кайра коюу сыяктуу аракеттерди аткара аласыз."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Жарнамалар. Жарнама параметрлерин башкарып, жарнама идентификаторун кайра коюу сыяктуу аракеттерди аткара аласыз."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Эми иштеп чыгуучу болдуңуз!"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Кажети жок, буга чейин эле өндүрүүчү болгонсуз"</string>
     <string name="device_info_default" msgid="2374506935205518448">"Белгисиз"</string>
@@ -778,7 +778,7 @@
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Wi‑Fi журналы"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Майда-барат маалыматты Wi‑Fi журналына жазууну иштетүү"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Тийүүлөр көрүнсүн"</string>
-    <string name="system_pointer_location" msgid="8724050865245555084">"Көрсөткүчтүн жайгашкан жери"</string>
+    <string name="system_pointer_location" msgid="8724050865245555084">"Көрсөткүчтүн турган жери"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"Калыптардын чектери көрүнсүн"</string>
     <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"Экран жаңыртуусун көрсөтүү"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Жабдык катмарын көрсөтүү"</string>
@@ -1046,7 +1046,7 @@
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Колдонмолорго ойготкучтарды коюуга жана башка аракеттерди графикке киргизүүгө уруксат берүү. Ушуну менен колдонмолор фондо иштеп, көбүрөөк кубат сарпталышы мүмкүн.\n\nЭгер бул уруксат өчүрүлсө, колдонмодогу ойготкучтар жана графикке киргизилген башка аракеттер иштебейт."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Экранды күйгүзүү"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"Экранды күйгүзүүгө уруксат берүү"</string>
-    <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Колдонмого экранды күйгүзүүгө уруксат бериңиз. Уруксат берилсе, колдонмо экранды каалаган убакта сизден уруксат сурабастан күйгүзүшү мүмкүн."</string>
+    <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Колдонмого экранды күйгүзүүгө уруксат бересиз. Колдонмо экранды каалаган убакта сизден уруксат сурабастан күйгүзө берет."</string>
     <string name="special_access" msgid="21806055758289916">"Атайын мүмкүнчүлүк"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Аудио"</string>
@@ -1107,10 +1107,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Ийгиликтүү туташты"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Баарын көрсөтүү"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Изделүүдө"</string>
-    <!-- no translation found for add_account_intent_not_available_dialog_message (8326403834567215053) -->
-    <skip />
-    <!-- no translation found for add_account_failed_dialog_message (3704858007957373186) -->
-    <skip />
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Authenticator колдонмосунан аккаунтту кошуу ниети алынган жок."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Аккаунт кошулган жок же анын түрү колдоого алынбайт."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Каналдар жана киргизүүлөр"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Каналдар, тышкы киргизүүлөр"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Каналдар"</string>
