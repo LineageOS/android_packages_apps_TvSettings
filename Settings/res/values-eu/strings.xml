@@ -420,11 +420,11 @@
     <item msgid="6005053494500517261">"Bikaina"</item>
   </string-array>
     <string name="title_mac_address" msgid="7511588678922209883">"Gailuaren MAC helbidea"</string>
-    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Ausaz antolatutako MAC helbidea"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Ausazko MAC helbidea"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Seinalearen indarra"</string>
     <string name="title_random_mac_settings" msgid="6685812569356353378">"Pribatutasuna"</string>
   <string-array name="random_mac_settings_entries">
-    <item msgid="3457228452595715533">"Ausaz aukeratutako MAC helbide bat (lehenetsia)"</item>
+    <item msgid="3457228452595715533">"Erabili ausazko MAC helbide bat (lehenetsia)"</item>
     <item msgid="2490415280467390067">"Erabili gailuaren MAC helbidea"</item>
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"Ez dago erabilgarri"</string>
@@ -1107,10 +1107,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Konektatu da"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Erakutsi guztiak"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Bilatzen"</string>
-    <!-- no translation found for add_account_intent_not_available_dialog_message (8326403834567215053) -->
-    <skip />
-    <!-- no translation found for add_account_failed_dialog_message (3704858007957373186) -->
-    <skip />
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Ezin izan da eskuratu kontua gehitzeko intent-a autentifikatzailetik."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Ezin izan da gehitu kontua, edo kontu mota ez dago erabilgarri."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Kanalak eta sarrerak"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Kanalak, kanpoko sarrerak"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Kanalak"</string>

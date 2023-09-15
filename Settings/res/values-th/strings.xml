@@ -1090,7 +1090,7 @@
     <string name="select_device_admin_msg" msgid="8475934459999710332">"แอปผู้ดูแลระบบอุปกรณ์"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"เปิดใช้งานแอปผู้ดูแลระบบอุปกรณ์ไหม"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"เปิดใช้งานแอปผู้ดูแลระบบอุปกรณ์นี้"</string>
-    <string name="device_admin_warning" msgid="7399916080685200660">"การเปิดใช้งานแอปผู้ดูแลระบบนี้จะอนุญาตให้แอป <xliff:g id="APP_NAME">%1$s</xliff:g> ทำงานต่างๆ ต่อไปนี้"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"การเปิดใช้งานแอปผู้ดูแลนี้จะอนุญาตให้แอป <xliff:g id="APP_NAME">%1$s</xliff:g> ทำงานต่างๆ ต่อไปนี้"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"<xliff:g id="APP_NAME">%1$s</xliff:g> จะเป็นผู้จัดการและตรวจสอบอุปกรณ์นี้"</string>
     <string name="device_admin_status" msgid="5467001937240455367">"แอปผู้ดูแลระบบนี้ทำงานอยู่และอนุญาตให้แอป <xliff:g id="APP_NAME">%1$s</xliff:g> ทำงานต่างๆ ต่อไปนี้"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"การดำเนินการต่อจะทำให้ผู้ใช้ของคุณได้รับการจัดการโดยผู้ดูแลระบบ ซึ่งอาจจัดเก็บข้อมูลที่เกี่ยวข้องนอกเหนือจากข้อมูลส่วนบุคคลของคุณได้ด้วย\n\nผู้ดูแลระบบสามารถตรวจสอบและจัดการการตั้งค่า การเข้าถึง แอป และข้อมูลที่เชื่อมโยงกับผู้ใช้นี้ รวมถึงกิจกรรมเครือข่ายและข้อมูลตำแหน่งของอุปกรณ์"</string>
@@ -1107,10 +1107,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"เชื่อมต่อสำเร็จ"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"แสดงทั้งหมด"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"กำลังค้นหา"</string>
-    <!-- no translation found for add_account_intent_not_available_dialog_message (8326403834567215053) -->
-    <skip />
-    <!-- no translation found for add_account_failed_dialog_message (3704858007957373186) -->
-    <skip />
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"เรียก Intent การเพิ่มบัญชีจาก Authenticator ไม่สำเร็จ"</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"เพิ่มบัญชีไม่สำเร็จหรือประเภทบัญชีไม่พร้อมใช้งาน"</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"ช่องและอินพุต"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"ช่อง อินพุตภายนอก"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"ช่อง"</string>
