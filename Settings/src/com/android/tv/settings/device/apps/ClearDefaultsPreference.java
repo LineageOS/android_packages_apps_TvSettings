@@ -27,14 +27,16 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.annotation.NonNull;
 import androidx.leanback.widget.GuidanceStylist;
 
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.applications.AppUtils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
-
 public class ClearDefaultsPreference extends AppActionPreference {
     private final IUsbManager mUsbManager;
     private final PackageManager mPackageManager;
@@ -48,6 +50,18 @@ public class ClearDefaultsPreference extends AppActionPreference {
 
         refresh();
         ConfirmationFragment.prepareArgs(getExtras(), mEntry.info.packageName);
+        UserManager userManager = getContext().getSystemService(UserManager.class);
+        if (userManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL)) {
+            final RestrictedLockUtils.EnforcedAdmin admin =
+                    RestrictedLockUtilsInternal.checkIfRestrictionEnforced(context,
+                            UserManager.DISALLOW_APPS_CONTROL, UserHandle.myUserId());
+            if (admin != null) {
+                setDisabledByAdmin(admin);
+            } else {
+                setEnabled(false);
+            }
+        }
+
     }
 
     public void refresh() {
