@@ -21,11 +21,15 @@ import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.text.format.Formatter;
 
 import androidx.annotation.NonNull;
 import androidx.leanback.widget.GuidanceStylist;
 
+import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 
@@ -37,6 +41,17 @@ public class ClearDataPreference extends AppActionPreference {
 
         refresh();
         ConfirmationFragment.prepareArgs(getExtras(), mEntry.info.packageName);
+        UserManager userManager = getContext().getSystemService(UserManager.class);
+        if (userManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL)) {
+            final RestrictedLockUtils.EnforcedAdmin admin =
+                    RestrictedLockUtilsInternal.checkIfRestrictionEnforced(context,
+                            UserManager.DISALLOW_APPS_CONTROL, UserHandle.myUserId());
+            if (admin != null) {
+                setDisabledByAdmin(admin);
+            } else {
+                setEnabled(false);
+            }
+        }
     }
 
     public void refresh() {
