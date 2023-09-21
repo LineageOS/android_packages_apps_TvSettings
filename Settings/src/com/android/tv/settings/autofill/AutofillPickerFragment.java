@@ -151,7 +151,8 @@ public class AutofillPickerFragment extends SettingsPreferenceFragment {
                 currentPref.setChecked(true);
                 currentPref.clearOtherRadioPreferences(getPreferenceScreen());
                 CharSequence confirmationMessage = Html.fromHtml(getContext().getString(
-                        R.string.autofill_confirmation_message, newPref.getTitle()));
+                        R.string.autofill_confirmation_message,
+                        Html.escapeHtml(newPref.getTitle())));
                 displayAlert(confirmationMessage, (dialog, which) -> {
                     RadioPreference pref = (RadioPreference) findPreference(newKey);
                     if (pref != null) {

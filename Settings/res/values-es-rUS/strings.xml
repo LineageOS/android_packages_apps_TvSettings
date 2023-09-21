@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Configuración de apps"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Ubicación, Uso y Diagnóstico, Anuncios"</string>
     <string name="add_account" msgid="7386223854837017129">"Agregar cuenta"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Cuenta desconocida"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Quitar cuenta"</string>
     <string name="account_sync" msgid="4315295293211313989">"Elegir aplic. sincronizadas"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sincronizar ahora"</string>
@@ -152,7 +153,7 @@
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Configuración de sonido avanzada"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Habilitar modo de juego"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Coincidir con el rango dinámico del contenido"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Si se habilita esta opción, el sistema cambiará entre los diferentes formatos de rango dinámico para coincidir con el contenido. Esto puede provocar una pantalla negra durante el cambio de formato.\n\nHaz clic en Configuración de pantalla avanzada para ver más opciones de rango dinámico."</string>
+    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Si se habilita esta opción, el sistema cambiará entre los diferentes formatos de rango dinámico para coincidir con el contenido. Esto puede provocar que aparezca una pantalla negra durante el cambio de formato.\n\nHaz clic en Configuración de pantalla avanzada para ver más opciones de rango dinámico."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Rango dinámico preferido"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversión preferida por el sistema"</string>
     <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Deja que el sistema se ocupe de la conversión del formato"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Texto de muestra"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"El maravilloso mago de Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Capítulo 11: La maravillosa Ciudad Esmeralda de Oz"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Aunque contaban con la protección de los lentes verdes, en un primer momento, Dorothy y sus amigos se sintieron encandilados por el brillo de la maravillosa ciudad. Las calles estaban bordeadas por hermosas casas de mármol verde y adornadas con esmeraldas brillantes. Caminaron por pavimento del mismo mármol verde y, donde se unían las calles, había filas de esmeraldas juntas que brillaban con el sol. Los vidrios de las ventanas eran verdes y hasta el cielo sobre la ciudad y los rayos del sol tenían un matiz verde. \n\nHabía muchas personas caminando: hombres, mujeres y niños, todos vestidos de verde y de piel verdosa. Miraban a Dorothy y a sus extraños acompañantes con asombro. Los niños corrían despavoridos detrás de sus madres cuando veían al León, pero nadie les hablaba. Había muchas tiendas en la calle, y Dorothy vio que todo lo que vendían era verde: caramelos verdes, palomitas de maíz verdes, zapatos verdes, sombreros verdes y ropa verde de todo tipo. En una tienda, un hombre vendía limonada verde y Dorothy observó que los niños que la compraban pagaban con monedas verdes. \n\nParecía no haber caballos ni animales de ningún tipo. Los hombres cargaban objetos en pequeñas carretas verdes que llevaban delante de ellos. Todos parecían felices, contentos y afortunados."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Aunque contaban con la protección de los lentes verdes, en un primer momento, Dorothy y sus amigos se sintieron encandilados por el brillo de la maravillosa ciudad. Las calles estaban bordeadas por hermosas casas de mármol verde y adornadas con esmeraldas brillantes. Caminaron por pavimento del mismo mármol verde y, donde se unían las calles, había filas de esmeraldas juntas que brillaban con el sol. Los vidrios de las ventanas eran verdes y hasta el cielo sobre la ciudad y los rayos del sol tenían un matiz verde. \n\nHabía muchas personas caminando: hombres, mujeres y niños, todos vestidos de verde y de piel verdosa. Miraban a Dorothy y a sus extraños acompañantes con asombro. Los niños corrían despavoridos detrás de sus madres cuando veían al León, pero nadie les hablaba. Había muchas tiendas en la calle, y Dorothy vio que todo lo que vendían era verde: caramelos verdes, palomitas de maíz verdes, zapatos verdes, sombreros verdes y ropa verde de todo tipo. En una tienda, un hombre vendía limonada verde, y Dorothy observó que los niños que la compraban pagaban con monedas verdes. \n\nParecía no haber caballos ni animales de ningún tipo. Los hombres cargaban objetos en pequeñas carretas verdes que llevaban delante de ellos. Todos parecían felices, contentos y exitosos."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Selección de formato"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automático"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
@@ -1106,6 +1107,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Conexión exitosa"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Mostrar todo"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Buscando"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Se produjo un error al recuperar el intent del autenticador para agregar la cuenta."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Se produjo un error al agregar la cuenta, o bien el tipo no está disponible."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Canales y entradas"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Canales y entradas externas"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Canales"</string>

@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Configurações do app"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Local, uso e diagnósticos, anúncios"</string>
     <string name="add_account" msgid="7386223854837017129">"Adicionar conta"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Conta desconhecida"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Remover conta"</string>
     <string name="account_sync" msgid="4315295293211313989">"Escolher apps sincronizados"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sincronizar agora"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Exemplo de texto"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"O Mágico de Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Capítulo 11: A maravilhosa Cidade das Esmeraldas de Oz"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Mesmo com os olhos protegidos pelos óculos verdes, Dorothy e os amigos dela foram ofuscados pelo brilho da magnífica cidade. As ruas estavam repletas de belas casas, todas feitas de mármore verde e cravejadas de esmeraldas brilhantes por toda a parte. Eles caminharam pela calçada do mesmo mármore verde, e, onde os blocos se encontravam, havia fileiras de esmeraldas bem próximas umas das outras, brilhantes à luz do sol. As janelas eram de vidro verde. Até mesmo o céu sobre a cidade era esverdeado, e os raios solares eram verdes. \n\nHavia muitas pessoas, homens, mulheres e crianças, caminhando por lá, e todos vestiam roupas verdes e tinham a pele esverdeada. Eles olharam para Dorothy e os estranhos companheiros da garota com olhos curiosos, e todas as crianças fugiram e se esconderam atrás de suas mães quando viram o Leão, mas ninguém falou com eles. Havia muitas lojas na rua, e Dorothy viu que tudo nelas era verde. Doces verdes e pipoca verde estavam à venda, assim como sapatos verdes, chapéus verdes e roupas verdes de todos os tipos. Em um lugar, um homem estava vendendo limonada verde, e quando as crianças a compravam, Dorothy viu que elas pagavam com moedas verdes. \n\nParecia não haver cavalos nem animais de qualquer espécie. Os homens carregavam as coisas em pequenos carrinhos verdes, que eles empurravam à frente. Todos pareciam felizes, satisfeitos e prósperos."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Mesmo com os olhos protegidos pelos óculos verdes, Dorothy e os amigos foram ofuscados pelo brilho da magnífica cidade. As ruas estavam repletas de belas casas, todas feitas de mármore verde e cravejadas de esmeraldas brilhantes por toda a parte. Eles caminharam pela calçada do mesmo mármore verde, e, onde os blocos se encontravam, havia fileiras de esmeraldas bem próximas umas das outras, brilhantes à luz do sol. As janelas eram de vidro verde. Até mesmo o céu sobre a cidade era esverdeado, e os raios solares eram verdes. \n\nHavia muitas pessoas, homens, mulheres e crianças, caminhando por lá, e todos vestiam roupas verdes e tinham a pele esverdeada. Eles observaram Dorothy e os estranhos companheiros da garota com olhos curiosos, e todas as crianças fugiram e se esconderam atrás de suas mães quando viram o Leão, mas ninguém falou com eles. Havia muitas lojas na rua, e Dorothy viu que tudo nelas era verde. Doces verdes e pipoca verde estavam à venda, assim como sapatos verdes, chapéus verdes e roupas verdes de todos os tipos. Em um lugar, um homem estava vendendo limonada verde, e quando as crianças a compravam, Dorothy viu que elas pagavam com moedas verdes. \n\nParecia não haver cavalos nem animais de qualquer espécie. Os homens carregavam as coisas em pequenos carrinhos verdes, que eles empurravam à frente. Todos pareciam felizes, satisfeitos e prósperos."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Seleção de formato"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automático"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
@@ -589,7 +590,7 @@
     <string name="storage_wizard_move_app_progress_description" msgid="7673347796805764888">"Não remova o drive durante a transferência.\nO<xliff:g id="APPNAME">%1$s</xliff:g> app do dispositivo fica indisponível até o final da transferência."</string>
     <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"Ignorar o armazenamento do dispositivo?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"Todos os dados armazenados neste drive serão perdidos para sempre com a opção \"Ignorar\". Gostaria de prosseguir?"</string>
-    <string name="storage_wizard_forget_action" msgid="5609631662522950596">"Ignorar"</string>
+    <string name="storage_wizard_forget_action" msgid="5609631662522950596">"Esquecer"</string>
     <string name="storage_new_title" msgid="4768955281180255038">"Drive USB conectado"</string>
     <string name="storage_new_action_browse" msgid="3355241742574072658">"Procurar"</string>
     <string name="storage_new_action_adopt" msgid="6809707961170895964">"Configurar como armazenamento do dispositivo"</string>
@@ -1106,6 +1107,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Conexão realizada"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Mostrar tudo"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Pesquisando"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Falha ao recuperar a intent \"Adicionar conta\" do autenticador."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Falha ao adicionar a conta ou o tipo dela não está disponível."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Canais e entradas"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Canais, entradas externas"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Canais"</string>

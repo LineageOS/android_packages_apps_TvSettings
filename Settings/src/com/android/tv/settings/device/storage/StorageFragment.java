@@ -89,18 +89,14 @@ public class StorageFragment extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         mStorageManager = getContext().getSystemService(StorageManager.class);
         mPackageManager = getContext().getPackageManager();
-
-        mVolumeInfo = mStorageManager.findVolumeById(
-                getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
-
+        updateVolumeInfo();
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        mVolumeInfo = mStorageManager.findVolumeById(
-                getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
+        updateVolumeInfo();
         if (mVolumeInfo == null || !mVolumeInfo.isMountedReadable()) {
             navigateBack();
         } else {
@@ -148,6 +144,11 @@ public class StorageFragment extends SettingsPreferenceFragment {
                 break;
         }
         return super.onPreferenceTreeClick(preference);
+    }
+
+    private void updateVolumeInfo() {
+        mVolumeInfo = mStorageManager.findVolumeById(
+                getArguments().getString(VolumeInfo.EXTRA_VOLUME_ID));
     }
 
     private void refresh() {
@@ -216,6 +217,10 @@ public class StorageFragment extends SettingsPreferenceFragment {
     }
 
     private void updateDetails(StorageMeasurement.MeasurementDetails details) {
+        if (mVolumeInfo == null) {
+            Log.w(TAG, "Unexpected details update. Volume info is null.");
+            return;
+        }
         final int currentUser = ActivityManager.getCurrentUser();
         final long dcimSize = totalValues(details.mediaSize.get(currentUser),
                 Environment.DIRECTORY_DCIM,

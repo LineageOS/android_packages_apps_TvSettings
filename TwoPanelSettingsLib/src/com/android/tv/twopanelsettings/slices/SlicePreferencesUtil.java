@@ -168,12 +168,13 @@ public final class SlicePreferencesUtil {
         }
 
         if (preference != null) {
+            boolean isEnabled = enabled(item);
             // Set whether preference is enabled.
-            if (preference instanceof InfoPreference || !enabled(item)) {
+            if (preference instanceof InfoPreference || !isEnabled) {
                 preference.setEnabled(false);
             }
             // Set whether preference is selectable
-            if (!selectable(item)) {
+            if (!selectable(item) || !isEnabled) {
                 preference.setSelectable(false);
             }
             // Set the key for the preference

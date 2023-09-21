@@ -85,21 +85,29 @@ public class AccessibilityServiceConfirmationFragment extends GuidedStepSupportF
     @Override
     public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
         final CharSequence label = getArguments().getCharSequence(ARG_LABEL);
+        String sanitizedLabel = label.toString()
+                .replace("\t", "")
+                .replace("\r", "")
+                .replace("\n", "")
+                .codePoints().limit(32)
+                .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+                .toString();
+
         if (getArguments().getBoolean(ARG_ENABLING)) {
             return new GuidanceStylist.Guidance(
                     getString(R.string.system_accessibility_service_on_confirm_title,
-                            label),
+                            sanitizedLabel),
                     getString(R.string.system_accessibility_service_on_confirm_desc,
-                            label),
+                            sanitizedLabel),
                     null,
                     getActivity().getDrawable(R.drawable.ic_accessibility_new_132dp)
             );
         } else {
             return new GuidanceStylist.Guidance(
                     getString(R.string.system_accessibility_service_off_confirm_title,
-                            label),
+                            sanitizedLabel),
                     getString(R.string.system_accessibility_service_off_confirm_desc,
-                            label),
+                            sanitizedLabel),
                     null,
                     getActivity().getDrawable(R.drawable.ic_accessibility_new_132dp)
             );

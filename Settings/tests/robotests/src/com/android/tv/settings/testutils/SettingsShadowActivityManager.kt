@@ -15,7 +15,7 @@ import java.util.Locale
 open class SettingsShadowActivityManager : ShadowActivityManager() {
     companion object {
         val configuration: Configuration = Configuration().apply {
-            locales = LocaleList(Locale.US)
+            setLocales(LocaleList(Locale.US))
         }
 
         @JvmStatic

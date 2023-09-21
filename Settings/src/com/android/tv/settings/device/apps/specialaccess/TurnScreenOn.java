@@ -65,11 +65,6 @@ public class TurnScreenOn extends ManageAppOp {
         updateAppList();
     }
 
-    private boolean hasTurnScreenOnPermission(ApplicationInfo appInfo) {
-        return getContext().getPackageManager().checkPermission(Manifest.permission.TURN_SCREEN_ON,
-                appInfo.packageName) == PackageManager.PERMISSION_GRANTED;
-    }
-
     @NonNull
     @Override
     public Preference bindPreference(@NonNull Preference preference,

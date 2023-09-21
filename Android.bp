@@ -47,6 +47,26 @@ android_library {
     ],
 }
 
+android_library {
+    name: "TvSettingsLib",
+    manifest: "Settings/AndroidManifest.xml",
+    srcs: [
+        ":TvSettingsSrc",
+    ],
+    aidl: {
+        local_include_dirs: ["Settings/src"],
+    },
+    resource_dirs: [
+        "Settings/res",
+        "Settings/res-twopanel",
+    ],
+
+    static_libs: [
+        "TvSettingsStaticLibs",
+    ],
+    platform_apis: true,
+}
+
 android_app {
     name: "TvSettings",
     manifest: "Settings/AndroidManifest.xml",

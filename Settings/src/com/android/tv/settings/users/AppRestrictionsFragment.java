@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.tv.settings.users;
@@ -41,8 +41,8 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.util.EventLog;
 import android.text.TextUtils;
+import android.util.EventLog;
 import android.util.Log;
 import android.view.View;
 import android.widget.Checkable;
@@ -62,6 +62,7 @@ import androidx.preference.SwitchPreference;
 import com.android.settingslib.users.AppRestrictionsHelper;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.util.SafeIntents;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -711,7 +712,7 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
                 p.setKey(getKeyForPackageActivity(mPackageName));
                 p.setIcon(BLANK_DRAWABLE);
                 p.setTitle(R.string.restricted_profile_customize_restrictions);
-                p.setIntent(restrictionsIntent);
+                p.setIntent(SafeIntents.forCallback(restrictionsIntent));
                 mPreference.addPreference(p);
             } else {
                 Log.e(TAG, "No restrictions returned from " + mPackageName);

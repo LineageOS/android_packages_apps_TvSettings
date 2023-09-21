@@ -32,4 +32,14 @@
         android:key="hdr_format_selection"
         android:persistent="true"
         android:title="@string/hdr_format_selection_title"/>
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        android:key="advanced_color_format"
+        custom:uri="@string/advanced_color_format_slice_uri"
+        custom:isPreferenceVisible="false" />
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        android:key="advanced_dolby_vision_mode"
+        custom:uri="@string/advanced_dolby_vision_mode_slice_uri"
+        custom:isPreferenceVisible="false" />
 </PreferenceScreen>

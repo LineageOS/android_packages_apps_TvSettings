@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Programos nustatymai"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Vietovė, naudojimas ir diagnostika, skelbimai"</string>
     <string name="add_account" msgid="7386223854837017129">"Pridėti paskyrą"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Nežinoma paskyra"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Paskyros pašalinimas"</string>
     <string name="account_sync" msgid="4315295293211313989">"Pasirinkti sinchr. programas"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sinchronizuoti dabar"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Pavyzdinis tekstas"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Nuostabusis Ozo šalies burtininkas"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11 skyrius. Nuostabusis Smaragdo miestas"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Netgi žaliais akiniais apsaugoję akis Dorotė ir jos draugai iš pradžių buvo apstulbinti nuostabiojo miesto žvilgesiu. Gatvėse stovėjo gražūs namai, pastatyti iš žalio marmuro ir nusagstyti žvilgančiais smaragdais. Jie ėjo tokiu pačiu žaliu marmuru grįstu šaligatviu, o šaligatvio plytelių sujungimo vietos buvo papuoštos viena šalia kitos esančiomis saulėje žvilgančių smaragdų eilėmis. Langų stiklai buvo žali, netgi dangaus virš miesto ir saulės spindulių spalva buvo žalia. \n\nMieste buvo daug žmonių (vyrų, moterų ir vaikų), kurie vaikščiojo apsirengę žaliais drabužiais. Jų oda buvo žalsvos spalvos. Į Dorotę ir jos keistą draugiją visi žiūrėjo su nuostaba, o pamatę Liūtą vaikai bėgo tolyn ir slėpėsi už savo mamų, tačiau niekas su jais nešnekėjo. Gatvėse buvo daug parduotuvių, o Dorotė pastebėjo, kad jose viskas taip pat buvo žalios spalvos. Viduje buvo parduodami žali saldainiai ir žali kukurūzų spragėsiai bei įvairūs žali batai, žalios kepurės ir žali drabužiai. Vienoje vietoje vyras siūlė nusipirkti žalio limonado ir Dorotė pastebėjo, kad jį perkantys vaikai atsiskaitė žaliomis monetomis. \n\nMieste nebuvo arklių ar kitų gyvūnų. Vyrai viską vežiojo mažais žaliais priekyje stumiamais vežimėliais. Visi atrodė laimingi, patenkinti ir turtingi."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Netgi žaliais akiniais apsaugoję akis Dorotė ir jos draugai iš pradžių buvo apstulbinti nuostabiojo miesto žvilgesio. Gatvėse stovėjo gražūs namai, pastatyti iš žalio marmuro ir nusagstyti žvilgančiais smaragdais. Jie ėjo tokiu pačiu žaliu marmuru grįstu šaligatviu, o šaligatvio plytelių sujungimo vietos buvo papuoštos saulėje žvilgančių smaragdų eilėmis. Langų stiklai buvo žali, netgi dangaus virš miesto ir saulės spindulių spalva buvo žalia. \n\nMieste buvo daug žmonių (vyrų, moterų ir vaikų), kurie vaikščiojo apsirengę žaliais drabužiais. Jų oda buvo žalsvos spalvos. Į Dorotę ir jos keistą draugiją visi žiūrėjo su nuostaba, o pamatę Liūtą vaikai bėgo tolyn ir slėpėsi už savo mamų, tačiau niekas su jais nešnekėjo. Gatvėse buvo daug parduotuvių, o Dorotė pastebėjo, kad jose viskas taip pat buvo žalios spalvos. Viduje buvo parduodami žali saldainiai ir žali kukurūzų spragėsiai bei įvairūs žali batai, žalios kepurės ir žali drabužiai. Vienoje vietoje vyras siūlė nusipirkti žalio limonado ir Dorotė pastebėjo, kad jį perkantys vaikai atsiskaitė žaliomis monetomis. \n\nMieste nebuvo arklių ar kitų gyvūnų. Vyrai viską vežiojo mažais žaliais priekyje stumiamais vežimėliais. Visi atrodė laimingi, patenkinti ir turtingi."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Formato pasirinkimas"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatinis"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Neautomatinis"</string>
@@ -1106,6 +1107,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Sėkmingai prisijungta"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Rodyti viską"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Ieškoma"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Nepavyko gauti paskyros pridėjimo tikslo iš autentifikavimo priemonės."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Nepavyko pridėti paskyros arba paskyros tipas nepasiekiamas."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Kanalai ir įvestys"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Kanalai, išorinės įvestys"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Kanalai"</string>

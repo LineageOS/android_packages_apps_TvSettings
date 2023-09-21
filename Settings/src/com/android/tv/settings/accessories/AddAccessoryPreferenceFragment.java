@@ -28,6 +28,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.SparseArray;
+import android.view.ViewTreeObserver;
 
 import androidx.annotation.NonNull;
 import androidx.leanback.preference.BaseLeanbackPreferenceFragmentCompat;
@@ -68,19 +69,11 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
     public void updateList(List<BluetoothDevice> devices, String currentTargetAddress,
             String currentTargetStatus, String cancelledAddress) {
         final Context themedContext = getPreferenceManager().getContext();
-
-        PreferenceScreen screen = getPreferenceScreen();
-        if (screen == null) {
-            screen = getPreferenceManager().createPreferenceScreen(themedContext);
-            setPreferenceScreen(screen);
-        } else {
-            screen.removeAll();
-        }
-
+        final PreferenceScreen screen =
+                getPreferenceManager().createPreferenceScreen(themedContext);
         if (devices == null) {
             return;
         }
-
         // Add entries for the discovered Bluetooth devices
         for (BluetoothDevice bt : devices) {
             final Preference preference = new Preference(themedContext);
@@ -92,11 +85,12 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
             } else {
                 preference.setSummary(bt.getAddress());
             }
+            preference.setIcon(getDeviceDrawable(bt));
             preference.setKey(bt.getAddress());
             preference.setTitle(bt.getName());
-            preference.setIcon(getDeviceDrawable(bt));
             screen.addPreference(preference);
         }
+        setPreferenceScreen(screen);
     }
 
     public void clearList() {

@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Қолданба параметрлері"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Локация, пайдалану дерегі және диагностика, жарнамалар"</string>
     <string name="add_account" msgid="7386223854837017129">"Аккаунт қосу"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Белгісіз аккаунт"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Аккаунтты жою"</string>
     <string name="account_sync" msgid="4315295293211313989">"Синхрондалған қолданбаларды таңдау"</string>
     <string name="sync_now" msgid="4335217984374620551">"Қазір синхрондау"</string>
@@ -152,14 +153,14 @@
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Қосымша дыбыс параметрлері"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Ойын режиміне рұқсат ету"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Контенттің динамикалық ауқымын сәйкестендіру"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Бұл опция таңдалғанда, жүйе контентпен сәйкестену үшін әр түрлі динамикалық ауқым форматтары арасында ауысады. Формат ауысқанда, қара экран қосылуы мүмкін.\n\nДинамикалық ауқымның толық опцияларын қарау үшін дисплейдің қосымша параметрлеріне өтіңіз."</string>
+    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Бұл опция таңдалғанда, жүйе контентпен сәйкестену үшін әртүрлі динамикалық ауқым форматтары арасында ауысады. Формат ауысқанда, экран қараюы мүмкін.\n\nДинамикалық ауқымның басқа опцияларын көру үшін \"Қосымша дисплей параметрлері\" тармағын таңдаңыз."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Қажетті динамикалық ауқым"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Жүйеге қолайлы конверсия"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Жүйенің формат конверсиясын басқаруына жол беру"</string>
-    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Осы опция таңдалған кезде жүйе дисплейге жіберілетін аралықты анықтайды және керек жағдайда мазмұнды осы динамикалық аралықта түрлендіреді"</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Әрқашан мазмұнның форматына сәйкес келеді"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Жүйеге формат конверсиясын басқаруға рұқсат береді."</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Осы опция таңдалған кезде, жүйе дисплейге жіберілетін аралықты анықтайды және керегінше контентті осы динамикалық аралыққа түрлендіреді."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Әрқашан контенттің форматына сәйкес келеді."</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Мәжбүрлі конверсия"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Қолайлы форматты мәжбүрлі конверсиялау"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Конверсияны мәжбүрлі түрле қолайлы форматқа орнатады."</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Қолайлы форматты мәжбүрлі конверсиялау Конверсяны мәжбүрлеу Display Mode немесе HDR фарматындағы басқа параметрлерге әсер етуі мүмкін"</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Әрқашан SDR-да"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Әрқашан <xliff:g id="HDR_TYPE">%s</xliff:g>-те"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Мәтін үлгісі"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Оз елінің ғажап сиқыршысы"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11-тарау. Оз елінің Зүбаржат қаласы"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Жасыл көзілдірік таққан Дороти мен оның достары қалаға алғаш келгенде, оның ғажайып көркіне таңғалды. Әдемі жасыл мәрмәр үйлер көшені жағалай тізіліп тұр. Жер-көкте жарқыраған зүбаржат тастар шашылып жатқандай. Мәрмәр жол да дәл сондай жап-жасыл. Зүбаржат кірпіштен қаланған тұрғын үйлер күннен жарқырайды. Терезелердің әйнектері де жасыл шыныдан. Қала үстіндегі жасыл аспаннан жасыл түсті күн сәулесі түседі. \n\nКөшедегі ерлер де, әйелдер де, балалар да жасыл киім киіп алған. Олардың терілері де жасыл реңді екен. Адамдар Дороти мен оның әпенді достарына таңдана қарайды. Балалар Арыстанды көре сала қашып, аналарының артына тығылып жатыр. Сөйлесуге де ешкім батпайды ғой. Дороти көше бойында қаз-қатар тұрған дүкендердегі нәрселердің барлығы жасыл түсті екеніне тамсана қарайды. Кәмпит те, поп-корн да, аяқ киім де, қалпақтар да – барлығы жасыл еді. Бір кісі жасыл лимонад сатып тұр, балалар оны жасыл ақшаға сатып алып жатыр. \n\nМұнда жануарлар жоқ сияқты. Жүкті ер адамдар кішкене жасыл арбаға салып сүйреп барады. Бәрі бақытты, өмірлеріне дән риза."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Жасыл көзілдірік таққан Дороти мен оның достары қалаға алғаш келгенде, оның ғажайып көркіне таңғалды. Әдемі жасыл мәрмәр үйлер көшені жағалай тізіліп тұр. Жер-көкте жарқыраған зүбаржаттар шашылып жатқандай. Мәрмәр жол да дәл сондай жап-жасыл. Зүбаржат кірпіштен қаланған тұрғын үйлер күннен жарқырайды. Терезелердің әйнектері де жасыл шыныдан. Қала үстіндегі жасыл аспаннан жасыл түсті күн сәулесі түседі. \n\nКөшедегі ерлер де, әйелдер де, балалар да жасыл киім киіп алған. Олардың терілері де жасыл реңді екен. Адамдар Дороти мен оның әпенді достарына таңдана қарайды. Балалар Арыстанды көре сала қашып, аналарының артына тығылып жатыр. Сөйлесуге де ешкім батпайды ғой. Дороти көше бойында қаз-қатар тұрған дүкендердегі нәрселердің барлығы жасыл түсті екеніне тамсана қарайды. Кәмпит те, поп-корн да, аяқ киім де, қалпақтар да барлығы жасыл еді. Бір кісі жасыл лимонад сатып тұр, балалар оны жасыл ақшаға сатып алып жатыр. \n\nМұнда жануарлар жоқ сияқты. Ер адамдар жүкті кішкене жасыл арбаға салып сүйреп барады. Бәрі бақытты, өмірлеріне дән риза."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Форматты таңдау"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Автоматты"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Қолмен"</string>
@@ -1106,6 +1107,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Байланыс орнатылды."</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Барлығын көрсету"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Іздеу"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Authenticator-дан аккаунт қосудың intent нысаны алынбады."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Аккаунт қосылмады немесе мұндай аккаунт түрі қолжетімді емес."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Арналар және кірістер"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Арналар, сыртқы кірістер"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Арналар"</string>
@@ -1121,6 +1124,6 @@
     <string name="energy_modes" msgid="1331693860386361744">"Энергия режимдері"</string>
     <string name="energy_modes_summary" msgid="7196407759836930799">"Теледидар пайдаланылмаған кезде энергияның тиімдірек қолданылуын қамтамасыз етіңіз"</string>
     <string name="energy_mode_enables" msgid="357960364751477627">"Келесілер қосылады:"</string>
-    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Бұл режим құрылғының қуат тұтынуын арттыруы мүмкін екенін ескеріңіз."</string>
+    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Бұл режим құрылғы тұтынатын қуат мөлшерін арттыруы мүмкін екенін ескеріңіз."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"\"<xliff:g id="ENERGYMODENAME">%s</xliff:g>\" режимін қосу"</string>
 </resources>

@@ -221,15 +221,14 @@ public class ConnectState implements State {
                 NetworkCapabilities wifiNetworkCapabilities = getActiveWifiNetworkCapabilities();
                 if (wifiNetworkCapabilities != null) {
                     if (wifiNetworkCapabilities.hasCapability(
+                            NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL)) {
+                        notifyListener(StateMachine.RESULT_CAPTIVE_PORTAL);
+                    } else if (wifiNetworkCapabilities.hasCapability(
                             NetworkCapabilities.NET_CAPABILITY_VALIDATED) ||
                         wifiNetworkCapabilities.hasCapability(
                             NetworkCapabilities.NET_CAPABILITY_INTERNET)) {
                         notifyListener(StateMachine.RESULT_SUCCESS);
-                    } else if (wifiNetworkCapabilities.hasCapability(
-                            NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL)) {
-                        notifyListener(StateMachine.RESULT_CAPTIVE_PORTAL);
                     }
-
                 }
             } else {
                 switch (configuration.getNetworkSelectionStatus()

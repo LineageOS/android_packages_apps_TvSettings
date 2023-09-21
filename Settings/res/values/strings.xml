@@ -2661,6 +2661,10 @@
     <string name="resolution_slice_uri" translatable="false"/>
     <!-- Slice uri for hdr and color format -->
     <string name="hdr_and_color_format_slice_uri" translatable="false"/>
+    <!-- Slice uri for Color format in Advanced display settings -->
+    <string name="advanced_color_format_slice_uri" translatable="false"/>
+    <!-- Slice uri for Dolby Vision Mode in Advanced display settings -->
+    <string name="advanced_dolby_vision_mode_slice_uri" translatable="false"/>
 
     <!-- Slice uri for general information -->
     <string name="general_info_slice_uri" translatable="false"/>
@@ -2766,6 +2770,11 @@
     <string name="network_connection_request_dialog_showall">Show all</string>
     <!-- Bluetooth settings screen, text that appears in heading bar when scanning for devices -->
     <string name="progress_scanning">Searching</string>
+
+    <!-- Message of a dialog shown to inform that the account intent is not available. [CHAR LIMIT=100] -->
+    <string name="add_account_intent_not_available_dialog_message">Failed to retrieve add account intent from authenticator.</string>
+    <!-- Message of a dialog shown to inform that the account type is not available or failed to add account. [CHAR LIMIT=100] -->
+    <string name="add_account_failed_dialog_message">Failed to add account or the account type is not available.</string>
 
     <!-- Placeholder font for compiling. The real font will be provided by RRO. -->
     <string name="preference_title_text_font" translatable="false" />

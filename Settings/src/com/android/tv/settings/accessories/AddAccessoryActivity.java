@@ -461,7 +461,6 @@ public class AddAccessoryActivity extends FragmentActivity
         // Cancel countdown
         mMsgHandler.removeMessages(MSG_AUTOPAIR_TICK);
         mMsgHandler.removeMessages(MSG_START_AUTOPAIR_COUNTDOWN);
-        setPairingText(null);
     }
 
     private void setTimeout(int timeout) {
