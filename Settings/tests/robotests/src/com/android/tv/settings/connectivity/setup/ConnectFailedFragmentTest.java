@@ -21,6 +21,7 @@ import static org.mockito.Mockito.doReturn;
 
 import android.net.wifi.WifiConfiguration;
 
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 
 import org.junit.Before;
@@ -39,13 +40,13 @@ public class ConnectFailedFragmentTest {
     WifiConfiguration mWifiConfig;
     @Spy
     private ConnectFailedState.ConnectFailedFragment mConnectFailedFragment;
-    private WifiSetupActivity mActivity;
+    private FragmentActivity mActivity;
     private UserChoiceInfo mUserChoiceInfo;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mActivity = Robolectric.buildActivity(WifiSetupActivity.class).create().get();
+        mActivity = Robolectric.buildActivity(FragmentActivity.class).create().get();
         doReturn(mActivity).when(mConnectFailedFragment).getContext();
         mUserChoiceInfo = ViewModelProviders.of(mActivity).get(UserChoiceInfo.class);
         mUserChoiceInfo.init();
