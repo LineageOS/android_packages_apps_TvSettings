@@ -21,6 +21,7 @@ import static org.robolectric.shadow.api.Shadow.extract;
 
 import android.net.wifi.WifiConfiguration;
 
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.android.settingslib.wifi.AccessPoint;
@@ -40,7 +41,7 @@ import org.robolectric.annotation.Config;
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = ShadowStateMachine.class)
 public class AddStartStateTest {
-    private WifiSetupActivity mActivity;
+    private FragmentActivity mActivity;
     private AddStartState mAddStartState;
     private UserChoiceInfo mUserChoiceInfo;
     @Mock
@@ -49,7 +50,7 @@ public class AddStartStateTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mActivity = Robolectric.buildActivity(WifiSetupActivity.class).get();
+        mActivity = Robolectric.buildActivity(FragmentActivity.class).get();
         StateMachine stateMachine = ViewModelProviders.of(mActivity).get(StateMachine.class);
         mUserChoiceInfo = ViewModelProviders.of(mActivity).get(UserChoiceInfo.class);
         ShadowStateMachine shadowStateMachine = extract(stateMachine);
