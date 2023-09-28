@@ -40,7 +40,7 @@
         android:order="2">
 
         <Preference
-            android:icon="@drawable/ic_photo_size_select_actual"
+            android:icon="@drawable/ic_settings_channels_and_inputs"
             android:key="channels_and_inputs"
             android:title="@string/channels_and_inputs_title"
             android:summary="@string/channels_and_inputs_summary"
@@ -48,7 +48,7 @@
             <!-- This is an example. Change to your intent for display and preview-->
         </Preference>
         <com.android.tv.twopanelsettings.slices.SlicePreference
-            android:icon="@drawable/ic_photo_size_select_actual"
+            android:icon="@drawable/ic_settings_channels_and_inputs"
             android:key="channels_and_inputs_slice"
             android:title="@string/channels_and_inputs_title"
             android:summary="@string/channels_and_inputs_summary"
