@@ -25,7 +25,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.leanback.widget.GuidedAction;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AdvancedOptionsFlowInfo;
 import com.android.tv.settings.connectivity.setup.UserChoiceInfo;

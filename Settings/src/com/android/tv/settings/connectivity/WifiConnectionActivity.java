@@ -31,7 +31,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.RestrictedLockUtilsInternal;
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AddStartState;
 import com.android.tv.settings.connectivity.setup.AdvancedWifiOptionsFlow;
