@@ -49,9 +49,9 @@ import androidx.appcompat.app.AlertDialog;
 import com.android.settingslib.Utils;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.core.lifecycle.ObservableDialogFragment;
-import com.android.settingslib.wifi.AccessPoint;
-import com.android.settingslib.wifi.WifiTracker;
-import com.android.settingslib.wifi.WifiTrackerFactory;
+import com.android.tv.settings.library.network.AccessPoint;
+import com.android.tv.settings.library.network.WifiTracker;
+import com.android.tv.settings.library.network.WifiTrackerFactory;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.NetworkRequestErrorDialogFragment.ERROR_DIALOG_TYPE;
 

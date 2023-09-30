@@ -142,7 +142,7 @@ public class UserChoiceInfo extends ViewModel {
 
     /**
      * Get WifiSecurity category. The category value is defined in
-     * {@link com.android.settingslib.wifi.AccessPoint}
+     * {@link com.android.tv.settings.library.network.AccessPoint}
      */
     public int getWifiSecurity() {
         return mWifiSecurity;
@@ -152,7 +152,7 @@ public class UserChoiceInfo extends ViewModel {
      * Set WifiSecurity
      *
      * @param wifiSecurity WifiSecurity category defined in
-     *                     {@link com.android.settingslib.wifi.AccessPoint}.
+     *                     {@link com.android.tv.settings.library.network.AccessPoint}.
      */
     public void setWifiSecurity(int wifiSecurity) {
         this.mWifiSecurity = wifiSecurity;

@@ -39,7 +39,7 @@ import androidx.preference.Preference;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.RestrictedPreference;
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 

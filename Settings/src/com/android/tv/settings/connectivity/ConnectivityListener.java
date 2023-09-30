@@ -48,8 +48,8 @@ import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnStart;
 import com.android.settingslib.core.lifecycle.events.OnStop;
 import com.android.settingslib.utils.ThreadUtils;
-import com.android.settingslib.wifi.AccessPoint;
-import com.android.settingslib.wifi.WifiTracker;
+import com.android.tv.settings.library.network.AccessPoint;
+import com.android.tv.settings.library.network.WifiTracker;
 
 import java.util.ArrayList;
 import java.util.List;

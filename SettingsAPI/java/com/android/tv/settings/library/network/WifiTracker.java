@@ -52,13 +52,12 @@ import android.util.Pair;
 import androidx.annotation.GuardedBy;
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
+import androidx.lifecycle.DefaultLifecycleObserver;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 
 import com.android.tv.settings.library.util.ThreadUtils;
-import com.android.tv.settings.library.util.lifecycle.Lifecycle;
-import com.android.tv.settings.library.util.lifecycle.LifecycleObserver;
-import com.android.tv.settings.library.util.lifecycle.events.OnDestroy;
-import com.android.tv.settings.library.util.lifecycle.events.OnStart;
-import com.android.tv.settings.library.util.lifecycle.events.OnStop;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -77,16 +76,16 @@ import java.util.stream.Collectors;
 /**
  * Tracks saved or available wifi networks and their state.
  *
- * @deprecated WifiTracker/AccessPoint is no longer supported, and will be removed in a future
+ * WifiTracker/AccessPoint is no longer supported, and will be removed in a future
  * release. Clients that need a dynamic list of available wifi networks should migrate to one of the
  * newer tracker classes,
  * {@link com.android.wifitrackerlib.WifiPickerTracker},
  * {@link com.android.wifitrackerlib.SavedNetworkTracker},
  * {@link com.android.wifitrackerlib.NetworkDetailsTracker},
  * in conjunction with {@link com.android.wifitrackerlib.WifiEntry} to represent each wifi network.
+ * TODO: Migrate this local copy to use WifiPickerTracker internally.
  */
-@Deprecated
-public class WifiTracker implements LifecycleObserver, OnStart, OnStop, OnDestroy {
+public class WifiTracker implements DefaultLifecycleObserver {
     /**
      * Default maximum age in millis of cached scored networks in
      * {@link .AccessPoint#mScoredNetworkCache} to be used for speed label generation.
@@ -186,6 +185,23 @@ public class WifiTracker implements LifecycleObserver, OnStart, OnStop, OnDestro
     @VisibleForTesting
     WifiTracker.Scanner mScanner;
 
+    private final LifecycleObserver lifecycleObserver = new DefaultLifecycleObserver() {
+        @Override
+        public void onStart(@NonNull LifecycleOwner owner) {
+            WifiTracker.this.onStart();
+        }
+
+        @Override
+        public void onStop(@NonNull LifecycleOwner owner) {
+            WifiTracker.this.onStop();
+        }
+
+        @Override
+        public void onDestroy(@NonNull LifecycleOwner owner) {
+            WifiTracker.this.onDestroy();
+        }
+    };
+
     private static IntentFilter newIntentFilter() {
         IntentFilter filter = new IntentFilter();
         filter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
@@ -222,7 +238,7 @@ public class WifiTracker implements LifecycleObserver, OnStart, OnStop, OnDestro
                 context.getSystemService(NetworkScoreManager.class),
                 newIntentFilter());
 
-        lifecycle.addObserver(this);
+        lifecycle.addObserver(lifecycleObserver);
     }
 
     @VisibleForTesting
@@ -278,7 +294,6 @@ public class WifiTracker implements LifecycleObserver, OnStart, OnStop, OnDestro
         });
     }
 
-    @Override
     public void onDestroy() {
         mWorkThread.quit();
     }
@@ -321,7 +336,6 @@ public class WifiTracker implements LifecycleObserver, OnStart, OnStop, OnDestro
      * <p>Registers listeners and starts scanning for wifi networks. If this is not called
      * then forceUpdate() must be called to populate getAccessPoints().
      */
-    @Override
     @MainThread
     public void onStart() {
         // fetch current ScanResults instead of waiting for broadcast of fresh results
@@ -397,7 +411,6 @@ public class WifiTracker implements LifecycleObserver, OnStart, OnStop, OnDestro
      * the bit
      * is unset on the next SCAN_RESULTS_AVAILABLE_ACTION).
      */
-    @Override
     @MainThread
     public void onStop() {
         if (mRegistered) {

@@ -24,7 +24,7 @@ import android.net.wifi.WifiConfiguration;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.testutils.ShadowStateMachine;
