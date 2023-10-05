@@ -237,7 +237,7 @@ public class StorageFragment extends SettingsPreferenceFragment {
         try {
             mAvailablePref.setSize(mStorageManager.getAllocatableBytes(
                     StorageManager.convert(mVolumeInfo.fsUuid)));
-        } catch (IOException e) {
+        } catch (IOException | IllegalArgumentException e) {
             mAvailablePref.setSize(details.availSize);
         }
         mAppsUsagePref.setSize(details.appsSize.get(currentUser));
