@@ -56,6 +56,7 @@ import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.settings.widget.CustomContentDescriptionSwitchPreference;
 import com.android.tv.settings.widget.TvAccessPointPreference;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
+import com.android.wifitrackerlib.WifiEntry;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -452,7 +453,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     }
 
     private boolean isCaptivePortal(AccessPoint accessPoint) {
-        if (accessPoint.getDetailedState() != NetworkInfo.DetailedState.CONNECTED) {
+        if (accessPoint.getWifiEntry().getConnectedState() != WifiEntry.CONNECTED_STATE_CONNECTED) {
             return false;
         }
         NetworkCapabilities nc = mConnectivityManager.getNetworkCapabilities(

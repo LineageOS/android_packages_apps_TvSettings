@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Binder;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.text.TextUtils;
@@ -36,6 +37,7 @@ import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.data.PreferenceControllerState;
 import com.android.tv.settings.library.settingslib.RestrictedLockUtils;
 import com.android.tv.settings.library.util.AbstractPreferenceController;
+import com.android.tv.settings.library.util.DataBinder;
 import com.android.tv.settings.library.util.ResourcesUtil;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
 
@@ -77,16 +79,14 @@ public class WifiDetailsState extends PreferenceControllerState implements
     }
 
     public static void prepareArgs(@NonNull Bundle args, AccessPoint accessPoint) {
-        final Bundle apBundle = new Bundle();
-        accessPoint.saveWifiState(apBundle);
-        args.putParcelable(ARG_ACCESS_POINT_STATE, apBundle);
+        args.putBinder(ARG_ACCESS_POINT_STATE, DataBinder.with(accessPoint));
     }
 
     @Override
     public void onCreate(Bundle extras) {
         mNetworkModule = NetworkModule.getInstance(mContext);
         mPreferenceCompatManager = new PreferenceCompatManager();
-        mAccessPoint = new AccessPoint(mContext, extras.getBundle(ARG_ACCESS_POINT_STATE));
+        mAccessPoint = DataBinder.getData(extras.getBinder(ARG_ACCESS_POINT_STATE));
         if (mUIUpdateCallback != null) {
             mUIUpdateCallback.notifyUpdateScreenTitle(getStateIdentifier(),
                     String.valueOf(mAccessPoint.getSsid()));
@@ -237,7 +237,7 @@ public class WifiDetailsState extends PreferenceControllerState implements
         // For saved Passpoint network, framework doesn't have the field to keep the MAC choice
         // persistently, so Passpoint network will always use the default value so far, which is
         // randomized MAC address, so don't need to modify title.
-        if (mAccessPoint.isPasspoint() || mAccessPoint.isPasspointConfig()) {
+        if (mAccessPoint.isPasspoint()) {
             return;
         }
         mMacAddressPref.setTitle(
@@ -254,8 +254,7 @@ public class WifiDetailsState extends PreferenceControllerState implements
                 (connectivityListener.getWifiMacRandomizationSetting(mAccessPoint)
                         == WifiConfiguration.RANDOMIZATION_PERSISTENT);
         mRandomMacPref.setValue(isMacRandomized ? VALUE_MAC_RANDOM : VALUE_MAC_DEVICE);
-        if (mAccessPoint.isEphemeral() || mAccessPoint.isPasspoint()
-                || mAccessPoint.isPasspointConfig()) {
+        if (!mAccessPoint.getWifiEntry().canSetPrivacy()) {
             mRandomMacPref.setSelectable(PreferenceCompat.STATUS_OFF);
             mRandomMacPref.setSummary(ResourcesUtil.getString(
                     mContext, "mac_address_ephemeral_summary"));

@@ -115,10 +115,10 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         if (mWifiManager != null) {
             if (lifecycle != null) {
                 lifecycle.addObserver(this);
-                mWifiTracker = new WifiTracker(context, this, lifecycle, true, true);
-            } else {
-                mWifiTracker = new WifiTracker(context, this, true, true);
             }
+
+            mWifiTracker = new WifiTracker(context, this, lifecycle, mWifiManager,
+                    mConnectivityManager);
         }
         mEthernetListener = (iface, state, role, configuration) -> {
             if (state == EthernetManager.STATE_LINK_UP) {
