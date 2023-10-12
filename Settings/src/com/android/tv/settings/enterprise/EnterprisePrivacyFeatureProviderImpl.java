@@ -98,9 +98,6 @@ public class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFe
         } else {
             disclosure.append(ResourcesUtil.getString(mContext, "do_disclosure_generic"));
         }
-        disclosure.append(ResourcesUtil.getString(mContext, "do_disclosure_learn_more_separator"));
-        disclosure.append(ResourcesUtil.getString(mContext, "learn_more"),
-                new EnterprisePrivacySpan(mContext), 0);
         return disclosure;
     }
 
