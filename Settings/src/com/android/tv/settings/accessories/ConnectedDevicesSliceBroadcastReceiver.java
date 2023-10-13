@@ -16,11 +16,14 @@
 
 package com.android.tv.settings.accessories;
 
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceProvider.KEY_EXTRAS_DEVICE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.DIRECTION_BACK;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_DIRECTION;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_SLICE_URI;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.notifyDeviceChanged;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.notifyToGoBack;
 
+import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -40,19 +43,34 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
             "com.android.tv.settings.accessories.TOGGLE_CHANGED";
     // The extra to specify toggle type. Currently, there is only Bluetooth toggle.
     static final String EXTRA_TOGGLE_TYPE = "TOGGLE_TYPE";
+    static final String EXTRA_TOGGLE_STATE = "TOGGLE_STATE";
     // Bluetooth off is handled differently by ResponseActivity with confirmation dialog.
     static final String BLUETOOTH_ON = "BLUETOOTH_ON";
+    static final String ACTIVE_AUDIO_OUTPUT = "ACTIVE_AUDIO_OUTPUT";
 
     @Override
     public void onReceive(Context context, Intent intent) {
         // Handle CEC control toggle.
         final String action = intent.getAction();
         if (ACTION_TOGGLE_CHANGED.equals(action)) {
-            if (BLUETOOTH_ON.equals(intent.getStringExtra(EXTRA_TOGGLE_TYPE))) {
-                if (AccessoryUtils.getDefaultBluetoothAdapter() != null) {
-                    AccessoryUtils.getDefaultBluetoothAdapter().enable();
+            final String toggleType = intent.getStringExtra(EXTRA_TOGGLE_TYPE);
+            if (toggleType != null) {
+                switch (toggleType) {
+                    case BLUETOOTH_ON -> {
+                        if (AccessoryUtils.getDefaultBluetoothAdapter() != null) {
+                            AccessoryUtils.getDefaultBluetoothAdapter().enable();
+                        }
+                        return;
+                    }
+                    case ACTIVE_AUDIO_OUTPUT -> {
+                        boolean enable = intent.getBooleanExtra(EXTRA_TOGGLE_STATE, false);
+                        BluetoothDevice device = intent.getParcelableExtra(KEY_EXTRAS_DEVICE,
+                                BluetoothDevice.class);
+                        AccessoryUtils.setActiveAudioOutput(enable ? device : null);
+                        // refresh device
+                        notifyDeviceChanged(context, device);
+                    }
                 }
-                return;
             }
         }
 
