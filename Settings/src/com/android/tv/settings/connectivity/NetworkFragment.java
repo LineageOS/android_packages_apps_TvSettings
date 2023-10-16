@@ -437,6 +437,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             }
             pref.setVisible(!restrictedPref.isRestricted() || accessPoint.isSaved());
             pref.setOrder(index++);
+            pref.setSummary(accessPoint.isActive()? R.string.connected : R.string.not_connected);
             restrictedPref.updatePreference();
 
             // Double-adding is harmless
