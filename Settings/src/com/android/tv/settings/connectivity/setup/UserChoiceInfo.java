@@ -51,7 +51,7 @@ public class UserChoiceInfo extends ViewModel {
     private int mWifiSecurity;
     private ScanResult mChosenNetwork;
     private String mConnectedNetwork;
-    private boolean mIsPasswordHidden = false;
+    private boolean mIsPasswordHidden = true;
     private ConnectionFailedStatus mConnectionFailedStatus;
     private int mEasyConnectNetworkId = -1;
 
@@ -211,7 +211,7 @@ public class UserChoiceInfo extends ViewModel {
         mWifiSecurity = 0;
         mChosenNetwork = null;
         mChosenNetwork = null;
-        mIsPasswordHidden = false;
+        mIsPasswordHidden = true;
     }
 
     public void setVisible(@PAGE int page, boolean visible) {
