@@ -28,7 +28,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.SparseArray;
-import android.view.ViewTreeObserver;
 
 import androidx.annotation.NonNull;
 import androidx.leanback.preference.BaseLeanbackPreferenceFragmentCompat;
@@ -62,15 +61,20 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         final AddAccessoryActivity activity = (AddAccessoryActivity) getActivity();
-        updateList(activity.getBluetoothDevices(), activity.getCurrentTargetAddress(),
+        final Context themedContext = getPreferenceManager().getContext();
+
+        PreferenceScreen screen =
+                getPreferenceManager().createPreferenceScreen(themedContext);
+        updateList(screen, activity.getBluetoothDevices(), activity.getCurrentTargetAddress(),
                 activity.getCurrentTargetStatus(), activity.getCancelledAddress());
     }
 
-    public void updateList(List<BluetoothDevice> devices, String currentTargetAddress,
-            String currentTargetStatus, String cancelledAddress) {
+    public void updateList(PreferenceScreen screen, List<BluetoothDevice> devices,
+                           String currentTargetAddress, String currentTargetStatus,
+                           String cancelledAddress) {
         final Context themedContext = getPreferenceManager().getContext();
-        final PreferenceScreen screen =
-                getPreferenceManager().createPreferenceScreen(themedContext);
+        screen.removeAll();
+
         if (devices == null) {
             return;
         }
