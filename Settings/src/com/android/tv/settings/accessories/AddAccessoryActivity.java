@@ -407,8 +407,9 @@ public class AddAccessoryActivity extends FragmentActivity
 
         int prevNumDevices = mPreferenceFragment.getPreferenceScreen().getPreferenceCount();
 
-        mPreferenceFragment.updateList(mBluetoothDevices, mCurrentTargetAddress,
-                mCurrentTargetStatus, mCancelledAddress);
+
+        mPreferenceFragment.updateList(mPreferenceFragment.getPreferenceScreen(),
+                mBluetoothDevices, mCurrentTargetAddress, mCurrentTargetStatus, mCancelledAddress);
 
         if (mNoInputMode) {
             if (DEBUG) Log.d(TAG, "stopping auto-exit timer");
