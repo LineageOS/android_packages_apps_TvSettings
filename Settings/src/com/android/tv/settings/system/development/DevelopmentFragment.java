@@ -75,7 +75,7 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.TwoStatePreference;
 
 import com.android.internal.app.LocalePicker;
 import com.android.settingslib.core.ConfirmationDialogController;
@@ -198,16 +198,16 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private boolean mLastEnabledState;
     private boolean mHaveDebugSettings;
 
-    private SwitchPreference mEnableDeveloper;
-    private SwitchPreference mEnableAdb;
+    private TwoStatePreference mEnableDeveloper;
+    private TwoStatePreference mEnableAdb;
     private Preference mClearAdbKeys;
-    private SwitchPreference mEnableTerminal;
+    private TwoStatePreference mEnableTerminal;
     private Preference mBugreport;
-    private SwitchPreference mKeepScreenOn;
+    private TwoStatePreference mKeepScreenOn;
     private ListPreference mBtHciSnoopLog;
     private OemUnlockPreferenceController mEnableOemUnlock;
-    private SwitchPreference mDebugViewAttributes;
-    private SwitchPreference mForceAllowOnExternal;
+    private TwoStatePreference mDebugViewAttributes;
+    private TwoStatePreference mForceAllowOnExternal;
 
     private PreferenceScreen mPassword;
     private String mDebugApp;
@@ -216,23 +216,23 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private String mMockLocationApp;
     private Preference mMockLocationAppPref;
 
-    private SwitchPreference mWaitForDebugger;
-    private SwitchPreference mVerifyAppsOverUsb;
-    private SwitchPreference mWifiDisplayCertification;
-    private SwitchPreference mWifiVerboseLogging;
-    private SwitchPreference mMobileDataAlwaysOn;
+    private TwoStatePreference mWaitForDebugger;
+    private TwoStatePreference mVerifyAppsOverUsb;
+    private TwoStatePreference mWifiDisplayCertification;
+    private TwoStatePreference mWifiVerboseLogging;
+    private TwoStatePreference mMobileDataAlwaysOn;
 
-    private SwitchPreference mStrictMode;
-    private SwitchPreference mPointerLocation;
-    private SwitchPreference mShowTouches;
-    private SwitchPreference mShowScreenUpdates;
-    private SwitchPreference mDisableOverlays;
-    private SwitchPreference mForceMsaa;
-    private SwitchPreference mShowHwScreenUpdates;
-    private SwitchPreference mShowHwLayersUpdates;
-    private SwitchPreference mDebugLayout;
-    private SwitchPreference mForceRtlLayout;
-    private SwitchPreference mWindowBlurs;
+    private TwoStatePreference mStrictMode;
+    private TwoStatePreference mPointerLocation;
+    private TwoStatePreference mShowTouches;
+    private TwoStatePreference mShowScreenUpdates;
+    private TwoStatePreference mDisableOverlays;
+    private TwoStatePreference mForceMsaa;
+    private TwoStatePreference mShowHwScreenUpdates;
+    private TwoStatePreference mShowHwLayersUpdates;
+    private TwoStatePreference mDebugLayout;
+    private TwoStatePreference mForceRtlLayout;
+    private TwoStatePreference mWindowBlurs;
     private ListPreference mDebugHwOverdraw;
     private LogdSizePreferenceController mLogdSizeController;
     private LogpersistPreferenceController mLogpersistController;
@@ -247,9 +247,9 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private ListPreference mSimulateColorSpace;
 
-    private SwitchPreference mUSBAudio;
+    private TwoStatePreference mUSBAudio;
 
-    private SwitchPreference mRecordAudio;
+    private TwoStatePreference mRecordAudio;
     private Preference mPlayRecordedAudio;
     private Preference mSaveAudio;
     private Preference mTimeToStartRead;
@@ -257,22 +257,21 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private Preference mEmptyAudioDuration;
     private ListPreference mRecordAudioSource;
 
-    private SwitchPreference mImmediatelyDestroyActivities;
+    private TwoStatePreference mImmediatelyDestroyActivities;
 
     private ListPreference mAppProcessLimit;
 
-    private SwitchPreference mShowAllANRs;
+    private TwoStatePreference mShowAllANRs;
 
     private ColorModePreference mColorModePreference;
 
-    private SwitchPreference mForceResizable;
+    private TwoStatePreference mForceResizable;
 
     private Preference mWirelessDebugging;
 
     private final ArrayList<Preference> mAllPrefs = new ArrayList<>();
 
-    private final ArrayList<SwitchPreference> mResetSwitchPrefs
-            = new ArrayList<>();
+    private final ArrayList<TwoStatePreference> mResetSwitchPrefs = new ArrayList<>();
 
     private final HashSet<Preference> mDisabledPrefs = new HashSet<>();
 
@@ -349,7 +348,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         final PreferenceScreen preferenceScreen = getPreferenceScreen();
 
         // Don't add to prefs lists or it'll disable itself when switched off
-        mEnableDeveloper = (SwitchPreference) findPreference(ENABLE_DEVELOPER);
+        mEnableDeveloper = findPreference(ENABLE_DEVELOPER);
 
         final PreferenceGroup debugDebuggingCategory = (PreferenceGroup)
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
@@ -458,15 +457,13 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mRecordAudioSource.setVisible(false);
         mForceResizable = findAndInitSwitchPref(FORCE_RESIZABLE_KEY);
 
-        mImmediatelyDestroyActivities = (SwitchPreference) findPreference(
-                IMMEDIATELY_DESTROY_ACTIVITIES_KEY);
+        mImmediatelyDestroyActivities = findPreference(IMMEDIATELY_DESTROY_ACTIVITIES_KEY);
         mAllPrefs.add(mImmediatelyDestroyActivities);
         mResetSwitchPrefs.add(mImmediatelyDestroyActivities);
 
         mAppProcessLimit = addListPreference(APP_PROCESS_LIMIT_KEY);
 
-        mShowAllANRs = (SwitchPreference) findPreference(
-                SHOW_ALL_ANRS_KEY);
+        mShowAllANRs = findPreference(SHOW_ALL_ANRS_KEY);
         mAllPrefs.add(mShowAllANRs);
         mResetSwitchPrefs.add(mShowAllANRs);
 
@@ -522,8 +519,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
     }
 
-    private SwitchPreference findAndInitSwitchPref(String key) {
-        SwitchPreference pref = (SwitchPreference) findPreference(key);
+    private TwoStatePreference findAndInitSwitchPref(String key) {
+        TwoStatePreference pref = findPreference(key);
         if (pref == null) {
             throw new IllegalArgumentException("Cannot find preference with key = " + key);
         }
@@ -659,7 +656,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mContentResolver.unregisterContentObserver(mToggleContentObserver);
     }
 
-    void updateSwitchPreference(SwitchPreference switchPreference, boolean value) {
+    void updateSwitchPreference(TwoStatePreference switchPreference, boolean value) {
         switchPreference.setChecked(value);
         mHaveDebugSettings |= value;
     }
@@ -721,7 +718,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private void resetDangerousOptions() {
         SystemPropPoker.getInstance().blockPokes();
-        for (final SwitchPreference cb : mResetSwitchPrefs) {
+        for (final TwoStatePreference cb : mResetSwitchPrefs) {
             if (cb.isChecked()) {
                 cb.setChecked(false);
                 onPreferenceTreeClick(cb);
