@@ -31,11 +31,14 @@ public final class ConnectedDevicesSliceUtils {
     static final String BLUETOOTH_DEVICE_PATH = "device";
     static final String EXTRAS_DIRECTION = "extras_direction";
     static final String EXTRAS_SLICE_URI = "extras_slice_uri";
+    static final String FIND_MY_REMOTE_PATH = "find_my_remote";
     static final String DIRECTION_BACK = "direction_back";
     public static final Uri GENERAL_SLICE_URI =
             Uri.parse("content://" + AUTHORITY + "/" + GENERAL_PATH);
     static final Uri BLUETOOTH_DEVICE_SLICE_URI =
             Uri.parse("content://" + AUTHORITY + "/" + BLUETOOTH_DEVICE_PATH);
+    static final Uri FMR_SLICE_URI =
+            Uri.parse("content://" + AUTHORITY + "/" + FIND_MY_REMOTE_PATH);
 
     static String getDeviceAddr(Uri uri) {
         if (uri.getPathSegments().size() >= 2) {
@@ -50,6 +53,10 @@ public final class ConnectedDevicesSliceUtils {
 
     static boolean isBluetoothDevicePath(Uri uri) {
         return BLUETOOTH_DEVICE_PATH.equals(getFirstSegment(uri));
+    }
+
+    static boolean isFindMyRemotePath(Uri uri) {
+        return FIND_MY_REMOTE_PATH.equals(getFirstSegment(uri));
     }
 
     /** Check if slice provider exists. */
