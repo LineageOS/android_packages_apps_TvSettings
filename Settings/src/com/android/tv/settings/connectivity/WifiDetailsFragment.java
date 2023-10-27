@@ -25,6 +25,7 @@ import android.net.IpConfiguration.ProxySettings;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Binder;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.text.TextUtils;
@@ -42,6 +43,7 @@ import com.android.settingslib.RestrictedPreference;
 import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.library.util.DataBinder;
 
 import java.util.List;
 
@@ -77,19 +79,23 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
     private ConnectivityListener mConnectivityListener;
     private AccessPoint mAccessPoint;
 
+    private static class AccessPointBinder extends Binder {
+        final AccessPoint accessPoint;
+
+        public AccessPointBinder(AccessPoint accessPoint) {
+            this.accessPoint = accessPoint;
+        }
+    }
+
     public static void prepareArgs(@NonNull Bundle args, AccessPoint accessPoint) {
-        final Bundle apBundle = new Bundle();
-        accessPoint.saveWifiState(apBundle);
-        args.putParcelable(ARG_ACCESS_POINT_STATE, apBundle);
+        args.putBinder(ARG_ACCESS_POINT_STATE, DataBinder.with(accessPoint));
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mConnectivityListener = new ConnectivityListener(
                 getContext(), this, getSettingsLifecycle());
-
-        mAccessPoint = new AccessPoint(getContext(),
-                getArguments().getBundle(ARG_ACCESS_POINT_STATE));
+        mAccessPoint = DataBinder.getData(getArguments().getBinder(ARG_ACCESS_POINT_STATE));
         super.onCreate(savedInstanceState);
     }
 
@@ -243,7 +249,7 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         // For saved Passpoint network, framework doesn't have the field to keep the MAC choice
         // persistently, so Passpoint network will always use the default value so far, which is
         // randomized MAC address, so don't need to modify title.
-        if (mAccessPoint.isPasspoint() || mAccessPoint.isPasspointConfig()) {
+        if (mAccessPoint.isPasspoint()) {
             return;
         }
         mMacAddressPref.setTitle(
@@ -256,8 +262,7 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         mRandomMacPref.setVisible(mConnectivityListener.isMacAddressRandomizationSupported());
         boolean isMacRandomized = mConnectivityListener.isWifiMacAddressRandomized(mAccessPoint);
         mRandomMacPref.setValue(isMacRandomized ? VALUE_MAC_RANDOM : VALUE_MAC_DEVICE);
-        if (mAccessPoint.isEphemeral() || mAccessPoint.isPasspoint()
-                || mAccessPoint.isPasspointConfig()) {
+        if (!mAccessPoint.getWifiEntry().canSetPrivacy()) {
             mRandomMacPref.setSelectable(false);
             mRandomMacPref.setSummary(R.string.mac_address_ephemeral_summary);
         } else {
@@ -285,15 +290,12 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         private AccessPoint mAccessPoint;
 
         public static void prepareArgs(@NonNull Bundle args, AccessPoint accessPoint) {
-            final Bundle apBundle = new Bundle();
-            accessPoint.saveWifiState(apBundle);
-            args.putParcelable(ARG_ACCESS_POINT_STATE, apBundle);
+            args.putBinder(ARG_ACCESS_POINT_STATE, DataBinder.with(accessPoint));
         }
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
-            mAccessPoint = new AccessPoint(getContext(),
-                    getArguments().getBundle(ARG_ACCESS_POINT_STATE));
+            mAccessPoint = DataBinder.getData(getArguments().getBinder(ARG_ACCESS_POINT_STATE));
             super.onCreate(savedInstanceState);
         }
 

@@ -218,18 +218,6 @@ public class WifiUtils {
 //        return stringBuilder.toString();
 //    }
 
-    @AccessPoint.Speed
-    private static int getSpecificApSpeed(ScanResult result,
-            Map<String, TimestampedScoredNetwork> scoredNetworkCache) {
-        TimestampedScoredNetwork timedScore = scoredNetworkCache.get(result.BSSID);
-        if (timedScore == null) {
-            return AccessPoint.Speed.NONE;
-        }
-        // For debugging purposes we may want to use mRssi rather than result.level as the average
-        // speed wil be determined by mRssi
-        return timedScore.getScore().calculateBadge(result.level);
-    }
-
 //    public static String getMeteredLabel(Context context, WifiConfiguration config) {
 //        // meteredOverride is whether the user manually set the metered setting or not.
 //        // meteredHint is whether the network itself is telling us that it is metered

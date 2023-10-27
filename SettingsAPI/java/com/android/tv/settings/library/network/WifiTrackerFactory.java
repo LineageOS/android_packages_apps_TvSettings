@@ -1,6 +1,8 @@
 package com.android.tv.settings.library.network;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.wifi.WifiManager;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
@@ -20,7 +22,9 @@ public class WifiTrackerFactory {
         if(sTestingWifiTracker != null) {
             return sTestingWifiTracker;
         }
-        return new WifiTracker(context, wifiListener, lifecycle, includeSaved, includeScans);
+        return new WifiTracker(context, wifiListener, lifecycle,
+                context.getSystemService(WifiManager.class),
+                context.getSystemService(ConnectivityManager.class));
     }
 
 }
