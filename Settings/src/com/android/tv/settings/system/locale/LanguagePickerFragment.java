@@ -146,6 +146,9 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
             if (localeInfoWithCountryList != null && localeInfoWithCountryList.size() <= 1) {
                 RadioPreference preference = new RadioPreference(getContext());
                 preference.setTitle(localeInfo.getFullNameNative());
+                if (localeInfoWithCountryList.size() == 1) {
+                    localeInfo = localeInfoWithCountryList.get(0);
+                }
                 preference.setChecked(localeInfo.getLocale().equals(currentLocale));
                 preference.setRadioGroup(LANGUAGE_PICKER_RADIO_GROUP);
                 preference.getExtras().putSerializable(KEY_LOCALE_INFO, localeInfo);

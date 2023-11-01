@@ -226,9 +226,6 @@ public class AccessPointPreference extends Preference {
     }
 
     updateBadge(context);
-
-    setSummary(mAccessPoint.getSettingsSummary());
-
     mContentDescription = buildContentDescription(getContext(), this /* pref */, mAccessPoint);
   }
 

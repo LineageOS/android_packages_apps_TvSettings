@@ -441,8 +441,11 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             pref.setSummary(accessPoint.isActive()? R.string.connected : R.string.not_connected);
             restrictedPref.updatePreference();
 
-            // Double-adding is harmless
-            mWifiNetworksCategory.addPreference(restrictedPref.getPreference());
+            Preference restrictedChild = restrictedPref.getPreference();
+            if (restrictedChild.getParent() != null) { // Remove first if already added.
+                restrictedChild.getParent().removePreference(restrictedChild);
+            }
+            mWifiNetworksCategory.addPreference(restrictedChild);
         }
 
         for (final Preference preference : toRemove) {
