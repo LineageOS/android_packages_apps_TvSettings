@@ -442,7 +442,9 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             restrictedPref.updatePreference();
 
             Preference restrictedChild = restrictedPref.getPreference();
-            if (restrictedChild.getParent() != null) { // Remove first if already added.
+            if (restrictedChild.getParent() != null &&
+                restrictedChild.getParent() != mWifiNetworksCategory) {
+                // Remove first if added to parent from old fragment.
                 restrictedChild.getParent().removePreference(restrictedChild);
             }
             mWifiNetworksCategory.addPreference(restrictedChild);
