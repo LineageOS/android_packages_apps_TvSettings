@@ -127,7 +127,7 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
             // setUserDisabledHdrTypes
             // mHdrType is selected by user by using FORCE. Change the preferred strategy to AUTO
             // and mHdrType is no longer permissible coz of setUserDisabledHdrTypes
-            if (mDisplayManager.getHdrConversionModeSetting().getPreferredHdrOutputType()
+            if (mDisplayManager.getHdrConversionMode().getPreferredHdrOutputType()
                     == mHdrType) {
                 mDisplayManager.setHdrConversionMode(
                         new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_SYSTEM));
