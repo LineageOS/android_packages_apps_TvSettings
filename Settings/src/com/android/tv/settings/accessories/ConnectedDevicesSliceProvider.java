@@ -18,7 +18,9 @@ package com.android.tv.settings.accessories;
 
 import static com.android.tv.settings.accessories.AddAccessoryActivity.ACTION_CONNECT_INPUT;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTION_TOGGLE_CHANGED;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTIVE_AUDIO_OUTPUT;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.BLUETOOTH_ON;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.EXTRA_TOGGLE_STATE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.EXTRA_TOGGLE_TYPE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_SLICE_URI;
 
@@ -51,6 +53,7 @@ import androidx.slice.SliceProvider;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
+import com.android.settingslib.media.flags.Flags;
 import com.android.tv.settings.R;
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder;
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder.RowBuilder;
@@ -70,7 +73,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
     private static final String TAG = "ConnectedDevices";
     private static final boolean DEBUG = false;
     private static final boolean DISCONNECT_PREFERENCE_ENABLED = false;
-
+    private static final int ACTIVE_AUDIO_OUTPUT_INTENT_REQUEST_CODE = 9;
     private final Map<Uri, Integer> mPinnedUris = new ArrayMap<>();
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
@@ -114,6 +117,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
     static final String KEY_RENAME = "rename";
     static final String KEY_FORGET = "forget";
     static final String KEY_EXTRAS_DEVICE = "extra_devices";
+    static final String KEY_TOGGLE_ACTIVE_AUDIO_OUTPUT = "toggle_active_audio_output";
 
     static final int YES = R.string.general_action_yes;
     static final int NO = R.string.general_action_no;
@@ -238,9 +242,40 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
 
         Bundle extras;
         Intent i;
+        // Update "Use for TV audio".
+        // Set as active audio output device only connected devices that have audio capabilities
+        if (Flags.enableTvMediaOutputDialog()
+                && cachedDevice != null && !cachedDevice.isBusy()
+                && AccessoryUtils.isConnected(device) && cachedDevice.isConnected()
+                && AccessoryUtils.isBluetoothHeadset(device)) {
+            boolean isActive = AccessoryUtils.isActiveAudioOutput(device);
+
+            Intent intent = new Intent(ACTION_TOGGLE_CHANGED);
+            intent.setClass(context, ConnectedDevicesSliceBroadcastReceiver.class);
+            intent.putExtra(EXTRA_TOGGLE_TYPE, ACTIVE_AUDIO_OUTPUT);
+            intent.putExtra(EXTRA_TOGGLE_STATE, !isActive);
+            intent.putExtra(KEY_EXTRAS_DEVICE, device);
+
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(context,
+                    ACTIVE_AUDIO_OUTPUT_INTENT_REQUEST_CODE, intent,
+                    PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
+
+            // Update set/unset active audio output preference
+            RowBuilder activeAudioOutputPref = new RowBuilder()
+                    .setKey(KEY_TOGGLE_ACTIVE_AUDIO_OUTPUT)
+                    .setTitle(getString(R.string.bluetooth_toggle_active_audio_output_title))
+                    .setActionId(
+                            TvSettingsEnums.CONNECTED_SLICE_DEVICE_ENTRY_TOGGLE_ACTIVE_AUDIO_OUTPUT)
+                    .addSwitch(pendingIntent,
+                            context.getText(R.string.bluetooth_toggle_active_audio_output_title),
+                            isActive);
+
+            psb.addPreference(activeAudioOutputPref);
+        }
+
         // Update "connect/disconnect preference"
         if (cachedDevice != null && !cachedDevice.isBusy()) {
-            // Whether the device is actually connected from CachedBluetoothDevice's perceptive.
+            // Whether the device is actually connected from CachedBluetoothDevice's perspective.
             boolean isConnected = AccessoryUtils.isConnected(device) && cachedDevice.isConnected();
 
             if (!isConnected || showDisconnectButton(device, context)) {
@@ -345,7 +380,6 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         RowBuilder infoPref = new RowBuilder()
                 .setIcon(IconCompat.createWithResource(context, R.drawable.ic_baseline_info_24dp));
 
-        BluetoothDeviceProvider provider = mLocalBluetoothDeviceProvider;
         infoPref.addInfoItem(getString(R.string.bluetooth_serial_number_label), deviceAddr);
         psb.addPreference(infoPref);
         return psb.build();

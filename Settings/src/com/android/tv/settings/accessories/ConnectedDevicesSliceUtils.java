@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.accessories;
 
+import android.bluetooth.BluetoothDevice;
 import android.content.ContentProviderClient;
 import android.content.Context;
 import android.net.Uri;
@@ -85,6 +86,13 @@ public final class ConnectedDevicesSliceUtils {
                 .appendQueryParameter(SlicesConstants.PARAMETER_DIRECTION, SlicesConstants.BACKWARD)
                 .build();
         context.getContentResolver().notifyChange(appendedUri, null);
+    }
+
+    static void notifyDeviceChanged(Context context, BluetoothDevice device) {
+        if (device != null) {
+            context.getContentResolver().notifyChange(
+                    getDeviceUri(device.getAddress(), device.getAlias()), null);
+        }
     }
 
     private ConnectedDevicesSliceUtils() {
