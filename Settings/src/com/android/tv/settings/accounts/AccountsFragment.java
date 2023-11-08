@@ -75,10 +75,15 @@ public class AccountsFragment extends SettingsPreferenceFragment {
 
     private void refreshAllPreferences() {
         final PreferenceScreen prefScreen = getPreferenceScreen();
-
-        for (int i = 0; i < prefScreen.getPreferenceCount(); i++) {
+        for (int i = 0; i < prefScreen.getPreferenceCount();) {
             final Preference preference = prefScreen.getPreference(i);
-            prefScreen.removePreference(preference);
+            final String key = preference.getKey();
+            if (TextUtils.equals(KEY_ADD_ACCOUNT, key)
+                    || TextUtils.equals(KEY_DEVICE_OWNER_FOOTER, key)) {
+                i++;
+            } else {
+                prefScreen.removePreference(preference);
+            }
         }
     }
 
