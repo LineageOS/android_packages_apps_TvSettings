@@ -54,6 +54,11 @@ import com.android.tv.settings.library.network.WifiTracker;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.Objects;
+
+import android.net.ConnectivityManager.NetworkCallback;
+import android.os.Handler;
+
 /**
  * Listens for changes to the current connectivity status.
  */
@@ -93,6 +98,8 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     private int mNetworkType;
     private String mWifiSsid;
     private int mWifiSignalStrength;
+    private final Handler mHandler = new Handler();
+    private LinkProperties mLateLp = null;
     private final InterfaceStateListener mEthernetListener;
     private final ArrayMap<String, IpConfiguration> mAvailableInterfaces = new ArrayMap<>();
     private final Handler mUiHandler = ThreadUtils.getUiThreadHandler();
@@ -166,6 +173,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
                 telephonyManager.listen(mPhoneStateListener,
                         PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
             }
+            mConnectivityManager.registerDefaultNetworkCallback(mNetworkCallback, mHandler);
             if (mEthernetManager != null) {
                 mEthernetManager.addInterfaceStateListener(r -> mUiHandler.post(r),
                         mEthernetListener);
@@ -198,6 +206,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
             if (telephonyManager != null) {
                 telephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
             }
+            mConnectivityManager.unregisterNetworkCallback(mNetworkCallback);
             if (mEthernetManager != null) {
                 mEthernetManager.removeInterfaceStateListener(mEthernetListener);
             }
@@ -499,9 +508,31 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         }
     }
 
+    public void onIpAddrChanged() {
+        if (mListener != null) {
+            mListener.onConnectivityChange();
+        }
+    }
+
     public interface Listener {
         void onConnectivityChange();
     }
+
+    private final NetworkCallback mNetworkCallback = new NetworkCallback() {
+        @Override
+        public void onLinkPropertiesChanged(Network network, LinkProperties lp) {
+
+            if (mLateLp != null) {
+                if (!Objects.equals(mLateLp, lp)) {
+                    if ((lp.hasIpv4Address() && !mLateLp.hasIpv4Address())
+                           ||(lp.hasGlobalIpv6Address() && !mLateLp.hasGlobalIpv6Address())) {
+                        onIpAddrChanged();
+                    }
+                }
+            }
+            mLateLp = lp;
+        }
+    };
 
     public interface WifiNetworkListener {
         void onWifiListChanged();
