@@ -161,4 +161,9 @@
     <string-array name="config_energy_mode_high_additionalAllowedFeatures" translatable="false" />
 
     <bool name="config_energy_mode_unrestricted_enabled">false</bool>
+
+    <!-- Enable the physical device button integration with the find my remote feature.
+         Note that this variable only controls the default implementation, which is used if
+         strings/connected_devices_slice_uri is empty. -->
+    <bool name="config_fmr_integration_enabled">false</bool>
 </resources>
