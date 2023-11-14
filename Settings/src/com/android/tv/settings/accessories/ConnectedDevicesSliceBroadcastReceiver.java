@@ -16,19 +16,24 @@
 
 package com.android.tv.settings.accessories;
 
+import static android.content.Intent.FLAG_INCLUDE_STOPPED_PACKAGES;
+import static android.content.Intent.FLAG_RECEIVER_FOREGROUND;
+import static android.content.Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND;
+
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceProvider.KEY_EXTRAS_DEVICE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.DIRECTION_BACK;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_DIRECTION;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_SLICE_URI;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.FIND_MY_REMOTE_PHYSICAL_BUTTON_ENABLED_SETTING;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.notifyDeviceChanged;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.notifyToGoBack;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.setFindMyRemoteButtonEnabled;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.provider.Settings.Global;
 
 /**
  * This broadcast receiver handles these cases:
@@ -40,6 +45,7 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
 
     private static final String TAG = "ConnectedSliceReceiver";
 
+    static final String ACTION_FIND_MY_REMOTE = "com.google.android.tv.FIND_MY_REMOTE";
     static final String ACTION_TOGGLE_CHANGED =
             "com.android.tv.settings.accessories.TOGGLE_CHANGED";
     // The extra to specify toggle type.
@@ -47,12 +53,6 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
     static final String EXTRA_TOGGLE_STATE = "TOGGLE_STATE";
     // Bluetooth off is handled differently by ResponseActivity with confirmation dialog.
     static final String BLUETOOTH_ON = "BLUETOOTH_ON";
-    /**
-     * The {@link Global} integer setting name.
-     *
-     * <p>The settings tells whether the physical button integration for FMR feature is enabled.
-     * Default value: 1. */
-    static final String FMR_ON_PHYSICAL_BUTTON_ENABLED = "fmr_on_physical_button_enabled";
     static final String ACTIVE_AUDIO_OUTPUT = "ACTIVE_AUDIO_OUTPUT";
 
     @Override
@@ -78,14 +78,20 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
                         // refresh device
                         notifyDeviceChanged(context, device);
                     }
-                  case FMR_ON_PHYSICAL_BUTTON_ENABLED -> {
-                        Global.putInt(context.getContentResolver(),
-                                FMR_ON_PHYSICAL_BUTTON_ENABLED, isChecked ? 1 : 0);
+                    case FIND_MY_REMOTE_PHYSICAL_BUTTON_ENABLED_SETTING -> {
+                        setFindMyRemoteButtonEnabled(context, isChecked);
                         context.getContentResolver().notifyChange(
-                                ConnectedDevicesSliceUtils.FMR_SLICE_URI, null);
+                                ConnectedDevicesSliceUtils.FIND_MY_REMOTE_SLICE_URI, null);
                     }
                 }
             }
+        } else if (ACTION_FIND_MY_REMOTE.equals(action)) {
+            context.sendBroadcast(
+                    new Intent(ACTION_FIND_MY_REMOTE)
+                            .putExtra("reason", "SETTINGS")
+                            .setFlags(FLAG_INCLUDE_STOPPED_PACKAGES | FLAG_RECEIVER_FOREGROUND
+                                    | FLAG_RECEIVER_INCLUDE_BACKGROUND),
+                    "com.google.android.tv.permission.FIND_MY_REMOTE");
         }
 
         // Notify TvSettings to go back to the previous level.
