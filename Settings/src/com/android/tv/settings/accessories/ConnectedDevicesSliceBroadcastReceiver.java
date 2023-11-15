@@ -28,6 +28,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.provider.Settings.Global;
 
 /**
  * This broadcast receiver handles these cases:
@@ -41,11 +42,17 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
 
     static final String ACTION_TOGGLE_CHANGED =
             "com.android.tv.settings.accessories.TOGGLE_CHANGED";
-    // The extra to specify toggle type. Currently, there is only Bluetooth toggle.
+    // The extra to specify toggle type.
     static final String EXTRA_TOGGLE_TYPE = "TOGGLE_TYPE";
     static final String EXTRA_TOGGLE_STATE = "TOGGLE_STATE";
     // Bluetooth off is handled differently by ResponseActivity with confirmation dialog.
     static final String BLUETOOTH_ON = "BLUETOOTH_ON";
+    /**
+     * The {@link Global} integer setting name.
+     *
+     * <p>The settings tells whether the physical button integration for FMR feature is enabled.
+     * Default value: 1. */
+    static final String FMR_ON_PHYSICAL_BUTTON_ENABLED = "fmr_on_physical_button_enabled";
     static final String ACTIVE_AUDIO_OUTPUT = "ACTIVE_AUDIO_OUTPUT";
 
     @Override
@@ -53,6 +60,7 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
         // Handle CEC control toggle.
         final String action = intent.getAction();
         if (ACTION_TOGGLE_CHANGED.equals(action)) {
+            final boolean isChecked = intent.getBooleanExtra(EXTRA_TOGGLE_STATE, false);
             final String toggleType = intent.getStringExtra(EXTRA_TOGGLE_TYPE);
             if (toggleType != null) {
                 switch (toggleType) {
@@ -69,6 +77,12 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
                         AccessoryUtils.setActiveAudioOutput(enable ? device : null);
                         // refresh device
                         notifyDeviceChanged(context, device);
+                    }
+                  case FMR_ON_PHYSICAL_BUTTON_ENABLED -> {
+                        Global.putInt(context.getContentResolver(),
+                                FMR_ON_PHYSICAL_BUTTON_ENABLED, isChecked ? 1 : 0);
+                        context.getContentResolver().notifyChange(
+                                ConnectedDevicesSliceUtils.FMR_SLICE_URI, null);
                     }
                 }
             }

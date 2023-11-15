@@ -16,12 +16,20 @@
 
 package com.android.tv.settings.accessories;
 
+
+import static android.app.PendingIntent.FLAG_IMMUTABLE;
+import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
+import static android.content.Intent.FLAG_INCLUDE_STOPPED_PACKAGES;
+import static android.content.Intent.FLAG_RECEIVER_FOREGROUND;
+import static android.content.Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND;
+
 import static com.android.tv.settings.accessories.AddAccessoryActivity.ACTION_CONNECT_INPUT;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTION_TOGGLE_CHANGED;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTIVE_AUDIO_OUTPUT;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.BLUETOOTH_ON;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.EXTRA_TOGGLE_STATE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.EXTRA_TOGGLE_TYPE;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.FMR_ON_PHYSICAL_BUTTON_ENABLED;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_SLICE_URI;
 
 import android.app.PendingIntent;
@@ -32,6 +40,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -41,6 +50,7 @@ import android.os.StrictMode;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
+import android.provider.Settings.Global;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Log;
@@ -73,6 +83,8 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
     private static final String TAG = "ConnectedDevices";
     private static final boolean DEBUG = false;
     private static final boolean DISCONNECT_PREFERENCE_ENABLED = false;
+    private static final String ACTION_FIND_MY_REMOTE =
+            "com.google.android.tv.FIND_MY_REMOTE";
     private static final int ACTIVE_AUDIO_OUTPUT_INTENT_REQUEST_CODE = 9;
     private final Map<Uri, Integer> mPinnedUris = new ArrayMap<>();
     private final Handler mHandler = new Handler(Looper.getMainLooper());
@@ -117,6 +129,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
     static final String KEY_RENAME = "rename";
     static final String KEY_FORGET = "forget";
     static final String KEY_EXTRAS_DEVICE = "extra_devices";
+    static final String KEY_FMR_TOGGLE = "fmr_toggle";
     static final String KEY_TOGGLE_ACTIVE_AUDIO_OUTPUT = "toggle_active_audio_output";
 
     static final int YES = R.string.general_action_yes;
@@ -170,6 +183,8 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                 return createGeneralSlice(sliceUri);
             } else if (ConnectedDevicesSliceUtils.isBluetoothDevicePath(sliceUri)) {
                 return createBluetoothDeviceSlice(sliceUri);
+            } else if (ConnectedDevicesSliceUtils.isFindMyRemotePath(sliceUri)) {
+                return createFmrSlice(sliceUri);
             }
         } finally {
             StrictMode.setThreadPolicy(oldPolicy);
@@ -219,6 +234,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         updatePairingButton(psb);
         updateConnectedDevices(psb);
         updateOfficialRemoteSettings(psb);
+        updateFmr(psb);
         return psb.build();
     }
 
@@ -531,6 +547,20 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         }
     }
 
+    private void updateFmr(PreferenceSliceBuilder psb) {
+        List<ResolveInfo> receivers = getContext().getPackageManager().queryBroadcastReceivers(
+                createFindMyRemoteIntent(), 0);
+        if (receivers.isEmpty()) {
+            return;
+        }
+
+        psb.addPreference(new RowBuilder()
+                .setKey(KEY_FMR_TOGGLE)
+                .setTitle(getString(R.string.settings_fmr_title))
+                .setSubtitle(getString(R.string.settings_fmr_description))
+                .setTargetSliceUri(ConnectedDevicesSliceUtils.FMR_SLICE_URI.toString()));
+    }
+
     private void createAndAddBtDeviceSlicePreferenceFromSet(
             PreferenceSliceBuilder psb,
             Set<String> addresses,
@@ -623,5 +653,50 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         }
         return !AccessoryUtils.isRemoteClass(device)
                 && !AccessoryUtils.isKnownDevice(context, device);
+    }
+
+    private static Intent createFindMyRemoteIntent() {
+        return new Intent(ACTION_FIND_MY_REMOTE).putExtra("reason", "SETTINGS");
+    }
+
+    private Slice createFmrSlice(Uri sliceUri) {
+        Context context = getContext();
+        final PreferenceSliceBuilder psb = new PreferenceSliceBuilder(context, sliceUri);
+        psb.addScreenTitle(new RowBuilder()
+                .setTitle(getString(R.string.settings_fmr_title))
+                .setSubtitle(getString(R.string.fmr_slice_description)));
+
+        if (context.getResources().getBoolean(R.bool.config_fmr_integration_enabled)) {
+            boolean isEnabled = Global.getInt(context.getContentResolver(),
+                    FMR_ON_PHYSICAL_BUTTON_ENABLED, 1) != 0;
+            Intent intent = new Intent(ACTION_TOGGLE_CHANGED);
+            intent.putExtra(EXTRA_TOGGLE_TYPE, FMR_ON_PHYSICAL_BUTTON_ENABLED);
+            intent.putExtra(EXTRA_TOGGLE_STATE, !isEnabled);
+            intent.setClass(context, ConnectedDevicesSliceBroadcastReceiver.class);
+            psb.addPreference(new RowBuilder()
+                    .setKey(FMR_ON_PHYSICAL_BUTTON_ENABLED)
+                    .setTitle(getString(R.string.fmr_suppress_title))
+                    .setSubtitle(getString(R.string.fmr_suppress_subtitle))
+                    .addSwitch(
+                            PendingIntent.getBroadcast(
+                                    context, 0, intent, FLAG_IMMUTABLE | FLAG_UPDATE_CURRENT),
+                            !isEnabled));
+        }
+
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                context, 0,
+                createFindMyRemoteIntent()
+                        .setFlags(FLAG_INCLUDE_STOPPED_PACKAGES
+                                | FLAG_RECEIVER_FOREGROUND
+                                | FLAG_RECEIVER_INCLUDE_BACKGROUND),
+                FLAG_IMMUTABLE | FLAG_UPDATE_CURRENT);
+
+        psb.addPreference(new RowBuilder()
+                .setKey(ACTION_FIND_MY_REMOTE)
+                .setTitle(getString(R.string.fmr_play_sound))
+                .setPendingIntent(pendingIntent)
+                .setIcon(IconCompat.createWithResource(context, R.drawable.ic_play_arrow))
+                .setIconNeedsToBeProcessed(true));
+        return psb.build();
     }
 }
