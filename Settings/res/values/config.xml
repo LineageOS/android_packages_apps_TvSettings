@@ -162,8 +162,12 @@
 
     <bool name="config_energy_mode_unrestricted_enabled">false</bool>
 
-    <!-- Enable the physical device button integration with the find my remote feature.
-         Note that this variable only controls the default implementation, which is used if
-         strings/connected_devices_slice_uri is empty. -->
-    <bool name="config_fmr_integration_enabled">false</bool>
+    <!--
+        Whether the ATV integrates the Find My Remote functionality with the on-device button.
+        If it does, the integration should respect the value of
+        Settings.Global.fmr_on_physical_button_enabled setting.
+        Note that this variable only controls the default implementation, which is used if
+        strings/connected_devices_slice_uri is empty.
+    -->
+    <bool name="config_find_my_remote_integration_enabled">false</bool>
 </resources>
