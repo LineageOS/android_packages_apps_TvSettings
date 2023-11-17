@@ -31,6 +31,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.Log;
@@ -40,6 +41,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settingslib.accounts.AuthenticatorHelper;
+import com.android.settingslib.widget.FooterPreference;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
@@ -175,13 +177,19 @@ public class AccountsFragment extends SettingsPreferenceFragment {
         }
 
         // Show device managed footer information if DO active
-        final Preference footerPref = findPreference(KEY_DEVICE_OWNER_FOOTER);
+        final FooterPreference footerPref = findPreference(KEY_DEVICE_OWNER_FOOTER);
         if (footerPref != null) {
             final CharSequence deviceOwnerDisclosure = FlavorUtils.getFeatureFactory(
                     getContext()).getEnterprisePrivacyFeatureProvider(
                     getContext()).getDeviceOwnerDisclosure();
             footerPref.setTitle(deviceOwnerDisclosure);
             footerPref.setOrder(ORDER_FOOTER);
+            final Context context = getContext();
+            footerPref.setLearnMoreAction(view ->
+                context.startActivity(new Intent(Settings.ACTION_ENTERPRISE_PRIVACY_SETTINGS))
+            );
+            final String learnMoreText = context.getString(R.string.learn_more);
+            footerPref.setLearnMoreText(learnMoreText);
             footerPref.setVisible(deviceOwnerDisclosure != null);
         }
     }
