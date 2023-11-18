@@ -61,7 +61,7 @@ public class StatusFragment extends PreferenceControllerFragment {
         controllers.add(new UptimePreferenceController(context, lifecycle));
         controllers.add(new BluetoothAddressPreferenceController(context, lifecycle));
         controllers.add(new IpAddressPreferenceController(context, lifecycle));
-        controllers.add(new WifiMacAddressPreferenceController(context, lifecycle));
+        controllers.add(new MacAddressPreferenceController(context, lifecycle));
         controllers.add(new ImsStatusPreferenceController(context, lifecycle));
 
         return controllers;
