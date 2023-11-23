@@ -16,7 +16,6 @@
 
 package com.android.tv.twopanelsettings.slices;
 
-import static android.app.slice.Slice.EXTRA_SLIDER_VALUE;
 import static android.app.slice.Slice.EXTRA_TOGGLE_STATE;
 import static android.app.slice.Slice.HINT_PARTIAL;
 
@@ -502,7 +501,6 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             try {
                 Intent fillInIntent =
                         new Intent()
-                                .putExtra(EXTRA_SLIDER_VALUE, preference.getValue())
                                 .putExtra(EXTRA_PREFERENCE_KEY, preference.getKey());
                 firePendingIntent((HasSliceAction) preference, fillInIntent);
             } catch (Exception e) {
