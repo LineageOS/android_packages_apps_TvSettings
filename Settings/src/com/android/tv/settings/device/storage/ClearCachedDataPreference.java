@@ -122,8 +122,7 @@ public class ClearCachedDataPreference extends RestrictedPreference implements
             // Show info fragment only if the UI is TwoPanel.
             return ClearCachedDataInfoFragment.class.getName();
         }
-        // Otherwise, we set the forward fragment as confirmation fragment.
-        return ConfirmationFragment.class.getName();
+        return null;
     }
 
     @Override
@@ -132,7 +131,8 @@ public class ClearCachedDataPreference extends RestrictedPreference implements
         confirmFragment.setOnOkListener(() -> clearCache());
         final Fragment settingsFragment = mFreeUpStorageFragment.getCallbackFragment();
         if (settingsFragment instanceof LeanbackSettingsFragmentCompat) {
-            return;
+            ((LeanbackSettingsFragmentCompat) settingsFragment)
+                    .startImmersiveFragment(confirmFragment);
         } else if (settingsFragment instanceof TwoPanelSettingsFragment) {
             // Show confirmation fragment in TwoPanel UI.
             ((TwoPanelSettingsFragment) settingsFragment)
