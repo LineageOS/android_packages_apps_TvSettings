@@ -19,7 +19,9 @@ package com.android.tv.settings.connectivity.setup;
 import static org.mockito.Mockito.verify;
 import static org.robolectric.shadow.api.Shadow.extract;
 
+import android.content.Context;
 import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiManager;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
@@ -27,7 +29,10 @@ import androidx.lifecycle.ViewModelProviders;
 import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
+import com.android.tv.settings.library.util.ThreadUtils;
 import com.android.tv.settings.testutils.ShadowStateMachine;
+import com.android.wifitrackerlib.WifiEntry;
+import com.android.wifitrackerlib.WifiTrackerInjector;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -46,6 +51,8 @@ public class AddStartStateTest {
     private UserChoiceInfo mUserChoiceInfo;
     @Mock
     private State.StateCompleteListener mStateCompleteListener;
+    @Mock private WifiManager mMockWifiManager;
+    @Mock private WifiTrackerInjector mWifiTrackerInjector;
 
     @Before
     public void setUp() {
@@ -59,48 +66,47 @@ public class AddStartStateTest {
     }
 
     @Test
-    public void testForward_WEP_NeedPassword() {
+    public void testForward_needsWifiConfiguration_NeedPassword() {
         mUserChoiceInfo.init();
-        mUserChoiceInfo.setWifiSecurity(AccessPoint.SECURITY_WEP);
-        mUserChoiceInfo.setWifiConfiguration(new WifiConfiguration());
+        mUserChoiceInfo.setWifiEntry(makeWifiEntry(
+                /* needsWifiConfiguration= */ true,
+                /* shouldEditBeforeConnect= */ false));
         mAddStartState.processForward();
         verify(mStateCompleteListener).onComplete(StateMachine.PASSWORD);
     }
 
     @Test
-    public void testForward_WPA_NeedPassword() {
+    public void testForward_shouldEditBeforeConnect_NeedPassword() {
         mUserChoiceInfo.init();
-        mUserChoiceInfo.setWifiSecurity(AccessPoint.SECURITY_PSK);
-        mUserChoiceInfo.setWifiConfiguration(new WifiConfiguration());
+        mUserChoiceInfo.setWifiEntry(makeWifiEntry(
+                /* needsWifiConfiguration= */ false,
+                /* shouldEditBeforeConnect= */ true));
         mAddStartState.processForward();
         verify(mStateCompleteListener).onComplete(StateMachine.PASSWORD);
     }
 
     @Test
-    public void testForward_EAP_NeedPassword() {
-        mUserChoiceInfo.init();
-        mUserChoiceInfo.setWifiSecurity(AccessPoint.SECURITY_EAP);
-        mUserChoiceInfo.setWifiConfiguration(new WifiConfiguration());
-        mAddStartState.processForward();
-        verify(mStateCompleteListener).onComplete(StateMachine.PASSWORD);
-    }
-
-    @Test
-    public void testForward_AlreadyHasPassword() {
-        mUserChoiceInfo.init();
-        mUserChoiceInfo.setWifiSecurity(AccessPoint.SECURITY_PSK);
-        WifiConfiguration config = new WifiConfiguration();
-        config.preSharedKey = "PasswordTest";
-        mUserChoiceInfo.setWifiConfiguration(config);
+    public void testForward_DoNotNeedPassword_Connect() {
+        mUserChoiceInfo.setWifiEntry(makeWifiEntry(
+                /* needsWifiConfiguration= */ false,
+                /* shouldEditBeforeConnect= */ false));
         mAddStartState.processForward();
         verify(mStateCompleteListener).onComplete(StateMachine.CONNECT);
     }
 
-    @Test
-    public void testForward_DoNotNeedPassword() {
-        mUserChoiceInfo.init();
-        mUserChoiceInfo.setWifiSecurity(AccessPoint.SECURITY_NONE);
-        mAddStartState.processForward();
-        verify(mStateCompleteListener).onComplete(StateMachine.CONNECT);
+    private WifiEntry makeWifiEntry(boolean needsWifiConfiguration,
+                                    boolean shouldEditBeforeConnect) {
+        return new WifiEntry(mWifiTrackerInjector,
+                ThreadUtils.getUiThreadHandler(), mMockWifiManager, false) {
+            @Override
+            public boolean needsWifiConfiguration() {
+                return needsWifiConfiguration;
+            }
+
+            @Override
+            public boolean shouldEditBeforeConnect() {
+                return shouldEditBeforeConnect;
+            }
+        };
     }
 }
