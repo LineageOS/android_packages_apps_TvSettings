@@ -24,6 +24,8 @@ import android.util.ArrayMap;
 import androidx.annotation.IntDef;
 import androidx.lifecycle.ViewModel;
 
+import com.android.wifitrackerlib.WifiEntry;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.HashMap;
@@ -54,6 +56,7 @@ public class UserChoiceInfo extends ViewModel {
     private boolean mIsPasswordHidden = true;
     private ConnectionFailedStatus mConnectionFailedStatus;
     private int mEasyConnectNetworkId = -1;
+    private WifiEntry wifiEntry;
 
     /**
      * Store the page summary into a HashMap.
@@ -200,6 +203,14 @@ public class UserChoiceInfo extends ViewModel {
 
     public void setConnectionFailedStatus(ConnectionFailedStatus status) {
         mConnectionFailedStatus = status;
+    }
+
+    public WifiEntry getWifiEntry() {
+        return wifiEntry;
+    }
+
+    public void setWifiEntry(WifiEntry wifiEntry) {
+        this.wifiEntry = wifiEntry;
     }
 
     /**
