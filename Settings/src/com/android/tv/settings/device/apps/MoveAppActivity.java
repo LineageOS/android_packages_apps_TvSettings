@@ -86,7 +86,7 @@ public class MoveAppActivity extends FragmentActivity implements MoveAppStepFrag
             final Fragment fragment = MoveAppStepFragment.newInstance(packageName, packageDesc);
             getSupportFragmentManager().beginTransaction()
                     .add(android.R.id.content, fragment)
-                    .commit();
+                    .commitAllowingStateLoss();
         }
     }
 
@@ -118,7 +118,7 @@ public class MoveAppActivity extends FragmentActivity implements MoveAppStepFrag
 
         getSupportFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
-                .commit();
+                .commitAllowingStateLoss();
     }
 
 }

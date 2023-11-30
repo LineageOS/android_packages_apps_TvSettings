@@ -94,7 +94,7 @@ public abstract class TvSettingsActivity extends FragmentActivity {
                         .setCustomAnimations(android.R.animator.fade_in,
                                 android.R.animator.fade_out)
                         .add(android.R.id.content, fragment, SETTINGS_FRAGMENT_TAG)
-                        .commitNow();
+                        .commitNowAllowingStateLoss();
                 return;
             }
 
@@ -114,7 +114,7 @@ public abstract class TvSettingsActivity extends FragmentActivity {
                                 getSupportFragmentManager().beginTransaction()
                                         .add(android.R.id.content, fragment,
                                                 SETTINGS_FRAGMENT_TAG)
-                                        .commitNow();
+                                        .commitNowAllowingStateLoss();
                             });
 
                             final Slide slide = new Slide(Gravity.END);
@@ -144,7 +144,7 @@ public abstract class TvSettingsActivity extends FragmentActivity {
             final Scene scene = new Scene(root);
             scene.setEnterAction(() -> getSupportFragmentManager().beginTransaction()
                     .remove(fragment)
-                    .commitNow());
+                    .commitNowAllowingStateLoss());
             final Slide slide = new Slide(Gravity.END);
             slide.setSlideFraction(
                     getResources().getDimension(R.dimen.lb_settings_pane_width) / root.getWidth());
@@ -217,7 +217,7 @@ public abstract class TvSettingsActivity extends FragmentActivity {
                                     android.R.id.content,
                                     createSettingsFragment(),
                                     SETTINGS_FRAGMENT_TAG)
-                            .commitNow();
+                            .commitNowAllowingStateLoss();
                 }
             } else {
                 Log.v(TAG, "Startup verification cancelled or failed.");

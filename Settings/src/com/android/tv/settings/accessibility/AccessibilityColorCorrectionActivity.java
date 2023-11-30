@@ -25,7 +25,7 @@ public class AccessibilityColorCorrectionActivity extends TvSettingsActivity {
                         AccessibilityColorCorrectionSettingsFragment.newInstance())
                 .add(android.R.id.content,
                         AccessibilityColorCorrectionPreviewFragment.newInstance())
-                .commit();
+                .commitAllowingStateLoss();
         return null;
     }
 }
