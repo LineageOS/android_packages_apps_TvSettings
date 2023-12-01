@@ -126,8 +126,8 @@ public class ConnectState implements State {
         public void onCreate(Bundle icicle) {
             super.onCreate(icicle);
             mUserChoiceInfo = ViewModelProviders.of(getActivity()).get(UserChoiceInfo.class);
-            mConnectivityListener = new ConnectivityListener(getActivity(), null);
-            mConnectivityListener.start();
+            mConnectivityListener = new ConnectivityListener(getActivity(), null,
+                    getLifecycle());
             mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(
                     Context.CONNECTIVITY_SERVICE);
 
@@ -192,8 +192,6 @@ public class ConnectState implements State {
                 mWifiManager.disconnect();
             }
 
-            mConnectivityListener.stop();
-            mConnectivityListener.destroy();
             mHandler.removeMessages(MSG_TIMEOUT);
             super.onDestroy();
         }
