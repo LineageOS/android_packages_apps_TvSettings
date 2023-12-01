@@ -27,7 +27,7 @@ public class CaptionSetupActivity extends FragmentActivity {
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(android.R.id.content, CaptionSettingsFragment.newInstance())
-                    .commit();
+                    .commitAllowingStateLoss();
         }
     }
 }

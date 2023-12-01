@@ -141,7 +141,7 @@ public class FormatActivity extends FragmentActivity
             }
             getSupportFragmentManager().beginTransaction()
                     .add(android.R.id.content, f)
-                    .commit();
+                    .commitAllowingStateLoss();
         }
     }
 
@@ -206,7 +206,7 @@ public class FormatActivity extends FragmentActivity
                 getSupportFragmentManager().beginTransaction()
                         .replace(android.R.id.content,
                                 SlowDriveStepFragment.newInstance())
-                        .commit();
+                        .commitAllowingStateLoss();
                 return;
             }
         }
@@ -278,7 +278,7 @@ public class FormatActivity extends FragmentActivity
         final FormattingProgressFragment fragment = FormattingProgressFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
-                .commit();
+                .commitAllowingStateLoss();
 
         mFormatAsPrivateDiskId = diskId;
         final List<VolumeInfo> volumes = mStorageManager.getVolumes();
@@ -321,7 +321,7 @@ public class FormatActivity extends FragmentActivity
         final FormattingProgressFragment fragment = FormattingProgressFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
-                .commit();
+                .commitAllowingStateLoss();
 
         mFormatAsPublicDiskId = diskId;
         if (!TextUtils.isEmpty(volumeId)) {

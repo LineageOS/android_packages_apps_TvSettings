@@ -82,7 +82,7 @@ public class NewStorageActivity extends FragmentActivity {
 
                 getSupportFragmentManager().beginTransaction()
                         .add(android.R.id.content, MissingStorageFragment.newInstance(fsUuid))
-                        .commit();
+                        .commitAllowingStateLoss();
             } else {
                 final String volumeId = getIntent().getStringExtra(VolumeInfo.EXTRA_VOLUME_ID);
                 final String diskId = getIntent().getStringExtra(DiskInfo.EXTRA_DISK_ID);
@@ -93,7 +93,7 @@ public class NewStorageActivity extends FragmentActivity {
 
                 getSupportFragmentManager().beginTransaction()
                         .add(android.R.id.content, NewStorageFragment.newInstance(volumeId, diskId))
-                        .commit();
+                        .commitAllowingStateLoss();
             }
         }
     }
