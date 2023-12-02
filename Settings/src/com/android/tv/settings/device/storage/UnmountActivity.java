@@ -85,7 +85,7 @@ public class UnmountActivity extends FragmentActivity {
                 final Fragment fragment = UnmountPrivateStepFragment.newInstance(mUnmountVolumeId);
                 getSupportFragmentManager().beginTransaction()
                         .replace(android.R.id.content, fragment)
-                        .commit();
+                        .commitAllowingStateLoss();
             } else {
                 // Jump straight to unmounting
                 onRequestUnmount();
@@ -104,7 +104,7 @@ public class UnmountActivity extends FragmentActivity {
         final Fragment fragment = UnmountProgressFragment.newInstance(mUnmountVolumeDesc);
         getSupportFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
-                .commit();
+                .commitAllowingStateLoss();
         // Post this so that it will presumably run after onResume, if we're calling from onCreate()
         mHandler.post(new Runnable() {
             @Override

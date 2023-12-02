@@ -67,7 +67,7 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
                 getSupportFragmentManager()
                         .beginTransaction()
                         .add(android.R.id.content, dialogFragment)
-                        .commit();
+                        .commitAllowingStateLoss();
             }
         }
     }

@@ -237,7 +237,7 @@ public class AddAccessoryActivity extends FragmentActivity
             fm.beginTransaction()
                     .add(R.id.action_fragment, mPreferenceFragment)
                     .add(R.id.content_fragment, mContentFragment)
-                    .commit();
+                    .commitAllowingStateLoss();
         } else {
             mPreferenceFragment = (AddAccessoryPreferenceFragment)
                     fm.getFragment(savedInstanceState,

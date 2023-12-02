@@ -104,7 +104,7 @@ public class FormatAsPublicStepFragment extends GuidedStepSupportFragment {
             getFragmentManager().beginTransaction()
                     .replace(android.R.id.content, f)
                     .addToBackStack(null)
-                    .commit();
+                    .commitAllowingStateLoss();
         } else if (id == ACTION_ID_FORMAT) {
             ((Callback) getActivity()).onRequestFormatAsPublic(mDiskId, mVolumeId);
         }
