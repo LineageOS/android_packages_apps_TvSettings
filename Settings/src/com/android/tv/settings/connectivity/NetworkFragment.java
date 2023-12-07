@@ -58,8 +58,10 @@ import com.android.tv.settings.widget.TvAccessPointPreference;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 import com.android.wifitrackerlib.WifiEntry;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -414,10 +416,15 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             if (restrictedPref == null) {
                 pref = new TvAccessPointPreference(accessPoint, themedContext, mUserBadgeCache,
                         false);
+                List<String> userRestrictions = new ArrayList<>();
+                userRestrictions.add(UserManager.DISALLOW_CONFIG_WIFI);
+                userRestrictions.add(UserManager.DISALLOW_ADD_WIFI_CONFIG);
                 restrictedPref = new RestrictedPreferenceAdapter(themedContext, pref,
-                        UserManager.DISALLOW_CONFIG_WIFI);
+                        userRestrictions);
+                restrictedPref.setApSaved(accessPoint.isSaved());
                 accessPoint.setTag(restrictedPref);
             } else {
+                restrictedPref.setApSaved(accessPoint.isSaved());
                 toRemove.remove(restrictedPref.getPreference());
                 pref = restrictedPref.getOriginalPreference();
             }
@@ -436,7 +443,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                             return false;
                         });
             }
-            pref.setVisible(!restrictedPref.isRestricted() || accessPoint.isSaved());
+            pref.setVisible(!restrictedPref.isRestricted(UserManager.DISALLOW_CONFIG_WIFI)
+                    || accessPoint.isSaved());
             pref.setOrder(index++);
             pref.setSummary(accessPoint.isActive()? R.string.connected : R.string.not_connected);
             restrictedPref.updatePreference();
