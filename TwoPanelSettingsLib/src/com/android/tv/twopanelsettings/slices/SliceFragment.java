@@ -18,7 +18,6 @@ package com.android.tv.twopanelsettings.slices;
 
 import static android.app.slice.Slice.EXTRA_TOGGLE_STATE;
 import static android.app.slice.Slice.HINT_PARTIAL;
-
 import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logToggleInteracted;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_STATUS;
@@ -38,7 +37,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
@@ -383,7 +381,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 for (Preference newPref : newPrefs) {
                     if (newPref.getKey() != null && newPref.getKey().equals(oldPref.getKey())
                             && (newPref instanceof HasSliceUri)
-                            == (oldPref instanceof HasSliceUri)) {
+                            == (oldPref instanceof HasSliceUri)
+                            && (newPref instanceof EmbeddedSlicePreference)
+                            == (oldPref instanceof EmbeddedSlicePreference)) {
                         needToRemoveCurrentPref = false;
                         break;
                     }
