@@ -111,8 +111,15 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
     /** Key for extra passed in from calling fragment to indicate if this is a newly created user */
     private static final String EXTRA_NEW_USER = "new_user";
 
+    /**
+     * Key for extra passed in from calling fragment to indicate we should exit after updating
+     * apps.
+     */
+    private static final String EXTRA_EXIT_AFTER_UPDATE = "exit_after_update";
+
     private boolean mFirstTime = true;
     private boolean mNewUser;
+    private boolean mExitAfterUpdate;
     private boolean mAppListChanged;
     private boolean mRestrictedProfile;
 
@@ -237,14 +244,17 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
         }
     }
 
-    public static void prepareArgs(@NonNull Bundle bundle, int userId, boolean newUser) {
+    public static void prepareArgs(@NonNull Bundle bundle, int userId, boolean newUser,
+                                   boolean exitAfterUpdate) {
         bundle.putInt(EXTRA_USER_ID, userId);
         bundle.putBoolean(EXTRA_NEW_USER, newUser);
+        bundle.putBoolean(EXTRA_EXIT_AFTER_UPDATE, exitAfterUpdate);
     }
 
-    public static AppRestrictionsFragment newInstance(int userId, boolean newUser) {
-        final Bundle args = new Bundle(2);
-        prepareArgs(args, userId, newUser);
+    public static AppRestrictionsFragment newInstance(int userId, boolean newUser,
+                                   boolean exitAfterUpdate) {
+        final Bundle args = new Bundle(3);
+        prepareArgs(args, userId, newUser, exitAfterUpdate);
         AppRestrictionsFragment fragment = new AppRestrictionsFragment();
         fragment.setArguments(args);
         return fragment;
@@ -268,6 +278,7 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
                     mUser = new UserHandle(args.getInt(EXTRA_USER_ID));
                 }
                 mNewUser = args.getBoolean(EXTRA_NEW_USER, false);
+                mExitAfterUpdate = args.getBoolean(EXTRA_EXIT_AFTER_UPDATE, false);
             }
         }
 
@@ -344,6 +355,15 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
                 }
             }.execute();
         }
+    }
+
+    @Override
+    public void onDestroyView() {
+        if (mExitAfterUpdate) {
+            requireActivity().setResult(Activity.RESULT_OK);
+            requireActivity().finish();
+        }
+        super.onDestroyView();
     }
 
     private void onPackageChanged(Intent intent) {

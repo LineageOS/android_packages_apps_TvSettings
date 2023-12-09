@@ -2222,11 +2222,27 @@
     <string name="restricted_profile_configure_apps_description_loading" >One moment\u2026</string>
     <!-- Title for action to change the PIN code to use when exiting restricted profile [CHAR LIMIT=100] -->
     <string name="restricted_profile_change_password_title" >Change pin</string>
+
+    <!-- Title of preference screen to create a restricted profile. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_create_preference_screen">Create restricted profile?</string>
+    <!-- Placeholder to indicate that restricted profile is already created. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_already_created_placeholder">Already Created</string>
+    <!-- Action to skip creating a restricted profile. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_skip_action">Skip</string>
+    <!-- Action to create pin for a restricted profile. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_create_pin_action">Create PIN</string>
+
+    <!-- Title of preference screen to create a restricted profile. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_enter_preference_screen">Enter restricted profile?</string>
+    <!-- Placeholder to indicated restricted profile is not found. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_enter_not_found_placeholder">No restricted profile</string>
+    <!-- Placeholder to indicated restricted profile is already entered. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_enter_already_entered_placeholder">Already entered</string>
+
     <!-- Description for action to configure an application's restriction [CHAR LIMIT=200] -->
     <string name="restriction_description" ><xliff:g id="description">%1$s</xliff:g>\n<xliff:g id="value">%2$s</xliff:g></string>
     <!-- Summary for a case when app entries that are controlled by another entry and app can access user accounts [CHAR LIMIT=none] -->
     <string name="app_sees_restricted_accounts_and_controlled_by">This app can access your accounts. Controlled by <xliff:g id="app">%1$s</xliff:g></string>
-
     <!-- PIN UX -->
     <eat-comment />
     <string name="font" translatable="false">sans-serif</string>

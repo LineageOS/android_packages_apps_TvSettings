@@ -507,6 +507,30 @@
         </activity-alias>
 
         <activity
+            android:name=".system.CreateRestrictedProfileActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:theme="@style/TvSettingsActivityTheme">
+            <intent-filter>
+                <action android:name="com.android.tv.settings.action.CREATE_RESTRICTED_PROFILE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".system.EnterRestrictedProfileActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:theme="@style/TvSettingsActivityTheme">
+            <intent-filter>
+                <action android:name="com.android.tv.settings.action.ENTER_RESTRICTED_PROFILE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".device.displaysound.DisplaySoundActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
