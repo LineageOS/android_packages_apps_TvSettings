@@ -110,7 +110,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
                 == HdmiControlManager.TV_SEND_STANDBY_ON_SLEEP_ENABLED);
         mTvAutoOnPref.setChecked(mHdmiControlManager.getTvWakeOnOneTouchPlay()
                 == HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_ENABLED);
-        mTvAutoOnPref.setChecked(mHdmiControlManager.getHdmiCecVolumeControlEnabled()
+        mCecVolumePref.setChecked(mHdmiControlManager.getHdmiCecVolumeControlEnabled()
                 == HdmiControlManager.VOLUME_CONTROL_ENABLED);
 
         for (TvInputInfo info : mTvInputManager.getTvInputList()) {
