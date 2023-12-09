@@ -52,5 +52,10 @@
             android:persistent="true"
             android:title="@string/inputs_volume_control_enabled"
             android:summary="@string/inputs_volume_control_enabled_desc" />
+        <com.android.tv.settings.widget.SwitchWithSoundPreference
+            android:key="system_audio_muting_enabled"
+            android:persistent="true"
+            android:title="@string/inputs_system_audio_muting_enabled"
+            android:summary="@string/inputs_system_audio_muting_enabled_desc" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -51,6 +51,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
     private static final String KEY_DEVICE_AUTO_OFF = "device_auto_off";
     private static final String KEY_TV_AUTO_ON = "tv_auto_on";
     private static final String KEY_CEC_VOLUME = "volume_control_enabled";
+    private static final String KEY_SYSTEM_AUDIO_MUTING = "system_audio_muting_enabled";
     private static final String ICU_PLURAL_COUNT = "count";
 
     private PreferenceGroup mConnectedGroup;
@@ -61,6 +62,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
     private TwoStatePreference mDeviceAutoOffPref;
     private TwoStatePreference mTvAutoOnPref;
     private TwoStatePreference mCecVolumePref;
+    private TwoStatePreference mSystemAudioMutingPref;
 
     private TvInputManager mTvInputManager;
     private HdmiControlManager mHdmiControlManager;
@@ -101,6 +103,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
         mDeviceAutoOffPref = (TwoStatePreference) findPreference(KEY_DEVICE_AUTO_OFF);
         mTvAutoOnPref = (TwoStatePreference) findPreference(KEY_TV_AUTO_ON);
         mCecVolumePref = (TwoStatePreference) findPreference(KEY_CEC_VOLUME);
+        mSystemAudioMutingPref = (TwoStatePreference) findPreference(KEY_SYSTEM_AUDIO_MUTING);
     }
 
     private void refresh() {
@@ -112,6 +115,9 @@ public class InputsFragment extends SettingsPreferenceFragment {
                 == HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_ENABLED);
         mCecVolumePref.setChecked(mHdmiControlManager.getHdmiCecVolumeControlEnabled()
                 == HdmiControlManager.VOLUME_CONTROL_ENABLED);
+        mSystemAudioMutingPref.setChecked(mHdmiControlManager.getSystemAudioModeMuting()
+                == HdmiControlManager.SYSTEM_AUDIO_MODE_MUTING_ENABLED);
+
 
         for (TvInputInfo info : mTvInputManager.getTvInputList()) {
             if (info.getType() == TvInputInfo.TYPE_TUNER
@@ -207,6 +213,11 @@ public class InputsFragment extends SettingsPreferenceFragment {
                 mHdmiControlManager.setHdmiCecVolumeControlEnabled(mCecVolumePref.isChecked()
                         ? HdmiControlManager.VOLUME_CONTROL_ENABLED
                         : HdmiControlManager.VOLUME_CONTROL_DISABLED);
+                return true;
+            case KEY_SYSTEM_AUDIO_MUTING:
+                mHdmiControlManager.setSystemAudioModeMuting(mSystemAudioMutingPref.isChecked()
+                        ? HdmiControlManager.SYSTEM_AUDIO_MODE_MUTING_ENABLED
+                        : HdmiControlManager.SYSTEM_AUDIO_MODE_MUTING_DISABLED);
                 return true;
         }
         return super.onPreferenceTreeClick(preference);
