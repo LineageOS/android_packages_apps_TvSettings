@@ -35,6 +35,7 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.annotation.LooperMode;
 import org.robolectric.shadows.androidx.fragment.FragmentController;
 
 @RunWith(RobolectricTestRunner.class)
@@ -152,6 +153,7 @@ public class MatchContentFrameRateFragmentTest {
     }
 
     @Test
+    @LooperMode(LooperMode.Mode.LEGACY)
     public void testDefaultPreference() {
         FragmentController.of(mMatchContentFrameRateFragment)
             .create();

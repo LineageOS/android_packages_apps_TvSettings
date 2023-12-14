@@ -36,6 +36,7 @@ import android.provider.Settings;
 
 import androidx.preference.Preference;
 
+import com.android.settings.testutils.shadow.ShadowUserManager;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.tv.settings.R;
 import com.android.tv.settings.testutils.Utils;
@@ -47,10 +48,11 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowPackageManager;
-import org.robolectric.shadows.ShadowUserManager;
 
 @RunWith(RobolectricTestRunner.class)
+@Config(shadows = {ShadowUserManager.class})
 public class DevicePrefFragmentTest {
     @Spy
     private DevicePrefFragment mDevicePrefFragment;
