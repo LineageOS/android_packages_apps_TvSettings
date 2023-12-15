@@ -19,6 +19,13 @@ android_robolectric_test {
     ],
 
     libs: ["services.core"],
+    
+    static_libs: [
+        "Robolectric_shadows_androidx_fragment_upstream",
+        "Settings_robolectric_meta_service_file",
+        "SettingsLib-robo-testutils",
+        "Settings-robo-testutils",
+    ],
 
     java_resource_dirs: ["config"],
 
@@ -27,4 +34,6 @@ android_robolectric_test {
     test_options: {
         timeout: 36000,
     },
+    
+    upstream: true,
 }
