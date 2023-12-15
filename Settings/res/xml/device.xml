@@ -30,11 +30,6 @@
         android:key="power_and_energy"
         android:title="@string/power_and_energy"/>
     <Preference
-        android:fragment="com.android.tv.settings.system.ButtonsFragment"
-        android:icon="@drawable/ic_buttons"
-        android:key="button_settings"
-        android:title="@string/system_buttons"/>
-    <Preference
         android:fragment="com.android.tv.settings.system.DateTimeFragment"
         android:icon="@drawable/ic_access_time"
         android:key="date_time"
