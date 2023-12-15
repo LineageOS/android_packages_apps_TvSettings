@@ -38,6 +38,11 @@
             android:targetClass="com.android.settings.SetFullBackupPassword" />
     </PreferenceScreen>
 
+    <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:key="advanced_reboot"
+            android:title="@string/advanced_restart_title"
+            android:summary="@string/advanced_restart_summary" />
+
     <com.android.tv.settings.widget.SwitchWithSoundPreference
         android:key="keep_screen_on"
         android:title="@string/keep_screen_on"
