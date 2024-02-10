@@ -304,7 +304,7 @@ public class BluetoothDevicePairer {
                         startBonding();
                         break;
                     case MSG_START:
-                        start();
+                        start(false);
                         break;
                     default:
                         Log.d(TAG, "No handler case available for message: " + msg.what);
@@ -335,7 +335,7 @@ public class BluetoothDevicePairer {
      * Start listening for devices and begin the pairing process when
      * criteria is met.
      */
-    public void start() {
+    public void start(boolean noInputMode) {
         final BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (!bluetoothAdapter.isEnabled()) {
             Log.d(TAG, "Bluetooth not enabled, delaying startup.");
@@ -346,7 +346,7 @@ public class BluetoothDevicePairer {
                         if (intent.getIntExtra(BluetoothAdapter.EXTRA_STATE,
                                 BluetoothAdapter.STATE_OFF) == BluetoothAdapter.STATE_ON) {
                             Log.d(TAG, "Bluetooth now enabled, starting.");
-                            start();
+                            start(false);
                         } else {
                             Log.d(TAG, "Bluetooth not yet started, got broadcast: " + intent);
                         }
@@ -382,6 +382,7 @@ public class BluetoothDevicePairer {
         // which might seem odd from a client perspective
         setStatus(STATUS_SCANNING);
 
+        BluetoothScanner.setNoInputMode(noInputMode);
         BluetoothScanner.startListening(mContext, mBtListener, mBluetoothDeviceCriteria);
     }
 
@@ -583,7 +584,7 @@ public class BluetoothDevicePairer {
 
         // resume scanning
         if (wasListening) {
-            start();
+            start(false);
         }
     }
 
