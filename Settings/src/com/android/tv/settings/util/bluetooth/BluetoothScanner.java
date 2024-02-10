@@ -17,6 +17,7 @@
 package com.android.tv.settings.util.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -182,12 +183,18 @@ public class BluetoothScanner {
         private static boolean mKeepScanning;
         private boolean mRegistered = false;
         private final Object mListenerLock = new Object();
+        private static boolean mNoInputMode = false;
+
 
         public Receiver(Context context) {
             mContext = context;
 
             // Bluetooth
             mBtAdapter = BluetoothAdapter.getDefaultAdapter();
+        }
+
+        public void setNoInputMode(boolean noInputMode) {
+            mNoInputMode = noInputMode;
         }
 
         /**
@@ -358,6 +365,17 @@ public class BluetoothScanner {
             }
         };
 
+        private static int MINOR_DEVICE_CLASS_KEYBOARD = BluetoothClass.Device.PERIPHERAL_KEYBOARD
+                & ~BluetoothClass.Device.Major.PERIPHERAL;
+        private static int MINOR_DEVICE_CLASS_POINTING = BluetoothClass.Device.PERIPHERAL_POINTING
+                & ~BluetoothClass.Device.Major.PERIPHERAL;
+        private static int MINOR_DEVICE_CLASS_JOYSTICK = 0x04;
+        private static int MINOR_DEVICE_CLASS_GAMEPAD = 0x08;
+        private static int MINOR_DEVICE_CLASS_REMOTE = 0x0C;
+        private static int AUTO_PAIR_MASK = MINOR_DEVICE_CLASS_KEYBOARD
+                | MINOR_DEVICE_CLASS_POINTING | MINOR_DEVICE_CLASS_JOYSTICK
+                | MINOR_DEVICE_CLASS_GAMEPAD | MINOR_DEVICE_CLASS_REMOTE;
+
         @Override
         public void onReceive(Context context, Intent intent) {
             final String action = intent.getAction();
@@ -376,6 +394,12 @@ public class BluetoothScanner {
                 }
 
                 if (address == null || name == null) {
+                    return;
+                }
+
+                if (mNoInputMode && (btDevice.getBluetoothClass().getMajorDeviceClass()
+                        != BluetoothClass.Device.Major.PERIPHERAL)
+                        || (btDevice.getBluetoothClass().getDeviceClass() & AUTO_PAIR_MASK) == 0) {
                     return;
                 }
 

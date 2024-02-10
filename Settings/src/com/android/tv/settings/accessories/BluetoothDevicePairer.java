@@ -335,7 +335,7 @@ public class BluetoothDevicePairer {
      * Start listening for devices and begin the pairing process when
      * criteria is met.
      */
-    public void start() {
+    public void start(boolean noInputMode) {
         final BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (!bluetoothAdapter.isEnabled()) {
             Log.d(TAG, "Bluetooth not enabled, delaying startup.");
@@ -382,6 +382,7 @@ public class BluetoothDevicePairer {
         // which might seem odd from a client perspective
         setStatus(STATUS_SCANNING);
 
+        BluetoothScanner.setNoInputMode(noInputMode);
         BluetoothScanner.startListening(mContext, mBtListener, mBluetoothDeviceCriteria);
     }
 
