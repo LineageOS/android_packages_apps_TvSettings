@@ -106,6 +106,7 @@ public class AddAccessoryActivity extends FragmentActivity
     private String mCurrentTargetAddress = ADDRESS_NONE;
     private String mCurrentTargetStatus = "";
     private boolean mPairingInBackground = false;
+    private InputDeviceCriteria mInputDeviceCriteria;
 
     private boolean mDone = false;
 
@@ -217,6 +218,7 @@ public class AddAccessoryActivity extends FragmentActivity
 
         mNoInputMode = getIntent().getBooleanExtra(INTENT_EXTRA_NO_INPUT_MODE, false);
         mHwKeyDown = false;
+        mInputDeviceCriteria = new InputDeviceCriteria();
 
         if (savedInstanceState == null) {
             mBluetoothDevices = new ArrayList<>();
@@ -605,7 +607,15 @@ public class AddAccessoryActivity extends FragmentActivity
         }
 
         mBluetoothDevices.clear();
-        mBluetoothDevices.addAll(mBluetoothPairer.getAvailableDevices());
+        if (mNoInputMode) {
+            for (BluetoothDevice device : mBluetoothPairer.getAvailableDevices()) {
+                if (mInputDeviceCriteria.isInputDevice(device.getBluetoothClass())) {
+                    mBluetoothDevices.add(device);
+                }
+            }
+        } else {
+            mBluetoothDevices.addAll(mBluetoothPairer.getAvailableDevices());
+        }
         announceNewDevicesForA11y();
 
         cancelTimeout();
