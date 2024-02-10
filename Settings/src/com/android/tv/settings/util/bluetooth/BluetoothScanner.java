@@ -17,6 +17,7 @@
 package com.android.tv.settings.util.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -376,6 +377,22 @@ public class BluetoothScanner {
                 }
 
                 if (address == null || name == null) {
+                    return;
+                }
+
+                int MINOR_DEVICE_CLASS_KEYBOARD = BluetoothClass.Device.PERIPHERAL_KEYBOARD
+                        & ~BluetoothClass.Device.Major.PERIPHERAL;
+                int MINOR_DEVICE_CLASS_POINTING = BluetoothClass.Device.PERIPHERAL_POINTING
+                        & ~BluetoothClass.Device.Major.PERIPHERAL;
+                int MINOR_DEVICE_CLASS_JOYSTICK = 0x04;
+                int MINOR_DEVICE_CLASS_GAMEPAD = 0x08;
+                int MINOR_DEVICE_CLASS_REMOTE = 0x0C;
+                int AUTO_PAIR_MASK = MINOR_DEVICE_CLASS_KEYBOARD | MINOR_DEVICE_CLASS_POINTING
+                        | MINOR_DEVICE_CLASS_JOYSTICK | MINOR_DEVICE_CLASS_GAMEPAD
+                        | MINOR_DEVICE_CLASS_REMOTE;
+                if ((btDevice.getBluetoothClass().getMajorDeviceClass()
+                        != BluetoothClass.Device.Major.PERIPHERAL)
+                        || (btDevice.getBluetoothClass().getDeviceClass() & AUTO_PAIR_MASK) == 0) {
                     return;
                 }
 
