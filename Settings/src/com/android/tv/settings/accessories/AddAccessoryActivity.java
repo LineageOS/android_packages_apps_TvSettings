@@ -146,7 +146,7 @@ public class AddAccessoryActivity extends FragmentActivity
                     break;
                 case MSG_RESTART:
                     if (activity.mBluetoothPairer != null) {
-                        activity.mBluetoothPairer.start();
+                        activity.mBluetoothPairer.start(false);
                         activity.mBluetoothPairer.cancelPairing();
                     }
                     break;
@@ -522,7 +522,7 @@ public class AddAccessoryActivity extends FragmentActivity
     private void startBluetoothPairer() {
         stopBluetoothPairer();
         mBluetoothPairer = new BluetoothDevicePairer(this, this);
-        mBluetoothPairer.start();
+        mBluetoothPairer.start(mNoInputMode);
 
         mBluetoothPairer.disableAutoPairing();
 
@@ -633,7 +633,7 @@ public class AddAccessoryActivity extends FragmentActivity
                     }
 
                     mBluetoothPairer.invalidateDevice(mBluetoothPairer.getTargetDevice());
-                    mBluetoothPairer.start();
+                    mBluetoothPairer.start(mNoInputMode);
                     mBluetoothPairer.cancelPairing();
                     setPairingBluetooth(false);
 
