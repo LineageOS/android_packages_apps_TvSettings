@@ -379,6 +379,16 @@ public class BluetoothScanner {
                     return;
                 }
 
+                int PERIPHERAL_JOYSTICK = BluetoothClass.Device.Major.PERIPHERAL | 0x04;
+                int PERIPHERAL_GAMEPAD = BluetoothClass.Device.Major.PERIPHERAL | 0x08;
+                int PERIPHERAL_REMOTE = BluetoothClass.Device.Major.PERIPHERAL | 0x0C;
+                int AUTO_PAIR_MASK = BluetoothClass.Device.PERIPHERAL_KEYBOARD
+                        | BluetoothClass.Device.PERIPHERAL_POINTING
+                        | PERIPHERAL_JOYSTICK | PERIPHERAL_GAMEPAD | PERIPHERAL_REMOTE;
+                if (!(btDevice.getBluetoothClass().getDeviceClass() & AUTO_PAIR_MASK)) {
+                    return;
+                }
+
                 // Older Bluetooth stacks may append a null character to a device name
                 if (name.endsWith("\0")) {
                     name = name.substring(0, name.length() - 1);
