@@ -139,6 +139,11 @@
         android:fragment="com.android.tv.settings.about.RebootConfirmFragment" />
     <Preference
         android:icon="@drawable/ic_shutdown"
+        android:key="sleep"
+        android:title="@string/sleep_button_label"
+        android:fragment="com.android.tv.settings.about.SleepConfirmFragment" />
+    <Preference
+        android:icon="@drawable/ic_shutdown"
         android:key="shutdown"
         android:title="@string/shutdown_button_label"
         android:fragment="com.android.tv.settings.about.ShutdownConfirmFragment" />
