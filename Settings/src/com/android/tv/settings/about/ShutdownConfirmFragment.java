@@ -62,10 +62,12 @@ public class ShutdownConfirmFragment extends GuidedStepSupportFragment {
             Bundle savedInstanceState) {
         final Context context = getActivity();
         actions.add(new GuidedAction.Builder(context)
+                .icon(R.drawable.ic_shutdown)
                 .id(GuidedAction.ACTION_ID_OK)
                 .title(R.string.shutdown_button_label)
                 .build());
         actions.add(new GuidedAction.Builder(context)
+                .icon(R.drawable.ic_cancel)
                 .clickAction(GuidedAction.ACTION_ID_CANCEL)
                 .build());
     }
