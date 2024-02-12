@@ -16,6 +16,75 @@
       "message": "Icons looks correct now. Still needs to be twopanel-ized. But perhaps that shouldn\u0027t be a blocker for this, since the other power options aren\u0027t either. Should get a test on aml first, however.",
       "revId": "d9be7a184e1db62150ca4154d1ea85d4ee437950",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8feaf9a2_5991eb68",
+        "filename": "Settings/src/com/android/tv/settings/about/SleepConfirmFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-02-12T22:58:47Z",
+      "side": 1,
+      "message": "Intent.ACTION_MAIN",
+      "range": {
+        "startLine": 85,
+        "startChar": 39,
+        "endLine": 85,
+        "endChar": 67
+      },
+      "revId": "d9be7a184e1db62150ca4154d1ea85d4ee437950",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c2a5407_c2b8cb2d",
+        "filename": "Settings/src/com/android/tv/settings/about/SleepConfirmFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-02-12T22:58:47Z",
+      "side": 1,
+      "message": "Also there\u0027s a constructor that takes only the action string, null not needed",
+      "range": {
+        "startLine": 85,
+        "startChar": 69,
+        "endLine": 85,
+        "endChar": 73
+      },
+      "revId": "d9be7a184e1db62150ca4154d1ea85d4ee437950",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3d45ecb_ad8bcf44",
+        "filename": "Settings/src/com/android/tv/settings/about/SleepConfirmFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-02-12T22:58:47Z",
+      "side": 1,
+      "message": "Intent.CATEGORY_HOME",
+      "range": {
+        "startLine": 86,
+        "startChar": 31,
+        "endLine": 86,
+        "endChar": 61
+      },
+      "revId": "d9be7a184e1db62150ca4154d1ea85d4ee437950",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
