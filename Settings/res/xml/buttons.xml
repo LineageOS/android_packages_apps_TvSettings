@@ -21,7 +21,18 @@
 
     <lineageos.preference.LineageSecureSettingSwitchPreference
         android:key="advanced_reboot"
+        android:order="0"
         android:title="@string/advanced_restart_title"
         android:summary="@string/advanced_restart_summary" />
+
+    <ListPreference
+        android:key="power_button_long_press_action"
+        android:order="1"
+        android:dialogTitle="@string/power_button_long_press_action_title"
+        android:title="@string/power_button_long_press_action_title"
+        android:summary="%s"
+        android:entries="@array/power_button_long_press_action_entries"
+        android:entryValues="@array/power_button_long_press_action_values"
+        android:defaultValue="0" />
 
 </PreferenceScreen>
