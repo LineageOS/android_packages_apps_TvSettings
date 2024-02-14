@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The LineageOS Project
+ * Copyright (C) 2021-2024 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,10 +17,14 @@
 package com.android.tv.settings.system;
 
 import android.app.tvsettings.TvSettingsEnums;
+import android.content.Context;
 import android.os.Bundle;
+import android.os.UserHandle;
 
 import androidx.annotation.Keep;
+import androidx.preference.ListPreference;
 
+import com.android.internal.app.AssistUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
@@ -31,6 +35,15 @@ import org.lineageos.internal.logging.LineageMetricsLogger;
  */
 @Keep
 public class ButtonsFragment extends SettingsPreferenceFragment {
+    private static final String KEY_POWER_BUTTON_LONG_PRESS_ACTION =
+            "power_button_long_press_action";
+
+    private static final int LONG_PRESS_POWER_BUTTON_FOR_ASSISTANT = 1;
+    private static final int LONG_PRESS_POWER_BUTTON_FOR_POWER_MENU = 0;
+
+    private AssistUtils mAssistUtils;
+
+    private ListPreference mPowerButtonLongPressAction;
 
     public static ButtonsFragment newInstance() {
         return new ButtonsFragment();
@@ -38,6 +51,33 @@ public class ButtonsFragment extends SettingsPreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        Context context = getContext();
         setPreferencesFromResource(R.xml.buttons, null);
+
+        mAssistUtils = new AssistUtils(context);
+
+        mPowerButtonLongPressAction = findPreference(KEY_POWER_BUTTON_LONG_PRESS_ACTION);
+        if (PowerMenuSettingsUtils.isLongPressPowerSettingAvailable(context) &&
+                hasAssistant()) {
+            mPowerButtonLongPressAction.setOnPreferenceChangeListener(
+                (preference, newValue) -> {
+                    int action = Integer.parseInt((String) newValue);
+                    switch (action) {
+                        case LONG_PRESS_POWER_BUTTON_FOR_ASSISTANT:
+                            PowerMenuSettingsUtils.setLongPressPowerForAssistant(context);
+                            break;
+                        case LONG_PRESS_POWER_BUTTON_FOR_POWER_MENU:
+                            PowerMenuSettingsUtils.setLongPressPowerForPowerMenu(context);
+                            break;
+                    }
+                    return true;
+                });
+        } else {
+            getPreferenceScreen().removePreference(mPowerButtonLongPressAction);
+        }
+    }
+
+    private boolean hasAssistant() {
+        return mAssistUtils.getAssistComponentForUser(UserHandle.myUserId()) != null;
     }
 }
