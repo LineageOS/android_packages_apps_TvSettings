@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2017 The LineageOS Project
+<!-- Copyright (C) 2017, 2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,6 +37,12 @@
 
     <!-- Buttons screen -->
     <string name="system_buttons">Buttons</string>
+    <!-- Power menu setting section title for selecting the press and hold power button behavior. [CHAR LIMIT=60] -->
+    <string name="power_menu_long_press_category_title">Press &amp; hold power button to access</string>
+    <!-- Power menu setting option to make press and hold power button to open Power Menu. [CHAR LIMIT=60] -->
+    <string name="power_menu_long_press_for_power_menu_title">Power menu</string>
+    <!-- Power menu setting option to make press and hold power button to open Assistant. [CHAR LIMIT=60] -->
+    <string name="power_menu_long_press_for_assistant_title">Digital assistant</string>
 
     <!-- Option to enable CEC volume control [CHAR LIMIT=30] -->
     <string name="inputs_volume_control_enabled">CEC Volume Control</string>
