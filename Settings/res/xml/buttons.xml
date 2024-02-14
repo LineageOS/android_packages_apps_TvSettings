@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (C) 2021 The LineageOS Project
+  Copyright (C) 2021-2024 The LineageOS Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:app="http://schemas.android.com/apk/res-auto"
-                  android:title="@string/system_buttons">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/system_buttons">
 
     <lineageos.preference.LineageSecureSettingSwitchPreference
-            android:key="advanced_reboot"
-            android:title="@string/advanced_restart_title"
-            android:summary="@string/advanced_restart_summary" />
+        android:key="advanced_reboot"
+        android:title="@string/advanced_restart_title"
+        android:summary="@string/advanced_restart_summary" />
 
 </PreferenceScreen>
