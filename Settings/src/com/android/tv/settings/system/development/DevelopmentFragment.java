@@ -622,6 +622,11 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
 
         mAudioDebug.cancelRecording();
+
+        if (mUnavailable) {
+            return;
+        }
+
         mConnectivityManager.unregisterNetworkCallback(mNetworkCallback);
     }
 
