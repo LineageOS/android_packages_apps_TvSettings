@@ -18,6 +18,7 @@ package com.android.tv.settings.suggestions;
 
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 
+import android.app.ActivityOptions;
 import android.app.PendingIntent;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
@@ -88,7 +89,10 @@ public class SuggestionPreference extends Preference {
 
     private void launchSuggestion() {
         try {
-            mSuggestion.getPendingIntent().send();
+            ActivityOptions activityOptions = ActivityOptions.makeBasic();
+            activityOptions.setPendingIntentBackgroundActivityStartMode(
+                    ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED);
+            mSuggestion.getPendingIntent().send(activityOptions.toBundle());
             mSuggestionControllerMixin.launchSuggestion(mSuggestion);
             logEntrySelected(TvSettingsEnums.SUGGESTED_SETTINGS);
         } catch (PendingIntent.CanceledException e) {
