@@ -197,10 +197,6 @@ public class AddAccessoryActivity extends FragmentActivity
         }
     }
 
-    private final Handler mAutoExitHandler = new Handler();
-
-    private final Runnable mAutoExitRunnable = this::finish;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -291,23 +287,6 @@ public class AddAccessoryActivity extends FragmentActivity
         }
 
         mPairingInBackground = false;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (mNoInputMode) {
-            // Start timer count down for exiting activity.
-            if (DEBUG) Log.d(TAG, "starting auto-exit timer");
-            mAutoExitHandler.postDelayed(mAutoExitRunnable, EXIT_TIMEOUT_MILLIS);
-        }
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        if (DEBUG) Log.d(TAG, "stopping auto-exit timer");
-        mAutoExitHandler.removeCallbacks(mAutoExitRunnable);
     }
 
 
@@ -422,22 +401,13 @@ public class AddAccessoryActivity extends FragmentActivity
                 mBluetoothDevices, mCurrentTargetAddress, mCurrentTargetStatus, mCancelledAddress);
 
         if (mNoInputMode) {
-            if (DEBUG) Log.d(TAG, "stopping auto-exit timer");
-            mAutoExitHandler.removeCallbacks(mAutoExitRunnable);
             if (mBluetoothDevices.size() == 1 && prevNumDevices == 0) {
                 // first device added, start counter for autopair
                 mMsgHandler.sendEmptyMessageDelayed(MSG_START_AUTOPAIR_COUNTDOWN,
                         TIME_TO_START_AUTOPAIR_COUNT);
-            } else {
-
-                // Start timer count down for exiting activity.
-                if (DEBUG) Log.d(TAG, "starting auto-exit timer");
-                mAutoExitHandler.postDelayed(mAutoExitRunnable, EXIT_TIMEOUT_MILLIS);
-
-                if (mBluetoothDevices.size() > 1) {
-                    // More than one device found, cancel auto pair
-                    cancelPairingCountdown();
-                }
+            } else if (mBluetoothDevices.size() > 1) {
+                // More than one device found, cancel auto pair
+                cancelPairingCountdown();
            }
         }
 
