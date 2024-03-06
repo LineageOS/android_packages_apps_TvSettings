@@ -58,6 +58,7 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
     private static final String KEY_CEC = "cec";
     private static final String KEY_DEFAULT_AUDIO_OUTPUT_SETTINGS_SLICE =
             "default_audio_output_settings";
+    private static final String KEY_FRAMERATE = "match_content_frame_rate";
     private static final String KEY_RESOLUTION_TITLE = "resolution_selection";
 
     private AudioManager mAudioManager;
@@ -113,6 +114,9 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
                     mCurrentMode, getContext()));
         } else {
             removeResolutionPreference();
+        }
+        if (!getResources().getBoolean(R.bool.enable_framerate_config)) {
+            removeFrameratePreference();
         }
     }
 
@@ -211,6 +215,13 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
         Preference resolutionPreference = findPreference(KEY_RESOLUTION_TITLE);
         if (resolutionPreference != null) {
             getPreferenceScreen().removePreference(resolutionPreference);
+        }
+    }
+
+    private void removeFrameratePreference() {
+        Preference frameratePreference = findPreference(KEY_FRAMERATE);
+        if (frameratePreference != null) {
+            getPreferenceScreen().removePreference(frameratePreference);
         }
     }
 }
