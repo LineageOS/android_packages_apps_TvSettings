@@ -61,6 +61,7 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
     private static final String KEY_CEC = "cec";
     private static final String KEY_DEFAULT_AUDIO_OUTPUT_SETTINGS_SLICE =
             "default_audio_output_settings";
+    private static final String KEY_FRAMERATE = "match_content_frame_rate";
     private static final String KEY_RESOLUTION_TITLE = "resolution_selection";
     private static final String KEY_DYNAMIC_RANGE = "match_content_dynamic_range";
 
@@ -107,6 +108,10 @@ public class DisplaySoundFragment extends SettingsPreferenceFragment implements
         soundPref.setChecked(getSoundEffectsEnabled());
         updateCecPreference();
         updateDefaultAudioOutputSettings();
+
+        if (!getResources().getBoolean(R.bool.enable_framerate_config)) {
+            removePreference(findPreference(KEY_FRAMERATE));
+        }
 
         mDisplayManager = getDisplayManager();
         Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
