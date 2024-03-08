@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Configuració de l\'aplicació"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Ubicació, Ús i diagnòstic, Anuncis"</string>
     <string name="add_account" msgid="7386223854837017129">"Afegeix un compte"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Compte desconegut"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Suprimeix el compte"</string>
     <string name="account_sync" msgid="4315295293211313989">"Tria aplicacions sincronitzades"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sincronitza ara"</string>
@@ -151,12 +152,12 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Configuració avançada del so"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Permet el mode de joc"</string>
-    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Iguala amb el rang dinàmic del contingut"</string>
+    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Fes coincidir amb el rang dinàmic del contingut"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"En activar aquesta opció, el sistema canviarà entre els diferents formats de rang dinàmic per igualar-lo amb el del contingut. És possible que la pantalla es torni negra durant el canvi de format.\n\nFes clic a Configuració avançada de la pantalla per a més opcions de rang dinàmic."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Rang dinàmic preferit"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversió preferida pel sistema"</string>
     <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Permet que el sistema gestioni la conversió del format"</string>
-    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"En seleccionar aquesta opció, el sistema determinarà un rang dinàmic adequat perquè s\'enviï a la teva pantalla i converteixi el contingut en aquest rang dinàmic segons calgui."</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"En seleccionar aquesta opció, el sistema determinarà un rang dinàmic adequat per a la teva pantalla i convertirà el contingut a aquest rang dinàmic, si cal."</string>
     <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Sempre coincideix amb el format del contingut"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Força la conversió"</string>
     <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Força la conversió a un format preferit"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Text de mostra"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"El meravellós mag d\'Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Capítol 11: La meravellosa Ciutat Maragda d\'Oz"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Fins i tot amb els ulls protegits per les ulleres verdes, la Dorothy i els seus amics van quedar enlluernats per la brillantor de la meravellosa ciutat. A banda i banda dels carrers es dreçaven cases boniques, totes fetes de marbre verd amb incrustacions de maragdes guspirejants. El terra també era fet del mateix marbre verd, i totes les juntures eren cobertes de rengleres de maragdes, una al costat de l\'altra, que guspirejaven a la llum del sol. Els vidres de les finestres eren verds; i fins i tot el cel, damunt la ciutat, tenia un to verdós, i els raigs del sol eren verds. \n\nPertot es veia molta gent, homes, dones i criatures, vestits tots de verd i amb la pell verdosa. Tothom mirava la Dorothy i els seus companys amb sorpresa i curiositat, i les criatures fugien per amagar-se rere les seves mares quan veien el Lleó; però ningú no els va adreçar la paraula. Pels carrers hi havia moltes botigues i parades, i la Dorothy es fixà que tot el que hi venien era verd: caramels verds, rosetes de blat de moro verdes, sabates verdes, barrets verds i vestits verds de tota mena. En una de les parades, un home venia gasosa verda, i la Dorothy es va adonar que les criatures que en compraven pagaven amb monedes verdes. \n\nSemblava que en tota la ciutat no hi havia cavalls ni animals de cap mena. Els homes transportaven les coses en petits carretons verds, que empenyien davant seu. Tothom semblava feliç, content i pròsper."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Fins i tot amb els ulls protegits per les ulleres verdes, la Dorothy i els seus amics van quedar enlluernats per la brillantor de la meravellosa ciutat. A banda i banda dels carrers es dreçaven cases boniques, totes fetes de marbre verd amb incrustacions de maragdes guspirejants. El terra també era fet del mateix marbre verd, i totes les juntures eren cobertes de rengleres de maragdes, una al costat de l\'altra, que guspirejaven a la llum del sol. Els vidres de les finestres eren verds; i fins i tot el cel, damunt la ciutat, tenia un to verdós, i els raigs del sol eren verds. \n\nPertot es veia molta gent, homes, dones i criatures, vestits tots de verd i amb la pell verdosa. Tothom mirava la Dorothy i els seus companys amb sorpresa i curiositat, i les criatures fugien per amagar-se rere les seves mares quan veien el Lleó; però ningú no els va adreçar la paraula. Pels carrers hi havia moltes botigues i parades, i la Dorothy es fixà que tot el que hi venien era verd: caramels verds, rosetes de blat de moro verdes, sabates verdes, barrets verds i vestits verds de tota mena. En una de les parades, un home venia gasosa verda, i la Dorothy es va adonar que les criatures que en compraven pagaven amb monedes verdes. \n\nSemblava que en tota la ciutat no hi havia cavalls ni animals de cap mena. Els homes transportaven les coses en petits carretons verds, que empenyien davant seu. Tothom semblava feliç, content i pròsper."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Selecció del format"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automàtic"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Connectat"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Desconnectat"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"No tens permís per canviar la configuració del Bluetooth."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"Utilitza per a l\'àudio del televisor"</string>
     <string name="send_feedback" msgid="936698637869795473">"Envia suggeriments"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centre d’ajuda"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Activa"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Configuració"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Vols fer servir <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> pot recopilar tot allò que escriguis excepte les contrasenyes. Això inclou dades personals com ara números de targetes de crèdit."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> podrà llegir contingut de la pantalla, mostrar contingut sobre altres aplicacions, fer un seguiment de les teves interaccions amb aplicacions o sensors de maquinari i interaccionar amb aplicacions en nom teu."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Vols aturar <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Si selecciones D\'acord, s\'aturarà <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Text a parla"</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"S\'ha connectat correctament"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Mostra-ho tot"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"S\'està cercant"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"No s\'ha pogut recuperar l\'intent de l\'autenticador per afegir el compte."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"No s\'ha pogut afegir el compte o el tipus de compte no està disponible."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Canals i entrades"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Canals, entrades externes"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Canals"</string>
@@ -1123,4 +1127,9 @@
     <string name="energy_mode_enables" msgid="357960364751477627">"Activa:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Tingues en compte que aquest mode pot augmentar el consum d\'energia del dispositiu."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Activa <xliff:g id="ENERGYMODENAME">%s</xliff:g>"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Troba el meu comandament"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Reprodueix un so per localitzar el teu comandament de Google TV si no el trobes"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"Prem el botó de la part posterior del teu dispositiu Google TV per reproduir un so al comandament durant 30 segons. Això només funciona amb els comandaments de Google TV.\n\nPer aturar el so, prem qualsevol botó al comandament."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"Quan la funció Troba el meu comandament està activada, pots reproduir un so per localitzar el comandament de Google TV si no el trobes."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Reprodueix un so"</string>
 </resources>

@@ -23,6 +23,7 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.storage.DiskInfo;
+import android.os.storage.StorageEventListener;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.text.TextUtils;
@@ -71,6 +72,29 @@ public class FormatActivity extends FragmentActivity
     private PackageManager mPackageManager;
     private StorageManager mStorageManager;
 
+    private String mDiskId;
+
+    private final StorageEventListener mDiskChangeListener = new StorageEventListener() {
+        @Override
+        public void onDiskDestroyed(DiskInfo disk) {
+            finishIfDiskGone();
+        }
+
+        @Override
+        public void onVolumeStateChanged(VolumeInfo vol, int oldState, int newState) {
+            finishIfDiskGone();
+        }
+    };
+
+    private void finishIfDiskGone() {
+        if (!TextUtils.isEmpty(mDiskId)) {
+            // If the disk disappears, abort by finishing FormatActivity.
+            if (mStorageManager.findDiskById(mDiskId) == null) {
+                finish();
+            }
+        }
+    }
+
     public static Intent getFormatAsPublicIntent(Context context, String diskId) {
         final Intent i = new Intent(context, FormatActivity.class);
         i.setAction(INTENT_ACTION_FORMAT_AS_PUBLIC);
@@ -101,21 +125,23 @@ public class FormatActivity extends FragmentActivity
             mFormatAsPrivateDiskId =
                     savedInstanceState.getString(SAVE_STATE_FORMAT_PRIVATE_DISK_ID);
             mFormatAsPublicDiskId = savedInstanceState.getString(SAVE_STATE_FORMAT_PUBLIC_DISK_ID);
+            mDiskId =
+                    mFormatAsPrivateDiskId != null ? mFormatAsPrivateDiskId : mFormatAsPublicDiskId;
             mFormatDiskDesc = savedInstanceState.getString(SAVE_STATE_FORMAT_DISK_DESC);
         } else {
-            final String diskId = getIntent().getStringExtra(DiskInfo.EXTRA_DISK_ID);
+            mDiskId = getIntent().getStringExtra(DiskInfo.EXTRA_DISK_ID);
             final String action = getIntent().getAction();
             final Fragment f;
             if (TextUtils.equals(action, INTENT_ACTION_FORMAT_AS_PRIVATE)) {
-                f = FormatAsPrivateStepFragment.newInstance(diskId);
+                f = FormatAsPrivateStepFragment.newInstance(mDiskId);
             } else if (TextUtils.equals(action, INTENT_ACTION_FORMAT_AS_PUBLIC)) {
-                f = FormatAsPublicStepFragment.newInstance(diskId);
+                f = FormatAsPublicStepFragment.newInstance(mDiskId);
             } else {
                 throw new IllegalStateException("No known action specified");
             }
             getSupportFragmentManager().beginTransaction()
                     .add(android.R.id.content, f)
-                    .commit();
+                    .commitAllowingStateLoss();
         }
     }
 
@@ -130,6 +156,18 @@ public class FormatActivity extends FragmentActivity
                 handleFormatAsPrivateComplete(-1, -1);
             }
         }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mStorageManager.registerListener(mDiskChangeListener);
+    }
+
+    @Override
+    public void onStop() {
+        mStorageManager.unregisterListener(mDiskChangeListener);
+        super.onStop();
     }
 
     @Override
@@ -168,7 +206,7 @@ public class FormatActivity extends FragmentActivity
                 getSupportFragmentManager().beginTransaction()
                         .replace(android.R.id.content,
                                 SlowDriveStepFragment.newInstance())
-                        .commit();
+                        .commitAllowingStateLoss();
                 return;
             }
         }
@@ -240,7 +278,7 @@ public class FormatActivity extends FragmentActivity
         final FormattingProgressFragment fragment = FormattingProgressFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
-                .commit();
+                .commitAllowingStateLoss();
 
         mFormatAsPrivateDiskId = diskId;
         final List<VolumeInfo> volumes = mStorageManager.getVolumes();
@@ -283,7 +321,7 @@ public class FormatActivity extends FragmentActivity
         final FormattingProgressFragment fragment = FormattingProgressFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(android.R.id.content, fragment)
-                .commit();
+                .commitAllowingStateLoss();
 
         mFormatAsPublicDiskId = diskId;
         if (!TextUtils.isEmpty(volumeId)) {

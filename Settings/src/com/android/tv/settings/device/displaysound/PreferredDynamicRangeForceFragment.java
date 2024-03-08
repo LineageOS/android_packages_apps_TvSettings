@@ -151,7 +151,9 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
     }
 
     private void createHdrPreference() {
+        Set<Integer> hdrTypesSet = new HashSet<>();
         for (int i = 0; i < mHdrTypes.length; i++) {
+            hdrTypesSet.add(mHdrTypes[i]);
             RadioPreference pref = new RadioPreference(getContext());
             pref.setTitle(getContext().getString(
                     R.string.preferred_dynamic_range_selection_force_hdr_title,
@@ -174,7 +176,8 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
 
         final int selectedHdrType =
                 mDisplayManager.getHdrConversionModeSetting().getPreferredHdrOutputType();
-        if (selectedHdrType != Display.HdrCapabilities.HDR_TYPE_INVALID) {
+        if (selectedHdrType != Display.HdrCapabilities.HDR_TYPE_INVALID
+                && hdrTypesSet.contains(selectedHdrType)) {
             pref = findPreference(KEY_HDR_FORMAT_PREFIX + selectedHdrType);
         }
         selectRadioPreference(pref);

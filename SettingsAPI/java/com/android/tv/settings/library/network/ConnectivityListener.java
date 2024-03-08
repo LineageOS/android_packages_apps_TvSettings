@@ -110,7 +110,8 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         mEthernetManager = mContext.getSystemService(EthernetManager.class);
         mListener = listener;
         if (mWifiManager != null) {
-            mWifiTracker = new WifiTracker(context, this, true, true);
+            mWifiTracker = new WifiTracker(context, this, null, mWifiManager,
+                    mConnectivityManager);
         }
         mEthernetListener = (iface, state, role, configuration) -> {
             if (state == EthernetManager.STATE_LINK_UP) {

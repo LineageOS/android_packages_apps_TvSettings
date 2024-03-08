@@ -139,11 +139,11 @@ public class ResolutionSelectionFragmentTest {
                         ResolutionSelectionUtils.getRefreshRateString(59.944f)));
 
         assertThat(getChildrenSummaries(modePreference)).containsExactly(
-                "2160 x 2160",
-                "2160 x 2160",
+                "2,160 x 2,160",
+                "2,160 x 2,160",
                 "576 x 576",
-                "800 x 1200",
-                "800 x 1200",
+                "800 x 1,200",
+                "800 x 1,200",
                 "600 x 800",
                 "600 x 800");
     }

@@ -19,7 +19,6 @@ package com.android.tv.settings.accessories;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothProfile;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -194,7 +193,7 @@ public class AccessoriesFragment extends SettingsPreferenceFragment {
             return willBeProcessed ? R.drawable.ic_headset_raw : R.drawable.ic_headset;
         } else if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_POINTING) != 0) {
             return willBeProcessed ? R.drawable.ic_mouse_raw : R.drawable.ic_mouse;
-        } else if (isA2dpSource(dev) && willBeProcessed) {
+        } else if (AccessoryUtils.isA2dpSource(dev) && willBeProcessed) {
             return R.drawable.ic_a2dp_raw;
         } else if ((devClass & InputDeviceCriteria.MINOR_DEVICE_CLASS_REMOTE) != 0) {
             return willBeProcessed ? R.drawable.ic_games_raw : R.drawable.ic_games;
@@ -208,10 +207,5 @@ public class AccessoriesFragment extends SettingsPreferenceFragment {
 
         // Default for now
         return willBeProcessed ? R.drawable.ic_bluetooth_raw : R.drawable.ic_bluetooth;
-    }
-
-    private static boolean isA2dpSource(BluetoothDevice device) {
-        return device != null && device.getBluetoothClass() != null
-            && device.getBluetoothClass().doesClassMatch(BluetoothProfile.A2DP);
     }
 }

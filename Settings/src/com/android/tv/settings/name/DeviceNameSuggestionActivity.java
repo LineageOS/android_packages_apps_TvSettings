@@ -22,6 +22,8 @@ import android.os.Bundle;
 import androidx.fragment.app.FragmentActivity;
 import androidx.leanback.app.GuidedStepSupportFragment;
 
+import com.android.tv.settings.overlay.FlavorUtils;
+
 /**
  * Entry activity for settings suggestions.
  */
@@ -32,6 +34,12 @@ public class DeviceNameSuggestionActivity extends FragmentActivity {
         if (savedInstanceState == null) {
             GuidedStepSupportFragment.addAsRoot(this, DeviceNameSetFragment.newInstance(),
                     android.R.id.content);
+        }
+
+        // Activity transitions from two panel settings look weird, disable.
+        if (FlavorUtils.isTwoPanel(this)) {
+            overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, 0, 0);
+            overrideActivityTransition(OVERRIDE_TRANSITION_CLOSE, 0, 0);
         }
     }
 }

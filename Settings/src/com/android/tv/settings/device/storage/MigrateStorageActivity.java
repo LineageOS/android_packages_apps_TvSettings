@@ -99,7 +99,7 @@ public class MigrateStorageActivity extends FragmentActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(android.R.id.content,
                             MigrateConfirmationStepFragment.newInstance(mTargetVolumeDesc))
-                    .commit();
+                    .commitAllowingStateLoss();
         } else {
             mVolumeInfo = storageManager.findVolumeById(volumeId);
             if (mVolumeInfo == null) {
@@ -110,7 +110,7 @@ public class MigrateStorageActivity extends FragmentActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(android.R.id.content,
                             ChooseStorageStepFragment.newInstance(mVolumeInfo))
-                    .commit();
+                    .commitAllowingStateLoss();
         }
 
         mPackageManager = getPackageManager();
@@ -150,7 +150,7 @@ public class MigrateStorageActivity extends FragmentActivity {
             getSupportFragmentManager().beginTransaction()
                     .replace(android.R.id.content,
                             MigrateProgressFragment.newInstance(mTargetVolumeDesc))
-                    .commitNow();
+                    .commitNowAllowingStateLoss();
         } catch (IllegalArgumentException e) {
             // This will generally happen if there's a move already in progress or completed
             StorageManager sm = (StorageManager) getSystemService(STORAGE_SERVICE);

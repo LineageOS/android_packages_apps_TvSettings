@@ -24,6 +24,8 @@ import android.accounts.AccountManagerFuture;
 import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -31,6 +33,7 @@ import android.util.Log;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.io.IOException;
@@ -56,13 +59,34 @@ public class AddAccountWithTypeActivity extends FragmentActivity {
                         .getParcelable(AccountManager.KEY_INTENT);
                 if (addAccountIntent == null) {
                     Log.e(TAG, "Failed to retrieve add account intent from authenticator");
-                    setResultAndFinish(Activity.RESULT_CANCELED);
+                    AlertDialog dialog = new AlertDialog.Builder(
+                            AddAccountWithTypeActivity.this)
+                            .setMessage(R.string.add_account_intent_not_available_dialog_message)
+                            .setNegativeButton(android.R.string.ok,
+                                    new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            setResultAndFinish(Activity.RESULT_CANCELED);
+                                        }
+                                    })
+                            .create();
+                    dialog.show();
                 } else {
                     startActivityForResult(new Intent(addAccountIntent), REQUEST_ADD_ACCOUNT);
                 }
             } catch (IOException|AuthenticatorException|OperationCanceledException e) {
                 Log.e(TAG, "Failed to get add account intent: ", e);
-                setResultAndFinish(Activity.RESULT_CANCELED);
+                AlertDialog dialog = new AlertDialog.Builder(AddAccountWithTypeActivity.this)
+                        .setMessage(R.string.add_account_failed_dialog_message)
+                        .setNegativeButton(android.R.string.ok,
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        setResultAndFinish(Activity.RESULT_CANCELED);
+                                    }
+                                })
+                        .create();
+                dialog.show();
             }
         }
     };

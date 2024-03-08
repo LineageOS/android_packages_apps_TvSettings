@@ -41,7 +41,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.ConnectivityListener;
 import com.android.tv.settings.connectivity.security.WifiSecurityHelper;
@@ -126,8 +126,8 @@ public class ConnectState implements State {
         public void onCreate(Bundle icicle) {
             super.onCreate(icicle);
             mUserChoiceInfo = ViewModelProviders.of(getActivity()).get(UserChoiceInfo.class);
-            mConnectivityListener = new ConnectivityListener(getActivity(), null);
-            mConnectivityListener.start();
+            mConnectivityListener = new ConnectivityListener(getActivity(), null,
+                    getLifecycle());
             mConnectivityManager = (ConnectivityManager) getActivity().getSystemService(
                     Context.CONNECTIVITY_SERVICE);
 
@@ -192,8 +192,6 @@ public class ConnectState implements State {
                 mWifiManager.disconnect();
             }
 
-            mConnectivityListener.stop();
-            mConnectivityListener.destroy();
             mHandler.removeMessages(MSG_TIMEOUT);
             super.onDestroy();
         }
@@ -221,15 +219,14 @@ public class ConnectState implements State {
                 NetworkCapabilities wifiNetworkCapabilities = getActiveWifiNetworkCapabilities();
                 if (wifiNetworkCapabilities != null) {
                     if (wifiNetworkCapabilities.hasCapability(
+                            NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL)) {
+                        notifyListener(StateMachine.RESULT_CAPTIVE_PORTAL);
+                    } else if (wifiNetworkCapabilities.hasCapability(
                             NetworkCapabilities.NET_CAPABILITY_VALIDATED) ||
                         wifiNetworkCapabilities.hasCapability(
                             NetworkCapabilities.NET_CAPABILITY_INTERNET)) {
                         notifyListener(StateMachine.RESULT_SUCCESS);
-                    } else if (wifiNetworkCapabilities.hasCapability(
-                            NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL)) {
-                        notifyListener(StateMachine.RESULT_CAPTIVE_PORTAL);
                     }
-
                 }
             } else {
                 switch (configuration.getNetworkSelectionStatus()

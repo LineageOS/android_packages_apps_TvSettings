@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Настройки за приложението"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Местоположение, употреба и диагностика, реклами"</string>
     <string name="add_account" msgid="7386223854837017129">"Добавяне на профил"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Неизвестен профил"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Премахване на профила"</string>
     <string name="account_sync" msgid="4315295293211313989">"Избор на приложения"</string>
     <string name="sync_now" msgid="4335217984374620551">"Синхронизиране сега"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Примерен текст"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Вълшебникът от Оз"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Глава 11: Удивителният изумруден град на Оз"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Макар зелените очила да предпазваха очите им, отначало Дороти и приятелите ѝ бяха заслепени от блясъка на великолепния град. По улиците се редяха красиви къщи, целите изградени от зелен мрамор и обсипани с искрящи изумруди. Групата се движеше по паваж от същия зелен мрамор, като блокчетата бяха свързани с редици от гъсто разположени изумруди, които блестяха на ярката слънчева светлина. Прозорците на къщите бяха със зелени стъкла. Дори небето над града бе обагрено в зелено, а слънчевите лъчи бяха зелени.\n\nРазхождаха се много хора – мъже, жени и деца. Всички бяха облечени в зелени дрехи и имаха зеленикава кожа. Те гледаха Дороти и странните ѝ спътници с учудени погледи, а децата бягаха и се криеха зад майките си, щом видеха Лъва. Но никой не започваше разговор с тях. На улицата имаше много магазини и Дороти забеляза, че всичко в тях е зелено. Продаваха се зелени бонбони и зелени пуканки, всевъзможни зелени обувки, зелени шапки и зелени дрехи. На едно място някакъв мъж продаваше зелена лимонада и Дороти видя, че децата плащат със зелени монети.\n\nНе се виждаха коне или други животни. За пренасяне мъжете използваха малки зелени колички, които бутаха. Всички изглеждаха доволни, щастливи и благоденстващи."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Макар зелените очила да предпазваха очите им, отначало Дороти и приятелите ѝ бяха заслепени от блясъка на великолепния град. По улиците се редяха красиви къщи, целите изградени от зелен мрамор и обсипани с искрящи изумруди. Групата се движеше по паваж от същия зелен мрамор, като блокчетата бяха свързани с редици от гъсто разположени изумруди, които блестяха на ярката слънчева светлина. Прозорците на къщите бяха със зелени стъкла. Дори небето над града бе обагрено в зелено, а слънчевите лъчи бяха зелени.\n\nРазхождаха се много хора – мъже, жени и деца. Всички бяха облечени в зелени дрехи и имаха зеленикава кожа. Те гледаха Дороти и странните ѝ спътници с учудени погледи, а децата бягаха и се криеха зад майките си, щом видеха Лъва. Но никой не започваше разговор с тях. На улицата имаше много магазини и Дороти забеляза, че всичко в тях е зелено. Продаваха се зелени бонбони и зелени пуканки, всевъзможни зелени обувки, зелени шапки и зелени дрехи. На едно място някакъв мъж продаваше зелена лимонада и Дороти видя, че децата плащат със зелени монети.\n\nНе се виждаха коне или други животни. За пренасяне мъжете използваха малки зелени колички, които бутаха. Всички изглеждаха доволни, щастливи и благоденстващи."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Избиране на формат"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Автоматично"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ръчно"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Установена е връзка"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Връзката е прекратена"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Нямате разрешение да променяте настройките за Bluetooth."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"Използване за аудио за телевизора"</string>
     <string name="send_feedback" msgid="936698637869795473">"Изпращане на отзиви"</string>
     <string name="launch_help" msgid="2607478763131952469">"Помощен център"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Активиране"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Конфигурация"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Да се използва ли „<xliff:g id="SERVICE">%1$s</xliff:g>“?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"„<xliff:g id="SERVICE">%1$s</xliff:g>“ може да събира целия въвеждан от вас текст с изключение на паролите. Това включва лични данни, като номера на кредитни карти."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> ще може да чете екрана ви, да показва съдържание върху други приложения, да проследява взаимодействията ви с приложения или хардуерни сензори и да взаимодейства с приложения от ваше име."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Да се спре ли „<xliff:g id="SERVICE">%1$s</xliff:g>“?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"С избирането на „OK“ ще спрете „<xliff:g id="SERVICE">%1$s</xliff:g>“."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Синтезиран говор"</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Връзката е успешна"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Показване на всички"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Търси се"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Извличането на намерението за добавяне на профил от инструмента за удостоверяване не бе успешно."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Добавянето на профил не бе успешно или типът профил не е налице."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Канали и входове"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Канали, външни входове"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Канали"</string>
@@ -1123,4 +1127,9 @@
     <string name="energy_mode_enables" msgid="357960364751477627">"Активира:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Имайте предвид, че този режим може да увеличи консумацията на енергия на устройството."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Активиране на „<xliff:g id="ENERGYMODENAME">%s</xliff:g>“"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Намиране на дистанционното ми управление"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Възпроизвеждане на звук, чрез който да намерите дистанционното си управление за Google TV"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"Натиснете бутона на гърба на устройството си Google TV, за да се възпроизведе звук на дистанционното ви управление, който продължава 30 секунди. Това работи само с поддържани дистанционни управления за Google TV.\n\nЗа да спрете звука, натиснете произволен бутон на дистанционното си управление."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"Когато функцията „Намиране на дистанционното ми управление“ е активирана, може да се възпроизведе звук, за да откриете дистанционното управление на Google TV, ако не можете да го намерите."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Пускане на звук"</string>
 </resources>

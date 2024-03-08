@@ -55,7 +55,7 @@
     <string name="device_pref_category_title" msgid="8292572846154873762">"Түзмөктүн параметрлери"</string>
     <string name="accessibility_category_title" msgid="1552664829936369592">"Атайын мүмкүнчүлүктөр"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"Пульттар жана Көмөкчү жабдыктар"</string>
-    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Дисплей жана добуш"</string>
+    <string name="display_and_sound_category_title" msgid="9203309625380755860">"Экран жана үн"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"Жардам жана пикир билдирүү"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"Купуялык"</string>
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Түзмөктү тууралоо"</string>
@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Колдонмону тууралоо"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Жайгашкан жер, Колдонуу жана мүчүлүштүктөрдү аныктоо, Жарнамалар"</string>
     <string name="add_account" msgid="7386223854837017129">"Аккаунт кошуу"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Белгисиз аккаунт"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Аккаунтту өчүрүү"</string>
     <string name="account_sync" msgid="4315295293211313989">"Колдонмолорду тандоо"</string>
     <string name="sync_now" msgid="4335217984374620551">"Азыр шайкештирүү"</string>
@@ -102,7 +103,7 @@
     <string name="all_apps_disabled" msgid="2776041242863791053">"Өчүрүлгөн колдонмолор"</string>
     <string name="device_daydream" msgid="2631191946958113220">"Көшөгө"</string>
     <string name="device_display" msgid="244634591698925025">"Көрсөтүү"</string>
-    <string name="device_display_sound" msgid="7399153506435649193">"Дисплей жана добуш"</string>
+    <string name="device_display_sound" msgid="7399153506435649193">"Экран жана үн"</string>
     <string name="device_sound" msgid="8616320533559404963">"Үн"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"Айланадагы үндөр"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Система добуштары"</string>
@@ -113,7 +114,7 @@
     <string name="device_factory_reset" msgid="1110189450013225971">"Баштапкы абалга кайтаруу"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Калибрдөө аяктады"</string>
     <string name="device_energy_saver" msgid="6611757996220443028">"Өчүрүү таймери"</string>
-    <string name="device_energy_saver_summary" msgid="5306058475316008429">"Сыналгыны өчүрүп, электр кубатын үнөмдөө үчүн таймерлерди коюңуз"</string>
+    <string name="device_energy_saver_summary" msgid="5306058475316008429">"Электр кубатын үнөмдөө үчүн сыналгыны таймер менен өчүрөсүз"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Түзмөктөр"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Форматтарды тандоо"</string>
@@ -147,17 +148,17 @@
     <string name="surround_sound_disabled_format_info_clicked" msgid="463393349034930031">"Иштетүү үчүн форматты Кол менен тандоого өзгөртүңүз."</string>
     <string name="surround_sound_enabled_format_info_clicked" msgid="4003154853054756792">"Өчүрүү үчүн форматты Кол менен тандоого өзгөртүңүз."</string>
     <string name="display_category_title" msgid="247804007525046312">"Экран"</string>
-    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Өркүндөтүлгөн дисплейдин параметрлери"</string>
+    <string name="advanced_display_settings_title" msgid="6293280819870140631">"Экрандын өркүндөтүлгөн параметрлери"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Өркүндөтүлгөн добуштун параметрлери"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Оюн режимине уруксат берүү"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Контенттин динамикалык диапазонуна дал келтирүү"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Бул параметр иштетилсе, контентке дал келүү үчүн тутум ар түрдүү динамикалык диазапондун форматтарына которулат. Форматка которулуп жатканда экран карарып калышы мүмкүн.\n\nДинамикалык диапазондун варианттарын көрүү үчүн Экрандын өркүндөтүлгөн параметрлерине өтүңүз."</string>
+    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Бул параметр иштетилсе, түзмөк контентте колдонулган динамикалык диапазондун форматына которулат. Форматка которулуп жатканда экран өчүп калышы мүмкүн.\n\nДинамикалык диапазондун кошумча параметрлерин көрүү үчүн Экрандын өркүндөтүлгөн параметрлерине өтүңүз."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Тандалган динамикалык диапазон"</string>
-    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Система тарабынан тандалган формат"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Формат өзгөртүүсүн тутум башкарсын"</string>
-    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Бул параметр тандалганда, тутум ылайыктуу динамикалык диапазонду таап, экраныңыздын форматына жараша мазмун форматын өзгөртүшү мүмкүн."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Ар дайым мазмундун форматына дал келет"</string>
+    <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Система тандаган формат"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Форматты система өзү тандайт"</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Бул параметр тандалса, система экраныңызга ылайыктуу динамикалык диапазонду таап, контентти ошого жараша көрсөтөт."</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Формат контенттин параметрлери боюнча тандалат"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Башка форматка өзгөртүү"</string>
     <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Тандалган форматка өзгөртөт"</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Тандалган форматка өзгөртүлсүн. Өзгөртүү Көрсөтүү режиминдеги же HDR форматындагы башка параметрлерге таасир этиши мүмкүн."</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Үлгү текст"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Оз өлкөсүнүн ажайып сыйкырчысы"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11-бөлүм: Оз өлкөсүнүн ажайып зымырыт шаары"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Жашыл көз айнек тагынып турса да, Дороти менен достору жаркыраган ажайып шаарды көргөндө көздөрү уялып кетти. Шаардын көчөлөрүндөгү үйлөр жалаң гана жашыл мрамордон курулуп, күндүн нуруна чагылышып жалт-жулт эткен зымырыт таштары менен капталган. Жада калса алар өтүп бара жаткан көпүрө да жашыл мрамордон курулган экен. Бут астындагы мрамор төшөмөлөрдүн ортолору зымырыт таштары менен толтурулуп, алар күн нуруна жарк-журк этет. Терезелерге да жашыл айнек коюлуп, шаар үстүндө асман да, күн нурлары да жашыл түскө боёлуп турду. \n\nКөчөдө ары-бери өткөн адамдар да жашыл кийимдерди кийип, өңү-түстөрү да жашыл тартып турат экен. Дороти менен анын кызыктай досторунун жанынан өткөн адамдар аларды айран таң калып карап, арстанды көргөн кичинекей балдар энелеринин аркаларына жашына калып жатышты. Шаардыктардын эч кимиси алардын жанына барып, сүйлөшүүгө даай алышкан жок. Дороти шаардын дүкөндөрүндө сатылып жаткан көйнөктөр, кийим-кечелер, бут кийимдер, шляпалар, момпосуйлар, жада калса, бадырак жүгөрүлөр да жашыл түстө экендигин байкады. Бир жерде балдар жашыл тыйындарды төлөп жашыл лимонад алып жатышат. \n\nШаарда, сыягы, жылкылар жана башка жаныбарлар жок окшойт, себеби эркектер буюмдарын жашыл арабаларга салып түртүп алышкан. Элдин баары бактылуу, жашоосуна ыраазы жана гүлдөп тургандай туюлду."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Жашыл көз айнек тагынып турса да, Дороти менен достору жаркыраган ажайып шаарды көргөндө көздөрү уялып кетти. Шаардын көчөлөрүндөгү үйлөр жалаң гана жашыл мрамордон курулуп, күндүн нуруна чагылышып жалт-жулт эткен зымырыт таштары менен капталган. Жада калса алар өтүп бара жаткан көпүрө да жашыл мрамордон курулган экен. Бут астындагы мрамор төшөмөлөрдүн ортолору зымырыт таштары менен толтурулуп, алар күн нуруна жарк-журк этет. Терезелерге да жашыл айнек коюлуп, шаар үстүндө асман да, күн нурлары да жашыл түскө боёлуп турду. \n\nКөчөдө ары-бери өткөн адамдар да жашыл кийимдерди кийип, өңү-түстөрү да жашгылт тартып турат экен. Дороти менен анын кызыктай досторунун жанынан өткөн адамдар аларды айран таң калып карап, арстанды көргөн кичинекей балдар энелеринин аркаларына жашына калып жатышты. Шаардыктардын эч кимиси алардын жанына барып, сүйлөшүүгө даай алышкан жок. Дороти шаардын дүкөндөрүндө сатылып жаткан көйнөктөр, кийим-кечелер, бут кийимдер, шляпалар, момпосуйлар, жада калса, бадырак жүгөрүлөр да жашыл түстө экендигин байкады. Бир жерде балдар жашыл тыйындарды төлөп жашыл лимонад алып жатышат. \n\nШаарда, сыягы, жылкылар жана башка жаныбарлар жок окшойт, себеби эркектер буюмдарын жашыл арабаларга салып түртүп алышкан. Элдин баары бактылуу, жашоосуна ыраазы жана гүлдөп тургандай туюлду."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Форматты тандоо"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Автоматтык түрдө"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Кол менен"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Туташты"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Ажыратылды"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Bluetooth параметрлерин өзгөртүүгө уруксатыңыз жок."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"TV\'нин аудиосу үчүн колдонуу"</string>
     <string name="send_feedback" msgid="936698637869795473">"Пикир билдирүү"</string>
     <string name="launch_help" msgid="2607478763131952469">"Жардам борбору"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -371,8 +373,8 @@
     <string name="about_build" msgid="8467840394761634575">"Android TV OS куралышы"</string>
     <string name="show_dev_countdown" msgid="4064986225625409361">"{count,plural, =1{Сиздин иштеп чыгуучу болушуңузга # кадам калды}other{Сиздин иштеп чыгуучу болушуңузга # кадам калды}}"</string>
     <string name="about_ads" msgid="7662896442040086522">"Жарнамалар"</string>
-    <string name="ads_description" msgid="8081069475265061074">"Жарнама параметрлерин башкарып, жарнама идентификаторун баштапкы абалга келтирүү сыяктуу аракеттерди аткара аласыз."</string>
-    <string name="ads_content_description" msgid="1006489792324920289">"Жарнамалар. Жарнама параметрлерин башкарып, жарнама идентификаторун баштапкы абалга келтирүү сыяктуу аракеттерди аткара аласыз."</string>
+    <string name="ads_description" msgid="8081069475265061074">"Жарнама параметрлерин башкарып, жарнама идентификаторун кайра коюу сыяктуу аракеттерди аткара аласыз."</string>
+    <string name="ads_content_description" msgid="1006489792324920289">"Жарнамалар. Жарнама параметрлерин башкарып, жарнама идентификаторун кайра коюу сыяктуу аракеттерди аткара аласыз."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Эми иштеп чыгуучу болдуңуз!"</string>
     <string name="show_dev_already" msgid="1522591284776449818">"Кажети жок, буга чейин эле өндүрүүчү болгонсуз"</string>
     <string name="device_info_default" msgid="2374506935205518448">"Белгисиз"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Иштетүү"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Конфигурация"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"<xliff:g id="SERVICE">%1$s</xliff:g> колдоносузбу?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> сырсөздөрдөн башка, бардык терилген тексттерди сактап турат. Тактап айтканда, насыя карталарынын номерлери сыяктуу жеке маалыматтарды."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> экраныңыздагы нерселерди окуп, контентти башка колдонмолордун үстүнөн көрсөтүп, колдонмолор жана аппараттык камсыздоо сенсорлору менен аракеттешүүлөрүңүзгө көз салып, колдонмолор менен сиздин атыңыздан аракеттеше алат."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"<xliff:g id="SERVICE">%1$s</xliff:g> токтотулсунбу?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"OK\'ди тандасаңыз, <xliff:g id="SERVICE">%1$s</xliff:g> токтойт."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Текстти-оозекилөө"</string>
@@ -777,7 +779,7 @@
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Wi‑Fi журналы"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Майда-барат маалыматты Wi‑Fi журналына жазууну иштетүү"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Тийүүлөр көрүнсүн"</string>
-    <string name="system_pointer_location" msgid="8724050865245555084">"Көрсөткүчтүн жайгашкан жери"</string>
+    <string name="system_pointer_location" msgid="8724050865245555084">"Көрсөткүчтүн турган жери"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"Калыптардын чектери көрүнсүн"</string>
     <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"Экран жаңыртуусун көрсөтүү"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Жабдык катмарын көрсөтүү"</string>
@@ -994,7 +996,7 @@
     <string name="device_rename_title" msgid="9070021379000499270">"<xliff:g id="DEVICEMODEL">%1$s</xliff:g> аталышын өзгөртүү"</string>
     <string name="device_rename_description" msgid="1973894029492915135">"Бул <xliff:g id="DEVICEMODEL">%1$s</xliff:g> учурда \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\" деп аталып турат"</string>
     <string name="device_name_suggestion_title" msgid="3986220212759193742">"Түзмөктү атаңыз"</string>
-    <string name="device_name_suggestion_summary" msgid="4582691399302362938">"Ушундай жол менен телефондогу сүрөттөрдү, видеолорду жана башкаларды сыналгыга оңой өткөрө аласыз."</string>
+    <string name="device_name_suggestion_summary" msgid="4582691399302362938">"Түзмөктүн аталышы менен телефондогу сүрөттөрдү, видеолорду жана башкаларды сыналгыга оңой өткөрө аласыз"</string>
     <string name="change_setting" msgid="7211706374208138343">"Өзгөртүү"</string>
     <string name="keep_settings" msgid="703474489210093961">"Өзгөртүлбөсүн"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"Уруксаттар"</string>
@@ -1045,7 +1047,7 @@
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Колдонмолорго ойготкучтарды коюуга жана башка аракеттерди графикке киргизүүгө уруксат берүү. Ушуну менен колдонмолор фондо иштеп, көбүрөөк кубат сарпталышы мүмкүн.\n\nЭгер бул уруксат өчүрүлсө, колдонмодогу ойготкучтар жана графикке киргизилген башка аракеттер иштебейт."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Экранды күйгүзүү"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"Экранды күйгүзүүгө уруксат берүү"</string>
-    <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Колдонмого экранды күйгүзүүгө уруксат бериңиз. Уруксат берилсе, колдонмо экранды каалаган убакта сизден уруксат сурабастан күйгүзүшү мүмкүн."</string>
+    <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Колдонмого экранды күйгүзүүгө уруксат бересиз. Колдонмо экранды каалаган убакта сизден уруксат сурабастан күйгүзө берет."</string>
     <string name="special_access" msgid="21806055758289916">"Атайын мүмкүнчүлүк"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"Аудио"</string>
@@ -1065,7 +1067,7 @@
     <string name="title_data_saver" msgid="7500278996154002792">"Трафикти үнөмдөө"</string>
     <string name="summary_data_saver" msgid="6793558728898207405">"Мобилдик трафикти үнөмдөө үчүн видеонун сапатын автоматтык түрдө тууралоо"</string>
     <string name="title_data_alert" msgid="8262081890052682475">"Маалыматтардын колдонулушу жана эскертүүлөр"</string>
-    <string name="data_saver_header_info" msgid="2706725187498535785">"Интернетке Wi-Fi, Ethernet же телефонуңуздагы хотспот аркылуу туташа аласыз."</string>
+    <string name="data_saver_header_info" msgid="2706725187498535785">"Интернетке Wi-Fi, Ethernet же телефонуңуздагы байланыш түйүнү аркылуу туташа аласыз."</string>
     <string name="bluetooth_ask_discovery_title" msgid="4955540555242269694">"Башка Bluetooth түзмөктөрүнө көрcөтүлсүнбү?"</string>
     <string name="bluetooth_ask_discovery_message" msgid="8609666862877703398">"Колдонмо сыналгыңызды башка Bluetooth түзмөктөрүнө <xliff:g id="TIMEOUT">%1$d</xliff:g> секунд көрсөткөнү жатат."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Ийгиликтүү туташты"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Баарын көрсөтүү"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Изделүүдө"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Authenticator колдонмосунан аккаунтту кошуу ниети алынган жок."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Аккаунт кошулган жок же анын түрү колдоого алынбайт."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Каналдар жана киргизүүлөр"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Каналдар, тышкы киргизүүлөр"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Каналдар"</string>
@@ -1118,9 +1122,14 @@
     <string name="power_on_behavior" msgid="927607372303160716">"Сыналгы күйүп тургандагы иштөө режими"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"Кайра коюу"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Ethernet жупташтыруучу коду"</string>
-    <string name="energy_modes" msgid="1331693860386361744">"Электр кубатын колдонуу режимдери"</string>
-    <string name="energy_modes_summary" msgid="7196407759836930799">"Сыналгы өчүп турганда электр кубатынын колдонулушун жакшыртуу"</string>
+    <string name="energy_modes" msgid="1331693860386361744">"Электр кубатын керектеген режимдер"</string>
+    <string name="energy_modes_summary" msgid="7196407759836930799">"Сыналгы өчүп турганда, электр кубатын үнөмдөп керектейт"</string>
     <string name="energy_mode_enables" msgid="357960364751477627">"Иштетет:"</string>
-    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Бул режим түзмөктө электр кубатынын колдонулушун жогорулатышы мүмкүн экенин эске алыңыз."</string>
+    <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Ушул режимден улам түзмөк электр кубатын көбүрөөк керектеши мүмкүн."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"\"<xliff:g id="ENERGYMODENAME">%s</xliff:g>\" иштетүү"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Пультумду табуу"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Google TV\'нин пультун табуу үчүн үн чыгарыңыз"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"Пультуңузда 30 секунд бою үн чыгаруу үчүн Google TV\'нин артындагы баскычты басыңыз. Бул колдоого алынган Google TV\'нин пультунда гана иштейт.\n\nҮнүн басуу үчүн пульттагы бир баскычты басыңыз."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"Пультумду табуу функциясы иштетилсе, Google TV\'нин пультун табуу үчүн анын үнүн чыгарууга болот."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Үнүн чыгаруу"</string>
 </resources>

@@ -215,7 +215,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
                 updateTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
             }
             updateTransaction.replace(R.id.wifi_container, fragment, TAG);
-            updateTransaction.commit();
+            updateTransaction.commitAllowingStateLoss();
         }
     }
 

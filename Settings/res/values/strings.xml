@@ -138,6 +138,8 @@
     <skip />
     <!-- Preference which adds an account [CHAR LIMIT=50] -->
     <string name="add_account">Add account</string>
+    <!-- Account not found [CHAR LIMIT=50]-->
+    <string name="unknown_account">Unknown Account</string>
     <!-- Header for remove account [CHAR LIMIT=50] -->
     <string name="account_header_remove_account">Remove account</string>
     <!-- Sync item label: control sync settings [CHAR LIMIT=100] -->
@@ -504,7 +506,7 @@
         Green candy and green pop-corn were offered for sale, as well as green shoes, green hats and green clothes of all sorts.
         At one place a man was selling green lemonade, and when the children bought it Dorothy could see that they paid for it with green pennies.
         \n\nThere seemed to be no horses nor animals of any kind; the men carried things around in little green carts, which they pushed before them.
-        Everyone seeemed happy and contented and prosperous.
+        Everyone seemed happy and contented and prosperous.
     </string>
 
     <!-- Title for preference for HDR format selection. [CHAR LIMIT=50] -->
@@ -729,6 +731,8 @@
     <string name="bluetooth_disconnected_status">Disconnected</string>
     <!-- Bluetooth Settings. text displayed when user has restriction DISALLOW_CONFIG_BLUETOOTH [CHAR LIMIT=NONE]-->
     <string name="bluetooth_empty_list_user_restricted">You don\u2019t have permission to change Bluetooth settings.</string>
+    <!-- Text on button that allows users to toggle their Bluetooth device as the active audio output. [CHAR LIMIT=50] -->
+    <string name="bluetooth_toggle_active_audio_output_title">Use for TV audio</string>
 
     <!-- Help and feedback preferences -->
     <skip />
@@ -1839,7 +1843,7 @@
     <!-- Title for confirmation screen when turning ON accessibility service[CHAR LIMIT=20] -->
     <string name="system_accessibility_service_on_confirm_title">Use <xliff:g id="service" example="TalkBack">%1$s</xliff:g>?</string>
     <!-- Description for confirmation screen when turning ON accessibility service[[CHAR LIMIT=NONE] -->
-    <string name="system_accessibility_service_on_confirm_desc"><xliff:g id="service" example="TalkBack">%1$s</xliff:g> can collect all of the text you type, except passwords. This includes personal data such as credit card numbers.</string>
+    <string name="system_accessibility_service_on_confirm_desc"><xliff:g id="service" example="TalkBack">%1$s</xliff:g> will be able to read your screen, display content over other apps, track your interactions with apps or hardware sensors, and interact with apps on your behalf.</string>
     <!-- Title for confirmation screen when turning OFF accessibility service[CHAR LIMIT=50] -->
     <string name="system_accessibility_service_off_confirm_title">Stop <xliff:g id="service" example="TalkBack">%1$s</xliff:g>?</string>
     <!-- Description for confirmation screen when turning OFF accessibility service[[CHAR LIMIT=NONE] -->
@@ -2218,11 +2222,27 @@
     <string name="restricted_profile_configure_apps_description_loading" >One moment\u2026</string>
     <!-- Title for action to change the PIN code to use when exiting restricted profile [CHAR LIMIT=100] -->
     <string name="restricted_profile_change_password_title" >Change pin</string>
+
+    <!-- Title of preference screen to create a restricted profile. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_create_preference_screen">Create restricted profile?</string>
+    <!-- Placeholder to indicate that restricted profile is already created. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_already_created_placeholder">Already Created</string>
+    <!-- Action to skip creating a restricted profile. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_skip_action">Skip</string>
+    <!-- Action to create pin for a restricted profile. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_create_pin_action">Create PIN</string>
+
+    <!-- Title of preference screen to create a restricted profile. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_enter_preference_screen">Enter restricted profile?</string>
+    <!-- Placeholder to indicated restricted profile is not found. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_enter_not_found_placeholder">No restricted profile</string>
+    <!-- Placeholder to indicated restricted profile is already entered. [CHAR LIMIT=30] -->
+    <string name="restricted_profile_enter_already_entered_placeholder">Already entered</string>
+
     <!-- Description for action to configure an application's restriction [CHAR LIMIT=200] -->
     <string name="restriction_description" ><xliff:g id="description">%1$s</xliff:g>\n<xliff:g id="value">%2$s</xliff:g></string>
     <!-- Summary for a case when app entries that are controlled by another entry and app can access user accounts [CHAR LIMIT=none] -->
     <string name="app_sees_restricted_accounts_and_controlled_by">This app can access your accounts. Controlled by <xliff:g id="app">%1$s</xliff:g></string>
-
     <!-- PIN UX -->
     <eat-comment />
     <string name="font" translatable="false">sans-serif</string>
@@ -2659,6 +2679,10 @@
     <string name="resolution_slice_uri" translatable="false"/>
     <!-- Slice uri for hdr and color format -->
     <string name="hdr_and_color_format_slice_uri" translatable="false"/>
+    <!-- Slice uri for Color format in Advanced display settings -->
+    <string name="advanced_color_format_slice_uri" translatable="false"/>
+    <!-- Slice uri for Dolby Vision Mode in Advanced display settings -->
+    <string name="advanced_dolby_vision_mode_slice_uri" translatable="false"/>
 
     <!-- Slice uri for general information -->
     <string name="general_info_slice_uri" translatable="false"/>
@@ -2765,6 +2789,11 @@
     <!-- Bluetooth settings screen, text that appears in heading bar when scanning for devices -->
     <string name="progress_scanning">Searching</string>
 
+    <!-- Message of a dialog shown to inform that the account intent is not available. [CHAR LIMIT=100] -->
+    <string name="add_account_intent_not_available_dialog_message">Failed to retrieve add account intent from authenticator.</string>
+    <!-- Message of a dialog shown to inform that the account type is not available or failed to add account. [CHAR LIMIT=100] -->
+    <string name="add_account_failed_dialog_message">Failed to add account or the account type is not available.</string>
+
     <!-- Placeholder font for compiling. The real font will be provided by RRO. -->
     <string name="preference_title_text_font" translatable="false" />
 
@@ -2833,4 +2862,13 @@
     <string name="energy_mode_eco_hint">Note that this mode may increase the power consumption of the device.</string>
     <!-- Title for energy mode selection confirmation dialog -->
     <string name="energy_modes_confirmation_title">Enable \"<xliff:g id="energyModeName" example="Essential network features">%s</xliff:g>\"</string>
+
+    <!-- Title for find my remote preference -->
+    <string name="settings_find_my_remote_title">Find my remote</string>
+    <!-- Description for find my remote preference -->
+    <string name="settings_find_my_remote_description">Play a sound to locate your Google TV remote if it\'s misplaced</string>
+    <string name="find_my_remote_slice_description">Press the button at the back of your Google TV to play a sound on your remote for 30 seconds. This only works with supported Google TV remote controls.\n\nTo stop the sound, press any button on your remote.</string>
+    <string name="find_my_remote_integration_title" translatable="false">@string/settings_find_my_remote_title</string>
+    <string name="find_my_remote_integration_hint">When Find my remote is enabled, you can play a sound to locate your Google TV remote if it\'s misplaced.</string>
+    <string name="find_my_remote_play_sound">Play sound</string>
 </resources>

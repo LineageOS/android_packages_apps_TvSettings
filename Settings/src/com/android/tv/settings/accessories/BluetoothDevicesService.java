@@ -134,12 +134,19 @@ public class BluetoothDevicesService extends Service {
                 switch(action) {
                     case BluetoothHidHost.ACTION_CONNECTION_STATE_CHANGED:
                         if (device.getBondState() == BluetoothDevice.BOND_BONDED) {
+                            Log.i(TAG, "bonded " + device);
                             mHandler.post(() -> onDeviceUpdated(device));
                         }
                         break;
                     case BluetoothA2dp.ACTION_CONNECTION_STATE_CHANGED:
-                        int state = intent.getIntExtra(BluetoothProfile.EXTRA_STATE, -1);
-                        mHandler.post(() -> onA2dpConnectionStateChanged(device.getName(), state));
+                        final int state = intent.getIntExtra(BluetoothProfile.EXTRA_STATE, -1);
+                        mHandler.post(() -> {
+                            onA2dpConnectionStateChanged(device.getName(), state);
+                            if (state == BluetoothProfile.STATE_CONNECTED
+                                    || state == BluetoothProfile.STATE_DISCONNECTED) {
+                                onDeviceUpdated(device);
+                            }
+                        });
                         break;
                     case BluetoothDevice.ACTION_ACL_CONNECTED:
                         Log.i(TAG, "acl connected " + device);
@@ -205,6 +212,7 @@ public class BluetoothDevicesService extends Service {
             CachedBluetoothDevice cachedDevice =
                     AccessoryUtils.getCachedBluetoothDevice(this, device);
             if (cachedDevice != null) {
+                Log.i(TAG, "connectDevice: " + device);
                 cachedDevice.connect();
             }
         }
@@ -215,6 +223,7 @@ public class BluetoothDevicesService extends Service {
             CachedBluetoothDevice cachedDevice =
                     AccessoryUtils.getCachedBluetoothDevice(this, device);
             if (cachedDevice != null) {
+                Log.i(TAG, "disconnectDevice: " + device);
                 cachedDevice.disconnect();
             }
         }
@@ -242,16 +251,23 @@ public class BluetoothDevicesService extends Service {
                 text = String.format(resStr, deviceName);
                 Toast.makeText(BluetoothDevicesService.this.getApplicationContext(),
                         text, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onA2dpConnectionStateChanged: Connected, toasting: " + text);
                 break;
             case BluetoothProfile.STATE_DISCONNECTED:
                 resStr = getResources().getString(R.string.bluetooth_device_disconnected_toast);
                 text = String.format(resStr, deviceName);
                 Toast.makeText(BluetoothDevicesService.this.getApplicationContext(),
                         text, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onA2dpConnectionStateChanged: Disconnected, toasting: " + text);
                 break;
             case BluetoothProfile.STATE_CONNECTING:
+                Log.d(TAG, "onA2dpConnectionStateChanged: Connecting");
+                break;
             case BluetoothProfile.STATE_DISCONNECTING:
+                Log.d(TAG, "onA2dpConnectionStateChanged: Disconnecting");
+                break;
             default:
+                Log.d(TAG, "onA2dpConnectionStateChanged: " + connectionStatus);
                 break;
         }
     }

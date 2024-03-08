@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
+import android.net.ConnectivityManager.NetworkCallback;
 import android.net.EthernetManager;
 import android.net.EthernetManager.InterfaceStateListener;
 import android.net.IpConfiguration;
@@ -40,31 +41,28 @@ import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.UiThread;
+import androidx.lifecycle.DefaultLifecycleObserver;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 
-import com.android.settingslib.core.lifecycle.Lifecycle;
-import com.android.settingslib.core.lifecycle.LifecycleObserver;
-import com.android.settingslib.core.lifecycle.events.OnStart;
-import com.android.settingslib.core.lifecycle.events.OnStop;
 import com.android.settingslib.utils.ThreadUtils;
-import com.android.settingslib.wifi.AccessPoint;
-import com.android.settingslib.wifi.WifiTracker;
+import com.android.tv.settings.library.network.AccessPoint;
+import com.android.tv.settings.library.network.WifiTracker;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Listens for changes to the current connectivity status.
  */
-public class ConnectivityListener implements WifiTracker.WifiListener, LifecycleObserver, OnStart,
-        OnStop {
-
+public class ConnectivityListener implements WifiTracker.WifiListener {
     private static final String TAG = "ConnectivityListener";
 
     private final Context mContext;
     private final Listener mListener;
-    private boolean mStarted;
 
     private WifiTracker mWifiTracker;
 
@@ -93,17 +91,11 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
     private int mNetworkType;
     private String mWifiSsid;
     private int mWifiSignalStrength;
+    private final Handler mHandler = new Handler();
+    private LinkProperties mLateLp = null;
     private final InterfaceStateListener mEthernetListener;
     private final ArrayMap<String, IpConfiguration> mAvailableInterfaces = new ArrayMap<>();
     private final Handler mUiHandler = ThreadUtils.getUiThreadHandler();
-
-    /**
-     * @deprecated use the constructor that provides a {@link Lifecycle} instead
-     */
-    @Deprecated
-    public ConnectivityListener(Context context, Listener listener) {
-        this(context, listener, null);
-    }
 
     public ConnectivityListener(Context context, Listener listener, Lifecycle lifecycle) {
         mContext = context;
@@ -113,12 +105,20 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         mEthernetManager = mContext.getSystemService(EthernetManager.class);
         mListener = listener;
         if (mWifiManager != null) {
-            if (lifecycle != null) {
-                lifecycle.addObserver(this);
-                mWifiTracker = new WifiTracker(context, this, lifecycle, true, true);
-            } else {
-                mWifiTracker = new WifiTracker(context, this, true, true);
-            }
+            lifecycle.addObserver(new DefaultLifecycleObserver() {
+                @Override
+                public void onStart(LifecycleOwner owner) {
+                    start();
+                }
+
+                @Override
+                public void onStop(@NonNull LifecycleOwner owner) {
+                    stop();
+                }
+            });
+
+            mWifiTracker = new WifiTracker(context, this, lifecycle, mWifiManager,
+                    mConnectivityManager);
         }
         mEthernetListener = (iface, state, role, configuration) -> {
             if (state == EthernetManager.STATE_LINK_UP) {
@@ -134,84 +134,39 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         updateConnectivityStatus();
     }
 
-    /**
-     * Starts {@link ConnectivityListener}.
-     * This should be called only from main thread.
-     * @deprecated not needed when a {@link Lifecycle} is provided
-     */
-    @UiThread
-    @Deprecated
-    public void start() {
-        if (!mStarted && mWifiTracker != null) {
-            mWifiTracker.onStart();
+    private void start() {
+        updateConnectivityStatus();
+        IntentFilter networkIntentFilter = new IntentFilter();
+        networkIntentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
+        networkIntentFilter.addAction(WifiManager.RSSI_CHANGED_ACTION);
+        networkIntentFilter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
+        networkIntentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+
+        mContext.registerReceiver(mNetworkReceiver, networkIntentFilter);
+        final TelephonyManager telephonyManager = mContext
+                .getSystemService(TelephonyManager.class);
+        if (telephonyManager != null) {
+            telephonyManager.listen(mPhoneStateListener,
+                    PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
         }
-        onStart();
-    }
-
-    @Override
-    public void onStart() {
-        if (!mStarted) {
-            mStarted = true;
-            updateConnectivityStatus();
-            IntentFilter networkIntentFilter = new IntentFilter();
-            networkIntentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
-            networkIntentFilter.addAction(WifiManager.RSSI_CHANGED_ACTION);
-            networkIntentFilter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
-            networkIntentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-
-            mContext.registerReceiver(mNetworkReceiver, networkIntentFilter);
-            final TelephonyManager telephonyManager = mContext
-                    .getSystemService(TelephonyManager.class);
-            if (telephonyManager != null) {
-                telephonyManager.listen(mPhoneStateListener,
-                        PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
-            }
-            if (mEthernetManager != null) {
-                mEthernetManager.addInterfaceStateListener(r -> mUiHandler.post(r),
-                        mEthernetListener);
-            }
+        mConnectivityManager.registerDefaultNetworkCallback(mNetworkCallback, mHandler);
+        if (mEthernetManager != null) {
+            mEthernetManager.addInterfaceStateListener(r -> mUiHandler.post(r),
+                    mEthernetListener);
         }
     }
 
-    /**
-     * Stops {@link ConnectivityListener}.
-     * This should be called only from main thread.
-     * @deprecated not needed when a {@link Lifecycle} is provided
-     */
-    @UiThread
-    @Deprecated
-    public void stop() {
-        if (mStarted && mWifiTracker != null) {
-            mWifiTracker.onStop();
+    private void stop() {
+        mContext.unregisterReceiver(mNetworkReceiver);
+        mWifiListener = null;
+        final TelephonyManager telephonyManager = mContext
+                .getSystemService(TelephonyManager.class);
+        if (telephonyManager != null) {
+            telephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
         }
-        onStop();
-    }
-
-    @Override
-    public void onStop() {
-        if (mStarted) {
-            mStarted = false;
-            mContext.unregisterReceiver(mNetworkReceiver);
-            mWifiListener = null;
-            final TelephonyManager telephonyManager = mContext
-                    .getSystemService(TelephonyManager.class);
-            if (telephonyManager != null) {
-                telephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
-            }
-            if (mEthernetManager != null) {
-                mEthernetManager.removeInterfaceStateListener(mEthernetListener);
-            }
-        }
-    }
-
-    /**
-     * Causes the background thread to quit.
-     * @deprecated not needed when a {@link Lifecycle} is provided
-     */
-    @Deprecated
-    public void destroy() {
-        if (mWifiTracker != null) {
-            mWifiTracker.onDestroy();
+        mConnectivityManager.unregisterNetworkCallback(mNetworkCallback);
+        if (mEthernetManager != null) {
+            mEthernetManager.removeInterfaceStateListener(mEthernetListener);
         }
     }
 
@@ -254,12 +209,16 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         return "";
     }
 
-    /** Return whether the connected Wifi supports MAC address randomization. */
+    /**
+     * Return whether the connected Wifi supports MAC address randomization.
+     */
     public boolean isMacAddressRandomizationSupported() {
         return mWifiManager.isConnectedMacRandomizationSupported();
     }
 
-    /** Return whether the MAC address of the currently connected Wifi AP is randomized. */
+    /**
+     * Return whether the MAC address of the currently connected Wifi AP is randomized.
+     */
     public int getWifiMacRandomizationSetting(AccessPoint ap) {
         if (ap == null || ap.getConfig() == null) {
             return WifiConfiguration.RANDOMIZATION_NONE;
@@ -267,12 +226,16 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         return ap.getConfig().macRandomizationSetting;
     }
 
-    /** Return whether the randomized MAC address is used. */
+    /**
+     * Return whether the randomized MAC address is used.
+     */
     public boolean isWifiMacAddressRandomized(AccessPoint ap) {
         return getWifiMacRandomizationSetting(ap) != WifiConfiguration.RANDOMIZATION_NONE;
     }
 
-    /** Apply the setting of whether to use MAC address randimization. */
+    /**
+     * Apply the setting of whether to use MAC address randimization.
+     */
     public void applyMacRandomizationSetting(AccessPoint ap, boolean enable) {
         if (ap != null && ap.getConfig() != null) {
             ap.getConfig().macRandomizationSetting = enable
@@ -499,9 +462,31 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
         }
     }
 
+    public void onIpAddrChanged() {
+        if (mListener != null) {
+            mListener.onConnectivityChange();
+        }
+    }
+
     public interface Listener {
         void onConnectivityChange();
     }
+
+    private final NetworkCallback mNetworkCallback = new NetworkCallback() {
+        @Override
+        public void onLinkPropertiesChanged(Network network, LinkProperties lp) {
+
+            if (mLateLp != null) {
+                if (!Objects.equals(mLateLp, lp)) {
+                    if ((lp.hasIpv4Address() && !mLateLp.hasIpv4Address())
+                            || (lp.hasGlobalIpv6Address() && !mLateLp.hasGlobalIpv6Address())) {
+                        onIpAddrChanged();
+                    }
+                }
+            }
+            mLateLp = lp;
+        }
+    };
 
     public interface WifiNetworkListener {
         void onWifiListChanged();
@@ -509,6 +494,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener, Lifecycle
 
     /**
      * Get the SSID of current connected network.
+     *
      * @return SSID
      */
     public String getSsid() {

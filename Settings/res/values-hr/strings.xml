@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Postavke aplikacije"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Lokacija, Upotreba i dijagnostika, Oglasi"</string>
     <string name="add_account" msgid="7386223854837017129">"Dodaj račun"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Nepoznati račun"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Uklanjanje računa"</string>
     <string name="account_sync" msgid="4315295293211313989">"Odaberite sink. aplikacije"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sinkroniziraj sada"</string>
@@ -156,7 +157,7 @@
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Preferirani dinamički raspon"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Pretvaranje koje preferira sustav"</string>
     <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Omogućuje sustavu da upravlja pretvaranjem formata"</string>
-    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Kada se ta opcija odabere, sustav će odrediti prikladan dinamički raspon koji će se poslati na vaš zaslon i prema potrebi pretvorit će sadržaj na taj dinamički raspon."</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Kada se odabere ta opcija, sustav će odrediti prikladan dinamički raspon koji će se poslati na vaš zaslon i prema potrebi konvertirati sadržaj u taj dinamički raspon."</string>
     <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Uvijek se podudara s formatom sadržaja"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Nametanje pretvaranja"</string>
     <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Nameće pretvaranje u preferirani format"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Primjer teksta"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Čarobnjak iz Oza"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11. poglavlje: Čudesni Smaragdni Grad čarobnjaka Oza"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Čak i sa zelenim naočalama koje su im štitile oči Dorothy i njezini prijatelji isprva su bili zaslijepljeni sjajem prekrasnoga Grada. Ulicama su se nizale predivne kuće sve izgrađene od zelenog mramora i cijele optočene svjetlucavim smaragdima. Hodali su pločnikom od istog zelenog mramora, a na mjestima gdje su se kameni blokovi spajali nalazili su se redovi gusto postavljenih smaragda koji su svjetlucali na jarkom suncu. Prozori su bili od zelenog stakla, a čak je i nebo iznad Grada imalo zeleni odsjaj i sunčeve su zrake bile zelene boje. \n\nNa ulicama je bilo mnogo ljudi, muškaraca, žena i djece, i svi su bili odjeveni u zeleno i imali zelenkastu put. S čuđenjem su gledali Dorothy i njezinu neobičnu, šaroliku pratnju i sva su se djeca sakrila iza svojih majki kada su ugledala Lava, no nitko im se nije obratio. Mnoge su trgovine bile otvorene na ulicu i Dorothy je mogla vidjeti kako je u njima sve zeleno. Prodavali su se zeleni slatkiši i zelene kokice, kao i zelene cipele, zeleni šeširi i zelena odjeća svakojake vrste. Na jednom je mjestu jedan čovjek prodavao zelenu limunadu, a kad ju je koje dijete kupilo, Dorothy je mogla vidjeti kako je plaća zelenim novčićima. \n\nČinilo se da nije bilo konja niti koje druge životinje, a ljudi su naokolo vozili stvari u malim zelenim kolicima koja su gurali ispred sebe. Svi su se činili sretnima, zadovoljnima i uspješnima."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Čak i sa zelenim naočalama koje su im štitile oči Dorothy i njezini prijatelji isprva su bili zaslijepljeni sjajem prekrasnoga Grada. Ulicama su se nizale predivne kuće sve izgrađene od zelenog mramora i cijele optočene svjetlucavim smaragdima. Hodali su pločnikom od istog zelenog mramora, a na mjestima gdje su se kameni blokovi spajali nalazili su se redovi gusto postavljenih smaragda koji su svjetlucali na jarkom suncu. Prozori su bili od zelenog stakla, a čak je i nebo iznad Grada imalo zeleni odsjaj i sunčeve su zrake bile zelene boje. \n\nNa ulicama je bilo mnogo ljudi, muškaraca, žena i djece, i svi su bili odjeveni u zeleno i imali zelenkastu put. S čuđenjem su gledali Dorothy i njezinu neobičnu, šaroliku pratnju i sva su se djeca sakrila iza svojih majki kada su ugledala Lava, no nitko im se nije obratio. Mnoge su trgovine bile otvorene na ulicu i Dorothy je mogla vidjeti kako je u njima sve zeleno. Prodavali su se zeleni slatkiši i zelene kokice, kao i zelene cipele, zeleni šeširi i zelena odjeća svakojake vrste. Na jednom je mjestu jedan čovjek prodavao zelenu limunadu, a kad ju je koje dijete kupilo, Dorothy je mogla vidjeti kako je plaća zelenim novčićima. \n\nČinilo se da nije bilo konja niti koje druge životinje, a ljudi su naokolo vozili stvari u malim zelenim kolicima koja su gurali ispred sebe. Svi su se činili sretnima, zadovoljnima i uspješnima."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Odabir formata"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatski"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ručno"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Povezano"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Nije povezano"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Nemate dopuštenje za promjenu postavki Bluetootha."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"Upotrijebi za zvuk na TV-u"</string>
     <string name="send_feedback" msgid="936698637869795473">"Pošaljite povratne informacije"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centar za pomoć"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Omogući"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Konfiguracija"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Želite li upotrijebiti uslugu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> može prikupiti sav tekst koji upisujete, izuzev zaporki. To uključuje osobne podatke kao što su brojevi kreditnih kartica."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> će moći pročitati vaš zaslon, prikazati sadržaj preko drugih aplikacija, pratiti vaše interakcije s aplikacijskim ili hardverskim senzorima i voditi interakciju s aplikacijama u vaše ime."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Želite li zaustaviti uslugu <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Ako odaberete \"U redu\", usluga <xliff:g id="SERVICE">%1$s</xliff:g> zaustavit će se."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Pretvaranje teksta u govor"</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Povezivanje je uspjelo"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Prikaži sve"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Pretraživanje"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Nije uspjelo dohvaćanje namjere dodavanja računa iz autentifikatora."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Dodavanje računa nije uspjelo ili vrsta računa nije dostupna."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Kanali i ulazi"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Kanali, vanjski ulazi"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Kanali"</string>
@@ -1123,4 +1127,9 @@
     <string name="energy_mode_enables" msgid="357960364751477627">"Omogućuje:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Napominjemo da taj način može povećati potrošnju energije na uređaju."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Omogućite <xliff:g id="ENERGYMODENAME">%s</xliff:g>"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Pronađi moj daljinski upravljač"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Reproducirajte zvuk da biste locirali daljinski upravljač za Google TV ako ste ga zametnuli"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"Pritisnite gumb sa stražnje strane Google TV-a za reprodukciju zvuka na daljinskom upravljaču u trajanju od 30 sekundi. To funkcionira samo s podržanim daljinskim upravljačima Google TV-a.\n\nDa biste isključili zvuk, pritisnite bilo koji gumb na daljinskom upravljaču."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"Kada je omogućena značajka Pronađi moj daljinski upravljač, možete reproducirati zvuk da biste locirali daljinski upravljač za Google TV ako ste ga zametnuli."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Reproduciraj zvuk"</string>
 </resources>

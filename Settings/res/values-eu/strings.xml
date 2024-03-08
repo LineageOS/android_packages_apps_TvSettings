@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Aplikazioaren ezarpenak"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Kokapena, erabilera eta diagnosikoak, iragarkiak"</string>
     <string name="add_account" msgid="7386223854837017129">"Gehitu kontu bat"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Kontu ezezaguna"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Kendu kontua"</string>
     <string name="account_sync" msgid="4315295293211313989">"Aukeratu sinkronizatutako aplikazioak"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sinkronizatu"</string>
@@ -113,7 +114,7 @@
     <string name="device_factory_reset" msgid="1110189450013225971">"Berrezarri jatorrizko datuak"</string>
     <string name="device_calibration" msgid="2907914144048739705">"Kalibrazioa"</string>
     <string name="device_energy_saver" msgid="6611757996220443028">"Itzaltzeko tenporizadorea"</string>
-    <string name="device_energy_saver_summary" msgid="5306058475316008429">"Ezarri tenporizadoreak telebista itzaltzeko eta energia aurrezteko moduan"</string>
+    <string name="device_energy_saver_summary" msgid="5306058475316008429">"Ezarri tenporizadoreak telebista itzaltzeko eta energia aurrezteko"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Gailuak"</string>
     <string name="surround_sound_select_formats" msgid="6070283650131226239">"Hautatu formatuak"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Testu-lagina"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Ozeko azti miragarria"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11. kapitulua: Esmeraldazko Oz hiri harrigarria"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Begiak betaurreko berdeekin babestuta bazituzten ere, Dorothy eta haren lagunak txundituta geratu ziren Hiri zoragarri haren distira lehenbizikoz ikustean. Kaleak etxe ederrez josita zeuden; marmol berdezkoak ziren, eta esmeralda distiratsuz zeuden apainduta. Marmol berde hartaz egindako espaloian ibili ziren, eta lauzen junturak esmeraldazko errenkadak zirela nabaritu zuten, bata bestearen ondoan estu-estu jarriak, eguzkitan dir-dir egiten. Leihoen kristalak berdeak ziren. Hiria estaltzen zuen zeruak kutsu berdea zuen, eta berdeak ziren eguzki-izpiak ere. \n\nJende asko zebilen hara eta hona: gizonak, emakumeak eta haurrak, guztiak berdez jantziak eta azal berdexkakoak. Zalantzaz begiratzen zieten Dorothyri eta haren lagun talde xelebreari, eta haurrak amaren atzean ezkutatzen ziren lehoia ikusi bezain laster. Hala ere, inork ez zien txintik ere esan. Denda asko zeuden kalean, eta salgai guztiak berdeak zirela atzeman zuen Dorothyk. Gozoki berdeak eta krispeta berdeak eros zitezkeen, baita zapata berdeak, kapela berdeak eta askotariko jantzi berdeak ere. Gizon bat limonada berdea saltzen ari zen, eta haur batzuek erosi ziotenean, txanpon berdeekin ordaindu zutela ikusi zuen Dorothyk. \n\nEz zegoen zaldirik edo inolako animaliarik; gizonek orgatxo berdeak bultzatuta eramaten zituzten gauzak batetik bestera. Denak zeuden pozik, alai eta zoriontsu."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Begiak betaurreko berdeekin babestuta bazituzten ere, Dorothy eta bere lagunak txundituta geratu ziren Hiri zoragarriaren distira lehenbizikoz ikustean. Kaleak etxe ederrez josita zeuden; marmol berdezkoak ziren, eta esmeralda distiratsuz zeuden apainduta. Marmol berde horretaz egindako espaloian ibili ziren, eta lauzen junturak esmeraldazko errenkadak zirela nabaritu zuten, bata bestearen ondoan estu-estu jarriak, eguzkitan dir-dir egiten. Leihoen kristalak berdeak ziren. Hiria estaltzen zuen zeruak kutsu berdea zuen, eta berdeak ziren eguzki-izpiak ere. \n\nJende asko zebilen hara eta hona: gizonak, emakumeak eta haurrak, guztiak berdez jantziak eta azal berdexkakoak. Zalantzaz begiratzen zieten Dorothyri eta haren lagun talde xelebreari, eta haurrak amaren atzean ezkutatzen ziren Lehoia ikusi bezain laster. Hala ere, inork ez zien txintik ere esan. Denda asko zeuden kalean, eta salgai guztiak berdeak zirela atzeman zuen Dorothyk. Gozoki berdeak eta krispeta berdeak eros zitezkeen, baita oinetako berdeak, kapela berdeak eta askotariko jantzi berdeak ere. Gizon bat limonada berdea saltzen ari zen, eta, haur batzuek limonada erosi ziotenean, txanpon berdeekin ordaindu zutela ikusi zuen Dorothyk. \n\nEz zegoen zaldirik edo inolako animaliarik; gizonek orgatxo berdeak bultzatuta eramaten zituzten gauzak batetik bestera. Pozik, alai eta zoriontsu zeuden denak."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Formatu-hautapena"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatikoa"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Eskuzkoa"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Konektatuta"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Deskonektatuta"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Ez daukazu Bluetootharen ezarpenak aldatzeko baimenik."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"Erabili telebistaren audio gisa"</string>
     <string name="send_feedback" msgid="936698637869795473">"Bidali oharrak"</string>
     <string name="launch_help" msgid="2607478763131952469">"Laguntza-zentroa"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -419,11 +421,11 @@
     <item msgid="6005053494500517261">"Bikaina"</item>
   </string-array>
     <string name="title_mac_address" msgid="7511588678922209883">"Gailuaren MAC helbidea"</string>
-    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Ausaz antolatutako MAC helbidea"</string>
+    <string name="title_randomized_mac_address" msgid="3359532498635833471">"Ausazko MAC helbidea"</string>
     <string name="title_signal_strength" msgid="5047116893338315998">"Seinalearen indarra"</string>
     <string name="title_random_mac_settings" msgid="6685812569356353378">"Pribatutasuna"</string>
   <string-array name="random_mac_settings_entries">
-    <item msgid="3457228452595715533">"Ausaz aukeratutako MAC helbide bat (lehenetsia)"</item>
+    <item msgid="3457228452595715533">"Erabili ausazko MAC helbide bat (lehenetsia)"</item>
     <item msgid="2490415280467390067">"Erabili gailuaren MAC helbidea"</item>
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"Ez dago erabilgarri"</string>
@@ -514,7 +516,7 @@
     <string name="title_wifi_anonymous_identity" msgid="5965175781722004334">"Idatzi <xliff:g id="SSID">%1$s</xliff:g> sarearen identitate anonimoa"</string>
     <string name="wifi_setup_summary_title_connected" msgid="2725439590655448489">"<xliff:g id="SSID">%1$s</xliff:g> sarera konektatuta zaude"</string>
     <string name="wifi_summary_title_connected" msgid="201105022065577659">"Sarea konektatu da"</string>
-    <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Ez zaude sarera konektatuta"</string>
+    <string name="wifi_summary_title_not_connected" msgid="7991004795297065201">"Ez zaude konektatuta sarera"</string>
     <string name="wifi_summary_description_connected_to_wifi_network" msgid="8796747274977762311">"<xliff:g id="SSID">%1$s</xliff:g> sarera konektatuta zaude. Beste sare batera konektatu nahi duzu?"</string>
     <string name="wifi_summary_unknown_network" msgid="8044143986439139664">"sare ezezaguna"</string>
     <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Ez duzu wifi-sarea aldatzeko baimenik."</string>
@@ -680,7 +682,7 @@
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Koloreen zuzenketa"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Erabili koloreen zuzenketa"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Kolore modua"</string>
-    <string name="color_correction_mode_deuteranomaly" msgid="1513793544554228224">"Daltonismoa"</string>
+    <string name="color_correction_mode_deuteranomaly" msgid="1513793544554228224">"Deuteranomalia"</string>
     <string name="color_correction_mode_deuteranomaly_summary" msgid="5991561481464520986">"Gorri-berdea"</string>
     <string name="color_correction_mode_protanomaly" msgid="8105793166015115037">"Protanopia"</string>
     <string name="color_correction_mode_protanomaly_summary" msgid="3247619910784115563">"Gorri-berdea"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Gaitu"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Konfigurazioa"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"<xliff:g id="SERVICE">%1$s</xliff:g> erabili?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> zerbitzuak idazten duzun guztia bil dezake, pasahitzak izan ezik. Datu pertsonalak hartzen ditu barne; besteak beste, kreditu-txartelen zenbakiak."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> zure pantaila irakurtzeko gai izango da, beste aplikazio batzuetako edukia erakutsi ahal izango du, aplikazioekin edo hardwareen sentsoreekin dituzun interakzioen jarraipena egin eta beste aplikazio batzuekin zure izenean interakzioan jardun."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"<xliff:g id="SERVICE">%1$s</xliff:g> gelditu?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Ados sakatuta, <xliff:g id="SERVICE">%1$s</xliff:g> gelditu egingo da."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Testua ahots bihurtzeko eginbidea"</string>
@@ -932,7 +934,7 @@
     <string name="device_apps_app_management_clear_data" msgid="7305471678286735600">"Garbitu datuak"</string>
     <string name="device_apps_app_management_clear_data_desc" msgid="170972356946852847">"Aplikazio honetako datu guztiak betiko ezabatuko dira.\nBesteak beste, fitxategiak, ezarpenak, kontuak eta datu-baseak."</string>
     <string name="device_apps_app_management_clear_default" msgid="4566187319647111484">"Garbitu lehenespenak"</string>
-    <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Zehaztu aplikazioa noiz abiarazi"</string>
+    <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"Zehaztu aplikazioa noiz exekutatu"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"Ez da ezarri balio lehenetsirik"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"Garbitu cachea"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"Jakinarazpenak"</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Konektatu da"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Erakutsi guztiak"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Bilatzen"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Ezin izan da eskuratu kontua gehitzeko intent-a autentifikatzailetik."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Ezin izan da gehitu kontua, edo kontu mota ez dago erabilgarri."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Kanalak eta sarrerak"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Kanalak, kanpoko sarrerak"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Kanalak"</string>
@@ -1123,4 +1127,9 @@
     <string name="energy_mode_enables" msgid="357960364751477627">"Hauek gaitzen ditu:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Kontuan izan agian modu honek gailuaren energia-kontsumoa handituko duela."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Gaitu <xliff:g id="ENERGYMODENAME">%s</xliff:g>"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Bilatu urruneko kontrolagailua"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Erreproduzitu soinu bat Google TV-ren urruneko kontrolagailua aurkitzeko hura galtzen baduzu"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"Sakatu Google TV-ren atzealdeko botoia, urruneko kontrolagailuan 30 segundoz soinu bat erreproduzitzeko. Google TV-ren urruneko kontrolagailu bateragarriekin soilik funtzionatzen du horrek.\n\nSoinua erreproduzitzeari uzteko, sakatu urruneko kontrolagailuaren edozein botoi."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"\"Bilatu urruneko kontrolagailua\" gaituta dagoenean, soinu bat erreproduzi dezakezu Google TV-ren urruneko kontrolagailua aurkitzeko, betiko tokian ez badago."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Erreproduzitu soinua"</string>
 </resources>

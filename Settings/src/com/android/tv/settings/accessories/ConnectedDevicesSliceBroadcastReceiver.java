@@ -16,11 +16,20 @@
 
 package com.android.tv.settings.accessories;
 
+import static android.content.Intent.FLAG_INCLUDE_STOPPED_PACKAGES;
+import static android.content.Intent.FLAG_RECEIVER_FOREGROUND;
+import static android.content.Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND;
+
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceProvider.KEY_EXTRAS_DEVICE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.DIRECTION_BACK;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_DIRECTION;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_SLICE_URI;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.FIND_MY_REMOTE_PHYSICAL_BUTTON_ENABLED_SETTING;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.notifyDeviceChanged;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.notifyToGoBack;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.setFindMyRemoteButtonEnabled;
 
+import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -36,24 +45,53 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
 
     private static final String TAG = "ConnectedSliceReceiver";
 
+    static final String ACTION_FIND_MY_REMOTE = "com.google.android.tv.FIND_MY_REMOTE";
     static final String ACTION_TOGGLE_CHANGED =
             "com.android.tv.settings.accessories.TOGGLE_CHANGED";
-    // The extra to specify toggle type. Currently, there is only Bluetooth toggle.
+    // The extra to specify toggle type.
     static final String EXTRA_TOGGLE_TYPE = "TOGGLE_TYPE";
+    static final String EXTRA_TOGGLE_STATE = "TOGGLE_STATE";
     // Bluetooth off is handled differently by ResponseActivity with confirmation dialog.
     static final String BLUETOOTH_ON = "BLUETOOTH_ON";
+    static final String ACTIVE_AUDIO_OUTPUT = "ACTIVE_AUDIO_OUTPUT";
 
     @Override
     public void onReceive(Context context, Intent intent) {
         // Handle CEC control toggle.
         final String action = intent.getAction();
         if (ACTION_TOGGLE_CHANGED.equals(action)) {
-            if (BLUETOOTH_ON.equals(intent.getStringExtra(EXTRA_TOGGLE_TYPE))) {
-                if (AccessoryUtils.getDefaultBluetoothAdapter() != null) {
-                    AccessoryUtils.getDefaultBluetoothAdapter().enable();
+            final boolean isChecked = intent.getBooleanExtra(EXTRA_TOGGLE_STATE, false);
+            final String toggleType = intent.getStringExtra(EXTRA_TOGGLE_TYPE);
+            if (toggleType != null) {
+                switch (toggleType) {
+                    case BLUETOOTH_ON -> {
+                        if (AccessoryUtils.getDefaultBluetoothAdapter() != null) {
+                            AccessoryUtils.getDefaultBluetoothAdapter().enable();
+                        }
+                        return;
+                    }
+                    case ACTIVE_AUDIO_OUTPUT -> {
+                        boolean enable = intent.getBooleanExtra(EXTRA_TOGGLE_STATE, false);
+                        BluetoothDevice device = intent.getParcelableExtra(KEY_EXTRAS_DEVICE,
+                                BluetoothDevice.class);
+                        AccessoryUtils.setActiveAudioOutput(enable ? device : null);
+                        // refresh device
+                        notifyDeviceChanged(context, device);
+                    }
+                    case FIND_MY_REMOTE_PHYSICAL_BUTTON_ENABLED_SETTING -> {
+                        setFindMyRemoteButtonEnabled(context, isChecked);
+                        context.getContentResolver().notifyChange(
+                                ConnectedDevicesSliceUtils.FIND_MY_REMOTE_SLICE_URI, null);
+                    }
                 }
-                return;
             }
+        } else if (ACTION_FIND_MY_REMOTE.equals(action)) {
+            context.sendBroadcast(
+                    new Intent(ACTION_FIND_MY_REMOTE)
+                            .putExtra("reason", "SETTINGS")
+                            .setFlags(FLAG_INCLUDE_STOPPED_PACKAGES | FLAG_RECEIVER_FOREGROUND
+                                    | FLAG_RECEIVER_INCLUDE_BACKGROUND),
+                    "com.google.android.tv.permission.FIND_MY_REMOTE");
         }
 
         // Notify TvSettings to go back to the previous level.

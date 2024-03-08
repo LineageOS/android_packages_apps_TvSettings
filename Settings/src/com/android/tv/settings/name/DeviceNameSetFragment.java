@@ -17,6 +17,8 @@
 package com.android.tv.settings.name;
 
 import android.app.Activity;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -29,8 +31,10 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 import androidx.leanback.widget.GuidedActionsStylist;
 
+import com.android.settingslib.dream.DreamBackend;
 import com.android.tv.settings.R;
 import com.android.tv.settings.name.setup.DeviceNameFlowStartActivity;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.GuidedActionsAlignUtil;
 
 import java.util.ArrayList;
@@ -61,7 +65,13 @@ public class DeviceNameSetFragment extends GuidedStepSupportFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
-        return GuidedActionsAlignUtil.createView(view, this);
+        View guidanceView = GuidedActionsAlignUtil.createView(view, this);
+
+        if (FlavorUtils.isTwoPanel(getContext())) {
+            guidanceView.setBackgroundColor(
+                    getResources().getColor(R.color.tp_preference_panel_background_color));
+        }
+        return guidanceView;
     }
 
     @NonNull

@@ -16,6 +16,7 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:custom="http://schemas.android.com/apk/res-auto"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/about_preference">
 
@@ -116,4 +117,9 @@
         android:title="@string/selinux_status"
         android:summary="@string/selinux_status_enforcing"/>
 
+    <!-- General information for arbitrary content -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="general_info"
+        custom:uri="@string/general_info_slice_uri"
+        custom:isPreferenceVisible="false" />
 </PreferenceScreen>

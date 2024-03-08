@@ -21,8 +21,10 @@
         android:key="feedback"
         android:icon="@drawable/ic_send_feedback"
         android:title="@string/send_feedback">
-        <intent
-            android:action="com.google.android.apps.tv.launcherx.feedback.LAUNCH_FEEDBACK_UI" />
+        <intent android:action="com.google.android.apps.tv.launcherx.feedback.LAUNCH_FEEDBACK_UI">
+            <!-- A screenshot would only show the Settings screen, so don't take it. -->
+            <extra android:name="FEEDBACK_CAPTURE_SCREENSHOT" android:value="false" />
+        </intent>
     </Preference>
     <Preference
         android:key="help_center"

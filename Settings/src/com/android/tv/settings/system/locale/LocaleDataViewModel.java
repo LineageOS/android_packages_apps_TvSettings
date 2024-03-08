@@ -21,42 +21,63 @@ import android.content.Context;
 import android.os.RemoteException;
 import android.util.Log;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.lifecycle.ViewModel;
 
 import com.android.internal.app.LocaleStore;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-/** ViewModel to provide data for locale selection. */
+/**
+ * ViewModel to provide data for locale selection.
+ */
 public class LocaleDataViewModel extends ViewModel {
-    private static final String TAG = "LocaleDataViewModel";
-    private final Map<LocaleStore.LocaleInfo, ArrayList<LocaleStore.LocaleInfo>> mLocaleMap =
-            new HashMap<>();
     static final boolean TRANSLATED_ONLY = false;
+    private static final String TAG = "LocaleDataViewModel";
+    @VisibleForTesting
+    final Map<LocaleStore.LocaleInfo, List<LocaleStore.LocaleInfo>> mLocaleMap =
+            new HashMap<>();
+    Set<LocaleStore.LocaleInfo> mLocaleInfos;
 
     public static Locale getCurrentLocale() {
         try {
             return ActivityManager.getService().getConfiguration()
-                                .getLocales().get(0);
+                    .getLocales().get(0);
         } catch (RemoteException e) {
             Log.e(TAG, "Could not retrieve locale", e);
             return null;
         }
     }
 
-    public void addLocaleInfoList(LocaleStore.LocaleInfo localeInfo, Context context,
-            Set<String> langTagsToIgnore) {
+    public synchronized Set<LocaleStore.LocaleInfo> getLocaleInfos(
+            Context context) {
+        if (mLocaleInfos == null) {
+            mLocaleInfos = LocaleStore.getLevelLocales(context,
+                    /* ignorables= */ Collections.emptySet(),
+                    /* parent= */ null,
+                    TRANSLATED_ONLY);
+        }
+        return mLocaleInfos;
+    }
+
+    public synchronized void addLocaleInfoList(LocaleStore.LocaleInfo localeInfo, Context context) {
+        if (mLocaleMap.containsKey(localeInfo)) {
+            return;
+        }
         ArrayList<LocaleStore.LocaleInfo> localeInfoWithCountryList = new ArrayList<>(
                 LocaleStore.getLevelLocales(
-                        context, langTagsToIgnore, localeInfo, TRANSLATED_ONLY));
+                        context, Collections.emptySet(), localeInfo, TRANSLATED_ONLY));
         mLocaleMap.put(localeInfo, localeInfoWithCountryList);
     }
 
-    public ArrayList<LocaleStore.LocaleInfo> getLocaleInfoList(LocaleStore.LocaleInfo localeInfo) {
+    public synchronized List<LocaleStore.LocaleInfo>
+    getLocaleInfoList(LocaleStore.LocaleInfo localeInfo) {
         return mLocaleMap.get(localeInfo);
     }
 }

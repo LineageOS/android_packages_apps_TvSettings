@@ -19,7 +19,7 @@ package com.android.tv.settings.inputmethod;
 import android.annotation.UserIdInt;
 import android.content.Context;
 import android.view.inputmethod.InputMethodInfo;
-import android.widget.Switch;
+import android.widget.CompoundButton;
 
 import androidx.preference.Preference;
 
@@ -40,7 +40,7 @@ public class TVInputMethodPreference extends InputMethodPreference {
 
     @Override
     public boolean onPreferenceClick(final Preference preference) {
-        final Switch switchWidget = getSwitch();
+        final CompoundButton switchWidget = getSwitch();
         if (!switchWidget.isEnabled()) {
             return true;
         }

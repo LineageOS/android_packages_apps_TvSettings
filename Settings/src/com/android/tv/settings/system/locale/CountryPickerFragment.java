@@ -33,12 +33,15 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import com.android.internal.app.LocaleHelper;
 import com.android.internal.app.LocaleStore;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
 /** Country picker settings screen for locale selection. */
 @Keep
@@ -68,11 +71,16 @@ public class CountryPickerFragment extends SettingsPreferenceFragment {
             screen.setTitle(parentLocale.getFullNameNative());
         }
         Locale currentLocale = LocaleDataViewModel.getCurrentLocale();
-        ArrayList<LocaleStore.LocaleInfo> localeInfoCountryList = mLocaleDataViewModel
+        List<LocaleStore.LocaleInfo> localeInfoCountryList = mLocaleDataViewModel
                 .getLocaleInfoList(parentLocale);
         Preference activePref = null;
         if (localeInfoCountryList != null) {
-            for (LocaleStore.LocaleInfo localeInfo : localeInfoCountryList) {
+            Locale sortingLocale = Locale.getDefault();
+            LocaleHelper.LocaleInfoComparator comp =
+                    new LocaleHelper.LocaleInfoComparator(sortingLocale, true);
+
+            for (LocaleStore.LocaleInfo localeInfo : localeInfoCountryList.stream()
+                    .sorted(comp).toList()) {
                 RadioPreference preference = new RadioPreference(getContext());
                 preference.setTitle(localeInfo.getFullCountryNameNative());
                 if (localeInfo.getLocale().equals(currentLocale)) {

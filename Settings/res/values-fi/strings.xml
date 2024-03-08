@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Sovellusasetukset"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Sijainti, käyttö, diagnostiikka, mainokset"</string>
     <string name="add_account" msgid="7386223854837017129">"Lisää tili"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Tuntematon tili"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Poista tili"</string>
     <string name="account_sync" msgid="4315295293211313989">"Valitse synkronoitavat sovellukset"</string>
     <string name="sync_now" msgid="4335217984374620551">"Synkronoi nyt"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Esimerkkiteksti"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Ihmemaa Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Luku 11: Ozin ihastuttava smaragdikaupunki"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Vihreistä silmälaseista huolimatta kaupungin loiste sokaisi aluksi Dorothyn ja ystävät. Teiden varsilla oli kauniita, vihreästä marmorista rakennettuja ja smaragdein koristeltuja taloja. Jalkakäytävä heidän jalkojensa alla oli samaa vihreää marmoria. Laattojen välissä oli tiiviissä riveissä smaragdeja, jotka kimmelsivät auringonpaisteessa. Ikkunaruudut olivat vihreää lasia, kaupungin yllä kaartuva taivas vihersi ja jopa auringon säteet olivat vihreitä.\n\nKaduilla käveli vihreään pukeutuneita ihmisiä, joiden iho oli vihreänsävyinen. He katsoivat Dorothya ja hänen seuralaisiaan hämmästellen. Leijonan nähdessään lapset piiloutuivat äitinsä taakse, mutta kukaan ei sanonut muukalaisille mitään. Kadun varrella oli monia kauppoja, joiden ikkunoissa Dorothy näki pelkästään vihreitä tuotteita. Myytävänä oli vihreitä makeisia, popcornia, kenkiä, hattuja ja kaikenlaisia vaatteita. Yhdessä liikkeessä myytiin vihreää limonadia. Dorothy huomasi, että lapset ostivat limonadia vihreillä penneillä.\n\nKaupungissa ei näkynyt hevosia tai muita eläimiä: tavaroita kuljetettiin pienillä vihreillä työnnettävillä kärryillä. Kaikki ihmiset vaikuttivat onnellisilta ja vaurailta."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Vihreistä silmälaseista huolimatta kaupungin loiste sokaisi aluksi Dorothyn ja ystävät. Teiden varsilla oli kauniita, vihreästä marmorista rakennettuja ja smaragdein koristeltuja taloja. Jalkakäytävä heidän jalkojensa alla oli samaa vihreää marmoria. Laattojen välissä oli tiiviissä riveissä smaragdeja, jotka kimmelsivät auringonpaisteessa. Ikkunaruudut olivat vihreää lasia, kaupungin yllä kaartuva taivas vihersi ja jopa auringon säteet olivat vihreitä.\n\nKaduilla käveli vihreään pukeutuneita ihmisiä, joiden iho oli vihreänsävyinen. He katsoivat Dorothya ja hänen seuralaisiaan hämmästellen. Leijonan nähdessään lapset piiloutuivat äitinsä taakse, mutta kukaan ei sanonut muukalaisille mitään. Kadun varrella oli monia kauppoja, joiden ikkunoissa Dorothy näki pelkästään vihreitä tuotteita. Myytävänä oli vihreitä makeisia, popcornia, kenkiä, hattuja ja kaikenlaisia vaatteita. Yhdessä liikkeessä myytiin vihreää limonadia. Dorothy huomasi, että lapset ostivat limonadia vihreillä penneillä.\n\nKaupungissa ei näkynyt hevosia tai muita eläimiä: tavaroita kuljetettiin pienillä vihreillä työnnettävillä kärryillä. Kaikki ihmiset vaikuttivat onnellisilta ja vaurailta."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Muodon valinta"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automaattinen"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuaalinen"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Yhdistetty"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Yhteys katkaistu"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Sinulla ei ole lupaa muuttaa Bluetooth-asetuksia."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"Käytä TV:n audiota varten"</string>
     <string name="send_feedback" msgid="936698637869795473">"Lähetä palautetta"</string>
     <string name="launch_help" msgid="2607478763131952469">"Ohjekeskus"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -500,7 +502,7 @@
     <string name="wifi_gateway_description" msgid="8902481147103929271">"Anna kelvollinen IP-osoite tai jätä tämä kohta tyhjäksi.\nEsimerkki: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
     <string name="wifi_network_prefix_length_description" msgid="2670994968279018896">"Anna kelvollinen verkon etuliitteen pituus.\nEsimerkki: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="5629893736174170157">"Isäntänimi on virheellinen"</string>
-    <string name="proxy_error_invalid_exclusion_list" msgid="1762079966901078116">"Poissulkemisluettelo on virheellinen. Anna pilkuilla erotettu poissuljettujen verkkotunnusten luettelo."</string>
+    <string name="proxy_error_invalid_exclusion_list" msgid="1762079966901078116">"Poissulkemislista on virheellinen. Anna pilkuilla erotettu poissuljettujen verkkotunnusten lista."</string>
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Portin kenttä ei voi olla tyhjä"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"Jos isäntäkenttä on tyhjä, jätä portin kenttä tyhjäksi"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Portti on virheellinen"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Ota käyttöön"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Määritykset"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Käytetäänkö: <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> voi kerätä kaiken kirjoittamasi tekstin paitsi salasanat. Palvelu voi kerätä myös henkilökohtaisia ​​tietoja, kuten luottokorttien numeroita."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> voi lukea näyttöä, näyttää sisältöä muiden sovellusten päällä, seurata toimintaasi sovelluksilla tai laitteistoantureilla ja käyttää sovelluksia puolestasi."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Pysäytetäänkö <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Valitse OK, niin <xliff:g id="SERVICE">%1$s</xliff:g> pysäytetään."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Tekstistä puheeksi"</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Yhteyden muodostus onnistui"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Näytä kaikki"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Haetaan"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Tilin lisäämistavoitetta ei voitu noutaa todentajalta."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Tiliä ei voitu lisätä tai tilityyppi ei ole käytettävissä."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Kanavat ja tulot"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Kanavat, ulkoiset tulot"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Kanavat"</string>
@@ -1123,4 +1127,9 @@
     <string name="energy_mode_enables" msgid="357960364751477627">"Ottaa käyttöön nämä:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Huomaa, että tämä tila voi lisätä laitteen virrankulutusta."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Ota <xliff:g id="ENERGYMODENAME">%s</xliff:g> käyttöön"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Etsi kaukosäädin"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Jos et löydä Google TV ‑kaukosäädintä, etsi se toistamalla äänimerkki"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"Toista ääntä 30 sekunnin ajan painamalla Google TV ‑kaukosäätimen takaosassa olevaa painiketta. Tämä toimii vain tuetuilla Google TV ‑kaukosäätimillä.\n\nLopeta äänen toistaminen painamalla kaukosäätimestä mitä tahansa painiketta."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"Kun Etsi kaukosäätimeni on käytössä, voit etsiä Google TV ‑kaukosäätimen toistamalla äänimerkin."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Toista äänimerkki"</string>
 </resources>

@@ -61,26 +61,23 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         final AddAccessoryActivity activity = (AddAccessoryActivity) getActivity();
-        updateList(activity.getBluetoothDevices(), activity.getCurrentTargetAddress(),
+        final Context themedContext = getPreferenceManager().getContext();
+
+        PreferenceScreen screen =
+                getPreferenceManager().createPreferenceScreen(themedContext);
+        updateList(screen, activity.getBluetoothDevices(), activity.getCurrentTargetAddress(),
                 activity.getCurrentTargetStatus(), activity.getCancelledAddress());
     }
 
-    public void updateList(List<BluetoothDevice> devices, String currentTargetAddress,
-            String currentTargetStatus, String cancelledAddress) {
+    public void updateList(PreferenceScreen screen, List<BluetoothDevice> devices,
+                           String currentTargetAddress, String currentTargetStatus,
+                           String cancelledAddress) {
         final Context themedContext = getPreferenceManager().getContext();
-
-        PreferenceScreen screen = getPreferenceScreen();
-        if (screen == null) {
-            screen = getPreferenceManager().createPreferenceScreen(themedContext);
-            setPreferenceScreen(screen);
-        } else {
-            screen.removeAll();
-        }
+        screen.removeAll();
 
         if (devices == null) {
             return;
         }
-
         // Add entries for the discovered Bluetooth devices
         for (BluetoothDevice bt : devices) {
             final Preference preference = new Preference(themedContext);
@@ -92,10 +89,18 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
             } else {
                 preference.setSummary(bt.getAddress());
             }
+            preference.setIcon(getDeviceDrawable(bt));
             preference.setKey(bt.getAddress());
             preference.setTitle(bt.getName());
-            preference.setIcon(getDeviceDrawable(bt));
             screen.addPreference(preference);
+        }
+        setPreferenceScreen(screen);
+    }
+
+    public void clearList() {
+        PreferenceScreen screen = getPreferenceScreen();
+        if (screen != null) {
+            screen.removeAll();
         }
     }
 

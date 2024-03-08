@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Nastavitve aplikacije"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Lokacija, podatki o uporabi in diagnostični podatki, oglasi"</string>
     <string name="add_account" msgid="7386223854837017129">"Dodajanje računa"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Neznan račun"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Odstrani račun"</string>
     <string name="account_sync" msgid="4315295293211313989">"Izberite sinhronizirane aplikacije"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sinhroniziraj"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Vzorčno besedilo"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Čudoviti čarovnik iz Oza"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11. poglavje: Čudovito Smaragdno mesto"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Četudi so jim oči varovala zelena očala, je Dorotejo in prijatelje sprva zaslepil sij čudovitega Smaragdnega mesta. Na ulicah so se vrstile prekrasne hiše iz zelenega marmorja, na vseh koncih podprte s sijočimi smaragdi. Hodili so po pločniku iz plošč iz enakega zelenega marmorja, katerih stike so krasile vrste tesno položenih in v soncu lesketajočih se smaragdov. Okenske šipe so bile iz zelenega stekla; celo nebo nad Smaragdnim mestom je bilo obarvano zelenkasto in sončni žarki so bili zelene barve. \n\nPo ulicah se je sprehajalo veliko ljudi, moški, ženske in otroci. Vsi so nosili zelena oblačila in imeli so zelenkasto polt. Dorotejo in njeno nenavadno spremstvo so gledali z začudenimi očmi – vsi otroci so stekli proč in se skrili za svoje mame, ko so zagledali Leva –, ampak spregovoril ni z njimi nihče niti besede. Na ulici so stale številne prodajalne in Doroteja je opazila, da je bilo v njih vse zeleno. Naprodaj so imele zelene sladkarije in zeleno pokovko, pa zelene čevlje, zelene klobuke in zelena oblačila vseh vrst prav tako. V eni od njih je možak prodajal zeleno limonado in Doroteja je videla, da so otroci plačevali zanjo z zelenimi novci. \n\nNi bilo videti konjev ali živali drugih vrst; ljudje so prenašali stvari naokrog v majhnih zelenih vozičkih, ki so jih potiskali pred seboj. Vsi so se zdeli veseli, zadovoljni in uspešni."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Četudi so jim oči varovala zelena očala, je Dorotejo in prijatelje sprva zaslepil sij čudovitega Smaragdnega mesta. Na ulicah so se vrstile prekrasne hiše iz zelenega marmorja, na vseh koncih podprte s sijočimi smaragdi. Hodili so po pločniku iz plošč iz enakega zelenega marmorja, katerih stike so krasile vrste tesno položenih in v soncu lesketajočih se smaragdov. Okenske šipe so bile iz zelenega stekla; celo nebo nad Smaragdnim mestom je bilo obarvano zelenkasto in sončni žarki so bili zelene barve. \n\nPo ulicah se je sprehajalo veliko ljudi, moški, ženske in otroci. Vsi so nosili zelena oblačila in imeli so zelenkasto polt. Dorotejo in njeno nenavadno spremstvo so gledali z začudenimi očmi – vsi otroci so stekli proč in se skrili za svoje mame, ko so zagledali Leva –, ampak spregovoril ni z njimi nihče niti besede. Na ulici so stale številne prodajalne in Doroteja je opazila, da je bilo v njih vse zeleno. Naprodaj so imele zelene sladkarije in zeleno pokovko, pa zelene čevlje, zelene klobuke in zelena oblačila vseh vrst prav tako. V eni od njih je možak prodajal zeleno limonado in Doroteja je videla, da so otroci plačevali zanjo z zelenimi novci. \n\nNi bilo videti konjev ali živali drugih vrst; ljudje so prenašali stvari naokrog v majhnih zelenih vozičkih, ki so jih potiskali pred seboj. Vsi so se zdeli veseli, zadovoljni in uspešni."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Izbor oblike"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Samodejno"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Ročno"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Povezava je vzpostavljena"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Povezava je prekinjena"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Nimate dovoljenja za spreminjanje nastavitev za Bluetooth."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"Uporabi za zvok televizorja"</string>
     <string name="send_feedback" msgid="936698637869795473">"Pošiljanje povratnih informacij"</string>
     <string name="launch_help" msgid="2607478763131952469">"Center za pomoč"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Omogoči"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Konfiguracija"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Želite uporabiti <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> lahko zbere vse besedilo, ki ga vnesete, razen gesel. To obsega tudi osebne podatke, na primer številke kreditnih kartic."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> bo lahko brala vsebino zaslona, prikazovala vsebino prek drugih aplikacij, spremljala vašo uporabo aplikacij ali tipal strojne opreme in komunicirala z aplikacijami v vašem imenu."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Želite izklopiti <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Če izberete »V redu«, izklopite storitev <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Pretvorba besedila v govor"</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Uspešna vzpostavitev povezave"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Pokaži vse"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Iskanje"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Ni bilo mogoče dobiti namena za dodajanje računa od overitelja."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Ni bilo mogoče dodati računa ali pa vrsta računa ni na voljo."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Kanali in vhodi"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Kanali, zunanji vhodi"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Kanali"</string>
@@ -1123,4 +1127,9 @@
     <string name="energy_mode_enables" msgid="357960364751477627">"Omogoča:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Upoštevajte, da lahko ta način poveča porabo energije naprave."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Omogočite »<xliff:g id="ENERGYMODENAME">%s</xliff:g>«"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Poišči moj daljinski upravljalnik"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Predvajajte zvok, da poiščete daljinski upravljalnik za Google TV, če ga založite"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"Pritisnite gumb na hrbtni strani naprave Google TV, če želite 30 sekund predvajati zvok prek daljinskega upravljalnika. To deluje samo s podprtimi daljinskimi upravljalniki za Google TV.\n\nČe želite ustaviti zvok, na daljinskem upravljalniku pritisnite kateri koli gumb."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"Če je omogočena funkcija Poišči moj daljinski upravljalnik, lahko nastavite, da se predvaja zvok, da najdete založeni daljinski upravljalnik Googla TV."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Predvajaj zvok"</string>
 </resources>

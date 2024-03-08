@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Paramètres des applications"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Localisation, utilisation et diagnostics, et annonces"</string>
     <string name="add_account" msgid="7386223854837017129">"Ajouter un compte"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Compte inconnu"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Supprimer le compte"</string>
     <string name="account_sync" msgid="4315295293211313989">"Sélectionner applis synchro"</string>
     <string name="sync_now" msgid="4335217984374620551">"Synchroniser maintenant"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Exemple de texte"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Le Magicien d\'Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Chapitre 11 : La merveilleuse cité d\'émeraude d\'Oz"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Malgré leurs lunettes vertes, Dorothée et ses amis ont d\'abord été éblouis par l\'éclat de la cité merveilleuse. Les rues étaient bordées de maisons splendides, toutes faites de marbre vert et incrustées d\'étincelantes émeraudes. Ils marchaient sur une chaussée ornée du même marbre, et la jointure des dalles était sertie de rangs serrés d\'émeraudes qui resplendissaient sous le soleil. Les panneaux de verre des fenêtres étaient verts, le ciel au-dessus de la cité avait une teinte verte, et le soleil lui-même lançait des rayons verts. \n\nBeaucoup de gens déambulaient dans les rues, hommes, femmes et enfants. Tous étaient vêtus de vert et avaient un teint verdâtre. Étonnés, ils dévisageaient Dorothée et son étrange escorte. Les enfants couraient se cacher derrière leurs mères à la vue du lion, mais personne ne leur adressait la parole. Il y avait de nombreuses boutiques et Dorothée a remarqué que tout y était vert à l\'intérieur. Tout ce qu\'on y vendait était vert : les bonbons et le maïs éclaté, les chaussures, les chapeaux et les vêtements. Dans un magasin, un homme vendait de la limonade verte, et Dorothée a vu que les enfants payaient avec des sous verts. \n\nIl semblait n\'y avoir ni chevaux ni animaux d\'aucune espèce; les hommes transportaient diverses choses dans de petites charrettes vertes, qu\'ils poussaient devant eux. Tout le monde avait un air heureux et satisfait, et tous les habitants semblaient prospères."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Malgré leurs lunettes vertes, Dorothée et ses amis ont d\'abord été éblouis par l\'éclat de la cité merveilleuse. Les rues étaient bordées de maisons splendides, toutes faites de marbre vert et incrustées d\'étincelantes émeraudes. Ils marchaient sur une chaussée ornée du même marbre, et la jointure des dalles était sertie de rangs serrés d\'émeraudes qui resplendissaient sous le soleil. Les panneaux de verre des fenêtres étaient verts, le ciel au-dessus de la cité avait une teinte verte, et le soleil lui-même lançait des rayons verts. \n\nBeaucoup de gens déambulaient dans les rues, hommes, femmes et enfants. Tous étaient vêtus de vert et avaient un teint verdâtre. Étonnés, ils dévisageaient Dorothée et son étrange escorte. Les enfants couraient se cacher derrière leurs mères à la vue du lion, mais personne ne leur adressait la parole. Il y avait de nombreuses boutiques et Dorothée a remarqué que tout y était vert à l\'intérieur. Tout ce qu\'on y vendait était vert : les bonbons et le maïs éclaté, les chaussures, les chapeaux et les vêtements. Dans un magasin, un homme vendait de la limonade verte, et Dorothée a vu que les enfants payaient avec des sous verts. \n\nIl semblait n\'y avoir ni chevaux ni animaux d\'aucune espèce; les hommes transportaient diverses choses dans de petites charrettes vertes, qu\'ils poussaient devant eux. Tout le monde semblait heureux, satisfait et prospère."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Sélection du format"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatique"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuel"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Connecté"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Déconnecté"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Vous n\'êtes pas autorisé à modifier les paramètres Bluetooth."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"Utiliser pour l\'audio du téléviseur"</string>
     <string name="send_feedback" msgid="936698637869795473">"Envoyer des commentaires"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centre d’aide"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Activer"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Configuration"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Utiliser <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> peut recueillir la totalité du texte que vous entrez, à l\'exception des mots de passe. Cela comprend les données personnelles, telles que les numéros de carte de crédit."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> pourra lire votre écran, afficher du contenu par-dessus d\'autres applications, suivre vos interactions avec des applications ou des capteurs matériels, et interagir avec des applications en votre nom."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Arrêter <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Si vous sélectionnez OK, cela interrompt <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Synthèse vocale"</string>
@@ -1089,7 +1091,7 @@
     <string name="select_device_admin_msg" msgid="8475934459999710332">"Applications d\'administration d\'appareils"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"Activer l\'appli d\'admin de l\'appareil?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Activer l\'application d\'administration de l\'appareil"</string>
-    <string name="device_admin_warning" msgid="7399916080685200660">"L\'activation de cette application d\'administration permettra à <xliff:g id="APP_NAME">%1$s</xliff:g> d\'effectuer les opérations suivantes :"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"Lorsque l\'application d\'administration est activée, <xliff:g id="APP_NAME">%1$s</xliff:g> pourra effectuer les opérations suivantes :"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Cet appareil sera géré et surveillé par <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"Cette application d\'administration est active et permet à l\'application <xliff:g id="APP_NAME">%1$s</xliff:g> d\'effectuer les opérations suivantes :"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"En continuant, votre utilisateur sera géré par votre administrateur, qui pourra aussi stocker des données associées en plus de vos données personnelles.\n\nVotre administrateur peut surveiller et gérer les paramètres, l\'accès, les applications et les données associées à cet utilisateur, y compris l\'activité réseau et les données de localisation de votre appareil."</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Connexion réussie"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Tout afficher"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Recherche en cours…"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Impossible de récupérer l\'intention d\'ajouter un compte à partir de l\'authentifiant."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Impossible d\'ajouter un compte, ou le type de compte n\'est pas accessible."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Chaînes et entrées"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Chaînes, entrées externes"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Chaînes"</string>
@@ -1119,8 +1123,13 @@
     <string name="reset_options_title" msgid="7632580482285108955">"Réinitialiser"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Code d\'association Ethernet"</string>
     <string name="energy_modes" msgid="1331693860386361744">"Modes de consommation d\'énergie"</string>
-    <string name="energy_modes_summary" msgid="7196407759836930799">"Améliorer l\'efficacité énergétique lorsque le téléviseur n\'est pas en cours d\'utilisation"</string>
+    <string name="energy_modes_summary" msgid="7196407759836930799">"Améliorez l\'efficacité énergétique lorsque le téléviseur n\'est pas en cours d\'utilisation"</string>
     <string name="energy_mode_enables" msgid="357960364751477627">"Active :"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Notez que ce mode peut augmenter la consommation d\'énergie de l\'appareil."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Activer « <xliff:g id="ENERGYMODENAME">%s</xliff:g> »"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Localiser ma télécommande"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Faites jouer un son pour localiser votre télécommande Google TV si elle est égarée"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"Appuyez sur le bouton à l\'arrière de votre Google TV pour faire jouer un son sur votre télécommande pendant 30 secondes. Cette action ne fonctionne qu\'avec les télécommandes prises en charge par Google TV.\n\nPour couper le son, appuyez sur n\'importe quel bouton de votre télécommande."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"Quand la fonctionnalité Localiser ma télécommande est activée, vous pouvez faire jouer un son pour localiser votre télécommande Google TV si elle est égarée."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Faire jouer un son"</string>
 </resources>

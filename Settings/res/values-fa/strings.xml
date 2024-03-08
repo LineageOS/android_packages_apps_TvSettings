@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"تنظیمات برنامه"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"مکان، استفاده و عیب‌یابی، آگهی‌ها"</string>
     <string name="add_account" msgid="7386223854837017129">"افزودن حساب"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"حساب نامشخص"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"حذف کردن حساب"</string>
     <string name="account_sync" msgid="4315295293211313989">"انتخاب برنامه‌های همگام‌ شده"</string>
     <string name="sync_now" msgid="4335217984374620551">"اکنون همگام‌سازی شود"</string>
@@ -92,7 +93,7 @@
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"عیب‌یابی شبکه"</string>
     <string name="apps_recently_used_category_title" msgid="7877660412428813933">"برنامه‌های اخیراً بازشده"</string>
     <string name="apps_see_all_apps" msgid="2002886135933443688">"مشاهده همه برنامه‌ها"</string>
-    <string name="apps_permissions_category_title" msgid="8099660060701465267">"مجوزها"</string>
+    <string name="apps_permissions_category_title" msgid="8099660060701465267">"اجازه‌ها"</string>
     <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
     <string name="update_slice_title" msgid="6553763903108611747"></string>
     <string name="all_apps_title" msgid="3717294436135280133">"همه برنامه‌ها"</string>
@@ -151,12 +152,12 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"تنظیمات پیشرفته صدا"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"مجاز کردن حالت بازی"</string>
-    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"مطابقت دادن بازه پویای محتوا"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"هنگام فعال کردن این گزینه، سیستم بین قالب‌های مختلف بازه پویا جابه‌جا می‌شود تا با محتوا مطابقت پیدا کند. به‌همین دلیل ممکن است درطول تغییر قالب، صفحه سیاهی ببینید.\n\nبرای گزینه‌های بازه پویای بیشتر، روی «تنظیمات پیشرفته نمایشگر» کلیک کنید."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"بازه پویای ترجیحی"</string>
+    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"مطابقت دادن دامنه پویای محتوا"</string>
+    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"هنگام فعال کردن این گزینه، سیستم بین قالب‌های مختلف دامنه پویا جابه‌جا می‌شود تا با محتوا مطابقت پیدا کند. به‌همین دلیل ممکن است درطول تغییر قالب، صفحه سیاهی ببینید.\n\nبرای گزینه‌های دامنه پویای بیشتر، روی «تنظیمات پیشرفته نمایشگر» کلیک کنید."</string>
+    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"دامنه پویای ترجیحی"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"تبدیل ترجیحی سیستم"</string>
     <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"به سیستم اجازه داده می‌شود تبدیل قالب را مدیریت کند"</string>
-    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"وقتی این گزینه انتخاب شود، سیستم محدوده پویای مناسبی را برای ارسال به صفحه‌نمایش شما تعیین می‌کند و درصورت نیاز محتوا را به این محدوده پویا تبدیل می‌کند."</string>
+    <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"وقتی این گزینه انتخاب شود، سیستم دامنه پویای مناسبی را برای ارسال به صفحه‌نمایش شما تعیین می‌کند و درصورت نیاز محتوا را به این دامنه پویا تبدیل می‌کند."</string>
     <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"همیشه با قالب محتوا مطابقت دارد"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"تبدیل اجباری"</string>
     <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"تبدیل به قالب ترجیحی را اجباری می‌کند"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"نوشتار نمونه"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"جادوگر شهر اوز"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"فصل ۱۱: شهر زمردی شگفت‌انگیز اوز"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"با وجودی که دورتی و دوستانش عینک‌هایی سبز به چشم داشتند چشمانشان در اولین نگاه از درخشندگی این شهر فوق‌العاده خیره شد. خیابان‌ها با ردیف خانه‌هایی که همه از مرمر سبز ساخته شده بودند و در همه جای آن با زمردهای درخشنده تزئین شده بود می‌درخشید. آن‌ها در پیاده‌رویی از همان مرمر سبز راه می‌رفتند و سنگفرش‌های پیاده‌رو با ردیف‌های زمردی که نزدیک به هم قرار گرفته بودند و در نور خورشید می‌درخشیدند به هم پیوسته بود. قاب‌های پنجره‌ها از شیشه سبز بود؛ حتی آسمان بالای شهر رنگ‌مایه سبز داشت و اشعه خورشید سبزرنگ بود. \n\nمردم زیادی از مرد و زن و بچه در اطراف راه می‌رفتند که همه لباس‌های سبزی پوشیده بودند و پوست بدنشان ته رنگ سبزی داشت. آن‌ها به دوروتی و دوستان عجیبش با تعجب نگاه می‌کردند. بچه‌ها به‌محض دیدن شیر همه فرار کردند و پشت سر مادرانشان پنهان شدند؛ اما هیچ‌کس با آن‌ها صحبت نکرد. تعداد زیادی مغازه در خیابان بود و دوروتی متوجه شد که همه‌چیز در این مغازه‌ها به رنگ سبز است. آبنبات سبز و پف فیل سبز برای فروش گذاشته شده بود، همین‌طور همه مدل کفش، کلاه و لباس که همه به رنگ سبز بودند. در جایی مردی لیموناد سبز می‌فروخت و وقتی بچه‌ها از او خرید می‌کردند دوروتی دید که پول آن را با سکه‌هایی سبزرنگ پرداختند. \n\nبه‌نظر می‌رسید که اسب یا حیوان دیگری در آنجا نیست؛ مردها چیزها را با گاری‌های کوچک سبزی به این طرف و آن طرف حمل می‌کردند و گاری را در جلوشان هل می‌دادند. به‌نظر می‌رسید همه شاد و راضی و مرفه بودند."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"با وجودی که دوروتی و دوستانش عینک‌هایی سبز به چشم داشتند، باز هم چشمانشان در اولین نگاه از درخشندگی این شهر فوق‌العاده خیره مانده بود. خیابان‌ها با ردیف خانه‌هایی که همه از مرمر سبز ساخته شده بودند و همه جای آن‌ها با زمردهای درخشنده تزیین شده بود می‌درخشید. آن‌ها در پیاده‌رویی از همان مرمر سبز راه می‌رفتند و سنگفرش‌های پیاده‌رو با ردیف‌های زمردی که نزدیک به هم قرار گرفته بودند و در نور خورشید می‌درخشیدند به هم پیوسته بود. قاب پنجره‌ها از شیشه سبز بود؛ حتی آسمان بالای شهر رنگ‌مایه سبز داشت و اشعه‌های خورشید سبزرنگ بود. \n\nمردم زیادی از مرد و زن و بچه در آن اطراف راه می‌رفتند که همه لباس‌های سبزی پوشیده بودند و پوست بدنشان ته‌رنگ سبز داشت. آن‌ها به دوروتی و دوستان عجیبش با تعجب نگاه می‌کردند. بچه‌ها به‌محض دیدن شیر همه فرار کردند و پشت سر مادرانشان پنهان شدند؛ اما هیچ‌کس با آن‌ها صحبت نکرد. تعداد زیادی مغازه در خیابان بود و دوروتی متوجه شد که همه‌چیز در این مغازه‌ها به رنگ سبز است. آبنبات سبز و پف فیل سبز برای فروش گذاشته شده بود، همین‌طور همه مدل کفش، کلاه، و لباس که همه به رنگ سبز بودند. در جایی مردی لیموناد سبز می‌فروخت و وقتی بچه‌ها از او خرید می‌کردند دوروتی دید که پول آن را با سکه‌هایی سبزرنگ می‌پردازند. \n\nبه‌نظر می‌رسید که اسب یا حیوان دیگری در آنجا نیست؛ مردها چیزها را با گاری‌های کوچک سبزی به این طرف و آن طرف حمل می‌کردند و گاری را در جلوشان هل می‌دادند. به‌نظر می‌رسید همه شاد و راضی و مرفه هستند."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"انتخاب قالب‌بندی"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"خودکار"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"دستی"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"متصل"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"متصل نیست"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"اجازه ندارید تنظیمات بلوتوث را تغییر دهید."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"استفاده برای صدای تلویزیون"</string>
     <string name="send_feedback" msgid="936698637869795473">"ارسال بازخورد"</string>
     <string name="launch_help" msgid="2607478763131952469">"مرکز راهنمایی"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -700,7 +702,7 @@
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"سرویس میان‌بر"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"وقتی میان‌بر روشن است، اگر دکمه‌های برگشت و پایین را با هم فشار دهید و ۳ ثانیه نگه دارید ویژگی دسترس‌پذیری شروع خواهد شد."</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"زیرنویس"</string>
-    <string name="accessibility_captions_description" msgid="3827820027578548160">"تنظیمات وضعیت متن زیرنویس روی ویدئو"</string>
+    <string name="accessibility_captions_description" msgid="3827820027578548160">"تنظیمات وضعیت متن زیرنویس روی ویدیو"</string>
     <string name="captions_display" msgid="2598662495450633375">"نمایش"</string>
     <string name="captions_display_on" msgid="480438033345455728">"روشن"</string>
     <string name="captions_display_off" msgid="87881163874948539">"خاموش"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"فعال کردن"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"پیکربندی"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"از <xliff:g id="SERVICE">%1$s</xliff:g> استفاده شود؟"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> می‌تواند همه متنی را که تایپ می‌کنید، به‌غیراز گذرواژه، جمع‌آوری کند. این متن شامل داده‌های شخصی مانند شماره کارت‌‌های اعتباری نیز می‌شود."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> می‌تواند صفحه را بخواند، محتوا را روی برنامه‌های دیگر به‌نمایش بگذارد، تعامل‌های شما با برنامه‌ها یا حسگرهای سخت‌افزاری را پیگیری کند، و ازجانب شما با برنامه‌ها تعامل داشته باشد."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"<xliff:g id="SERVICE">%1$s</xliff:g> متوقف شود؟"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"‫با انتخاب تأیید، <xliff:g id="SERVICE">%1$s</xliff:g> متوقف می‌شود."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"نوشتار به گفتار"</string>
@@ -808,7 +810,7 @@
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"منابع ناشناس"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"اجازه نصب برنامه‌ها از منابعی غیر از فروشگاه Play"</string>
     <string name="security_unknown_sources_confirm_title" msgid="4600896691987804985">"اجازه به منابع ناشناس"</string>
-    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"دستگاه و داده‌های شخصی‌تان در برابر حمله برنامه‌هایی با منابع ناشناس بیشتر آسیب‌پذیرند. شما می‌پذیرید که مسئولیت انحصاری هرگونه آسیب به دستگاه یا ازبین رفتن داده دراثر استفاده از این برنامه‌ها با خودتان است."</string>
+    <string name="security_unknown_sources_confirm_desc" msgid="7883820068140189584">"دستگاه و داده‌های شخصی‌تان دربرابر حمله برنامه‌هایی با منابع ناشناس بیشتر آسیب‌پذیرند. شما می‌پذیرید که مسئولیت انحصاری هرگونه آسیب به دستگاه یا ازبین رفتن داده دراثر استفاده از این برنامه‌ها با خودتان است."</string>
     <string name="system_hdcp_checking_never" msgid="3251512398865365135">"هیچ‌وقت"</string>
     <string name="system_hdcp_checking_drm" msgid="2159124883496899278">"برای محتوای DRM"</string>
     <string name="system_hdcp_checking_always" msgid="5868177105455148262">"همیشه"</string>
@@ -937,7 +939,7 @@
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"پاک کردن حافظه پنهان"</string>
     <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"اعلان‌ها"</string>
     <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"منبع شخص ثالث"</string>
-    <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"مجوزها"</string>
+    <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"اجازه‌ها"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"برنامه دردسترس نیست"</string>
     <string name="unused_apps" msgid="5539166745483454543">"برنامه‌های استفاده‌نشده"</string>
     <string name="settings_ok" msgid="5950888975075541964">"تأیید"</string>
@@ -994,10 +996,10 @@
     <string name="device_rename_title" msgid="9070021379000499270">"تغییر نام این <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="1973894029492915135">"نام فعلی این <xliff:g id="DEVICEMODEL">%1$s</xliff:g>،‏ «<xliff:g id="DEVICENAME">%2$s</xliff:g>» است."</string>
     <string name="device_name_suggestion_title" msgid="3986220212759193742">"تنظیم نام دستگاه"</string>
-    <string name="device_name_suggestion_summary" msgid="4582691399302362938">"هنگام ارسال عکس، ویدیو و محتوایی دیگر از تلفنتان، از این نام استفاده کنید"</string>
+    <string name="device_name_suggestion_summary" msgid="4582691399302362938">"هنگام ارسال عکس، ویدیو و سایر محتواها از تلفنتان، از این نام استفاده کنید"</string>
     <string name="change_setting" msgid="7211706374208138343">"تغییر داده شود"</string>
     <string name="keep_settings" msgid="703474489210093961">"تغییر داده نشود"</string>
-    <string name="apps_permissions" msgid="7876407267050498394">"مجوزها"</string>
+    <string name="apps_permissions" msgid="7876407267050498394">"اجازه‌ها"</string>
     <string name="device_apps_permissions" msgid="8421323706003063878">"اجازه‌های برنامه"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_0">%1$d</xliff:g> از <xliff:g id="COUNT_1">%2$d</xliff:g> برنامه‌های مجاز"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"درخواست اجازه بلوتوث"</string>
@@ -1045,7 +1047,7 @@
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"به برنامه‌ها اجازه می‌دهد زنگ ساعت تنظیم کنند و کنش‌های حساس به زمان زمان‌بندی کنند. این تنظیم به برنامه‌ها اجازه می‌دهد در پس‌زمینه اجرا شوند که می‌تواند مصرف باتری را افزایش دهد.\n\nاگر این اجازه خاموش باشد، زنگ‌های ساعت موجود و رویدادهای زمان‌محوری که این برنامه زمان‌بندی کرده است، کار نخواهند کرد."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"روشن کردن صفحه‌نمایش"</string>
     <string name="allow_turn_screen_on" msgid="4903401106871656521">"مجاز کردن روشن کردن صفحه‌نمایش"</string>
-    <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"به برنامه اجازه می‌دهد صفحه‌نمایش را روشن کند. اگر اجازه داده شود، برنامه ممکن است در هر زمانی بدون هدف صریح شما صفحه‌نمایش را روشن کند."</string>
+    <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"به برنامه اجازه می‌دهد صفحه‌نمایش را روشن کند. اگر اجازه داده شود، برنامه ممکن است بی‌آنکه شما مستقیماً خواسته باشید صفحه‌نمایش را روشن کند."</string>
     <string name="special_access" msgid="21806055758289916">"دسترسی ویژه به برنامه"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>، <xliff:g id="PART2">%2$s</xliff:g>"</string>
     <string name="audio_category" msgid="6143623109624947993">"صدا"</string>
@@ -1078,9 +1080,9 @@
     <string name="disabled_by_policy_title_suspend_packages" msgid="6500185610058872758">"نمی‌توان این برنامه را باز کرد"</string>
     <string name="default_admin_support_msg" msgid="7913455019068370350">"اگر سؤالی دارید، با سرپرست فناوری اطلاعات تماس بگیرید"</string>
     <string name="admin_support_more_info" msgid="9053232166115098434">"جزئیات بیشتر"</string>
-    <string name="admin_profile_owner_message" msgid="5729169873349157622">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این نمایه کاری (ازجمله تنظیمات، مجوزها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
-    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این کاربر (ازجمله تنظیمات، مجوزها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
-    <string name="admin_device_owner_message" msgid="1935507216776040907">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این دستگاه (ازجمله تنظیمات، مجوزها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
+    <string name="admin_profile_owner_message" msgid="5729169873349157622">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این نمایه کاری (ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
+    <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این کاربر (ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
+    <string name="admin_device_owner_message" msgid="1935507216776040907">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این دستگاه (ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
     <string name="remove_managed_profile_label" msgid="8950011141359605612">"حذف نمایه کار"</string>
     <string name="active_device_admin_msg" msgid="185537304726228624">"برنامه سرپرست دستگاه"</string>
     <string name="remove_device_admin" msgid="2623866073546295104">"غیرفعال کردن این برنامه سرپرست دستگاه"</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"اتصال برقرار شد"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"نمایش همه"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"درحال جستجو"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"هدف افزودن حساب از برنامه اصالت‌سنجی بازیابی نشد."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"حساب اضافه نشد یا نوع حساب دردسترس نیست."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"کانال‌ها و ورودی‌ها"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"کانال‌ها،‌ ورودی‌های خارجی"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"کانال‌ها"</string>
@@ -1123,4 +1127,9 @@
     <string name="energy_mode_enables" msgid="357960364751477627">"این حالت را فعال می‌کند:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"توجه داشته باشید که ممکن است این حالت مصرف برق دستگاه را افزایش دهد."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"فعال کردن «<xliff:g id="ENERGYMODENAME">%s</xliff:g>»"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"پیدا کردن کنترل از دور"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"اگر کنترل از دور Google TV در جای خودش نباشد، برای پیدا کردن آن، صدایی پخش می‌شود"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"دکمه پشت Google TV را فشار دهید تا صدایی به‌مدت ۳۰ ثانیه در کنترل از دور پخش شود. این روش فقط در کنترل از دورهای پشتیبانی‌شده Google TV کار می‌کند.\n\nبرای متوقف کردن صدا، یکی از دکمه‌های روی کنترل از دور را فشار دهید."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"وقتی «پیدا کردن کنترل از دور» فعال باشد، اگر کنترل از دور Google TV در جای خودش نباشد، می‌توانید با پخش صدا آن را پیدا کنید."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"پخش صدا"</string>
 </resources>

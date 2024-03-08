@@ -32,6 +32,7 @@ import com.android.tv.settings.library.UIUpdateCallback;
 import com.android.tv.settings.library.data.PreferenceCompatManager;
 import com.android.tv.settings.library.util.ResourcesUtil;
 import com.android.tv.settings.library.util.RestrictedPreferenceController;
+import com.android.wifitrackerlib.WifiEntry;
 
 /** Preference controller for access point preference in NetworkState. */
 public class AccessPointPreferenceController extends RestrictedPreferenceController {
@@ -95,7 +96,7 @@ public class AccessPointPreferenceController extends RestrictedPreferenceControl
         WifiManager wifiManager = mContext.getSystemService(WifiManager.class);
         ConnectivityManager connectivityManager = mContext.getSystemService(
                 ConnectivityManager.class);
-        if (accessPoint.getDetailedState() != NetworkInfo.DetailedState.CONNECTED) {
+        if (accessPoint.getWifiEntry().getConnectedState() != WifiEntry.CONNECTED_STATE_CONNECTED) {
             return false;
         }
         NetworkCapabilities nc = connectivityManager.getNetworkCapabilities(

@@ -19,7 +19,7 @@ import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.text.TextUtils;
 
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.tv.settings.library.network.AccessPoint;
 
 /** Helper class for Wifi configuration. */
 public class WifiUtils {

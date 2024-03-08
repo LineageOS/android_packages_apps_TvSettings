@@ -56,9 +56,10 @@ public class RestrictedPreferenceAdapter<T extends Preference> {
     private final Context mContext;
     private final T mOriginalPreference;
     private final List<String> mUserRestrictions;
-    private final boolean mRestricted;
-    private final EnforcedAdmin mEnforcingAdmin;
-    private final RestrictedPreference mRestrictedPreference;
+    private boolean mRestricted;
+    private EnforcedAdmin mEnforcingAdmin;
+    private RestrictedPreference mRestrictedPreference;
+    private boolean mIsApSaved;
 
     public RestrictedPreferenceAdapter(Context context, T originalPreference,
             List<String> userRestrictions) {
@@ -125,6 +126,15 @@ public class RestrictedPreferenceAdapter<T extends Preference> {
         return false;
     }
 
+    /**
+     * Returns {@code true} if given restriction applies to this preference,
+     * {@code false} otherwise.
+     */
+    public boolean isRestricted(String restriction) {
+        UserManager userManager = UserManager.get(mContext);
+        return userManager.hasUserRestriction(restriction);
+    }
+
     private EnforcedAdmin isRestrictedByAdmin() {
         if (mUserRestrictions == null) {
             return null;
@@ -156,6 +166,11 @@ public class RestrictedPreferenceAdapter<T extends Preference> {
         screen.addPreference(mRestrictedPreference);
     }
 
+    /** Set access point saved or not. */
+    public void setApSaved(boolean saved) {
+        mIsApSaved = saved;
+    }
+
     /**
      * Returns the preference to be inserted into the preference screen.
      *
@@ -164,7 +179,8 @@ public class RestrictedPreferenceAdapter<T extends Preference> {
      * the original preference.
      */
     public Preference getPreference() {
-        if (mRestrictedPreference != null) {
+        if (mRestrictedPreference != null && (isRestricted(UserManager.DISALLOW_CONFIG_WIFI)
+                || (isRestricted(UserManager.DISALLOW_ADD_WIFI_CONFIG) && !mIsApSaved))) {
             return mRestrictedPreference;
         }
 
@@ -194,8 +210,19 @@ public class RestrictedPreferenceAdapter<T extends Preference> {
      * Call this after making direct changes to the original preference.
      */
     public void updatePreference() {
-        if (mRestricted) {
+        mRestricted = isRestricted();
+        mEnforcingAdmin = isRestrictedByAdmin();
+        if (mEnforcingAdmin != null) {
+            if (mRestrictedPreference == null) {
+                mRestrictedPreference = new RestrictedPreference(mContext);
+            }
+        } else {
+            mRestrictedPreference = null;
+        }
+        if (mRestricted && isRestricted(UserManager.DISALLOW_CONFIG_WIFI)) {
             mOriginalPreference.setEnabled(false);
+        } else {
+            mOriginalPreference.setEnabled(true);
         }
         updateRestrictedPreference();
     }
@@ -204,8 +231,8 @@ public class RestrictedPreferenceAdapter<T extends Preference> {
         if (mRestrictedPreference == null) {
             return;
         }
-
         mRestrictedPreference.setKey(mOriginalPreference.getKey());
+        mRestrictedPreference.setOrder(mOriginalPreference.getOrder());
         mRestrictedPreference.setTitle(mOriginalPreference.getTitle());
         mRestrictedPreference.setSummary(mOriginalPreference.getSummary());
         mRestrictedPreference.setIcon(mOriginalPreference.getIcon());

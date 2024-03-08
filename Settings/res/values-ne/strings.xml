@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"एपका सेटिङहरू"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"स्थान, प्रयोग तथा निदान, विज्ञापनहरू"</string>
     <string name="add_account" msgid="7386223854837017129">"खाता हाल्नुहोस्"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"खाता भेटिएन"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"खाता हटाउनुहोस्"</string>
     <string name="account_sync" msgid="4315295293211313989">"सिंक गरिएको एपहरू छनौट गर्नुहोस्"</string>
     <string name="sync_now" msgid="4335217984374620551">"अहिले सिंक्रोनाइजेसन गर्नुहोस्"</string>
@@ -151,13 +152,13 @@
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"ध्वनिसम्बन्धी उन्नत सेटिङ"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"गेम मोडलाई अनुमति दिनुहोस्"</string>
-    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"सामग्रीको डायनामिक रेन्जसँग मिल्दोजुल्दो बनाउनुहोस्"</string>
+    <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"सामग्रीको डायनामिक रेन्जसँग मिल्दोजुल्दो बनाइयोस्"</string>
     <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"तपाईंले यो विकल्प अन गर्नुभयो भने सिस्टमले सामग्रीसँग मिल्दाजुल्दा परिणामहरू देखाउने प्रयोजनका लागि डायनामिक रेन्जका विभिन्न फर्म्याटहरू अदलबदल गर्ने छ। तपाईंले यो विकल्प अन गर्नुभएका खण्डमा फर्म्याट अदलबदल गर्ने क्रममा स्क्रिन कालो हुन सक्छ।\n\nडायनामिक रेन्जका थप विकल्पहरू प्राप्त गर्न \"डिस्प्लेसम्बन्धी उन्नत सेटिङ\" मा क्लिक गर्नुहोस्।"</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"रोजाइको डायनामिक रेन्ज"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"सिस्टमका अनुसार फर्म्याट बदलियोस्"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"फर्म्याट रूपान्तरण गर्ने काम सिस्टमलाई जिम्मा दिइयोस्"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"फर्म्याट रूपान्तरण गर्ने काम सिस्टमलाई जिम्मा दिनुहोस्"</string>
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"यो विकल्प चयन गरिएका बेला सिस्टमले तपाईंको डिस्प्लेमा कुन डायनामिक रेन्ज पठाउन उपयुक्त हुन्छ भन्ने कुरा निर्धारण गर्छ र सामग्रीलाई आवश्यकताअनुसार रूपान्तरण गरी उक्त डायनामिक रेन्ज बनाउँछ।"</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"सधैँ सामग्रीको फर्म्याटसँग मिल्ने फर्म्याट प्रयोग गरियोस्"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"सधैँ सामग्रीको फर्म्याटसँग मिल्ने फर्म्याट प्रयोग गर्नुहोस्"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"जबरजस्ती रूपान्तरण गरियोस्"</string>
     <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"यसले चाहेको फर्म्याटमा जबरजस्ती रूपान्तरण गर्छ"</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"चाहेको फर्म्याटमा जबरजस्ती रूपान्तरण गरियोस्। जबरजस्ती रूपान्तरण गर्दा डिस्प्ले मोड वा HDR फर्म्याटका अन्य सेटिङ प्रभावित हुन सक्छन्।"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"नमुना पाठ"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"The Wonderful Wizard of Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"भाग ११: The Wonderful Emerald City of Oz"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"डोरोथी र उनका साथीहरूले सुरक्षाका लागि आँखामा हरियो चस्मा लगाएका भए पनि त्यस अद्भुत सहरको चमक देखेर उनीहरू सुरुमा निकै आश्चर्यचकित भए। त्यस सहरका गल्लीहरूको दुवै छेउमा लस्करै हरियो मार्बलले बनेका सुन्दर घरहरू थिए र ती घरमा जताततै झिलमिलाउँदा पन्नाहरू टाँसिएका थिए। उनीहरू त्यही हरियो मार्बलको पेटीमा हिँडदै थिए, ब्लकहरूलाई आपसमा नजिक नजिक मिलाएर राखी पन्नाका रोहरूले जोडिएको थियो र त्यो सूर्यको प्रकाशमा जगमगाइरहेको थियो। झ्यालका पल्लाहरू हरियो काँचका थिए, त्यतिमात्र कहाँ हो र सहरमाथिको आकाशमा पनि हल्का हरियो रङको छाप देखिन्थ्यो र सूर्यका किरण पनि हरियो रङका नै थिए। \n\nत्यहाँ महिला, पुरुष र बालबालिकाहरू जस्ता धेरै मान्छेहरू यताउता हिँडिरहेका थिए र ती मान्छेहरूले हरियो कपडा लगाएका थिए र उनीहरूको छाला पनि हल्का हरियो खाले थियो। उनीहरूले डोरोथी तथा अनौठो विविधता भएका उनका साथीहरूलाई अचम्मको दृष्टिले हेरे र सिँहलाई देखेर सबै बालबालिकाहरू भागेर आफ्नो आमाको पछाडि लुक्न थाले तर कसैले पनि उनीहरूसँग कुरा गरेनन्। गल्लीमा थुप्रै पसलहरू थिए र डोरोथीले भने त्यहाँ भएका सबै कुराहरू हरियो रङका नै छन् भन्ने देखिन्। त्यहाँ बिक्रीका लागि हरियो क्यान्डी र मकैका फुलाका साथै हरियो रङका जुत्ता, हरियो रङका टोपी र थुप्रै प्रकारका हरियो रङका कपडाहरू राखिएका थिए। एक ठाउँमा एक जना व्यक्ति हरियो रङको कागती पानी बेच्दै थियो र डोरोथीले ती बालबालिकाहरूले त्यो किन्दा हरियो रङका सिक्काहरू दिएको देख्छिन्। \n\nत्यहाँ घोडा वा कुनै अरू जनावरहरू छैनन् जस्तो देखिन्थ्यो; त्यहाँ मान्छेहरू साना हरियो रङका गाडाहरूमा सामानहरू लिएर अगाडितिर धकेल्दै हिँड्थे। सबै जना खुसी र सन्तुष्ट तथा सम्पन्न देखिन्थे।"</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"डोरोथी र उनका साथीहरूले सुरक्षाका लागि आँखामा हरियो चस्मा लगाएका भए पनि त्यस अद्भुत सहरको चमक देखेर उनीहरू सुरुमा निकै आश्चर्यचकित भए। त्यस सहरका गल्लीहरूको दुवै छेउमा लस्करै हरियो मार्बलले बनेका सुन्दर घरहरू थिए र ती घरमा जताततै झिलमिलाउँदा पन्नाहरू टाँसिएका थिए। उनीहरू त्यही हरियो मार्बलको पेटीमा हिँडदै थिए, ब्लकहरूलाई आपसमा नजिक नजिक मिलाएर राखी पन्नाका रोहरूले जोडिएको थियो र त्यो सूर्यको प्रकाशमा जगमगाइरहेको थियो। झ्यालका पल्लाहरू हरियो काँचका थिए, त्यतिमात्र कहाँ हो र सहरमाथिको आकाशमा पनि हल्का हरियो रङको छाप देखिन्थ्यो र सूर्यका किरण पनि हरियो रङका नै थिए। \n\nत्यहाँ महिला, पुरुष र बालबालिकाहरू जस्ता धेरै मान्छेहरू यताउता हिँडिरहेका थिए र ती मान्छेहरूले हरियो कपडा लगाएका थिए र उनीहरूको छाला पनि हल्का हरियो खालको थियो। उनीहरूले डोरोथी तथा अनौठो विविधता भएका उनका साथीहरूलाई अचम्मको दृष्टिले हेरे र सिँहलाई देखेर सबै बालबालिकाहरू भागेर आफ्नो आमाको पछाडि लुक्न थाले तर कसैले पनि उनीहरूसँग कुरा गरेनन्। गल्लीमा थुप्रै पसलहरू थिए र डोरोथीले भने त्यहाँ भएका सबै कुराहरू हरियो रङका नै छन् भन्ने देखिन्। त्यहाँ बिक्रीका लागि हरियो क्यान्डी र मकैका फुलाका साथै हरियो रङका जुत्ता, हरियो रङका टोपी र थुप्रै प्रकारका हरियो रङका कपडाहरू राखिएका थिए। एक ठाउँमा एक जना व्यक्ति हरियो रङको कागती पानी बेच्दै थियो र डोरोथीले ती बालबालिकाहरूले त्यो किन्दा हरियो रङका सिक्काहरू दिएको देख्छिन्। \n\nत्यहाँ घोडा वा कुनै अरू जनावरहरू छैनन् जस्तो देखिन्थ्यो; त्यहाँ मान्छेहरू साना हरियो रङका गाडाहरूमा सामानहरू लिएर अगाडितिर धकेल्दै हिँड्थे। सबै जना खुसी र सन्तुष्ट तथा सम्पन्न देखिन्थे।"</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"फर्म्याट छनौट"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"स्वचालित"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"म्यानुअल"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"कनेक्ट गरिएको छ"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"डिस्कनेक्ट भयो"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"तपाईं सँग ब्लुटुथ सेटिङहरू परिवर्तन गर्न अनुमति छैन।"</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"टिभीको अडियोका लागि प्रयोग गर्नुहोस्"</string>
     <string name="send_feedback" msgid="936698637869795473">"प्रतिक्रिया पठाउनुहोस्"</string>
     <string name="launch_help" msgid="2607478763131952469">"मद्दत केन्द्र"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"अन गर्नुहोस्"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"कन्फिगरेसन"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"<xliff:g id="SERVICE">%1$s</xliff:g>प्रयोग गर्ने ?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> ले पासवर्ड बाहेकका तपाईंले टाइप गर्ने सबै पाठ संकलन गर्न सक्छ। यसले क्रेडिट कार्ड नम्बर जस्ता व्यक्तिगत डेटा समावेस गर्दछ।"</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> ले तपाईंको स्क्रिनमा देखिएको कुरा पढ्न, अन्य एपहरूका माथि सामग्री देखाउन, एप वा हार्डवेयर सेन्सरहरूसँग तपाईंले गर्नुभएका अन्तर्क्रिया ट्र्याक गर्न र तपाईंका तर्फबाट एपहरूसँग अन्तर्क्रिया गर्न सक्ने छ।"</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"<xliff:g id="SERVICE">%1$s</xliff:g> बन्द गर्ने हो?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"OK चयन गर्दा <xliff:g id="SERVICE">%1$s</xliff:g> बन्द हुनेछ ।"</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Text to speech"</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"सफलतापूर्वक जोडियो"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"सबै देखाउनुहोस्"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"खोज्दै"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Authenticator बाट \"खाता हाल्नुहोस्\" को उद्देश्य प्राप्त गर्न सकिएन।"</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"खाता हाल्न सकिएन वा यस प्रकारको खाता उपलब्ध छैन।"</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"च्यानल तथा इनपुटहरू"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"च्यानलहरू, बाह्य इनपुटहरू"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"च्यानलहरू"</string>
@@ -1123,4 +1127,9 @@
     <string name="energy_mode_enables" msgid="357960364751477627">"निम्न सुविधाहरू सक्षम गर्छ:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"तपाईंले यो मोड प्रयोग गर्नुभयो भने तपाईंको डिभाइसले ऊर्जाको प्रयोग बढाउन सक्छ भन्ने कुरा याद राख्नुहोस्।"</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"\"<xliff:g id="ENERGYMODENAME">%s</xliff:g>\" अन गर्नुहोस्"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"मेरो रिमोट भेट्टाइयोस्"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"आफ्नो Google TV रिमोट हराएका खण्डमा उक्त रिमोट भेट्टाउन कुनै साउन्ड प्ले गर्नुहोस्"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"रिमोटमा ३० सेकेन्डसम्म साउन्ड प्ले गर्न Google TV को पछाडिपट्टि रहेको बटन थिच्नुहोस्। यो Google TV का रिमोट कन्ट्रोलहरू प्रयोग गरी मात्र चलाउन मिल्छ।\n\nयो साउन्ड बन्द गर्न आफ्नो रिमोटको कुनै पनि बटन थिच्नुहोस्।"</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"\"मेरो रिमोट भेट्टाइयोस्\" अन गरिएका बेला तपाईंको Google TV रिमोट हराएका खण्डमा तपाईं उक्त रिमोट भेट्टाउन कुनै साउन्ड प्ले गर्न सक्नुहुन्छ।"</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"साउन्ड प्ले गर्नुहोस्"</string>
 </resources>

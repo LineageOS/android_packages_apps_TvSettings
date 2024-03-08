@@ -31,7 +31,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.RestrictedLockUtilsInternal;
-import com.android.settingslib.wifi.AccessPoint;
+import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.setup.AddStartState;
 import com.android.tv.settings.connectivity.setup.AdvancedWifiOptionsFlow;
@@ -47,6 +47,7 @@ import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.connectivity.util.WifiSecurityUtil;
 import com.android.tv.settings.core.instrumentation.InstrumentedActivity;
+import com.android.tv.settings.library.util.DataBinder;
 
 /**
  * Add a wifi network where we already know the ssid/security; normal post-install settings.
@@ -57,24 +58,20 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
 
     private static final String EXTRA_WIFI_SSID = "wifi_ssid";
     private static final String EXTRA_WIFI_SECURITY_NAME = "wifi_security_name";
+    private static final String EXTRA_WIFI_ENTRY = "wifi_entry";
 
     public static Intent createIntent(Context context, AccessPoint result, int security) {
+        Bundle bundle = new Bundle();
+        bundle.putString(EXTRA_WIFI_SSID, result.getSsidStr());
+        bundle.putInt(EXTRA_WIFI_SECURITY_NAME, security);
+        bundle.putBinder(EXTRA_WIFI_ENTRY, DataBinder.with(result.getWifiEntry()));
         return new Intent(context, WifiConnectionActivity.class)
-                .putExtra(EXTRA_WIFI_SSID, result.getSsidStr())
-                .putExtra(EXTRA_WIFI_SECURITY_NAME, security);
+                .putExtras(bundle);
     }
 
     public static Intent createIntent(Context context, AccessPoint result) {
         final int security = result.getSecurity();
         return createIntent(context, result, security);
-    }
-
-    public static Intent createIntent(Context context, WifiConfiguration configuration) {
-        final int security = WifiSecurityUtil.getSecurity(configuration);
-        final String ssid = configuration.getPrintableSsid();
-        return new Intent(context, WifiConnectionActivity.class)
-                .putExtra(EXTRA_WIFI_SSID, ssid)
-                .putExtra(EXTRA_WIFI_SECURITY_NAME, security);
     }
 
     private WifiConfiguration mConfiguration;
@@ -199,6 +196,8 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                     ViewModelProviders.of(this).get(UserChoiceInfo.class);
         userChoiceInfo.setWifiConfiguration(mConfiguration);
         userChoiceInfo.setWifiSecurity(mWifiSecurity);
+        userChoiceInfo.setWifiEntry(DataBinder.getData(
+                getIntent().getExtras().getBinder(EXTRA_WIFI_ENTRY)));
 
         WifiConfiguration.NetworkSelectionStatus networkStatus =
                 mConfiguration.getNetworkSelectionStatus();
@@ -227,7 +226,7 @@ public class WifiConnectionActivity extends InstrumentedActivity implements
                 updateTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
             }
             updateTransaction.replace(R.id.wifi_container, fragment, TAG);
-            updateTransaction.commit();
+            updateTransaction.commitAllowingStateLoss();
         }
     }
 

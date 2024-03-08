@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Alkalmazásbeállítások"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Hely, Használat és diagnosztika, Hirdetések"</string>
     <string name="add_account" msgid="7386223854837017129">"Fiók hozzáadása"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Ismeretlen fiók"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Fiók eltávolítása"</string>
     <string name="account_sync" msgid="4315295293211313989">"Szinkronizáltak kiválasztása"</string>
     <string name="sync_now" msgid="4335217984374620551">"Szinkronizálás most"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Mintaszöveg"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Óz, a csodák csodája"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11. fejezet: A csodálatos Smaragdváros"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Dorothyt és barátait még a zöld szemüvegen át is lenyűgözte a csodálatos Város tündöklése. Az utcákat zöld márványból épült és ragyogó smaragdokkal kirakott, gyönyörű házak sora szegélyezte. Az utak ugyanebből a zöld márványból készültek, az utcaköveket pedig sűrűn rakott smaragdsorok választották el, amelyek csak úgy sziporkáztak a napfényben. Az ablaktáblák zöld üvegből voltak, az ég zöldes színben tündökölt a Város fölött, és még a napsugarak is zöld színben játszottak. \n\nRengeteg ember járkált mindenfelé, férfiak, nők, gyerekek, mind zöld ruhákban, zöldes árnyalatú volt a bőrük is. Csodálkozó szemekkel néztek Dorothyra és furcsa kísérőire, és amikor a gyerekek meglátták az Oroszlánt, elszaladtak, és anyjuk mögé bújtak. De senki sem szólt hozzájuk. Az utcán sok bolt állt, és Dorothy észrevette, hogy ezekben is minden zöld. Lehetett kapni zöld cukorkát és zöld pattogatott kukoricát, zöld cipőt, zöld kalapot és mindenféle zöld ruhát. Az egyik helyen egy férfi zöld limonádét árult, és Dorothy látta, hogy a gyerekek zöld pennykkel fizetnek érte. \n\nNem voltak sehol lovak vagy más állatok; az emberek mindent kis zöld kocsikon hordtak, amelyet maguk előtt toltak. Mindenki boldognak, elégedettnek és jómódúnak tűnt."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Dorothyt és barátait még a zöld szemüvegen át is lenyűgözte a csodálatos Város tündöklése. Az utcákat zöld márványból épült és ragyogó smaragdokkal kirakott, gyönyörű házak sora szegélyezte. Az utak ugyanebből a zöld márványból készültek, az utcaköveket pedig sűrűn rakott smaragdsorok választották el, amelyek csak úgy sziporkáztak a napfényben. Az ablaktáblák zöld üvegből voltak, az ég zöldes színben tündökölt a Város fölött, és még a napsugarak is zöld színben játszottak. \n\nRengeteg ember járkált mindenfelé, férfiak, nők, gyerekek, mind zöld ruhákban, zöldes árnyalatú volt a bőrük is. Csodálkozó szemekkel néztek Dorothyra és furcsa kísérőire, és amikor a gyerekek meglátták az Oroszlánt, elszaladtak, és anyjuk mögé bújtak. De senki sem szólt hozzájuk. Az utcán sok bolt állt, és Dorothy észrevette, hogy ezekben is minden zöld. Lehetett kapni zöld cukorkát és zöld pattogatott kukoricát, zöld cipőt, zöld kalapot és mindenféle zöld ruhát. Az egyik helyen egy férfi zöld limonádét árult, és Dorothy látta, hogy a gyerekek zöld pennykkel fizetnek érte. \n\nNem voltak sehol lovak vagy más állatok; az emberek mindent kis zöld kocsikon hordtak, amelyet maguk előtt toltak. Mindenki boldognak, elégedettnek és jómódúnak tűnt."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Formátumválasztás"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatikus"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Kézi"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Csatlakozva"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Leválasztva"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Nincs engedélye a Bluetooth-beállítások módosítására."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"Tévés hangkimenethez való használat"</string>
     <string name="send_feedback" msgid="936698637869795473">"Visszajelzés küldése"</string>
     <string name="launch_help" msgid="2607478763131952469">"Súgó"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Engedélyezés"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Beállítások"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Használja: <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"A(z) <xliff:g id="SERVICE">%1$s</xliff:g> összegyűjti az összes beírt szöveget, kivéve a jelszavakat. Ez magában foglalja a személyes adatokat, például a bankkártyaszámokat."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"A(z) <xliff:g id="SERVICE">%1$s</xliff:g> képes lesz a képernyő tartalmának olvasására, tartalmak más appok fölött való megjelenítésére, az alkalmazásokkal vagy hardveres érzékelőkkel való interakcióinak nyomon követésére, valamint arra, hogy az Ön nevében lépjen interakcióba más appokkal."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Leállítja a következőt: <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Az OK-val leállítja a következőt: <xliff:g id="SERVICE">%1$s</xliff:g>."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Szövegfelolvasás"</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Sikeres kapcsolódás"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Összes mutatása"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Keresés"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Nem sikerült lekérni a fiókintentet a hitelesítőtől."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Nem sikerült hozzáadni a fiókot, vagy nem áll rendelkezésre az adott fióktípus."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Csatornák és bemenetek"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Csatornák, külső bemenetek"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Csatornák"</string>
@@ -1123,4 +1127,9 @@
     <string name="energy_mode_enables" msgid="357960364751477627">"Engedélyezi a következőket:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Vegye figyelembe, hogy ez az üzemmód növelheti az eszköz energiafogyasztását."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"A következő engedélyezése: „<xliff:g id="ENERGYMODENAME">%s</xliff:g>”"</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Távirányító-kereső"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Hang lejátszásával megkeresheti a Google TV távirányítóját, ha nem találja"</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"A Google TV Streamer hátoldalán lévő gombot lenyomva 30 másodpercen át hangot ad ki a távirányító. Ez csak a támogatott Google TV-távirányítóknál működik.\n\nA hanglejátszás leállításához nyomja meg bármelyik gombot a távirányítón."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"Amikor engedélyezve van a Távirányító-kereső, és nem találja a Google TV-távirányítót, az eszközön való hanglejátszással megkeresheti."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Hang lejátszása"</string>
 </resources>

@@ -65,6 +65,7 @@
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Impostazioni app"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Posizione, Utilizzo e diagnostica, Annunci"</string>
     <string name="add_account" msgid="7386223854837017129">"Aggiungi account"</string>
+    <string name="unknown_account" msgid="5159580666787047518">"Account sconosciuto"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"Rimuovi account"</string>
     <string name="account_sync" msgid="4315295293211313989">"Scegli app sincronizzate"</string>
     <string name="sync_now" msgid="4335217984374620551">"Sincronizza ora"</string>
@@ -152,7 +153,7 @@
     <string name="advanced_sound_settings_title" msgid="319921303039469139">"Impostazioni audio avanzate"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Consenti modalità di gioco"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Adatta a intervallo dinamico dei contenuti"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Quando attivi questa opzione, il sistema passerà da uno dei diversi formati di intervallo dinamico all\'altro affinché i contenuti corrispondano. Questa operazione potrebbe causare la visualizzazione di una schermata nera durante il passaggio dei formati.\n\nFai clic su Impostazioni display avanzate per altre opzioni di intervallo dinamico."</string>
+    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Attivando questa opzione, il sistema passerà da un formato di intervallo dinamico all\'altro in base ai contenuti. Questo potrebbe causare la visualizzazione di una schermata nera durante il cambio di formato.\n\nFai clic su Impostazioni display avanzate per altre opzioni di intervallo dinamico."</string>
     <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Intervallo dinamico preferito"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Conversione preferita dal sistema"</string>
     <string name="preferred_dynamic_range_selection_system_desc" msgid="5712920601553613576">"Consente al sistema di gestire la conversione del formato"</string>
@@ -191,7 +192,7 @@
     <string name="font_scale_sample_text_title" msgid="5239266611413037261">"Testo di esempio"</string>
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Il meraviglioso mago di Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Capitolo 11: La splendida Città di smeraldo di Oz"</string>
-    <string name="font_scale_preview_text_body" msgid="2040384234251207410">"Sebbene i loro occhi fossero protetti dalle lenti verdi, Dorothy e i suoi amici rimasero immediatamente abbagliati dal fulgore della splendida Città. Lungo le strade si affacciavano belle case tutte realizzate in marmo verde e tempestate ovunque di smeraldi scintillanti. Camminarono lungo un marciapiede fatto dello stesso marmo verde, i cui blocchi erano congiunti da file e file di smeraldi incastonati che rilucevano sotto il sole splendente. I vetri alle finestre erano verdi e persino il cielo sopra la Città e i raggi di sole avevano una sfumatura verde. \n\nC\'erano molte persone che passeggiavano, uomini, donne e bambini: erano tutti vestiti di verde e avevano la pelle verdognola. Guardavano Dorothy e la sua stravagante compagnia con occhi pieni di meraviglia e i bambini correvano tutti a nascondersi dietro le loro madri quando vedevano il Leone; ma nessuno rivolse loro la parola. C\'erano molti negozi lungo la strada e Dorothy vide che ogni cosa al loro interno era verde. Si vendevano caramelle verdi e popcorn verdi, come pure scarpe verdi, cappelli verdi e abiti verdi di ogni tipo. C\'era anche un posto in cui un uomo vendeva limonata verde e, quando i bambini la acquistavano, Dorothy vide che pagavano con monetine verdi. \n\nSembrava che non esistessero cavalli o altri animali; gli uomini portavano le merci spingendole davanti a sé su carretti verdi. Tutti sembravano felici, soddisfatti e prosperi."</string>
+    <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Sebbene i loro occhi fossero protetti dalle lenti verdi, Dorothy e i suoi amici rimasero immediatamente abbagliati dal fulgore della splendida Città. Lungo le strade si affacciavano belle case tutte realizzate in marmo verde e tempestate ovunque di smeraldi scintillanti. Camminarono lungo un marciapiede fatto dello stesso marmo verde, i cui blocchi erano congiunti da file e file di smeraldi incastonati che rilucevano sotto il sole splendente. I vetri alle finestre erano verdi e persino il cielo sopra la Città e i raggi di sole avevano una sfumatura verde. \n\nC\'erano molte persone che passeggiavano, uomini, donne e bambini: erano tutti vestiti di verde e avevano la pelle verdognola. Guardavano Dorothy e la sua stravagante compagnia con occhi pieni di meraviglia e i bambini correvano tutti a nascondersi dietro le loro madri quando vedevano il Leone; ma nessuno rivolse loro la parola. C\'erano molti negozi lungo la strada e Dorothy vide che ogni cosa al loro interno era verde. Si vendevano caramelle verdi e popcorn verdi, come pure scarpe verdi, cappelli verdi e abiti verdi di ogni tipo. C\'era anche un posto in cui un uomo vendeva limonata verde e, quando i bambini la acquistavano, Dorothy vide che pagavano con monetine verdi. \n\nSembrava che non esistessero cavalli o altri animali; gli uomini portavano le merci spingendole davanti a sé su carretti verdi. Tutti sembravano felici, soddisfatti e prosperi."</string>
     <string name="hdr_format_selection_title" msgid="4042679694363850581">"Selezione del formato"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatica"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuale"</string>
@@ -277,6 +278,7 @@
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Connesso"</string>
     <string name="bluetooth_disconnected_status" msgid="7617866963193224775">"Disconnesso"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="1610743588460010736">"Non sei autorizzato a modificare le impostazioni Bluetooth."</string>
+    <string name="bluetooth_toggle_active_audio_output_title" msgid="3715722506642793944">"Usa per audio TV"</string>
     <string name="send_feedback" msgid="936698637869795473">"Invia feedback"</string>
     <string name="launch_help" msgid="2607478763131952469">"Centro assistenza"</string>
     <string name="system_cast" msgid="6081391679828510058">"Google Cast"</string>
@@ -741,7 +743,7 @@
     <string name="system_accessibility_status" msgid="8504842254080682515">"Attiva"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Configurazione"</string>
     <string name="system_accessibility_service_on_confirm_title" msgid="4547924421106540376">"Utilizzare <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
-    <string name="system_accessibility_service_on_confirm_desc" msgid="1291445700158602622">"<xliff:g id="SERVICE">%1$s</xliff:g> è in grado di raccogliere tutto il testo digitato, tranne le password. Sono inclusi i dati personali come i numeri di carta di credito."</string>
+    <string name="system_accessibility_service_on_confirm_desc" msgid="5426217096813804569">"<xliff:g id="SERVICE">%1$s</xliff:g> potrà leggere il tuo schermo, mostrarne i contenuti su altre app, monitorare le tue interazioni con sensori hardware o app e interagire con le app per tuo conto."</string>
     <string name="system_accessibility_service_off_confirm_title" msgid="1110904358228641834">"Interrompere <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="system_accessibility_service_off_confirm_desc" msgid="3486513644923267157">"Se selezioni OK, <xliff:g id="SERVICE">%1$s</xliff:g> verrà interrotto."</string>
     <string name="system_accessibility_tts_output" msgid="3186078508203212288">"Sintesi vocale"</string>
@@ -994,7 +996,7 @@
     <string name="device_rename_title" msgid="9070021379000499270">"Cambia nome al dispositivo <xliff:g id="DEVICEMODEL">%1$s</xliff:g>"</string>
     <string name="device_rename_description" msgid="1973894029492915135">"Il nome attuale di questo dispositivo <xliff:g id="DEVICEMODEL">%1$s</xliff:g> è \"<xliff:g id="DEVICENAME">%2$s</xliff:g>\""</string>
     <string name="device_name_suggestion_title" msgid="3986220212759193742">"Imposta nome del dispositivo"</string>
-    <string name="device_name_suggestion_summary" msgid="4582691399302362938">"Utilizza questo nome quando trasmetti foto, video o altri contenuti dal tuo telefono"</string>
+    <string name="device_name_suggestion_summary" msgid="4582691399302362938">"Utilizza questo nome quando trasmetti foto, video o altri contenuti dal tuo smartphone"</string>
     <string name="change_setting" msgid="7211706374208138343">"Cambia"</string>
     <string name="keep_settings" msgid="703474489210093961">"Non cambiare"</string>
     <string name="apps_permissions" msgid="7876407267050498394">"Autorizzazioni"</string>
@@ -1106,6 +1108,8 @@
     <string name="network_connection_connect_successful" msgid="2981223044343511313">"Connessione riuscita"</string>
     <string name="network_connection_request_dialog_showall" msgid="2653775399674126208">"Mostra tutto"</string>
     <string name="progress_scanning" msgid="3323638586482686516">"Ricerca"</string>
+    <string name="add_account_intent_not_available_dialog_message" msgid="8326403834567215053">"Impossibile recuperare l\'intent add account dall\'autenticatore."</string>
+    <string name="add_account_failed_dialog_message" msgid="3704858007957373186">"Impossibile aggiungere l\'account oppure il tipo di account non è disponibile."</string>
     <string name="channels_and_inputs_title" msgid="7484506121290830217">"Canali e ingressi"</string>
     <string name="channels_and_inputs_summary" msgid="3168386051698084007">"Canali, ingressi esterni"</string>
     <string name="channels_settings_title" msgid="8048956665383762510">"Canali"</string>
@@ -1119,8 +1123,13 @@
     <string name="reset_options_title" msgid="7632580482285108955">"Reimposta"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"Codice di accoppiamento Ethernet"</string>
     <string name="energy_modes" msgid="1331693860386361744">"Modalità di energia"</string>
-    <string name="energy_modes_summary" msgid="7196407759836930799">"Migliorare l\'efficienza energetica quando la TV non è in uso"</string>
+    <string name="energy_modes_summary" msgid="7196407759836930799">"Migliora l\'efficienza energetica quando la TV non è in uso"</string>
     <string name="energy_mode_enables" msgid="357960364751477627">"Attiva:"</string>
     <string name="energy_mode_eco_hint" msgid="1461517905015359947">"Nota: questa modalità può aumentare il consumo di energia del dispositivo."</string>
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"Attiva \"<xliff:g id="ENERGYMODENAME">%s</xliff:g>\""</string>
+    <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Trova il mio telecomando"</string>
+    <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Riproduci un suono per trovare il tuo telecomando di Google TV se non sai dov\'è."</string>
+    <string name="find_my_remote_slice_description" msgid="7288029543560257872">"Premi il pulsante sul retro di Google TV per riprodurre un suono per 30 secondi sul telecomando. Questa opzione è disponibile solo sui telecomandi di Google TV supportati.\n\nPer interrompere il suono, premi qualsiasi pulsante del telecomando."</string>
+    <string name="find_my_remote_integration_hint" msgid="7560895390042161430">"Quando l\'opzione Trova il mio telecomando è attivata, puoi riprodurre un suono per trovare il tuo telecomando di Google TV se non sai dov\'è."</string>
+    <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Riproduci suono"</string>
 </resources>
