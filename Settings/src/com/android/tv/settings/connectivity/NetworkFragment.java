@@ -297,6 +297,12 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         return super.onPreferenceTreeClick(preference);
     }
 
+    private boolean isConnected() {
+        NetworkInfo activeNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected()
+                && ConnectivityManager.TYPE_ETHERNET != activeNetworkInfo.getType();
+    }
+
     private void updateConnectivity() {
         if (!isAdded()) {
             return;
@@ -304,14 +310,13 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
 
         final boolean wifiEnabled = mIsWifiHardwarePresent
                 && mConnectivityListener.isWifiEnabledOrEnabling();
-        final boolean ethernetConnected = mConnectivityListener.isEthernetConnected();
         mEnableWifiPref.setChecked(wifiEnabled);
 
-        mWifiNetworksCategory.setVisible(wifiEnabled && !ethernetConnected);
+        mWifiNetworksCategory.setVisible(wifiEnabled);
         mCollapsePref.setVisible(wifiEnabled && mWifiNetworksCategory.shouldShowCollapsePref());
-        mAddPref.setVisible(wifiEnabled && !ethernetConnected);
+        mAddPref.setVisible(wifiEnabled);
         if (mAddEasyConnectPref != null) {
-            mAddEasyConnectPref.setVisible(isEasyConnectEnabled() && !ethernetConnected);
+            mAddEasyConnectPref.setVisible(isEasyConnectEnabled());
         }
 
         if (!wifiEnabled) {
@@ -362,6 +367,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 });
 
         if (ethernetAvailable) {
+            final boolean ethernetConnected =
+                    mConnectivityListener.isEthernetConnected();
             mEthernetStatusPref.setTitle(ethernetConnected
                     ? R.string.connected : R.string.not_connected);
             mEthernetStatusPref.setSummary(mConnectivityListener.getEthernetIpAddress());
@@ -376,8 +383,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             return;
         }
 
-        if (!mIsWifiHardwarePresent || !mConnectivityListener.isWifiEnabledOrEnabling()
-            || mConnectivityListener.isEthernetConnected()) {
+        if (!mIsWifiHardwarePresent || !mConnectivityListener.isWifiEnabledOrEnabling()) {
             mWifiNetworksCategory.removeAll();
             mNoWifiUpdateBeforeMillis = 0;
             return;
