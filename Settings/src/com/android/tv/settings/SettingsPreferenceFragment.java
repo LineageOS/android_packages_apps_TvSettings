@@ -196,12 +196,14 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
                             getContext(), R.animator.preference));
                 }
                 vh.itemView.setOnTouchListener((v, e) -> {
-                    if (e.getActionMasked() == MotionEvent.ACTION_DOWN) {
+                    if (e.getActionMasked() == MotionEvent.ACTION_DOWN
+                            && e.getButtonState() == MotionEvent.BUTTON_PRIMARY) {
                         vh.itemView.requestFocus();
                         v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,
                                 KeyEvent.KEYCODE_DPAD_CENTER));
                         return true;
-                    } else if (e.getActionMasked() == MotionEvent.ACTION_UP) {
+                    } else if (e.getActionMasked() == MotionEvent.ACTION_UP
+                            && e.getButtonState() == MotionEvent.BUTTON_PRIMARY) {
                         v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP,
                                 KeyEvent.KEYCODE_DPAD_CENTER));
                         return true;
