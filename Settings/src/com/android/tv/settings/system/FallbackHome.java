@@ -112,13 +112,13 @@ public class FallbackHome extends FragmentActivity implements PinDialogFragment.
     }
 
     private void unlockDevice() {
-        LockscreenCredential pin = getPinFromSharedPreferences();
-
-        if (pin == null || pin.isNone()) {
-            showPinDialogToUnlockDevice();
-        } else {
-            // Give LockSettings the pin. This unlocks the device.
-            unlockDeviceWithPin(pin);
+        try (LockscreenCredential pin = getPinFromSharedPreferences()) {
+            if (pin == null || pin.isNone()) {
+                showPinDialogToUnlockDevice();
+            } else {
+                // Give LockSettings the pin. This unlocks the device.
+                unlockDeviceWithPin(pin);
+            }
         }
     }
 
