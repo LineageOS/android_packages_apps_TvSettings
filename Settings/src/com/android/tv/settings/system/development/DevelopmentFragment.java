@@ -211,7 +211,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private TwoStatePreference mEnableDeveloper;
     private TwoStatePreference mEnableAdb;
-    private SwitchPreference mAdbOverNetwork;
+    private TwoStatePreference mAdbOverNetwork;
     private Preference mClearAdbKeys;
     private TwoStatePreference mEnableAdbRoot;
     private TwoStatePreference mEnableTerminal;
@@ -369,7 +369,6 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
         mEnableAdb = findAndInitSwitchPref(ENABLE_ADB);
         mEnableAdbRoot = findAndInitSwitchPref(ENABLE_ADB_ROOT);
-        mAdbOverNetwork = findAndInitSwitchPref(ADB_TCPIP);
         mClearAdbKeys = findPreference(CLEAR_ADB_KEYS);
         if (!AdbProperties.secure().orElse(false)) {
             if (debugDebuggingCategory != null) {
@@ -506,6 +505,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             mWirelessDebugging.setFragment(WirelessDebuggingInfoFragment.class.getName());
         } else {
             mWirelessDebugging.setFragment(WirelessDebuggingFragment.class.getName());
+        }
+
+        mAdbOverNetwork = findAndInitSwitchPref(ADB_TCPIP);
+        if (mAdbOverNetwork != null) {
+            removePreference(mWirelessDebugging);
+            mWirelessDebugging = null;
         }
     }
 
