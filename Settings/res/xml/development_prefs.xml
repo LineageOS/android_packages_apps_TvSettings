@@ -87,7 +87,7 @@
             android:summary="@string/enable_adb_summary"
             android:fragment="com.android.tv.settings.system.development.AdbDialog" />
 
-        <SwitchPreference
+        <com.android.tv.settings.widget.SwitchWithSoundPreference
             android:key="enable_adb_root"
             android:title="@string/enable_adb_root"
             android:summary="@string/enable_adb_root_summary"

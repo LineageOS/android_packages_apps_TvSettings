@@ -213,7 +213,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private TwoStatePreference mEnableAdb;
     private SwitchPreference mAdbOverNetwork;
     private Preference mClearAdbKeys;
-    private SwitchPreference mEnableAdbRoot;
+    private TwoStatePreference mEnableAdbRoot;
     private TwoStatePreference mEnableTerminal;
     private Preference mBugreport;
     private TwoStatePreference mKeepScreenOn;
