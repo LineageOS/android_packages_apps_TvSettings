@@ -87,7 +87,7 @@ public class RestrictedProfilePinStorage {
     boolean setPin(@NonNull String pin, String originalPin) {
         if (!isPinSet() || isPinCorrect(originalPin)) {
             setPinInternal(pin);
-            clearLockPassword(LockscreenCredential.createPinOrNone(originalPin));
+            clearLockPassword(originalPin);
             return true;
         } else {
             Log.w(TAG, "Unable to validate the original PIN");
@@ -101,7 +101,7 @@ public class RestrictedProfilePinStorage {
     boolean deletePin(@NonNull String oldPin) {
         if (isPinCorrect(oldPin)) {
             deletePinInternal();
-            clearLockPassword(LockscreenCredential.createPinOrNone(oldPin));
+            clearLockPassword(oldPin);
             return true;
         } else {
             Log.w(TAG, "Unable to validate the original PIN");
@@ -177,14 +177,15 @@ public class RestrictedProfilePinStorage {
         return mConnection.getPinService();
     }
 
-    private void clearLockPassword(LockscreenCredential oldPin) {
-        mLockPatternUtils.setLockCredential(LockscreenCredential.createNone(), oldPin,
-                mOwnerUserId);
+    private void clearLockPassword(String oldPinString) {
+        try (LockscreenCredential oldPin = LockscreenCredential.createPinOrNone(oldPinString)) {
+            mLockPatternUtils.setLockCredential(LockscreenCredential.createNone(), oldPin,
+                    mOwnerUserId);
+        }
     }
 
     private boolean checkPasswordLegacy(String pin) {
-        try {
-            LockscreenCredential credential = LockscreenCredential.createPin(pin);
+        try (LockscreenCredential credential = LockscreenCredential.createPin(pin)) {
             Log.i(TAG, "checkPasswordLegacy " + Arrays.toString(credential.getCredential()));
             boolean response = mLockPatternUtils.checkCredential(credential, mOwnerUserId, null);
             Log.i(TAG, "response " + response);
