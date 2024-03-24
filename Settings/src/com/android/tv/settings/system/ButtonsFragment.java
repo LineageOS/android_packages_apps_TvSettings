@@ -23,6 +23,8 @@ import android.os.UserHandle;
 
 import androidx.annotation.Keep;
 import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.TwoStatePreference;
 
 import com.android.internal.app.AssistUtils;
 import com.android.tv.settings.R;
@@ -36,7 +38,9 @@ import org.lineageos.internal.logging.LineageMetricsLogger;
  * The button settings screen in TV settings.
  */
 @Keep
-public class ButtonsFragment extends SettingsPreferenceFragment {
+public class ButtonsFragment extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
+    private static final String KEY_ADVANCED_REBOOT = "advanced_reboot";
     private static final String KEY_POWER_BUTTON_LONG_PRESS_ACTION =
             "power_button_long_press_action";
     private static final String KEY_PRESS_VOLUME_UP_AND_DOWN_TO_MUTE =
@@ -58,6 +62,9 @@ public class ButtonsFragment extends SettingsPreferenceFragment {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         Context context = getContext();
         setPreferencesFromResource(R.xml.buttons, null);
+
+        TwoStatePreference advancedReboot = findPreference(KEY_ADVANCED_REBOOT);
+        advancedReboot.setOnPreferenceChangeListener(this);
 
         mAssistUtils = new AssistUtils(context);
 
@@ -86,6 +93,15 @@ public class ButtonsFragment extends SettingsPreferenceFragment {
                         LineageSettings.System.VOLUME_UP_AND_DOWN_MUTE, (Boolean) newValue ? 1 : 0);
                 return true;
             });
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (KEY_ADVANCED_REBOOT.equals(preference.getKey())) {
+            LineageSettings.Secure.putInt(getContext().getContentResolver(),
+                    LineageSettings.Secure.ADVANCED_REBOOT, (Boolean) newValue ? 1 : 0);
+        }
+        return true;
     }
 
     private boolean hasAssistant() {
