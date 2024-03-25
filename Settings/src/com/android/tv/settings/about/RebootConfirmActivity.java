@@ -159,7 +159,7 @@ public class RebootConfirmActivity extends FragmentActivity {
         @Override
         public void onViewCreated(View view, Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
-            setSelectedActionPosition(getActions().size());
+            setSelectedActionPosition(0);
         }
 
         @Override
@@ -193,6 +193,10 @@ public class RebootConfirmActivity extends FragmentActivity {
         public void onCreateActions(@NonNull List<GuidedAction> actions,
                 Bundle savedInstanceState) {
             final Context context = getActivity();
+            actions.add(new GuidedAction.Builder(context)
+                    .icon(R.drawable.ic_cancel)
+                    .clickAction(GuidedAction.ACTION_ID_CANCEL)
+                    .build());
             if (getArguments().getBoolean(ARG_SAFE_MODE, false)) {
                 actions.add(new GuidedAction.Builder(context)
                         .icon(R.drawable.ic_restart_alt)
@@ -222,10 +226,6 @@ public class RebootConfirmActivity extends FragmentActivity {
                         .title(R.string.restart_button_label)
                         .build());
             }
-            actions.add(new GuidedAction.Builder(context)
-                    .icon(R.drawable.ic_cancel)
-                    .clickAction(GuidedAction.ACTION_ID_CANCEL)
-                    .build());
         }
 
         @Override
