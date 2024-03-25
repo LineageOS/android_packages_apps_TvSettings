@@ -46,7 +46,7 @@ public class SleepConfirmFragment extends GuidedStepSupportFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setSelectedActionPosition(1);
+        setSelectedActionPosition(0);
     }
 
     @Override
@@ -65,13 +65,13 @@ public class SleepConfirmFragment extends GuidedStepSupportFragment {
             Bundle savedInstanceState) {
         final Context context = getActivity();
         actions.add(new GuidedAction.Builder(context)
+                .icon(R.drawable.ic_cancel)
+                .clickAction(GuidedAction.ACTION_ID_CANCEL)
+                .build());
+        actions.add(new GuidedAction.Builder(context)
                 .icon(R.drawable.ic_sleep)
                 .id(GuidedAction.ACTION_ID_OK)
                 .title(R.string.sleep_button_label)
-                .build());
-        actions.add(new GuidedAction.Builder(context)
-                .icon(R.drawable.ic_cancel)
-                .clickAction(GuidedAction.ACTION_ID_CANCEL)
                 .build());
     }
 
