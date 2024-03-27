@@ -510,7 +510,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
         mAdbOverNetwork = findAndInitSwitchPref(ADB_TCPIP);
         if (mAdbOverNetwork != null) {
-            removePreference(mWirelessDebugging);
+            mWirelessDebugging.setVisible(false);
             mWirelessDebugging = null;
         }
     }
