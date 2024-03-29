@@ -56,6 +56,11 @@ public class BluetoothInputDeviceConnector implements BluetoothDevicePairer.Blue
             }
             mInputProxy = (BluetoothHidHost) proxy;
             if (mTarget != null) {
+                if (BluetoothProfile.STATE_CONNECTED == mInputProxy.getConnectionState(mTarget)) {
+                    closeInputProfileProxy();
+                    mOpenConnectionCallback.succeeded();
+                    return;
+                }
                 registerInputMethodMonitor();
                 if (DEBUG) {
                     Log.d(TAG, "Connecting to target: " + mTarget.getAddress());
