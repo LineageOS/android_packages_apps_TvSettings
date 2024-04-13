@@ -120,14 +120,13 @@
 
         <!-- WifiSetupActivity may be (usually is) started from setup so theme is determined at
              runtime. -->
-        <activity-alias
+        <activity
             android:name=".connectivity.setup.WifiSetupActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/TvSettingsActivityTheme"
-            android:targetActivity=".connectivity.NetworkActivity">
+            android:theme="@style/Theme.Setup">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="com.android.net.wifi.SETUP_WIFI_NETWORK"/>
@@ -143,7 +142,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             -->
-        </activity-alias>
+        </activity>
 
         <activity
             android:name=".connectivity.NetworkRequestDialogActivity"
