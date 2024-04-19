@@ -30,9 +30,11 @@ import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -116,6 +118,23 @@ public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragm
                 PreferenceViewHolder vh = super.onCreateViewHolder(parent, viewType);
                 vh.itemView.setStateListAnimator(AnimatorInflater.loadStateListAnimator(
                         getContext(), R.animator.preference));
+                vh.itemView.setOnTouchListener((v, e) -> {
+                    if (e.getActionMasked() == MotionEvent.ACTION_DOWN
+                            && isPrimaryKey(e.getButtonState())) {
+                        vh.itemView.requestFocus();
+                        v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,
+                                KeyEvent.KEYCODE_DPAD_CENTER));
+                        return true;
+                    } else if (e.getActionMasked() == MotionEvent.ACTION_UP
+                            && isPrimaryKey(e.getButtonState())) {
+                        v.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP,
+                                KeyEvent.KEYCODE_DPAD_CENTER));
+                        return true;
+                    }
+                    return false;
+                });
+                vh.itemView.setFocusable(true);
+                vh.itemView.setFocusableInTouchMode(true);
                 return vh;
             }
         };
@@ -203,5 +222,12 @@ public abstract class SettingsPreferenceFragment extends SettingsPreferenceFragm
     /** Subclasses should override this to use their own PageId for statsd logging. */
     protected int getPageId() {
         return TvSettingsEnums.PAGE_CLASSIC_DEFAULT;
+    }
+
+    // check if such motion event should translate to key event DPAD_CENTER
+    private boolean isPrimaryKey(int buttonState) {
+        return buttonState == MotionEvent.BUTTON_PRIMARY
+                || buttonState == MotionEvent.BUTTON_STYLUS_PRIMARY
+                || buttonState == 0;  // motion events which creates by UI Automator
     }
 }
