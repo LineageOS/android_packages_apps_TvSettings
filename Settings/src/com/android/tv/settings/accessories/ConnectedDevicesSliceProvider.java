@@ -29,6 +29,8 @@ import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcast
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.EXTRA_TOGGLE_STATE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.EXTRA_TOGGLE_TYPE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_SLICE_URI;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_DIRECTION;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.DIRECTION_BACK;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.FIND_MY_REMOTE_PHYSICAL_BUTTON_ENABLED_SETTING;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.isFindMyRemoteButtonEnabled;
 
@@ -391,6 +393,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                 context, 7, i, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
         followUpIntent = new Intent(context, ConnectedDevicesSliceBroadcastReceiver.class);
         followUpIntent.putExtra(EXTRAS_SLICE_URI, sliceUri.toString());
+        followUpIntent.putExtra(EXTRAS_DIRECTION, DIRECTION_BACK);
         PendingIntent forgetFollowupIntent = PendingIntent.getBroadcast(
                 context, 8, followUpIntent,
                 PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
