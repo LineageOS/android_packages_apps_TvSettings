@@ -271,9 +271,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             }
         } else {
             // If there is no corresponding slice provider, thus the corresponding fragment is not
-            // created, return false to check the intent of the SlicePreference.
+            // created, return true so it won't be handled by onPreferenceTreeClick in
+            // PreferenceFragment, but instead onPreferenceFocused will handle it.
             if (pref instanceof SlicePreference) {
-                return false;
+                return true;
             }
             try {
                 Fragment fragment = Fragment.instantiate(getActivity(), pref.getFragment(),
