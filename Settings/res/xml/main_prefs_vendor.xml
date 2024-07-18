@@ -56,7 +56,14 @@
             custom:isPreferenceVisible="false"
             custom:uri="@string/channels_and_inputs_slice_uri">
         </com.android.tv.twopanelsettings.slices.SlicePreference>
-
+        <com.android.tv.twopanelsettings.slices.SlicePreference
+            android:icon="@drawable/ic_device_prefs"
+            android:key="monitor_slice"
+            android:title="@string/menu_monitor"
+            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            custom:isPreferenceVisible="false"
+            custom:uri="@string/menu_monitor_slice_uri">
+        </com.android.tv.twopanelsettings.slices.SlicePreference>
         <Preference
             android:icon="@drawable/ic_photo_size_select_actual"
             android:key="display_and_sound"
