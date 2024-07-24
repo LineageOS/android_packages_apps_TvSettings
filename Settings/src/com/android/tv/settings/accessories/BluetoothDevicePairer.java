@@ -325,17 +325,8 @@ public class BluetoothDevicePairer {
         mInputDeviceCriteria = new InputDeviceCriteria();
         mBluetoothDeviceCriteria.add(mInputDeviceCriteria);
 
-        // Add Bluetooth a2dp on if the service is running and the
-        // setting profile_supported_a2dp is set to true.
-        Intent intent = new Intent("android.bluetooth.IBluetoothA2dp");
-        ComponentName comp = intent.resolveSystemService(mContext.getPackageManager(), 0);
-        if (comp != null) {
-            int enabledState = mContext.getPackageManager().getComponentEnabledSetting(comp);
-            if (enabledState != PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
-                Log.d(TAG, "Adding A2dp device criteria for pairing");
-                mBluetoothDeviceCriteria.add(new A2dpDeviceCriteria());
-            }
-        }
+        // A2dp is supported by all devices.
+        mBluetoothDeviceCriteria.add(new A2dpDeviceCriteria());
     }
 
     /**
