@@ -19,6 +19,7 @@ package com.android.tv.settings.accessories;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothProfile;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -325,16 +326,12 @@ public class BluetoothDevicePairer {
         mInputDeviceCriteria = new InputDeviceCriteria();
         mBluetoothDeviceCriteria.add(mInputDeviceCriteria);
 
-        // Add Bluetooth a2dp on if the service is running and the
-        // setting profile_supported_a2dp is set to true.
-        Intent intent = new Intent("android.bluetooth.IBluetoothA2dp");
-        ComponentName comp = intent.resolveSystemService(mContext.getPackageManager(), 0);
-        if (comp != null) {
-            int enabledState = mContext.getPackageManager().getComponentEnabledSetting(comp);
-            if (enabledState != PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
-                Log.d(TAG, "Adding A2dp device criteria for pairing");
-                mBluetoothDeviceCriteria.add(new A2dpDeviceCriteria());
-            }
+        // Add Bluetooth a2dp if the profile is supported.
+        final BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        final List<Integer> supportedList =  bluetoothAdapter.getSupportedProfiles();
+        if (supportedList.contains(BluetoothProfile.A2DP)) {
+            Log.d(TAG, "Adding A2dp device criteria for pairing");
+            mBluetoothDeviceCriteria.add(new A2dpDeviceCriteria());
         }
     }
 
