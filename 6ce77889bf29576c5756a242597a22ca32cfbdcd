@@ -16,6 +16,24 @@
       "message": "Can getDefaultAdapter() return null or throw exceptions?",
       "revId": "6ce77889bf29576c5756a242597a22ca32cfbdcd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "438534cb_125a7306",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2024-07-26T16:46:24Z",
+      "side": 1,
+      "message": "even if it did it would crash right after that because get get the adapter without any checks\nanyways, AOSP ok\u0027d this so \\o/",
+      "parentUuid": "072afe80_454fe977",
+      "revId": "6ce77889bf29576c5756a242597a22ca32cfbdcd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
