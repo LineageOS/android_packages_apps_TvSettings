@@ -18,6 +18,12 @@
     <string name="global_action_restart_system">Sistema</string>
     <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Bootloader</string>
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Ora sei a <xliff:g id="step_count">%1$d</xliff:g> passo dall\'attivare le opzioni sviluppatore.</item>
+        <item quantity="other">Ora sei a <xliff:g id="step_count">%1$d</xliff:g> passi dall\'attivare le opzioni sviluppatore.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Hai attivato le opzioni sviluppatore!</string>
+    <string name="show_dev_already_cm">Non è necessario, hai già attivato le opzioni sviluppatore.</string>
     <string name="system_buttons">Pulsanti</string>
     <string name="power_button_long_press_action_title">Azione alla pressione prolungata del pulsante di accensione</string>
     <string name="power_button_long_press_for_power_menu_action">Apri il menù di spegnimento</string>
@@ -29,6 +35,8 @@
     <string name="advanced_restart_title">Riavvio avanzato</string>
     <string name="advanced_restart_summary">Mostra le opzioni per il riavvio in recovery, bootloader o l\'esecuzione di un riavvio parziale</string>
     <string name="adb_over_network">ADB attraverso la rete</string>
+    <string name="adb_over_network_summary">Attiva il debug TCP/IP attraverso interfacce di rete (Wi\u2011Fi, reti USB). Questa impostazione è ripristinata all\'avvio</string>
+    <string name="adb_over_network_warning">ATTENZIONE: Quando ADB attraverso la rete è abilitato, il telefono è suscettibile di intrusioni su tutte le reti connesse! \n\nUtilizzare questa funzionalità solo quando si è connessi su reti affidabili.\n\nAbilitare questa funzione?</string>
     <string name="trust_category_features">Stato</string>
     <string name="trust_feature_selinux">SELinux</string>
     <string name="trust_feature_selinux_value_enforcing">Applicato</string>
