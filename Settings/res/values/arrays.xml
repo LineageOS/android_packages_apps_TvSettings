@@ -403,6 +403,34 @@
         <item>120000</item>
     </string-array>
 
+    <!-- Titles for accessibility delay before repeat preference. [CHAR LIMIT=35] -->
+    <string-array name="a11y_delay_before_repeat_entries">
+        <item>Default</item>
+        <item>3 seconds</item>
+        <item>5 seconds</item>
+    </string-array>
+
+    <!-- Values for accessibility delay before repeat preference. [CHAR LIMIT=35] -->
+    <integer-array name="a11y_delay_before_repeat_values">
+        <item>150</item>
+        <item>3000</item>
+        <item>5000</item>
+    </integer-array>
+
+    <!-- Titles for accessibility repeat rate preference. [CHAR LIMIT=35] -->
+    <string-array name="a11y_repeat_rate_entries">
+        <item>Default</item>
+        <item>Slow</item>
+        <item>Fast</item>
+    </string-array>
+
+    <!-- Values for accessibility repeat rate preference. [CHAR LIMIT=35] -->
+    <integer-array name="a11y_repeat_rate_values">
+        <item>200</item>
+        <item>2000</item>
+        <item>20</item>
+    </integer-array>
+
     <!-- Titles for volume change preference -->
     <string-array name="volume_change_entries">
         <item>Mute</item>

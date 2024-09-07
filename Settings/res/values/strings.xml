@@ -1794,6 +1794,28 @@
     <string name="accessibility_timeout_info_title">Timing : 2\u20133 seconds</string>
     <!-- Description for accessibility timeout info [CHAR LIMIT=50] -->
     <string name="accessibility_timeout_info_description">Sets default amount of time to respond to on\u2013screen actions (2\u20133 seconds)</string>
+    <!-- Title for accessibility key repeat delay [CHAR LIMIT=100] -->
+    <string name="accessibility_key_repeat_delay">Key repeat delay</string>
+    <!-- Summary for accessibility key repeat delay [CHAR LIMIT=NO_LIMIT] -->
+    <string name="accessibility_key_repeat_delay_detailed">Configure the delay before repeated characters appear when a key is held down</string>
+    <!-- Summary for accessibility key repeat delay[CHAR LIMIT=1000] -->
+    <string name="accessibility_key_repeat_delay_summary">Adjust the delay before key repeat</string>
+    <!-- Title for accessibility key repeat [CHAR LIMIT=100] -->
+    <string name="accessibility_key_repeat">Key repeat</string>
+    <!-- Title for accessibility Delay before repeat [CHAR LIMIT=100] -->
+    <string name="accessibility_delay_before_repeat">Delay before repeat</string>
+    <!-- Summary for accessibility Delay before repeat [CHAR LIMIT=NO_LIMIT] -->
+    <string name="accessibility_delay_before_repeat_summary">Customize how long you can hold a button before it starts repeating</string>
+    <!-- Detailed for accessibility Delay before repeat [CHAR LIMIT=NO_LIMIT] -->
+    <string name="accessibility_delay_before_repeat_detailed">Customize duration of hold a button after which it starts repeating</string>
+    <!-- Title for accessibility repeat rate [CHAR LIMIT=100] -->
+    <string name="accessibility_repeat_rate">Repeat rate</string>
+    <!-- Summary for accessibility Repeat rate [CHAR LIMIT=NO_LIMIT] -->
+    <string name="accessibility_repeat_rate_summary">Set how fast repeated characters are entered when a key is held down</string>
+    <!-- Title for accessibility Key Repeat info [CHAR LIMIT=100] -->
+    <string name="accessibility_key_repeat_info">Default</string>
+    <!-- Information Summary for accessibility Repeat rate [CHAR LIMIT=NO_LIMIT] -->
+    <string name="accessibility_repeat_rate_info_summary">Control how quickly button repeats after initial delay</string>
     <!-- Title and description for accessibility captions setting [CHAR LIMIT=50] -->
     <string name="accessibility_captions">Captions</string>
     <!-- Title and description for accessibility captions description [CHAR LIMIT=NONE] -->
@@ -2701,6 +2723,9 @@
 
     <!-- Slice uri for "Channels & Inputs" -->
     <string name="channels_and_inputs_slice_uri" translatable="false"/>
+
+    <!-- Slice uri for "Channels & Inputs" (fallback if not overridden) -->
+    <string name="channels_and_inputs_fallback_slice_uri" translatable="false"/>
 
     <!-- Slice uri for "Connected devices" -->
     <string name="connected_devices_slice_uri" translatable="false"/>

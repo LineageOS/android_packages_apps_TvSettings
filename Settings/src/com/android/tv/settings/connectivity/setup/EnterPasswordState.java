@@ -244,6 +244,12 @@ public class EnterPasswordState implements State {
         }
 
         @Override
+        public void onResume() {
+            super.onResume();
+            openInEditMode(mPasswordAction);
+        }
+
+        @Override
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                 String password = action.getTitle().toString();

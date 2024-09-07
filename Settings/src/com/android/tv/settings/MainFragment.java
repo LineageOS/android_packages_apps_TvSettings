@@ -205,8 +205,16 @@ public class MainFragment extends PreferenceControllerFragment implements
         updateAccountPref();
         updateAccessoryPref();
         updateBasicModeSuggestion();
-        maybeUseSlice(findPreference(KEY_CHANNELS_AND_INPUTS),
-                findPreference(KEY_CHANNELS_AND_INPUTS_SLICE));
+
+        SlicePreference sliceInputsPreference = findPreference(KEY_CHANNELS_AND_INPUTS_SLICE);
+        if (sliceInputsPreference != null
+                && !SliceUtils.isSliceProviderValid(
+                        requireContext(), sliceInputsPreference.getUri())) {
+            sliceInputsPreference.setUri(
+                    getString(R.string.channels_and_inputs_fallback_slice_uri));
+        }
+
+        maybeUseSlice(findPreference(KEY_CHANNELS_AND_INPUTS), sliceInputsPreference);
         maybeUseSlice(findPreference(KEY_HELP_AND_FEEDBACK),
                 findPreference(KEY_HELP_AND_FEEDBACK_SLICE));
         return super.onCreateView(inflater, container, savedInstanceState);

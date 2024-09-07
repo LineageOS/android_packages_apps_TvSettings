@@ -24,4 +24,9 @@
         android:title="@string/accessibility_timeout"
         android:summary="@string/accessibility_timeout_summary"
         android:fragment="com.android.tv.settings.accessibility.AccessibilityTimeoutFragment" />
+    <Preference
+        android:key="accessibility_key_repeat"
+        android:title="@string/accessibility_key_repeat_delay"
+        android:summary="@string/accessibility_key_repeat_delay_summary"
+        android:fragment="com.android.tv.settings.accessibility.AccessibilityKeyRepeatFragment" />
 </PreferenceScreen>

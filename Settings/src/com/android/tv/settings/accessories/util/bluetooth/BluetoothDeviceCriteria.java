@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.util.bluetooth;
+package com.android.tv.settings.accessories.util.bluetooth;
 
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;

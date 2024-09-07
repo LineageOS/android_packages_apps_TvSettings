@@ -26,6 +26,7 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.tv.settings.NopePreferenceController;
 import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
+import com.android.tv.settings.accessories.util.bluetooth.BluetoothAddressPreferenceController;
 
 import java.util.ArrayList;
 import java.util.List;
