@@ -484,7 +484,7 @@
     <string name="wifi_action_try_again" msgid="8920677153891141148">"ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ"</string>
     <string name="wifi_action_view_available_networks" msgid="609561604257828342">"ಲಭ್ಯವಿರುವ ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ"</string>
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> ಗೆ ಸಂಪರ್ಕಪಡಿಸಲಾಗುತ್ತಿದೆ"</string>
-    <string name="wifi_saving" msgid="320653339670641708">"<xliff:g id="SSID">%1$s</xliff:g> ಗಾಗಿ ಕಾನ್ಫಿಗರೇಶನ್ ಉಳಿಸಲಾಗುತ್ತಿದೆ"</string>
+    <string name="wifi_saving" msgid="320653339670641708">"<xliff:g id="SSID">%1$s</xliff:g> ಗಾಗಿ ಕಾನ್ಫಿಗರೇಶನ್ ಸೇವ್ ಮಾಡಲಾಗುತ್ತಿದೆ"</string>
     <string name="wifi_connect" msgid="2206086690065242121">"ಸಂಪರ್ಕಪಡಿಸು"</string>
     <string name="wifi_forget_network" msgid="4634016112624305571">"ನೆಟ್‌ವರ್ಕ್‌ ಮರೆತುಬಿಡು"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"ಇದು ಉಳಿಸಲಾಗಿರುವ ಪಾಸ್‌ವರ್ಡ್ ಸೇರಿದಂತೆ, ಈ ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕಿಸಲು ಬಳಸಲಾಗಿರುವ ಮಾಹಿತಿಯನ್ನು ತೆರವುಗೊಳಿಸುತ್ತದೆ."</string>
@@ -718,28 +718,17 @@
     <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"ನೀವು ಕ್ರಮ ಕೈಗೊಳ್ಳಬೇಕೆಂದು ನಿಮಗೆ ಹೇಳುವ ಸಂದೇಶಗಳನ್ನು ಎಷ್ಟು ಸಮಯದವರೆಗೆ ತೋರಿಸಬೇಕು ಎಂಬುದನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"ಸಮಯ : 2-3 ಸೆಕೆಂಡುಗಳು"</string>
     <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"ಆನ್-ಸ್ಕ್ರೀನ್ ಕ್ರಿಯೆಗಳಿಗೆ ಪ್ರತಿಕ್ರಿಯಿಸಲು ಡೀಫಾಲ್ಟ್ ಸಮಯವನ್ನು ಸೆಟ್‌ ಮಾಡುತ್ತದೆ (2-3 ಸೆಕೆಂಡುಗಳು)"</string>
-    <!-- no translation found for accessibility_key_repeat_delay (3705218700730796163) -->
-    <skip />
-    <!-- no translation found for accessibility_key_repeat_delay_detailed (839875964245948920) -->
-    <skip />
-    <!-- no translation found for accessibility_key_repeat_delay_summary (1285871520625842138) -->
-    <skip />
-    <!-- no translation found for accessibility_key_repeat (2883843620765652931) -->
-    <skip />
-    <!-- no translation found for accessibility_delay_before_repeat (2090040450091150466) -->
-    <skip />
-    <!-- no translation found for accessibility_delay_before_repeat_summary (7889272629294523770) -->
-    <skip />
-    <!-- no translation found for accessibility_delay_before_repeat_detailed (5855212602097866850) -->
-    <skip />
-    <!-- no translation found for accessibility_repeat_rate (7021902189827133568) -->
-    <skip />
-    <!-- no translation found for accessibility_repeat_rate_summary (3583246887327117521) -->
-    <skip />
-    <!-- no translation found for accessibility_key_repeat_info (6966835128389755237) -->
-    <skip />
-    <!-- no translation found for accessibility_repeat_rate_info_summary (6481063957245411995) -->
-    <skip />
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"ಕೀ ಪುನರಾವರ್ತನೆ ವಿಳಂಬ"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"ಕೀಯನ್ನು ಹೋಲ್ಡ್ ಮಾಡಿದಾಗ ಪುನರಾವರ್ತಿತ ಅಕ್ಷರಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುವ ಮೊದಲು ವಿಳಂಬವನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"ಕೀ ಪುನರಾವರ್ತನೆಯ ಮೊದಲು ವಿಳಂಬವನ್ನು ಅಡ್ಜಸ್ಟ್ ಮಾಡಿ"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"ಕೀ ಪುನರಾವರ್ತನೆ"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"ಪುನರಾವರ್ತನೆಗೆ ಮೊದಲು ವಿಳಂಬ"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"ಬಟನ್ ಪುನರಾವರ್ತನೆಗೊಳ್ಳುವ ಮೊದಲು ನೀವು ಎಷ್ಟು ಸಮಯ ಹೋಲ್ಡ್ ಮಾಡಬಹುದು ಎಂಬುದನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"ಬಟನ್ ಅನ್ನು ಹೋಲ್ಡ್ ಮಾಡಿ ಅವಧಿಯನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ ನಂತರ ಅದು ಪುನರಾವರ್ತಿಸಲು ಪ್ರಾರಂಭಿಸುತ್ತದೆ"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"ಪುನರಾವರ್ತನೆ ದರ"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"ಕೀಯನ್ನು ಹೋಲ್ಡ್ ಮಾಡಿದಾಗ ಎಷ್ಟು ವೇಗವಾಗಿ ಪುನರಾವರ್ತಿತ ಅಕ್ಷರಗಳನ್ನು ನಮೂದಿಸಲಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ಸೆಟ್ ಮಾಡಿ"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"ಡೀಫಾಲ್ಟ್"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"ಆರಂಭಿಕ ವಿಳಂಬದ ನಂತರ ಬಟನ್ ಎಷ್ಟು ಬೇಗ ಪುನರಾವರ್ತನೆಯಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನಿಯಂತ್ರಿಸಿ"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"ಶೀರ್ಷಿಕೆಗಳು"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"ವೀಡಿಯೊದಲ್ಲಿ ಮುಚ್ಚಿದ ಶೀರ್ಷಿಕೆ ಪಠ್ಯದ ಓವರ್‌ಲೇಗಾಗಿ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
     <string name="captions_display" msgid="2598662495450633375">"ಪ್ರದರ್ಶನ"</string>
