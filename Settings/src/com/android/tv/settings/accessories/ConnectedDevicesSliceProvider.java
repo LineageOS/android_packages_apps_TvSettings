@@ -178,9 +178,6 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         if (DEBUG) {
             Log.d(TAG, "onBindSlice: " + sliceUri);
         }
-        if (getBluetoothDevices().isEmpty()) {
-            sliceUri = ConnectedDevicesSliceUtils.GENERAL_SLICE_URI;
-        }
         StrictMode.ThreadPolicy oldPolicy = StrictMode.getThreadPolicy();
         try {
             // Prevent StrictMode from throwing on access to shared preferences.
