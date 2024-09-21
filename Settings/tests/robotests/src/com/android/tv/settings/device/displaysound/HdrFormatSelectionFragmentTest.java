@@ -33,6 +33,7 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
 import android.hardware.display.DisplayManager;
+import android.hardware.display.HdrConversionMode;
 import android.view.Display;
 
 import androidx.preference.Preference;
@@ -330,6 +331,10 @@ public class HdrFormatSelectionFragmentTest {
     private HdrFormatSelectionFragment createHdrFormatSelectionFragmentWithDisplayManagerReturning(
             int[] deviceHdrTypes, Display.Mode[] displayModes, int[] userDisabledHdrTypes) {
         doReturn(userDisabledHdrTypes).when(mDisplayManager).getUserDisabledHdrTypes();
+        doReturn(new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_SYSTEM))
+                .when(mDisplayManager).getHdrConversionModeSetting();
+        doReturn(new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_SYSTEM))
+                .when(mDisplayManager).getHdrConversionMode();
         Display display = spy(Display.class);
         doReturn(displayModes).when(display).getSupportedModes();
         doReturn(displayModes[0]).when(display).getMode();

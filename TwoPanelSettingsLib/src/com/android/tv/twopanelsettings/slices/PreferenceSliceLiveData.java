@@ -28,8 +28,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.slice.Slice;
-import androidx.slice.SliceViewManager;
+
+import com.android.tv.twopanelsettings.slices.compat.Slice;
+import com.android.tv.twopanelsettings.slices.compat.SliceViewManager;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 

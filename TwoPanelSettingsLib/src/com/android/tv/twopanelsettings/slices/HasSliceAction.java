@@ -16,7 +16,7 @@
 
 package com.android.tv.twopanelsettings.slices;
 
-import androidx.slice.core.SliceActionImpl;
+import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
 
 /**
  * Indicates the preference has the slice action to be triggered.

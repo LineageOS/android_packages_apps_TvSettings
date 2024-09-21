@@ -118,8 +118,6 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
             if (key.equals(KEY_DYNAMIC_RANGE_SELECTION_SDR)) {
                 mDisplayManager.setHdrConversionMode(
                         new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_FORCE));
-                mDisplayManager.setAreUserDisabledHdrTypesAllowed(false);
-                mDisplayManager.setUserDisabledHdrTypes(getDeviceSupportedHdrTypes());
                 selectRadioPreference(preference);
             } else if (key.contains(KEY_HDR_FORMAT_PREFIX)) {
                 String hdrType = key.substring(KEY_HDR_FORMAT_PREFIX.length());

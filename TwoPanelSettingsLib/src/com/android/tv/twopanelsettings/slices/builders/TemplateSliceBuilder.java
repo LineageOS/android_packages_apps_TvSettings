@@ -21,12 +21,13 @@ import android.net.Uri;
 import android.util.Pair;
 
 import androidx.annotation.NonNull;
-import androidx.slice.Clock;
-import androidx.slice.Slice;
-import androidx.slice.SliceManager;
-import androidx.slice.SliceProvider;
-import androidx.slice.SliceSpec;
-import androidx.slice.SystemClock;
+
+import com.android.tv.twopanelsettings.slices.compat.Clock;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
+import com.android.tv.twopanelsettings.slices.compat.SliceManager;
+import com.android.tv.twopanelsettings.slices.compat.SliceProvider;
+import com.android.tv.twopanelsettings.slices.compat.SliceSpec;
+import com.android.tv.twopanelsettings.slices.compat.SystemClock;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,8 +68,13 @@ public abstract class TemplateSliceBuilder {
      * Construct the slice.
      */
     @NonNull
-    public Slice build() {
+    public Slice buildForSettings() {
         return mImpl.build();
+    }
+
+    @Deprecated
+    public androidx.slice.Slice build() {
+        return new androidx.slice.Slice(buildForSettings().toBundle());
     }
 
     protected Slice.Builder getBuilder() {

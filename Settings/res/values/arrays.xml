@@ -52,6 +52,20 @@
         <item>Never</item>
     </string-array>
 
+    <!-- Titles for bounce key timeout preference. [CHAR LIMIT=35] -->
+    <string-array name="bounce_key_timeout_entries">
+        <item>0.5 seconds</item>
+        <item>1 second</item>
+        <item>2 seconds</item>
+    </string-array>
+
+    <!-- Titles for bounce key timeout preference. [CHAR LIMIT=35] -->
+    <integer-array name="bounce_key_timeout_values">
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+    </integer-array>
+
     <!-- Do not translate. -->
     <string-array name="device_energy_saver_sleep_timeout_values" translatable="false">
         <!-- Do not translate. -->

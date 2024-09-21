@@ -29,4 +29,9 @@
         android:title="@string/accessibility_key_repeat_delay"
         android:summary="@string/accessibility_key_repeat_delay_summary"
         android:fragment="com.android.tv.settings.accessibility.AccessibilityKeyRepeatFragment" />
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
+        android:key="toggle_bounce_key"
+        android:persistent="true"
+        android:title="@string/bounce_key_title"
+        android:summary="@string/bounce_key_detailed"/>
 </PreferenceScreen>

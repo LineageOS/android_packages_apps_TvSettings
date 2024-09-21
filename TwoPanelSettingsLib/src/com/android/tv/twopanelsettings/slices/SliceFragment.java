@@ -61,16 +61,16 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
-import androidx.slice.Slice;
-import androidx.slice.SliceItem;
-import androidx.slice.widget.ListContent;
-import androidx.slice.widget.SliceContent;
 
 import com.android.tv.twopanelsettings.R;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment.SliceFragmentCallback;
 import com.android.tv.twopanelsettings.slices.PreferenceSliceLiveData.SliceLiveDataImpl;
 import com.android.tv.twopanelsettings.slices.SlicePreferencesUtil.Data;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
+import com.android.tv.twopanelsettings.slices.compat.SliceItem;
+import com.android.tv.twopanelsettings.slices.compat.widget.ListContent;
+import com.android.tv.twopanelsettings.slices.compat.widget.SliceContent;
 
 import java.util.ArrayList;
 import java.util.HashMap;

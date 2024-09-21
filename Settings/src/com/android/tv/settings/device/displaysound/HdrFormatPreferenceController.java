@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.device.displaysound;
 
-
 import static android.content.DialogInterface.OnClickListener;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_DOLBY_VISION;
 
@@ -25,6 +24,7 @@ import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.disa
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.doesCurrentModeNotSupportDvBecauseLimitedTo4k30;
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.enableHdrType;
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.findMode1080p60;
+import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.isForceSdr;
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.isHdrFormatSupported;
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.sendHdrSettingsChangedBroadcast;
 
@@ -33,6 +33,7 @@ import android.hardware.display.DisplayManager;
 import android.hardware.display.HdrConversionMode;
 import android.view.Display;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
@@ -47,7 +48,6 @@ import java.util.stream.Collectors;
  * Controller for the hdr formats switch preferences.
  */
 public class HdrFormatPreferenceController extends AbstractPreferenceController {
-
     private final int mHdrType;
     private final DisplayManager mDisplayManager;
 
@@ -74,7 +74,7 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
         if (preference.getKey().equals(getPreferenceKey())) {
             preference.setEnabled(getPreferenceEnabledState());
             Display.Mode mode = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY).getMode();
-            if (!isHdrFormatSupported(mode, mHdrType)) {
+            if (!isHdrFormatSupported(mode, mHdrType) || isForceSdr(mDisplayManager)) {
                 ((SwitchPreference) preference).setChecked(false);
             } else {
                 ((SwitchPreference) preference).setChecked(getPreferenceCheckedState());
@@ -108,9 +108,9 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
     /**
      * Handler for when this particular format preference is clicked.
      */
-    private void onPreferenceClicked(SwitchPreference preference) {
+    @VisibleForTesting
+    void onPreferenceClicked(SwitchPreference preference) {
         final boolean enabled = preference.isChecked();
-
         boolean resetHdrConversion = false;
         if (enabled) {
             Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
@@ -120,14 +120,22 @@ public class HdrFormatPreferenceController extends AbstractPreferenceController 
             } else {
                 enableHdrType(mDisplayManager, mHdrType);
             }
-            // If using SYSTEM conversion, the system may prefer the newly enabled type
+            // If using SYSTEM conversion, the system may prefer the newly enabled type.
+            // Or if Force SDR Conversion, when the user enables an HDR type, Force SDR Conversion
+            // should be reset to System Preferred to allow for HDR output.  This is because
+            // the most recent user action (in this case, enabling an HDR type) takes priority over
+            // older actions (setting to Force SDR). Also note that this logic is executed here
+            // instead of DisplayManagerService because it needs to happen when enabling an HDR
+            // type, and in the special case where HDR is indirectly disabled by Force SDR
+            // conversion, manually enabling HDR is not properly recognized as an action that
+            // reduces the disabled HDR count.
             if (mDisplayManager.getHdrConversionMode().getConversionMode()
-                    == HdrConversionMode.HDR_CONVERSION_SYSTEM) {
+                    == HdrConversionMode.HDR_CONVERSION_SYSTEM || isForceSdr(mDisplayManager)) {
                 resetHdrConversion = true;
             }
         } else {
             disableHdrType(mDisplayManager, mHdrType);
-            // If the disabled HDR type is mHdrType, the current HDR output type, then the HDR
+            // If the disabled HDR type is the current HDR output type, then the HDR
             // conversion settings must be updated. This can happen in 2 cases:
             //   1. mHdrType was selected by the OEM implementation of SYSTEM conversion (default)
             //   2. mHdrType was selected by the user via FORCE

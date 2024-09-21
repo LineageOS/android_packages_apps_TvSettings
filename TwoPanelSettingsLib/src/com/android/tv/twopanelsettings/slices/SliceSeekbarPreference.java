@@ -4,7 +4,8 @@ import android.content.Context;
 import android.util.AttributeSet;
 
 import androidx.preference.SeekBarPreference;
-import androidx.slice.core.SliceActionImpl;
+
+import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
 
 /**
  * Slices version of SeekBarPreference.

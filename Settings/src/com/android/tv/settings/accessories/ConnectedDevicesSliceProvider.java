@@ -62,8 +62,8 @@ import android.util.Log;
 
 import androidx.annotation.IntegerRes;
 import androidx.core.graphics.drawable.IconCompat;
-import androidx.slice.Slice;
-import androidx.slice.SliceProvider;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
+import com.android.tv.twopanelsettings.slices.compat.SliceProvider;
 
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
@@ -183,9 +183,6 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         if (DEBUG) {
             Log.d(TAG, "onBindSlice: " + sliceUri);
         }
-        if (getBluetoothDevices().isEmpty()) {
-            sliceUri = ConnectedDevicesSliceUtils.GENERAL_SLICE_URI;
-        }
         StrictMode.ThreadPolicy oldPolicy = StrictMode.getThreadPolicy();
         try {
             // Prevent StrictMode from throwing on access to shared preferences.
@@ -250,7 +247,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         updateOfficialRemoteSettings(psb);
         updateFmr(psb);
         updateBacklight(psb);
-        return psb.build();
+        return psb.buildForSettings();
     }
 
     // The slice page that shows detail information of a particular device.
@@ -416,7 +413,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
 
         infoPref.addInfoItem(getString(R.string.bluetooth_serial_number_label), deviceAddr);
         psb.addPreference(infoPref);
-        return psb.build();
+        return psb.buildForSettings();
     }
 
     private void updateBluetoothToggle(PreferenceSliceBuilder psb) {
@@ -726,7 +723,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                 .setPendingIntent(pendingIntent)
                 .setIcon(IconCompat.createWithResource(context, R.drawable.ic_play_arrow))
                 .setIconNeedsToBeProcessed(true));
-        return psb.build();
+        return psb.buildForSettings();
     }
 
     /**
@@ -767,6 +764,6 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
             psb.addPreference(backlightModeRow);
         }
 
-        return psb.build();
+        return psb.buildForSettings();
     }
 }

@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.util;
 
-import android.app.slice.SliceManager;
 import android.content.Context;
 import android.content.pm.ProviderInfo;
 import android.net.Uri;
@@ -28,10 +27,6 @@ import androidx.preference.Preference;
 
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
-
-import java.util.Collection;
-
-import kotlin.coroutines.Continuation;
 
 /** Utility class for slice **/
 public final class SliceUtils {

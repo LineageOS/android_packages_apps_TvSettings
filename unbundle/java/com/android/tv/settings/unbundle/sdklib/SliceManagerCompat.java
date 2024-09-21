@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import android.app.slice.SliceManager;
+import com.android.tv.twopanelsettings.slices.base.SliceManager;
 import android.net.Uri;
 
 public class SliceManagerCompat {

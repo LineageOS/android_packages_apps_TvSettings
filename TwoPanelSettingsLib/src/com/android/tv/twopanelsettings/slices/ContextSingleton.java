@@ -16,13 +16,13 @@
 
 package com.android.tv.twopanelsettings.slices;
 
-import android.app.slice.SliceManager;
 import android.content.Context;
 import android.net.Uri;
 import android.util.ArrayMap;
 import android.util.Log;
 
 import com.android.tv.twopanelsettings.slices.PreferenceSliceLiveData.SliceLiveDataImpl;
+import com.android.tv.twopanelsettings.slices.base.SliceManager;
 
 
 /**
@@ -68,7 +68,7 @@ public class ContextSingleton {
             String currentPackageName = ctx.getApplicationContext().getPackageName();
             // Uri cannot be null here as SliceManagerService calls notifyChange(uri, null) in
             // grantPermissionFromUser.
-            ctx.getSystemService(SliceManager.class).grantPermissionFromUser(
+            SliceManager.from(ctx).grantPermissionFromUser(
                     uri, currentPackageName, true);
             mGivenFullSliceAccess = true;
         }
@@ -79,7 +79,7 @@ public class ContextSingleton {
      */
     public void grantFullAccess(Context ctx, String uri, String packageName) {
         try {
-            ctx.getSystemService(SliceManager.class).grantPermissionFromUser(
+            SliceManager.from(ctx).grantPermissionFromUser(
                     Uri.parse(uri), packageName, true);
         } catch (Exception e) {
             Log.e(TAG, "Cannot grant full access to " + packageName + " " + e);

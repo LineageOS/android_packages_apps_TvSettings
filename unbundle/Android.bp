@@ -10,12 +10,12 @@ android_library {
     ],
 
     static_libs: [
+        "TvSliceLib",
     ],
 
     errorprone: {
         enabled: false,
     },
-    min_sdk_version: "31",
     lint: {
         baseline_filename: "lint-baseline.xml",
     },

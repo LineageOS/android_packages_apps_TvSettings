@@ -32,12 +32,6 @@ import static android.app.slice.Slice.SUBTYPE_LAYOUT_DIRECTION;
 import static android.app.slice.SliceItem.FORMAT_IMAGE;
 import static android.app.slice.SliceItem.FORMAT_INT;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
-
-import static androidx.slice.builders.ListBuilder.ICON_IMAGE;
-import static androidx.slice.builders.ListBuilder.INFINITY;
-import static androidx.slice.builders.ListBuilder.LARGE_IMAGE;
-import static androidx.slice.core.SliceHints.SUBTYPE_MILLIS;
-
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.BUTTONSTYLE;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_ACTION_ID;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_ADD_INFO_STATUS;
@@ -48,6 +42,10 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFE
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TITLE_ICON;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER;
+import static com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder.ICON_IMAGE;
+import static com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder.INFINITY;
+import static com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder.LARGE_IMAGE;
+import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.SUBTYPE_MILLIS;
 
 import android.net.Uri;
 
@@ -56,14 +54,14 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.util.Pair;
-import androidx.slice.Clock;
-import androidx.slice.Slice;
-import androidx.slice.SliceItem;
-import androidx.slice.SliceSpec;
-import androidx.slice.SystemClock;
-import androidx.slice.builders.SliceAction;
 
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder.RowBuilder;
+import com.android.tv.twopanelsettings.slices.compat.Clock;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
+import com.android.tv.twopanelsettings.slices.compat.SliceItem;
+import com.android.tv.twopanelsettings.slices.compat.SliceSpec;
+import com.android.tv.twopanelsettings.slices.compat.SystemClock;
+import com.android.tv.twopanelsettings.slices.compat.builders.SliceAction;
 
 import java.time.Duration;
 import java.util.ArrayList;

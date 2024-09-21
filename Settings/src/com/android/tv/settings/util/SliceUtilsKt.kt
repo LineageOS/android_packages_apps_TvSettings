@@ -15,7 +15,7 @@
  */
 package com.android.tv.settings.util
 
-import android.app.slice.SliceManager
+import com.android.tv.twopanelsettings.slices.base.SliceManager
 import android.content.Context
 import android.net.Uri
 import android.util.Log
@@ -41,8 +41,7 @@ object SliceUtilsKt {
         if (uri == null) {
             return false
         }
-        val sliceManager = context.getSystemService(SliceManager::class.java)
-            ?: return false
+        val sliceManager = SliceManager.from(context)
         return withContext(Dispatchers.IO) {
             return@withContext isSettingsSliceEnabledInternal(
                 context, sliceManager,
@@ -68,8 +67,7 @@ object SliceUtilsKt {
         if (uri == null) {
             return false
         }
-        val sliceManager = context.getSystemService(SliceManager::class.java)
-            ?: return false
+        val sliceManager = SliceManager.from(context)
         return isSettingsSliceEnabledInternal(context, sliceManager, uri, topLevelSettingsSliceUri)
     }
 

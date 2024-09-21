@@ -545,16 +545,16 @@
     <string name="storage_media_cache_usage" msgid="6397941751551207630">"Keširani podaci"</string>
     <string name="storage_eject" msgid="3268870873944951902">"Izbaci"</string>
     <string name="storage_format" msgid="5360900929128087085">"Potpuno brisanje podataka i formatiranje"</string>
-    <string name="storage_format_as_private" msgid="77945551149326052">"Izbriši i formatiraj kao pohranu uređaja"</string>
+    <string name="storage_format_as_private" msgid="77945551149326052">"Izbriši i formatiraj kao pohranu na uređaju"</string>
     <string name="storage_format_as_public" msgid="6745112917895223463">"Izbriši i formatiraj kao prenosivu pohranu"</string>
-    <string name="storage_format_for_private" msgid="5380138334184923252">"Formatiraj kao pohranu uređaja"</string>
+    <string name="storage_format_for_private" msgid="5380138334184923252">"Formatiraj kao pohranu na uređaju"</string>
     <string name="storage_not_connected" msgid="4327902652748552794">"Nije povezano"</string>
     <string name="storage_migrate" msgid="9137556600192167701">"Migrirajte podatke na ovu pohranu"</string>
     <string name="storage_migrate_away" msgid="7880100961434638430">"Migriraj podatke na drugu pohranu"</string>
     <string name="storage_no_apps" msgid="95566375753627272">"Nema aplikacija za izradu sigurnosne kopije"</string>
-    <string name="storage_forget" msgid="4671975563260507003">"Zaboravi pohranu ovog uređaja"</string>
+    <string name="storage_forget" msgid="4671975563260507003">"Zaboravi pohranu na ovom uređaju"</string>
     <string name="storage_forget_wall_of_text" msgid="230454348256179142">"Da koristite aplikacije ili podatke na ovom disku, ponovo ga priključite. Osim toga, možete odabrati da zaboravite ovu pohranu ako disk nije dostupan.\n\nAko odaberete opciju Zaboravi, svi podaci na disku će se trajno izgubiti.\n\nAplikacije možete ponovo instalirati kasnije, ali podaci pohranjeni na ovom disku će se izgubiti."</string>
-    <string name="storage_device_storage_section" msgid="22958375769694027">"Pohrana uređaja"</string>
+    <string name="storage_device_storage_section" msgid="22958375769694027">"Pohrana na uređaju"</string>
     <string name="storage_removable_storage_section" msgid="280332107650735088">"Uklonjiva pohrana"</string>
     <string name="storage_reset_section" msgid="3896575204828589494">"Vraćanje na zadano"</string>
     <string name="storage_free_up" msgid="5719667150891467122">"Oslobodite prostor u pohrani"</string>
@@ -572,10 +572,10 @@
     <string name="storage_unmount_failure_cant_find" msgid="2890335341404932068">"Nema diska za izbacivanje"</string>
     <string name="storage_format_success" msgid="5599914756144012286">"Uređaj <xliff:g id="NAME">%1$s</xliff:g> je formatiran"</string>
     <string name="storage_format_failure" msgid="5619442934314277332">"Uređaj <xliff:g id="NAME">%1$s</xliff:g> nije formatiran"</string>
-    <string name="storage_wizard_format_as_private_title" msgid="7985715762649933211">"Formatiranje kao uređaj za pohranu"</string>
+    <string name="storage_wizard_format_as_private_title" msgid="7985715762649933211">"Formatiranje kao pohrane na uređaju"</string>
     <string name="storage_wizard_format_as_private_description" msgid="6143406934742456154">"Radi sigurnosti, za ovo je potrebno formatirati USB disk. Nakon sigurnog formatiranja disk će raditi samo s ovim uređajem. Formatiranjem potpuno brišete sve podatke koji su trenutno pohranjeni na njemu. Da izbjegnete gubitak podataka, predlažemo izradu sigurnosne kopije."</string>
     <string name="storage_wizard_format_as_public_title" msgid="3546915348149438389">"Brisanje i formatiranje"</string>
-    <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"Nakon formatiranja, ovaj USB disk možete koristiti na drugim uređajima. Svi podaci će se potpuno izbrisati. Predlažemo da prvo napravite sigurnosnu kopiju premještanjem aplikacija u drugu pohranu uređaja."</string>
+    <string name="storage_wizard_format_as_public_description" msgid="5849129772499352597">"Nakon formatiranja, ovaj USB disk možete koristiti na drugim uređajima. Svi podaci će se potpuno izbrisati. Predlažemo da prvo napravite sigurnosnu kopiju premještanjem aplikacija u drugu pohranu na uređaju."</string>
     <string name="storage_wizard_format_progress_title" msgid="3875906251546380271">"Formatiranje USB diska…"</string>
     <string name="storage_wizard_format_progress_description" msgid="292229747129805538">"Ovo će kratko potrajati. Nemojte uklanjati disk."</string>
     <string name="storage_wizard_migrate_choose_title" msgid="8743036821605231654">"Odaberite pohranu na koju ćete migrirati podatke"</string>
@@ -594,18 +594,18 @@
     <string name="storage_wizard_back_up_apps_title" msgid="6225663573896846937">"Aplikacije pohranjene na uređaju <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_and_data_title" msgid="7763611380573099978">"Aplikacije i podaci pohranjeni na uređaju <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_back_up_apps_space_available" msgid="5741521038349239359">"Dostupno je <xliff:g id="SIZE">%1$s</xliff:g>"</string>
-    <string name="storage_wizard_eject_private_title" msgid="1336088625197134497">"Izbacivanje pohrane uređaja"</string>
-    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"Aplikacije u pohrani ovog uređaja prestat će raditi kada ga izbacite. Ovaj USB disk je formatiran za rad samo na ovom uređaju i neće raditi na drugim uređajima."</string>
+    <string name="storage_wizard_eject_private_title" msgid="1336088625197134497">"Izbacivanje pohrane na uređaju"</string>
+    <string name="storage_wizard_eject_private_description" msgid="4341905730016007385">"Aplikacije u pohrani na ovom uređaju prestat će raditi kada ga izbacite. Ovaj USB disk je formatiran za rad samo na ovom uređaju i neće raditi na drugim uređajima."</string>
     <string name="storage_wizard_eject_progress_title" msgid="6025569356827683446">"Izbacivanje uređaja <xliff:g id="NAME">%1$s</xliff:g>…"</string>
     <string name="storage_wizard_move_app_title" msgid="6504922588346440942">"Iskorištena memorija"</string>
     <string name="storage_wizard_move_app_progress_title" msgid="7058465372227392453">"Premještanje aplikacije <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_wizard_move_app_progress_description" msgid="7673347796805764888">"Nemojte uklanjati disk za vrijeme premještanja.\nAplikacija <xliff:g id="APPNAME">%1$s</xliff:g> na ovom uređaju neće biti dostupna dok se premještanje ne završi."</string>
-    <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"Zaboraviti pohranu uređaja?"</string>
+    <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"Zaboraviti pohranu na uređaju?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"Ako odaberete \'Zaboravi\', zauvijek ćete izgubiti sve podatke pohranjene na ovom disku. Želite li nastaviti?"</string>
     <string name="storage_wizard_forget_action" msgid="5609631662522950596">"Zaboravi"</string>
     <string name="storage_new_title" msgid="4768955281180255038">"USB disk je povezan"</string>
     <string name="storage_new_action_browse" msgid="3355241742574072658">"Pregledaj"</string>
-    <string name="storage_new_action_adopt" msgid="6809707961170895964">"Postavi kao pohranu uređaja"</string>
+    <string name="storage_new_action_adopt" msgid="6809707961170895964">"Postavi kao pohranu na uređaju"</string>
     <string name="storage_new_action_format_public" msgid="1964662216574764811">"Postavi kao izmjenjivu pohranu"</string>
     <string name="storage_new_action_eject" msgid="919249291814300000">"Izbaci"</string>
     <string name="storage_missing_title" msgid="9068915586235805818">"Uređaj <xliff:g id="NAME">%1$s</xliff:g> je uklonjen"</string>
