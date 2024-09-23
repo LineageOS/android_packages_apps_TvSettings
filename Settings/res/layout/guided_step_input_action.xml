@@ -27,7 +27,7 @@
              android:paddingEnd="@dimen/guided_action_start_end_padding"
              android:paddingStart="@dimen/guided_action_start_end_padding">
 
-    <EditText
+    <com.android.tv.settings.connectivity.util.SettingsGuidedActionEditText
         android:id="@+id/guidedactions_item_title"
         style="@style/Setup.Action.TextInput"
         android:layout_width="match_parent"
@@ -36,5 +36,5 @@
         android:gravity="center_vertical"
         android:imeOptions="actionDone|flagNoExtractUi"
         android:inputType="text">
-    </EditText>
+    </com.android.tv.settings.connectivity.util.SettingsGuidedActionEditText>
 </FrameLayout>
