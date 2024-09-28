@@ -110,8 +110,9 @@ public class PreferredDynamicRangeFragment  extends SettingsPreferenceFragment {
             // is done because when SDR is chosen, we disable all HDR types.
             switch (key) {
                 case KEY_DYNAMIC_RANGE_SELECTION_SYSTEM: {
-                    mDisplayManager.setHdrConversionMode(new HdrConversionMode(
-                            HdrConversionMode.HDR_CONVERSION_SYSTEM));
+                    mHdrConversionMode = new HdrConversionMode(
+                            HdrConversionMode.HDR_CONVERSION_SYSTEM);
+                    mDisplayManager.setHdrConversionMode(mHdrConversionMode);
                     sendHdrSettingsChangedBroadcast(getContext());
                     showPreferredDynamicRangeRadioPreference(false);
                     break;

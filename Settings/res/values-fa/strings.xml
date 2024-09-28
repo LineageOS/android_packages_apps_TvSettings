@@ -300,7 +300,7 @@
     <string name="system_inputs" msgid="5552840337357572096">"ورودی‌ها"</string>
     <string name="system_inputs_devices" msgid="2158421111699829399">"ورودی‌ها و دستگاه‌ها"</string>
     <string name="system_home_theater_control" msgid="6228949628173590310">"کنترل سینمای خانگی"</string>
-    <string name="system_developer_options" msgid="8480844257066475479">"گزینه‌های برنامه‌نویسان"</string>
+    <string name="system_developer_options" msgid="8480844257066475479">"گزینه‌های توسعه‌دهندگان"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"خالی"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"میزان استفاده و عیب‌یابی"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"هیچ‌یک از برنامه‌‌های سرپرست دستگاه در دسترس نیستند"</string>
@@ -690,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"نوشتار با کنتراست بالا"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"نوشتار پررنگ"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"نوسان کلیدها"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"زمان موردنظر را انتخاب کنید"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"کنترل از دور فشارهای تکراری کلید را نادیده می‌گیرد"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"فشارهای تصادفی سریع و تکراری دکمه نادیده گرفته می‌شود. می‌توانید فاصله زمانی مدنظر را که درطول آن فشارها نادیده گرفته می‌شود تنظیم کنید"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"زمان: پیش‌فرض"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"پس‌از فشار اولیه، فشارهای تکراری تا سپری شدن فاصله زمانی پیش‌فرض نادیده گرفته می‌شود"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"زمان : ۰٫۵ ثانیه"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"فاصله زمانی روی ۰٫۵ ثانیه تنظیم می‌شود تا فشارهای تکراری کلید در این فاصله نادیده گرفته شود"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"زمان : ۱ ثانیه"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"فاصله زمانی روی ۱ ثانیه تنظیم می‌شود تا فشارهای تکراری کلید در این فاصله نادیده گرفته شود"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"زمان : ۲ ثانیه"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"فاصله زمانی روی ۲ ثانیه تنظیم می‌شود تا فشارهای تکراری کلید در این فاصله نادیده گرفته شود"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"تصحیح رنگ"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"استفاده از تصحیح رنگ"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"حالت رنگی"</string>
@@ -1115,7 +1127,7 @@
     <string name="admin_profile_owner_message" msgid="5729169873349157622">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این نمایه کاری (ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
     <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این کاربر (ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
     <string name="admin_device_owner_message" msgid="1935507216776040907">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این دستگاه (ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
-    <string name="remove_managed_profile_label" msgid="8950011141359605612">"حذف نمایه کار"</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"حذف نمایه کاری"</string>
     <string name="active_device_admin_msg" msgid="185537304726228624">"برنامه سرپرست دستگاه"</string>
     <string name="remove_device_admin" msgid="2623866073546295104">"غیرفعال کردن این برنامه سرپرست دستگاه"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"حذف نصب برنامه"</string>

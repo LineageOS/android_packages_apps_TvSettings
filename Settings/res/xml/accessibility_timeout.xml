@@ -18,4 +18,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/accessibility_timeout"
     android:summary="@string/accessibility_timeout_detailed">
+    <Preference
+        android:key="accessibility_timeout_subtitle"
+        android:title="@string/accessibility_timeout_detailed"
+        android:selectable="false"
+        />
 </PreferenceScreen>

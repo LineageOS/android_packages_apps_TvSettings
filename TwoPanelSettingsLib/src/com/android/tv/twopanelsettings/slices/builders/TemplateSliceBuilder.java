@@ -38,25 +38,17 @@ import java.util.Set;
  * template types.
  */
 public abstract class TemplateSliceBuilder {
-
-    private static final String TAG = "TemplateSliceBuilder";
-
     private final Slice.Builder mBuilder;
-    private final Context mContext;
     private final TemplateBuilderImpl mImpl;
-    private List<SliceSpec> mSpecs;
 
     protected TemplateSliceBuilder(TemplateBuilderImpl impl) {
-        mContext = null;
         mBuilder = null;
         mImpl = impl;
         setImpl(impl);
     }
 
-    public TemplateSliceBuilder(Context context, Uri uri) {
+    public TemplateSliceBuilder(Context unusedContext, Uri uri) {
         mBuilder = new Slice.Builder(uri);
-        mContext = context;
-        mSpecs = getSpecs(uri);
         mImpl = selectImpl(uri);
         if (mImpl == null) {
             throw new IllegalArgumentException("No valid specs found");
@@ -87,39 +79,11 @@ public abstract class TemplateSliceBuilder {
         return null;
     }
 
-    protected boolean checkCompatible(SliceSpec candidate, Uri uri) {
-        final int size = mSpecs.size();
-        for (int i = 0; i < size; i++) {
-            if (mSpecs.get(i).canRender(candidate)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private List<SliceSpec> getSpecs(Uri uri) {
-        if (SliceProvider.getCurrentSpecs() != null) {
-            return new ArrayList<>(SliceProvider.getCurrentSpecs());
-        }
-        Set<SliceSpec> pinnedSpecs = SliceManager.getInstance(mContext).getPinnedSpecs(uri);
-        return new ArrayList<>(pinnedSpecs);
-    }
-
     protected Clock getClock() {
         if (SliceProvider.getClock() != null) {
             return SliceProvider.getClock();
         }
         return new SystemClock();
-    }
-
-    /**
-     * This is for typing, to clean up the code.
-     *
-     * @hide
-     */
-    static <T> Pair<SliceSpec, Class<? extends TemplateBuilderImpl>> pair(SliceSpec spec,
-            Class<T> cls) {
-        return new Pair(spec, cls);
     }
 }
 
