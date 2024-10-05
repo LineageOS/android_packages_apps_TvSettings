@@ -17,6 +17,8 @@
 package com.android.tv.twopanelsettings.slices.compat.core;
 
 import android.app.PendingIntent;
+import android.content.Intent;
+import android.os.Parcelable;
 
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
@@ -61,8 +63,14 @@ public interface SliceAction {
     /**
      * @return the {@link PendingIntent} associated with this action.
      */
-    @NonNull
+    @Nullable
     PendingIntent getAction();
+
+    @Nullable
+    Intent getActionIntent();
+
+    @NonNull
+    Parcelable getActionParcelable();
 
     /**
      * @return the {@link IconCompat} to display for this action. This can be null when the action

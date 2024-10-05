@@ -91,6 +91,7 @@ import java.util.List;
 @VersionedParcelize(allowSerialization = true, ignoreParcelables = true, isCustom = true)
 // @Deprecated // Supported for TV
 public final class SliceItem extends CustomVersionedParcelable {
+    private static final String TAG = "SliceItem";
 
     private static final String HINTS = "hints";
     private static final String FORMAT = "format";
@@ -167,7 +168,7 @@ public final class SliceItem extends CustomVersionedParcelable {
     /**
      */
     // @RestrictTo(Scope.LIBRARY_GROUP)
-    public SliceItem(@NonNull PendingIntent intent, @Nullable Slice slice,
+    public SliceItem(@NonNull Parcelable intent, @Nullable Slice slice,
             @NonNull @SliceType String format, @Nullable String subType,
             @NonNull @Slice.SliceHint String[] hints) {
         this(new Pair<Object, Slice>(intent, slice), format, subType, hints);
@@ -295,6 +296,43 @@ public final class SliceItem extends CustomVersionedParcelable {
     }
 
     /**
+     * @return The pending intent held by this {@link android.app.slice.SliceItem#FORMAT_ACTION}
+     * SliceItem
+     */
+    @Nullable
+    @SuppressWarnings("unchecked")
+    public Intent getActionIntent() {
+        ObjectsCompat.requireNonNull(mObj, "Object must be non-null");
+        Object action = ((Pair<Object, Slice>) mObj).first;
+        if (action instanceof Intent) {
+            return (Intent) action;
+        }
+        return null;
+    }
+
+    @Nullable
+    public Parcelable getActionParcelable() {
+        ObjectsCompat.requireNonNull(mObj, "Object must be non-null");
+        Object action = ((Pair<Object, Slice>) mObj).first;
+        if (action instanceof Parcelable) {
+            return (Parcelable) action;
+        }
+        return null;
+    }
+
+    @Nullable
+    @SuppressWarnings("unchecked")
+    private ActionHandler getActionHandler() {
+        ObjectsCompat.requireNonNull(mObj, "Object must be non-null");
+        Object action = ((Pair<Object, Slice>) mObj).first;
+        if (action instanceof ActionHandler) {
+            return (ActionHandler) action;
+        }
+        return null;
+    }
+
+
+    /**
      * Trigger the action on this SliceItem.
      * @param context The Context to use when sending the PendingIntent.
      * @param i The intent to use when sending the PendingIntent.
@@ -310,15 +348,17 @@ public final class SliceItem extends CustomVersionedParcelable {
     // @RestrictTo(Scope.LIBRARY_GROUP_PREFIX)
     public boolean fireActionInternal(@Nullable Context context, @Nullable Intent i)
             throws PendingIntent.CanceledException {
-        ObjectsCompat.requireNonNull(mObj, "Object must be non-null for FORMAT_ACTION");
-        Object action = ((Pair<Object, Slice>) mObj).first;
-        if (action instanceof PendingIntent) {
-            ((PendingIntent) action).send(context, 0, i, null, null);
-            return false;
-        } else {
-            ((ActionHandler) action).onAction(this, context, i);
-            return true;
+        Parcelable action = getActionParcelable();
+        if (action != null) {
+            SliceUtils.fireAction(context, action, i);
         }
+
+        ActionHandler handler = getActionHandler();
+        if (handler != null) {
+            handler.onAction(this, context, i);
+        }
+
+        return true;
     }
 
     /**
@@ -434,7 +474,7 @@ public final class SliceItem extends CustomVersionedParcelable {
                 dest.putParcelable(OBJ, ((Slice) obj).toBundle());
                 break;
             case FORMAT_ACTION:
-                dest.putParcelable(OBJ, (PendingIntent) ((Pair<Object, Slice>) obj).first);
+                dest.putParcelable(OBJ, (Parcelable) ((Pair<Object, Slice>) obj).first);
                 dest.putBundle(OBJ_2, ((Pair<Object, Slice>) obj).second.toBundle());
                 break;
             case FORMAT_TEXT:

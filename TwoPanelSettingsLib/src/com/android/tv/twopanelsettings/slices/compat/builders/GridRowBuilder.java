@@ -17,6 +17,7 @@
 package com.android.tv.twopanelsettings.slices.compat.builders;
 
 import android.app.PendingIntent;
+import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -60,7 +61,7 @@ public class GridRowBuilder {
     private final List<CellBuilder> mCells = new ArrayList<>();
     private boolean mHasSeeMore;
     private CellBuilder mSeeMoreCell;
-    private PendingIntent mSeeMoreIntent;
+    private Parcelable mSeeMoreIntent;
     private SliceAction mPrimaryAction;
     private CharSequence mDescription;
     private int mLayoutDirection = -1;
@@ -116,7 +117,7 @@ public class GridRowBuilder {
      * </p>
      */
     @NonNull
-    public GridRowBuilder setSeeMoreAction(@NonNull PendingIntent intent) {
+    public GridRowBuilder setSeeMoreAction(@NonNull Parcelable intent) {
         if (mHasSeeMore) {
             throw new IllegalStateException("Trying to add see more action when one has "
                     + "already been added");
@@ -207,7 +208,7 @@ public class GridRowBuilder {
     /**
      */
     // @RestrictTo(LIBRARY)
-    public PendingIntent getSeeMoreIntent() {
+    public Parcelable getSeeMoreIntent() {
         return mSeeMoreIntent;
     }
 
@@ -284,7 +285,7 @@ public class GridRowBuilder {
         private final List<Integer> mTypes = new ArrayList<>();
         private final List<Boolean> mLoadings = new ArrayList<>();
         private CharSequence mCellDescription;
-        private PendingIntent mContentIntent;
+        private Parcelable mContentIntent;
         private SliceAction mSliceAction;
 
         /**
@@ -425,7 +426,7 @@ public class GridRowBuilder {
          * Sets the action to be invoked if the user taps on this cell in the row.
          */
         @NonNull
-        public CellBuilder setContentIntent(@NonNull PendingIntent intent) {
+        public CellBuilder setContentIntent(@NonNull Parcelable intent) {
             mContentIntent = intent;
             return this;
         }
@@ -490,7 +491,7 @@ public class GridRowBuilder {
         /**
          */
         // @RestrictTo(LIBRARY)
-        public PendingIntent getContentIntent() {
+        public Parcelable getContentIntent() {
             return mContentIntent;
         }
 

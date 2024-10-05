@@ -21,6 +21,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
+import android.os.Parcelable;
 import android.os.PersistableBundle;
 import android.view.View;
 
@@ -450,7 +451,7 @@ public class ListBuilder extends TemplateSliceBuilder {
      * </p>
      */
     @NonNull
-    public ListBuilder setSeeMoreAction(@NonNull PendingIntent intent) {
+    public ListBuilder setSeeMoreAction(@NonNull Parcelable intent) {
         if (mHasSeeMore) {
             throw new IllegalArgumentException("Trying to add see more action when one has "
                     + "already been added");
@@ -838,8 +839,8 @@ public class ListBuilder extends TemplateSliceBuilder {
         private int mValue = 0;
         private boolean mValueSet = false;
         private CharSequence mContentDescription;
-        private PendingIntent mAction;
-        private PendingIntent mInputAction;
+        private Parcelable mAction;
+        private Parcelable mInputAction;
         private CharSequence mTitle;
         private CharSequence mSubtitle;
         private SliceAction mPrimaryAction;
@@ -920,7 +921,7 @@ public class ListBuilder extends TemplateSliceBuilder {
          */
         // @RestrictTo(LIBRARY)
         @Nullable
-        public PendingIntent getAction() {
+        public Parcelable getAction() {
             return mAction;
         }
 
@@ -1017,7 +1018,7 @@ public class ListBuilder extends TemplateSliceBuilder {
          */
         // @RestrictTo(LIBRARY)
         @Nullable
-        public PendingIntent getInputAction() {
+        public Parcelable getInputAction() {
             return mInputAction;
         }
 
@@ -1026,7 +1027,7 @@ public class ListBuilder extends TemplateSliceBuilder {
          */
         @SuppressLint("ExecutorRegistration")
         @NonNull
-        public RatingBuilder setInputAction(@NonNull PendingIntent action) {
+        public RatingBuilder setInputAction(@NonNull Parcelable action) {
             mInputAction = action;
             return this;
         }
@@ -1108,8 +1109,8 @@ public class ListBuilder extends TemplateSliceBuilder {
         private boolean mValueSet = false;
         private CharSequence mTitle;
         private CharSequence mSubtitle;
-        private PendingIntent mAction;
-        private PendingIntent mInputAction;
+        private Parcelable mAction;
+        private Parcelable mInputAction;
         private IconCompat mThumb;
         private SliceAction mPrimaryAction;
         private CharSequence mContentDescription;
@@ -1262,7 +1263,7 @@ public class ListBuilder extends TemplateSliceBuilder {
          * Set the {@link PendingIntent} to send when the current value is updated.
          */
         @NonNull
-        public InputRangeBuilder setInputAction(@NonNull PendingIntent action) {
+        public InputRangeBuilder setInputAction(@NonNull Parcelable action) {
             mInputAction = action;
             return this;
         }
@@ -1419,7 +1420,7 @@ public class ListBuilder extends TemplateSliceBuilder {
          */
         // @RestrictTo(LIBRARY)
         @Nullable
-        public PendingIntent getAction() {
+        public Parcelable getAction() {
             return mAction;
         }
 
@@ -1427,7 +1428,7 @@ public class ListBuilder extends TemplateSliceBuilder {
          */
         // @RestrictTo(LIBRARY)
         @Nullable
-        public PendingIntent getInputAction() {
+        public Parcelable getInputAction() {
             return mInputAction;
         }
 

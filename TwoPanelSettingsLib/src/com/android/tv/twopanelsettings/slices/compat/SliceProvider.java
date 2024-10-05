@@ -117,6 +117,10 @@ import java.util.Set;
 // @Deprecated // Supported for TV
 public abstract class SliceProvider extends ContentProvider implements
         CoreComponentFactory.CompatWrapped {
+    /**
+     * {@link Slice} can be returned directly as serialized versioned parcelable.
+     */
+    public static final String EXTRA_SUPPORTS_SETTINGS_SLICE = "supports_settings_slice";
 
     private static Set<SliceSpec> sSpecs;
     private static Clock sClock;
@@ -283,7 +287,14 @@ public abstract class SliceProvider extends ContentProvider implements
      */
     // TODO: Provide alternate notifyChange that takes in the slice (i.e. notifyChange(Uri, Slice)).
     @Nullable
-    public abstract Slice onBindSlice(@NonNull Uri sliceUri);
+    public Slice onBindSlice(@NonNull Uri sliceUri) {
+        return null;
+    }
+
+    @Nullable
+    public Slice onBindSlice(@NonNull Uri sliceUri, @NonNull Bundle extras) {
+        return onBindSlice(sliceUri);
+    }
 
     /**
      * Called to inform an app that a slice has been pinned.

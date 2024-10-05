@@ -45,6 +45,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.text.TextUtils;
 
 import androidx.annotation.IntDef;
@@ -279,7 +280,7 @@ public class SliceMetadata {
             Intent intent = new Intent().addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
                     .putExtra(EXTRA_TOGGLE_STATE, toggleValue);
             if (mContext != null) {
-                toggleAction.getAction().send(mContext, 0, intent, null, null);
+                SliceUtils.fireAction(mContext, toggleAction.getActionParcelable(), intent);
             }
             return true;
         }
@@ -292,11 +293,11 @@ public class SliceMetadata {
      * @return the {@link android.app.PendingIntent} for the input range.
      */
     @Nullable
-    public PendingIntent getInputRangeAction() {
+    public Parcelable getInputRangeAction() {
         if (mTemplateType == ROW_TYPE_SLIDER) {
             SliceItem range = mHeaderContent.getRange();
             if (range != null) {
-                return range.getAction();
+                return range.getActionParcelable();
             }
         }
         return null;

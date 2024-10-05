@@ -17,6 +17,7 @@
 package com.android.tv.twopanelsettings.slices.compat.builders;
 
 import android.app.PendingIntent;
+import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,7 +46,7 @@ public class SelectionBuilder {
     private final Set<String> mOptionKeys;
     private String mSelectedOption;
     private SliceAction mPrimaryAction;
-    private PendingIntent mInputAction;
+    private Parcelable mInputAction;
 
     private CharSequence mTitle;
     private CharSequence mSubtitle;
@@ -196,7 +197,7 @@ public class SelectionBuilder {
     /**
      */
     // @RestrictTo(LIBRARY)
-    public PendingIntent getInputAction() {
+    public Parcelable getInputAction() {
         return mInputAction;
     }
 

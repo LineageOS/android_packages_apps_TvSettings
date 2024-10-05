@@ -28,8 +28,8 @@ import static com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder
 import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.SUBTYPE_HOST_EXTRAS;
 import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.SUBTYPE_MILLIS;
 
-import android.app.PendingIntent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.os.PersistableBundle;
 
 import androidx.annotation.ColorInt;
@@ -212,7 +212,7 @@ public class ListBuilderBasicImpl extends TemplateBuilderImpl implements ListBui
     /**
      */
     @Override
-    public void setSeeMoreAction(@NonNull PendingIntent intent) {
+    public void setSeeMoreAction(@NonNull Parcelable intent) {
         // Do nothing.
     }
 

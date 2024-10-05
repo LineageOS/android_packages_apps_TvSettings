@@ -33,6 +33,7 @@ import android.os.Bundle;
 import android.os.CancellationSignal;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.Parcelable;
 import android.os.Process;
 import android.os.StrictMode;
 import android.os.StrictMode.ThreadPolicy;
@@ -162,11 +163,7 @@ public abstract class SliceProvider extends ContentProvider {
      * @see Slice
      * @see Slice#HINT_PARTIAL
      */
-    public Slice onBindSlice(Uri sliceUri, Set<SliceSpec> supportedSpecs) {
-        return onBindSlice(sliceUri, new ArrayList<>(supportedSpecs));
-    }
-
-    public Slice onBindSlice(Uri sliceUri, List<SliceSpec> supportedSpecs) {
+    public Parcelable onBindSlice(Uri sliceUri, Set<SliceSpec> supportedSpecs, Bundle extras) {
         return null;
     }
 
@@ -308,7 +305,8 @@ public abstract class SliceProvider extends ContentProvider {
             int callingUid = Binder.getCallingUid();
             int callingPid = Binder.getCallingPid();
 
-            Slice s = handleBindSlice(uri, supportedSpecs, callingPackage, callingUid, callingPid);
+            Parcelable s = handleBindSlice(uri, supportedSpecs, callingPackage, callingUid,
+                    callingPid, extras);
             Bundle b = new Bundle();
             b.putParcelable(EXTRA_SLICE, s);
             return b;
@@ -319,8 +317,8 @@ public abstract class SliceProvider extends ContentProvider {
             List<SliceSpec> supportedSpecs = extras.getParcelableArrayList(EXTRA_SUPPORTED_SPECS, SliceSpec.class);
             Bundle b = new Bundle();
             if (uri != null) {
-                Slice s = handleBindSlice(uri, supportedSpecs, getCallingPackage(),
-                        Binder.getCallingUid(), Binder.getCallingPid());
+                Parcelable s = handleBindSlice(uri, supportedSpecs, getCallingPackage(),
+                        Binder.getCallingUid(), Binder.getCallingPid(), extras);
                 b.putParcelable(EXTRA_SLICE, s);
             } else {
                 b.putParcelable(EXTRA_SLICE, null);
@@ -388,8 +386,8 @@ public abstract class SliceProvider extends ContentProvider {
         }
     }
 
-    private Slice handleBindSlice(Uri sliceUri, List<SliceSpec> supportedSpecs,
-            String callingPkg, int callingUid, int callingPid) {
+    private Parcelable handleBindSlice(Uri sliceUri, List<SliceSpec> supportedSpecs,
+                                String callingPkg, int callingUid, int callingPid, Bundle extras) {
         // This can be removed once Slice#bindSlice is removed and everyone is using
         // SliceManager#bindSlice.
         String pkg = callingPkg != null ? callingPkg
@@ -403,7 +401,7 @@ public abstract class SliceProvider extends ContentProvider {
         mCallback = "onBindSlice";
         sMainHandler.postDelayed(mAnr, SLICE_BIND_ANR);
         try {
-            return onBindSliceStrict(sliceUri, supportedSpecs);
+            return onBindSliceStrict(sliceUri, supportedSpecs, extras);
         } finally {
             sMainHandler.removeCallbacks(mAnr);
         }
@@ -432,18 +430,15 @@ public abstract class SliceProvider extends ContentProvider {
         return intent;
     }
 
-    public static CharSequence getPermissionString(Context context, String callingPackage) {
-        return "";
-    }
-
-    private Slice onBindSliceStrict(Uri sliceUri, List<SliceSpec> supportedSpecs) {
+    private Parcelable onBindSliceStrict(Uri sliceUri, List<SliceSpec> supportedSpecs,
+                                         Bundle extras) {
         ThreadPolicy oldPolicy = StrictMode.getThreadPolicy();
         try {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
                     .detectAll()
                     .penaltyDeath()
                     .build());
-            return onBindSlice(sliceUri, new ArraySet<>(supportedSpecs));
+            return onBindSlice(sliceUri, new ArraySet<>(supportedSpecs), extras);
         } finally {
             StrictMode.setThreadPolicy(oldPolicy);
         }

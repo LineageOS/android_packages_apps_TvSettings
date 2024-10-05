@@ -53,6 +53,8 @@ import java.util.Set;
  * The SliceManager manages permissions and pinned state for slices.
  */
 public class SliceManager {
+    /** Delegate calls except bind to system slice manager */
+    private static final boolean DELEGATE_TO_SYSTEM_MANAGER = true;
 
     private static final String TAG = "SliceManager";
 
@@ -94,6 +96,7 @@ public class SliceManager {
 
     private final SliceManagerService mService;
     private final Context mContext;
+    private final android.app.slice.SliceManager mSystemManager;
 
     @NonNull
     public static synchronized SliceManager from(Context context) {
@@ -106,6 +109,7 @@ public class SliceManager {
     private SliceManager(Context context) {
         mContext = context;
         mService = new SliceManagerService(context);
+        mSystemManager = mContext.getSystemService(android.app.slice.SliceManager.class);
     }
 
     /**
@@ -124,6 +128,10 @@ public class SliceManager {
      * @see Intent#CATEGORY_HOME
      */
     public void pinSlice(@NonNull Uri uri, @NonNull Set<SliceSpec> specs) {
+        if (DELEGATE_TO_SYSTEM_MANAGER) {
+            mSystemManager.pinSlice(uri, specs);
+            return;
+        }
         mService.pinSlice(uri,
                 specs.toArray(new SliceSpec[specs.size()]));
     }
@@ -143,6 +151,10 @@ public class SliceManager {
      * @see Intent#CATEGORY_HOME
      */
     public void unpinSlice(@NonNull Uri uri) {
+        if (DELEGATE_TO_SYSTEM_MANAGER) {
+            mSystemManager.unpinSlice(uri);
+            return;
+        }
         mService.unpinSlice(uri);
     }
 
@@ -154,6 +166,9 @@ public class SliceManager {
      * @see SliceSpec
      */
     public @NonNull Set<SliceSpec> getPinnedSpecs(Uri uri) {
+       if (DELEGATE_TO_SYSTEM_MANAGER) {
+           return mSystemManager.getPinnedSpecs(uri);
+       }
        return new ArraySet<>(Arrays.asList(mService.getPinnedSpecs(uri)));
     }
 
@@ -162,6 +177,9 @@ public class SliceManager {
      * @see SliceProvider#onSlicePinned
      */
     public @NonNull List<Uri> getPinnedSlices() {
+        if (DELEGATE_TO_SYSTEM_MANAGER) {
+            return mSystemManager.getPinnedSlices();
+        }
         return Arrays.asList(mService.getPinnedSlices());
     }
 
@@ -195,6 +213,30 @@ public class SliceManager {
     }
 
     /**
+     * For use in extension libraries
+     */
+    public @Nullable Bundle bindSlice(@NonNull Uri uri, @NonNull Set<SliceSpec> supportedSpecs,
+                                      Bundle extras) {
+        Objects.requireNonNull(uri, "uri");
+        ContentResolver resolver = mContext.getContentResolver();
+        try (ContentProviderClient provider = resolver.acquireUnstableContentProviderClient(uri)) {
+            if (provider == null) {
+                Log.w(TAG, String.format("Unknown URI: %s", uri));
+                return null;
+            }
+            extras.putParcelable(SliceProvider.EXTRA_BIND_URI, uri);
+            extras.putParcelableArrayList(SliceProvider.EXTRA_SUPPORTED_SPECS,
+                    new ArrayList<>(supportedSpecs));
+            return provider.call(SliceProvider.METHOD_SLICE, null, extras);
+        } catch (RemoteException e) {
+            // Arbitrary and not worth documenting, as Activity
+            // Manager will kill this process shortly anyway.
+            return null;
+        }
+
+    }
+
+    /**
      * Turns a slice Uri into slice content.
      *
      * @param uri The URI to a slice provider
@@ -203,31 +245,8 @@ public class SliceManager {
      * @see Slice
      */
     public @Nullable Slice bindSlice(@NonNull Uri uri, @NonNull Set<SliceSpec> supportedSpecs) {
-        Objects.requireNonNull(uri, "uri");
-        ContentResolver resolver = mContext.getContentResolver();
-        try (ContentProviderClient provider = resolver.acquireUnstableContentProviderClient(uri)) {
-            if (provider == null) {
-                Log.w(TAG, String.format("Unknown URI: %s", uri));
-                return null;
-            }
-            Bundle extras = new Bundle();
-            extras.putParcelable(SliceProvider.EXTRA_BIND_URI, uri);
-            extras.putParcelableArrayList(SliceProvider.EXTRA_SUPPORTED_SPECS,
-                    new ArrayList<>(supportedSpecs));
-            final Bundle res = provider.call(SliceProvider.METHOD_SLICE, null, extras);
-            if (res == null) {
-                return null;
-            }
-            return res.getParcelable(SliceProvider.EXTRA_SLICE, Slice.class);
-        } catch (RemoteException e) {
-            // Arbitrary and not worth documenting, as Activity
-            // Manager will kill this process shortly anyway.
-            return null;
-        }
-    }
-
-    public @Nullable Slice bindSlice(@NonNull Uri uri, @NonNull List<SliceSpec> supportedSpecs) {
-        return bindSlice(uri, new ArraySet<>(supportedSpecs));
+        Bundle result = bindSlice(uri, supportedSpecs, new Bundle());
+        return result != null ? result.getParcelable(SliceProvider.EXTRA_SLICE, Slice.class) : null;
     }
 
     /**
@@ -315,6 +334,40 @@ public class SliceManager {
     }
 
     /**
+     * For use with library extensions.
+     */
+    public @Nullable Bundle bindSlice(@NonNull Intent intent,
+                                      @NonNull Set<SliceSpec> supportedSpecs,
+                                      @NonNull Bundle extras) {
+        Objects.requireNonNull(intent, "intent");
+        Preconditions.checkArgument(intent.getComponent() != null || intent.getPackage() != null
+                        || intent.getData() != null,
+                "Slice intent must be explicit %s", intent);
+        ContentResolver resolver = mContext.getContentResolver();
+        final Uri staticUri = resolveStatic(intent, resolver);
+        if (staticUri != null) return bindSlice(staticUri, supportedSpecs, extras);
+        // Otherwise ask the app
+        String authority = getAuthority(intent);
+        if (authority == null) return null;
+        Uri uri = new Uri.Builder().scheme(ContentResolver.SCHEME_CONTENT)
+                .authority(authority).build();
+        try (ContentProviderClient provider = resolver.acquireUnstableContentProviderClient(uri)) {
+            if (provider == null) {
+                Log.w(TAG, String.format("Unknown URI: %s", uri));
+                return null;
+            }
+            extras.putParcelable(SliceProvider.EXTRA_INTENT, intent);
+            extras.putParcelableArrayList(SliceProvider.EXTRA_SUPPORTED_SPECS,
+                    new ArrayList<>(supportedSpecs));
+            return provider.call(SliceProvider.METHOD_MAP_INTENT, null, extras);
+        } catch (RemoteException e) {
+            // Arbitrary and not worth documenting, as Activity
+            // Manager will kill this process shortly anyway.
+            return null;
+        }
+    }
+
+    /**
      * Turns a slice intent into slice content. Is a shortcut to perform the action
      * of both {@link #mapIntentToUri(Intent)} and {@link #bindSlice(Uri, Set)} at once.
      *
@@ -327,48 +380,8 @@ public class SliceManager {
      */
     public @Nullable Slice bindSlice(@NonNull Intent intent,
             @NonNull Set<SliceSpec> supportedSpecs) {
-        Objects.requireNonNull(intent, "intent");
-        Preconditions.checkArgument(intent.getComponent() != null || intent.getPackage() != null
-                || intent.getData() != null,
-                "Slice intent must be explicit %s", intent);
-        ContentResolver resolver = mContext.getContentResolver();
-        final Uri staticUri = resolveStatic(intent, resolver);
-        if (staticUri != null) return bindSlice(staticUri, supportedSpecs);
-        // Otherwise ask the app
-        String authority = getAuthority(intent);
-        if (authority == null) return null;
-        Uri uri = new Uri.Builder().scheme(ContentResolver.SCHEME_CONTENT)
-                .authority(authority).build();
-        try (ContentProviderClient provider = resolver.acquireUnstableContentProviderClient(uri)) {
-            if (provider == null) {
-                Log.w(TAG, String.format("Unknown URI: %s", uri));
-                return null;
-            }
-            Bundle extras = new Bundle();
-            extras.putParcelable(SliceProvider.EXTRA_INTENT, intent);
-            extras.putParcelableArrayList(SliceProvider.EXTRA_SUPPORTED_SPECS,
-                    new ArrayList<>(supportedSpecs));
-            final Bundle res = provider.call(SliceProvider.METHOD_MAP_INTENT, null, extras);
-            if (res == null) {
-                return null;
-            }
-            return res.getParcelable(SliceProvider.EXTRA_SLICE, Slice.class);
-        } catch (RemoteException e) {
-            // Arbitrary and not worth documenting, as Activity
-            // Manager will kill this process shortly anyway.
-            return null;
-        }
-    }
-
-    /**
-     * @deprecated TO BE REMOVED.
-     * @removed
-     */
-    @Deprecated
-    @Nullable
-    public Slice bindSlice(@NonNull Intent intent,
-            @NonNull List<SliceSpec> supportedSpecs) {
-        return bindSlice(intent, new ArraySet<>(supportedSpecs));
+        Bundle result = bindSlice(intent, supportedSpecs, new Bundle());
+        return result != null ? result.getParcelable(SliceProvider.EXTRA_SLICE, Slice.class) : null;
     }
 
     /**
@@ -387,6 +400,9 @@ public class SliceManager {
      * @see #grantSlicePermission(String, Uri)
      */
     public int checkSlicePermission(@NonNull Uri uri, int pid, int uid) {
+        if (DELEGATE_TO_SYSTEM_MANAGER) {
+            return mSystemManager.checkSlicePermission(uri, pid, uid);
+        }
         return PERMISSION_GRANTED;
     }
 
@@ -398,7 +414,11 @@ public class SliceManager {
      *
      * @see #revokeSlicePermission
      */
-    public void grantSlicePermission(@NonNull String toPackage, @NonNull Uri uri) {}
+    public void grantSlicePermission(@NonNull String toPackage, @NonNull Uri uri) {
+        if (DELEGATE_TO_SYSTEM_MANAGER) {
+            mSystemManager.grantSlicePermission(toPackage, uri);
+        }
+    }
 
     /**
      * Remove permissions to access a particular content provider Uri
@@ -414,15 +434,27 @@ public class SliceManager {
      *
      * @see #grantSlicePermission
      */
-    public void revokeSlicePermission(@NonNull String toPackage, @NonNull Uri uri) {}
+    public void revokeSlicePermission(@NonNull String toPackage, @NonNull Uri uri) {
+        if (DELEGATE_TO_SYSTEM_MANAGER) {
+            mSystemManager.revokeSlicePermission(toPackage, uri);
+        }
+    }
 
     /**
      * Does the permission check to see if a caller has access to a specific slice.
      */
-    public void enforceSlicePermission(Uri uri, int pid, int uid, String[] autoGrantPermissions) {}
+    public void enforceSlicePermission(Uri uri, int pid, int uid, String[] autoGrantPermissions) {
+        if (DELEGATE_TO_SYSTEM_MANAGER) {
+            mSystemManager.enforceSlicePermission(uri, pid, uid, autoGrantPermissions);
+        }
+    }
 
     /**
      * Called by SystemUI to grant a slice permission after a dialog is shown.
      */
-    public void grantPermissionFromUser(Uri uri, String pkg, boolean allSlices) {}
+    public void grantPermissionFromUser(Uri uri, String pkg, boolean allSlices) {
+        if (DELEGATE_TO_SYSTEM_MANAGER) {
+            mSystemManager.grantPermissionFromUser(uri, pkg, allSlices);
+        }
+    }
 }

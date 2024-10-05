@@ -19,7 +19,9 @@ package com.android.tv.twopanelsettings.slices.compat.builders;
 import static com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder.ICON_IMAGE;
 
 import android.app.PendingIntent;
+import android.content.Intent;
 import android.graphics.drawable.Icon;
+import android.os.Parcelable;
 
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
@@ -48,8 +50,8 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      */
     // @RestrictTo(LIBRARY)
     @RequiresApi(23)
-    public SliceAction(@NonNull PendingIntent action, @NonNull Icon actionIcon,
-            @NonNull CharSequence actionTitle) {
+    public SliceAction(@NonNull Parcelable action, @NonNull Icon actionIcon,
+                       @NonNull CharSequence actionTitle) {
         this(action, actionIcon, ICON_IMAGE, actionTitle);
     }
 
@@ -57,7 +59,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      */
     // @RestrictTo(LIBRARY)
     @RequiresApi(23)
-    public SliceAction(@NonNull PendingIntent action, @NonNull Icon actionIcon,
+    public SliceAction(@NonNull Parcelable action, @NonNull Icon actionIcon,
             @ListBuilder.ImageMode int imageMode, @NonNull CharSequence actionTitle) {
         this(action, IconCompat.createFromIcon(actionIcon), imageMode, actionTitle);
     }
@@ -66,7 +68,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      */
     // @RestrictTo(LIBRARY)
     @RequiresApi(23)
-    public SliceAction(@NonNull PendingIntent action, @NonNull Icon actionIcon,
+    public SliceAction(@NonNull Parcelable action, @NonNull Icon actionIcon,
             @NonNull CharSequence actionTitle, boolean isChecked) {
         this(action, IconCompat.createFromIcon(actionIcon), actionTitle, isChecked);
     }
@@ -80,7 +82,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      *                    been set via {@link #setContentDescription(CharSequence)}.
      */
     // @RestrictTo(LIBRARY)
-    public SliceAction(@NonNull PendingIntent action, @NonNull IconCompat actionIcon,
+    public SliceAction(@NonNull Parcelable action, @NonNull IconCompat actionIcon,
             @NonNull CharSequence actionTitle) {
         this(action, actionIcon, ICON_IMAGE, actionTitle);
     }
@@ -103,7 +105,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      * @see ListBuilder#LARGE_IMAGE
      */
     // @RestrictTo(LIBRARY_GROUP)
-    public SliceAction(@NonNull PendingIntent action, @NonNull IconCompat actionIcon,
+    public SliceAction(@NonNull Parcelable action, @NonNull IconCompat actionIcon,
             @ListBuilder.ImageMode int imageMode, @NonNull CharSequence actionTitle) {
         mSliceAction = new SliceActionImpl(action, actionIcon, imageMode, actionTitle);
     }
@@ -119,7 +121,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      * @param isChecked the state of the toggle.
      */
     // @RestrictTo(LIBRARY_GROUP)
-    public SliceAction(@NonNull PendingIntent action, @NonNull IconCompat actionIcon,
+    public SliceAction(@NonNull Parcelable action, @NonNull IconCompat actionIcon,
             @NonNull CharSequence actionTitle, boolean isChecked) {
         mSliceAction = new SliceActionImpl(action, actionIcon, actionTitle, isChecked);
     }
@@ -133,7 +135,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      * @param isChecked the state of the toggle.
      */
     // @RestrictTo(LIBRARY_GROUP)
-    public SliceAction(@NonNull PendingIntent action, @NonNull CharSequence actionTitle,
+    public SliceAction(@NonNull Parcelable action, @NonNull CharSequence actionTitle,
             boolean isChecked) {
         mSliceAction = new SliceActionImpl(action, actionTitle, isChecked);
     }
@@ -147,7 +149,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      * @param isDatePicker   if it is a date picker, as opposed to a time picker.
      */
     // @RestrictTo(LIBRARY_GROUP)
-    public SliceAction(@NonNull PendingIntent action, @NonNull CharSequence actionTitle,
+    public SliceAction(@NonNull Parcelable action, @NonNull CharSequence actionTitle,
             long dateTimeMillis, boolean isDatePicker) {
         mSliceAction = new SliceActionImpl(action, actionTitle, dateTimeMillis, isDatePicker);
     }
@@ -165,7 +167,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      * @see ListBuilder#SMALL_IMAGE
      * @see ListBuilder#LARGE_IMAGE
      */
-    public static SliceAction create(@NonNull PendingIntent action,
+    public static SliceAction create(@NonNull Parcelable action,
             @NonNull IconCompat actionIcon, @ListBuilder.ImageMode int imageMode,
             @NonNull CharSequence actionTitle) {
         return new SliceAction(action, actionIcon, imageMode, actionTitle);
@@ -200,7 +202,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      */
     // @RestrictTo(LIBRARY)
     @NonNull
-    public static SliceAction createDatePicker(@NonNull PendingIntent action,
+    public static SliceAction createDatePicker(@NonNull Parcelable action,
             @NonNull CharSequence actionTitle, long dateTimeMillis) {
         return new SliceAction(action, actionTitle, dateTimeMillis, true);
     }
@@ -215,7 +217,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      */
     // @RestrictTo(LIBRARY)
     @NonNull
-    public static SliceAction createTimePicker(@NonNull PendingIntent action,
+    public static SliceAction createTimePicker(@NonNull Parcelable action,
             @NonNull CharSequence actionTitle, long dateTimeMillis) {
         return new SliceAction(action, actionTitle, dateTimeMillis, false);
     }
@@ -234,7 +236,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      * @see ListBuilder#SMALL_IMAGE
      * @see ListBuilder#LARGE_IMAGE
      */
-    public static SliceAction createDeeplink(@NonNull PendingIntent action,
+    public static SliceAction createDeeplink(@NonNull Parcelable action,
             @NonNull IconCompat actionIcon, @ListBuilder.ImageMode int imageMode,
             @NonNull CharSequence actionTitle) {
         SliceAction sliceAction = new SliceAction(action, actionIcon, imageMode, actionTitle);
@@ -273,7 +275,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      *                    been set via {@link #setContentDescription(CharSequence)}.
      * @param isChecked the state of the toggle.
      */
-    public static SliceAction createToggle(@NonNull PendingIntent action,
+    public static SliceAction createToggle(@NonNull Parcelable action,
             @NonNull CharSequence actionTitle, boolean isChecked) {
         return new SliceAction(action, actionTitle, isChecked);
     }
@@ -301,7 +303,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      *                    been set via {@link #setContentDescription(CharSequence)}.
      * @param isChecked the state of the toggle.
      */
-    public static SliceAction createToggle(@NonNull PendingIntent action,
+    public static SliceAction createToggle(@NonNull Parcelable action,
             @NonNull IconCompat actionIcon, @NonNull CharSequence actionTitle, boolean isChecked) {
         return new SliceAction(action, actionIcon, actionTitle, isChecked);
     }
@@ -367,10 +369,25 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
     /**
      * @return the {@link PendingIntent} associated with this action.
      */
-    @NonNull
+    @Nullable
     @Override
     public PendingIntent getAction() {
         return mSliceAction.getAction();
+    }
+
+    /**
+     * @return the {@link PendingIntent} associated with this action.
+     */
+    @Nullable
+    @Override
+    public Intent getActionIntent() {
+        return mSliceAction.getActionIntent();
+    }
+
+    @NonNull
+    @Override
+    public Parcelable getActionParcelable() {
+        return mSliceAction.getActionParcelable();
     }
 
     /**
@@ -479,7 +496,7 @@ public class SliceAction implements com.android.tv.twopanelsettings.slices.compa
      */
     // @RestrictTo(LIBRARY)
     public void setPrimaryAction(@NonNull Slice.Builder builder) {
-        builder.addAction(mSliceAction.getAction(),
+        builder.addAction(mSliceAction.getActionParcelable(),
                 mSliceAction.buildPrimaryActionSlice(builder), mSliceAction.getSubtype());
     }
 }

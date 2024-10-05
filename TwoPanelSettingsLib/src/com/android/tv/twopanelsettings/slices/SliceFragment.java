@@ -50,7 +50,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.IntentSenderRequest;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -103,7 +102,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private CharSequence mScreenTitle;
     private CharSequence mScreenSubtitle;
     private Icon mScreenIcon;
-    private PendingIntent mPreferenceFollowupIntent;
+    private Parcelable mPreferenceFollowupIntent;
     private int mFollowupPendingIntentResultCode;
     private Intent mFollowupPendingIntentExtras;
     private Intent mFollowupPendingIntentExtrasCopy;
@@ -113,16 +112,15 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private final Handler mHandler = new Handler();
     private final ActivityResultLauncher<IntentSenderRequest> mActivityResultLauncher =
             registerForActivityResult(new ActivityResultContracts.StartIntentSenderForResult(),
-                    new ActivityResultCallback<ActivityResult>() {
-                        @Override
-                        public void onActivityResult(ActivityResult result) {
-                            Intent data = result.getData();
-                            mFollowupPendingIntentExtras = data;
-                            mFollowupPendingIntentExtrasCopy = data == null ? null : new Intent(
-                                    data);
-                            mFollowupPendingIntentResultCode = result.getResultCode();
-                        }
+                    this::processActionResult);
+    private final ActivityResultLauncher<Intent> mActivityResultLauncherIntent =
+            registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                    this::processActionResult);
+    private final ActivityResultLauncher<Intent> mActivityResultLauncherIntentFollowup =
+            registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                    result -> {
                     });
+
     private final ContentObserver mContentObserver = new ContentObserver(new Handler()) {
         @Override
         public void onChange(boolean selfChange, Uri uri) {
@@ -186,6 +184,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 .getSliceLiveData(getActivity(), Uri.parse(mUriString));
     }
 
+    private void processActionResult(ActivityResult result) {
+        Intent data = result.getData();
+        mFollowupPendingIntentExtras = data;
+        mFollowupPendingIntentExtrasCopy = data == null ? null : new Intent(
+                data);
+        mFollowupPendingIntentResultCode = result.getResultCode();
+    }
+
     private void fireFollowupPendingIntent() {
         if (mFollowupPendingIntentExtras == null) {
             return;
@@ -210,11 +216,21 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             if (mPreferenceFollowupIntent == null) {
                 return;
             }
-            try {
-                mPreferenceFollowupIntent.send(getContext(),
-                        mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras);
-            } catch (CanceledException e) {
-                Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
+            if (mPreferenceFollowupIntent instanceof Intent) {
+                Intent filledIn = new Intent((Intent) mPreferenceFollowupIntent);
+                filledIn.fillIn(mFollowupPendingIntentExtras, 0);
+                if (requireContext().getPackageManager().resolveActivity(filledIn, 0) != null) {
+                    mActivityResultLauncherIntentFollowup.launch(filledIn);
+                } else {
+                    requireContext().sendBroadcast(filledIn);
+                }
+            } else {
+                try {
+                    ((PendingIntent) mPreferenceFollowupIntent).send(requireContext(),
+                            mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras);
+                } catch (CanceledException e) {
+                    Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
+                }
             }
             mPreferenceFollowupIntent = null;
         }
@@ -586,12 +602,30 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (preference.getSliceAction() == null) {
             return false;
         }
-        IntentSender intentSender = preference.getSliceAction().getAction().getIntentSender();
-        mActivityResultLauncher.launch(
-                new IntentSenderRequest.Builder(intentSender).setFillInIntent(
-                        fillInIntent).build());
+
+        Intent intent = preference.getSliceAction().getActionIntent();
+        if (intent != null) {
+            Intent filledIn = new Intent(intent);
+            if (fillInIntent != null) {
+                filledIn.fillIn(fillInIntent, 0);
+            }
+
+            if (requireContext().getPackageManager().resolveActivity(filledIn, 0) != null) {
+                mActivityResultLauncherIntent.launch(filledIn);
+            } else {
+                requireContext().sendBroadcast(intent);
+            }
+        } else {
+            IntentSender intentSender = preference.getSliceAction().getAction().getIntentSender();
+            mActivityResultLauncher.launch(
+                    new IntentSenderRequest.Builder(intentSender).setFillInIntent(
+                            fillInIntent).build());
+        }
         if (preference.getFollowupSliceAction() != null) {
             mPreferenceFollowupIntent = preference.getFollowupSliceAction().getAction();
+            if (mPreferenceFollowupIntent == null) {
+                mPreferenceFollowupIntent = preference.getFollowupSliceAction().getActionIntent();
+            }
         }
 
         return true;

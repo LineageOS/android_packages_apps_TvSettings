@@ -47,8 +47,8 @@ import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.SUBT
 import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.SUBTYPE_MIN;
 import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.SUBTYPE_SELECTION;
 
-import android.app.PendingIntent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.os.PersistableBundle;
 
 import androidx.annotation.ColorInt;
@@ -264,7 +264,7 @@ public class ListBuilderImpl extends TemplateBuilderImpl implements ListBuilder 
     /**
      */
     @Override
-    public void setSeeMoreAction(@NonNull final PendingIntent intent) {
+    public void setSeeMoreAction(@NonNull final Parcelable intent) {
         getBuilder().addSubSlice(
                 new Slice.Builder(getBuilder())
                         .addHints(HINT_SEE_MORE)
@@ -431,7 +431,7 @@ public class ListBuilderImpl extends TemplateBuilderImpl implements ListBuilder 
      * Builder to construct an input range row.
      */
     public static class InputRangeBuilderImpl extends RangeBuilderImpl {
-        private final PendingIntent mAction;
+        private final Parcelable mAction;
         private final IconCompat mThumb;
         private Slice mStartItem;
         private final ArrayList<Slice> mEndItems = new ArrayList<>();
@@ -505,7 +505,7 @@ public class ListBuilderImpl extends TemplateBuilderImpl implements ListBuilder 
      * Builder to construct an input range row.
      */
     public static class RatingBuilderImpl extends TemplateBuilderImpl {
-        private final PendingIntent mAction;
+        private final Parcelable mAction;
         protected int mMin = 0;
         protected int mMax = 100;
         protected int mValue = 0;

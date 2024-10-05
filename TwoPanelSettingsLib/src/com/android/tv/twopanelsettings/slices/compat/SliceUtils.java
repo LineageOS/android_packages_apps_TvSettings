@@ -21,15 +21,19 @@ import static android.app.slice.SliceItem.FORMAT_IMAGE;
 import static android.app.slice.SliceItem.FORMAT_REMOTE_INPUT;
 import static java.lang.annotation.RetentionPolicy.SOURCE;
 
+import android.app.PendingIntent;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Parcelable;
 
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.graphics.drawable.IconCompat;
+import androidx.core.util.Preconditions;
 import androidx.versionedparcelable.ParcelUtils;
 
 import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
@@ -123,6 +127,31 @@ public class SliceUtils {
     // @RestrictTo(RestrictTo.Scope.LIBRARY)
     public static int parseImageMode(@NonNull SliceItem iconItem) {
         return SliceActionImpl.parseImageMode(iconItem);
+    }
+
+    public static void fireAction(@Nullable Context context, @NonNull Parcelable action,
+                                  @Nullable Intent fillIn) throws PendingIntent.CanceledException {
+        if (action instanceof PendingIntent) {
+            ((PendingIntent) action).send(context, 0, fillIn, null, null);
+            return;
+        }
+
+        Preconditions.checkNotNull(context);
+        Intent filledIn = new Intent((Intent) action);
+        if (fillIn != null) {
+            filledIn.fillIn(fillIn, 0);
+        }
+
+        if (context.getPackageManager().resolveActivity(filledIn, 0) == null) {
+            context.sendBroadcast(filledIn);
+            return;
+        }
+
+        try {
+            context.startActivity(filledIn);
+        } catch (ActivityNotFoundException e) {
+            throw new PendingIntent.CanceledException(e);
+        }
     }
 
     private static boolean doesStreamStartWith(String parcelName, BufferedInputStream inputStream) {

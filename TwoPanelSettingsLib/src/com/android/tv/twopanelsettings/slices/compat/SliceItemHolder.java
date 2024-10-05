@@ -26,10 +26,11 @@ import static android.app.slice.SliceItem.FORMAT_SLICE;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
 
 import android.annotation.SuppressLint;
-import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.text.Spanned;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,6 +41,7 @@ import androidx.versionedparcelable.ParcelField;
 import androidx.versionedparcelable.VersionedParcelable;
 import androidx.versionedparcelable.VersionedParcelize;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 /**
@@ -49,6 +51,7 @@ import java.util.ArrayList;
         factory = SliceItemHolder.SliceItemPool.class)
 // @Deprecated // Supported for TV
 public class SliceItemHolder implements VersionedParcelable {
+    private static final String TAG = "SliceItemHolder";
 
     public static final Object sSerializeLock = new Object();
 
@@ -103,8 +106,12 @@ public class SliceItemHolder implements VersionedParcelable {
     public SliceItemHolder(@NonNull String format, Object mObj, boolean isStream) {
         switch (format) {
             case FORMAT_ACTION:
-                if (((Pair<Object, Slice>) mObj).first instanceof PendingIntent) {
-                    mParcelable = (Parcelable) ((Pair<Object, Slice>) mObj).first;
+                Object first = ((Pair<Object, Slice>) mObj).first;
+
+                if (first instanceof Intent) {
+                    mStr = ((Intent) first).toUri(Intent.URI_INTENT_SCHEME);
+                } else if (first instanceof Parcelable) {
+                    mParcelable = (Parcelable) first;
                 } else if (!isStream) {
                     throw new IllegalArgumentException("Cannot write callback to parcel");
                 }
@@ -146,8 +153,17 @@ public class SliceItemHolder implements VersionedParcelable {
         }
         switch (format) {
             case FORMAT_ACTION:
-                if (mParcelable == null && mVersionedParcelable == null) return null;
-                return new Pair<>(mParcelable != null ? mParcelable : mCallback,
+                Intent intent;
+                try {
+                    intent = mStr != null ? Intent.parseUri(mStr, 0) : null;
+                } catch (URISyntaxException e) {
+                    intent = null;
+                    Log.w(TAG, "Invalid intent: " + intent);
+                }
+                if (intent == null
+                        && mParcelable == null && mVersionedParcelable == null) return null;
+                return new Pair<>(intent != null ? intent
+                        : mParcelable != null ? mParcelable : mCallback,
                         (Slice) mVersionedParcelable);
             case FORMAT_IMAGE:
             case FORMAT_SLICE:

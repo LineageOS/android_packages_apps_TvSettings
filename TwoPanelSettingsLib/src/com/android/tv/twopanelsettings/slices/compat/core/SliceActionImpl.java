@@ -43,13 +43,16 @@ import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.UNKN
 
 import android.annotation.SuppressLint;
 import android.app.PendingIntent;
+import android.content.Intent;
 import android.graphics.drawable.Icon;
+import android.os.Parcelable;
 
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.util.ObjectsCompat;
+import androidx.core.util.Preconditions;
 
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.SliceItem;
@@ -63,7 +66,7 @@ public class SliceActionImpl implements SliceAction {
 
     // Either mAction or mActionItem must be non-null.
     @Nullable
-    private PendingIntent mAction;
+    private Parcelable mAction;
 
     // Either mAction or mActionItem must be non-null.
     @Nullable
@@ -102,7 +105,7 @@ public class SliceActionImpl implements SliceAction {
      * @param actionTitle the title for this action, also used for content description if one hasn't
      *                    been set via {@link #setContentDescription(CharSequence)}.
      */
-    public SliceActionImpl(@NonNull PendingIntent action, @NonNull IconCompat actionIcon,
+    public SliceActionImpl(@NonNull Parcelable action, @NonNull IconCompat actionIcon,
             @NonNull CharSequence actionTitle) {
         this(action, actionIcon, ICON_IMAGE, actionTitle);
     }
@@ -116,7 +119,7 @@ public class SliceActionImpl implements SliceAction {
      * @param isDatePicker   if it is a date picker, as opposed to a time picker.
      */
     // @RestrictTo(LIBRARY)
-    public SliceActionImpl(@NonNull PendingIntent action, @NonNull CharSequence actionTitle,
+    public SliceActionImpl(@NonNull Parcelable action, @NonNull CharSequence actionTitle,
             long dateTimeMillis, boolean isDatePicker) {
         mAction = action;
         mTitle = actionTitle;
@@ -142,7 +145,7 @@ public class SliceActionImpl implements SliceAction {
      * @see SliceHints#LARGE_IMAGE
      * @see SliceHints#ACTION_WITH_LABEL
      */
-    public SliceActionImpl(@NonNull PendingIntent action, @NonNull IconCompat actionIcon,
+    public SliceActionImpl(@NonNull Parcelable action, @NonNull IconCompat actionIcon,
             @SliceHints.ImageMode int imageMode, @NonNull CharSequence actionTitle) {
         mAction = action;
         mIcon = actionIcon;
@@ -160,7 +163,7 @@ public class SliceActionImpl implements SliceAction {
      *                    been set via {@link #setContentDescription(CharSequence)}.
      * @param isChecked the state of the toggle.
      */
-    public SliceActionImpl(@NonNull PendingIntent action, @NonNull IconCompat actionIcon,
+    public SliceActionImpl(@NonNull Parcelable action, @NonNull IconCompat actionIcon,
             @NonNull CharSequence actionTitle, boolean isChecked) {
         this(action, actionIcon, ICON_IMAGE, actionTitle);
         mIsChecked = isChecked;
@@ -175,7 +178,7 @@ public class SliceActionImpl implements SliceAction {
      *                    been set via {@link #setContentDescription(CharSequence)}.
      * @param isChecked the state of the toggle.
      */
-    public SliceActionImpl(@NonNull PendingIntent action, @NonNull CharSequence actionTitle,
+    public SliceActionImpl(@NonNull Parcelable action, @NonNull CharSequence actionTitle,
             boolean isChecked) {
         mAction = action;
         mTitle = actionTitle;
@@ -200,7 +203,7 @@ public class SliceActionImpl implements SliceAction {
             return;
         }
         mActionItem = actionItem;
-        mAction = actionItem.getAction();
+        mAction = actionItem.getActionParcelable();
         SliceItem iconItem = SliceQuery.find(actionItem.getSlice(), FORMAT_IMAGE);
         if (iconItem != null) {
             mIcon = iconItem.getIcon();
@@ -300,10 +303,22 @@ public class SliceActionImpl implements SliceAction {
      * @return the {@link PendingIntent} associated with this action.
      */
     @SuppressWarnings("ConstantConditions") // Either mAction or mActionItem must be non-null
-    @NonNull
+    @Nullable
     @Override
     public PendingIntent getAction() {
-        return mAction != null ? mAction : mActionItem.getAction();
+        return mAction instanceof PendingIntent ? (PendingIntent) mAction : mActionItem.getAction();
+    }
+
+    @Nullable
+    @Override
+    public Intent getActionIntent() {
+        return mAction instanceof Intent ? (Intent) mAction : mActionItem.getActionIntent();
+    }
+
+    @NonNull
+    @Override
+    public Parcelable getActionParcelable() {
+        return Preconditions.checkNotNull(mAction);
     }
 
     /**

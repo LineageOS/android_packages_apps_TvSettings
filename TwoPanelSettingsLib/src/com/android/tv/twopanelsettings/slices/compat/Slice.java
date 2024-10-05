@@ -49,7 +49,6 @@ import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.HINT
 import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.HINT_SELECTION_OPTION;
 import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.HINT_SHOW_LABEL;
 
-import android.app.PendingIntent;
 import android.app.RemoteInput;
 import android.content.Context;
 import android.graphics.drawable.Icon;
@@ -369,7 +368,7 @@ public final class Slice extends CustomVersionedParcelable implements VersionedP
          * @param subType Optional template-specific type information
          * @see SliceItem#getSubType()
          */
-        public @NonNull Builder addAction(@NonNull PendingIntent action,
+        public @NonNull Builder addAction(@NonNull Parcelable action,
                 @NonNull Slice s, @Nullable String subType) {
             Preconditions.checkNotNull(action);
             Preconditions.checkNotNull(s);

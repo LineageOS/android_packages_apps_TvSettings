@@ -24,7 +24,7 @@ import static android.app.slice.Slice.SUBTYPE_CONTENT_DESCRIPTION;
 import static android.app.slice.Slice.SUBTYPE_LAYOUT_DIRECTION;
 import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.HINT_OVERLAY;
 
-import android.app.PendingIntent;
+import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -98,7 +98,7 @@ public class GridRowBuilderListV1Impl extends TemplateBuilderImpl {
 
     /**
      */
-    public void setSeeMoreAction(PendingIntent intent) {
+    public void setSeeMoreAction(Parcelable intent) {
         getBuilder().addSubSlice(new Slice.Builder(getBuilder()).addHints(HINT_SEE_MORE)
                 .addAction(intent, new Slice.Builder(getBuilder()).build(), null).build());
     }
@@ -125,7 +125,7 @@ public class GridRowBuilderListV1Impl extends TemplateBuilderImpl {
      */
     public static final class CellBuilderImpl extends TemplateBuilderImpl {
 
-        private PendingIntent mContentIntent;
+        private Parcelable mContentIntent;
 
         /**
          */
@@ -206,7 +206,7 @@ public class GridRowBuilderListV1Impl extends TemplateBuilderImpl {
         /**
          *
          */
-        private void setContentIntent(@NonNull PendingIntent intent) {
+        private void setContentIntent(@NonNull Parcelable intent) {
             mContentIntent = intent;
         }
 

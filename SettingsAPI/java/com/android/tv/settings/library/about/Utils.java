@@ -1,7 +1,6 @@
 package com.android.tv.settings.library.about;
 
 import android.annotation.ColorInt;
-import android.annotation.Nullable;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -18,9 +17,6 @@ import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
-import android.net.NetworkCapabilities;
-import android.net.vcn.VcnTransportInfo;
-import android.net.wifi.WifiInfo;
 import android.os.BatteryManager;
 import android.telephony.AccessNetworkConstants;
 import android.telephony.NetworkRegistrationInfo;
@@ -295,22 +291,5 @@ public class Utils {
         drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
         drawable.draw(canvas);
         return roundedBitmap;
-    }
-
-    /**
-     * Returns the WifiInfo for the underlying WiFi network of the VCN network, returns null if the
-     * input NetworkCapabilities is not for a VCN network with underlying WiFi network.
-     *
-     * @param networkCapabilities NetworkCapabilities of the network.
-     */
-    @Nullable
-    public static WifiInfo tryGetWifiInfoForVcn(NetworkCapabilities networkCapabilities) {
-        if (networkCapabilities.getTransportInfo() == null
-                || !(networkCapabilities.getTransportInfo() instanceof VcnTransportInfo)) {
-            return null;
-        }
-        VcnTransportInfo vcnTransportInfo =
-                (VcnTransportInfo) networkCapabilities.getTransportInfo();
-        return vcnTransportInfo.getWifiInfo();
     }
 }

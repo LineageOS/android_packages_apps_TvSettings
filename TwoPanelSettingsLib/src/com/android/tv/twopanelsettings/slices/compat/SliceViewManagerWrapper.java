@@ -16,7 +16,9 @@
 
 package com.android.tv.twopanelsettings.slices.compat;
 
+import static com.android.tv.twopanelsettings.slices.base.SliceProvider.EXTRA_SLICE;
 import static com.android.tv.twopanelsettings.slices.compat.SliceConvert.unwrap;
+import static com.android.tv.twopanelsettings.slices.compat.SliceProvider.EXTRA_SUPPORTS_SETTINGS_SLICE;
 import static com.android.tv.twopanelsettings.slices.compat.widget.SliceLiveData.SUPPORTED_SPECS;
 
 import android.annotation.SuppressLint;
@@ -29,11 +31,14 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ProviderInfo;
 import android.net.Uri;
+import android.os.Bundle;
+import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.collection.ArrayMap;
+import androidx.versionedparcelable.ParcelUtils;
 
 import java.util.Collection;
 import java.util.Set;
@@ -94,7 +99,9 @@ class SliceViewManagerWrapper extends SliceViewManagerBase {
         if (isAuthoritySuspended(uri.getAuthority())) {
             return null;
         }
-        return SliceConvert.wrap(mManager.bindSlice(uri, mSpecs), mContext);
+        Bundle extras = new Bundle();
+        extras.putBoolean(EXTRA_SUPPORTS_SETTINGS_SLICE, true);
+        return toSettingsSlice(mManager.bindSlice(uri, mSpecs, extras));
     }
 
     @Nullable
@@ -103,7 +110,21 @@ class SliceViewManagerWrapper extends SliceViewManagerBase {
         if (isPackageSuspended(intent)) {
             return null;
         }
-        return SliceConvert.wrap(mManager.bindSlice(intent, mSpecs), mContext);
+        Bundle extras = new Bundle();
+        extras.putBoolean(EXTRA_SUPPORTS_SETTINGS_SLICE, true);
+        return toSettingsSlice(mManager.bindSlice(intent, mSpecs, extras));
+    }
+
+    private com.android.tv.twopanelsettings.slices.compat.Slice toSettingsSlice(
+            Bundle bundle) {
+        Parcelable parcelable = bundle != null
+                ? bundle.getParcelable(EXTRA_SLICE, Parcelable.class) : null;
+        if (parcelable == null) {
+            return null;
+        }
+        return parcelable instanceof android.app.slice.Slice
+                ? SliceConvert.wrap((android.app.slice.Slice) parcelable, mContext)
+                : ParcelUtils.fromParcelable(parcelable);
     }
 
     private boolean isPackageSuspended(Intent intent) {

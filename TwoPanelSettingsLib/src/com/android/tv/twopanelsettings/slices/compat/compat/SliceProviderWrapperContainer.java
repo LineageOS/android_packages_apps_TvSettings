@@ -17,9 +17,9 @@
 package com.android.tv.twopanelsettings.slices.compat.compat;
 
 import static com.android.tv.twopanelsettings.slices.compat.SliceConvert.wrap;
+import static com.android.tv.twopanelsettings.slices.compat.SliceProvider.EXTRA_SUPPORTS_SETTINGS_SLICE;
 
 import android.app.PendingIntent;
-import android.app.slice.Slice;
 import android.app.slice.SliceSpec;
 import android.content.Context;
 import android.content.Intent;
@@ -28,13 +28,16 @@ import android.content.pm.ProviderInfo;
 import android.net.Uri;
 import android.os.Binder;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.versionedparcelable.ParcelUtils;
 
 import com.android.tv.twopanelsettings.slices.base.SliceManager;
 import com.android.tv.twopanelsettings.slices.base.SliceProvider;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.SliceConvert;
 
 import java.util.Collection;
@@ -137,10 +140,19 @@ public class SliceProviderWrapperContainer {
         }
 
         @Override
-        public Slice onBindSlice(Uri sliceUri, Set<SliceSpec> supportedVersions) {
-            com.android.tv.twopanelsettings.slices.compat.SliceProvider.setSpecs(wrap(supportedVersions));
+        public Parcelable onBindSlice(Uri sliceUri, Set<SliceSpec> supportedVersions,
+                                      Bundle extras) {
+            com.android.tv.twopanelsettings.slices.compat.SliceProvider.setSpecs(
+                    wrap(supportedVersions));
             try {
-                return SliceConvert.unwrap(mSliceProvider.onBindSlice(sliceUri));
+                Slice slice = mSliceProvider.onBindSlice(sliceUri, extras);
+                if (slice == null) {
+                    return null;
+                } else if (extras.getBoolean(EXTRA_SUPPORTS_SETTINGS_SLICE)) {
+                    return ParcelUtils.toParcelable(slice);
+                } else {
+                    return SliceConvert.unwrap(mSliceProvider.onBindSlice(sliceUri));
+                }
             } catch (Exception e) {
                 Log.wtf(TAG, "Slice with URI " + sliceUri.toString() + " is invalid.", e);
                 return null;

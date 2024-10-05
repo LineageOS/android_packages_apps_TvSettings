@@ -16,7 +16,7 @@
 
 package com.android.tv.twopanelsettings.slices.compat.builders.impl;
 
-import android.app.PendingIntent;
+import android.os.Parcelable;
 import android.os.PersistableBundle;
 
 import androidx.annotation.ColorInt;
@@ -106,7 +106,7 @@ public interface ListBuilder {
      * a row or action has been previously added.
      * </p>
      */
-    void setSeeMoreAction(@NonNull PendingIntent intent);
+    void setSeeMoreAction(@NonNull Parcelable intent);
 
     /**
      * Sets the color to tint items displayed by this template (e.g. icons).
