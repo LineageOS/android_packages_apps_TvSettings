@@ -38,6 +38,7 @@ import androidx.preference.SwitchPreference
 import androidx.preference.TwoStatePreference
 import com.android.tv.settings.R
 import com.android.tv.settings.SettingsPreferenceFragment
+import com.android.tv.settings.device.util.DeviceUtils
 import com.android.tv.settings.device.displaysound.PreferredDynamicRangeInfo.MatchContentDynamicRangeInfoFragment
 import com.android.tv.settings.overlay.FlavorUtils
 import com.android.tv.settings.util.InstrumentationUtils
@@ -55,12 +56,13 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
     lateinit var mAudioManager: AudioManager
     lateinit var mHdmiControlManager: HdmiControlManager
     lateinit var mDisplayManager: DisplayManager
+    private var mCurrentDeviceName: String? = null
     private var mCurrentMode: Display.Mode? = null
 
     override fun onAttach(context: Context) {
         mAudioManager = context.getSystemService(AudioManager::class.java) as AudioManager
         mHdmiControlManager =
-                context.getSystemService(HdmiControlManager::class.java) as HdmiControlManager
+            context.getSystemService(HdmiControlManager::class.java) as HdmiControlManager
         mDisplayManager = displayManager
         super.onAttach(context)
     }
@@ -77,15 +79,19 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
+        savedInstanceState: Bundle?): View {
         findPreference<TwoStatePreference>(KEY_SOUND_EFFECTS)?.isChecked = soundEffectsEnabled
         updateCecPreference()
+
+        mCurrentDeviceName = DeviceUtils.getDeviceName(context)
+        updateVolumeChangePreference()
+
         val display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY)
         if (display.systemPreferredDisplayMode != null) {
             mDisplayManager.registerDisplayListener(this, null)
             mCurrentMode = mDisplayManager.globalUserPreferredDisplayMode
             updateResolutionTitleDescription(ResolutionSelectionUtils.modeToString(
-                    mCurrentMode, context))
+                mCurrentMode, context))
         } else {
             removePreference(findPreference(KEY_RESOLUTION_TITLE))
         }
@@ -115,20 +121,20 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
         // Update the subtitle of CEC setting when navigating back to this page.
         updateCecPreference()
         findPreference<SwitchPreference>(KEY_DYNAMIC_RANGE)?.isChecked =
-                DisplaySoundUtils.getMatchContentDynamicRangeStatus(mDisplayManager)
+            DisplaySoundUtils.getMatchContentDynamicRangeStatus(mDisplayManager)
     }
 
     override fun onPreferenceTreeClick(preference: Preference): Boolean {
         if (TextUtils.equals(preference.key, KEY_SOUND_EFFECTS)) {
             val soundPref = preference as TwoStatePreference
             InstrumentationUtils
-                    .logToggleInteracted(
-                            TvSettingsEnums.DISPLAY_SOUND_SYSTEM_SOUNDS, soundPref.isChecked)
+                .logToggleInteracted(
+                    TvSettingsEnums.DISPLAY_SOUND_SYSTEM_SOUNDS, soundPref.isChecked)
             soundEffectsEnabled = soundPref.isChecked
         } else if (TextUtils.equals(preference.key, KEY_DYNAMIC_RANGE)) {
             val dynamicPref = preference as SwitchPreference
             DisplaySoundUtils
-                    .setMatchContentDynamicRangeStatus(context, mDisplayManager, dynamicPref.isChecked)
+                .setMatchContentDynamicRangeStatus(context, mDisplayManager, dynamicPref.isChecked)
         }
         return super.onPreferenceTreeClick(preference)
     }
@@ -142,13 +148,13 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
                 mAudioManager.unloadSoundEffects()
             }
             Settings.System.putInt(requireActivity().contentResolver,
-                    Settings.System.SOUND_EFFECTS_ENABLED, if (enabled) 1 else 0)
+                Settings.System.SOUND_EFFECTS_ENABLED, if (enabled) 1 else 0)
         }
 
     private fun updateCecPreference() {
         findPreference<Preference>(KEY_CEC)?.apply{
             if (this is SlicePreference && SliceUtils.isSliceProviderValid(
-                            context, this.uri)) {
+                    context, this.uri)) {
                 val cecEnabled = (mHdmiControlManager.getHdmiCecEnabled()
                         == HdmiControlManager.HDMI_CEC_CONTROL_ENABLED)
                 setSummary(if (cecEnabled) R.string.enabled else R.string.disabled)
@@ -162,9 +168,17 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
     private suspend fun updateDefaultAudioOutputSettings() {
         findPreference<SlicePreference>(KEY_DEFAULT_AUDIO_OUTPUT_SETTINGS_SLICE)?.apply {
             isVisible = SliceUtils.isSliceProviderValid(context,
-                    this.uri)
+                this.uri)
                     && SliceUtilsKt.isSettingsSliceEnabled(context,
-                    this.uri, null)
+                this.uri, null)
+        }
+    }
+
+    private fun updateVolumeChangePreference() {
+        findPreference<Preference>(VOLUME_CHANGE)?.apply {
+            setTitle(requireContext().resources.getString(R.string.volume_change_settings_title,
+                mCurrentDeviceName))
+            isVisible = requireContext().resources.getBoolean(R.bool.config_volume_change)
         }
     }
 
@@ -178,7 +192,7 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
         val newMode = mDisplayManager.globalUserPreferredDisplayMode
         if (mCurrentMode != newMode) {
             updateResolutionTitleDescription(
-                    ResolutionSelectionUtils.modeToString(newMode, context))
+                ResolutionSelectionUtils.modeToString(newMode, context))
             mCurrentMode = newMode
         }
     }
@@ -199,7 +213,7 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
 
     private fun createInfoFragments() {
         findPreference<Preference>(KEY_DYNAMIC_RANGE)?.fragment =
-                MatchContentDynamicRangeInfoFragment::class.java.name
+            MatchContentDynamicRangeInfoFragment::class.java.name
     }
 
     companion object {
@@ -208,6 +222,9 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
         private const val KEY_DEFAULT_AUDIO_OUTPUT_SETTINGS_SLICE = "default_audio_output_settings"
         private const val KEY_RESOLUTION_TITLE = "resolution_selection"
         private const val KEY_DYNAMIC_RANGE = "match_content_dynamic_range"
+
+        private const val VOLUME_CHANGE = "volume_change"
+
         fun newInstance(): DisplaySoundFragment {
             return DisplaySoundFragment()
         }

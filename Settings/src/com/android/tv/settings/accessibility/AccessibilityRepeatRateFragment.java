@@ -15,6 +15,9 @@
  */
 package com.android.tv.settings.accessibility;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
@@ -99,9 +102,30 @@ public class AccessibilityRepeatRateFragment extends SettingsPreferenceFragment
                 radioPreference.setFragment(null);
             }
         }
-        /*TODO -- Log Accessibility Delay before repeat Status change.
-         *Refer A11y Notification Timeout feature. cl/614754347 */
+        // Log repeat rate selection
+        logNewRepeatRateTimeoutSelection(mCurrentRepeatRate);
         return true;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_A11Y_KEY_REPEAT_RATE;
+    }
+
+    private void logNewRepeatRateTimeoutSelection(int entryValue) {
+        final int[] a11yRepeatRateOptions = {
+                TvSettingsEnums.SYSTEM_A11Y_KEY_REPEAT_RATE_DEFAULT,
+                TvSettingsEnums.SYSTEM_A11Y_KEY_REPEAT_RATE_SLOW,
+                TvSettingsEnums.SYSTEM_A11Y_KEY_REPEAT_RATE_FAST,
+        };
+        final int[] entryValues =
+                getContext().getResources().getIntArray(R.array.a11y_repeat_rate_values);
+        for (int i = 0; i < entryValues.length; i++) {
+            if (entryValue == entryValues[i]) {
+                logEntrySelected(a11yRepeatRateOptions[i]);
+                return;
+            }
+        }
     }
 
     /** Setting Initial repeat rate. */

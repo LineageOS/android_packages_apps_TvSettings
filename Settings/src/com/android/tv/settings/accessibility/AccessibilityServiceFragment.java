@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.accessibility;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
+
 import android.app.admin.DevicePolicyManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.ComponentName;
@@ -169,10 +171,16 @@ public class AccessibilityServiceFragment extends SettingsPreferenceFragment imp
 
     @Override
     public void onAccessibilityServiceConfirmed(ComponentName componentName, boolean enabling) {
-        AccessibilityUtils.setAccessibilityServiceState(getActivity(),
-                componentName, enabling);
+        AccessibilityUtils.setAccessibilityServiceState(getActivity(), componentName, enabling);
         if (mEnablePref != null) {
-            mEnablePref.setChecked(enabling);
+        mEnablePref.setChecked(enabling);
+        // Check if component is talkback, then log
+        if (componentName != null
+            && componentName.flattenToString().equals(
+                getResources().getString(
+                    R.string.accessibility_screen_reader_flattened_component_name))) {
+            logToggleInteracted(TvSettingsEnums.SYSTEM_A11Y_TALKBACK_ON_OFF, enabling);
+        }
         }
     }
 

@@ -23,6 +23,7 @@ import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
+import android.app.Activity;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.Intent;
@@ -41,6 +42,8 @@ import android.provider.Settings;
 import android.util.ArrayMap;
 import android.view.View;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -95,6 +98,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
 
     private static final String NETWORK_DIAGNOSTICS_ACTION =
             "com.android.tv.settings.network.NETWORK_DIAGNOSTICS";
+    private static final String NETWORK_HOOK_RESTRICT_WIFI_ACTION =
+            "com.android.tv.settings.HOOK_RESTRICT_WIFI_FOR_ERP";
 
     private ConnectivityListener mConnectivityListener;
     private WifiManager mWifiManager;
@@ -131,6 +136,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
 
     private final List<AccessPoint> mCurrentAccessPoints = new ArrayList<>();
 
+    private ActivityResultLauncher<Intent> mRestrictWifiHookLauncher;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         mIsWifiHardwarePresent = getContext().getPackageManager()
@@ -141,6 +148,17 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mConnectivityManager = getContext().getSystemService(ConnectivityManager.class);
         mUserBadgeCache =
                 new TvAccessPointPreference.UserBadgeCache(getContext().getPackageManager());
+        mRestrictWifiHookLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+            if (result.getResultCode() == Activity.RESULT_OK) {
+                // OK to restrict Wifi
+                if(mEnableWifiPref != null && mEnableWifiPref.isChecked()){
+                    mEnableWifiPref.setChecked(false);
+                }
+            }else if(result.getResultCode() == Activity.RESULT_CANCELED){
+                // we should let user connect Wifi in default/fallback case
+                updateWifiEnable();
+            }
+        });
         super.onCreate(savedInstanceState);
     }
 
@@ -237,6 +255,38 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         }
     }
 
+    private Intent getRestrictWifiHookIntent(){
+        Intent intent = new Intent();
+        intent.setAction(NETWORK_HOOK_RESTRICT_WIFI_ACTION);
+
+        ResolveInfo resolveInfo = MainFragment.systemIntentIsHandled(getContext(), intent);
+        if (resolveInfo == null || resolveInfo.activityInfo == null) {
+            return null;
+        }
+
+        intent.setPackage(resolveInfo.activityInfo.packageName);
+        return intent;
+    }
+
+    private void updateWifiEnable(){
+        BasicModeFeatureProvider provider = FlavorUtils.getFeatureFactory(
+                getContext()).getBasicModeFeatureProvider();
+        if (mEnableWifiPref.isChecked() &&
+                Settings.Global.getInt(
+                        getContext().getContentResolver(), Settings.Global.ADB_ENABLED, 0)
+                        != 1 && SystemProperties.getInt(
+                "ro.product.first_api_level", Build.VERSION.SDK_INT)
+                >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE && provider.isBasicMode(
+                getContext())
+                && !provider.isStoreDemoMode(getContext())) {
+            // WiFi turned ON + not developer + launched on U+ + basic mode.
+            // Prevent WiFi connection by launching dialog instead.
+            provider.startBasicModeInternetBlock(getActivity());
+        } else {
+            mConnectivityListener.setWifiEnabled(mEnableWifiPref.isChecked());
+        }
+    }
+
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         if (preference.getKey() == null) {
@@ -244,21 +294,11 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         }
         switch (preference.getKey()) {
             case KEY_WIFI_ENABLE:
-                BasicModeFeatureProvider provider = FlavorUtils.getFeatureFactory(
-                        getContext()).getBasicModeFeatureProvider();
-                if (mEnableWifiPref.isChecked() &&
-                        Settings.Global.getInt(
-                                getContext().getContentResolver(), Settings.Global.ADB_ENABLED, 0)
-                                != 1 && SystemProperties.getInt(
-                        "ro.product.first_api_level", Build.VERSION.SDK_INT)
-                        >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE && provider.isBasicMode(
-                        getContext())
-                        && !provider.isStoreDemoMode(getContext())) {
-                    // WiFi turned ON + not developer + launched on U+ + basic mode.
-                    // Prevent WiFi connection by launching dialog instead.
-                    provider.startBasicModeInternetBlock(getActivity());
+                Intent intent = getRestrictWifiHookIntent();
+                if (mEnableWifiPref.isChecked() && intent != null) {
+                    mRestrictWifiHookLauncher.launch(intent);
                 } else {
-                    mConnectivityListener.setWifiEnabled(mEnableWifiPref.isChecked());
+                    updateWifiEnable();
                 }
                 logToggleInteracted(
                         TvSettingsEnums.NETWORK_WIFI_ON_OFF, mEnableWifiPref.isChecked());
