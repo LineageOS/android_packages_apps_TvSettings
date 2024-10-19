@@ -16,6 +16,7 @@
 
 package com.android.tv.settings;
 
+import android.app.Activity;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -191,5 +192,11 @@ public class FullScreenDialogFragment extends Fragment {
      * @see #ACTION_NEGATIVE
      */
     public void onButtonPressed(int action) {
+        if (action == ACTION_POSITIVE) {
+            getActivity().setResult(Activity.RESULT_OK);
+        } else if (action == ACTION_NEGATIVE) {
+            getActivity().setResult(Activity.RESULT_CANCELED);
+        }
+        getActivity().finish();
     }
 }

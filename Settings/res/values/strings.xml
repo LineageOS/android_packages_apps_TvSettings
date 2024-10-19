@@ -199,6 +199,40 @@
     <string name="wifi_setting_always_scan_content_description">Scanning
         always available, Let Google\'s location service and other apps scan
         for networks, even when Wi-Fi is off</string>
+    <!-- Title for thread network. [CHAR LIMIT=50] -->
+    <string name="wifi_setting_thread_network">Thread network</string>
+    <!-- Thread network description [CHAR LIMIT=NONE] -->
+    <string name="wifi_setting_thread_network_context">Thread network locally connects
+        Thread-enabled smart home devices, boosting efficiency and performance.\n\nWhen turned on,
+        this device will create or join your Thread network. Credentials will be privately uploaded
+        to the cloud for easier setup of your future smart home devices.\n\nWhen turned off, this
+        device will no longer be able to communicate with other devices on your Thread network.
+        Certain smart home devices and services may not work as expected.\n\nLearn more at
+        g.co/tv/thread
+    </string>
+    <!-- Thread network confirmation title in dialog to turn off thread
+         network [CHAR LIMIT=NONE] -->
+    <string name="wifi_settings_thread_network_confirmation_title">Turn off Thread Network?</string>
+    <!-- Thread network confirmation message in dialog button to turn off thread
+         network [CHAR LIMIT=NONE] -->
+    <string name="wifi_settings_thread_network_confirmation_message">If turned off, certain smart
+        home devices and services may not work as expected. Would you like to proceed?</string>
+    <!-- Thread network confirmation title in dialog to turn on thread
+     network from low or optimized energy mode [CHAR LIMIT=NONE] -->
+    <string name="wifi_settings_thread_network_energy_title">Turn on Thread Network?</string>
+    <!-- Thread network confirmation message in dialog button to turn on thread
+         network from low or optimized energy mode [CHAR LIMIT=NONE] -->
+    <string name="wifi_settings_thread_network_energy_message">Thread network requires "Increased"
+    energy mode. Change energy mode to "Increased" first, and then come back to turn on Thread
+    network.</string>
+    <!-- Thread network confirmation message in dialog button to turn off thread
+         network [CHAR LIMIT=NONE] -->
+    <string name="wifi_settings_thread_network_confirmation_button_confirm">Turn off</string>
+    <!-- Thread network confirmation message in dialog button to change energy mode when
+    turning on thread network [CHAR LIMIT=NONE] -->
+    <string name="wifi_settings_thread_network_button_change_energy_mode">
+        Change energy mode
+    </string>
     <!-- Title for enable wifi. [CHAR LIMIT=50] -->
     <string name="wifi_setting_enable_wifi">Wi-Fi</string>
     <string name="connectivity_hint_message">Connect to network</string>
