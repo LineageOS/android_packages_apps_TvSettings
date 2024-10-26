@@ -21,42 +21,35 @@ import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.View;
-
 import androidx.core.graphics.drawable.IconCompat;
 
-/**
- * A bunch of utilities for slice UI.
- *
- */
+/** A bunch of utilities for slice UI. */
 // @RestrictTo(RestrictTo.Scope.LIBRARY)
 // @Deprecated // Supported for TV
 public class SliceViewUtil {
-    /**
-     */
-    public static IconCompat createIconFromDrawable(Drawable d) {
-        if (d instanceof BitmapDrawable) {
-            return IconCompat.createWithBitmap(((BitmapDrawable) d).getBitmap());
-        }
-        Bitmap b = Bitmap.createBitmap(d.getIntrinsicWidth(), d.getIntrinsicHeight(),
-                Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(b);
-        d.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-        d.draw(canvas);
-        return IconCompat.createWithBitmap(b);
+  /** */
+  public static IconCompat createIconFromDrawable(Drawable d) {
+    if (d instanceof BitmapDrawable) {
+      return IconCompat.createWithBitmap(((BitmapDrawable) d).getBitmap());
     }
+    Bitmap b =
+        Bitmap.createBitmap(d.getIntrinsicWidth(), d.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+    Canvas canvas = new Canvas(b);
+    d.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+    d.draw(canvas);
+    return IconCompat.createWithBitmap(b);
+  }
 
-    /**
-     */
-    public static int resolveLayoutDirection(int layoutDir) {
-        if (layoutDir == View.LAYOUT_DIRECTION_INHERIT
-                || layoutDir == View.LAYOUT_DIRECTION_LOCALE
-                || layoutDir == View.LAYOUT_DIRECTION_RTL
-                || layoutDir == View.LAYOUT_DIRECTION_LTR) {
-            return layoutDir;
-        }
-        return -1;
+  /** */
+  public static int resolveLayoutDirection(int layoutDir) {
+    if (layoutDir == View.LAYOUT_DIRECTION_INHERIT
+        || layoutDir == View.LAYOUT_DIRECTION_LOCALE
+        || layoutDir == View.LAYOUT_DIRECTION_RTL
+        || layoutDir == View.LAYOUT_DIRECTION_LTR) {
+      return layoutDir;
     }
+    return -1;
+  }
 
-    private SliceViewUtil() {
-    }
+  private SliceViewUtil() {}
 }

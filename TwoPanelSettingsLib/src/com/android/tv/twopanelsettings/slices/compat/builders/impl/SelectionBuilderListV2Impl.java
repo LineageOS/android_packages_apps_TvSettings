@@ -28,65 +28,61 @@ import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.SUBT
 
 import androidx.annotation.NonNull;
 import androidx.core.util.Pair;
-
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.builders.SelectionBuilder;
-
 import java.util.List;
 
-/**
- */
+/** */
 // @RestrictTo(LIBRARY)
 // @Deprecated // Supported for TV
 public class SelectionBuilderListV2Impl extends SelectionBuilderImpl {
-    public SelectionBuilderListV2Impl(Slice.Builder parentSliceBuilder,
-                                  SelectionBuilder selectionBuilder) {
-        super(parentSliceBuilder, selectionBuilder);
+  public SelectionBuilderListV2Impl(
+      Slice.Builder parentSliceBuilder, SelectionBuilder selectionBuilder) {
+    super(parentSliceBuilder, selectionBuilder);
+  }
+
+  @Override
+  public void apply(@NonNull Slice.Builder sliceBuilder) {
+    Slice.Builder actionBuilder = new Slice.Builder(sliceBuilder);
+
+    final SelectionBuilder selectionBuilder = getSelectionBuilder();
+
+    selectionBuilder.check();
+
+    if (selectionBuilder.getTitle() != null) {
+      actionBuilder.addText(selectionBuilder.getTitle(), null, HINT_TITLE);
     }
 
-    @Override
-    public void apply(@NonNull Slice.Builder sliceBuilder) {
-        Slice.Builder actionBuilder = new Slice.Builder(sliceBuilder);
-
-        final SelectionBuilder selectionBuilder = getSelectionBuilder();
-
-        selectionBuilder.check();
-
-        if (selectionBuilder.getTitle() != null) {
-            actionBuilder.addText(selectionBuilder.getTitle(), null, HINT_TITLE);
-        }
-
-        if (selectionBuilder.getSubtitle() != null) {
-            actionBuilder.addText(selectionBuilder.getSubtitle(), null);
-        }
-
-        if (selectionBuilder.getContentDescription() != null) {
-            actionBuilder.addText(selectionBuilder.getContentDescription(),
-                    SUBTYPE_CONTENT_DESCRIPTION);
-        }
-
-        if (selectionBuilder.getLayoutDirection() != -1) {
-            actionBuilder.addInt(selectionBuilder.getLayoutDirection(), SUBTYPE_LAYOUT_DIRECTION);
-        }
-
-        final List<Pair<String, CharSequence>> options = selectionBuilder.getOptions();
-        for (Pair<String, CharSequence> option : options) {
-            final Slice.Builder optionSubSliceBuilder = new Slice.Builder(sliceBuilder);
-            if (option.first.equals(selectionBuilder.getSelectedOption())) {
-                optionSubSliceBuilder.addHints(HINT_SELECTED);
-            }
-            optionSubSliceBuilder.addText(option.first, SUBTYPE_SELECTION_OPTION_KEY);
-            optionSubSliceBuilder.addText(option.second, SUBTYPE_SELECTION_OPTION_VALUE);
-            optionSubSliceBuilder.addHints(HINT_SELECTION_OPTION);
-            actionBuilder.addSubSlice(optionSubSliceBuilder.build());
-        }
-
-        selectionBuilder.getPrimaryAction().setPrimaryAction(actionBuilder);
-
-        sliceBuilder.addAction(selectionBuilder.getInputAction(), actionBuilder.build(),
-                SUBTYPE_SELECTION);
-
-        // TODO: This should ideally be in ListBuilder, not here.
-        sliceBuilder.addHints(HINT_LIST_ITEM);
+    if (selectionBuilder.getSubtitle() != null) {
+      actionBuilder.addText(selectionBuilder.getSubtitle(), null);
     }
+
+    if (selectionBuilder.getContentDescription() != null) {
+      actionBuilder.addText(selectionBuilder.getContentDescription(), SUBTYPE_CONTENT_DESCRIPTION);
+    }
+
+    if (selectionBuilder.getLayoutDirection() != -1) {
+      actionBuilder.addInt(selectionBuilder.getLayoutDirection(), SUBTYPE_LAYOUT_DIRECTION);
+    }
+
+    final List<Pair<String, CharSequence>> options = selectionBuilder.getOptions();
+    for (Pair<String, CharSequence> option : options) {
+      final Slice.Builder optionSubSliceBuilder = new Slice.Builder(sliceBuilder);
+      if (option.first.equals(selectionBuilder.getSelectedOption())) {
+        optionSubSliceBuilder.addHints(HINT_SELECTED);
+      }
+      optionSubSliceBuilder.addText(option.first, SUBTYPE_SELECTION_OPTION_KEY);
+      optionSubSliceBuilder.addText(option.second, SUBTYPE_SELECTION_OPTION_VALUE);
+      optionSubSliceBuilder.addHints(HINT_SELECTION_OPTION);
+      actionBuilder.addSubSlice(optionSubSliceBuilder.build());
+    }
+
+    selectionBuilder.getPrimaryAction().setPrimaryAction(actionBuilder);
+
+    sliceBuilder.addAction(
+        selectionBuilder.getInputAction(), actionBuilder.build(), SUBTYPE_SELECTION);
+
+    // TODO: This should ideally be in ListBuilder, not here.
+    sliceBuilder.addHints(HINT_LIST_ITEM);
+  }
 }

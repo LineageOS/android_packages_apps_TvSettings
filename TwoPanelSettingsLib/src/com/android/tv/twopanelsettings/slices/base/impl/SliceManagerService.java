@@ -23,98 +23,98 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.ArrayMap;
 import android.util.Log;
-
 import androidx.annotation.GuardedBy;
 import androidx.annotation.VisibleForTesting;
-
 import java.util.ArrayList;
 
+/** */
 public class SliceManagerService {
 
-    private static final String TAG = "SliceManagerService";
-    private static final Handler sMainHandler = new Handler(Looper.getMainLooper());
+  private static final String TAG = "SliceManagerService";
+  private static final Handler sMainHandler = new Handler(Looper.getMainLooper());
 
-    private final Object mLock = new Object();
+  private final Object mLock = new Object();
 
-    private final Context mContext;
+  private final Context mContext;
 
-    @GuardedBy("mLock")
-    private final ArrayMap<Uri, PinnedSliceState> mPinnedSlicesByUri = new ArrayMap<>();
+  @GuardedBy("mLock")
+  private final ArrayMap<Uri, PinnedSliceState> mPinnedSlicesByUri = new ArrayMap<>();
 
-    public SliceManagerService(Context context) {
-        mContext = context;
+  public SliceManagerService(Context context) {
+    mContext = context;
+  }
+
+  public Uri[] getPinnedSlices() {
+    ArrayList<Uri> ret = new ArrayList<>();
+    synchronized (mLock) {
+      for (PinnedSliceState state : mPinnedSlicesByUri.values()) {
+        Uri uri = state.getUri();
+        ret.add(uri);
+      }
     }
+    return ret.toArray(new Uri[0]);
+  }
 
-    public Uri[] getPinnedSlices() {
-        ArrayList<Uri> ret = new ArrayList<>();
-        synchronized (mLock) {
-            for (PinnedSliceState state : mPinnedSlicesByUri.values()) {
-                Uri uri = state.getUri();
-                ret.add(uri);
-            }
-        }
-        return ret.toArray(new Uri[0]);
+  public void pinSlice(Uri uri, SliceSpec[] specs) {
+    getOrCreatePinnedSlice(uri).pin(specs);
+  }
+
+  public void unpinSlice(Uri uri) {
+    try {
+      PinnedSliceState slice = getPinnedSlice(uri);
+      if (slice != null && slice.unpin()) {
+        removePinnedSlice(uri);
+      }
+    } catch (IllegalStateException exception) {
+      Log.w(TAG, exception.getMessage());
     }
+  }
 
-    public void pinSlice(Uri uri, SliceSpec[] specs) {
-        getOrCreatePinnedSlice(uri).pin(specs);
+  public SliceSpec[] getPinnedSpecs(Uri uri) {
+    return getPinnedSlice(uri).getSpecs();
+  }
+
+  protected void removePinnedSlice(Uri uri) {
+    synchronized (mLock) {
+      mPinnedSlicesByUri.remove(uri).destroy();
     }
+  }
 
-    public void unpinSlice(Uri uri) {
-        try {
-            PinnedSliceState slice = getPinnedSlice(uri);
-            if (slice != null && slice.unpin()) {
-                removePinnedSlice(uri);
-            }
-        } catch (IllegalStateException exception) {
-            Log.w(TAG, exception.getMessage());
-        }
+  private PinnedSliceState getPinnedSlice(Uri uri) {
+    synchronized (mLock) {
+      PinnedSliceState manager = mPinnedSlicesByUri.get(uri);
+      if (manager == null) {
+        throw new IllegalStateException(String.format("Slice %s not pinned", uri.toString()));
+      }
+      return manager;
     }
+  }
 
-    public SliceSpec[] getPinnedSpecs(Uri uri) {
-        return getPinnedSlice(uri).getSpecs();
+  private PinnedSliceState getOrCreatePinnedSlice(Uri uri) {
+    synchronized (mLock) {
+      PinnedSliceState manager = mPinnedSlicesByUri.get(uri);
+      if (manager == null) {
+        manager = createPinnedSlice(uri);
+        mPinnedSlicesByUri.put(uri, manager);
+      }
+      return manager;
     }
+  }
 
-    protected void removePinnedSlice(Uri uri) {
-        synchronized (mLock) {
-            mPinnedSlicesByUri.remove(uri).destroy();
-        }
-    }
+  @VisibleForTesting
+  protected PinnedSliceState createPinnedSlice(Uri uri) {
+    return new PinnedSliceState(this, uri);
+  }
 
-    private PinnedSliceState getPinnedSlice(Uri uri) {
-        synchronized (mLock) {
-            PinnedSliceState manager = mPinnedSlicesByUri.get(uri);
-            if (manager == null) {
-                throw new IllegalStateException(String.format("Slice %s not pinned",
-                        uri.toString()));
-            }
-            return manager;
-        }
-    }
+  public Object getLock() {
+    return mLock;
+  }
 
-    private PinnedSliceState getOrCreatePinnedSlice(Uri uri) {
-        synchronized (mLock) {
-            PinnedSliceState manager = mPinnedSlicesByUri.get(uri);
-            if (manager == null) {
-                manager = createPinnedSlice(uri);
-                mPinnedSlicesByUri.put(uri, manager);
-            }
-            return manager;
-        }
-    }
+  public Context getContext() {
+    return mContext;
+  }
 
-    @VisibleForTesting
-    protected PinnedSliceState createPinnedSlice(Uri uri) {
-        return new PinnedSliceState(this, uri);
-    }
-
-    public Object getLock() {
-        return mLock;
-    }
-
-    public Context getContext() {
-        return mContext;
-    }
-
-    public Handler getHandler() { return sMainHandler; }
+  public Handler getHandler() {
+    return sMainHandler;
+  }
 }

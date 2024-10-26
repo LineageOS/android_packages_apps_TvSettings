@@ -20,7 +20,6 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
-
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceViewHolder;
 
@@ -29,34 +28,35 @@ import androidx.preference.PreferenceViewHolder;
  * accessibility purposes.
  */
 public class CustomContentDescriptionPreferenceCategory extends PreferenceCategory
-        implements HasCustomContentDescription {
-    private String mContentDescription;
-    public CustomContentDescriptionPreferenceCategory(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
+    implements HasCustomContentDescription {
+  private String mContentDescription;
 
-    public CustomContentDescriptionPreferenceCategory(Context context) {
-        super(context);
-    }
+  public CustomContentDescriptionPreferenceCategory(Context context, AttributeSet attrs) {
+    super(context, attrs);
+  }
 
-    @Override
-    public void onBindViewHolder(PreferenceViewHolder holder) {
-        super.onBindViewHolder(holder);
-        if (!TextUtils.isEmpty(mContentDescription)) {
-            holder.itemView.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);
-            holder.itemView.setContentDescription(mContentDescription);
-        }
-    }
+  public CustomContentDescriptionPreferenceCategory(Context context) {
+    super(context);
+  }
 
-    /**
-     * Sets the accessibility content description that will be read to the TalkBack users when they
-     * focus on this preference.
-     */
-    public void setContentDescription(String contentDescription) {
-        this.mContentDescription = contentDescription;
+  @Override
+  public void onBindViewHolder(PreferenceViewHolder holder) {
+    super.onBindViewHolder(holder);
+    if (!TextUtils.isEmpty(mContentDescription)) {
+      holder.itemView.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);
+      holder.itemView.setContentDescription(mContentDescription);
     }
+  }
 
-    public String getContentDescription() {
-        return mContentDescription;
-    }
+  /**
+   * Sets the accessibility content description that will be read to the TalkBack users when they
+   * focus on this preference.
+   */
+  public void setContentDescription(String contentDescription) {
+    this.mContentDescription = contentDescription;
+  }
+
+  public String getContentDescription() {
+    return mContentDescription;
+  }
 }

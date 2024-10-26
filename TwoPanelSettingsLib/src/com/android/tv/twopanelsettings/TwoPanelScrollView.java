@@ -20,45 +20,43 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.HorizontalScrollView;
 
-/**
- * A horizontal scroll view that ignores left/right key events for scrolling.
- */
+/** A horizontal scroll view that ignores left/right key events for scrolling. */
 public class TwoPanelScrollView extends HorizontalScrollView {
 
-    public TwoPanelScrollView(Context context) {
-        super(context);
-    }
+  public TwoPanelScrollView(Context context) {
+    super(context);
+  }
 
-    public TwoPanelScrollView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
+  public TwoPanelScrollView(Context context, AttributeSet attrs) {
+    super(context, attrs);
+  }
 
-    @Override
-    public boolean arrowScroll(int direction) {
+  @Override
+  public boolean arrowScroll(int direction) {
+    return false;
+  }
+
+  @Override
+  public boolean onInterceptTouchEvent(MotionEvent ev) {
+    switch (ev.getActionMasked()) {
+      case MotionEvent.ACTION_DOWN:
+      case MotionEvent.ACTION_MOVE:
+      case MotionEvent.ACTION_CANCEL:
+      case MotionEvent.ACTION_UP:
         return false;
     }
+    return super.onInterceptTouchEvent(ev);
+  }
 
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        switch (ev.getActionMasked()) {
-            case MotionEvent.ACTION_DOWN:
-            case MotionEvent.ACTION_MOVE:
-            case MotionEvent.ACTION_CANCEL:
-            case MotionEvent.ACTION_UP:
-                return false;
-        }
-        return super.onInterceptTouchEvent(ev);
+  @Override
+  public boolean onTouchEvent(MotionEvent ev) {
+    switch (ev.getActionMasked()) {
+      case MotionEvent.ACTION_DOWN:
+      case MotionEvent.ACTION_MOVE:
+      case MotionEvent.ACTION_CANCEL:
+      case MotionEvent.ACTION_UP:
+        return false;
     }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent ev) {
-        switch (ev.getActionMasked()) {
-            case MotionEvent.ACTION_DOWN:
-            case MotionEvent.ACTION_MOVE:
-            case MotionEvent.ACTION_CANCEL:
-            case MotionEvent.ACTION_UP:
-                return false;
-        }
-        return super.onInterceptTouchEvent(ev);
-    }
+    return super.onInterceptTouchEvent(ev);
+  }
 }

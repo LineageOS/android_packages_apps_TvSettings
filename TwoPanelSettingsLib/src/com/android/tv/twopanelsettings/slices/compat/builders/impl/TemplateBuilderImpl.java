@@ -28,101 +28,90 @@ import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.HINT
 import static com.android.tv.twopanelsettings.slices.compat.core.SliceHints.HINT_SHOW_LABEL;
 
 import androidx.annotation.NonNull;
-
 import com.android.tv.twopanelsettings.slices.compat.Clock;
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.SliceSpec;
 import com.android.tv.twopanelsettings.slices.compat.SystemClock;
-
 import java.util.ArrayList;
 
-/**
- */
+/** */
 // @RestrictTo(LIBRARY)
 // @Deprecated // Supported for TV
 public abstract class TemplateBuilderImpl {
 
-    private Slice.Builder mSliceBuilder;
-    private final SliceSpec mSpec;
-    private Clock mClock;
+  private Slice.Builder mSliceBuilder;
+  private final SliceSpec mSpec;
+  private Clock mClock;
 
-    protected TemplateBuilderImpl(Slice.Builder b, SliceSpec spec) {
-        this(b, spec, new SystemClock());
+  protected TemplateBuilderImpl(Slice.Builder b, SliceSpec spec) {
+    this(b, spec, new SystemClock());
+  }
+
+  protected TemplateBuilderImpl(Slice.Builder b, SliceSpec spec, Clock clock) {
+    mSliceBuilder = b;
+    mSpec = spec;
+    mClock = clock;
+  }
+
+  protected void setBuilder(Slice.Builder builder) {
+    mSliceBuilder = builder;
+  }
+
+  /** Construct the slice. */
+  public Slice build() {
+    mSliceBuilder.setSpec(mSpec);
+    apply(mSliceBuilder);
+    return mSliceBuilder.build();
+  }
+
+  /** */
+  // @RestrictTo(LIBRARY)
+  public Slice.Builder getBuilder() {
+    return mSliceBuilder;
+  }
+
+  /** */
+  // @RestrictTo(LIBRARY)
+  public Slice.Builder createChildBuilder() {
+    return new Slice.Builder(mSliceBuilder);
+  }
+
+  /** */
+  // @RestrictTo(LIBRARY)
+  public abstract void apply(@NonNull Slice.Builder builder);
+
+  /** */
+  // @RestrictTo(LIBRARY)
+  public Clock getClock() {
+    return mClock;
+  }
+
+  /** */
+  // @RestrictTo(LIBRARY)
+  public SliceSpec getSpec() {
+    return mSpec;
+  }
+
+  /** */
+  // @RestrictTo(LIBRARY)
+  @NonNull
+  protected ArrayList<String> parseImageMode(int imageMode, boolean isLoading) {
+    ArrayList<String> hints = new ArrayList<>();
+    if (imageMode == ACTION_WITH_LABEL) {
+      hints.add(HINT_SHOW_LABEL);
     }
-
-    protected TemplateBuilderImpl(Slice.Builder b, SliceSpec spec, Clock clock) {
-        mSliceBuilder = b;
-        mSpec = spec;
-        mClock = clock;
+    if (imageMode != ICON_IMAGE) {
+      hints.add(HINT_NO_TINT);
     }
-
-    protected void setBuilder(Slice.Builder builder) {
-        mSliceBuilder = builder;
+    if (imageMode == LARGE_IMAGE || imageMode == RAW_IMAGE_LARGE) {
+      hints.add(HINT_LARGE);
     }
-
-    /**
-     * Construct the slice.
-     */
-    public Slice build() {
-        mSliceBuilder.setSpec(mSpec);
-        apply(mSliceBuilder);
-        return mSliceBuilder.build();
+    if (imageMode == RAW_IMAGE_SMALL || imageMode == RAW_IMAGE_LARGE) {
+      hints.add(HINT_RAW);
     }
-
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    public Slice.Builder getBuilder() {
-        return mSliceBuilder;
+    if (isLoading) {
+      hints.add(HINT_PARTIAL);
     }
-
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    public Slice.Builder createChildBuilder() {
-        return new Slice.Builder(mSliceBuilder);
-    }
-
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    public abstract void apply(@NonNull Slice.Builder builder);
-
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    public Clock getClock() {
-        return mClock;
-    }
-
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    public SliceSpec getSpec() {
-        return mSpec;
-    }
-
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    @NonNull
-    protected ArrayList<String> parseImageMode(int imageMode, boolean isLoading) {
-        ArrayList<String> hints = new ArrayList<>();
-        if (imageMode == ACTION_WITH_LABEL) {
-            hints.add(HINT_SHOW_LABEL);
-        }
-        if (imageMode != ICON_IMAGE) {
-            hints.add(HINT_NO_TINT);
-        }
-        if (imageMode == LARGE_IMAGE || imageMode == RAW_IMAGE_LARGE) {
-            hints.add(HINT_LARGE);
-        }
-        if (imageMode == RAW_IMAGE_SMALL || imageMode == RAW_IMAGE_LARGE) {
-            hints.add(HINT_RAW);
-        }
-        if (isLoading) {
-            hints.add(HINT_PARTIAL);
-        }
-        return hints;
-    }
+    return hints;
+  }
 }

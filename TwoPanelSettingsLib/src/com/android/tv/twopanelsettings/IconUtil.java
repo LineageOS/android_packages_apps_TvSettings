@@ -23,37 +23,30 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.util.Log;
 import android.view.Gravity;
-
 import androidx.core.content.ContextCompat;
 
-/**
- * Create two panel settings style icon
- */
+/** Create two panel settings style icon */
 public class IconUtil {
-    private static final int INSET = 12;
-    private static final String TAG = "IconUtil";
+  private static final int INSET = 12;
+  private static final String TAG = "IconUtil";
 
-    /**
-     * Add the border and return the compound icon.
-     */
-    public static Drawable getCompoundIcon(Context context, Drawable icon) {
-        Drawable container =
-                ContextCompat.getDrawable(context, R.drawable.compound_icon_background);
+  /** Add the border and return the compound icon. */
+  public static Drawable getCompoundIcon(Context context, Drawable icon) {
+    Drawable container = ContextCompat.getDrawable(context, R.drawable.compound_icon_background);
 
-        Resources res = context.getResources();
-        try {
-            ColorStateList colorStateList = ColorStateList
-                    .createFromXml(res, res.getXml(R.color.two_panel_preference_icon_color));
-            icon.setTintList(colorStateList);
-        } catch (Exception e) {
-            Log.e(TAG, "Cannot set tint", e);
-
-        }
-
-        LayerDrawable compoundDrawable = new LayerDrawable(new Drawable[] {container, icon});
-        compoundDrawable.setLayerGravity(0, Gravity.CENTER);
-        compoundDrawable.setLayerGravity(1, Gravity.CENTER);
-        compoundDrawable.setLayerInset(1, INSET, INSET, INSET, INSET);
-        return compoundDrawable;
+    Resources res = context.getResources();
+    try {
+      ColorStateList colorStateList =
+          ColorStateList.createFromXml(res, res.getXml(R.color.two_panel_preference_icon_color));
+      icon.setTintList(colorStateList);
+    } catch (Exception e) {
+      Log.e(TAG, "Cannot set tint", e);
     }
+
+    LayerDrawable compoundDrawable = new LayerDrawable(new Drawable[] {container, icon});
+    compoundDrawable.setLayerGravity(0, Gravity.CENTER);
+    compoundDrawable.setLayerGravity(1, Gravity.CENTER);
+    compoundDrawable.setLayerInset(1, INSET, INSET, INSET, INSET);
+    return compoundDrawable;
+  }
 }

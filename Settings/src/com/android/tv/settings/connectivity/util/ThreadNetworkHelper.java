@@ -76,6 +76,16 @@ public class ThreadNetworkHelper {
             public void onDeviceRoleChanged(int i) {
 
             }
+
+            @Override
+            public void onThreadEnableStateChanged(int enabledState) {
+                // There might be race condition when listener is detached so check
+                // if listener is available
+                if (mOnStateChangeListener != null) {
+                    mOnStateChangeListener.isEnabled(
+                            enabledState == ThreadNetworkController.STATE_ENABLED);
+                }
+            }
         };
     }
 

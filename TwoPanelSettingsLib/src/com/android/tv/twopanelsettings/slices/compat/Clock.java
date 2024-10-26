@@ -16,10 +16,9 @@
 
 package com.android.tv.twopanelsettings.slices.compat;
 
-/**
- */
+/** */
 // @RestrictTo(LIBRARY_GROUP_PREFIX)
 // @Deprecated // Supported for TV
 public interface Clock {
-    long currentTimeMillis();
+  long currentTimeMillis();
 }

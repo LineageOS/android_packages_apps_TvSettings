@@ -20,7 +20,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.widget.FrameLayout;
-
 import androidx.annotation.NonNull;
 
 /**
@@ -28,35 +27,35 @@ import androidx.annotation.NonNull;
  * layout.
  */
 public class TwoPanelSettingsRootView extends FrameLayout {
-    private OnKeyListener mOnBackKeyListener;
+  private OnKeyListener mOnBackKeyListener;
 
-    public TwoPanelSettingsRootView(Context context) {
-        super(context);
-    }
+  public TwoPanelSettingsRootView(Context context) {
+    super(context);
+  }
 
-    public TwoPanelSettingsRootView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
+  public TwoPanelSettingsRootView(Context context, AttributeSet attrs) {
+    super(context, attrs);
+  }
 
-    public TwoPanelSettingsRootView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
+  public TwoPanelSettingsRootView(Context context, AttributeSet attrs, int defStyleAttr) {
+    super(context, attrs, defStyleAttr);
+  }
 
-    public void setOnBackKeyListener(OnKeyListener backKeyListener) {
-        mOnBackKeyListener = backKeyListener;
-    }
+  public void setOnBackKeyListener(OnKeyListener backKeyListener) {
+    mOnBackKeyListener = backKeyListener;
+  }
 
-    @Override
-    public boolean dispatchKeyEvent(@NonNull KeyEvent event) {
-        boolean handled = false;
-        if ((event.getKeyCode() == KeyEvent.KEYCODE_BACK
-                || event.getKeyCode() == KeyEvent.KEYCODE_DPAD_UP
-                || event.getKeyCode() == KeyEvent.KEYCODE_DPAD_DOWN
-                || event.getKeyCode() == KeyEvent.KEYCODE_DPAD_LEFT
-                || event.getKeyCode() == KeyEvent.KEYCODE_DPAD_RIGHT)
-                && mOnBackKeyListener != null) {
-            handled = mOnBackKeyListener.onKey(this, event.getKeyCode(), event);
-        }
-        return handled || super.dispatchKeyEvent(event);
+  @Override
+  public boolean dispatchKeyEvent(@NonNull KeyEvent event) {
+    boolean handled = false;
+    if ((event.getKeyCode() == KeyEvent.KEYCODE_BACK
+            || event.getKeyCode() == KeyEvent.KEYCODE_DPAD_UP
+            || event.getKeyCode() == KeyEvent.KEYCODE_DPAD_DOWN
+            || event.getKeyCode() == KeyEvent.KEYCODE_DPAD_LEFT
+            || event.getKeyCode() == KeyEvent.KEYCODE_DPAD_RIGHT)
+        && mOnBackKeyListener != null) {
+      handled = mOnBackKeyListener.onKey(this, event.getKeyCode(), event);
     }
+    return handled || super.dispatchKeyEvent(event);
+  }
 }

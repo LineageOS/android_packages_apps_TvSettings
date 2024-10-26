@@ -16,10 +16,9 @@
 
 package com.android.tv.twopanelsettings.slices;
 
-/**
- * Indicates the preference has target slice uri.
- */
+/** Indicates the preference has target slice uri. */
 public interface HasSliceUri {
-    void setUri(String uri);
-    String getUri();
+  void setUri(String uri);
+
+  String getUri();
 }

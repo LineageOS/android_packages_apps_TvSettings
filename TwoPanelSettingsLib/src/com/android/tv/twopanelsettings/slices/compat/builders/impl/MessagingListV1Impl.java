@@ -20,96 +20,83 @@ import static com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder
 import static com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder.SMALL_IMAGE;
 
 import android.graphics.drawable.Icon;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.core.graphics.drawable.IconCompat;
-
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.SliceSpec;
 
-/**
- */
+/** */
 // @RestrictTo(LIBRARY)
 // @Deprecated // Supported for TV
-public class MessagingListV1Impl extends TemplateBuilderImpl implements MessagingBuilder{
+public class MessagingListV1Impl extends TemplateBuilderImpl implements MessagingBuilder {
 
-    private final ListBuilderImpl mListBuilder;
+  private final ListBuilderImpl mListBuilder;
 
-    /**
-     */
-    public MessagingListV1Impl(Slice.Builder b, SliceSpec spec) {
-        super(b, spec);
-        mListBuilder = new ListBuilderImpl(b, spec);
-        mListBuilder.setTtl(INFINITY);
+  /** */
+  public MessagingListV1Impl(Slice.Builder b, SliceSpec spec) {
+    super(b, spec);
+    mListBuilder = new ListBuilderImpl(b, spec);
+    mListBuilder.setTtl(INFINITY);
+  }
+
+  /** */
+  @Override
+  public void add(TemplateBuilderImpl builder) {
+    MessageBuilder b = (MessageBuilder) builder;
+    mListBuilder.addRow(b.mListBuilder);
+  }
+
+  /** */
+  @Override
+  public TemplateBuilderImpl createMessageBuilder() {
+    return new MessageBuilder(this);
+  }
+
+  /** */
+  @Override
+  public void apply(@NonNull Slice.Builder builder) {
+    mListBuilder.apply(builder);
+  }
+
+  /** */
+  public static final class MessageBuilder extends TemplateBuilderImpl
+      implements MessagingBuilder.MessageBuilder {
+    final ListBuilderImpl.RowBuilderImpl mListBuilder;
+
+    /** */
+    public MessageBuilder(MessagingListV1Impl parent) {
+      this(parent.createChildBuilder());
     }
 
-    /**
-     */
+    private MessageBuilder(Slice.Builder builder) {
+      super(builder, null);
+      mListBuilder = new ListBuilderImpl.RowBuilderImpl(builder);
+    }
+
+    /** */
     @Override
-    public void add(TemplateBuilderImpl builder) {
-        MessageBuilder b = (MessageBuilder) builder;
-        mListBuilder.addRow(b.mListBuilder);
+    @RequiresApi(23)
+    public void addSource(Icon source) {
+      mListBuilder.setTitleItem(IconCompat.createFromIcon(source), SMALL_IMAGE);
     }
 
-    /**
-     */
+    /** */
     @Override
-    public TemplateBuilderImpl createMessageBuilder() {
-        return new MessageBuilder(this);
+    public void addText(CharSequence text) {
+      mListBuilder.setSubtitle(text);
     }
 
-    /**
-     */
+    /** */
+    @Override
+    public void addTimestamp(long timestamp) {
+      mListBuilder.addEndItem(timestamp);
+    }
+
+    /** */
     @Override
     public void apply(@NonNull Slice.Builder builder) {
-        mListBuilder.apply(builder);
+      mListBuilder.apply(builder);
     }
-
-    /**
-     */
-    public static final class MessageBuilder extends TemplateBuilderImpl
-            implements MessagingBuilder.MessageBuilder {
-        final ListBuilderImpl.RowBuilderImpl mListBuilder;
-
-        /**
-         */
-        public MessageBuilder(MessagingListV1Impl parent) {
-            this(parent.createChildBuilder());
-        }
-
-        private MessageBuilder(Slice.Builder builder) {
-            super(builder, null);
-            mListBuilder = new ListBuilderImpl.RowBuilderImpl(builder);
-        }
-
-        /**
-         */
-        @Override
-        @RequiresApi(23)
-        public void addSource(Icon source) {
-            mListBuilder.setTitleItem(IconCompat.createFromIcon(source), SMALL_IMAGE);
-        }
-
-        /**
-         */
-        @Override
-        public void addText(CharSequence text) {
-            mListBuilder.setSubtitle(text);
-        }
-
-        /**
-         */
-        @Override
-        public void addTimestamp(long timestamp) {
-            mListBuilder.addEndItem(timestamp);
-        }
-
-        /**
-         */
-        @Override
-        public void apply(@NonNull Slice.Builder builder) {
-            mListBuilder.apply(builder);
-        }
-    }
+  }
 }

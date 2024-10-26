@@ -18,26 +18,23 @@ package com.android.tv.twopanelsettings.slices.compat.widget;
 
 import java.util.List;
 
-/**
- * The slice items we can render on the available space.
- *
- */
+/** The slice items we can render on the available space. */
 // @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
 // @Deprecated // Supported for TV
 class DisplayedListItems {
-    private final List<SliceContent> mDisplayedItems;
-    private final int mHiddenItemCount;
+  private final List<SliceContent> mDisplayedItems;
+  private final int mHiddenItemCount;
 
-    DisplayedListItems(List<SliceContent> displayedItems, int hiddenItemCount) {
-        mDisplayedItems = displayedItems;
-        mHiddenItemCount = hiddenItemCount;
-    }
+  DisplayedListItems(List<SliceContent> displayedItems, int hiddenItemCount) {
+    mDisplayedItems = displayedItems;
+    mHiddenItemCount = hiddenItemCount;
+  }
 
-    List<SliceContent> getDisplayedItems() {
-        return mDisplayedItems;
-    }
+  List<SliceContent> getDisplayedItems() {
+    return mDisplayedItems;
+  }
 
-    int getHiddenItemCount() {
-        return mHiddenItemCount;
-    }
+  int getHiddenItemCount() {
+    return mHiddenItemCount;
+  }
 }

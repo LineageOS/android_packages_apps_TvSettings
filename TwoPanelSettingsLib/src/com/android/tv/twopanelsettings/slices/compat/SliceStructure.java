@@ -27,104 +27,101 @@ import static android.app.slice.SliceItem.FORMAT_SLICE;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
 
 import android.net.Uri;
-
 import androidx.annotation.Nullable;
 
 /**
- * Class used to see if two Slices are structurally equivalent ignoring
- * specific content such as text or icons.
+ * Class used to see if two Slices are structurally equivalent ignoring specific content such as
+ * text or icons.
  *
- * Two structures can be compared using {@link #equals(Object)}.
+ * <p>Two structures can be compared using {@link #equals(Object)}.
  *
- * Slice framework has been deprecated, it will not receive any updates moving
- * forward. If you are looking for a framework that handles communication across apps,
- * consider using {@link android.app.appsearch.AppSearchManager}.
+ * <p>Slice framework has been deprecated, it will not receive any updates moving forward. If you
+ * are looking for a framework that handles communication across apps, consider using {@link
+ * android.app.appsearch.AppSearchManager}.
  */
 // @Deprecated // Supported for TV
 public class SliceStructure {
 
-    private final String mStructure;
-    private final Uri mUri;
+  private final String mStructure;
+  private final Uri mUri;
 
-    /**
-     * Create a SliceStructure.
-     */
-    public SliceStructure(Slice s) {
-        StringBuilder str = new StringBuilder();
-        getStructure(s, str);
-        mStructure = str.toString();
-        mUri = s.getUri();
+  /** Create a SliceStructure. */
+  public SliceStructure(Slice s) {
+    StringBuilder str = new StringBuilder();
+    getStructure(s, str);
+    mStructure = str.toString();
+    mUri = s.getUri();
+  }
+
+  /** Create a SliceStructure. */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public SliceStructure(SliceItem s) {
+    StringBuilder str = new StringBuilder();
+    getStructure(s, str);
+    mStructure = str.toString();
+    if (FORMAT_ACTION.equals(s.getFormat()) || FORMAT_SLICE.equals(s.getFormat())) {
+      mUri = s.getSlice().getUri();
+    } else {
+      mUri = null;
     }
+  }
 
-    /**
-     * Create a SliceStructure.
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public SliceStructure(SliceItem s) {
-        StringBuilder str = new StringBuilder();
-        getStructure(s, str);
-        mStructure = str.toString();
-        if (FORMAT_ACTION.equals(s.getFormat()) || FORMAT_SLICE.equals(s.getFormat())) {
-            mUri = s.getSlice().getUri();
-        } else {
-            mUri = null;
+  /**
+   * @return the Uri associated with this content item if one exists.
+   */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  @Nullable
+  public Uri getUri() {
+    return mUri;
+  }
+
+  @Override
+  public int hashCode() {
+    return mStructure.hashCode();
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (!(obj instanceof SliceStructure)) {
+      return false;
+    }
+    SliceStructure other = (SliceStructure) obj;
+    return mStructure.equals(other.mStructure);
+  }
+
+  private static void getStructure(Slice s, StringBuilder str) {
+    str.append("s{");
+    for (SliceItem item : s.getItems()) {
+      getStructure(item, str);
+    }
+    str.append("}");
+  }
+
+  private static void getStructure(SliceItem item, StringBuilder str) {
+    switch (item.getFormat()) {
+      case FORMAT_SLICE:
+        getStructure(item.getSlice(), str);
+        break;
+      case FORMAT_ACTION:
+        str.append('a');
+        if (SUBTYPE_RANGE.equals(item.getSubType())) {
+          str.append('r');
         }
+        getStructure(item.getSlice(), str);
+        break;
+      case FORMAT_TEXT:
+        str.append('t');
+        break;
+      case FORMAT_IMAGE:
+        str.append('i');
+        break;
+      case FORMAT_INT:
+      case FORMAT_LONG:
+      case FORMAT_REMOTE_INPUT:
+      case FORMAT_BUNDLE:
+      default:
+        // Generally adding or removing these types is ok.
+        break;
     }
-
-    /**
-     * @return the Uri associated with this content item if one exists.
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    @Nullable
-    public Uri getUri() {
-        return mUri;
-    }
-
-    @Override
-    public int hashCode() {
-        return mStructure.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (!(obj instanceof SliceStructure)) return false;
-        SliceStructure other = (SliceStructure) obj;
-        return mStructure.equals(other.mStructure);
-    }
-
-    private static void getStructure(Slice s, StringBuilder str) {
-        str.append("s{");
-        for (SliceItem item : s.getItems()) {
-            getStructure(item, str);
-        }
-        str.append("}");
-    }
-
-    private static void getStructure(SliceItem item, StringBuilder str) {
-        switch (item.getFormat()) {
-            case FORMAT_SLICE:
-                getStructure(item.getSlice(), str);
-                break;
-            case FORMAT_ACTION:
-                str.append('a');
-                if (SUBTYPE_RANGE.equals(item.getSubType())) {
-                    str.append('r');
-                }
-                getStructure(item.getSlice(), str);
-                break;
-            case FORMAT_TEXT:
-                str.append('t');
-                break;
-            case FORMAT_IMAGE:
-                str.append('i');
-                break;
-            case FORMAT_INT:
-            case FORMAT_LONG:
-            case FORMAT_REMOTE_INPUT:
-            case FORMAT_BUNDLE:
-            default:
-                // Generally adding or removing these types is ok.
-                break;
-        }
-    }
+  }
 }

@@ -17,7 +17,6 @@
 package com.android.tv.twopanelsettings.slices.compat;
 
 import android.net.Uri;
-
 import androidx.annotation.NonNull;
 import androidx.versionedparcelable.ParcelField;
 import androidx.versionedparcelable.VersionedParcelable;
@@ -25,17 +24,15 @@ import androidx.versionedparcelable.VersionedParcelize;
 
 /**
  * Class describing the structure of the data contained within a slice.
- * <p>
- * A data version contains a string which describes the type of structure
- * and a revision which denotes this specific implementation. Revisions are expected
- * to be backwards compatible and monotonically increasing. Meaning if a
- * SliceSpec has the same type and an equal or lesser revision,
- * it is expected to be compatible.
- * <p>
- * Apps rendering slices will provide a list of supported versions to the OS which
- * will also be given to the app. Apps should only return a {@link Slice} with a
- * {@link SliceSpec} that one of the supported {@link SliceSpec}s provided
- * {@link #canRender}.
+ *
+ * <p>A data version contains a string which describes the type of structure and a revision which
+ * denotes this specific implementation. Revisions are expected to be backwards compatible and
+ * monotonically increasing. Meaning if a SliceSpec has the same type and an equal or lesser
+ * revision, it is expected to be compatible.
+ *
+ * <p>Apps rendering slices will provide a list of supported versions to the OS which will also be
+ * given to the app. Apps should only return a {@link Slice} with a {@link SliceSpec} that one of
+ * the supported {@link SliceSpec}s provided {@link #canRender}.
  *
  * @see Slice
  * @see SliceProvider#onBindSlice(Uri)
@@ -45,67 +42,65 @@ import androidx.versionedparcelable.VersionedParcelize;
 // @Deprecated // Supported for TV
 public final class SliceSpec implements VersionedParcelable {
 
-    @ParcelField(1)
-    String mType;
-    @ParcelField(value = 2, defaultValue = "1")
-    int mRevision = 1;
+  @ParcelField(1)
+  String mType;
 
-    /**
-     * Used for VersionedParcelable
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public SliceSpec() {
-    }
+  @ParcelField(value = 2, defaultValue = "1")
+  int mRevision = 1;
 
-    public SliceSpec(@NonNull String type, int revision) {
-        mType = type;
-        mRevision = revision;
-    }
+  /** Used for VersionedParcelable */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public SliceSpec() {}
 
-    /**
-     * Gets the type of the version.
-     */
-    @NonNull
-    public String getType() {
-        return mType;
-    }
+  public SliceSpec(@NonNull String type, int revision) {
+    mType = type;
+    mRevision = revision;
+  }
 
-    /**
-     * Gets the revision of the version.
-     */
-    public int getRevision() {
-        return mRevision;
-    }
+  /** Gets the type of the version. */
+  @NonNull
+  public String getType() {
+    return mType;
+  }
 
-    /**
-     * Indicates that this spec can be used to render the specified spec.
-     * <p>
-     * Rendering support is not bi-directional (e.g. Spec v3 can render
-     * Spec v2, but Spec v2 cannot render Spec v3).
-     *
-     * @param candidate candidate format of data.
-     * @return true if versions are compatible.
-     * @see com.android.tv.twopanelsettings.slices.compat.widget.SliceView
-     */
-    public boolean canRender(@NonNull SliceSpec candidate) {
-        if (!mType.equals(candidate.mType)) return false;
-        return mRevision >= candidate.mRevision;
-    }
+  /** Gets the revision of the version. */
+  public int getRevision() {
+    return mRevision;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (!(obj instanceof SliceSpec)) return false;
-        SliceSpec other = (SliceSpec) obj;
-        return mType.equals(other.mType) && mRevision == other.mRevision;
+  /**
+   * Indicates that this spec can be used to render the specified spec.
+   *
+   * <p>Rendering support is not bi-directional (e.g. Spec v3 can render Spec v2, but Spec v2 cannot
+   * render Spec v3).
+   *
+   * @param candidate candidate format of data.
+   * @return true if versions are compatible.
+   * @see com.android.tv.twopanelsettings.slices.compat.widget.SliceView
+   */
+  public boolean canRender(@NonNull SliceSpec candidate) {
+    if (!mType.equals(candidate.mType)) {
+      return false;
     }
+    return mRevision >= candidate.mRevision;
+  }
 
-    @Override
-    public int hashCode() {
-        return mType.hashCode() + mRevision;
+  @Override
+  public boolean equals(Object obj) {
+    if (!(obj instanceof SliceSpec)) {
+      return false;
     }
+    SliceSpec other = (SliceSpec) obj;
+    return mType.equals(other.mType) && mRevision == other.mRevision;
+  }
 
-    @Override
-    public String toString() {
-        return String.format("SliceSpec{%s,%d}", mType, mRevision);
-    }
+  @Override
+  public int hashCode() {
+    return mType.hashCode() + mRevision;
+  }
+
+  @Override
+  public String toString() {
+    return String.format("SliceSpec{%s,%d}", mType, mRevision);
+  }
 }

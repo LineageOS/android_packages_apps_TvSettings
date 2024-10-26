@@ -15,64 +15,60 @@
  */
 package com.android.tv.twopanelsettings.slices.compat;
 
-
 import androidx.core.util.ObjectsCompat;
-
 import java.lang.reflect.Array;
 
-/**
- */
+/** */
 // @RestrictTo(Scope.LIBRARY_GROUP)
 // @Deprecated // Supported for TV
 public class ArrayUtils {
 
-    public static <T> boolean contains(T[] array, T item) {
-        for (T t : array) {
-            if (ObjectsCompat.equals(t, item)) {
-                return true;
-            }
-        }
-        return false;
+  public static <T> boolean contains(T[] array, T item) {
+    for (T t : array) {
+      if (ObjectsCompat.equals(t, item)) {
+        return true;
+      }
     }
+    return false;
+  }
 
-    @SuppressWarnings("unchecked")
-    public static <T> T[] appendElement(Class<T> kind, T[] array, T element) {
-        final T[] result;
-        final int end;
-        if (array != null) {
-            end = array.length;
-            result = (T[]) Array.newInstance(kind, end + 1);
-            System.arraycopy(array, 0, result, 0, end);
-        } else {
-            end = 0;
-            result = (T[]) Array.newInstance(kind, 1);
-        }
-        result[end] = element;
-        return result;
+  @SuppressWarnings("unchecked")
+  public static <T> T[] appendElement(Class<T> kind, T[] array, T element) {
+    final T[] result;
+    final int end;
+    if (array != null) {
+      end = array.length;
+      result = (T[]) Array.newInstance(kind, end + 1);
+      System.arraycopy(array, 0, result, 0, end);
+    } else {
+      end = 0;
+      result = (T[]) Array.newInstance(kind, 1);
     }
+    result[end] = element;
+    return result;
+  }
 
-    @SuppressWarnings("unchecked")
-    public static <T> T[] removeElement(Class<T> kind, T[] array, T element) {
-        if (array != null) {
-            if (!contains(array, element)) {
-                return array;
-            }
-            final int length = array.length;
-            for (int i = 0; i < length; i++) {
-                if (ObjectsCompat.equals(array[i], element)) {
-                    if (length == 1) {
-                        return null;
-                    }
-                    T[] result = (T[]) Array.newInstance(kind, length - 1);
-                    System.arraycopy(array, 0, result, 0, i);
-                    System.arraycopy(array, i + 1, result, i, length - i - 1);
-                    return result;
-                }
-            }
-        }
+  @SuppressWarnings("unchecked")
+  public static <T> T[] removeElement(Class<T> kind, T[] array, T element) {
+    if (array != null) {
+      if (!contains(array, element)) {
         return array;
+      }
+      final int length = array.length;
+      for (int i = 0; i < length; i++) {
+        if (ObjectsCompat.equals(array[i], element)) {
+          if (length == 1) {
+            return null;
+          }
+          T[] result = (T[]) Array.newInstance(kind, length - 1);
+          System.arraycopy(array, 0, result, 0, i);
+          System.arraycopy(array, i + 1, result, i, length - i - 1);
+          return result;
+        }
+      }
     }
+    return array;
+  }
 
-    private ArrayUtils() {
-    }
+  private ArrayUtils() {}
 }
