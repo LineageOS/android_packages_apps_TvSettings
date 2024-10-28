@@ -193,6 +193,11 @@ public class UnmountActivity extends FragmentActivity {
                 ((UnmountActivity) getActivity()).onRequestUnmount();
             }
         }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.Theme_Leanback_GuidedStep;
+        }
     }
 
     public static class UnmountProgressFragment extends ProgressDialogFragment {

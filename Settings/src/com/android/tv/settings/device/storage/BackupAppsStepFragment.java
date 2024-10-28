@@ -276,6 +276,11 @@ public class BackupAppsStepFragment extends GuidedStepSupportFragment implements
         updateActions();
     }
 
+    @Override
+    public int onProvideTheme() {
+        return R.style.Theme_Leanback_GuidedStep;
+    }
+
     private class IconLoaderTask extends AsyncTask<Void, Void, Map<String, Drawable>> {
         private final List<ApplicationsState.AppEntry> mEntries;
 

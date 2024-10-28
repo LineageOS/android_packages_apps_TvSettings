@@ -572,6 +572,11 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment {
             };
         }
 
+        @Override
+        public int onProvideTheme() {
+            return R.style.Theme_Leanback_GuidedStep;
+        }
+
         private void refresh(String pairingCode, String ipAddressPort) {
             mPairingCode = pairingCode;
             mIpAddressPort = ipAddressPort;

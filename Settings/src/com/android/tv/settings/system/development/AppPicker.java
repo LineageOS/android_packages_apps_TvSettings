@@ -163,6 +163,11 @@ public class AppPicker extends FragmentActivity {
             getActivity().finish();
         }
 
+        @Override
+        public int onProvideTheme() {
+            return R.style.Theme_Leanback_GuidedStep;
+        }
+
         private static class AppAction extends GuidedAction {
 
             private final String mPackageName;

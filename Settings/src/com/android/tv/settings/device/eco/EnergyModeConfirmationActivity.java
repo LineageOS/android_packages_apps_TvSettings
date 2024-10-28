@@ -134,6 +134,11 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
         public GuidanceStylist onCreateGuidanceStylist() {
             return GuidedActionsAlignUtil.createGuidanceStylist();
         }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.Theme_Leanback_GuidedStep;
+        }
     }
 
     /** Confirmation dialog for changing energy mode */
