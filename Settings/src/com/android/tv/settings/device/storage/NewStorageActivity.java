@@ -222,6 +222,11 @@ public class NewStorageActivity extends FragmentActivity {
             getActivity().finish();
         }
 
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
+        }
+
         private void checkForUnmount() {
             if (!isAdded()) {
                 return;
@@ -329,6 +334,11 @@ public class NewStorageActivity extends FragmentActivity {
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
             getActivity().finish();
+        }
+
+        @Override
+        public int onProvideTheme() {
+           return R.style.GuidedStepFragmentThemeTwoPanel;
         }
 
         private void checkForRemount() {

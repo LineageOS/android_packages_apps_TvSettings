@@ -150,5 +150,10 @@ public class RemoveAccountDialog extends FragmentActivity
                     .title(getString(android.R.string.ok))
                     .build());
         }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
+        }
     }
 }

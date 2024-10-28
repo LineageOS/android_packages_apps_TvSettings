@@ -84,4 +84,9 @@ public class FormatAsPrivateStepFragment extends GuidedStepSupportFragment {
             // todo
         } */
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }

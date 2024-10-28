@@ -110,6 +110,11 @@ public class InputCustomNameFragment extends GuidedStepSupportFragment {
         getFragmentManager().popBackStack();
     }
 
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
+
     public interface Callback {
         void onSetCustomName(CharSequence name);
     }

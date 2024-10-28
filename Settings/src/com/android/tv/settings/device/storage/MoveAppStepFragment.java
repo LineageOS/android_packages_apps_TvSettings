@@ -139,4 +139,8 @@ public class MoveAppStepFragment extends GuidedStepSupportFragment {
         }
     }
 
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }

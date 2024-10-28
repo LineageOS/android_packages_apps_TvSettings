@@ -160,4 +160,9 @@ public class DeviceNameSetFragment extends GuidedStepSupportFragment {
         super.onProvideFragmentTransitions();
         setExitTransition(null);
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }

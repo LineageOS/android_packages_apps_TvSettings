@@ -57,4 +57,9 @@ public class SlowDriveStepFragment extends GuidedStepSupportFragment {
     public void onGuidedActionClicked(GuidedAction action) {
         ((Callback) getActivity()).onSlowDriveWarningComplete();
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }
