@@ -363,6 +363,11 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
             }
             return GuidedAction.ACTION_ID_NEXT;
         }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
+        }
     }
 
     private static class UnpairReceiver extends BroadcastReceiver {
@@ -486,6 +491,11 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
             } else {
                 super.onGuidedActionClicked(action);
             }
+        }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
         }
 
         private void navigateBack() {

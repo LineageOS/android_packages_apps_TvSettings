@@ -233,6 +233,11 @@ public class MigrateStorageActivity extends FragmentActivity {
                     break;
             }
         }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
+        }
     }
 
     public static class ChooseStorageStepFragment extends GuidedStepSupportFragment {
@@ -286,6 +291,11 @@ public class MigrateStorageActivity extends FragmentActivity {
         public void onGuidedActionClicked(GuidedAction action) {
             final VolumeInfo volumeInfo = mCandidateVolumes.get((int) action.getId());
             ((MigrateStorageActivity)getActivity()).onChoose(volumeInfo);
+        }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
         }
     }
 

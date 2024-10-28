@@ -109,4 +109,9 @@ public class FormatAsPublicStepFragment extends GuidedStepSupportFragment {
             ((Callback) getActivity()).onRequestFormatAsPublic(mDiskId, mVolumeId);
         }
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }
