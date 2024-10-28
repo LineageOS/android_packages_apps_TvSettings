@@ -93,4 +93,9 @@ public class AdbDeviceDetailsFragment extends GuidedStepSupportFragment {
             super.onGuidedActionClicked(action);
         }
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }
