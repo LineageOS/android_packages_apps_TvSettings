@@ -146,4 +146,9 @@ public class DeviceNameSetCustomFragment extends GuidedStepSupportFragment {
         popBackStackToGuidedStepSupportFragment(
                 DeviceNameSetCustomFragment.class, FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }

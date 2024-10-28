@@ -96,4 +96,9 @@ public class DeviceNameSummaryFragment extends GuidedStepSupportFragment {
             throw new IllegalStateException("Unknown action");
         }
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }

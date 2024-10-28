@@ -66,4 +66,9 @@ public class ConfirmClearCacheFragment extends GuidedStepSupportFragment {
             getFragmentManager().popBackStack();
         }
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }

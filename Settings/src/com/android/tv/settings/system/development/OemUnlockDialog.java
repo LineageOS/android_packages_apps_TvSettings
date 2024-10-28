@@ -66,4 +66,9 @@ public class OemUnlockDialog extends GuidedStepSupportFragment {
             getFragmentManager().popBackStack();
         }
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }
