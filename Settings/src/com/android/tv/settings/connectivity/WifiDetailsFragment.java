@@ -331,5 +331,10 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
             }
             getFragmentManager().popBackStack();
         }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
+        }
     }
 }

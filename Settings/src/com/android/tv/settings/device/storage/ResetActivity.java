@@ -108,6 +108,11 @@ public class ResetActivity extends FragmentActivity {
         public GuidanceStylist onCreateGuidanceStylist() {
             return GuidedActionsAlignUtil.createGuidanceStylist();
         }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
+        }
     }
 
     public static class ResetConfirmFragment extends GuidedStepSupportFragment {
@@ -221,6 +226,11 @@ public class ResetActivity extends FragmentActivity {
                 resetIntent.putExtra(SHUTDOWN_INTENT_EXTRA, true);
             }
             getActivity().sendBroadcastAsUser(resetIntent, UserHandle.SYSTEM);
+        }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
         }
     }
 }

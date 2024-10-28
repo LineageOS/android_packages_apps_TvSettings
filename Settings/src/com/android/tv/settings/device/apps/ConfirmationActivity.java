@@ -28,6 +28,8 @@ import androidx.leanback.widget.GuidedAction;
 import com.android.tv.settings.util.GuidedActionsAlignUtil;
 import com.android.tv.settings.util.SafeIntents;
 
+import com.android.tv.settings.R;
+
 import java.util.List;
 
 /** Confirmation activity to handle apps related actions. */
@@ -105,6 +107,11 @@ public class ConfirmationActivity extends FragmentActivity {
                     break;
             }
             getActivity().finish();
+        }
+
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
         }
     }
 }
