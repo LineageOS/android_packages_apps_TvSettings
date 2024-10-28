@@ -26,6 +26,8 @@ import androidx.leanback.widget.GuidedAction;
 import com.android.settingslib.RestrictedPreference;
 import com.android.settingslib.applications.ApplicationsState;
 
+import com.android.tv.settings.R;
+
 import java.util.List;
 
 public abstract class AppActionPreference extends RestrictedPreference {
@@ -80,6 +82,10 @@ public abstract class AppActionPreference extends RestrictedPreference {
         }
 
         public abstract void onOk();
-    }
 
+        @Override
+        public int onProvideTheme() {
+            return R.style.GuidedStepFragmentThemeTwoPanel;
+        }
+    }
 }

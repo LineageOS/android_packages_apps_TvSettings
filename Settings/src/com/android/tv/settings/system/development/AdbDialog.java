@@ -69,4 +69,9 @@ public class AdbDialog extends GuidedStepSupportFragment {
             getFragmentManager().popBackStack();
         }
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }

@@ -100,4 +100,9 @@ public class WifiConnectivityGuidedStepFragment extends GuidedStepSupportFragmen
         GuidedActionsAlignUtil.align(getGuidedActionsStylist());
         return view;
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }

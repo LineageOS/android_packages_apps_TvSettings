@@ -144,4 +144,9 @@ public class AccessibilityServiceConfirmationFragment extends GuidedStepSupportF
             super.onGuidedActionClicked(action);
         }
     }
+
+    @Override
+    public int onProvideTheme() {
+        return R.style.GuidedStepFragmentThemeTwoPanel;
+    }
 }
