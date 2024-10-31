@@ -400,12 +400,12 @@
         <item name="android:visibility">gone</item>
     </style>
 
-    <style name="GuidanceContainerStyleTwoPanel">
+    <style name="GuidanceContainerStyleTwoPanel" parent="Widget.Leanback.GuidanceContainerStyle">
         <item name="android:layout_marginStart">@dimen/guidance_group_margin_start_two_panel</item>
         <item name="android:layout_marginEnd">@dimen/guidance_group_margin_end_two_panel</item>
     </style>
 
-    <style name="GuidanceTitleStyle">
+    <style name="GuidanceTitleStyle" parent="Widget.Leanback.GuidanceTitleStyle">
         <item name="android:gravity">start</item>
         <item name="android:maxLines">4</item>
         <item name="android:lineSpacingMultiplier">@dimen/setup_title_line_spacing_multiplier</item>
@@ -415,7 +415,7 @@
 
     </style>
 
-    <style name="GuidanceDescriptionStyle">
+    <style name="GuidanceDescriptionStyle" parent="Widget.Leanback.GuidanceDescriptionStyle">
         <item name="android:gravity">start</item>
         <item name="android:lineSpacingMultiplier">@dimen/setup_description_line_spacing_multiplier</item>
         <item name="android:fontFamily">sans-serif</item>
@@ -423,7 +423,7 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-    <style name="GuidanceIconStyle">
+    <style name="GuidanceIconStyle" parent="Widget.Leanback.GuidanceIconStyle">
         <item name="android:layout_marginBottom">@dimen/guidance_icon_margin_bottom_two_panel</item>
         <item name="android:layout_height">48dp</item>
         <item name="android:layout_width">48dp</item>
