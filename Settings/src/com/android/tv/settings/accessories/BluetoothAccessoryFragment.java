@@ -90,7 +90,7 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
     private Runnable mBailoutRunnable = new Runnable() {
         @Override
         public void run() {
-            if (isResumed() && !getFragmentManager().popBackStackImmediate()) {
+            if (!getFragmentManager().popBackStackImmediate() && isResumed()) {
                 getActivity().onBackPressed();
             }
         }
@@ -404,7 +404,7 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
         private Runnable mBailoutRunnable = new Runnable() {
             @Override
             public void run() {
-                if (isResumed() && !getFragmentManager().popBackStackImmediate()) {
+                if (!getFragmentManager().popBackStackImmediate() && isResumed()) {
                     getActivity().onBackPressed();
                 }
             }

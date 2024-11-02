@@ -29,12 +29,6 @@
             android:title="@string/preferred_dynamic_range_selection_system_title"
             android:summary="@string/preferred_dynamic_range_selection_system_desc" />
         <com.android.tv.settings.RadioPreference
-            android:key="preferred_dynamic_range_selection_passthrough"
-            android:persistent="true"
-            app:radioGroup="preferred_dynamic_range_selection_option"
-            android:title="@string/match_content_dynamic_range_title"
-            android:summary="@string/preferred_dynamic_range_selection_passthrough_desc" />
-        <com.android.tv.settings.RadioPreference
             android:key="preferred_dynamic_range_selection_force"
             android:persistent="true"
             app:radioGroup="preferred_dynamic_range_selection_option"

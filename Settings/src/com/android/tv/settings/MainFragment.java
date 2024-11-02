@@ -177,11 +177,15 @@ public class MainFragment extends PreferenceControllerFragment implements
         mSuggestionQuickSettingPrefsContainer.onCreate();
         if (isWifiScanOptimisationEnabled()) {
             mConnectivityListenerLite = new ConnectivityListenerLite(
-                    getContext(), this::updateConnectivityType, getLifecycle());
+                    requireActivity().getApplicationContext(),
+                    this::updateConnectivityType,
+                    getLifecycle());
             mConnectivityListenerOptional = Optional.empty();
         } else {
             mConnectivityListenerOptional = Optional.of(new ConnectivityListener(
-                    getContext(), this::updateConnectivity, getSettingsLifecycle()));
+                    requireActivity().getApplicationContext(),
+                    this::updateConnectivity,
+                    getSettingsLifecycle()));
         }
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
         super.onCreate(savedInstanceState);

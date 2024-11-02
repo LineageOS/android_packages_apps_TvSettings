@@ -17,7 +17,6 @@
 package com.android.tv.settings.device.displaysound;
 
 import static android.hardware.display.HdrConversionMode.HDR_CONVERSION_FORCE;
-import static android.view.Display.HdrCapabilities.HDR_TYPE_INVALID;
 
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.isHdrFormatSupported;
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.sendHdrSettingsChangedBroadcast;
@@ -38,7 +37,6 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
-
 
 /**
  * This Fragment is responsible for selecting the dynamic range or HDR conversion preference.
@@ -80,19 +78,26 @@ public class PreferredDynamicRangeFragment  extends SettingsPreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.preferred_dynamic_range_selection, null);
-
-        String preferenceFromMode = getPreferenceFromMode(mHdrConversionMode.getConversionMode());
-        if (preferenceFromMode != null && findPreference(preferenceFromMode) != null) {
-            Preference pref = findPreference(preferenceFromMode);
-            selectRadioPreference(pref);
+        if (mDisplayManager.getHdrConversionModeSetting().getConversionMode()
+                == HdrConversionMode.HDR_CONVERSION_PASSTHROUGH) {
+            setPreferencesFromResource(R.xml.preferred_dynamic_range_selection_match_enabled, null);
         }
-        showPreferredDynamicRangeRadioPreference(
-                mHdrConversionMode.getConversionMode() == HDR_CONVERSION_FORCE);
+        else {
+            setPreferencesFromResource(R.xml.preferred_dynamic_range_selection, null);
 
-        // Do not show sidebar info texts in case of 1 panel settings.
-        if (FlavorUtils.getFlavor(getContext()) != FLAVOR_CLASSIC) {
-            createInfoFragments();
+            String preferenceFromMode =
+                    getPreferenceFromMode(mHdrConversionMode.getConversionMode());
+            if (preferenceFromMode != null && findPreference(preferenceFromMode) != null) {
+                Preference pref = findPreference(preferenceFromMode);
+                selectRadioPreference(pref);
+            }
+            showPreferredDynamicRangeRadioPreference(
+                    mHdrConversionMode.getConversionMode() == HDR_CONVERSION_FORCE);
+
+            // Do not show sidebar info texts in case of 1 panel settings.
+            if (FlavorUtils.getFlavor(getContext()) != FLAVOR_CLASSIC) {
+                createInfoFragments();
+            }
         }
     }
 
@@ -106,24 +111,10 @@ public class PreferredDynamicRangeFragment  extends SettingsPreferenceFragment {
 
         if (preference instanceof RadioPreference) {
             selectRadioPreference(preference);
-            // Enable auto option in HDR types if hdr conversion mode to SDR was selected. This
-            // is done because when SDR is chosen, we disable all HDR types.
             switch (key) {
                 case KEY_DYNAMIC_RANGE_SELECTION_SYSTEM: {
                     mHdrConversionMode = new HdrConversionMode(
                             HdrConversionMode.HDR_CONVERSION_SYSTEM);
-                    mDisplayManager.setHdrConversionMode(mHdrConversionMode);
-                    sendHdrSettingsChangedBroadcast(getContext());
-                    showPreferredDynamicRangeRadioPreference(false);
-                    break;
-                }
-                case KEY_DYNAMIC_RANGE_SELECTION_PASSTHROUGH: {
-                    if (mDisplayManager.getHdrConversionModeSetting().equals(new HdrConversionMode(
-                            HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_INVALID))) {
-                        mDisplayManager.setAreUserDisabledHdrTypesAllowed(true);
-                    }
-                    mHdrConversionMode =
-                            new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_PASSTHROUGH);
                     mDisplayManager.setHdrConversionMode(mHdrConversionMode);
                     sendHdrSettingsChangedBroadcast(getContext());
                     showPreferredDynamicRangeRadioPreference(false);

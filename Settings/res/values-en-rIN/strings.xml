@@ -129,7 +129,8 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"Set timers to turn TV off and save energy"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Devices"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Select formats"</string>
+    <!-- no translation found for surround_sound_select_formats (3232348550606222833) -->
+    <skip />
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Surround Sound"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -141,10 +142,16 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos with Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"NB The automatic option may not work if your device does not report its supported formats correctly."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatic: Enable only the formats that are supported by your audio output device "</string>
+    <!-- no translation found for surround_sound_auto_title (811867430010809597) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_auto_desc (7272466222509838647) -->
+    <skip />
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"When selected, the system will allow apps to select any sound format that is supported by your device chain. Apps may choose a format that is not the highest-quality format."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"None: Never use surround sound"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: Selectively enable or disable each format supported by this device, regardless of what is supported by your audio output device."</string>
+    <!-- no translation found for surround_sound_manual_title (8294975285009655065) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_manual_desc (3077478058774499547) -->
+    <skip />
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"When selected, you can manually disable sound formats that are supported by your device chain that cause problems with playback. Sound formats not supported by your device chain can be enabled. In some cases apps may choose a format that is not the highest-quality format."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Enabling unsupported sound format?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Your connected audio device does not report support for this format. This may cause unexpected behaviour like loud noises or pops from your device."</string>
@@ -162,23 +169,33 @@
     <string name="display_category_title" msgid="247804007525046312">"Display"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Advanced display settings"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Advanced sound settings"</string>
+    <!-- no translation found for advanced_sound_settings_title (2800805994220135889) -->
+    <skip />
     <string name="game_mode_title" msgid="7280816243531315755">"Allow game mode"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Match content dynamic range"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"When enabling this option, the system will switch between different dynamic range formats to match the content. This may cause a black screen during a format switch.\n\nClick Advanced display settings for more dynamic range options."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Preferred dynamic range"</string>
+    <!-- no translation found for match_content_dynamic_range_summary (5897559876103008433) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_title (3216820729147940951) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"System-preferred conversion"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="2765115460108291217">"Lets the system manage the format conversion"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5622795479042469982) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"When this option is selected, the system will determine a suitable dynamic range to be sent to your display and convert content to this dynamic range as needed."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Always matches content\'s format"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (885503418469834735) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Force conversion"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Forces conversion to preferred format"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1965870548185816252) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Force conversion to a preferred format. Forcing conversion may affect other settings in Display mode or HDR format."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Always to SDR"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Always to <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Do you want to force the HDR output?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"By default, the conversion will be forced to <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Your display will run at 1080p 60 Hz resolution. This option is not compatible with your display when running at the 4K 60 Hz resolution."</string>
+    <!-- no translation found for preferred_dynamic_range_match_enabled_title (4761382844444479841) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_match_enabled_desc (264141414825957741) -->
+    <skip />
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Dolby Vision is not supported at the current resolution. If you enable Dolby Vision manually, the resolution of your display will be changed to 1080p 60Hz"</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Change resolution to 1080p 60Hz?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Always force conversion to Dolby Vision"</string>
@@ -205,11 +222,14 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"The Wonderful Wizard of Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Chapter 11: The Wonderful Emerald City of Oz"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Even with eyes protected by the green spectacles, Dorothy and her friends were at first dazzled by the brilliance of the wonderful City. The streets were lined with beautiful houses, all built of green marble and studded everywhere with sparkling emeralds. They walked over a pavement of the same green marble, and where the blocks were joined together were rows of emeralds, set closely and glittering in the brightness of the sun. The window panes were of green glass; even the sky above the City had a green tint, and the rays of the sun were green. \n\nThere were many people, men, women and children, walking about, and they were all dressed in green clothes and had greenish skins. They looked at Dorothy and her strangely assorted company with wondering eyes, and the children all ran away and hid behind their mothers when they saw the Lion; but no one spoke to them. Many shops stood in the street, and Dorothy saw that everything in them was green. Green candy and green popcorn were offered for sale, as well as green shoes, green hats and green clothes of all sorts. In one place, a man was selling green lemonade, and when the children bought it Dorothy could see that they paid for it with green pennies. \n\nThere seemed to be no horses, nor animals of any kind; the men carried things around in little green carts, which they pushed before them. Everyone seemed happy, contented and prosperous."</string>
-    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Format selection"</string>
+    <!-- no translation found for hdr_format_selection_title (3847284265003261898) -->
+    <skip />
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatic"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Use device-reported formats"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Choose formats manually from available formats"</string>
+    <!-- no translation found for hdr_format_selection_auto_desc (7091897909210568236) -->
+    <skip />
+    <!-- no translation found for hdr_format_selection_manual_desc (6989666818251254061) -->
+    <skip />
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"SUPPORTED FORMATS"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"UNSUPPORTED FORMATS"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>

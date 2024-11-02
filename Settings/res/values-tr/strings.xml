@@ -96,13 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread ağı, Thread özellikli akıllı ev cihazlarını yerel olarak bağlayarak verimliliği ve performansı artırır.\n\nBu cihaz, açıldığında Thread ağı oluşturur veya Thread ağınıza katılır. Kimlik bilgileri, gelecekte akıllı ev cihazlarını daha kolay kurabilmeniz için gizli olarak buluta yüklenir.\n\nBu cihaz, kapatıldığında artık Thread ağınızdaki diğer cihazlarla iletişim kuramaz. Bazı akıllı ev cihazları ve hizmetleri beklendiği gibi çalışmayabilir.\n\nDaha fazla bilgiyi g.co/tv/thread adresinde bulabilirsiniz"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread ağı kapatılsın mı?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Kapatıldığında bazı akıllı ev cihazları ve hizmetleri beklendiği gibi çalışmayabilir. Devam etmek istiyor musunuz?"</string>
-    <!-- no translation found for wifi_settings_thread_network_energy_title (1975654727631313381) -->
-    <skip />
-    <!-- no translation found for wifi_settings_thread_network_energy_message (6579289433006123263) -->
-    <skip />
+    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Thread ağı açılsın mı?"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Thread ağı için Daha Yüksek enerji modu gerekir. Daha Yüksek enerji moduna geçtikten sonra Thread ağını açmak için geri dönün."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Kapat"</string>
-    <!-- no translation found for wifi_settings_thread_network_button_change_energy_mode (6535896653472709387) -->
-    <skip />
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Enerji modunu değiştirin"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Kablosuz"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Ağa bağlan"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Ağ teşhisi"</string>
@@ -132,7 +129,8 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"TV\'yi kapatıp enerji tasarrufu yapmak için zamanlayıcılar ayarlayın"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Cihazlar"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Biçimleri seçin"</string>
+    <!-- no translation found for surround_sound_select_formats (3232348550606222833) -->
+    <skip />
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Surround Ses"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -144,10 +142,16 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus ile Dolby Atmos"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Not: Cihaz desteklenen biçimleri doğru olarak bildirmezse Otomatik seçeneği çalışmaz."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Otomatik: Yalnızca ses çıkış cihazınızın desteklediği biçimleri etkinleştirin "</string>
+    <!-- no translation found for surround_sound_auto_title (811867430010809597) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_auto_desc (7272466222509838647) -->
+    <skip />
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Seçildiğinde, sistem tarafından uygulamaların cihaz zincirinizin desteklediği herhangi bir ses biçimini belirlemesine izin verilir. Uygulamalar, en yüksek kalitede olmayan bir biçim seçebilir."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Hiçbiri: Surround ses kullanılmasın"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manuel: Ses çıkış cihazınızın neyi desteklediğinden bağımsız olarak, bu cihazın desteklediği biçimler arasından seçilenleri etkinleştirin veya devre dışı bırakın."</string>
+    <!-- no translation found for surround_sound_manual_title (8294975285009655065) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_manual_desc (3077478058774499547) -->
+    <skip />
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Seçildiğinde, cihaz zincirinizin desteklediği, oynatma ile ilgili sorunlara neden olan ses biçimlerini manuel olarak devre dışı bırakabilirsiniz. Cihaz zincirinizin desteklemediği ses biçimleri etkinleştirilemez. Bazı kurumlarda uygulamalar en yüksek kalitede olmayan bir biçim seçebilir."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Desteklenmeyen ses biçimi etkinleştirilsin mi?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Bağlı ses cihazınız, bu biçimi desteklediğini bildirmiyor. Bu durum, cihazınızda yüksek gürültü veya patlama sesleri gibi davranışlara neden olabilir."</string>
@@ -165,23 +169,33 @@
     <string name="display_category_title" msgid="247804007525046312">"Ekran"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Gelişmiş ekran ayarları"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Gelişmiş ses ayarları"</string>
+    <!-- no translation found for advanced_sound_settings_title (2800805994220135889) -->
+    <skip />
     <string name="game_mode_title" msgid="7280816243531315755">"Oyun moduna izin ver"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"İçerik dinamik aralığını eşleştir"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Bu seçenek etkinleştirildiğinde sistem içeriği eşleştirmek için farklı dinamik aralık biçimleri arasında geçiş yapar. Biçim değiştirme sırasında siyah ekran görünmesine neden olabilir.\n\nDiğer dinamik aralık seçenekleri için Gelişmiş Ekran ayarlarını tıklayın."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Tercih edilen dinamik aralık"</string>
+    <!-- no translation found for match_content_dynamic_range_summary (5897559876103008433) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_title (3216820729147940951) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Sistem tarafından tercih edilen dönüştürme"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="2765115460108291217">"Biçim dönüştürme işlemini sisteme bırakır"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5622795479042469982) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Bu seçenek belirlenirse sistem, ekranınıza gönderilecek uygun bir dinamik aralık belirler ve gerektiğinde içeriği bu dinamik aralığa dönüştürür."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Her zaman içeriğin biçimiyle uyumludur"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (885503418469834735) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Zorunlu dönüştürme"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Tercih edilen biçime dönüştürmeyi zorunlu kılar"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1965870548185816252) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Tercih edilen biçime dönüştürmeyi zorunlu kılar. Dönüştürmenin zorunlu kılınması, görüntü modundaki veya HDR biçimindeki diğer ayarları etkileyebilir."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Her zaman SDR\'ye"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Her zaman <xliff:g id="HDR_TYPE">%s</xliff:g> biçimine"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"HDR çıkışını zorunlu kılmak istiyor musunuz?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Varsayılan olarak, <xliff:g id="HDR_TYPE">%s</xliff:g> biçimine dönüştürme zorunlu kılınır."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Ekranınız, 1080p 60 Hz çözünürlükte çalışır. Bu seçenek, 4K 60 Hz çözünürlükte çalışırken ekranınızla uyumlu değildir."</string>
+    <!-- no translation found for preferred_dynamic_range_match_enabled_title (4761382844444479841) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_match_enabled_desc (264141414825957741) -->
+    <skip />
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Dolby Vision mevcut çözünürlükte desteklenmez. Dolby Vision\'ı manuel olarak etkinleştirirseniz ekranınızın çözünürlüğü 1080p 60 Hz olarak değiştirilir."</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Çözünürlük 1080p 60 Hz olarak değiştirilsin mi?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Dolby Vision\'a dönüştürmeyi her zaman zorunlu kılar"</string>
@@ -208,11 +222,14 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Muhteşem Oz Büyücüsü"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11. Bölüm: Oz\'un Muhteşem Zümrüt Kenti"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Yeşil gözlüklerle korunuyor olsalar bile Dorothy ve arkadaşlarının bu olağanüstü güzellikteki Şehrin parlaklığı karşısında gözleri kamaşmıştı. Tamamı yeşil mermerden yapılmış çok güzel evlerle dolu sokaklarda her yer parlak zümrütlerle bezeliydi. Üzerinde yürüdükleri yeşil mermerden yapılmış kaldırım taşlarının birleştiği yerler, güneş ışığıyla parlayan dizi dizi zümrütlerle süslenmişti. Pencerelerin camları yeşildi. Hatta güneş ışınları ve Şehrin üzerindeki gökyüzünü bile yeşile boyanmıştı.\n\nHepsi yeşil kıyafetler giymiş, yeşil tenli birçok kadın, erkek ve çocuk sokakta geziniyordu. Dorothy ve garip görünümlü arkadaşlarını meraklı bakışlarla süzdüler. Aslan\'ı gören çocuklar kaçıp annelerinin arkasına saklanıyorlardı. Hiç kimse onlarla konuşmuyordu. Sokakta pek çok dükkan vardı. Dorothy, bu dükkanlardaki her şeyin yeşil olduğunu gördü. Yeşil şekerlerin, yeşil renkli patlamış mısırların yanı sıra yeşil ayakkabılar, yeşil şapkalar ve her türden yeşil kıyafetler satılıyordu. Bir yerde, yeşil limonata satan bir adam vardı ve Dorothy, limonata alan çocukların parayı yeşil kuruşlarla ödediklerini gördü. \n\nGörünürde ne at ne de başka hayvan vardı; erkekler, eşyalarını yeşil küçük arabalarla taşıyorlardı. Herkes mutlu, huzurlu ve refah içinde görünüyordu."</string>
-    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Biçim seçimi"</string>
+    <!-- no translation found for hdr_format_selection_title (3847284265003261898) -->
+    <skip />
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Otomatik"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuel"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Cihazın bildirdiği biçimi kullan"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Biçimleri kullanılabilir biçimler arasından manuel olarak seçin"</string>
+    <!-- no translation found for hdr_format_selection_auto_desc (7091897909210568236) -->
+    <skip />
+    <!-- no translation found for hdr_format_selection_manual_desc (6989666818251254061) -->
+    <skip />
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"DESTEKLENEN BİÇİMLER"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"DESTEKLENMEYEN BİÇİMLER"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>

@@ -96,13 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread-netværket forbinder Thread-kompatible smartenheder i hjemmet lokalt, hvilket øger effektiviteten og ydeevnen.\n\nNår det er aktiveret, forbindes eller føjes din enhed til Thread-netværket. Loginoplysninger uploades privat til skyen, så dine fremtidige smartenheder til hjemmet nemmere kan konfigureres.\n\nNår det er deaktiveret, kan denne enhed ikke længere kommunikere med andre enheder på dit Thread-netværk. Visse tjenester og smartenheder til hjemmet fungerer muligvis ikke efter hensigten.\n\nFå flere oplysninger på g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Vil du deaktivere Thread-netværket?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Hvis du deaktiverer det, vil visse tjenester og smartenheder til hjemmet muligvis ikke fungere efter hensigten. Vil du fortsætte?"</string>
-    <!-- no translation found for wifi_settings_thread_network_energy_title (1975654727631313381) -->
-    <skip />
-    <!-- no translation found for wifi_settings_thread_network_energy_message (6579289433006123263) -->
-    <skip />
+    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Vil du aktivere Thread-netværk?"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Thread-netværk kræver energitilstanden Øget. Skift først energitilstand til Øget, og vend derefter tilbage for at aktivere Thread-netværk."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Deaktiver"</string>
-    <!-- no translation found for wifi_settings_thread_network_button_change_energy_mode (6535896653472709387) -->
-    <skip />
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Skift energitilstand"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Opret forbindelse til netværk"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Netværksdiagnostik"</string>
@@ -132,7 +129,8 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"Indstil timere for at slukke fjernsynet og spare strøm"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Enheder"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Vælg formater"</string>
+    <!-- no translation found for surround_sound_select_formats (3232348550606222833) -->
+    <skip />
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Surroundsound"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -144,10 +142,16 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos med Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Bemærk! Automatisk fungerer muligvis kun, hvis enheden rapporterer sine understøttede formater korrekt."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatisk: Aktivér kun formater, som understøttes af din outputenhed til lyd "</string>
+    <!-- no translation found for surround_sound_auto_title (811867430010809597) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_auto_desc (7272466222509838647) -->
+    <skip />
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Når du har valgt dette, tillader systemet, at apps kan vælge ethvert lydformat, der understøttes af din enhedskæde. Apps kan vælge et format, der ikke er af højeste kvalitet."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Ingen: Brug aldrig surroundsound"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manuelt: Aktivér eller deaktiver hvert format, som understøttes af denne enhed, uanset hvilke formater din outputenhed til lyd understøtter."</string>
+    <!-- no translation found for surround_sound_manual_title (8294975285009655065) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_manual_desc (3077478058774499547) -->
+    <skip />
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Når du har valgt dette, kan du manuelt deaktivere lydformater, der understøttes af din enhedskæde, som forårsager afspilningsproblemer. Lydformater, der ikke understøttes af din enhed, kan aktiveres. I visse tilfælde kan apps vælge et format, der ikke er af højeste kvalitet."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Vil du tillade lydformatet, selvom det ikke er understøttet?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Din tilsluttede lydenhed rapporterer ikke understøttelse af dette format. Dette kan medføre høje lyde fra enheden eller anden uventet adfærd."</string>
@@ -165,23 +169,33 @@
     <string name="display_category_title" msgid="247804007525046312">"Skærm"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Avancerede skærmindstillinger"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Avancerede lydindstillinger"</string>
+    <!-- no translation found for advanced_sound_settings_title (2800805994220135889) -->
+    <skip />
     <string name="game_mode_title" msgid="7280816243531315755">"Tillad spiltilstand"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Match dynamisk område for indhold"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Når du aktiverer denne mulighed, vil systemet skifte mellem forskellige dynamiske områdeformater for at matche indholdet. Dette kan medføre, at skærmen bliver sort under et formatskift.\n\nKlik på Avancerede skærmindstillinger for at se flere muligheder for dynamiske områder."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Foretrukket dynamisk område"</string>
+    <!-- no translation found for match_content_dynamic_range_summary (5897559876103008433) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_title (3216820729147940951) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Systemforetrukken konvertering"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="2765115460108291217">"Lader systemet administrere konverteringen af formatet"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5622795479042469982) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Når denne mulighed er valgt, fastlægger systemet et passende dynamisk område, som sendes til din skærm, og konverterer indholdet i overensstemmelse med dette dynamiske område efter behov."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Matcher altid indholdets format"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (885503418469834735) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Gennemtving konvertering"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Gennemtvinger konvertering til foretrukket format"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1965870548185816252) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Gennemtving konvertering til et foretrukket format. Når du gennemtvinger konvertering, kan det påvirke andre indstillinger i Skærmtilstand eller HDR-format."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Altid til SDR"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Altid til <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Vil du gennemtvinge HDR-output?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Som standard gennemtvinges konverteringen til <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Din skærm vil køre med en opløsning på 1080p 60 Hz. Denne valgmulighed er ikke kompatibel med din skærm, når den kører med en opløsning på 4K 60 Hz."</string>
+    <!-- no translation found for preferred_dynamic_range_match_enabled_title (4761382844444479841) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_match_enabled_desc (264141414825957741) -->
+    <skip />
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Dolby Vision understøttes ikke i den nuværende opløsning. Hvis du aktiverer Dolby Vision manuelt, ændres opløsningen på din skærm til 1080p 60 Hz"</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Vil du ændre opløsning til 1080p 60 Hz?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Gennemtving altid konvertering til Dolby Vision"</string>
@@ -208,11 +222,14 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Den vidunderlige troldmand fra Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Kapitel 11: Den vidunderlige smaragdby i Oz"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Selv med øjnene beskyttet bag de grønne briller blev Dorothy og hendes venner til at starte med forblændet af byens vidunderlige funklen. Langs gaderne stod smukke huse i grøn marmor bestrøet med skinnende smaragder. De gik hen over et fortov, der var lavet af det samme grønne marmor, og der hvor fliserne mødtes, var der rækker af smaragder, der side om side skinnede i lyset fra solen. Ruderne var af grønt glas. Selv himlen over byen havde et grønt skær, og solens stråler var grønne. \n\nMange mennesker, både mænd, kvinder og børn, gik omkring, og de var alle klædt i grønt og havde en grønlig hud. De kiggede med undrende øjne på Dorothy og hendes mærkværdige brogede følge, og børnene løb alle hen og gemte sig bag deres mødre, da de så Løven, men der var ingen, der talte til dem. Der var mange butikker på gaden, og Dorothy kunne se, at alle varerne var grønne. Der blev solgt grønt slik og grønne popcorn, grønne sko, grønne hatte og alle slags grønne klæder. En mand solgte grøn lemonade, og da børnene købte det, kunne Dorothy se, at de betalte for det med grønne penge. \n\nDer så ikke ud til at være heste eller dyr af nogen art, og mændene kørte med ting i små grønne vogne, som de skubbede foran sig. Alle virkede glade og tilfredse og velstående."</string>
-    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Valg af format"</string>
+    <!-- no translation found for hdr_format_selection_title (3847284265003261898) -->
+    <skip />
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatisk"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuelt"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Brug formater, som enheden rapporterer"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Vælg formater manuelt blandt de tilgængelige formater"</string>
+    <!-- no translation found for hdr_format_selection_auto_desc (7091897909210568236) -->
+    <skip />
+    <!-- no translation found for hdr_format_selection_manual_desc (6989666818251254061) -->
+    <skip />
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"UNDERSTØTTEDE FORMATER"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"IKKE-UNDERSTØTTEDE FORMATER"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>

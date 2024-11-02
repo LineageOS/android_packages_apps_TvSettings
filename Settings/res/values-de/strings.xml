@@ -96,13 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Das Thread-Netzwerk verbindet Thread-kompatible Smart-Home-Geräte lokal, um die Effizienz und die Leistung zu steigern.\n\nWenn aktiviert, erstellt das Gerät ein Thread-Netzwerk oder tritt deinem bei. Damit du neue Smart-Home-Geräte in Zukunft einfacher einrichten kannst, werden die Anmeldedaten sicher in die Cloud hochgeladen.\n\nWenn deaktiviert, kann dieses Gerät nicht mehr mit anderen Geräten in deinem Thread-Netzwerk kommunizieren. Bestimmte Smart-Home-Geräte und ‑Dienste funktionieren eventuell nicht wie erwartet.\n\nWeitere Informationen unter g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread-Netzwerk deaktivieren?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Wenn deaktiviert, funktionieren bestimmte Smart-Home-Geräte und ‑Dienste eventuell nicht wie erwartet. Möchtest du fortfahren?"</string>
-    <!-- no translation found for wifi_settings_thread_network_energy_title (1975654727631313381) -->
-    <skip />
-    <!-- no translation found for wifi_settings_thread_network_energy_message (6579289433006123263) -->
-    <skip />
+    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Thread-Netzwerk aktivieren?"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Für das Thread-Netzwerk ist der Modus mit erhöhtem Energieverbrauch erforderlich. Wechsle zuerst zu diesem Modus und kehre dann hierher zurück, um das Thread-Netzwerk zu aktivieren."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Deaktivieren"</string>
-    <!-- no translation found for wifi_settings_thread_network_button_change_energy_mode (6535896653472709387) -->
-    <skip />
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Energiemodus ändern"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"WLAN"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Mit Netzwerk verbinden"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Netzwerkdiagnose"</string>
@@ -132,7 +129,8 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"Timer einrichten, um den Fernseher auszuschalten und Energie zu sparen"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Geräte"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Formate auswählen"</string>
+    <!-- no translation found for surround_sound_select_formats (3232348550606222833) -->
+    <skip />
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Surround-Sound"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -144,10 +142,16 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos mit Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"„Automatisch“ funktioniert ggf. nicht, wenn das Gerät die unterstützten Formate nicht korrekt meldet."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatisch: Nur Formate aktivieren, die von deinem Audio-Ausgabegerät unterstützt werden "</string>
+    <!-- no translation found for surround_sound_auto_title (811867430010809597) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_auto_desc (7272466222509838647) -->
+    <skip />
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Bei dieser Option können Apps jedes Tonformat wählen, das von deiner Gerätekette unterstützt wird. Möglicherweise wählen Apps ein Format, das nicht der höchsten Qualität entspricht."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Keinen Surround-Sound verwenden"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manuell: Jedes Format, das von diesem Gerät unterstützt wird, selektiv aktivieren oder deaktivieren, unabhängig davon, ob es von deinem Audio-Ausgabegerät unterstützt wird."</string>
+    <!-- no translation found for surround_sound_manual_title (8294975285009655065) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_manual_desc (3077478058774499547) -->
+    <skip />
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Du kannst von deiner Gerätekette unterstützte Tonformate, die Probleme bei der Wiedergabe verursachen, manuell deaktivieren. Es können auch Tonformate aktiviert werden, die nicht von deiner Gerätekette unterstützt werden. Manchmal wählen Apps ein Format, das nicht der höchsten Qualität entspricht."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Nicht unterstütztes Tonformat aktivieren?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Verbundenes Audiogerät meldet nicht, dass es das Format unterstützt. Das kann zu unerwartetem Verhalten (laute Geräusche/Knacken des Geräts) führen."</string>
@@ -165,23 +169,33 @@
     <string name="display_category_title" msgid="247804007525046312">"Display"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Erweiterte Displayeinstellungen"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Erweiterte Toneinstellungen"</string>
+    <!-- no translation found for advanced_sound_settings_title (2800805994220135889) -->
+    <skip />
     <string name="game_mode_title" msgid="7280816243531315755">"Spielmodus zulassen"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Inhalte an dynamischen Bereich anpassen"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Wenn du diese Option aktivierst, passt das System das Format des dynamischen Bereichs an die wiedergegebenen Inhalte an. Beim Wechsel des Formats kann der Bildschirm kurz schwarz werden.\n\nKlicke auf „Erweiterte Displayeinstellungen“, um weitere Optionen zum dynamischen Bereich zu sehen."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Bevorzugter dynamischer Bereich"</string>
+    <!-- no translation found for match_content_dynamic_range_summary (5897559876103008433) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_title (3216820729147940951) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Vom System bevorzugte Umwandlung"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="2765115460108291217">"Die Umwandlung von Formaten wird vom System verwaltet"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5622795479042469982) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Wenn diese Option ausgewählt wird, ermittelt das System einen geeigneten dynamischen Bereich, der an dein Display gesendet wird, und wandelt Inhalte nach Bedarf in diesen dynamischen Bereich um."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Das Format des Inhalts wird nicht verändert"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (885503418469834735) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Umwandlung erzwingen"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Erzwingt die Umwandlung in ein bevorzugtes Format"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1965870548185816252) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Umwandlung in ein bevorzugtes Format erzwingen. Das Erzwingen einer Umwandlung beeinträchtigt möglicherweise andere Einstellungen im Anzeigemodus oder HDR-Format."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Immer in SDR"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Immer in <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Möchtest du die HDR-Ausgabe erzwingen?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Standardmäßig wird für die Umwandlung <xliff:g id="HDR_TYPE">%s</xliff:g> erzwungen."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Inhalte werden auf deiner Anzeige mit einer Auflösung von 1080p und einer Bildwiederholrate von 60 Hz wiedergegeben. Diese Option ist nicht mit deiner Anzeige kompatibel, wenn Inhalte mit einer Auflösung von 4K und einer Bildwiederholrate von 60 Hz wiedergegeben werden."</string>
+    <!-- no translation found for preferred_dynamic_range_match_enabled_title (4761382844444479841) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_match_enabled_desc (264141414825957741) -->
+    <skip />
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Dolby Vision wird für die aktuelle Auflösung nicht unterstützt. Wenn du Dolby Vision manuell aktivierst, wird die Auflösung deines Bildschirms in 1080p/60Hz geändert"</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Auflösung in 1080p/60Hz ändern?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Umwandlung in Dolby Vision immer erzwingen"</string>
@@ -208,11 +222,14 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Der Zauberer von Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Kapitel 11: Die wundervolle Smaragdstadt von Oz"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Obwohl ihre Augen durch die grünen Gläser der Brillen geschützt waren, wurden Dorothy und ihren Freunden vom Glanz und vom Schimmer der wundervollen Stadt beinahe schwindelig. Prächtige Häuser aus grünem Marmor, die mit Smaragden besetzt waren, säumten die Straßen. Auch das Straßenpflaster bestand aus feinstem grünem Marmor und die Fugen waren mit glitzernden Smaragden bestückt. Sie funkelten und leuchteten in der Sonne. Die Fensterscheiben der Häuser bestanden aus grünem Glas, der Himmel über der Stadt schimmerte hellgrün, und sogar die Strahlen der Sonne wirkten leicht grünlich.\n\nIn der Stadt gab es viel Leben. Männer, Frauen und Kinder liefen geschäftig durch die Straßen. Alle waren grün gekleidet und trugen eine grüne Brille. Ihre Haut schien leicht grün zu sein und sie sahen Dorothy und ihre Freunde mit großen verwunderten Augen an. Als die Kinder den Löwen sahen, rannten sie davon, um sich hinter ihren Müttern zu verstecken. Niemand richtete das Wort an die Wanderer. Es gab auch viele Geschäfte in der Smaragdstadt und sogar die Auslagen der Läden waren grün. Da gab es grüne Bonbons, grünes Popcorn, grüne Schuhe, grüne Hüte und viele grüne Kleider. Ein Mann verkaufte grüne Limonade und Dorothy sah die Kinder mit grünem Geld dafür bezahlen.\n\nPferde oder andere Tiere konnte Dorothy nirgendwo entdecken. Dafür begegneten ihnen immer wieder Männer, die auf ihren kleinen grünen Karren Lasten durch die Stadt schoben. Alle schienen glücklich und zufrieden zu sein."</string>
-    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Formatauswahl"</string>
+    <!-- no translation found for hdr_format_selection_title (3847284265003261898) -->
+    <skip />
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatisch"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuell"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Vom Gerät gemeldete Formate verwenden"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Manuell aus den verfügbaren Formaten auswählen"</string>
+    <!-- no translation found for hdr_format_selection_auto_desc (7091897909210568236) -->
+    <skip />
+    <!-- no translation found for hdr_format_selection_manual_desc (6989666818251254061) -->
+    <skip />
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"UNTERSTÜTZTE FORMATE"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"NICHT UNTERSTÜTZTE FORMATE"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>

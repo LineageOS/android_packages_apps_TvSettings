@@ -305,7 +305,7 @@
     <!-- Display and sound screen -->
     <skip />
     <!-- Title for preference which when clicked lets the user select surround sound formats. [CHAR LIMIT=50] -->
-    <string name="surround_sound_select_formats">Select formats</string>
+    <string name="surround_sound_select_formats">Surround sound settings</string>
     <!-- A category title for the settings related to surround sound. [CHAR LIMIT=50] -->
     <string name="surround_sound_category_title">Surround Sound</string>
     <!-- Name of the AC3 surround sound format that is displayed to the user [CHAR LIMIT=50] -->
@@ -336,9 +336,9 @@
         does not report its supported formats correctly.</string>
     <!-- Title for a radio button that if selected will cause the device to automatically select
         an appropriate surround sound format. [CHAR LIMIT=165] -->
-    <string name="surround_sound_auto_title">Automatic: Enable only the formats that are supported
-        by your audio output device
-        "</string>
+    <string name="surround_sound_auto_title">Automatic"</string>
+    <!-- Desc for Automatic preference for surround sound selection. [CHAR LIMIT=100] -->
+    <string name="surround_sound_selection_auto_desc">Enable all supported formats</string>
     <!-- Summary for a radio button that if selected will cause the device to automatically select
         an appropriate surround sound format. [CHAR LIMIT=300] -->
     <string name="surround_sound_auto_summary">When selected, the system will allow apps to select
@@ -349,9 +349,9 @@
     <string name="surround_sound_none_title">None: Never use surround sound</string>
     <!-- Title for a radio button that if selected will allow the user to manually select surround
         sound formats. [CHAR LIMIT=187] -->
-    <string name="surround_sound_manual_title">Manual: Selectively enable or disable each format
-        supported by this device, regardless of what is supported by your audio output
-        device.</string>
+    <string name="surround_sound_manual_title">Manual</string>
+    <!-- Desc for Manual preference for surround sound selection. [CHAR LIMIT=100] -->
+    <string name="surround_sound_selection_manual_desc">Choose from available formats</string>
     <!-- Summary for a radio button that if selected will allow the user to manually select surround
         sound formats. [CHAR LIMIT=300] -->
     <string name="surround_sound_manual_summary">When selected, you can manually disable sound
@@ -402,25 +402,25 @@
     <string name="advanced_display_settings_title">Advanced display settings</string>
     <!-- Title for HDMI-CEC settings entry. [CHAR LIMIT=20] -->
     <string name="hdmi_cec_settings_title">HDMI-CEC</string>
-    <!-- Title for preference which when clicked lets the user configure advanced sound settings. [CHAR LIMIT=50] -->
-    <string name="advanced_sound_settings_title">Advanced sound settings</string>
+    <!-- Title for preference which when clicked lets the user configure surround sound settings. [CHAR LIMIT=50] -->
+    <string name="advanced_sound_settings_title">Surround sound settings</string>
     <!-- Title for preference to allow game mode for display. [CHAR LIMIT=50] -->
     <string name="game_mode_title">Allow game mode</string>
     <!-- Title for preference for disabling/enabling HDR conversion. [CHAR LIMIT=120] -->
     <string name="match_content_dynamic_range_title">Match content dynamic range</string>
     <!-- Summary for preference for disabling/enabling HDR conversion. [CHAR LIMIT=500] -->
-    <string name="match_content_dynamic_range_summary">When enabling this option, the system will
-        switch between different dynamic range formats to match the content. This may cause a black
-        screen during a format switch.\n\nClick Advanced Display settings for more dynamic range
-        options.
+    <string name="match_content_dynamic_range_summary">When selected, the system will match the
+        dynamic range of the content. This may cause your screen to go black for a moment when
+        starting or ending a video. Additional dynamic range settings may be found in Advanced
+        display settings.
     </string>
     <!-- Title for preference for HDR conversion. [CHAR LIMIT=120] -->
-    <string name="preferred_dynamic_range_title">Preferred dynamic range</string>
+    <string name="preferred_dynamic_range_title">Preferred dynamic range format</string>
     <!-- Title for preference for HDR conversion - System-Preferred/Auto. [CHAR LIMIT=120] -->
     <string name="preferred_dynamic_range_selection_system_title">System-preferred conversion
             </string>
     <!-- Description for preference for HDR conversion - System-Preferred/Auto. [CHAR LIMIT=300] -->
-    <string name="preferred_dynamic_range_selection_system_desc">Lets the system manage the format
+    <string name="preferred_dynamic_range_selection_system_desc">Let the system manage the format
         conversion
     </string>
     <!-- Summary for preference for HDR conversion - System-Preferred/Auto. [CHAR LIMIT=500] -->
@@ -429,12 +429,12 @@
         content to this dynamic range as needed.
     </string>
     <!-- Description for preference for HDR conversion - Passthrough/No conversion. [CHAR LIMIT=300] -->
-    <string name="preferred_dynamic_range_selection_passthrough_desc">Always matches content\'s
+    <string name="preferred_dynamic_range_selection_passthrough_desc">Always match content\'s
         format</string>
     <!-- Title for preference for HDR conversion - Force/Manual. [CHAR LIMIT=120] -->
     <string name="preferred_dynamic_range_selection_force_title">Force conversion</string>
     <!-- Description for preference for HDR conversion - Force/Manual. [CHAR LIMIT=300] -->
-    <string name="preferred_dynamic_range_selection_force_desc">Forces conversion to preferred
+    <string name="preferred_dynamic_range_selection_force_desc">Force conversion to preferred
         format</string>
     <!-- Summary for preference for HDR conversion - Force/Manual. [CHAR LIMIT=500] -->
     <string name="preferred_dynamic_range_selection_force_summary">Force conversion to
@@ -456,6 +456,13 @@
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue">Your display will run at
         1080p 60Hz resolution. This option is not compatible with your display when running at the
         4k 60Hz resolution.</string>
+    <!-- Title preferred dynamic range match enabled screen [CHAR LIMIT=120] -->
+    <string name="preferred_dynamic_range_match_enabled_title">This setting is unavailable</string>
+    <!-- Description for preferred dynamic range match enabled screen [CHAR LIMIT=300] -->
+    <string name="preferred_dynamic_range_match_enabled_desc">\'Match content dynamic range\' is
+        enabled. To convert to a specific dynamic range format, go to Settings > Display &amp; Sound and
+        turn off \'Match content dynamic range\' first.
+    </string>
     <!-- Sidebar description indicating that Dolby Vision selection is not allowed because current display mode[CHAR LIMIT=300] -->
     <string name="selection_dolby_vision_not_supported_sidebar">Dolby Vision is not supported at the current
         resolution. If you enable Dolby Vision manually, the resolution of your display will
@@ -554,16 +561,15 @@
     </string>
 
     <!-- Title for preference for HDR format selection. [CHAR LIMIT=50] -->
-    <string name="hdr_format_selection_title">Format selection</string>
+    <string name="hdr_format_selection_title">Allow dynamic range formats</string>
     <!-- Title for Automatic preference for HDR format selection. [CHAR LIMIT=50] -->
     <string name="hdr_format_selection_auto_title">Automatic</string>
     <!-- Title for Manual preference for HDR format selection. [CHAR LIMIT=50] -->
     <string name="hdr_format_selection_manual_title">Manual</string>
     <!-- Desc for Automatic preference for HDR format selection. [CHAR LIMIT=100] -->
-    <string name="hdr_format_selection_auto_desc">Use device reported formats</string>
+    <string name="hdr_format_selection_auto_desc">Enable all supported formats</string>
     <!-- Desc for Manual preference for HDR format selection. [CHAR LIMIT=100] -->
-    <string name="hdr_format_selection_manual_desc">Choose formats manually from available
-        formats</string>
+    <string name="hdr_format_selection_manual_desc">Choose from available formats</string>
     <!-- Title for supported HDR format section [CHAR LIMIT=50]-->
     <string name="hdr_format_supported_title">SUPPORTED FORMATS</string>
     <!-- Title for unsupported HDR format [CHAR LIMIT=50]-->

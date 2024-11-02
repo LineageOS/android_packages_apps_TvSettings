@@ -35,6 +35,7 @@ import com.android.tv.settings.customization.Partner;
 import com.android.tv.settings.customization.PartnerPreferencesMerger;
 import com.android.tv.settings.device.LimitNetworkInStandbyConfirmationDialogActivity;
 import com.android.tv.settings.library.util.SliceUtils;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
 
 /** Power and energy settings. */
@@ -67,9 +68,13 @@ public class PowerAndEnergyFragment extends SettingsPreferenceFragment {
         final EnergyModesHelper energyModesHelper = new EnergyModesHelper(context);
         final boolean lowPowerStandbySupported = isLowPowerStandbySupported(context);
         final boolean enableEnergyModes = energyModesHelper.areEnergyModesAvailable();
+        final boolean isBasicMode = FlavorUtils.getFeatureFactory(
+                        context).getBasicModeFeatureProvider()
+                .isBasicMode(context);
 
         if (limitNetworkPreference != null) {
-            limitNetworkPreference.setVisible(lowPowerStandbySupported && !enableEnergyModes);
+            limitNetworkPreference.setVisible(
+                    lowPowerStandbySupported && !enableEnergyModes && !isBasicMode);
         }
         if (energyModesPreference != null) {
             energyModesPreference.setVisible(lowPowerStandbySupported && enableEnergyModes);

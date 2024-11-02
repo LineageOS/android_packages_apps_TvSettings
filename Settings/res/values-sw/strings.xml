@@ -96,13 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Mtandao wa Thread huunganisha na vifaa mahiri vya nyumbani vinavyoweza kuutumia vilivyo karibu, hivyo kuboresha ufanisi na utendaji.\n\nKikiwashwa, kifaa hiki kitaanzisha au kujiunga na mtandao wako wa Thread. Vitambulisho vitapakiwa kwa faragha kwenye wingu ili iwe rahisi zaidi kuweka mipangilio ya vifaa vyako mahiri vya nyumbani vya siku zijazo.\n\nKikizimwa, kifaa hiki hakitaweza tena kuwasiliana na vifaa vingine kwenye mtandao wako wa Thread. Huenda huduma na vifaa fulani mahiri vya nyumbani visifanye kazi inavyotarajiwa.\n\nPata maelezo zaidi kwenye g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Ungependa kuzima Mtandao wa Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Ukizimwa, huenda huduma na vifaa fulani mahiri vya nyumbani visifanye kazi inavyotarajiwa. Je, ungependa kuuzima?"</string>
-    <!-- no translation found for wifi_settings_thread_network_energy_title (1975654727631313381) -->
-    <skip />
-    <!-- no translation found for wifi_settings_thread_network_energy_message (6579289433006123263) -->
-    <skip />
+    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Ungependa kuwasha Mtandao wa Thread?"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Mtandao wa Thread unahitaji hali ya Nishati iliyoongezwa. Badilisha hali ya nishati iwe Iliyoongezwa kwanza, kisha urudi kuwasha mtandao wa Thread."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Zima"</string>
-    <!-- no translation found for wifi_settings_thread_network_button_change_energy_mode (6535896653472709387) -->
-    <skip />
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Badilisha hali ya nishati"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Unganisha kwenye mtandao"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Uchunguzi wa mtandao"</string>
@@ -132,7 +129,8 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"Weka vipima muda ili kuzima TV na kuokoa nishati"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Vifaa"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Chagua miundo"</string>
+    <!-- no translation found for surround_sound_select_formats (3232348550606222833) -->
+    <skip />
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Sauti inayozingira"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -144,10 +142,16 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos iliyo na Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Kumbuka: Chaguo la Otomatiki huenda lisitumike ikiwa kifaa chako hakiripoti kwa usahihi miundo inayotumika."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Otomatiki: Washa tu miundo inayotumika na kifaa chako cha kutoa sauti "</string>
+    <!-- no translation found for surround_sound_auto_title (811867430010809597) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_auto_desc (7272466222509838647) -->
+    <skip />
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Ukichagua, mfumo utaruhusu programu kuteua muundo wowote wa sauti unaotumika kwenye vifaa vyako. Huenda programu zikachagua muundo ambao si wenye ubora wa juu zaidi."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Hamna: Kamwe usitumie sauti inayozingira"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Teua mwenyewe: Washa au zima kila muundo unaotumika kwenye kifaa hiki, bila kujali muundo unaotumika kwenye kifaa chako cha kutoa sauti."</string>
+    <!-- no translation found for surround_sound_manual_title (8294975285009655065) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_manual_desc (3077478058774499547) -->
+    <skip />
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Ukichagua, unaweza kuzima mwenyewe miundo ya sauti inayotumika kwenye vifaa vyako inayosababisha matatizo ya uchezaji. Unaweza kuwasha miundo ya sauti isiyotumika kwenye kifaa chako. Katika hali nyingine, huenda programu zikachagua muundo ambao si wenye ubora wa juu zaidi."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Je, ungependa kutumia muundo wa sauti usiotumika?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Kifaa cha sauti ulichounganisha hakitumii muundo huu. Huenda hii ikasababisha hali isiyotarajiwa kwenye kifaa kama vile kelele au miatuko."</string>
@@ -165,23 +169,33 @@
     <string name="display_category_title" msgid="247804007525046312">"Onyesho"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Mipangilio ya kina ya onyesho"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Mipangilio ya kina ya sauti"</string>
+    <!-- no translation found for advanced_sound_settings_title (2800805994220135889) -->
+    <skip />
     <string name="game_mode_title" msgid="7280816243531315755">"Ruhusu hali ya mchezo"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Linganisha mfululizo wa ubadilikaji wa maudhui"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Unapowasha chaguo hili, mfumo utabadilisha kati ya miundo tofauti ya mfululizo wa ubadilikaji ili kulingansha maudhui. Hali hii inaweza kusababisha skrini nyeusi wakati wa kubadilisha muundo.\n\nBofya mipangilio ya Kina ya Skrini ili upate chaguo zaidi za mfululizo wa ubadilikaji."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Mfululizo wa ubadilikaji unaopendelewa"</string>
+    <!-- no translation found for match_content_dynamic_range_summary (5897559876103008433) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_title (3216820729147940951) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Ubadilishaji unaopendelewa na mfumo"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="2765115460108291217">"Huruhusu mfumo kudhibiti ubadilishaji wa muundo"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5622795479042469982) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Ukiteua chaguo hili, mfumo utabainisha masafa yanayobadilika yanayofaa kutumwa kwenye skrini yako na kubadilisha maudhui kuwa katika masafa haya yanayobadilika kadiri inavyohitajika."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Hulingana na muundo wa maudhui wakati wote"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (885503418469834735) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Kulazimisha ubadilishaji"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Italazimisha ubadilishaji uwe katika muundo unaopendelewa"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1965870548185816252) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Lazimisha ubadilishaji uwe katika muundo unaopendelewa. Kulazimisha ubadilishaji huenda kukaathiri mipangilio mingine ya Hali ya Skrini au Muundo wa HDR."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Wakati wote iwe SDR"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Wakati wote huwa <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Je, ungependa kulazimisha matumizi ya mfumo wa HDR?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Kwa chaguomsingi, ubadilishaji utalazimishwa kuwa <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Skrini yako itaonyesha katika ubora wa 1080p 60Hz. Chaguo hili halioani na skrini yako linapoonyesha katika ubora wa 4k 60Hz."</string>
+    <!-- no translation found for preferred_dynamic_range_match_enabled_title (4761382844444479841) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_match_enabled_desc (264141414825957741) -->
+    <skip />
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Dolby Vision haioani na ubora wa sasa. Ukiwasha Dolby Vision mwenyewe, ubora wa maudhui kwenye skrini utabadilika kuwa 1080p 60Hz."</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Ungependa kubadilisha ubora kuwa 1080p 60Hz?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Lazimisha ubadilishaji uwe katika muundo wa Dolby Vision"</string>
@@ -208,11 +222,14 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Wachawi wa Ajabu kutoka Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Sura ya 11: Mji wa Ajabu wa Johari wa Oz"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Amina na marafiki zake walishangazwa na mng\'aro wa Mji wa ajabu licha ya kuvaa miwani ya kijani. Mitaa ilikuwa na nyumba maridadi zilizotengezwa kwa marumaru za kijani na kila mahali kulikuwa na johari zilizong\'aa. Walitembea kwenye njia ya marumaru, na matofali yalipokuwa yameuganishwa, kulikuwa na safu za johari zilizong\'aa kama jua. Madirisha yalitengezwa kwa vioo vya kijani. Anga la Mji na miale ya jua ilikuwa ya kijani. \n\nKulikuwa na watu wengi (wanaume, wanawake na watoto) ambao walikuwa wakitembea na wote walikuwa wamevalia nguo za kijani na ngozi yao ilikuwa ya kijani. Watu hawa walimtazama Amina na marafiki zake kwa mshangao. Watoto nao walitoroka na kujificha nyuma ya mama zao walipoona Simba; hakuna aliyewazungumzia. Kulikuwa na maduka mengi mtaani na Amina aliona kuwa bidhaa zilizokuwemo zilikuwa za kijani. Peremende, bisi, viatu, kofia na nguo za aina zote zilikuwa za kijani. Katika sehemu fulani, mtu mmoja alikuwa akiuza sharubati ya kijani, na watoto walilipa sarafu za kijani ili kuinunua.\n\nIlionekana kuwa mji huo haukuwa na farasi wala wanyama wa aina yoyote; watu walibeba bidhaa katika vikapu vya kijani. Kila mtu alionekana mchangamfu na aliyeridhika."</string>
-    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Uteuzi wa muundo"</string>
+    <!-- no translation found for hdr_format_selection_title (3847284265003261898) -->
+    <skip />
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Otomatiki"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Teua mwenyewe"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Tumia miundo inayotumika kwenye kifaa"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Chaguo miundo mwenyewe kwenye miundo inayopatikana"</string>
+    <!-- no translation found for hdr_format_selection_auto_desc (7091897909210568236) -->
+    <skip />
+    <!-- no translation found for hdr_format_selection_manual_desc (6989666818251254061) -->
+    <skip />
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"MIUNDO INAYOTUMIKA"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"MIUNDO ISIYOTUMIKA"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>

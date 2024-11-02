@@ -29,6 +29,11 @@
         android:key="display_category"
         android:title="@string/display_category_title" />
     <Preference
+        android:fragment="com.android.tv.settings.device.displaysound.ResolutionSelectionFragment"
+        android:key="resolution_selection"
+        android:persistent="true"
+        android:title="@string/resolution_selection_title"/>
+    <Preference
         android:key="font_scale"
         android:title="@string/font_scale_settings_title"
         android:fragment="com.android.tv.settings.device.displaysound.FontScalePreferenceFragment" />
@@ -40,11 +45,6 @@
         android:fragment="com.android.tv.settings.device.displaysound.MatchContentFrameRateFragment"
         android:key="match_content_frame_rate"
         android:title="@string/match_content_frame_rate_title"/>
-    <Preference
-        android:fragment="com.android.tv.settings.device.displaysound.ResolutionSelectionFragment"
-        android:key="resolution_selection"
-        android:persistent="true"
-        android:title="@string/resolution_selection_title"/>
     <Preference
         android:key="advanced_display_settings"
         android:title="@string/advanced_display_settings_title"

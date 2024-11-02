@@ -96,13 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"스레드 네트워크는 스레드 지원 스마트 홈 기기를 로컬에서 연결하여 효율성과 성능을 개선합니다.\n\n사용 설정하면 이 기기에서 스레드 네트워크를 만들거나 스레드 네트워크에 연결합니다. 사용자 인증 정보는 향후 스마트 홈 기기를 쉽게 설정할 수 있도록 클라우드에 비공개로 업로드됩니다.\n\n사용 중지하면 이 기기에서 더 이상 스레드 네트워크의 다른 기기와 통신할 수 없습니다. 특정 스마트 홈 기기 및 서비스는 제대로 작동하지 않을 수도 있습니다.\n\n자세한 내용은 g.co/tv/thread를 참고하세요."</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"스레드 네트워크를 사용 중지하시겠습니까?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"사용 중지하면 특정 스마트 홈 기기 및 서비스가 제대로 작동하지 않을 수 있습니다. 계속하시겠습니까?"</string>
-    <!-- no translation found for wifi_settings_thread_network_energy_title (1975654727631313381) -->
-    <skip />
-    <!-- no translation found for wifi_settings_thread_network_energy_message (6579289433006123263) -->
-    <skip />
+    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"스레드 네트워크를 사용 설정하시겠습니까?"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"스레드 네트워크에는 고전력 모드가 필요합니다. 먼저 에너지 모드를 고전력으로 변경한 후 돌아와서 스레드 네트워크를 사용 설정하세요."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"사용 중지"</string>
-    <!-- no translation found for wifi_settings_thread_network_button_change_energy_mode (6535896653472709387) -->
-    <skip />
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"에너지 모드 변경"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"네트워크에 연결"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"네트워크 진단"</string>
@@ -132,7 +129,8 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"TV 전원을 끄는 타이머를 설정하여 에너지 절약"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"기기"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"형식 선택"</string>
+    <!-- no translation found for surround_sound_select_formats (3232348550606222833) -->
+    <skip />
     <string name="surround_sound_category_title" msgid="5688539514178173911">"서라운드 사운드"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -144,10 +142,16 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus에서 제공하는 Dolby Atmos"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"참고: 기기가 지원되는 형식을 올바르게 보고하지 않는 경우 자동 옵션이 작동하지 않을 수 있습니다."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"자동: 오디오 출력 장치에서 지원되는 형식만 사용 설정합니다 "</string>
+    <!-- no translation found for surround_sound_auto_title (811867430010809597) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_auto_desc (7272466222509838647) -->
+    <skip />
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"선택하면 시스템에서 앱이 기기 체인에서 지원되는 모든 사운드 형식을 선택하도록 허용하게 됩니다. 앱에서 최고 품질이 아닌 형식을 선택할 수 있습니다."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"사용 안함: 서라운드 사운드를 사용하지 않음"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"수동: 오디오 출력 장치의 지원 여부와 무관하게 이 기기에서 지원되는 각 형식을 선택적으로 사용 또는 사용 중지합니다"</string>
+    <!-- no translation found for surround_sound_manual_title (8294975285009655065) -->
+    <skip />
+    <!-- no translation found for surround_sound_selection_manual_desc (3077478058774499547) -->
+    <skip />
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"선택하면 재생 관련 문제를 일으키는 기기 체인에서 지원하는 사운드 형식을 직접 사용 중지할 수 있습니다. 기기 체인에서 지원하지 않는 사운드 형식을 사용 설정할 수 있습니다. 경우에 따라 앱에서 최고 품질이 아닌 형식을 선택할 가능성이 있습니다."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"지원되지 않는 사운드 형식을 사용 설정할까요?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"연결된 오디오 기기가 이 형식을 지원하지 않습니다. 이로 인해 기기에서 큰 잡음과 같은 예기치 않은 동작이 발생할 수 있습니다."</string>
@@ -165,23 +169,33 @@
     <string name="display_category_title" msgid="247804007525046312">"화면"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"고급 화면 설정"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"고급 소리 설정"</string>
+    <!-- no translation found for advanced_sound_settings_title (2800805994220135889) -->
+    <skip />
     <string name="game_mode_title" msgid="7280816243531315755">"게임 모드 허용"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"다이내믹 레인지 콘텐츠와 맞춤"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"이 옵션을 사용 설정하면 시스템에서 콘텐츠에 맞춰 다이내믹 레인지 형식을 전환합니다. 형식이 전환되는 동안 검은색 화면이 표시될 수 있습니다.\n\n고급 화면 설정을 클릭하여 더 많은 다이내믹 레인지 옵션을 확인하세요."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"선호하는 다이내믹 레인지"</string>
+    <!-- no translation found for match_content_dynamic_range_summary (5897559876103008433) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_title (3216820729147940951) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"시스템 선호 전환"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="2765115460108291217">"시스템에서 형식 전환을 관리하도록 허용합니다."</string>
+    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5622795479042469982) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"이 옵션이 선택되면 시스템에서 디스플레이에 전송할 적절한 다이내믹 레인지를 결정하고 필요에 따라 콘텐츠를 이 다이내믹 레인지로 전환합니다."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"항상 콘텐츠 형식에 맞춤"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (885503418469834735) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"강제 전환"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"원하는 형식으로 강제 전환"</string>
+    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1965870548185816252) -->
+    <skip />
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"원하는 형식으로 강제로 전환됩니다. 강제로 전환하면 디스플레이 모드 또는 HDR 형식의 다른 설정에 영향을 미칠 수도 있습니다."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"항상 SDR로 전환"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"항상 <xliff:g id="HDR_TYPE">%s</xliff:g> 형식으로 전환"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"강제로 HDR을 출력하시겠습니까?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"기본적으로 <xliff:g id="HDR_TYPE">%s</xliff:g> 형식으로 강제 전환됩니다."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"디스플레이가 1,080p 60Hz 해상도에서 실행됩니다. 이 옵션은 4k 60Hz에서 실행될 때 내 디스플레이와 호환되지 않습니다."</string>
+    <!-- no translation found for preferred_dynamic_range_match_enabled_title (4761382844444479841) -->
+    <skip />
+    <!-- no translation found for preferred_dynamic_range_match_enabled_desc (264141414825957741) -->
+    <skip />
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"현재 해상도에서는 Dolby Vision이 지원되지 않습니다. Dolby Vision을 수동으로 사용 설정하면 디스플레이 해상도가 1080p 60Hz로 변경됩니다."</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"해상도를 1080p 60Hz로 변경하시겠습니까?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"항상 Dolby Vision으로 강제 전환"</string>
@@ -208,11 +222,14 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"오즈의 마법사"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11장: 오즈의 멋진 에메랄드 도시"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"도로시와 친구들은 녹색 안경으로 눈을 보호하고 있었는데도 처음에는 휘황찬란한 도시에 눈이 부셨습니다. 거리에는 녹색 대리석으로 지은 아름다운 집이 늘어서 있고 어디든지 반짝이는 에메랄드가 박혀 있었습니다. 같은 녹색 대리석으로 된 도로를 따라 걷는데 블록이 만나는 곳에는 에메랄드가 줄지어 촘촘히 박혀 있어서 햇빛에 반짝거리고 있었습니다. 창문이 녹색 유리로 되어 있었으며, 도시를 덮고 있는 하늘도 녹색을 띠고 있고 햇빛도 녹색이었습니다. \n\n남녀노소 많은 사람이 걸어 다니고 있었는데 모두 녹색 옷을 입고 피부도 녹색을 띠고 있었습니다. 사람들은 도로시의 별난 무리를 놀란 눈으로 쳐다보았으며 아이들은 사자를 보자 도망가서 엄마 뒤로 숨었지만, 말을 거는 사람은 없었습니다. 거리에 많은 상점이 있었으며 도로시가 들여다보니 안에 있는 모든 것이 녹색이었습니다. 녹색 사탕과 녹색 팝콘 그리고 갖가지 녹색 신발, 녹색 모자, 녹색 옷을 팔고 있었습니다. 한 남자가 녹색 레모네이드를 팔고 있는 곳이 있었는데 도로시가 보니 아이들이 레모네이드를 살 때 녹색 동전을 내고 있었습니다. \n\n말을 비롯해 어떤 동물도 없는 것 같았고, 남자들이 작은 녹색 손수레에 짐을 싣고 밀어서 운반했습니다. 모두 행복하고 만족스러우며 풍족해 보였습니다."</string>
-    <string name="hdr_format_selection_title" msgid="4042679694363850581">"형식 선택"</string>
+    <!-- no translation found for hdr_format_selection_title (3847284265003261898) -->
+    <skip />
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"자동"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"수동"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"기기에서 보고한 형식 사용"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"사용 가능한 형식 중에 직접 선택"</string>
+    <!-- no translation found for hdr_format_selection_auto_desc (7091897909210568236) -->
+    <skip />
+    <!-- no translation found for hdr_format_selection_manual_desc (6989666818251254061) -->
+    <skip />
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"지원되는 형식"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"지원되지 않는 형식"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>
