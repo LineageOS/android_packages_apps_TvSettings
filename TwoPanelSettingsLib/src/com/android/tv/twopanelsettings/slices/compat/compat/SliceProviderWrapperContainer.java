@@ -32,7 +32,6 @@ import android.os.Parcelable;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.versionedparcelable.ParcelUtils;
 import com.android.tv.twopanelsettings.slices.base.SliceManager;
 import com.android.tv.twopanelsettings.slices.base.SliceProvider;
 import com.android.tv.twopanelsettings.slices.compat.Slice;
@@ -145,9 +144,9 @@ public class SliceProviderWrapperContainer {
         if (slice == null) {
           return null;
         } else if (extras.getBoolean(EXTRA_SUPPORTS_SETTINGS_SLICE)) {
-          return ParcelUtils.toParcelable(slice);
+          return slice.toBundle();
         } else {
-          return SliceConvert.unwrap(mSliceProvider.onBindSlice(sliceUri));
+          return SliceConvert.unwrap(slice);
         }
       } catch (Exception e) {
         Log.wtf(TAG, "Slice with URI " + sliceUri.toString() + " is invalid.", e);

@@ -113,7 +113,7 @@ import java.util.Set;
 public abstract class SliceProvider extends ContentProvider
     implements CoreComponentFactory.CompatWrapped {
   /** {@link Slice} can be returned directly as serialized versioned parcelable. */
-  public static final String EXTRA_SUPPORTS_SETTINGS_SLICE = "supports_settings_slice";
+  public static final String EXTRA_SUPPORTS_SETTINGS_SLICE = "extra_supports_settings_slice";
 
   private static Set<SliceSpec> sSpecs;
   private static Clock sClock;

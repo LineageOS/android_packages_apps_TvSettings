@@ -37,8 +37,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.collection.ArrayMap;
-import androidx.versionedparcelable.ParcelUtils;
 import com.android.tv.twopanelsettings.slices.base.BundleCompat;
+import com.android.tv.twopanelsettings.slices.base.SliceManager;
 import java.util.Collection;
 import java.util.Set;
 
@@ -98,9 +98,17 @@ class SliceViewManagerWrapper extends SliceViewManagerBase {
     if (isAuthoritySuspended(uri.getAuthority())) {
       return null;
     }
+    return bindSlice(mContext, mManager, uri, mSpecs);
+  }
+
+  public static com.android.tv.twopanelsettings.slices.compat.Slice bindSlice(
+      Context context,
+      @NonNull SliceManager sliceManager,
+      @NonNull Uri uri,
+      @NonNull Set<SliceSpec> specs) {
     Bundle extras = new Bundle();
     extras.putBoolean(EXTRA_SUPPORTS_SETTINGS_SLICE, true);
-    return toSettingsSlice(mManager.bindSlice(uri, mSpecs, extras));
+    return toSettingsSlice(context, sliceManager.bindSlice(uri, specs, extras));
   }
 
   @Nullable
@@ -111,18 +119,18 @@ class SliceViewManagerWrapper extends SliceViewManagerBase {
     }
     Bundle extras = new Bundle();
     extras.putBoolean(EXTRA_SUPPORTS_SETTINGS_SLICE, true);
-    return toSettingsSlice(mManager.bindSlice(intent, mSpecs, extras));
+    return toSettingsSlice(mContext, mManager.bindSlice(intent, mSpecs, extras));
   }
 
-  private com.android.tv.twopanelsettings.slices.compat.Slice toSettingsSlice(Bundle bundle) {
+  private static Slice toSettingsSlice(Context context, Bundle bundle) {
     Parcelable parcelable =
         bundle != null ? BundleCompat.getParcelable(bundle, EXTRA_SLICE, Parcelable.class) : null;
     if (parcelable == null) {
       return null;
     }
     return parcelable instanceof android.app.slice.Slice
-        ? SliceConvert.wrap((android.app.slice.Slice) parcelable, mContext)
-        : ParcelUtils.fromParcelable(parcelable);
+        ? SliceConvert.wrap((android.app.slice.Slice) parcelable, context)
+        : new Slice((Bundle) parcelable);
   }
 
   private boolean isPackageSuspended(Intent intent) {

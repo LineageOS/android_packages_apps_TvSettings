@@ -308,7 +308,7 @@ public final class SliceLiveData {
         new SliceViewManager.SliceCallback() {
           @Override
           public void onSliceUpdated(@Nullable Slice s) {
-            if (mPendingUri.size() > 0) {
+            if (!mPendingUri.isEmpty()) {
               if (s == null) {
                 onSliceError(OnErrorListener.ERROR_SLICE_NO_LONGER_PRESENT, null);
                 return;

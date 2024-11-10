@@ -134,7 +134,7 @@ public class RowContent extends SliceContent {
     if (SUBTYPE_SELECTION.equals(rowSlice.getSubType())) {
       mSelection = rowSlice;
     }
-    if (rowItems.size() > 0) {
+    if (!rowItems.isEmpty()) {
       // Remove the things we already know about
       if (mStartItem != null) {
         rowItems.remove(mStartItem);
@@ -198,7 +198,7 @@ public class RowContent extends SliceContent {
   /** Sets the {@link #getPrimaryAction()} and {@link #getStartItem()} for this row. */
   private void determineStartAndPrimaryAction(@NonNull SliceItem rowSlice) {
     List<SliceItem> possibleStartItems = SliceQuery.findAll(rowSlice, null, HINT_TITLE, null);
-    if (possibleStartItems.size() > 0) {
+    if (!possibleStartItems.isEmpty()) {
       // The start item will be at position 0 if it exists
       String format = possibleStartItems.get(0).getFormat();
       if ((FORMAT_ACTION.equals(format)
@@ -224,7 +224,7 @@ public class RowContent extends SliceContent {
         && possiblePrimaries.get(0) == mStartItem) {
       // Next item is the primary action
       mPrimaryAction = possiblePrimaries.get(1);
-    } else if (possiblePrimaries.size() > 0) {
+    } else if (!possiblePrimaries.isEmpty()) {
       mPrimaryAction = possiblePrimaries.get(0);
     }
   }
@@ -236,7 +236,7 @@ public class RowContent extends SliceContent {
             || mPrimaryAction != null
             || mTitleItem != null
             || mSubtitleItem != null
-            || mEndItems.size() > 0
+            || !mEndItems.isEmpty()
             || mRange != null
             || mSelection != null
             || isDefaultSeeMore());

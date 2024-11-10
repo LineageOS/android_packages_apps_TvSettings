@@ -439,7 +439,7 @@ public class SliceStyle {
       ListContent list, int availableHeight, SliceViewPolicy policy) {
     ArrayList<SliceContent> visibleItems = new ArrayList<>();
     int hiddenItemCount = 0;
-    if (list.getRowItems() == null || list.getRowItems().size() == 0) {
+    if (list.getRowItems() == null || list.getRowItems().isEmpty()) {
       return new DisplayedListItems(visibleItems, hiddenItemCount);
     }
 
@@ -487,7 +487,7 @@ public class SliceStyle {
         visibleHeight -= seeMoreHeight;
       }
     }
-    if (visibleItems.size() == 0) {
+    if (visibleItems.isEmpty()) {
       // Didn't have enough space to show anything; should still show something
       visibleItems.add(list.getRowItems().get(0));
     }
@@ -502,7 +502,7 @@ public class SliceStyle {
   @NonNull
   public List<SliceContent> getListItemsToDisplay(@NonNull ListContent list) {
     List<SliceContent> rowItems = list.getRowItems();
-    if (rowItems.size() > 0 && shouldSkipFirstListItem(rowItems)) {
+    if (!rowItems.isEmpty() && shouldSkipFirstListItem(rowItems)) {
       return rowItems.subList(1, rowItems.size());
     }
     return rowItems;

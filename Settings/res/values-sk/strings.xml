@@ -129,8 +129,7 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"Nastavte časovače, ktoré vypnú televízor a ušetria energiu"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Zariadenia"</string>
-    <!-- no translation found for surround_sound_select_formats (3232348550606222833) -->
-    <skip />
+    <string name="surround_sound_select_formats" msgid="3232348550606222833">"Nastavenia priestorového zvuku"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Priestorový zvuk"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -142,16 +141,12 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos s Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Poznámka: Možnosť Automaticky nemusí fungovať, ak zariadenie správne neuvádza podporované formáty."</string>
-    <!-- no translation found for surround_sound_auto_title (811867430010809597) -->
-    <skip />
-    <!-- no translation found for surround_sound_selection_auto_desc (7272466222509838647) -->
-    <skip />
+    <string name="surround_sound_auto_title" msgid="811867430010809597">"Automaticky"</string>
+    <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Povoľte všetky podporované formáty"</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Keď vyberiete túto možnosť, systém umožní aplikáciám vybrať ľubovoľný formát zvuku, ktorý váš reťazec zariadení podporuje. Aplikácie môžu zvoliť formát, ktorý nemá najvyššiu kvalitu."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Žiadne: nepoužívať priestorový zvuk"</string>
-    <!-- no translation found for surround_sound_manual_title (8294975285009655065) -->
-    <skip />
-    <!-- no translation found for surround_sound_selection_manual_desc (3077478058774499547) -->
-    <skip />
+    <string name="surround_sound_manual_title" msgid="8294975285009655065">"Manuálne"</string>
+    <string name="surround_sound_selection_manual_desc" msgid="3077478058774499547">"Vyberte z dostupných formátov"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Keď vyberiete túto možnosť, môžete manuálne zakázať formáty zvuku podporované vaším reťazcom zariadení, ktoré pri prehrávaní spôsobujú problémy. Formáty zvuku nepodporované vaším reťazcom zariadení nie je možné povoliť. V niektorých prípadoch môžu aplikácie zvoliť formát, ktorý nemá najvyššiu kvalitu."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Chcete povoliť nepodporovaný formát zvuku?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Vaše pripojené audio zariadenie neuvádza podporu pre tento formát. Môže to viesť k neočakávanému správaniu vrátane hlasného zvuku alebo praskania."</string>
@@ -169,33 +164,25 @@
     <string name="display_category_title" msgid="247804007525046312">"Zobrazenie"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Rozšírené nastavenia zobrazenia"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <!-- no translation found for advanced_sound_settings_title (2800805994220135889) -->
-    <skip />
+    <string name="advanced_sound_settings_title" msgid="2800805994220135889">"Nastavenia priestorového zvuku"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Povoliť herný režim"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Zladiť dynamický rozsah obsahu"</string>
-    <!-- no translation found for match_content_dynamic_range_summary (5897559876103008433) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_title (3216820729147940951) -->
-    <skip />
+    <string name="match_content_dynamic_range_summary" msgid="5897559876103008433">"Keď je táto možnosť vybraná, systém zladí dynamický rozsah obsahu. Môže to spôsobiť, že pri spustení alebo ukončení prehrávania videa obrazovka na chvíľu stmavne. Ďalšie nastavenia dynamického rozsahu nájdete v rozšírených nastaveniach zobrazenia."</string>
+    <string name="preferred_dynamic_range_title" msgid="3216820729147940951">"Preferovaný formát dynamického rozsahu"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Konverzia určovaná systémom"</string>
-    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5622795479042469982) -->
-    <skip />
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5622795479042469982">"Nechajte konverziu formátu spravovať systémom"</string>
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Keď je vybraná táto možnosť, systém bude určovať vhodný dynamický rozsah obrazovky a podľa potreby doň konvertovať obsah."</string>
-    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (885503418469834735) -->
-    <skip />
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="885503418469834735">"Vždy zlaďte formát obsahu"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Vynucovať konverziu"</string>
-    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1965870548185816252) -->
-    <skip />
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1965870548185816252">"Vynúťte konverziu na preferovaný formát"</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Vynúťte konverziu do preferovaného formátu. Vynucovanie konverzie môže ovplyvniť iné nastavenia režimu zobrazenia alebo formátu HDR."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Vždy do formátu SDR"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Vždy do formátu <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Chcete vynútiť výstup HDR?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Videá budú predvolene vynútene konvertované do formátu <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Rozlíšenie obrazovky bude 1080p, 60 Hz. Táto možnosť nie je kompatibilná s obrazovkou pri rozlíšení 4K, 60 Hz."</string>
-    <!-- no translation found for preferred_dynamic_range_match_enabled_title (4761382844444479841) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_match_enabled_desc (264141414825957741) -->
-    <skip />
+    <string name="preferred_dynamic_range_match_enabled_title" msgid="4761382844444479841">"Toto nastavenie nie je k dispozícii"</string>
+    <string name="preferred_dynamic_range_match_enabled_desc" msgid="264141414825957741">"Možnosť Zladiť dynamický rozsah obsahu je povolená. Ak chcete konvertovať na konkrétny formát dynamického rozsahu, prejdite do sekcie Nastavenia &gt; Zobrazenie a zvuk a vypnite možnosť Zladiť dynamický rozsah obsahu."</string>
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Aktuálne rozlíšenie technológiu Dolby Vision nepodporuje. Ak Dolby Vision zapnete ručne, rozlíšenie obrazovky sa zmení na 1080p 60 Hz."</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Chcete zmeniť rozlíšenie na 1080p 60 Hz?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Vždy vynucovať konverziu do formátu Dolby Vision"</string>
@@ -222,14 +209,11 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Čarodejník z krajiny Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"11. kapitola: Nádherné smaragdové mesto"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Lesk tohto nádherného mesta Dorotku a jej priateľov najskôr oslepoval, hoci mali na očiach zelené okuliare. Ulice lemovali nádherné domy zo zeleného mramoru, husto posiate trblietajúcimi sa smaragdmi. Kráčali po chodníku z takého istého zeleného mramoru a na miestach, kde sa spájali dlaždice, sa ligotali v odraze slnka husté rady smaragdov. Tabule oblokov boli zo zeleného skla. Dokonca aj obloha nad mestom bola zafarbená dozelena a slnečné lúče boli tiež zelené. \n\nNa uliciach bolo veľa ľudí. Muži, ženy i deti si vykračovali oblečení v zelených šatách a všetci mali nazelenalú pleť. Zvedavo si obzerali Dorotku a jej prazvláštnu spoločnosť. Keď deti zbadali leva, rýchlo utiekli a skryli sa za chrbty matiek. Nik sa však Dorotke ani jej spoločníkom neprihovoril. Na ulici bolo mnoho rôznych obchodov a Dorotke neušlo, že všetok tovar bol zelený. Na predaj boli zelené cukríky, zelené pukance, zelené topánky, zelené klobúky a všelijaké zelené šaty. Jeden obchodník predával zelenú limonádu a keď si ju deti kupovali, Dorotka si všimla, že platia zelenými mincami. \n\nZdalo sa, že v meste nie sú žiadne kone ani iné zvieratá. Muži tlačili pred sebou malé zelené vozíky, v ktorých prevážali rôzne veci. Všetci vyzerali šťastní, spokojní a prosperujúci."</string>
-    <!-- no translation found for hdr_format_selection_title (3847284265003261898) -->
-    <skip />
+    <string name="hdr_format_selection_title" msgid="3847284265003261898">"Povoliť formáty dynamického rozsahu"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automaticky"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manuálne"</string>
-    <!-- no translation found for hdr_format_selection_auto_desc (7091897909210568236) -->
-    <skip />
-    <!-- no translation found for hdr_format_selection_manual_desc (6989666818251254061) -->
-    <skip />
+    <string name="hdr_format_selection_auto_desc" msgid="7091897909210568236">"Povoľte všetky podporované formáty"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="6989666818251254061">"Vyberte z dostupných formátov"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"PODPOROVANÉ FORMÁTY"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"NEPODPOROVANÉ FORMÁTY"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>
@@ -718,7 +702,7 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Text s vysokým kontrastom"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Tučný text"</string>
-    <string name="bounce_key_title" msgid="8334672581038914983">"Klávesy jedného stlačenia"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Opakované stlačenia"</string>
     <string name="bounce_key_description" msgid="8742025495500915588">"Vyberte preferované časovanie"</string>
     <string name="bounce_key_detailed" msgid="2422246064036507844">"Diaľkový ovládač ignoruje opakované stlačenia klávesov"</string>
     <string name="bounce_key_description_summary" msgid="6753146496890170215">"Nastavte, aby boli neúmyselné rýchle a opakované stlačenia tlačidla ignorované. Môžete upraviť časový interval, počas ktorého majú byť stlačenia ignorované."</string>

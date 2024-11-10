@@ -31,9 +31,7 @@ import android.os.Parcelable;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.util.Preconditions;
-import androidx.versionedparcelable.ParcelUtils;
 import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
 import com.android.tv.twopanelsettings.slices.compat.core.SliceHints;
 import java.io.BufferedInputStream;
@@ -73,52 +71,9 @@ public class SliceUtils {
       @NonNull final SliceActionListener listener)
       throws IOException, SliceParseException {
     BufferedInputStream bufferedInputStream = new BufferedInputStream(input);
-    String parcelName = Slice.class.getName();
-
-    bufferedInputStream.mark(parcelName.length() + 4);
-    boolean usesParcel = doesStreamStartWith(parcelName, bufferedInputStream);
-    bufferedInputStream.reset();
-    if (usesParcel) {
-      Slice slice;
-      final SliceItem.ActionHandler handler =
-          new SliceItem.ActionHandler() {
-            @Override
-            public void onAction(
-                @NonNull SliceItem item, @Nullable Context context, Intent intent) {
-              listener.onSliceAction(item.getSlice().getUri(), context, intent);
-            }
-          };
-      synchronized (SliceItemHolder.sSerializeLock) {
-        SliceItemHolder.sHandler =
-            new SliceItemHolder.HolderHandler() {
-              @Override
-              public void handle(@NonNull SliceItemHolder holder, @NonNull String format) {
-                setActionsAndUpdateIcons(holder, handler, context, format);
-              }
-            };
-        slice = ParcelUtils.fromInputStream(bufferedInputStream);
-        slice.mHints = ArrayUtils.appendElement(String.class, slice.mHints, SliceHints.HINT_CACHED);
-        SliceItemHolder.sHandler = null;
-      }
-      return slice;
-    }
     Slice s = SliceXml.parseSlice(context, bufferedInputStream, encoding, listener);
     s.mHints = ArrayUtils.appendElement(String.class, s.mHints, SliceHints.HINT_CACHED);
     return s;
-  }
-
-  static void setActionsAndUpdateIcons(
-      SliceItemHolder holder, SliceItem.ActionHandler listener, Context context, String format) {
-    switch (format) {
-      case FORMAT_IMAGE:
-        if (holder.mVersionedParcelable instanceof IconCompat) {
-          ((IconCompat) holder.mVersionedParcelable).checkResource(context);
-        }
-        break;
-      case FORMAT_ACTION:
-        holder.mCallback = listener;
-        break;
-    }
   }
 
   /** */

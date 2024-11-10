@@ -84,7 +84,7 @@ public class GridContent extends SliceContent {
     mSeeMoreItem = SliceQuery.find(gridItem, null, HINT_SEE_MORE, null);
     if (mSeeMoreItem != null && FORMAT_SLICE.equals(mSeeMoreItem.getFormat())) {
       List<SliceItem> seeMoreItems = mSeeMoreItem.getSlice().getItems();
-      if (seeMoreItems != null && seeMoreItems.size() > 0) {
+      if (seeMoreItems != null && !seeMoreItems.isEmpty()) {
         mSeeMoreItem = seeMoreItems.get(0);
       }
     }
@@ -175,7 +175,7 @@ public class GridContent extends SliceContent {
    */
   @Override
   public boolean isValid() {
-    return super.isValid() && mGridContent.size() > 0;
+    return super.isValid() && !mGridContent.isEmpty();
   }
 
   /**
@@ -431,7 +431,7 @@ public class GridContent extends SliceContent {
      * @return whether this grid has content that is valid to display.
      */
     public boolean isValid() {
-      return mPicker != null || (mCellItems.size() > 0 && mCellItems.size() <= 3);
+      return mPicker != null || (!mCellItems.isEmpty() && mCellItems.size() <= 3);
     }
 
     /**

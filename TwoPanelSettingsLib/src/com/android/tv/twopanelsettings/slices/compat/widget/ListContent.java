@@ -115,7 +115,7 @@ public class ListContent extends SliceContent {
       mHeaderContent = (RowContent) mRowItems.get(0);
       mHeaderContent.setIsHeader(true);
     }
-    if (mRowItems.size() > 0 && mRowItems.get(mRowItems.size() - 1) instanceof GridContent) {
+    if (!mRowItems.isEmpty() && mRowItems.get(mRowItems.size() - 1) instanceof GridContent) {
       // Grid item is the last item, note that.
       ((GridContent) mRowItems.get(mRowItems.size() - 1)).setIsLastIndex(true);
     }
@@ -151,7 +151,7 @@ public class ListContent extends SliceContent {
    */
   @Override
   public boolean isValid() {
-    return super.isValid() && mRowItems.size() > 0;
+    return super.isValid() && !mRowItems.isEmpty();
   }
 
   @Nullable
@@ -263,7 +263,7 @@ public class ListContent extends SliceContent {
           }
           return EventInfo.ROW_TYPE_LIST;
         } else {
-          return rc.getToggleItems().size() > 0
+          return !rc.getToggleItems().isEmpty()
               ? EventInfo.ROW_TYPE_TOGGLE
               : EventInfo.ROW_TYPE_LIST;
         }

@@ -57,14 +57,9 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.annotation.StringDef;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.util.Preconditions;
-import androidx.versionedparcelable.CustomVersionedParcelable;
-import androidx.versionedparcelable.ParcelField;
-import androidx.versionedparcelable.VersionedParcelable;
-import androidx.versionedparcelable.VersionedParcelize;
 import com.android.tv.twopanelsettings.slices.base.SliceManager;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -85,9 +80,8 @@ import java.util.Set;
  * are looking for a framework that handles communication across apps, consider using {@link
  * android.app.appsearch.AppSearchManager}.
  */
-@VersionedParcelize(allowSerialization = true, isCustom = true)
 // @Deprecated // Supported for TV
-public final class Slice extends CustomVersionedParcelable implements VersionedParcelable {
+public final class Slice {
 
   /** Key to retrieve an extra added to an intent when an item in a selection is selected. */
   public static final String EXTRA_SELECTION = "android.app.slice.extra.SELECTION";
@@ -139,21 +133,13 @@ public final class Slice extends CustomVersionedParcelable implements VersionedP
   @Retention(RetentionPolicy.SOURCE)
   public @interface SliceHint {}
 
-  @ParcelField(value = 1, defaultValue = "null")
   SliceSpec mSpec = null;
 
-  @ParcelField(
-      value = 2,
-      defaultValue = "com.android.tv.twopanelsettings.slices.compat.Slice.NO_ITEMS")
   SliceItem[] mItems = NO_ITEMS;
 
-  @ParcelField(
-      value = 3,
-      defaultValue = "com.android.tv.twopanelsettings.slices.compat.Slice.NO_HINTS")
   @SliceHint
   String[] mHints = NO_HINTS;
 
-  @ParcelField(value = 4, defaultValue = "null")
   String mUri = null;
 
   /** */
@@ -164,10 +150,6 @@ public final class Slice extends CustomVersionedParcelable implements VersionedP
     mUri = uri.toString();
     mSpec = spec;
   }
-
-  /** Used for VersionedParcelable */
-  // @RestrictTo(Scope.LIBRARY)
-  public Slice() {}
 
   /** */
   // @RestrictTo(Scope.LIBRARY)
@@ -253,25 +235,6 @@ public final class Slice extends CustomVersionedParcelable implements VersionedP
   // @RestrictTo(Scope.LIBRARY_GROUP_PREFIX)
   public boolean hasHint(@NonNull @SliceHint String hint) {
     return ArrayUtils.contains(mHints, hint);
-  }
-
-  /** */
-  // @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
-  @Override
-  public void onPreParceling(boolean isStream) {}
-
-  /** */
-  // @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
-  @Override
-  public void onPostParceling() {
-    for (int i = mItems.length - 1; i >= 0; i--) {
-      if (mItems[i].mObj == null) {
-        mItems = ArrayUtils.removeElement(SliceItem.class, mItems, mItems[i]);
-        if (mItems == null) {
-          mItems = new SliceItem[0];
-        }
-      }
-    }
   }
 
   /** A Builder used to construct {@link Slice}s */
@@ -609,14 +572,8 @@ public final class Slice extends CustomVersionedParcelable implements VersionedP
   @Nullable
   public static Slice bindSlice(
       @NonNull Context context, @NonNull Uri uri, @Nullable Set<SliceSpec> supportedSpecs) {
-    return callBindSlice(context, uri, supportedSpecs);
-  }
-
-  @RequiresApi(28)
-  private static Slice callBindSlice(Context context, Uri uri, Set<SliceSpec> supportedSpecs) {
-    SliceManager sliceManager = SliceManager.from(context);
-    return SliceConvert.wrap(
-        Api28Impl.bindSlice(sliceManager, uri, unwrap(supportedSpecs)), context);
+    return SliceViewManagerWrapper.bindSlice(
+        context, SliceManager.from(context), uri, unwrap(supportedSpecs));
   }
 
   /** */
@@ -630,28 +587,5 @@ public final class Slice extends CustomVersionedParcelable implements VersionedP
           "Failed to add icon, invalid resource id: " + icon.getResId());
     }
     return true;
-  }
-
-  @RequiresApi(23)
-  static class Api23Impl {
-    private Api23Impl() {
-      // This class is not instantiable.
-    }
-
-    static <T> T getSystemService(Context context, Class<T> serviceClass) {
-      return context.getSystemService(serviceClass);
-    }
-  }
-
-  @RequiresApi(28)
-  static class Api28Impl {
-    private Api28Impl() {
-      // This class is not instantiable.
-    }
-
-    static android.app.slice.Slice bindSlice(
-        SliceManager sliceManager, Uri uri, Set<android.app.slice.SliceSpec> supportedSpecs) {
-      return sliceManager.bindSlice(uri, supportedSpecs);
-    }
   }
 }

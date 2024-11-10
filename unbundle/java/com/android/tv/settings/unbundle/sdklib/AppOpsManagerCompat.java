@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
+import android.app.AppOpEnums;
 import android.app.AppOpsManager;
-import android.app.AppProtoEnums;
 import android.content.Context;
 import android.os.IBinder;
 
@@ -93,11 +93,11 @@ public class AppOpsManagerCompat {
     public static final int OP_FLAGS_ALL = AppOpsManager.OP_FLAGS_ALL;
     public static final int OP_SYSTEM_ALERT_WINDOW = AppOpsManager.OP_SYSTEM_ALERT_WINDOW;
 
-    public static final int OP_TOAST_WINDOW = AppProtoEnums.APP_OP_TOAST_WINDOW;
-    public static final int OP_MOCK_LOCATION = AppProtoEnums.APP_OP_MOCK_LOCATION;
+    public static final int OP_TOAST_WINDOW = AppOpEnums.APP_OP_TOAST_WINDOW;
+    public static final int OP_MOCK_LOCATION = AppOpEnums.APP_OP_MOCK_LOCATION;
 
     public static final int OP_REQUEST_INSTALL_PACKAGES =
-            AppProtoEnums.APP_OP_REQUEST_INSTALL_PACKAGES;
+            AppOpEnums.APP_OP_REQUEST_INSTALL_PACKAGES;
 
     public void setUserRestriction(int code, boolean restricted, IBinder token) {
         mAppOpsManager.setUserRestriction(code, restricted, token);

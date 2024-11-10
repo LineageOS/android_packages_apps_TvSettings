@@ -18,9 +18,6 @@ package com.android.tv.twopanelsettings.slices.compat;
 
 import android.net.Uri;
 import androidx.annotation.NonNull;
-import androidx.versionedparcelable.ParcelField;
-import androidx.versionedparcelable.VersionedParcelable;
-import androidx.versionedparcelable.VersionedParcelize;
 
 /**
  * Class describing the structure of the data contained within a slice.
@@ -37,20 +34,11 @@ import androidx.versionedparcelable.VersionedParcelize;
  * @see Slice
  * @see SliceProvider#onBindSlice(Uri)
  */
-// @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
-@VersionedParcelize(allowSerialization = true)
-// @Deprecated // Supported for TV
-public final class SliceSpec implements VersionedParcelable {
+public final class SliceSpec {
 
-  @ParcelField(1)
   String mType;
 
-  @ParcelField(value = 2, defaultValue = "1")
   int mRevision = 1;
-
-  /** Used for VersionedParcelable */
-  // @RestrictTo(RestrictTo.Scope.LIBRARY)
-  public SliceSpec() {}
 
   public SliceSpec(@NonNull String type, int revision) {
     mType = type;

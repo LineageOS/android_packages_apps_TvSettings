@@ -82,7 +82,7 @@ public class SliceQuery {
   public static SliceItem findNotContaining(
       @Nullable SliceItem container, @NonNull List<SliceItem> list) {
     SliceItem ret = null;
-    while (ret == null && list.size() != 0) {
+    while (ret == null && !list.isEmpty()) {
       SliceItem remove = list.remove(0);
       if (!contains(container, remove)) {
         ret = remove;

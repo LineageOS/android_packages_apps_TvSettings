@@ -153,7 +153,7 @@ public class SliceMetadata {
           actions.add(new SliceActionImpl(items.get(i)));
         }
       }
-      if (actions.size() > 0) {
+      if (!actions.isEmpty()) {
         mSliceActions = actions;
       }
     }
@@ -235,7 +235,7 @@ public class SliceMetadata {
     // Is it the primary action?
     if (mPrimaryAction != null && mPrimaryAction.isToggle()) {
       toggles.add(mPrimaryAction);
-    } else if (mSliceActions != null && mSliceActions.size() > 0) {
+    } else if (mSliceActions != null && !mSliceActions.isEmpty()) {
       for (int i = 0; i < mSliceActions.size(); i++) {
         SliceAction action = mSliceActions.get(i);
         if (action.isToggle()) {

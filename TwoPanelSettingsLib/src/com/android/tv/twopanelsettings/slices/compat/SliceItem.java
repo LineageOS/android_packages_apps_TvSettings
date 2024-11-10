@@ -46,6 +46,7 @@ import android.text.style.AlignmentSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
+import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -53,12 +54,9 @@ import androidx.annotation.StringDef;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.util.ObjectsCompat;
 import androidx.core.util.Pair;
-import androidx.versionedparcelable.CustomVersionedParcelable;
-import androidx.versionedparcelable.NonParcelField;
-import androidx.versionedparcelable.ParcelField;
-import androidx.versionedparcelable.VersionedParcelize;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
@@ -85,9 +83,7 @@ import java.util.List;
  * are looking for a framework that handles communication across apps, consider using {@link
  * android.app.appsearch.AppSearchManager}.
  */
-@VersionedParcelize(allowSerialization = true, ignoreParcelables = true, isCustom = true)
-// @Deprecated // Supported for TV
-public final class SliceItem extends CustomVersionedParcelable {
+public final class SliceItem {
   private static final String TAG = "SliceItem";
 
   private static final String HINTS = "hints";
@@ -95,6 +91,7 @@ public final class SliceItem extends CustomVersionedParcelable {
   private static final String SUBTYPE = "subtype";
   private static final String OBJ = "obj";
   private static final String OBJ_2 = "obj_2";
+  private static final String INTENT = "intent";
   private static final String SLICE_CONTENT = "androidx.slice.content";
   private static final String SLICE_CONTENT_SENSITIVE = "sensitive";
 
@@ -116,28 +113,17 @@ public final class SliceItem extends CustomVersionedParcelable {
 
   /** */
   @NonNull
-  // @RestrictTo(Scope.LIBRARY)
-  @ParcelField(
-      value = 1,
-      defaultValue = "com.android.tv.twopanelsettings.slices.compat.Slice.NO_HINTS")
   @Slice.SliceHint
   String[] mHints = Slice.NO_HINTS;
 
   @NonNull
-  @ParcelField(value = 2, defaultValue = FORMAT_TEXT)
   String mFormat = FORMAT_TEXT;
 
-  @Nullable
-  @ParcelField(value = 3, defaultValue = "null")
   String mSubType = null;
 
-  @Nullable @NonParcelField Object mObj;
+  @Nullable Object mObj;
 
-  @NonParcelField CharSequence mSanitizedText;
-
-  @Nullable
-  @ParcelField(4)
-  SliceItemHolder mHolder;
+  CharSequence mSanitizedText;
 
   /** */
   @SuppressWarnings("NullableProblems")
@@ -165,12 +151,7 @@ public final class SliceItem extends CustomVersionedParcelable {
     this(obj, format, subType, hints.toArray(new String[hints.size()]));
   }
 
-  /** Used by VersionedParcelable. */
-  // @RestrictTo(Scope.LIBRARY_GROUP)
-  public SliceItem() {}
-
   /** */
-  // @RestrictTo(Scope.LIBRARY_GROUP)
   public SliceItem(
       @NonNull Parcelable intent,
       @Nullable Slice slice,
@@ -483,9 +464,16 @@ public final class SliceItem extends CustomVersionedParcelable {
         dest.putParcelable(OBJ, ((Slice) obj).toBundle());
         break;
       case FORMAT_ACTION:
-        dest.putParcelable(OBJ, (Parcelable) ((Pair<Object, Slice>) obj).first);
+        {
+          Parcelable action = (Parcelable) ((Pair<Object, Slice>) obj).first;
+          if (action instanceof Intent) {
+            dest.putString(INTENT, ((Intent) action).toUri(Intent.URI_INTENT_SCHEME));
+          } else {
+            dest.putParcelable(OBJ, (Parcelable) ((Pair<Object, Slice>) obj).first);
+          }
         dest.putBundle(OBJ_2, ((Pair<Object, Slice>) obj).second.toBundle());
         break;
+        }
       case FORMAT_TEXT:
         dest.putCharSequence(OBJ, (CharSequence) obj);
         break;
@@ -514,7 +502,18 @@ public final class SliceItem extends CustomVersionedParcelable {
       case FORMAT_TEXT:
         return in.getCharSequence(OBJ);
       case FORMAT_ACTION:
-        return new Pair<>(in.getParcelable(OBJ), new Slice(in.getBundle(OBJ_2)));
+        String intentUri = in.getString(INTENT);
+        if (intentUri == null) {
+          return new Pair<>(in.getParcelable(OBJ), new Slice(in.getBundle(OBJ_2)));
+        }
+        Intent intent;
+        try {
+          intent = Intent.parseUri(intentUri, 0);
+        } catch (URISyntaxException e) {
+          Log.e(TAG, "Malformed intent: " + intentUri, e);
+          intent = new Intent();
+        }
+        return new Pair<>(intent, new Slice(in.getBundle(OBJ_2)));
       case FORMAT_INT:
         return in.getInt(OBJ);
       case FORMAT_LONG:
@@ -642,22 +641,6 @@ public final class SliceItem extends CustomVersionedParcelable {
     }
     sb.append("\n");
     return sb.toString();
-  }
-
-  @Override
-  public void onPreParceling(boolean isStream) {
-    mHolder = new SliceItemHolder(mFormat, mObj, isStream);
-  }
-
-  @Override
-  public void onPostParceling() {
-    if (mHolder != null) {
-      mObj = mHolder.getObj(mFormat);
-      mHolder.release();
-    } else {
-      mObj = null;
-    }
-    mHolder = null;
   }
 
   /**

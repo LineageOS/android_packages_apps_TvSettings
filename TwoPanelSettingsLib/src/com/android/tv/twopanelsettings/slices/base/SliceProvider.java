@@ -303,8 +303,9 @@ public abstract class SliceProvider extends ContentProvider {
   public Bundle call(String method, String arg, Bundle extras) {
     if (method.equals(METHOD_SLICE)) {
       Uri uri =
-          validateIncomingUriOrNull(
-              BundleCompat.getParcelable(extras, EXTRA_BIND_URI, android.net.Uri.class));
+          getUriWithoutUserId(
+              validateIncomingUriOrNull(
+                  BundleCompat.getParcelable(extras, EXTRA_BIND_URI, android.net.Uri.class)));
       List<SliceSpec> supportedSpecs =
           BundleCompat.getParcelableArrayList(extras, EXTRA_SUPPORTED_SPECS, SliceSpec.class);
 
@@ -353,18 +354,21 @@ public abstract class SliceProvider extends ContentProvider {
       return b;
     } else if (method.equals(METHOD_PIN)) {
       Uri uri =
-          validateIncomingUriOrNull(
-              BundleCompat.getParcelable(extras, EXTRA_BIND_URI, android.net.Uri.class));
+          getUriWithoutUserId(
+              validateIncomingUriOrNull(
+                  BundleCompat.getParcelable(extras, EXTRA_BIND_URI, android.net.Uri.class)));
       handlePinSlice(uri);
     } else if (method.equals(METHOD_UNPIN)) {
       Uri uri =
-          validateIncomingUriOrNull(
-              BundleCompat.getParcelable(extras, EXTRA_BIND_URI, android.net.Uri.class));
+          getUriWithoutUserId(
+              validateIncomingUriOrNull(
+                  BundleCompat.getParcelable(extras, EXTRA_BIND_URI, android.net.Uri.class)));
       handleUnpinSlice(uri);
     } else if (method.equals(METHOD_GET_DESCENDANTS)) {
       Uri uri =
-          validateIncomingUriOrNull(
-              BundleCompat.getParcelable(extras, EXTRA_BIND_URI, android.net.Uri.class));
+          getUriWithoutUserId(
+              validateIncomingUriOrNull(
+                  BundleCompat.getParcelable(extras, EXTRA_BIND_URI, android.net.Uri.class)));
       Bundle b = new Bundle();
       b.putParcelableArrayList(EXTRA_SLICE_DESCENDANTS, new ArrayList<>(handleGetDescendants(uri)));
       return b;
@@ -381,6 +385,23 @@ public abstract class SliceProvider extends ContentProvider {
 
   private Uri validateIncomingUriOrNull(Uri uri) {
     return uri;
+  }
+
+  public static String getAuthorityWithoutUserId(String auth) {
+    if (auth == null) {
+      return null;
+    }
+    int end = auth.lastIndexOf('@');
+    return auth.substring(end + 1);
+  }
+
+  public static Uri getUriWithoutUserId(Uri uri) {
+    if (uri == null) {
+      return null;
+    }
+    Uri.Builder builder = uri.buildUpon();
+    builder.authority(getAuthorityWithoutUserId(uri.getAuthority()));
+    return builder.build();
   }
 
   private Collection<Uri> handleGetDescendants(Uri uri) {

@@ -129,8 +129,7 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"ТВ-ийг унтраах болон эрчим хүч хэмнэхийн тулд цаг хэмжигч тохируулна уу"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Төхөөрөмжүүд"</string>
-    <!-- no translation found for surround_sound_select_formats (3232348550606222833) -->
-    <skip />
+    <string name="surround_sound_select_formats" msgid="3232348550606222833">"Орчин тойрны дууны тохиргоо"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Орчин тойрны дуу"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -142,16 +141,12 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus-тай Dolby Atmos"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Санамж: Таны төхөөрөмж дэмждэг форматаа зөв мэдээлэхгүй бол Автомат сонголт ажиллахгүй байж болно."</string>
-    <!-- no translation found for surround_sound_auto_title (811867430010809597) -->
-    <skip />
-    <!-- no translation found for surround_sound_selection_auto_desc (7272466222509838647) -->
-    <skip />
+    <string name="surround_sound_auto_title" msgid="811867430010809597">"Автомат"</string>
+    <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Бүх дэмжигдсэн форматыг идэвхжүүлэх"</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Сонгосон үед систем нь аппуудад таны төхөөрөмжийн сүлжээний дэмждэг дурын дууны форматыг сонгохыг зөвшөөрнө. Аппууд өндөр чанартай биш форматыг сонгож болзошгүй."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Байхгүй: Орчин тойрны дууг хэзээ ч бүү ашигла"</string>
-    <!-- no translation found for surround_sound_manual_title (8294975285009655065) -->
-    <skip />
-    <!-- no translation found for surround_sound_selection_manual_desc (3077478058774499547) -->
-    <skip />
+    <string name="surround_sound_manual_title" msgid="8294975285009655065">"Гараар"</string>
+    <string name="surround_sound_selection_manual_desc" msgid="3077478058774499547">"Боломжтой форматуудаас сонгох"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Сонгосон үед та төхөөрөмжийнхөө сүлжээний дэмждэг, дахин тоглуулахад асуудал үүсгэдэг дууны форматуудыг гар аргаар идэвхгүй болгох боломжтой. Таны төхөөрөмжийн сүлжээний дэмждэггүй дууны форматуудыг идэвхжүүлэх боломжтой. Зарим тохиолдолд аппууд өндөр чанартай биш форматыг сонгож болзошгүй."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Дэмжээгүй дуу чимээний форматыг идэвхжүүлэх үү?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Таны холбогдсон аудио төхөөрөмж энэ форматыг дэмжихээр мэдээлдэггүй. Энэ нь таны төхөөрөмжөөс тооцоолоогүй чанга дуу чимээ гарах эсвэл үзэгдэхэд нөлөөлж болзошгүй."</string>
@@ -169,33 +164,25 @@
     <string name="display_category_title" msgid="247804007525046312">"Дэлгэц"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Нарийвчилсан дэлгэцийн тохиргоо"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <!-- no translation found for advanced_sound_settings_title (2800805994220135889) -->
-    <skip />
+    <string name="advanced_sound_settings_title" msgid="2800805994220135889">"Орчин тойрны дууны тохиргоо"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Тоглоомын горимыг зөвшөөрөх"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Контентын динамик мужийг тааруулах"</string>
-    <!-- no translation found for match_content_dynamic_range_summary (5897559876103008433) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_title (3216820729147940951) -->
-    <skip />
+    <string name="match_content_dynamic_range_summary" msgid="5897559876103008433">"Сонгосон үед систем контентын динамик хүрээтэй тааруулна. Энэ нь видео эхлэх эсвэл дуусахад таны дэлгэцийг хэсэг хугацаанд хар болгож болно. Динамик хүрээний нэмэлт тохиргоог Дэлгэцийн нарийвчилсан тохиргооноос олж болно."</string>
+    <string name="preferred_dynamic_range_title" msgid="3216820729147940951">"Сонгосон динамик хүрээний формат"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Системийн сонгосон хувиралт"</string>
-    <!-- no translation found for preferred_dynamic_range_selection_system_desc (5622795479042469982) -->
-    <skip />
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5622795479042469982">"Системд форматын хөрвүүлэлтийг удирдахыг зөвшөөрнө"</string>
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Энэ сонголтыг сонгосон үед систем таны дэлгэц рүү илгээх тохирох динамик мужийг тодорхойлж, шаардлагатай бол контентыг энэ динамик муж руу хувиргана."</string>
-    <!-- no translation found for preferred_dynamic_range_selection_passthrough_desc (885503418469834735) -->
-    <skip />
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="885503418469834735">"Контентын форматтай үргэлж тааруулна"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Хувиралтыг хүчлэх"</string>
-    <!-- no translation found for preferred_dynamic_range_selection_force_desc (1965870548185816252) -->
-    <skip />
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1965870548185816252">"Сонгосон формат руу хүчээр хөрвүүлнэ"</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Хувиралтыг сонгосон формат рүү хүчилнэ. Хувиралтыг хүчлэх нь Дэлгэцийн горим эсвэл HDR форматын бусад тохиргоонд нөлөөлж магадгүй."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Үргэлж SDR"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Үргэлж <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Та HDR гаралтыг хүчлэхийг хүсэж байна уу?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Өгөгдмөлөөр хувиралтыг <xliff:g id="HDR_TYPE">%s</xliff:g> болгож хүчилнэ."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Таны дэлгэц 1080p 60Hz нягтралтайгаар ажиллана. Таны дэлгэц 4000 60Hz нягтралтайгаар ажиллаж байгаа үед энэ сонголт тохиромжгүй."</string>
-    <!-- no translation found for preferred_dynamic_range_match_enabled_title (4761382844444479841) -->
-    <skip />
-    <!-- no translation found for preferred_dynamic_range_match_enabled_desc (264141414825957741) -->
-    <skip />
+    <string name="preferred_dynamic_range_match_enabled_title" msgid="4761382844444479841">"Энэ тохиргоо боломжгүй байна"</string>
+    <string name="preferred_dynamic_range_match_enabled_desc" msgid="264141414825957741">"\'Контентын динамик хүрээтэй тааруулах\'-ыг идэвхжүүлсэн. Тодорхой динамик хүрээний формат руу хөрвүүлэхийн тулд эхлээд Тохиргоо &gt; Дэлгэц &amp; Дуу руу очиж, \'Контентын динамик хүрээг тааруулах\'-ыг унтраана уу."</string>
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Dolby Vision-г одоогийн нягтралд дэмждэггүй. Хэрэв та Dolby Vision-г гар аргаар идэвхжүүлбэл таны дэлгэцийн нягтралыг 1080p 60Hz болгож өөрчилнө"</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Нягтралыг 1080p 60Hz болгож өөрчлөх үү?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Хувиралтыг үргэлж Dolby Vision рүү хүчлэх"</string>
@@ -222,14 +209,11 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Озын Гайхамшигт шидтэн"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Бүлэг 11: Озын Гайхамшигт Маргад эрдэнийн хот"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Дороти болон түүний нөхөд ногоон өнгийн шилээр нүдээ хамгаалсан байсан ч гайхамшигт Хотын сүр жавхланд нүд гялбаж байлаа. Хотын байшингуудыг ногоон гантигаар барьсан бөгөөд энд тэндгүй маргад эрдэнийн чулууг битүү шигтгэсэн байх аж. Тэдний явж буй ногоон гантиг замыг хооронд нь маргад эрдэнээр шигүү холбосон нь нарны гэрэлд гялалзан харагдана. Байшингуудын цонхыг ногоон өвсөөр хүрээлсэн, тэр ч бүү хэл энэ Хотын тэнгэрийн хаяа, нарны цацраг нь хүртэл ногоон туяатай байлаа. \n\nЭнд тэндгүй ногоон өнгийн хувцас өмссөн, арьс нь ногоовтор туяатай хүмүүс явж харагдана. Тэд Дороти болон түүний хачирхалтай нөхдийг гайхширсан нүдээр харах бөгөөд хүүхэд багачууд Арсланг харсан даруйдаа ээжийнхээ ард нуугдах хэдий ч тэдэнтэй хэн ч үг сольсонгүй. Гудамжинд маш олон тооны дэлгүүр байх хэдий ч тэдгээр нь мөн л ногоон өнгөтэй болохыг Дороти ажиглав. Дэлгүүрт ногоон өнгийн чихэр болон эрдэнэ шиш байх бөгөөд гутал, малгай зэрэг бүх төрлийн ногоон өнгөтэй хувцас худалдаалж байв. Тэнд нэгэн эр ногоон өнгийн нимбэгний шүүс зарж байхтай таарав. Үүнийг нь авч ууж буй хүүхдүүд ногоон өнгийн зоос төлж байгаа нь Доротид харагдав. \n\nАжиглаад байхад энд ямар ч амьтан, морь мал байхгүй бөгөөд хүмүүс жижиг ногоон тэргээр ачаа бараагаа зөөж харагдана. Энэ хотын бүх хүн аз жаргалтай, амар тайван харагдаж байлаа."</string>
-    <!-- no translation found for hdr_format_selection_title (3847284265003261898) -->
-    <skip />
+    <string name="hdr_format_selection_title" msgid="3847284265003261898">"Динамик хүрээний форматыг зөвшөөрөх"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Автомат"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Гар арга"</string>
-    <!-- no translation found for hdr_format_selection_auto_desc (7091897909210568236) -->
-    <skip />
-    <!-- no translation found for hdr_format_selection_manual_desc (6989666818251254061) -->
-    <skip />
+    <string name="hdr_format_selection_auto_desc" msgid="7091897909210568236">"Бүх дэмжигдсэн форматыг идэвхжүүлэх"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="6989666818251254061">"Боломжтой форматуудаас сонгох"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"ДЭМЖДЭГ ФОРМАТУУД"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"ДЭМЖДЭГГҮЙ ФОРМАТУУД"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>
