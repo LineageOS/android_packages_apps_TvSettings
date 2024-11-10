@@ -43,6 +43,8 @@ public class ButtonsFragment extends SettingsPreferenceFragment
     private static final String KEY_ADVANCED_REBOOT = "advanced_reboot";
     private static final String KEY_POWER_BUTTON_LONG_PRESS_ACTION =
             "power_button_long_press_action";
+    private static final String KEY_PRESS_BACK_AND_HOME_TO_SLEEP = "press_back_and_home_to_sleep";
+
 
     private static final int LONG_PRESS_POWER_BUTTON_FOR_ASSISTANT = 1;
     private static final int LONG_PRESS_POWER_BUTTON_FOR_POWER_MENU = 0;
@@ -83,6 +85,13 @@ public class ButtonsFragment extends SettingsPreferenceFragment
         } else {
             getPreferenceScreen().removePreference(mPowerButtonLongPressAction);
         }
+
+        findPreference(KEY_PRESS_BACK_AND_HOME_TO_SLEEP).setOnPreferenceChangeListener(
+            (preference, newValue) -> {
+                LineageSettings.System.putInt(context.getContentResolver(),
+                        LineageSettings.System.BACK_AND_HOME_SLEEP, (Boolean) newValue ? 1 : 0);
+                return true;
+            });
     }
 
     @Override
