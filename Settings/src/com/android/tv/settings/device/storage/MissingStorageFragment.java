@@ -22,13 +22,16 @@ import android.os.storage.VolumeRecord;
 import android.text.TextUtils;
 import android.util.Log;
 
-import androidx.leanback.preference.LeanbackPreferenceFragment;
+import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.tv.settings.R;
+import android.content.Intent;
 
-public class MissingStorageFragment extends LeanbackPreferenceFragment {
+import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.device.StorageResetActivity;
+public class MissingStorageFragment extends LeanbackPreferenceFragmentCompat {
 
     private static final String TAG = "MissingStorageFragment";
 
@@ -36,7 +39,7 @@ public class MissingStorageFragment extends LeanbackPreferenceFragment {
 
     private String mFsUuid;
     private StorageManager mStorageManager;
-
+    private boolean isTwoPanel;
     public static void prepareArgs(Bundle b, String fsUuid) {
         b.putString(VolumeRecord.EXTRA_FS_UUID, fsUuid);
     }
@@ -53,8 +56,14 @@ public class MissingStorageFragment extends LeanbackPreferenceFragment {
     public void onResume() {
         super.onResume();
         if (mStorageManager.findRecordByUuid(mFsUuid) == null) {
-            getFragmentManager().popBackStack();
+            isTwoPanel = FlavorUtils.isTwoPanel(getContext());
             Log.i(TAG, "FsUuid " + mFsUuid + " vanished upon resuming");
+            if(isTwoPanel){
+                startActivity(new Intent(getActivity(), StorageResetActivity.class));
+                getActivity().finish();
+            }else{
+                getFragmentManager().popBackStack();
+            }
         } else {
             refresh();
         }
@@ -84,8 +93,12 @@ public class MissingStorageFragment extends LeanbackPreferenceFragment {
                 return;
             }
             if (mStorageManager.findRecordByUuid(fsUuid) == null) {
-                getFragmentManager().popBackStack();
+                isTwoPanel = FlavorUtils.isTwoPanel(getContext());
                 Log.i(TAG, "FsUuid " + mFsUuid + " vanished while resumed");
+                if(isTwoPanel)
+                    onDestroy();
+                else
+                    getFragmentManager().popBackStack();
             } else {
                 refresh();
             }
