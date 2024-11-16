@@ -17,6 +17,7 @@
     <string name="system_reboot_confirm_cm">Atosaigh go:</string>
     <string name="global_action_restart_system">Córas</string>
     <string name="global_action_restart_recovery">Aisghabháil</string>
+    <string name="global_action_restart_bootloader">Bootloader</string>
     <plurals name="show_dev_countdown_cm">
         <item quantity="one">Tá tú <xliff:g id="step_count">%1$d</xliff:g> céim ar shiúl ó na socruithe forbartha a chumasú anois.</item>
         <item quantity="two">Tá tú <xliff:g id="step_count">%1$d</xliff:g> céimeanna ar shiúl ó na socruithe forbartha a chumasú anois.</item>
@@ -62,4 +63,21 @@
     <string name="trust_restrict_usb_always">Diúltaigh naisc USB</string>
     <string name="trust_restrict_usb_disabled">Ceadaigh naisc USB i gcónaí</string>
     <string name="trust_onboarding_description">Cabhraíonn Trust leat do ghléas a choinneáil slán agus do phríobháideachas a chosaint.\nNí thaispeánfar an deilbhín Trust ach amháin nuair a bheidh inneachar an leathanaigh fíoraithe.</string>
+    <string name="trust_warnings_alerts_intro">Is féidir leat na saincheisteanna slándála a bhfuil tú ag iarraidh go dtabharfar rabhadh duit a roghnú. Ar mhaithe le do shábháilteacht, moltar gach foláireamh a chumasú</string>
+    <string name="trust_warnings_selinux">Stádas SELinux</string>
+    <string name="trust_warnings_keys">Tóg síniú</string>
+    <string name="sleep_button_label">Codladh</string>
+    <string name="system_sleep_confirm">Codladh anois?</string>
+    <string name="shutdown_button_label">Múchadh</string>
+    <string name="system_shutdown_confirm">Múchadh anois?</string>
+    <string name="convertible_port_busy_title">Tá port USB 1 in úsáid</string>
+    <string name="convertible_port_busy_warning">Díphlugáil gléasanna nó gabhálais ar bith agus bain triail eile as</string>
+    <string name="mtp_enable_title">Rochtain ar fhillteáin SHIELD ar ríomhaire trí USB</string>
+    <string name="mtp_enable_warning">Tá port USB 1 cumraithe anois chun SHIELD a nascadh le ríomhaire mar ghléas meán.\n\nNí bhraithfidh an port seo meáin stórála USB nó gabhálais USB a thuilleadh agus ní féidir é a úsáid chun gléasanna luchtaithe.</string>
+    <string name="mtp_retry_error">Theip. Bain triail eile as, le do thoil.</string>
+    <string name="mtp_summary">Sa mhodh seo, níl an port USB feidhmiúil le haghaidh úsáidí eile</string>
+    <string name="mtp_title">Comhaid a aistriú chuig ríomhaire ag baint úsáide as USB</string>
+    <string name="mtp_unexpected_error">Earráid gan choinne. Bain triail eile as ar ball le do thoil.</string>
+    <string name="usb_debugging_enable_title">Cumasaíodh dífhabhtú USB</string>
+    <string name="usb_debugging_enable_warning">Tá port USB 1 cumraithe anois chun SHIELD a nascadh le ríomhaire mar ghléas meán.\n\nNí bhraithfidh an port seo meáin stórála USB nó gabhálais USB a thuilleadh agus ní féidir é a úsáid chun gléasanna luchtaithe.</string>
 </resources>
