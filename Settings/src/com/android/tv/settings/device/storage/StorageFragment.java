@@ -28,7 +28,7 @@ import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.text.TextUtils;
 import android.util.Log;
-
+import java.io.File;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
@@ -80,7 +80,7 @@ public class StorageFragment extends SettingsPreferenceFragment {
     private StoragePreference mCacheUsagePref;
     private StoragePreference mMiscUsagePref;
     private StoragePreference mAvailablePref;
-
+    private static String file_path = "/cache";
     public static void prepareArgs(Bundle bundle, VolumeInfo volumeInfo) {
         bundle.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeInfo.getId());
     }
@@ -233,25 +233,37 @@ public class StorageFragment extends SettingsPreferenceFragment {
 
         final long downloadsSize = totalValues(details.mediaSize.get(currentUser),
                 Environment.DIRECTORY_DOWNLOADS);
-
-        try {
-            long availSize = mStorageManager.getAllocatableBytes(
-                    StorageManager.convert(mVolumeInfo.fsUuid));
-            if (availSize <= 0) {
-                availSize = details.availSize;
+        if(mVolumeInfo.fsUuid != null)
+        {
+            long size = Math.max(0L, details.availSize - cachePartitionSize());
+            mAvailablePref.setSize(size);
+        }else
+        {
+            try {
+                long size = mStorageManager.getAllocatableBytes(
+                        StorageManager.convert(mVolumeInfo.fsUuid));
+                mAvailablePref.setSize(size);
+            } catch (IOException | IllegalArgumentException e) {
+                mAvailablePref.setSize(details.availSize);
             }
-            Log.i(TAG, "details availSize:" + availSize);
-            mAvailablePref.setSize(availSize);
-        } catch (IOException | IllegalArgumentException e) {
-            Log.i(TAG, "details availSize:" + details.availSize);
-            mAvailablePref.setSize(details.availSize);
         }
+
         mAppsUsagePref.setSize(details.appsSize.get(currentUser));
         mDcimUsagePref.setSize(dcimSize);
         mMusicUsagePref.setSize(musicSize);
         mDownloadsUsagePref.setSize(downloadsSize);
         mCacheUsagePref.setSize(details.cacheSize);
         mMiscUsagePref.setSize(details.miscSize.get(currentUser));
+    }
+
+    private static long cachePartitionSize() {
+        File cache = new File(file_path);
+        try {
+            return cache.getUsableSpace();
+        } catch (SecurityException e) {
+            Log.w(TAG, "Cannot determine cache partition size.", e);
+            return 0;
+        }
     }
 
     private static long totalValues(HashMap<String, Long> map, String... keys) {
