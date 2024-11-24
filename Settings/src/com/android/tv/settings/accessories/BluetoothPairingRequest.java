@@ -16,10 +16,17 @@
 
 package com.android.tv.settings.accessories;
 
+import android.bluetooth.BluetoothCsipSetCoordinator;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.media.tv.flags.Flags;
+import android.text.TextUtils;
+import android.util.Log;
+
+import com.android.settingslib.bluetooth.CachedBluetoothDevice;
+import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 /**
  * BluetoothPairingRequest is a receiver for any Bluetooth pairing request. It
@@ -28,34 +35,53 @@ import android.content.Intent;
  */
 public final class BluetoothPairingRequest extends BroadcastReceiver {
 
+    public static final String TAG = "BluetoothPairingRequest";
+
     @Override
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
-        if (!action.equals(BluetoothDevice.ACTION_PAIRING_REQUEST)) {
-            return;
-        }
+        if (action.equals(BluetoothDevice.ACTION_PAIRING_REQUEST)) {
 
-        // convert broadcast intent into activity intent (same action string)
-        BluetoothDevice device =
-                intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-        int type = intent.getIntExtra(BluetoothDevice.EXTRA_PAIRING_VARIANT,
-                BluetoothDevice.ERROR);
-        Intent pairingIntent = new Intent();
-        pairingIntent.setClass(context, BluetoothPairingDialog.class);
-        pairingIntent.putExtra(BluetoothDevice.EXTRA_DEVICE, device);
-        pairingIntent.putExtra(BluetoothDevice.EXTRA_PAIRING_VARIANT, type);
-        if (type == BluetoothDevice.PAIRING_VARIANT_PASSKEY_CONFIRMATION ||
-                type == BluetoothDevice.PAIRING_VARIANT_DISPLAY_PASSKEY ||
-                type == BluetoothDevice.PAIRING_VARIANT_DISPLAY_PIN) {
-            int pairingKey = intent.getIntExtra(BluetoothDevice.EXTRA_PAIRING_KEY,
+            // convert broadcast intent into activity intent (same action string)
+            BluetoothDevice device =
+                    intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+            int type = intent.getIntExtra(BluetoothDevice.EXTRA_PAIRING_VARIANT,
                     BluetoothDevice.ERROR);
-            pairingIntent.putExtra(BluetoothDevice.EXTRA_PAIRING_KEY, pairingKey);
-        }
-        pairingIntent.setAction(BluetoothDevice.ACTION_PAIRING_REQUEST);
-        pairingIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            Intent pairingIntent = new Intent();
+            pairingIntent.setClass(context, BluetoothPairingDialog.class);
+            pairingIntent.putExtra(BluetoothDevice.EXTRA_DEVICE, device);
+            pairingIntent.putExtra(BluetoothDevice.EXTRA_PAIRING_VARIANT, type);
+            if (type == BluetoothDevice.PAIRING_VARIANT_PASSKEY_CONFIRMATION ||
+                    type == BluetoothDevice.PAIRING_VARIANT_DISPLAY_PASSKEY ||
+                    type == BluetoothDevice.PAIRING_VARIANT_DISPLAY_PIN) {
+                int pairingKey = intent.getIntExtra(BluetoothDevice.EXTRA_PAIRING_KEY,
+                        BluetoothDevice.ERROR);
+                pairingIntent.putExtra(BluetoothDevice.EXTRA_PAIRING_KEY, pairingKey);
+            }
+            pairingIntent.setAction(BluetoothDevice.ACTION_PAIRING_REQUEST);
+            pairingIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-        // In Canvas, always start the pairing activity when we get the pairing broadcast,
-        // as opposed to displaying a notification that will start the pairing activity.
-        context.startActivity(pairingIntent);
+            // In Canvas, always start the pairing activity when we get the pairing broadcast,
+            // as opposed to displaying a notification that will start the pairing activity.
+            context.startActivity(pairingIntent);
+        } else if (Flags.enableLeAudioUnicastUi()
+                && TextUtils.equals(action,
+                   BluetoothCsipSetCoordinator.ACTION_CSIS_SET_MEMBER_AVAILABLE)) {
+            Log.d(TAG, "Received ACTION_CSIS_SET_MEMBER_AVAILABLE");
+            BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+            LocalBluetoothManager bluetoothManager =
+                AccessoryUtils.getLocalBluetoothManager(context);
+            if (device == null) {
+                return;
+            }
+
+            final int groupId = intent.getIntExtra(BluetoothCsipSetCoordinator.EXTRA_CSIS_GROUP_ID,
+                    BluetoothCsipSetCoordinator.GROUP_ID_INVALID);
+            if (groupId == BluetoothCsipSetCoordinator.GROUP_ID_INVALID) {
+                return;
+            }
+
+            bluetoothManager.getCachedDeviceManager().pairDeviceByCsip(device, groupId);
+        }
     }
 }
