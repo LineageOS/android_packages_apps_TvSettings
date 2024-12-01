@@ -24,6 +24,7 @@ import static android.app.slice.SliceItem.FORMAT_LONG;
 import static android.app.slice.SliceItem.FORMAT_REMOTE_INPUT;
 import static android.app.slice.SliceItem.FORMAT_SLICE;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
+
 import static com.android.tv.twopanelsettings.slices.compat.Slice.appendHints;
 
 import android.annotation.SuppressLint;
@@ -47,6 +48,7 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -54,6 +56,7 @@ import androidx.annotation.StringDef;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.util.ObjectsCompat;
 import androidx.core.util.Pair;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.net.URISyntaxException;
@@ -238,6 +241,12 @@ public final class SliceItem {
   @Nullable
   public CharSequence getText() {
     return (CharSequence) mObj;
+  }
+
+  /**  */
+  @Nullable
+  public Bundle getBundle() {
+    return (Bundle) mObj;
   }
 
   /**

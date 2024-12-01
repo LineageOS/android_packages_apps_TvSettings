@@ -17,6 +17,9 @@
 package com.android.tv.twopanelsettings.slices;
 
 import androidx.annotation.IntDef;
+
+import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilderImpl;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
@@ -45,6 +48,8 @@ public final class SlicesConstants {
   public static final String SUBTYPE_SEEKBAR_MIN = "SUBTYPE_SEEKBAR_MIN";
   public static final String SUBTYPE_SEEKBAR_MAX = "SUBTYPE_SEEKBAR_MAX";
   public static final String SUBTYPE_SEEKBAR_VALUE = "SUBTYPE_SEEKBAR_VALUE";
+  public static final String SUBTYPE_CLASSNAME = PreferenceSliceBuilderImpl.SUBTYPE_CLASSNAME;
+  public static final String SUBTYPE_PROPERTIES = PreferenceSliceBuilderImpl.SUBTYPE_PROPERTIES;
   public static final String PATH_STATUS = "status";
   public static final String PARAMETER_DIRECTION = "direction";
   public static final String FORWARD = "forward";
