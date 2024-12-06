@@ -51,6 +51,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
     private static final String KEY_DEVICE_AUTO_OFF = "device_auto_off";
     private static final String KEY_TV_AUTO_ON = "tv_auto_on";
     private static final String KEY_CEC_VOLUME = "volume_control_enabled";
+    private static final String KEY_CEC_UNSUPPORTED = "cec_unsupported";
     private static final String ICU_PLURAL_COUNT = "count";
 
     private PreferenceGroup mConnectedGroup;
@@ -61,6 +62,7 @@ public class InputsFragment extends SettingsPreferenceFragment {
     private TwoStatePreference mDeviceAutoOffPref;
     private TwoStatePreference mTvAutoOnPref;
     private TwoStatePreference mCecVolumePref;
+    private Preference mCecUnsupportedPref;
 
     private TvInputManager mTvInputManager;
     private HdmiControlManager mHdmiControlManager;
@@ -101,17 +103,27 @@ public class InputsFragment extends SettingsPreferenceFragment {
         mDeviceAutoOffPref = (TwoStatePreference) findPreference(KEY_DEVICE_AUTO_OFF);
         mTvAutoOnPref = (TwoStatePreference) findPreference(KEY_TV_AUTO_ON);
         mCecVolumePref = (TwoStatePreference) findPreference(KEY_CEC_VOLUME);
+        mCecUnsupportedPref = (Preference) findPreference(KEY_CEC_UNSUPPORTED);
     }
 
     private void refresh() {
-        mHdmiControlPref.setChecked(mHdmiControlManager.getHdmiCecEnabled()
-                == HdmiControlManager.HDMI_CEC_CONTROL_ENABLED);
-        mDeviceAutoOffPref.setChecked(mHdmiControlManager.getTvSendStandbyOnSleep()
-                == HdmiControlManager.TV_SEND_STANDBY_ON_SLEEP_ENABLED);
-        mTvAutoOnPref.setChecked(mHdmiControlManager.getTvWakeOnOneTouchPlay()
-                == HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_ENABLED);
-        mCecVolumePref.setChecked(mHdmiControlManager.getHdmiCecVolumeControlEnabled()
-                == HdmiControlManager.VOLUME_CONTROL_ENABLED);
+        if (mHdmiControlManager == null) {
+            mHdmiControlPref.setVisible(false);
+            mDeviceAutoOffPref.setVisible(false);
+            mTvAutoOnPref.setVisible(false);
+            mCecVolumePref.setVisible(false);
+            mCecUnsupportedPref.setVisible(true);
+        } else {
+            mHdmiControlPref.setChecked(mHdmiControlManager.getHdmiCecEnabled()
+                    == HdmiControlManager.HDMI_CEC_CONTROL_ENABLED);
+            mDeviceAutoOffPref.setChecked(mHdmiControlManager.getTvSendStandbyOnSleep()
+                    == HdmiControlManager.TV_SEND_STANDBY_ON_SLEEP_ENABLED);
+            mTvAutoOnPref.setChecked(mHdmiControlManager.getTvWakeOnOneTouchPlay()
+                    == HdmiControlManager.TV_WAKE_ON_ONE_TOUCH_PLAY_ENABLED);
+            mCecVolumePref.setChecked(mHdmiControlManager.getHdmiCecVolumeControlEnabled()
+                    == HdmiControlManager.VOLUME_CONTROL_ENABLED);
+            mCecUnsupportedPref.setVisible(false);
+        }
 
         for (TvInputInfo info : mTvInputManager.getTvInputList()) {
             if (info.getType() == TvInputInfo.TYPE_TUNER
