@@ -52,5 +52,9 @@
             android:persistent="true"
             android:title="@string/inputs_volume_control_enabled"
             android:summary="@string/inputs_volume_control_enabled_desc" />
+        <Preference android:key="cec_unsupported"
+            android:title="@string/unsupported"
+            android:persistent="false"
+            android:visible="false" />
     </PreferenceCategory>
 </PreferenceScreen>
