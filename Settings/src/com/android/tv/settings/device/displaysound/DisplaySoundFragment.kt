@@ -54,15 +54,15 @@ import kotlinx.coroutines.launch
 @Keep
 class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.DisplayListener {
     lateinit var mAudioManager: AudioManager
-    lateinit var mHdmiControlManager: HdmiControlManager
     lateinit var mDisplayManager: DisplayManager
     private var mCurrentDeviceName: String? = null
+    private var mHdmiControlManager: HdmiControlManager? = null
     private var mCurrentMode: Display.Mode? = null
 
     override fun onAttach(context: Context) {
         mAudioManager = context.getSystemService(AudioManager::class.java) as AudioManager
         mHdmiControlManager =
-            context.getSystemService(HdmiControlManager::class.java) as HdmiControlManager
+            context.getSystemService(HdmiControlManager::class.java) as? HdmiControlManager
         mDisplayManager = displayManager
         super.onAttach(context)
     }
@@ -159,8 +159,8 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
     private fun updateCecPreference() {
         findPreference<Preference>(KEY_CEC)?.apply{
             if (this is SlicePreference && SliceUtils.isSliceProviderValid(
-                    context, this.uri)) {
-                val cecEnabled = (mHdmiControlManager.getHdmiCecEnabled()
+                    context, this.uri) && mHdmiControlManager != null) {
+                val cecEnabled = (mHdmiControlManager?.getHdmiCecEnabled()
                         == HdmiControlManager.HDMI_CEC_CONTROL_ENABLED)
                 setSummary(if (cecEnabled) R.string.enabled else R.string.disabled)
                 isVisible = true
