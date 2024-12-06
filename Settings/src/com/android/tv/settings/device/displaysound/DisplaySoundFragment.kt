@@ -61,6 +61,7 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
     lateinit var mDisplayManager: DisplayManager
     var mHdmiControlManager: HdmiControlManager? = null
     private var mCurrentDeviceName: String? = null
+    private var mHdmiControlManager: HdmiControlManager? = null
     private var mCurrentMode: Display.Mode? = null
     private var mSliceShard: SliceShard? = null
 
