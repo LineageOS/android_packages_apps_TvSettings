@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"ປິດການແຈ້ງເຕືອນ"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"ການກວດພົບຄຳສັ່ງ \"OK Google\""</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"ລົມກັບຜູ້ຊ່ວຍ Google ໄດ້ທຸກເວລາ"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (ໂປຣແກຣມອ່ານໜ້າຈໍ)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack ແມ່ນຄຸນສົມບັດການຊ່ວຍເຂົ້າເຖິງຂອງໂປຣແກຣມອ່ານໜ້າຈໍທີ່ຊ່ວຍເຫຼືອຜູ້ໃຊ້ທີ່ມີຄວາມບົກພ່ອງທາງການເບິ່ງເຫັນໂດຍການອ່ານອອກສຽງຂໍ້ຄວາມຢູ່ໜ້າຈໍ, ລາຍການເມນູ ແລະ ອົງປະກອບອື່ນໆ. ນອກຈາກນີ້, ຍັງສາມາດຕັ້ງຄ່າຄຸນສົມບັດດັ່ງກ່າວໃຫ້ໃຊ້ກັບທາງລັດສຳລັບການຊ່ວຍເຂົ້າເຖິງໄດ້ນຳ."</string>
     <string name="header_category_device" msgid="3023893663454705969">"ອຸປະກອນ"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"ການ​ກຳນົດ​ຄ່າ"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"ຣີໂໝດ ແລະ ອຸປະກອນເສີມ"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ຕົວອັກສອນຄອນທຣາສສູງ"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"ຂໍ້ຄວາມຕົວໜາ"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"ປຸ່ມຕີກັບ"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"ເລືອກໄລຍະເວລາທີ່ຕ້ອງການ"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"ຣີໂໝດບໍ່ສົນໃຈການກົດປຸ່ມຊ້ຳໆ"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"ບໍ່ຕ້ອງສົນໃຈການກົດປຸ່ມທີ່ກົດຊ້ຳໆຢ່າງວ່ອງໄວໂດຍບໍ່ໄດ້ຕັ້ງໃຈ. ທ່ານສາມາດປັບຊ່ວງເວລາໄດ້ວ່າຈະໃຫ້ລະບົບບໍ່ຕ້ອງສົນໃຈການກົດໃດ"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"ໄລຍະເວລາ : ຄ່າເລີ່ມຕົ້ນ"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"ບໍ່ຕ້ອງສົນໃຈການກົດປຸ່ມຊ້ຳໆສຳລັບຊ່ວງເວລາເລີ່ມຕົ້ນຫຼັງຈາກການກົດເທື່ອທຳອິດ"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"ໄລຍະເວລາ : 0.5 ວິນາທີ"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"ປັບໄລຍະຫ່າງຂອງເວລາເປັນ 0.5 ວິນາທີສຳລັບການກົດປຸ່ມຊ້ຳໆທີ່ລະບົບບໍ່ຕ້ອງສົນໃຈ"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"ໄລຍະເວລາ : 1 ວິນາທີ"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"ປັບໄລຍະຫ່າງຂອງເວລາເປັນ 1 ວິນາທີສຳລັບການກົດປຸ່ມຊ້ຳໆທີ່ລະບົບບໍ່ຕ້ອງສົນໃຈ"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"ໄລຍະເວລາ : 2 ວິນາທີ"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"ປັບໄລຍະຫ່າງຂອງເວລາເປັນ 2 ວິນາທີສຳລັບການກົດປຸ່ມຊ້ຳໆທີ່ລະບົບບໍ່ຕ້ອງສົນໃຈ"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"ການແກ້ໄຂສີ"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"ໃຊ້ການແກ້ໄຂສີ"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"ຮູບແບບສີ"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"ປຸ່ມລັດ​ສຳລັບ​ການ​ເຂົ້າ​ເຖິງ"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"ເປີດໃຊ້ປຸ່ມລັດການຊ່ວຍເຂົ້າເຖິງ"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"ບໍລິການປຸ່ມທາງລັດ"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"ການຊ່ວຍເຂົ້າເຖິງແປ້ນພິມ"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"ເມື່ອເປີດປຸ່ມລັດແລ້ວ, ທ່ານສາມາດກົດປຸ່ມກັບຄືນ ແລະ ປຸ່ມລົງພ້ອມກັນຄ້າງໄວ້ 3 ວິນາທີເພື່ອເປັນການເປີດຄຸນສົມບັດຊ່ວຍເຂົ້າເຖິງ"</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"ເວລາດຳເນີນການ"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"ເວລາດຳເນີນການ (ໄລຍະໝົດເວລາການຊ່ວຍເຂົ້າເຖິງ)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"ຊ່ວງເວລາ"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"ບາງແອັບບໍ່ຮອງຮັບຄ່າກຳນົດໄລຍະເວລານີ້."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"ເວລາດຳເນີນການ (ໝົດເວລາການຊ່ວຍເຂົ້າເຖິງ)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"ປັບໄລຍະເວລາຂອງຂໍ້ຄວາມທີ່ຕ້ອງການດຳເນີນການ"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"ເລືອກໄລຍະເວລາທີ່ຈະສະແດງຂໍ້ຄວາມຊົ່ວຄາວທີ່ຂໍໃຫ້ທ່ານດຳເນີນການ"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"ຊ່ວງເວລາ : 2–3 ວິນາທີ"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"ຕັ້ງຄ່າໄລຍະເວລາເລີ່ມຕົ້ນໃນການຕອບສະໜອງຕໍ່ຄຳສັ່ງຢູ່ໜ້າຈໍ (2–3 ວິນາທີ)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"ຄວາມຊັກຊ້າຂອງປຸ່ມຊ້ຳຄືນ"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"ຕັ້ງຄ່າຄວາມຊັກຊ້າກ່ອນທີ່ຕົວອັກສອນທີ່ເຮັດຊ້ຳຈະປາກົດເມື່ອກົດປຸ່ມຄ້າງໄວ້"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"ປັບການຊັກຊ້າກ່ອນປຸ່ມຊ້ຳຄືນ"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"ປຸ່ມຊ້ຳຄືນ"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"ຄວາມຊັກຊ້າກ່ອນການຊໍ້າຄືນ"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"ປັບແຕ່ງໄລຍະເວລາທີ່ທ່ານສາມາດກົດປຸ່ມຄ້າງໄວ້ກ່ອນທີ່ມັນຈະເລີ່ມຊໍ້າຄືນ"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"ປັບແຕ່ງໄລຍະເວລາຂອງການກົດປຸ່ມຄ້າງໄວ້ຫຼັງຈາກທີ່ມັນເລີ່ມຊໍ້າຄືນ"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"ອັດຕາຄວາມຊັກຊ້າ"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"ຕັ້ງຄ່າຄວາມໄວໃນການປ້ອນຂອງຕົວອັກສອນທີ່ເຮັດຊ້ຳເມື່ອກົດປຸ່ມຄ້າງໄວ້"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"ຄ່າເລີ່ມຕົ້ນ"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"ຄວບຄຸມຄວາມໄວໃນການເຮັດຊ້ຳຢ່າງວ່ອງໄວຫຼັງຈາກຄວາມຊັກຊ້າເລີ່ມຕົ້ນ"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"ຄຳບັນຍາຍ"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"​ການ​ຕັ້ງ​ຄ່າ​ສຳ​ລັບ​ຂໍ້​ຄວາມ​ຄຳ​ບັນ​ຍາຍ​ຢູ່​ເທິງວິ​ດີ​ໂອ"</string>
     <string name="captions_display" msgid="2598662495450633375">"ການສະແດງຜົນ"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"ຊອກຫາຣີໂໝດຂອງຂ້ອຍ"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"ຫຼິ້ນສຽງເພື່ອຊອກຫາຣີໂໝດ Google TV ຂອງທ່ານຫາກວາງໄວ້ຜິດບ່ອນ"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"ມີປຸ່ມຢູ່ Google TV ຂອງທ່ານທີ່ທ່ານສາມາດກົດເພື່ອຫຼິ້ນສຽງຢູ່ຣີໂໝດຂອງທ່ານເປັນເວລາ 30 ວິນາທີ. ສິ່ງນີ້ໃຊ້ໄດ້ກັບຣີໂໝດຂອງ Google TV ທີ່ຮອງຮັບເທົ່ານັ້ນ.\n\nເພື່ອຢຸດສຽງ, ໃຫ້ກົດປຸ່ມໃດກໍໄດ້ຢູ່ຣີໂໝດຂອງທ່ານ."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"ເມື່ອເປີດໄວ້, ທ່ານສາມາດໃຊ້ປຸ່ມຢູ່ອຸປະກອນຂອງທ່ານໃນການຫຼິ້ນສຽງເພື່ອຊອກຫາຣີໂໝດຂອງທ່ານໄດ້. ແຕ່ຫາກປິດໄວ້, ປຸ່ມນີ້ຈະບໍ່ເຮັດວຽກ. ທ່ານຈະຍັງຄົງສາມາດໃຊ້ຄຸນສົມບັດຊອກຫາຣີໂໝດຂອງຂ້ອຍຜ່ານວິທີການອື່ນໆໄດ້."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"ຫຼິ້ນສຽງ"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"ໂໝດແສງພື້ນຫຼັງ"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"ການສ່ອງສະຫວ່າງຂອງປຸ່ມເມື່ອກົດຣີໂໝດຄວບຄຸມແຕ່ລະເທື່ອ."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"ເມື່ອໃຊ້ຣີໂໝດ Google TV ທີ່ຮອງຮັບ, ການກົດປຸ່ມເທິງຣີໂໝດຈະເປັນການເປີດການນຳໃຊ້ແສງພື້ນຫຼັງ."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"ລະດັບສຽງຂອງ %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"ທ່ານສາມາດຄວບຄຸມລະດັບສຽງຜູ້ຊ່ວຍຢູ່ລຳໂພງ %1$s ໄດ້"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"ມີຜົນກັບລະດັບສຽງຢູ່ອຸປະກອນ %1$s ເທົ່ານັ້ນ, ບໍ່ມີຜົນກັບໂທລະທັດ"</string>

@@ -28,13 +28,16 @@ import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.FIN
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.notifyDeviceChanged;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.notifyToGoBack;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.setFindMyRemoteButtonEnabled;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.setBacklightMode;
 
+import android.app.PendingIntent;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.android.tv.settings.R;
 /**
  * This broadcast receiver handles these cases:
  * (a) Bluetooth toggle on.
@@ -54,6 +57,10 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
     // Bluetooth off is handled differently by ResponseActivity with confirmation dialog.
     static final String BLUETOOTH_ON = "BLUETOOTH_ON";
     static final String ACTIVE_AUDIO_OUTPUT = "ACTIVE_AUDIO_OUTPUT";
+
+    static final String BACKLIGHT_MODE = "BACKLIGHT_MODE";
+    static final String ACTION_BACKLIGHT = "com.google.android.tv.BACKLIGHT";
+    static final String KEY_BACKLIGHT_MODE = "key_backlight_mode";
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -92,6 +99,17 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
                             .setFlags(FLAG_INCLUDE_STOPPED_PACKAGES | FLAG_RECEIVER_FOREGROUND
                                     | FLAG_RECEIVER_INCLUDE_BACKGROUND),
                     "com.google.android.tv.permission.FIND_MY_REMOTE");
+        } else if (ACTION_BACKLIGHT.equals(action)) {
+            final int modes = intent.getIntExtra(BACKLIGHT_MODE, 1);
+            // save user selection
+            setBacklightMode(context, modes);
+
+            context.sendBroadcast(
+                    new Intent(ACTION_BACKLIGHT)
+                            .putExtra(BACKLIGHT_MODE, modes)
+                            .setFlags(FLAG_INCLUDE_STOPPED_PACKAGES | FLAG_RECEIVER_FOREGROUND
+                                    | FLAG_RECEIVER_INCLUDE_BACKGROUND),
+                    "com.google.android.tv.permission.BACKLIGHT");
         }
 
         // Notify TvSettings to go back to the previous level.
@@ -99,5 +117,36 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
         if (DIRECTION_BACK.equals(direction)) {
             notifyToGoBack(context, Uri.parse(intent.getStringExtra(EXTRAS_SLICE_URI)));
         }
+    }
+
+    public static PendingIntent getBacklightModeIntent(
+            Context context, Uri sliceUri, String backlightMode) {
+        Intent intent = new Intent(context, ConnectedDevicesSliceBroadcastReceiver.class);
+
+        // Intents are considered the same if only extras different. Thus putting backlightMode in
+        // Uri query to create different PendingIntents for different backlightMode changing
+        // requests.
+        final Uri sliceUriWithQuery =
+                sliceUri.buildUpon()
+                        .appendQueryParameter(
+                                KEY_BACKLIGHT_MODE, backlightMode)
+                        .build();
+
+        intent.setAction(ACTION_BACKLIGHT);
+
+        final String[] backlightModes =
+                context.getResources().getStringArray(R.array.backlight_modes);
+        int modes = -1;
+        for (int i = 0; i < backlightModes.length; i ++){
+            if (backlightModes[i].equals(backlightMode)) {
+                modes = i;
+                break;
+            }
+        }
+        intent.putExtra(BACKLIGHT_MODE, modes);
+        intent.setData(sliceUriWithQuery);
+
+        return PendingIntent.getBroadcast(context, 0, intent,
+                PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
     }
 }

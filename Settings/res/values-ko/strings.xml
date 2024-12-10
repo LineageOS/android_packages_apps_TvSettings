@@ -24,8 +24,8 @@
     <string name="general_action_no" msgid="674735073031386948">"아니요"</string>
     <string name="action_on_title" msgid="1074972820237738324">"사용"</string>
     <string name="action_off_title" msgid="3598665702863436597">"사용 안함"</string>
-    <string name="action_on_description" msgid="9146557891514835767">"사용"</string>
-    <string name="action_off_description" msgid="1368039592272701910">"사용 안함"</string>
+    <string name="action_on_description" msgid="9146557891514835767">"켜짐"</string>
+    <string name="action_off_description" msgid="1368039592272701910">"꺼짐"</string>
     <string name="agree" msgid="8155497436593889753">"동의"</string>
     <string name="disagree" msgid="7402998517682194430">"동의 안함"</string>
     <string name="enabled" msgid="5127188665060746381">"사용 설정됨"</string>
@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"추천 닫기"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\'Ok Google\' 감지"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"언제든지 Google 어시스턴트에게 문의하세요"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack(스크린 리더)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack은 스크린 리더 접근성 기능으로, 시각 장애인을 위해 화면 텍스트, 메뉴 항목, 기타 요소를 소리 내어 읽어 줍니다. 또한 TalkBack은 접근성 바로가기와 함께 사용하도록 설정할 수 있습니다."</string>
     <string name="header_category_device" msgid="3023893663454705969">"기기"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"환경설정"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"리모컨 및 액세서리"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"고대비 텍스트"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"텍스트 굵게 표시"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"바운스 키"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"원하는 시간 선택"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"반복된 키누르기를 무시합니다"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"실수로 버튼을 빠르게 반복적으로 눌렀을 때 이를 무시합니다. 눌렀을 때 무시되는 시간 간격을 조정할 수 있습니다."</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"타이밍: 기본값"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"처음 누른 다음 기본 간격 이후 발생한 반복된 누르기를 무시합니다."</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"타이밍: 0.5초"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"반복 키 입력을 무시하는 타이밍 간격을 0.5초로 조정합니다."</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"타이밍: 1초"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"반복 키 입력을 무시하는 타이밍 간격을 1초로 조정합니다."</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"타이밍: 2초"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"반복 키 입력을 무시하는 타이밍 간격을 2초로 조정합니다."</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"색상 보정"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"색상 보정 사용"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"색상 모드"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"접근성 단축키"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"접근성 단축키 사용"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"단축키 서비스"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"키보드 접근성"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"단축키가 사용 설정되어 있다면 뒤로 버튼과 아래 버튼을 3초 동안 동시에 눌러 접근성 기능을 실행할 수 있습니다."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"조치를 취할 시간"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"조치를 취할 시간(접근성 기능 시간 제한)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"타이밍"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"시간 환경설정은 앱에 따라 지원되지 않을 수도 있습니다."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"조치를 취할 시간(접근성 기능 시간 제한)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"조치가 필요한 메시지의 지속 시간 조정"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"사용자에게 조치를 취하도록 요청하는 메시지가 표시되는 시간을 선택합니다."</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"타이밍: 2~3초"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"화면상의 작업에 응답하는 데 걸리는 기본 시간(2~3초)을 설정합니다."</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"키 반복 지연"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"키를 길게 누를 때 반복 문자가 표시되기까지의 지연 시간을 구성합니다."</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"키 반복 전 지연 시간 조정"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"키 반복"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"반복 전 지연"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"반복을 시작하기 전에 버튼을 얼마나 길게 누르고 있어야 하는지 맞춤설정합니다."</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"반복을 시작하기 전에 버튼을 길게 누르는 시간을 맞춤설정합니다."</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"반복 속도"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"키를 길게 누를 때 반복 문자가 입력되는 속도를 설정합니다."</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"기본"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"초기 지연 후 버튼이 얼마나 빨리 반복되는지 제어합니다."</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"자막"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"동영상 캡션 텍스트 오버레이 설정"</string>
     <string name="captions_display" msgid="2598662495450633375">"표시"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"내 리모컨 찾기"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Google TV 리모컨을 잃어버린 경우 소리를 재생하여 위치 찾기"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Google TV에 있는 버튼을 누르면 리모컨에서 30초 동안 소리가 울립니다. 이 기능은 지원되는 Google TV 리모컨에서만 작동합니다.\n\n소리 재생을 중지하려면 리모컨의 아무 버튼이나 누르세요."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"켜져 있으면 기기의 버튼으로 소리를 재생하여 리모컨을 찾을 수 있습니다. 꺼져 있으면 버튼이 작동하지 않습니다. 다른 방법으로도 \'리모컨 찾기\'를 사용할 수 있습니다."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"소리 재생"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"백라이트 모드"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"리모컨에 있는 조명 버튼을 누를 때마다 조명이 들어옵니다."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"지원되는 Google TV 리모컨에서 리모컨에 있는 조명 버튼을 누르면 백라이트 조명이 활성화됩니다."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s 볼륨"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s 스피커의 어시스턴트 볼륨을 제어할 수 있습니다"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"TV가 아닌 %1$s 기기 볼륨에만 영향을 줍니다"</string>

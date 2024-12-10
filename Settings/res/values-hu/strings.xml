@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Javaslat elvetése"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Az „Ok Google” felismerése"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Bármikor beszélhet Google Segédjéhez"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (képernyőolvasó)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"A TalkBack képernyőolvasó egy olyan kisegítő funkció, amely a képernyőn megjelenő szövegek, menüelemek és más elemek felolvasásával segít a látássérült felhasználóknak. Emellett a Kisegítő lehetőségek gyorsparancsával való használatra is beállítható."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Eszköz"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Beállítások"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Távirányító és tartozékok"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Nagy kontrasztú szöveg"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Félkövér szöveg"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Billentyűblokkolás"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Válassza ki a kívánt időzítést"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"A távirányító figyelmen kívül hagyja az ismétlődő gombnyomásokat"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Beállíthatja a véletlen történő, gyors, ismétlődő gombnyomások figyelmen kívül hagyását. Megadhatja azt az időintervallumot, amelyen belül a rendszer figyelmen kívül hagyja a gombnyomásokat."</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Időzítés: Alapértelmezett"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Ismétlődő gombnyomások figyelmen kívül hagyása az első megnyomás utáni alapértelmezett ideig"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Időzítés: 0,5 másodperc"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Az ismétlődő gombnyomások figyelmen kívül hagyási időtartamának beállítása 0,5 másodpercre"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Időzítés: 1 másodperc"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Az ismétlődő gombnyomások figyelmen kívül hagyási időtartamának beállítása 1 másodpercre"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Időzítés: 2 másodperc"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Az ismétlődő gombnyomások figyelmen kívül hagyási időtartamának beállítása 2 másodpercre"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Színjavítás"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Színjavítás használata"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Színmód"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Billentyűparancs kisegítő lehetőségekhez"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Kisegítő lehetőségek engedélyezése"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Billentyűparancs szolgáltatás"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"A billentyűzet kisegítő lehetőségei"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Ha be van kapcsolva a gyorsparancs, a Vissza és Lefelé gomb 3 másodpercig tartó együttes lenyomásával elindíthat egy adott kisegítő lehetőséget."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Művelet elvégzésére szánt idő"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Művelet ideje (kisegítés időkorlátja)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Időzítés"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Az időzítéspreferenciát nem támogatja minden app."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Művelet ideje (kisegítés időkorlátja)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"A műveletet igénylő üzenetek időtartamának módosítása"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Beállíthatja, hogy mennyi ideig legyenek láthatók azok az ideiglenes üzenetek, amelyek művelet végrehajtására kérik"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Időzítés: 2–3 másodperc"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"A képernyőn megjelenő műveletekre való reagáláshoz szükséges alapértelmezett időtartam beállítása (2–3 másodperc)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Billentyűismétlés késleltetése"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Beállíthatja, hogy mekkora késleltetés után jelenjenek meg az ismétlődő karakterek egy billentyű lenyomva tartásakor"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"A billentyűismétlés előtti késleltetés beállítása"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Billentyűismétlés"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Ismétlés előtti késleltetés"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Testreszabhatja, hogy mennyi ideig kell nyomva tartani a gombot, mielőtt az ismétlés elindul"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Testreszabhatja a gomb lenyomásának időtartamát, amely után az ismétlés elindul"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Ismétlési sebesség"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Beállíthatja, hogy milyen gyorsan legyenek beírva az ismétlődő karakterek egy billentyű lenyomva tartásakor"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Alapértelmezett"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Beállíthatja, hogy a gomb milyen gyorsan ismétlődjön a kezdeti késleltetés után"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Feliratok"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Mentett feliratok szövegrétegének beállítása videóknál"</string>
     <string name="captions_display" msgid="2598662495450633375">"Megjelenítés"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Távirányító-kereső"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Hang lejátszásával megkeresheti a Google TV távirányítóját, ha nem találja"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Van egy gomb a Google TV-n, amelyet megnyomva 30 másodpercen át lejátszhat egy hangjelzést a távirányítón. Ez csak a támogatott Google TV-távirányítóknál működik.\n\nA hanglejátszás leállításához nyomja meg bármelyik gombot a távirányítón."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Amikor be van kapcsolva, az eszközén lévő gombot lenyomva hang lejátszásával keresheti meg a távirányítót. Amikor ki van kapcsolva, ez a gomb nem működik. Más módszerekkel továbbra is használhatja a távirányító megkeresése funkciót."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Hang lejátszása"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Háttérvilágítás mód"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"A távirányító gombjainak háttérvilágítása minden lenyomáskor bekapcsol."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"A támogatott Google TV-távirányítókon a rajtuk lévő gombok megnyomásakor aktiválódik a háttérvilágítás."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"A(z) %1$s hangereje"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Vezérelheti a Segéd hangerejét a(z) %1$s hangszórón"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Csak a(z) %1$s eszköz hangerejére van hatással, a tévéére nem"</string>

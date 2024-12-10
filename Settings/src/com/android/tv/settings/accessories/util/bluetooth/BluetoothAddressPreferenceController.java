@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings.about;
+package com.android.tv.settings.accessories.util.bluetooth;
 
 import android.content.Context;
 

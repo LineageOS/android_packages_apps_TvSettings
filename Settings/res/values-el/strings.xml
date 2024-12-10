@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Παράβλεψη πρότασης"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Ανίχνευση \"Ok Google\""</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Μιλήστε στον Βοηθό Google ανά πάσα στιγμή"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (Αναγνώστης οθόνης)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"Το TalkBack είναι μια λειτουργία προσβασιμότητας αναγνώστη οθόνης που βοηθά τους χρήστες με μειωμένη όραση μέσω εκφώνησης κειμένου στην οθόνη, στοιχείων μενού και άλλων στοιχείων. Μπορεί επίσης να ρυθμιστεί για χρήση με τη Συντόμευση προσβασιμότητας."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Συσκευή"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Προτιμήσεις"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Τηλεχειριστήριο και αξεσουάρ"</string>
@@ -549,7 +551,7 @@
     <string name="storage_not_connected" msgid="4327902652748552794">"Δεν συνδέθηκε"</string>
     <string name="storage_migrate" msgid="9137556600192167701">"Μετεγκατ. δεδομένων σε αυτόν το χώρο αποθήκευσης"</string>
     <string name="storage_migrate_away" msgid="7880100961434638430">"Μετεγκατάσταση δεδομένων σε άλλο αποθηκευτικό χώρο"</string>
-    <string name="storage_no_apps" msgid="95566375753627272">"Καμία εφαρμογή για δημιουργία αντιγράφων ασφαλείας"</string>
+    <string name="storage_no_apps" msgid="95566375753627272">"Καμία εφαρμογή για δημιουργία αντιγράφου ασφαλείας"</string>
     <string name="storage_forget" msgid="4671975563260507003">"Διαγραφή αυτού του αποθηκευτικού χώρου συσκευής"</string>
     <string name="storage_forget_wall_of_text" msgid="230454348256179142">"Για να χρησιμοποιήσετε τις εφαρμογές ή τα δεδομένα που περιέχει αυτός ο δίσκος, συνδέστε τον ξανά. Εναλλακτικά, μπορείτε να επιλέξετε να γίνει κατάργηση απομνημόνευσης αυτού του αποθηκευτικού μέσου, εάν ο δίσκος δεν είναι διαθέσιμος.\n\nΕάν επιλέξετε να γίνει κατάργηση απομνημόνευσης, όλα τα δεδομένα που περιέχει ο δίσκος θα χαθούν οριστικά.\n\nΜπορείτε να επανεγκαταστήσετε τις εφαρμογές αργότερα, αλλά τα δεδομένα τους που είναι αποθηκευμένα σε αυτόν το δίσκο θα χαθούν."</string>
     <string name="storage_device_storage_section" msgid="22958375769694027">"Αποθηκευτικός χώρος συσκευής"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Κείμενο υψηλής αντίθεσης"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Κείμενο με έντονη γραφή"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Ελαστικά πλήκτρα"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Επιλογή προτιμώμενου χρονισμού"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Το τηλεχειριστήριο παραβλέπει επαναλαμβανόμενα πατήματα πλήκτρων"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Παράβλεψη ακούσιων, γρήγορων και επαναλαμβανόμενων πατημάτων κουμπιού. Μπορείτε να προσαρμόσετε το χρονικό διάστημα εντός του οποίου παραβλέπονται τα πατήματα"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Χρονισμός : Προεπιλογή"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Παράβλεψη των επαναλαμβανόμενων πατημάτων για το προεπιλεγμένο διάστημα μετά το αρχικό πάτημα"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Χρονισμός : 0,5 δευτερόλεπτα"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Προσαρμόστε το διάστημα χρονισμού σε 0,5 δευτερόλεπτα, κατά το οποίο παραβλέπονται τα επαναλαμβανόμενα πατήματα πλήκτρων"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Χρονισμός : 1 δευτερόλεπτο"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Προσαρμόστε το διάστημα χρονισμού στο 1 δευτερόλεπτο, κατά το οποίο παραβλέπονται τα επαναλαμβανόμενα πατήματα πλήκτρων"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Χρονισμός : 2 δευτερόλεπτα"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Προσαρμόστε το διάστημα χρονισμού στα 2 δευτερόλεπτα, κατά το οποίο παραβλέπονται τα επαναλαμβανόμενα πατήματα πλήκτρων"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Διόρθωση χρωμάτων"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Χρήση διόρθωσης χρωμάτων"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Λειτουργία χρώματος"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Συντόμευση προσβα/τητας"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Ενεργοποίηση συντόμευσης προσβασιμότητας"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Υπηρεσία συντόμευσης"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Προσβασιμότητα πληκτρολογίου"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Όταν η συντόμευση είναι ενεργοποιημένη, μπορείτε να πατήσετε παρατεταμένα το κουμπί επιστροφής και το κουμπί κάτω βέλους για 3 δευτερόλεπτα, για να ξεκινήσετε μια λειτουργία προσβασιμότητας."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Ώρα για την εκτέλεση ενεργειών"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Ώρα εκτέλεσης ενεργειών (χρονικό όριο προσβασιμ.)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Χρονισμός"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Η προτίμηση δεν υποστηρίζεται από κάθε εφαρμογή."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Ώρα εκτέλεσης ενεργειών (χρονικό όριο προσβασιμότητας)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Προσαρμογή της διάρκειας των μηνυμάτων που απαιτούν κάποια ενέργεια"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Επιλέξτε τη διάρκεια εμφάνισης των προσωρινών μηνυμάτων που σας ζητούν να εκτελέσετε κάποια ενέργεια"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Χρόνος : 2-3 δευτερόλεπτα"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Χρόνος απόκρισης σε ενέργειες στην οθόνη (2-3 δ.)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Καθυστέρηση επανάληψης πλήκτρου"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Διαμορφώστε την καθυστέρηση πριν εμφανιστούν οι επαναλαμβανόμενοι χαρακτήρες όταν πατήσετε παρατεταμένα ένα πλήκτρο"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Προσαρμόστε την καθυστέρηση πριν από την επανάληψη πλήκτρου"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Επανάληψη πλήκτρου"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Καθυστέρηση πριν από την επανάληψη"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Προσαρμόστε το χρονικό διάστημα που μπορείτε να πατήσετε παρατεταμένα ένα κουμπί πριν ξεκινήσει η επανάληψη"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Προσαρμόστε τη διάρκεια παρατεταμένου πατήματος ενός κουμπιού, μετά από την οποία ξεκινά η επανάληψη"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Ρυθμός επανάληψης"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Ορίστε πόσο γρήγορα θα εισάγονται οι επαναλαμβανόμενοι χαρακτήρες όταν πατήσετε παρατεταμένα ένα πλήκτρο"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Προεπιλογή"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Ελέγξτε πόσο γρήγορα επαναλαμβάνεται το κουμπί μετά την αρχική καθυστέρηση"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Υπότιτλοι"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Ρυθμίσεις για την επικάλυψη κειμένου υποτίτλων στο βίντεο"</string>
     <string name="captions_display" msgid="2598662495450633375">"Προβολή"</string>
@@ -995,7 +1022,7 @@
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Επιτρέποντας τη σύνδεση δικτύου σε κατάσταση αναμονής, η χρήση ενέργειας στην κατάσταση αναμονής αυξάνεται."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Κανένας λογαριασμός δεν αποθηκεύει προς το παρόν δεδομένα αντιγράφων ασφαλείας"</string>
     <string name="backup_erase_dialog_title" msgid="6008454053276987100"></string>
-    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Θέλετε να διακοπεί η δημιουργία αντιγράφων ασφαλείας για τους κωδικούς πρόσβασης Wi-Fi, τους σελιδοδείκτες, τις άλλες ρυθμίσεις και τα δεδομένα εφαρμογών, καθώς και να διαγραφούν όλα τα αντίτυπα από τους διακομιστές της Google;"</string>
+    <string name="backup_erase_dialog_message" msgid="222169533402624861">"Θέλετε να διακοπεί η δημιουργία αντιγράφου ασφαλείας για τους κωδικούς πρόσβασης Wi-Fi, τους σελιδοδείκτες, τις άλλες ρυθμίσεις και τα δεδομένα εφαρμογών, καθώς και να διαγραφούν όλα τα αντίτυπα από τους διακομιστές της Google;"</string>
     <string name="privacy_backup_data" msgid="3604057980102997914">"Αντίγραφα ασφαλείας των δεδομένων μου"</string>
     <string name="privacy_backup_account" msgid="4527813051841860610">"Εφεδρικός λογαριασμός"</string>
     <string name="privacy_automatic_restore" msgid="7117805818589418118">"Αυτόματη επαναφορά"</string>
@@ -1084,7 +1111,7 @@
     <string name="record_audio_source_dialog_title" msgid="6556408220589197097">"Επιλέξ. πηγή εγγραφής ήχου για την επόμενη εγγραφή"</string>
     <string name="recorded_microphones_title" msgid="5466988146086215426">"Μικρόφωνα εγγραφής"</string>
     <string name="show_audio_recording_start_failed" msgid="9131762831381326605">"Απέτυχε η έναρξη εγγραφής ήχου."</string>
-    <string name="show_audio_recording_failed" msgid="8128216664039868681">"Η εγγραφή ήχου απέτυχε."</string>
+    <string name="show_audio_recording_failed" msgid="8128216664039868681">"Η ηχογράφηση απέτυχε."</string>
     <string name="bluetooth_ask_discovery_title" msgid="4955540555242269694">"Να είναι ορατή σε άλλες συσκευές Bluetooth;"</string>
     <string name="bluetooth_ask_discovery_message" msgid="8609666862877703398">"Μια εφαρμογή θέλει να κάνει ορατή την τηλεόρασή σας σε άλλες συσκευές Bluetooth για <xliff:g id="TIMEOUT">%1$d</xliff:g> δευτερόλεπτα."</string>
     <string name="help_center_title" msgid="6109822142761302433"></string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Εύρεση τηλεχειριστηρίου"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Αναπαράγετε ήχο για να εντοπίσετε το τηλεχειριστήριο του Google TV, σε περίπτωση που το έχετε χάσει"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Υπάρχει ένα κουμπί στο Google TV που μπορείτε να πατήσετε για την αναπαραγωγή ενός ήχου στο τηλεχειριστήριο για 30 δευτερόλεπτα. Αυτό έχει αποτέλεσμα μόνο σε υποστηριζόμενα τηλεχειριστήρια Google TV.\n\nΓια να διακόψετε τον ήχο, πατήστε ένα κουμπί στο τηλεχειριστήριο."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Όταν είναι ενεργό, μπορείτε να χρησιμοποιήσετε το κουμπί στη συσκευή σας για να αναπαράγετε έναν ήχο, έτσι ώστε να εντοπίσετε το τηλεχειριστήριό σας. Όταν είναι ανενεργό, αυτό το κουμπί δεν λειτουργεί. Θα μπορείτε ακόμα να χρησιμοποιείτε την Εύρεση τηλεχειριστηρίου με άλλους τρόπους."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Αναπαραγωγή ήχου"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Λειτουργία οπίσθιου φωτισμού"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Φωτισμός των κουμπιών στο τηλεχειριστήριο με κάθε πάτημα."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Στα υποστηριζόμενα τηλεχειριστήρια Google TV, ο οπίσθιος φωτισμός ενεργοποιείται με το πάτημα του κουμπιού στα τηλεχειριστήρια."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Ένταση %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Μπορείτε να ελέγξετε την ένταση του Βοηθού στο ηχείο %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Επηρεάζει μόνο την ένταση στη συσκευή %1$s, όχι στην τηλεόραση"</string>

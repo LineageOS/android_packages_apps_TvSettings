@@ -24,9 +24,9 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
-import androidx.slice.core.SliceActionImpl;
 
 import com.android.tv.twopanelsettings.R;
+import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
 
 /**
  * A preference that represents a slice provided by another app.

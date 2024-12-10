@@ -58,11 +58,18 @@ public final class PartnerPreferencesMerger {
          */
         final PartnerResourcesParser partnerResourcesParser = new PartnerResourcesParser(
                 context, settingsScreen);
-        for (final Preference newPartnerPreference : partnerResourcesParser.buildPreferences()) {
+        final List<Preference> partnerPreferences = partnerResourcesParser.buildPreferences();
+        final String[] orderedPreferenceKeys = partnerResourcesParser.getOrderedPreferences();
+
+        // Don't touch this screen if our partner hasn't asked to.
+        if (partnerPreferences.isEmpty() && orderedPreferenceKeys.length == 0) {
+            return;
+        }
+
+        for (final Preference newPartnerPreference : partnerPreferences) {
             preferenceScreen.addPreference(newPartnerPreference);
         }
 
-        final String[] orderedPreferenceKeys = partnerResourcesParser.getOrderedPreferences();
 
         // Clone the existing tv settings PreferenceScreen. All the preferences
         // will be removed from this screen to avoid multiple re-orderings as

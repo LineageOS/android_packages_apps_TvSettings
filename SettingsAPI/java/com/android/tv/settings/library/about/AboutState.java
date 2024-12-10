@@ -385,7 +385,7 @@ public class AboutState implements State {
 //                logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_SYSTEM_UPDATE);
                 CarrierConfigManager configManager = (CarrierConfigManager)
                         context.getSystemService(Context.CARRIER_CONFIG_SERVICE);
-                PersistableBundle b = configManager.getConfig();
+                PersistableBundle b = configManager != null ? configManager.getConfig() : null;
                 if (b != null &&
                         b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
                     ciActionOnSysUpdate(b);

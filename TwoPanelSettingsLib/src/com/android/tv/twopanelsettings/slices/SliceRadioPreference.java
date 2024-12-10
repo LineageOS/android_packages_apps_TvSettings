@@ -21,7 +21,8 @@ import android.text.TextUtils;
 import android.view.View;
 
 import androidx.preference.PreferenceViewHolder;
-import androidx.slice.core.SliceActionImpl;
+
+import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
 
 /**
  * Slice version of RadioPreference.

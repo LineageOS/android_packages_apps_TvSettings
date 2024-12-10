@@ -34,6 +34,11 @@
     <item msgid="5034242362688847963">"24시간"</item>
     <item msgid="940743686898651116">"사용 안함"</item>
   </string-array>
+  <string-array name="bounce_key_timeout_entries">
+    <item msgid="1353936388457765422">"0.5초"</item>
+    <item msgid="5610264235282558145">"1초"</item>
+    <item msgid="1560952154506153896">"2초"</item>
+  </string-array>
   <string-array name="device_energy_saver_attentive_timeout_entries">
     <item msgid="3361047879614054539">"4시간"</item>
     <item msgid="680279399507109560">"6시간"</item>
@@ -89,6 +94,16 @@
     <item msgid="3665868694672130423">"MSCHAPV2"</item>
     <item msgid="1778635393795831325">"GTC"</item>
   </string-array>
+  <string-array name="a11y_delay_before_repeat_entries">
+    <item msgid="3192011162664254283">"기본"</item>
+    <item msgid="7610332375189141638">"3초"</item>
+    <item msgid="8884836025164318091">"5초"</item>
+  </string-array>
+  <string-array name="a11y_repeat_rate_entries">
+    <item msgid="5784213974557593735">"기본"</item>
+    <item msgid="8131016800415858190">"느림"</item>
+    <item msgid="6031948535453777783">"빠름"</item>
+  </string-array>
   <string-array name="volume_change_entries">
     <item msgid="8475727172583493318">"음소거"</item>
     <item msgid="2508680062291793288">"낮음(20%)"</item>
@@ -100,5 +115,15 @@
     <item msgid="3948049660167106381">"0.2"</item>
     <item msgid="3441480529755779159">"0.5"</item>
     <item msgid="4571900814286671092">"0.8"</item>
+  </string-array>
+  <string-array name="backlight_modes">
+    <item msgid="7900972906680877520">"사용 안함"</item>
+    <item msgid="3256715108348109595">"표준"</item>
+    <item msgid="5517658202197894866">"예약됨"</item>
+  </string-array>
+  <string-array name="backlight_hints">
+    <item msgid="8765944779122322726">"누를 때마다 백라이트가 켜지지 않습니다."</item>
+    <item msgid="62911590277354399">"누를 때마다 백라이트가 켜지며, 조명이 활성화될 때마다 5초 동안 지속됩니다."</item>
+    <item msgid="5334296639506784894">"밤 동안(오후 6시~오전 6시)에만 누를 때마다 백라이트가 켜지며, 조명이 활성화될 때마다 5초 동안 지속됩니다."</item>
   </string-array>
 </resources>

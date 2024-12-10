@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Փակել առաջարկը"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"«Ok Google» հրահանգի հայտնաբերում"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Խոսեք Google Օգնականի հետ ցանկացած ժամանակ"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (էկրանի ընթերցիչ)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack-ն էկրանի ընթերցման հատուկ գործառույթ է, որն օգնում է տեսողության խանգարումներով օգտատերերին բարձրաձայն կարդալ էկրանի տեքստը, ընտրացանկի տարրերը և այլ բաներ։ Այն նաև հնարավոր է կարգավորել հատուկ գործառույթների դյուրանցման համար։"</string>
     <string name="header_category_device" msgid="3023893663454705969">"Սարք"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Նախընտրանքներ"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Հեռակառավարման վահանակներ և լրասարքեր"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Բարձր կոնտրաստի տեքստ"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Թավ տեքստ"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Կրկնակի սեղմման անտեսում"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Ընտրեք ժամանակը"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Հեռակառավարման վահանակն անտեսում է ստեղների կրկնվող սեղմումները"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Անտեսեք կոճակների պատահական արագ, կրկնվող սեղմումները։ Դուք կարող եք ճշգրտել այն ժամանակամիջոցը, որի ընթացքում սեղմումները պետք է անտեսվեն։"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Ժամանակը՝ կանխադրված"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Անտեսել կրկնվող սեղմումները առաջին սեղմումից հետո կանխադրված ժամանակամիջոցի տևողությամբ"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Ժամանակը՝ 0,5 վայրկյան"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Ժամանակամիջոցը, որի դեպքում ստեղների կրկնվող սեղմումները պետք է անտեսվեն, դարձնել 0,5 վայրկյան"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Ժամանակը՝ 1 վայրկյան"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Ժամանակամիջոցը, որի դեպքում ստեղների կրկնվող սեղմումները պետք է անտեսվեն, դարձնել 1 վայրկյան"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Ժամանակը՝ 2 վայրկյան"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Ժամանակամիջոցը, որի դեպքում ստեղների կրկնվող սեղմումները պետք է անտեսվեն, դարձնել 2 վայրկյան"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Գունաշտկում"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Օգտագործել գունաշտկումը"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Գույների ռեժիմ"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Հատուկ գործառույթների դյուրանցում"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Միացնել մատչելիության դյուրացումը"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Դյուրանցման ծառայություն"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Ստեղնաշարի հատուկ գործառույթներ"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Եթե դյուրանցումը միացված է, ապա հետ և ներքև կոճակները միասին 3 վայրկյան սեղմած պահելով կարող եք գործարկել մատչելիության գործառույթը:"</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Գործողություն կատարելու ժամանակն է"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Գործողություն կատարելու սպասման ժամանակը"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Ժամանակ"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Այս կարգավորումը ոչ բոլոր հավելվածներում է աջակցվում։"</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Գործողություն կատարելու սպասման ժամանակը"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Կարգավորել տևողությունը գործողություն պահանջող հաղորդագրությունների համար"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Ընտրեք, թե որքան ժամանակ է ձեզ անհրաժեշտ ավտոմատ անհետացող հաղորդագրությունների հետ կապված գործողություն կատարելու համար"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Ժամանակը՝ 2–3 վայրկյան"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Սահմանում է էկրանին կատարված գործողություններին արձագանքելու կանխադրված ժամանակահատվածը (2–3 վրկ)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Ստեղնի կրկնության հապաղում"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Կարգավորեք հապաղման տևողությունը, որից հետո կրկնվող նիշեր կհայտնվեն, երբ ստեղնը սեղմած պահեք"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Կարգավորեք հապաղման տևողությունը, որից հետո այն պետք է կրկնի նիշի մուտքագրումը"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Ստեղնի կրկնություն"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Հապաղում կրկնությունից առաջ"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Նշեք, թե որքան ժամանակ կարող եք կոճակը սեղմած պահել, որից հետո այն կկրկնի նիշի մուտքագրումը"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Կարգավորեք կոճակը սեղմած պահելու տևողությունը, որից հետո այն պետք է կրկնի նիշի մուտքագրումը"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Կրկնման արագությունը"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Նշեք, թե ինչ արագությամբ պետք է կրկնվող նիշերը մուտքագրվեն, երբ որևէ ստեղն սեղմած պահեք"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Կանխադրված"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Նշեք, թե ինչ արագությամբ կոճակը պետք է կրկնի նիշի մուտքագրումը նախնական հապաղումից հետո"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Ենթագրեր"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Տեսանյութի խորագրերի կարգավորում"</string>
     <string name="captions_display" msgid="2598662495450633375">"Էկրան"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Գտնել իմ հեռակառավարիչը"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Եթե չեք գտնում ձեր Google TV հեռակառավարիչը, նվագարկեք ազդանշան՝ այն տեղորոշելու համար։"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Ձեր Google TV սարքի վրա կա կոճակ, որը սեղմելու դեպքում հեռակառավարման վահանակում ազդանշան կհնչի 30 վայրկյան շարունակ։ Սա աշխատում է միայն Google TV-ի աջակցվող հեռակառավարիչների հետ։\n\nԱզդանշանը կանգնեցնելու համար սեղմեք հեռակառավարիչի ցանկացած կոճակ։"</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Միացված ժամանակ դուք կարող եք ձեր սարքում այս կոճակի միջոցով նվագարկել ազդանշան՝ ձեր հեռակառավարիչը տեղորոշելու համար։ Երբ այն անջատված է, կոճակը չի աշխատի։ Դուք կարող եք այլ եղանակներով օգտագործել «Գտնել հեռակառավարիչը» գործառույթը։"</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Նվագարկել ազդանշանը"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Հետնալույսի ռեժիմ"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Հեռակառավարման վահանակի կոճակների լուսավորում յուրաքանչյուր սեղմման ժամանակ։"</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Հեռակառավարման վահանակի կոճակի սեղմումը Google TV-ի հեռակառավարման աջակցվող վահանակներում միացնում է հետնալույսը։"</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Ձայնի ուժգնությունը՝ %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Դուք կարող եք կառավարել Օգնականի ձայնի ուժգնությունը %1$s բարձրախոսում"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Ազդում է միայն %1$s սարքի ձայնի ուժգնության վրա, սակայն ոչ հեռուստացույցի"</string>

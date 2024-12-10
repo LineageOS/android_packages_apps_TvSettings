@@ -26,7 +26,6 @@ import static android.app.slice.SliceItem.FORMAT_INT;
 import static android.app.slice.SliceItem.FORMAT_LONG;
 import static android.app.slice.SliceItem.FORMAT_SLICE;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
-
 import static com.android.tv.twopanelsettings.slices.HasCustomContentDescription.CONTENT_DESCRIPTION_SEPARATOR;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.CHECKMARK;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_ACTION_ID;
@@ -51,14 +50,14 @@ import android.view.ContextThemeWrapper;
 
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.preference.Preference;
-import androidx.slice.Slice;
-import androidx.slice.SliceItem;
-import androidx.slice.core.SliceActionImpl;
-import androidx.slice.core.SliceQuery;
-import androidx.slice.widget.SliceContent;
 
 import com.android.tv.twopanelsettings.IconUtil;
 import com.android.tv.twopanelsettings.R;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
+import com.android.tv.twopanelsettings.slices.compat.SliceItem;
+import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
+import com.android.tv.twopanelsettings.slices.compat.core.SliceQuery;
+import com.android.tv.twopanelsettings.slices.compat.widget.SliceContent;
 
 import java.util.ArrayList;
 import java.util.List;

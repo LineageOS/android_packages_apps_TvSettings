@@ -27,6 +27,7 @@ import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
 import static com.android.tv.settings.util.InstrumentationUtils.logPageFocused;
+import static com.android.tv.settings.util.SliceUtils.maybeUseSlice;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -122,6 +123,9 @@ public class MainFragment extends PreferenceControllerFragment implements
     private static final String KEY_CHANNELS_AND_INPUTS = "channels_and_inputs";
     private static final String KEY_CHANNELS_AND_INPUTS_SLICE = "channels_and_inputs_slice";
 
+    private static final String KEY_HELP_AND_FEEDBACK = "help_and_feedback";
+    private static final String KEY_HELP_AND_FEEDBACK_SLICE = "help_and_feedback_slice";
+
     private static final String ACTION_ACCOUNTS = "com.android.tv.settings.ACCOUNTS";
     @VisibleForTesting
     Optional<ConnectivityListener> mConnectivityListenerOptional;
@@ -201,7 +205,18 @@ public class MainFragment extends PreferenceControllerFragment implements
         updateAccountPref();
         updateAccessoryPref();
         updateBasicModeSuggestion();
-        updateChannelsAndInputs();
+
+        SlicePreference sliceInputsPreference = findPreference(KEY_CHANNELS_AND_INPUTS_SLICE);
+        if (sliceInputsPreference != null
+                && !SliceUtils.isSliceProviderValid(
+                        requireContext(), sliceInputsPreference.getUri())) {
+            sliceInputsPreference.setUri(
+                    getString(R.string.channels_and_inputs_fallback_slice_uri));
+        }
+
+        maybeUseSlice(findPreference(KEY_CHANNELS_AND_INPUTS), sliceInputsPreference);
+        maybeUseSlice(findPreference(KEY_HELP_AND_FEEDBACK),
+                findPreference(KEY_HELP_AND_FEEDBACK_SLICE));
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
@@ -268,7 +283,8 @@ public class MainFragment extends PreferenceControllerFragment implements
         }
         mSuggestionQuickSettingPrefsContainer.onCreatePreferences();
         updateSoundSettings();
-        updateDisplayAndSound();
+        maybeUseSlice(findPreference(KEY_DISPLAY_AND_SOUND),
+            findPreference(KEY_DISPLAY_AND_SOUND_SLICE));
     }
 
     @VisibleForTesting
@@ -597,36 +613,6 @@ public class MainFragment extends PreferenceControllerFragment implements
             basicModeSuggestion.setVisible(true);
         } else {
             basicModeSuggestion.setVisible(false);
-        }
-    }
-
-    private void updateChannelsAndInputs() {
-        Preference channelsAndInputsPreference = findPreference(KEY_CHANNELS_AND_INPUTS);
-        SlicePreference channelsAndInputsSlicePreference =
-                (SlicePreference) findPreference(KEY_CHANNELS_AND_INPUTS_SLICE);
-        if (channelsAndInputsSlicePreference != null
-                && FlavorUtils.isTwoPanel(getContext())
-                && SliceUtils.isSliceProviderValid(
-                getContext(), channelsAndInputsSlicePreference.getUri())) {
-            channelsAndInputsSlicePreference.setVisible(true);
-            if (channelsAndInputsPreference != null) {
-                channelsAndInputsPreference.setVisible(false);
-            }
-        }
-    }
-
-    private void updateDisplayAndSound() {
-        Preference displayAndSoundPreference = findPreference(KEY_DISPLAY_AND_SOUND);
-        SlicePreference displayAndSoundSlicePreference =
-                (SlicePreference) findPreference(KEY_DISPLAY_AND_SOUND_SLICE);
-        if (displayAndSoundSlicePreference != null
-                && FlavorUtils.isTwoPanel(getContext())
-                && SliceUtils.isSliceProviderValid(
-                getContext(), displayAndSoundSlicePreference.getUri())) {
-            displayAndSoundSlicePreference.setVisible(true);
-            if (displayAndSoundPreference != null) {
-                displayAndSoundPreference.setVisible(false);
-            }
         }
     }
 

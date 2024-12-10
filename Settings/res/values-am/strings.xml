@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"የአስተያየት ጥቆማውን አሰናብት"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"«Ok Google»ን ማወቅ"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"በማንኛውም ጊዜ Google ረዳትን ያናግሩ"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (ማያ ገፅ አንባቢ)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack የማያ ገፅ ላይ ጽሁፍ፣ የምናሌ ንጥሎች እና ሌሎች አካሎችን ጮክ ብሎ በማንበብ የቀነሰ የማየት ችሎታ ያላቸውን ተጠቃሚዎች የሚረዳ የማያ ገጽ አንባቢ የተደራሽነት ባህሪ ነው። እንዲሁም ከተደራሽነት አቋራጭ ጋር ለመጠቀም መዋቀር ይችላል።"</string>
     <string name="header_category_device" msgid="3023893663454705969">"መሣሪያ"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"ምርጫዎች"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"የርቀት መቆጣጠሪያ እና ተቀጥላዎች"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ከፍተኛ ንጽጽር ጽሁፍ"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"ደማቅ ጽሁፍ"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"የአንጥር ቁልፎች"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"ተመራጭ ጊዜን ይምረጡ"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"የርቀት መቆጣጠሪያ ተደጋጋሚ የቁልፍ መጫኖችን ችላ ይላል"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"ያልታሰቡ ፈጣን፣ ተደጋጋሚ የአዝራራር መጫኖችን ችላ ይበሉ። መጫኖች ችላ የተባሉበትን የጊዜ ክፍተት ማስተካከል ይችላሉ"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"ጊዜ ፦ ነባሪ"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"ከመጀመሪያው መጫን በኋላ ለነባሪ የጊዜ ክፍተት ተደጋጋሚ መጫኖችን ችላ ይበሉ"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"ጊዜ ፦ 0.5 ሰከንዶች"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"የጊዜ ክፍተቱን ተደጋጋሚ የቁልፍ መጫኖች ችላ ወደሚባሉበት ወደ 0.5 ሰከንዶች ያስተካክሉ"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"ጊዜ ፦ 1 ሰከንድ"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"የጊዜ ክፍተቱን ተደጋጋሚ የቁልፍ መጫኖች ችላ ወደሚባሉበት ወደ 1 ሰከንድ ያስተካክሉ"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"ጊዜ ፦ 2 ሰከንዶች"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"የጊዜ ክፍተቱን ተደጋጋሚ የቁልፍ መጫኖች ችላ ወደሚባሉበት ወደ 2 ሰከንዶች ያስተካክሉ"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"የቀለም ማስተካከያ"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"የቀለም ማስተካከያን ተጠቀም"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"የቀለም ሁነታ"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"የተደራሽነት አቋራጭ"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"የተደራሽነት አቋራጭ ያንቁ"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"የአቋራጭ አገልግሎት"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"የቁልፍ ተደራሽነት"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"አቋራጩ ሲበራ የተደራሽነት ባህሪን ለማስጀመር ሁለቱንም የተመለስ እና የታች አዝራሮች ለ3 ሰከንዶች ተጭነው መያዝ ይችላሉ።"</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"እርምጃ መውሰጃ ጊዜ"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"እርምጃ መውሰጃ ጊዜ (ተደራሽነት ጊዜው አብቅቷል)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"ጊዜ"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"ይህ የጊዜ ምርጫ በሁሉም መተግበሪያዎች አይደገፍም።"</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"እርምጃ መውሰጃ ጊዜ (የተደራሽነት ጊዜው አብቅቷል)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"እርምጃ የሚያስፈልጋቸውን የመልዕክቶች የቆይታ ጊዜ ያስተካክሉ"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"እርምጃ እንዲወስዱ የሚጠይቁዎትን ጊዜያዊ መልዕክቶች ለምን ያህል ጊዜ እንደሚታዩ ይምረጡ"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"ጊዜ ፦ 2–3 ሰከንዶች"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"ለማያ ገፅ–ላይ እርምጃዎች ምላሽ ለመስጠት ነባሪ ጊዜ ያቀናብራል (2–3 ሰከንዶች)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"የቁልፍ ድግግሞሽ መዘግየት"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"ቁልፍ ሲያዝ ተደጋጋሚ ቁምፊዎች ከመታየታቸው በፊት መዘግየቱን ያዋቅሩ"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"ከቁልፍ ድግግሞሽ በፊት መዘግየቱን ያስተካክሉ"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"ቁልፍ ድግግሞሽ"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"ከመድገም በፊት አዘግይ"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"አንድ አዝራር መደጋገም ከመጀመሩ በፊት ለምን ያህል ጊዜ መያዝ እንደሚችሉ ያበጁ"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"የአዝራር መቆያ መደጋገም ከሚጀምርበት በኋላ ያለውን ጊዜን ያብጁ"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"የድግግሞሽ ፍጥነት"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"አንድ ቁልፍ ተጭኖ ሲያዝ የሚደገሙ ቁምፊዎች በምን ፍጥነት እንደሚገቡ ያቀናብሩ"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"ነባሪ"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"ከመጀመሪያ መዘግየት በኋላ በምን ፍጥነት አዝራር እንደሚደገም ይቆጣጠሩ"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"መግለጫ ፅሑፎች"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"በቪዲዮ ላይ ያለ የዝግ ጽሁፍ ተደራቢ ቅንብሮች"</string>
     <string name="captions_display" msgid="2598662495450633375">"ማሳያ"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"የእኔን የርቀት መቆጣጠሪያ አግኝ"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"የGoogle ቲቪ የርቀት መቆጣጠሪያዎ ያለ ቦታው ተቀምጦ ከሆነ አካባቢውን ለማግኘት ድምፅን ያጫውቱ"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"በእርስዎ Google ቲቪ ላይ ለ30 ሰከንዶች በርቀት መቆጣጠሪያዎ ላይ ድምፅን ለማጫወት መግፋት የሚችሉት አዝራር አለ። ይህ የሚሠራው በሚደገፉ የGoogle ቲቪ የርቀት መቆጣጠሪያዎች ብቻ ነው።\n\nድምፁን ለማስቆም በርቀት መቆጣጠሪያዎ ላይ ያለ ማንኛውንም አዝራር ይጫኑ።"</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"ሲበራ የርቀት መቆጣጠሪያዎን ለማግኘት ድምፅ ለማጫወት በመሣሪያዎ ላይ ያለውን አዝራር መጠቀም ይችላሉ። ሲጠፋ ይህ አዝራር አይሠራም። አሁንም የርቀት መቆጣጠሪያዬን አግኝን በሌሎች መንገዶች በኩል መጠቀም ይችላሉ።"</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"ድምፅ አጫውት"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"የኋላ ብርሃን ሁነታ"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"በእያንዳንዱ ጫን ማለት ላይ በርቀት መቆጣጠሪያው ያሉት አዝራሮች ብርሃን።"</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"በሚደገፉ የGoogle ቲቪ የርቀት መቆጣጠሪያዎች ላይ፣ የርቀት መቆጣጠሪያዎቹ ላይ ያለውን አዝራር ጫን ማለት የኋላውን ብርሃን ያነቃል።"</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s የድምፅ መጠን"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s ድምፅ ማውጫ ላይ የረዳት የድምፅ መጠኑን መቆጣጠር ይችላሉ"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"የድምፅ መጠን ላይ ተጽዕኖ የሚያደርገው ቲቪ ላይ ሳይሆን %1$s መሣሪያ ላይ ነው"</string>

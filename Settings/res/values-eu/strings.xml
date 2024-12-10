@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Baztertu iradokizuna"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"Hey Google\" hautematea"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Hitz egin Google-ren Laguntzailea zerbitzuari edonoiz"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (pantaila-irakurgailua)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"Pantaila irakurtzeko erabilerraztasun-eginbide bat da TalkBack. Ikusmen-akatsak dituzten erabiltzaileentzat lagungarria da, pantailako testua, menuetako aukerak eta bestelako elementuak ozen irakurtzen dituelako. Halaber, erabilerraztasun-lasterbideekin erabiltzeko konfigura daiteke."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Gailua"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Hobespenak"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Urruneko kontrolagailua eta osagarriak"</string>
@@ -511,7 +513,7 @@
     <string name="wifi_gateway_description" msgid="8902481147103929271">"Idatzi balio duen IP helbide bat edo utzi hutsik.\nAdibidez: <xliff:g id="ID_1">192.168.1.1</xliff:g>"</string>
     <string name="wifi_network_prefix_length_description" msgid="2670994968279018896">"Idatzi balio duen karaktere kopuruko sare-aurrizkia.\nAdibidez: <xliff:g id="ID_1">24</xliff:g>"</string>
     <string name="proxy_error_invalid_host" msgid="5629893736174170157">"Ostalari-izenak ez du balio"</string>
-    <string name="proxy_error_invalid_exclusion_list" msgid="1762079966901078116">"Salbuespen-zerrendak ez du balio. Idatzi kanpo utzitako domeinuen zerrenda, komaz bereizita."</string>
+    <string name="proxy_error_invalid_exclusion_list" msgid="1762079966901078116">"Bazterketa-zerrendak ez du balio. Idatzi baztertzeko domeinuen zerrenda, komaz bereizita."</string>
     <string name="proxy_error_empty_port" msgid="692020249267351015">"Ataka eremuak ezin du hutsik egon"</string>
     <string name="proxy_error_empty_host_set_port" msgid="5347712018244852847">"Ostalaria eremua hutsik badago, utzi Ataka eremua hutsik"</string>
     <string name="proxy_error_invalid_port" msgid="5307010810664745294">"Atakak ez du balio"</string>
@@ -661,7 +663,7 @@
     <string name="system_desc_location" msgid="1680134126100535031">"Utzi baimena eskatu dizuten aplikazioei zure kokapenaren informazioa erabiltzen"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Kokapena erabiltzeko baimena"</string>
     <string name="location_mode_title" msgid="728244518174115443">"Modua"</string>
-    <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Azken kokapen-eskaerak"</string>
+    <string name="location_category_recent_location_requests" msgid="4541924383164183490">"Azkenaldiko kokapen-eskaerak"</string>
     <string name="location_no_recent_apps" msgid="7033474075806435793">"Ez dago kokapena duela gutxi eskatu duen aplikaziorik"</string>
     <string name="location_high_battery_use" msgid="5325556609027887602">"Bateria-erabilera handia"</string>
     <string name="location_low_battery_use" msgid="728585923412018253">"Bateria-erabilera txikia"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Kontraste handiko testua"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Testu lodia"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Errebote-teklak"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Aukeratu denbora tarte hobetsia"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Urruneko kontrolagailuak ez ikusi egingo die sakatze errepikakorrei"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Egin ez ikusi botoia nahi gabe bizkor eta modu errepikakorrean sakatuz gero. Sakatzeei ez ikusi egiteko denbora tartea doi dezakezu."</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Denbora tartea: lehenetsia"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Egin ez ikusi sakatze errepikakorrei lehen sakatzearen ondorengo denbora tarte lehenetsian"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Denbora tartea: 0,5 segundo"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Doitu denbora tartea 0,5 segundotara; hartan oinarrituta, sakatze errepikakorrei ez ikusi egingo zaie"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Denbora tartea: 1 segundo"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Doitu denbora tartea segundo batera; hartan oinarrituta, sakatze errepikakorrei ez ikusi egingo zaie"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Denbora tartea: 2 segundo"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Doitu denbora tartea 2 segundotara; hartan oinarrituta, sakatze errepikakorrei ez ikusi egingo zaie"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Koloreen zuzenketa"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Erabili koloreen zuzenketa"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Kolore modua"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Erabilerraztasunaren lasterbidea"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Gaitu erabilerraztasunaren lasterbidea"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Lasterbideari esleitutako zerbitzua"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Teklatuaren erabilerraztasuna"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Lasterbidea aktibatuta badago, Atzera eta Behera teklak hiru segundoz sakatuta abiarazten da erabilerraztasun-eginbidea."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Zerbait egiteko unea da"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Zerbait egiteko unea da (erabilerraztasuneko denbora-muga)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Denbora"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Aplikazio guztiek ez dute onartzen denboraren hobespena."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Zerbait egiteko unea da (erabilerraztasuneko denbora-muga)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Doitu zerbait egiteko eskatzen duten mezuen iraupena"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Aukeratu zenbat denboraz erakutsi behar diren zerbait egiteko eskatzen duten aldi baterako mezuak"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Epea : 2-3 segundo"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Pantailako ekintzei erantzuteko epe lehenetsia ezartzen du (2-3 segundo)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Teklen errepikapenaren atzerapena"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Konfiguratu karaktere errepikatuak agertzeko atzerapena, tekla bat sakatuta edukitzen denean"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Doitu teklen errepikapenaren aurreko atzerapena"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Teklen errepikapena"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Errepikatu aurreko tartea"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Pertsonalizatu zenbat denboraz eduki ahal duzun sakatuta botoi bat errepikatzen hasi aurretik"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Pertsonalizatu zenbat denboraz eduki behar den sakatuta botoi bat errepikatzen hasteko"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Errepikapen-abiadura"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Ezarri zeinen bizkor idazten diren karaktere errepikatuak tekla bat sakatuta mantentzen bada"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Lehenetsia"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Kontrolatu zeinen bizkor errepikatzen diren botoiak hasierako atzerapenaren ondoren"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Azpitituluak"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Bideoetako azpitituluen testua gainjartzeko ezarpenak"</string>
     <string name="captions_display" msgid="2598662495450633375">"Bistaratzea"</string>
@@ -784,7 +811,7 @@
     <string name="system_bt_hci_log" msgid="1891838112637932603">"Bluetooth HCI interfazeko saio-hasiera"</string>
     <string name="system_email_address" msgid="3725494874473757217">"Helbide elektronikoa"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"USB bidezko arazketa"</string>
-    <string name="system_allow_mock_locations" msgid="2483106887711851466">"Baimendu kokapen faltsuak sortzea"</string>
+    <string name="system_allow_mock_locations" msgid="2483106887711851466">"Baimendu asmatutako kokapenak sortzea"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"Hautatu arazteko aplikazioa"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Itxaron araztaileari"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Egiaztatu USB bidezko aplikazioak"</string>
@@ -911,7 +938,7 @@
     <string name="restricted_profile_configure_title" msgid="3327502517511010296">"Ezarpenak"</string>
     <string name="restricted_profile_configure_apps_title" msgid="2244201859522056827">"Baimena duten aplikazioak"</string>
     <string name="restricted_profile_allowed" msgid="970921490464867884">"Baimenduta"</string>
-    <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Onartezina"</string>
+    <string name="restricted_profile_not_allowed" msgid="8184983064118036268">"Ez da onartzen"</string>
     <string name="restricted_profile_customize_restrictions" msgid="4723577877385636704">"Murrizketa pertsonalizatuak"</string>
     <string name="restricted_profile_configure_apps_description_loading" msgid="3293508876131962699">"Unetxo bat…"</string>
     <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"Aldatu PINa"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Bilatu urruneko kontrolagailua"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Erreproduzitu soinu bat Google TV-ren urruneko kontrolagailua aurkitzeko hura galtzen baduzu"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Google TV-ak daukan botoi jakin bat sakatzen baduzu, urruneko kontrolagailuan soinu bat erreproduzituko da 30 segundoz. Google TV-ren urruneko kontrolagailu bateragarriekin soilik funtzionatzen du horrek.\n\nSoinua erreproduzitzeari uzteko, sakatu urruneko kontrolagailuaren edozein botoi."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Aktibatuta badago, gailuko botoia erabil dezakezu urruneko kontrolagailua aurkitzeko soinu bat erreproduzitzeko. Desaktibatuta badago, botoiak ez du funtzionatuko. Hala ere, beste metodo batzuen bidez erabili ahalko duzu Bilatu urruneko kontrolagailua."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Erreproduzitu soinua"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Hondoko argiaren modua"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Urruneko kontrolagailuko botoiak sakatze bakoitzarekin argiztatzea."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Google TV-ren urruneko kontrolagailu bateragarrietako botoia sakatuz gero, hondoko argiztapena aktibatuko da."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s gailuaren bolumena"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s bozgorailuko Laguntzailea zerbitzuaren bolumena kontrola dezakezu"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"%1$s gailuaren bolumena soilik aldatzen du, ez telebistarena"</string>

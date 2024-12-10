@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Сунушту четке кагуу"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"Ok Google\" аныктоо функциясы"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Google Жардамчы менен каалаган убакта сүйлөшүңүз"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (Экрандагыны окугуч)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack — атайын мүмкүнчүлүктөрдү сунуштаган экрандагыны окугуч. Ал көрүүсү начар колдонуучуларга экрандагы текстти, менюдагы нерселерди жана башка элементтерди окуп берет. Аны Атайын мүмкүнчүлүктөрдүн ыкчам баскычтарын колдонуу үчүн да тууралап алууга болот."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Түзмөк"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Жеке параметрлер"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Пульттар жана аксессуарлар"</string>
@@ -430,7 +432,7 @@
     <string name="title_random_mac_settings" msgid="6685812569356353378">"Купуялык"</string>
   <string-array name="random_mac_settings_entries">
     <item msgid="3457228452595715533">"Туш келди түзүлгөн MAC дареги колдонулат (демейки)"</item>
-    <item msgid="2490415280467390067">"Түзмөктүн MAC дарегин колдонуу"</item>
+    <item msgid="2490415280467390067">"Түзмөктүн MAC дареги колдонулат"</item>
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"Жеткиликсиз"</string>
     <string name="mac_address_ephemeral_summary" msgid="3284374877361772531">"Туш келди түзүлгөн MAC"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Жогорку контрасттагы текст"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Жоон текст"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Кайтаруу баскычтары"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Каалаган убакыт белгилерин тандаңыз"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Пульт кайталанган басууларга көңүл бурбайт"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Кокустан басылган, тез жана кайталанган басууларга көңүл бурбаңыз. Басуулар этибарга алынбаган убакыт аралыгын тууралай аласыз"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Убакыт белгилери: Демейки"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Биринчи жолу басылгандан кийин демейки аралыкта кайталанган басууларга көңүл бурбаңыз"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Убакыт белгилери: 0,5 секунд"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Убакыт аралыгын 0,5 секундага тууралаңыз, ага чейин кайталап басуулар этибарга алынбайт"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Убакыт белгилери: 1 секунд"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Убакыт аралыгын 1 секундага тууралаңыз, ага чейин кайталап басуулар этибарга алынбайт"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Убакыт белгилери: 2 секунд"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Убакыт аралыгын 2 секундага тууралаңыз, ага чейин кайталап басуулар этибарга алынбайт"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Түстөрдү тууралоо"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Түстөрдү тууралоону колдонуу"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Түстүү режим"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Ыкчам иштетүү"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Ыкчам иштетүү"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Кызматты ыкчам иштетүү"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Баскычтоптогу атайын мүмкүнчүлүктөр"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Атайын мүмкүнчүлүктөр функциясын пайдалануу үчүн, ал күйгүзүлгөндө, үндү катуулатып/акырындаткан эки баскычты тең үч секунддай кое бербей басып туруңуз."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Аракетти аткаруу убакыты"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Аракетти аткаруу убакыты (Атайын мүмкүнчүлүктөр)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Убакыт"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Бул убакыт параметри айрым колдонмолордо иштебейт."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Аракетти аткаруу убакыты (атайын мүмкүнчүлүктөр)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Аракет талап кылынган билдирүүлөр канча убакыт көрсөтүлөрүн тууралоо"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Убактылуу билдирүүлөрдө жасалчу аракеттерге канча убакыт керектелерин көрсөтүңүз"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Убакыт: 2–3 секунд"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Экрандагы аракеттерге жооп берүү үчүн демейки убакытты тууралайт (2–3 секунд)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Баскычтын кайталанышына чейинки кечигүү"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Баскычты басып турганда символдорду кайталап киргизүүгө чейинки кечигүүнү конфигурациялаңыз"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Баскычтын кайталанышына чейинки кечигүүнү тууралаңыз"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Баскычтын кайталанышы"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Кайталанганга чейинки кечигүү"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Кайталанып баштаганга чейин баскычты басып туруу убакытын тууралаңыз"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Кайталанып баштаганга чейин баскычты канча убакытка чейин басып туруу керектигин тууралаңыз"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Кайталоо ылдамдыгы"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Баскычты басып турганда символдорду кайталап киргизүү ылдамдыгын көрсөтүңүз"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Демейки"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Баштапкы кечигүүдөн кийин баскыч канчалык тез кайталанарын көзөмөлдөңүз"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Коштомо жазуулар"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Видеого жашыруун түшүндүрмө тексттерди жазуу параметрлери"</string>
     <string name="captions_display" msgid="2598662495450633375">"Экран"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Пультумду табуу"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Google TV\'нин пультун табуу үчүн үн чыгарыңыз"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Google TV\'де баскыч бар, аны бассаңыз, пульттан 30 секунд бою үн ойнотулат. Бул колдоого алынган Google TV\'нин пультунда гана иштейт.\n\nҮнүн басуу үчүн пульттагы бир баскычты басыңыз."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Күйүп турганда түзмөгүңүздөгү баскыч аркылуу үн чыгарып, пультту таба аласыз. Өчүп турганда бул баскыч иштебейт. \"Пульт кайда\" функциясын башка жолдор менен колдоно бересиз."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Үнүн чыгаруу"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Арткы жарык режими"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Пульттагы баскычтар баскан сайын жанат."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Колдоого алынган Google TV пульттарындагы баскычты басканда арткы жарык жанат."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s түзмөгүнүн үн көлөмү"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s динамигиндеги Жардамчынын үнүн катуулатып/акырындата аласыз"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Сыналгынын эмес, %1$s түзмөгүнүн үн көлөмүнө гана таасир этет"</string>

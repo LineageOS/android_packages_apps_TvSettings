@@ -136,5 +136,11 @@
             android:title="@string/help_and_feedback_category_title"
             android:fragment="com.android.tv.settings.help.HelpFragment">
         </Preference>
+        <com.android.tv.twopanelsettings.slices.SlicePreference
+            android:icon="@drawable/ic_help_outline"
+            android:key="help_and_feedback_slice"
+            android:title="@string/help_and_feedback_category_title"
+            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            custom:uri="@string/help_and_feedback_slice_uri"/>
     </PreferenceCategory>
 </PreferenceScreen>

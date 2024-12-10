@@ -61,7 +61,9 @@ public class ConnectivityListenerLite implements LifecycleObserver {
 
     public void handleConnectivityChange() {
         mActiveNetworkProvider.updateActiveNetwork();
-        mListener.onConnectivityChange(mActiveNetworkProvider);
+        if (mListener != null) {
+            mListener.onConnectivityChange(mActiveNetworkProvider);
+        }
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)

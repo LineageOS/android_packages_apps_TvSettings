@@ -39,9 +39,11 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"候補を閉じる"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"「OK Google」の検出"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Google アシスタントにいつでも話しかけてください"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack（スクリーン リーダー）"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack は、画面上のテキストやメニュー項目などの要素を読み上げることで視覚障がいのあるユーザーを補助するスクリーン リーダー機能です。ユーザー補助のショートカットと併用するよう設定することもできます。"</string>
     <string name="header_category_device" msgid="3023893663454705969">"デバイス"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"設定"</string>
-    <string name="header_category_accessories" msgid="6479803330480847199">"リモコンとアクセサリ"</string>
+    <string name="header_category_accessories" msgid="6479803330480847199">"リモコンとアクセサリー"</string>
     <string name="header_category_personal" msgid="7880053929985150368">"ユーザー設定"</string>
     <string name="connect_to_network" msgid="4133686359319492392">"ネットワークへの接続"</string>
     <string name="add_an_account" msgid="2601275122685226096">"アカウントの追加"</string>
@@ -54,7 +56,7 @@
     <string name="applications_category_title" msgid="7112019490898586223">"アプリ"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"デバイス設定"</string>
     <string name="accessibility_category_title" msgid="1552664829936369592">"ユーザー補助"</string>
-    <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"リモコンとアクセサリ"</string>
+    <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"リモコンとアクセサリー"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"ディスプレイと音"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"ヘルプとフィードバック"</string>
     <string name="privacy_category_title" msgid="8552430590908463601">"プライバシー"</string>
@@ -229,21 +231,21 @@
     <string name="device_storage_clear_cache_title" msgid="14370154552302965">"キャッシュデータを削除しますか？"</string>
     <string name="device_storage_clear_cache_message" msgid="4352802738505831032">"すべてのアプリのキャッシュデータが削除されます。"</string>
     <string name="default_audio_output_settings_title" msgid="5441937324539531999"></string>
-    <string name="accessories_add" msgid="413764175035531452">"アクセサリを追加"</string>
+    <string name="accessories_add" msgid="413764175035531452">"アクセサリーを追加"</string>
     <string name="accessory_state_pairing" msgid="15908899628218319">"ペアに設定しています…"</string>
     <string name="accessory_state_connecting" msgid="6560241025917621212">"接続しています…"</string>
     <string name="accessory_state_error" msgid="8353621828816824428">"ペア設定できませんでした"</string>
     <string name="accessory_state_canceled" msgid="4794837663402063770">"キャンセル"</string>
     <string name="accessory_state_paired" msgid="3296695242499532000">"ペア設定済み"</string>
-    <string name="accessory_options" msgid="774592782382321681">"アクセサリ"</string>
+    <string name="accessory_options" msgid="774592782382321681">"アクセサリー"</string>
     <string name="accessory_unpair" msgid="2473411128146068804">"ペアを解除"</string>
     <string name="accessory_battery" msgid="2283700366184703548">"電池残量: <xliff:g id="PERCENTAGE">%1$d</xliff:g>%%"</string>
     <string name="accessory_unpairing" msgid="2529195578082286563">"デバイスのペアを解除しています…"</string>
     <string name="accessory_connected" msgid="5229574480869175180">"ペアリング済み"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"名前の変更"</string>
-    <string name="accessory_change_name_title" msgid="451188562035392238">"このアクセサリの新しい名前を入力してください"</string>
+    <string name="accessory_change_name_title" msgid="451188562035392238">"このアクセサリーの新しい名前を入力してください"</string>
     <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"Bluetooth ペア設定。"</string>
-    <string name="accessories_add_title" msgid="7704824893011194433">"アクセサリを検索しています…"</string>
+    <string name="accessories_add_title" msgid="7704824893011194433">"アクセサリーを検索しています…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"Bluetooth デバイスをペアリングする前に、デバイスがペアリング モードになっていることを確認してください。"</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"デバイスが見つかりました。<xliff:g id="COUNTDOWN">%1$s</xliff:g>秒以内にペア設定が自動的に始まります"</string>
     <string name="error_action_not_supported" msgid="5377532621386080296">"この操作はサポートされていません"</string>
@@ -258,12 +260,12 @@
     <string name="bluetooth_cancel" msgid="4415185529332987034">"キャンセル"</string>
     <string name="bluetooth_device_connected_toast" msgid="1896195197089204806">"%1$s に接続しました"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="7459239447363156499">"%1$s との接続を解除しました"</string>
-    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"リモコンとアクセサリ"</string>
+    <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"リモコンとアクセサリー"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Bluetooth を OFF にする"</string>
     <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Bluetooth が OFF の場合は、リモコンから Google アシスタントにアクセスできません。"</string>
-    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"アクセサリのペア設定"</string>
-    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"アクセサリ"</string>
+    <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"アクセサリーのペア設定"</string>
+    <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"アクセサリー"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"リモコン"</string>
     <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"リモコンの設定"</string>
     <string name="bluetooth_ir_entry_title" msgid="6927284710576530479">"リモコンボタンのセットアップ"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"高コントラスト テキスト"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"テキストを太字にする"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"バウンスキー"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"ご希望のタイミングを選択できます"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"リモコンのキーが繰り返し押されても無視します"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"ボタンが誤ってすばやく連続で押されたときに、その操作を無視できます。ボタン操作を無視する時間間隔を設定できます。"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"タイミング: デフォルト"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"最初に押されてからデフォルトの間隔で繰り返し押されても無視します"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"タイミング: 0.5 秒"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"キーが繰り返し押されても無視する間隔を 0.5 秒に設定します"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"タイミング: 1 秒"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"キーが繰り返し押されても無視する間隔を 1 秒に設定します"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"タイミング: 2 秒"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"キーが繰り返し押されても無視する間隔を 2 秒に設定します"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"色補正"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"色補正の使用"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"色モード"</string>
@@ -700,7 +714,7 @@
     <string name="color_correction_mode_grayscale" msgid="2592973844160514484">"グレースケール"</string>
     <string name="palette_color_red" msgid="507196433434979086">"赤"</string>
     <string name="palette_color_orange" msgid="6209196069366109835">"オレンジ"</string>
-    <string name="palette_color_yellow" msgid="298466132578870590">"黄"</string>
+    <string name="palette_color_yellow" msgid="298466132578870590">"黄色"</string>
     <string name="palette_color_green" msgid="4904783063036825668">"緑"</string>
     <string name="palette_color_cyan" msgid="3212217287628948203">"シアン"</string>
     <string name="palette_color_blue" msgid="8836682634988540630">"青"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"ユーザー補助のショートカット"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"ユーザー補助機能のショートカットを有効にする"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"シ⁠ョ⁠ー⁠ト⁠カ⁠ッ⁠ト サ⁠ー⁠ビ⁠ス"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"キーボードのユーザー補助機能"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"ショートカットが ON の場合、戻るボタンと下ボタンの両方を 3 秒間押し続けるとユーザー補助機能が起動します。"</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"操作要求の表示時間"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"操作要求の表示時間（ユーザー補助タイムアウト）"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"タイミング"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"アプリがこのタイミング設定に対応していない場合があります。"</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"操作要求の表示時間（ユーザー補助タイムアウト）"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"対応が必要なメッセージの表示時間を調整します"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"操作を求める一時的なメッセージの表示時間を指定します"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"タイミング: 2～3 秒"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"画面上の操作に応答する時間を設定します（2～3 秒）"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"キーリピート遅延"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"キーを長押ししたときに文字がリピート表示されるまでの遅延時間を設定します"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"キーリピートまでの遅延時間を調整します"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"キーリピート"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"リピートまでの遅延時間"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"ボタンを長押ししてからリピートを開始するまでの時間をカスタマイズします"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"リピートを開始するまでにボタンを長押しする時間をカスタマイズします"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"リピート速度"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"キーを長押ししたときに文字がリピート入力される速度を設定します"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"デフォルト"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"最初の遅延時間経過後のボタンのリピート速度を変更します"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"字幕"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"動画の字幕テキストオーバーレイの設定"</string>
     <string name="captions_display" msgid="2598662495450633375">"表示"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"リモコンを探す"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Google TV リモコンの場所がわからなくなったときに、リモコンから音を鳴らして探せるようにします"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Google TV のこのボタンを押すと、リモコンから 30 秒間音が鳴ります。この機能を使用できるのは、対応する Google TV リモコンのみです。\n\n音を止めるには、リモコンのいずれかのボタンを押します。"</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"ON にすると、デバイスのボタンを使用して、リモコンから音を鳴らして探すことができます。OFF にすると、このボタンは使用できません。別の方法で「リモコンを探す」機能を使用することもできます。"</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"音を鳴らす"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"バックライト モード"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"リモコンのボタンを押すたびに点灯します。"</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"サポートされている Google TV リモコンでは、リモコンのボタンを押すとバックライトが点灯します。"</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s の音量"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s スピーカーのアシスタントの音量を調整できます"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"音量が調整されるのはテレビではなく、%1$s デバイスのみです"</string>

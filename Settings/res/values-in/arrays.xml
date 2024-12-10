@@ -34,6 +34,11 @@
     <item msgid="5034242362688847963">"24 jam"</item>
     <item msgid="940743686898651116">"Tidak pernah"</item>
   </string-array>
+  <string-array name="bounce_key_timeout_entries">
+    <item msgid="1353936388457765422">"0,5 detik"</item>
+    <item msgid="5610264235282558145">"1 detik"</item>
+    <item msgid="1560952154506153896">"2 detik"</item>
+  </string-array>
   <string-array name="device_energy_saver_attentive_timeout_entries">
     <item msgid="3361047879614054539">"4 jam"</item>
     <item msgid="680279399507109560">"6 jam"</item>
@@ -89,6 +94,16 @@
     <item msgid="3665868694672130423">"MSCHAPV2"</item>
     <item msgid="1778635393795831325">"GTC"</item>
   </string-array>
+  <string-array name="a11y_delay_before_repeat_entries">
+    <item msgid="3192011162664254283">"Default"</item>
+    <item msgid="7610332375189141638">"3 detik"</item>
+    <item msgid="8884836025164318091">"5 detik"</item>
+  </string-array>
+  <string-array name="a11y_repeat_rate_entries">
+    <item msgid="5784213974557593735">"Default"</item>
+    <item msgid="8131016800415858190">"Lambat"</item>
+    <item msgid="6031948535453777783">"Cepat"</item>
+  </string-array>
   <string-array name="volume_change_entries">
     <item msgid="8475727172583493318">"Bisukan"</item>
     <item msgid="2508680062291793288">"Rendah (20%)"</item>
@@ -100,5 +115,15 @@
     <item msgid="3948049660167106381">"0,2"</item>
     <item msgid="3441480529755779159">"0,5"</item>
     <item msgid="4571900814286671092">"0,8"</item>
+  </string-array>
+  <string-array name="backlight_modes">
+    <item msgid="7900972906680877520">"Tidak pernah"</item>
+    <item msgid="3256715108348109595">"Standar"</item>
+    <item msgid="5517658202197894866">"Dijadwalkan"</item>
+  </string-array>
+  <string-array name="backlight_hints">
+    <item msgid="8765944779122322726">"Lampu latar tidak akan menyala setiap kali ditekan."</item>
+    <item msgid="62911590277354399">"Lampu latar akan menyala setiap kali ditekan. Cahaya akan bertahan selama 5 detik setiap kali diaktifkan."</item>
+    <item msgid="5334296639506784894">"Lampu latar tidak akan menyala setiap kali ditekan, hanya saat malam hari (18.00 - 06.00). Cahaya akan bertahan selama 5 detik setiap kali diaktifkan."</item>
   </string-array>
 </resources>

@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Odmietnuť návrh"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Rozpoznanie výrazu „Ok Google“"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Oslovte Asistenta Google kedykoľvek"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (čítačka obrazovky)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack je čítačka obrazovky v rámci funkcie dostupnosti, ktorá pomáha zrakovo postihnutým používateľom tak, že číta nahlas text, položky ponuky a ďalšie prvky na obrazovke. Dá sa nastaviť aj na používanie so skratkou dostupnosti."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Zariadenie"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Predvoľby"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Diaľkové ovládanie a príslušenstvo"</string>
@@ -274,7 +276,7 @@
     <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"Odpojiť od zariadenia %1$s"</string>
     <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"Premenovať"</string>
     <string name="bluetooth_rename" msgid="7791922876280337194">"Premenovať pripojené zariadenie"</string>
-    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Odstrániť"</string>
+    <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Zabudnúť"</string>
     <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"Zabudnúť zariadenie %1$s"</string>
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Adresa Bluetooth"</string>
     <string name="bluetooth_connected_status" msgid="8629393539370085418">"Pripojené"</string>
@@ -600,7 +602,7 @@
     <string name="storage_wizard_move_app_progress_description" msgid="7673347796805764888">"Úložisko počas presunu neodoberajte.\nAplikácia <xliff:g id="APPNAME">%1$s</xliff:g> bude v tomto zariadení k dispozícii až po dokončení presunu."</string>
     <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"Zabudnúť úložisko zariadenia?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"Po stlačení možnosti Odstrániť budú všetky údaje uložené na tejto jednotke navždy odstránené. Chcete pokračovať?"</string>
-    <string name="storage_wizard_forget_action" msgid="5609631662522950596">"Odstrániť"</string>
+    <string name="storage_wizard_forget_action" msgid="5609631662522950596">"Zabudnúť"</string>
     <string name="storage_new_title" msgid="4768955281180255038">"Disk USB je pripojený"</string>
     <string name="storage_new_action_browse" msgid="3355241742574072658">"Prehliadať"</string>
     <string name="storage_new_action_adopt" msgid="6809707961170895964">"Nastaviť ako úložisko zariadenia"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Text s vysokým kontrastom"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Tučný text"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Klávesy jedného stlačenia"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Vyberte preferované časovanie"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Diaľkový ovládač ignoruje opakované stlačenia klávesov"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Nastavte, aby boli neúmyselné rýchle a opakované stlačenia tlačidla ignorované. Môžete upraviť časový interval, počas ktorého majú byť stlačenia ignorované."</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Časovanie: predvolené"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Nastavte, aby boli opakované stlačenia počas predvoleného intervalu po prvom stlačení ignorované"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Časovanie: 0,5 sekundy"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Upravte časový interval na 0,5 sekundy. Počas tohto času budú opakované stlačenia klávesa ignorované."</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Časovanie: 1 sekunda"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Upravte časový interval na 1 sekundu. Počas tohto času budú opakované stlačenia klávesa ignorované."</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Časovanie: 2 sekundy"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Upravte časový interval na 2 sekundy. Počas tohto času budú opakované stlačenia klávesa ignorované."</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Úprava farieb"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Používať úpravu farieb"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Farebný režim"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Skratka dostupnosti"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Povoliť skratku dostupnosti"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Služba ovládaná skratkou"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Dostupnosť klávesnice"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Keď je skratka zapnutá, funkciu dostupnosti môžete spustiť tým, že na tri sekundy podržíte tlačidlá späť a nadol."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Čas na reakciu"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Čas na reakciu (časový limit dostupnosti)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Čas"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Túto predvoľbu podporujú len niektoré aplikácie."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Čas na reakciu (časový limit dostupnosti)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Upravte trvanie správ vyžadujúcich akciu"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Vyberte, ako dlho sa majú zobrazovať dočasné správy s výzvami na akciu"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Časovanie: 2 – 3 sekundy"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Nastavte predvolený čas reakcie na akcie na obrazovke (2 – 3 sekundy)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Oneskorenie pred opakovaným stláčaním klávesa"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Nakonfigurujte oneskorenie, po ktorom sa majú po pridržaní klávesa opakovane zadávať príslušné znaky"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Upravte oneskorenie pred opakovaným stláčaním klávesa"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Opakovanie stláčania klávesa"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Oneskorenie pred opakovaním"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Prispôsobte, ako dlho má byť tlačidlo pridržané, než sa jeho stláčanie začne opakovať"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Prispôsobte si, ako dlho má byť tlačidlo pridržané, než sa jeho stláčanie začne opakovať"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Rýchlosť opakovania"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Nastavte, ako rýchlo sa majú opakovane zadávať znaky pri pridržaní klávesa"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Predvolená hodnota"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Ovládajte, ako rýchlo sa má tlačidlo znova stláčať po počiatočnom oneskorení"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Titulky"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Nastavenia textového prekrytia videa skrytými titulkami"</string>
     <string name="captions_display" msgid="2598662495450633375">"Zobrazovať"</string>
@@ -750,7 +777,7 @@
     <string name="color_blue" msgid="7681690245150985958">"Modrá"</string>
     <string name="color_cyan" msgid="3172130225116530998">"Azúrová"</string>
     <string name="color_yellow" msgid="3519470952904560404">"Žltá"</string>
-    <string name="color_magenta" msgid="2377854703399624607">"Purpurová"</string>
+    <string name="color_magenta" msgid="2377854703399624607">"Magentová"</string>
     <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"Zvukový opis"</string>
     <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"Vypočujte si opis toho, čo sa deje na obrazovke v podporovaných filmoch a reláciách"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Zapnúť"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Find my remote"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Prehraním zvuku nájdite stratené diaľkové ovládanie Google TV"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Na zariadení so službou Google TV je tlačidlo, ktorého stlačením prehráte 30‑sekundový zvuk v diaľkovom ovládaní. Funguje to len s podporovanými diaľkovými ovládaniami Google TV.\n\nAk chcete zvuk zastaviť, stlačte ľubovoľné tlačidlo na diaľkovom ovládaní."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Keď je táto možnosť zapnutá, pomocou príslušného tlačidla na zariadení môžete prehrať zvuk a nájsť tak svoje diaľkové ovládanie. Keď je vypnutá, toto tlačidlo nefunguje. Funkciu nájdenia ovládania budete môcť stále používať inými spôsobmi."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Prehrávanie zvuku"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Režim podsvietenia"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Aktivácia podsvietenia tlačidiel diaľkového ovládania po každom stlačení."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Po stlačení tlačidla na podporovaných diaľkových ovládaniach zariadení Google TV sa rozsvieti podsvietenie."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Hlasitosť na úrovni %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Pomocou Asistenta môžete ovládať hlasitosť reproduktora %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Ovplyvní iba hlasitosť zariadenia %1$s, nie televízora"</string>

@@ -25,6 +25,7 @@ android_library {
 
     platform_apis: true,
     static_libs: [
+        "TvSliceLib",
         "androidx-constraintlayout_constraintlayout",
         "androidx.recyclerview_recyclerview",
         "androidx.preference_preference",
@@ -43,7 +44,6 @@ android_library {
         enabled: false,
     },
 
-    min_sdk_version: "29",
     lint: {
         baseline_filename: "lint-baseline.xml",
     },

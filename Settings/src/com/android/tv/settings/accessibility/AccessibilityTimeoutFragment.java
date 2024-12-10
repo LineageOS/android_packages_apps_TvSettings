@@ -37,13 +37,14 @@ import com.android.tv.settings.overlay.FlavorUtils;
 public class AccessibilityTimeoutFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
     private int mCurrentA11yTimeout;
+    private boolean isTwoPanel;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.accessibility_timeout, null);
         PreferenceScreen a11yTimeoutScreen = getPreferenceManager().getPreferenceScreen();
         final Context themedContext = getPreferenceManager().getContext();
-        final boolean isTwoPanel = FlavorUtils.isTwoPanel(getContext());
+        isTwoPanel = FlavorUtils.isTwoPanel(getContext());
         final String[] entries =
                 getContext().getResources().getStringArray(R.array.a11y_timeout_entries);
         final String[] entryValues =
@@ -59,8 +60,13 @@ public class AccessibilityTimeoutFragment extends SettingsPreferenceFragment
             if (mCurrentA11yTimeout == Integer.parseInt(entryValues[i])) {
                 radioPreference.setChecked(true);
             }
-            if (isTwoPanel) {
-                radioPreference.setFragment(AccessibilityTimeoutInfoFragment.class.getName());
+            if (isTwoPanel){
+                if(i==0) {
+                    // Setting information fragment only for default value
+                    radioPreference.setFragment(AccessibilityTimeoutInfoFragment.class.getName());
+                }else{
+                    radioPreference.setFragment(null);
+                }
             }
             a11yTimeoutScreen.addPreference(radioPreference);
         }
@@ -75,8 +81,18 @@ public class AccessibilityTimeoutFragment extends SettingsPreferenceFragment
         PreferenceScreen a11yTimeoutScreen = getPreferenceManager().getPreferenceScreen();
         radioPreference.clearOtherRadioPreferences(a11yTimeoutScreen);
         mCurrentA11yTimeout = Integer.parseInt(radioPreference.getKey());
+        final String[] entryValues =
+                getContext().getResources().getStringArray(R.array.a11y_timeout_values);
         commit();
         radioPreference.setChecked(true);
+        if(isTwoPanel){
+            if (mCurrentA11yTimeout==Integer.parseInt(entryValues[0])) {
+                // Setting information fragment only for default value
+                radioPreference.setFragment(AccessibilityTimeoutInfoFragment.class.getName());
+            }else{
+                radioPreference.setFragment(null);
+            }
+        }
         logNewA11yTimeoutSelection(radioPreference.getKey());
         return true;
     }

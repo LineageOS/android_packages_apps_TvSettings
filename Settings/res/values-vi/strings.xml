@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Loại bỏ đề xuất"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Phát hiện \"Ok Google\""</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Nói chuyện với Trợ lý Google bất cứ lúc nào"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (Trình đọc màn hình)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack là tính năng đọc màn hình hỗ trợ người dùng khiếm thị bằng cách đọc to văn bản trên màn hình, các mục trong trình đơn và các thành phần khác. Bạn cũng có thể thiết lập để sử dụng tính năng này thông qua Phím tắt hỗ trợ tiếp cận."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Thiết bị"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Lựa chọn ưu tiên"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Điều khiển từ xa và phụ kiện"</string>
@@ -679,7 +681,7 @@
     <string name="delete_location_history_title" msgid="707559064715633152">"Xóa nhật ký vị trí"</string>
     <string name="delete_location_history_desc" msgid="4035229731487113147">"Thao tác này sẽ xóa tất cả Lịch sử Vị trí đã được lưu trữ từ thiết bị này cho tài khoản Google này. Bạn không thể hoàn tác việc xóa này. Một số ứng dụng, kể cả Google Hiện hành, sẽ ngừng hoạt động."</string>
     <string name="accessibility_screen_readers_category_title" msgid="7742526514873922018">"Trình đọc màn hình"</string>
-    <string name="accessibility_display_category_title" msgid="593444602101558017">"Chế độ hiển thị"</string>
+    <string name="accessibility_display_category_title" msgid="593444602101558017">"Hiển thị"</string>
     <string name="accessibility_interaction_controls_category_title" msgid="5290687835178852745">"Kiểm soát tương tác"</string>
     <string name="accessibility_audio_and_onscreen_text_category_title" msgid="113841605896486212">"Âm thanh và văn bản trên màn hình"</string>
     <string name="accessibility_experimental_category_title" msgid="3401773834179170206">"Thử nghiệm"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Văn bản có độ tương phản cao"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Văn bản in đậm"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Phím nảy"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Chọn thời gian bạn muốn"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Điều khiển từ xa bỏ qua các lần nhấn phím lặp lại"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Bỏ qua các lần vô tình nhấn nút nhanh và lặp lại. Bạn có thể điều chỉnh khoảng thời gian bỏ qua các lần nhấn"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Thời gian: Mặc định"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Bỏ qua các lần nhấn lặp lại trong khoảng thời gian mặc định sau lần nhấn đầu tiên"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Thời gian: 0,5 giây"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Điều chỉnh khoảng thời gian bỏ qua các lần nhấn phím lặp lại thành 0,5 giây"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Thời gian: 1 giây"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Điều chỉnh khoảng thời gian bỏ qua các lần nhấn phím lặp lại thành 1 giây"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Thời gian: 2 giây"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Điều chỉnh khoảng thời gian bỏ qua các lần nhấn phím lặp lại thành 2 giây"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Chỉnh màu"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Sử dụng tính năng chỉnh màu"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Chế độ màu"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Lối tắt hỗ trợ tiếp cận"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Bật lối tắt hỗ trợ tiếp cận?"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Dịch vụ phím tắt"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Hỗ trợ tiếp cận bàn phím"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Khi bật phím tắt, bạn có thể nhấn vào cả hai nút quay lại và xuống trong 3 giây để bật tính năng hỗ trợ tiếp cận."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Thời gian thực hiện hành động"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Thời gian thực hiện hành động (Thời gian chờ của tính năng Hỗ trợ tiếp cận)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Thời gian"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Không phải ứng dụng nào cũng hỗ trợ tuỳ chọn hiển thị thời gian này"</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Thời gian thực hiện hành động (thời gian chờ của tính năng hỗ trợ tiếp cận)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Điều chỉnh thời gian hiện thông báo yêu cầu hành động"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Chọn thời gian hiện thông báo tạm thời yêu cầu bạn hành động"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Thời gian : 2 – 3 giây"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Đặt thời gian mặc định để phản hồi hành động trên màn hình (2 – 3 giây)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Độ trễ để lặp lại phím"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Định cấu hình độ trễ để các ký tự lặp lại hiện ra khi bạn nhấn và giữ một phím"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Điều chỉnh độ trễ trước khi lặp lại phím"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Lặp lại phím"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Độ trễ trước khi lặp lại"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Tuỳ chỉnh thời gian bạn có thể giữ nút trước khi phím bắt đầu lặp lại"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Tuỳ chỉnh thời gian giữ nút để phím bắt đầu lặp lại"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Tốc độ lặp lại"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Đặt tốc độ nhập ký tự lặp lại khi bạn nhấn và giữ một phím"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Mặc định"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Kiểm soát tốc độ lặp lại của nút sau độ trễ ban đầu"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Phụ đề"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Cài đặt cho lớp phủ văn bản phụ đề đóng trên video"</string>
     <string name="captions_display" msgid="2598662495450633375">"Hiển thị"</string>
@@ -737,7 +764,7 @@
     <string name="captions_textopacity" msgid="6055602491649526307">"Độ mờ văn bản"</string>
     <string name="captions_windowshow" msgid="6002072054703167886">"Hiển thị cửa sổ"</string>
     <string name="captions_windowcolor" msgid="7460430328878876648">"Màu cửa sổ"</string>
-    <string name="captions_windowopacity" msgid="8645082670322789314">"Độ mờ cửa sổ"</string>
+    <string name="captions_windowopacity" msgid="8645082670322789314">"Độ mờ của cửa sổ"</string>
     <string name="captions_style_0" msgid="169414884289770256">"Chữ trắng trên nền đen"</string>
     <string name="captions_style_1" msgid="8236052739817535538">"Chữ đen trên nền trắng"</string>
     <string name="captions_style_2" msgid="456353889540431910">"Chữ vàng trên nền đen"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Tìm điều khiển từ xa"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Phát chuông báo để tìm điều khiển từ xa Google TV khi bạn không nhớ chỗ để"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Trên Google TV có nút nhấn để phát chuông báo trên điều khiển từ xa trong vòng 30 giây. Tính năng này chỉ hoạt động với các loại điều khiển từ xa được hỗ trợ của Google TV.\n\nNếu bạn muốn dừng chuông báo, hãy nhấn nút bất kỳ trên điều khiển từ xa."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Khi bật, bạn có thể dùng nút trên thiết bị để phát âm thanh và tìm điều khiển từ xa. Khi tắt, nút này sẽ không hoạt động. Bạn vẫn có thể dùng tính năng Tìm điều khiển của tôi qua các phương thức khác."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Phát chuông báo"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Chế độ đèn nền"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Các nút trên điều khiển từ xa sẽ sáng lên sau mỗi lần nhấn."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Trên điều khiển từ xa được hỗ trợ của Google TV, thao tác nhấn nút trên điều khiển từ xa sẽ kích hoạt đèn nền phát sáng."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Âm lượng %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Bạn có thể kiểm soát âm lượng của Trợ lý trên loa %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Chỉ ảnh hưởng đến âm lượng trên thiết bị %1$s chứ không ảnh hưởng đến TV"</string>

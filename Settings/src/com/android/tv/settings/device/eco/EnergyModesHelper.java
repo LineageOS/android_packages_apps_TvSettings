@@ -158,7 +158,7 @@ public final class EnergyModesHelper {
             R.string.energy_mode_moderate_info,
             R.array.energy_mode_moderate_features,
             R.string.energy_mode_moderate_eco_hint,
-            /* ecoHintIconRes= */ 0,
+            R.drawable.ic_bolt,
             R.array.energy_mode_moderate_baseExemptPackages,
             R.array.energy_mode_moderate_vendorExemptPackages,
             R.integer.energy_mode_moderate_baseAllowedReasons,

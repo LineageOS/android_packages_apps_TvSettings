@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Hunsa tillöguna"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Greining „Ok Google“"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Talaðu við Google hjálparann hvenær sem er"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (skjálesari)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack er aðgengiseiginleiki sem les texta, valmyndaratriði og aðra hluti á skjánum upphátt og aðstoðar þannig notendur með sjónskerðingu. Einnig er hægt að setja hann upp til notkunar með flýtileið aðgengisstillingar."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Tæki"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Kjörstillingar"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Fjarstýring og fylgihlutir"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Texti með miklum birtuskilum"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Feitletra texta"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Endurkastslyklar"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Veldu tíma"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Fjarstýrð hunsun þegar ýtt er endurtekið á lykil"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Stilltu hunsun þegar ýtt er hratt og endurtekið á hnapp fyrir slysni. Þú getur breytt tímanum sem þú vilt að ýtingar á hnapp séu hunsaðar á"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Tími: sjálfgefinn"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Stilltu hunsun þegar ýtt er endurtekið á sjálfgefnum tíma eftir fyrsta skipti"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Tími: 0,5 sekúndur"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Breytir tímanum sem endurteknar ýtingar á lykil eru hunsaðar í 0,5 sekúndur"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Tími: 1 sekúnda"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Breytir tímanum sem endurteknar ýtingar á lykil eru hunsaðar í 1 sekúndu"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Tími: 2 sekúndur"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Breytir tímanum sem endurteknar ýtingar á lykil eru hunsaðar í 2 sekúndur"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Litaleiðrétting"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Nota litaleiðréttingu"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Litastilling"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Flýtileið aðgengisstillingar"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Virkja flýtileið aðgengisstillingar"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Flýtileiðarþjónusta"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Aðgengi að lyklaborði"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Þegar kveikt er á flýtileiðinni geturðu ýtt bæði á bakkhnappinn og hnappinn til að fara niður í þrjár sekúndur til að opna aðgengiseiginleika."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Tími til að grípa til aðgerða"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Tími til að grípa til aðgerða (tímalokun aðgengis)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Tímasetning"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Sum forrit styðja ekki þessa stillingu á tímasetningu."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Tími til að grípa til aðgerða (tímalokun aðgengis)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Stilla lengd skilaboða þar sem aðgerða er krafist"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Veldu hversu lengi tímabundin skilaboð sem biðja þig um að grípa til aðgerða eiga að birtast"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Tímasetning : 2–3 sekúndur"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Stillir sjálfgefinn tíma til að svara aðgerðum á skjánum (2–3 sek.)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Töf fyrir endurtekningu lykla"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Stilltu töfina áður en stafir birtast endurtekið þegar þú heldur lykli inni"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Breyttu töfinni áður en lykill er endurtekinn"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Endurtekning lykla"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Töf fyrir endurtekningu"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Sérsníddu hversu lengi þú getur haldið hnappi inni áður en hann er endurtekinn"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Sérsníddu hversu lengi þú getur haldið hnappi inni áður en hann er endurtekinn"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Tíðni endurtekninga"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Stilltu hversu hratt stafir eru endurteknir þegar lykli er haldið inni"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Sjálfgefið"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Stjórnaðu því hversu fljótt hnappur er endurtekinn eftir fyrstu töf"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Skjátextar"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Stillingar skjátexta á myndefni"</string>
     <string name="captions_display" msgid="2598662495450633375">"Skjár"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Finna fjarstýringuna mína"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Spilaðu hljóð til að finna Google TV-fjarstýringuna ef hún týnist"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Það er hnappur á Google TV sem þú getur ýtt á til að spila hljóð á fjarstýringunni þinni í 30 sekúndur. Þetta virkar aðeins í studdum Google TV-fjarstýringum.\n\nÝttu á hvaða hnapp sem er á fjarstýringunni til að stöðva hljóðið."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Þegar kveikt er á þessu geturðu notað hnappinn í tækinu til að spila hljóð til að finna fjarstýringuna. Þegar slökkt er á þessu virkar hnappurinn ekki. Þú getur áfram notað Finna fjarstýringuna mína með öðrum aðferðum."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Spila hljóð"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Baklýsingarstilling"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Baklýsing á hnöppum fjarstýringar í hvert sinn sem þú ýtir."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Ef þú ýtir á fjarstýringahnapp á studdum Google TV-fjarstýringum kviknar á baklýsingunni."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s hljóðstyrkur"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Þú getur stjórnað hljóðstyrk Hjálpara í %1$s-hátalara"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Hefur aðeins áhrif á hljóðstyrk í %1$s-tæki, ekki í sjónvarpi"</string>

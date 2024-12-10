@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Loobu soovitusest"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Otsetee sõna „Ok Google” tuvastamine"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Rääkige mis tahes ajal Google\'i assistendiga"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (ekraanilugeja)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack on juurdepääsufunktsioon, mis abistab nägemispuudega kasutajaid, lugedes ette ekraanil kuvatava teksti, menüü-üksused ja muud elemendid. Sellele saab seadistada ka juurdepääsetavuse otsetee."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Seade"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Eelistused"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Kaugjuhtimine ja tarvikud"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Suure kontrastsusega tekst"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Paks tekst"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Põrkeklahvid"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Valige eelistatud ajastus"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Pult ignoreerib korduvaid klahvivajutusi"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Ignoreerige kogemata tehtud kiireid ja korduvaid nupuvajutusi. Saate reguleerida ajavahemikku, mille jooksul vajutusi ignoreeritakse"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Ajastus: vaikeseade"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Pärast esialgset vajutamist vaikevahemiku korduvate vajutuste ignoreerimine"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Ajastus: 0,5 sekundit"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Ajavahemiku reguleerimine 0,5 sekundile, mille jooksul korduvaid klahvivajutusi ignoreeritakse"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Ajastus: 1 sekund"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Ajavahemiku reguleerimine 1 sekundile, mille jooksul korduvaid klahvivajutusi ignoreeritakse"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Ajastus: 2 sekundit"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Ajavahemiku reguleerimine 2 sekundile, mille jooksul korduvaid klahvivajutusi ignoreeritakse"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Värvide korrigeerimine"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Kasuta värvide korrigeerimist"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Värvirežiim"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Juurdepääsetavuse otsetee"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Luba juurdepääsetavuse otsetee"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Otsetee teenus"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Klaviatuuri juurdepääsetavus"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Kui otsetee on sisse lülitatud, saab juurdepääsufunktsiooni käivitada nuppe Tagasi ja Alla kolm sekundit vajutades."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Aeg toimingu tegemiseks"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Aeg toimingu tegemiseks (juurdepääsu ajalõpp)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Ajastus"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Seda ajastamiseelistust kõikides rakendustes ei toetata."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Aeg toimingu tegemiseks (juurdepääsu ajalõpp)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Määrake toimingut nõudvate sõnumite kestus"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Valige, kui kaua kuvatakse ajutisi sõnumeid, milles teil palutakse midagi teha"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Ajalõpp: 2–3 sekundit"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Määrab vaikeaja ekraanil kuvatavatele toimingutele reageerimiseks (2–3 s)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Klahvi korduse viivitus"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Kohandage viivitust, mille järel korduvad tähemärgid pärast klahvi allhoidmist kuvatakse"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Kohandage klahvi kordumisele eelnevat viivitust"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Klahvi kordus"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Viivitus enne kordamist"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Kohandage seda, kui kaua peate nuppu all hoidma, enne kui see korduma hakkab"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Kohandage nupu hoidmise kestust, pärast mida hakkab toiming korduma"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Kordusmäär"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Määrake, kui kiiresti korduvad tähemärgid klahvi allhoidmisel sisestatakse"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Vaikeseade"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Juhtige, kui kiiresti nupp pärast esialgset viivitust kordub"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Subtiitrid"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Video subtiitrite teksti ülekatte seaded"</string>
     <string name="captions_display" msgid="2598662495450633375">"Kuvamine"</string>
@@ -1024,7 +1051,7 @@
     <string name="device_apps_permissions" msgid="8421323706003063878">"Rakenduste load"</string>
     <string name="app_permissions_group_summary" msgid="6818210080117761117">"<xliff:g id="COUNT_0">%1$d</xliff:g> <xliff:g id="COUNT_1">%2$d</xliff:g>-st rakendusest on lubatud"</string>
     <string name="bluetooth_permission_request" msgid="7788089036741496993">"Bluetoothi loa taotlus"</string>
-    <string name="security_patch" msgid="8924741264829495392">"Android TV OS-i turvapaiga tase"</string>
+    <string name="security_patch" msgid="8924741264829495392">"Android TV OS-i turbepaiga tase"</string>
     <string name="choose_application" msgid="2375936782103669988">"Rakenduse valimine"</string>
     <string name="experimental_preference" msgid="3982593252210557436">"(Katseline)"</string>
     <string name="reboot_safemode_action" msgid="2862127510492131128">"Taaskäivita ohutusrežiimis"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Leia mu pult"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Esitage heli, et leida oma kaotsiläinud Google TV pult"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Teie Google TV-l on nupp, mida vajutades saate puldil 30 sekundi vältel heli esitada. See töötab ainult toetatud Google TV kaugjuhtimispultidega.\n\nHeli peatamiseks vajutage puldil mõnda nuppu."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Kui see funktsioon on sees, saate esitada oma seadmes oleva nupu abil heli, et leida oma pult. Kui funktsioon on väljas, siis see nupp ei tööta. Saate siiski kasutada funktsiooni Leia mu kaugjuhtimispult teiste meetodite kaudu."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Esita heli"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Taustavalgustuse režiim"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Puldi nuppude valgustus süttib igal vajutamisel."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Toetatud Google TV pultide korral aktiveerib puldil nupu vajutamine taustavalgustuse."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s – helitugevus"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Saate assistendi helitugevust kõlaris %1$s hallata"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Mõjutab helitugevust vaid seadmes %1$s, mitte teleris"</string>

@@ -20,7 +20,6 @@ import static android.view.Display.HdrCapabilities.HDR_TYPE_DOLBY_VISION;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HDR10;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HDR10_PLUS;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HLG;
-import static android.view.Display.HdrCapabilities.HDR_TYPE_INVALID;
 
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.isHdrFormatSupported;
 import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.sendHdrSettingsChangedBroadcast;
@@ -34,7 +33,6 @@ import static com.android.tv.settings.util.InstrumentationUtils.logToggleInterac
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.hardware.display.DisplayManager;
-import android.hardware.display.HdrConversionMode;
 import android.os.Bundle;
 import android.view.Display;
 import android.widget.Toast;
@@ -51,14 +49,10 @@ import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
-import com.android.tv.settings.device.displaysound.HdrFormatSelectionInfo.AutoInfoFragment;
-import com.android.tv.settings.device.displaysound.HdrFormatSelectionInfo.DolbyVisionNotSupportedFragment;
-import com.android.tv.settings.device.displaysound.HdrFormatSelectionInfo.ManualInfoFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -92,7 +86,6 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
     private PreferenceCategory mFormatsInfoPreferenceCategory;
     private PreferenceCategory mEnabledFormatsPreferenceCategory;
     private PreferenceCategory mDisabledFormatsPreferenceCategory;
-    private boolean disableFormatSelectionManual = false;
 
     private List<AbstractPreferenceController> mPreferenceControllers;
 
@@ -114,13 +107,6 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
         mUserDisabledHdrTypes = toSet(mDisplayManager.getUserDisabledHdrTypes());
         mDisplayReportedHdrTypes = getDisplaySupportedHdrTypes();
 
-        disableFormatSelectionManual =
-            mDisplayManager
-                .getHdrConversionModeSetting()
-                .equals(
-                    new HdrConversionMode(
-                        HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_INVALID));
-
         super.onAttach(context);
     }
 
@@ -133,22 +119,11 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.hdr_format_selection, null);
 
-        if (disableFormatSelectionManual) {
-            Preference preference = findPreference(KEY_HDR_FORMAT_SELECTION_AUTO);
-            preference.setSelectable(false);
-            preference.setSummary("");
-
-            preference = findPreference(KEY_HDR_FORMAT_SELECTION_MANUAL);
-            preference.setSelectable(false);
-            preference.setEnabled(false);
-            preference.setSummary(getContext().getString(R.string.disabled));
-        }
-
         createFormatInfoPreferences();
         createFormatPreferences();
 
         String currentPreferenceKey;
-        if (mDisplayManager.areUserDisabledHdrTypesAllowed() || disableFormatSelectionManual) {
+        if (mDisplayManager.areUserDisabledHdrTypesAllowed()) {
             currentPreferenceKey = KEY_HDR_FORMAT_SELECTION_AUTO;
             hideFormatPreferences();
         } else {
@@ -242,15 +217,8 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
     }
 
     private Set<Integer> getDisplaySupportedHdrTypes() {
-        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
-        if (mDisplayManager
-                .getHdrConversionModeSetting()
-                .equals(new HdrConversionMode(
-                        HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_INVALID))) {
-            // Disable hdrTypes when preferring "Force SDR"
-            return Collections.emptySet();
-        }
         Set<Integer> hdrTypes = new HashSet<>();
+        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
         Arrays.stream(display.getSupportedModes())
                 .map(Display.Mode::getSupportedHdrTypes)
                 .forEach(types -> Arrays.stream(types).forEach(hdrTypes::add));

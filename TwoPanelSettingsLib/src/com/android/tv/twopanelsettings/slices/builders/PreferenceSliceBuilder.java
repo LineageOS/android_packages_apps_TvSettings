@@ -30,14 +30,14 @@ import android.view.View;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RestrictTo;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.util.Pair;
-import androidx.slice.Slice;
-import androidx.slice.SliceSpecs;
-import androidx.slice.builders.ListBuilder;
-import androidx.slice.builders.SliceAction;
-import androidx.slice.core.SliceHints;
+
+import com.android.tv.twopanelsettings.slices.compat.Slice;
+import com.android.tv.twopanelsettings.slices.compat.SliceSpecs;
+import com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder;
+import com.android.tv.twopanelsettings.slices.compat.builders.SliceAction;
+import com.android.tv.twopanelsettings.slices.compat.core.SliceHints;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -61,7 +61,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     /**
      * @hide
      */
-    @RestrictTo(RestrictTo.Scope.LIBRARY)
+    // @RestrictTo(RestrictTo.Scope.LIBRARY)
     @IntDef({
         View.LAYOUT_DIRECTION_RTL, View.LAYOUT_DIRECTION_LTR, View.LAYOUT_DIRECTION_INHERIT,
         View.LAYOUT_DIRECTION_LOCALE
@@ -122,7 +122,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
      */
     @NonNull
     @Override
-    public Slice build() {
+    public Slice buildForSettings() {
         return mImpl.build();
     }
 
@@ -443,7 +443,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
          * The action specified here will be sent when the whole row is clicked.
          * <p>
          * If this is the first row in a {@link ListBuilder} this action will also be used to define
-         * the {@link androidx.slice.widget.SliceView#MODE_SHORTCUT} representation of the slice.
+         * the SliceView#MODE_SHORTCUT representation of the slice.
          */
         @NonNull
         private RowBuilder setPrimaryAction(@NonNull SliceAction action) {

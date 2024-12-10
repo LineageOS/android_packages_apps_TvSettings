@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"సూచనను విస్మరించండి"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"Ok Google\" గుర్తింపు"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Google Assistantతో ఎప్పుడైనా మాట్లాడండి"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (స్క్రీన్ రీడర్)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack అనేది స్క్రీన్ రీడర్ యాక్సెసిబిలిటీ ఫీచర్, ఇది స్క్రీన్‌పై టెక్స్ట్‌ను, మెనూ ఐటెమ్‌లను, ఇతర ఎలిమెంట్‌లను బిగ్గరగా చదవడం ద్వారా అంధత్వం ఉన్న యూజర్‌లకు సహాయపడుతుంది. యాక్సెసిబిలిటీ షార్ట్‌కట్‌తో ఉపయోగించడానికి కూడా దీన్ని సెటప్ చేయవచ్చు."</string>
     <string name="header_category_device" msgid="3023893663454705969">"పరికరం"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"ప్రాధాన్యతలు"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"రిమోట్ &amp; యాక్సెసరీలు"</string>
@@ -367,7 +369,7 @@
     <string name="restart_button_label" msgid="911750765086382990">"రీస్టార్ట్ చేయి"</string>
     <string name="about_legal_info" msgid="2148797328415559733">"చట్టబద్ధమైన సమాచారం"</string>
     <string name="about_legal_license" msgid="4056934178111674054">"థర్డ్-పార్టీ సోర్స్"</string>
-    <string name="about_terms_of_service" msgid="8514826341101557623">"Google చట్టపరమైన అంశాల విభాగం"</string>
+    <string name="about_terms_of_service" msgid="8514826341101557623">"Google లీగల్ డిపార్ట్‌మెంట్"</string>
     <string name="about_license_activity_unavailable" msgid="4559187037375581674">"లైసెన్స్ డేటా అందుబాటులో లేదు"</string>
     <string name="about_model" msgid="9164284529291439296">"నమూనా"</string>
     <string name="device_mode" msgid="7258350575590118152">"పరికరం మోడ్"</string>
@@ -603,8 +605,8 @@
     <string name="storage_wizard_forget_action" msgid="5609631662522950596">"విస్మరించు"</string>
     <string name="storage_new_title" msgid="4768955281180255038">"USB డ్రైవ్ కనెక్ట్ చేయబడింది"</string>
     <string name="storage_new_action_browse" msgid="3355241742574072658">"బ్రౌజ్ చేయండి"</string>
-    <string name="storage_new_action_adopt" msgid="6809707961170895964">"పరికర నిల్వగా సెటప్ చేయి"</string>
-    <string name="storage_new_action_format_public" msgid="1964662216574764811">"తీసివేయదగిన నిల్వగా సెటప్ చేయి"</string>
+    <string name="storage_new_action_adopt" msgid="6809707961170895964">"పరికర నిల్వగా సెటప్ చేయండి"</string>
+    <string name="storage_new_action_format_public" msgid="1964662216574764811">"తీసివేయదగిన నిల్వగా సెటప్ చేయండి"</string>
     <string name="storage_new_action_eject" msgid="919249291814300000">"తొలగించండి"</string>
     <string name="storage_missing_title" msgid="9068915586235805818">"<xliff:g id="NAME">%1$s</xliff:g> తీసివేయబడింది"</string>
     <string name="storage_missing_description" msgid="6835620703133204249">"డ్రైవ్‌ను మళ్లీ కనెక్ట్ చేసే వరకు కొన్ని యాప్‌లు అందుబాటులో ఉండవు లేదా సరిగ్గా పని చేయవు."</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"అధిక కాంట్రాస్ట్ టెక్స్ట్"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"బోల్డ్ టెక్స్ట్"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"బౌన్స్ కీలు"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"ప్రాధాన్య సమయాన్ని ఎంచుకోండి"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"ఏదైనా కీని రిపీట్‌గా నొక్కితే రిమోట్ దాన్ని విస్మరిస్తుంది"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"వేగంగా, రిపీట్‌గా ఏవైనా బటన్‌లను అనుకోకుండా నొక్కితే వాటిని విస్మరించండి. నొక్కిన వాటిలో వేటిని విస్మరించాలో వాటి మధ్య సమయ విరామాన్ని మీరు సర్దుబాటు చేయవచ్చు."</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"సమయం : ఆటోమేటిక్ సెట్టింగ్"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"మొదటిసారి నొక్కిన తర్వాత, ఆటోమేటిక్ విరామానికి సంబంధించి రిపీట్‌గా జరిగే నొక్కడాలను విస్మరించండి"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"సమయం : 0.5 సెకన్లు"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"రిపీట్‌గా కీలను నొక్కడాన్ని విస్మరించే సమయ వ్యవధిని 0.5 సెకన్లకు సర్దుబాటు చేయండి"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"సమయం : 1 సెకను"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"రిపీట్‌గా కీలను నొక్కడాన్ని విస్మరించే సమయ వ్యవధిని 1 సెకనుకు సర్దుబాటు చేయండి"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"సమయం : 2 సెకన్లు"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"రిపీట్‌గా కీలను నొక్కడాన్ని విస్మరించే సమయ వ్యవధిని 2 సెకన్లకు సర్దుబాటు చేయండి"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"కలర్ కరెక్షన్"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"కలర్ కరెక్షన్ ఫీచర్‌ను ఉపయోగించండి"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"రంగు మోడ్"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"యాక్సెసిబిలిటీ షార్ట్‌కట్"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"యాక్సెసిబిలిటీ షార్ట్‌కట్‌ను ఎనేబుల్ చేయండి"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"షార్ట్‌కట్ సేవ"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"కీబోర్డ్ యాక్సెసిబిలిటీ"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"షార్ట్‌కట్ ఆన్‌లో ఉన్నప్పుడు, \'వెనుకకు\', \'కిందికి\' బటన్‌లను ఒకే సారి 3 సెకన్ల పాటు నొక్కితే ఏదైనా యాక్సెసిబిలిటీ ఫీచర్‌‌ను ప్రారంభించవచ్చు."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"చర్య తీసుకోవడానికి పట్టే సమయం"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"చర్యకు సమయం (యాక్సెసిబిలిటీ గడువు ముగింపు)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"సమయం"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"ఈ టైమింగ్ ప్రాధాన్యతకు అన్ని యాప్స్ సపోర్ట్ చేయవు."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"చర్య తీసుకోవాల్సిన సమయం (యాక్సెసిబిలిటీ గడువు ముగింపు)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"చర్య అవసరమయ్యే మెసేజ్‌ల వ్యవధిని సర్దుబాటు చేయండి"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"మీరు చర్య తీసుకోవాలని తెలిపే తాత్కాలిక మెసేజ్‌లను ఎంతసేపు చూపించాలో ఎంచుకోండి"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"సమయం : 2-3 సెకన్లు"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"ఆన్-స్క్రీన్ చర్యల డిఫాల్ట్ రెస్పాన్స్ టైం సెట్ చేస్తుంది (2–3 సె.)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"కీ రిపీట్ అవ్వడానికి ముందు ఆలస్యం"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"కీని హోల్డ్ చేసినప్పుడు రిపీట్ అయ్యే క్యారెక్టర్‌లు కనిపించడానికి ముందు ఎంత ఆలస్యం ఉండాలో కాన్ఫిగర్ చేయండి"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"కీ రిపీట్ అవ్వడానికి ముందు ఆలస్యాన్ని సర్దుబాటు చేయండి"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"కీ రిపీట్"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"రిపీట్ చేయడానికి ముందు జరిగిన ఆలస్యం"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"రిపీట్ అవ్వడానికి ముందు మీరు బటన్‌ను ఎంత సమయం హోల్డ్‌లో ఉంచగలరు అనే దానిని అనుకూలంగా మార్చండి"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"రిపీట్ చేయడానికి ముందు బటన్‌ను హోల్డ్‌లో ఉంచాల్సిన వ్యవధిని అనుకూలంగా మార్చండి"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"రిపీట్ రేట్"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"కీని హోల్డ్ చేసినప్పుడు రిపీట్ అయ్యే క్యారెక్టర్‌లు ఎంత వేగంగా టైప్ అవ్వాలి అనే దానిని సెట్ చేయండి"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"ఆటోమేటిక్ సెట్టింగ్"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"ముందు జరిగిన ఆలస్యం తర్వాత బటన్ ఎంత వేగంగా రిపీట్ అవ్వాలి అనే దానిని కంట్రోల్ చేయండి"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"క్యాప్షన్‌లు"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"వీడియోలో సంవృత శీర్షిక వచన అతివ్యాప్తికి సెట్టింగ్‌లు"</string>
     <string name="captions_display" msgid="2598662495450633375">"ప్రదర్శన"</string>
@@ -1108,7 +1135,7 @@
     <string name="select_device_admin_msg" msgid="8475934459999710332">"పరికర నిర్వాహకుల యాప్‌లు"</string>
     <string name="add_device_admin_msg" msgid="5390773166682603421">"డివైజ్ నిర్వాహకుల యాప్‌ను యాక్టివేట్‌ చేయాలా?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"ఈ పరికరం నిర్వాహకుల యాప్‌ను యాక్టివేట్‌ చేయి"</string>
-    <string name="device_admin_warning" msgid="7399916080685200660">"ఈ \'అడ్మిన్‌ యాప్‌\'ను యాక్టివేట్‌ చేస్తే, కింది చర్యలను చేయడానికి <xliff:g id="APP_NAME">%1$s</xliff:g> యాప్ అనుమతించబడుతుంది:"</string>
+    <string name="device_admin_warning" msgid="7399916080685200660">"ఈ \'అడ్మిన్‌ యాప్‌\'ను యాక్టివేట్‌ చేస్తే, <xliff:g id="APP_NAME">%1$s</xliff:g> యాప్, ఈ కింది పనులు చేయగలుగుతుంది:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"ఈ పరికరం <xliff:g id="APP_NAME">%1$s</xliff:g> ద్వారా నిర్వహించబడుతుంది, పర్యవేక్షించబడుతుంది."</string>
     <string name="device_admin_status" msgid="5467001937240455367">"ఈ అడ్మిన్ యాప్ యాక్టివ్‌గా ఉంది. కింది చర్యలు చేయడానికి <xliff:g id="APP_NAME">%1$s</xliff:g> యాప్‌ను అనుమతిస్తుంది:"</string>
     <string name="adding_profile_owner_warning" msgid="3888867082224127564">"కొనసాగిస్తే, మీ యూజర్‌ను మీ అడ్మిన్ మేనేజ్ చేయగలరు, దాని వలన మీ వ్యక్తిగత డేటాతో పాటు అనుబంధితంగా ఉన్న డేటా కూడా స్టోర్ చేయబడవచ్చు.\n\nమీ అడ్మిన్ నెట్‌వర్క్ యాక్టివిటీ మరియు మీ పరికరం యొక్క లొకేషన్ సమాచారంతో పాటు ఈ యూజర్‌కు అనుబంధితంగా ఉన్న సెట్టింగ్‌లు, యాక్సెస్, యాప్‌లు మరియు డేటాను పర్యవేక్షించగలరు, మేనేజ్ చేయగలరు."</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"నా రిమోట్‌ను కనుగొనండి"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"మీ Google TV రిమోట్ మిస్‌ప్లేస్ చేయబడితే దాన్ని గుర్తించడానికి సౌండ్ ప్లే చేయండి"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"మీ రిమోట్‌లో 30 సెకన్ల పాటు ధ్వనిని ప్లే చేయడానికి మీ Google TVలో ఒక బటన్ ఉంటుంది. సపోర్ట్ చేసే Google TV రిమోట్ కంట్రోల్స్‌తో మాత్రమే ఇది పని చేస్తుంది.\n\nసౌండ్‌ను ఆపివేయడానికి, మీ రిమోట్‌లో ఏదైనా బటన్‌ను నొక్కండి."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"ఆన్ చేసినప్పుడు, మీ రిమోట్‌ను గుర్తించడం కోసం సౌండ్ ప్లే చేయడానికి మీ పరికరంలోని బటన్‌ను ఉపయోగించవచ్చు. ఆఫ్ చేసినప్పుడు, ఈ బటన్ పని చేయదు. మీరు ఇప్పటికీ ఇతర పద్ధతుల ద్వారా \'రిమోట్‌ను వెతకండి\'ని ఉపయోగించగలరు."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"సౌండ్‌ను ప్లే చేయండి"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"బ్యాక్‌లైట్ మోడ్"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"మీరు రిమోట్ కంట్రోల్‌లోని బటన్‌లను నొక్కిన ప్రతిసారీ అవి వెలుగుతాయి."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"సపోర్ట్ చేసే Google TV రిమోట్స్‌లో, రిమోట్స్‌లోని బటన్‌ను నొక్కడం ద్వారా బ్యాక్‌లైట్ వెలగడం యాక్టివేట్ అవుతుంది."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s వాల్యూమ్"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"మీరు %1$s స్పీకర్‌లో Assistant వాల్యూమ్‌ను కంట్రోల్ చేయవచ్చు"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"%1$s పరికరానికి సంబంధించిన వాల్యూమ్‌ను మాత్రమే ప్రభావితం చేస్తుంది , టీవీ వాల్యూమ్‌ను ప్రభావితం చేయదు"</string>

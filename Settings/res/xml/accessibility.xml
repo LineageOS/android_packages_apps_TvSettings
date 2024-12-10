@@ -68,8 +68,8 @@
             android:fragment="com.android.tv.settings.accessibility.AccessibilityShortcutFragment" />
         <Preference
             android:key="accessibility_timeout"
-            android:title="@string/accessibility_timeout_detailed"
-            android:fragment="com.android.tv.settings.accessibility.AccessibilityTimeoutFragment" />
+            android:title="@string/keyboard_accessibility"
+            android:fragment="com.android.tv.settings.accessibility.AccessibilityKeyboardFragment" />
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -18,7 +18,7 @@ package com.android.tv.settings.accessories;
 
 import android.bluetooth.BluetoothClass;
 
-import com.android.tv.settings.util.bluetooth.BluetoothDeviceCriteria;
+import com.android.tv.settings.accessories.util.bluetooth.BluetoothDeviceCriteria;
 
 public class InputDeviceCriteria extends BluetoothDeviceCriteria {
 

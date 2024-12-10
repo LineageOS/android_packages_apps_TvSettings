@@ -193,4 +193,12 @@
             <item>language2-COUNTRY2</item>
         -->
     </string-array>
+
+    <!-- Apps that should not be disabled from Settings -->
+    <string-array name="config_always_enabled_apps" translatable="false">
+        <!--
+            <item>package.name.one</item>
+            <item>package.name.two</item>
+        -->
+    </string-array>
 </resources>

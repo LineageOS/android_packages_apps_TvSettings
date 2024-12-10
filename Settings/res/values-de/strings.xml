@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Vorschlag ablehnen"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"Ok Google\"-Erkennung"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Jederzeit mit Google Assistant sprechen"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (Screenreader)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack ist eine Bedienungshilfe (Screenreader), die sehbehinderten Nutzern hilft, indem sie Text, Menüpunkte und andere Elemente auf dem Bildschirm vorliest. TalkBack kann auch für die Verwendung mit dem Kurzbefehl für Bedienungshilfen eingerichtet werden."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Gerät"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Einstellungen"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Fernbedienung &amp; Zubehör"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Text mit hohem Kontrast"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Fettdruck"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Bounce-Tasten"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Gewünschtes Zeitintervall auswählen"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Fernbedienung ignoriert wiederholtes Drücken der Tasten"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Versehentliches schnelles, wiederholtes Drücken der Tasten ignorieren. Du kannst das Zeitintervall anpassen, in dem das Drücken der Tasten ignoriert wird."</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Zeitintervall: Standard"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Nach dem ersten Drücken der Tasten wiederholtes Drücken für die Dauer des Standardintervalls ignorieren"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Zeitintervall: 0,5 Sekunden"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Zeitintervall, in dem wiederholtes Drücken der Tasten ignoriert wird, auf 0,5 Sekunden anpassen"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Zeitintervall: 1 Sekunde"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Zeitintervall, in dem wiederholtes Drücken der Tasten ignoriert wird, auf 1 Sekunde anpassen"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Zeitintervall: 2 Sekunden"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Zeitintervall, in dem wiederholtes Drücken der Tasten ignoriert wird, auf 2 Sekunden anpassen"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Farbkorrektur"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Farbkorrektur aktivieren"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Farbmodus"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Bedienungshilfe-\\nKurzbefehl"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Kurzbefehl für Bedienungshilfen aktivieren"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Verknüpfter Dienst"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Bedienungshilfen für die Tastatur"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Wenn die Tastenkombination aktiviert ist, kannst du die Bedienungshilfe starten, indem du die Zurück-Taste und die Nach-Unten-Taste drei Sekunden lang gedrückt hältst."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Zeit zum Reagieren"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Zeit zum Reagieren (Zeitüberschreitung bei Bedienungshilfen)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Dauer"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Diese Einstellung für die Dauer wird nicht von allen Apps unterstützt."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Zeit zum Reagieren (Zeitüberschreitung bei Bedienungshilfen)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Anzeigedauer von Nachrichten anpassen, die eine Aktion erfordern"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Hier kannst du festlegen, wie lange vorübergehende Nachrichten angezeigt werden, die dich zum Handeln auffordern"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Zeit: 2–3 Sekunden"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Legt die Standardzeit für die Reaktion auf Aktionen auf dem Bildschirm fest (2–3 Sek.)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Verzögerung für die Tastenwiederholung"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Hier kannst du die Länge der Verzögerung konfigurieren, bis wiederholte Zeichen angezeigt werden, wenn eine Taste gedrückt gehalten wird"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Hier kannst du die Verzögerung bis zum wiederholten Anschlag derselben Taste festlegen"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Tastenwiederholung"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Verzögerung vor Wiederholung"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Hier kannst du festlegen, wie lange du eine Schaltfläche gedrückt halten kannst, bevor die Wiederholung startet"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Hier kannst du festlegen, wie lange eine Schaltfläche gedrückt gehalten werden kann, bis die Wiederholung startet"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Wiederholungsrate"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Hier kannst du festlegen, wie schnell wiederholte Zeichen eingegeben werden, wenn eine Taste gedrückt gehalten wird"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Standard"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Hier kannst du festlegen, wie schnell die Schaltfläche nach der anfänglichen Verzögerung wiederholt wird"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Untertitel"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Einstellungen für Untertitel-Overlays in einem Video"</string>
     <string name="captions_display" msgid="2598662495450633375">"Anzeigen"</string>
@@ -751,7 +778,7 @@
     <string name="color_cyan" msgid="3172130225116530998">"Cyan"</string>
     <string name="color_yellow" msgid="3519470952904560404">"Gelb"</string>
     <string name="color_magenta" msgid="2377854703399624607">"Magenta"</string>
-    <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"Audiobeschreibung"</string>
+    <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"Audiodeskription"</string>
     <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"Bei unterstützten Filmen und Serien eine Beschreibung der Ereignisse auf dem Bildschirm anhören"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Aktivieren"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Konfiguration"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Fernbedienung finden"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Du kannst auf deiner Google TV-Fernbedienung einen Ton wiedergeben lassen, wenn du sie verlegt hast"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Du kannst eine Taste an deinem Google TV drücken, um 30 Sekunden lang einen Ton auf deiner Fernbedienung wiedergeben zu lassen. Dafür ist eine Fernbedienung erforderlich, die Google TV unterstützt.\n\nDrücke zum Beenden der Wiedergabe eine beliebige Taste auf deiner Fernbedienung."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Wenn diese Option aktiviert ist, kannst du über die Schaltfläche auf deinem Gerät einen Ton wiedergeben lassen, um deine Fernbedienung zu finden. Ist sie deaktiviert, funktioniert die Schaltfläche nicht. Du kannst „Finde meine Fernbedienung“ jedoch mit anderen Methoden verwenden."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Ton wiedergeben lassen"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Hintergrundbeleuchtung"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Die Tasten der Fernbedienung leuchten beim Drücken auf."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Wenn du bei unterstützten Google TV-Fernbedienungen auf die Tasten drückst, leuchtet die Hintergrundbeleuchtung auf."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s – Lautstärke"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Du kannst die Lautstärke von Assistant über den „%1$s“-Lautsprecher steuern"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Wirkt sich nur auf die Lautstärke des Geräts „%1$s“ aus, nicht auf den Fernseher"</string>

@@ -33,8 +33,8 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.view.InputDevice;
 
-import com.android.tv.settings.util.bluetooth.BluetoothDeviceCriteria;
-import com.android.tv.settings.util.bluetooth.BluetoothScanner;
+import com.android.tv.settings.accessories.util.bluetooth.BluetoothDeviceCriteria;
+import com.android.tv.settings.accessories.util.bluetooth.BluetoothScanner;
 
 import java.time.Duration;
 import java.util.ArrayList;

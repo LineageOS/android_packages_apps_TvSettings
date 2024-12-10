@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Закрыть подсказку"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Распознавание команды \"Окей, Google\""</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Говорите с Google Ассистентом в любой момент."</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (программа чтения с экрана)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack – это программа для пользователей с нарушениями зрения, которая читает вслух текст на экране, называет пункты меню и другие элементы. Чтобы быстро запускать программу, можно настроить для нее кнопку быстрого включения."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Устройство"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Настройки"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Пульт и аксессуары"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Контрастный текст"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Полужирный шрифт"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Контроль повторного нажатия"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Укажите длительность интервала"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Повторные нажатия клавиш будут игнорироваться удаленно"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Если вы случайно нажмете какую-либо кнопку многократно, то в течение выбранного интервала назначенное на нее действие будет игнорироваться."</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"По умолчанию"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Повторные нажатия клавиш не учитываются в течение стандартного интервала"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"0,5 секунды"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Повторные нажатия клавиш игнорируются в течение 0,5 секунды"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"1 секунда"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Повторные нажатия клавиш не учитываются в течение 1 секунды"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"2 секунды"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Повторные нажатия клавиш не регистрируются в течение 2 секунд"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Коррекция цвета"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Использовать коррекцию цвета"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Цветной режим"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Быстрое включение"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Быстрое включение"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Быстрое включение сервиса"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Управление с клавиатуры"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Когда эта функция включена, вы можете активировать специальные возможности, одновременно удерживая кнопки \"Назад\" и \"Вниз\" в течение трех секунд."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Время на выполнение действия"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Время на выполнение действия"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Время ожидания"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Параметр поддерживается не во всех приложениях."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Время на выполнение действия"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Можно указать, как долго на экране будет оставаться сообщение, в котором требуется выполнить действие"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Укажите, сколько времени вам нужно на выполнение действий в автоматически исчезающих сообщениях"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Время на выполнение: 2–3 секунды"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Время на выполнение действия (2–3 секунды)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Задержка перед повтором нажатия клавиши"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Укажите, сколько времени можно удерживать клавишу перед тем, как назначенный на нее символ будет введен повторно"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Настройте, сколько времени должно пройти, прежде чем назначенное на клавишу действие начнет повторяться"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Повтор нажатия клавиши"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Задержка перед повторным нажатием"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Настройте, сколько времени можно удерживать кнопку, прежде чем назначенное на нее действие начнет повторяться"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Задайте, сколько времени можно удерживать кнопку перед тем, как назначенное на нее действие начнет повторяться"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Скорость повтора"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Укажите, с какой скоростью повторно вводятся символы, когда вы удерживаете какую-либо клавишу"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"По умолчанию"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Задайте, как быстро повторяется назначенное на кнопку действие после начальной задержки"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Субтитры"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Настройки субтитров в видео"</string>
     <string name="captions_display" msgid="2598662495450633375">"Экран"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Поиск пульта"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Воспроизводить звуковой сигнал на потерянном пульте Google TV"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"На вашем устройстве Google TV есть кнопка, которую можно нажать, чтобы в течение 30 секунд на пульте воспроизводился звук. Функция работает только на поддерживаемых пультах для устройств Google TV.\n\nЧтобы прекратить воспроизведение сигнала, нажмите любую кнопку на пульте."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Если функция включена, вы можете воспроизводить звуковой сигнал нажатием кнопки на устройстве. Он поможет найти пульт. Когда функция отключена, кнопка не работает. Однако вы по-прежнему можете пользоваться поиском пульта другими способами."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Воспроизвести звуковой сигнал"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Подсветка"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Кнопки на пульте будут подсвечиваться при каждом нажатии"</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Нажав какую-либо кнопку на поддерживаемом пульте Google TV, вы включите подсветку."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Уровень громкости: %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Управлять громкостью Ассистента можно на колонке (%1$s)."</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Громкость меняется не на телевизоре, а только на определенном устройстве (%1$s)."</string>

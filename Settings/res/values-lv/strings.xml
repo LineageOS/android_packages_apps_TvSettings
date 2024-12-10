@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Noraidīt ieteikumu"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Īsinājumvārda “OK Google” atpazīšana"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Runājiet ar Google asistentu jebkurā laikā."</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (ekrāna lasītājs)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack ir ekrāna lasītāja pieejamības funkcija, kas palīdz lietotājiem ar redzes traucējumiem, skaļi nolasot ekrānā redzamo tekstu, izvēlnes vienumus un citus elementus. Varat arī iestatīt ekrāna lasītāja izmantošanu kopā ar pieejamības saīsni."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Ierīce"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Preferences"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Tālvadība un piederumi"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Liela kontrasta teksts"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Teksts treknrakstā"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Atlēcienu taustiņi"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Izvēlieties vēlamo laiku"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Tālvadības ierīce ignorē atkārtotu taustiņu nospiešanu"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Ignorē nejaušu ātru, atkārtotu pogas nospiešanu. Varat pielāgot laika intervālu, kurā atkārtota nospiešana tiek ignorēta."</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Laiks: noklusējums"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Noklusējuma laika intervālā ignorē atkārtotu nospiešanu, kas tiek veikta pēc pirmās nospiešanas"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Ilgums: 0,5 sekundes"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Pielāgojiet laika intervālu uz 0,5 sekundēm, pēc kura tiek ignorēta atkārtota taustiņa nospiešana"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Ilgums: 1 sekunde"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Pielāgojiet laika intervālu līdz 1 sekundei, pēc kura tiek ignorēta atkārtota taustiņa nospiešana"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Ilgums: 2 sekundes"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Pielāgojiet laika intervālu līdz 2 sekundēm, pēc kura tiek ignorēta atkārtota taustiņa nospiešana"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Krāsu korekcija"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Izmantot krāsu korekciju"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Krāsu režīms"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Pieejamības īsinājumtaustiņš"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Iespējot pieejamības īsinājumtaustiņu"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Īsinājumtaustiņa pakalpojums"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Tastatūras pieejamība"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Kad īsinājumtaustiņš ir ieslēgts, varat uz 3 sekundēm nospiest pogu Atpakaļ un skaļuma samazināšanas pogu, lai aktivizētu pieejamības funkciju."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Laiks veikt darbību"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Laiks veikt darbību (pieejamības noildze)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Ilgums"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Ne visas lietotnes atbalsta šo laika preferenci."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Laiks veikt darbību (pieejamības noildze)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Pielāgojiet to ziņojumu rādīšanas ilgumu, kuros ir aicinājums uz darbību."</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Izvēlieties, cik ilgi rādīt īslaicīgus ziņojumus, kuros ir aicinājums uz darbību."</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Ilgums: 2–3 sekundes"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Iestata noklusējuma laiku atbildei uz ekrānā redzamajām darbībām (2–3 s)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Taustiņa atkārtošanas noildze"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Konfigurējiet aizkavi pirms atkārtotu rakstzīmju parādīšanas, kad taustiņš tiek turēts nospiests."</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Pielāgojiet aizkavi pirms taustiņa atkārtošanas."</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Taustiņa atkārtošana"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Aizkave pirms atkārtošanas"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Pielāgojiet laiku, cik ilgi varat turēt pogu, pirms tiek sākta atkārtošana."</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Pielāgojiet laiku, cik ilgi jātur poga, lai sāktu atkārtošanu."</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Atkārtošanas ātrums"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Iestatiet, cik ātri tiek ievadītas atkārtotas rakstzīmes, kad taustiņš tiek turēts nospiests."</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Noklusējums"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Kontrolējiet, cik ātri poga tiek atkārtoti nospiesta pēc sākotnējās aizkaves."</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Subtitri"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Videoklipa subtitru teksta pārklājuma iestatījumi"</string>
     <string name="captions_display" msgid="2598662495450633375">"Rādīt"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Tālvadības ierīces atrašana"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Atskaņojiet signālu, lai atrastu savu Google TV tālvadības ierīci, ja tā ir pazudusi."</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Uz jūsu Google TV ierīces ir poga, ko varat nospiest, lai savā tālvadības ierīcē 30 sekundes atskaņotu signālu. Tas darbojas tikai atbalstītās Google TV tālvadības ierīcēs.\n\nLai apturētu signāla atskaņošanu, nospiediet jebkuru tālvadības ierīces pogu."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Kad šis iestatījums ir ieslēgts, varat izmantot savas ierīces pogu, lai atskaņotu signālu un tādējādi atrastu savu tālvadības ierīci. Kad šis iestatījums ir izslēgts, šī poga nedarbosies. Jūs joprojām varēsiet izmantot tālvadības ierīces atrašanas funkciju citos veidos."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Atskaņot signālu"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Fona apgaismojuma režīms"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Katru reizi nospiežot tālvadības ierīces pogu, tiek aktivizēts pogu izgaismojums."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Atbalstītām Google TV tālvadības ierīcēm, nospiežot tālvadības ierīces pogu, tiek aktivizēts fona apgaismojums."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s: skaļums"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Varat kontrolēt Asistenta skaļumu šajā skaļrunī: %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Attiecas uz skaļumu tikai tālāk norādītajā ierīcē, bet ne televizorā: %1$s"</string>

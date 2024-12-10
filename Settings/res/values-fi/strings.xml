@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Hylkää ehdotus"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Hey Google ‑tunnistus"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Puhu Google Assistantille koska vain"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (näytönlukuohjelma)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack on näytönlukuohjelma, joka auttaa näkövammaisia käyttäjiä lukemalla ääneen näytöllä olevaa tekstiä, valikkokohtia ja muita elementtejä. Sitä voi käyttää myös saavutettavuuspikanäppäimellä."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Laite"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Asetukset"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Kaukosäädin ja lisävarusteet"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Suurikontrastinen teksti"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Lihavoi teksti"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Toistuvien painallusten ohitus"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Valitse haluamasi aika"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Kaukosäädin ohittaa toistuvat painallukset"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Ohita nopeat ja toistuvat vahinkopainallukset. Voit säätää aikaa, jonka aikana painalluksia ei huomioida"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Ajoitus : oletus"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Ohita toistuvat painallukset oletusvälillä ensimmäisen painalluksen jälkeen"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Ajoitus : 0,5 sekuntia"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Säädä aikaväliksi 0,5 sekuntia, jonka aikana toistetut painallukset ohitetaan"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Ajoitus : 1 sekunti"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Säädä aikaväliksi 1 sekunti, jonka aikana toistuvat painallukset ohitetaan"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Ajoitus : 2 sekuntia"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Säädä aikaväliksi 2 sekuntia, jonka aikana toistetut painallukset ohitetaan"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Värinkorjaus"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Käytä värinkorjausta"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Väritila"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Saavutettavuustilan pikanäppäin"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Ota saavutettavuustilan pikanäppäin käyttöön"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Pikanäppäinpalvelu"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Näppäimistön saavutettavuus"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Kun pikanäppäin on päällä, voit käynnistää saavutettavuusominaisuuden pitämällä Takaisin- ja Alas-näppäimiä painettuina kolmen sekunnin ajan."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Reagointiaika"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Toiminnon aika (saavutettavuuskatkaisu)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Ajoitus"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Kaikki sovellukset eivät tue tätä ajoitusasetusta."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Toiminnon aika (saavutettavuuskatkaisu)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Muuta toimenpiteitä vaativien viestien näkymisaikaa"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Valitse, miten pitkään haluat nähdä tilapäiset viestit, joissa pyydetään tekemään toiminto"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Ajoitus : 2–3 sekuntia"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Oletusvastausaika näytön toiminnoille (2–3 s)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Näppäimen toiston viive"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Valitse viive, jonka jälkeen toistetut merkit näkyvät, kun näppäintä pidetään painettuna"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Säädä viivettä ennen näppäimen toistoa"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Näppäimen toisto"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Viive ennen toistoa"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Valitse, miten kauan voit pitää painiketta painettuna ennen kuin se alkaa toistaa"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Valitse, miten kauan painiketta on pidettävä painettuna, jotta se alkaa toistaa"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Toistonopeus"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Valitse, kuinka nopeasti toistetut merkit lisätään, kun näppäintä pidetään painettuna"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Oletus"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Valitse, kuinka nopeasti painike toistetaan alkuperäisen viiveen jälkeen"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Tekstitykset"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Videon päällä näytettävän tekstityksen asetukset"</string>
     <string name="captions_display" msgid="2598662495450633375">"Näyttö"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Etsi kaukosäädin"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Jos et löydä Google TV ‑kaukosäädintä, etsi se toistamalla äänimerkki"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Google TV:ssä on painike, jota painamalla kaukosäädin toistaa äänen 30 sekunnin ajan. Tämä toimii vain tuetuilla Google TV ‑kaukosäätimillä.\n\nLopeta äänen toistaminen painamalla kaukosäätimestä mitä tahansa painiketta."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Kun asetus on päällä, voit käyttää laitteen painiketta ja löytää kaukosäätimen sen toistaman äänen perusteella. Kun asetus on pois päältä, painike ei toimi. Voit kuitenkin käyttää Löydä kaukosäädin ‑ominaisuutta muilla tavoilla."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Toista äänimerkki"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Taustavalaisutila"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Säädä valaisua painamalla kaukosäätimen painikkeita."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Tuetuilla Google TV ‑kaukosäätimillä voit painaa kaukosäätimen painiketta, joka aktivoi taustavalaisun."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Äänenvoimakkuus (%1$s)"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Voit muuttaa Assistantin äänenvoimakkuutta kaiuttimella (%1$s)"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Vaikuttaa vain äänenvoimakkuuteen laitteella (%1$s), ei TV:llä"</string>

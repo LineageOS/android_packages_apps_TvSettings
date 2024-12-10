@@ -16,12 +16,12 @@
 
 package com.android.tv.settings.connectivity;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 
 import com.android.settingslib.core.lifecycle.ObservableDialogFragment;
 import com.android.tv.settings.R;
@@ -60,7 +60,8 @@ public class NetworkRequestErrorDialogFragment extends ObservableDialogFragment 
             msgType = (ERROR_DIALOG_TYPE) getArguments().getSerializable(DIALOG_TYPE);
         }
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getContext(),
+                android.R.style.Theme_DeviceDefault_Dialog_Alert);
         if (msgType == ERROR_DIALOG_TYPE.TIME_OUT) {
             builder.setMessage(R.string.network_connection_timeout_dialog_message)
                     .setPositiveButton(R.string.network_connection_timeout_dialog_ok,

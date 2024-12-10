@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Ondoa pendekezo hili"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Utambuzi wa \"OK Google\""</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Zungumza na programu yako ya Mratibu wa Google wakati wowote"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (Kisoma skrini)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack ni kipengele cha ufikivu cha kisoma skrini kinachosaidia watumiaji wenye matatizo ya kuona kwa kusoma kwa sauti maandishi yaliyo kwenye skrini, vipengee vya menyu na vipengee vingine. Kinaweza pia kuwekewa mipangilio ili kitumike kupitia Njia ya Mkato ya Ufikivu."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Kifaa"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Mapendeleo"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Kidhibiti cha Mbali na Vifaa vya Ziada"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Maandishi yenye utofautishaji bora"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Herufi nzito"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Vitufe vinavyoruka"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Chagua wakati unaopendelea"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Kidhibiti cha mbali hupuuza matukio ya kubonyeza vitufe kwa kurudia"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Puuza matukio ya kubonyeza haraka na kwa kurudia bila kukusudia. Unaweza kurekebisha kipindi cha muda ambacho itapuuza matukio ya kubonyeza"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Muda : Chaguomsingi"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Puuza matukio ya kubonyeza kwa kurudia katika kipindi chaguomsingi baada ya tukio la awali la kubonyeza"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Muda : sekunde 0.5"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Rekebisha kipindi cha muda hadi sekunde 0.5 ambapo matukio ya kubonyeza vitufe kwa kurudia yatapuuzwa"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Muda : sekunde 1"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Rekebisha kipindi cha muda hadi sekunde 1 ambapo matukio ya kubonyeza vitufe kwa kurudia yatapuuzwa"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Muda : sekunde 2"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Rekebisha kipindi cha muda hadi sekunde 2 ambapo matukio ya kubonyeza vitufe vya kurudia yatapuuzwa"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Usahihishaji wa rangi"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Tumia usahihishaji wa rangi"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Hali ya Rangi"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Njia ya mkato ya ufikivu"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Washa njia ya mkato ya ufikivu"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Huduma ya njia ya mkato"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Ufikivu wa kibodi"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Ukiwasha njia ya mkato, unaweza kufungua kipengele cha ufikivu kwa kubonyeza kitufe cha \'nyuma\' na \'chini\' pamoja kwa sekunde 3."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Wakati wa kuchukua hatua"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Kuchukua hatua (Muda wa Ufikivu umekwisha)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Kuweka muda"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Mapendeleo ya kuweka muda hayatumiki katika programu zote."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Wakati wa kuchukua hatua (kuisha kwa muda wa ufikivu)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Rekebisha muda wa ujumbe unaokuomba uchukue hatua"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Chagua muda ambao ungependa kuonyesha ujumbe unaokuomba uchukue hatua"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Muda : sekunde 2–3"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Huweka muda chaguomsingi wa kushughulikia vitendo vilivyo kwenye skrini (sekunde 2–3)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Kukawia kurudia kitendo cha kitufe"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Weka mipangilio ya kukawia kabla ya kurudia herufi wakati kitufe kinabonyezwa na kushikiliwa"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Rekebisha muda wa kukawia kabla ya kurudia kitendo cha kitufe"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Kurudia kitendo cha kitufe"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Kukawia kabla ya kurudia"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Weka mapendeleo ya muda wa kushikilia kitufe kabla hakijaanza kurudia kitendo"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Weka mapendeleo ya muda wa kushikilia kitufe kabla kitendo kianze kurudiwa"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Kasi ya kurudia"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Weka mipangilio ya kasi ya kurudia herufi wakati kitufe kinabonyezwa na kushikiliwa"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Chaguomsingi"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Dhibiti kasi ya kitufe kurudia kitendo baada ya kukawia mwanzoni"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Manukuu"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Mipangilio ya kugaga maandishi ya manukuu kwenye video"</string>
     <string name="captions_display" msgid="2598662495450633375">"Kuonyeshwa"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Tafuta kidhibiti changu cha mbali"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Cheza sauti ili upate kilipo kidhibiti chako cha mbali cha Google TV ikiwa kimepotea"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Kuna kitufe kwenye Google TV yako unachoweza kukibofya ili kucheza sauti kwenye kidhibiti chako cha mbali kwa sekunde 30. Kipengele hiki kinafanya kazi tu kwenye vidhibiti vya mbali vya Google TV vinavyotumika.\n\nIli uzime sauti, bonyeza kitufe chochote kwenye kidhibiti chako cha mbali."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Ukiwasha, unaweza kutumia kitufe kilicho kwenye kifaa chako kucheza sauti ili utambue mahali kilipo kidhibiti chako cha mbali. Ukizima, kitufe hiki hakitafanya kazi. Bado utaweza kutumia kipengele cha Tafuta kidhibiti changu cha mbali kupitia mbinu nyinginezo."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Cheza sauti"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Hali ya Mwangaza wa Skrini"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Vitufe vilivyo kwenye kidhibiti cha mbali kuwaka kila unapobonyeza."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Kwenye vidhibiti vya mbali vya Google TV vinavyotumika, kubonyeza kitufe kwenye vidhibiti vya mbali huwasha mwangaza wa skrini."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Kiwango cha sauti ya %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Unaweza kudhibiti kiwango cha sauti ya Kiratibu kwenye spika ya %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Huathiri tu kiwango cha sauti kwenye kifaa cha %1$s, si kwenye televisheni"</string>

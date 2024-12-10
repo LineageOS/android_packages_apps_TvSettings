@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"تجویز مسترد کریں"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"Ok Google\" کا پتہ لگانا"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Google اسسٹنٹ سے کسی بھی وقت بات کریں"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"‫Talkback (سکرین ریڈر)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"‫TalkBack ایک اسکرین ریڈر کی ایکسیسبیلٹی خصوصیت ہے جو بصارت سے محروم صارفین کی اسکرین پر موجود ٹیکسٹ، مینو آئٹمز اور دیگر عناصر کو بلند آواز سے پڑھ کر ان کی مدد کرتی ہے۔ اسے ایکسیسبیلٹی شارٹ کٹ کے ساتھ استعمال کرنے کے لیے بھی سیٹ اپ کیا جا سکتا ہے۔"</string>
     <string name="header_category_device" msgid="3023893663454705969">"آلہ"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"ترجیحات"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"ریموٹ اور لوازمات"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"اعلی تناسب امتزاج والا ٹیکسٹ"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"بولڈ ٹیکسٹ"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"باؤنس کلیدیں"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"ترجیحی وقت کا انتخاب کریں"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"ریموٹ بار بار کلید کو دبائے جانے کو نظر انداز کرتا ہے"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"حادثاتی طور پر تیز، بار بار بٹن دبانے کو نظر انداز کریں۔ آپ اس وقت کے وقفے کو ایڈجسٹ کر سکتے ہیں جس کے اندر دبانے کو نظر انداز کیا جاتا ہے"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"ٹائمنگ: ڈیفالٹ"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"ابتدائی دبائے جانے کے بعد ڈیفالٹ وقفہ کے لیے بار بار دبائے جانے کو نظر انداز کریں"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"ٹائمنگ: 0.5 سیکنڈ"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"اس ٹائمنگ وقفہ کو 0.5 سیکنڈ تک ایڈجسٹ کریں جس میں بار بار کلید کو دبائے جانے کو نظر انداز کیا جاتا ہے"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"ٹائمنگ: 1 سیکنڈ"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"اس ٹائمنگ وقفہ کو 1 سیکنڈ تک ایڈجسٹ کریں جس میں بار بار کلید کو دبائے جانے کو نظر انداز کیا جاتا ہے"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"ٹائمنگ: 2 سیکنڈ"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"اس ٹائمنگ وقفہ کو 2 سیکنڈ تک ایڈجسٹ کریں جس میں بار بار کلید کو دبائے جانے کو نظر انداز کیا جاتا ہے"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"رنگ کی اصلاح"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"رنگ کی اصلاح استعمال کریں"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"رنگ کی وضع"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"ایکسیسبیلٹی شارٹ کٹ"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"ایکسیسبیلٹی شارٹ کٹ کو فعال کریں"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"شارٹ کٹ سروس"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"کی بورڈ ایکسیسبیلٹی"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"شارٹ کٹ آن ہونے پر، ایکسیسبیلٹی خصوصیت شروع کرنے کے لیے آپ ییچھے اور نیچے کے دونوں بٹنز کو 3 سیکنڈ تک دبا سکتے ہیں۔"</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"کارروائی کرنے کا وقت"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"کارروائی کرنے کا وقت (ایکسیسبیلٹی ٹائم آؤٹ)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"ٹائمنگ"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"وقت کی اس ترجیح کو سبھی ایپس سپورٹ نہیں کرتی ہیں۔"</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"کارروائی کرنے کا وقت (ایکسیسبیلٹی ٹائم آؤٹ)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"ان پیغامات کا دورانیہ ایڈجسٹ کریں جن پر کارروائی کی ضرورت ہے"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"ان عارضی پیغامات کو دکھانے کی مدت منتخب کریں جو آپ سے کارروائی کرنے کا مطالبہ کرتے ہیں"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"ٹائمنگ: 2 سے 3 سیکنڈ"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"آن اسکرین کارروائیوں کا جواب دینے کیلئے ڈیفالٹ وقت سیٹ کرتا ہے (2 سے 3 سیکنڈ)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"کلید کے دہرانے میں تاخیر"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"کسی کلید کو دبائے رکھنے پر دہرائے جانے والے حروف ظاہر ہونے سے پہلے تاخیر کو کنفیگر کریں"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"کلید کو دہرانے سے پہلے تاخیر کو ایڈجسٹ کریں"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"دہرانے کی کلید"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"دہرانے سے پہلے تاخیر"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"حسب ضرورت بنائیں کہ آپ بٹن کو کتنی دیر تک دبا کر رکھ سکتے ہیں اس سے پہلے کہ یہ دہرانا شروع ہو"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"بٹن کو دبائے رکھنے کی مدت کو حسب ضرورت بنائیں جس کے بعد یہ دہرانا شروع ہوگا"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"دہرائے جانے کی شرح"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"کسی کلید کو دبائے رکھنے پر کتنی تیزی سے دہرائے جانے والے حروف داخل ہونے چاہیے یہ سیٹ کریں"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"ڈیفالٹ"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"کنٹرول کریں کہ ابتدائی تاخیر کے بعد بٹن کتنی جلدی دہرایا جانا چاہیے"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"کیپشنز"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"ویڈیو پر سب ٹائٹلز ٹیسکٹ اوورلے کیلئے ترتیبات"</string>
     <string name="captions_display" msgid="2598662495450633375">"ڈسپلے"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"میرا ریموٹ تلاش کریں"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"اگر آپ کا Google TV کا ریموٹ گم ہو گیا ہے تو اس کا پتا لگانے کے لیے آواز چلائیں"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"آپ کے Google TV پر ایک بٹن ہے جسے آپ 30 سیکنڈ تک اپنے ریموٹ پر آواز چلانے کے لیے دبا سکتے ہیں۔ یہ صرف تعاون یافتہ Google TV کے ریموٹ کنٹرولز کے ساتھ کام کرتا ہے۔\n\nآواز کو روکنے کے لیے، اپنے ریموٹ پر موجود کسی بھی بٹن کو دبائیں۔"</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"آن ہونے پر، آپ اپنے ریموٹ کا پتا لگانے کے لیے آواز چلانے کی خاطر اپنے آلے پر بٹن کا استعمال کر سکتے ہیں۔ آف ہونے پر یہ بٹن کام نہیں کرے گا۔ آپ اب بھی دیگر طریقوں سے میرا ریموٹ تلاش کریں کا استعمال کر سکیں گے۔"</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"آواز چلائیں"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"بیک لائٹ موڈ"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"ریموٹ کنٹرول پر موجود بٹنز کو ہر بار دبانے سے جلتی ہے۔"</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"تعاون یافتہ Google TV ریموٹس پر، ریموٹس پر موجود بٹن کو دبانے سے بیک لائٹ جل جاتی ہے۔"</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s والیوم"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"آپ %1$s اسپیکر پر اسسٹنٹ والیوم کو کنٹرول کر سکتے ہیں"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"صرف %1$s آلہ پر والیوم کو متاثر کرتا ہے، TV پر نہیں"</string>

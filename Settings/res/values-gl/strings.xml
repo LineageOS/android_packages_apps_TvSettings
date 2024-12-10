@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Ignorar a suxestión"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Detección de \"Ok Google\""</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Fala co Asistente de Google en calquera momento"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (lector de pantalla)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack é un lector de pantalla, é dicir, unha función de accesibilidade para persoas con discapacidade visual que le en voz alta os elementos que aparecen na pantalla (por exemplo, os dos menús, o texto etc.). Tamén se pode configurar para usala co atallo de accesibilidade."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Dispositivo"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Preferencias"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Mando a distancia e accesorios"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Texto de alto contraste"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Texto en grosa"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Teclas de rebote"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Escolle o tempo que prefiras"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"O mando a distancia ignora as presións repetidas de botóns"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Ignora as presións de botóns accidentais, rápidas e repetidas. Podes axustar o intervalo de tempo no que se ignoran as presións"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Tempo: Predeterminado"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Ignora as presións repetidas durante o intervalo predeterminado tras a primeira"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Tempo: 0,5 segundos"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Axusta a 0,5 segundos o intervalo de tempo no que se ignoran as presións de botóns repetidas"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Tempo: 1 segundo"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Axusta a 1 segundo o intervalo de tempo no que se ignoran as presións de botóns repetidas"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Tempo: 2 segundos"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Axusta a 2 segundos o intervalo de tempo no que se ignoran as presións de botóns repetidas"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Corrección da cor"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Usar corrección da cor"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Modo de cor"</string>
@@ -704,16 +718,29 @@
     <string name="palette_color_green" msgid="4904783063036825668">"Verde"</string>
     <string name="palette_color_cyan" msgid="3212217287628948203">"Ciano"</string>
     <string name="palette_color_blue" msgid="8836682634988540630">"Azul"</string>
-    <string name="palette_color_purple" msgid="2123828754639683555">"Violeta"</string>
+    <string name="palette_color_purple" msgid="2123828754639683555">"Púrpura"</string>
     <string name="palette_color_gray" msgid="4014534773994261194">"Gris"</string>
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Atallo de accesibilidade"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Activar atallo de accesibilidade"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Servizo do atallo"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Accesibilidade do teclado"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Cando o atallo estea activado, podes premer simultaneamente os botóns Atrás e Abaixo durante 3 segundos para iniciar unha función de accesibilidade."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Tempo para actuar"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Tempo para actuar (accesibilidade)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Tempo"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Non todas as aplicacións admiten este tempo."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Tempo para realizar algunha acción (accesibilidade)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Axusta a duración das mensaxes nas que se require algunha acción"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Escolle o tempo durante o que se mostran as mensaxes temporais nas que se che pide que realices algunha acción"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Tempo: 2-3 segundos"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Determina o límite de tempo para responder ás accións solicitadas (2-3 s)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Atraso na repetición de teclas"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Configura o atraso previo á aparición dos caracteres repetidos cando se mantén premida unha tecla"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Axusta o atraso previo á repetición de teclas"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Repetición de teclas"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Atraso previo á repetición"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Personaliza canto tempo podes manter premido un botón antes de que comece a repetición"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Personaliza canto tempo se debe manter premido un botón antes de que comece a repetición"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Índice de repetición"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Define a velocidade coa que se insiren os caracteres repetidos cando se mantén premida unha tecla"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Predeterminada"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Controla con que rapidez se repite un botón despois do atraso inicial"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Subtítulos"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Configuración para a superposición de texto de subtítulos en vídeo"</string>
     <string name="captions_display" msgid="2598662495450633375">"Pantalla"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Localizar o mando a distancia"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Se non dás atopado o mando a distancia de Google TV, fai que emita un son para localizalo"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"En Google TV tes un botón que podes premer para reproducir un son no mando a distancia durante 30 segundos. Esta acción só se pode levar a cabo con mandos a distancia de Google TV que admitan esta opción.\n\nPreme calquera botón do mando para que deixe de soar."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Cando a función está activada, podes usar o botón do dispositivo para reproducir un son que che permita atopar o mando a distancia. Cando está desactivada, este botón non funciona. Poderás seguir utilizando Localizar o mando a distancia a través doutros métodos."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Reproducir son"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Modo de retroiluminación"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Iluminación dos botóns do mando a distancia con cada pulsación."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Nos mandos a distancia de Google TV compatibles, activarase a retroiluminación ao premer o botón."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Volume (%1$s)"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Podes controlar o volume do Asistente en %1$s altofalante"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Só lle afecta ao volume de %1$s dispositivo, non ao da televisión"</string>

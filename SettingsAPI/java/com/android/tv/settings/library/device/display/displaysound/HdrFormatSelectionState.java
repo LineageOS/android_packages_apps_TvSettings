@@ -20,13 +20,11 @@ import static android.view.Display.HdrCapabilities.HDR_TYPE_DOLBY_VISION;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HDR10;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HDR10_PLUS;
 import static android.view.Display.HdrCapabilities.HDR_TYPE_HLG;
-import static android.view.Display.HdrCapabilities.HDR_TYPE_INVALID;
 
 import static com.android.tv.settings.library.ManagerUtil.STATE_HDR_FORMAT_SELECTION;
 
 import android.content.Context;
 import android.hardware.display.DisplayManager;
-import android.hardware.display.HdrConversionMode;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Display;
@@ -41,7 +39,6 @@ import com.android.tv.settings.library.util.ResourcesUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -94,16 +91,8 @@ public class HdrFormatSelectionState extends PreferenceControllerState {
         mDeviceHdrTypes = toSet(getDeviceSupportedHdrTypes());
         mUserDisabledHdrTypes = toSet(mDisplayManager.getUserDisabledHdrTypes());
 
-        if (mDisplayManager
-                .getHdrConversionModeSetting()
-                .equals(new HdrConversionMode(
-                        HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_INVALID))) {
-            // Disable hdrTypes when preferring "Force SDR"
-            mDisplayReportedHdrTypes = Collections.emptySet();
-        } else {
-            Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
-            mDisplayReportedHdrTypes = toSet(display.getReportedHdrTypes());
-        }
+        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
+        mDisplayReportedHdrTypes = toSet(display.getReportedHdrTypes());
     }
 
     @Override

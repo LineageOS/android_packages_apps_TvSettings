@@ -17,13 +17,11 @@
 package com.android.tv.settings;
 
 import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
-
 import static com.android.tv.settings.overlay.FlavorUtils.ALL_FLAVORS_MASK;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
+import android.os.SystemClock;
 import android.transition.Scene;
 import android.transition.Slide;
 import android.transition.Transition;
@@ -48,10 +46,11 @@ public abstract class TvSettingsActivity extends FragmentActivity {
     private static final String SETTINGS_FRAGMENT_TAG =
             "com.android.tv.settings.MainSettings.SETTINGS_FRAGMENT";
 
-    private static final int UI_UPDATE_DELAY_MS = 200;
     private static final int REQUEST_CODE_STARTUP_VERIFICATION = 1;
+    private static final String EXTRA_START_ACTIVITY_ELAPSED_REALTIME =
+            "extra_start_activity_elapsed_realtime";
 
-    private Handler mHandler = new Handler(Looper.getMainLooper());
+    private boolean mReportedStartupLatency;
 
     public Fragment getVisibleFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -227,8 +226,21 @@ public abstract class TvSettingsActivity extends FragmentActivity {
     }
 
     @Override
-    public void onPause() {
-        super.onPause();
-        mHandler.removeCallbacksAndMessages(null);
+    protected void onResume() {
+        super.onResume();
+        reportStartupLatency();
+    }
+
+    private void reportStartupLatency() {
+        if (mReportedStartupLatency) {
+            return;
+        }
+        mReportedStartupLatency = true;
+        long callerElapsedRealtime = getIntent().getLongExtra(
+                EXTRA_START_ACTIVITY_ELAPSED_REALTIME, -1L);
+        if (callerElapsedRealtime >= 0) {
+            Log.i(TAG, "Startup latency for " + getIntent().getAction() + " is "
+                    + (SystemClock.elapsedRealtime() - callerElapsedRealtime));
+        }
     }
 }

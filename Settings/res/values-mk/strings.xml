@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Отфрли го предлогот"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Откривање на „OK Google“"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Разговарајте со „Помошникот на Google“ кога било"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (читач на екран)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack е функција за пристапност на читачот на екранот којашто им помага на корисниците со попречен вид со читање на текстот на екранот, ставките на менито и другите елементи наглас. Може да се постави и да се користи со кратенка за пристапност."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Уред"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Претпочитани вредности"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Далечински управувач и додатоци"</string>
@@ -88,8 +90,8 @@
     <string name="connectivity_summary_wifi_disabled" msgid="7819225159680467324">"Wi-Fi е исклучено"</string>
     <string name="unplug_ethernet_to_use_wifi" msgid="5078499991407069670">"Исклучете го етернетот за да користите Wi-Fi"</string>
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Скенирањето е секогаш достапно"</string>
-    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Дозволи услугата за локација на Google и други апликации да скенираат за мрежи, дури и кога Wi-Fi е исклучена"</string>
-    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Скенирањето е секогаш достапно, дозволете услугата според локација на Google и други апликации да скенираат мрежи, дури и кога Wi-Fi е исклучено"</string>
+    <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Дозволи локациската услуга на Google и други апликации да скенираат за мрежи, дури и кога Wi-Fi е исклучена"</string>
+    <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Скенирањето е секогаш достапно, дозволете локациската услуга на Google и други апликации да скенираат мрежи, дури и кога Wi-Fi е исклучено"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Поврзете се на мрежа"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Дијагностика на мрежа"</string>
@@ -110,7 +112,7 @@
     <string name="device_surround_sound" msgid="1889436002598316470">"Опкружувачки звук"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"Системски звуци"</string>
     <string name="device_apps" msgid="2134756632245008919">"Апликации"</string>
-    <string name="device_storage" msgid="8540243547121791073">"Капацитет"</string>
+    <string name="device_storage" msgid="8540243547121791073">"Простор"</string>
     <string name="device_reset" msgid="6115282675800077867">"Ресетирање на фабричките поставки"</string>
     <string name="device_backup_restore" msgid="3634531946308269398">"Бекап и враќање"</string>
     <string name="device_factory_reset" msgid="1110189450013225971">"Ресетирање фабрички податоци"</string>
@@ -531,7 +533,7 @@
     <string name="wifi_empty_list_user_restricted" msgid="7326314737931342236">"Немате дозвола за промена на Wi-Fi мрежата."</string>
     <string name="title_ok" msgid="6500452958848127145">"Во ред"</string>
     <string name="title_cancel" msgid="2337143367016419016">"Откажи"</string>
-    <string name="storage_title" msgid="6637715914885228193">"Капацитет"</string>
+    <string name="storage_title" msgid="6637715914885228193">"Простор"</string>
     <string name="storage_available" msgid="8860901789290434209">"Достапна"</string>
     <string name="storage_size" msgid="5517261387579171381">"Вкупно простор: <xliff:g id="TOTAL_SPACE">%1$s</xliff:g>"</string>
     <string name="storage_calculating_size" msgid="5716281278843281044">"Пресметување..."</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Текст со висок контраст"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Текст во болд"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Копчиња за игнорирање повторени притискања"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Изберете го претпочитаното време"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Далечинското игнорира повторени притискања на копчињата"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Игнорирање случајни брзи, повторени притискања на копчињата. Може да го приспособите временскиот интервал во кој се игнорираат притискањата"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Временски интервал: стандарден"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Игнорирај ги повторените притискања за стандардниот интервал по првичното притискање"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Временски интервал: 0,5 секунди"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Приспособете го временскиот интервал на 0,5 секунди до кој се игнорираат повторените притискања на копчињата"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Временски интервал: 1 секунда"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Приспособете го временскиот интервал на 1 секунда до кој се игнорираат повторените притискања на копчињата"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Временски интервал: 2 секунди"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Приспособете го временскиот интервал на 2 секунди до кој се игнорираат повторените притискања на копчињата"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Корекција на боите"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Користи „Корекција на боите“"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Режим во боја"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Кратенка за пристапност"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Овозможи кратенка за пристапност"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Услуга со кратенка"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Пристапност до тастатурата"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Кога кратенката е вклучена, може да ги притиснете копчето за назад и за надолу во времетраење од 3 секунди за да стартувате функција за пристапност."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Време за преземање дејство"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Време за преземање дејство (истек на пристапноста)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Тајминг"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Поставкава за тајминг не е поддрж. од сите аплик."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Време за преземање дејство (истек на пристапноста)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Приспособете го времетраењето на пораките за коишто е потребно дејство"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Изберете колку долго да се прикажуваат привремените пораки што од вас бараат да преземете дејство"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Време: 2 – 3 секунди"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Го поставува станд. време за одговор на дејствата на екранот (2 – 3 сек.)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Доцнење на повторување на копче"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Конфигурирајте го доцнењето пред да се појават повторените знаци кога ќе се задржи дадено копче"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Приспособете го доцнењето пред повторувањето на копче"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Повторување на копче"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Доцнење пред повторување"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Приспособете колку време може да се задржи дадено копче пред да започне да се повторува"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Приспособете го времетраењето на задржувањето дадено копче по што започнува да се повторува"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Стапка на повторување"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Поставете колку брзо да се внесуваат повторените знаци кога ќе се задржи дадено копче"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Стандардно"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Контролирајте колку брзо да се повторува дадено копче по првичното доцнење"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Затворени титлови"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Поставки за затворени слоеви од титлови на видео"</string>
     <string name="captions_display" msgid="2598662495450633375">"Приказ"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Најди го мојот далечински управувач"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Репродуцирајте звук за да го лоцирате далечинскиот управувач на Google TV ако е изгубен"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"На вашата Google TV има копче што може да го притиснете за да се пушти звук на далечинскиот управувач 30 секунди. Ова функционира само со поддржани далечински управувачи на Google TV.\n\nЗа да го сопрете звукот, притиснете некое копче на далечинскиот управувач."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Кога е вклучено, може да го користите копчето на вашиот уред за да репродуцирате звук за да го лоцирате далечинското. Кога е исклучено, копчево не функционира. Сè уште ќе може да ја користите „Најди го далечинското“ преку други методи."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Репродуцирај звук"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Режим на заднинско осветлување"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Светење на копчињата на далечинското при секое притискање."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"На поддржаните далечински за Google TV, со притискање на копчето на далечинското се активира заднинското осветлување."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Јачина на звук: %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Може да ја контролирате јачината на звукот на „Помошникот“ на звучникот на %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Влијае само на јачината на звукот на уред %1$s, не на телевизор"</string>

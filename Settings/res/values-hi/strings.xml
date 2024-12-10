@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"सुझाव खारिज करें"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"OK Google\" के ज़रिए पता लगाना"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Google Assistant से कभी भी बात करें"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (स्क्रीन रीडर)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack, स्क्रीन रीडर की सुलभता सुविधा है. यह स्क्रीन पर दिख रहे टेक्स्ट, मेन्यू आइटम, और अन्य एलिमेंट को तेज़ आवाज़ में सुनाने की सुविधा का इस्तेमाल करके दृष्टिबाधित उपयोगकर्ताओं की मदद करती है. इसे सुलभता सुविधा के शॉर्टकट के साथ इस्तेमाल करने के लिए भी सेट अप किया जा सकता है."</string>
     <string name="header_category_device" msgid="3023893663454705969">"डिवाइस"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"प्राथमिकताएं"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"रिमोट और ऐक्सेसरी"</string>
@@ -298,7 +300,7 @@
     <string name="system_inputs" msgid="5552840337357572096">"इनपुट"</string>
     <string name="system_inputs_devices" msgid="2158421111699829399">"इनपुट और डिवाइस"</string>
     <string name="system_home_theater_control" msgid="6228949628173590310">"होम थिएटर से जुड़े नियंत्रण"</string>
-    <string name="system_developer_options" msgid="8480844257066475479">"डेवलपर विकल्प"</string>
+    <string name="system_developer_options" msgid="8480844257066475479">"डेवलपर के लिए सेटिंग और टूल"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"कोई नहीं"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"इस्तेमाल और निदान"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"कोई भी डिवाइस व्यवस्थापक ऐप्लिकेशन उपलब्ध नहीं है"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ज़्यादा कंट्रास्ट वाला टेक्स्ट"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"टेक्स्ट को बोल्ड करने की सुविधा"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"बाउंस बटन"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"अपनी पसंद के मुताबिक समय चुनें"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"रिमोट, बटन को बार-बार दबाने को अनदेखा करता है"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"अनजाने में तेज़ी से और बार-बार बटन दबाने की कार्रवाइयों को अनदेखा करें. आपके पास, उस समयावधि को अडजस्ट करने का विकल्प है जिसके बीच बटन दबाने पर कोई कार्रवाई नहीं होती"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"समय : डिफ़ॉल्ट"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"पहली बार बटन दबाने के बाद, डिफ़ॉल्ट इंटरवल के लिए बार-बार दबाने को अनदेखा करें"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"समय : 0.5 सेकंड"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"टाइमिंग इंटरवल को 0.5 सेकंड पर सेट करें, ताकि इस समयावधि में बटन को बार-बार दबाने पर उसे अनदेखा किया जा सके"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"समय : 1 सेकंड"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"टाइमिंग इंटरवल को 1 सेकंड पर सेट करें, ताकि इस समयावधि में बटन को बार-बार दबाने पर उसे अनदेखा किया जा सके"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"समय : 2 सेकंड"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"टाइमिंग इंटरवल को 2 सेकंड पर सेट करें, ताकि इस समयावधि में बटन को बार-बार दबाने पर उसे अनदेखा किया जा सके"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"रंग में सुधार करने की सुविधा"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"रंग में सुधार करें"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"कलर मोड"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"सुलभता सुविधा का शॉर्टकट"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"सुलभता सुविधा का शॉर्टकट चालू करें"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"शॉर्टकट सेवा"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"कीबोर्ड की सुलभता सुविधा"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"शॉर्टकट इस्तेमाल करने के दौरान, आप \'वापस जाएं\' और \'नीचे जाएं\' बटन को एक साथ 3 सेकंड तक दबा के, सुलभता सुविधा शुरू कर सकते हैं."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"कार्रवाई करने के लिए समय"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"कार्रवाई करने का समय (सुलभता टाइम आउट)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"समय"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"समय की यह सेटिंग सभी ऐप के लिए उपलब्ध नहीं है."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"कार्रवाई करने का समय (सुलभता टाइम आउट)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"जिन मैसेज के लिए कार्रवाई करने की ज़रूरत है उनके दिखने का समय तय करें"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"चुनें कि कार्रवाई करने का मैसेज देने वाले प्रॉम्प्ट कितनी देर तक दिखें"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"समय : 2 से 3 सेकंड"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"इससे कार्रवाई वाले मैसेज का जवाब देने के लिए डिफ़ॉल्ट समय सेट होता है (2 से 3 सेकंड)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"कैरेक्टर दोहराने में लगने वाला समय"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"यह तय करें कि कीबोर्ड के किसी बटन को दबाकर रखने पर, उसके कैरेक्टर को दोहराने में कितना समय लगेगा"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"कीबोर्ड कैरेक्टर को दोहराने में लगने वाले समय में बदलाव करें"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"कैरेक्टर दोहराने की सेटिंग"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"कीबोर्ड कैरेक्टर दोहराने में लगने वाला समय"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"अपनी पसंद के मुताबिक यह तय करें कि कीबोर्ड के किसी बटन को कितने समय तक दबाकर रखने से स्क्रीन पर कैरेक्टर दोहराया जाएगा"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"अपनी पसंद के मुताबिक यह तय करें कि कीबोर्ड के किसी बटन को कितने समय तक दबाकर रखने के बाद, स्क्रीन पर उसका कैरेक्टर दोहराया जाएगा"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"दोहराने की दर"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"यह तय करें कि किसी बटन को दबाकर रखने से, उसके कैरेक्टर को कितनी तेज़ी से दोहराया जाता है"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"डिफ़ॉल्ट"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"यह कंट्रोल करें कि शुरुआती देरी के बाद, बटन के कैरेक्टर को कितनी जल्दी दोहराए जाएगा"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"कैप्शन"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"वीडियो पर बंद अनुशीर्षक देने वाले लेख ओवरले की सेटिंग"</string>
     <string name="captions_display" msgid="2598662495450633375">"प्रदर्शन"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"मेरा रिमोट ढूंढें"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Google TV रिमोट खो जाने पर, उसका पता लगाने के लिए साउंड चलाएं"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"आपके Google TV पर एक ऐसा बटन होता है जिसे दबाने से रिमोट पर 30 सेकंड के लिए आवाज़ चलाई जा सकती है. ऐसा सिर्फ़ उन Google TV के रिमोट कंट्रोल पर किया जा सकता है जिन पर यह सुविधा काम करती है.\n\nसाउंड बंद करने के लिए, रिमोट के किसी भी बटन को दबाएं."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"सेटिंग चालू होने पर, अपने डिवाइस पर मौजूद बटन को दबाकर एक साउंड चलाया जा सकेगा, ताकि टीवी के रिमोट को ढूंढा जा सके. सेटिंग बंद होने पर यह बटन काम नहीं करेगा. हालांकि, \'मेरा रिमोट ढूंढो\' सुविधा का इस्तेमाल अन्य तरीकों से अब भी किया जा सकेगा."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"साउंड चलाएं"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"बैकलाइट मोड"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"रिमोट कंट्रोल में मौजूद बटन को हर बार दबाने पर बैकलाइट जलती है."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Google TV के जिन रिमोट पर यह सुविधा काम करती है उन पर बटन दबाने से बैकलाइट जलती है."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s आवाज़"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s स्पीकर पर Assistant की आवाज़ को कंट्रोल किया जा सकता है"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"इससे सिर्फ़ %1$s डिवाइस की आवाज़ पर असर पड़ता है , टीवी पर नहीं"</string>

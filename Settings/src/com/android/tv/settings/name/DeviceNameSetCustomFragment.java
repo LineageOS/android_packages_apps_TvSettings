@@ -124,6 +124,7 @@ public class DeviceNameSetCustomFragment extends GuidedStepSupportFragment {
             getActivity().finish();
             return super.onGuidedActionEditedAndProceed(action);
         } else {
+            AccessibilityHelper.dismissKeyboard(getActivity(), getView());
             popBackStackToGuidedStepSupportFragment(
                     DeviceNameSetCustomFragment.class, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             return GuidedAction.ACTION_ID_CANCEL;

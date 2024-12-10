@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"பரிந்துரையை நிராகரி"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"OK Google\"ஐக் கண்டறிதல்"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"எந்தநேரத்திலும், Google அசிஸ்டண்ட்டுடன் பேசுங்கள்"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (ஸ்கிரீன் ரீடர்)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack என்பது ஸ்கிரீன் ரீடர் மாற்றுத்திறன் அம்சமாகும். திரையில் உள்ள வார்த்தைகள், மெனு விருப்பங்கள், பிற உறுப்புகள் ஆகியவற்றை உரக்கப் படிப்பதன் மூலம் பார்வைக் குறைபாடுள்ளவர்களுக்கு இது உதவுகிறது. மாற்றுத்திறன் வசதிக்கான ஷார்ட்கட் மூலம் பயன்படுத்தவும் இதை அமைக்கலாம்."</string>
     <string name="header_category_device" msgid="3023893663454705969">"சாதனம்"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"விருப்பங்கள்"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"ரிமோட் &amp; துணைக்கருவிகள்"</string>
@@ -53,7 +55,7 @@
     <string name="sound_category_title" msgid="7899816751041939518">"ஒலி"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"ஆப்ஸ்"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"சாதன விருப்பத்தேர்வுகள்"</string>
-    <string name="accessibility_category_title" msgid="1552664829936369592">"அணுகல்தன்மை"</string>
+    <string name="accessibility_category_title" msgid="1552664829936369592">"மாற்றுத்திறன் வசதி"</string>
     <string name="remotes_and_accessories_category_title" msgid="4795119810430255047">"ரிமோட்கள் &amp; துணைக்கருவிகள்"</string>
     <string name="display_and_sound_category_title" msgid="9203309625380755860">"டிஸ்ப்ளேவும் சத்தமும்"</string>
     <string name="help_and_feedback_category_title" msgid="7036505833991003031">"உதவி &amp; கருத்து"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"அதிக ஒளி மாறுபாடுடைய உரை"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"தடிமன் எழுத்துகள்"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"பவுன்ஸ் பட்டன்கள்"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"விருப்பமான நேரத்தைத் தேர்வுசெய்யும்"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"தொடர்ச்சியாக பட்டன் அழுத்தப்படுவதை ரிமோட் புறக்கணிக்கும்"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"தற்செயலான விரைவு அழுத்தங்கள், தொடர்ச்சியாக பட்டன் அழுத்தப்படுவதைப் புறக்கணிக்கும். அழுத்தங்கள் புறக்கணிக்கப்படும் நேர இடைவெளியை நீங்கள் சரிசெய்யலாம்"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"நேரம் : இயல்பு"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"முதல் அழுத்தத்திற்குப் பிறகு தொடர்ச்சியாக பட்டன் அழுத்தப்படுவது இயல்பு இடைவெளியில் புறக்கணிக்கப்படும்"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"நேரம் : 0.5 வினாடிகள்"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"தொடர்ச்சியாக பட்டன் அழுத்தப்படுவதைப் புறக்கணிக்கும் நேர இடைவெளியை 0.5 வினாடிகளாக மாற்றவும்"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"நேரம் : 1 வினாடி"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"தொடர்ச்சியாக பட்டன் அழுத்தப்படுவதைப் புறக்கணிக்கும் நேர இடைவெளியை 1 வினாடியாக மாற்றவும்"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"நேரம் : 2 வினாடிகள்"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"தொடர்ச்சியாக பட்டன் அழுத்தப்படுவதைப் புறக்கணிக்கும் நேர இடைவெளியை 2 வினாடிகளாக மாற்றவும்"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"கலர் கரெக்‌ஷன்"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"கலர் கரெக்‌ஷனைப் பயன்படுத்துதல்"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"வண்ணப் பயன்முறை"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"அணுகல்தன்மை ஷார்ட்கட்"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"அணுகல்தன்மை ஷார்ட்கட்டை இயக்கு"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"ஷார்ட்கட் சேவை"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"கீபோர்டுக்கான மாற்றுத்திறன் வசதி"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"ஷார்ட்கட் அம்சம் இயக்கத்தில் இருக்கும்போது, பின்செல் பட்டன் மற்றும் ஒலியைக் குறைக்கும் பட்டன் இரண்டையும் 3 வினாடிகள் அழுத்திப் பிடித்தால், அணுகல்தன்மை அம்சத்தை இயக்க முடியும்."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"செயல்பட வேண்டிய நேரம்"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"செயல்பட வேண்டிய நேரம் (அணுகலுக்கான நேர முடிவு)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"நேரம்"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"இந்த நேர விருப்பத்தேர்வு சில ஆப்ஸில் கிடைக்காது."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"நடவடிக்கை எடுப்பதற்கான நேரம் (மாற்றுத்திறன் வசதிக்கான நேர முடிவு)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"நடவடிக்கை தேவைப்படும் மெசேஜ்களுக்குக் கால அளவை மாற்றலாம்"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"நடவடிக்கை எடுக்கும்படி உங்களிடம் கேட்கும் தற்காலிக மெசேஜ்களை எவ்வளவு நேரம் காட்ட வேண்டும் என்பதைத் தேர்வுசெய்யலாம்"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"நேரம் : 2–3 வினாடிகள்"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"பதிலளிக்க இயல்பு நேரத்தை அமைக்கும் (2–3 வினாடிகள்)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"பட்டனை அழுத்திப் பிடித்திருக்கும் நேரம்"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"பட்டன் அழுத்திப் பிடிக்கப்பட்டிருக்கும்போது தொடர்ச்சியான எழுத்துக்கள் காட்டப்படுவதற்கு முன்பு உள்ள தாமதத்தை உள்ளமைக்கலாம்"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"மீண்டும் இயக்கப்படுவதற்கு முன்பு உள்ள தாமதத்தைச் சரிகட்டலாம்"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"பட்டன் மீண்டும் இயக்கப்படுதல்"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"மீண்டும் இயக்கப்படுவதற்கு முன்பு பட்டனை அழுத்திப் பிடிக்கும் நேரம்"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"மீண்டும் இயக்கப்படுவதற்கு முன்பு எவ்வளவு நேரம் பட்டனைப் பிடித்திருக்க வேண்டும் என்பதைப் பிரத்தியேகமாக்கலாம்"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"மீண்டும் இயக்கப்படுவதற்கு ஒரு பட்டனைப் பிடித்திருக்கும் நேரத்தைப் பிரத்தியேகமாக்கலாம்"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"தொடர்ந்து உள்ளிடப்படுவதற்கான வீதம்"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"பட்டன் அழுத்திப் பிடிக்கப்பட்டிருக்கும்போது தொடர்ச்சியான எழுத்துக்கள் எத்தனை விரைவாக உள்ளிடப்பட வேண்டும் என்பதை அமைக்கலாம்"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"இயல்புநிலை"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"ஆரம்பநிலை தாமதத்திற்குப் பிறகு பட்டன் எத்தனை விரைவாகச் செயல்பட வேண்டும் என்பதைக் கட்டுப்படுத்தலாம்"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"தலைப்புகள்"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"வீடியோவில் தோன்றும் வசனங்களுக்கான அமைப்புகள்"</string>
     <string name="captions_display" msgid="2598662495450633375">"காட்சி"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"எனது ரிமோட்டைக் கண்டறிதல்"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"உங்கள் Google TV ரிமோட்டைத் தவறுதலாக வேறொரு இடத்தில் வைத்திருந்தால் ஒலியை இயக்குவதன் மூலம் அதைக் கண்டறியலாம்"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"உங்கள் Google TVயில் ஒரு பட்டன் உள்ளது அதை அழுத்தினால் உங்கள் ரிமோட் 30 வினாடிகளுக்கு ஒலிக்கும். ஆதரிக்கப்படும் Google TV ரிமோட் கன்ட்ரோல்களில் மட்டுமே இது வேலை செய்யும்.\n\nஒலியை நிறுத்த, உங்கள் ரிமோட்டில் இருக்கும் ஏதேனும் ஒரு பட்டனை அழுத்தவும்."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"இயக்கப்பட்டிருக்கும்போது, உங்கள் சாதனத்திலுள்ள பட்டனைப் பயன்படுத்தி ஒலியை இயக்கி ரிமோட்டைக் கண்டறியலாம். முடக்கப்பட்டிருக்கும்போது இந்தப் பட்டன் வேலை செய்யாது. எனினும் பிற வழிகள் மூலம் நீங்கள் \'ரிமோட் கண்டறிதல்\' அம்சத்தைப் பயன்படுத்த முடியும்."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"ஒலியை இயக்கு"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"பேக்லைட் பயன்முறை"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"ஒவ்வொருமுறை அழுத்தும்போதும் ரிமோட் கன்ட்ரோலில் உள்ள பட்டன்களில் வெளிப்படும் வெளிச்சம்."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"ஆதரிக்கப்படும் Google TV ரிமோட்களில் உள்ள பட்டனை அழுத்துவது பேக்லைட்டை ஒளிரச் செய்யும்."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s ஒலியளவு"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s ஸ்பீக்கரில் Assistantடின் ஒளியளவைக் கட்டுப்படுத்தலாம்"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"%1$s சாதனத்தில் மட்டுமே ஒலியளவை மாற்றும், டிவியில் மாற்றாது"</string>

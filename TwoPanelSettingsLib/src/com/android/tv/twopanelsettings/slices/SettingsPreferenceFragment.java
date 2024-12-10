@@ -22,7 +22,6 @@ import static androidx.lifecycle.Lifecycle.Event.ON_PAUSE;
 import static androidx.lifecycle.Lifecycle.Event.ON_RESUME;
 import static androidx.lifecycle.Lifecycle.Event.ON_START;
 import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
-
 import static com.android.tv.twopanelsettings.slices.InstrumentationUtils.logPageFocused;
 
 import android.animation.AnimatorInflater;

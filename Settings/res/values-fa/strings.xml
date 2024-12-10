@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"نپذیرفتن پیشنهاد"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"تشخیص «OK Google»"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"هروقت خواستید با «دستیار Google» صحبت کنید"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"‫TalkBack (صفحه‌خوان)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"‫TalkBack یکی از ویژگی‌های دسترس‌پذیری صفحه‌خوان است که با بلند خواندن نوشتار روی صفحه، گزینه‌های منو، و دیگر عناصر به کاربران دارای اختلال بینایی کمک می‌کند. این ویژگی را همچنین می‌توان برای استفاده با «میان‌بر دسترس‌پذیری» راه‌اندازی کرد."</string>
     <string name="header_category_device" msgid="3023893663454705969">"دستگاه"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"اولویت‌ها"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"کنترل ازراه‌دور و لوازم جانبی"</string>
@@ -74,7 +76,7 @@
     <string name="last_synced" msgid="8371967816955123864">"‫زمان آخرین همگام‌سازی <xliff:g id="TIME">%1$s</xliff:g>"</string>
     <string name="sync_disabled" msgid="6652778349371079140">"غیرفعال"</string>
     <string name="account_remove" msgid="8456848988853890155">"حذف کردن حساب"</string>
-    <string name="account_remove_failed" msgid="5654411101098531690">"حذف حساب ممکن نیست"</string>
+    <string name="account_remove_failed" msgid="5654411101098531690">"برداشتن حساب ممکن نیست"</string>
     <!-- no translation found for sync_item_title (5884138264243772176) -->
     <skip />
     <string name="sync_one_time_sync" msgid="1665961083810584134">"همگام‌سازی در این لحظه<xliff:g id="LAST_SYNC_TIME">
@@ -242,7 +244,7 @@
     <string name="accessory_connected" msgid="5229574480869175180">"متصل"</string>
     <string name="accessory_change_name" msgid="6493717176878500683">"تغییر نام"</string>
     <string name="accessory_change_name_title" msgid="451188562035392238">"نام جدیدی برای این وسیله جانبی وارد کنید"</string>
-    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"مرتبط‌سازی بلوتوث."</string>
+    <string name="accessories_add_accessibility_title" msgid="1300294413423909579">"جفت‌سازی بلوتوث."</string>
     <string name="accessories_add_title" msgid="7704824893011194433">"در حال جستجوی لوازم جانبی…"</string>
     <string name="accessories_add_bluetooth_inst" msgid="2508151218328384366">"قبل از جفت کردن دستگاه‌های بلوتوث، مطمئن شوید در حالت مرتبط‌سازی باشند."</string>
     <string name="accessories_autopair_msg" msgid="2501824457418285019">"دستگاهی یافت شد و به‌طور خودکار بعد از <xliff:g id="COUNTDOWN">%1$s</xliff:g> ثانیه مرتبط می‌شود"</string>
@@ -298,10 +300,10 @@
     <string name="system_inputs" msgid="5552840337357572096">"ورودی‌ها"</string>
     <string name="system_inputs_devices" msgid="2158421111699829399">"ورودی‌ها و دستگاه‌ها"</string>
     <string name="system_home_theater_control" msgid="6228949628173590310">"کنترل سینمای خانگی"</string>
-    <string name="system_developer_options" msgid="8480844257066475479">"گزینه‌های برنامه‌نویسان"</string>
+    <string name="system_developer_options" msgid="8480844257066475479">"گزینه‌های توسعه‌دهندگان"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"خالی"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"میزان استفاده و عیب‌یابی"</string>
-    <string name="no_device_admins" msgid="4628974717150185625">"هیچ‌یک از برنامه‌‌های سرپرست دستگاه در دسترس نیستند"</string>
+    <string name="no_device_admins" msgid="4628974717150185625">"هیچ برنامه‌ سرپرست دستگاهی دردسترس نیست"</string>
     <string name="security_enable_widgets_disabled_summary" msgid="7678529948487939871">"توسط سرپرست غیرفعال شده"</string>
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"دردسترس نیست"</string>
     <string name="manage_device_admin" msgid="5714217234035017983">"برنامه‌های سرپرست دستگاه"</string>
@@ -429,7 +431,7 @@
     <string name="title_signal_strength" msgid="5047116893338315998">"قدرت سیگنال"</string>
     <string name="title_random_mac_settings" msgid="6685812569356353378">"حریم خصوصی"</string>
   <string-array name="random_mac_settings_entries">
-    <item msgid="3457228452595715533">"استفاده از MAC تصادفی (پیش‌فرض)"</item>
+    <item msgid="3457228452595715533">"استفاده کردن از MAC تصادفی (پیش‌فرض)"</item>
     <item msgid="2490415280467390067">"استفاده از MAC دستگاه"</item>
   </string-array>
     <string name="mac_address_not_available" msgid="2992935344891853369">"موجود نیست"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"نوشتار با کنتراست بالا"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"نوشتار پررنگ"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"نوسان کلیدها"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"زمان موردنظر را انتخاب کنید"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"کنترل از دور فشارهای تکراری کلید را نادیده می‌گیرد"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"فشارهای تصادفی سریع و تکراری دکمه نادیده گرفته می‌شود. می‌توانید فاصله زمانی مدنظر را که درطول آن فشارها نادیده گرفته می‌شود تنظیم کنید"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"زمان: پیش‌فرض"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"پس‌از فشار اولیه، فشارهای تکراری تا سپری شدن فاصله زمانی پیش‌فرض نادیده گرفته می‌شود"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"زمان : ۰٫۵ ثانیه"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"فاصله زمانی روی ۰٫۵ ثانیه تنظیم می‌شود تا فشارهای تکراری کلید در این فاصله نادیده گرفته شود"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"زمان : ۱ ثانیه"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"فاصله زمانی روی ۱ ثانیه تنظیم می‌شود تا فشارهای تکراری کلید در این فاصله نادیده گرفته شود"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"زمان : ۲ ثانیه"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"فاصله زمانی روی ۲ ثانیه تنظیم می‌شود تا فشارهای تکراری کلید در این فاصله نادیده گرفته شود"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"تصحیح رنگ"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"استفاده از تصحیح رنگ"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"حالت رنگی"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"میان‌بر دسترس‌پذیری"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"فعال کردن میان‌بر دسترس‌پذیری"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"سرویس میان‌بر"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"دسترس‌پذیری صفحه‌کلید"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"وقتی میان‌بر روشن است، اگر دکمه‌های برگشت و پایین را با هم فشار دهید و ۳ ثانیه نگه دارید ویژگی دسترس‌پذیری شروع خواهد شد."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"زمان اقدام کردن"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"زمان اقدام کردن (درنگ دسترس‌پذیری)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"زمانبندی"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"اولویت زمان‌بندی در همه برنامه‌ها پشتیبانی نمی‌شود."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"زمان اقدام کردن (درنگ دسترس‌پذیری)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"تنظیم مدت‌زمان پیام‌هایی که نیاز به اقدام دارند"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"انتخاب کنید پیام‌های موقتی که از شما می‌خواهند اقدام کنید چه‌مدت نمایش داده شوند"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"زمان : ۲ تا ۳ ثانیه"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"مدت‌زمان پیش‌فرض را برای پاسخ به کنش‌های روی صفحه تنظیم می‌کند (۲ تا ۳ ثانیه)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"تأخیر در تکرار کردن کلید"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"پیکربندی کردن تأخیر پیش‌از ظاهر شدن نویسه‌های تکراری هنگام پایین نگه داشتن کلید"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"تنظیم کردن میزان تأخیر قبل‌از تکرار شدن کلید"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"تکرار کردن کلید"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"تأخیر پیش‌از تکرار"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"سفارشی‌سازی کردن مدت زمان نگه داشتن دکمه پیش‌از شروع شدن تکرار"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"سفارشی‌سازی کردن مدت زمان نگه داشتن دکمه که تکرار پس‌از آن شروع می‌شود"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"سرعت تکرار"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"تنظیم کردن سرعت وارد شدن نویسه‌های تکراری هنگام پایین نگه داشتن کلید"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"پیش‌فرض"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"کنترل کردن سرعت تکرار شدن دکمه بعداز تأخیر اولیه"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"زیرنویس"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"تنظیمات وضعیت متن زیرنویس روی ویدیو"</string>
     <string name="captions_display" msgid="2598662495450633375">"نمایش"</string>
@@ -800,7 +827,7 @@
     <string name="system_show_surface_updates" msgid="7680759813613585278">"نمایش به‌روزرسانی سطح"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"مقیاس پویانمایی پنجره"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"مقیاس پویانمایی انتقالی"</string>
-    <string name="system_animator_duration_scale" msgid="3829445237130423625">"مقیاس طول مدت انیماتور"</string>
+    <string name="system_animator_duration_scale" msgid="3829445237130423625">"مقیاس مدت پویانماساز"</string>
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"حالت شدید فعال شد"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"پردازش GPU نمایه"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"فعال کردن ردیابی"</string>
@@ -1100,7 +1127,7 @@
     <string name="admin_profile_owner_message" msgid="5729169873349157622">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این نمایه کاری (ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
     <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این کاربر (ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
     <string name="admin_device_owner_message" msgid="1935507216776040907">"سرپرستتان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این دستگاه (ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه و اطلاعات مکان دستگاه) نظارت داشته باشد و آن‌ها را مدیریت کنید."</string>
-    <string name="remove_managed_profile_label" msgid="8950011141359605612">"حذف نمایه کار"</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"حذف نمایه کاری"</string>
     <string name="active_device_admin_msg" msgid="185537304726228624">"برنامه سرپرست دستگاه"</string>
     <string name="remove_device_admin" msgid="2623866073546295104">"غیرفعال کردن این برنامه سرپرست دستگاه"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"حذف نصب برنامه"</string>
@@ -1137,7 +1164,7 @@
     <string name="sound_settings_title" msgid="9149367966117889465">"صدا"</string>
     <string name="power_and_energy" msgid="4638182439670702556">"برق و انرژی"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"عملکرد تلویزیون هنگام روشن بودن"</string>
-    <string name="reset_options_title" msgid="7632580482285108955">"بازنشاندن"</string>
+    <string name="reset_options_title" msgid="7632580482285108955">"بازنشانی"</string>
     <string name="system_tv_title" msgid="2800695543185187197">"تلویزیون"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"کد مرتبط‌سازی اترنت"</string>
     <string name="energy_modes" msgid="1331693860386361744">"حالت‌های انرژی"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"پیدا کردن کنترل از راه دور"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"اگر کنترل از دور Google TV در جای خودش نباشد، برای پیدا کردن آن، صدایی پخش می‌شود"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"دکمه‌ای روی Google TV قرار دارد که می‌توانید فشار دهید تا صدایی به‌مدت ۳۰ ثانیه در کنترل از دور پخش شود. این روش فقط در کنترل از دورهای پشتیبانی‌شده Google TV کار می‌کند.\n\nبرای متوقف کردن صدا، یکی از دکمه‌های روی کنترل از دور را فشار دهید."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"وقتی روشن باشد، بااستفاده از این دکمه در دستگاهتان می‌توانید صدایی پخش کنید و کنترل از دور را پیدا کنید. وقتی خاموش باشد، این دکمه کار نمی‌کند. همچنان می‌توانید با روش‌های دیگر از «پیدا کردن کنترل از راه دور» استفاده کنید."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"پخش صدا"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"حالت نور پس‌زمینه"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"روشنایی دکمه‌های کنترل از دور با هر فشردن."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"در کنترل‌های از دور پشتیبانی‌شده Google TV، با فشار دادن دکمه روی کنترل از دور روشنایی نور پس‌زمینه فعال می‌شود."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"میزان صدای %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"می‌توانید میزان صدای «دستیار» را در بلندگوی %1$s کنترل کنید"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"فقط بر میزان صدای دستگاه %1$s تأثیر می‌گذارد، نه بر تلویزیون"</string>

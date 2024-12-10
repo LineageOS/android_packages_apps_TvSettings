@@ -52,6 +52,20 @@
         <item>Never</item>
     </string-array>
 
+    <!-- Titles for bounce key timeout preference. [CHAR LIMIT=35] -->
+    <string-array name="bounce_key_timeout_entries">
+        <item>0.5 seconds</item>
+        <item>1 second</item>
+        <item>2 seconds</item>
+    </string-array>
+
+    <!-- Titles for bounce key timeout preference. [CHAR LIMIT=35] -->
+    <integer-array name="bounce_key_timeout_values">
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+    </integer-array>
+
     <!-- Do not translate. -->
     <string-array name="device_energy_saver_sleep_timeout_values" translatable="false">
         <!-- Do not translate. -->
@@ -403,6 +417,34 @@
         <item>120000</item>
     </string-array>
 
+    <!-- Titles for accessibility delay before repeat preference. [CHAR LIMIT=35] -->
+    <string-array name="a11y_delay_before_repeat_entries">
+        <item>Default</item>
+        <item>3 seconds</item>
+        <item>5 seconds</item>
+    </string-array>
+
+    <!-- Values for accessibility delay before repeat preference. [CHAR LIMIT=35] -->
+    <integer-array name="a11y_delay_before_repeat_values">
+        <item>150</item>
+        <item>3000</item>
+        <item>5000</item>
+    </integer-array>
+
+    <!-- Titles for accessibility repeat rate preference. [CHAR LIMIT=35] -->
+    <string-array name="a11y_repeat_rate_entries">
+        <item>Default</item>
+        <item>Slow</item>
+        <item>Fast</item>
+    </string-array>
+
+    <!-- Values for accessibility repeat rate preference. [CHAR LIMIT=35] -->
+    <integer-array name="a11y_repeat_rate_values">
+        <item>200</item>
+        <item>2000</item>
+        <item>20</item>
+    </integer-array>
+
     <!-- Titles for volume change preference -->
     <string-array name="volume_change_entries">
         <item>Mute</item>
@@ -417,5 +459,24 @@
         <item>0.2</item>
         <item>0.5</item>
         <item>0.8</item>
+    </string-array>
+
+    <!-- Values for RCU Backlight. -->
+    <string-array name="backlight_modes">
+        <item>Never</item>
+        <item>Standard</item>
+        <item>Scheduled</item>
+    </string-array>
+
+    <string-array name="backlight_keys"  translatable="false">
+        <item>Never</item>
+        <item>Standard</item>
+        <item>Scheduled</item>
+    </string-array>
+
+    <string-array name="backlight_hints">
+        <item>The backlight will not illuminate with each press.</item>
+        <item>The backlight will illuminate with each press. The illumination will last for 5 seconds each time it is activated.</item>
+        <item>The backlight will illuminate with each press only during nighttime hours(6pm~6am). The illumination will last for 5 seconds each time it is activated.</item>
     </string-array>
 </resources>

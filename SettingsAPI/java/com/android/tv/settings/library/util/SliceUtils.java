@@ -15,8 +15,7 @@
  */
 
 package com.android.tv.settings.library.util;
-
-import android.app.slice.SliceManager;
+import com.android.tv.twopanelsettings.slices.base.SliceManager;
 import android.content.ContentProviderClient;
 import android.content.Context;
 import android.net.Uri;
@@ -62,7 +61,7 @@ public final class SliceUtils {
         if (uri == null) {
             return false;
         }
-        final SliceManager sliceManager = context.getSystemService(SliceManager.class);
+        final SliceManager sliceManager = SliceManager.from(context);
         if (sliceManager == null) {
             return false;
         }

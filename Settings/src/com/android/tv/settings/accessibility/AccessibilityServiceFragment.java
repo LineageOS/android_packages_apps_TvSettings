@@ -82,14 +82,35 @@ public class AccessibilityServiceFragment extends SettingsPreferenceFragment imp
         final Preference settingsPref = new Preference(themedContext);
         settingsPref.setTitle(R.string.system_accessibility_config);
         final String activityName = getArguments().getString(ARG_SETTINGS_ACTIVITY_NAME);
-        if (!TextUtils.isEmpty(activityName)) {
-            final String packageName = getArguments().getString(ARG_PACKAGE_NAME);
+        final String packageName = getArguments().getString(ARG_PACKAGE_NAME);
+        if (!TextUtils.isEmpty(activityName) && !TextUtils.isEmpty(packageName)) {
             settingsPref.setIntent(new Intent(Intent.ACTION_MAIN)
                     .setComponent(new ComponentName(packageName, activityName)));
         } else {
             settingsPref.setEnabled(false);
         }
         screen.addPreference(settingsPref);
+
+        final String serviceName = getArguments().getString(ARG_SERVICE_NAME);
+        ComponentName serviceComponent=null;
+        if(!TextUtils.isEmpty(packageName) && !TextUtils.isEmpty(serviceName)){
+            serviceComponent = new ComponentName(packageName, serviceName);
+        }
+        if (serviceComponent != null
+            && serviceComponent
+            .flattenToString()
+            .equals(
+                getResources()
+                    .getString(R.string.
+                                   accessibility_screen_reader_flattened_component_name))) {
+            final Preference screenReaderPref = new Preference(themedContext);
+            screenReaderPref.setTitle(
+                getResources().getString(
+                    R.string.screen_reader_service_title));
+            screenReaderPref.setSummary(R.string.screen_reader_summary);
+            screenReaderPref.setEnabled(false);
+            screen.addPreference(screenReaderPref);
+        }
 
         setPreferenceScreen(screen);
     }

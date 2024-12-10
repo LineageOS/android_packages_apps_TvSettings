@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Cashisa isiphakamiso"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Ukuthola okuthi \"OK Google\""</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Khuluma nomsizi we-Google noma kunini"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"ITalkback (Isifundi sesikrini)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"ITalkBack isakhi sokufinyelela sesifundi sesikrini esisiza abasebenzisi abangaboni kahle ngokufunda ngokuphimisela embhalweni okusikrini, kwizinto zemenyu nakwamanye ama-elementi. Ingasethwa kuphela ukuze isetshenziswe Nesinqamuleli Sokufinyeleleka."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Idivayisi"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Izintandokazi"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Isilawuli kude Nezinsiza"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Umbhala ogqame kakhulu"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Umbhalo ogqamile"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Okhiye bokubuyisela emuva"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Khetha isikhathi esincanyelwayo"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Irimothi iziba ukucindezela kokhiye okuphindaphindiwe"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Ziba ukucindezelwa ngengozi kwezinkinobho okusheshayo, okuphindaphindiwe. Ungalungisa isikhawu sesikhathi lapho ukucindezelwa kuzitshwa"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Isikhathi : Okuzenzekelayo"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Ziba ukucindezela okuphindaphindiwe kwesikhawu okuzenzakalelayo ngemva kokucindezela kokuqala"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Isikhathi : imizuzwana engu-0.5"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Lungisa isikhawu sesikhathi sibe imizuzwana engu-0.5 lapho ukucindezela okhiye okuphindaphindiwe kuzitshwa"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Isikhathi: umzuzwana o-1"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Lungisa isikhawu sesikhathi sibe umzuzwana o-1 lapho ukucindezelwa kokhiye okuphindaphindiwe kuzitshwa"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Isikhathi : imizuzwana emi-2"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Lungisa isikhawu sesikhathi sibe imizuzwana emi-2 lapho ukucindezelwa kokhiye okuphindaphindiwe kuzitshwa"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Ukulungiswa kombala"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Sebenzisa ukulungisa kombala"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Imodi Yombala"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Isinqamuleli sokufinyeleleka"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Nika amandla isinqamuleli sokufinyelela"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Isevisi yesinqamuleli"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Ukufinyeleleka kwekhibhodi"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Uma isinqamuleli sivuliwe, ungacindezela zombili izinkinobho ezingemuva neziphansi ngamasekhondi angu-3 ukuze uqale isici sokufinyelela."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Isikhathi sokwenza isenzo"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Isikhathi sokwenza okuthile (Ukuphelelwa isikhathi kokufinyelela)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Isikhathi"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Lokhu okuncanyelwayo akusekelwe yiwo wonke ama-app."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Isikhathi sokuthatha isinyathelo (Isikhathi sokuvala sokufinyeleleka)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Lungisa ubude besikhathi semilayezo edinga isinyathelo"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Khetha ukuthi ungayibonisa isikhathi esingakanani imiyalezo yesikhashana ekucela ukuthi uthathe isinyathelo"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Isikhathi : imizuzwana emi-2-3"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Isetha inani elizenzakalelayo lesikhathi sokuphendula ezenzweni ezisesikrinini (imizuzwana emi-2–3)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Ukulibaziseka kokuphinda ukhiye"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Lungiselela ukubambezeleka ngaphambi kokuvela kwezinhlamvu eziphindaphindiwe uma ukhiye ubanjelwe phansi"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Lungisa ukubambezeleka ngaphambi kokuphinda ukhiye"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Ukuphinda ukhiye"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Bambezela ngaphambi kokuphinda"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Enza ngokwezifiso ukuthi ungayibamba isikhathi esingakanani inkinobho ngaphambi kokuthi iqale ukuphinda"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Enza ngokwezifiso ubude besikhathi sokubamba inkinobho ngemva kwalokho iqale ukuphinda"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Phinda inani"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Setha ukuthi izinhlamvu eziphindwayo zifakwa ngokushesha kangakanani uma ukhiye ubanjelwa phansi"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Okuzenzekelayo"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Lawula ukuthi inkinobho iphinda ngokushesha kangakanani ngemva kokulibaziseka kokuqala"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Amazwibela"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Izilungiselelo zombhalo wamazwibela avaliwe kuzimbondela ezikuvidiyo"</string>
     <string name="captions_display" msgid="2598662495450633375">"Isibonisi"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Thola irimothi yami"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Dlala umsindo ukuze uthole irimothi yakho ye-Google TV uma ibekwe kabi"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Kunenkinobho ku-Google TV yakho ongayicindezela ukuze udlale umsindo kurimothi yakho imizuzwana engu-30. Lokhu kusebenza kuphela ngezilawuli-kude ezisekelwayo ze-Google TV.\n\nUkuze umise umsindo, cindezela noma iyiphi inkinobho kurimothi yakho."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Uma ivuliwe, ungasebenzisa inkinobho esedivayisini yakho ukuze udlale umsindo ukuze uthole irimothi yakho. Uma icishiwe, le nkinobho ngeke isebenze. Usazokwazi ukusebenzisa okuthi Thola irimothi yami ngezinye izindlela."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Dlala umsindo"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Imodi Yokukhanya Kwangemuva"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Ukukhanya kwezinkinobho kusilawuli-kude ngokucindezela ngakunye."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Kumarimothi asekelwayo eGoogle TV, ukucindezela inkinobho kumarimothi kwenza ukukhanya kwangemuva kukhanye."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s ivolumu"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Ungalawula ivolumu yomsizi kusipikha se-%1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Ithinta kuphela ivolumu kudivayisi ye-%1$s, hhayi ku-TV"</string>

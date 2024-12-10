@@ -38,6 +38,7 @@ import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
@@ -90,6 +91,8 @@ public class EnableDisablePreference extends AppActionPreference {
     }
 
     private boolean canDisable() {
+        final List<String> keepEnabledPackages = Arrays.asList(
+                getContext().getResources().getStringArray(R.array.config_always_enabled_apps));
         final HashSet<String> homePackages = getHomePackages();
         PackageInfo packageInfo;
         try {
@@ -101,7 +104,8 @@ public class EnableDisablePreference extends AppActionPreference {
             return false;
         }
         return !(homePackages.contains(mEntry.info.packageName) ||
-                Utils.isSystemPackage(getContext().getResources(), mPackageManager, packageInfo));
+                 keepEnabledPackages.contains(mEntry.info.packageName) ||
+                  Utils.isSystemPackage(getContext().getResources(), mPackageManager, packageInfo));
     }
 
     private HashSet<String> getHomePackages() {

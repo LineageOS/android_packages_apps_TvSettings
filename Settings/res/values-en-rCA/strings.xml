@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Dismiss the suggestion"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"OK Google\" detection"</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Talk to Google Assistant anytime"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (Screen reader)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack is a screen reader accessibility feature that assists visually impaired users by reading aloud on-screen text, menu items and other elements. It can also be set up to use with Accessibility Shortcut."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Device"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Preferences"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Remote &amp; Accessories"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"High contrast text"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Bold text"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Bounce keys"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Choose preferred timing"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Remote ignores repeated key presses"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Ignore accidental rapid, repeated button presses. You can adjust the time interval within which presses are ignored"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Timing : Default"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Ignore repeated presses for default interval after initial press"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Timing : 0.5 seconds"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Adjust the timing interval to 0.5 seconds to which repeated key presses are ignored"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Timing : 1 second"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Adjust the timing interval to 1 second to which repeated key presses are ignored"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Timing : 2 seconds"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Adjust the timing interval to 2 seconds to which repeated key presses are ignored"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Color correction"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Use color correction"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Color Mode"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Accessibility shortcut"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Enable accessibility shortcut"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Shortcut service"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Keyboard accessibility"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"When the shortcut is on, you can press both the back and down buttons for 3 seconds to start an accessibility feature."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Time to take action"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Time to take action (Accessibility timeout)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Timing"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"This timing preference isn\'t supported by all apps."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Time to take action (accessibility timeout)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Adjust duration of messages that require action"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Choose how long to show temporary messages that asks you to take action"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Timing : 2–3 seconds"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Sets default amount of time to respond to on–screen actions (2–3 seconds)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Key repeat delay"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Configure the delay before repeated characters appear when a key is held down"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Adjust the delay before key repeat"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Key repeat"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Delay before repeat"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Customize how long you can hold a button before it starts repeating"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Customize duration of hold a button after which it starts repeating"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Repeat rate"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Set how fast repeated characters are entered when a key is held down"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Default"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Control how quickly button repeats after initial delay"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Captions"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Settings for closed captioning text overlay on video"</string>
     <string name="captions_display" msgid="2598662495450633375">"Display"</string>
@@ -1150,6 +1177,9 @@
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"There is a button on your Google TV that you can push to play a sound on your remote for 30 seconds. This only works with supported Google TV remote controls.\n\nTo stop the sound, press any button on your remote."</string>
     <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"When on, you can use the button on your device to play a sound to locate your remote. When off, this button won\'t work. You\'ll still be able to use Find my remote via other methods."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Play sound"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Backlight Mode"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Illumination of the buttons on the remote control upon each press."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"On supported Google TV remotes, pressing the button on the remotes activates backlight illumination."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s volume"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"You can control the Assistant volume on %1$s speaker"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Only affects volume on %1$s device , not on TV"</string>

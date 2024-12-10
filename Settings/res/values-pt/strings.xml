@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Dispensar sugestão"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Detecção de \"Ok Google\""</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Fale com o Google Assistente a qualquer momento"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (leitor de tela)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"O TalkBack é um recurso de acessibilidade de leitor de tela que ajuda pessoas com deficiência visual lendo em voz alta textos na tela, itens de menu e outros elementos. Ele também pode ser configurado para uso com o atalho de acessibilidade."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Dispositivo"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Preferências"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Controle remoto e acessórios"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Texto em alto contraste"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Negrito"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Teclas de filtragem"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Escolha o intervalo de tempo de sua preferência"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"O controle remoto ignora pressionamentos repetidos de botões"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Ignora pressionamentos acidentais rápidos e repetidos de botões. Você pode ajustar o intervalo de tempo em que os pressionamentos são ignorados"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Tempo: padrão"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Ignora pressionamentos repetidos para o intervalo padrão após o pressionamento inicial"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Tempo: 0,5 segundo"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Ajuste o intervalo de tempo para 0,5 segundo, para que os pressionamentos repetidos do mesmo botão sejam ignorados"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Tempo: 1 segundo"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Ajuste o intervalo de tempo para 1 segundo, para que os pressionamentos repetidos do mesmo botão sejam ignorados"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Tempo: 2 segundos"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Ajuste o intervalo de tempo para 2 segundos, para que os pressionamentos repetidos do mesmo botão sejam ignorados"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Correção de cor"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Usar correção de cor"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Modo de cor"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Atalho de acessibilidade"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Ativar o atalho de acessibilidade"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Serviço do atalho"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Acessibilidade do teclado"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Quando o atalho estiver ativado, pressione ao mesmo tempo o botão para voltar e o botão para baixo, por três segundos, para iniciar um recurso de acessibilidade."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Tempo para agir"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Tempo para agir (tempo limite de acessibilidade)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Marcação de tempo"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Nem todos os apps têm suporte a essa preferência de marcação de tempo."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Tempo para agir (tempo limite de acessibilidade)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Ajuste a duração das mensagens que exigem uma ação"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Escolha por quanto tempo mostrar mensagens temporárias que solicitam uma ação"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Tempo: de 2 a 3 segundos"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Define o tempo padrão para responder a ações na tela (de 2 a 3 segundos)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Espera da repetição de teclas"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Configurar o tempo de espera para que os caracteres repetidos apareçam quando uma tecla é pressionada"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Ajuste a espera antes da repetição de uma tecla"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Repetição de teclas"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Atraso antes da repetição"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Personalize o tempo que um botão precisa ser pressionado antes de começar a repetir a ação"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Personalize a duração do ato de pressionar um botão até que a ação comece a se repetir"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Taxa de repetição"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Defina a velocidade de entrada de caracteres repetidos quando uma tecla é pressionada"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Padrão"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Controle a rapidez com que o botão se repete depois da espera inicial"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Legendas"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Configurações para sobreposição de texto de legenda no vídeo"</string>
     <string name="captions_display" msgid="2598662495450633375">"Exibir legendas"</string>
@@ -1148,9 +1175,11 @@
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"Encontrar meu controle remoto"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Toque um som para localizar o controle remoto do Google TV caso ele esteja perdido"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Há um botão no Google TV que você pode pressionar para tocar um som no controle remoto por 30 segundos. Isso só funciona com controles remotos do Google TV compatíveis.\n\nPara interromper o som, pressione qualquer botão no controle."</string>
-    <!-- no translation found for find_my_remote_integration_hint (1505908080631286111) -->
-    <skip />
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Quando ativado, você pode usar o botão no seu dispositivo para tocar um som e encontrar o controle remoto. Quando desativado, o botão não vai funcionar. Você ainda poderá usar o recurso \"encontrar meu controle remoto\" por outros métodos."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Tocar som"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Modo luz de fundo"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Iluminação dos botões do controle remoto a cada pressionamento."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Em controles remotos do Google TV compatíveis, pressionar o botão ativa a luz de fundo."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Volume do %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Você pode controlar o volume do Google Assistente no alto-falante %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Afeta apenas o volume no dispositivo %1$s, não na TV"</string>

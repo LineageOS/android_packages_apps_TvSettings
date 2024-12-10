@@ -16,10 +16,10 @@
 
 package com.android.tv.twopanelsettings.slices.builders;
 
-import androidx.slice.Clock;
-import androidx.slice.Slice;
-import androidx.slice.SliceSpec;
-import androidx.slice.SystemClock;
+import com.android.tv.twopanelsettings.slices.compat.Clock;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
+import com.android.tv.twopanelsettings.slices.compat.SliceSpec;
+import com.android.tv.twopanelsettings.slices.compat.SystemClock;
 
 /**
  * A copy of TemplateBuilderImpl from slices support lib.

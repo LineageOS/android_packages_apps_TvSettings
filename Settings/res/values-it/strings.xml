@@ -39,6 +39,8 @@
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Ignora il suggerimento"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Rilevamento di \"Ok Google\""</string>
     <string name="hotwording_summary" msgid="2170375928302175449">"Parla con l\'Assistente Google quando vuoi"</string>
+    <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (screen reader)"</string>
+    <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack è una funzione di accessibilità dello screen reader che aiuta gli utenti con disabilità visiva leggendo ad alta voce testi, voci di menu e altri elementi visualizzati sullo schermo. Può essere configurata anche per l\'utilizzo con la scorciatoia di accessibilità."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Dispositivo"</string>
     <string name="header_category_preferences" msgid="3738388885555798797">"Preferenze"</string>
     <string name="header_category_accessories" msgid="6479803330480847199">"Telecomando e accessori"</string>
@@ -688,6 +690,18 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Testo ad alto contrasto"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Testo in grassetto"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Tasti rimbalzati"</string>
+    <string name="bounce_key_description" msgid="8742025495500915588">"Scegli il tuo intervallo preferito"</string>
+    <string name="bounce_key_detailed" msgid="2422246064036507844">"Il telecomando ignora le pressioni ripetute dei tasti"</string>
+    <string name="bounce_key_description_summary" msgid="6753146496890170215">"Ignora le pressioni accidentali rapide e ripetute dei pulsanti. Puoi modificare l\'intervallo di tempo entro il quale vengono ignorate le pressioni"</string>
+    <string name="bounce_key_timing_default_title" msgid="6028993610146552962">"Intervallo: predefinito"</string>
+    <string name="bounce_key_timing_default_description" msgid="145758684535868136">"Ignora le pressioni ripetute per l\'intervallo predefinito dopo la pressione iniziale"</string>
+    <string name="bounce_key_timing_half_second_title" msgid="8394245870111238967">"Intervallo: 0,5 secondi"</string>
+    <string name="bounce_key_timing_half_second_description" msgid="4748780223063740284">"Regola l\'intervallo di tempo su 0,5 secondi, in modo che le pressioni ripetute dei tasti vengano ignorate"</string>
+    <string name="bounce_key_timing_one_second_title" msgid="6735859672558014764">"Intervallo: 1 secondo"</string>
+    <string name="bounce_key_timing_one_second_description" msgid="8081507577181702545">"Regola l\'intervallo di tempo su 1 secondo, in modo che le pressioni ripetute dei tasti vengano ignorate"</string>
+    <string name="bounce_key_timing_two_second_title" msgid="8302518230221066238">"Intervallo: 2 secondi"</string>
+    <string name="bounce_key_timing_two_second_description" msgid="15724682361848243">"Regola l\'intervallo di tempo su 2 secondi, in modo che le pressioni ripetute dei tasti vengano ignorate"</string>
     <string name="accessibility_color_correction" msgid="6765093204922184119">"Correzione del colore"</string>
     <string name="color_correction_usage" msgid="4160611639548748657">"Usa correzione del colore"</string>
     <string name="color_correction_color_mode" msgid="5081377780734779169">"Modalità colore"</string>
@@ -709,11 +723,24 @@
     <string name="accessibility_shortcut" msgid="5856158637840030531">"Scorciatoia Accessibilità"</string>
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"Abilita scorciatoia Accessibilità"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"Servizio scorciatoia"</string>
+    <string name="keyboard_accessibility" msgid="7849649126112178029">"Accessibilità della tastiera"</string>
     <string name="accessibility_shortcut_description" msgid="2050424178481510046">"Quando è attiva la scorciatoia, premi i pulsanti indietro e giù per 3 secondi per avviare una funzione di accessibilità."</string>
-    <string name="accessibility_timeout" msgid="5806441204926407081">"Tempo per agire"</string>
-    <string name="accessibility_timeout_detailed" msgid="3671649651457927559">"Tempo per agire (timeout Accessibilità)"</string>
-    <string name="accessibility_timeout_info_title" msgid="6436020666160017491">"Durata"</string>
-    <string name="accessibility_timeout_info_description" msgid="443750173070723088">"Preferenza di tempo non supportata da ogni app."</string>
+    <string name="accessibility_timeout" msgid="6238669374985731114">"Tempo per compiere un\'azione (timeout accessibilità)"</string>
+    <string name="accessibility_timeout_summary" msgid="5365359228570110804">"Regola la durata dei messaggi che richiedono un\'azione"</string>
+    <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"Scegli per quanto tempo mostrare i messaggi temporanei che ti chiedono di compiere un\'azione"</string>
+    <string name="accessibility_timeout_info_title" msgid="4940515076094949892">"Durata: 2-3 secondi"</string>
+    <string name="accessibility_timeout_info_description" msgid="8821082019984052271">"Imposta il tempo predefinito per rispondere alle azioni sullo schermo (2-3 secondi)"</string>
+    <string name="accessibility_key_repeat_delay" msgid="3705218700730796163">"Ritardo ripetizione del tasto"</string>
+    <string name="accessibility_key_repeat_delay_detailed" msgid="839875964245948920">"Configura il ritardo prima della visualizzazione dei caratteri ripetuti quando si tiene premuto un tasto"</string>
+    <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"Regola il ritardo prima della ripetizione del tasto"</string>
+    <string name="accessibility_key_repeat" msgid="2883843620765652931">"Ripetizione del tasto"</string>
+    <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"Ritardo prima della ripetizione"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"Personalizza il tempo in cui puoi tenere premuto un pulsante prima che inizi la ripetizione"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"Personalizza la durata della pressione di un pulsante dopo la quale inizia la ripetizione"</string>
+    <string name="accessibility_repeat_rate" msgid="7021902189827133568">"Frequenza ripetizione"</string>
+    <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"Imposta la velocità di inserimento dei caratteri ripetuti quando si tiene premuto un tasto"</string>
+    <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"Predefinita"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"Controlla la velocità di ripetizione del pulsante dopo il ritardo iniziale"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"Sottotitoli"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"Impostazioni per la sovrapposizione del testo dei sottotitoli sul video"</string>
     <string name="captions_display" msgid="2598662495450633375">"Visualizzazione"</string>
@@ -1150,6 +1177,9 @@
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Puoi premere un pulsante su Google TV che farà emettere un suono al telecomando per 30 secondi. Questa opzione è disponibile solo sui telecomandi di Google TV supportati.\n\nPer interrompere il suono, premi qualsiasi tasto del telecomando."</string>
     <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"Se l\'impostazione è attivata, potrai usare il pulsante sul dispositivo per riprodurre un suono che ti aiuterà a trovare il telecomando. Se è disattivata, il pulsante non funzionerà. Potrai comunque usare Trova il telecomando con altri metodi."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"Riproduci suono"</string>
+    <string name="settings_backlight_title" msgid="3427298593084740948">"Modalità di retroilluminazione"</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"Illuminazione dei tasti del telecomando a ogni pressione."</string>
+    <string name="backlight_slice_description" msgid="6201435407391858605">"Sui telecomandi Google TV supportati, premendo il pulsante sul telecomando si attiva la retroilluminazione."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Volume: %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Puoi controllare il volume dell\'assistente su %1$s speaker"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Influisce sul volume solo su %1$s dispositivo, non sulla TV"</string>

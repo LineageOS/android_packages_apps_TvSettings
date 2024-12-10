@@ -34,6 +34,11 @@
     <item msgid="5034242362688847963">"24 uur"</item>
     <item msgid="940743686898651116">"Nooit"</item>
   </string-array>
+  <string-array name="bounce_key_timeout_entries">
+    <item msgid="1353936388457765422">"0,5 sekondes"</item>
+    <item msgid="5610264235282558145">"1 sekonde"</item>
+    <item msgid="1560952154506153896">"2 sekondes"</item>
+  </string-array>
   <string-array name="device_energy_saver_attentive_timeout_entries">
     <item msgid="3361047879614054539">"4 uur"</item>
     <item msgid="680279399507109560">"6 uur"</item>
@@ -89,6 +94,16 @@
     <item msgid="3665868694672130423">"MSCHAPV2"</item>
     <item msgid="1778635393795831325">"GTC"</item>
   </string-array>
+  <string-array name="a11y_delay_before_repeat_entries">
+    <item msgid="3192011162664254283">"Verstek"</item>
+    <item msgid="7610332375189141638">"3 sekondes"</item>
+    <item msgid="8884836025164318091">"5 sekondes"</item>
+  </string-array>
+  <string-array name="a11y_repeat_rate_entries">
+    <item msgid="5784213974557593735">"Verstek"</item>
+    <item msgid="8131016800415858190">"Stadig"</item>
+    <item msgid="6031948535453777783">"Vinnig"</item>
+  </string-array>
   <string-array name="volume_change_entries">
     <item msgid="8475727172583493318">"Demp"</item>
     <item msgid="2508680062291793288">"Laag (20%)"</item>
@@ -100,5 +115,15 @@
     <item msgid="3948049660167106381">"0,2"</item>
     <item msgid="3441480529755779159">"0,5"</item>
     <item msgid="4571900814286671092">"0,8"</item>
+  </string-array>
+  <string-array name="backlight_modes">
+    <item msgid="7900972906680877520">"Nooit"</item>
+    <item msgid="3256715108348109595">"Standaard"</item>
+    <item msgid="5517658202197894866">"Geskeduleer"</item>
+  </string-array>
+  <string-array name="backlight_hints">
+    <item msgid="8765944779122322726">"Die agterlig sal nie met elke druk verlig nie."</item>
+    <item msgid="62911590277354399">"Die agterlig sal met elke druk verlig. Die verligting sal vir 5 sekondes duur elke keer wat dit geaktiveer word."</item>
+    <item msgid="5334296639506784894">"Die agterlig sal net in die nagtelike ure (18:00-06:00) met elke druk verlig. Die verligting sal vir 5 sekondes duur elke keer wat dit geaktiveer word."</item>
   </string-array>
 </resources>

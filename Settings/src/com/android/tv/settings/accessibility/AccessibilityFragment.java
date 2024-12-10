@@ -245,7 +245,7 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
             final boolean serviceAllowed = permittedServices == null
                     || permittedServices.contains(serviceInfo.packageName);
 
-            final String title = accInfo.getResolveInfo()
+            String title = accInfo.getResolveInfo()
                     .loadLabel(getActivity().getPackageManager()).toString();
 
             final String key = "ServicePref:" + componentName.flattenToString();
@@ -253,6 +253,14 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
             if (servicePref == null) {
                 servicePref = new RestrictedPreference(getContext());
                 servicePref.setKey(key);
+            }
+            if (componentName
+                .flattenToString()
+                .equals(
+                    getResources()
+                        .getString(R.string.
+                                       accessibility_screen_reader_flattened_component_name))) {
+                title = getResources().getString(R.string.screen_reader_service_title);
             }
             servicePref.setTitle(title);
             servicePref.setSummary(serviceEnabled ? R.string.settings_on : R.string.settings_off);

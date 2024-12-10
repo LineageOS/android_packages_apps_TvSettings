@@ -23,7 +23,8 @@ import android.view.View;
 
 import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
-import androidx.slice.core.SliceActionImpl;
+
+import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
 
 /**
  * Slices version of SwitchPreference.
