@@ -50,8 +50,11 @@ import android.util.Log;
 import android.util.Pair;
 import android.view.ContextThemeWrapper;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
 
 import com.android.tv.twopanelsettings.IconUtil;
 import com.android.tv.twopanelsettings.R;
@@ -71,7 +74,7 @@ public final class SlicePreferencesUtil {
     private static final String TAG = "SlicePreferenceUtil";
 
     static Preference getPreference(SliceItem item, ContextThemeWrapper contextThemeWrapper,
-            String className, boolean isTwoPanel) {
+            String className, boolean isTwoPanel, @Nullable PreferenceGroup parent) {
         Preference preference = null;
         if (item == null) {
             return null;
@@ -79,9 +82,7 @@ public final class SlicePreferencesUtil {
         Data data = extract(item);
         if (item.getSubType() != null) {
             String subType = item.getSubType();
-            if (subType.equals(SlicesConstants.TYPE_PREFERENCE)
-                    || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED)
-                    || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER)) {
+            if (isPreferenceSubType(subType)) {
                 // TODO: Figure out all the possible cases and reorganize the logic
                 if (data.mClassNameItem != null) {
                     try {
@@ -181,6 +182,23 @@ public final class SlicePreferencesUtil {
         }
 
         if (preference != null) {
+            if (preference instanceof PreferenceGroup && !data.mChildPreferences.isEmpty()) {
+                PreferenceGroup group = (PreferenceGroup) preference;
+                if (parent != null) {
+                    parent.addPreference(preference); // Needed for adding children to work.
+                }
+                for (SliceItem child : data.mChildPreferences) {
+                    Preference childPreference = getPreference(
+                            child, contextThemeWrapper, className, isTwoPanel, group);
+                    if (childPreference != null) {
+                        group.addPreference(childPreference);
+                    }
+                }
+                if (parent != null) {
+                    parent.removePreference(preference);
+                }
+            }
+
             boolean isEnabled = enabled(item);
             // Set whether preference is enabled.
             if (preference instanceof InfoPreference || !isEnabled) {
@@ -311,6 +329,10 @@ public final class SlicePreferencesUtil {
             final SliceItem item = items.get(i);
             String subType = item.getSubType();
             if (subType != null) {
+                if (isPreferenceSubType(subType)) {
+                    data.mChildPreferences.add(item);
+                    continue;
+                }
                 switch (subType) {
                     case SlicesConstants.SUBTYPE_INFO_PREFERENCE :
                         data.mInfoItems.add(item);
@@ -365,6 +387,7 @@ public final class SlicePreferencesUtil {
         List<SliceItem> mInfoItems = new ArrayList<>();
         SliceItem mClassNameItem;
         SliceItem mPropertiesItem;
+        List<SliceItem> mChildPreferences = new ArrayList<>();
     }
 
     private static List<Pair<CharSequence, CharSequence>> getInfoList(List<SliceItem> sliceItems) {
@@ -633,5 +656,11 @@ public final class SlicePreferencesUtil {
             }
         }
         return null;
+    }
+
+    private static boolean isPreferenceSubType(@NonNull String subType) {
+        return subType.equals(SlicesConstants.TYPE_PREFERENCE)
+                || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED)
+                || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER);
     }
 }

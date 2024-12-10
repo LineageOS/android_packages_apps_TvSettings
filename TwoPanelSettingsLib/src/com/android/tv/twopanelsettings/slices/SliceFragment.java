@@ -57,6 +57,7 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.Observer;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
@@ -343,13 +344,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 Preference preference =
                         SlicePreferencesUtil.getPreference(
                                 item, mContextThemeWrapper, getClass().getCanonicalName(),
-                                getParentFragment() instanceof TwoPanelSettingsFragment);
+                                getParentFragment() instanceof TwoPanelSettingsFragment,
+                                getPreferenceScreen());
                 if (preference != null) {
                     newPrefs.add(preference);
                 }
             }
         }
-        updatePreferenceScreen(preferenceScreen, newPrefs);
+        updatePreferenceGroup(preferenceScreen, newPrefs);
         if (defaultFocusedKey != null) {
             scrollToPreference(defaultFocusedKey.toString());
         } else if (mLastFocusedPreferenceKey != null) {
@@ -397,7 +399,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         }
     }
 
-    private void updatePreferenceScreen(PreferenceScreen screen, List<Preference> newPrefs) {
+    private void updatePreferenceGroup(PreferenceGroup group, List<Preference> newPrefs) {
         // Remove all the preferences in the screen that satisfy such three cases:
         // (a) Preference without key
         // (b) Preference with key which does not appear in the new list.
@@ -405,9 +407,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         // ability to handle slices and needs to be replaced instead of re-used.
         int index = 0;
         IdentityHashMap<Preference, Preference> newToOld = new IdentityHashMap<>();
-        while (index < screen.getPreferenceCount()) {
+        while (index < group.getPreferenceCount()) {
             boolean needToRemoveCurrentPref = true;
-            Preference oldPref = screen.getPreference(index);
+            Preference oldPref = group.getPreference(index);
             for (Preference newPref : newPrefs) {
                 if (isSamePreference(oldPref, newPref)) {
                     needToRemoveCurrentPref = false;
@@ -417,7 +419,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             }
 
             if (needToRemoveCurrentPref) {
-                screen.removePreference(oldPref);
+                group.removePreference(oldPref);
             } else {
                 index++;
             }
@@ -440,7 +442,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             Preference oldPref = newToOld.get(newPref);
             if (oldPref == null) {
                 newPref.setOrder(i);
-                screen.addPreference(newPref);
+                group.addPreference(newPref);
                 continue;
             }
 
@@ -478,12 +480,22 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                         ((HasCustomContentDescription) newPref)
                                 .getContentDescription());
             }
+
+            if (oldPref instanceof PreferenceGroup && newPref instanceof PreferenceGroup) {
+                PreferenceGroup newGroup = (PreferenceGroup) newPref;
+                List<Preference> newChildren = new ArrayList<>();
+                for (int j = 0; j < newGroup.getPreferenceCount(); j++) {
+                    newChildren.add(newGroup.getPreference(j));
+                }
+                newGroup.removeAll();
+                updatePreferenceGroup((PreferenceGroup) oldPref, newChildren);
+            }
         }
 
         //addPreference will reset the checked status of TwoStatePreference.
         //So we need to add them back
-        for (int i = 0; i < screen.getPreferenceCount(); i++) {
-            Preference screenPref = screen.getPreference(i);
+        for (int i = 0; i < group.getPreferenceCount(); i++) {
+            Preference screenPref = group.getPreference(i);
             if (screenPref instanceof TwoStatePreference
                     && twoStatePreferenceIsCheckedByOrder.get(screenPref.getOrder()) != null) {
                 ((TwoStatePreference) screenPref)
@@ -510,6 +522,10 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         }
 
         if (newPref instanceof HasSliceUri != oldPref instanceof HasSliceUri) {
+            return false;
+        }
+
+        if (newPref instanceof PreferenceGroup != oldPref instanceof PreferenceGroup) {
             return false;
         }
 

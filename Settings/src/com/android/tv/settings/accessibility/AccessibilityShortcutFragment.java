@@ -97,7 +97,7 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
     }
     private void setAccessibilityShortcutEnabled(boolean enabled) {
         if (enabled) {
-            String updatedComponent = getLastShortcutService();
+            String updatedComponent = getCurrentService(getContext());
             if (!TextUtils.isEmpty(updatedComponent)) {
                 Settings.Secure.putString(getContext().getContentResolver(),
                         Settings.Secure.ACCESSIBILITY_SHORTCUT_TARGET_SERVICE, updatedComponent);

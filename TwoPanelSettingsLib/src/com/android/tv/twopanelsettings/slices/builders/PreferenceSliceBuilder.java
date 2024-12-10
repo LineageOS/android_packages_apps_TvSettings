@@ -236,6 +236,8 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     private String mClassName;
     private Bundle mProperties;
 
+    private List<RowBuilder> mChildPreferences = new ArrayList<>();
+
     public static final int TYPE_ICON = 1;
     public static final int TYPE_ACTION = 2;
 
@@ -735,6 +737,19 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
       mHasDefaultToggle = action.getImpl().isDefaultToggle();
       mHasEndActionOrToggle = true;
       return this;
+    }
+
+    /** Adds a child preference to preference category. */
+    @NonNull
+    @CanIgnoreReturnValue
+    public RowBuilder addPreference(RowBuilder childPreference) {
+      mChildPreferences.add(childPreference);
+      return this;
+    }
+
+    /** */
+    public List<RowBuilder> getPreferences() {
+      return mChildPreferences;
     }
 
     /**

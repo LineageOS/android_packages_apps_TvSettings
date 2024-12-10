@@ -350,6 +350,10 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
         addInfoItem(infoItems.get(i).first, infoItems.get(i).second);
       }
 
+      for (RowBuilder childPreference : builder.getPreferences()) {
+        addPreference(childPreference);
+      }
+
       setClassName(builder.getClassName());
       setProperties(builder.getProperties());
     }
@@ -592,6 +596,14 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
       mPropertiesItem = properties != null
               ? new SliceItem(properties, FORMAT_BUNDLE, SUBTYPE_PROPERTIES, new String[0])
               : null;
+    }
+
+    public void addPreference(RowBuilder childPreference) {
+      Slice.Builder sb = new Slice.Builder(getBuilder());
+      RowBuilderImpl impl = new RowBuilderImpl(sb);
+      impl.fillFrom(childPreference);
+      impl.getBuilder().addHints(HINT_LIST_ITEM);
+      getBuilder().addSubSlice(impl.build(), TYPE_PREFERENCE);
     }
 
     /** */
