@@ -42,4 +42,9 @@
         android:key="advanced_dolby_vision_mode"
         custom:uri="@string/advanced_dolby_vision_mode_slice_uri"
         custom:isPreferenceVisible="false" />
+    <lineageos.preference.RemotePreference
+        android:key="color_space_device_settings"
+        android:title="@string/color_space_screen_title">
+        <intent android:action="org.lineageos.settings.device.COLOR_SPACE_SETTINGS" />
+    </lineageos.preference.RemotePreference>
 </PreferenceScreen>
