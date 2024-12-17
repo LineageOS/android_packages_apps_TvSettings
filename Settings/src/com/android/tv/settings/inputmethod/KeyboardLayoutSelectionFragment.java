@@ -30,7 +30,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
-import com.android.tv.twopanelsettings.slices.SliceFragment;
+import com.android.tv.twopanelsettings.slices.SliceShard;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -154,8 +154,8 @@ public class KeyboardLayoutSelectionFragment extends SettingsPreferenceFragment 
             if (parentFragment.isFragmentInTheMainPanel(this)) {
                 parentFragment.navigateBack();
             }
-        } else if (getCallbackFragment() instanceof SliceFragment.OnePanelSliceFragmentContainer) {
-            ((SliceFragment.OnePanelSliceFragmentContainer) getCallbackFragment()).navigateBack();
+        } else if (getCallbackFragment() instanceof SliceShard.OnePanelSliceFragmentContainer) {
+            ((SliceShard.OnePanelSliceFragmentContainer) getCallbackFragment()).navigateBack();
         }
     }
 }

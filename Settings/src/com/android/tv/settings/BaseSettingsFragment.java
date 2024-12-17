@@ -31,8 +31,8 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.tv.settings.system.LeanbackPickerDialogFragment;
 import com.android.tv.settings.system.LeanbackPickerDialogPreference;
-import com.android.tv.twopanelsettings.slices.SliceFragment;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
+import com.android.tv.twopanelsettings.slices.SliceShard;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
 
 /**
@@ -41,7 +41,7 @@ import com.android.tv.twopanelsettings.slices.SlicesConstants;
  */
 
 public abstract class BaseSettingsFragment extends LeanbackSettingsFragmentCompat implements
-        SliceFragment.OnePanelSliceFragmentContainer {
+        SliceShard.OnePanelSliceFragmentContainer {
     @Override
     public final boolean onPreferenceStartFragment(PreferenceFragmentCompat caller,
             Preference pref) {

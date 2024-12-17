@@ -41,6 +41,7 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.SEEKBAR;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
@@ -73,7 +74,7 @@ import java.util.List;
 public final class SlicePreferencesUtil {
     private static final String TAG = "SlicePreferenceUtil";
 
-    static Preference getPreference(SliceItem item, ContextThemeWrapper contextThemeWrapper,
+    static Preference getPreference(SliceItem item, Context context,
             String className, boolean isTwoPanel, @Nullable PreferenceGroup parent) {
         Preference preference = null;
         if (item == null) {
@@ -88,7 +89,7 @@ public final class SlicePreferencesUtil {
                     try {
                         preference = NonSlicePreferenceBuilder.Companion.forClassName(
                                         data.mClassNameItem.getText().toString())
-                                .create(contextThemeWrapper,
+                                .create(context,
                                         data.mPropertiesItem != null
                                                 ? data.mPropertiesItem.getBundle() : null);
                     } catch (Exception e) {
@@ -97,14 +98,14 @@ public final class SlicePreferencesUtil {
                     }
                 } else if (data.mInfoItems.size() > 0) {
                     preference = new InfoPreference(
-                                contextThemeWrapper, getInfoList(data.mInfoItems));
+                                context, getInfoList(data.mInfoItems));
                 } else if (data.mIntentItem != null) {
                     SliceActionImpl action = new SliceActionImpl(data.mIntentItem);
                     if (action != null) {
                         // Currently if we don't set icon for the SliceAction, slice lib will
                         // automatically treat it as a toggle. To distinguish preference action and
                         // toggle action, we need to add a subtype if this is a preference action.
-                        preference = new SlicePreference(contextThemeWrapper);
+                        preference = new SlicePreference(context);
                         ((SlicePreference) preference).setSliceAction(action);
                         ((SlicePreference) preference).setActionId(getActionId(item));
                         if (data.mFollowupIntentItem != null) {
@@ -120,13 +121,13 @@ public final class SlicePreferencesUtil {
                         switch (buttonStyle) {
                             case CHECKMARK :
                                 preference = new SliceCheckboxPreference(
-                                        contextThemeWrapper, action);
+                                        context, action);
                                 break;
                             case SWITCH :
-                                preference = new SliceSwitchPreference(contextThemeWrapper, action);
+                                preference = new SliceSwitchPreference(context, action);
                                 break;
                             case RADIO:
-                                preference = new SliceRadioPreference(contextThemeWrapper, action);
+                                preference = new SliceRadioPreference(context, action);
                                 preference.setLayoutResource(R.layout.preference_reversed_widget);
                                 if (getRadioGroup(item) != null) {
                                     ((SliceRadioPreference) preference).setRadioGroup(
@@ -138,7 +139,7 @@ public final class SlicePreferencesUtil {
                                 int max = SlicePreferencesUtil.getSeekbarMax(item);
                                 int value = SlicePreferencesUtil.getSeekbarValue(item);
                                 preference = new SliceSeekbarPreference(
-                                        contextThemeWrapper, action, min, max, value);
+                                        context, action, min, max, value);
                                 break;
                         }
                         if (preference instanceof HasSliceAction) {
@@ -156,15 +157,15 @@ public final class SlicePreferencesUtil {
                 CharSequence uri = getText(data.mTargetSliceItem);
                 if (uri == null || TextUtils.isEmpty(uri)) {
                     if (preference == null) {
-                        preference = new CustomContentDescriptionPreference(contextThemeWrapper);
+                        preference = new CustomContentDescriptionPreference(context);
                     }
                 } else {
                     if (preference == null) {
                         if (subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER)) {
-                            preference = new EmbeddedSlicePreference(contextThemeWrapper,
+                            preference = new EmbeddedSlicePreference(context,
                                     String.valueOf(uri));
                         } else {
-                            preference = new SlicePreference(contextThemeWrapper);
+                            preference = new SlicePreference(context);
                         }
                         if (hasEndIcon(data.mHasEndIconItem)) {
                             preference.setLayoutResource(R.layout.preference_reversed_icon);
@@ -177,7 +178,7 @@ public final class SlicePreferencesUtil {
                     preference.setFragment(className);
                 }
             } else if (item.getSubType().equals(SlicesConstants.TYPE_PREFERENCE_CATEGORY)) {
-                preference = new CustomContentDescriptionPreferenceCategory(contextThemeWrapper);
+                preference = new CustomContentDescriptionPreferenceCategory(context);
             }
         }
 
@@ -189,7 +190,7 @@ public final class SlicePreferencesUtil {
                 }
                 for (SliceItem child : data.mChildPreferences) {
                     Preference childPreference = getPreference(
-                            child, contextThemeWrapper, className, isTwoPanel, group);
+                            child, context, className, isTwoPanel, group);
                     if (childPreference != null) {
                         group.addPreference(childPreference);
                     }
@@ -218,9 +219,9 @@ public final class SlicePreferencesUtil {
             if (icon != null) {
                 boolean isIconNeedToBeProcessed =
                         SlicePreferencesUtil.isIconNeedsToBeProcessed(item);
-                Drawable iconDrawable = icon.loadDrawable(contextThemeWrapper);
+                Drawable iconDrawable = icon.loadDrawable(context);
                 if (isIconNeedToBeProcessed && isTwoPanel) {
-                    preference.setIcon(IconUtil.getCompoundIcon(contextThemeWrapper, iconDrawable));
+                    preference.setIcon(IconUtil.getCompoundIcon(context, iconDrawable));
                 } else {
                     preference.setIcon(iconDrawable);
                 }
