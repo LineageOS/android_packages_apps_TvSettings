@@ -30,6 +30,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.window.OnBackInvokedCallback;
+import android.window.OnBackInvokedDispatcher;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -70,6 +72,10 @@ public abstract class TvSettingsActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
+
+        // Prevent activity exit if we still have parent panels to display.
+        getOnBackInvokedDispatcher().registerOnBackInvokedCallback(
+                OnBackInvokedDispatcher.PRIORITY_OVERLAY, () -> {});
 
         if ((FlavorUtils.getFlavor(this) & getAvailableFlavors()) == 0) {
             Log.w(TAG, "Activity is not supported in current flavor");
