@@ -26,11 +26,13 @@
         <item name="android:textAppearanceListItemSecondary">@style/TextAppearance.TwoPanelPreference.ListItem.Secondary</item>
         <item name="android:imageButtonStyle">@style/TwoPanelPreferenceIconStyle</item>
         <item name="android:colorControlNormal">#FF808080</item>
-        <item name="android:thumbTint">@drawable/switch_thumb</item>
-        <item name="thumbTint">@drawable/switch_thumb</item><!-- For SwitchPreferenceCompat -->
-        <item name="android:trackTint">@drawable/switch_track</item>
-        <item name="trackTint">@drawable/switch_track</item><!-- For SwitchPreferenceCompat -->
         <item name="android:listPreferredItemPaddingStart">20dp</item>
         <item name="android:listPreferredItemPaddingEnd">20dp</item>
+        <item name="switchPreferenceStyle">@style/TwoPanelSwitchPreferenceStyle</item>
+        <item name="switchPreferenceCompatStyle">@style/TwoPanelSwitchPreferenceStyle</item>
+        <item name="checkboxStyle">@style/TwoPanelCheckboxStyle</item>
+        <item name="android:checkboxStyle">@style/TwoPanelCheckboxStyle</item>
+        <item name="radioButtonStyle">@style/TwoPanelRadioButtonStyle</item>
+        <item name="android:radioButtonStyle">@style/TwoPanelRadioButtonStyle</item>
     </style>
 </resources>

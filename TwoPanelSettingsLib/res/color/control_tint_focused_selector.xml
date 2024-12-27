@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <!--  We have to maintain a separate state list with onFocusChangeListener -->
+  <!--  because we cannot use duplicateParentState-->
+  <item android:color="@color/tp_preference_control_on_focused_color"
+      android:state_enabled="true"
+      android:state_checked="true"/>
+  <item android:color="@color/tp_preference_control_off_focused_color"
+      android:state_enabled="true"/>
+  <item android:color="@color/tp_preference_control_disabled_focused_color"/>
+</selector>

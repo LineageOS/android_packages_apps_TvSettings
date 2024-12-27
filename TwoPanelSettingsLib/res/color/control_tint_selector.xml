@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:color="@color/tp_preference_control_on_default_color"
+      android:state_enabled="true"
+      android:state_focused="false"
+      android:state_checked="true"/>
+
+  <item android:color="@color/tp_preference_control_off_default_color"
+      android:state_enabled="true"
+      android:state_focused="false"
+      android:state_checked="false"/>
+
+  <item android:color="@color/tp_preference_control_on_focused_color"
+      android:state_enabled="true"
+      android:state_checked="true"
+      android:state_focused="true"/>
+
+  <item android:color="@color/tp_preference_control_off_focused_color"
+      android:state_enabled="true"
+      android:state_checked="false"
+      android:state_focused="true"/>
+
+  <item android:color="@color/tp_preference_control_disabled_focused_color"
+      android:state_enabled="false"
+      android:state_focused="true"/>
+
+  <item android:color="@color/tp_preference_control_disabled_default_color"/>
+</selector>

@@ -68,4 +68,28 @@
         <item name="android:textSize">@dimen/settings_info_fragment_summary_text_size</item>
         <item name="android:textColor">@color/eco_hint_color</item>
     </style>
+    <style name="TwoPanelSwitchPreferenceStyle" parent="@style/Preference.SwitchPreferenceCompat">
+        <item name="widgetLayout">@layout/preference_switch</item>
+        <item name="android:widgetLayout">@layout/preference_switch</item>
+        <item name="android:layout">@layout/leanback_preference</item>
+    </style>
+    <style name="Widget.TwoPanelPreference.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.TwoPanelPreference.Switch</item>
+    </style>
+    <style name="ThemeOverlay.TwoPanelPreference.Switch" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="thumbTint">@color/thumb_tint_selector</item>
+        <item name="trackTint">@color/control_tint_selector</item>
+        <item name="trackDecorationTint">@color/control_tint_selector</item>
+        <item name="android:scaleX">0.8</item>
+        <item name="android:scaleY">0.8</item>
+    </style>
+    <style name="TwoPanelCheckboxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:buttonTint">@color/control_tint_selector</item>
+        <item name="android:duplicateParentState">true</item>
+    </style>
+    <style name="TwoPanelRadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:buttonTint">@color/control_tint_selector</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:background">@null</item>
+    </style>
 </resources>
