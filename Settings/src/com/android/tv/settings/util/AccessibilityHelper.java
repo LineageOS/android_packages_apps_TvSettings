@@ -19,7 +19,10 @@ package com.android.tv.settings.util;
 import android.content.Context;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
+import android.accessibilityservice.AccessibilityServiceInfo;
 import android.view.inputmethod.InputMethodManager;
+
+import java.util.List;
 
 /**
  * Static utility class for common accessibility functions.
@@ -32,7 +35,9 @@ public class AccessibilityHelper {
     public static boolean forceFocusableViews(Context context) {
         AccessibilityManager accessMan = (AccessibilityManager) context.
                 getSystemService(Context.ACCESSIBILITY_SERVICE);
-        return accessMan.isEnabled();
+        List<AccessibilityServiceInfo> serviceInfos = accessMan
+            .getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_SPOKEN);
+        return !serviceInfos.isEmpty();
     }
 
     public static void dismissKeyboard(Context context, View view) {
