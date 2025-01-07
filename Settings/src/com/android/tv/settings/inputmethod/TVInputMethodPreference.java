@@ -44,7 +44,9 @@ public class TVInputMethodPreference extends InputMethodPreference {
       final InputMethodPreference.OnSavePreferenceListener onSaveListener,
       final @UserIdInt int userId) {
     super(prefContext, imi, isAllowedByOrganization, onSaveListener, userId);
-    setWidgetLayoutResource(R.layout.preference_switch_input);
+    if (FlavorUtils.isTwoPanel(getContext())) {
+      setWidgetLayoutResource(R.layout.preference_switch_input);
+    }
   }
 
   @Override
