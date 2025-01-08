@@ -26,6 +26,7 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
+import android.os.UserManager;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -55,6 +56,9 @@ public class BasicModeFeatureProviderImplX implements BasicModeFeatureProvider {
     private static final String VALUE = "value";
 
     public boolean isBasicMode(@NonNull Context context) {
+        if (!context.getSystemService(UserManager.class).isSystemUser()) {
+            return false;
+        }
         int numAccounts = AccountManager.get(context).getAccounts().length;
         Log.i(TAG, "Number of accounts: " + numAccounts);
         return numAccounts == 0;

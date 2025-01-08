@@ -108,7 +108,6 @@ object SlicePreferencesUtil {
 
                             SlicesConstants.RADIO -> {
                                 preference = SliceRadioPreference(context, action)
-                                preference.setLayoutResource(R.layout.preference_reversed_widget)
                                 if (getRadioGroup(item) != null) {
                                     preference.radioGroup =
                                         getRadioGroup(item).toString()

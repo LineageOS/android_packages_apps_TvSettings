@@ -110,16 +110,36 @@ public class TimeZoneFragment extends SettingsPreferenceFragment {
     }
 
     private void updateZones() {
-        final String id = TimeZone.getDefault().getID();
+        final TimeZone current = TimeZone.getDefault();
+        final String id = current.getID();
         final PreferenceScreen screen = getPreferenceScreen();
         final int count = screen.getPreferenceCount();
+        boolean hasChecked = false;
         for (int i = 0; i < count; i++) {
             final Preference pref = screen.getPreference(i);
             if (!(pref instanceof ZonePreference)) {
                 continue;
             }
             final ZonePreference zonePref = (ZonePreference) pref;
-            zonePref.setChecked(TextUtils.equals(zonePref.getKey(), id));
+            final boolean isChecked = TextUtils.equals(zonePref.getKey(), id);
+            zonePref.setChecked(isChecked);
+            hasChecked |= isChecked;
+        }
+
+        // If there is no id match, pick a timezone with same offset and daylight savings.
+        if (!hasChecked) {
+            for (int i = 0; i < count; i++) {
+                final Preference pref = screen.getPreference(i);
+                if (!(pref instanceof ZonePreference)) {
+                    continue;
+                }
+                final ZonePreference zonePref = (ZonePreference) pref;
+                TimeZone timeZone = TimeZone.getTimeZone(zonePref.getKey());
+                if (timeZone.hasSameRules(current)) {
+                    zonePref.setChecked(true);
+                    break;
+                }
+            }
         }
     }
 
