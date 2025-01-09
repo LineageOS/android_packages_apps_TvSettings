@@ -20,7 +20,7 @@ android_robolectric_test {
     ],
 
     libs: ["services.core"],
-    
+
     static_libs: [
         "Robolectric_shadows_androidx_fragment_upstream",
         "Settings_robolectric_meta_service_file",
@@ -35,8 +35,6 @@ android_robolectric_test {
     test_options: {
         timeout: 36000,
     },
-    
-    upstream: true,
 
     strict_mode: false,
 }
