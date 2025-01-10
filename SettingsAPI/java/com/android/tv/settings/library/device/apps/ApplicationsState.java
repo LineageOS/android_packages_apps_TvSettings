@@ -143,6 +143,7 @@ public class ApplicationsState {
     int mCurComputingSizeUserId;
     boolean mSessionsChanged;
     // Maps all installed modules on the system to whether they're hidden or not.
+    // TODO(b/382016780): to be removed after flag cleanup.
     final HashMap<String, Boolean> mSystemModules = new HashMap<>();
 
     // Temporary for dispatching session callbacks.  Only touched by main thread.
@@ -214,9 +215,11 @@ public class ApplicationsState {
         mRetrieveFlags = PackageManager.MATCH_DISABLED_COMPONENTS |
                 PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS;
 
-        final List<ModuleInfo> moduleInfos = mPm.getInstalledModules(0 /* flags */);
-        for (ModuleInfo info : moduleInfos) {
-            mSystemModules.put(info.getPackageName(), info.isHidden());
+        if (!android.content.pm.Flags.removeHiddenModuleUsage()) {
+            final List<ModuleInfo> moduleInfos = mPm.getInstalledModules(0 /* flags */);
+            for (ModuleInfo info : moduleInfos) {
+                mSystemModules.put(info.getPackageName(), info.isHidden());
+            }
         }
 
         /**
@@ -313,9 +316,11 @@ public class ApplicationsState {
                 }
                 mHaveDisabledApps = true;
             }
-            if (isHiddenModule(info.packageName)) {
-                mApplications.remove(i--);
-                continue;
+            if (!android.content.pm.Flags.removeHiddenModuleUsage()) {
+                if (isHiddenModule(info.packageName)) {
+                    mApplications.remove(i--);
+                    continue;
+                }
             }
             if (!mHaveInstantApps && AppUtils.isInstant(info)) {
                 mHaveInstantApps = true;
@@ -432,6 +437,7 @@ public class ApplicationsState {
         return mHaveInstantApps;
     }
 
+    // TODO(b/382016780): to be removed after flag cleanup.
     boolean isHiddenModule(String packageName) {
         Boolean isHidden = mSystemModules.get(packageName);
         if (isHidden == null) {
@@ -441,6 +447,7 @@ public class ApplicationsState {
         return isHidden;
     }
 
+    // TODO(b/382016780): to be removed after flag cleanup.
     boolean isSystemModule(String packageName) {
         return mSystemModules.containsKey(packageName);
     }
@@ -729,11 +736,13 @@ public class ApplicationsState {
             Log.i(TAG, "Looking up entry of pkg " + info.packageName + ": " + entry);
         }
         if (entry == null) {
-            if (isHiddenModule(info.packageName)) {
-                if (DEBUG) {
-                    Log.i(TAG, "No AppEntry for " + info.packageName + " (hidden module)");
+            if (!android.content.pm.Flags.removeHiddenModuleUsage()) {
+                if (isHiddenModule(info.packageName)) {
+                    if (DEBUG) {
+                        Log.i(TAG, "No AppEntry for " + info.packageName + " (hidden module)");
+                    }
+                    return null;
                 }
-                return null;
             }
             if (DEBUG) {
                 Log.i(TAG, "Creating AppEntry for " + info.packageName);
