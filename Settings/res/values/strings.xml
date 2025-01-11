@@ -95,6 +95,8 @@
 
     <!-- Main Fragment General Settings Preferences -->
     <skip />
+    <!-- Slice URI for main fragment settings updates. -->
+    <string name="main_fragment_slice_uri" translatable="false" />
     <!-- Title for main screen preference for accounts on device [CHAR LIMIT=50] -->
     <string name="accounts_category_title">Accounts &amp; Profiles</string>
     <!-- Summary for main screen preference for accounts on device indicates no account is signed in[CHAR LIMIT=50] -->
@@ -251,6 +253,10 @@
     <string name="overlay_security_slice_title"/>
     <!-- An item title on the privacy and apps screen. If clicked, the user is taken to screen listing Update options. [CHAR_LIMIT=50]-->
     <string name="update_slice_title"/>
+    <!-- Title of the preference to add more apps [CHAR LIMIT=60] -->
+    <string name="add_apps_title">Add more apps</string>
+    <!-- Serialized intent of the preference to add more apps. -->
+    <string name="add_apps_intent" translatable="false" />
 
     <!-- All application preferences -->
     <skip />

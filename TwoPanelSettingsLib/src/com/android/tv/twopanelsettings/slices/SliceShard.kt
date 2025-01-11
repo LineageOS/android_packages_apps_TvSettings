@@ -17,11 +17,13 @@ package com.android.tv.twopanelsettings.slices
 
 import android.app.Activity
 import android.app.PendingIntent
+import android.app.slice.Slice.HINT_PARTIAL
 import android.app.tvsettings.TvSettingsEnums
 import android.content.ContentProviderClient
 import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
+import android.content.res.Configuration
 import android.database.ContentObserver
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.Icon
@@ -41,25 +43,35 @@ import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat
 import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.Preference
+import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceScreen
 import androidx.preference.TwoStatePreference
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment
 import com.android.tv.twopanelsettings.slices.compat.Slice
 import com.android.tv.twopanelsettings.slices.compat.SliceItem
+import com.android.tv.twopanelsettings.slices.compat.SliceViewManager
 import com.android.tv.twopanelsettings.slices.compat.widget.ListContent
 import com.android.tv.twopanelsettings.slices.compat.widget.SliceContent
 import java.util.IdentityHashMap
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /**
  * Provides functionality for a fragment to display slice data.
  */
 class SliceShard(
     private val mFragment: LeanbackPreferenceFragmentCompat, uriString: String?,
-    callbacks: Callbacks, initialTitle: CharSequence, prefContext: Context
+    callbacks: Callbacks, initialTitle: CharSequence, prefContext: Context,
+    private val supportedKeys : Set<String> = setOf(),
+    private val isCached: Boolean = false
 ) {
     private val mCallbacks: Callbacks
     private val mInitialTitle: CharSequence
@@ -67,6 +79,7 @@ class SliceShard(
     private var mUriString: String? = null
     private var mSlice: Slice? = null
     private val mPrefContext: Context
+    private val mSliceCacheManager = SliceCacheManager.getInstance(prefContext)
     var screenTitle: CharSequence?
         private set
     private var mScreenSubtitle: CharSequence? = null
@@ -118,6 +131,28 @@ class SliceShard(
             }
         })
 
+        if (isCached) {
+            mFragment.viewLifecycleOwner.lifecycleScope.launch {
+                mFragment.viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    mCallbacks.showProgressBar(true)
+                    val slice = try {
+                        loadCachedSlice(mFragment.resources.configuration)
+                    } catch (e : Exception) {
+                        Log.e(TAG, "Unable to load $mUriString", e)
+                        null
+                    }
+                    if (slice != null) {
+                        mIsMainPanelReady = false
+                        mSlice = slice
+                        update()
+                    } else {
+                        mCallbacks.showProgressBar(false)
+                        mCallbacks.onSlice(null)
+                    }
+                }
+            }
+        }
+
         mSliceObserver = Observer { slice: Slice? ->
             mSlice = slice
             // Make TvSettings guard against the case that slice provider is not set up correctly
@@ -125,7 +160,7 @@ class SliceShard(
                 return@Observer
             }
 
-            if (slice.hints.contains(android.app.slice.Slice.HINT_PARTIAL)) {
+            if (slice.hints.contains(HINT_PARTIAL)) {
                 mCallbacks.showProgressBar(true)
             } else {
                 mCallbacks.showProgressBar(false)
@@ -143,9 +178,9 @@ class SliceShard(
         mCallbacks.setTitle(screenTitle)
         mCallbacks.setSubtitle(mScreenSubtitle)
         mCallbacks.setIcon(if (mScreenIcon != null) mScreenIcon!!.loadDrawable(mPrefContext) else null)
-        mCallbacks.showProgressBar(true)
 
-        if (!TextUtils.isEmpty(mUriString)) {
+        if (!isCached && !TextUtils.isEmpty(mUriString)) {
+            mCallbacks.showProgressBar(true)
             sliceLiveData.observeForever(mSliceObserver)
             mFragment.requireContext().contentResolver.registerContentObserver(
                 SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver
@@ -158,6 +193,26 @@ class SliceShard(
         mCallbacks.showProgressBar(false)
         requireContext().contentResolver.unregisterContentObserver(mContentObserver)
         sliceLiveData.removeObserver(mSliceObserver)
+    }
+
+    private suspend fun loadCachedSlice(configuration: Configuration) : Slice? {
+        val uri = Uri.parse(mUriString)
+        val cachedSlice = mSliceCacheManager.getCachedSlice(uri, configuration)
+        if (cachedSlice != null) {
+            return cachedSlice
+        }
+
+        mCallbacks.showProgressBar(false) // Show fallback while loading slice.
+
+        return withContext(Dispatchers.IO) {
+            val viewManager = SliceViewManager.getInstance(mPrefContext)
+            val slice = viewManager.bindSlice(uri)
+            if (slice != null && !slice.hints.contains(HINT_PARTIAL)) {
+                mSliceCacheManager.saveCachedSlice(uri, configuration, slice)
+                return@withContext slice;
+            }
+            return@withContext null
+        }
     }
 
     private val sliceLiveData: PreferenceSliceLiveData.SliceLiveDataImpl
@@ -338,6 +393,13 @@ class SliceShard(
             (mFragment.parentFragment as TwoPanelSettingsFragment).refocusPreference(mFragment)
         }
         mIsMainPanelReady = true
+        mCallbacks.onSlice(mSlice)
+    }
+
+    private fun isPreferenceSupported(preference : Preference) : Boolean {
+        return preference is InfoPreference || preference is HasSliceAction
+                || (preference is PreferenceCategory && preference.preferenceCount > 0)
+                || (preference.key != null && supportedKeys.contains(preference.key))
     }
 
     private fun updatePreferenceGroup(group: PreferenceGroup, newPrefs: List<Preference>) {
@@ -376,11 +438,14 @@ class SliceShard(
 
         //Iterate the new preferences list and give each preference a correct order
         for (i in newPrefs.indices) {
-            val newPref: Preference = newPrefs.get(i)
+            val newPref: Preference = newPrefs[i]
+            if (!isPreferenceSupported(newPref)) {
+                continue
+            }
 
             // If the newPref has a key and has a corresponding old preference, update the old
             // preference and give it a new order.
-            val oldPref: Preference? = newToOld.get(newPref)
+            val oldPref: Preference? = newToOld[newPref]
             if (oldPref == null) {
                 newPref.order = i
                 group.addPreference(newPref)
@@ -720,6 +785,8 @@ class SliceShard(
         fun setSubtitle(subtitle: CharSequence?)
 
         fun setIcon(icon: Drawable?)
+
+        fun onSlice(slice: Slice?)
     }
 
     /** Callback for one panel settings fragment  */

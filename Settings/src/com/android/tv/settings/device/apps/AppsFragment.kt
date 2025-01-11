@@ -18,6 +18,7 @@ package com.android.tv.settings.device.apps
 import android.app.Activity
 import android.app.tvsettings.TvSettingsEnums
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.provider.DeviceConfig
 import android.text.TextUtils
@@ -56,6 +57,16 @@ class AppsFragment : PreferenceControllerFragment() {
             }
         }
         findPreference<Preference>(KEY_HIBERNATED_APPS)?.isVisible = isHibernationEnabled
+
+        findPreference<Preference>(KEY_ADD_APPS)?.apply {
+            val addAppsUrl = requireContext().getString(R.string.add_apps_intent)
+            if (addAppsUrl.isNotEmpty()) {
+                isVisible = true
+                intent = Intent.parseUri(addAppsUrl, 0)
+            } else {
+                isVisible = false
+            }
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -139,6 +150,7 @@ class AppsFragment : PreferenceControllerFragment() {
         private const val KEY_SECURITY = "security"
         private const val KEY_OVERLAY_SECURITY = "overlay_security"
         private const val KEY_UPDATE = "update"
+        private const val KEY_ADD_APPS="add_apps"
         private const val TOP_LEVEL_SLICE_URI = "top_level_settings_slice_uri"
         private const val KEY_HIBERNATED_APPS = "see_unused_apps"
         @JvmStatic

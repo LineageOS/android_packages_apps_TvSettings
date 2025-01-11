@@ -201,4 +201,10 @@
             <item>package.name.two</item>
         -->
     </string-array>
+
+    <!--
+        STB often didn't contain tuner or HDMI inputs. Partners can set this config to true to hide
+        the "Channels and Inputs" preference
+    -->
+    <bool name="config_hide_channels_and_inputs">false</bool>
 </resources>

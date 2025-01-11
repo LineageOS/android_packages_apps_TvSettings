@@ -19,6 +19,10 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:title="@string/applications_category_title">
 
+    <Preference
+        android:key="add_apps"
+        android:title="@string/add_apps_title" />
+
     <PreferenceCategory
         android:key="recently_used_apps_category"
         android:title="@string/apps_recently_used_category_title">

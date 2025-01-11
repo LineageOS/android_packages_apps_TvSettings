@@ -36,6 +36,8 @@ import android.service.settings.suggestions.Suggestion
 import android.telephony.CellSignalStrength
 import android.text.TextUtils
 import android.util.Log
+import android.util.TypedValue
+import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -61,6 +63,8 @@ import com.android.tv.settings.util.InstrumentationUtils
 import com.android.tv.settings.util.SliceUtils
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment
 import com.android.tv.twopanelsettings.slices.SlicePreference
+import com.android.tv.twopanelsettings.slices.SliceShard
+import com.android.tv.twopanelsettings.slices.compat.Slice
 import java.util.Locale
 import java.util.Optional
 
@@ -71,7 +75,8 @@ import java.util.Optional
 open class MainFragment : PreferenceControllerFragment(),
     SuggestionControllerMixinCompat.SuggestionControllerHost,
     SuggestionPreference.Callback,
-    HotwordStateListener {
+    HotwordStateListener,
+    SliceShard.Callbacks {
     @VisibleForTesting
     var mConnectivityListenerOptional: Optional<ConnectivityListener>? = null
 
@@ -93,6 +98,8 @@ open class MainFragment : PreferenceControllerFragment(),
     }
 
     private var mConnectivityListenerLite: ConnectivityListenerLite? = null
+
+    private var mSliceShard : SliceShard? = null
 
     override fun getPreferenceScreenResId(): Int {
         return when (FlavorUtils.getFlavor(context)) {
@@ -144,33 +151,32 @@ open class MainFragment : PreferenceControllerFragment(),
     private val isWifiScanOptimisationEnabled: Boolean
         get() = context!!.resources.getBoolean(R.bool.wifi_scan_optimisation_enabled)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        mSuggestionQuickSettingPrefsContainer!!.showOrHideQuickSettings()
-        updateAccountPref()
-        updateAccessoryPref()
-        updateBasicModeSuggestion()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val sliceUri = getString(R.string.main_fragment_slice_uri)
 
-        val sliceInputsPreference = findPreference<SlicePreference>(
-            KEY_CHANNELS_AND_INPUTS_SLICE
-        )
-        if (sliceInputsPreference != null
-            && !SliceUtils.isSliceProviderValid(
-                requireContext(), sliceInputsPreference.uri
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(preferenceScreenResId, null)
+            configurePreferences()
+        } else {
+            setPreferencesFromResource(R.xml.settings_loading, null)
+
+            val themeTypedValue = TypedValue()
+            requireContext().theme.resolveAttribute(
+                com.android.tv.twopanelsettings.R.attr.preferenceTheme,
+                themeTypedValue,
+                true
             )
-        ) {
-            sliceInputsPreference.uri = getString(R.string.channels_and_inputs_fallback_slice_uri)
+            val prefContext = ContextThemeWrapper(activity, themeTypedValue.resourceId)
+            mSliceShard = SliceShard(
+                this, sliceUri, this,
+                getString(R.string.settings_app_name), prefContext, supportedKeys, true
+            )
         }
-
-        SliceUtils.maybeUseSlice(findPreference(KEY_CHANNELS_AND_INPUTS), sliceInputsPreference)
-        SliceUtils.maybeUseSlice(
-            findPreference(KEY_HELP_AND_FEEDBACK),
-            findPreference(KEY_HELP_AND_FEEDBACK_SLICE)
-        )
-        return super.onCreateView(inflater, container, savedInstanceState)
+        super.onViewCreated(view, savedInstanceState)
     }
+
+    private val shouldHideChannelsAndInputs: Boolean
+        get() = context!!.resources.getBoolean(R.bool.config_hide_channels_and_inputs)
 
     private fun updateConnectivityType(activeNetworkProvider: ActiveNetworkProvider) {
         val networkPref = findPreference<Preference>(KEY_NETWORK)
@@ -196,7 +202,16 @@ open class MainFragment : PreferenceControllerFragment(),
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(preferenceScreenResId, null)
+    }
+
+    override fun onSlice(slice: Slice?) {
+        if (slice == null) {
+            setPreferencesFromResource(preferenceScreenResId, null)
+        }
+        configurePreferences()
+    }
+
+    private fun configurePreferences() {
         if (Partner.getInstance(context).isCustomizationPackageProvided) {
             PartnerPreferencesMerger.mergePreferences(
                 context,
@@ -239,6 +254,37 @@ open class MainFragment : PreferenceControllerFragment(),
         SliceUtils.maybeUseSlice(
             findPreference(KEY_DISPLAY_AND_SOUND),
             findPreference(KEY_DISPLAY_AND_SOUND_SLICE)
+        )
+        mSuggestionQuickSettingPrefsContainer!!.showOrHideQuickSettings()
+        updateAccountPref()
+        updateAccessoryPref()
+        updateBasicModeSuggestion()
+
+        val sliceInputsPreference = findPreference<SlicePreference>(
+            KEY_CHANNELS_AND_INPUTS_SLICE
+        )
+        val channelsAndInputsPreference = findPreference<Preference>(KEY_CHANNELS_AND_INPUTS)
+        if (shouldHideChannelsAndInputs) {
+            if (sliceInputsPreference != null) {
+                sliceInputsPreference.setVisible(false)
+            }
+            if (channelsAndInputsPreference != null) {
+                channelsAndInputsPreference.setVisible(false)
+            }
+        } else {
+            if (sliceInputsPreference != null
+                && !SliceUtils.isSliceProviderValid(
+                    requireContext(), sliceInputsPreference.uri
+                )
+            ) {
+                sliceInputsPreference.uri = getString(R.string.channels_and_inputs_fallback_slice_uri)
+            }
+            SliceUtils.maybeUseSlice(findPreference(KEY_CHANNELS_AND_INPUTS), sliceInputsPreference)
+        }
+
+        SliceUtils.maybeUseSlice(
+            findPreference(KEY_HELP_AND_FEEDBACK),
+            findPreference(KEY_HELP_AND_FEEDBACK_SLICE)
         )
     }
 
@@ -717,6 +763,12 @@ open class MainFragment : PreferenceControllerFragment(),
         return TvSettingsEnums.TV_SETTINGS_ROOT
     }
 
+    override fun setSubtitle(subtitle: CharSequence?) {
+    }
+
+    override fun setIcon(icon: Drawable?) {
+    }
+
     companion object {
         private const val TAG = "MainFragment"
         private const val KEY_BASIC_MODE_SUGGESTION = "basic_mode_suggestion"
@@ -760,6 +812,15 @@ open class MainFragment : PreferenceControllerFragment(),
 
         private const val KEY_HELP_AND_FEEDBACK = "help_and_feedback"
         private const val KEY_HELP_AND_FEEDBACK_SLICE = "help_and_feedback_slice"
+
+        private val supportedKeys = setOf(KEY_BASIC_MODE_SUGGESTION, KEY_BASIC_MODE_EXIT,
+            KEY_ACCOUNTS_AND_SIGN_IN, KEY_ACCOUNTS_AND_SIGN_IN_SLICE,
+            KEY_ACCOUNTS_AND_SIGN_IN_BASIC_MODE, KEY_APPLICATIONS,
+            KEY_ACCESSORIES, KEY_CONNECTED_DEVICES, KEY_CONNECTED_DEVICES_SLICE,
+            KEY_NETWORK, KEY_NETWORK, KEY_PRIVACY, KEY_DISPLAY_AND_SOUND,
+            KEY_DISPLAY_AND_SOUND_SLICE, KEY_CHANNELS_AND_INPUTS,
+            KEY_CHANNELS_AND_INPUTS_SLICE, KEY_HELP_AND_FEEDBACK,
+            KEY_HELP_AND_FEEDBACK_SLICE)
 
         private const val ACTION_ACCOUNTS = "com.android.tv.settings.ACCOUNTS"
         fun newInstance(): MainFragment {
