@@ -66,7 +66,7 @@
     <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"תשלום ורכישות"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"הגדרות האפליקציה"</string>
-    <string name="privacy_category_summary" msgid="3534434883380511043">"מיקום, אופן השימוש בנתונים וניתוח הביצועים, מודעות"</string>
+    <string name="privacy_category_summary" msgid="3534434883380511043">"מיקום, דפוסי שימוש וביצועים, מודעות"</string>
     <string name="add_account" msgid="7386223854837017129">"הוספת חשבון"</string>
     <string name="unknown_account" msgid="5159580666787047518">"חשבון לא ידוע"</string>
     <string name="account_header_remove_account" msgid="8573697553061331373">"הסרת חשבון"</string>
@@ -108,6 +108,8 @@
     <string name="apps_permissions_category_title" msgid="8099660060701465267">"הרשאות"</string>
     <string name="overlay_security_slice_title" msgid="4895032817538300187"></string>
     <string name="update_slice_title" msgid="6553763903108611747"></string>
+    <!-- no translation found for add_apps_title (5644022756289850710) -->
+    <skip />
     <string name="all_apps_title" msgid="3717294436135280133">"כל האפליקציות"</string>
     <string name="all_apps_show_system_apps" msgid="1260688031005374302">"הצגת אפליקציות מערכת"</string>
     <string name="all_apps_installed" msgid="8217778476185598971">"אפליקציות מותקנות"</string>
@@ -280,7 +282,7 @@
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"אביזרים"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"שלט רחוק"</string>
     <string name="bluetooth_official_remote_entry_title" msgid="6699700335229570038">"הגדרות לשלט רחוק"</string>
-    <string name="bluetooth_ir_entry_title" msgid="6927284710576530479">"הגדרת הלחצנים בשלט הרחוק"</string>
+    <string name="bluetooth_ir_entry_title" msgid="6927284710576530479">"הגדרת הכפתורים בשלט הרחוק"</string>
     <string name="bluetooth_ir_entry_subtitle" msgid="4606207128353416151">"שליטה בעוצמת הקול, בהפעלה, בקלט של טלוויזיות, ברסיברים ובמקרני קול."</string>
     <string name="bluetooth_connect_action_title" msgid="7715342395313781643">"התחברות"</string>
     <string name="bluetooth_connect_confirm" msgid="4769958536295137386">"חיבור אל %1$s"</string>
@@ -501,7 +503,7 @@
     <string name="wifi_forget_network" msgid="4634016112624305571">"שכח רשת"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"פעולה זו מנקה מידע המשמש להתחבר אל הרשת הזו, כולל סיסמה שמורה"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" כדי להצטרף לרשת Wi-Fi, ניתן לסרוק קוד QR באמצעות טלפון נייד ואז לפעול לפי ההוראות.\n \n ב"<b>"טלפון Android"</b>", עוברים אל \'הגדרות\' -&gt; \'רשת\' ואינטרנט -&gt; Wi-Fi -&gt; בוחרים רשת Wi-Fi‏ -&gt; מתקדם -&gt; מוסיפים מכשיר ואז סורקים את קוד ה-QR."</string>
-    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"יש ללחוץ על הלחצן \'הקודם\' כדי לבטל"</string>
+    <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"יש ללחוץ על הכפתור \'הקודם\' כדי לבטל"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"אישור"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"המשך"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"שינוי רשת"</string>
@@ -662,7 +664,7 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"הגישה למצלמה חסומה"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"כדי לבטל את החסימה ולאפשר גישה למצלמה, צריך להעביר את מתג הפרטיות במכשיר למצב \'המצלמה פועלת\'."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"סטטוס הגישה למיקרופון: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"כשהמיקרופון מופעל, כל האפליקציות והשירותים המורשים להשתמש במיקרופון יוכלו לגשת אליו.\n\nכשהמיקרופון כבוי, אפליקציות או שירותים לא יוכלו לגשת למיקרופון. עדיין יתאפשר לך לדבר עם Google Assistant על ידי לחיצה על לחצן המעבר ל-Assistant בשלט הרחוק.\n\nייתכן שהתקני אודיו שמשתמשים בפרוטוקולים מותאמים אישית לתקשורת עם הטלוויזיה לא יושפעו מההגדרה הזו."</string>
+    <string name="mic_toggle_info_content" msgid="3187791167208947239">"כשהמיקרופון מופעל, כל האפליקציות והשירותים המורשים להשתמש במיקרופון יוכלו לגשת אליו.\n\nכשהמיקרופון כבוי, אפליקציות או שירותים לא יוכלו לגשת למיקרופון. עדיין יתאפשר לך לדבר עם Google Assistant על ידי לחיצה על כפתור המעבר ל-Assistant בשלט הרחוק.\n\nייתכן שהתקני אודיו שמשתמשים בפרוטוקולים מותאמים אישית לתקשורת עם הטלוויזיה לא יושפעו מההגדרה הזו."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"המיקרופון בשלט הרחוק מופעל"</string>
     <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistant יכולה לגשת למיקרופון בשלט הרחוק שלך. יתאפשר לך לדבר עם ה-Assistant על ידי לחיצה על כפתור Google Assistant בשלט הרחוק."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"המיקרופון בשלט הרחוק מושבת"</string>
@@ -736,7 +738,7 @@
     <string name="accessibility_shortcut_enable" msgid="6603542432267329986">"הפעלת קיצור הדרך לנגישות"</string>
     <string name="accessibility_shortcut_service" msgid="2053250146891420311">"שירות קיצורי הדרך"</string>
     <string name="keyboard_accessibility" msgid="7849649126112178029">"נגישות במקלדת"</string>
-    <string name="accessibility_shortcut_description" msgid="2050424178481510046">"כאשר קיצור הדרך מופעל, ניתן ללחוץ בו זמנית על הלחצן \'הקודם\' ועל החץ למטה למשך שלוש שניות כדי להפעיל תכונת נגישות."</string>
+    <string name="accessibility_shortcut_description" msgid="2050424178481510046">"כאשר קיצור הדרך מופעל, ניתן ללחוץ בו זמנית על הכפתור \"הקודם\" ועל החץ למטה למשך שלוש שניות כדי להפעיל תכונת נגישות."</string>
     <string name="accessibility_timeout" msgid="6238669374985731114">"זמן לביצוע פעולה (זמן קצוב לתפוגה של הגדרת נגישות)"</string>
     <string name="accessibility_timeout_summary" msgid="5365359228570110804">"כוונון משך הזמן של הודעות עם בקשה לביצוע פעולה"</string>
     <string name="accessibility_timeout_detailed" msgid="8456883531647489988">"בוחרים את משך הזמן שבו יוצגו הודעות זמניות עם בקשה לביצוע פעולה"</string>
@@ -747,12 +749,12 @@
     <string name="accessibility_key_repeat_delay_summary" msgid="1285871520625842138">"כוונון ההשהיה לפני החזרה על המקש"</string>
     <string name="accessibility_key_repeat" msgid="2883843620765652931">"חזרה על מקש"</string>
     <string name="accessibility_delay_before_repeat" msgid="2090040450091150466">"השהיה לפני חזרה"</string>
-    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"התאמה אישית של משך הזמן שבו אפשר ללחוץ על לחצן לפני שהוא יתחיל לחזור על עצמו"</string>
-    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"התאמה אישית של משך הזמן שבו לוחצים לחיצה ארוכה על לחצן כדי שהוא יתחיל לחזור על עצמו"</string>
+    <string name="accessibility_delay_before_repeat_summary" msgid="7889272629294523770">"התאמה אישית של משך הזמן שבו אפשר ללחוץ על כפתור לפני שהוא יתחיל לחזור על עצמו"</string>
+    <string name="accessibility_delay_before_repeat_detailed" msgid="5855212602097866850">"התאמה אישית של משך הזמן שבו לוחצים לחיצה ארוכה על כפתור כדי שהוא יתחיל לחזור על עצמו"</string>
     <string name="accessibility_repeat_rate" msgid="7021902189827133568">"קצב החזרה"</string>
     <string name="accessibility_repeat_rate_summary" msgid="3583246887327117521">"הגדרת קצב החזרה על תווים שמוזנים במהלך לחיצה ארוכה על מקש"</string>
     <string name="accessibility_key_repeat_info" msgid="6966835128389755237">"ברירת המחדל"</string>
-    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"שליטה בקצב החזרה על לחצן בסיום ההשהיה הראשונית"</string>
+    <string name="accessibility_repeat_rate_info_summary" msgid="6481063957245411995">"שליטה בקצב החזרה על כפתור בסיום ההשהיה הראשונית"</string>
     <string name="accessibility_captions" msgid="3411554568812306549">"כתוביות"</string>
     <string name="accessibility_captions_description" msgid="3827820027578548160">"הגדרות עבור שכבת-על של טקסט כתוביות בסרטון"</string>
     <string name="captions_display" msgid="2598662495450633375">"תצוגה"</string>
@@ -1084,7 +1086,7 @@
     <string name="high_power_system" msgid="6263052626979462255">"אופטימיזציה של צריכת האנרגיה אינה זמינה"</string>
     <string name="manage_notification_access_title" msgid="8659254371564990084">"גישה להודעות"</string>
     <string name="no_notification_listeners" msgid="5119406452675724448">"אין אפליקציות מותקנות שביקשו גישה להודעות."</string>
-    <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"אפליקציות אלה יוכלו לקרוא את כל ההודעות, כולל מידע אישי כמו שמות של אנשי קשר והודעות טקסט שתקבל. הן גם יוכלו לבטל הודעות או להפעיל לחצני פעולה שהן כוללות."</string>
+    <string name="notification_listener_security_warning_summary" msgid="8602907284276088658">"אפליקציות אלה יוכלו לקרוא את כל ההודעות, כולל מידע אישי כמו שמות של אנשי קשר והודעות טקסט שתקבל. הן גם יוכלו לבטל הודעות או להפעיל כפתורי פעולה שהן כוללות."</string>
     <string name="default_notification_access_package_summary" msgid="1354775994781420222">"ההגדרה הזו נדרשת על ידי המערכת"</string>
     <string name="directory_access" msgid="7338555825237012006">"גישה לספרייה"</string>
     <string name="directory_access_description" msgid="3630855858552422012">"לאפליקציות אלה יש הרשאת גישה לספריות מסוימות."</string>
@@ -1186,11 +1188,11 @@
     <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"הפעלת מצב \'<xliff:g id="ENERGYMODENAME">%s</xliff:g>\'"</string>
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"איפה השלט שלי"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"ניתן להשמיע צליל כדי לאתר שלט רחוק של Google TV שאבד"</string>
-    <string name="find_my_remote_slice_description" msgid="313598681990933215">"יש כפתור ב-Google TV שאפשר ללחוץ עליו כדי להשמיע צליל בשלט הרחוק למשך 30 שניות. הפעולה הזו עובדת רק בשלטים רחוקים נתמכים של Google TV.‏\n\nכדי להפסיק את הצליל, צריך ללחוץ על לחצן כלשהו בשלט."</string>
-    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"כשהאפשרות מופעלת, אפשר להשתמש בלחצן במכשיר כדי להשמיע צליל ולאתר את השלט הרחוק. כשהאפשרות מושבתת, הלחצן הזה לא יעבוד. עדיין תהיה לך אפשרות להשתמש בתכונה \'איפה השלט\' באמצעות שיטות אחרות."</string>
+    <string name="find_my_remote_slice_description" msgid="313598681990933215">"יש כפתור ב-Google TV שאפשר ללחוץ עליו כדי להשמיע צליל בשלט הרחוק למשך 30 שניות. הפעולה הזו עובדת רק בשלטים רחוקים נתמכים של Google TV.‏\n\nכדי להפסיק את הצליל, צריך ללחוץ על כפתור כלשהו בשלט."</string>
+    <string name="find_my_remote_integration_hint" msgid="1505908080631286111">"כשהאפשרות מופעלת, אפשר להשתמש בכפתור במכשיר כדי להשמיע צליל ולאתר את השלט הרחוק. כשהאפשרות מושבתת, הכפתור הזה לא יעבוד. עדיין תהיה לך אפשרות להשתמש בתכונה \'איפה השלט\' באמצעות שיטות אחרות."</string>
     <string name="find_my_remote_play_sound" msgid="3364983972397728084">"השמעת צליל"</string>
     <string name="settings_backlight_title" msgid="3427298593084740948">"מצב \'תאורה אחורית\'"</string>
-    <string name="settings_backlight_description" msgid="7017662329873546994">"תאורה של הלחצנים בשלט הרחוק בכל לחיצה."</string>
+    <string name="settings_backlight_description" msgid="7017662329873546994">"תאורה של הכפתורים בשלט הרחוק בכל לחיצה."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"בשלטים רחוקים שנתמכים על ידי Google TV, לחיצה על השלט מפעילה את התאורה האחורית."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"עוצמת קול %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"אפשר לשלוט בעוצמת הקול של Assistant ברמקול של %1$s"</string>
