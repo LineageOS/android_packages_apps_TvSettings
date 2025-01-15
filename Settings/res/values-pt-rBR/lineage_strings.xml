@@ -16,7 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_reboot_confirm_cm">Reiniciar para:</string>
     <string name="global_action_restart_system">Sistema</string>
-    <string name="global_action_restart_recovery">Recuperação</string>
+    <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Bootloader</string>
     <plurals name="show_dev_countdown_cm">
         <item quantity="one">Você está a <xliff:g id="step_count">%1$d</xliff:g> passo de ativar as configurações de desenvolvimento.</item>
@@ -33,13 +33,13 @@
     <string name="enable_adb_root">Depuração como superusuário</string>
     <string name="enable_adb_root_summary">Permitir executar a depuração do Android como superusuário</string>
     <string name="advanced_restart_title">Reinicialização avançada</string>
-    <string name="advanced_restart_summary">Mostrar opções para reiniciar em modo de recuperação, no bootloader ou executar um reinício \"soft\"</string>
+    <string name="advanced_restart_summary">Mostrar opções para reiniciar em modo recovery, no bootloader ou executar um reinício \"soft\"</string>
     <string name="adb_over_network">ADB através da rede</string>
     <string name="adb_over_network_summary">Ativa a depuração de TCP/IP nas interfaces de rede (redes Wi\u2011Fi, USB). Esta configuração é redefinida quando o dispositivo é reiniciado</string>
     <string name="adb_over_network_warning">AVISO: Quando o ADB pela rede está ativado, seu telefone fica aberto para invasões em todas as redes conectadas! \n\nSó use este recurso quando estiver conectado a redes confiáveis.\n\nDeseja realmente ativar esta função?</string>
     <string name="trust_category_features">Estado</string>
     <string name="trust_feature_selinux">SELinux</string>
-    <string name="trust_feature_selinux_value_enforcing">Impondo</string>
+    <string name="trust_feature_selinux_value_enforcing">Restrito</string>
     <string name="trust_feature_selinux_value_disabled">Desabilitado</string>
     <string name="trust_feature_selinux_explain">O SELinux determina quais processos têm acesso a determinados arquivos/pastas no seu dispositivo.\nIsto impede que apps e serviços tenham acesso a arquivos com os quais não devem. Dessa forma, um potencial processo malicioso terá acesso limitado e sua segurança é preservada.</string>
     <string name="trust_feature_security_patches">Atualizações de segurança do Android</string>
