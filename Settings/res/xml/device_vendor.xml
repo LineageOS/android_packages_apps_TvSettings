@@ -23,6 +23,15 @@
         android:icon="@drawable/ic_info_outline"
         android:key="about_device"
         android:title="@string/about_preference"/>
+    <!-- System update settings - launches activity -->
+    <Preference android:key="system_update_settings"
+        android:title="@string/about_system_update" />
+    <Preference android:key="additional_system_update_settings"
+        android:title="@string/additional_system_update_settings_list_item_title">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="@string/additional_system_update"
+            android:targetClass="@string/additional_system_update_menu" />
+    </Preference>
     <com.android.tv.twopanelsettings.slices.SlicePreference
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
         android:icon="@drawable/ic_settings_system_daydream"
