@@ -19,6 +19,11 @@
                   xmlns:custom="http://schemas.android.com/apk/res-auto"
                   android:title="@string/device_pref_category_title">
     <Preference
+        android:fragment="com.android.tv.settings.about.AboutFragment"
+        android:icon="@drawable/ic_info_outline"
+        android:key="about_device"
+        android:title="@string/about_preference"/>
+    <Preference
         android:fragment="com.android.tv.settings.device.display.daydream.DaydreamFragment"
         android:icon="@drawable/ic_settings_system_daydream"
         android:key="daydream"
@@ -29,11 +34,6 @@
         android:key="power_and_energy"
         custom:isPreferenceVisible="false"
         android:title="@string/power_and_energy"/>
-    <Preference
-        android:fragment="com.android.tv.settings.about.AboutFragment"
-        android:icon="@drawable/ic_info_outline"
-        android:key="about_device"
-        android:title="@string/about_preference"/>
     <Preference
         android:fragment="com.android.tv.settings.system.DateTimeFragment"
         android:icon="@drawable/ic_access_time"

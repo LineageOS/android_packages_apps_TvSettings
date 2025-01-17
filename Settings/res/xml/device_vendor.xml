@@ -18,6 +18,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:custom="http://schemas.android.com/apk/res-auto"
                   android:title="@string/device_pref_category_title">
+    <Preference
+        android:fragment="com.android.tv.settings.about.AboutFragment"
+        android:icon="@drawable/ic_info_outline"
+        android:key="about_device"
+        android:title="@string/about_preference"/>
     <com.android.tv.twopanelsettings.slices.SlicePreference
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
         android:icon="@drawable/ic_settings_system_daydream"
@@ -35,11 +40,6 @@
         android:icon="@drawable/ic_settings_energy_saver"
         android:key="energysaver"
         android:title="@string/device_energy_saver"/>
-    <Preference
-        android:fragment="com.android.tv.settings.about.AboutFragment"
-        android:icon="@drawable/ic_info_outline"
-        android:key="about_device"
-        android:title="@string/about_preference"/>
     <Preference
         android:fragment="com.android.tv.settings.system.DateTimeFragment"
         android:icon="@drawable/ic_access_time"
