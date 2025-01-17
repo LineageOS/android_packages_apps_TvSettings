@@ -92,6 +92,7 @@
          android:label="@string/settings_app_name"
          android:supportsRtl="true"
          android:theme="@style/Theme.Settings"
+         android:enableOnBackInvokedCallback="false"
          android:usesCleartextTraffic="true">
 
         <activity
