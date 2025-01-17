@@ -23,8 +23,11 @@ import android.content.res.Resources
 import android.media.AudioManager
 import android.media.tv.TvInputManager
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.os.UserHandle
+import android.os.UserManager
 import android.provider.Settings
+import android.telephony.CarrierConfigManager
 import android.text.TextUtils
 import android.util.Log
 import android.view.LayoutInflater
@@ -56,6 +59,7 @@ import com.android.tv.settings.system.SecurityFragment
 import com.android.tv.settings.util.InstrumentationUtils
 import com.android.tv.settings.util.SliceUtils
 import com.android.tv.settings.util.SliceUtilsKt
+import com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference
 import com.android.tv.twopanelsettings.slices.SlicePreference
 import com.android.tv.twopanelsettings.slices.SliceShard
 import com.android.tv.twopanelsettings.slices.compat.Slice
@@ -71,6 +75,7 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
     private var mInputSettingNeeded = false
     private var mAudioManager: AudioManager? = null
     private var mSliceShard: SliceShard? = null
+    private var mUm: UserManager? = null
 
     private val preferenceScreenResId: Int
         get() = if (isRestricted) {
@@ -95,6 +100,7 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
             }
         }
         mAudioManager = requireContext().getSystemService(AudioManager::class.java) as AudioManager
+        mUm = UserManager.get(getActivity())
         super.onCreate(savedInstanceState)
     }
 
@@ -155,6 +161,7 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
         updateAmbientSettings()
         updatePowerAndEnergySettings()
         updateSystemTvSettings()
+        updateUpdateSettings()
         hideIfIntentUnhandled(findPreference(KEY_HOME_SETTINGS))
         hideIfIntentUnhandled(findPreference(KEY_CAST_SETTINGS))
         hideIfIntentUnhandled(findPreference(KEY_USAGE))
@@ -181,6 +188,17 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
                 InstrumentationUtils.logToggleInteracted(TvSettingsEnums.DISPLAY_SOUND_SYSTEM_SOUNDS,
                         it.isChecked)
                 soundEffectsEnabled = it.isChecked
+            }
+            KEY_SYSTEM_UPDATE_SETTINGS -> {
+                InstrumentationUtils.logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_SYSTEM_UPDATE)
+                val configManager = requireActivity().getSystemService(
+                        Context.CARRIER_CONFIG_SERVICE) as? CarrierConfigManager
+                val configBundle = configManager?.config
+                if (configBundle?.getBoolean(
+                        CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL) == true) {
+                    ciActionOnSysUpdate(configBundle)
+                }
+                startActivity(Intent(Settings.ACTION_SYSTEM_UPDATE_SETTINGS))
             }
         }
         return super.onPreferenceTreeClick(preference)
@@ -241,6 +259,31 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
                 icon = it.activityInfo.loadIcon(requireContext().packageManager)
                 title = it.activityInfo.loadLabel(requireContext().packageManager)
             }
+        }
+    }
+
+    private fun updateUpdateSettings() {
+        val updateSettingsPref = findPreference<Preference>(KEY_SYSTEM_UPDATE_SETTINGS)
+
+        if (mUm?.isAdminUser == true) {
+            val systemUpdateIntent = Intent(Settings.ACTION_SYSTEM_UPDATE_SETTINGS)
+            val info = MainFragment.systemIntentIsHandled(context, systemUpdateIntent)
+
+            if (info == null) {
+                removePreference(updateSettingsPref)
+            } else {
+                updateSettingsPref?.title =
+                        info.activityInfo.loadLabel(requireContext().packageManager)
+            }
+        } else {
+            // Remove for secondary users
+            removePreference(updateSettingsPref)
+        }
+
+        // Read platform settings for additional system update setting
+        if (!requireContext().getResources()
+                .getBoolean(R.bool.config_additional_system_update_setting_enable)) {
+            removePreference(findPreference(KEY_UPDATE_SETTING));
         }
     }
 
@@ -353,6 +396,35 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
         }
     }
 
+    /**
+    * Trigger client-initiated action (send intent) on system update.
+    */
+    private fun ciActionOnSysUpdate(bundle: PersistableBundle) {
+        val intentStr = bundle.getString(
+                CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_INTENT_STRING)
+        if (!intentStr.isNullOrEmpty()) {
+            val extra = bundle.getString(
+                    CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_STRING)
+            val extraVal = bundle.getString(
+                    CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_VAL_STRING)
+
+            val intent = Intent(intentStr).apply {
+                if (!extra.isNullOrEmpty()) {
+                    putExtra(extra, extraVal)
+                }
+            }
+
+            Log.d(TAG, "ciActionOnSysUpdate: broadcasting intent $intentStr with extra $extra, $extraVal")
+            requireActivity().applicationContext.sendBroadcast(intent)
+        }
+    }
+
+    private fun removePreference(preference: Preference?) {
+        if (preference != null) {
+            getPreferenceScreen().removePreference(preference)
+        }
+    }
+
     override fun getPageId(): Int {
         return TvSettingsEnums.SYSTEM
     }
@@ -371,6 +443,7 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
         @VisibleForTesting
         val KEY_KEYBOARD = "keyboard"
         private const val TAG = "DeviceFragment"
+        private const val KEY_UPDATE_SETTING = "additional_system_update_settings"
         private const val KEY_USAGE = "usageAndDiag"
         private const val KEY_INPUTS = "inputs"
         private const val KEY_SOUNDS = "sound_effects"
@@ -388,5 +461,6 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
         private const val KEY_POWER_AND_ENERGY = "power_and_energy"
         private const val RES_TOP_LEVEL_ASSISTANT_SLICE_URI = "top_level_assistant_slice_uri"
         private const val KEY_SYSTEM_TV_SLICE = "menu_system_tv"
+        private const val KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings"
     }
 }

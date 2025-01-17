@@ -31,7 +31,6 @@ import android.content.pm.ResolveInfo;
 import android.icu.text.MessageFormat;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.os.SELinux;
 import android.os.SystemClock;
 import android.os.SystemProperties;
@@ -39,7 +38,6 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.sysprop.TelephonyProperties;
-import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
@@ -83,7 +81,6 @@ public class AboutFragment extends SettingsPreferenceFragment implements SliceSh
 
     private static final String KEY_MANUAL = "manual";
     private static final String KEY_REGULATORY_INFO = "regulatory_info";
-    private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
@@ -93,7 +90,6 @@ public class AboutFragment extends SettingsPreferenceFragment implements SliceSh
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
     private static final String KEY_SECURITY_PATCH = "security_patch";
-    private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
@@ -268,31 +264,6 @@ public class AboutFragment extends SettingsPreferenceFragment implements SliceSh
             resetOptionsPreference.setFragment(null);
         }
 
-        final Preference updateSettingsPref = findPreference(KEY_SYSTEM_UPDATE_SETTINGS);
-        if (updateSettingsPref instanceof CustomContentDescriptionPreference) {
-            ((CustomContentDescriptionPreference) updateSettingsPref).setContentDescription(
-                    getResources().getString(R.string.system_update_content_description));
-        }
-
-        if (mUm.isAdminUser()) {
-            final Intent systemUpdateIntent = new Intent(Settings.ACTION_SYSTEM_UPDATE_SETTINGS);
-            final ResolveInfo info =
-                    MainFragment.systemIntentIsHandled(getContext(), systemUpdateIntent);
-            if (info == null) {
-                removePreference(updateSettingsPref);
-            } else {
-                updateSettingsPref.setTitle(info.loadLabel(getContext().getPackageManager()));
-            }
-        } else if (updateSettingsPref != null) {
-            // Remove for secondary users
-            removePreference(updateSettingsPref);
-        }
-
-        // Read platform settings for additional system update setting
-        if (!getResources().getBoolean(R.bool.config_additional_system_update_setting_enable)) {
-            removePreference(findPreference(KEY_UPDATE_SETTING));
-        }
-
         // Remove manual entry if none present.
         if (!getResources().getBoolean(R.bool.config_show_manual)) {
             removePreference(findPreference(KEY_MANUAL));
@@ -438,17 +409,6 @@ public class AboutFragment extends SettingsPreferenceFragment implements SliceSh
             case KEY_DEVICE_FEEDBACK:
                 sendFeedback();
                 break;
-            case KEY_SYSTEM_UPDATE_SETTINGS:
-                logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_SYSTEM_UPDATE);
-                CarrierConfigManager configManager = (CarrierConfigManager)
-                        getActivity().getSystemService(Context.CARRIER_CONFIG_SERVICE);
-                PersistableBundle b = configManager != null ? configManager.getConfig() : null;
-                if (b != null &&
-                        b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
-                    ciActionOnSysUpdate(b);
-                }
-                startActivity(new Intent(Settings.ACTION_SYSTEM_UPDATE_SETTINGS));
-                break;
             case KEY_DEVICE_NAME:
                 logEntrySelected(TvSettingsEnums.SYSTEM_ABOUT_DEVICE_NAME);
                 break;
@@ -464,28 +424,6 @@ public class AboutFragment extends SettingsPreferenceFragment implements SliceSh
                 break;
         }
         return super.onPreferenceTreeClick(preference);
-    }
-
-    /**
-     * Trigger client initiated action (send intent) on system update
-     */
-    private void ciActionOnSysUpdate(PersistableBundle b) {
-        String intentStr = b.getString(CarrierConfigManager.
-                KEY_CI_ACTION_ON_SYS_UPDATE_INTENT_STRING);
-        if (!TextUtils.isEmpty(intentStr)) {
-            String extra = b.getString(CarrierConfigManager.
-                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_STRING);
-            String extraVal = b.getString(CarrierConfigManager.
-                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_VAL_STRING);
-
-            Intent intent = new Intent(intentStr);
-            if (!TextUtils.isEmpty(extra)) {
-                intent.putExtra(extra, extraVal);
-            }
-            Log.d(TAG, "ciActionOnSysUpdate: broadcasting intent " + intentStr +
-                    " with extra " + extra + ", " + extraVal);
-            getActivity().getApplicationContext().sendBroadcast(intent);
-        }
     }
 
     private String getSystemPropertySummary(String property) {
