@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/compound_icon_background" />
+    <item android:left="@dimen/preference_icon_offset"
+        android:right="@dimen/preference_icon_offset"
+        android:top="@dimen/preference_icon_offset"
+        android:bottom="@dimen/preference_icon_offset"
+        android:drawable="@drawable/ic_update">
+    </item>
+</layer-list>
