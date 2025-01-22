@@ -18,18 +18,16 @@ package com.android.tv.settings.inputmethod;
 
 import android.annotation.UserIdInt;
 import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodInfo;
 import android.widget.CompoundButton;
-import android.view.ViewGroup;
-import android.view.View;
-
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
-
 import com.android.settingslib.inputmethod.InputMethodPreference;
+import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.google.android.material.materialswitch.MaterialSwitch;
-import com.android.tv.settings.R;
 
 /**
  * Input method preference for Android TV.
@@ -78,24 +76,24 @@ public class TVInputMethodPreference extends InputMethodPreference {
     ViewGroup widgetFrame = (ViewGroup) holder.findViewById(android.R.id.widget_frame);
     View container = (View) widgetFrame.getParent();
     MaterialSwitch switchWidget = (MaterialSwitch) widgetFrame.findViewById(R.id.switchWidget);
-    switchWidget.setTrackTintList(getContext().getColorStateList(R.color.control_tint_selector));
+    switchWidget.setTrackTintList(getContext().getColorStateList(R.color.track_tint_selector));
     switchWidget.setTrackDecorationTintList(
-        getContext().getColorStateList(R.color.control_tint_selector));
+        getContext().getColorStateList(R.color.track_decoration_tint_selector));
     switchWidget.setThumbTintList(getContext().getColorStateList(R.color.thumb_tint_selector));
     container.setOnFocusChangeListener(
         (v, hasFocus) -> {
           if (hasFocus) {
             switchWidget.setTrackTintList(
-                getContext().getColorStateList(R.color.control_tint_focused_selector));
+                getContext().getColorStateList(R.color.track_tint_selector_focused));
             switchWidget.setTrackDecorationTintList(
-                getContext().getColorStateList(R.color.control_tint_focused_selector));
+                getContext().getColorStateList(R.color.track_decoration_tint_selector_focused));
             switchWidget.setThumbTintList(
-                getContext().getColorStateList(R.color.thumb_tint_focused_selector));
+                getContext().getColorStateList(R.color.thumb_tint_selector_focused));
           } else {
             switchWidget.setTrackTintList(
-                getContext().getColorStateList(R.color.control_tint_selector));
+                getContext().getColorStateList(R.color.track_tint_selector));
             switchWidget.setTrackDecorationTintList(
-                getContext().getColorStateList(R.color.control_tint_selector));
+                getContext().getColorStateList(R.color.track_decoration_tint_selector));
             switchWidget.setThumbTintList(
                 getContext().getColorStateList(R.color.thumb_tint_selector));
           }

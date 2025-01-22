@@ -78,13 +78,14 @@
     </style>
     <style name="ThemeOverlay.TwoPanelPreference.Switch" parent="Theme.Material3.Dark.NoActionBar">
         <item name="thumbTint">@color/thumb_tint_selector</item>
-        <item name="trackTint">@color/control_tint_selector</item>
-        <item name="trackDecorationTint">@color/control_tint_selector</item>
+        <item name="trackTint">@color/track_tint_selector</item>
+        <item name="trackDecorationTint">@color/track_decoration_tint_selector</item>
         <item name="android:scaleX">0.8</item>
         <item name="android:scaleY">0.8</item>
     </style>
     <style name="TwoPanelCheckboxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="android:buttonTint">@color/control_tint_selector</item>
+        <item name="android:button">@drawable/checkbox_drawable</item>
         <item name="android:duplicateParentState">true</item>
     </style>
     <style name="TwoPanelRadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
