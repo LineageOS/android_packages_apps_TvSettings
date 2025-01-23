@@ -98,4 +98,7 @@
         <item name="android:shouldDisableView">false</item>
         <item name="android:selectable">false</item>
     </style>
+    <style name="TwoPanelPreferenceFragmentListStyle" parent="@style/PreferenceFragmentList.Leanback">
+        <item name="android:paddingTop">0dp</item>
+    </style>
 </resources>

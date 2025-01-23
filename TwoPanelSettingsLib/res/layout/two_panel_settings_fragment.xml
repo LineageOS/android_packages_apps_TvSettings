@@ -47,7 +47,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:background="@color/tp_fragment_container_background_color">
+    android:background="@android:color/black">
+    <!-- TODO: Replace background with webp drawable with gradient -->
 
     <com.android.tv.twopanelsettings.TwoPanelScrollView
         android:id="@+id/scrollview"
@@ -62,18 +63,11 @@
             android:layout_width="@dimen/tp_settings_panes_width"
             android:layout_height="match_parent">
 
-            <!-- extra_padding, the extra paddingStart of preference pane -->
-            <FrameLayout
-                 android:background="@color/tp_preference_panel_background_color"
-                 android:layout_width="@dimen/preference_pane_extra_padding_start"
-                 android:layout_height="match_parent" />
-
             <com.android.tv.twopanelsettings.TwoPanelSettingsFrameLayout
                 android:id="@+id/frame1"
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/pane_basic_padding_start"
                 android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:clipChildren="false"
                 android:clipToPadding="false">
@@ -84,7 +78,6 @@
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/pane_basic_padding_start"
                 android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:clipChildren="false"
                 android:clipToPadding="false">
@@ -95,7 +88,6 @@
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/pane_basic_padding_start"
                 android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:clipChildren="false"
                 android:clipToPadding="false">
@@ -106,7 +98,6 @@
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/pane_basic_padding_start"
                 android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:clipChildren="false"
                 android:clipToPadding="false">
@@ -117,7 +108,6 @@
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/pane_basic_padding_start"
                 android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:clipChildren="false"
                 android:clipToPadding="false">
@@ -128,7 +118,6 @@
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/pane_basic_padding_start"
                 android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:clipChildren="false"
                 android:clipToPadding="false">
@@ -139,7 +128,6 @@
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/pane_basic_padding_start"
                 android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:clipChildren="false"
                 android:clipToPadding="false">
@@ -150,7 +138,6 @@
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/pane_basic_padding_start"
                 android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:clipChildren="false"
                 android:clipToPadding="false">
@@ -161,7 +148,6 @@
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/pane_basic_padding_start"
                 android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:clipChildren="false"
                 android:clipToPadding="false">
@@ -172,17 +158,10 @@
                 android:background="@color/tp_preference_panel_background_color"
                 android:layout_width="@dimen/tp_settings_preference_pane_width"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/pane_basic_padding_start"
                 android:paddingEnd="@dimen/preference_pane_padding_end"
                 android:clipChildren="false"
                 android:clipToPadding="false">
             </com.android.tv.twopanelsettings.TwoPanelSettingsFrameLayout>
-
-            <!-- extra_padding_rtl, the extra paddingStart of preference pane in RTL -->
-            <FrameLayout
-                android:background="@color/tp_preference_panel_background_color"
-                android:layout_width="@dimen/preference_pane_extra_padding_start"
-                android:layout_height="match_parent" />
 
         </LinearLayout>
     </com.android.tv.twopanelsettings.TwoPanelScrollView>

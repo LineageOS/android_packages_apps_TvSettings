@@ -381,8 +381,6 @@ class SliceShard(
         }
         updatePreferenceGroup(preferenceScreen, newPrefs)
 
-        removeAnimationClipping(mFragment.view)
-
         if (defaultFocusedKey != null) {
             mFragment.scrollToPreference(defaultFocusedKey.toString())
         } else if (mLastFocusedPreferenceKey != null) {
@@ -586,17 +584,6 @@ class SliceShard(
         }
 
         return false
-    }
-
-    private fun removeAnimationClipping(v: View) {
-        if (v is ViewGroup) {
-            v.clipChildren = false
-            v.clipToPadding = false
-            for (index in 0 until v.childCount) {
-                val child: View = v.getChildAt(index)
-                removeAnimationClipping(child)
-            }
-        }
     }
 
     private val isTwoPanel: Boolean

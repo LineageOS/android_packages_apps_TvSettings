@@ -21,13 +21,14 @@
               android:layout_height="match_parent"
               android:background="?android:attr/windowBackground"
               android:orientation="vertical"
+              android:paddingStart="@dimen/tp_preference_fragment_start_padding"
               android:transitionGroup="false">
 
     <FrameLayout
         android:id="@+id/decor_title_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/tp_preference_item_margin_bottom"
+        android:layout_marginBottom="@dimen/tp_preference_decor_container_margin_bottom"
         android:background="@color/tp_preference_brand_color"
         android:elevation="0dp"
         android:transitionGroup="false">
@@ -52,6 +53,10 @@
 
     <androidx.leanback.widget.VerticalGridView
         android:id="@android:id/list"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:transitionGroup="true"/>

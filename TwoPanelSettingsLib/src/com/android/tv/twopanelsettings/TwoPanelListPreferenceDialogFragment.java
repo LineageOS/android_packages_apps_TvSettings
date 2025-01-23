@@ -96,21 +96,9 @@ public class TwoPanelListPreferenceDialogFragment extends
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (view != null) {
-            removeAnimationClipping(view);
             ViewGroup mainFrame = view.findViewById(R.id.main_frame);
             if (mainFrame != null) {
                 mainFrame.setOutlineProvider(null);
-            }
-        }
-    }
-
-    protected void removeAnimationClipping(View v) {
-        if (v instanceof ViewGroup) {
-            ((ViewGroup) v).setClipChildren(false);
-            ((ViewGroup) v).setClipToPadding(false);
-            for (int index = 0; index < ((ViewGroup) v).getChildCount(); index++) {
-                View child = ((ViewGroup) v).getChildAt(index);
-                removeAnimationClipping(child);
             }
         }
     }

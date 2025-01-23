@@ -46,4 +46,17 @@
         custom:isPreferenceVisible="false"
         custom:uri="@string/power_boot_resume_slice_uri"/>
 
+    <!-- No Signal Sleep Timer -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="no_signal_sleep_timer"
+        custom:uri="@string/no_signal_sleep_timer_slice_uri"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false" />
+
+    <!-- Automatic Power on -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSliceSwitchPreference
+        android:key="automatic_power_on"
+        custom:uri="@string/automatic_power_on_slice_uri"
+        custom:isPreferenceVisible="false" />
+
 </PreferenceScreen>

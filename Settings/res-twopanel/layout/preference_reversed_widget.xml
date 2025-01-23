@@ -17,7 +17,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/container"
-              android:layout_width="match_parent"
+              android:layout_width="@dimen/tp_preference_width"
               android:layout_height="wrap_content"
               android:minHeight="@dimen/tp_preference_min_height"
               android:background="?android:attr/selectableItemBackground"
@@ -26,6 +26,7 @@
               android:descendantFocusability="blocksDescendants"
               android:orientation="horizontal"
               android:layout_marginBottom="@dimen/tp_preference_item_margin_bottom"
+              android:clipChildren="false"
               android:paddingTop="@dimen/lb_preference_item_text_space_top"
               android:paddingBottom="@dimen/lb_preference_item_text_space_bottom"
               android:paddingStart="@dimen/lb_preference_item_padding_start"

@@ -156,10 +156,6 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
                 ViewGroup decor = view.findViewById(R.id.decor_title_container);
                 if (decor != null) {
                     decor.setOutlineProvider(null);
-                    if (getCallbackFragment() == null ||
-                            !(getCallbackFragment() instanceof TwoPanelSettingsFragment)) {
-                        decor.setBackgroundResource(R.color.tp_preference_panel_background_color);
-                    }
                 }
             } else {
                 // We only want to set the title in this location for one-panel settings.
@@ -180,7 +176,10 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
                 });
 
             }
-            removeAnimationClipping(view);
+            // For Two Panel Settings determine clipping per-view
+            if (!FlavorUtils.isTwoPanel(getContext())) {
+                removeAnimationClipping(view);
+            }
         }
         SettingsViewModel settingsViewModel = new ViewModelProvider(this.getActivity(),
                 ViewModelProvider.AndroidViewModelFactory.getInstance(

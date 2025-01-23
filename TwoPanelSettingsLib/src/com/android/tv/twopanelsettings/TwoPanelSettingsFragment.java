@@ -971,9 +971,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         int scrollViewWidth = getResources().getDimensionPixelSize(R.dimen.tp_settings_panes_width);
         int panelWidth = getResources().getDimensionPixelSize(
                 R.dimen.tp_settings_preference_pane_width);
-        int panelPadding = getResources().getDimensionPixelSize(
-                R.dimen.preference_pane_extra_padding_start) * 2;
-        int result = frameResIds.length * panelWidth - scrollViewWidth + panelPadding;
+        int result = frameResIds.length * panelWidth - scrollViewWidth;
         return result < 0 ? 0 : result;
     }
 
@@ -1009,8 +1007,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 }
                 return true;
             });
-            View scrollToPanelHead = scrollToPanel.findViewById(R.id.decor_title_container);
-            View previewPanelHead = previewPanel.findViewById(R.id.decor_title_container);
             boolean scrollsToPreview =
                     isRTL() ? mScrollView.getScrollX() >= mMaxScrollX - panelWidth * index
                             : mScrollView.getScrollX() <= panelWidth * index;
@@ -1047,9 +1043,6 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 if (scrollsToPreview) {
                     previewPanel.setAlpha(setAlphaForPreview ? PREVIEW_PANEL_ALPHA : 1f);
                     previewPanel.setBackgroundColor(previewPanelColor);
-                    if (previewPanelHead != null) {
-                        previewPanelHead.setBackgroundColor(previewPanelColor);
-                    }
                     ObjectAnimator alphaAnim = ObjectAnimator.ofFloat(scrollToPanel, "alpha",
                             scrollToPanel.getAlpha(), 1f);
                     ObjectAnimator backgroundColorAnim = ObjectAnimator.ofObject(scrollToPanel,
@@ -1060,27 +1053,13 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     backgroundColorAnim.setAutoCancel(true);
                     backgroundColorAnim.setDuration(PANEL_BACKGROUND_ANIMATION_ALPHA_MS);
                     AnimatorSet animatorSet = new AnimatorSet();
-                    if (scrollToPanelHead != null) {
-                        ObjectAnimator backgroundColorAnimForHead = ObjectAnimator.ofObject(
-                                scrollToPanelHead,
-                                "backgroundColor",
-                                new ArgbEvaluator(), previewPanelColor, mainPanelColor);
-                        backgroundColorAnimForHead.setAutoCancel(true);
-                        backgroundColorAnimForHead.setDuration(PANEL_BACKGROUND_ANIMATION_ALPHA_MS);
-                        animatorSet.playTogether(alphaAnim, backgroundColorAnim,
-                                backgroundColorAnimForHead);
-                    } else {
-                        animatorSet.playTogether(alphaAnim, backgroundColorAnim);
-                    }
+                    animatorSet.playTogether(alphaAnim, backgroundColorAnim);
                     animatorSet.setInterpolator(AnimationUtils.loadInterpolator(
                             getContext(), R.anim.easing_browse));
                     animatorSet.start();
                 } else {
                     scrollToPanel.setAlpha(1f);
                     scrollToPanel.setBackgroundColor(mainPanelColor);
-                    if (scrollToPanelHead != null) {
-                        scrollToPanelHead.setBackgroundColor(mainPanelColor);
-                    }
                     ObjectAnimator alphaAnim = ObjectAnimator.ofFloat(previewPanel, "alpha",
                             previewPanel.getAlpha(), setAlphaForPreview ? PREVIEW_PANEL_ALPHA : 1f);
                     ObjectAnimator backgroundColorAnim = ObjectAnimator.ofObject(previewPanel,
@@ -1091,18 +1070,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     backgroundColorAnim.setAutoCancel(true);
                     backgroundColorAnim.setDuration(PANEL_BACKGROUND_ANIMATION_ALPHA_MS);
                     AnimatorSet animatorSet = new AnimatorSet();
-                    if (previewPanelHead != null) {
-                        ObjectAnimator backgroundColorAnimForHead = ObjectAnimator.ofObject(
-                                previewPanelHead,
-                                "backgroundColor",
-                                new ArgbEvaluator(), mainPanelColor, previewPanelColor);
-                        backgroundColorAnimForHead.setAutoCancel(true);
-                        backgroundColorAnimForHead.setDuration(PANEL_BACKGROUND_ANIMATION_ALPHA_MS);
-                        animatorSet.playTogether(alphaAnim, backgroundColorAnim,
-                                backgroundColorAnimForHead);
-                    } else {
                         animatorSet.playTogether(alphaAnim, backgroundColorAnim);
-                    }
                     animatorSet.setInterpolator(AnimationUtils.loadInterpolator(
                             getContext(), R.anim.easing_browse));
                     animatorSet.start();
@@ -1113,14 +1081,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 mScrollView.scrollTo(scrollToX, 0);
                 previewPanel.setAlpha(setAlphaForPreview ? PREVIEW_PANEL_ALPHA : 1f);
                 previewPanel.setBackgroundColor(previewPanelColor);
-                if (previewPanelHead != null) {
-                    previewPanelHead.setBackgroundColor(previewPanelColor);
-                }
                 scrollToPanel.setAlpha(1f);
                 scrollToPanel.setBackgroundColor(mainPanelColor);
-                if (scrollToPanelHead != null) {
-                    scrollToPanelHead.setBackgroundColor(mainPanelColor);
-                }
             }
             if (fragmentToBecomeMainPanel != null && fragmentToBecomeMainPanel.getView() != null) {
                 if (!isA11yOn()) {

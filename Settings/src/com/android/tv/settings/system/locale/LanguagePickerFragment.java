@@ -59,6 +59,7 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
     static final String KEY_LOCALE_INFO = "locale_info";
     private final Handler mHandler = new Handler(Looper.getMainLooper());
     private boolean mProgressBarHidden;
+    private boolean mNeedRefreshFocus;
 
     public static LanguagePickerFragment newInstance() {
         return new LanguagePickerFragment();
@@ -77,6 +78,7 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
             loadLocales(applicationContext, mainThreadRunnable);
         });
         setPreferenceScreen(screen);
+        mNeedRefreshFocus = false;
     }
 
     @Override
@@ -163,6 +165,7 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
                 preference.getExtras().putSerializable(KEY_LOCALE_INFO, localeInfo);
             }
         }
+        ifNeededScrollToPreference();
     }
 
     private static boolean containsSuggestedLocale(Set<LocaleStore.LocaleInfo> localeInfos,
@@ -173,9 +176,13 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
                         suggestedLocaleInfo.getLocale().getScript()));
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
+    private void ifNeededScrollToPreference() {
+        if (!mNeedRefreshFocus) {
+            if (DEBUG) {
+                Log.d(TAG, "ifNeededScrollToPreference, do nothing!");
+            }
+            return;
+        }
         Locale currentLocale = LocaleDataViewModel.getCurrentLocale();
         for (int i = 0; i < getPreferenceScreen().getPreferenceCount(); i++) {
             Preference pref = getPreferenceScreen().getPreference(i);
@@ -188,9 +195,17 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
                     if (DEBUG) {
                         Log.d(TAG, "Scroll to active locale: " + locale);
                     }
+                    mNeedRefreshFocus = false;
                     mHandler.post(() -> scrollToPreference(pref));
                 }
             }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mNeedRefreshFocus = true;
+        ifNeededScrollToPreference();
     }
 
     @Override

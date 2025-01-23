@@ -181,7 +181,6 @@ open class SliceFragment : SettingsPreferenceFragment(),
 
         if (newTitleContainer != null) {
             newTitleContainer.outlineProvider = null
-            newTitleContainer.setBackgroundResource(R.color.tp_preference_panel_background_color)
         }
 
         val newContainer =

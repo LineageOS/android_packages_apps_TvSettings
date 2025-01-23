@@ -18,8 +18,9 @@
 packages/SettingsLib/TwoTargetPreference/res/layout-v31/preference_two_target.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/container"
-              android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:layout_width="@dimen/tp_preference_width"
+              android:clipChildren="false"
               android:minHeight="@dimen/tp_preference_min_height"
               android:background="?android:attr/selectableItemBackground"
               android:clickable="true"

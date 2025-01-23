@@ -18,7 +18,7 @@
 <!-- Originally copied from leanback_preference.xml in TwoPanelSettingsOverlay-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/container"
-              android:layout_width="match_parent"
+              android:layout_width="@dimen/tp_preference_width"
               android:layout_height="wrap_content"
               android:minHeight="@dimen/tp_preference_min_height"
               android:background="?android:attr/selectableItemBackground"
