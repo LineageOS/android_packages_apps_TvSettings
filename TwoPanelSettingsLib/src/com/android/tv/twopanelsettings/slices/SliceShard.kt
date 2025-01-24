@@ -43,13 +43,10 @@ import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat
 import androidx.lifecycle.DefaultLifecycleObserver
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
+import androidx.lifecycle.coroutineScope
 import androidx.preference.Preference
-import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceScreen
 import androidx.preference.TwoStatePreference
@@ -70,7 +67,6 @@ import kotlinx.coroutines.withContext
 class SliceShard(
     private val mFragment: LeanbackPreferenceFragmentCompat, uriString: String?,
     callbacks: Callbacks, initialTitle: CharSequence, prefContext: Context,
-    private val supportedKeys : Set<String> = setOf(),
     private val isCached: Boolean = false
 ) {
     private val mCallbacks: Callbacks
@@ -132,24 +128,23 @@ class SliceShard(
         })
 
         if (isCached) {
-            mFragment.viewLifecycleOwner.lifecycleScope.launch {
-                mFragment.viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                    mCallbacks.showProgressBar(true)
-                    val slice = try {
-                        loadCachedSlice(mFragment.resources.configuration)
-                    } catch (e : Exception) {
-                        Log.e(TAG, "Unable to load $mUriString", e)
-                        null
-                    }
-                    if (slice != null) {
-                        mIsMainPanelReady = false
-                        mSlice = slice
-                        update()
-                    } else {
-                        mCallbacks.showProgressBar(false)
-                        mCallbacks.onSlice(null)
-                    }
+            mFragment.lifecycle.coroutineScope.launch {
+                mCallbacks.showProgressBar(true)
+                val slice = try {
+                    loadCachedSlice(mFragment.resources.configuration)
+                } catch (e: Exception) {
+                    Log.e(TAG, "Unable to load $mUriString", e)
+                    null
                 }
+                if (slice != null) {
+                    mIsMainPanelReady = false
+                    mSlice = slice
+                    update()
+                } else {
+                    mCallbacks.showProgressBar(false)
+                    mCallbacks.onSlice(null)
+                }
+
             }
         }
 
@@ -394,12 +389,6 @@ class SliceShard(
         mCallbacks.onSlice(mSlice)
     }
 
-    private fun isPreferenceSupported(preference : Preference) : Boolean {
-        return preference is InfoPreference || preference is HasSliceAction
-                || (preference is PreferenceCategory && preference.preferenceCount > 0)
-                || (preference.key != null && supportedKeys.contains(preference.key))
-    }
-
     private fun updatePreferenceGroup(group: PreferenceGroup, newPrefs: List<Preference>) {
         // Remove all the preferences in the screen that satisfy such three cases:
         // (a) Preference without key
@@ -437,9 +426,6 @@ class SliceShard(
         //Iterate the new preferences list and give each preference a correct order
         for (i in newPrefs.indices) {
             val newPref: Preference = newPrefs[i]
-            if (!isPreferenceSupported(newPref)) {
-                continue
-            }
 
             // If the newPref has a key and has a corresponding old preference, update the old
             // preference and give it a new order.
