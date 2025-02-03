@@ -126,7 +126,7 @@ class SliceCacheManager internal constructor(val context : Context) {
         const val SLICE_FORMAT_VERSION = "SLICE_FORMAT_VERSION"
         const val SLICE_PACKAGE_NAME = "SLICE_PACKAGE_NAME"
         const val SLICE_PACKAGE_VERSION = "SLICE_PACKAGE_VERSION"
-        const val SLICE_PACKAGE_UPDATE_TIME = "SLICE_PACKAGE_VERSION"
+        const val SLICE_PACKAGE_UPDATE_TIME = "SLICE_PACKAGE_UPDATE_TIME"
 
         const val FORMAT_VERSION = 1
 

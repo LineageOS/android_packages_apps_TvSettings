@@ -194,6 +194,9 @@ class SliceShard(
         val uri = Uri.parse(mUriString)
         val cachedSlice = mSliceCacheManager.getCachedSlice(uri, configuration)
         if (cachedSlice != null) {
+            withContext(Dispatchers.IO) {
+                preloadPreferenceBuilders()
+            }
             return cachedSlice
         }
 
@@ -203,11 +206,17 @@ class SliceShard(
             val viewManager = SliceViewManager.getInstance(mPrefContext)
             val slice = viewManager.bindSlice(uri)
             if (slice != null && !slice.hints.contains(HINT_PARTIAL)) {
+                preloadPreferenceBuilders()
                 mSliceCacheManager.saveCachedSlice(uri, configuration, slice)
                 return@withContext slice;
             }
             return@withContext null
         }
+    }
+
+    private suspend fun preloadPreferenceBuilders() {
+        // Preload to reduce main thread overhead
+        NonSlicePreferenceBuilder.forClassName(PreferenceGroup::class.qualifiedName!!)
     }
 
     private val sliceLiveData: PreferenceSliceLiveData.SliceLiveDataImpl
