@@ -637,7 +637,7 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
                 return true;
             }
             try {
-                startActivityForResult(preference.getIntent(),
+                startActivityForResult(new Intent(preference.getIntent()),
                         generateCustomActivityRequestCode(preference));
             } catch (ActivityNotFoundException e) {
                 Log.e(TAG, "Activity not found", e);

@@ -52,6 +52,9 @@ public class SliceSwitchPreference extends SwitchPreference implements HasSliceA
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
+        if (holder.itemView.isFocusable() && !holder.itemView.isFocusableInTouchMode()) {
+            holder.itemView.setFocusableInTouchMode(true);
+        }
         if (!TextUtils.isEmpty(mContentDescription)) {
             holder.itemView.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);
             holder.itemView.setContentDescription(
