@@ -33,6 +33,7 @@ import android.text.SpannableStringBuilder;
 import android.text.style.ClickableSpan;
 import android.view.View;
 
+import com.android.settingslib.supervision.SupervisionIntentProvider;
 import com.android.tv.settings.util.ResourcesUtil;
 
 import java.util.Date;
@@ -40,6 +41,7 @@ import java.util.List;
 
 public class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFeatureProvider {
 
+    @Deprecated
     public static final String ACTION_PARENTAL_CONTROLS = "android.settings.SHOW_PARENTAL_CONTROLS";
 
     private final Context mContext;
@@ -243,7 +245,10 @@ public class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFe
 
     @Override
     public boolean showParentalControls() {
-        Intent intent = getParentalControlsIntent();
+        Intent intent =
+                android.app.supervision.flags.Flags.deprecateDpmSupervisionApis()
+                        ? SupervisionIntentProvider.getSettingsIntent(mContext)
+                        : getParentalControlsIntent();
         if (intent != null) {
             mContext.startActivity(intent);
             return true;
@@ -252,6 +257,7 @@ public class EnterprisePrivacyFeatureProviderImpl implements EnterprisePrivacyFe
         return false;
     }
 
+    @Deprecated
     private Intent getParentalControlsIntent() {
         final ComponentName componentName =
                 mDpm.getProfileOwnerOrDeviceOwnerSupervisionComponent(new UserHandle(MY_USER_ID));
