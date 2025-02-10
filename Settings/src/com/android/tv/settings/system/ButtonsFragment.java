@@ -28,6 +28,8 @@ import com.android.internal.app.AssistUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
+import lineageos.providers.LineageSettings;
+
 import org.lineageos.internal.logging.LineageMetricsLogger;
 
 /**
@@ -37,6 +39,9 @@ import org.lineageos.internal.logging.LineageMetricsLogger;
 public class ButtonsFragment extends SettingsPreferenceFragment {
     private static final String KEY_POWER_BUTTON_LONG_PRESS_ACTION =
             "power_button_long_press_action";
+    private static final String KEY_PRESS_VOLUME_UP_AND_DOWN_TO_MUTE =
+            "press_volume_up_and_down_to_mute";
+
 
     private static final int LONG_PRESS_POWER_BUTTON_FOR_ASSISTANT = 1;
     private static final int LONG_PRESS_POWER_BUTTON_FOR_POWER_MENU = 0;
@@ -74,6 +79,13 @@ public class ButtonsFragment extends SettingsPreferenceFragment {
         } else {
             getPreferenceScreen().removePreference(mPowerButtonLongPressAction);
         }
+
+        findPreference(KEY_PRESS_VOLUME_UP_AND_DOWN_TO_MUTE).setOnPreferenceChangeListener(
+            (preference, newValue) -> {
+                LineageSettings.System.putInt(context.getContentResolver(),
+                        LineageSettings.System.VOLUME_UP_AND_DOWN_MUTE, (Boolean) newValue ? 1 : 0);
+                return true;
+            });
     }
 
     private boolean hasAssistant() {
