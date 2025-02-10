@@ -29,4 +29,11 @@
         android:entryValues="@array/power_button_long_press_action_values"
         android:defaultValue="0" />
 
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
+        android:key="press_volume_up_and_down_to_mute"
+        android:order="2"
+        android:title="@string/press_volume_up_and_down_to_mute_title"
+        android:summary="@string/press_volume_up_and_down_to_mute_summary"
+        android:defaultValue="0" />
+
 </PreferenceScreen>
