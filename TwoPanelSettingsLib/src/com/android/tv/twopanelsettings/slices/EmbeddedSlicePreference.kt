@@ -61,6 +61,7 @@ open class EmbeddedSlicePreference : SlicePreference,
         title = mHelper.mNewPref!!.title
         summary = mHelper.mNewPref!!.summary
         icon = mHelper.mNewPref!!.icon
+        extras.putAll(mHelper.mNewPref!!.extras)
         if (mHelper.mNewPref is HasSliceAction
             && (mHelper.mNewPref as HasSliceAction).sliceAction != null
         ) {
