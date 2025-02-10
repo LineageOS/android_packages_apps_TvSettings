@@ -52,7 +52,7 @@
     <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# खाता}other{# वटा खाता}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"मिडिया सेवा, सहायक, भुक्तानी"</string>
     <string name="connectivity_network_category_title" msgid="8226264889892008114">"नेटवर्क र इन्टरनेट"</string>
-    <string name="sound_category_title" msgid="7899816751041939518">"ध्वनि"</string>
+    <string name="sound_category_title" msgid="7899816751041939518">"साउन्ड"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"एपहरू"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"डिभाइसका प्राथमिकताहरू"</string>
     <string name="accessibility_category_title" msgid="1552664829936369592">"सर्वसुलभता"</string>
@@ -117,7 +117,7 @@
     <string name="device_daydream" msgid="2631191946958113220">"स्क्रिन सेभर"</string>
     <string name="device_display" msgid="244634591698925025">"प्रदर्शन गर्नुहोस्"</string>
     <string name="device_display_sound" msgid="7399153506435649193">"डिस्प्ले तथा ध्वनि"</string>
-    <string name="device_sound" msgid="8616320533559404963">"ध्वनि"</string>
+    <string name="device_sound" msgid="8616320533559404963">"साउन्ड"</string>
     <string name="device_surround_sound" msgid="1889436002598316470">"सराउन्ड ध्वनि"</string>
     <string name="device_sound_effects" msgid="2000295001122684957">"प्रणाली ध्वनिहरु"</string>
     <string name="device_apps" msgid="2134756632245008919">"एपहरू"</string>
@@ -615,7 +615,7 @@
     <string name="storage_wizard_move_app_progress_description" msgid="7673347796805764888">"सारिएको बेलामा ड्राइभ नहटाउनुहोस्। \n सार्ने काम नसकिएसम्म यस यन्त्रमा <xliff:g id="APPNAME">%1$s</xliff:g> एप उपलब्ध हुने छैन।"</string>
     <string name="storage_wizard_forget_confirm_title" msgid="3709482471888830896">"यन्त्रको भण्डारण बिर्सने हो?"</string>
     <string name="storage_wizard_forget_confirm_description" msgid="5896860042525566767">"यस ड्राइमा भएका सबै डेटा \'बिर्सनु\' को साथ सधैंका लागि नष्ट हुनेछन्। के तपाईं अगाडि बढ्न चाहनुहुन्छ?"</string>
-    <string name="storage_wizard_forget_action" msgid="5609631662522950596">"बिर्सनुहोस्"</string>
+    <string name="storage_wizard_forget_action" msgid="5609631662522950596">"हटाउनुहोस्"</string>
     <string name="storage_new_title" msgid="4768955281180255038">"USB ड्राइभ जडान गरियो"</string>
     <string name="storage_new_action_browse" msgid="3355241742574072658">"ब्राउज गर्नुहोस्"</string>
     <string name="storage_new_action_adopt" msgid="6809707961170895964">"यन्त्रको भण्डारणको रूपमा सेटअप गर्नुहोस्"</string>
@@ -658,7 +658,7 @@
     <string name="microphone_physical_privacy_enabled_title" msgid="6135130916399886772">"माइक्रोफोन प्रयोग गर्ने अनुमति ब्लक गरिएको छ"</string>
     <string name="microphone_physical_privacy_enabled_text" msgid="401238365312924088">"अनब्लक गर्नका लागि माइक्रोफोन प्रयोग गर्ने अनुमति दिनु पर्ने हुन्छ। उक्त अनुमति दिन डिभाइसको \"गोपनीयता\" स्विचमा गई सेटिङ बदलेर \"माइक्रोफोन अन छ\" बनाउनुहोस्।"</string>
     <string name="camera" msgid="1226671478936288283">"क्यामेरा"</string>
-    <string name="camera_toggle_title" msgid="5566469574224956142">"क्यामेरा प्रयोग गर्ने अनुमति"</string>
+    <string name="camera_toggle_title" msgid="5566469574224956142">"क्यामेरा एक्सेस"</string>
     <string name="open_camera_permissions" msgid="301360297337141591">"एपलाई क्यामेरा प्रयोग गर्ने अनुमति"</string>
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"क्यामेरा प्रयोग गर्ने अनुमति ब्लक गरिएको छ"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"अनब्लक गर्नका लागि क्यामेरा प्रयोग गर्ने अनुमति दिनु पर्ने हुन्छ। उक्त अनुमति दिन डिभाइसको \"गोपनीयता\" स्विचमा गई सेटिङ बदलेर \"क्यामेरा अन छ\" बनाउनुहोस्।"</string>
@@ -998,7 +998,7 @@
     <string name="device_apps_app_management_clear_default_set" msgid="1649974109123107390">"केही कारवाहीका लागि यो एप सुरु गर्न सेट भयो"</string>
     <string name="device_apps_app_management_clear_default_none" msgid="5935252537185381597">"कुनै पनि पूर्वनिर्धारितहरू सेट छैनन्"</string>
     <string name="device_apps_app_management_clear_cache" msgid="2678301483598915479">"क्यास हटाउनुहोस्"</string>
-    <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"सूचनाहरू"</string>
+    <string name="device_apps_app_management_notifications" msgid="1687529279264810317">"नोटिफिकेसनहरू"</string>
     <string name="device_apps_app_management_licenses" msgid="4809737266551899869">"तेस्रो पक्षीय स्रोत"</string>
     <string name="device_apps_app_management_permissions" msgid="4951820230491375037">"अनुमतिहरू"</string>
     <string name="device_apps_app_management_not_available" msgid="4198634078194500518">"एप उपलब्ध छैन"</string>
@@ -1174,7 +1174,7 @@
     <string name="display_and_sound_vendor_summary" msgid="7661072343315403110">"फोटो, स्क्रिन, ध्वनि"</string>
     <string name="picture_settings_title" msgid="7643193630924322697">"फोटो"</string>
     <string name="screen_settings_title" msgid="7806908869190824434">"स्क्रिन"</string>
-    <string name="sound_settings_title" msgid="9149367966117889465">"ध्वनि"</string>
+    <string name="sound_settings_title" msgid="9149367966117889465">"साउन्ड"</string>
     <string name="power_and_energy" msgid="4638182439670702556">"पावर तथा इनर्जी"</string>
     <string name="power_on_behavior" msgid="927607372303160716">"पावर अन हुँदा देखिने मोड"</string>
     <string name="reset_options_title" msgid="7632580482285108955">"रिसेट गर्नुहोस्"</string>
