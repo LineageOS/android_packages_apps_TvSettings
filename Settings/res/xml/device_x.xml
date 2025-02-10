@@ -90,6 +90,11 @@
         android:icon="@drawable/ic_developer_mode"
         android:key="developer"
         android:title="@string/system_developer_options"/>
+    <Preference
+        android:fragment="com.android.tv.settings.system.InputsFragment"
+        android:icon="@drawable/ic_input"
+        android:key="inputs"
+        android:title="@string/system_inputs" />
     <com.android.tv.twopanelsettings.slices.SlicePreference
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
         android:icon="@drawable/ic_cast"
