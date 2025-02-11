@@ -36,13 +36,14 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.name.setup.DeviceNameFlowStartActivity;
 import com.android.tv.settings.util.AccessibilityHelper;
 import com.android.tv.settings.util.GuidedActionsAlignUtil;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
 /**
  * Fragment responsible for adding new device name.
  */
-public class DeviceNameSetCustomFragment extends GuidedStepSupportFragment {
+public class DeviceNameSetCustomFragment extends SettingsGuidedStepFragment {
 
     private GuidedAction mEditAction;
 

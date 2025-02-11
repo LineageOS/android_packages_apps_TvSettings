@@ -25,6 +25,7 @@ import androidx.leanback.widget.GuidedAction;
 
 import com.android.settingslib.RestrictedPreference;
 import com.android.settingslib.applications.ApplicationsState;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
@@ -50,7 +51,7 @@ public abstract class AppActionPreference extends RestrictedPreference {
      */
     public abstract void refresh();
 
-    public abstract static class ConfirmationFragment extends GuidedStepSupportFragment {
+    public abstract static class ConfirmationFragment extends SettingsGuidedStepFragment {
         private static final int ID_OK = 0;
         private static final int ID_CANCEL = 1;
 

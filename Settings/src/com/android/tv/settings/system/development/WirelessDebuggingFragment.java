@@ -59,6 +59,7 @@ import androidx.preference.PreferenceCategory;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.net.Inet4Address;
 import java.net.InetAddress;
@@ -424,7 +425,7 @@ public class WirelessDebuggingFragment extends SettingsPreferenceFragment {
      * Fragment for showing the pairing code and IP address & port to pair the device
      */
     @Keep
-    public static class PairingCodeFragment extends GuidedStepSupportFragment {
+    public static class PairingCodeFragment extends SettingsGuidedStepFragment {
         private String mPairingCode;
         private String mIpAddressPort;
 

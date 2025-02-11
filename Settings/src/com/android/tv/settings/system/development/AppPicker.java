@@ -34,6 +34,7 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.text.Collator;
 import java.util.Comparator;
@@ -58,7 +59,7 @@ public class AppPicker extends FragmentActivity {
         }
     }
 
-    public static class AppPickerFragment extends GuidedStepSupportFragment {
+    public static class AppPickerFragment extends SettingsGuidedStepFragment {
 
         private String mPermissionName;
         private boolean mDebuggableOnly;

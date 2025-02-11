@@ -28,6 +28,7 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
@@ -35,7 +36,7 @@ import java.util.List;
  * Fragment shown when clicking on a paired device in the Wireless
  * Debugging fragment.
  */
-public class AdbDeviceDetailsFragment extends GuidedStepSupportFragment {
+public class AdbDeviceDetailsFragment extends SettingsGuidedStepFragment {
     private static final String TAG = "AdbDeviceDetailsFragment";
 
     private static final String ARG_DEVICE_NAME = "device_name";

@@ -27,11 +27,12 @@ import androidx.leanback.widget.GuidedActionsStylist;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.util.AccessibilityHelper;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
 @Keep
-public class InputCustomNameFragment extends GuidedStepSupportFragment {
+public class InputCustomNameFragment extends SettingsGuidedStepFragment {
 
     private static final String ARG_CURRENT_NAME = "current_name";
     private static final String ARG_DEFAULT_NAME = "default_name";

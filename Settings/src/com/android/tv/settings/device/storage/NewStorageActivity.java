@@ -37,6 +37,7 @@ import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.StorageResetActivity;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
@@ -98,7 +99,7 @@ public class NewStorageActivity extends FragmentActivity {
         }
     }
 
-    public static class NewStorageFragment extends GuidedStepSupportFragment {
+    public static class NewStorageFragment extends SettingsGuidedStepFragment {
 
         private static final int ACTION_BROWSE = 1;
         private static final int ACTION_FORMAT_AS_PRIVATE = 2;
@@ -259,7 +260,7 @@ public class NewStorageActivity extends FragmentActivity {
         }
     }
 
-    public static class MissingStorageFragment extends GuidedStepSupportFragment {
+    public static class MissingStorageFragment extends SettingsGuidedStepFragment{
 
         private String mFsUuid;
         private String mDescription;

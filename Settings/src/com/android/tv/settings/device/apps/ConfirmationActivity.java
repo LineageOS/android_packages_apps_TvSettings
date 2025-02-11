@@ -27,6 +27,7 @@ import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.util.GuidedActionsAlignUtil;
 import com.android.tv.settings.util.SafeIntents;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class ConfirmationActivity extends FragmentActivity {
         }
     }
 
-    public static class ConfirmationFragment extends GuidedStepSupportFragment {
+    public static class ConfirmationFragment extends SettingsGuidedStepFragment {
         private static final int ID_OK = 0;
         private static final int ID_CANCEL = 1;
         private final Intent mIntent;

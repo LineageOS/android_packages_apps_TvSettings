@@ -26,11 +26,12 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
 @Keep
-public class AdbDialog extends GuidedStepSupportFragment {
+public class AdbDialog extends SettingsGuidedStepFragment {
 
     public interface Callback {
         void onEnableAdbConfirm();

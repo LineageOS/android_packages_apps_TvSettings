@@ -44,6 +44,7 @@ import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.library.util.DataBinder;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
@@ -286,7 +287,7 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         return TvSettingsEnums.NETWORK_AP_INFO;
     }
 
-    public static class ForgetNetworkConfirmFragment extends GuidedStepSupportFragment {
+    public static class ForgetNetworkConfirmFragment extends SettingsGuidedStepFragment {
 
         private AccessPoint mAccessPoint;
 
