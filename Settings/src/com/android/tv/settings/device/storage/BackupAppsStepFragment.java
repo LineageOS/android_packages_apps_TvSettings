@@ -34,12 +34,13 @@ import androidx.leanback.widget.GuidedAction;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.device.apps.MoveAppActivity;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class BackupAppsStepFragment extends GuidedStepSupportFragment implements
+public class BackupAppsStepFragment extends SettingsGuidedStepFragment implements
         ApplicationsState.Callbacks {
 
     private static final int ACTION_NO_APPS = 0;

@@ -31,13 +31,14 @@ import androidx.leanback.widget.GuidedActionsStylist;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.util.GuidedActionsAlignUtil;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
 /**
  * Fragment responsible for showing the device name summary.
  */
-public class DeviceNameSummaryFragment extends GuidedStepSupportFragment {
+public class DeviceNameSummaryFragment extends SettingsGuidedStepFragment {
 
     public static DeviceNameSummaryFragment newInstance() {
         return new DeviceNameSummaryFragment();

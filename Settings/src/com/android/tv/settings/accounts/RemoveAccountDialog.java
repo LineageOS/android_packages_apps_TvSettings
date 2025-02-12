@@ -35,6 +35,7 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.io.IOException;
 import java.util.List;
@@ -78,7 +79,7 @@ public class RemoveAccountDialog extends FragmentActivity
         finish();
     }
 
-    public static class RemoveAccountFragment extends GuidedStepSupportFragment {
+    public static class RemoveAccountFragment extends SettingsGuidedStepFragment {
         private static final String ARG_ACCOUNT_NAME = "accountName";
         private static final int ID_OK = 1;
         private static final int ID_CANCEL = 0;

@@ -32,11 +32,12 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.io.File;
 import java.util.List;
 
-public class MoveAppStepFragment extends GuidedStepSupportFragment {
+public class MoveAppStepFragment extends SettingsGuidedStepFragment {
 
     private static final String TAG = "MoveAppStepFragment";
 
