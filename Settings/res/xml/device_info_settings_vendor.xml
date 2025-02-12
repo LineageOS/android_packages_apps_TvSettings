@@ -127,4 +127,18 @@
         android:key="general_info"
         custom:uri="@string/general_info_slice_uri"
         custom:isPreferenceVisible="false" />
+
+    <!-- Device Serial number -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="device_serial_number"
+        custom:uri="@string/device_serial_number_slice_uri"
+        android:fragment="com.android.tv.twopanelsettings.slices.InfoFragment"
+        custom:isPreferenceVisible="false"/>
+
+    <!-- HW Revision -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="hw_revison"
+        custom:uri="@string/hw_revison_slice_uri"
+        android:fragment="com.android.tv.twopanelsettings.slices.InfoFragment"
+        custom:isPreferenceVisible="false" />
 </PreferenceScreen>
