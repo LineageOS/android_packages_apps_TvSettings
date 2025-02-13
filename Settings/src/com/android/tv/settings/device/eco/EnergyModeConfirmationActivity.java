@@ -35,6 +35,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.device.eco.EnergyModesHelper.EnergyMode;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.GuidedActionsAlignUtil;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
@@ -73,7 +74,7 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
     }
 
     /** Fragment to confirm whether an energy mode should be set */
-    public static class GuidedStepConfirmationFragment extends GuidedStepSupportFragment {
+    public static class GuidedStepConfirmationFragment extends SettingsGuidedStepFragment {
 
         private EnergyModesHelper mEnergyModesHelper;
         private EnergyMode mEnergyMode;

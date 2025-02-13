@@ -36,6 +36,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.name.setup.DeviceNameFlowStartActivity;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.GuidedActionsAlignUtil;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,7 +45,7 @@ import java.util.List;
 /**
  * Fragment responsible for showing the device names list.
  */
-public class DeviceNameSetFragment extends GuidedStepSupportFragment {
+public class DeviceNameSetFragment extends SettingsGuidedStepFragment {
     private ArrayList<String> mDeviceNames = new ArrayList<>();
 
     public static DeviceNameSetFragment newInstance() {

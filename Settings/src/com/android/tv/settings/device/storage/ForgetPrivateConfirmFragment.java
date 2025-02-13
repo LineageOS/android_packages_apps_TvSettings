@@ -26,10 +26,11 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
-public class ForgetPrivateConfirmFragment extends GuidedStepSupportFragment {
+public class ForgetPrivateConfirmFragment extends SettingsGuidedStepFragment {
 
     private static final int ACTION_ID_FORGET = 1;
 

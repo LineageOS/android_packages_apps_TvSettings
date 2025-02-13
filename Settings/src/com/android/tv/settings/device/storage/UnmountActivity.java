@@ -39,6 +39,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.ProgressDialogFragment;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
@@ -149,7 +150,7 @@ public class UnmountActivity extends FragmentActivity {
         }
     }
 
-    public static class UnmountPrivateStepFragment extends GuidedStepSupportFragment {
+    public static class UnmountPrivateStepFragment extends SettingsGuidedStepFragment {
 
         private static final int ACTION_ID_UNMOUNT = 1;
 

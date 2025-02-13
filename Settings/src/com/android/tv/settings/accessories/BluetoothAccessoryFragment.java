@@ -43,6 +43,7 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 import java.util.Objects;
@@ -316,7 +317,7 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
      * Fragment for changing the name of a bluetooth accessory
      */
     @Keep
-    public static class ChangeNameFragment extends GuidedStepSupportFragment {
+    public static class ChangeNameFragment extends SettingsGuidedStepFragment {
 
         public static void prepareArgs(@NonNull Bundle args, String deviceName,
                 @DrawableRes int deviceImgId) {
@@ -395,7 +396,7 @@ public class BluetoothAccessoryFragment extends SettingsPreferenceFragment {
         }
     }
 
-    public static class UnpairConfirmFragment extends GuidedStepSupportFragment {
+    public static class UnpairConfirmFragment extends SettingsGuidedStepFragment {
 
         private BluetoothDevice mDevice;
         private BroadcastReceiver mBroadcastReceiver;

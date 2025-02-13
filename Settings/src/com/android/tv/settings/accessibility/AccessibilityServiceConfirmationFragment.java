@@ -27,13 +27,14 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
 /**
  * Fragment for confirming [de]activation of accessibility service
  */
-public class AccessibilityServiceConfirmationFragment extends GuidedStepSupportFragment {
+public class AccessibilityServiceConfirmationFragment extends SettingsGuidedStepFragment {
     private static final String ARG_LABEL = "label";
     private static final String ARG_COMPONENT = "component";
     private static final String ARG_ENABLING = "enabling";

@@ -29,10 +29,11 @@ import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.util.List;
 
-public class FormatAsPublicStepFragment extends GuidedStepSupportFragment {
+public class FormatAsPublicStepFragment extends SettingsGuidedStepFragment {
     private static final int ACTION_ID_BACKUP = 1;
     private static final int ACTION_ID_FORMAT = 2;
 

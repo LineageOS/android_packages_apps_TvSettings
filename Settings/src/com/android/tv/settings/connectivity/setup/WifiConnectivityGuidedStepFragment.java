@@ -31,12 +31,13 @@ import androidx.leanback.widget.VerticalGridView;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.util.GuidedActionsAlignUtil;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 
 /**
  * Subclass of {@link GuidedStepSupportFragment} used in settings wifi setup.
  */
-public class WifiConnectivityGuidedStepFragment extends GuidedStepSupportFragment {
+public class WifiConnectivityGuidedStepFragment extends SettingsGuidedStepFragment {
 
     @Override
     protected void onProvideFragmentTransitions() {

@@ -38,6 +38,7 @@ import androidx.leanback.widget.GuidedAction;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.ProgressDialogFragment;
+import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
 import java.io.File;
 import java.util.List;
@@ -183,7 +184,7 @@ public class MigrateStorageActivity extends FragmentActivity {
                 Toast.LENGTH_SHORT).show();
     }
 
-    public static class MigrateConfirmationStepFragment extends GuidedStepSupportFragment {
+    public static class MigrateConfirmationStepFragment extends SettingsGuidedStepFragment {
         private static final String ARG_VOLUME_DESC = "volumeDesc";
 
         private static final int ACTION_CONFIRM = 1;
@@ -235,7 +236,7 @@ public class MigrateStorageActivity extends FragmentActivity {
         }
     }
 
-    public static class ChooseStorageStepFragment extends GuidedStepSupportFragment {
+    public static class ChooseStorageStepFragment extends SettingsGuidedStepFragment {
 
         private List<VolumeInfo> mCandidateVolumes;
 
