@@ -13,21 +13,16 @@
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
--->
+  -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="@color/tp_preference_control_on_focused_color"
-        android:state_enabled="true"
-        android:state_focused="true"
-        android:state_checked="true"/>
-    <item android:color="@color/tp_preference_control_off_focused_color"
-        android:state_enabled="true"
-        android:state_focused="true"/>
-    <item android:color="@color/tp_preference_control_on_default_color"
+    <!--  We have to maintain a separate state list for TvInputSelector -->
+    <!--  because we cannot use duplicateParentState-->
+    <item android:color="@color/tp_preference_switch_track_decoration_on_focused_color"
         android:state_enabled="true"
         android:state_checked="true"/>
-    <item android:color="@color/tp_preference_control_off_default_color"
+    <item android:color="@color/tp_preference_switch_track_decoration_off_focused_color"
         android:state_enabled="true"/>
-    <item android:color="@color/tp_preference_control_disabled_focused_color"
-        android:state_focused="true"/>
-    <item android:color="@color/tp_preference_control_disabled_default_color" />
+    <item android:color="@color/tp_preference_switch_track_decoration_on_focused_disabled_color"
+        android:state_checked="true"/>
+    <item android:color="@color/tp_preference_switch_track_decoration_off_focused_disabled_color"/>
 </selector>
