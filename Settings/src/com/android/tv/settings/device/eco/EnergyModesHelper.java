@@ -224,11 +224,20 @@ public final class EnergyModesHelper {
         boolean customPoliciesEnabled = DeviceConfig.getBoolean(NAMESPACE_LOW_POWER_STANDBY,
                 KEY_ENABLE_POLICY, true);
 
+        boolean isEnergyModesVisible =
+                enableEnergyModes && customPoliciesEnabled && isLowPowerStandbySupported(mContext);
+
+        // Device can be in basic mode and demo mode at the same time. This logic has to come first
+        // to avoid being overridden by basic mode energy setting which only allows one energy mode.
+        if (isStoreDemoMode()) {
+            return isEnergyModesVisible; // We should show energy modes settings in store demo mode.
+        }
+
         if (isBasicMode()) {
             return false; // We should not show energy modes settings in basic TV.
         }
 
-        return enableEnergyModes && customPoliciesEnabled && isLowPowerStandbySupported(mContext);
+        return isEnergyModesVisible;
     }
 
     /** Returns whether Energy Modes should be shown in settings fragments on this Device */
@@ -478,6 +487,11 @@ public final class EnergyModesHelper {
                 .isBasicMode(mContext);
     }
 
+    private boolean isStoreDemoMode() {
+        return FlavorUtils.getFeatureFactory(mContext).getBasicModeFeatureProvider()
+                .isStoreDemoMode(mContext);
+    }
+
     /**
      * Makes sure a valid energy mode is set, if energy modes are enabled, and returns the current
      * energy mode.
@@ -485,7 +499,7 @@ public final class EnergyModesHelper {
     @Nullable
     public EnergyMode updateEnergyMode() {
         // Use a basic mode policy if low power standby is supported in basic TV mode.
-        if (isLowPowerStandbySupported(mContext) && isBasicMode()) {
+        if (isLowPowerStandbySupported(mContext) && isBasicMode() && !isStoreDemoMode()) {
             EnergyMode basicEnergyMode = getEnergyMode(mContext.getString(
                     R.string.basic_tv_energy_mode));
             if (basicEnergyMode != null) {
