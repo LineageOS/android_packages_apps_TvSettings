@@ -16,6 +16,11 @@
 
 package com.android.tv.settings.device.apps.specialaccess;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+
 import android.Manifest;
 import android.app.ActivityManager;
 import android.app.AppOpsManager;
@@ -34,6 +39,7 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
 
 /**
@@ -56,7 +62,7 @@ public class TurnScreenOn extends ManageAppOp {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.turn_screen_on, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
     }
 
     @Override
@@ -122,5 +128,18 @@ public class TurnScreenOn extends ManageAppOp {
     @Override
     protected int getPageId() {
         return TvSettingsEnums.APPS_SPECIAL_APP_ACCESS_TURN_SCREEN_ON;
+    }
+
+    private int getPreferenceScreenResId() {
+        switch (FlavorUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+            case FLAVOR_TWO_PANEL:
+                return R.xml.turn_screen_on;
+            case FLAVOR_X:
+            case FLAVOR_VENDOR:
+                return R.xml.turn_screen_on_x;
+            default:
+                return R.xml.turn_screen_on;
+        }
     }
 }
