@@ -14,34 +14,35 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-
 <resources>
-    <style name="TextAppearance.TwoPanelPreference.Title" parent="android:TextAppearance">
+    <style name="TextAppearance.TwoPanelPreference.TvTextAppearance" parent="android:TextAppearance">
         <item name="android:fontFamily">@string/preference_title_text_font</item>
+    </style>
+    <style name="TextAppearance.TwoPanelPreference.TvTextAppearanceMedium" parent="android:TextAppearance">
+        <item name="android:fontFamily">@string/preference_category_text_font</item>
+    </style>
+    <style name="TextAppearance.TwoPanelPreference.Title" parent="TextAppearance.TwoPanelPreference.TvTextAppearance">
         <item name="android:textSize">@dimen/tp_preference_decor_title_text_size</item>
         <item name="android:textColor">@color/tp_preference_decor_title_text_color</item>
     </style>
-    <style name="TextAppearance.TwoPanelPreference.Subtitle" parent="android:TextAppearance">
-        <item name="android:fontFamily">@string/preference_subtitle_text_font</item>
+    <style name="TextAppearance.TwoPanelPreference.Subtitle" parent="TextAppearance.TwoPanelPreference.TvTextAppearance">
         <item name="android:textSize">@dimen/tp_preference_decor_subtitle_text_size</item>
         <item name="android:alpha">0.6</item>
         <item name="android:textColor">@color/tp_preference_decor_title_text_color</item>
         <item name="android:gravity">top</item>
     </style>
-    <style name="TextAppearance.TwoPanelPreference.Category" parent="android:TextAppearance">
-        <item name="android:fontFamily">@string/preference_category_text_font</item>
+    <style name="TextAppearance.TwoPanelPreference.Category" parent="TextAppearance.TwoPanelPreference.TvTextAppearanceMedium">
         <item name="android:textColor">@color/tp_preference_category_text_color</item>
         <item name="android:textSize">@dimen/tp_preference_category_text_size</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="TextAppearance.TwoPanelPreference.ListItem" parent="android:TextAppearance">
-        <item name="android:fontFamily">@string/preference_list_item_text_font</item>
+    <style name="TextAppearance.TwoPanelPreference.ListItem" parent="TextAppearance.TwoPanelPreference.TvTextAppearance">
         <item name="android:textColor">@color/tp_preference_item_primary_text_color_selector</item>
         <item name="android:textSize">@dimen/tp_preference_item_primary_text_size</item>
     </style>
 
-    <style name="TextAppearance.TwoPanelPreference.ListItem.Secondary" parent="android:TextAppearance">
+    <style name="TextAppearance.TwoPanelPreference.ListItem.Secondary" parent="TextAppearance.TwoPanelPreference.TvTextAppearance">
         <item name="android:fontFamily">@string/preference_list_item_secondary_text_font</item>
         <item name="android:textColor">@color/tp_preference_item_secondary_text_color_selector</item>
         <item name="android:textSize">@dimen/tp_preference_item_secondary_text_size</item>
@@ -52,19 +53,16 @@
     </style>
 
     <style name="TwoPanelInfoTitleTextStyle">
-        <item name="android:fontFamily">@string/preference_title_text_font</item>
         <item name="android:textSize">@dimen/settings_info_fragment_title_text_size</item>
         <item name="android:textColor">@color/info_title_text_color</item>
     </style>
 
     <style name="TwoPanelInfoSummaryTextStyle">
-        <item name="android:fontFamily">@string/preference_list_item_secondary_text_font</item>
         <item name="android:textSize">@dimen/settings_info_fragment_summary_text_size</item>
         <item name="android:textColor">@color/info_title_text_color</item>
     </style>
 
     <style name="EcoHintTextStyle">
-        <item name="android:fontFamily">@string/preference_list_item_secondary_text_font</item>
         <item name="android:textSize">@dimen/settings_info_fragment_summary_text_size</item>
         <item name="android:textColor">@color/eco_hint_color</item>
     </style>
