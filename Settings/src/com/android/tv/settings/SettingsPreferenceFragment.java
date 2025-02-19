@@ -121,7 +121,7 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
             return;
         }
 
-        View progressBar = requireView().requireViewById(R.id.progress_bar);
+        View progressBar = requireView().requireViewById(R.id.tv_settings_progress_bar);
         if (toShow) {
             progressBar.bringToFront();
             progressBar.setAlpha(0f);
