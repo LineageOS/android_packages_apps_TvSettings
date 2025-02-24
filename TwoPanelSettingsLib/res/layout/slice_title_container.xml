@@ -30,7 +30,7 @@
         android:layout_height="@dimen/decor_icon_height"
         android:layout_marginEnd="@dimen/decor_icon_margin_end"
         android:layout_alignTop="@id/decor_title"/>
-    <TextView
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
         android:id="@+id/decor_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         android:maxLines="4"
         android:ellipsize="end"
         style="@style/TextAppearance.TwoPanelPreference.Title"/>
-    <TextView
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
         android:id="@+id/decor_subtitle"
         android:layout_width="@dimen/decor_subtitle_width"
         android:layout_height="wrap_content"

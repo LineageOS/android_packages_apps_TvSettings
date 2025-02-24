@@ -32,7 +32,7 @@
         android:background="@color/tp_preference_brand_color"
         android:elevation="0dp"
         android:transitionGroup="false">
-        <TextView
+        <com.android.tv.twopanelsettings.SmoothScalingTextView
             android:id="@+id/decor_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
             android:maxLines="3"/>
     </FrameLayout>
 
-    <TextView
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
         android:id="@android:id/message"
         android:layout_width="match_parent"
         android:layout_height="16dp"
