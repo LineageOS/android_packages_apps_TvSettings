@@ -24,11 +24,12 @@
               android:paddingStart="@dimen/tp_preference_fragment_start_padding"
               android:transitionGroup="false">
 
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/decor_title_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/tp_preference_decor_container_margin_bottom"
+        android:paddingBottom="@dimen/tp_preference_decor_title_padding_bottom"
         android:background="@android:color/transparent"
         android:elevation="@dimen/lb_preference_decor_title_container_elevation"
         android:transitionGroup="false">
@@ -38,10 +39,19 @@
             android:layout_height="wrap_content"
             style="?android:attr/titleTextStyle"
             android:includeFontPadding="true"
-            android:layout_marginBottom="@dimen/tp_preference_decor_title_margin_bottom"
             android:singleLine="false"
             android:autoSizeTextType="uniform"
             android:maxLines="3"/>
-    </FrameLayout>
+        <TextView
+            android:id="@id/DecorSubtitleId"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/decor_title"
+            android:layout_alignStart="@id/decor_title"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:includeFontPadding="true"
+            style="@style/TextAppearance.TwoPanelPreference.Subtitle"/>
+    </RelativeLayout>
 
 </LinearLayout>

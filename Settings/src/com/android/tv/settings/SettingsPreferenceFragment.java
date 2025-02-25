@@ -157,6 +157,15 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
                 if (decor != null) {
                     decor.setOutlineProvider(null);
                 }
+                // Title is set in LeanbackPreferenceCompat parent class
+                // Subtitle is set here because base leanbackpreference doesn't have a summary.
+                CharSequence summary = getPreferenceScreen().getSummary();
+                final TextView decorSummary =
+                    view == null ? null : (TextView) view.findViewById(R.id.DecorSubtitleId);
+                if (summary != null && decorSummary != null) {
+                      decorSummary.setText(summary);
+                      decorSummary.setVisibility(View.VISIBLE);
+                }
             } else {
                 // We only want to set the title in this location for one-panel settings.
                 // TwoPanelSettings behavior is handled moveToPanel in TwoPanelSettingsFragment
