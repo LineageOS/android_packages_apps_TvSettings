@@ -61,7 +61,7 @@
             android:layout_weight="1"
             android:duplicateParentState="true">
 
-            <TextView
+            <com.android.tv.twopanelsettings.SmoothScalingTextView
                 android:id="@android:id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                 android:textAppearance="?android:attr/textAppearanceListItem"
                 android:ellipsize="marquee" />
 
-            <TextView
+            <com.android.tv.twopanelsettings.SmoothScalingTextView
                 android:id="@android:id/summary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

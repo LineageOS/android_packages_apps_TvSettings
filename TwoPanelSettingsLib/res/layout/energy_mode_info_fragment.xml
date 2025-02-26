@@ -39,7 +39,7 @@
         android:importantForAccessibility="no"
         android:clickable="false" />
 
-    <TextView
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
         android:id="@+id/info_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
         app:constraint_referenced_ids="info_title_icon,info_title"
         />
 
-    <TextView
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
         android:id="@+id/info_summary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/eco_hint_barrier" />
 
-    <TextView
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
         android:id="@+id/eco_hint"
         style="@style/EcoHintTextStyle"
         android:layout_width="0dp"
