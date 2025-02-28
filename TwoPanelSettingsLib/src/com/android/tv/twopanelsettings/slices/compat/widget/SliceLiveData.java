@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Looper;
+import android.os.StrictMode;
 import android.util.Log;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
@@ -386,7 +387,12 @@ public final class SliceLiveData {
         new Runnable() {
           @Override
           public void run() {
+            StrictMode.ThreadPolicy oldPolicy = StrictMode.getThreadPolicy();
             try {
+              // Prevent StrictMode from throwing when writing to disk.
+              StrictMode.setThreadPolicy(
+                  new StrictMode.ThreadPolicy
+                      .Builder(oldPolicy).permitDiskWrites().build());
               Slice s =
                   mUri != null
                       ? mSliceViewManager.bindSlice(mUri)
@@ -402,6 +408,8 @@ public final class SliceLiveData {
             } catch (Exception e) {
               onSliceError(OnErrorListener.ERROR_UNKNOWN, e);
               postValue(null);
+            } finally {
+              StrictMode.setThreadPolicy(oldPolicy);
             }
           }
         };
