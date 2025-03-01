@@ -32,10 +32,10 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.TwoStatePreference;
 
 import com.android.settingslib.applications.ApplicationsState;
-import com.android.settingslib.fuelgauge.PowerAllowlistBackend;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.library.device.apps.specialaccess.PowerAllowlistBackend;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
 
 /**
@@ -60,7 +60,7 @@ public class HighPower extends SettingsPreferenceFragment implements
                         public boolean filterApp(ApplicationsState.AppEntry info) {
                             info.extraInfo =
                                     mPowerAllowlistBackend.isAllowlisted(
-                                            info.info.packageName, info.info.uid);
+                                            info.info.packageName);
                             return !ManageAppOp.shouldIgnorePackage(getContext(),
                                     info.info.packageName, 0);
                         }
@@ -106,19 +106,19 @@ public class HighPower extends SettingsPreferenceFragment implements
                 } else {
                     mPowerAllowlistBackend.addApp(pkg);
                 }
-                updateSummary(pref, entry.info.uid);
+                updateSummary(pref);
                 return true;
             });
         }
-        updateSummary(switchPref, entry.info.uid);
+        updateSummary(switchPref);
         return switchPref;
     }
 
-    private void updateSummary(Preference preference, int uid) {
+    private void updateSummary(Preference preference) {
         final String pkg = preference.getKey();
         if (mPowerAllowlistBackend.isSysAllowlisted(pkg)) {
             preference.setSummary(R.string.high_power_system);
-        } else if (mPowerAllowlistBackend.isAllowlisted(pkg, uid)) {
+        } else if (mPowerAllowlistBackend.isAllowlisted(pkg)) {
             preference.setSummary(R.string.high_power_on);
         } else {
             preference.setSummary(R.string.high_power_off);
