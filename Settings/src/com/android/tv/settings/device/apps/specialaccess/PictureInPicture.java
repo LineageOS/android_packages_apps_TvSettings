@@ -16,6 +16,11 @@
 
 package com.android.tv.settings.device.apps.specialaccess;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+
 import android.app.AppOpsManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.pm.ActivityInfo;
@@ -33,6 +38,7 @@ import androidx.preference.TwoStatePreference;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
 
 import java.util.List;
@@ -81,7 +87,7 @@ public class PictureInPicture extends SettingsPreferenceFragment
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.picture_in_picture, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
     }
 
     @Override
@@ -166,5 +172,18 @@ public class PictureInPicture extends SettingsPreferenceFragment
     @Override
     protected int getPageId() {
         return TvSettingsEnums.APPS_SPECIAL_APP_ACCESS_PICTURE_IN_PICTURE;
+    }
+
+    private int getPreferenceScreenResId() {
+        switch (FlavorUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+            case FLAVOR_TWO_PANEL:
+                return R.xml.picture_in_picture;
+            case FLAVOR_X:
+            case FLAVOR_VENDOR:
+                return R.xml.picture_in_picture_x;
+            default:
+                return R.xml.picture_in_picture;
+        }
     }
 }

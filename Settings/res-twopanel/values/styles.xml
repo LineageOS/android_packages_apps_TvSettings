@@ -19,7 +19,7 @@
     <!-- Override the Theme.Settings.Transparent to TwoPanel style. -->
     <style name="TvSettingsActivityTheme" parent="Theme.Settings.TwoPanel" />
 
-    <style name="Theme.Settings.TwoPanel">
+    <style name="Theme.Settings.TwoPanel" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@color/settings_background</item>
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowAnimationStyle">@style/SettingsWindowAnimationStyle</item>
