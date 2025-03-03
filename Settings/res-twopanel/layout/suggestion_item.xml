@@ -52,7 +52,7 @@
                   android:duplicateParentState="true"
                   android:layout_gravity="center_vertical"
                   android:orientation="vertical">
-        <TextView
+        <com.android.tv.twopanelsettings.SmoothScalingTextView
                 android:id="@android:id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
                 android:includeFontPadding="true"
                 android:duplicateParentState="true"
                 android:textAppearance="?android:attr/textAppearanceListItem"/>
-        <TextView
+        <com.android.tv.twopanelsettings.SmoothScalingTextView
                 android:id="@android:id/summary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

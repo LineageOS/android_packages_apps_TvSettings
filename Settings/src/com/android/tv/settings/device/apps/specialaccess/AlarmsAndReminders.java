@@ -16,6 +16,11 @@
 
 package com.android.tv.settings.device.apps.specialaccess;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+
 import android.Manifest;
 import android.app.AppOpsManager;
 import android.app.tvsettings.TvSettingsEnums;
@@ -29,6 +34,7 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
 
 /**
@@ -57,7 +63,7 @@ public class AlarmsAndReminders extends ManageAppOp {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.alarms_and_reminders, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
     }
 
     @NonNull
@@ -113,5 +119,18 @@ public class AlarmsAndReminders extends ManageAppOp {
     @Override
     protected int getPageId() {
         return TvSettingsEnums.APPS_SPECIAL_APP_ACCESS_ALARMS_AND_REMINDERS;
+    }
+
+    private int getPreferenceScreenResId() {
+        switch (FlavorUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+            case FLAVOR_TWO_PANEL:
+                return R.xml.alarms_and_reminders;
+            case FLAVOR_X:
+            case FLAVOR_VENDOR:
+                return R.xml.alarms_and_reminders_x;
+            default:
+                return R.xml.alarms_and_reminders;
+        }
     }
 }

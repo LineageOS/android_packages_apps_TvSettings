@@ -38,14 +38,14 @@
         android:duplicateParentState="true"
         android:orientation="vertical">
         <Space android:layout_width="0dp" android:layout_height="@dimen/lb_preference_item_text_space_top" />
-        <TextView
+        <com.android.tv.twopanelsettings.SmoothScalingTextView
             android:id="@android:id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/lb_preference_item_primary_text_margin_bottom"
             android:duplicateParentState="true"
             android:textAppearance="?android:attr/textAppearanceListItem"/>
-        <TextView
+        <com.android.tv.twopanelsettings.SmoothScalingTextView
             android:id="@android:id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

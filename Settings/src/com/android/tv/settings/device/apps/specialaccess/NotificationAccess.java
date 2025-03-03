@@ -16,6 +16,11 @@
 
 package com.android.tv.settings.device.apps.specialaccess;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+
 import android.app.NotificationManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.ComponentName;
@@ -38,6 +43,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.settingslib.applications.ServiceListing;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
 
 import java.util.List;
@@ -103,7 +109,7 @@ public class NotificationAccess extends SettingsPreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.notification_access, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
 
         String packages = getString(
                 getResources().getIdentifier("config_defaultListenerAccessPackages",
@@ -164,5 +170,18 @@ public class NotificationAccess extends SettingsPreferenceFragment {
     @Override
     protected int getPageId() {
         return TvSettingsEnums.APPS_SPECIAL_APP_ACCESS_NOTIFICATION_ACCESS;
+    }
+
+    private int getPreferenceScreenResId() {
+        switch (FlavorUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+            case FLAVOR_TWO_PANEL:
+                return R.xml.notification_access;
+            case FLAVOR_X:
+            case FLAVOR_VENDOR:
+                return R.xml.notification_access_x;
+            default:
+                return R.xml.notification_access;
+        }
     }
 }

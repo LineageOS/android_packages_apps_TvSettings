@@ -16,6 +16,11 @@
 
 package com.android.tv.settings.device.apps.specialaccess;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.os.Bundle;
@@ -30,6 +35,7 @@ import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.fuelgauge.PowerAllowlistBackend;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
 
 /**
@@ -70,7 +76,7 @@ public class HighPower extends SettingsPreferenceFragment implements
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.manage_high_power, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
     }
 
     @Override
@@ -144,5 +150,18 @@ public class HighPower extends SettingsPreferenceFragment implements
     @Override
     protected int getPageId() {
         return TvSettingsEnums.APPS_SPECIAL_APP_ACCESS_ENERGY_OPTIMIZATION;
+    }
+
+    private int getPreferenceScreenResId() {
+        switch (FlavorUtils.getFlavor(getContext())) {
+            case FLAVOR_CLASSIC:
+            case FLAVOR_TWO_PANEL:
+                return R.xml.manage_high_power;
+            case FLAVOR_X:
+            case FLAVOR_VENDOR:
+                return R.xml.manage_high_power_x;
+            default:
+                return R.xml.manage_high_power;
+        }
     }
 }
