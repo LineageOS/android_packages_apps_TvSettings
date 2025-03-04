@@ -831,6 +831,11 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".about.RebootConfirmActivity"
+            android:theme="@style/Theme.Reset"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true" />
+
         <activity
             android:name=".name.DeviceNameSettingsActivity"
             android:theme="@style/Theme.SettingsDeviceName"
