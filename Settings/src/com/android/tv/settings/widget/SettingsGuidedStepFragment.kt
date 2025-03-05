@@ -24,6 +24,8 @@ import androidx.leanback.app.GuidedStepSupportFragment
 open class SettingsGuidedStepFragment : GuidedStepSupportFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val title = view.requireViewById(R.id.guidance_title) as TextView
+        title.setMaxLines(4)
         val description = view.requireViewById(R.id.guidance_description) as TextView
         description.setMaxLines(10) // Allow for long text without truncation.
     }
