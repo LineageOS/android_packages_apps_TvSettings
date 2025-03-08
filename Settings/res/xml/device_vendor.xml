@@ -106,7 +106,6 @@
         custom:isPreferenceVisible="false"
         custom:uri="@string/system_tv_slice_uri"/>
     <com.android.tv.settings.LongClickPreference
-        android:fragment="com.android.tv.settings.about.RebootConfirmFragment"
         android:icon="@drawable/ic_restart_alt"
         android:key="reboot"
         android:title="@string/restart_button_label"/>

@@ -252,6 +252,7 @@ open class MainFragment : PreferenceControllerFragment(),
         updateAccountPref()
         updateAccessoryPref()
         updateBasicModeSuggestion()
+        updateMonitorPref()
 
         val sliceInputsPreference = findPreference<SlicePreference>(
             KEY_CHANNELS_AND_INPUTS_SLICE
@@ -627,6 +628,16 @@ open class MainFragment : PreferenceControllerFragment(),
         }
     }
 
+    fun updateMonitorPref() {
+        val monitorSlicePref = findPreference<SlicePreference>(
+            KEY_MONITOR_SLICE
+        )
+            ?: return
+        if (SliceUtils.isSliceProviderValid(context, monitorSlicePref.uri)) {
+            monitorSlicePref.setVisible(true);
+        }
+    }
+
     override fun onStart() {
         super.onStart()
         updateAccountPref()
@@ -805,6 +816,8 @@ open class MainFragment : PreferenceControllerFragment(),
 
         private const val KEY_HELP_AND_FEEDBACK = "help_and_feedback"
         private const val KEY_HELP_AND_FEEDBACK_SLICE = "help_and_feedback_slice"
+
+        private const val KEY_MONITOR_SLICE = "monitor_slice"
 
         private const val ACTION_ACCOUNTS = "com.android.tv.settings.ACCOUNTS"
 
