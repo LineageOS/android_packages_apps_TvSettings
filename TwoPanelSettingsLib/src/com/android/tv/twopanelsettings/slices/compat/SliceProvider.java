@@ -31,14 +31,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.CancellationSignal;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.CoreComponentFactory;
-
 import com.android.tv.twopanelsettings.slices.compat.compat.SliceProviderWrapperContainer;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -47,15 +44,15 @@ import java.util.Set;
 
 /**
  * A SliceProvider allows an app to provide {@link Slice}s to the Android OS. A slice is a piece of
- * app content and actions that can be displayed outside of the app in Android system surfaces
- * or within another app. Slices are identified by a Uri and a SliceProvider allows your app to
- * provide a slice based on a uri.
- * <p>
- * The primary method to implement in SliceProvider is {@link #onBindSlice(Uri)} which is called
+ * app content and actions that can be displayed outside of the app in Android system surfaces or
+ * within another app. Slices are identified by a Uri and a SliceProvider allows your app to provide
+ * a slice based on a uri.
+ *
+ * <p>The primary method to implement in SliceProvider is {@link #onBindSlice(Uri)} which is called
  * whenever something wants to display a slice from your app. An app can have multiple slices all
  * served from the same slice provider, the Uri passed to onBindSlice will identify the specific
  * slice being requested.
- * </p>
+ *
  * <pre class="prettyprint">
  * public MySliceProvider extends SliceProvider {
  *
@@ -71,31 +68,30 @@ import java.util.Set;
  *      }
  * }
  * </pre>
- * <p>
- * Slices are constructed with {@link com.android.tv.twopanelsettings.slices.compat.builders.TemplateSliceBuilder}s.
- * </p>
- * <p>
- * Slices are not currently live content. They are bound once and shown to the user. If the content
- * in the slice changes due to user interaction or an update in the data being displayed, then
- * {@link ContentResolver#notifyChange(Uri, ContentObserver)} should be used to notify the system
- * to request the latest slice from the app.
- * </p>
- * <p>
- * The provider needs to be declared in the manifest to provide the authority for the app. The
+ *
+ * <p>Slices are constructed with {@link
+ * com.android.tv.twopanelsettings.slices.compat.builders.TemplateSliceBuilder}s.
+ *
+ * <p>Slices are not currently live content. They are bound once and shown to the user. If the
+ * content in the slice changes due to user interaction or an update in the data being displayed,
+ * then {@link ContentResolver#notifyChange(Uri, ContentObserver)} should be used to notify the
+ * system to request the latest slice from the app.
+ *
+ * <p>The provider needs to be declared in the manifest to provide the authority for the app. The
  * authority for most slices is expected to match the package of the application.
- * </p>
+ *
  * <pre class="prettyprint">
  * {@literal
  * <provider
  *     android:name="com.android.mypkg.MySliceProvider"
  *     android:authorities="com.android.mypkg" />}
  * </pre>
- * <p>
- * Slices can also be identified by an intent. To link an intent with a slice, the slice provider
+ *
+ * <p>Slices can also be identified by an intent. To link an intent with a slice, the slice provider
  * must have an {@link IntentFilter} matching the slice intent. When a slice is being requested via
  * an intent, {@link #onMapIntentToUri(Intent)} will be called and is expected to return an
  * appropriate Uri representing the slice.
- * </p>
+ *
  * <pre class="prettyprint">
  * {@literal
  * <provider
@@ -109,357 +105,364 @@ import java.util.Set;
  * </pre>
  *
  * @see Slice
- *
- * Slice framework has been deprecated, it will not receive any updates moving
- * forward. If you are looking for a framework that handles communication across apps,
- * consider using {@link android.app.appsearch.AppSearchManager}.
+ *     <p>Slice framework has been deprecated, it will not receive any updates moving forward. If
+ *     you are looking for a framework that handles communication across apps, consider using {@link
+ *     android.app.appsearch.AppSearchManager}.
  */
 // @Deprecated // Supported for TV
-public abstract class SliceProvider extends ContentProvider implements
-        CoreComponentFactory.CompatWrapped {
+public abstract class SliceProvider extends ContentProvider
+    implements CoreComponentFactory.CompatWrapped {
+  /** {@link Slice} can be returned directly as serialized versioned parcelable. */
+  public static final String EXTRA_SUPPORTS_SETTINGS_SLICE = "extra_supports_settings_slice";
 
-    private static Set<SliceSpec> sSpecs;
-    private static Clock sClock;
+  private static Set<SliceSpec> sSpecs;
+  private static Clock sClock;
 
-    private static final String TAG = "SliceProvider";
+  private static final String TAG = "SliceProvider";
 
-    private static final boolean DEBUG = false;
-    private final String[] mAutoGrantPermissions;
+  private static final boolean DEBUG = false;
+  private final String[] mAutoGrantPermissions;
 
-    private Context mContext = null;
+  private Context mContext = null;
 
-    private final Object mPinnedSliceUrisLock = new Object();
-    private List<Uri> mPinnedSliceUris;
+  private final Object mPinnedSliceUrisLock = new Object();
+  private List<Uri> mPinnedSliceUris;
 
-    private String mAuthority;
-    private String[] mAuthorities;
+  private String mAuthority;
+  private String[] mAuthorities;
 
-    /**
-     * A version of constructing a SliceProvider that allows autogranting slice permissions
-     * to apps that hold specific platform permissions.
-     * <p>
-     * When an app tries to bind a slice from a provider that it does not have access to,
-     * the provider will check if the caller holds permissions to any of the autoGrantPermissions
-     * specified, if they do they will be granted persisted uri access to all slices of this
-     * provider.
-     *
-     * @param autoGrantPermissions List of permissions that holders are auto-granted access
-     *                             to slices.
+  /**
+   * A version of constructing a SliceProvider that allows autogranting slice permissions to apps
+   * that hold specific platform permissions.
+   *
+   * <p>When an app tries to bind a slice from a provider that it does not have access to, the
+   * provider will check if the caller holds permissions to any of the autoGrantPermissions
+   * specified, if they do they will be granted persisted uri access to all slices of this provider.
+   *
+   * @param autoGrantPermissions List of permissions that holders are auto-granted access to slices.
+   */
+  public SliceProvider(@NonNull String... autoGrantPermissions) {
+    mAutoGrantPermissions = autoGrantPermissions;
+  }
+
+  public SliceProvider() {
+    mAutoGrantPermissions = new String[0];
+  }
+
+  /**
+   * Implement this to initialize your slice provider on startup. This method is called for all
+   * registered slice providers on the application main thread at application launch time. It must
+   * not perform lengthy operations, or application startup will be delayed.
+   *
+   * <p>You should defer nontrivial initialization (such as opening, upgrading, and scanning
+   * databases) until the slice provider is used (via #onBindSlice, etc). Deferred initialization
+   * keeps application startup fast, avoids unnecessary work if the provider turns out not to be
+   * needed, and stops database errors (such as a full disk) from halting application launch.
+   *
+   * @return true if the provider was successfully loaded, false otherwise
+   */
+  public abstract boolean onCreateSliceProvider();
+
+  /** */
+  @Nullable
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  @Override
+  public Object getWrapper() {
+    return new SliceProviderWrapperContainer.SliceProviderWrapper(this, mAutoGrantPermissions);
+  }
+
+  @Override
+  public final boolean onCreate() {
+    return onCreateSliceProvider();
+  }
+
+  @Nullable
+  @Override
+  public final String getType(@NonNull Uri uri) {
+    if (DEBUG) {
+      Log.d(TAG, "getFormat " + uri);
+    }
+    return SLICE_TYPE;
+  }
+
+  @Override
+  public void attachInfo(@Nullable Context context, @Nullable ProviderInfo info) {
+    super.attachInfo(context, info);
+    /*
+     * Only allow it to be set once, so after the content service gives
+     * this to us clients can't change it.
      */
-    public SliceProvider(@NonNull String... autoGrantPermissions) {
-        mAutoGrantPermissions = autoGrantPermissions;
+    if (mContext == null) {
+      mContext = context;
+      if (info != null) {
+        setAuthoritiesInternal(info.authority);
+      }
     }
+  }
 
-    public SliceProvider() {
-        mAutoGrantPermissions = new String[0];
+  /**
+   * Change the authorities of the ContentProvider. This is normally set for you from its manifest
+   * information when the provider is first created.
+   *
+   * @param authorities the semi-colon separated authorities of the ContentProvider.
+   */
+  private void setAuthoritiesInternal(String authorities) {
+    if (authorities != null) {
+      if (authorities.indexOf(';') == -1) {
+        mAuthority = authorities;
+        mAuthorities = null;
+      } else {
+        mAuthority = null;
+        mAuthorities = authorities.split(";");
+      }
     }
+  }
 
-    /**
-     * Implement this to initialize your slice provider on startup.
-     * This method is called for all registered slice providers on the
-     * application main thread at application launch time.  It must not perform
-     * lengthy operations, or application startup will be delayed.
-     *
-     * <p>You should defer nontrivial initialization (such as opening,
-     * upgrading, and scanning databases) until the slice provider is used
-     * (via #onBindSlice, etc).  Deferred initialization
-     * keeps application startup fast, avoids unnecessary work if the provider
-     * turns out not to be needed, and stops database errors (such as a full
-     * disk) from halting application launch.
-     *
-     * @return true if the provider was successfully loaded, false otherwise
-     */
-    public abstract boolean onCreateSliceProvider();
-
-    /**
-     */
-    @Nullable
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    @Override
-    public Object getWrapper() {
-        return new SliceProviderWrapperContainer.SliceProviderWrapper(this,
-                mAutoGrantPermissions);
+  private boolean matchesOurAuthoritiesInternal(String authority) {
+    if (mAuthority != null) {
+      return mAuthority.equals(authority);
     }
-
-    @Override
-    public final boolean onCreate() {
-        return onCreateSliceProvider();
-    }
-
-    @Nullable
-    @Override
-    public final String getType(@NonNull Uri uri) {
-        if (DEBUG) Log.d(TAG, "getFormat " + uri);
-        return SLICE_TYPE;
-    }
-
-    @Override
-    public void attachInfo(@Nullable Context context, @Nullable ProviderInfo info) {
-        super.attachInfo(context, info);
-        /*
-         * Only allow it to be set once, so after the content service gives
-         * this to us clients can't change it.
-         */
-        if (mContext == null) {
-            mContext = context;
-            if (info != null) {
-                setAuthoritiesInternal(info.authority);
-            }
+    if (mAuthorities != null) {
+      int length = mAuthorities.length;
+      for (int i = 0; i < length; i++) {
+        if (mAuthorities[i].equals(authority)) {
+          return true;
         }
+      }
     }
+    return false;
+  }
 
-    /**
-     * Change the authorities of the ContentProvider.
-     * This is normally set for you from its manifest information when the provider is first
-     * created.
-     * @param authorities the semi-colon separated authorities of the ContentProvider.
-     */
-    private void setAuthoritiesInternal(String authorities) {
-        if (authorities != null) {
-            if (authorities.indexOf(';') == -1) {
-                mAuthority = authorities;
-                mAuthorities = null;
-            } else {
-                mAuthority = null;
-                mAuthorities = authorities.split(";");
-            }
-        }
+  /**
+   * Called when an app requests a slice it does not have write permission to the uri for.
+   *
+   * <p>The return value will be the action on a slice that prompts the user that the calling app
+   * wants to show slices from this app. Returning null will use the default implementation that
+   * launches a dialog that allows the user to grant access to this slice. Apps that do not want to
+   * allow this user grant, can override this and instead launch their own dialog with different
+   * behavior.
+   *
+   * @param sliceUri the Uri of the slice attempting to be bound.
+   * @param callingPackage the packageName of the app requesting the slice
+   */
+  @Nullable
+  public PendingIntent onCreatePermissionRequest(
+      @NonNull Uri sliceUri, @NonNull String callingPackage) {
+    return null;
+  }
+
+  /** Generate a slice that contains a permission request. */
+  @NonNull
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public Slice createPermissionSlice(@NonNull Uri sliceUri, @NonNull String callingPackage) {
+    return new Slice.Builder(sliceUri).build();
+  }
+
+  /**
+   * Implemented to create a slice.
+   *
+   * <p>onBindSlice should return as quickly as possible so that the UI tied to this slice can be
+   * responsive. No network or other IO will be allowed during onBindSlice. Any loading that needs
+   * to be done should happen in the background with a call to {@link
+   * ContentResolver#notifyChange(Uri, ContentObserver)} when the app is ready to provide the
+   * complete data in onBindSlice.
+   *
+   * <p>
+   *
+   * @see Slice
+   * @see android.app.slice.Slice#HINT_PARTIAL
+   */
+  // TODO: Provide alternate notifyChange that takes in the slice (i.e. notifyChange(Uri, Slice)).
+  @Nullable
+  public Slice onBindSlice(@NonNull Uri sliceUri) {
+    return null;
+  }
+
+  @Nullable
+  public Slice onBindSlice(@NonNull Uri sliceUri, @NonNull Bundle extras) {
+    return onBindSlice(sliceUri);
+  }
+
+  /**
+   * Called to inform an app that a slice has been pinned.
+   *
+   * <p>Pinning is a way that slice hosts use to notify apps of which slices they care about updates
+   * for. When a slice is pinned the content is expected to be relatively fresh and kept up to date.
+   *
+   * <p>Being pinned does not provide any escalated privileges for the slice provider. So apps
+   * should do things such as turn on syncing or schedule a job in response to a onSlicePinned.
+   *
+   * <p>Pinned state is not persisted through a reboot, and apps can expect a new call to
+   * onSlicePinned for any slices that should remain pinned after a reboot occurs.
+   *
+   * @param sliceUri The uri of the slice being unpinned.
+   * @see #onSliceUnpinned(Uri)
+   */
+  public void onSlicePinned(@NonNull Uri sliceUri) {}
+
+  /**
+   * Called to inform an app that a slices is no longer pinned.
+   *
+   * <p>This means that no other apps on the device care about updates to this slice anymore and
+   * therefore it is not important to be updated. Any syncs or jobs related to this slice should be
+   * cancelled.
+   *
+   * @see #onSlicePinned(Uri)
+   */
+  public void onSliceUnpinned(@NonNull Uri sliceUri) {}
+
+  /** */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public void handleSlicePinned(@NonNull Uri sliceUri) {
+    List<Uri> pinnedSlices = getPinnedSlices();
+    if (!pinnedSlices.contains(sliceUri)) {
+      pinnedSlices.add(sliceUri);
     }
+  }
 
-    private boolean matchesOurAuthoritiesInternal(String authority) {
-        if (mAuthority != null) {
-            return mAuthority.equals(authority);
-        }
-        if (mAuthorities != null) {
-            int length = mAuthorities.length;
-            for (int i = 0; i < length; i++) {
-                if (mAuthorities[i].equals(authority)) return true;
-            }
-        }
-        return false;
+  /** */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public void handleSliceUnpinned(@NonNull Uri sliceUri) {
+    List<Uri> pinnedSlices = getPinnedSlices();
+    if (pinnedSlices.contains(sliceUri)) {
+      pinnedSlices.remove(sliceUri);
     }
+  }
 
-    /**
-     * Called when an app requests a slice it does not have write permission
-     * to the uri for.
-     * <p>
-     * The return value will be the action on a slice that prompts the user that
-     * the calling app wants to show slices from this app. Returning null will use the default
-     * implementation that launches a dialog that allows the user to grant access to this slice.
-     * Apps that do not want to allow this user grant, can override this and instead
-     * launch their own dialog with different behavior.
-     *
-     * @param sliceUri the Uri of the slice attempting to be bound.
-     * @param callingPackage the packageName of the app requesting the slice
-     */
-    @Nullable
-    public PendingIntent onCreatePermissionRequest(@NonNull Uri sliceUri,
-            @NonNull String callingPackage) {
-        return null;
+  /**
+   * This method must be overridden if an {@link IntentFilter} is specified on the SliceProvider. In
+   * that case, this method can be called and is expected to return a non-null Uri representing a
+   * slice. Otherwise this will throw {@link UnsupportedOperationException}.
+   *
+   * @return Uri representing the slice associated with the provided intent.
+   * @see android.app.slice.Slice
+   */
+  @NonNull
+  public Uri onMapIntentToUri(@NonNull Intent intent) {
+    throw new UnsupportedOperationException(
+        "This provider has not implemented intent to uri mapping");
+  }
+
+  /**
+   * Obtains a list of slices that are descendants of the specified Uri.
+   *
+   * <p>Implementing this is optional for a SliceProvider, but does provide a good discovery
+   * mechanism for finding slice Uris.
+   *
+   * @param uri The uri to look for descendants under.
+   * @return All slices within the space.
+   * @see com.android.tv.twopanelsettings.slices.compat.SliceViewManager#getSliceDescendants(Uri)
+   */
+  @NonNull
+  public Collection<Uri> onGetSliceDescendants(@NonNull Uri uri) {
+    return Collections.emptyList();
+  }
+
+  /**
+   * Returns a list of slice URIs that are currently pinned.
+   *
+   * @return All pinned slices.
+   */
+  @NonNull
+  public List<Uri> getPinnedSlices() {
+    synchronized (mPinnedSliceUrisLock) {
+      if (mPinnedSliceUris == null) {
+        mPinnedSliceUris =
+            new ArrayList<>(SliceManager.getInstance(getContext()).getPinnedSlices());
+      }
     }
+    return mPinnedSliceUris;
+  }
 
-    /**
-     * Generate a slice that contains a permission request.
-     */
-    @NonNull
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public Slice createPermissionSlice(@NonNull Uri sliceUri,
-            @NonNull String callingPackage) {
-        return new Slice.Builder(sliceUri).build();
-    }
+  @Nullable
+  @Override
+  public final Cursor query(
+      @NonNull Uri uri,
+      @Nullable String[] projection,
+      @Nullable String selection,
+      @Nullable String[] selectionArgs,
+      @Nullable String sortOrder) {
+    return null;
+  }
 
-    /**
-     * Implemented to create a slice.
-     * <p>
-     * onBindSlice should return as quickly as possible so that the UI tied
-     * to this slice can be responsive. No network or other IO will be allowed
-     * during onBindSlice. Any loading that needs to be done should happen
-     * in the background with a call to {@link ContentResolver#notifyChange(Uri, ContentObserver)}
-     * when the app is ready to provide the complete data in onBindSlice.
-     * <p>
-     *
-     * @see Slice
-     * @see android.app.slice.Slice#HINT_PARTIAL
-     */
-    // TODO: Provide alternate notifyChange that takes in the slice (i.e. notifyChange(Uri, Slice)).
-    @Nullable
-    public abstract Slice onBindSlice(@NonNull Uri sliceUri);
+  @Nullable
+  @Override
+  @RequiresApi(28)
+  public final Cursor query(
+      @NonNull Uri uri,
+      @Nullable String[] projection,
+      @Nullable Bundle queryArgs,
+      @Nullable CancellationSignal cancellationSignal) {
+    return null;
+  }
 
-    /**
-     * Called to inform an app that a slice has been pinned.
-     * <p>
-     * Pinning is a way that slice hosts use to notify apps of which slices
-     * they care about updates for. When a slice is pinned the content is
-     * expected to be relatively fresh and kept up to date.
-     * <p>
-     * Being pinned does not provide any escalated privileges for the slice
-     * provider. So apps should do things such as turn on syncing or schedule
-     * a job in response to a onSlicePinned.
-     * <p>
-     * Pinned state is not persisted through a reboot, and apps can expect a
-     * new call to onSlicePinned for any slices that should remain pinned
-     * after a reboot occurs.
-     *
-     * @param sliceUri The uri of the slice being unpinned.
-     * @see #onSliceUnpinned(Uri)
-     */
-    public void onSlicePinned(@NonNull Uri sliceUri) {}
+  @Nullable
+  @Override
+  public final Cursor query(
+      @NonNull Uri uri,
+      @Nullable String[] projection,
+      @Nullable String selection,
+      @Nullable String[] selectionArgs,
+      @Nullable String sortOrder,
+      @Nullable CancellationSignal cancellationSignal) {
+    return null;
+  }
 
-    /**
-     * Called to inform an app that a slices is no longer pinned.
-     * <p>
-     * This means that no other apps on the device care about updates to this
-     * slice anymore and therefore it is not important to be updated. Any syncs
-     * or jobs related to this slice should be cancelled.
-     * @see #onSlicePinned(Uri)
-     */
-    public void onSliceUnpinned(@NonNull Uri sliceUri) {}
+  @Nullable
+  @Override
+  public final Uri insert(@NonNull Uri uri, @Nullable ContentValues values) {
+    return null;
+  }
 
-    /**
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public void handleSlicePinned(@NonNull Uri sliceUri) {
-        List<Uri> pinnedSlices = getPinnedSlices();
-        if (!pinnedSlices.contains(sliceUri)) {
-            pinnedSlices.add(sliceUri);
-        }
-    }
+  @Override
+  public final int bulkInsert(@NonNull Uri uri, @NonNull ContentValues[] values) {
+    return 0;
+  }
 
-    /**
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public void handleSliceUnpinned(@NonNull Uri sliceUri) {
-        List<Uri> pinnedSlices = getPinnedSlices();
-        if (pinnedSlices.contains(sliceUri)) {
-            pinnedSlices.remove(sliceUri);
-        }
-    }
+  @Override
+  public final int delete(
+      @NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
+    return 0;
+  }
 
-    /**
-     * This method must be overridden if an {@link IntentFilter} is specified on the SliceProvider.
-     * In that case, this method can be called and is expected to return a non-null Uri representing
-     * a slice. Otherwise this will throw {@link UnsupportedOperationException}.
-     *
-     * @return Uri representing the slice associated with the provided intent.
-     * @see android.app.slice.Slice
-     */
-    @NonNull
-    public Uri onMapIntentToUri(@NonNull Intent intent) {
-        throw new UnsupportedOperationException(
-                "This provider has not implemented intent to uri mapping");
-    }
+  @Override
+  public final int update(
+      @NonNull Uri uri,
+      @Nullable ContentValues values,
+      @Nullable String selection,
+      @Nullable String[] selectionArgs) {
+    return 0;
+  }
 
-    /**
-     * Obtains a list of slices that are descendants of the specified Uri.
-     * <p>
-     * Implementing this is optional for a SliceProvider, but does provide a good
-     * discovery mechanism for finding slice Uris.
-     *
-     * @param uri The uri to look for descendants under.
-     * @return All slices within the space.
-     * @see com.android.tv.twopanelsettings.slices.compat.SliceViewManager#getSliceDescendants(Uri)
-     */
-    @NonNull
-    public Collection<Uri> onGetSliceDescendants(@NonNull Uri uri) {
-        return Collections.emptyList();
-    }
+  @Nullable
+  @Override
+  public final Uri canonicalize(@NonNull Uri url) {
+    return null;
+  }
 
-    /**
-     * Returns a list of slice URIs that are currently pinned.
-     *
-     * @return All pinned slices.
-     */
-    @NonNull
-    public List<Uri> getPinnedSlices() {
-        synchronized (mPinnedSliceUrisLock) {
-            if (mPinnedSliceUris == null) {
-                mPinnedSliceUris = new ArrayList<>(SliceManager.getInstance(getContext())
-                        .getPinnedSlices());
-            }
-        }
-        return mPinnedSliceUris;
-    }
+  /** */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public static void setSpecs(@Nullable Set<SliceSpec> specs) {
+    sSpecs = specs;
+  }
 
-    @Nullable
-    @Override
-    public final Cursor query(@NonNull Uri uri, @Nullable String[] projection,
-            @Nullable String selection, @Nullable String[] selectionArgs,
-            @Nullable String sortOrder) {
-        return null;
-    }
+  /** */
+  @Nullable
+  // @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
+  public static Set<SliceSpec> getCurrentSpecs() {
+    return sSpecs;
+  }
 
-    @Nullable
-    @Override
-    @RequiresApi(28)
-    public final Cursor query(@NonNull Uri uri, @Nullable String[] projection,
-            @Nullable Bundle queryArgs, @Nullable CancellationSignal cancellationSignal) {
-        return null;
-    }
+  /** */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public static void setClock(@Nullable Clock clock) {
+    sClock = clock;
+  }
 
-    @Nullable
-    @Override
-    public final Cursor query(@NonNull Uri uri, @Nullable String[] projection,
-            @Nullable String selection, @Nullable String[] selectionArgs,
-            @Nullable String sortOrder, @Nullable CancellationSignal cancellationSignal) {
-        return null;
-    }
-
-    @Nullable
-    @Override
-    public final Uri insert(@NonNull Uri uri, @Nullable ContentValues values) {
-        return null;
-    }
-
-    @Override
-    public final int bulkInsert(@NonNull Uri uri, @NonNull ContentValues[] values) {
-        return 0;
-    }
-
-    @Override
-    public final int delete(@NonNull Uri uri, @Nullable String selection,
-            @Nullable String[] selectionArgs) {
-        return 0;
-    }
-
-    @Override
-    public final int update(@NonNull Uri uri, @Nullable ContentValues values,
-            @Nullable String selection, @Nullable String[] selectionArgs) {
-        return 0;
-    }
-
-    @Nullable
-    @Override
-    public final Uri canonicalize(@NonNull Uri url) {
-        return null;
-    }
-
-    /**
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public static void setSpecs(@Nullable Set<SliceSpec> specs) {
-        sSpecs = specs;
-    }
-
-    /**
-     */
-    @Nullable
-    // @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
-    public static Set<SliceSpec> getCurrentSpecs() {
-        return sSpecs;
-    }
-
-    /**
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public static void setClock(@Nullable Clock clock) {
-        sClock = clock;
-    }
-
-    /**
-     */
-    @Nullable
-    // @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP)
-    public static Clock getClock() {
-        return sClock;
-    }
+  /** */
+  @Nullable
+  // @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP)
+  public static Clock getClock() {
+    return sClock;
+  }
 }

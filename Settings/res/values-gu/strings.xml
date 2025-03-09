@@ -92,6 +92,14 @@
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"સ્કૅનિંગ હંમેશાં ઉપલબ્ધ છે"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Google ની સ્થાન સેવા અને અન્ય ઍપ્લિકેશનોને નેટવર્ક માટે સ્કૅન કરવા દો, Wi‑Fi બંધ હોય ત્યારે પણ"</string>
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"સ્કૅનિંગ હંમેશાં ઉપલબ્ધ, Googleની સ્થાન સેવા અને અન્ય ઍપને નેટવર્ક માટે સ્કૅન કરવા દો, વાઇ-ફાઇ બંધ હોય ત્યારે પણ"</string>
+    <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread નેટવર્ક"</string>
+    <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"કાર્યક્ષમતા અને પર્ફોર્મન્સ બૂસ્ટ કરતી વખતે Thread નેટવર્ક Thread-ચાલુ કરેલા સ્માર્ટ ઘરના સ્માર્ટ ડિવાઇસને સ્થાનિક રીતે કનેક્ટ કરે છે.\n\nજ્યારે ચાલુ હોય, ત્યારે આ ડિવાઇસ તમારું Thread નેટવર્ક બનાવશે અથવા તેમાં જોડાશે. તમારા ભવિષ્યના સ્માર્ટ ઘરના સ્માર્ટ ડિવાઇસના વધુ સરળ સેટઅપ માટેની લૉગ ઇન વિગત ખાનગી રીતે ક્લાઉડ પર અપલોડ કરવામાં આવશે.\n\nજયારે બંધ હોય, ત્યારે આ ડિવાઇસ હવે તમારા Thread નેટવર્ક પરના અન્ય ડિવાઇસ સાથે વાતચીત કરી શકશે નહીં. સ્માર્ટ ઘરના અમુક સ્માર્ટ ડિવાઇસ અને સેવાઓ અપેક્ષા મુજબ કામ કરી શકશે નહીં.\n\ng.co/tv/thread પર વધુ જાણો"</string>
+    <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread નેટવર્ક બંધ કરીએ?"</string>
+    <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"જો બંધ હોય, તો સ્માર્ટ ઘરના અમુક સ્માર્ટ ડિવાઇસ અને સેવાઓ અપેક્ષા મુજબ કામ કરી શકશે નહીં. શું તમે આગળ ચાલુ રાખવા માગો છો?"</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Thread નેટવર્ક ચાલુ કરીએ?"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Thread નેટવર્ક માટે વધારેલી ઊર્જાનો મોડ જરૂરી છે. ઊર્જાના મોડને પહેલા વધારેલી ઊર્જાના મોડમાં બદલો અને પછી Thread નેટવર્ક ચાલુ કરવા માટે પાછા આવો."</string>
+    <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"બંધ કરો"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"ઊર્જાનો મોડ બદલો"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"વાઇ-ફાઇ"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"નેટવર્ક સાથે કનેક્ટ કરો"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"નેટવર્કના નિદાન"</string>
@@ -121,7 +129,7 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"ટીવી બંધ કરવા અને ઊર્જા બચાવવા માટે ટાઇમર સેટ કરો"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"ડિવાઇસ"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"ફૉર્મેટ પસંદ કરો"</string>
+    <string name="surround_sound_select_formats" msgid="3232348550606222833">"સરાઉન્ડ સાઉન્ડ સેટિંગ"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"સરાઉન્ડ સાઉન્ડ"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -133,10 +141,12 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus સાથે Dolby Atmos"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"નોંધ: જો તમારું ડિવાઇસ તેને સપોર્ટ કરતા ફૉર્મેટની યોગ્ય રીતે જાણ ન કરે, તો કદાચ ઑટો વિકલ્પ કામ ન કરે."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"ઑટોમૅટિક રીતે: તમારું ઑડિયો આઉટપુટ ડિવાઇસ સપોર્ટ કરે, માત્ર તે જ ફૉર્મેટ ચાલુ કરો "</string>
+    <string name="surround_sound_auto_title" msgid="811867430010809597">"ઑટોમૅટિક"</string>
+    <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"તમામ સપોર્ટેડ ફૉર્મેટ ચાલુ કરો"</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"જ્યારે આ પસંદ કરેલું હોય ત્યારે, સિસ્ટમ ઍપને તમે જોડેલા ડિવાઇસ દ્વારા સપોર્ટ કરવામાં આવતા કોઈપણ સાઉન્ડ ફૉર્મેટને પસંદ કરવાની મંજૂરી આપશે. ઍપ દ્વારા ઉચ્ચતમ ગુણવત્તાનું ફૉર્મેટ ન હોય તેવા ફૉર્મેટની પસંદગી કરવામાં આવી શકે છે."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"કોઈ નહીં: સરાઉન્ડ સાઉન્ડનો ક્યારેય ઉપયોગ કરશો નહીં"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"મેન્યુઅલ: તમારા ઑડિયો આઉટપુટ ડિવાઇસને સપોર્ટ કરે છે કે નહીં તેને ધ્યાનમાં લીધા વિના, આ ડિવાઇસ પર સપોર્ટેડ દરેક ફૉર્મેટને પસંદગીપૂર્વક ચાલુ અથવા બંધ કરો."</string>
+    <string name="surround_sound_manual_title" msgid="8294975285009655065">"મેન્યુઅલ"</string>
+    <string name="surround_sound_selection_manual_desc" msgid="3077478058774499547">"ઉપલબ્ધ ફૉર્મેટમાંથી પસંદ કરો"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"જ્યારે આ પસંદ કરેલું હોય ત્યારે તમે મેન્યુઅલી જોડેલા ડિવાઇસ દ્વારા સપોર્ટ કરવામાં આવતા, પ્લેબૅકમાં સમસ્યાઓ ઉભી કરતાં હોય તેવા સાઉન્ડ ફૉર્મેટને બંધ કરી શકો છો. તમે જોડેલા ડિવાઇસ દ્વારા સપોર્ટ કરવામાં આવતા ન હોય તેવા સાઉન્ડ ફૉર્મેટને ચાલુ કરી શકાય છે. અમુક કેસમાં ઍપ દ્વારા ઉચ્ચતમ ગુણવત્તાનું ફૉર્મેટ ન હોય તેવા ફૉર્મેટની પસંદગી કરવામાં આવી શકે છે."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"શું સપોર્ટ ન કરતું હોય એવું સાઉન્ડ ફૉર્મેટ ચાલુ કરી રહ્યાં છો?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"તમારું કનેક્ટેડ ઑડિયો ડિવાઇસ આ ફૉર્મેટને સપોર્ટ હોવાની જાણ કરતું નથી. તેથી કદાચ ડિવાઇસમાંથી મોટો અવાજ આવે કે નજીવા વિસ્ફોટ જેવી અનપેક્ષિત વર્તણૂક થાય."</string>
@@ -154,23 +164,25 @@
     <string name="display_category_title" msgid="247804007525046312">"ડિસ્પ્લે"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"વિગતવાર ડિસ્પ્લે સેટિંગ"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"વિગતવાર સાઉન્ડ સેટિંગ"</string>
+    <string name="advanced_sound_settings_title" msgid="2800805994220135889">"સરાઉન્ડ સાઉન્ડ સેટિંગ"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"ગેમ મોડની મંજૂરી આપો"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"કન્ટેન્ટની ડાઇનૅમિક શ્રેણી સાથે મેળ કરો"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"આ વિકલ્પ ચાલુ કરતી વખતે, કન્ટેન્ટ સાથે મેળ કરવા માટે સિસ્ટમ, ડાઇનૅમિક શ્રેણીના વિવિધ ફૉર્મેટ વચ્ચે સ્વિચ કરશે. આના કારણે ફૉર્મેટ સ્વિચ કરતી વખતે કાળી સ્ક્રીન જોવા મળી શકે છે.\n\nડાઇનૅમિક શ્રેણીના વધુ વિકલ્પો માટે, વિગતવાર ડિસ્પ્લે સેટિંગ પર ક્લિક કરો."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"પસંદ કરેલી ડાઇનૅમિક શ્રેણી"</string>
+    <string name="match_content_dynamic_range_summary" msgid="5897559876103008433">"જ્યારે પસંદ કરવામાં આવે, ત્યારે સિસ્ટમ કન્ટેન્ટની ડાયનૅમિક રેંજ સાથે મેળ કરશે. આના લીધે, વીડિયો શરૂ અથવા સમાપ્ત કરતી વખતે તમારી સ્ક્રીન એક પળ માટે કાળી થઈ શકે છે. વિગતવાર ડિસ્પ્લે સેટિંગમાં વધારાના ડાયનૅમિક રેંજ સેટિંગ મળી શકે છે."</string>
+    <string name="preferred_dynamic_range_title" msgid="3216820729147940951">"ડાયનૅમિક રેંજ માટે પસંદગીનું ફૉર્મેટ"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"સિસ્ટમ દ્વારા પસંદ કરાયેલું રૂપાંતરણ"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="2765115460108291217">"સિસ્ટમને ફૉર્મેટનું રૂપાંતરણ મેનેજ કરવાની મંજૂરી આપે છે"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5622795479042469982">"સિસ્ટમને ફૉર્મેટનું રૂપાંતરણ મેનેજ કરવાની મંજૂરી આપો"</string>
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"જ્યારે આ વિકલ્પ પસંદ કરેલો હોય, ત્યારે સિસ્ટમ તમારા ડિસ્પ્લે પર મોકલવા માટેની અનુકૂળ ડાયનૅમિક રેંજ નક્કી કરશે અને કન્ટેન્ટને જરૂર મુજબ આ ડાયનૅમિક રેંજમાં રૂપાંતરિત કરશે."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"હંમેશાં કન્ટેન્ટના ફૉર્મેટ સાથે મેળ કરે છે"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="885503418469834735">"હંમેશાં કન્ટેન્ટના ફૉર્મેટ સાથે મેળ કરો"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"રૂપાંતરણ ફરજિયાત લાગુ કરવું"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"પસંદગીના ફૉર્મેટમાં રૂપાંતરણ ફરજિયાત લાગુ કરવામાં આવે છે"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1965870548185816252">"પસંદગીના ફૉર્મેટમાં રૂપાંતરણ ફરજિયાત લાગુ કરો"</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"પસંદગીના ફૉર્મેટમાં રૂપાંતરણ ફરજિયાત લાગુ કરો રૂપાંતરણને ફરજિયાત લાગુ કરવાથી ડિસ્પ્લે મોડ અથવા HDR ફૉર્મેટના અન્ય સેટિંગ પર અસર પડી શકે છે."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"હંમેશાં SDRમાં"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"હંમેશાં <xliff:g id="HDR_TYPE">%s</xliff:g>માં"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"શું તમે HDR આઉટપુટને ફરજિયાત લાગુ કરવા માગો છો?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"ડિફૉલ્ટ તરીકે રૂપાંતરણને <xliff:g id="HDR_TYPE">%s</xliff:g>માં ફરજિયાત લાગુ કરવામાં આવશે."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"તમારા ડિસ્પ્લેને 1080p 60Hz રિઝોલ્યુશન પર ચલાવવામાં આવશે. જ્યારે તમારા ડિસ્પ્લેને 4k 60Hz રિઝોલ્યુશન પર ચલાવવામાં આવી રહ્યું હોય ત્યારે આ વિકલ્પ તેની સાથે સુસંગત હોતો નથી."</string>
+    <string name="preferred_dynamic_range_match_enabled_title" msgid="4761382844444479841">"આ સેટિંગ અનુપલબ્ધ છે"</string>
+    <string name="preferred_dynamic_range_match_enabled_desc" msgid="264141414825957741">"\'કન્ટેન્ટની ડાયનૅમિક રેંજ સાથે મેળ કરો\' ચાલુ છે. કન્ટેન્ટના કોઈ ચોક્કસ ડાયનૅમિક રેંજ ફૉર્મેટમાં રૂપાંતરણ કરવા માટે, સેટિંગ &gt; ડિસ્પ્લે &amp; સાઉન્ડ પર જાઓ અને સૌપ્રથમ \'કન્ટેન્ટની ડાયનૅમિક રેંજ સાથે મેળ કરો\' બંધ કરો."</string>
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"હાલના રિઝોલ્યુશનમાં Dolby Vision સપોર્ટેડ નથી. જો તમે મેન્યુઅલી Dolby Vision ચાલુ કરશો, તો તમારા ડિસ્પ્લેનું રિઝોલ્યુશન 1080p 60Hzમાં બદલાઈ જશે"</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"રિઝોલ્યુશનને 1080p 60Hzમાં બદલીએ?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Dolby Vision માટે, હંમેશાં ફરજિયાત રીતે રૂપાંતરણ કરો"</string>
@@ -197,11 +209,11 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"ધ વન્ડરફુલ વિઝાર્ડ ઑફ ઓઝ"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"ચૅપ્ટર 11: ધ વન્ડરફુલ એમરલ્ડ સિટી ઑફ ઓઝ"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"લીલા રંગના ચશ્માં પહેર્યા હોવા છતાં પણ ડોરોથી અને તેના મિત્રો આ અદ્દભુત શહેરના ભપકાદાર દેખાવથી આશ્ચર્યચકિત થઈ ગયા હતા. શેરીઓ લીલા રંગના માર્બલથી બનેલા એક હરોળમાં આવેલા સુંદર મકાનોથી સજ્જ હતી અને ચારે તરફ ચમકતા નીલમ જડેલા હતા. તેઓ એ જ લીલા માર્બલ પર ચાલવા લાગ્યા, જ્યાં પાસે-પાસે રાખેલા બ્લૉક એકબીજા સાથે જોડાઈ રહ્યાં હતા. તે નીલમની પંક્તિઓ હતી અને સૂરજના પ્રકાશમાં ચમકી રહી હતી, બારીઓના કાચ લીલા રંગના હતા, એટલું જ નહીં શહેરની ઉપર આકાશની રંગછટા પણ લીલા રંગની હતી અને સૂર્યના કિરણો પણ લીલા રંગના હતા. \n\nઘણા પુરુષો, સ્ત્રીઓ અને બાળકો હતા, એ બધા લોકો ચાલી રહ્યાં હતા અને તેમણે લીલા રંગના કપડાં પહેર્યા હતા, એટલું જ નહીં તેમની ત્વચા પણ લીલા રંગની હતી. તેઓ વિસ્મય પામેલી નજરોથી ડોરોથી તેમજ તેના વિચિત્ર મિત્રોને જોઈ રહ્યાં હતા અને જ્યારે બાળકોએ સિંહને જોયો તો તે બધા ત્યાંથી નાસી છુટ્યા અને તેમની માતાની પાછળ જઈને સંતાઈ ગયા, પરંતુ કોઈએ પણ તેમની સાથે વાત કરી નહીં. શેરીમાં ઘણી દુકાનો હતી અને ડોરોથીએ જોયું તો તેમાં મૂકેલી બધી જ વસ્તુઓ લીલા રંગની હતી. લીલા રંગની કૅન્ડી અને લીલા રંગના પૉપ-કોર્ન વેચાઈ રહ્યાં હતા. સાથે જ લીલા રંગના જૂતા, લીલા રંગની ટોપીઓ અને ભાતભાતના કપડાં પણ લીલા રંગના હતા. એક જગ્યાએ તો એક માણસ લીલા રંગનું લીંબુનું શરબત વેચી રહ્યો હતો અને જ્યારે બાળકોએ તે ખરીદ્યું ત્યારે ડોરોથીએ જોયું કે તેમણે તેના માટે લીલા રંગના સિક્કા આપ્યા. \n\nત્યાં ન તો ઘોડા હતા કે ન કોઈ પ્રાણી, માણસો તેમની સામે નાના લીલા રંગના ગાડામાં સામાન અહીંથી ત્યાં લઈ જઈ રહ્યાં હતા. બધા જ ખુશ, સંતુષ્ટ અને સમૃદ્ધ લાગી રહ્યાં હતા."</string>
-    <string name="hdr_format_selection_title" msgid="4042679694363850581">"ફૉર્મેટની પસંદગી"</string>
+    <string name="hdr_format_selection_title" msgid="3847284265003261898">"ડાયનૅમિક રેંજના ફૉર્મેટને મંજૂરી આપો"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"ઑટોમૅટિક રીતે"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"મેન્યુઅલ"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"ડિવાઇસની જાણ કરતા ફૉર્મેટનો ઉપયોગ કરો"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"ઉપલબ્ધ ફૉર્મેટમાંથી મેન્યુઅલી ફૉર્મેટ પસંદ કરો"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="7091897909210568236">"તમામ સપોર્ટેડ ફૉર્મેટ ચાલુ કરો"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="6989666818251254061">"ઉપલબ્ધ ફૉર્મેટમાંથી પસંદ કરો"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"સપોર્ટ કરતા ફૉર્મેટ"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"સપોર્ટ ન કરતા ફૉર્મેટ"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>

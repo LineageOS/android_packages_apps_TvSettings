@@ -70,11 +70,21 @@ public class DisplaySoundUtils {
     public static void setMatchContentDynamicRangeStatus(Context context,
             DisplayManager displayManager,
             boolean status) {
-        HdrConversionMode mode = status
-                ? new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_PASSTHROUGH)
-                : new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_SYSTEM);
-
-        displayManager.setHdrConversionMode(mode);
+        if (status) {
+            // When enabling Match Content Dymanic Range, check if the current Preferred Dynamic
+            // Range is set to Force SDR. Since Force SDR means that all HDR types have been
+            // disabled, when enabling Match Content Dynamic Range, Format Selection must be reset
+            // to Auto to allow for all supported HDR formats
+            if (displayManager.getHdrConversionModeSetting().equals(new HdrConversionMode(
+                    HdrConversionMode.HDR_CONVERSION_FORCE, HDR_TYPE_INVALID))) {
+                displayManager.setAreUserDisabledHdrTypesAllowed(true);
+            }
+            displayManager.setHdrConversionMode(
+                    new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_PASSTHROUGH));
+        } else {
+            displayManager.setHdrConversionMode(
+                    new HdrConversionMode(HdrConversionMode.HDR_CONVERSION_SYSTEM));
+        }
         sendHdrSettingsChangedBroadcast(context);
     }
 

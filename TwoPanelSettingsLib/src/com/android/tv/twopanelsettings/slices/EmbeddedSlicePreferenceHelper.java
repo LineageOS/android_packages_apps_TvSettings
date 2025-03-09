@@ -92,7 +92,7 @@ public class EmbeddedSlicePreferenceHelper implements Observer<Slice> {
         //  FlavorUtils
         // For now, put true here so IconNeedsToBeProcessed will be respected.
         mNewPref = SlicePreferencesUtil.getPreference(embeddedItem,
-                (ContextThemeWrapper) mContext, null, true);
+                (ContextThemeWrapper) mContext, null, true, null);
         if (mNewPref == null) {
             updateVisibility(false);
             return;

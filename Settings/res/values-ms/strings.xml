@@ -92,6 +92,14 @@
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Pengimbasan sentiasa tersedia"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Benarkan perkhidmatan lokasi Google dan apl lain mengimbas rangkaian, walaupun semasa Wi-Fi dimatikan"</string>
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Pengimbasan sentiasa tersedia, Benarkan perkhidmatan lokasi Google dan apl lain mengimbas rangkaian, walaupun semasa Wi-Fi dimatikan"</string>
+    <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Rangkaian Urutan"</string>
+    <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Rangkaian Urutan menyambungkan peranti kediaman pintar berdaya Urutan secara setempat, meningkatkan kecekapan dan prestasi.\n\nApabila dihidupkan, peranti ini akan membuat atau menyertai rangkaian Urutan anda. Bukti kelayakan akan dimuat naik secara peribadi pada awan untuk memudahkan persediaan peranti kediaman pintar anda pada masa hadapan.\n\nApabila dimatikan, peranti ini tidak akan dapat berkomunikasi lagi dengan peranti lain dalam rangkaian Urutan anda. Peranti kediaman pintar dan perkhidmatan tertentu mungkin tidak berfungsi seperti yang dijangka.\n\nKetahui lebih lanjut pada g.co/tv/thread"</string>
+    <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Matikan Rangkaian Urutan?"</string>
+    <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Jika dimatikan, peranti kediaman pintar dan perkhidmatan tertentu mungkin tidak berfungsi seperti yang dijangka. Adakah anda mahu meneruskan proses?"</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Hidupkan Rangkaian Urutan?"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Rangkaian urutan memerlukan mod tenaga yang Ditingkatkan. Tukar mod tenaga kepada Ditingkatkan dahulu, kemudian kembali untuk menghidupkan rangkaian Urutan."</string>
+    <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Matikan"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Tukar mod tenaga"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Sambung ke rangkaian"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnostik rangkaian"</string>
@@ -121,7 +129,7 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"Tetapkan pemasa untuk mematikan TV dan menjimatkan tenaga"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Peranti"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Pilih format"</string>
+    <string name="surround_sound_select_formats" msgid="3232348550606222833">"Tetapan bunyi keliling"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Bunyi Keliling"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -133,10 +141,12 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos dengan Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: Pilihan Auto mungkin tdk berfungsi jika peranti tdk melaporkan format yg disokong dgn betul."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Automatik: Dayakan format yang disokong oleh peranti output audio anda sahaja "</string>
+    <string name="surround_sound_auto_title" msgid="811867430010809597">"Automatik"</string>
+    <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Dayakan semua format yang disokong"</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Apabila dipilih, sistem akan membenarkan apl untuk memilih sebarang format bunyi yang disokong oleh rangkaian peranti anda. Apl mungkin memilih format yang bukan format paling berkualiti."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Tiada: Jangan gunakan bunyi keliling"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Manual: Dayakan atau lumpuhkan setiap format yang disokong oleh peranti ini secara pilihan, tanpa mengira perkara yang disokong oleh peranti output audio anda."</string>
+    <string name="surround_sound_manual_title" msgid="8294975285009655065">"Manual"</string>
+    <string name="surround_sound_selection_manual_desc" msgid="3077478058774499547">"Pilih daripada format yang tersedia"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Apabila dipilih, anda boleh melumpuhkan format bunyi yang disokong oleh rangkaian peranti anda yang menyebabkan masalah dengan main balik secara manual. Format bunyi yang tidak disokong rangkaian peranti boleh didayakan. Kadang kala, apl mungkin memilih format yang bukan format paling berkualiti."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Dayakan format bunyi yang tidak disokong?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Peranti paparan/audio anda tidak melaporkan sokongan bagi format. Mungkin menyebabkan gelagat tdk dijangka: cth bunyi bising/pop daripada peranti."</string>
@@ -154,23 +164,25 @@
     <string name="display_category_title" msgid="247804007525046312">"Paparan"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Tetapan paparan terperinci"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Tetapan bunyi terperinci"</string>
+    <string name="advanced_sound_settings_title" msgid="2800805994220135889">"Tetapan bunyi keliling"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Benarkan mod permainan"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Padankan julat dinamik kandungan"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Apabila mendayakan pilihan ini, sistem akan bertukar antara format julat dinamik yang berbeza untuk dipadankan dengan kandungan. Perkara ini mungkin menyebabkan skrin hitam ketika pertukaran format.\n\nKlik tetapan Paparan Terperinci untuk pelbagai pilihan julat dinamik."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Julat dinamik pilihan"</string>
+    <string name="match_content_dynamic_range_summary" msgid="5897559876103008433">"Apabila dipilih, sistem akan memadankan julat dinamik kandungan. Keadaan ini boleh menyebabkan skrin anda bertukar menjadi hitam seketika semasa memulakan atau menamatkan video. Tetapan julat dinamik tambahan boleh ditemukan dalam Tetapan paparan lanjutan."</string>
+    <string name="preferred_dynamic_range_title" msgid="3216820729147940951">"Format julat dinamik pilihan"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Penukaran pilihan sistem"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="2765115460108291217">"Membolehkan sistem mengurus penukaran format"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5622795479042469982">"Biarkan sistem mengurus penukaran format"</string>
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Apabila pilihan ini dipilih, sistem ini akan menentukan julat dinamik yang sesuai untuk dihantar kepada paparan anda dan menukar kandungan kepada julat dinamik ini apabila diperlukan."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Sentiasa sepadan dengan format kandungan"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="885503418469834735">"Sentiasa padankan format kandungan"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Paksa penukaran"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Memaksa penukaran kepada format pilihan"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1965870548185816252">"Paksa penukaran kepada format pilihan"</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Paksa penukaran kepada format pilihan. Tindakan memaksa penukaran boleh menjejaskan tetapan lain dalam Mod Paparan atau Format HDR."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Sentiasa ditukarkan kepada SDR"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Sentiasa ditukarkan kepada <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Adakah anda mahu memaksa output HDR?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Secara lalai, penukaran akan dipaksa menjadi <xliff:g id="HDR_TYPE">%s</xliff:g>."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Paparan anda akan dijalankan pada peleraian 60Hz 1080p. Pilihan ini tidak serasi dengan paparan anda apabila dijalankan pada peleraian 60Hz 4k."</string>
+    <string name="preferred_dynamic_range_match_enabled_title" msgid="4761382844444479841">"Tetapan ini tidak tersedia"</string>
+    <string name="preferred_dynamic_range_match_enabled_desc" msgid="264141414825957741">"\'Padankan julat dinamik kandungan\' didayakan. Untuk bertukar kepada format julat dinamik yang khusus, akses Tetapan &gt; Paparan &amp; Bunyi dan matikan \'Padankan julat dinamik kandungan\' dahulu."</string>
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Dolby Vision tidak disokong pada peleraian semasa. Jika anda mendayakan Dolby Vision secara manual, peleraian pada paparan anda akan ditukarkan kepada 60Hz 1080p"</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Tukar peleraian kepada 60Hz 1080p?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Sentiasa paksa penukaran kepada Dolby Vision"</string>
@@ -197,11 +209,11 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Ahli Sihir Oz yang Menakjubkan"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Bab 11: Oz, Kota Zamrud yang Menakjubkan"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Biarpun mata mereka ditutupi cermin mata hijau, Dorothy dan rakan-rakannya tetap silau dengan kilauan Kota hebat yang terang-benderang itu. Rumah-rumah cantik yang diperbuat daripada marmar hijau bertatah batu zamrud yang berkilau-kilau membarisi jalan. Mereka berjalan di atas laluan jalan kaki yang berturap marmar hijau serupa. Zamrud disusun rapi di garisan cantuman bongkah-bongkah laluan itu, bergemerlapan dalam sinaran matahari. Cermin tingkap diperbuat daripada kaca berwarna hijau; malah langit yang memayungi Kota itu berwarna kehijauan, bahkan sinar matahari juga berwarna hijau. \n\nKelihatan ramai orang, lelaki, wanita dan kanak-kanak, berjalan-jalan dengan berpakaian serba hijau dan berkulit kehijauan. Mereka memandang Dorothy dan rakannya yang pelbagai rupa dengan penuh tanda tanya, malah kanak-kanak berlari dan bersembunyi di sebalik tubuh ibu mereka apabila ternampak sang Singa; namun tiada sesiapa yang menegur. Terdapat banyak kedai di jalan dan Dorothy mendapati semua barangan di dalam kedai-kedai itu berwarna hijau. Ada gula-gula hijau dan bertih jagung hijau, selain kasut hijau, topi hijau dan pelbagai jenis pakaian hijau. Di satu tempat, seorang lelaki menjual lemonad hijau dan apabila kanak-kanak membeli lemonad itu, Dorothy lihat mereka membayar dengan duit syiling hijau. \n\nTidak kelihatan kuda atau sebarang jenis haiwan lain; kaum lelaki menggunakan pedati kecil berwarna hijau yang ditolak oleh mereka sendiri untuk mengangkut barang-barang. Semua orang kelihatan gembira, bahagia dan makmur."</string>
-    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Pilihan format"</string>
+    <string name="hdr_format_selection_title" msgid="3847284265003261898">"Benarkan format julat dinamik"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Automatik"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Manual"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Gunakan format yang dilaporkan peranti"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Pilih format secara manual daripada format yang tersedia"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="7091897909210568236">"Dayakan semua format yang disokong"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="6989666818251254061">"Pilih daripada format yang tersedia"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"FORMAT DISOKONG"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"FORMAT TIDAK DISOKONG"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>

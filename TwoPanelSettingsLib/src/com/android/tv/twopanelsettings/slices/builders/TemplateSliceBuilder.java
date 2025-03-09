@@ -18,108 +18,60 @@ package com.android.tv.twopanelsettings.slices.builders;
 
 import android.content.Context;
 import android.net.Uri;
-import android.util.Pair;
-
 import androidx.annotation.NonNull;
-
 import com.android.tv.twopanelsettings.slices.compat.Clock;
 import com.android.tv.twopanelsettings.slices.compat.Slice;
-import com.android.tv.twopanelsettings.slices.compat.SliceManager;
 import com.android.tv.twopanelsettings.slices.compat.SliceProvider;
-import com.android.tv.twopanelsettings.slices.compat.SliceSpec;
 import com.android.tv.twopanelsettings.slices.compat.SystemClock;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 /**
  * A copy of TemplateSliceBuilder from slices support lib. Base class of builders of various
  * template types.
  */
 public abstract class TemplateSliceBuilder {
+  private final Slice.Builder mBuilder;
+  private final TemplateBuilderImpl mImpl;
 
-    private static final String TAG = "TemplateSliceBuilder";
+  protected TemplateSliceBuilder(TemplateBuilderImpl impl) {
+    mBuilder = null;
+    mImpl = impl;
+    setImpl(impl);
+  }
 
-    private final Slice.Builder mBuilder;
-    private final Context mContext;
-    private final TemplateBuilderImpl mImpl;
-    private List<SliceSpec> mSpecs;
-
-    protected TemplateSliceBuilder(TemplateBuilderImpl impl) {
-        mContext = null;
-        mBuilder = null;
-        mImpl = impl;
-        setImpl(impl);
+  public TemplateSliceBuilder(Context unusedContext, Uri uri) {
+    mBuilder = new Slice.Builder(uri);
+    mImpl = selectImpl(uri);
+    if (mImpl == null) {
+      throw new IllegalArgumentException("No valid specs found");
     }
+    setImpl(mImpl);
+  }
 
-    public TemplateSliceBuilder(Context context, Uri uri) {
-        mBuilder = new Slice.Builder(uri);
-        mContext = context;
-        mSpecs = getSpecs(uri);
-        mImpl = selectImpl(uri);
-        if (mImpl == null) {
-            throw new IllegalArgumentException("No valid specs found");
-        }
-        setImpl(mImpl);
+  /** Construct the slice. */
+  @NonNull
+  public Slice buildForSettings() {
+    return mImpl.build();
+  }
+
+  @Deprecated
+  public androidx.slice.Slice build() {
+    return new androidx.slice.Slice(buildForSettings().toBundle());
+  }
+
+  protected Slice.Builder getBuilder() {
+    return mBuilder;
+  }
+
+  abstract void setImpl(TemplateBuilderImpl impl);
+
+  protected TemplateBuilderImpl selectImpl(Uri uri) {
+    return null;
+  }
+
+  protected Clock getClock() {
+    if (SliceProvider.getClock() != null) {
+      return SliceProvider.getClock();
     }
-
-    /**
-     * Construct the slice.
-     */
-    @NonNull
-    public Slice buildForSettings() {
-        return mImpl.build();
-    }
-
-    @Deprecated
-    public androidx.slice.Slice build() {
-        return new androidx.slice.Slice(buildForSettings().toBundle());
-    }
-
-    protected Slice.Builder getBuilder() {
-        return mBuilder;
-    }
-
-    abstract void setImpl(TemplateBuilderImpl impl);
-
-    protected TemplateBuilderImpl selectImpl(Uri uri) {
-        return null;
-    }
-
-    protected boolean checkCompatible(SliceSpec candidate, Uri uri) {
-        final int size = mSpecs.size();
-        for (int i = 0; i < size; i++) {
-            if (mSpecs.get(i).canRender(candidate)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private List<SliceSpec> getSpecs(Uri uri) {
-        if (SliceProvider.getCurrentSpecs() != null) {
-            return new ArrayList<>(SliceProvider.getCurrentSpecs());
-        }
-        Set<SliceSpec> pinnedSpecs = SliceManager.getInstance(mContext).getPinnedSpecs(uri);
-        return new ArrayList<>(pinnedSpecs);
-    }
-
-    protected Clock getClock() {
-        if (SliceProvider.getClock() != null) {
-            return SliceProvider.getClock();
-        }
-        return new SystemClock();
-    }
-
-    /**
-     * This is for typing, to clean up the code.
-     *
-     * @hide
-     */
-    static <T> Pair<SliceSpec, Class<? extends TemplateBuilderImpl>> pair(SliceSpec spec,
-            Class<T> cls) {
-        return new Pair(spec, cls);
-    }
+    return new SystemClock();
+  }
 }
-

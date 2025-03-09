@@ -21,7 +21,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -30,56 +29,52 @@ import androidx.annotation.Nullable;
  * before sent to a corresponding child view.
  */
 public class TwoPanelSettingsFrameLayout extends FrameLayout {
+  /**
+   * Interface definition for a callback to be invoked when a touch event is going to be dispatched
+   * to this view. The callback will be invoked before the touch event is given to the view.
+   */
+  public interface OnDispatchTouchListener {
     /**
-     * Interface definition for a callback to be invoked when a touch event is going to be
-     * dispatched to this view. The callback will be invoked before the touch
-     * event is given to the view.
+     * Called when a touch event is going to be dispatched to a view. This allows listeners to get a
+     * chance to respond before the target view.
+     *
+     * @param v The view the touch event is going to be dispatched to.
+     * @param event The MotionEvent object containing full information about the event.
+     * @return True if the listener has consumed the event, false otherwise.
      */
-    public interface OnDispatchTouchListener {
-        /**
-         * Called when a touch event is going to be dispatched to a view. This allows listeners to
-         * get a chance to respond before the target view.
-         *
-         * @param v     The view the touch event is going to be dispatched to.
-         * @param event The MotionEvent object containing full information about
-         *              the event.
-         * @return True if the listener has consumed the event, false otherwise.
-         */
-        boolean onDispatchTouch(View v, MotionEvent event);
-    }
+    boolean onDispatchTouch(View v, MotionEvent event);
+  }
 
-    private OnDispatchTouchListener mOnDispatchTouchListener;
+  private OnDispatchTouchListener mOnDispatchTouchListener;
 
-    public TwoPanelSettingsFrameLayout(@NonNull Context context) {
-        super(context);
-    }
+  public TwoPanelSettingsFrameLayout(@NonNull Context context) {
+    super(context);
+  }
 
-    public TwoPanelSettingsFrameLayout(@NonNull Context context,
-            @Nullable AttributeSet attrs) {
-        super(context, attrs);
-    }
+  public TwoPanelSettingsFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    super(context, attrs);
+  }
 
-    public TwoPanelSettingsFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs,
-            int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
+  public TwoPanelSettingsFrameLayout(
+      @NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    super(context, attrs, defStyleAttr);
+  }
 
-    public TwoPanelSettingsFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs,
-            int defStyleAttr,
-            int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
+  public TwoPanelSettingsFrameLayout(
+      @NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    super(context, attrs, defStyleAttr, defStyleRes);
+  }
 
-    public void setOnDispatchTouchListener(@Nullable OnDispatchTouchListener listener) {
-        mOnDispatchTouchListener = listener;
-    }
+  public void setOnDispatchTouchListener(@Nullable OnDispatchTouchListener listener) {
+    mOnDispatchTouchListener = listener;
+  }
 
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        boolean handled = false;
-        if (mOnDispatchTouchListener != null) {
-            handled = mOnDispatchTouchListener.onDispatchTouch(this, ev);
-        }
-        return handled || super.dispatchTouchEvent(ev);
+  @Override
+  public boolean dispatchTouchEvent(MotionEvent ev) {
+    boolean handled = false;
+    if (mOnDispatchTouchListener != null) {
+      handled = mOnDispatchTouchListener.onDispatchTouch(this, ev);
     }
+    return handled || super.dispatchTouchEvent(ev);
+  }
 }

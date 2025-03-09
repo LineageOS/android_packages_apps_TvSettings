@@ -19,467 +19,500 @@ package com.android.tv.twopanelsettings.slices.compat.builders;
 import static com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder.ICON_IMAGE;
 
 import android.app.PendingIntent;
+import android.content.Intent;
 import android.graphics.drawable.Icon;
-
+import android.os.Parcelable;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.remotecallback.RemoteCallback;
-
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
 
 /**
- * Class representing an action, supports tappable icons, custom toggle icons, and default
- * toggles, as well as date and time pickers.
+ * Class representing an action, supports tappable icons, custom toggle icons, and default toggles,
+ * as well as date and time pickers.
  *
- * Slice framework has been deprecated, it will not receive any updates moving
- * forward. If you are looking for a framework that handles communication across apps,
- * consider using {@link android.app.appsearch.AppSearchManager}.
+ * <p>Slice framework has been deprecated, it will not receive any updates moving forward. If you
+ * are looking for a framework that handles communication across apps, consider using {@link
+ * android.app.appsearch.AppSearchManager}.
  */
 // @Deprecated // Supported for TV
 public class SliceAction implements com.android.tv.twopanelsettings.slices.compat.core.SliceAction {
 
-    private final SliceActionImpl mSliceAction;
+  private final SliceActionImpl mSliceAction;
 
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    @RequiresApi(23)
-    public SliceAction(@NonNull PendingIntent action, @NonNull Icon actionIcon,
-            @NonNull CharSequence actionTitle) {
-        this(action, actionIcon, ICON_IMAGE, actionTitle);
-    }
+  /** */
+  // @RestrictTo(LIBRARY)
+  @RequiresApi(23)
+  public SliceAction(
+      @NonNull Parcelable action, @NonNull Icon actionIcon, @NonNull CharSequence actionTitle) {
+    this(action, actionIcon, ICON_IMAGE, actionTitle);
+  }
 
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    @RequiresApi(23)
-    public SliceAction(@NonNull PendingIntent action, @NonNull Icon actionIcon,
-            @ListBuilder.ImageMode int imageMode, @NonNull CharSequence actionTitle) {
-        this(action, IconCompat.createFromIcon(actionIcon), imageMode, actionTitle);
-    }
+  /** */
+  // @RestrictTo(LIBRARY)
+  @RequiresApi(23)
+  public SliceAction(
+      @NonNull Parcelable action,
+      @NonNull Icon actionIcon,
+      @ListBuilder.ImageMode int imageMode,
+      @NonNull CharSequence actionTitle) {
+    this(action, IconCompat.createFromIcon(actionIcon), imageMode, actionTitle);
+  }
 
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    @RequiresApi(23)
-    public SliceAction(@NonNull PendingIntent action, @NonNull Icon actionIcon,
-            @NonNull CharSequence actionTitle, boolean isChecked) {
-        this(action, IconCompat.createFromIcon(actionIcon), actionTitle, isChecked);
-    }
+  /** */
+  // @RestrictTo(LIBRARY)
+  @RequiresApi(23)
+  public SliceAction(
+      @NonNull Parcelable action,
+      @NonNull Icon actionIcon,
+      @NonNull CharSequence actionTitle,
+      boolean isChecked) {
+    this(action, IconCompat.createFromIcon(actionIcon), actionTitle, isChecked);
+  }
 
-    /**
-     * Construct a SliceAction representing a tappable icon.
-     *
-     * @param action the pending intent to invoke for this action.
-     * @param actionIcon the icon to display for this action.
-     * @param actionTitle the title for this action, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     */
-    // @RestrictTo(LIBRARY)
-    public SliceAction(@NonNull PendingIntent action, @NonNull IconCompat actionIcon,
-            @NonNull CharSequence actionTitle) {
-        this(action, actionIcon, ICON_IMAGE, actionTitle);
-    }
+  /**
+   * Construct a SliceAction representing a tappable icon.
+   *
+   * @param action the pending intent to invoke for this action.
+   * @param actionIcon the icon to display for this action.
+   * @param actionTitle the title for this action, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   */
+  // @RestrictTo(LIBRARY)
+  public SliceAction(
+      @NonNull Parcelable action,
+      @NonNull IconCompat actionIcon,
+      @NonNull CharSequence actionTitle) {
+    this(action, actionIcon, ICON_IMAGE, actionTitle);
+  }
 
-    /**
-     * Construct a SliceAction representing a tappable icon. Use this method to specify the
-     * format of the image, {@link ListBuilder#ICON_IMAGE} will be presented as a tintable icon.
-     * Note that there is no difference between {@link ListBuilder#SMALL_IMAGE} and
-     * {@link ListBuilder#LARGE_IMAGE} for actions; these will just be represented as an
-     * non-tintable image.
-     *
-     * @param action the pending intent to invoke for this action.
-     * @param actionIcon the icon to display for this action.
-     * @param imageMode the mode this icon should be displayed in.
-     * @param actionTitle the title for this action, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     *
-     * @see ListBuilder#ICON_IMAGE
-     * @see ListBuilder#SMALL_IMAGE
-     * @see ListBuilder#LARGE_IMAGE
-     */
-    // @RestrictTo(LIBRARY_GROUP)
-    public SliceAction(@NonNull PendingIntent action, @NonNull IconCompat actionIcon,
-            @ListBuilder.ImageMode int imageMode, @NonNull CharSequence actionTitle) {
-        mSliceAction = new SliceActionImpl(action, actionIcon, imageMode, actionTitle);
-    }
+  /**
+   * Construct a SliceAction representing a tappable icon. Use this method to specify the format of
+   * the image, {@link ListBuilder#ICON_IMAGE} will be presented as a tintable icon. Note that there
+   * is no difference between {@link ListBuilder#SMALL_IMAGE} and {@link ListBuilder#LARGE_IMAGE}
+   * for actions; these will just be represented as an non-tintable image.
+   *
+   * @param action the pending intent to invoke for this action.
+   * @param actionIcon the icon to display for this action.
+   * @param imageMode the mode this icon should be displayed in.
+   * @param actionTitle the title for this action, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @see ListBuilder#ICON_IMAGE
+   * @see ListBuilder#SMALL_IMAGE
+   * @see ListBuilder#LARGE_IMAGE
+   */
+  // @RestrictTo(LIBRARY_GROUP)
+  public SliceAction(
+      @NonNull Parcelable action,
+      @NonNull IconCompat actionIcon,
+      @ListBuilder.ImageMode int imageMode,
+      @NonNull CharSequence actionTitle) {
+    mSliceAction = new SliceActionImpl(action, actionIcon, imageMode, actionTitle);
+  }
 
-    /**
-     * Construct a SliceAction representing a custom toggle icon.
-     *
-     * @param action the pending intent to invoke for this toggle.
-     * @param actionIcon the icon to display for this toggle, should have a checked and unchecked
-     *                   state.
-     * @param actionTitle the title for this toggle, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     * @param isChecked the state of the toggle.
-     */
-    // @RestrictTo(LIBRARY_GROUP)
-    public SliceAction(@NonNull PendingIntent action, @NonNull IconCompat actionIcon,
-            @NonNull CharSequence actionTitle, boolean isChecked) {
-        mSliceAction = new SliceActionImpl(action, actionIcon, actionTitle, isChecked);
-    }
+  /**
+   * Construct a SliceAction representing a custom toggle icon.
+   *
+   * @param action the pending intent to invoke for this toggle.
+   * @param actionIcon the icon to display for this toggle, should have a checked and unchecked
+   *     state.
+   * @param actionTitle the title for this toggle, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @param isChecked the state of the toggle.
+   */
+  // @RestrictTo(LIBRARY_GROUP)
+  public SliceAction(
+      @NonNull Parcelable action,
+      @NonNull IconCompat actionIcon,
+      @NonNull CharSequence actionTitle,
+      boolean isChecked) {
+    mSliceAction = new SliceActionImpl(action, actionIcon, actionTitle, isChecked);
+  }
 
-    /**
-     * Construct a SliceAction representing a default toggle.
-     *
-     * @param action the pending intent to invoke for this toggle.
-     * @param actionTitle the title for this toggle, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     * @param isChecked the state of the toggle.
-     */
-    // @RestrictTo(LIBRARY_GROUP)
-    public SliceAction(@NonNull PendingIntent action, @NonNull CharSequence actionTitle,
-            boolean isChecked) {
-        mSliceAction = new SliceActionImpl(action, actionTitle, isChecked);
-    }
+  /**
+   * Construct a SliceAction representing a default toggle.
+   *
+   * @param action the pending intent to invoke for this toggle.
+   * @param actionTitle the title for this toggle, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @param isChecked the state of the toggle.
+   */
+  // @RestrictTo(LIBRARY_GROUP)
+  public SliceAction(
+      @NonNull Parcelable action, @NonNull CharSequence actionTitle, boolean isChecked) {
+    mSliceAction = new SliceActionImpl(action, actionTitle, isChecked);
+  }
 
-    /**
-     * Construct a SliceAction representing a default date or time picker.
-     *
-     * @param action         the pending intent to invoke for this date picker.
-     * @param actionTitle    the timestamp for this date or time picker.
-     * @param dateTimeMillis the default state of the date or time picker.
-     * @param isDatePicker   if it is a date picker, as opposed to a time picker.
-     */
-    // @RestrictTo(LIBRARY_GROUP)
-    public SliceAction(@NonNull PendingIntent action, @NonNull CharSequence actionTitle,
-            long dateTimeMillis, boolean isDatePicker) {
-        mSliceAction = new SliceActionImpl(action, actionTitle, dateTimeMillis, isDatePicker);
-    }
+  /**
+   * Construct a SliceAction representing a default date or time picker.
+   *
+   * @param action the pending intent to invoke for this date picker.
+   * @param actionTitle the timestamp for this date or time picker.
+   * @param dateTimeMillis the default state of the date or time picker.
+   * @param isDatePicker if it is a date picker, as opposed to a time picker.
+   */
+  // @RestrictTo(LIBRARY_GROUP)
+  public SliceAction(
+      @NonNull Parcelable action,
+      @NonNull CharSequence actionTitle,
+      long dateTimeMillis,
+      boolean isDatePicker) {
+    mSliceAction = new SliceActionImpl(action, actionTitle, dateTimeMillis, isDatePicker);
+  }
 
-    /**
-     * Construct a SliceAction representing a tappable icon.
-     *
-     * @param action the pending intent to invoke for this action.
-     * @param actionIcon the icon to display for this action.
-     * @param imageMode the mode this icon should be displayed in.
-     * @param actionTitle the title for this action, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     *
-     * @see ListBuilder#ICON_IMAGE
-     * @see ListBuilder#SMALL_IMAGE
-     * @see ListBuilder#LARGE_IMAGE
-     */
-    public static SliceAction create(@NonNull PendingIntent action,
-            @NonNull IconCompat actionIcon, @ListBuilder.ImageMode int imageMode,
-            @NonNull CharSequence actionTitle) {
-        return new SliceAction(action, actionIcon, imageMode, actionTitle);
-    }
+  /**
+   * Construct a SliceAction representing a tappable icon.
+   *
+   * @param action the pending intent to invoke for this action.
+   * @param actionIcon the icon to display for this action.
+   * @param imageMode the mode this icon should be displayed in.
+   * @param actionTitle the title for this action, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @see ListBuilder#ICON_IMAGE
+   * @see ListBuilder#SMALL_IMAGE
+   * @see ListBuilder#LARGE_IMAGE
+   */
+  public static SliceAction create(
+      @NonNull Parcelable action,
+      @NonNull IconCompat actionIcon,
+      @ListBuilder.ImageMode int imageMode,
+      @NonNull CharSequence actionTitle) {
+    return new SliceAction(action, actionIcon, imageMode, actionTitle);
+  }
 
-    /**
-     * Construct a SliceAction representing a tappable icon.
-     *
-     * @param action the remote callback to invoke for this action.
-     * @param actionIcon the icon to display for this action.
-     * @param imageMode the mode this icon should be displayed in.
-     * @param actionTitle the title for this action, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     *
-     * @see ListBuilder#ICON_IMAGE
-     * @see ListBuilder#SMALL_IMAGE
-     * @see ListBuilder#LARGE_IMAGE
-     */
-    public static SliceAction create(@NonNull RemoteCallback action,
-            @NonNull IconCompat actionIcon, @ListBuilder.ImageMode int imageMode,
-            @NonNull CharSequence actionTitle) {
-        return new SliceAction(action.toPendingIntent(), actionIcon, imageMode, actionTitle);
-    }
+  /**
+   * Construct a SliceAction representing a tappable icon.
+   *
+   * @param action the remote callback to invoke for this action.
+   * @param actionIcon the icon to display for this action.
+   * @param imageMode the mode this icon should be displayed in.
+   * @param actionTitle the title for this action, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @see ListBuilder#ICON_IMAGE
+   * @see ListBuilder#SMALL_IMAGE
+   * @see ListBuilder#LARGE_IMAGE
+   */
+  public static SliceAction create(
+      @NonNull RemoteCallback action,
+      @NonNull IconCompat actionIcon,
+      @ListBuilder.ImageMode int imageMode,
+      @NonNull CharSequence actionTitle) {
+    return new SliceAction(action.toPendingIntent(), actionIcon, imageMode, actionTitle);
+  }
 
-    /**
-     * Construct a SliceAction representing a timestamp connected to a date picker.
-     * Currently only supported in GridRow.
-     *
-     * @param action         the pending intent to invoke for this picker.
-     * @param actionTitle    the timestamp title for this picker.
-     * @param dateTimeMillis the default state of the date picker.
-     */
-    // @RestrictTo(LIBRARY)
-    @NonNull
-    public static SliceAction createDatePicker(@NonNull PendingIntent action,
-            @NonNull CharSequence actionTitle, long dateTimeMillis) {
-        return new SliceAction(action, actionTitle, dateTimeMillis, true);
-    }
+  /**
+   * Construct a SliceAction representing a timestamp connected to a date picker. Currently only
+   * supported in GridRow.
+   *
+   * @param action the pending intent to invoke for this picker.
+   * @param actionTitle the timestamp title for this picker.
+   * @param dateTimeMillis the default state of the date picker.
+   */
+  // @RestrictTo(LIBRARY)
+  @NonNull
+  public static SliceAction createDatePicker(
+      @NonNull Parcelable action, @NonNull CharSequence actionTitle, long dateTimeMillis) {
+    return new SliceAction(action, actionTitle, dateTimeMillis, true);
+  }
 
-    /**
-     * Construct a SliceAction representing a timestamp connected to a time picker.
-     * Currently only supported in GridRow.
-     *
-     * @param action         the pending intent to invoke for this picker.
-     * @param actionTitle    the timestamp title for this picker.
-     * @param dateTimeMillis the default state of the time picker.
-     */
-    // @RestrictTo(LIBRARY)
-    @NonNull
-    public static SliceAction createTimePicker(@NonNull PendingIntent action,
-            @NonNull CharSequence actionTitle, long dateTimeMillis) {
-        return new SliceAction(action, actionTitle, dateTimeMillis, false);
-    }
+  /**
+   * Construct a SliceAction representing a timestamp connected to a time picker. Currently only
+   * supported in GridRow.
+   *
+   * @param action the pending intent to invoke for this picker.
+   * @param actionTitle the timestamp title for this picker.
+   * @param dateTimeMillis the default state of the time picker.
+   */
+  // @RestrictTo(LIBRARY)
+  @NonNull
+  public static SliceAction createTimePicker(
+      @NonNull Parcelable action, @NonNull CharSequence actionTitle, long dateTimeMillis) {
+    return new SliceAction(action, actionTitle, dateTimeMillis, false);
+  }
 
-    /**
-     * Construct a SliceAction representing a tappable icon that launches an
-     * activity when clicked.
-     *
-     * @param action the pending intent to invoke for this action.
-     * @param actionIcon the icon to display for this action.
-     * @param imageMode the mode this icon should be displayed in.
-     * @param actionTitle the title for this action, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     *
-     * @see ListBuilder#ICON_IMAGE
-     * @see ListBuilder#SMALL_IMAGE
-     * @see ListBuilder#LARGE_IMAGE
-     */
-    public static SliceAction createDeeplink(@NonNull PendingIntent action,
-            @NonNull IconCompat actionIcon, @ListBuilder.ImageMode int imageMode,
-            @NonNull CharSequence actionTitle) {
-        SliceAction sliceAction = new SliceAction(action, actionIcon, imageMode, actionTitle);
-        sliceAction.mSliceAction.setActivity(true);
-        return sliceAction;
-    }
+  /**
+   * Construct a SliceAction representing a tappable icon that launches an activity when clicked.
+   *
+   * @param action the pending intent to invoke for this action.
+   * @param actionIcon the icon to display for this action.
+   * @param imageMode the mode this icon should be displayed in.
+   * @param actionTitle the title for this action, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @see ListBuilder#ICON_IMAGE
+   * @see ListBuilder#SMALL_IMAGE
+   * @see ListBuilder#LARGE_IMAGE
+   */
+  public static SliceAction createDeeplink(
+      @NonNull Parcelable action,
+      @NonNull IconCompat actionIcon,
+      @ListBuilder.ImageMode int imageMode,
+      @NonNull CharSequence actionTitle) {
+    SliceAction sliceAction = new SliceAction(action, actionIcon, imageMode, actionTitle);
+    sliceAction.mSliceAction.setActivity(true);
+    return sliceAction;
+  }
 
-    /**
-     * Construct a SliceAction representing a tappable icon that launches an
-     * activity when clicked.
-     *
-     * @param action the remote callback to invoke for this action.
-     * @param actionIcon the icon to display for this action.
-     * @param imageMode the mode this icon should be displayed in.
-     * @param actionTitle the title for this action, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     *
-     * @see ListBuilder#ICON_IMAGE
-     * @see ListBuilder#SMALL_IMAGE
-     * @see ListBuilder#LARGE_IMAGE
-     */
-    public static SliceAction createDeeplink(@NonNull RemoteCallback action,
-            @NonNull IconCompat actionIcon, @ListBuilder.ImageMode int imageMode,
-            @NonNull CharSequence actionTitle) {
-        SliceAction sliceAction = new SliceAction(action.toPendingIntent(), actionIcon, imageMode,
-                actionTitle);
-        sliceAction.mSliceAction.setActivity(true);
-        return sliceAction;
-    }
+  /**
+   * Construct a SliceAction representing a tappable icon that launches an activity when clicked.
+   *
+   * @param action the remote callback to invoke for this action.
+   * @param actionIcon the icon to display for this action.
+   * @param imageMode the mode this icon should be displayed in.
+   * @param actionTitle the title for this action, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @see ListBuilder#ICON_IMAGE
+   * @see ListBuilder#SMALL_IMAGE
+   * @see ListBuilder#LARGE_IMAGE
+   */
+  public static SliceAction createDeeplink(
+      @NonNull RemoteCallback action,
+      @NonNull IconCompat actionIcon,
+      @ListBuilder.ImageMode int imageMode,
+      @NonNull CharSequence actionTitle) {
+    SliceAction sliceAction =
+        new SliceAction(action.toPendingIntent(), actionIcon, imageMode, actionTitle);
+    sliceAction.mSliceAction.setActivity(true);
+    return sliceAction;
+  }
 
-    /**
-     * Construct a SliceAction representing a default toggle.
-     *
-     * @param action the pending intent to invoke for this toggle.
-     * @param actionTitle the title for this toggle, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     * @param isChecked the state of the toggle.
-     */
-    public static SliceAction createToggle(@NonNull PendingIntent action,
-            @NonNull CharSequence actionTitle, boolean isChecked) {
-        return new SliceAction(action, actionTitle, isChecked);
-    }
+  /**
+   * Construct a SliceAction representing a default toggle.
+   *
+   * @param action the pending intent to invoke for this toggle.
+   * @param actionTitle the title for this toggle, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @param isChecked the state of the toggle.
+   */
+  public static SliceAction createToggle(
+      @NonNull Parcelable action, @NonNull CharSequence actionTitle, boolean isChecked) {
+    return new SliceAction(action, actionTitle, isChecked);
+  }
 
-    /**
-     * Construct a SliceAction representing a default toggle.
-     *
-     * @param action the remote callback to invoke for this toggle.
-     * @param actionTitle the title for this toggle, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     * @param isChecked the state of the toggle.
-     */
-    public static SliceAction createToggle(@NonNull RemoteCallback action,
-            @NonNull CharSequence actionTitle, boolean isChecked) {
-        return new SliceAction(action.toPendingIntent(), actionTitle, isChecked);
-    }
+  /**
+   * Construct a SliceAction representing a default toggle.
+   *
+   * @param action the remote callback to invoke for this toggle.
+   * @param actionTitle the title for this toggle, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @param isChecked the state of the toggle.
+   */
+  public static SliceAction createToggle(
+      @NonNull RemoteCallback action, @NonNull CharSequence actionTitle, boolean isChecked) {
+    return new SliceAction(action.toPendingIntent(), actionTitle, isChecked);
+  }
 
-    /**
-     * Construct a SliceAction representing a custom toggle icon.
-     *
-     * @param action the pending intent to invoke for this toggle.
-     * @param actionIcon the icon to display for this toggle, should have a checked and unchecked
-     *                   state.
-     * @param actionTitle the title for this toggle, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     * @param isChecked the state of the toggle.
-     */
-    public static SliceAction createToggle(@NonNull PendingIntent action,
-            @NonNull IconCompat actionIcon, @NonNull CharSequence actionTitle, boolean isChecked) {
-        return new SliceAction(action, actionIcon, actionTitle, isChecked);
-    }
+  /**
+   * Construct a SliceAction representing a custom toggle icon.
+   *
+   * @param action the pending intent to invoke for this toggle.
+   * @param actionIcon the icon to display for this toggle, should have a checked and unchecked
+   *     state.
+   * @param actionTitle the title for this toggle, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @param isChecked the state of the toggle.
+   */
+  public static SliceAction createToggle(
+      @NonNull Parcelable action,
+      @NonNull IconCompat actionIcon,
+      @NonNull CharSequence actionTitle,
+      boolean isChecked) {
+    return new SliceAction(action, actionIcon, actionTitle, isChecked);
+  }
 
-    /**
-     * Construct a SliceAction representing a custom toggle icon.
-     *
-     * @param action the remote callback to invoke for this toggle.
-     * @param actionIcon the icon to display for this toggle, should have a checked and unchecked
-     *                   state.
-     * @param actionTitle the title for this toggle, also used for content description if one hasn't
-     *                    been set via {@link #setContentDescription(CharSequence)}.
-     * @param isChecked the state of the toggle.
-     */
-    public static SliceAction createToggle(@NonNull RemoteCallback action,
-            @NonNull IconCompat actionIcon, @NonNull CharSequence actionTitle, boolean isChecked) {
-        return new SliceAction(action.toPendingIntent(), actionIcon, actionTitle, isChecked);
-    }
+  /**
+   * Construct a SliceAction representing a custom toggle icon.
+   *
+   * @param action the remote callback to invoke for this toggle.
+   * @param actionIcon the icon to display for this toggle, should have a checked and unchecked
+   *     state.
+   * @param actionTitle the title for this toggle, also used for content description if one hasn't
+   *     been set via {@link #setContentDescription(CharSequence)}.
+   * @param isChecked the state of the toggle.
+   */
+  public static SliceAction createToggle(
+      @NonNull RemoteCallback action,
+      @NonNull IconCompat actionIcon,
+      @NonNull CharSequence actionTitle,
+      boolean isChecked) {
+    return new SliceAction(action.toPendingIntent(), actionIcon, actionTitle, isChecked);
+  }
 
-    /**
-     * @param description the content description for this action.
-     * @return
-     */
-    @NonNull
-    @Override
-    public com.android.tv.twopanelsettings.slices.compat.core.SliceAction setContentDescription(
-            @NonNull CharSequence description) {
-        mSliceAction.setContentDescription(description);
-        return this;
-    }
+  /**
+   * @param description the content description for this action.
+   * @return
+   */
+  @NonNull
+  @Override
+  public com.android.tv.twopanelsettings.slices.compat.core.SliceAction setContentDescription(
+      @NonNull CharSequence description) {
+    mSliceAction.setContentDescription(description);
+    return this;
+  }
 
-    /**
-     * @param isChecked whether the state of this action is checked or not; only used for toggle
-     *                  actions.
-     */
-    @NonNull
-    @Override
-    public SliceAction setChecked(boolean isChecked) {
-        mSliceAction.setChecked(isChecked);
-        return this;
-    }
+  /**
+   * @param isChecked whether the state of this action is checked or not; only used for toggle
+   *     actions.
+   */
+  @NonNull
+  @Override
+  public SliceAction setChecked(boolean isChecked) {
+    mSliceAction.setChecked(isChecked);
+    return this;
+  }
 
-    /**
-     * Sets the priority of this action, with the lowest priority having the highest ranking.
-     */
-    @NonNull
-    @Override
-    public SliceAction setPriority(@IntRange(from = 0) int priority) {
-        mSliceAction.setPriority(priority);
-        return this;
-    }
+  /** Sets the priority of this action, with the lowest priority having the highest ranking. */
+  @NonNull
+  @Override
+  public SliceAction setPriority(@IntRange(from = 0) int priority) {
+    mSliceAction.setPriority(priority);
+    return this;
+  }
 
-    /**
-     * Sets the key of this action to provide extra information to the host renderer.
-     */
-    @NonNull
-    @Override
-    public SliceAction setKey(@NonNull String key) {
-        mSliceAction.setKey(key);
-        return this;
-    }
+  /** Sets the key of this action to provide extra information to the host renderer. */
+  @NonNull
+  @Override
+  public SliceAction setKey(@NonNull String key) {
+    mSliceAction.setKey(key);
+    return this;
+  }
 
-    /**
-     * @return the {@link PendingIntent} associated with this action.
-     */
-    @NonNull
-    @Override
-    public PendingIntent getAction() {
-        return mSliceAction.getAction();
-    }
+  /**
+   * @return the {@link PendingIntent} associated with this action.
+   */
+  @Nullable
+  @Override
+  public PendingIntent getAction() {
+    return mSliceAction.getAction();
+  }
 
-    /**
-     * @return the {@link Icon} to display for this action. This can be null when the action
-     * represented is a default toggle.
-     */
-    @Nullable
-    @Override
-    public IconCompat getIcon() {
-        return mSliceAction.getIcon();
-    }
+  /**
+   * @return the {@link PendingIntent} associated with this action.
+   */
+  @Nullable
+  @Override
+  public Intent getActionIntent() {
+    return mSliceAction.getActionIntent();
+  }
 
-    /**
-     * @return the title for this action.
-     */
-    @NonNull
-    @Override
-    public CharSequence getTitle() {
-        return mSliceAction.getTitle();
-    }
+  @NonNull
+  @Override
+  public Parcelable getActionParcelable() {
+    return mSliceAction.getActionParcelable();
+  }
 
-    @Override
-    public boolean isActivity() {
-        return mSliceAction.isActivity();
-    }
+  /**
+   * @return the {@link Icon} to display for this action. This can be null when the action
+   *     represented is a default toggle.
+   */
+  @Nullable
+  @Override
+  public IconCompat getIcon() {
+    return mSliceAction.getIcon();
+  }
 
-    /**
-     * @return the content description to use for this action.
-     */
-    @Nullable
-    @Override
-    public CharSequence getContentDescription() {
-        return mSliceAction.getContentDescription();
-    }
+  /**
+   * @return the title for this action.
+   */
+  @NonNull
+  @Override
+  public CharSequence getTitle() {
+    return mSliceAction.getTitle();
+  }
 
-    /**
-     * @return the priority associated with this action, -1 if unset.
-     */
-    @Override
-    public int getPriority() {
-        return mSliceAction.getPriority();
-    }
+  @Override
+  public boolean isActivity() {
+    return mSliceAction.isActivity();
+  }
 
-    /**
-     * @return the key associated with this action.
-     */
-    @Nullable
-    @Override
-    public String getKey() {
-        return mSliceAction.getKey();
-    }
+  /**
+   * @return the content description to use for this action.
+   */
+  @Nullable
+  @Override
+  public CharSequence getContentDescription() {
+    return mSliceAction.getContentDescription();
+  }
 
-    /**
-     * @return whether this action represents a toggle (i.e. has a checked and unchecked state).
-     */
-    @Override
-    public boolean isToggle() {
-        return mSliceAction.isToggle();
-    }
+  /**
+   * @return the priority associated with this action, -1 if unset.
+   */
+  @Override
+  public int getPriority() {
+    return mSliceAction.getPriority();
+  }
 
-    /**
-     * @return whether the state of this action is checked or not; only used for toggle actions.
-     */
-    @Override
-    public boolean isChecked() {
-        return mSliceAction.isChecked();
-    }
+  /**
+   * @return the key associated with this action.
+   */
+  @Nullable
+  @Override
+  public String getKey() {
+    return mSliceAction.getKey();
+  }
 
-    /**
-     * @return the image mode to use for this action.
-     */
-    @Override
-    public @ListBuilder.ImageMode int getImageMode() {
-        return mSliceAction.getImageMode();
-    }
+  /**
+   * @return whether this action represents a toggle (i.e. has a checked and unchecked state).
+   */
+  @Override
+  public boolean isToggle() {
+    return mSliceAction.isToggle();
+  }
 
-    /**
-     * @return whether this action is a toggle using the standard switch control.
-     */
-    @Override
-    public boolean isDefaultToggle() {
-        return mSliceAction.isDefaultToggle();
-    }
+  /**
+   * @return whether the state of this action is checked or not; only used for toggle actions.
+   */
+  @Override
+  public boolean isChecked() {
+    return mSliceAction.isChecked();
+  }
 
-    /**
-     * @param builder this should be a new builder that has any additional hints the action might
-     *                need.
-     * @return the slice representation of this action.
-     */
-    // @RestrictTo(LIBRARY)
-    @NonNull
-    public Slice buildSlice(@NonNull Slice.Builder builder) {
-        return mSliceAction.buildSlice(builder);
-    }
+  /**
+   * @return the image mode to use for this action.
+   */
+  @Override
+  @SuppressWarnings("WrongConstant")
+  public @ListBuilder.ImageMode int getImageMode() {
+    return mSliceAction.getImageMode();
+  }
 
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    @NonNull
-    public SliceActionImpl getImpl() {
-        return mSliceAction;
-    }
+  /**
+   * @return whether this action is a toggle using the standard switch control.
+   */
+  @Override
+  public boolean isDefaultToggle() {
+    return mSliceAction.isDefaultToggle();
+  }
 
-    /**
-     * @param builder the parent slice builder that contains the primary action.
-     */
-    // @RestrictTo(LIBRARY)
-    public void setPrimaryAction(@NonNull Slice.Builder builder) {
-        builder.addAction(mSliceAction.getAction(),
-                mSliceAction.buildPrimaryActionSlice(builder), mSliceAction.getSubtype());
-    }
+  /**
+   * @param builder this should be a new builder that has any additional hints the action might
+   *     need.
+   * @return the slice representation of this action.
+   */
+  // @RestrictTo(LIBRARY)
+  @NonNull
+  public Slice buildSlice(@NonNull Slice.Builder builder) {
+    return mSliceAction.buildSlice(builder);
+  }
+
+  /** */
+  // @RestrictTo(LIBRARY)
+  @NonNull
+  public SliceActionImpl getImpl() {
+    return mSliceAction;
+  }
+
+  /**
+   * @param builder the parent slice builder that contains the primary action.
+   */
+  // @RestrictTo(LIBRARY)
+  public void setPrimaryAction(@NonNull Slice.Builder builder) {
+    builder.addAction(
+        mSliceAction.getActionParcelable(),
+        mSliceAction.buildPrimaryActionSlice(builder),
+        mSliceAction.getSubtype());
+  }
 }

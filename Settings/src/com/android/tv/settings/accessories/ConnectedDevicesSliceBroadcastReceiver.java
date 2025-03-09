@@ -19,7 +19,6 @@ package com.android.tv.settings.accessories;
 import static android.content.Intent.FLAG_INCLUDE_STOPPED_PACKAGES;
 import static android.content.Intent.FLAG_RECEIVER_FOREGROUND;
 import static android.content.Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND;
-
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceProvider.KEY_EXTRAS_DEVICE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.DIRECTION_BACK;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_DIRECTION;
@@ -27,10 +26,9 @@ import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXT
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.FIND_MY_REMOTE_PHYSICAL_BUTTON_ENABLED_SETTING;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.notifyDeviceChanged;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.notifyToGoBack;
-import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.setFindMyRemoteButtonEnabled;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.setBacklightMode;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.setFindMyRemoteButtonEnabled;
 
-import android.app.PendingIntent;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -119,7 +117,7 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
         }
     }
 
-    public static PendingIntent getBacklightModeIntent(
+    public static Intent getBacklightModeIntent(
             Context context, Uri sliceUri, String backlightMode) {
         Intent intent = new Intent(context, ConnectedDevicesSliceBroadcastReceiver.class);
 
@@ -145,8 +143,6 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
         }
         intent.putExtra(BACKLIGHT_MODE, modes);
         intent.setData(sliceUriWithQuery);
-
-        return PendingIntent.getBroadcast(context, 0, intent,
-                PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
+        return intent;
     }
 }

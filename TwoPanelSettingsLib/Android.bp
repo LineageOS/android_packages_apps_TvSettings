@@ -27,6 +27,7 @@ android_library {
 
     srcs: [
         "src/**/*.java",
+        "src/**/*.kt",
     ],
 
     resource_dirs: [
@@ -47,9 +48,11 @@ android_library {
         "androidx.lifecycle_lifecycle-extensions",
         "androidx.lifecycle_lifecycle-common-java8",
         "androidx.cardview_cardview",
-	    "androidx.slice_slice-builders",
+        "androidx.slice_slice-builders",
         "androidx.slice_slice-core",
         "androidx.slice_slice-view",
+        "error_prone_annotations",
+        "kotlin-reflect",
         "statslog-tvsettings",
         "TvSettingsAPI",
     ],
@@ -78,5 +81,6 @@ android_library {
         "androidx.slice_slice-builders",
         "androidx.slice_slice-core",
         "androidx.slice_slice-view",
+        "error_prone_annotations",
     ],
 }

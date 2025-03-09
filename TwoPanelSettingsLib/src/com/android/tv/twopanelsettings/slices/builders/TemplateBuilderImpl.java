@@ -21,49 +21,45 @@ import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.SliceSpec;
 import com.android.tv.twopanelsettings.slices.compat.SystemClock;
 
-/**
- * A copy of TemplateBuilderImpl from slices support lib.
- */
+/** A copy of TemplateBuilderImpl from slices support lib. */
 public abstract class TemplateBuilderImpl {
 
-    private Slice.Builder mSliceBuilder;
-    private final SliceSpec mSpec;
-    private Clock mClock;
+  private Slice.Builder mSliceBuilder;
+  private final SliceSpec mSpec;
+  private Clock mClock;
 
-    protected TemplateBuilderImpl(Slice.Builder b, SliceSpec spec) {
-        this(b, spec, new SystemClock());
-    }
+  protected TemplateBuilderImpl(Slice.Builder b, SliceSpec spec) {
+    this(b, spec, new SystemClock());
+  }
 
-    protected TemplateBuilderImpl(Slice.Builder b, SliceSpec spec, Clock clock) {
-        mSliceBuilder = b;
-        mSpec = spec;
-        mClock = clock;
-    }
+  protected TemplateBuilderImpl(Slice.Builder b, SliceSpec spec, Clock clock) {
+    mSliceBuilder = b;
+    mSpec = spec;
+    mClock = clock;
+  }
 
-    protected void setBuilder(Slice.Builder builder) {
-        mSliceBuilder = builder;
-    }
+  protected void setBuilder(Slice.Builder builder) {
+    mSliceBuilder = builder;
+  }
 
-    /**
-     * Construct the slice.
-     */
-    public Slice build() {
-        mSliceBuilder.setSpec(mSpec);
-        apply(mSliceBuilder);
-        return mSliceBuilder.build();
-    }
+  /** Construct the slice. */
+  public Slice build() {
+    mSliceBuilder.setSpec(mSpec);
+    apply(mSliceBuilder);
+    return mSliceBuilder.build();
+  }
 
-    public Slice.Builder getBuilder() {
-        return mSliceBuilder;
-    }
+  public Slice.Builder getBuilder() {
+    return mSliceBuilder;
+  }
 
-    public Slice.Builder createChildBuilder() {
-        return new Slice.Builder(mSliceBuilder);
-    }
+  public Slice.Builder createChildBuilder() {
+    return new Slice.Builder(mSliceBuilder);
+  }
 
-    public abstract void apply(Slice.Builder builder);
+  public abstract void apply(Slice.Builder builder);
 
-    public Clock getClock() {
-        return mClock;
-    }
+  public Clock getClock() {
+    return mClock;
+  }
 }

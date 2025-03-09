@@ -20,11 +20,11 @@ package com.android.tv.twopanelsettings.slices;
  * Preference that allows external classes to set its view's content description for accessibility.
  */
 public interface HasCustomContentDescription {
-    String CONTENT_DESCRIPTION_SEPARATOR = ", ";
+  String CONTENT_DESCRIPTION_SEPARATOR = ", ";
 
-    /** Set the content description for talkback */
-    void setContentDescription(String contentDescription);
+  /** Set the content description for talkback */
+  void setContentDescription(String contentDescription);
 
-    /** Return the content description. */
-    String getContentDescription();
+  /** Return the content description. */
+  String getContentDescription();
 }

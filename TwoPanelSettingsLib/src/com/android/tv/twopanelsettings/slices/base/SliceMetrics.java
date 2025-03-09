@@ -18,50 +18,35 @@ package com.android.tv.twopanelsettings.slices.base;
 
 import android.content.Context;
 import android.net.Uri;
-
 import androidx.annotation.NonNull;
 
 /**
  * Metrics interface for slices.
  *
- * This is called by SliceView, so Slice developers should
- * not need to reference this class.
+ * <p>This is called by SliceView, so Slice developers should not need to reference this class.
  *
  * @see androidx.slice.widget.SliceView
  */
 public class SliceMetrics {
 
-    /**
-     * An object to be used throughout the life of a slice to register events.
-     */
-    public SliceMetrics(@NonNull Context context, @NonNull Uri uri) {
-    }
+  /** An object to be used throughout the life of a slice to register events. */
+  public SliceMetrics(@NonNull Context context, @NonNull Uri uri) {}
 
-    /**
-     * To be called whenever the slice becomes visible to the user.
-     */
-    public void logVisible() {
-    }
+  /** To be called whenever the slice becomes visible to the user. */
+  public void logVisible() {}
 
-    /**
-     * To be called whenever the slice becomes invisible to the user.
-     */
-    public void logHidden() {
-    }
+  /** To be called whenever the slice becomes invisible to the user. */
+  public void logHidden() {}
 
-    /**
-     * To be called whenever the user invokes a discrete action via a slice.
-     *
-     * <P>
-     *     Use this for discrete events like a tap or the end of a drag,
-     *     not for a continuous streams of events, such as the motion during a gesture.
-     * </P>
-     *
-     * @see androidx.slice.widget.EventInfo#actionType
-     *
-     * @param actionType The type of the event.
-     * @param subSlice The URI of the sub-slice that is the subject of the interaction.
-     */
-    public void logTouch(int actionType, @NonNull Uri subSlice) {
-    }
+  /**
+   * To be called whenever the user invokes a discrete action via a slice.
+   *
+   * <p>Use this for discrete events like a tap or the end of a drag, not for a continuous streams
+   * of events, such as the motion during a gesture.
+   *
+   * @see androidx.slice.widget.EventInfo#actionType
+   * @param actionType The type of the event.
+   * @param subSlice The URI of the sub-slice that is the subject of the interaction.
+   */
+  public void logTouch(int actionType, @NonNull Uri subSlice) {}
 }

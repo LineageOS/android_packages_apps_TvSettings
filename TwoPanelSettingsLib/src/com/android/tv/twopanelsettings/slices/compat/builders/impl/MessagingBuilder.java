@@ -17,42 +17,29 @@
 package com.android.tv.twopanelsettings.slices.compat.builders.impl;
 
 import android.graphics.drawable.Icon;
-
 import androidx.annotation.RequiresApi;
 
-/**
- */
+/** */
 // @RestrictTo(LIBRARY)
 // @Deprecated // Supported for TV
 public interface MessagingBuilder {
-    /**
-     * Add a subslice to this builder.
-     */
-    void add(TemplateBuilderImpl builder);
+  /** Add a subslice to this builder. */
+  void add(TemplateBuilderImpl builder);
 
-    /**
-     * Create a builder that implements {@link MessageBuilder}
-     */
-    TemplateBuilderImpl createMessageBuilder();
+  /** Create a builder that implements {@link MessageBuilder} */
+  TemplateBuilderImpl createMessageBuilder();
 
-    /**
-     */
-    interface MessageBuilder {
+  /** */
+  interface MessageBuilder {
 
-        /**
-         * Add the icon used to display contact in the messaging experience
-         */
-        @RequiresApi(23)
-        void addSource(Icon source);
+    /** Add the icon used to display contact in the messaging experience */
+    @RequiresApi(23)
+    void addSource(Icon source);
 
-        /**
-         * Add the text to be used for this message.
-         */
-        void addText(CharSequence text);
+    /** Add the text to be used for this message. */
+    void addText(CharSequence text);
 
-        /**
-         * Add the time at which this message arrived in ms since Unix epoch
-         */
-        void addTimestamp(long timestamp);
-    }
+    /** Add the time at which this message arrived in ms since Unix epoch */
+    void addTimestamp(long timestamp);
+  }
 }

@@ -26,6 +26,7 @@ import static android.app.slice.SliceItem.FORMAT_INT;
 import static android.app.slice.SliceItem.FORMAT_LONG;
 import static android.app.slice.SliceItem.FORMAT_SLICE;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
+
 import static com.android.tv.twopanelsettings.slices.HasCustomContentDescription.CONTENT_DESCRIPTION_SEPARATOR;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.CHECKMARK;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_ACTION_ID;
@@ -45,11 +46,15 @@ import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Pair;
 import android.view.ContextThemeWrapper;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
 
 import com.android.tv.twopanelsettings.IconUtil;
 import com.android.tv.twopanelsettings.R;
@@ -66,9 +71,10 @@ import java.util.List;
  * Generate corresponding preference based upon the slice data.
  */
 public final class SlicePreferencesUtil {
+    private static final String TAG = "SlicePreferenceUtil";
 
     static Preference getPreference(SliceItem item, ContextThemeWrapper contextThemeWrapper,
-            String className, boolean isTwoPanel) {
+            String className, boolean isTwoPanel, @Nullable PreferenceGroup parent) {
         Preference preference = null;
         if (item == null) {
             return null;
@@ -76,11 +82,20 @@ public final class SlicePreferencesUtil {
         Data data = extract(item);
         if (item.getSubType() != null) {
             String subType = item.getSubType();
-            if (subType.equals(SlicesConstants.TYPE_PREFERENCE)
-                    || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED)
-                    || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER)) {
+            if (isPreferenceSubType(subType)) {
                 // TODO: Figure out all the possible cases and reorganize the logic
-                if (data.mInfoItems.size() > 0) {
+                if (data.mClassNameItem != null) {
+                    try {
+                        preference = NonSlicePreferenceBuilder.Companion.forClassName(
+                                        data.mClassNameItem.getText().toString())
+                                .create(contextThemeWrapper,
+                                        data.mPropertiesItem != null
+                                                ? data.mPropertiesItem.getBundle() : null);
+                    } catch (Exception e) {
+                        Log.e(TAG, "Unable to create preference", e);
+                        return null;
+                    }
+                } else if (data.mInfoItems.size() > 0) {
                     preference = new InfoPreference(
                                 contextThemeWrapper, getInfoList(data.mInfoItems));
                 } else if (data.mIntentItem != null) {
@@ -167,6 +182,23 @@ public final class SlicePreferencesUtil {
         }
 
         if (preference != null) {
+            if (preference instanceof PreferenceGroup && !data.mChildPreferences.isEmpty()) {
+                PreferenceGroup group = (PreferenceGroup) preference;
+                if (parent != null) {
+                    parent.addPreference(preference); // Needed for adding children to work.
+                }
+                for (SliceItem child : data.mChildPreferences) {
+                    Preference childPreference = getPreference(
+                            child, contextThemeWrapper, className, isTwoPanel, group);
+                    if (childPreference != null) {
+                        group.addPreference(childPreference);
+                    }
+                }
+                if (parent != null) {
+                    parent.removePreference(preference);
+                }
+            }
+
             boolean isEnabled = enabled(item);
             // Set whether preference is enabled.
             if (preference instanceof InfoPreference || !isEnabled) {
@@ -276,20 +308,6 @@ public final class SlicePreferencesUtil {
         return preference;
     }
 
-    static class Data {
-        SliceItem mStartItem;
-        SliceItem mTitleItem;
-        SliceItem mSubtitleItem;
-        SliceItem mSummaryItem;
-        SliceItem mTargetSliceItem;
-        SliceItem mRadioGroupItem;
-        SliceItem mIntentItem;
-        SliceItem mFollowupIntentItem;
-        SliceItem mHasEndIconItem;
-        List<SliceItem> mEndItems = new ArrayList<>();
-        List<SliceItem> mInfoItems = new ArrayList<>();
-    }
-
     static Data extract(SliceItem sliceItem) {
         Data data = new Data();
         List<SliceItem> possibleStartItems =
@@ -311,6 +329,10 @@ public final class SlicePreferencesUtil {
             final SliceItem item = items.get(i);
             String subType = item.getSubType();
             if (subType != null) {
+                if (isPreferenceSubType(subType)) {
+                    data.mChildPreferences.add(item);
+                    continue;
+                }
                 switch (subType) {
                     case SlicesConstants.SUBTYPE_INFO_PREFERENCE :
                         data.mInfoItems.add(item);
@@ -326,6 +348,12 @@ public final class SlicePreferencesUtil {
                         break;
                     case SlicesConstants.EXTRA_HAS_END_ICON:
                         data.mHasEndIconItem = item;
+                        break;
+                    case SlicesConstants.SUBTYPE_CLASSNAME:
+                        data.mClassNameItem = item;
+                        break;
+                    case SlicesConstants.SUBTYPE_PROPERTIES:
+                        data.mPropertiesItem = item;
                         break;
                 }
             } else if (FORMAT_TEXT.equals(item.getFormat()) && (item.getSubType() == null)) {
@@ -343,6 +371,23 @@ public final class SlicePreferencesUtil {
         }
         data.mEndItems.remove(data.mStartItem);
         return data;
+    }
+
+    static class Data {
+        SliceItem mStartItem;
+        SliceItem mTitleItem;
+        SliceItem mSubtitleItem;
+        SliceItem mSummaryItem;
+        SliceItem mTargetSliceItem;
+        SliceItem mRadioGroupItem;
+        SliceItem mIntentItem;
+        SliceItem mFollowupIntentItem;
+        SliceItem mHasEndIconItem;
+        List<SliceItem> mEndItems = new ArrayList<>();
+        List<SliceItem> mInfoItems = new ArrayList<>();
+        SliceItem mClassNameItem;
+        SliceItem mPropertiesItem;
+        List<SliceItem> mChildPreferences = new ArrayList<>();
     }
 
     private static List<Pair<CharSequence, CharSequence>> getInfoList(List<SliceItem> sliceItems) {
@@ -611,5 +656,11 @@ public final class SlicePreferencesUtil {
             }
         }
         return null;
+    }
+
+    private static boolean isPreferenceSubType(@NonNull String subType) {
+        return subType.equals(SlicesConstants.TYPE_PREFERENCE)
+                || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED)
+                || subType.equals(SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER);
     }
 }

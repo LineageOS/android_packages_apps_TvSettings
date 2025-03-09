@@ -16,35 +16,25 @@
 
 package com.android.tv.twopanelsettings.slices.compat;
 
-/**
- * Constants for each of the slice specs
- */
+/** Constants for each of the slice specs */
 // @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
 // @Deprecated // Supported for TV
 public class SliceSpecs {
 
-    /**
-     * Most basic slice, only has icon, title, and summary.
-     */
-    public static final SliceSpec BASIC = new SliceSpec("androidx.slice.BASIC", 1);
+  /** Most basic slice, only has icon, title, and summary. */
+  public static final SliceSpec BASIC = new SliceSpec("androidx.slice.BASIC", 1);
 
-    /**
-     * List of rows, each row has start/end items, title, summary.
-     * Also supports grid rows.
-     */
-    public static final SliceSpec LIST = new SliceSpec("androidx.slice.LIST", 1);
+  /** List of rows, each row has start/end items, title, summary. Also supports grid rows. */
+  public static final SliceSpec LIST = new SliceSpec("androidx.slice.LIST", 1);
 
-    /**
-     * Same as LIST, but also supports selection rows.
-     */
-    public static final SliceSpec LIST_V2 = new SliceSpec("androidx.slice.LIST", 2);
+  /** Same as LIST, but also supports selection rows. */
+  public static final SliceSpec LIST_V2 = new SliceSpec("androidx.slice.LIST", 2);
 
-    /**
-     * Messaging template. Each message contains a timestamp and a message, it optionally contains
-     * a source of where the message came from.
-     */
-    public static final SliceSpec MESSAGING = new SliceSpec("androidx.slice.MESSAGING", 1);
+  /**
+   * Messaging template. Each message contains a timestamp and a message, it optionally contains a
+   * source of where the message came from.
+   */
+  public static final SliceSpec MESSAGING = new SliceSpec("androidx.slice.MESSAGING", 1);
 
-    private SliceSpecs() {
-    }
+  private SliceSpecs() {}
 }

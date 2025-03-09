@@ -29,7 +29,6 @@ import android.content.res.Resources;
 import android.os.PowerManager;
 import android.os.PowerManager.LowPowerStandbyPolicy;
 import android.provider.DeviceConfig;
-import android.text.TextUtils;
 import android.util.ArraySet;
 
 import com.android.tv.settings.R;
@@ -216,23 +215,23 @@ public final class EnergyModesHelper {
      * If false, energy modes are not supported.
      */
     public static boolean isLowPowerStandbySupported(Context context) {
-        if (FlavorUtils.getFeatureFactory(context).getBasicModeFeatureProvider()
-                .isBasicMode(context)) {
-            return false; // Basic mode does no background processing during standby.
-        }
-        final PowerManager powerManager = context.getSystemService(PowerManager.class);
-        return powerManager.isLowPowerStandbySupported();
+        PowerManager powerManager = context.getSystemService(PowerManager.class);
+        return powerManager.isLowPowerStandbyEnabled();
     }
 
-    private boolean areEnergyModesEnabled() {
+    private boolean shouldShowEnergyModeSettings() {
         boolean enableEnergyModes = mContext.getResources().getBoolean(R.bool.enable_energy_modes);
         boolean customPoliciesEnabled = DeviceConfig.getBoolean(NAMESPACE_LOW_POWER_STANDBY,
                 KEY_ENABLE_POLICY, true);
 
+        if (isBasicMode()) {
+            return false; // We should not show energy modes settings in basic TV.
+        }
+
         return enableEnergyModes && customPoliciesEnabled && isLowPowerStandbySupported(mContext);
     }
 
-    /** Returns whether Energy Modes should be shown and used on this device */
+    /** Returns whether Energy Modes should be shown in settings fragments on this Device */
     public boolean areEnergyModesAvailable() {
         return !getEnergyModes().isEmpty();
     }
@@ -241,7 +240,7 @@ public final class EnergyModesHelper {
     @NonNull
     public List<EnergyMode> getEnergyModes() {
         ArrayList<EnergyMode> enabledModes = new ArrayList<>();
-        if (!areEnergyModesEnabled()) {
+        if (!shouldShowEnergyModeSettings()) {
             return enabledModes;
         }
 
@@ -474,12 +473,27 @@ public final class EnergyModesHelper {
         return -1;
     }
 
+    private boolean isBasicMode() {
+        return FlavorUtils.getFeatureFactory(mContext).getBasicModeFeatureProvider()
+                .isBasicMode(mContext);
+    }
+
     /**
      * Makes sure a valid energy mode is set, if energy modes are enabled, and returns the current
      * energy mode.
      */
     @Nullable
     public EnergyMode updateEnergyMode() {
+        // Use a basic mode policy if low power standby is supported in basic TV mode.
+        if (isLowPowerStandbySupported(mContext) && isBasicMode()) {
+            EnergyMode basicEnergyMode = getEnergyMode(mContext.getString(
+                    R.string.basic_tv_energy_mode));
+            if (basicEnergyMode != null) {
+                setEnergyMode(basicEnergyMode);
+            }
+            return basicEnergyMode;
+        }
+
         if (!areEnergyModesAvailable()) {
             return null;
         }

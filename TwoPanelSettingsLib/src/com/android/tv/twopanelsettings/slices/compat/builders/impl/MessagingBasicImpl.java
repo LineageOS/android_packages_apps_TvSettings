@@ -23,112 +23,100 @@ import static android.app.slice.Slice.SUBTYPE_SOURCE;
 
 import android.graphics.drawable.Icon;
 import android.os.Build;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.core.graphics.drawable.IconCompat;
-
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.SliceSpec;
 
-/**
- */
+/** */
 // @RestrictTo(LIBRARY)
 // @Deprecated // Supported for TV
-public class MessagingBasicImpl extends TemplateBuilderImpl implements
-        MessagingBuilder {
-    private MessageBuilder mLastMessage;
+public class MessagingBasicImpl extends TemplateBuilderImpl implements MessagingBuilder {
+  private MessageBuilder mLastMessage;
 
-    /**
-     */
-    public MessagingBasicImpl(Slice.Builder builder, SliceSpec spec) {
-        super(builder, spec);
+  /** */
+  public MessagingBasicImpl(Slice.Builder builder, SliceSpec spec) {
+    super(builder, spec);
+  }
+
+  /** */
+  @Override
+  public void apply(@NonNull Slice.Builder builder) {
+    if (mLastMessage != null) {
+      Slice.Builder sb = new Slice.Builder(getBuilder()).addHints(HINT_LIST_ITEM);
+      if (Build.VERSION.SDK_INT >= 23) {
+        if (mLastMessage.mIcon != null) {
+          sb.addSubSlice(mLastMessage.mIcon);
+        }
+      }
+      if (mLastMessage.mText != null) {
+        sb.addText(mLastMessage.mText, null);
+      }
+      builder.addSubSlice(sb.build());
+    }
+  }
+
+  /** */
+  @Override
+  public void add(TemplateBuilderImpl builder) {
+    MessageBuilder b = (MessageBuilder) builder;
+    if (mLastMessage == null || mLastMessage.mTimestamp < b.mTimestamp) {
+      mLastMessage = b;
+    }
+  }
+
+  /** */
+  @Override
+  public TemplateBuilderImpl createMessageBuilder() {
+    return new MessageBuilder(this);
+  }
+
+  /** */
+  public static final class MessageBuilder extends TemplateBuilderImpl
+      implements MessagingBuilder.MessageBuilder {
+
+    @RequiresApi(23)
+    Slice mIcon;
+
+    CharSequence mText;
+    long mTimestamp;
+
+    /** */
+    public MessageBuilder(MessagingBasicImpl parent) {
+      this(parent.createChildBuilder());
     }
 
-    /**
-     */
+    /** */
+    private MessageBuilder(Slice.Builder builder) {
+      super(builder, null);
+    }
+
+    /** */
     @Override
-    public void apply(@NonNull Slice.Builder builder) {
-        if (mLastMessage != null) {
-            Slice.Builder sb = new Slice.Builder(getBuilder()).addHints(HINT_LIST_ITEM);
-            if (Build.VERSION.SDK_INT >= 23) {
-                if (mLastMessage.mIcon != null) {
-                    sb.addSubSlice(mLastMessage.mIcon);
-                }
-            }
-            if (mLastMessage.mText != null) {
-                sb.addText(mLastMessage.mText, null);
-            }
-            builder.addSubSlice(sb.build());
-        }
+    @RequiresApi(23)
+    public void addSource(Icon source) {
+      mIcon =
+          getBuilder()
+              .addIcon(IconCompat.createFromIcon(source), SUBTYPE_SOURCE, HINT_NO_TINT)
+              .addHints(HINT_TITLE)
+              .build();
     }
 
-    /**
-     */
+    /** */
     @Override
-    public void add(TemplateBuilderImpl builder) {
-        MessageBuilder b = (MessageBuilder) builder;
-        if (mLastMessage == null || mLastMessage.mTimestamp < b.mTimestamp) {
-            mLastMessage = b;
-        }
+    public void addText(CharSequence text) {
+      mText = text;
     }
 
-    /**
-     */
+    /** */
     @Override
-    public TemplateBuilderImpl createMessageBuilder() {
-        return new MessageBuilder(this);
+    public void addTimestamp(long timestamp) {
+      mTimestamp = timestamp;
     }
 
-    /**
-     */
-    public static final class MessageBuilder extends TemplateBuilderImpl
-            implements MessagingBuilder.MessageBuilder {
-
-        @RequiresApi(23)
-        Slice mIcon;
-        CharSequence mText;
-        long mTimestamp;
-
-        /**
-         */
-        public MessageBuilder(MessagingBasicImpl parent) {
-            this(parent.createChildBuilder());
-        }
-
-        /**
-         */
-        private MessageBuilder(Slice.Builder builder) {
-            super(builder, null);
-        }
-
-        /**
-         */
-        @Override
-        @RequiresApi(23)
-        public void addSource(Icon source) {
-            mIcon = getBuilder().addIcon(IconCompat.createFromIcon(source),
-                    SUBTYPE_SOURCE, HINT_NO_TINT).addHints(HINT_TITLE).build();
-        }
-
-        /**
-         */
-        @Override
-        public void addText(CharSequence text) {
-            mText = text;
-        }
-
-        /**
-         */
-        @Override
-        public void addTimestamp(long timestamp) {
-            mTimestamp = timestamp;
-        }
-
-        /**
-         */
-        @Override
-        public void apply(@NonNull Slice.Builder builder) {
-        }
-    }
+    /** */
+    @Override
+    public void apply(@NonNull Slice.Builder builder) {}
+  }
 }

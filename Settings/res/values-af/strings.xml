@@ -92,6 +92,14 @@
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"Skandering altyd beskikbaar"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"Laat Google se liggingdiens en ander programme netwerke soek, selfs wanneer Wi-Fi af is"</string>
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Skandering altyd beskikbaar: Laat Google se liggingdiens en ander programme netwerke soek, selfs wanneer Wi-Fi af is"</string>
+    <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread-netwerk"</string>
+    <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread-netwerk verbind plaaslik Thread-geaktiveerde slimhuistoestelle, wat doeltreffendheid en werkverrigting ’n hupstoot gee.\n\nAs hierdie toestel aangeskakel is, sal dit jou Thread-netwerk skep of daarby aansluit. Eiebewyse sal privaat na die wolk opgelaai word vir makliker opstelling van jou toekomstige slimhuistoestelle.\n\nAs hierdie toestel afgeskakel is, sal dit nie meer met ander toestelle op jou Thread-netwerk kan kommunikeer nie. Sekere slimhuistoestelle en -dienste sal dalk nie na verwagting werk nie.\n\nKry meer inligting by g.co/tv/thread"</string>
+    <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Skakel Thread-netwerk af?"</string>
+    <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Sekere slimhuistoestelle en -dienste sal dalk nie na verwagting werk as dit afgeskakel is nie. Wil jy voortgaan?"</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Skakel Thread-netwerk aan?"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Thread-netwerk vereis verhoogde energiemodus. Verander eers energiemodus na \"Verhoog\" en kom dan terug om Thread-netwerk aan te skakel."</string>
+    <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Skakel af"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Verander energiemodus"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Koppel aan netwerk"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Netwerkdiagnostiek"</string>
@@ -121,7 +129,7 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"Stel aftellers om TV af te skakel en energie te bespaar"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"Toestelle"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"Kies formate"</string>
+    <string name="surround_sound_select_formats" msgid="3232348550606222833">"Omringklankinstellings"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"Omringklank"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -133,10 +141,12 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos met Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Let wel: Die outomatiese opsie sal dalk nie werk as jou toestel nie sy gesteunde formate reg aandui nie."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"Outomaties: Aktiveer net die formate wat deur jou oudio-uitvoertoestel gesteun word "</string>
+    <string name="surround_sound_auto_title" msgid="811867430010809597">"Outomaties"</string>
+    <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Aktiveer alle gesteunde formate"</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"Indien die opsie gekies is, sal die stelsel programme toelaat om enige klankformaat te kies wat deur jou toestelketting gesteun word. Programme kan dalk \'n formaat kies wat nie die formaat van hoogste gehalte is nie."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"Geen: Moet nooit omringklank gebruik nie"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"Handmatig: Keuse om elke formaat wat deur hierdie toestel gesteun word, te aktiveer of te deaktiveer, ongeag wat deur jou oudio-uitvoertoestel gesteun word."</string>
+    <string name="surround_sound_manual_title" msgid="8294975285009655065">"Handmatig"</string>
+    <string name="surround_sound_selection_manual_desc" msgid="3077478058774499547">"Kies uit beskikbare formate"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"Indien gekies, kan jy klankformate wat deur jou toestelketting gesteun word maar wat probleme met terugspeel veroorsaak, self deaktiveer. Klankformate wat nie deur jou toestelketting gesteun word nie, kan geaktiveer word. Soms kan programme dalk \'n formaat kies wat nie van die hoogste gehalte is nie."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"Aktiveer ongesteunde klankformaat?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"Jou gekoppelde oudiotoestel dui nie aan dat dit dié formaat steun nie. Dit kan onvoorsiene gedrag soos harde of plofklanke op jou toestel veroorsaak."</string>
@@ -154,23 +164,25 @@
     <string name="display_category_title" msgid="247804007525046312">"Vertoon"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"Gevorderde vertooninstellings"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"Gevorderde klankinstellings"</string>
+    <string name="advanced_sound_settings_title" msgid="2800805994220135889">"Omringklankinstellings"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"Laat speletjiemodus toe"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"Pas by inhoud se dinamiese omvang"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"Wanneer jy hierdie opsie aktiveer, sal die stelsel tussen verskillende formate vir dinamiese omvang oorskakel om by die inhoud te pas. Dit kan ’n swart skerm veroorsaak terwyl daar tussen formate oorgeskakel word.\n\nKlik Gevorderde Skerm-instellings vir meer opsies vir dinamiese omvang."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"Voorkeur- dinamiese omvang"</string>
+    <string name="match_content_dynamic_range_summary" msgid="5897559876103008433">"Wanneer dit gekies is, sal die sisteem die dinamiese omvang van inhoud laat ooreenstem. Dit kan veroorsaak dat jou skerm vir \'n oomblik donker raak wanneer dit ’n video begin of eindig. Bykomende instellings vir dinamiese omvang kan in Gevorderde skerminstellings gevind word."</string>
+    <string name="preferred_dynamic_range_title" msgid="3216820729147940951">"Voorkeurformaat vir dinamiese omvang"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"Omskakeling wat deur stelsel verkies word"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="2765115460108291217">"Laat die stelsel die formaatomskakeling bestuur"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5622795479042469982">"Laat die stelsel die formaatomskakeling bestuur"</string>
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"Wanneer hierdie opsie gekies is, sal die stelsel ’n geskikte dinamiese bestek bepaal wat na jou skerm toe gestuur word, en inhoud wanneer nodig na hierdie dinamiese bestek toe omskakel."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"Pas altyd by inhoud se formaat"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="885503418469834735">"Laat inhoud se formaat altyd ooreenstem"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"Verplig omskakeling"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"Verplig omskakeling na voorkeurformaat"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1965870548185816252">"Dwing omskakeling na voorkeurformaat"</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"Verplig omskakeling na ’n voorkeurformaat. As omskakeling verpligtend gemaak word, kan dit ander instellings in Vertoonmodus of HDR-formaat beïnvloed."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"Altyd na SDR"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"Altyd na <xliff:g id="HDR_TYPE">%s</xliff:g>"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"Wil jy die HDR-uitvoer verpligtend maak?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"Omskakeling na <xliff:g id="HDR_TYPE">%s</xliff:g> sal by verstek verplig word."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"Jou skerm sal ’n resolusie van 1080 p teen 60 Hz gebruik. Hierdie opsie is nie met jou skerm versoenbaar terwyl dit ’n resolusie van 4k teen 60 Hz gebruik nie."</string>
+    <string name="preferred_dynamic_range_match_enabled_title" msgid="4761382844444479841">"Hierdie instelling is nie beskikbaar nie"</string>
+    <string name="preferred_dynamic_range_match_enabled_desc" msgid="264141414825957741">"“Laat dinamiese omvang van inhoud ooreenstem” is geaktiveer. Om na ’n spesifieke formaat vir dinamiese omvang om te skakel, moet jy na Instellings &gt; Skerm &amp; Klank gaan en skakel “Laat dinamiese omvang van inhoud ooreenstem” afskakel."</string>
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"Dolby Vision word nie teen die huidige resolusie gesteun nie. Jou skerm se resolusie sal na 1080 p 60 Hz verander word as jy Dolby Vision handmatig aktiveer"</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"Verander resolusie na 1080 p 60 Hz?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"Verplig altyd omskakeling na Dolby Vision"</string>
@@ -197,11 +209,11 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"Die Wonderlike Towenaar van Oz"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"Hoofstuk 11: Die Wonderlike Smaragstad van Oz"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"Selfs al word hul oë deur die groen bril beskerm, word Dorothy en haar vriende met die eerste oogopslag verblind deur die helderheid van die wonderlike stad. Huise van groen marmer en bedek met vonkelende smaragte staan in rye langs die strate. Hulle stap op ’n sypaadjie van dieselfde groen marmer waar die blokke marmer gelas is met rye smaragte wat dig op mekaar geset is en in die helder son blink. Die vensters is van groen glas; selfs die lug bo die stad het ’n groen skynsel en die son se strale is groen. \n\nDaar beweeg baie mense – mans, vroue en kinders – rond en hulle is almal in groen klere geklee en het groenerige velle. Hulle staar met verwonderde oë na Dorothy en haar vreemde versameling vriende en die kinders hardloop almal weg en kruip agter hul ma’s weg toe hulle die Leeu sien, maar niemand praat met hulle nie. Daar is baie winkels in die straat en Dorothy merk op dat alles in hulle groen is. Groen lekkergoed en groen springmielies word te koop aangebied, asook groen skoene, groen hoede en allerlei groen klere. Op een plek verkoop ’n man groen limonade en Dorothy sien dat die kinders met groen pennies betaal. \n\nDit lyk nie of daar enige perde of diere is nie; die mans vervoer goed in klein, groen waentjies wat hulle voor hulle stoot. Almal lyk gelukkig en tevrede en welvarend."</string>
-    <string name="hdr_format_selection_title" msgid="4042679694363850581">"Formaatkeuse"</string>
+    <string name="hdr_format_selection_title" msgid="3847284265003261898">"Laat dinamiese-omvangsformate toe"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"Outomaties"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"Handmatig"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"Gebruik formate wat deur toestel aangedui is"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"Kies self formate uit beskikbare formate"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="7091897909210568236">"Aktiveer alle gesteunde formate"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="6989666818251254061">"Kies uit beskikbare formate"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"GESTEUNDE FORMATE"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"ONGESTEUNDE FORMATE"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>

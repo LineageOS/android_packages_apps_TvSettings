@@ -16,13 +16,12 @@
 
 package com.android.tv.twopanelsettings.slices.compat;
 
-/**
- */
+/** */
 // @RestrictTo(LIBRARY_GROUP_PREFIX)
 // @Deprecated // Supported for TV
 public class SystemClock implements Clock {
-    @Override
-    public long currentTimeMillis() {
-        return System.currentTimeMillis();
-    }
+  @Override
+  public long currentTimeMillis() {
+    return System.currentTimeMillis();
+  }
 }

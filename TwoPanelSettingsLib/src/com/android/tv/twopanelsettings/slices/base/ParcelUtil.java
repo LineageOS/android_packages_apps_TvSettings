@@ -17,19 +17,17 @@ package com.android.tv.twopanelsettings.slices.base;
 
 import android.os.Parcel;
 
-/**
- * Serialization utilities.
- */
+/** Serialization utilities. */
 final class ParcelUtil {
-    static String[] readStringArray(Parcel parcel) {
-        int count = parcel.readInt();
-        if (count <= 0) {
-            return null;
-        }
-        String[] result = new String[count];
-        for (int i = 0; i < count; i++) {
-            result[i] = parcel.readString();
-        }
-        return result;
+  static String[] readStringArray(Parcel parcel) {
+    int count = parcel.readInt();
+    if (count <= 0) {
+      return null;
     }
+    String[] result = new String[count];
+    for (int i = 0; i < count; i++) {
+      result[i] = parcel.readString();
+    }
+    return result;
+  }
 }

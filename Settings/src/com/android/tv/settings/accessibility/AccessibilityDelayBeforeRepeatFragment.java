@@ -15,6 +15,9 @@
  */
 package com.android.tv.settings.accessibility;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected;
+
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
@@ -104,9 +107,30 @@ public class AccessibilityDelayBeforeRepeatFragment extends SettingsPreferenceFr
                 radioPreference.setFragment(null);
             }
         }
-        /*TODO -- Log Accessibility Delay before repeat Status change.
-         *Refer A11y Notification Timeout feature. cl/614754347 */
+        // Log delay before repeat selection
+        logNewDelayBeforeRepeatTimeoutSelection(mCurrentDelayBeforeRepeat);
         return true;
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_A11Y_KEY_REPEAT_DELAY;
+    }
+
+    private void logNewDelayBeforeRepeatTimeoutSelection(int entryValue) {
+        final int[] a11yDelayBeforeRepeatOptions = {
+                TvSettingsEnums.SYSTEM_A11Y_KEY_REPEAT_DELAY_DEFAULT,
+                TvSettingsEnums.SYSTEM_A11Y_KEY_REPEAT_DELAY_THREE_SECONDS,
+                TvSettingsEnums.SYSTEM_A11Y_KEY_REPEAT_DELAY_FIVE_SECONDS,
+        };
+        final int[] entryValues =
+                getContext().getResources().getIntArray(R.array.a11y_delay_before_repeat_values);
+        for (int i = 0; i < entryValues.length; i++) {
+            if (entryValue == entryValues[i]) {
+                logEntrySelected(a11yDelayBeforeRepeatOptions[i]);
+                return;
+            }
+        }
     }
 
     /** Setting Initial Delay Before Repeat time. */

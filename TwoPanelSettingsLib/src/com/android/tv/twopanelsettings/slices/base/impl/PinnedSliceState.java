@@ -19,153 +19,165 @@ import android.content.ContentProviderClient;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-
 import androidx.annotation.GuardedBy;
 import androidx.annotation.VisibleForTesting;
-
 import com.android.tv.twopanelsettings.slices.base.SliceProvider;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * Manages the state of a pinned slice.
- */
+/** Manages the state of a pinned slice. */
 public class PinnedSliceState {
 
-    private static final String TAG = "PinnedSliceState";
+  private static final String TAG = "PinnedSliceState";
 
-    private final Object mLock;
+  private final Object mLock;
 
-    private final SliceManagerService mService;
-    private final Uri mUri;
-    @GuardedBy("mLock")
-    private int mListenerCount;
-    @GuardedBy("mLock")
-    private SliceSpec[] mSupportedSpecs = null;
+  private final SliceManagerService mService;
+  private final Uri mUri;
 
-    private boolean mSlicePinned;
+  @GuardedBy("mLock")
+  private int mListenerCount;
 
-    public PinnedSliceState(SliceManagerService service, Uri uri) {
-        mService = service;
-        mUri = uri;
-        mLock = mService.getLock();
+  @GuardedBy("mLock")
+  private SliceSpec[] mSupportedSpecs = null;
+
+  private boolean mSlicePinned;
+
+  public PinnedSliceState(SliceManagerService service, Uri uri) {
+    mService = service;
+    mUri = uri;
+    mLock = mService.getLock();
+  }
+
+  public SliceSpec[] getSpecs() {
+    synchronized (mLock) {
+      return mSupportedSpecs;
     }
+  }
 
-    public SliceSpec[] getSpecs() {
-        return mSupportedSpecs;
-    }
-
-    public void mergeSpecs(SliceSpec[] supportedSpecs) {
-        synchronized (mLock) {
-            if (mSupportedSpecs == null) {
-                mSupportedSpecs = supportedSpecs;
-            } else {
-                List<SliceSpec> specs = Arrays.asList(mSupportedSpecs);
-                mSupportedSpecs = specs.stream().map(s -> {
-                    SliceSpec other = findSpec(supportedSpecs, s.getType());
-                    if (other == null) return null;
-                    if (other.getRevision() < s.getRevision()) {
+  public void mergeSpecs(SliceSpec[] supportedSpecs) {
+    synchronized (mLock) {
+      if (mSupportedSpecs == null) {
+        mSupportedSpecs = supportedSpecs;
+      } else {
+        List<SliceSpec> specs = Arrays.asList(mSupportedSpecs);
+        mSupportedSpecs =
+            specs.stream()
+                .map(
+                    s -> {
+                      SliceSpec other = findSpec(supportedSpecs, s.getType());
+                      if (other == null) {
+                        return null;
+                      }
+                      if (other.getRevision() < s.getRevision()) {
                         return other;
-                    }
-                    return s;
-                }).filter(s -> s != null).toArray(SliceSpec[]::new);
-            }
-        }
+                      }
+                      return s;
+                    })
+                .filter(s -> s != null)
+                .toArray(SliceSpec[]::new);
+      }
     }
+  }
 
-    private SliceSpec findSpec(SliceSpec[] specs, String type) {
-        for (SliceSpec spec : specs) {
-            if (Objects.equals(spec.getType(), type)) {
-                return spec;
-            }
-        }
-        return null;
+  private SliceSpec findSpec(SliceSpec[] specs, String type) {
+    for (SliceSpec spec : specs) {
+      if (Objects.equals(spec.getType(), type)) {
+        return spec;
+      }
     }
+    return null;
+  }
 
-    public Uri getUri() {
-        return mUri;
-    }
+  public Uri getUri() {
+    return mUri;
+  }
 
-    public void destroy() {
-        setSlicePinned(false);
-    }
+  public void destroy() {
+    setSlicePinned(false);
+  }
 
-    private void setSlicePinned(boolean pinned) {
-        synchronized (mLock) {
-            if (mSlicePinned == pinned) return;
-            mSlicePinned = pinned;
-            if (pinned) {
-                mService.getHandler().post(this::handleSendPinned);
-            } else {
-                mService.getHandler().post(this::handleSendUnpinned);
-            }
-        }
+  private void setSlicePinned(boolean pinned) {
+    synchronized (mLock) {
+      if (mSlicePinned == pinned) {
+        return;
+      }
+      mSlicePinned = pinned;
+      if (pinned) {
+        mService.getHandler().post(this::handleSendPinned);
+      } else {
+        mService.getHandler().post(this::handleSendUnpinned);
+      }
     }
+  }
 
-    public void pin(SliceSpec[] specs) {
-        synchronized (mLock) {
-            mListenerCount++;
-            mergeSpecs(specs);
-            setSlicePinned(true);
-        }
+  public void pin(SliceSpec[] specs) {
+    synchronized (mLock) {
+      mListenerCount++;
+      mergeSpecs(specs);
+      setSlicePinned(true);
     }
+  }
 
-    public boolean unpin() {
-        synchronized (mLock) {
-            mListenerCount--;
-        }
-        return !hasPinOrListener();
+  public boolean unpin() {
+    synchronized (mLock) {
+      mListenerCount--;
     }
+    return !hasPinOrListener();
+  }
 
-    public boolean isListening() {
-        synchronized (mLock) {
-            return mListenerCount > 0;
-        }
+  public boolean isListening() {
+    synchronized (mLock) {
+      return mListenerCount > 0;
     }
+  }
 
-    @VisibleForTesting
-    public boolean hasPinOrListener() {
-        return isListening();
-    }
+  @VisibleForTesting
+  public boolean hasPinOrListener() {
+    return isListening();
+  }
 
-    ContentProviderClient getClient() {
-        ContentProviderClient client = mService.getContext().getContentResolver()
-                .acquireUnstableContentProviderClient(mUri);
-        return client;
-    }
+  ContentProviderClient getClient() {
+    ContentProviderClient client =
+        mService.getContext().getContentResolver().acquireUnstableContentProviderClient(mUri);
+    return client;
+  }
 
-    private void checkSelfRemove() {
-        if (!hasPinOrListener()) {
-            // All the listeners died, remove from pinned state.
-            mService.removePinnedSlice(mUri);
-        }
+  private void checkSelfRemove() {
+    if (!hasPinOrListener()) {
+      // All the listeners died, remove from pinned state.
+      mService.removePinnedSlice(mUri);
     }
+  }
 
-    private void handleSendPinned() {
-        try (ContentProviderClient client = getClient()) {
-            if (client == null) return;
-            Bundle b = new Bundle();
-            b.putParcelable(SliceProvider.EXTRA_BIND_URI, mUri);
-            try {
-                client.call(SliceProvider.METHOD_PIN, null, b);
-            } catch (Exception e) {
-                Log.w(TAG, "Unable to contact " + mUri, e);
-            }
-        }
+  private void handleSendPinned() {
+    try (ContentProviderClient client = getClient()) {
+      if (client == null) {
+        return;
+      }
+      Bundle b = new Bundle();
+      b.putParcelable(SliceProvider.EXTRA_BIND_URI, mUri);
+      try {
+        client.call(SliceProvider.METHOD_PIN, null, b);
+      } catch (Exception e) {
+        Log.w(TAG, "Unable to contact " + mUri, e);
+      }
     }
+  }
 
-    private void handleSendUnpinned() {
-        try (ContentProviderClient client = getClient()) {
-            if (client == null) return;
-            Bundle b = new Bundle();
-            b.putParcelable(SliceProvider.EXTRA_BIND_URI, mUri);
-            try {
-                client.call(SliceProvider.METHOD_UNPIN, null, b);
-            } catch (Exception e) {
-                Log.w(TAG, "Unable to contact " + mUri, e);
-            }
-        }
+  private void handleSendUnpinned() {
+    try (ContentProviderClient client = getClient()) {
+      if (client == null) {
+        return;
+      }
+      Bundle b = new Bundle();
+      b.putParcelable(SliceProvider.EXTRA_BIND_URI, mUri);
+      try {
+        client.call(SliceProvider.METHOD_UNPIN, null, b);
+      } catch (Exception e) {
+        Log.w(TAG, "Unable to contact " + mUri, e);
+      }
     }
+  }
 }

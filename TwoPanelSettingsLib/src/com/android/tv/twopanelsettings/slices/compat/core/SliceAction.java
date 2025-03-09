@@ -17,7 +17,8 @@
 package com.android.tv.twopanelsettings.slices.compat.core;
 
 import android.app.PendingIntent;
-
+import android.content.Intent;
+import android.os.Parcelable;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,96 +27,99 @@ import androidx.core.graphics.drawable.IconCompat;
 /**
  * Interface for a slice action, supports tappable icons, custom toggle icons, and default toggles.
  *
- * Slice framework has been deprecated, it will not receive any updates moving
- * forward. If you are looking for a framework that handles communication across apps,
- * consider using {@link android.app.appsearch.AppSearchManager}.
+ * <p>Slice framework has been deprecated, it will not receive any updates moving forward. If you
+ * are looking for a framework that handles communication across apps, consider using {@link
+ * android.app.appsearch.AppSearchManager}.
  */
 // @Deprecated // Supported for TV
 public interface SliceAction {
 
-    /**
-     * @param description the content description for this action.
-     */
-    @NonNull
-    SliceAction setContentDescription(@NonNull CharSequence description);
+  /**
+   * @param description the content description for this action.
+   */
+  @NonNull
+  SliceAction setContentDescription(@NonNull CharSequence description);
 
-    /**
-     * @param isChecked whether the state of this action is checked or not; only used for toggle
-     *                  actions.
-     */
-    @NonNull
-    SliceAction setChecked(boolean isChecked);
+  /**
+   * @param isChecked whether the state of this action is checked or not; only used for toggle
+   *     actions.
+   */
+  @NonNull
+  SliceAction setChecked(boolean isChecked);
 
-    /**
-     * Sets the priority of this action, with the lowest priority having the highest ranking.
-     */
-    @NonNull
-    SliceAction setPriority(@IntRange(from = 0) int priority);
+  /** Sets the priority of this action, with the lowest priority having the highest ranking. */
+  @NonNull
+  SliceAction setPriority(@IntRange(from = 0) int priority);
 
-    /**
-     * Sets the key of this action.
-     */
-    @NonNull
-    SliceAction setKey(@NonNull String key);
+  /** Sets the key of this action. */
+  @NonNull
+  SliceAction setKey(@NonNull String key);
 
-    /**
-     * @return the {@link PendingIntent} associated with this action.
-     */
-    @NonNull
-    PendingIntent getAction();
+  /**
+   * @return the {@link PendingIntent} associated with this action.
+   */
+  @Nullable
+  PendingIntent getAction();
 
-    /**
-     * @return the {@link IconCompat} to display for this action. This can be null when the action
-     * represented is a default toggle.
-     */
-    @Nullable
-    IconCompat getIcon();
+  @Nullable
+  Intent getActionIntent();
 
-    /**
-     * @return the title for this action.
-     */
-    @NonNull
-    CharSequence getTitle();
+  @NonNull
+  Parcelable getActionParcelable();
 
-    /**
-     * @return the content description to use for this action.
-     */
-    @Nullable
-    CharSequence getContentDescription();
+  /**
+   * @return the {@link IconCompat} to display for this action. This can be null when the action
+   *     represented is a default toggle.
+   */
+  @Nullable
+  IconCompat getIcon();
 
-    /**
-     * @return the priority associated with this action, -1 if unset.
-     */
-    int getPriority();
+  /**
+   * @return the title for this action.
+   */
+  @NonNull
+  CharSequence getTitle();
 
-    /**
-     * @return the key associated with this action.
-     */
-    @Nullable
-    String getKey();
+  /**
+   * @return the content description to use for this action.
+   */
+  @Nullable
+  CharSequence getContentDescription();
 
-    /**
-     * @return whether this action represents a toggle (i.e. has a checked and unchecked state).
-     */
-    boolean isToggle();
+  /**
+   * @return the priority associated with this action, -1 if unset.
+   */
+  int getPriority();
 
-    /**
-     * @return whether the state of this action is checked or not; only used for toggle actions.
-     */
-    boolean isChecked();
+  /**
+   * @return the key associated with this action.
+   */
+  @Nullable
+  String getKey();
 
-    /**
-     * @return whether this activity launches an activity or not.
-     */
-    boolean isActivity();
+  /**
+   * @return whether this action represents a toggle (i.e. has a checked and unchecked state).
+   */
+  boolean isToggle();
 
-    /**
-     * @return the image mode to use for this action.
-     */
-    @SliceHints.ImageMode int getImageMode();
+  /**
+   * @return whether the state of this action is checked or not; only used for toggle actions.
+   */
+  boolean isChecked();
 
-    /**
-     * @return whether this action is a toggle using the standard switch control.
-     */
-    boolean isDefaultToggle();
+  /**
+   * @return whether this activity launches an activity or not.
+   */
+  boolean isActivity();
+
+  /**
+   * @return the image mode to use for this action.
+   */
+  @SliceHints.ImageMode
+  int getImageMode();
+
+  /**
+   * @return whether this action is a toggle using the standard switch control.
+   */
+  boolean isDefaultToggle();
 }

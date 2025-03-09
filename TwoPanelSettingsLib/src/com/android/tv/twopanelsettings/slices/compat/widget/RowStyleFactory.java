@@ -18,22 +18,22 @@ package com.android.tv.twopanelsettings.slices.compat.widget;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StyleRes;
-
 import com.android.tv.twopanelsettings.slices.compat.SliceItem;
 
 /**
  * Factory to return different styles for child views of a slice.
  *
- * Slice framework has been deprecated, it will not receive any updates moving
- * forward. If you are looking for a framework that handles communication across apps,
- * consider using {@link android.app.appsearch.AppSearchManager}.
+ * <p>Slice framework has been deprecated, it will not receive any updates moving forward. If you
+ * are looking for a framework that handles communication across apps, consider using {@link
+ * android.app.appsearch.AppSearchManager}.
  */
 // @Deprecated // Supported for TV
 public interface RowStyleFactory {
-    /**
-     * Returns the style resource to use for this child.
-     *
-     * @return Style resource or 0 if the default style should be used.
-     */
-    @StyleRes int getRowStyleRes(@NonNull SliceItem rowItem);
+  /**
+   * Returns the style resource to use for this child.
+   *
+   * @return Style resource or 0 if the default style should be used.
+   */
+  @StyleRes
+  int getRowStyleRes(@NonNull SliceItem rowItem);
 }

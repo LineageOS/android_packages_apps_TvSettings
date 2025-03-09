@@ -50,7 +50,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.IntentSenderRequest;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -58,6 +57,7 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.Observer;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
@@ -103,7 +103,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private CharSequence mScreenTitle;
     private CharSequence mScreenSubtitle;
     private Icon mScreenIcon;
-    private PendingIntent mPreferenceFollowupIntent;
+    private Parcelable mPreferenceFollowupIntent;
     private int mFollowupPendingIntentResultCode;
     private Intent mFollowupPendingIntentExtras;
     private Intent mFollowupPendingIntentExtrasCopy;
@@ -113,16 +113,15 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
     private final Handler mHandler = new Handler();
     private final ActivityResultLauncher<IntentSenderRequest> mActivityResultLauncher =
             registerForActivityResult(new ActivityResultContracts.StartIntentSenderForResult(),
-                    new ActivityResultCallback<ActivityResult>() {
-                        @Override
-                        public void onActivityResult(ActivityResult result) {
-                            Intent data = result.getData();
-                            mFollowupPendingIntentExtras = data;
-                            mFollowupPendingIntentExtrasCopy = data == null ? null : new Intent(
-                                    data);
-                            mFollowupPendingIntentResultCode = result.getResultCode();
-                        }
+                    this::processActionResult);
+    private final ActivityResultLauncher<Intent> mActivityResultLauncherIntent =
+            registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                    this::processActionResult);
+    private final ActivityResultLauncher<Intent> mActivityResultLauncherIntentFollowup =
+            registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                    result -> {
                     });
+
     private final ContentObserver mContentObserver = new ContentObserver(new Handler()) {
         @Override
         public void onChange(boolean selfChange, Uri uri) {
@@ -186,6 +185,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 .getSliceLiveData(getActivity(), Uri.parse(mUriString));
     }
 
+    private void processActionResult(ActivityResult result) {
+        Intent data = result.getData();
+        mFollowupPendingIntentExtras = data;
+        mFollowupPendingIntentExtrasCopy = data == null ? null : new Intent(
+                data);
+        mFollowupPendingIntentResultCode = result.getResultCode();
+    }
+
     private void fireFollowupPendingIntent() {
         if (mFollowupPendingIntentExtras == null) {
             return;
@@ -210,11 +217,21 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             if (mPreferenceFollowupIntent == null) {
                 return;
             }
-            try {
-                mPreferenceFollowupIntent.send(getContext(),
-                        mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras);
-            } catch (CanceledException e) {
-                Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
+            if (mPreferenceFollowupIntent instanceof Intent) {
+                Intent filledIn = new Intent((Intent) mPreferenceFollowupIntent);
+                filledIn.fillIn(mFollowupPendingIntentExtras, 0);
+                if (requireContext().getPackageManager().resolveActivity(filledIn, 0) != null) {
+                    mActivityResultLauncherIntentFollowup.launch(filledIn);
+                } else {
+                    requireContext().sendBroadcast(filledIn);
+                }
+            } else {
+                try {
+                    ((PendingIntent) mPreferenceFollowupIntent).send(requireContext(),
+                            mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras);
+                } catch (CanceledException e) {
+                    Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e);
+                }
             }
             mPreferenceFollowupIntent = null;
         }
@@ -327,13 +344,14 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                 Preference preference =
                         SlicePreferencesUtil.getPreference(
                                 item, mContextThemeWrapper, getClass().getCanonicalName(),
-                                getParentFragment() instanceof TwoPanelSettingsFragment);
+                                getParentFragment() instanceof TwoPanelSettingsFragment,
+                                getPreferenceScreen());
                 if (preference != null) {
                     newPrefs.add(preference);
                 }
             }
         }
-        updatePreferenceScreen(preferenceScreen, newPrefs);
+        updatePreferenceGroup(preferenceScreen, newPrefs);
         if (defaultFocusedKey != null) {
             scrollToPreference(defaultFocusedKey.toString());
         } else if (mLastFocusedPreferenceKey != null) {
@@ -381,7 +399,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         }
     }
 
-    private void updatePreferenceScreen(PreferenceScreen screen, List<Preference> newPrefs) {
+    private void updatePreferenceGroup(PreferenceGroup group, List<Preference> newPrefs) {
         // Remove all the preferences in the screen that satisfy such three cases:
         // (a) Preference without key
         // (b) Preference with key which does not appear in the new list.
@@ -389,9 +407,9 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         // ability to handle slices and needs to be replaced instead of re-used.
         int index = 0;
         IdentityHashMap<Preference, Preference> newToOld = new IdentityHashMap<>();
-        while (index < screen.getPreferenceCount()) {
+        while (index < group.getPreferenceCount()) {
             boolean needToRemoveCurrentPref = true;
-            Preference oldPref = screen.getPreference(index);
+            Preference oldPref = group.getPreference(index);
             for (Preference newPref : newPrefs) {
                 if (isSamePreference(oldPref, newPref)) {
                     needToRemoveCurrentPref = false;
@@ -401,7 +419,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             }
 
             if (needToRemoveCurrentPref) {
-                screen.removePreference(oldPref);
+                group.removePreference(oldPref);
             } else {
                 index++;
             }
@@ -424,7 +442,7 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
             Preference oldPref = newToOld.get(newPref);
             if (oldPref == null) {
                 newPref.setOrder(i);
-                screen.addPreference(newPref);
+                group.addPreference(newPref);
                 continue;
             }
 
@@ -462,12 +480,22 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
                         ((HasCustomContentDescription) newPref)
                                 .getContentDescription());
             }
+
+            if (oldPref instanceof PreferenceGroup && newPref instanceof PreferenceGroup) {
+                PreferenceGroup newGroup = (PreferenceGroup) newPref;
+                List<Preference> newChildren = new ArrayList<>();
+                for (int j = 0; j < newGroup.getPreferenceCount(); j++) {
+                    newChildren.add(newGroup.getPreference(j));
+                }
+                newGroup.removeAll();
+                updatePreferenceGroup((PreferenceGroup) oldPref, newChildren);
+            }
         }
 
         //addPreference will reset the checked status of TwoStatePreference.
         //So we need to add them back
-        for (int i = 0; i < screen.getPreferenceCount(); i++) {
-            Preference screenPref = screen.getPreference(i);
+        for (int i = 0; i < group.getPreferenceCount(); i++) {
+            Preference screenPref = group.getPreference(i);
             if (screenPref instanceof TwoStatePreference
                     && twoStatePreferenceIsCheckedByOrder.get(screenPref.getOrder()) != null) {
                 ((TwoStatePreference) screenPref)
@@ -494,6 +522,10 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         }
 
         if (newPref instanceof HasSliceUri != oldPref instanceof HasSliceUri) {
+            return false;
+        }
+
+        if (newPref instanceof PreferenceGroup != oldPref instanceof PreferenceGroup) {
             return false;
         }
 
@@ -586,12 +618,30 @@ public class SliceFragment extends SettingsPreferenceFragment implements Observe
         if (preference.getSliceAction() == null) {
             return false;
         }
-        IntentSender intentSender = preference.getSliceAction().getAction().getIntentSender();
-        mActivityResultLauncher.launch(
-                new IntentSenderRequest.Builder(intentSender).setFillInIntent(
-                        fillInIntent).build());
+
+        Intent intent = preference.getSliceAction().getActionIntent();
+        if (intent != null) {
+            Intent filledIn = new Intent(intent);
+            if (fillInIntent != null) {
+                filledIn.fillIn(fillInIntent, 0);
+            }
+
+            if (requireContext().getPackageManager().resolveActivity(filledIn, 0) != null) {
+                mActivityResultLauncherIntent.launch(filledIn);
+            } else {
+                requireContext().sendBroadcast(intent);
+            }
+        } else {
+            IntentSender intentSender = preference.getSliceAction().getAction().getIntentSender();
+            mActivityResultLauncher.launch(
+                    new IntentSenderRequest.Builder(intentSender).setFillInIntent(
+                            fillInIntent).build());
+        }
         if (preference.getFollowupSliceAction() != null) {
             mPreferenceFollowupIntent = preference.getFollowupSliceAction().getAction();
+            if (mPreferenceFollowupIntent == null) {
+                mPreferenceFollowupIntent = preference.getFollowupSliceAction().getActionIntent();
+            }
         }
 
         return true;

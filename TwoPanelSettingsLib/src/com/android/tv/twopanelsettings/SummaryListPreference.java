@@ -17,30 +17,26 @@ package com.android.tv.twopanelsettings;
 
 import android.content.Context;
 import android.util.AttributeSet;
-
 import androidx.preference.ListPreference;
 
-/**
- * A ListPreference that optionally displays a summary (aka subtitle) for
- * each of its options.
- */
+/** A ListPreference that optionally displays a summary (aka subtitle) for each of its options. */
 public class SummaryListPreference extends ListPreference {
 
-    private CharSequence[] mSummaries;
+  private CharSequence[] mSummaries;
 
-    public SummaryListPreference(Context context, AttributeSet attrs) {
-        super(context, attrs, 0, 0);
-    }
+  public SummaryListPreference(Context context, AttributeSet attrs) {
+    super(context, attrs, 0, 0);
+  }
 
-    public SummaryListPreference(Context context) {
-        super(context, null);
-    }
+  public SummaryListPreference(Context context) {
+    super(context, null);
+  }
 
-    public void setSummaries(CharSequence[] summaries) {
-        this.mSummaries = summaries;
-    }
+  public void setSummaries(CharSequence[] summaries) {
+    this.mSummaries = summaries;
+  }
 
-    public CharSequence[] getSummaries() {
-        return mSummaries;
-    }
+  public CharSequence[] getSummaries() {
+    return mSummaries;
+  }
 }

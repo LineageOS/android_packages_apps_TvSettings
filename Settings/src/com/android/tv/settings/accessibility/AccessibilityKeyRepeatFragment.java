@@ -15,6 +15,7 @@
  */
 package com.android.tv.settings.accessibility;
 
+import android.app.tvsettings.TvSettingsEnums;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -96,6 +97,11 @@ public class AccessibilityKeyRepeatFragment extends SettingsPreferenceFragment {
                 resolver,
                 Settings.Secure.KEY_REPEAT_DELAY_MS,
                 getContext().getResources().getInteger(R.integer.key_repeat_rate));
+    }
+
+    @Override
+    protected int getPageId() {
+        return TvSettingsEnums.SYSTEM_A11Y_KEY_REPEAT;
     }
 
     /**

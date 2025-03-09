@@ -92,6 +92,14 @@
     <string name="wifi_setting_always_scan" msgid="431846292711998602">"எப்போதும் ஸ்கேன் செய்"</string>
     <string name="wifi_setting_always_scan_context" msgid="1092998659666221222">"வைஃபை முடக்கத்தில் இருந்தாலும்கூட, Googleளின் இருப்பிடச் சேவையையும் பிற ஆப்ஸையும் நெட்வொர்க்குகளை ஸ்கேன் செய்ய அனுமதி"</string>
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"எப்போதும் ஸ்கேன் செய்தல், வைஃபை ஆஃபில் இருந்தாலும்கூட Googleளின் இருப்பிடச் சேவையையும் பிற ஆப்ஸையும் நெட்வொர்க்குகளை ஸ்கேன் செய்ய அனுமதிக்கும்"</string>
+    <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread நெட்வொர்க்"</string>
+    <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread நெட்வொர்க், Thread இணக்கமான ஸ்மார்ட் வீட்டுச் சாதனங்களை வீட்டு நெட்வொர்க் மூலம் இணைத்து செயல்திறனை மேம்படுத்துகிறது.\n\nஇயக்கப்பட்டிருக்கும்போது, இந்தச் சாதனம் உங்கள் Thread நெட்வொர்க்கை உருவாக்கும் அல்லது அதில் சேரும். எதிர்காலத்தில் உங்கள் ஸ்மார்ட் வீட்டுச் சாதனங்களை எளிதாக அமைக்க அனுமதிச் சான்றுகள் கிளவுடில் தனிப்பட்ட முறையில் பதிவேற்றப்படும்.\n\nமுடக்கப்பட்டிருக்கும்போது, இனி இந்தச் சாதனத்தால் Thread நெட்வொர்க்கில் உள்ள பிற சாதனங்களைத் தொடர்புகொள்ள முடியாது. குறிப்பிட்ட ஸ்மார்ட் வீட்டுச் சாதனங்களும் சேவைகளும் எதிர்பார்த்தபடி செயல்படாமல் போகக்கூடும்.\n\ng.co/tv/thread பக்கத்தில் மேலும் அறிந்துகொள்ளுங்கள்"</string>
+    <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread நெட்வொர்க்கை முடக்கவா?"</string>
+    <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"முடக்கினால், குறிப்பிட்ட ஸ்மார்ட் வீட்டுச் சாதனங்களும் சேவைகளும் எதிர்பார்த்தபடி செயல்படாமல் போகக்கூடும். தொடர விரும்புகிறீர்களா?"</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Thread நெட்வொர்க்கை இயக்கவா?"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Thread நெட்வொர்க்கிற்கு அதிகரிக்கப்பட்ட ஆற்றல் பயன்முறை தேவை. முதலில் ஆற்றல் பயன்முறையை அதிகரிக்கப்பட்ட ஆற்றல் பயன்முறைக்கு மாற்றிவிட்டு Thread நெட்வொர்க்கை இயக்குங்கள்."</string>
+    <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"முடக்கு"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"ஆற்றல் பயன்முறையை மாற்று"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"வைஃபை"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"நெட்வொர்க்குடன் இணைக்கும்"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"நெட்வொர்க் பிழையைக் கண்டறியும் கருவி"</string>
@@ -121,7 +129,7 @@
     <string name="device_energy_saver_summary" msgid="5306058475316008429">"டிவியை ஆஃப் செய்வதற்கான டைமர்களை அமைத்து மின்சாரத்தைச் சேமிக்கலாம்"</string>
     <string name="overlay_internal_slice_title" msgid="6427352417573831625"></string>
     <string name="device_fastpair" msgid="1235240814051277047">"சாதனங்கள்"</string>
-    <string name="surround_sound_select_formats" msgid="6070283650131226239">"வடிவங்களைத் தேர்ந்தெடுக்கவும்"</string>
+    <string name="surround_sound_select_formats" msgid="3232348550606222833">"சரவுண்ட் சவுண்ட் அமைப்புகள்"</string>
     <string name="surround_sound_category_title" msgid="5688539514178173911">"சரவுண்ட் சவுண்ட்"</string>
     <string name="surround_sound_format_ac3" msgid="4759143098751306492">"Dolby Digital"</string>
     <string name="surround_sound_format_e_ac3" msgid="6923129088903887242">"Dolby Digital Plus"</string>
@@ -133,10 +141,12 @@
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plusஸுடன் கூடிய Dolby Atmos"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"குறிப்பு: ஆதரிக்கும் வடிவங்களை சாதனம் சரியாக குறிப்பிடவில்லை எனில், \'தானியங்கு\' செயல்படாமல் போகலாம்."</string>
-    <string name="surround_sound_auto_title" msgid="4892922385727913277">"தானியங்கு: ஆடியோ அவுட்புட் சாதனத்தால் ஆதரிக்கப்படும் வடிவங்களை மட்டும் இயக்குதல் "</string>
+    <string name="surround_sound_auto_title" msgid="811867430010809597">"தானியங்கு"</string>
+    <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"ஆதரிக்கப்படும் அனைத்து வடிவமைப்புகளையும் இயக்கும்"</string>
     <string name="surround_sound_auto_summary" msgid="7073023654150720285">"இந்த பட்டனைத் தேர்வுசெய்தால், உங்கள் சாதனச் செயினால் ஆதரிக்கப்படும் எந்த ஒலி வடிவத்தையும் தேர்ந்தெடுக்க ஆப்ஸை சிஸ்டம் அனுமதிக்கும். உயர்தரமற்ற வடிவத்தை ஆப்ஸ் தேர்வுசெய்யக்கூடும்."</string>
     <string name="surround_sound_none_title" msgid="1600095173519889326">"ஏதுமில்லை: சரவுண்டு சவுண்டை ஒருபோதும் உபயோகிக்காது"</string>
-    <string name="surround_sound_manual_title" msgid="4935447605070985537">"கைமுறை: ஆடியோ அவுட்புட் சாதனத்தால் ஆதரிக்கப்படுவதைப் பொருட்படுத்தாமல் இந்தச் சாதனத்தால் ஆதரிக்கப்படும் ஒவ்வொரு வடிவத்தையும் உங்கள் விருப்பப்படி இயக்குதல், முடக்குதல்."</string>
+    <string name="surround_sound_manual_title" msgid="8294975285009655065">"நேரடி"</string>
+    <string name="surround_sound_selection_manual_desc" msgid="3077478058774499547">"கிடைக்கக்கூடிய வடிவமைப்புகளில் இருந்து தேர்வுசெய்யலாம்"</string>
     <string name="surround_sound_manual_summary" msgid="5155535847461070572">"இந்த பட்டனைத் தேர்வுசெய்தால், பிளேபேக்கில் சிக்கல்களை ஏற்படுத்துவதும் உங்கள் சாதனச் செயினால் ஆதரிக்கப்படுவதுமான ஒலி வடிவங்களை நீங்களே நேரடியாக முடக்கலாம். உங்கள் சாதனச் செயினால் ஆதரிக்கப்படாத ஒலி வடிவங்களை இயக்கலாம். சில சமயங்களில், உயர்தரமற்ற வடிவத்தை ஆப்ஸ் தேர்வுசெய்யக்கூடும்."</string>
     <string name="surround_sound_enable_unsupported_dialog_title" msgid="9155579373370356463">"ஆதரிக்கப்படாத ஒலி வடிவத்தை இயக்கவா?"</string>
     <string name="surround_sound_enable_unsupported_dialog_desc" msgid="1901648758103522741">"இணைக்கப்பட்டுள்ள ஆடியோ சாதனம் இந்த வடிவத்தை ஆதரிக்கவில்லை. இது உங்கள் சாதனத்தில் அதிக இரைச்சல் அல்லது பாப்ஸ் போன்ற எதிர்பாராத விளைவுகளை ஏற்படுத்தலாம்."</string>
@@ -154,23 +164,25 @@
     <string name="display_category_title" msgid="247804007525046312">"காட்சி அமைப்புகள்"</string>
     <string name="advanced_display_settings_title" msgid="6293280819870140631">"மேம்பட்ட காட்சி அமைப்புகள்"</string>
     <string name="hdmi_cec_settings_title" msgid="7120729705063868627">"HDMI-CEC"</string>
-    <string name="advanced_sound_settings_title" msgid="319921303039469139">"மேம்பட்ட ஒலி அமைப்புகள்"</string>
+    <string name="advanced_sound_settings_title" msgid="2800805994220135889">"சரவுண்ட் சவுண்ட் அமைப்புகள்"</string>
     <string name="game_mode_title" msgid="7280816243531315755">"கேம் பயன்முறையை அனுமதி"</string>
     <string name="match_content_dynamic_range_title" msgid="2794980556561655838">"உள்ளடக்கத்திற்குப் பொருந்தும் டைனமிக் வரம்பு"</string>
-    <string name="match_content_dynamic_range_summary" msgid="2255683926227355398">"இந்த விருப்பத்தை இயக்கும்போது, உள்ளடக்கத்துடன் பொருந்துவதற்காகப் பல்வேறு டைனமிக் வரம்பு வடிவங்களுக்கிடையே இந்த அமைப்பு மாறும். வடிவங்களுக்கிடையே மாறும்போது திரை கருப்பாக மாறக்கூடும்.\n\nகூடுதல் டைனமிக் வரம்பு விருப்பங்கள் காட்டப்பட, மேம்பட்ட காட்சி அமைப்புகளைக் கிளிக் செய்யவும்."</string>
-    <string name="preferred_dynamic_range_title" msgid="5064883672337010588">"விருப்பமான டைனமிக் வரம்பு"</string>
+    <string name="match_content_dynamic_range_summary" msgid="5897559876103008433">"தேர்ந்தெடுக்கும்போது, சிஸ்டம் உள்ளடக்கத்தின் டைனமிக் ரேஞ்சுடன் பொருந்தும். இதனால், வீடியோவின் தொடக்கத்திலோ முடிவிலோ திரை சிறிது நேரம் மறைந்து தெரியக்கூடும். கூடுதல் டைனமிக் ரேஞ்ச் அமைப்புகளை மேம்பட்ட டிஸ்ப்ளே அமைப்புகளில் பார்க்கலாம்."</string>
+    <string name="preferred_dynamic_range_title" msgid="3216820729147940951">"விருப்பமான டைனமிக் ரேஞ்ச் வடிவமைப்பு"</string>
     <string name="preferred_dynamic_range_selection_system_title" msgid="4505030483876080996">"சிஸ்டம் பரிந்துரைக்கும் வடிவமைப்பு மாற்றம்"</string>
-    <string name="preferred_dynamic_range_selection_system_desc" msgid="2765115460108291217">"வடிவமைப்பு மாற்றத்தை நிர்வகிக்க சிஸ்டத்தை அனுமதிக்கும்"</string>
+    <string name="preferred_dynamic_range_selection_system_desc" msgid="5622795479042469982">"வடிவமைப்பு மாற்றத்தை நிர்வகிக்க சிஸ்டத்தை அனுமதிக்கும்"</string>
     <string name="preferred_dynamic_range_selection_system_summary" msgid="4509062596428781094">"இந்த விருப்பம் தேர்ந்தெடுக்கப்பட்டிருக்கும்போது, உங்கள் டிஸ்ப்ளேக்கு அனுப்ப வேண்டிய பொருத்தமான டைனமிக் ரேஞ்சை சிஸ்டம் தீர்மானிக்கும். அதன் பிறகு, தேவைக்கேற்ப இந்த டைனமிக் ரேஞ்சிற்கு உள்ளடக்கத்தை மாற்றும்."</string>
-    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="4831260397179583737">"எப்போதும் உள்ளடக்கத்தின் வடிவமைப்போடு பொருந்தும்"</string>
+    <string name="preferred_dynamic_range_selection_passthrough_desc" msgid="885503418469834735">"எப்போதும் உள்ளடக்கத்தின் வடிவமைப்போடு பொருந்தும்"</string>
     <string name="preferred_dynamic_range_selection_force_title" msgid="4448836594133973103">"வடிவமைப்பை மாற்றுதல்"</string>
-    <string name="preferred_dynamic_range_selection_force_desc" msgid="1418542349290684513">"விருப்பமான வடிவமைப்பிற்கு மாற்றும்"</string>
+    <string name="preferred_dynamic_range_selection_force_desc" msgid="1965870548185816252">"விருப்பமான வடிவமைப்பிற்கு மாற்று"</string>
     <string name="preferred_dynamic_range_selection_force_summary" msgid="8381058061765216239">"விருப்பமான வடிவமைப்பிற்கு மாற்றும். வடிவமைப்பை மாற்றுவது காட்சிப் பயன்முறையிலோ HDR வடிவத்திலோ உள்ள மற்ற அமைப்புகளில் மாற்றத்தை ஏற்படுத்தக்கூடும்."</string>
     <string name="preferred_dynamic_range_selection_force_sdr_title" msgid="3135104063034317252">"எப்போதும் SDR வடிவமைப்பிற்கு மாற்றுதல்"</string>
     <string name="preferred_dynamic_range_selection_force_hdr_title" msgid="1032587815433139859">"எப்போதும் <xliff:g id="HDR_TYPE">%s</xliff:g> வடிவமைப்பிற்கு மாற்றுதல்"</string>
     <string name="preferred_dynamic_range_force_dialog_title" msgid="6865110024863661702">"HDR அவுட்புட்டை மாற்ற வேண்டுமா?"</string>
     <string name="preferred_dynamic_range_force_dialog_desc" msgid="7758323258282201656">"இயல்பாக, <xliff:g id="HDR_TYPE">%s</xliff:g> வடிவமைப்பிற்கு மாற்றப்படும்."</string>
     <string name="preferred_dynamic_range_force_dialog_desc_4k30_issue" msgid="4938418395391206131">"உங்கள் டிஸ்ப்ளே 1080பி. 60Hz தெளிவுத்திறனில் இயங்கும். 4k 60Hz தெளிவுத்திறனில் இயங்கும்போது உங்கள் டிஸ்பிளேயுடன் இந்த விருப்பம் இணக்கமாக இருக்காது."</string>
+    <string name="preferred_dynamic_range_match_enabled_title" msgid="4761382844444479841">"இந்த அமைப்பு கிடைக்கவில்லை"</string>
+    <string name="preferred_dynamic_range_match_enabled_desc" msgid="264141414825957741">"\'உள்ளடக்கத்திற்குப் பொருந்தும் டைனமிக் ரேஞ்ச்\' இயக்கப்பட்டது. குறிப்பிட்ட டைனமிக் ரேஞ்ச் வடிவமைப்புக்கு மாற்ற, அமைப்புகள் &gt; டிஸ்ப்ளே &amp; ஒலி என்பதற்குச் சென்று முதலில் \'உள்ளடக்கத்திற்குப் பொருந்தும் டைனமிக் ரேஞ்ச்\' என்பதை முடக்கவும்."</string>
     <string name="selection_dolby_vision_not_supported_sidebar" msgid="8994591316574824115">"தற்போதுள்ள தெளிவுத்திறனில் Dolby Vision ஆதரிக்கப்படவில்லை. நீங்களே நேரடியாக Dolby Visionனை இயக்கினால், உங்கள் திரையின் தெளிவுத்திறன் 1080p 60Hz என்பதற்கு மாற்றப்படும்"</string>
     <string name="manual_dolby_vision_format_on_4k60_title" msgid="4172263676512376500">"1080p 60Hz தெளிவுத்திறனுக்கு மாற்றவா?"</string>
     <string name="dynamic_range_selection_force_dv_title" msgid="8070148109262327094">"எப்போதும் Dolby Vision வடிவத்திற்கு மாற்று"</string>
@@ -197,11 +209,11 @@
     <string name="font_scale_preview_text_title" msgid="8056182208511371119">"தி வொண்டர்ஃபுல் விசார்டு ஆஃப் ஓஸ்"</string>
     <string name="font_scale_preview_text_subtitle" msgid="677394182922188048">"அத்தியாயம் 11: தி வொண்டர்ஃபுல் எமரால்டு சிட்டி ஆஃப் ஓஸ்"</string>
     <string name="font_scale_preview_text_body" msgid="7890679265084738383">"டோரத்தியும் அவளின் நண்பர்களும் பச்சை நிறக் கண்ணாடிகளை அணிந்திருந்தபோதும், முதல் பார்வையிலேயே எழில்கொஞ்சும் நகரத்தின் அழகில் மயங்கினர். பச்சை நிறச் சலவைக் கற்களால் கட்டப்பட்ட அழகிய வீடுகள் தெருக்களில் அணிவகுத்து நின்றன. அத்துடன் திரும்பும் இடமெல்லாம் மின்னும் மரகதக் கற்களால் அலங்கரிக்கப்பட்டிருந்தன. அவர்கள் அதே பச்சை நிறச் சலவைக் கல்லால் அமைக்கப்பட்டிருந்த நடைபாதையில் நடந்து சென்றனர். அதில் இணைக்கப்பட்டிருந்த தடுப்புகள் மரகதக் கற்களைக் கொண்டு நெருக்கமாகக் கட்டப்பட்டிருந்தன. அவை சூரியனின் ஒளிக்கதிர்களால் பளபளத்தன. ஜன்னல் கண்ணாடிகள் பச்சை நிறக் கண்ணாடியால் கட்டப்பட்டிருந்தன. நகரத்தின் மேலே உள்ள வானமும் பச்சை நிறச் சாயலில் இருந்தது, அத்துடன் சூரியனும் பச்சை நிற ஒளிக்கதிர்களை வீசியது. \n\nஅங்கே நிறைய மனிதர்கள் இருந்தனர். ஆண்கள், பெண்கள், குழந்தைகள் என அனைவரும் நடந்து கொண்டிருந்தனர். அவர்கள் பச்சை நிற ஆடைகளை அணிந்திருந்தனர், அவர்களின் சருமமும் பச்சை நிறத்தில் இருந்தது. டோரத்தியையும் அவளுடன் இருந்த விசித்திரமான நண்பர்களையும் அவர்கள் பிரமிப்புடன் பார்த்தனர். சிங்கத்தைப் பார்த்தவுடன் குழந்தைகள் அனைவரும் ஓடிச்சென்று தங்கள் அம்மாக்களின் பின்னால் ஒளிந்துகொண்டனர். ஆனால் யாரும் அவர்களுடன் பேசவில்லை. அந்தத் தெருவில் நிறைய கடைகள் இருந்தன. அந்தக் கடைகளில் எல்லாமே பச்சை நிறத்தில் இருப்பதை டோரத்தி பார்த்தாள். பச்சை நிற மிட்டாய், பச்சை நிறப் பாப்கார்ன், பச்சை நிறக் காலணிகள், பச்சை நிறத் தொப்பிகள், அனைத்து விதமான பச்சை நிற உடைகள் ஆகியவை விற்பனைக்கு வைக்கப்பட்டிருந்தன. அங்கே ஒருவன் பச்சை நிற எலுமிச்சை ஜூஸ் விற்றுக் கொண்டிருந்தான். அதைப் பச்சை நிற நாணயங்களைக் கொடுத்து குழந்தைகள் வாங்கிச் செல்வதை டோரத்தி பார்த்தாள். \n\nஅங்கே குதிரைகளோ எந்த விதமான விலங்குகளோ இல்லை. முன்புறமாகத் தள்ளிச்செல்லக்கூடிய பச்சை நிறக் கூடைகளில் இவற்றை மனிதர்களே சுமந்து சென்றனர். அனைவரும் மகிழ்ச்சியாகவும் திருப்தியாகவும் செழிப்பாகவும் இருந்தனர்."</string>
-    <string name="hdr_format_selection_title" msgid="4042679694363850581">"வடிவத்தைத் தேர்ந்தெடுத்தல்"</string>
+    <string name="hdr_format_selection_title" msgid="3847284265003261898">"டைனமிக் ரேஞ்ச் வடிவமைப்பை அனுமதி"</string>
     <string name="hdr_format_selection_auto_title" msgid="2370148695440344232">"தானியங்கு"</string>
     <string name="hdr_format_selection_manual_title" msgid="2077604650196987438">"கைமுறை"</string>
-    <string name="hdr_format_selection_auto_desc" msgid="1542210944552409996">"சாதனத்தில் ஆதரிக்கப்படும் வடிவங்களைப் பயன்படுத்தும்"</string>
-    <string name="hdr_format_selection_manual_desc" msgid="8865649615882146772">"கிடைக்கக்கூடிய வடிவங்களிலிருந்து நேரடியாகத் தேர்வுசெய்யலாம்"</string>
+    <string name="hdr_format_selection_auto_desc" msgid="7091897909210568236">"ஆதரிக்கப்படும் அனைத்து வடிவமைப்புகளையும் இயக்கும்"</string>
+    <string name="hdr_format_selection_manual_desc" msgid="6989666818251254061">"கிடைக்கக்கூடிய வடிவமைப்புகளில் இருந்து தேர்வுசெய்யலாம்"</string>
     <string name="hdr_format_supported_title" msgid="1458594819224612431">"ஆதரிக்கப்படும் வடிவங்கள்"</string>
     <string name="hdr_format_unsupported_title" msgid="715318408107924941">"ஆதரிக்கப்படாத வடிவங்கள்"</string>
     <string name="hdr_format_sdr" msgid="7211377112392255102">"SDR"</string>

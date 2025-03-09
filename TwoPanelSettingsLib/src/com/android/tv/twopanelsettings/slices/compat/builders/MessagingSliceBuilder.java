@@ -20,12 +20,10 @@ import android.content.Context;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Build;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.util.Consumer;
-
 import com.android.tv.twopanelsettings.slices.compat.SliceSpecs;
 import com.android.tv.twopanelsettings.slices.compat.builders.impl.MessagingBasicImpl;
 import com.android.tv.twopanelsettings.slices.compat.builders.impl.MessagingBuilder;
@@ -33,118 +31,97 @@ import com.android.tv.twopanelsettings.slices.compat.builders.impl.MessagingList
 import com.android.tv.twopanelsettings.slices.compat.builders.impl.MessagingV1Impl;
 import com.android.tv.twopanelsettings.slices.compat.builders.impl.TemplateBuilderImpl;
 
-/**
- * Builder to construct slice content in a messaging format.
- */
+/** Builder to construct slice content in a messaging format. */
 // @RestrictTo(LIBRARY_GROUP_PREFIX)
 // @Deprecated // Supported for TV
 public class MessagingSliceBuilder extends TemplateSliceBuilder {
 
-    /**
-     * The maximum number of messages that will be retained in the Slice itself (the
-     * number displayed is up to the platform).
-     */
-    public static final int MAXIMUM_RETAINED_MESSAGES = 50;
+  /**
+   * The maximum number of messages that will be retained in the Slice itself (the number displayed
+   * is up to the platform).
+   */
+  public static final int MAXIMUM_RETAINED_MESSAGES = 50;
 
-    @SuppressWarnings("WeakerAccess") /* synthetic access */
-    MessagingBuilder mBuilder;
+  @SuppressWarnings("WeakerAccess") /* synthetic access */
+  MessagingBuilder mBuilder;
 
-    /**
-     * Create a MessagingSliceBuilder with the specified uri.
-     */
-    public MessagingSliceBuilder(@NonNull Context context, @NonNull Uri uri) {
-        super(context, uri);
+  /** Create a MessagingSliceBuilder with the specified uri. */
+  public MessagingSliceBuilder(@NonNull Context context, @NonNull Uri uri) {
+    super(context, uri);
+  }
+
+  /** Add a subslice to this builder. */
+  public MessagingSliceBuilder add(MessageBuilder builder) {
+    mBuilder.add((TemplateBuilderImpl) builder.mImpl);
+    return this;
+  }
+
+  /** Add a subslice to this builder. */
+  public MessagingSliceBuilder add(Consumer<MessageBuilder> c) {
+    MessageBuilder b = new MessageBuilder(this);
+    c.accept(b);
+    return add(b);
+  }
+
+  @Override
+  void setImpl(TemplateBuilderImpl impl) {
+    mBuilder = (MessagingBuilder) impl;
+  }
+
+  /** */
+  // @RestrictTo(LIBRARY)
+  @Override
+  protected TemplateBuilderImpl selectImpl() {
+    if (checkCompatible(SliceSpecs.MESSAGING)) {
+      return new MessagingV1Impl(getBuilder(), SliceSpecs.MESSAGING);
+    } else if (checkCompatible(SliceSpecs.LIST)) {
+      return new MessagingListV1Impl(getBuilder(), SliceSpecs.LIST);
+    } else if (checkCompatible(SliceSpecs.BASIC)) {
+      return new MessagingBasicImpl(getBuilder(), SliceSpecs.BASIC);
+    }
+    return null;
+  }
+
+  /** Builder for adding a message to {@link MessagingSliceBuilder}. */
+  public static final class MessageBuilder extends TemplateSliceBuilder {
+
+    MessagingBuilder.MessageBuilder mImpl;
+
+    /** Creates a MessageBuilder with the specified parent. */
+    public MessageBuilder(MessagingSliceBuilder parent) {
+      super(parent.mBuilder.createMessageBuilder());
     }
 
-    /**
-     * Add a subslice to this builder.
-     */
-    public MessagingSliceBuilder add(MessageBuilder builder) {
-        mBuilder.add((TemplateBuilderImpl) builder.mImpl);
-        return this;
+    /** Add the icon used to display contact in the messaging experience */
+    @RequiresApi(23)
+    public MessageBuilder addSource(Icon source) {
+      mImpl.addSource(source);
+      return this;
     }
 
-    /**
-     * Add a subslice to this builder.
-     */
-    public MessagingSliceBuilder add(Consumer<MessageBuilder> c) {
-        MessageBuilder b = new MessageBuilder(this);
-        c.accept(b);
-        return add(b);
+    /** Add the icon used to display contact in the messaging experience */
+    public MessageBuilder addSource(IconCompat source) {
+      if (Build.VERSION.SDK_INT >= 23) {
+        mImpl.addSource(source.toIcon());
+      }
+      return this;
+    }
+
+    /** Add the text to be used for this message. */
+    public MessageBuilder addText(CharSequence text) {
+      mImpl.addText(text);
+      return this;
+    }
+
+    /** Add the time at which this message arrived in ms since Unix epoch */
+    public MessageBuilder addTimestamp(long timestamp) {
+      mImpl.addTimestamp(timestamp);
+      return this;
     }
 
     @Override
     void setImpl(TemplateBuilderImpl impl) {
-        mBuilder = (MessagingBuilder) impl;
+      mImpl = (MessagingBuilder.MessageBuilder) impl;
     }
-
-    /**
-     */
-    // @RestrictTo(LIBRARY)
-    @Override
-    protected TemplateBuilderImpl selectImpl() {
-        if (checkCompatible(SliceSpecs.MESSAGING)) {
-            return new MessagingV1Impl(getBuilder(), SliceSpecs.MESSAGING);
-        } else if (checkCompatible(SliceSpecs.LIST)) {
-            return new MessagingListV1Impl(getBuilder(), SliceSpecs.LIST);
-        } else if (checkCompatible(SliceSpecs.BASIC)) {
-            return new MessagingBasicImpl(getBuilder(), SliceSpecs.BASIC);
-        }
-        return null;
-    }
-
-    /**
-     * Builder for adding a message to {@link MessagingSliceBuilder}.
-     */
-    public static final class MessageBuilder extends TemplateSliceBuilder {
-
-        MessagingBuilder.MessageBuilder mImpl;
-
-        /**
-         * Creates a MessageBuilder with the specified parent.
-         */
-        public MessageBuilder(MessagingSliceBuilder parent) {
-            super(parent.mBuilder.createMessageBuilder());
-        }
-
-        /**
-         * Add the icon used to display contact in the messaging experience
-         */
-        @RequiresApi(23)
-        public MessageBuilder addSource(Icon source) {
-            mImpl.addSource(source);
-            return this;
-        }
-
-        /**
-         * Add the icon used to display contact in the messaging experience
-         */
-        public MessageBuilder addSource(IconCompat source) {
-            if (Build.VERSION.SDK_INT >= 23) {
-                mImpl.addSource(source.toIcon());
-            }
-            return this;
-        }
-
-        /**
-         * Add the text to be used for this message.
-         */
-        public MessageBuilder addText(CharSequence text) {
-            mImpl.addText(text);
-            return this;
-        }
-
-        /**
-         * Add the time at which this message arrived in ms since Unix epoch
-         */
-        public MessageBuilder addTimestamp(long timestamp) {
-            mImpl.addTimestamp(timestamp);
-            return this;
-        }
-
-        @Override
-        void setImpl(TemplateBuilderImpl impl) {
-            mImpl = (MessagingBuilder.MessageBuilder) impl;
-        }
-    }
+  }
 }

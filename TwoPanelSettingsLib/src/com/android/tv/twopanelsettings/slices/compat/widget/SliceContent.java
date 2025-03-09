@@ -38,10 +38,8 @@ import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-
 import androidx.annotation.Nullable;
 import androidx.core.graphics.drawable.IconCompat;
-
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.SliceItem;
 import com.android.tv.twopanelsettings.slices.compat.SliceUtils;
@@ -52,219 +50,226 @@ import com.android.tv.twopanelsettings.slices.compat.core.SliceQuery;
 /**
  * Base class representing content that can be displayed.
  *
- * Slice framework has been deprecated, it will not receive any updates moving
- * forward. If you are looking for a framework that handles communication across apps,
- * consider using {@link android.app.appsearch.AppSearchManager}.
+ * <p>Slice framework has been deprecated, it will not receive any updates moving forward. If you
+ * are looking for a framework that handles communication across apps, consider using {@link
+ * android.app.appsearch.AppSearchManager}.
  */
 // @Deprecated // Supported for TV
 public class SliceContent {
 
-    /**
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    protected SliceItem mSliceItem;
-    /**
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    protected SliceItem mColorItem;
-    /**
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    protected SliceItem mLayoutDirItem;
-    /**
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    protected SliceItem mContentDescr;
-    /**
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    protected int mRowIndex;
+  /** */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  protected SliceItem mSliceItem;
 
-    public SliceContent(@Nullable Slice slice) {
-        if (slice == null) return;
-        init(new SliceItem(slice, FORMAT_SLICE, null, slice.getHints()));
-        // Built from a slice implies it's top level and index shouldn't matter
-        mRowIndex = -1;
+  /** */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  protected SliceItem mColorItem;
+
+  /** */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  protected SliceItem mLayoutDirItem;
+
+  /** */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  protected SliceItem mContentDescr;
+
+  /** */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  protected int mRowIndex;
+
+  public SliceContent(@Nullable Slice slice) {
+    if (slice == null) {
+      return;
+    }
+    init(new SliceItem(slice, FORMAT_SLICE, null, slice.getHints()));
+    // Built from a slice implies it's top level and index shouldn't matter
+    mRowIndex = -1;
+  }
+
+  /** */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public SliceContent(@Nullable SliceItem item, int rowIndex) {
+    if (item == null) {
+      return;
+    }
+    init(item);
+    mRowIndex = rowIndex;
+  }
+
+  private void init(SliceItem item) {
+    mSliceItem = item;
+    if (FORMAT_SLICE.equals(item.getFormat()) || FORMAT_ACTION.equals(item.getFormat())) {
+      mColorItem =
+          SliceQuery.findTopLevelItem(item.getSlice(), FORMAT_INT, SUBTYPE_COLOR, null, null);
+      mLayoutDirItem =
+          SliceQuery.findTopLevelItem(
+              item.getSlice(), FORMAT_INT, SUBTYPE_LAYOUT_DIRECTION, null, null);
+    }
+    mContentDescr = SliceQuery.findSubtype(item, FORMAT_TEXT, SUBTYPE_CONTENT_DESCRIPTION);
+  }
+
+  /**
+   * @return the slice item used to construct this content.
+   */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  @Nullable
+  public SliceItem getSliceItem() {
+    return mSliceItem;
+  }
+
+  /**
+   * @return the accent color to use for this content or -1 if no color is set.
+   */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public int getAccentColor() {
+    return mColorItem != null ? mColorItem.getInt() : -1;
+  }
+
+  /**
+   * @return the layout direction to use for this content or -1 if no direction set.
+   */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public int getLayoutDir() {
+    return mLayoutDirItem != null ? resolveLayoutDirection(mLayoutDirItem.getInt()) : -1;
+  }
+
+  /**
+   * @return the content description to use for this row if set.
+   */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  @Nullable
+  public CharSequence getContentDescription() {
+    return mContentDescr != null ? mContentDescr.getText() : null;
+  }
+
+  /**
+   * @return the row index of this content, or -1 if no row index is set.
+   */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public int getRowIndex() {
+    return mRowIndex;
+  }
+
+  /**
+   * @return the desired height of this content based on the provided mode and context or the
+   *     default height if context is null.
+   */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public int getHeight(SliceStyle style, SliceViewPolicy policy) {
+    return 0;
+  }
+
+  /**
+   * @return whether this content is valid to display or not.
+   */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  public boolean isValid() {
+    return mSliceItem != null;
+  }
+
+  /**
+   * @return the action that represents the shortcut.
+   */
+  // @RestrictTo(RestrictTo.Scope.LIBRARY)
+  @Nullable
+  public SliceAction getShortcut(@Nullable Context context) {
+    if (mSliceItem == null) {
+      // Can't make something from nothing
+      return null;
+    }
+    SliceItem iconItem = null;
+    SliceItem labelItem = null;
+    int imageMode = UNKNOWN_IMAGE;
+
+    // Prefer something properly hinted
+    String[] hints = new String[] {HINT_TITLE, HINT_SHORTCUT};
+    SliceItem actionItem = SliceQuery.find(mSliceItem, FORMAT_ACTION, hints, null);
+    if (actionItem != null) {
+      iconItem = SliceQuery.find(actionItem, FORMAT_IMAGE, HINT_TITLE, null);
+      labelItem = SliceQuery.find(actionItem, FORMAT_TEXT, (String) null, null);
+    }
+    if (actionItem == null) {
+      // No hinted action; just use the first one
+      actionItem = SliceQuery.find(mSliceItem, FORMAT_ACTION, (String) null, null);
     }
 
-    /**
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public SliceContent(@Nullable SliceItem item, int rowIndex) {
-        if (item == null) return;
-        init(item);
-        mRowIndex = rowIndex;
+    // First fallback: any hinted image and text
+    if (iconItem == null) {
+      iconItem = SliceQuery.find(mSliceItem, FORMAT_IMAGE, HINT_TITLE, null);
+    }
+    if (labelItem == null) {
+      labelItem = SliceQuery.find(mSliceItem, FORMAT_TEXT, HINT_TITLE, null);
     }
 
-    private void init(SliceItem item) {
-        mSliceItem = item;
-        if (FORMAT_SLICE.equals(item.getFormat()) || FORMAT_ACTION.equals(item.getFormat())) {
-            mColorItem = SliceQuery.findTopLevelItem(item.getSlice(), FORMAT_INT, SUBTYPE_COLOR,
-                    null, null);
-            mLayoutDirItem = SliceQuery.findTopLevelItem(item.getSlice(), FORMAT_INT,
-                    SUBTYPE_LAYOUT_DIRECTION, null, null);
+    // Second fallback: first image and text
+    if (iconItem == null) {
+      iconItem = SliceQuery.find(mSliceItem, FORMAT_IMAGE, (String) null, null);
+    }
+    if (labelItem == null) {
+      labelItem = SliceQuery.find(mSliceItem, FORMAT_TEXT, (String) null, null);
+    }
+
+    // Fill in anything we don't have with app data
+    if (iconItem != null) {
+      imageMode = SliceUtils.parseImageMode(iconItem);
+    }
+    if (context != null) {
+      return fallBackToAppData(context, labelItem, iconItem, imageMode, actionItem);
+    }
+    if (iconItem != null && actionItem != null && labelItem != null) {
+      return new SliceActionImpl(
+          actionItem.getAction(), iconItem.getIcon(), imageMode, labelItem.getText());
+    }
+    return null;
+  }
+
+  private SliceAction fallBackToAppData(
+      Context context, SliceItem textItem, SliceItem iconItem, int iconMode, SliceItem actionItem) {
+    SliceItem slice = SliceQuery.find(mSliceItem, FORMAT_SLICE, (String) null, null);
+    if (slice == null) {
+      // Can't make something out of nothing
+      return null;
+    }
+    Uri uri = slice.getSlice().getUri();
+    IconCompat shortcutIcon = iconItem != null ? iconItem.getIcon() : null;
+    CharSequence shortcutAction = textItem != null ? textItem.getText() : null;
+    if (context != null) {
+      PackageManager pm = context.getPackageManager();
+      ProviderInfo providerInfo = pm.resolveContentProvider(uri.getAuthority(), 0);
+      ApplicationInfo appInfo = providerInfo != null ? providerInfo.applicationInfo : null;
+      if (appInfo != null) {
+        if (shortcutIcon == null) {
+          Drawable icon = pm.getApplicationIcon(appInfo);
+          shortcutIcon = SliceViewUtil.createIconFromDrawable(icon);
+          iconMode = LARGE_IMAGE;
         }
-        mContentDescr = SliceQuery.findSubtype(item, FORMAT_TEXT, SUBTYPE_CONTENT_DESCRIPTION);
-    }
-
-    /**
-     * @return the slice item used to construct this content.
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    @Nullable
-    public SliceItem getSliceItem() {
-        return mSliceItem;
-    }
-
-    /**
-     * @return the accent color to use for this content or -1 if no color is set.
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public int getAccentColor() {
-        return mColorItem != null ? mColorItem.getInt() : -1;
-    }
-
-    /**
-     * @return the layout direction to use for this content or -1 if no direction set.
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public int getLayoutDir() {
-        return mLayoutDirItem != null ? resolveLayoutDirection(mLayoutDirItem.getInt()) : -1;
-    }
-
-    /**
-     * @return the content description to use for this row if set.
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    @Nullable
-    public CharSequence getContentDescription() {
-        return mContentDescr != null ? mContentDescr.getText() : null;
-    }
-
-    /**
-     * @return the row index of this content, or -1 if no row index is set.
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public int getRowIndex() { return mRowIndex; }
-
-    /**
-     * @return the desired height of this content based on the provided mode and context or the
-     * default height if context is null.
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public int getHeight(SliceStyle style, SliceViewPolicy policy) {
-        return 0;
-    }
-
-    /**
-     * @return whether this content is valid to display or not.
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    public boolean isValid() {
-        return mSliceItem != null;
-    }
-
-    /**
-     * @return the action that represents the shortcut.
-     */
-    // @RestrictTo(RestrictTo.Scope.LIBRARY)
-    @Nullable
-    public SliceAction getShortcut(@Nullable Context context) {
-        if (mSliceItem == null) {
-            // Can't make something from nothing
-            return null;
-        }
-        SliceItem iconItem = null;
-        SliceItem labelItem = null;
-        int imageMode = UNKNOWN_IMAGE;
-
-        // Prefer something properly hinted
-        String[] hints = new String[]{HINT_TITLE, HINT_SHORTCUT};
-        SliceItem actionItem =  SliceQuery.find(mSliceItem, FORMAT_ACTION, hints, null);
-        if (actionItem != null) {
-            iconItem = SliceQuery.find(actionItem, FORMAT_IMAGE, HINT_TITLE, null);
-            labelItem = SliceQuery.find(actionItem, FORMAT_TEXT, (String) null, null);
+        if (shortcutAction == null) {
+          shortcutAction = pm.getApplicationLabel(appInfo);
         }
         if (actionItem == null) {
-            // No hinted action; just use the first one
-            actionItem = SliceQuery.find(mSliceItem, FORMAT_ACTION, (String) null, null);
+          Intent launchIntent = pm.getLaunchIntentForPackage(appInfo.packageName);
+          if (launchIntent != null) {
+            actionItem =
+                new SliceItem(
+                    PendingIntent.getActivity(
+                        context, 0, launchIntent, PendingIntent.FLAG_IMMUTABLE),
+                    new Slice.Builder(uri).build(),
+                    FORMAT_ACTION,
+                    null /* subtype */,
+                    new String[] {});
+          }
         }
-
-        // First fallback: any hinted image and text
-        if (iconItem == null) {
-            iconItem = SliceQuery.find(mSliceItem, FORMAT_IMAGE, HINT_TITLE, null);
-        }
-        if (labelItem == null) {
-            labelItem = SliceQuery.find(mSliceItem, FORMAT_TEXT, HINT_TITLE, null);
-        }
-
-        // Second fallback: first image and text
-        if (iconItem == null) {
-            iconItem = SliceQuery.find(mSliceItem, FORMAT_IMAGE, (String) null, null);
-        }
-        if (labelItem == null) {
-            labelItem = SliceQuery.find(mSliceItem, FORMAT_TEXT, (String) null, null);
-        }
-
-        // Fill in anything we don't have with app data
-        if (iconItem != null) {
-            imageMode = SliceUtils.parseImageMode(iconItem);
-        }
-        if (context != null) {
-            return fallBackToAppData(context, labelItem, iconItem, imageMode, actionItem);
-        }
-        if (iconItem != null && actionItem != null && labelItem != null) {
-            return new SliceActionImpl(actionItem.getAction(), iconItem.getIcon(), imageMode,
-                    labelItem.getText());
-        }
-        return null;
+      }
     }
-
-    private SliceAction fallBackToAppData(Context context, SliceItem textItem, SliceItem iconItem,
-            int iconMode, SliceItem actionItem) {
-        SliceItem slice = SliceQuery.find(mSliceItem, FORMAT_SLICE, (String) null, null);
-        if (slice == null) {
-            // Can't make something out of nothing
-            return null;
-        }
-        Uri uri = slice.getSlice().getUri();
-        IconCompat shortcutIcon = iconItem != null ? iconItem.getIcon() : null;
-        CharSequence shortcutAction = textItem != null ? textItem.getText() : null;
-        if (context != null) {
-            PackageManager pm = context.getPackageManager();
-            ProviderInfo providerInfo = pm.resolveContentProvider(uri.getAuthority(), 0);
-            ApplicationInfo appInfo = providerInfo != null ? providerInfo.applicationInfo : null;
-            if (appInfo != null) {
-                if (shortcutIcon == null) {
-                    Drawable icon = pm.getApplicationIcon(appInfo);
-                    shortcutIcon = SliceViewUtil.createIconFromDrawable(icon);
-                    iconMode = LARGE_IMAGE;
-                }
-                if (shortcutAction == null) {
-                    shortcutAction = pm.getApplicationLabel(appInfo);
-                }
-                if (actionItem == null) {
-                    Intent launchIntent = pm.getLaunchIntentForPackage(appInfo.packageName);
-                    if (launchIntent != null) {
-                        actionItem = new SliceItem(
-                                PendingIntent.getActivity(context, 0, launchIntent,
-                                PendingIntent.FLAG_IMMUTABLE),
-                                new Slice.Builder(uri).build(), FORMAT_ACTION,
-                                null /* subtype */, new String[]{});
-                    }
-                }
-            }
-        }
-        if (actionItem == null) {
-            Intent intent = new Intent();
-            PendingIntent pi = PendingIntent.getActivity(context, 0, intent, 
-                PendingIntent.FLAG_IMMUTABLE);
-            actionItem = new SliceItem(pi, null, FORMAT_ACTION, null, null);
-        }
-        if (shortcutAction != null && shortcutIcon != null && actionItem != null) {
-            return new SliceActionImpl(actionItem.getAction(), shortcutIcon, iconMode,
-                    shortcutAction);
-        }
-        return null;
+    if (actionItem == null) {
+      Intent intent = new Intent();
+      PendingIntent pi =
+          PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
+      actionItem = new SliceItem(pi, null, FORMAT_ACTION, null, null);
     }
+    if (shortcutAction != null && shortcutIcon != null && actionItem != null) {
+      return new SliceActionImpl(actionItem.getAction(), shortcutIcon, iconMode, shortcutAction);
+    }
+    return null;
+  }
 }

@@ -17,31 +17,29 @@
 package com.android.tv.twopanelsettings.slices.compat.builders.impl;
 
 import androidx.annotation.NonNull;
-
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.builders.SelectionBuilder;
 
-/**
- */
+/** */
 // @RestrictTo(LIBRARY)
 // @Deprecated // Supported for TV
 public abstract class SelectionBuilderImpl extends TemplateBuilderImpl {
-    private final SelectionBuilder mSelectionBuilder;
+  private final SelectionBuilder mSelectionBuilder;
 
-    public SelectionBuilderImpl(Slice.Builder sliceBuilder,
-                                SelectionBuilder selectionBuilder) {
-        super(sliceBuilder, null);
-        mSelectionBuilder = selectionBuilder;
-    }
+  public SelectionBuilderImpl(Slice.Builder sliceBuilder, SelectionBuilder selectionBuilder) {
+    super(sliceBuilder, null);
+    mSelectionBuilder = selectionBuilder;
+  }
 
-    /**
-     * Applies the selection returned by {@link #getSelectionBuilder()} to sliceBuilder.
-     * @param sliceBuilder the {@link Slice.Builder} into which the selection will be built
-     */
-    @Override
-    public abstract void apply(@NonNull Slice.Builder sliceBuilder);
+  /**
+   * Applies the selection returned by {@link #getSelectionBuilder()} to sliceBuilder.
+   *
+   * @param sliceBuilder the {@link Slice.Builder} into which the selection will be built
+   */
+  @Override
+  public abstract void apply(@NonNull Slice.Builder sliceBuilder);
 
-    protected SelectionBuilder getSelectionBuilder() {
-        return mSelectionBuilder;
-    }
+  protected SelectionBuilder getSelectionBuilder() {
+    return mSelectionBuilder;
+  }
 }

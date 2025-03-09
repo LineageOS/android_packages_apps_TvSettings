@@ -21,8 +21,11 @@ import android.net.Uri;
 import android.util.ArrayMap;
 import android.util.Log;
 
+import androidx.lifecycle.Observer;
+
 import com.android.tv.twopanelsettings.slices.PreferenceSliceLiveData.SliceLiveDataImpl;
 import com.android.tv.twopanelsettings.slices.base.SliceManager;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 
 /**
@@ -58,6 +61,20 @@ public class ContextSingleton {
         }
 
         return mSliceMap.get(uri);
+    }
+
+    /**
+     * Register slice live data observer directly.
+     */
+    public void addSliceObserver(Context context, Uri uri, Observer<Slice> observer) {
+        getSliceLiveData(context, uri).observeForever(observer);
+    }
+
+    /**
+     * Unregister slice live data observer directly.
+     */
+    public void removeSliceObserver(Context context, Uri uri, Observer<Slice> observer) {
+        getSliceLiveData(context, uri).removeObserver(observer);
     }
 
     /**

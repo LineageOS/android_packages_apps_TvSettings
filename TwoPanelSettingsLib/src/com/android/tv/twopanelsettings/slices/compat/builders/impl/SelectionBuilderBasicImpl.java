@@ -22,46 +22,42 @@ import static android.app.slice.Slice.SUBTYPE_CONTENT_DESCRIPTION;
 import static android.app.slice.Slice.SUBTYPE_LAYOUT_DIRECTION;
 
 import androidx.annotation.NonNull;
-
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.builders.SelectionBuilder;
 
-/**
- */
+/** */
 // @RestrictTo(LIBRARY)
 // @Deprecated // Supported for TV
 public class SelectionBuilderBasicImpl extends SelectionBuilderImpl {
-    public SelectionBuilderBasicImpl(Slice.Builder sliceBuilder,
-                                     SelectionBuilder selectionBuilder) {
-        super(sliceBuilder, selectionBuilder);
+  public SelectionBuilderBasicImpl(Slice.Builder sliceBuilder, SelectionBuilder selectionBuilder) {
+    super(sliceBuilder, selectionBuilder);
+  }
+
+  @Override
+  public void apply(@NonNull Slice.Builder sliceBuilder) {
+    final SelectionBuilder selectionBuilder = getSelectionBuilder();
+
+    selectionBuilder.check();
+
+    // TODO: This should ideally be in ListBuilder, not here.
+    sliceBuilder.addHints(HINT_LIST_ITEM);
+
+    selectionBuilder.getPrimaryAction().setPrimaryAction(sliceBuilder);
+
+    if (selectionBuilder.getTitle() != null) {
+      sliceBuilder.addText(selectionBuilder.getTitle(), null, HINT_TITLE);
     }
 
-    @Override
-    public void apply(@NonNull Slice.Builder sliceBuilder) {
-        final SelectionBuilder selectionBuilder = getSelectionBuilder();
-
-        selectionBuilder.check();
-
-        // TODO: This should ideally be in ListBuilder, not here.
-        sliceBuilder.addHints(HINT_LIST_ITEM);
-
-        selectionBuilder.getPrimaryAction().setPrimaryAction(sliceBuilder);
-
-        if (selectionBuilder.getTitle() != null) {
-            sliceBuilder.addText(selectionBuilder.getTitle(), null, HINT_TITLE);
-        }
-
-        if (selectionBuilder.getSubtitle() != null) {
-            sliceBuilder.addText(selectionBuilder.getSubtitle(), null);
-        }
-
-        if (selectionBuilder.getContentDescription() != null) {
-            sliceBuilder.addText(selectionBuilder.getContentDescription(),
-                    SUBTYPE_CONTENT_DESCRIPTION);
-        }
-
-        if (selectionBuilder.getLayoutDirection() != -1) {
-            sliceBuilder.addInt(selectionBuilder.getLayoutDirection(), SUBTYPE_LAYOUT_DIRECTION);
-        }
+    if (selectionBuilder.getSubtitle() != null) {
+      sliceBuilder.addText(selectionBuilder.getSubtitle(), null);
     }
+
+    if (selectionBuilder.getContentDescription() != null) {
+      sliceBuilder.addText(selectionBuilder.getContentDescription(), SUBTYPE_CONTENT_DESCRIPTION);
+    }
+
+    if (selectionBuilder.getLayoutDirection() != -1) {
+      sliceBuilder.addInt(selectionBuilder.getLayoutDirection(), SUBTYPE_LAYOUT_DIRECTION);
+    }
+  }
 }
