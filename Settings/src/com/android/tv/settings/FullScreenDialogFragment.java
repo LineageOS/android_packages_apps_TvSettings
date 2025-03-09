@@ -49,6 +49,8 @@ public class FullScreenDialogFragment extends Fragment {
     private static final String ARGUMENT_HINT_TEXT = "ARGUMENT_HINT_TEXT";
     private static final String ARGUMENT_POSITIVE_BUTTON_LABEL = "ARGUMENT_POSITIVE_BUTTON_LABEL";
     private static final String ARGUMENT_NEGATIVE_BUTTON_LABEL = "ARGUMENT_NEGATIVE_BUTTON_LABEL";
+    private static final String ARGUMENT_INITIAL_FOCUS_ON_NEGATIVE_BUTTON =
+            "ARGUMENT_INITIAL_FOCUS_ON_NEGATIVE_BUTTON";
 
     /** Builder that sets up arguments to the dialog fragment */
     public static final class DialogBuilder {
@@ -97,6 +99,12 @@ public class FullScreenDialogFragment extends Fragment {
         /** Sets the label of the negative button */
         public DialogBuilder setNegativeButton(String negativeButtonLabel) {
             mArgs.putString(ARGUMENT_NEGATIVE_BUTTON_LABEL, negativeButtonLabel);
+            return this;
+        }
+
+        /** Sets initial focus to negative button */
+        public DialogBuilder setInitialFocusOnNegativeButton(boolean focusOnNegativeButton) {
+            mArgs.putBoolean(ARGUMENT_INITIAL_FOCUS_ON_NEGATIVE_BUTTON, focusOnNegativeButton);
             return this;
         }
 
@@ -170,6 +178,13 @@ public class FullScreenDialogFragment extends Fragment {
         negativeButton.setText(negativeButtonLabel);
         negativeButton.setOnClickListener((v) -> onButtonPressed(ACTION_NEGATIVE));
 
+        final boolean focusOnNegativeButton =
+                args.getBoolean(ARGUMENT_INITIAL_FOCUS_ON_NEGATIVE_BUTTON, false);
+        if (focusOnNegativeButton) {
+            negativeButton.requestFocus();
+        } else {
+            positiveButton.requestFocus();
+        }
 
         return view;
     }

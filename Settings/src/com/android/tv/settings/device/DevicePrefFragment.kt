@@ -32,7 +32,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.Keep
 import androidx.annotation.VisibleForTesting
-import androidx.leanback.preference.LeanbackSettingsFragmentCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -43,7 +42,7 @@ import com.android.tv.settings.LongClickPreference
 import com.android.tv.settings.MainFragment
 import com.android.tv.settings.R
 import com.android.tv.settings.SettingsPreferenceFragment
-import com.android.tv.settings.about.RebootConfirmFragment
+import com.android.tv.settings.about.RebootConfirmActivity
 import com.android.tv.settings.autofill.AutofillHelper
 import com.android.tv.settings.customization.CustomizationConstants
 import com.android.tv.settings.customization.Partner
@@ -57,7 +56,6 @@ import com.android.tv.settings.system.SecurityFragment
 import com.android.tv.settings.util.InstrumentationUtils
 import com.android.tv.settings.util.SliceUtils
 import com.android.tv.settings.util.SliceUtilsKt
-import com.android.tv.twopanelsettings.TwoPanelSettingsFragment
 import com.android.tv.twopanelsettings.slices.SlicePreference
 import kotlinx.coroutines.launch
 
@@ -138,7 +136,11 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
             KEY_HOME_SETTINGS -> InstrumentationUtils.logEntrySelected(TvSettingsEnums.PREFERENCES_HOME_SCREEN)
             KEY_GOOGLE_SETTINGS -> InstrumentationUtils.logEntrySelected(TvSettingsEnums.PREFERENCES_ASSISTANT)
             KEY_CAST_SETTINGS -> InstrumentationUtils.logEntrySelected(TvSettingsEnums.PREFERENCES_CHROMECAST_SHELL)
-            KEY_REBOOT -> InstrumentationUtils.logEntrySelected(TvSettingsEnums.SYSTEM_REBOOT)
+            KEY_REBOOT -> {
+                InstrumentationUtils.logEntrySelected(TvSettingsEnums.SYSTEM_REBOOT)
+                val intent = RebootConfirmActivity.getIntent(context, false)
+                startActivity(intent)
+            }
             KEY_SOUNDS_SWITCH ->
                 mSoundsSwitchPref?.let {
                 InstrumentationUtils.logToggleInteracted(TvSettingsEnums.DISPLAY_SOUND_SYSTEM_SOUNDS,
@@ -152,16 +154,8 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
     override fun onPreferenceLongClick(preference: Preference): Boolean {
         if (TextUtils.equals(preference.key, KEY_REBOOT)) {
             InstrumentationUtils.logEntrySelected(TvSettingsEnums.SYSTEM_REBOOT)
-            val fragment = callbackFragment
-            if (fragment is LeanbackSettingsFragmentCompat) {
-                fragment.startImmersiveFragment(
-                        RebootConfirmFragment.newInstance(true /* safeMode */))
-                return true
-            } else if (fragment is TwoPanelSettingsFragment) {
-                fragment.startImmersiveFragment(
-                        RebootConfirmFragment.newInstance(true /* safeMode */))
-                return true
-            }
+            val intent = RebootConfirmActivity.getIntent(context, true)
+            startActivity(intent)
         }
         return false
     }
