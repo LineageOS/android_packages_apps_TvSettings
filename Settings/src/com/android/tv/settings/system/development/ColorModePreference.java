@@ -40,6 +40,7 @@ public class ColorModePreference extends SwitchWithSoundPreference implements Di
     public ColorModePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         mDisplayManager = getContext().getSystemService(DisplayManager.class);
+        updateCurrentAndSupported();
     }
 
     public int getColorModeCount() {

@@ -36,6 +36,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.ContentObserver;
+import android.graphics.drawable.Drawable;
 import android.hardware.usb.UsbManager;
 import android.media.MediaRecorder.AudioSource;
 import android.net.ConnectivityManager;
@@ -63,6 +64,8 @@ import android.sysprop.DisplayProperties;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
+import android.util.TypedValue;
+import android.view.ContextThemeWrapper;
 import android.view.IWindowManager;
 import android.view.LayoutInflater;
 import android.view.ThreadedRenderer;
@@ -71,6 +74,7 @@ import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
@@ -88,6 +92,9 @@ import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.system.development.audio.AudioDebug;
 import com.android.tv.settings.system.development.audio.AudioMetrics;
 import com.android.tv.settings.system.development.audio.AudioReaderException;
+import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -99,7 +106,8 @@ import java.util.Optional;
  */
 public class DevelopmentFragment extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener,
-        EnableDevelopmentDialog.Callback, OemUnlockDialog.Callback, AdbDialog.Callback {
+        EnableDevelopmentDialog.Callback, OemUnlockDialog.Callback, AdbDialog.Callback,
+        SliceShard.Callbacks {
     private static final String TAG = "DevelopmentSettings";
 
     private static final String ENABLE_DEVELOPER = "development_settings_enable";
@@ -278,6 +286,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private boolean mUnavailable;
 
     private AudioDebug mAudioDebug;
+    private SliceShard mSliceShard;
 
     private ConnectivityManager mConnectivityManager;
 
@@ -287,6 +296,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private final Handler mHandler = new Handler(Looper.getMainLooper());
     private final NetworkCallback mNetworkCallback = new NetworkCallback();
+    private boolean mNetworkCallbackRegistered;
     private ContentObserver mToggleContentObserver;
 
     @Override
@@ -344,7 +354,44 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             return;
         }
 
-        addPreferencesFromResource(R.xml.development_prefs);
+        String sliceUri = getString(R.string.development_fragment_slice_uri);
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            addPreferencesFromResource(R.xml.development_prefs);
+            configurePreferences();
+            return;
+        }
+
+        addPreferencesFromResource(R.xml.settings_loading);
+        setTitle(getString(R.string.development_settings_title));
+
+        TypedValue themeTypedValue = new TypedValue();
+        requireContext().getTheme().resolveAttribute(
+                com.android.tv.twopanelsettings.R.attr.preferenceTheme,
+                themeTypedValue,
+                true);
+        Context prefContext = new ContextThemeWrapper(getActivity(), themeTypedValue.resourceId);
+        mSliceShard = new SliceShard(
+                this, sliceUri, this,
+                getString(R.string.development_settings_title), prefContext, true);
+    }
+
+    @Override
+    public void setSubtitle(@Nullable CharSequence subtitle) {}
+
+    @Override
+    public void setIcon(@Nullable Drawable icon) {}
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        if (slice == null) {
+            addPreferencesFromResource(R.xml.development_prefs);
+        }
+        configurePreferences();
+        onLoaded();
+        mSliceShard = null;
+    }
+
+    private void configurePreferences() {
         final PreferenceScreen preferenceScreen = getPreferenceScreen();
 
         // Don't add to prefs lists or it'll disable itself when switched off
@@ -566,7 +613,12 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
+        if (mSliceShard == null) {
+            onLoaded();
+        }
+    }
 
+    private void onLoaded() {
         if (mUnavailable) {
             return;
         }
@@ -606,12 +658,15 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             mPendingDialogKey = null;
         }
 
-        mConnectivityManager.registerNetworkCallback(
-                new NetworkRequest.Builder()
-                        .addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
-                        .addTransportType(NetworkCapabilities.TRANSPORT_ETHERNET)
-                        .build(),
-                mNetworkCallback);
+        if (isResumed()) {
+            mConnectivityManager.registerNetworkCallback(
+                    new NetworkRequest.Builder()
+                            .addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
+                            .addTransportType(NetworkCapabilities.TRANSPORT_ETHERNET)
+                            .build(),
+                    mNetworkCallback);
+            mNetworkCallbackRegistered = true;
+        }
     }
 
     @Override
@@ -622,7 +677,10 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
 
         mAudioDebug.cancelRecording();
-        mConnectivityManager.unregisterNetworkCallback(mNetworkCallback);
+        if (mNetworkCallbackRegistered) {
+            mConnectivityManager.unregisterNetworkCallback(mNetworkCallback);
+            mNetworkCallbackRegistered = false;
+        }
     }
 
     @Override
