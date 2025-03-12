@@ -15,10 +15,11 @@
   ~ limitations under the License
   -->
 
-<!-- Stubbed Font. Intended to be overrided by resource overlay. Not used unless defined in overlay   -->
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-        android:fontProviderAuthority="com.example.fontprovider.authority"
-        android:fontProviderPackage="com.example.fontprovider"
-        android:fontProviderQuery="example font"
-        android:fontProviderCerts="@array/font_certs">
-</font-family>
+<!-- Stubbed Font. Intended to be overridden by resource overlay. Not used unless defined in overlay   -->
+<font-family
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:fontProviderAuthority="@string/font_provider_authority"
+    app:fontProviderCerts="@array/font_certs"
+    app:fontProviderPackage="@string/font_provider_package"
+    app:fontProviderQuery="@string/font_provider_query_medium"
+    app:fontProviderSystemFontFamily="@string/font_provider_system_font_family_medium"/>
