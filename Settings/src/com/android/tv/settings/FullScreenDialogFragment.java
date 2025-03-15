@@ -24,8 +24,11 @@ import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -188,6 +191,44 @@ public class FullScreenDialogFragment extends Fragment {
 
         return view;
     }
+
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        Activity activity = getActivity();
+        if (activity != null) {
+            View rootView = activity.getWindow().getDecorView().getRootView();
+            Button positiveButton = view.findViewById(R.id.positive_button);
+
+            rootView
+                .getViewTreeObserver()
+                .addOnGlobalLayoutListener(
+                    new ViewTreeObserver.OnGlobalLayoutListener() {
+                        @Override
+                        public void onGlobalLayout() {
+                            positiveButton.requestFocus();
+
+                            // ScrollView is focusable by default (regardless of XML
+                            // value), so we have to set Scrollview to not be focusable
+                            // if it's not tall enough
+                            ScrollView scrollView =
+                                activity.requireViewById(R.id.dialog_message_scroll_view);
+                            boolean isScrollable =
+                                scrollView.canScrollVertically(/* direction= */ 1)
+                                                    || scrollView.canScrollVertically(
+                                                            /* direction= */ -1);
+                            if (!isScrollable) {
+                                scrollView.setFocusable(false);
+                            }
+                            rootView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                        }
+                    }
+                );
+        }
+    }
+
 
     /** Returns the dialog message. */
     public CharSequence getMessage() {

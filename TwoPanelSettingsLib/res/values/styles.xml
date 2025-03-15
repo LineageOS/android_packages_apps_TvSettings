@@ -16,10 +16,10 @@
 -->
 <resources>
     <style name="TextAppearance.TwoPanelPreference.TvTextAppearance" parent="android:TextAppearance">
-        <item name="android:fontFamily">@string/preference_title_text_font</item>
+        <item name="android:fontFamily">@font/brand_font</item>
     </style>
     <style name="TextAppearance.TwoPanelPreference.TvTextAppearanceMedium" parent="android:TextAppearance">
-        <item name="android:fontFamily">@string/preference_category_text_font</item>
+        <item name="android:fontFamily">@font/brand_font_medium</item>
     </style>
     <style name="TextAppearance.TwoPanelPreference.Title" parent="TextAppearance.TwoPanelPreference.TvTextAppearance">
         <item name="android:textSize">@dimen/tp_preference_decor_title_text_size</item>

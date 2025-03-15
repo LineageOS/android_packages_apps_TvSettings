@@ -40,16 +40,35 @@
         android:layout_width="0dp"
         android:layout_height="24dp" />
 
-    <TextView
-        android:id="@+id/dialog_message"
-        android:maxWidth="600dp"
-        android:textAlignment="center"
-        android:textColor="#DBE8EAED"
-        android:textSize="16sp"
-        android:lineSpacingExtra="5sp"
-        android:importantForAccessibility="yes"
+
+    <com.android.tv.settings.widget.MaxHeightScrollView
+        android:id="@+id/dialog_message_scroll_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:maxHeight="200dp"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/dialog_scroll_thumb"
+        android:focusable="true">
+        <LinearLayout
+            android:id="@+id/dialog_message_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/dialog_message"
+                android:maxWidth="600dp"
+                android:textAlignment="center"
+                android:textColor="#DBE8EAED"
+                android:textSize="16sp"
+                android:lineSpacingExtra="5sp"
+                android:importantForAccessibility="yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.android.tv.settings.widget.MaxHeightScrollView>
 
     <FrameLayout
         android:id="@+id/custom_view_container"
