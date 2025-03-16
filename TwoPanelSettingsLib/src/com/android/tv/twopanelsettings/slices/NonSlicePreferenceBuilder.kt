@@ -16,61 +16,120 @@
 package com.android.tv.twopanelsettings.slices
 
 import android.content.Context
+import android.content.ContextWrapper
 import android.os.Bundle
+import android.util.AttributeSet
+import android.util.Log
+import android.view.ContextThemeWrapper
 import androidx.preference.Preference
+import java.lang.reflect.Constructor
+import java.lang.reflect.Array
+import java.lang.reflect.Field
+import java.lang.reflect.Method
 import java.util.Locale
-import kotlin.reflect.KFunction
-import kotlin.reflect.full.isSubclassOf
-import kotlin.reflect.full.memberFunctions
 
 class NonSlicePreferenceBuilder private constructor(className: String) {
-    private val factory: KFunction<*>
-    private val setters: Map<String, KFunction<*>>
+    private val cls : Class<*> = Class.forName(className)
+    private val factory: Constructor<*>
+    private val setters: MutableMap<String, MutableList<Method>> = mutableMapOf()
 
     init {
-        val cls = Class.forName(className).kotlin
-
-        if (!cls.isSubclassOf(Preference::class)) {
+        if (!Preference::class.java.isAssignableFrom(cls)) {
             throw IllegalArgumentException("Not a preference")
         }
 
-        var contextConstructor: KFunction<*>? = null
-        for (cons in cls.constructors) {
-            if (cons.parameters.size == 1 && cons.parameters[0].type.classifier == Context::class) {
-                contextConstructor = cons
-                break
-            }
+        factory = try {
+            cls.getConstructor(Context::class.java)
+        } catch (e: Exception) {
+            cls.getConstructor(Context::class.java, AttributeSet::class.java)
         }
-        contextConstructor
-            ?: throw IllegalArgumentException("Class doesn't have context constructor")
+    }
 
-        factory = contextConstructor
-        setters = mutableMapOf()
-        for (function in cls.memberFunctions) {
-            if (function.name.startsWith("set")
-                && function.name.length > 3
-                && function.parameters.size == 2
-            ) {
-                val property = function.name.substring(3..3).lowercase(Locale.US)
-                    .plus(function.name.substring(4..<function.name.length))
-                setters[property] = function
-            }
+
+    fun create(context: Context, bundle: Bundle?) : Preference {
+        synchronized(this) {
+            return createInternal(context, bundle)
         }
     }
 
     @Suppress("DEPRECATION") // Types can not be determined statically.
-    fun create(context: Context, bundle: Bundle?): Preference {
-        val preference: Preference = factory.call(context) as Preference
+    private fun createInternal(context: Context, bundle: Bundle?): Preference {
+        val preference: Preference =
+            (if (factory.parameters.size == 1)
+                factory.newInstance(context) else factory.newInstance(context, null)) as Preference
         bundle ?: return preference
 
-        for (property in bundle.keySet()) {
-            setters[property]?.call(preference, bundle[property])
+        properties@ for (property in bundle.keySet()) {
+            val value = bundle[property]!!
+            val setterList = setters[property] ?: mutableListOf()
+            for (setter in setterList) {
+                try {
+                    setter.invoke(preference, value)
+                    continue@properties;
+                } catch (_: Exception) {
+                }
+            }
+
+            val setterName = "set" + property.substring(0..<1).uppercase(Locale.US) +
+                    property.substring(1)
+            val setter = findSetter(setterName, value::class.java)
+            if (setter != null) {
+                setter.invoke(preference, value)
+                setterList += setter
+                setters[property] = setterList
+            } else {
+                Log.e(
+                    TAG,
+                    "Can't find $setterName in ${cls.name} of type ${value::class.java.name}"
+                );
+            }
         }
 
         return preference
     }
 
+    private fun findSetter(name: String, type: Class<*>) : Method? {
+        try {
+            return cls.getMethod(name, type)
+        } catch (_: Exception) {}
+
+        if (type.isArray) {
+            val componentType = type.componentType
+            val baseSuperClass = componentType.superclass
+            if (baseSuperClass != null) {
+                findSetter(name, Array.newInstance(baseSuperClass, 0)::class.java)?.let { return it }
+            }
+
+            for (baseInterface in componentType.interfaces) {
+                findSetter(name, Array.newInstance(baseInterface, 0)::class.java)?.let { return it }
+            }
+
+            return null
+        }
+
+        try {
+            val primitiveField = type.getField("TYPE")
+            val primitiveType = primitiveField.get(null)
+            if (primitiveType is Class<*>) {
+                findSetter(name, primitiveType)?.let { return it }
+            }
+        } catch(_: Exception) {}
+
+        val superclass = type.superclass
+        if (superclass != null) {
+            findSetter(name, superclass)?.let { return it }
+        }
+
+        for (iface in type.interfaces) {
+            findSetter(name, iface)?.let { return it }
+        }
+
+        return null
+    }
+
     companion object {
+        private const val TAG = "NonSlicePreferenceBld"
+
         private val builders: MutableMap<String, NonSlicePreferenceBuilder> = mutableMapOf()
 
         fun forClassName(className: String): NonSlicePreferenceBuilder {
