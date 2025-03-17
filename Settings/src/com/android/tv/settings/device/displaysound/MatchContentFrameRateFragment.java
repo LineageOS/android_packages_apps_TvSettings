@@ -18,6 +18,10 @@ package com.android.tv.settings.device.displaysound;
 
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
 import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
+import static android.provider.Settings.Secure.MATCH_CONTENT_FRAME_RATE;
+import static android.provider.Settings.Secure.MATCH_CONTENT_FRAMERATE_ALWAYS;
+import static android.provider.Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER;
+import static android.provider.Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY;
 
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
@@ -118,15 +122,15 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
                 int newValue;
                 switch (key) {
                     case KEY_MATCH_CONTENT_FRAME_RATE_SEAMLESS: {
-                        newValue = Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY;
+                        newValue = MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY;
                         break;
                     }
                     case KEY_MATCH_CONTENT_FRAME_RATE_NON_SEAMLESS: {
-                        newValue = Settings.Secure.MATCH_CONTENT_FRAMERATE_ALWAYS;
+                        newValue = MATCH_CONTENT_FRAMERATE_ALWAYS;
                         break;
                     }
                     case KEY_MATCH_CONTENT_FRAME_RATE_NEVER: {
-                        newValue = Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER;
+                        newValue = MATCH_CONTENT_FRAMERATE_NEVER;
                         break;
                     }
                     default:
@@ -139,7 +143,7 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
                 if (newValue != oldValue) {
                     Settings.Secure.putInt(
                             getContext().getContentResolver(),
-                            Settings.Secure.MATCH_CONTENT_FRAME_RATE,
+                            MATCH_CONTENT_FRAME_RATE,
                             newValue);
                     logToggleInteracted(toggleIdFromSetting(oldValue), false);
                     logToggleInteracted(toggleIdFromSetting(newValue), true);
@@ -161,23 +165,35 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
 
     private int getCurrentSettingValue() {
         int defaultSetting = isSeamlessSwitchingSupported()
-                ? Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY
-                : Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER;
-        return Settings.Secure.getInt(
-                getContext().getContentResolver(),
-                Settings.Secure.MATCH_CONTENT_FRAME_RATE, defaultSetting);
+                ? MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY
+                : MATCH_CONTENT_FRAMERATE_NEVER;
+        int setting = Settings.Secure.getInt(
+                getContext().getContentResolver(), MATCH_CONTENT_FRAME_RATE,
+                defaultSetting);
+
+        // Older versions of Android default to SEAMLESS_ONLY, even if the
+        // device doesn't support seamless switching. In such cases, the setting
+        // should be changed to NEVER.
+        if (!isSeamlessSwitchingSupported()
+                && setting == MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY) {
+            Settings.Secure.putInt(
+                    getContext().getContentResolver(), MATCH_CONTENT_FRAME_RATE,
+                    MATCH_CONTENT_FRAMERATE_NEVER);
+            return MATCH_CONTENT_FRAMERATE_NEVER;
+        }
+        return setting;
     }
 
     private String preferenceKeyFromSetting() {
         int matchContentSetting = getCurrentSettingValue();
         switch (matchContentSetting) {
-            case (Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER): {
+            case (MATCH_CONTENT_FRAMERATE_NEVER): {
                 return KEY_MATCH_CONTENT_FRAME_RATE_NEVER;
             }
-            case (Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY): {
+            case (MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY): {
                 return KEY_MATCH_CONTENT_FRAME_RATE_SEAMLESS;
             }
-            case (Settings.Secure.MATCH_CONTENT_FRAMERATE_ALWAYS): {
+            case (MATCH_CONTENT_FRAMERATE_ALWAYS): {
                 return KEY_MATCH_CONTENT_FRAME_RATE_NON_SEAMLESS;
             }
             default:
@@ -188,11 +204,11 @@ public class MatchContentFrameRateFragment extends SettingsPreferenceFragment {
 
     private int toggleIdFromSetting(int matchContentSetting) {
         switch (matchContentSetting) {
-            case Settings.Secure.MATCH_CONTENT_FRAMERATE_NEVER:
+            case MATCH_CONTENT_FRAMERATE_NEVER:
                 return TvSettingsEnums.DISPLAY_SOUND_MATCH_CONTENT_FRAMERATE_NEVER;
-            case Settings.Secure.MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY:
+            case MATCH_CONTENT_FRAMERATE_SEAMLESSS_ONLY:
                 return TvSettingsEnums.DISPLAY_SOUND_MATCH_CONTENT_FRAMERATE_SEAMLESS;
-            case Settings.Secure.MATCH_CONTENT_FRAMERATE_ALWAYS:
+            case MATCH_CONTENT_FRAMERATE_ALWAYS:
                 return TvSettingsEnums.DISPLAY_SOUND_MATCH_CONTENT_FRAMERATE_NON_SEAMLESS;
             default:
                 throw new IllegalArgumentException("Unknown match content frame rate pref value");
