@@ -71,7 +71,7 @@
     <!-- Title for main screen preference for hotwording [CHAR LIMIT=50] -->
     <string name="hotwording_title">\"OK Google\" detection</string>
     <!-- Summary for main screen preference for hotwording [CHAR LIMIT=50] -->
-    <string name="hotwording_summary">Talk to Google Assistant anytime</string>
+    <string name="hotwording_summary">Talk to voice assistant anytime</string>
     <!-- Talkback Screen reader service title [CHAR LIMIT=50] -->
     <string name="screen_reader_service_title">Talkback\u0020(Screen reader)</string>
     <!-- Summary for Talkback Screen reader service [CHAR LIMIT=NONE] -->
@@ -138,8 +138,8 @@
     <string name="privacy_account_settings_category">Account Settings</string>
     <!-- Title for Device Lock privacy settings [CHAR LIMIT=50] -->
     <string name="privacy_device_lock_settings_title">Device Lock</string>
-    <!-- Title for Google Assistant privacy settings [CHAR LIMIT=50] -->
-    <string name="privacy_assistant_settings_title">Google Assistant</string>
+    <!-- Title for voice assistant privacy settings [CHAR LIMIT=50] -->
+    <string name="privacy_assistant_settings_title">Voice Assistant</string>
     <!-- Title for purchases-related privacy settings [CHAR LIMIT=50] -->
     <string name="privacy_purchases_settings_title">Payment &amp; Purchases</string>
     <!-- Title for application-related privacy settings category [CHAR LIMIT=50] -->
@@ -751,7 +751,7 @@
     <!-- The summary for the confirmation dialog when users try to turn off bluetooth.
         [CHAR LIMIT=240]-->
     <string name="bluetooth_toggle_confirmation_dialog_summary">You will not be able to
-        access Google Assistant from your remote while Bluetooth is off.</string>
+        access voice assistant from your remote while Bluetooth is off.</string>
     <!-- The title on button that starts pairing flow. [CHAR LIMIT=40] -->
     <string name="bluetooth_pair_accessory">Pair accessory</string>
     <!-- The category title for connected/paired accessories. [CHAR LIMIT=30] -->
@@ -1687,24 +1687,24 @@
     <!-- Message shown in an info panel on the side when the microphone toggle is selected. [CHAR LIMIT=NONE] -->
     <string name="mic_toggle_info_content">When turned on, all apps and services that are allowed to
         use the microphone will be able to access it.\n\nWhen turned off, no apps or services will
-        be able to access the microphone. But you may still be able to talk to your Google Assistant
-        by pressing the Assistant button on your remote.\n\nAudio devices using custom protocols for
+        be able to access the microphone. But you may still be able to talk to your voice assistant
+        by pressing the assistant button on your remote.\n\nAudio devices using custom protocols for
         communicating with the TV may not be affected by this setting.
     </string>
 
     <!-- Title of the info panel that is shown on the side when the microphone on the remote toggle is selected and enabled. [CHAR LIMIT=60]-->
     <string name="mic_remote_toggle_on_info_title">Microphone enabled on remote</string>
     <!-- Message shown in an info panel on the side when the microphone toggle is selected and enabled. [CHAR LIMIT=NONE] -->
-    <string name="mic_remote_toggle_on_info_content">Google Assistant is able to access the
-        microphone on your remote. You will be able to talk to your Assistant by pressing the Google
-        Assistant button on your remote.
+    <string name="mic_remote_toggle_on_info_content">Voice assistant is able to access the
+        microphone on your remote. You will be able to talk to your assistant by pressing the
+        assistant button on your remote.
     </string>
 
     <!-- Title of the info panel that is shown on the side when the microphone on the remote toggle is selected and disabled. [CHAR LIMIT=60]-->
     <string name="mic_remote_toggle_off_info_title">Microphone disabled on remote</string>
     <!-- Message shown in an info panel on the side when the microphone toggle is selected and disabled. [CHAR LIMIT=NONE] -->
-    <string name="mic_remote_toggle_off_info_content">You will not be able to talk to your Google
-        Assistant using your remote. To be able to use the Google Assistant button, enable
+    <string name="mic_remote_toggle_off_info_content">You will not be able to talk to your voice
+        assistant using your remote. To be able to use the voice assistant button, enable
         microphone access.
     </string>
 
@@ -2520,7 +2520,7 @@
     <!-- The subtitle of the "Limit network connection in standby" toggle. [CHAR LIMIT=60] -->
     <string name="limit_network_in_standby_toggle_summary">Uses less energy in standby mode</string>
     <!-- The info text for the "Limit network connection in standby" toggle. [CHAR LIMIT=NONE] -->
-    <string name="limit_network_in_standby_toggle_info">Your TV will be disconnected from your network when in standby mode, except to receive automatic updates. This may decrease your TV’s energy use, though it also means you may not be able to use functions like Cast and Google Assistant while in standby.</string>
+    <string name="limit_network_in_standby_toggle_info">Your TV will be disconnected from your network when in standby mode, except to receive automatic updates. This may decrease your TV’s energy use, though it also means you may not be able to use functions like Cast and voice assistant while in standby.</string>
     <!-- The title of the confirmation dialog when disabling "Limit network connection in standby". [CHAR LIMIT=60] -->
     <string name="limit_network_in_standby_confirm_title">Allow network connection in standby</string>
     <!-- The message of the confirmation dialog when disabling "Limit network connection in standby". [CHAR LIMIT=NONE] -->
@@ -3025,7 +3025,7 @@
     <!-- Title for preference which when clicked lets the user configure volume change -->
     <string name="volume_change_settings_title">%1$s volume</string>
     <!-- Subtitle for volume change during unselect -->
-    <string name="volume_change_subtitle_unselect">You can control the Assistant volume on %1$s speaker</string>
+    <string name="volume_change_subtitle_unselect">You can control the assistant volume on %1$s speaker</string>
     <!-- Subtitle for volume change during select -->
     <string name="volume_change_subtitle_select">Only affects volume on %1$s device , not on TV</string>
 
