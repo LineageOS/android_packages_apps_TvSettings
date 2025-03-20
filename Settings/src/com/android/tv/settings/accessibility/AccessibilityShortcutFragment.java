@@ -39,6 +39,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.List;
+import java.util.prefs.Preferences;
 
 /**
  * Fragment for configuring the accessibility shortcut
@@ -49,6 +50,9 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
     private static final String KEY_SERVICE = "service";
     private static final String ACCESSIBILITY_SHORTCUT_STORE = "accessibility_shortcut";
     private static final String LAST_SHORTCUT_SERVICE = "last_shortcut_service";
+    private static final String CHOOSE_TIMES = "choose_times";
+    private static final String FIRST_VIEW = "first_view";
+    private static String updatedComponent;
 
     private SharedPreferences mSharedPref;
     @Override
@@ -96,9 +100,18 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
         }
     }
     private void setAccessibilityShortcutEnabled(boolean enabled) {
+        //Because the first time the shortcut is viewed,
+        //getLastShortcutService() is null, resulting in the
+        //ACCESSIBILITY_SHORTCUT_TARGET_SERVICE value not being put correctly the first time,
+        //so isFirstView is set to differentiate it.
+        SharedPreferences chooseTimes = getContext().getSharedPreferences(CHOOSE_TIMES, 
+                Context.MODE_PRIVATE);
+        boolean isFirstView = chooseTimes.getBoolean(FIRST_VIEW, true);
         if (enabled) {
-            String updatedComponent = getCurrentService(getContext());
+            updatedComponent = isFirstView ? getCurrentService(getContext()):
+                    getLastShortcutService();
             if (!TextUtils.isEmpty(updatedComponent)) {
+                chooseTimes.edit().putBoolean(FIRST_VIEW, false).apply();
                 Settings.Secure.putString(getContext().getContentResolver(),
                         Settings.Secure.ACCESSIBILITY_SHORTCUT_TARGET_SERVICE, updatedComponent);
                 updateServicePrefSummary();
