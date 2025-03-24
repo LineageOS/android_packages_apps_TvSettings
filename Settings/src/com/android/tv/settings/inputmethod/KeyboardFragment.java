@@ -32,6 +32,7 @@ import android.view.inputmethod.InputMethodInfo;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -46,6 +47,8 @@ import com.android.tv.settings.library.util.ThreadUtils;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +60,7 @@ import java.util.Set;
  */
 @Keep
 public class KeyboardFragment extends SettingsPreferenceFragment implements
-        InputManager.InputDeviceListener {
+        InputManager.InputDeviceListener, SliceShard.Callbacks {
     private static final String TAG = "KeyboardFragment";
     private static final boolean DEBUG = false;
 
@@ -90,6 +93,8 @@ public class KeyboardFragment extends SettingsPreferenceFragment implements
 
     private InputManager mIm;
 
+    private SliceShard mSliceShard;
+
     /**
      * @return New fragment instance
      */
@@ -106,8 +111,44 @@ public class KeyboardFragment extends SettingsPreferenceFragment implements
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.keyboard, null);
+        var sliceUri = getString(R.string.keyboard_fragment_slice_uri);
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(R.xml.keyboard, null);
+            configurePreferences();
+            return;
+        }
 
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.system_keyboard_autofill),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(R.xml.keyboard, null);
+        }
+        configurePreferences();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mSliceShard == null) {
+            updateUi();
+        }
+        mIm.registerInputDeviceListener(this, null);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mIm.unregisterInputDeviceListener(this);
+    }
+
+    private void configurePreferences() {
         findPreference(KEY_CURRENT_KEYBOARD).setOnPreferenceChangeListener(
                 (preference, newValue) -> {
                     logEntrySelected(TvSettingsEnums.SYSTEM_KEYBOARD_CURRENT_KEYBOARD);
@@ -116,19 +157,6 @@ public class KeyboardFragment extends SettingsPreferenceFragment implements
                 });
 
         updateUi();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        updateUi();
-        mIm.registerInputDeviceListener(this, null);
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        mIm.unregisterInputDeviceListener(this);
     }
 
     @VisibleForTesting
@@ -215,11 +243,13 @@ public class KeyboardFragment extends SettingsPreferenceFragment implements
     }
 
     void scheduleUpdatePhysicalKeyboards(Context context) {
-        ThreadUtils.postOnBackgroundThread(() -> {
-            final List<PhysicalKeyboardHelper.DeviceInfo> newPhysicalKeyboards =
-                    PhysicalKeyboardHelper.getPhysicalKeyboards(context);
-            ThreadUtils.postOnMainThread(() -> updatePhysicalKeyboards(newPhysicalKeyboards));
-        });
+        if (mSliceShard == null) {
+            ThreadUtils.postOnBackgroundThread(() -> {
+                final List<PhysicalKeyboardHelper.DeviceInfo> newPhysicalKeyboards =
+                        PhysicalKeyboardHelper.getPhysicalKeyboards(context);
+                ThreadUtils.postOnMainThread(() -> updatePhysicalKeyboards(newPhysicalKeyboards));
+            });
+        }
     }
 
     private void updatePhysicalKeyboards(

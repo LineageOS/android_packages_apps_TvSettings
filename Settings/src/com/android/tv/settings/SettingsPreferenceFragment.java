@@ -30,7 +30,9 @@ import android.annotation.CallSuper;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -133,6 +135,29 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
         }
     }
 
+    public void setSubtitle(@Nullable CharSequence subtitle) {
+        getPreferenceScreen().setSummary(subtitle);
+        if (getView() == null) {
+            return;
+        }
+
+        // Title is set in LeanbackPreferenceCompat parent class
+        // Subtitle is set here because base leanbackpreference doesn't have a summary.
+        TextView subtitleView = requireView().findViewById(R.id.DecorSubtitleId);
+        if (subtitleView == null) {
+            return;
+        }
+
+        if (!TextUtils.isEmpty(subtitle)) {
+            subtitleView.setText(subtitle);
+            subtitleView.setVisibility(View.VISIBLE);
+        } else {
+            subtitleView.setVisibility(View.GONE);
+        }
+    }
+
+    public void setIcon(@Nullable Drawable icon) {}
+
     // While the default of relying on text language to determine gravity works well in general,
     // some page titles (e.g., SSID as Wifi details page title) are dynamic and can be in different
     // languages. This can cause some complex gravity issues. For example, Wifi details page in RTL
@@ -157,15 +182,7 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
                 if (decor != null) {
                     decor.setOutlineProvider(null);
                 }
-                // Title is set in LeanbackPreferenceCompat parent class
-                // Subtitle is set here because base leanbackpreference doesn't have a summary.
-                CharSequence summary = getPreferenceScreen().getSummary();
-                final TextView decorSummary =
-                    view == null ? null : (TextView) view.findViewById(R.id.DecorSubtitleId);
-                if (summary != null && decorSummary != null) {
-                      decorSummary.setText(summary);
-                      decorSummary.setVisibility(View.VISIBLE);
-                }
+                setSubtitle(getPreferenceScreen().getSummary());
             } else {
                 // We only want to set the title in this location for one-panel settings.
                 // TwoPanelSettings behavior is handled moveToPanel in TwoPanelSettingsFragment

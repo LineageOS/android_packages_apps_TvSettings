@@ -33,6 +33,7 @@ import android.text.TextUtils;
 import android.text.format.DateFormat;
 
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
@@ -41,6 +42,9 @@ import com.android.settingslib.datetime.ZoneGetter;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RestrictedPreferenceAdapter;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -50,7 +54,7 @@ import java.util.Date;
  */
 @Keep
 public class DateTimeFragment extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, SliceShard.Callbacks {
 
     private static final String KEY_AUTO_DATE_TIME = "auto_date_time";
     private static final String KEY_SET_DATE = "set_date";
@@ -72,6 +76,7 @@ public class DateTimeFragment extends SettingsPreferenceFragment implements
     private RestrictedPreferenceAdapter<Preference> mTimePref;
     private RestrictedPreferenceAdapter<Preference> mTimeZone;
     private Preference mTime24Pref;
+    private SliceShard mSliceShard;
 
     private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
@@ -96,8 +101,32 @@ public class DateTimeFragment extends SettingsPreferenceFragment implements
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.date_time, null);
+        var sliceUri = getString(R.string.date_time_fragment_slice_uri);
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(R.xml.date_time, null);
+            configurePreferences();
+            return;
+        }
 
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.system_date_time),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(R.xml.date_time, null);
+        }
+        configurePreferences();
+        if (isResumed()) {
+            updatePreferences();
+        }
+    }
+
+    private void configurePreferences() {
         final boolean isRestricted = SecurityFragment.isRestrictedProfileInEffect(getContext());
 
         Preference datePref = findPreference(KEY_SET_DATE);
@@ -133,8 +162,9 @@ public class DateTimeFragment extends SettingsPreferenceFragment implements
     @Override
     public void onResume() {
         super.onResume();
-
-        ((SwitchPreference)mTime24Pref).setChecked(is24Hour());
+        if (mSliceShard == null) {
+            updatePreferences();
+        }
 
         // Register for time ticks and other reasons for time change
         IntentFilter filter = new IntentFilter();
@@ -142,7 +172,10 @@ public class DateTimeFragment extends SettingsPreferenceFragment implements
         filter.addAction(Intent.ACTION_TIME_CHANGED);
         filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
         getActivity().registerReceiver(mIntentReceiver, filter, null, null);
+    }
 
+    private void updatePreferences() {
+        ((SwitchPreference)mTime24Pref).setChecked(is24Hour());
         updateTimeAndDateDisplay(getActivity());
         updateTimeDateEnable();
     }

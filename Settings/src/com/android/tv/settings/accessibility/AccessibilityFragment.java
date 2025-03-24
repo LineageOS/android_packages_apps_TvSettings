@@ -33,6 +33,7 @@ import android.view.accessibility.AccessibilityManager;
 import android.util.ArrayMap;
 
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceCategory;
@@ -46,6 +47,10 @@ import com.android.settingslib.accessibility.AccessibilityUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SliceFragment;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 import java.util.List;
 import java.util.Set;
@@ -55,7 +60,8 @@ import java.util.Map;
  * Fragment for Accessibility settings
  */
 @Keep
-public class AccessibilityFragment extends SettingsPreferenceFragment {
+public class AccessibilityFragment extends SettingsPreferenceFragment
+        implements SliceShard.Callbacks {
     private static final String TOGGLE_HIGH_TEXT_CONTRAST_KEY = "toggle_high_text_contrast";
     private static final String TOGGLE_AUDIO_DESCRIPTION_KEY = "toggle_audio_description";
     private static final String TOGGLE_BOLD_TEXT_KEY = "toggle_bold_text";
@@ -64,6 +70,8 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
     private static final String ACCESSIBILITY_SHORTCUT_KEY = "accessibility_shortcut";
     private static final int BOLD_TEXT_ADJUSTMENT = 500;
     private static final int FIRST_PREFERENCE_IN_CATEGORY_INDEX = -1;
+
+    private SliceShard mSliceShard;
 
     PreferenceCategory mServicesPrefCategory;
     PreferenceCategory mControlsPrefCategory;
@@ -116,7 +124,9 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        refreshServices();
+        if (mSliceShard == null) {
+            refreshServices();
+        }
     }
 
     @Override
@@ -131,8 +141,29 @@ public class AccessibilityFragment extends SettingsPreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.accessibility, null);
+        var sliceUri = getString(R.string.accessibility_fragment_slice_uri);
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(R.xml.accessibility, null);
+            configurePreferences();
+            return;
+        }
 
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.accessibility_category_title),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(R.xml.accessibility, null);
+        }
+        configurePreferences();
+    }
+
+    private void configurePreferences() {
         final TwoStatePreference highContrastPreference =
                 (TwoStatePreference) findPreference(TOGGLE_HIGH_TEXT_CONTRAST_KEY);
         highContrastPreference.setChecked(Settings.Secure.getInt(getContext().getContentResolver(),
