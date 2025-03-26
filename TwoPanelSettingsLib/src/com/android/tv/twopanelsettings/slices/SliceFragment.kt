@@ -112,7 +112,7 @@ open class SliceFragment : SettingsPreferenceFragment(),
     }
 
     private fun showProgressBar() {
-        val progressBar = view?.findViewById<View>(R.id.progress_bar)
+        val progressBar = view?.requireViewById<View>(R.id.tv_settings_progress_bar)
         if (progressBar != null) {
             progressBar.bringToFront()
             progressBar.visibility = View.VISIBLE
@@ -120,7 +120,7 @@ open class SliceFragment : SettingsPreferenceFragment(),
     }
 
     private fun hideProgressBar() {
-        val progressBar = view?.findViewById<View>(R.id.progress_bar)
+        val progressBar = view?.requireViewById<View>(R.id.tv_settings_progress_bar)
         if (progressBar != null) {
             progressBar.visibility = View.GONE
         }
