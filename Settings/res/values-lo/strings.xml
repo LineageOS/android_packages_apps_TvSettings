@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"ການຕັ້ງຄ່າທົ່ວໄປ"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"ປິດການແຈ້ງເຕືອນ"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"ການກວດພົບຄຳສັ່ງ \"OK Google\""</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"ລົມກັບຜູ້ຊ່ວຍ Google ໄດ້ທຸກເວລາ"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"ລົມກັບຜູ້ຊ່ວຍເຫຼືອທາງສຽງໄດ້ທຸກເວລາ"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (ໂປຣແກຣມອ່ານໜ້າຈໍ)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack ແມ່ນຄຸນສົມບັດການຊ່ວຍເຂົ້າເຖິງຂອງໂປຣແກຣມອ່ານໜ້າຈໍທີ່ຊ່ວຍເຫຼືອຜູ້ໃຊ້ທີ່ມີຄວາມບົກພ່ອງທາງການເບິ່ງເຫັນໂດຍການອ່ານອອກສຽງຂໍ້ຄວາມຢູ່ໜ້າຈໍ, ລາຍການເມນູ ແລະ ອົງປະກອບອື່ນໆ. ນອກຈາກນີ້, ຍັງສາມາດຕັ້ງຄ່າຄຸນສົມບັດດັ່ງກ່າວໃຫ້ໃຊ້ກັບທາງລັດສຳລັບການຊ່ວຍເຂົ້າເຖິງໄດ້ນຳ."</string>
     <string name="header_category_device" msgid="3023893663454705969">"ອຸປະກອນ"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"ການຕັ້ງຄ່າອຸປະກອນ"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"ການຕັ້ງຄ່າບັນຊີ"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"ການລັອກອຸປະກອນ"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"ຜູ້ຊ່ວຍ Google"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"ຜູ້ຊ່ວຍເຫຼືອທາງສຽງ"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"ການຈ່າຍເງິນ ແລະ ການສັ່ງຊື້"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"ການຕັ້ງຄ່າແອັບ"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"ສະຖານທີ່, ກນນຳໃຊ້ ແລະ ການວິນິໄສ, ໂຄສະນາ"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"ຣີໂໝດ ແລະ ອຸປະກອນເສີມ"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ປິດ Bluetooth"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"ທ່ານຈະບໍ່ສາມາດໃຊ້ຜູ້ຊ່ວຍ Google ໄດ້ຈາກຣີໂໝດຂອງທ່ານໃນເວລາປິດ Bluetooth ໄວ້."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"ທ່ານຈະບໍ່ສາມາດເຂົ້າເຖິງຜູ້ຊ່ວຍເຫຼືອທາງສຽງຈາກຣີໂໝດຂອງທ່ານໄດ້ໃນຂະນະທີ່ Bluetooth ປິດຢູ່."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ຈັບຄູ່ອຸປະກອນເສີມ"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"ອຸປະກອນເສີມ"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"ຣີໂໝດ"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"ບລັອກສິດເຂົ້າເຖິງກ້ອງຖ່າຍຮູບແລ້ວ"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"ເພື່ອປົດລັອກ, ໃຫ້ເລື່ອນສະວິດຄວາມເປັນສ່ວນຕົວຢູ່ອຸປະກອນຂອງທ່ານໄປໃສ່ຕຳແໜ່ງເປີດຢູ່ກ້ອງຖ່າຍຮູບເພື່ອອະນຸຍາດສິດເຂົ້າເຖິງກ້ອງຖ່າຍຮູບ."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"ການເຂົ້າເຖິງໄມໂຄຣໂຟນ: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"ເມື່ອເປີດໃຊ້, ແອັບ ແລະ ບໍລິການທັງໝົດທີ່ໄດ້ຮັບການອະນຸຍາດໃຫ້ໃຊ້ໄມໂຄຣໂຟນແມ່ນຈະສາມາດເຂົ້າເຖິງມັນໄດ້.\n\nເມື່ອປິດໃຊ້, ຈະບໍ່ມີແອັບ ຫຼື ບໍລິການໃດທີ່ສາມາດເຂົ້າເຖິງໄມໂຄຣໂຟນໄດ້. ແຕ່ທ່ານອາດຍັງສາມາດເວົ້າກັບຜູ້ຊ່ວຍ Google ຂອງທ່ານໄດ້ໂດຍການກົດປຸ່ມຜູ້ຊ່ວຍຢູ່ຣີໂໝດຂອງທ່ານ.\n\nເຄື່ອງສຽງທີ່ໃຊ້ໂປຣໂຕຄໍແບບກຳນົດເອງໃນການສື່ສານກັບໂທລະທັດອາດບໍ່ໄດ້ຮັບຜົນກະທົບຈາກການຕັ້ງຄ່ານີ້."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"ເມື່ອເປີດໄວ້, ແອັບ ແລະ ບໍລິການທັງໝົດທີ່ໄດ້ຮັບອະນຸຍາດໃຫ້ໃຊ້ໄມໂຄຣໂຟນກໍຈະສາມາດເຂົ້າເຖິງໄດ້.\n\nເມື່ອປິດໄວ້, ຈະບໍ່ມີແອັບ ຫຼື ບໍລິການໃດທີ່ສາມາດເຂົ້າເຖິງໄມໂຄຣໂຟນໄດ້. ແຕ່ທ່ານອາດຍັງຄົງສາມາດລົມກັບຜູ້ຊ່ວຍເຫຼືອທາງສຽງຂອງທ່ານໄດ້ໂດຍກົດປຸ່ມຜູ້ຊ່ວຍຢູ່ຣີໂໝດຂອງທ່ານ.\n\nເຄື່ອງສຽງເຊິ່ງໃຊ້ໂປຣໂຕຄໍທີ່ກຳນົດເອງໃນການສື່ສານກັບໂທລະທັດອາດບໍ່ໄດ້ຮັບຜົນກະທົບຈາກການຕັ້ງຄ່ານີ້."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"ໄມໂຄຣໂຟນຖືກເປີດການນຳໃຊ້ຢູ່ຣີໂໝດ"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"ຜູ້ຊ່ວຍ Google ສາມາດເຂົ້າເຖິງໄມໂຄຣໂຟນຢູ່ຣີໂໝດຂອງທ່ານໄດ້. ທ່ານຈະສາມາດລົມກັບຜູ້ຊ່ວຍຂອງທ່ານໄດ້ໂດຍການກົດປຸ່ມຜູ້ຊ່ວຍ Google ຢູ່ຣີໂໝດຂອງທ່ານ."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"ຜູ້ຊ່ວຍເຫຼືອທາງສຽງສາມາດເຂົ້າເຖິງໄມໂຄຣໂຟນຢູ່ຣີໂໝດຂອງທ່ານໄດ້. ທ່ານຈະສາມາດລົມກັບຜູ້ຊ່ວຍຂອງທ່ານໄດ້ໂດຍກົດປຸ່ມຜູ້ຊ່ວຍຢູ່ຣີໂໝດຂອງທ່ານ."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"ໄມໂຄຣໂຟນຖືກປິດການນຳໃຊ້ຢູ່ຣີໂໝດ"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"ທ່ານຈະບໍ່ສາມາດເວົ້າກັບຜູ້ຊ່ວຍ Google ຂອງທ່ານໂດຍໃຊ້ຣີໂໝດຂອງທ່ານໄດ້. ເພື່ອໃຫ້ສາມາດໃຊ້ປຸ່ມຜູ້ຊ່ວຍ Google ໄດ້, ໃຫ້ເປີດການນຳໃຊ້ສິດເຂົ້າເຖິງໄມໂຄຣໂຟນ."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"ທ່ານຈະບໍ່ສາມາດລົມກັບຜູ້ຊ່ວຍເຫຼືອທາງສຽງຂອງທ່ານໂດຍໃຊ້ຣີໂໝດຂອງທ່ານໄດ້. ເພື່ອໃຫ້ສາມາດໃຊ້ປຸ່ມຜູ້ຊ່ວຍເຫຼືອທາງສຽງໄດ້, ກະລຸນາເປີດການນຳໃຊ້ສິດເຂົ້າເຖິງໄມໂຄຣໂຟນ."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"ການເຂົ້າເຖິງກ້ອງຖ່າຍຮູບ: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"ເມື່ອເປີດໃຊ້ແລ້ວ, ແອັບ ແລະ ບໍລິການທັງໝົດທີ່ມີການອະນຸຍາດຈະສາມາດເຂົ້າເຖິງກ້ອງຖ່າຍຮູບໃດກໍຕາມຢູ່ອຸປະກອນນີ້ໄດ້.\n\nອຸປະກອນຕໍ່ພ່ວງກ້ອງຖ່າຍຮູບທີ່ມີໂປຣໂຕຄໍກຳນົດເອງຈະບໍ່ໄດ້ຮັບຜົນກະທົບຈາກການຕັ້ງຄ່ານີ້."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"ເປີດ"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"ໂມງຈັບເວລາ \"ເມື່ອເບິ່ງ\" ຕ້ອງຍາວກວ່າໂມງຈັບເວລາ \"ເມື່ອບໍ່ເຄື່ອນໄຫວ\""</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"ຈຳກັດການເຊື່ອມຕໍ່ເຄືອຂ່າຍໃນໂໝດສະແຕນບາຍ"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"ໃຊ້ພະລັງງານໜ້ອຍລົງໃນໂໝດສະແຕນບາຍ"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"ໂທລະທັດຂອງທ່ານຈະຕັດການເຊື່ອມຕໍ່ຈາກເຄືອຂ່າຍເມື່ອຢູ່ໃນໂໝດສະແຕນບາຍ, ຍົກເວັ້ນເພື່ອຮັບອັບເດດອັດຕະໂນມັດ. ນີ້ອາດຫຼຸດການໃຊ້ພະລັງງານຂອງໂທລະທັດທ່ານ, ເຖິງແມ່ນວ່າມັນຈະໝາຍເຖິງວ່າທ່ານຈະບໍ່ສາມາດໃຊ້ຄຸນສົມບັດຕ່າງໆໄດ້ ເຊັ່ນ: ການສົ່ງສັນຍານ ແລະ ຜູ້ຊ່ວຍ Google ໃນເວລາຢູ່ໃນໂໝດສະແຕນບາຍ."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"ໂທລະທັດຂອງທ່ານຈະຍົກເລີກການເຊື່ອມຕໍ່ຈາກເຄືອຂ່າຍຂອງທ່ານເມື່ອຢູ່ໃນໂໝດສະແຕນບາຍ, ຍົກເວັ້ນໃນກໍລະນີທີ່ຕ້ອງຮັບການອັບເດດອັດຕະໂນມັດ. ການດຳເນີນການນີ້ອາດຊ່ວຍຫຼຸດການໃຊ້ພະລັງງານຂອງໂທລະທັດຂອງທ່ານໄດ້, ແຕ່ເມື່ອຢູ່ໃນໂໝດສະແຕນບາຍ, ທ່ານກໍອາດຈະບໍ່ສາມາດໃຊ້ຟັງຊັນຕ່າງໆ ເຊັ່ນ: ການສົ່ງສັນຍານ ແລະ ຜູ້ຊ່ວຍເຫຼືອທາງສຽງໄດ້ເຊັ່ນກັນ."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"ອະນຸຍາດການເຊື່ອມຕໍ່ເຄືອຂ່າຍໃນໂໝດສະແຕນບາຍ"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"ການອະນຸຍາດການເຊື່ອມຕໍ່ເຄືອຂ່າຍໃນໂໝດສະແຕນບາຍຈະເພີ່ມການໃຊ້ພະລັງງານສະແຕນບາຍຫຼາຍຂຶ້ນ."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"ບໍ່ມີບັນຊີໃດຈັດເກັບຂໍ້ມູນສຳຮອງໄວ້ໃນ​ປະ​ຈຸ​ບັນ"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"ການສ່ອງສະຫວ່າງຂອງປຸ່ມເມື່ອກົດຣີໂໝດຄວບຄຸມແຕ່ລະເທື່ອ."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"ເມື່ອໃຊ້ຣີໂໝດ Google TV ທີ່ຮອງຮັບ, ການກົດປຸ່ມເທິງຣີໂໝດຈະເປັນການເປີດການນຳໃຊ້ແສງພື້ນຫຼັງ."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"ລະດັບສຽງຂອງ %1$s"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"ທ່ານສາມາດຄວບຄຸມລະດັບສຽງຜູ້ຊ່ວຍຢູ່ລຳໂພງ %1$s ໄດ້"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"ທ່ານສາມາດຄວບຄຸມລະດັບສຽງຜູ້ຊ່ວຍຢູ່ລຳໂພງ %1$s ໄດ້"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"ມີຜົນກັບລະດັບສຽງຢູ່ອຸປະກອນ %1$s ເທົ່ານັ້ນ, ບໍ່ມີຜົນກັບໂທລະທັດ"</string>
 </resources>

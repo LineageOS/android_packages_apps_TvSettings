@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Configuración general"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Descartar sugerencia"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Detección de \"Hey Google\""</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Habla con el Asistente de Google cuando quieras"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"Habla con el asistente de voz en cualquier momento"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (lector de pantalla)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack es un lector de pantalla que brinda funciones de accesibilidad y ayuda a los usuarios con discapacidades visuales leyendo en voz alta de texto en pantalla, elementos de menú y otros elementos. También se puede configurar para usar con la combinación de accesibilidad."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Dispositivo"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Configuración del dispositivo"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Configuración de la cuenta"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Bloqueo del dispositivo"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Asistente de Google"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Asistente de voz"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Pago y compras"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Configuración de apps"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Ubicación, Uso y Diagnóstico, Anuncios"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Control remoto y accesorios"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Desactivar Bluetooth"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"No podrás acceder a Asistente de Google desde el control remoto si el Bluetooth está desactivado."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"No podrás acceder al asistente de voz desde el control remoto si el Bluetooth está desactivado."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Vincular accesorio"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Accesorios"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Control remoto"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Acceso a la cámara bloqueado"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Para desbloquearlo, mueve el interruptor de privacidad del dispositivo a la posición de cámara activada para permitir el acceso a la cámara."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Acceso al micrófono: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Cuando esté activado, las apps y servicios que pueden usar el micrófono podrán acceder a él.\n\nSi se desactiva, las apps y los servicios no podrán acceder al micrófono. Pero podrías seguir hablando con Asistente de Google si presionas el botón del Asistente en el control remoto.\n\nEsta configuración no afecta los dispositivos de audio que usan protocolos personalizados para comunicarse con la TV."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Cuando esté activado, todas las apps y servicios que puedan utilizar el micrófono podrán acceder a él.\n\nSi se desactiva, las apps y los servicios no podrán acceder al micrófono. Sin embargo, es posible que puedas seguir hablando con el asistente de voz si presionas el botón del asistente en el control remoto.\n\nLos dispositivos de audio que utilizan protocolos personalizados para comunicarse con la TV pueden no verse afectados por esta configuración."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Se habilitó el micrófono en el control remoto"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"El Asistente de Google puede acceder al micrófono en el control remoto. Si presionas el botón del Asistente de Google en el control remoto, podrás hablar con el Asistente."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"El asistente de voz puede acceder al micrófono en el control remoto. Si presionas el botón del asistente de voz en el control remoto, podrás hablar con tu asistente."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"El micrófono está inhabilitado en el control remoto"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"No podrás hablar con Asistente de Google desde el control remoto. Para poder usar el botón del Asistente de Google, habilita el acceso al micrófono."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"No podrás hablar con el asistente de voz desde el control remoto. Para poder usar el botón del asistente de voz, habilita el acceso al micrófono."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Acceso a la cámara: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Cuando se activa, todos los servicios y las apps con los permisos correspondientes pueden acceder a cualquiera de las cámaras de este dispositivo.\n\nLos periféricos de la cámara con protocolo personalizado no se verán afectados por este parámetro de configuración."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Sí"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"El temporizador de \"Cuando esté mirando\" debe ser más largo que el de \"Cuando entre en inactividad\""</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limita conexión de red en modo en espera"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Consume menos energía en modo en espera"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"La TV se desconectará de la red cuando esté en modo en espera, salvo para recibir actualizaciones automáticas. Puede que así se reduzca el consumo de energía de la TV, aunque también es posible que, mientras esté en modo en espera, algunas funciones, como Transmitir y Asistente de Google, no estén disponibles."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"La TV se desconectará de la red cuando esté en modo en espera, salvo para recibir actualizaciones automáticas. Puede que así se reduzca el consumo de energía de la TV, aunque también es posible que, mientras esté en modo en espera, algunas funciones, como Transmitir y asistente de voz, no estén disponibles."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Permite la conexión de red en modo en espera"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Si permites la conexión de red en modo en espera, aumentará el consumo de energía en ese modo."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"En este momento, ninguna cuenta almacena copias de seguridad de los datos."</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Iluminación de los botones del control remoto cuando se presionan."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"Se puede activar la retroiluminación cuando se presiona un botón en controles remotos de Google TV compatibles."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Volumen %1$s"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Puedes controlar el volumen de Asistente en la bocina %1$s"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Puedes controlar el volumen del asistente en la bocina %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Solo se modificará el volumen del dispositivo %1$s; no se cambiará el de la TV"</string>
 </resources>

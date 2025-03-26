@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"全般設定"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"候補を閉じる"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"「OK Google」の検出"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Google アシスタントにいつでも話しかけてください"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"音声アシスタントにいつでも話しかけてください"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack（スクリーン リーダー）"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack は、画面上のテキストやメニュー項目などの要素を読み上げることで視覚障がいのあるユーザーを補助するスクリーン リーダー機能です。ユーザー補助のショートカットと併用するよう設定することもできます。"</string>
     <string name="header_category_device" msgid="3023893663454705969">"デバイス"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"デバイスの設定"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"アカウント設定"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"デバイスのロック"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google アシスタント"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"音声アシスタント"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"お支払いとご購入"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"アプリの設定"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"位置情報、使用状況と診断、広告"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"リモコンとアクセサリー"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Bluetooth を OFF にする"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Bluetooth が OFF の場合は、リモコンから Google アシスタントにアクセスできません。"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Bluetooth が OFF の場合は、リモコンから音声アシスタントにアクセスできません。"</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"アクセサリーのペア設定"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"アクセサリー"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"リモコン"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"カメラへのアクセスがブロックされています"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"ブロックを解除するには、デバイスのプライバシー スイッチをカメラオンの位置に移動し、カメラへのアクセスを許可してください。"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"マイクへのアクセス: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"ON にすると、マイクの使用を許可されたすべてのアプリとサービスがマイクにアクセスできます。\n\nOFF にすると、すべてのアプリとサービスがマイクにアクセスできません。ただしリモコンの Google アシスタント ボタンを押して Google アシスタントに話しかけることはできます。\n\n独自のプロトコルを使ってテレビと通信するオーディオ機器は、この設定に影響を受けません。"</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"ON にすると、マイクの使用を許可されたすべてのアプリとサービスがマイクにアクセスできるようになります。\n\nOFF にすると、すべてのアプリとサービスがマイクにアクセスできなくなります。ただし、リモコンのアシスタント ボタンを押して音声アシスタントに話しかけることはできます。\n\n独自のプロトコルを使ってテレビと通信するオーディオ機器は、この設定の影響を受けません。"</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"リモコンのマイクが有効です"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google アシスタントはリモコンのマイクにアクセスできます。リモコンの Google アシスタント ボタンを押してアシスタントに話しかけることができます。"</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"音声アシスタントはリモコンのマイクにアクセスできます。リモコンのアシスタント ボタンを押してアシスタントに話しかけることができます。"</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"リモコンのマイクが無効です"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"リモコンを使用して Google アシスタントに話しかけることができなくなります。Google アシスタント ボタンを使用できるようにするには、マイクへのアクセスを有効にしてください。"</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"リモコンを使用して音声アシスタントに話しかけることができなくなります。音声アシスタント ボタンを使用できるようにするには、マイクへのアクセスを有効にしてください。"</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"カメラへのアクセス: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"ON にすると、権限を持つすべてのアプリとサービスがこのデバイスのカメラにアクセスできるようになります。\n\nカスタムのプロトコルが設定されたカメラ周辺機器はこの設定の影響を受けません。"</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"ON"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"[視聴しているとき] タイマーは [動作していないとき] タイマーより長くしてください"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"スタンバイ時のネットワーク接続を制限"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"スタンバイ モード時のエネルギー使用量を節約します"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"スタンバイ モード時は、自動アップデートを受信する場合を除き、テレビとネットワークの接続を解除します。スタンバイ時のテレビのエネルギー使用量を減らせますが、キャストや Google アシスタントなどの機能を利用することはできなくなります。"</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"スタンバイ モード時は、自動アップデートを受信する場合を除き、テレビとネットワークの接続を解除します。スタンバイ時のテレビのエネルギー使用量を減らせますが、キャストや音声アシスタントなどの機能を利用することはできなくなります。"</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"スタンバイ時のネットワーク接続を許可"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"スタンバイ時のネットワーク接続を許可すると、スタンバイ時のエネルギー使用量が増えます。"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"現在バックアップデータを保存しているアカウントはありません"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"リモコンのボタンを押すたびに点灯します。"</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"サポートされている Google TV リモコンでは、リモコンのボタンを押すとバックライトが点灯します。"</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s の音量"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s スピーカーのアシスタントの音量を調整できます"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s スピーカーのアシスタントの音量を調整できます"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"音量が調整されるのはテレビではなく、%1$s デバイスのみです"</string>
 </resources>
