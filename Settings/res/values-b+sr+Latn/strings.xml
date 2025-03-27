@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Opšta podešavanja"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Odbacite predlog"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Otkrivanje fraze „Ok Google“"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Razgovarajte sa Google pomoćnikom u bilo kom tren."</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"Razgovarajte sa glasovnim pomoćnikom bilo kada"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (čitač ekrana)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack je funkcija pristupačnosti čitača ekrana koja pomaže korisnicima sa oštećenjem vida tako što naglas čita tekst na ekranu, stavke menija i druge elemente. Može da se podesi i tako da se koristi sa prečicom za pristupačnost."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Uređaj"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Podešavanja uređaja"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Podešavanja naloga"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Zaključavanje uređaja"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google pomoćnik"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Glasovni pomoćnik"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Plaćanje i kupovine"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Podešavanja aplikacije"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Lokacija, korišćenje i dijagnostika, oglasi"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Daljinski upravljači i dodatna oprema"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Isključite Bluetooth"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Nećete moći da pristupate Google pomoćniku sa daljinskog upravljača dok je Bluetooth isključen."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Nećete moći da pristupate glasovnom pomoćniku pomoću daljinskog upravljača dok je Bluetooth isključen."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Upari dodatnu opremu"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Dodaci"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Daljinski upravljač"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Pristup kameri je blokiran"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Da biste odblokirali, pomerite prekidač za privatnost na uređaju na poziciju uključeno za kameru kako biste omogućili pristup kameri."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Pristup mikrofonu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Kada je mikrofon uključen, sve aplikacije i usluge kojima je dozvoljeno da koriste mikrofon moći će da mu pristupaju .\n\nKada je isključen, nijedna aplikacija ni usluga neće moći da pristupa mikrofonu. Ali možda ćete i dalje moći da razgovarate sa Google pomoćnikom pritiskom na dugme za Pomoćnik na daljinskom upravljaču.\n\nOvo podešavanje možda neće uticati na audio uređaje koji koriste prilagođene protokole za komuniciranje sa TV-om."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Kada je mikrofon uključen, mogu da mu pristupaju sve aplikacije i usluge kojima je dozvoljeno da ga koriste.\n\nKada je isključen, nijedna aplikacija ni usluga ne može da pristupa mikrofonu. Ipak ćete možda moći da razgovarate sa glasovnim pomoćnikom kada pritisnete dugme za pomoćnik na daljinskom upravljaču.\n\nOvo podešavanje možda neće uticati na audio uređaje koji koriste prilagođene protokole za komuniciranje sa TV-om."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Mikrofon je omogućen na daljinskom upravljaču"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google može da pristupa mikrofonu na daljinskom upravljaču. Moći ćete da razgovarate sa Pomoćnikom pritiskom na dugme za Google pomoćnik na daljinskom upravljaču."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"Glasovni pomoćnik može da pristupa mikrofonu na daljinskom upravljaču. Moći ćete da razgovarate sa pomoćnikom kada pritisnete dugme za pomoćnik na daljinskom upravljaču."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Mikrofon je onemogućen na daljinskog"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"Nećete moći da razgovarate sa Google pomoćnikom preko daljinskog upravljača. Da biste mogli da koristite dugme Google pomoćnik, omogućite pristup mikrofonu."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Nećete moći da razgovarate sa glasovnim pomoćnikom pomoću daljinskog upravljača. Da biste mogli da koristite dugme za glasovni pomoćnik, omogućite pristup mikrofonu."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Pristup kameri: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Kada je uključeno, sve aplikacije i usluge sa dozvolom mogu da pristupaju svakoj kameri na ovom uređaju.\n\nOvo podešavanje ne utiče na periferne uređaje kamere sa prilagođenim protokolom."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Uključeno"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"Tajmer „Tokom gledanja“ mora da bude duži od tajmera „Tokom neaktivnosti“"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Ograniči mrežnu vezu u režimu mirovanja"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Koristi manje energije u režimu mirovanja"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Veza između TV-a i mreže će se prekinuti u režimu mirovanja, osim za dobijanje automatskih ažuriranja. To može da smanji potrošnju energije TV-a, ali takođe znači da nećete moći da koristite funkcije kao što su Prebacivanje i Google pomoćnik u režimu mirovanja."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"Veza između TV-a i mreže se prekida u režimu mirovanja, osim za prijem automatskih ažuriranja. To može da smanji potrošnju energije TV-a, ali takođe znači da u režimu mirovanja nećete moći da koristite funkcije kao što su Cast i glasovni pomoćnik."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Omogućite mrežnu vezu u režimu mirovanja"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Omogućavanje mrežne veze u režimu mirovanja će povećati potrošnju energije u režimu mirovanja."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Trenutno nijedan nalog ne čuva rezervne kopije podataka"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Dugmad na daljinskom upravljaču svetli za svaki pritisak."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"Na podržanim daljinskim upravljačima za Google TV, pritiskanje dugmeta na daljinskom aktivira pozadinsko osvetljenje."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Jačina zvuka: %1$s"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Možete da kontrolišete jačinu zvuka za Pomoćnik na %1$s zvučniku"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Možete da kontrolišete jačinu zvuka pomoćnika na %1$s zvučniku"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Utiče na zvuk samo na %1$s uređaju, ne na TV-u"</string>
 </resources>
