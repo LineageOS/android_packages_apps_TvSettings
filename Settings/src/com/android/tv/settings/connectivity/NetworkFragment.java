@@ -49,6 +49,7 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
@@ -69,9 +70,12 @@ import com.android.tv.settings.basic.BasicModeFeatureProvider;
 import com.android.tv.settings.connectivity.util.ThreadNetworkHelper;
 import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.settings.widget.AccessPointPreference;
 import com.android.tv.settings.widget.CustomContentDescriptionSwitchPreference;
 import com.android.tv.settings.widget.TvAccessPointPreference;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.wifitrackerlib.WifiEntry;
 
 import java.util.ArrayList;
@@ -88,7 +92,7 @@ import java.util.Set;
 @Keep
 public class NetworkFragment extends SettingsPreferenceFragment implements
         ConnectivityListener.Listener, ConnectivityListener.WifiNetworkListener,
-        AccessPoint.AccessPointListener {
+        AccessPoint.AccessPointListener, SliceShard.Callbacks {
 
     private static final String TAG = "NetworkFragment";
     private static final String KEY_WIFI_ENABLE = "wifi_enable";
@@ -209,6 +213,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         }
     };
     private boolean mIsWifiHardwarePresent;
+    private SliceShard mSliceShard;
 
     public static NetworkFragment newInstance() {
         return new NetworkFragment();
@@ -297,8 +302,36 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         getPreferenceManager().setPreferenceComparisonCallback(
                 new PreferenceManager.SimplePreferenceComparisonCallback());
-        setPreferencesFromResource(getPreferenceScreenResId(), null);
+        var sliceUri = getString(R.string.network_fragment_slice_uri);
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(getPreferenceScreenResId(), null);
+            maybeConfigurePreferences();
+            return;
+        }
 
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.connectivity_network_category_title),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(getPreferenceScreenResId(), null);
+        }
+        maybeConfigurePreferences();
+    }
+
+    private boolean isSliceLoading() {
+        return mSliceShard != null;
+    }
+
+    private void maybeConfigurePreferences() {
+        if (!isAdded() || isSliceLoading()) {
+            return;
+        }
         mEnableWifiPref = (TwoStatePreference) findPreference(KEY_WIFI_ENABLE);
         mWifiNetworksCategory = (CollapsibleCategory) findPreference(KEY_WIFI_LIST);
         mCollapsePref = findPreference(KEY_WIFI_COLLAPSE);
@@ -325,7 +358,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             networkDiagnosticsPref.setVisible(false);
         }
 
-        final UserManager userManager = UserManager.get(getContext());
+        final UserManager userManager = UserManager.get(requireContext());
 
         mAddPref.checkRestrictionAndSetDisabled(UserManager.DISALLOW_CONFIG_WIFI);
         mAddEasyConnectPref.checkRestrictionAndSetDisabled(UserManager.DISALLOW_CONFIG_WIFI);
@@ -348,6 +381,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 mAddEasyConnectPref.setEnabled(false);
             }
         }
+
+        updateConnectivity();
     }
 
     private Intent getRestrictWifiHookIntent(){
@@ -433,7 +468,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     }
 
     private void updateConnectivity() {
-        if (!isAdded()) {
+        if (!isAdded() || isSliceLoading()) {
             return;
         }
 
@@ -507,7 +542,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     }
 
     private void updateWifiList() {
-        if (!isAdded()) {
+        if (!isAdded() || isSliceLoading()) {
             return;
         }
 
@@ -641,14 +676,18 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     public void onAccessPointChanged(AccessPoint accessPoint) {
         RestrictedPreferenceAdapter<TvAccessPointPreference> restrictedPref =
                 mPrefMap.get(accessPoint.getWifiEntry());
-        restrictedPref.updatePreference(AccessPointPreference::refresh);
+        if (restrictedPref != null) {
+            restrictedPref.updatePreference(AccessPointPreference::refresh);
+        }
     }
 
     @Override
     public void onLevelChanged(AccessPoint accessPoint) {
         RestrictedPreferenceAdapter<TvAccessPointPreference> restrictedPref =
                 mPrefMap.get(accessPoint.getWifiEntry());
-        restrictedPref.updatePreference(AccessPointPreference::onLevelChanged);
+        if (restrictedPref != null) {
+            restrictedPref.updatePreference(AccessPointPreference::onLevelChanged);
+        }
     }
 
     @Override

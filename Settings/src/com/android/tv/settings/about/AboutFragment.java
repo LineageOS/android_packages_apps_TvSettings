@@ -64,7 +64,10 @@ import com.android.tv.settings.customization.Partner;
 import com.android.tv.settings.customization.PartnerPreferencesMerger;
 import com.android.tv.settings.name.DeviceManager;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -75,7 +78,7 @@ import java.util.stream.Collectors;
  * The "About" screen in TV settings.
  */
 @Keep
-public class AboutFragment extends SettingsPreferenceFragment {
+public class AboutFragment extends SettingsPreferenceFragment implements SliceShard.Callbacks {
     private static final String TAG = "AboutFragment";
 
     private static final String KEY_MANUAL = "manual";
@@ -108,6 +111,7 @@ public class AboutFragment extends SettingsPreferenceFragment {
     Toast mDevHitToast;
 
     private UserManager mUm;
+    private SliceShard mSliceShard;
 
     private final BroadcastReceiver mDeviceNameReceiver = new BroadcastReceiver() {
         @Override
@@ -143,7 +147,29 @@ public class AboutFragment extends SettingsPreferenceFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(getPreferenceScreenResId(), null);
+        var sliceUri = getString(R.string.about_fragment_slice_uri);
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(getPreferenceScreenResId(), null);
+            configurePreferences();
+            return;
+        }
+
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.about_preference),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(getPreferenceScreenResId(), null);
+        }
+        configurePreferences();
+    }
+
+    private void configurePreferences() {
         final PreferenceScreen screen = getPreferenceScreen();
         if (Partner.getInstance(getContext()).isCustomizationPackageProvided()) {
             PartnerPreferencesMerger.mergePreferences(
@@ -286,7 +312,9 @@ public class AboutFragment extends SettingsPreferenceFragment {
     @Override
     public void onStart() {
         super.onStart();
-        refreshDeviceName();
+        if (mSliceShard == null) {
+            refreshDeviceName();
+        }
 
         LocalBroadcastManager.getInstance(getContext()).registerReceiver(mDeviceNameReceiver,
                 new IntentFilter(DeviceManager.ACTION_DEVICE_NAME_UPDATE));

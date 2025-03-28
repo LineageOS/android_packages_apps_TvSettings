@@ -57,16 +57,21 @@ import com.android.tv.settings.util.InstrumentationUtils
 import com.android.tv.settings.util.SliceUtils
 import com.android.tv.settings.util.SliceUtilsKt
 import com.android.tv.twopanelsettings.slices.SlicePreference
+import com.android.tv.twopanelsettings.slices.SliceShard
+import com.android.tv.twopanelsettings.slices.compat.Slice
 import kotlinx.coroutines.launch
 
 /**
  * The "Device Preferences" screen in TV settings.
  */
 @Keep
-class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnLongClickListener {
+class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnLongClickListener,
+    SliceShard.Callbacks {
     private var mSoundsSwitchPref: TwoStatePreference? = null
     private var mInputSettingNeeded = false
     private var mAudioManager: AudioManager? = null
+    private var mSliceShard: SliceShard? = null
+
     private val preferenceScreenResId: Int
         get() = if (isRestricted) {
             R.xml.device_restricted
@@ -77,6 +82,9 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
             FlavorUtils.FLAVOR_VENDOR -> R.xml.device_vendor
             else -> R.xml.device
         }
+    private val preferenceSliceResource: Int
+        get() = if (isRestricted) R.string.device_fragment_restricted_slice_uri
+                    else R.string.device_fragment_slice_uri
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val manager = requireContext().getSystemService(
@@ -91,25 +99,53 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(preferenceScreenResId, null)
+        val sliceUri = getString(preferenceSliceResource)
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(preferenceScreenResId, null)
+            return
+        }
+
+        setPreferencesFromResource(R.xml.settings_loading, null)
+        mSliceShard = SliceShard(this, sliceUri, this,
+            getString(R.string.device_pref_category_title),
+            SliceShard.getPrefContext(requireContext()), true)
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View {
+        if (mSliceShard == null) {
+            configurePreferences()
+        }
+        return checkNotNull(super.onCreateView(inflater, container, savedInstanceState))
+    }
+
+    override fun onSlice(slice: Slice?) {
+        mSliceShard = null
+        if (slice == null) {
+            setPreferencesFromResource(preferenceScreenResId, null)
+        }
+
+        if (view != null) {
+            configurePreferences()
+        }
+    }
+
+    private fun configurePreferences() {
         if (Partner.getInstance(context).isCustomizationPackageProvided) {
             PartnerPreferencesMerger.mergePreferences(
-                    context,
-                    preferenceScreen,
-                    CustomizationConstants.DEVICE_SCREEN
+                context,
+                preferenceScreen,
+                CustomizationConstants.DEVICE_SCREEN
             )
         }
         mSoundsSwitchPref = findPreference(KEY_SOUNDS_SWITCH)
-    }
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
         mSoundsSwitchPref?.isChecked = soundEffectsEnabled
         findPreference<Preference>(KEY_INPUTS)?.isVisible = mInputSettingNeeded
         findPreference<LongClickPreference>(KEY_REBOOT)?.setLongClickListener(this)
         PrivacyToggle.MIC_TOGGLE.preparePreferenceWithSensorFragment(context,
-                findPreference(KEY_MIC), SensorFragment.TOGGLE_EXTRA)
+            findPreference(KEY_MIC), SensorFragment.TOGGLE_EXTRA)
         PrivacyToggle.CAMERA_TOGGLE.preparePreferenceWithSensorFragment(context,
-                findPreference(KEY_CAMERA), SensorFragment.TOGGLE_EXTRA)
+            findPreference(KEY_CAMERA), SensorFragment.TOGGLE_EXTRA)
         updateDeveloperOptions()
         updateSounds()
         updateGoogleSettings()
@@ -128,7 +164,6 @@ class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnL
                 updateAssistantBroadcastSlice()
             }
         }
-        return checkNotNull(super.onCreateView(inflater, container, savedInstanceState))
     }
 
     override fun onPreferenceTreeClick(preference: Preference): Boolean {

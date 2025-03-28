@@ -767,12 +767,6 @@ open class MainFragment : PreferenceControllerFragment(),
         return TvSettingsEnums.TV_SETTINGS_ROOT
     }
 
-    override fun setSubtitle(subtitle: CharSequence?) {
-    }
-
-    override fun setIcon(icon: Drawable?) {
-    }
-
     companion object {
         private const val TAG = "MainFragment"
         private const val KEY_BASIC_MODE_SUGGESTION = "basic_mode_suggestion"

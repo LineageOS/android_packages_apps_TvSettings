@@ -34,6 +34,8 @@ import android.os.Looper
 import android.os.Parcelable
 import android.text.TextUtils
 import android.util.Log
+import android.util.TypedValue
+import android.view.ContextThemeWrapper
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
@@ -788,6 +790,22 @@ class SliceShard(
         private const val KEY_SCREEN_ICON: String = "slice_key_screen_icon"
         private const val KEY_LAST_PREFERENCE: String = "slice_key_last_preference"
         private const val KEY_URI_STRING: String = "slice_key_uri_string"
+
+        fun getPrefContext(context: Context) : Context {
+            val themeTypedValue = TypedValue()
+            context.theme.resolveAttribute(
+                com.android.tv.twopanelsettings.R.attr.preferenceTheme,
+                themeTypedValue,
+                true
+            )
+
+            var parentContext = context
+            while (parentContext is ContextThemeWrapper && parentContext !is Activity) {
+                parentContext = parentContext.baseContext
+            }
+
+            return ContextThemeWrapper(parentContext, themeTypedValue.resourceId)
+        }
 
         private fun isSamePreference(oldPref: Preference?, newPref: Preference?): Boolean {
             if (oldPref == null || newPref == null) {
