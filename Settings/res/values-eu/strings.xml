@@ -38,8 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Ezarpen orokorrak"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Baztertu iradokizuna"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"Hey Google\" hautematea"</string>
-    <!-- no translation found for hotwording_summary (172570751256156407) -->
-    <skip />
+    <string name="hotwording_summary" msgid="172570751256156407">"Hitz egin ahozko laguntzarekin edonoiz"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (pantaila-irakurgailua)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"Pantaila irakurtzeko erabilerraztasun-eginbide bat da TalkBack. Ikusmen-akatsak dituzten erabiltzaileentzat lagungarria da, pantailako testua, menuetako aukerak eta bestelako elementuak ozen irakurtzen dituelako. Halaber, erabilerraztasun-lasterbideekin erabiltzeko konfigura daiteke."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Gailua"</string>
@@ -64,8 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Gailuaren ezarpenak"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Kontuaren ezarpenak"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Gailuaren blokeoa"</string>
-    <!-- no translation found for privacy_assistant_settings_title (3712261229443155572) -->
-    <skip />
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Ahozko laguntza"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Ordainketa eta erosketak"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Aplikazioaren ezarpenak"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Kokapena, erabilera eta diagnosikoak, iragarkiak"</string>
@@ -278,8 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Urruneko kontrolagailuak eta osagarriak"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetootha"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Desaktibatu Bluetootha"</string>
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_summary (2129842434432539594) -->
-    <skip />
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Bluetootha desaktibatuta badago, ezingo duzu atzitu Ahozko laguntza urruneko kontrolagailuaren bidez."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Parekatu osagarria"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Osagarriak"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Urruneko kontrolagailua"</string>
@@ -666,14 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Kamerarako sarbidea blokeatuta dago"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Hura desblokeatzeko, ezarri gailuaren pribatutasun-etengailua kamera aktibatuta egon dadin, kamerarako sarbidea emateko."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofonoa erabiltzeko baimena: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <!-- no translation found for mic_toggle_info_content (4435018638934578695) -->
-    <skip />
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Aktibatuta dagoenean, mikrofonoa erabiltzeko baimena duten aplikazio eta zerbitzu guztiek hura atzitu ahal izango dute.\n\nDesaktibatuta dagoenean, aldiz, ezein aplikaziok edo zerbitzuk ezingo du atzitu mikrofonoa. Alabaina, baliteke ahozko laguntzarekin hitz egin ahal izatea halere. Horretarako, sakatu Ahozko laguntza atzitzeko botoia urruneko kontrolagailuan.\n\nBaliteke telebistarekin komunikatzeko protokolo pertsonalizatuak erabiltzen dituzten audio-gailuek ezarpenaren eragina ez jasatea."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Urruneko kontrolagailuaren mikrofonoa gaituta dago"</string>
-    <!-- no translation found for mic_remote_toggle_on_info_content (2349197575836972081) -->
-    <skip />
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"Ahozko laguntzak urruneko kontrolagailuaren mikrofonoa atzi dezake. Ahozko laguntzarekin hitz egiteko, sakatu Ahozko laguntza atzitzeko botoia urruneko kontrolagailuan."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Urruneko kontrolagailuaren mikrofonoa desgaituta dago"</string>
-    <!-- no translation found for mic_remote_toggle_off_info_content (7102410903448065152) -->
-    <skip />
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Ezingo duzu hitz egin ahozko laguntzarekin urruneko kontrolagailua erabilita. Ahozko laguntza atzitzeko botoia erabili ahal izateko, gaitu mikrofonorako sarbidea."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kamera erabiltzeko baimena: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Aktibatuta dagoenean, gailu honetako edozein kamera atzitu ahalko dute horretarako baimena daukaten aplikazio eta zerbitzu guztiek.\n\nEzarpen honek ez die eragingo protokolo pertsonalizatu bat daukaten kamera periferikoei."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"aktibatuta"</string>
@@ -1036,8 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\"Zerbait ikusi bitartean\" izeneko tenporizadoreak \"Inaktibo dagoenean\" izenekoak baino luzeagoa izan behar du"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Mugatu sarerako konexioak egonean moduan"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Energia gutxiago kontsumitzen du egonean moduan"</string>
-    <!-- no translation found for limit_network_in_standby_toggle_info (7442334081757762718) -->
-    <skip />
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"Egonean moduan, telebista ez da sarera konektatuta egongo eguneratze automatikoak jasotzeko ez bada. Horrela energia gutxiago kontsumituko du, baina ezingo dituzu erabili funtzioetako batzuk; esate baterako Cast eta Ahozko laguntza."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Eman egonean moduan sarera konektatuta egoteko baimena"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Egonean moduan sarera konektatuta egoteko baimena emanez gero, energia gehiago kontsumituko da."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ez dago babeskopiak gordetzen dituen aplikaziorik"</string>
@@ -1202,7 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Urruneko kontrolagailuko botoiak sakatze bakoitzarekin argiztatzea."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"Google TV-ren urruneko kontrolagailu bateragarrietako botoia sakatuz gero, hondoko argiztapena aktibatuko da."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s gailuaren bolumena"</string>
-    <!-- no translation found for volume_change_subtitle_unselect (4671089222833161493) -->
-    <skip />
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s bozgorailuaren bidezko laguntzaren bolumena kontrola dezakezu"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"%1$s gailuaren bolumena soilik aldatzen du, ez telebistarena"</string>
 </resources>
