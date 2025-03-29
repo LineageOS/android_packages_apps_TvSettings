@@ -35,16 +35,19 @@ import com.android.tv.settings.util.SliceUtils
 import com.android.tv.settings.util.SliceUtilsKt
 import com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference
 import com.android.tv.twopanelsettings.slices.SlicePreference
+import com.android.tv.twopanelsettings.slices.SliceShard
+import com.android.tv.twopanelsettings.slices.compat.Slice
 import kotlinx.coroutines.launch
 
 /**
  * The Privacy policies screen in Settings.
  */
 @Keep
-class PrivacyFragment : SettingsPreferenceFragment() {
+class PrivacyFragment : SettingsPreferenceFragment(), SliceShard.Callbacks {
     private var mOverlaySecuritySlicePreference: Preference? = null
     private var mSecurityPreference: Preference? = null
     private var mUpdateSlicePreference: Preference? = null
+    private var mSliceShard: SliceShard? = null
     private val preferenceScreenResId: Int
         get() = when (FlavorUtils.getFlavor(context)) {
             FlavorUtils.FLAVOR_X, FlavorUtils.FLAVOR_VENDOR -> R.xml.privacy_x
@@ -52,11 +55,36 @@ class PrivacyFragment : SettingsPreferenceFragment() {
         }
 
     override fun onCreatePreferences(bundle: Bundle?, s: String?) {
-        setPreferencesFromResource(preferenceScreenResId, null)
+        val sliceUri = getString(R.string.privacy_fragment_slice_uri)
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(preferenceScreenResId, null)
+            return
+        }
+        setPreferencesFromResource(R.xml.settings_loading, null)
+        mSliceShard = SliceShard(this, sliceUri, this,
+            getString(R.string.privacy_category_title),
+            SliceShard.getPrefContext(requireContext()), true)
+    }
+
+    override fun onSlice(slice: Slice?) {
+        mSliceShard = null
+        if (slice == null) {
+            setPreferencesFromResource(preferenceScreenResId, null)
+        }
+        if (view != null) {
+            configurePreferences()
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
+        if (mSliceShard == null) {
+            configurePreferences()
+        }
+        return checkNotNull(super.onCreateView(inflater, container, savedInstanceState))
+    }
+
+    private fun configurePreferences() {
         mOverlaySecuritySlicePreference = findPreference(KEY_OVERLAY_SECURITY)
         mSecurityPreference = findPreference(KEY_SECURITY)
         mUpdateSlicePreference = findPreference(KEY_UPDATE)
@@ -66,9 +94,9 @@ class PrivacyFragment : SettingsPreferenceFragment() {
         val adsPreference = findPreference<Preference>(KEY_ADS)
         val deviceLockPreference = findPreference<Preference>(KEY_DEVICE_LOCK)
         PrivacyToggle.MIC_TOGGLE.preparePreferenceWithSensorFragment(context,
-                findPreference(KEY_MIC), SensorFragment.TOGGLE_EXTRA)
+            findPreference(KEY_MIC), SensorFragment.TOGGLE_EXTRA)
         PrivacyToggle.CAMERA_TOGGLE.preparePreferenceWithSensorFragment(context,
-                findPreference(KEY_CAMERA), SensorFragment.TOGGLE_EXTRA)
+            findPreference(KEY_CAMERA), SensorFragment.TOGGLE_EXTRA)
         adsPreference?.onPreferenceClickListener = Preference.OnPreferenceClickListener {
             val intent = Intent().setAction("com.google.android.gms.settings.ADS_PRIVACY")
             startActivity(intent)
@@ -78,7 +106,7 @@ class PrivacyFragment : SettingsPreferenceFragment() {
             adsPreference.contentDescription = resources.getString(R.string.ads_content_description)
         }
         if (FlavorUtils.getFeatureFactory(requireContext()).getBasicModeFeatureProvider()
-                        .isBasicMode(requireContext())) {
+                .isBasicMode(requireContext())) {
             accountPrefCategory?.isVisible = false
             assistantSlicePreference?.isVisible = false
             purchasesSlicePreference?.isVisible = false
@@ -98,16 +126,16 @@ class PrivacyFragment : SettingsPreferenceFragment() {
                 lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
                     if (isOverlaySecuritySlicePreferenceEnabled(mOverlaySecuritySlicePreference)) {
                         showOverlaySecuritySlicePreference(
-                                mOverlaySecuritySlicePreference, mSecurityPreference)
+                            mOverlaySecuritySlicePreference, mSecurityPreference)
                     } else {
                         showSecurityPreference(mSecurityPreference, mOverlaySecuritySlicePreference)
                     }
                     mUpdateSlicePreference?.isVisible =
-                            isUpdateSlicePreferenceEnabled(mUpdateSlicePreference)
+                        isUpdateSlicePreferenceEnabled(mUpdateSlicePreference)
                 }
             }
         }
-        return checkNotNull(super.onCreateView(inflater, container, savedInstanceState))
+
     }
 
     private suspend fun isOverlaySecuritySlicePreferenceEnabled(

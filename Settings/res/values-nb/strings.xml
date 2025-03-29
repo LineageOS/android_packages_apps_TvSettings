@@ -38,8 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Generelle innstillinger"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Avvis forslaget"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"«Ok Google»-gjenkjennelse"</string>
-    <!-- no translation found for hotwording_summary (172570751256156407) -->
-    <skip />
+    <string name="hotwording_summary" msgid="172570751256156407">"Snakk med stemmeassistenten når som helst"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (skjermleser)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack er en tilgjengelighetsfunksjon for skjermlesere som hjelper brukere med nedsatt synsevne ved å lese opp tekst, menyelementer og andre elementer på skjermen. Den kan også konfigureres for bruk med tilgjengelighetssnarveien."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Enhet"</string>
@@ -64,8 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Enhetsinnstillinger"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Kontoinnstillinger"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Enhetslås"</string>
-    <!-- no translation found for privacy_assistant_settings_title (3712261229443155572) -->
-    <skip />
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Stemmeassistent"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Betaling og kjøp"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Appinnstillinger"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Posisjon, bruk og diagnostikk, annonser"</string>
@@ -278,8 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Fjernkontroller og tilbehør"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Slå av Bluetooth"</string>
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_summary (2129842434432539594) -->
-    <skip />
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Du får ikke tilgang til stemmeassistenten fra fjernkontrollen når Bluetooth er av."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Koble til tilbehør"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Tilbehør"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Fjernkontroll"</string>
@@ -666,14 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Kameratilgang er blokkert"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"For å oppheve blokkeringen, sett personvernbryteren på enheten til kamera på-posisjonen for å gi kameratilgang."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofontilgang: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <!-- no translation found for mic_toggle_info_content (4435018638934578695) -->
-    <skip />
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Når den er slått på, har alle apper og tjenester med tillatelse til å bruke mikrofonen, tilgang til den.\n\nNår den er slått av, har ingen apper eller tjenester tilgang. Det kan likevel hende du fortsatt kan snakke til stemmeassistenten ved å trykke på assistentknappen på fjernkontrollen.\n\nDet er ikke sikkert at denne innstillingen har noen innvirkning på lydenheter som bruker tilpassede protokoller for å kommunisere med TV-en."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Mikrofonen er aktivert på fjernkontrollen"</string>
-    <!-- no translation found for mic_remote_toggle_on_info_content (2349197575836972081) -->
-    <skip />
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"Stemmeassistenten har tilgang til mikrofonen på fjernkontrollen. Du kan snakke til assistenten ved å trykke på knappen for stemmeassistenten på fjernkontrollen."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Mikrofonen er deaktivert på fjernkontrollen"</string>
-    <!-- no translation found for mic_remote_toggle_off_info_content (7102410903448065152) -->
-    <skip />
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Du kan ikke snakke til stemmeassistenten via fjernkontrollen. For å bruke knappen for stemmeassistenten må du gi tilgang til mikrofonen."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kameratilgang: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Når dette er slått på, har alle apper og tjenester med tillatelse tilgang til alle kameraer på denne enheten.\n\nEksterne kameraenheter med egendefinert protokoll blir ikke påvirket av denne innstillingen."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"På"</string>
@@ -1036,8 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"«Når du ser på noe»-tiden må være lengre enn «Når enheten er inaktiv»-tiden"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Begrens nettverkstilkobling i hvilemodus"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Bruker mindre energi i hvilemodus"</string>
-    <!-- no translation found for limit_network_in_standby_toggle_info (7442334081757762718) -->
-    <skip />
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"TV-en kobles fra nettverket når den er i hvilemodus, med unntak av når den mottar automatiske oppdateringer. Dette kan redusere TV-ens energibruk, men det betyr også at du muligens ikke kan bruke funksjoner som Cast og stemmeassistenten i hvilemodus."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Tillat nettverkstilkobling i hvilemodus"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Hvis du tillater nettverkstilkobling i hvilemodus, øker energibruken i hvilemodus."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ingen kontoer lagrer for øyeblikket sikkerhetskopierte data"</string>
@@ -1202,7 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Belysning av knappene på fjernkontrollen ved hvert trykk."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"På Google TV-fjernkontroller som støttes, aktiveres bakgrunnsbelysning når du trykker på knappene på fjernkontrollene."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s volum"</string>
-    <!-- no translation found for volume_change_subtitle_unselect (4671089222833161493) -->
-    <skip />
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Du kan kontrollere assistentvolumet på %1$s-høyttaleren"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Påvirker bare volumet på %1$s-enheten, ikke på TV-en"</string>
 </resources>

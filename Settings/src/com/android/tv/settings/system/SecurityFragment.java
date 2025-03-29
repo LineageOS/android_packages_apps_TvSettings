@@ -23,12 +23,16 @@ import android.os.Bundle;
 import android.os.UserManager;
 
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.users.AppRestrictionsFragment;
 import com.android.tv.settings.users.RestrictedProfileModel;
+import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 import java.util.List;
 
@@ -36,7 +40,7 @@ import java.util.List;
  * The security settings screen in Tv settings.
  */
 @Keep
-public class SecurityFragment extends BaseSecurityFragment {
+public class SecurityFragment extends BaseSecurityFragment implements SliceShard.Callbacks {
     private Preference mUnknownSourcesPref;
     private PreferenceGroup mRestrictedProfileGroup;
     private Preference mRestrictedProfileEnterPref;
@@ -48,6 +52,7 @@ public class SecurityFragment extends BaseSecurityFragment {
 
     private Preference mManageDeviceAdminPref;
     private Preference mEnterprisePrivacyPref;
+    private SliceShard mSliceShard;
 
     public static SecurityFragment newInstance() {
         return new SecurityFragment();
@@ -62,8 +67,29 @@ public class SecurityFragment extends BaseSecurityFragment {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.security, null);
+        var sliceUri = getString(R.string.security_fragment_slice_uri);
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(R.xml.security, null);
+            configurePreferences();
+            return;
+        }
 
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.system_security),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(R.xml.security, null);
+        }
+        configurePreferences();
+    }
+
+    private void configurePreferences() {
         mUnknownSourcesPref = findPreference(KEY_UNKNOWN_SOURCES);
         mRestrictedProfileGroup = (PreferenceGroup) findPreference(KEY_RESTRICTED_PROFILE_GROUP);
         mRestrictedProfileEnterPref = findPreference(KEY_RESTRICTED_PROFILE_ENTER);

@@ -38,8 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Загальні налаштування"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Відхилити пропозицію"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Розпізнавання команди \"Ok Google\""</string>
-    <!-- no translation found for hotwording_summary (172570751256156407) -->
-    <skip />
+    <string name="hotwording_summary" msgid="172570751256156407">"Розмовляйте з голосовим помічником будь-коли"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (програма зчитування з екрана)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack – це програма зчитування з екрана, яка допомагає користувачам із вадами зору, озвучуючи текст на екрані, пункти меню й інші елементи. Для неї можна налаштувати активацію засобами швидкого ввімкнення функцій доступності."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Пристрій"</string>
@@ -64,8 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Налаштування пристрою"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Налаштування облікового запису"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Блокування пристрою"</string>
-    <!-- no translation found for privacy_assistant_settings_title (3712261229443155572) -->
-    <skip />
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Голосовий помічник"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Платежі й покупки"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Налаштування додатка"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Місцезнаходження, використання й діагностика, реклама"</string>
@@ -278,8 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Дистанційне керування й аксесуари"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Вимкнути Bluetooth"</string>
-    <!-- no translation found for bluetooth_toggle_confirmation_dialog_summary (2129842434432539594) -->
-    <skip />
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Якщо ви вимкнете Bluetooth, то не зможете запускати голосового помічника з пульта ДК."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Підключити аксесуар"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Аксесуари"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Пульт ДК"</string>
@@ -666,14 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Доступ до камери заблоковано"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Щоб розблокувати камеру й надати доступ до неї, пересуньте перемикач конфіденційності на своєму пристрої в положення \"Камеру ввімкнено\"."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Доступ до мікрофона: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <!-- no translation found for mic_toggle_info_content (4435018638934578695) -->
-    <skip />
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Якщо цю опцію ввімкнено, усі додатки й сервіси з дозволом на використання мікрофона матимуть доступ до нього.\n\nЯкщо опцію вимкнено, доступу до мікрофона не матимуть жодні додатки чи сервіси. Однак ви все одно зможете спілкуватися з голосовим помічником, натиснувши відповідну кнопку на пульті дистанційного керування.\n\nЦе налаштування може не впливати на аудіопристрої, що використовують спеціальні протоколи для зв’язку з телевізором."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Мікрофон на пульті дистанційного керування ввімкнено"</string>
-    <!-- no translation found for mic_remote_toggle_on_info_content (2349197575836972081) -->
-    <skip />
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"Голосовий помічник має доступ до мікрофона на вашому пульті дистанційного керування. Ви зможете спілкуватися з помічником, натиснувши відповідну кнопку на своєму пульті."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Мікрофон на пульті дистанційного керування вимкнено"</string>
-    <!-- no translation found for mic_remote_toggle_off_info_content (7102410903448065152) -->
-    <skip />
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Тепер ви зможете спілкуватися з голосовим помічником за допомогою пульта дистанційного керування. Щоб використовувати кнопку виклику голосового помічника, надайте доступ до мікрофона."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Доступ до камери: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Коли цей параметр увімкнено, усі додатки й сервіси з відповідним дозволом можуть отримувати доступ до будь-якої камери на пристрої.\n\nЦе налаштування не впливає на периферійні пристрої камери зі спеціальним протоколом."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Увімкнено"</string>
@@ -1036,8 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"Період на таймері \"Під час перегляду\" має бути довшим, ніж на таймері \"Якщо немає взаємодії\""</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Очікування: обмежити з’єднання з мережею"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Зменште споживання електроенергії в режимі очікування"</string>
-    <!-- no translation found for limit_network_in_standby_toggle_info (7442334081757762718) -->
-    <skip />
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"У режимі очікування ваш телевізор підключатиметься до мережі, лише щоб отримати автоматичні оновлення. Завдяки цьому телевізор споживатиме менше електроенергії, однак ви, імовірно, не зможете користуватися такими функціями, як Google Cast і голосовий помічник, у режимі очікування."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Дозволити підключення до мережі в режимі очікування"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Якщо в режимі очікування дозволити з’єднання з мережею, використовуватиметься більше електроенергії."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Зараз резервні копії даних не зберігаються в облікових записах"</string>
@@ -1202,7 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Підсвічування кнопок на пульті дистанційного керування після кожного натискання."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"У разі натискання кнопки на підтримуваному пульті Google TV активується підсвічування."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Гучність: %1$s"</string>
-    <!-- no translation found for volume_change_subtitle_unselect (4671089222833161493) -->
-    <skip />
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Ви можете керувати гучністю помічника на колонці \"%1$s\""</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Вплине лише на гучність на пристрої \"%1$s\", а не на телевізорі"</string>
 </resources>

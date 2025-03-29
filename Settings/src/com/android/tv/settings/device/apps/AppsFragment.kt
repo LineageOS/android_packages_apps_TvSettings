@@ -36,21 +36,32 @@ import com.android.tv.settings.R
 import com.android.tv.settings.library.util.LibUtils
 import com.android.tv.settings.overlay.FlavorUtils
 import com.android.tv.settings.util.InstrumentationUtils
+import com.android.tv.settings.util.SliceUtils
 import com.android.tv.settings.util.SliceUtilsKt
 import com.android.tv.twopanelsettings.slices.SlicePreference
+import com.android.tv.twopanelsettings.slices.SliceShard
+import com.android.tv.twopanelsettings.slices.compat.Slice
 import kotlinx.coroutines.launch
 
 /**
  * Fragment for managing recent apps, and apps permissions.
  */
 @Keep
-class AppsFragment : PreferenceControllerFragment() {
+class AppsFragment : PreferenceControllerFragment(), SliceShard.Callbacks {
+    private var mSliceShard: SliceShard? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
+        if (mSliceShard == null) {
+            configurePreferences()
+        }
+        return checkNotNull(super.onCreateView(inflater, container, savedInstanceState))
+    }
+
+    private fun configurePreferences() {
         findPreference<Preference>(KEY_PERMISSIONS)?.apply {
             isVisible = TextUtils.isEmpty(
-                    arguments?.getString(AppsActivity.EXTRA_VOLUME_UUID))
+                arguments?.getString(AppsActivity.EXTRA_VOLUME_UUID))
             onPreferenceClickListener = Preference.OnPreferenceClickListener {
                 InstrumentationUtils.logEntrySelected(TvSettingsEnums.APPS_APP_PERMISSIONS)
                 false
@@ -72,25 +83,24 @@ class AppsFragment : PreferenceControllerFragment() {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 val securityPreference = findPreference<Preference>(KEY_SECURITY)
                 val overlaySecuritySlicePreference =
-                        findPreference<Preference>(KEY_OVERLAY_SECURITY)
+                    findPreference<Preference>(KEY_OVERLAY_SECURITY)
                 val updateSlicePreference = findPreference<Preference>(KEY_UPDATE)
                 if (FlavorUtils.getFeatureFactory(requireContext()).getBasicModeFeatureProvider()
-                                .isBasicMode(requireContext())) {
+                        .isBasicMode(requireContext())) {
                     showSecurityPreference(securityPreference, overlaySecuritySlicePreference)
                     updateSlicePreference?.isVisible = false
                 } else {
                     if (isOverlaySecuritySlicePreferenceEnabled(overlaySecuritySlicePreference)) {
                         showOverlaySecuritySlicePreference(
-                                overlaySecuritySlicePreference, securityPreference)
+                            overlaySecuritySlicePreference, securityPreference)
                     } else {
                         showSecurityPreference(securityPreference, overlaySecuritySlicePreference)
                     }
                     updateSlicePreference?.isVisible =
-                                isUpdateSlicePreferenceEnabled(updateSlicePreference)
+                        isUpdateSlicePreferenceEnabled(updateSlicePreference)
                 }
             }
         }
-        return checkNotNull(super.onCreateView(inflater, container, savedInstanceState))
     }
 
     private suspend fun isOverlaySecuritySlicePreferenceEnabled(
@@ -139,6 +149,30 @@ class AppsFragment : PreferenceControllerFragment() {
         val controllers: MutableList<AbstractPreferenceController> = ArrayList()
         controllers.add(RecentAppsPreferenceController(getContext(), app))
         return controllers
+    }
+
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        val sliceUri = getString(R.string.apps_fragment_slice_uri)
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            super.onCreatePreferences(savedInstanceState, rootKey)
+            return
+        }
+
+        setPreferencesFromResource(R.xml.settings_loading, null)
+        mSliceShard = SliceShard(this, sliceUri, this,
+            getString(R.string.applications_category_title),
+            SliceShard.getPrefContext(requireContext()), true)
+    }
+
+    override fun onSlice(slice: Slice?) {
+        mSliceShard = null
+        if (slice == null) {
+            setPreferencesFromResource(preferenceScreenResId, null)
+        }
+        refreshAllPreferences()
+        if (view != null) {
+            configurePreferences()
+        }
     }
 
     override fun getPageId(): Int {

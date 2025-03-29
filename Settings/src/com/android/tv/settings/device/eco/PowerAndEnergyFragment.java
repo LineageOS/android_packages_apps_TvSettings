@@ -25,6 +25,7 @@ import android.os.PowerManager;
 import android.text.TextUtils;
 
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
@@ -37,17 +38,43 @@ import com.android.tv.settings.device.LimitNetworkInStandbyConfirmationDialogAct
 import com.android.tv.settings.library.util.SliceUtils;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.twopanelsettings.slices.SlicePreference;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 /** Power and energy settings. */
 @Keep
-public class PowerAndEnergyFragment extends SettingsPreferenceFragment {
+public class PowerAndEnergyFragment extends SettingsPreferenceFragment
+        implements SliceShard.Callbacks {
     private static final String KEY_LIMIT_NETWORK = "limit_network_in_standby";
     private static final String KEY_ENERGY_MODES = "energy_modes";
 
+    private SliceShard mSliceShard;
+
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
-        setPreferencesFromResource(R.xml.power_and_energy, null);
+        var sliceUri = getString(R.string.power_energy_fragment_slice_uri);
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(R.xml.power_and_energy, null);
+            configurePreferences();
+            return;
+        }
 
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.power_and_energy),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(R.xml.power_and_energy, null);
+        }
+        configurePreferences();
+    }
+
+    private void configurePreferences() {
         updateLowPowerStandbyPreferences();
         updatePowerOnBehaviourPreference();
 
@@ -98,7 +125,9 @@ public class PowerAndEnergyFragment extends SettingsPreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
-        updateLowPowerStandbyPreferences();
+        if (mSliceShard == null) {
+            updateLowPowerStandbyPreferences();
+        }
     }
 
     @Override

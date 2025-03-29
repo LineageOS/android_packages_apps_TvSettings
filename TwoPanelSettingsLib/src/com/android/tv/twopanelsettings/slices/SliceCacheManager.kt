@@ -107,13 +107,12 @@ class SliceCacheManager internal constructor(val context : Context) {
 
     }
 
-    suspend fun clearCachedSlice(uri : Uri) {
+    suspend fun clearCachedSlices() {
         withContext(Dispatchers.IO) {
             val cache = FileSystems.getDefault().getPath(context.filesDir.path, SLICE_CACHE_DIR)
-            val suffix = "|_" + encodeUri(uri)
-            cache.forEach { file ->
-                if (file.fileName.endsWith(suffix))
-                    file.toFile().delete()
+            val files = cache.toFile().listFiles()?: return@withContext
+            for (file in files) {
+                file.delete()
             }
         }
     }
