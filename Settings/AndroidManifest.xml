@@ -905,6 +905,15 @@
             </intent-filter>
         </receiver>
 
+        <receiver
+            android:name=".slice.ClearCachedSlicesReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.tv.settings.CLEAR_CACHED_SLICES" />
+            </intent-filter>
+        </receiver>
+
+
         <service
             android:name=".users.RestrictedProfilePinService"
             android:exported="false" />

@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"सामान्य सेटिङहरू"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"सुझाव खारेज गर्नुहोस्"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"Ok Google\" को पहिचान गर्ने सुविधा"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Google सहायकसँग जुनसुकै बेला कुराकानी गर्नुहोस्"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"जुनसुकै बेला भ्वाइस एसिस्टेन्टसँग कुरा गर्नुहोस्"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (स्क्रिन रिडर)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack भनेको स्क्रिनमा भएका टेक्स्ट, मेनुका वस्तु र अन्य कुराहरू ठुलो स्वरमा पढेर कमजोर दृष्टि भएका वा दृष्टिविहीन प्रयोगकर्ताहरूलाई सहायता प्रदान गर्ने स्क्रिन रिडरसम्बन्धी सर्वसुलभता कायम गर्ने सुविधा हो। यसलाई सेटअप गरेर एक्सेसिबिलिटीको सर्टकटमार्फत पनि प्रयोग गर्न सकिन्छ।"</string>
     <string name="header_category_device" msgid="3023893663454705969">"उपकरण"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"डिभाइसका सेटिङहरू"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"खाताका सेटिङहरू"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"डिभाइसको लक"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google सहायक"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"भ्वाइस एसिस्टेन्ट"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"भुक्तानी तथा खरिदहरू"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"एपका सेटिङहरू"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"स्थान, प्रयोग तथा निदान, विज्ञापनहरू"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"रिमोट तथा सहायक उपकरणहरू"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ब्लुटुथ"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ब्लुटुथ अफ गर्नुहोस्"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"ब्लुटुथ अफ हुँदा तपाईं आफ्नो रिमोटमार्फत Google सहायक प्रयोग गर्न सक्नु हुने छैन।"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"ब्लुटुथ अफ भएका बेला तपाईं आफ्नो रिमोटमार्फत भ्वाइस एसिस्टेन्ट एक्सेस गर्न सक्नु हुने छैन।"</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"सहायक उपकरणमा कनेक्ट गर्नुहोस्"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"सहायक उपकरणहरू"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"रिमोट कन्ट्रोल"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"क्यामेरा प्रयोग गर्ने अनुमति ब्लक गरिएको छ"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"अनब्लक गर्नका लागि क्यामेरा प्रयोग गर्ने अनुमति दिनु पर्ने हुन्छ। उक्त अनुमति दिन डिभाइसको \"गोपनीयता\" स्विचमा गई सेटिङ बदलेर \"क्यामेरा अन छ\" बनाउनुहोस्।"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"माइक्रोफोन प्रयोग गर्ने अनुमति: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"माइक्रोफोन अन गरिएका बेला माइक्रोफोन प्रयोग गर्न अनुमति दिइएका सबै एप तथा सेवाहरूले माइक्रोफोन प्रयोग गर्न पाउने छन्।\n\nमाइक्रोफोन अफ गरिएका बेला कुनै पनि एप वा सेवाहरूले माइक्रोफोन प्रयोग गर्न पाउने छैनन्। तर तपाईं अझै पनि आफ्नो रिमोटमा भएको सहायक बटन थिचेर Google सहायकसँग कुरा गर्न सक्नु हुने छ।\n\nटिभीसँग कनेक्ट गर्नका लागि कस्टम प्रोटोकलहरू प्रयोग गर्ने अडियो डिभाइसहरूमा भने यस सेटिङले कुनै प्रभाव पार्ने छैन।"</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"माइक्रोफोन अन गरिएका बेला माइक्रोफोन प्रयोग गर्न अनुमति दिइएका सबै एप तथा सेवाहरूले माइक्रोफोन प्रयोग गर्न पाउने छन्।\n\nमाइक्रोफोन अफ गरिएका बेला कुनै पनि एप वा सेवाहरूले माइक्रोफोन प्रयोग गर्न पाउने छैनन्। तर तपाईंले अझै पनि आफ्नो रिमोटमा भएको एसिस्टेन्ट बटन थिचेर भ्वाइस एसिस्टेन्टसँग कुरा गर्न मिल्न सक्छ।\n\nटिभीसँग कनेक्ट गर्नका लागि कस्टम प्रोटोकलहरू प्रयोग गर्ने अडियो डिभाइसहरूमा भने यो सेटिङले कुनै प्रभाव पार्ने छैन।"</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"रिमोटमा माइक्रोफोन अन गरिएको छ"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google सहायकले तपाईंको रिमोटको माइक्रोफोन प्रयोग गर्न सक्ने छ। तपाईं आफ्नो रिमोटमा भएको Google सहायक बटन थिचेर सहायकसँग कुरा गर्न सक्नु हुने छ।"</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"भ्वाइस एसिस्टेन्टले तपाईंको रिमोटको माइक्रोफोन प्रयोग गर्न सक्छ। तपाईं आफ्नो रिमोटमा भएको एसिस्टेन्ट बटन थिचेर आफ्नो एसिस्टेन्टसँग कुरा गर्न सक्नु हुने छ।"</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"रिमोटको माइक्रोफोन अफ गरिएको छ"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"तपाईं आफ्नो रिमोटमार्फत Google सहायकसँग कुरा गर्न सक्नु हुने छैन। तपाईं Google सहायक बटन प्रयोग गर्न चाहनुहुन्छ भने माइक्रोफोन प्रयोग गर्ने अनुमति अन गर्नुहोस्।"</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"तपाईं आफ्नो रिमोटमार्फत भ्वाइस एसिस्टेन्टसँग कुरा गर्न सक्नु हुने छैन। भ्वाइस एसिस्टेन्ट बटन प्रयोग गर्न माइक्रोफोनको एक्सेस अन गर्नुहोस्।"</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"क्यामेरा प्रयोग गर्ने अनुमति: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"यो सेटिङ अन गरिएका बेला क्यामेरा प्रयोग गर्ने अनुमति पाएका सबै एप तथा सेवाहरूले यो डिभाइसका जुनसुकै क्यामेरा प्रयोग गर्न पाउँछन्।\n\nप्रयोगकर्ताको आवश्यकताअनुसारको प्रोटोकल भएका क्यामेरासम्बन्धी सहायक डिभाइसहरूमा भने यो सेटिङ लागू हुँदैन।"</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"अन छ"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\"हेर्दा\" टाइमरको समय अनिवार्य रूपमा \"निष्क्रिय हुँदा\" टाइमरको समयभन्दा बढी हुनु पर्छ"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"स्ट्यान्डबाइ मोडमा इन्टरनेटको प्रयोग सीमित प्रयोग गर्नुहोस्"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"स्ट्यान्डबाइ मोडमा कम ऊर्जा प्रयोग हुन्छ"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"स्ट्यान्डबाइ मोडमा टिभी इन्टरनेटबाट डिस्कनेक्ट हुने छ तर तपाईं स्वतः प्राप्त हुने अपडेटहरू भने पाइरहनु हुने छ। यसो गरेका बेला तपाईंको टिभीमा कम ऊर्जा प्रयोग हुन सक्छ तर स्ट्यान्डबाइ मोडमा कास्ट गर्ने तथा Google सहायक चलाउने जस्ता सुविधा उपलब्ध नहुन सक्छन्।"</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"स्ट्यान्डबाइ मोडमा तपाईंको टिभी इन्टरनेटबाट डिस्कनेक्ट हुने छ तर तपाईं स्वतः प्राप्त हुने अपडेटहरू भने पाइरहनु हुने छ। यसले गर्दा तपाईंको टिभीले कम ऊर्जा प्रयोग गर्न सक्छ तर तपाईंको टिभी स्ट्यान्डबाइ मोडमा भएका बेला तपाईं कास्ट गर्ने तथा भ्वाइस एसिस्टेन्ट चलाउने जस्ता सुविधा उपलब्ध नहुन सक्छन्।"</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"स्ट्यान्डबाइ मोडमा इन्टरनेट प्रयोग गर्ने अनुमति दिनुहोस्"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"स्ट्यान्डबाइ मोडमा इन्टरनेट प्रयोग गर्ने अनुमति दिँदा स्ट्यान्डबाइ ऊर्जा बढी खपत हुन्छ।"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"कुनैपनि खाताले ब्याकअप गरेको डाटा भण्डार गरेको छैन"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"रिमोट कन्ट्रोलमा भएका बटनमा थिच्दा हरेक पटक बटनहरूको बत्ती बल्छ।"</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"यो सुविधा भएको Google TV को रिमोटको बटन थिच्दा ब्याकलाइट एक्टिभेट हुन्छ।"</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s भोल्युम"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"तपाईं %1$s स्पिकरमा सहायकको भोल्युम नियन्त्रण गर्न सक्नुहुन्छ"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"तपाईं %1$s स्पिकरमा एसिस्टेन्टको भोल्युम नियन्त्रण गर्न सक्नुहुन्छ"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"यसबाट %1$s डिभाइसको भोल्युम मात्र प्रभावित हुन्छ , टिभीको हुँदैन"</string>
 </resources>

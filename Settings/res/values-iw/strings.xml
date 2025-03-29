@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"הגדרות כלליות"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"דחיית ההצעה"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"זיהוי של \"Ok Google\""</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"אפשר לדבר עם Google Assistant בכל עת"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"תמיד אפשר לדבר עם העוזר האישי הקולי"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"‫Talkback (קורא המסך)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"‫TalkBack היא תכונת נגישות של קורא מסך שעוזרת למשתמשים עם ליקויי ראייה להקריא בקול טקסט שמופיע במסך, אפשרויות בתפריט ורכיבים אחרים. אפשר גם להגדיר את השירות לשימוש עם קיצור הדרך לנגישות."</string>
     <string name="header_category_device" msgid="3023893663454705969">"מכשיר"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"הגדרות מכשיר"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"הגדרות חשבון"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"נעילת מכשיר"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"העוזר האישי הקולי"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"תשלום ורכישות"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"הגדרות האפליקציה"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"מיקום, דפוסי שימוש וביצועים, מודעות"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"מכשירי שלט רחוק ואביזרים"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"השבתת Bluetooth"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"כאשר Bluetooth כבוי, לא תהיה לך גישה אל Google Assistant מהשלט הרחוק."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"אם ה-Bluetooth מושבת, אי אפשר לגשת אל העוזר האישי הקולי מהשלט הרחוק."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"התאמת האביזר"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"אביזרים"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"שלט רחוק"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"הגישה למצלמה חסומה"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"כדי לבטל את החסימה ולאפשר גישה למצלמה, צריך להעביר את מתג הפרטיות במכשיר למצב \'המצלמה פועלת\'."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"סטטוס הגישה למיקרופון: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"כשהמיקרופון מופעל, כל האפליקציות והשירותים המורשים להשתמש במיקרופון יוכלו לגשת אליו.\n\nכשהמיקרופון כבוי, אפליקציות או שירותים לא יוכלו לגשת למיקרופון. עדיין יתאפשר לך לדבר עם Google Assistant על ידי לחיצה על כפתור המעבר ל-Assistant בשלט הרחוק.\n\nייתכן שהתקני אודיו שמשתמשים בפרוטוקולים מותאמים אישית לתקשורת עם הטלוויזיה לא יושפעו מההגדרה הזו."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"כשהמיקרופון מופעל, כל האפליקציות והשירותים שיש להם הרשאה להשתמש בו יכולים לגשת אליו.\n\nכשהמיקרופון כבוי, אפליקציות או שירותים לא יכולים לגשת אליו. אם רוצים לדבר לעוזר האישי הקולי בכל זאת, לוחצים על הכפתור שלו בשלט הרחוק.\n\nאם יש התקני אודיו שמתקשרים עם הטלוויזיה באמצעות פרוטוקולים מותאמים אישית, יכול להיות שהם לא יושפעו מההגדרה הזו."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"המיקרופון בשלט הרחוק מופעל"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistant יכולה לגשת למיקרופון בשלט הרחוק שלך. יתאפשר לך לדבר עם ה-Assistant על ידי לחיצה על כפתור Google Assistant בשלט הרחוק."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"לעוזר האישי הקולי יש גישה למיקרופון בשלט הרחוק. ניתן לדבר עם העוזר האישי בלחיצה על הכפתור שלו בשלט הרחוק."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"המיקרופון בשלט הרחוק מושבת"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"לא תהיה לך אפשרות לדבר עם Google Assistant באמצעות השלט הרחוק. כדי להשתמש בכפתור Google Assistant, צריך לאפשר גישה למיקרופון."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"לא תהיה אפשרות לדבר עם העוזר האישי הקולי באמצעות השלט הרחוק. כדי להשתמש בכפתור של העוזר האישי הקולי, צריך לתת גישה למיקרופון."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"סטטוס הגישה למצלמה: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"כשההגדרה מופעלת, לכל האפליקציות והשירותים יש גישה לכל מצלמה במכשיר הזה.\n\nההגדרה לא תשפיע על ציוד היקפי של מצלמות עם פרוטוקול בהתאמה אישית."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"מופעל"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"משך הזמן שמוגדר בטיימר \'בזמן הצפייה\' צריך להיות ארוך יותר ממשך הזמן שמוגדר בטיימר \'כשאין פעילות\'"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"הגבלת החיבור לרשת במצב המתנה"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"במצב המתנה הטלוויזיה צורכת פחות אנרגיה"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"במצב המתנה הטלוויזיה תתנתק מהרשת, ותתחבר רק לקבלת עדכונים אוטומטיים. הפעולה הזו תפחית את צריכת האנרגיה של הטלוויזיה, אבל לא ניתן יהיה להשתמש בפונקציות כמו הפעלת Cast ו-Google Assistant במצב ההמתנה."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"במצב המתנה הטלוויזיה תתנתק מהרשת, ותתחבר רק כדי לקבל עדכונים אוטומטיים. במצב כזה הטלוויזיה צורכת פחות אנרגיה, אבל לא ניתן יהיה להשתמש בפונקציות כמו הפעלת Cast ו-Google Assistant במצב ההמתנה."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"הרשאה לחיבור לרשת במצב המתנה"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"מתן הרשאה לחיבור לרשת במצב המתנה יגדיל את צריכת האנרגיה במצב המתנה."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"אין חשבון המאחסן כעת נתונים מגובים"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"תאורה של הכפתורים בשלט הרחוק בכל לחיצה."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"בשלטים רחוקים שנתמכים על ידי Google TV, לחיצה על השלט מפעילה את התאורה האחורית."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"עוצמת קול %1$s"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"אפשר לשלוט בעוצמת הקול של Assistant ברמקול של %1$s"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"אפשר לשלוט בעוצמת הקול של העוזר האישי ברמקול של %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"רק עוצמת הקול במכשיר %1$s מושפעת, לא בטלוויזיה"</string>
 </resources>

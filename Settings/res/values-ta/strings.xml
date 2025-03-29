@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"பொது அமைப்புகள்"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"பரிந்துரையை நிராகரி"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"OK Google\"ஐக் கண்டறிதல்"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"எந்தநேரத்திலும், Google அசிஸ்டண்ட்டுடன் பேசுங்கள்"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"எப்போது வேண்டுமானாலும் குரல் உதவியுடன் பேசலாம்"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (ஸ்கிரீன் ரீடர்)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack என்பது ஸ்கிரீன் ரீடர் மாற்றுத்திறன் அம்சமாகும். திரையில் உள்ள வார்த்தைகள், மெனு விருப்பங்கள், பிற உறுப்புகள் ஆகியவற்றை உரக்கப் படிப்பதன் மூலம் பார்வைக் குறைபாடுள்ளவர்களுக்கு இது உதவுகிறது. மாற்றுத்திறன் வசதிக்கான ஷார்ட்கட் மூலம் பயன்படுத்தவும் இதை அமைக்கலாம்."</string>
     <string name="header_category_device" msgid="3023893663454705969">"சாதனம்"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"சாதன அமைப்புகள்"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"கணக்கு அமைப்புகள்"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"சாதனப் பூட்டு"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"குரல் உதவி"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"பேமெண்ட்டுகளும் பர்ச்சேஸ்களும்"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"ஆப்ஸ் அமைப்புகள்"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"இருப்பிடம், உபயோகம் &amp; பிழை கண்டறிதல், விளம்பரங்கள்"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"ரிமோட்களும் துணைக்கருவிகளும்"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"புளூடூத்"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"புளூடூத்தை ஆஃப் செய்தல்"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"புளுடூத் ஆஃபில் இருக்கும்போது உங்கள் ரிமோட்டிலிருந்து Google Assistantடை அணுக முடியாது."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"புளூடூத் ஆஃபில் இருக்கும்போது உங்கள் ரிமோட்டில் இருந்து குரல் உதவியை அணுக முடியாது."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"துணைக்கருவியை இணை"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"துணைக்கருவிகள்"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"ரிமோட் கன்ட்ரோல்"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"கேமராவுக்கான அணுகல் தடுக்கப்பட்டுள்ளது"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"தடுப்பை நீக்குவதற்கு, உங்கள் சாதனத்தில் தனியுரிமை ஸ்விட்சைக் கேமராவின் இயக்கநிலைக்கு நகர்த்தி கேமராவுக்கான அணுகலை அனுமதிக்கவும்."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"மைக்ரோஃபோன் அணுகல்: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"இயக்கப்படும்போது, மைக்ரோஃபோனைப் பயன்படுத்த அனுமதிக்கப்பட்ட அனைத்து ஆப்ஸும் சேவைகளும் அதை அணுக முடியும்.\n\nமுடக்கப்படும்போது, எந்த ஆப்ஸும் சேவைகளும் மைக்ரோஃபோனை அணுக முடியாது. ஆனாலும் உங்கள் ரிமோட்டில் உள்ள Assistant பட்டனை அழுத்துவதன் மூலம் உங்களால் Google Assistantடுடன் பேச முடியும்.\n\nTVயுடன் தொடர்புகொள்வதற்கான பிரத்தியேகமான நெறிமுறைகளைப் பயன்படுத்தும் ஆடியோ சாதனங்கள் இந்த அமைப்பால் பாதிக்கப்படாது."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"ஆன் செய்யப்படும்போது, மைக்ரோஃபோனைப் பயன்படுத்த அனுமதிக்கப்பட்ட அனைத்து ஆப்ஸும் சேவைகளும் அதை அணுக முடியும்.\n\nஆஃப் செய்யப்படும்போது, ஆப்ஸ் அல்லது சேவைகள் எதுவும் மைக்ரோஃபோனை அணுக முடியாது. எனினும் உங்கள் ரிமோட்டில் உள்ள Assistant பட்டனை அழுத்துவதன் மூலம் குரல் உதவியுடன் நீங்கள் பேசலாம்.\n\nடிவியுடன் தொடர்புகொள்வதற்கான பிரத்தியேகமான நெறிமுறைகளைப் பயன்படுத்தும் ஆடியோ சாதனங்கள் இந்த அமைப்பால் பாதிக்கப்படாமல் இருக்கலாம்."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"ரிமோட்டில் மைக்ரோஃபோன் இயக்கப்பட்டது"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"உங்கள் ரிமோட்டில் உள்ள மைக்ரோஃபோனை Google Assistant அணுக முடியும். உங்கள் ரிமோட்டில் உள்ள Google Assistant பட்டனை அழுத்துவதன் மூலம் உங்கள் Assistantடுடன் பேச முடியும்."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"உங்கள் ரிமோட்டில் உள்ள மைக்ரோஃபோனைக் குரல் உதவி அணுக முடியும். உங்கள் ரிமோட்டில் உள்ள Assistant பட்டனை அழுத்துவதன் மூலம் உங்கள் Assistantடுடன் பேச முடியும்."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"ரிமோட்டில் மைக்ரோஃபோன் முடக்கப்பட்டுள்ளது"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"உங்கள் ரிமோட்டைப் பயன்படுத்தி Google Assistantடுடன் பேசமுடியாது. Google Assistant பட்டனைப் பயன்படுத்துவதற்கு மைக்ரோஃபோன் அணுகலை இயக்கவும்."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"உங்கள் ரிமோட்டைப் பயன்படுத்தி குரல் உதவியுடன் பேச முடியாது. குரல் உதவி பட்டனைப் பயன்படுத்த மைக்ரோஃபோன் அணுகலை இயக்கவும்."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"கேமரா அணுகல்: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"இயக்கப்பட்டிருக்கும்போது, இந்தச் சாதனத்திலுள்ள எந்தக் கேமராவையும் அனுமதியுள்ள அனைத்து ஆப்ஸும் சேவைகளும் அணுகலாம்.\n\nபிரத்தியேக நெறிமுறையைக் கொண்டுள்ள கேமரா சாதனங்கள் இந்த அமைப்பினால் பாதிக்கப்படாது."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"இயக்கப்பட்டுள்ளது"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\"பார்க்கும்போது\" எனும் டைமர் \"செயலில் இல்லை\" எனும் டைமரை விட நீண்ட நேரம் இருக்க வேண்டும்"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"காத்திருப்பில் நெட்வொர்க் இணைப்பு வரம்பு"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"காத்திருப்புப் பயன்முறையில் மின் உபயோகம் குறைவாக இருக்கும்"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"காத்திருப்புப் பயன்முறையில் இருக்கும்போது தானியங்குப் புதுப்பிப்புகளைப் பெறுவதற்கு மட்டும் நெட்வொர்க்குடன் உங்கள் டிவி இணைக்கப்படும். இது உங்கள் டிவி பயன்படுத்தும் மின்சாரத்தின் அளவை குறைக்கக்கூடும். ஆனால் காத்திருப்புப் பயன்முறையின்போது அலைபரப்பு, Google Assistant போன்ற செயல்பாடுகளை உங்களால் பயன்படுத்த முடியாமலும் போகக்கூடும்."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"காத்திருப்புப் பயன்முறையில் இருக்கும்போது (தானியங்குப் புதுப்பிப்புகளைப் பெறுவதற்குத் தவிர) நெட்வொர்க்கிலிருந்து உங்கள் டிவி இணைப்பு நீக்கப்படும். இது உங்கள் டிவி பயன்படுத்தும் மின்சாரத்தின் அளவைக் குறைக்கக்கூடும். ஆனால் காத்திருப்புப் பயன்முறையின்போது அலைபரப்பு, குரல் உதவி போன்ற செயல்பாடுகளை உங்களால் பயன்படுத்த முடியாமலும் போகக்கூடும்."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"காத்திருப்புப் பயன்முறையில் நெட்வொர்க் இணைப்பை அனுமதித்தல்"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"காத்திருப்புப் பயன்முறையில் நெட்வொர்க் இணைப்பை அனுமதிப்பது காத்திருப்பின்போது பயன்படுத்தப்படும் மின்சாரத்தின் அளவை அதிகரிக்கும்."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"தற்போது எந்தக் கணக்கிலும் காப்புப்பிரதி எடுத்த தரவு சேமிக்கப்படவில்லை"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"ஒவ்வொருமுறை அழுத்தும்போதும் ரிமோட் கன்ட்ரோலில் உள்ள பட்டன்களில் வெளிப்படும் வெளிச்சம்."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"ஆதரிக்கப்படும் Google TV ரிமோட்களில் உள்ள பட்டனை அழுத்துவது பேக்லைட்டை ஒளிரச் செய்யும்."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s ஒலியளவு"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s ஸ்பீக்கரில் Assistantடின் ஒளியளவைக் கட்டுப்படுத்தலாம்"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s ஸ்பீக்கரில் Assistantடின் ஒலியளவைக் கட்டுப்படுத்தலாம்"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"%1$s சாதனத்தில் மட்டுமே ஒலியளவை மாற்றும், டிவியில் மாற்றாது"</string>
 </resources>

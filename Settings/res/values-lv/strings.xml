@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Vispārīgi iestatījumi"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Noraidīt ieteikumu"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Īsinājumvārda “OK Google” atpazīšana"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Runājiet ar Google asistentu jebkurā laikā."</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"Varat jebkurā laikā runāt ar balss palīgu."</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (ekrāna lasītājs)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack ir ekrāna lasītāja pieejamības funkcija, kas palīdz lietotājiem ar redzes traucējumiem, skaļi nolasot ekrānā redzamo tekstu, izvēlnes vienumus un citus elementus. Varat arī iestatīt ekrāna lasītāja izmantošanu kopā ar pieejamības saīsni."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Ierīce"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Ierīces iestatījumi"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Konta iestatījumi"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Ierīces bloķēšana"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google asistents"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Balss palīgs"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Maksājums un pirkumi"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Lietotnes iestatījumi"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Atrašanās vieta, lietojums un diagnostika, reklāmas"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Tālvadības ierīces un piederumi"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Bluetooth izslēgšana"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Kad Bluetooth būs izslēgts, jūs nevarēsiet piekļūt Google asistentam, izmantojot tālvadības ierīci."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Kad Bluetooth būs izslēgts, jūs nevarēsiet piekļūt balss palīgam, izmantojot savu tālvadības ierīci."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Savienot pārī piederumu"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Piederumi"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Tālvadības ierīce"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Piekļuve kamerai bloķēta"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Lai atbloķētu piekļuvi, ierīcē pavirziet konfidencialitātes slēdzi uz kameru, lai atļautu piekļuvi kamerai."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Piekļuve mikrofonam: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Ja slēdzis ir ieslēgts, visas lietotnes un pakalpojumi, kuriem ir piešķirta atļauja izmantot mikrofonu, varēs tam piekļūt.\n\nJa tas ir izslēgts, mikrofonam nevarēs piekļūt neviena lietotne vai pakalpojums. Tomēr, iespējams, varēsiet runāt ar Google asistentu, nospiežot Asistenta pogu uz tālvadības ierīces.\n\nŠis iestatījums, iespējams, neietekmēs audio ierīces, kuras saziņai ar televizoru izmanto pielāgotus protokolus."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Ja slēdzis ir ieslēgts, visas lietotnes un pakalpojumi, kuriem ir piešķirta atļauja izmantot mikrofonu, varēs tam piekļūt.\n\nJa tas ir izslēgts, mikrofonam nevarēs piekļūt neviena lietotne vai pakalpojums. Tomēr, iespējams, varēsiet runāt ar balss palīgu, nospiežot palīga pogu uz tālvadības ierīces.\n\nŠis iestatījums, iespējams, neietekmēs audio ierīces, kuras saziņai ar televizoru izmanto pielāgotus protokolus."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Tālvadības ierīces mikrofons ir iespējots"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google asistents var piekļūt jūsu tālvadības ierīces mikrofonam. Nospiežot Google asistenta pogu uz tālvadības ierīces, varēsiet runāt ar Asistentu."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"Balss palīgs var piekļūt jūsu tālvadības ierīces mikrofonam. Nospiežot palīga pogu uz tālvadības ierīces, varēsiet runāt ar palīgu."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Tālvadības ierīces mikrofons ir atspējots"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"Izmantojot savu tālvadības ierīci, nevarēsiet runāt ar Google asistentu. Lai varētu izmantot Google asistenta pogu, iespējojiet piekļuvi mikrofonam."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Jūs nevarēsiet runāt ar balss palīgu, izmantojot savu tālvadības ierīci. Lai varētu izmantot balss palīga pogu, iespējojiet piekļuvi mikrofonam."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Piekļuve kamerai: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Ja šis iestatījums ir ieslēgts, visas lietotnes un pakalpojumi, kam ir attiecīgā atļauja, var piekļūt jebkurai šīs ierīces kamerai.\n\nŠis iestatījums neietekmēs perifērās ierīces ar kameru, kurām ir pielāgots protokols."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Ieslēgta"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"Iestatījuma “Skatīšanās laikā” taimerim ir jābūt ilgākam par iestatījuma “Neaktivitātes laikā” taimeri."</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Ierobežot tīkla savienojumu gaidstāvē"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Patērē mazāk enerģijas gaidstāves režīmā"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Televizors būs atvienots no tīkla gaidstāves režīmā, izņemot automātisko atjauninājumu saņemšanai. Tādējādi var samazināties televizora enerģijas patēriņš, tomēr nevarēsiet izmantot tādas funkcijas kā Cast un Google asistents."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"Televizors būs atvienots no tīkla gaidstāves režīmā, izņemot automātisko atjauninājumu saņemšanai. Tādējādi var samazināties televizora enerģijas patēriņš, tomēr nevarēsiet izmantot tādas funkcijas kā Google Cast un balss palīgs."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Tīkla savienojuma atļaušana gaidstāvē"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Atļaujot tīkla savienojumu gaidstāvē, tiks palielināts gaidstāves enerģijas patēriņš."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Pašlaik nevienā kontā netiek uzglabāti dublēti dati."</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Katru reizi nospiežot tālvadības ierīces pogu, tiek aktivizēts pogu izgaismojums."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"Atbalstītām Google TV tālvadības ierīcēm, nospiežot tālvadības ierīces pogu, tiek aktivizēts fona apgaismojums."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s: skaļums"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Varat kontrolēt Asistenta skaļumu šajā skaļrunī: %1$s"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Varat kontrolēt palīga skaļumu šajā skaļrunī: %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Attiecas uz skaļumu tikai tālāk norādītajā ierīcē, bet ne televizorā: %1$s"</string>
 </resources>

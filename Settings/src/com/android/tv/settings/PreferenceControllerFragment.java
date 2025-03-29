@@ -135,7 +135,7 @@ public abstract class PreferenceControllerFragment extends SettingsPreferenceFra
         }
     }
 
-    private void refreshAllPreferences() {
+    protected void refreshAllPreferences() {
         final PreferenceScreen screen = getPreferenceScreen();
         Collection<AbstractPreferenceController> controllers =
                 new ArrayList<>(mPreferenceControllers);

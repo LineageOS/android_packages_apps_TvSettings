@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2025 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License")
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="@android:color/black" />
+    </item>
+    <item>
+        <vector
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:aapt="http://schemas.android.com/aapt"
+            android:width="960dp"
+            android:height="540dp"
+            android:viewportWidth="960"
+            android:viewportHeight="540">
+            <group>
+                <clip-path
+                    android:pathData="M0 0H960V540H0V0Z" />
+                <group
+                    android:pivotX="480"
+                    android:pivotY="270"
+                    android:rotation="132.624"
+                    android:scaleX="5.436"
+                    android:scaleY="5.202"
+                    android:translateX="2.799"
+                    android:translateY="-0.121">
+                    <path android:pathData="M0 0V540H960V0">
+                        <aapt:attr name="android:fillColor">
+                            <gradient
+                                android:centerX="480"
+                                android:centerY="270"
+                                android:gradientRadius="240"
+                                android:type="radial">
+                                <item
+                                    android:color="#1F7FCFFF"
+                                    android:offset="0" />
+                                <item
+                                    android:color="#057FCFFF"
+                                    android:offset="1" />
+                            </gradient>
+                        </aapt:attr>
+                    </path>
+                </group>
+            </group>
+        </vector>
+    </item>
+</layer-list>

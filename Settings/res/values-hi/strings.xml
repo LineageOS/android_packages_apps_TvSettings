@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"सामान्य सेटिंग"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"सुझाव खारिज करें"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"OK Google\" के ज़रिए पता लगाना"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Google Assistant से कभी भी बात करें"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"\'आवाज़ से डिवाइस का इस्तेमाल\' कभी भी इस्तेमाल करें"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (स्क्रीन रीडर)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack, स्क्रीन रीडर की सुलभता सुविधा है. यह स्क्रीन पर दिख रहे टेक्स्ट, मेन्यू आइटम, और अन्य एलिमेंट को तेज़ आवाज़ में सुनाने की सुविधा का इस्तेमाल करके दृष्टिबाधित उपयोगकर्ताओं की मदद करती है. इसे सुलभता सुविधा के शॉर्टकट के साथ इस्तेमाल करने के लिए भी सेट अप किया जा सकता है."</string>
     <string name="header_category_device" msgid="3023893663454705969">"डिवाइस"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"डिवाइस की सेटिंग"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"खाता सेटिंग"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"डिवाइस लॉक"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"आवाज़ से डिवाइस का इस्तेमाल"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"खरीदारियां और पैसे चुकाना"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"ऐप्लिकेशन सेटिंग"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"जगह, इस्तेमाल और गड़बड़ी की जानकारी, विज्ञापन"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"रिमोट और ऐक्सेसरी"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ब्लूटूथ"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ब्लूटूथ बंद करें"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"अगर ब्लूटूथ बंद है, तो आप Google Assistant को रिमोट से ऐक्सेस नहीं कर पाएंगे."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"ब्लूटूथ बंद होने पर, आवाज़ से डिवाइस का इस्तेमाल करने की सुविधा को रिमोट से ऐक्सेस नहीं किया जा सकेगा."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ऐक्सेसरी जोड़ें"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"कनेक्ट की गई ऐक्सेसरी"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"रिमोट कंट्रोल"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"कैमरे का ऐक्सेस ब्लॉक किया गया है"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"अनब्लॉक करने के लिए, आपको कैमरे का ऐक्सेस देना होगा. इसके लिए, डिवाइस के प्राइवसी स्विच को \'कैमरे चालू है\' वाली पोज़िशन पर ले जाएं."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"माइक्रोफ़ोन का ऐक्सेस: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"माइक्रोफ़ोन ऐक्सेस करने की सेटिंग चालू होने पर, जिन सेवाओं और ऐप्लिकेशन को माइक्रोफ़ोन ऐक्सेस करने की अनुमति है वे सभी इसका इस्तेमाल कर पाएंगे. \n\nइस सेटिंग के बंद होने पर, कोई भी ऐप्लिकेशन या सेवा, माइक्रोफ़ोन को ऐक्सेस नहीं कर पाएगी. हालांकि, अब भी रिमोट के Assistant बटन को दबाकर, Google Assistant से बात की जा सकती है.\n\nइस सेटिंग का, उन ऑडियो डिवाइसों पर कोई असर नहीं होगा जो टीवी से कनेक्ट करने के लिए कस्टम प्रोटोकॉल का इस्तेमाल करते हैं."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"माइक्रोफ़ोन ऐक्सेस करने की सेटिंग चालू होने पर, जिन सेवाओं और ऐप्लिकेशन को माइक्रोफ़ोन ऐक्सेस करने की अनुमति है वे सभी इसका इस्तेमाल कर पाएंगे. \n\nइस सेटिंग के बंद होने पर, कोई भी ऐप्लिकेशन या सेवा, माइक्रोफ़ोन को ऐक्सेस नहीं कर पाएगी. हालांकि, अब भी रिमोट पर असिस्टेंट बटन को दबाकर, आवाज़ से डिवाइस का इस्तेमाल किया जा सकता है.\n\nइस सेटिंग का, उन ऑडियो डिवाइसों पर कोई असर नहीं होगा जो टीवी से कनेक्ट करने के लिए कस्टम प्रोटोकॉल का इस्तेमाल करते हैं."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"रिमोट पर माइक्रोफ़ोन ऐक्सेस करने की सेटिंग चालू है"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistant, रिमोट पर माइक्रोफ़ोन को ऐक्सेस कर सकती है. रिमोट पर Google Assistant बटन दबाकर Assistant से बात की जा सकती है."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"आवाज़ से डिवाइस का इस्तेमाल करने की सुविधा, रिमोट पर माइक्रोफ़ोन को ऐक्सेस कर सकती है. रिमोट पर असिस्टेंट बटन दबाकर असिस्टेंट से बात की जा सकती है."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"रिमोट पर माइक्रोफ़ोन ऐक्सेस करने की सेटिंग चालू है"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"यह सेटिंग बंद करने पर, रिमोट का इस्तेमाल करके Google Assistant से बात नहीं की जा सकेगी. Google Assistant बटन का इस्तेमाल करने के लिए, माइक्रोफ़ोन को ऐक्सेस करने की सेटिंग चालू करें."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"इस सेटिंग को बंद करने पर, रिमोट के ज़रिए आवाज़ से डिवाइस का इस्तेमाल नहीं किया जा सकेगा. \'आवाज़ से डिवाइस का इस्तेमाल\' बटन का इस्तेमाल करने के लिए, माइक्रोफ़ोन को ऐक्सेस करने की सेटिंग चालू करें."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"कैमरे का ऐक्सेस: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"कैमरा ऐक्सेस करने की सेटिंग चालू होने पर, वे सभी ऐप्लिकेशन और सेवाएं इस डिवाइस का कोई भी कैमरा ऐक्सेस कर पाएंगी जिन्हें आपने ऐसा करने की अनुमति दी है.\n\nहालांकि, इस सेटिंग को चालू करने से, कैमरे के तौर पर काम करने वाले उन सहायक डिवाइसों पर कोई असर नहीं होगा जो कस्टम प्रोटोकॉल का पालन करते हैं."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"चालू है"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\"जब डिवाइस पर कॉन्टेंट चल रहा हो\" टाइमर, \"जब डिवाइस का इस्तेमाल न किया जा रहा हो\" टाइमर से लंबा होना चाहिए"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"स्टैंडबाय मोड में इंटरनेट का सीमित इस्तेमाल करें"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"स्टैंडबाय मोड में कम ऊर्जा इस्तेमाल करता है"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"स्टैंडबाय मोड में टीवी को इंटरनेट से डिसकनेक्ट कर दिया जाएगा. हालांकि, आपको ऑटोमैटिक अपडेट मिलते रहेंगे. हो सकता है कि इससे आपकी टीवी कम ऊर्जा इस्तेमाल करे. हालांकि, यह भी हो सकता है कि स्टैंडबाय मोड में, आप कास्ट करने और Google Assistant जैसे फ़ंक्शन का इस्तेमाल न कर पाएं."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"स्टैंडबाय मोड में टीवी को इंटरनेट से डिसकनेक्ट कर दिया जाएगा. हालांकि, आपको ऑटोमैटिक अपडेट मिलते रहेंगे. हो सकता है कि इससे आपका टीवी कम ऊर्जा की खपत करे. इसके अलावा, यह भी हो सकता है कि स्टैंडबाय मोड में, कास्ट और आवाज़ से डिवाइस का इस्तेमाल करने जैसी सुविधाएं उपलब्ध न हों."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"स्टैंडबाय मोड में इंटरनेट का इस्तेमाल करने की अनुमति दें"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"स्टैंडबाय मोड में इंटरनेट का इस्तेमाल करने की अनुमति देने से, स्टैंडबाय मोड में ज़्यादा ऊर्जा खर्च होगी."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"वर्तमान में कोई भी खाता, बैकअप डेटा संग्रहित नहीं कर रहा है"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"रिमोट कंट्रोल में मौजूद बटन को हर बार दबाने पर बैकलाइट जलती है."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"Google TV के जिन रिमोट पर यह सुविधा काम करती है उन पर बटन दबाने से बैकलाइट जलती है."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s आवाज़"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s स्पीकर पर Assistant की आवाज़ को कंट्रोल किया जा सकता है"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s स्पीकर पर असिस्टेंट की आवाज़ को कंट्रोल किया जा सकता है"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"इससे सिर्फ़ %1$s डिवाइस की आवाज़ पर असर पड़ता है , टीवी पर नहीं"</string>
 </resources>

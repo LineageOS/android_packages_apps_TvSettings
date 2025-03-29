@@ -18,6 +18,7 @@ package com.android.tv.settings.device.displaysound
 import android.app.tvsettings.TvSettingsEnums
 import android.content.ContentResolver
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.hardware.display.DisplayManager
 import android.hardware.hdmi.HdmiControlManager
 import android.media.AudioManager
@@ -38,26 +39,30 @@ import androidx.preference.SwitchPreference
 import androidx.preference.TwoStatePreference
 import com.android.tv.settings.R
 import com.android.tv.settings.SettingsPreferenceFragment
-import com.android.tv.settings.device.util.DeviceUtils
 import com.android.tv.settings.device.displaysound.PreferredDynamicRangeInfo.MatchContentDynamicRangeInfoFragment
+import com.android.tv.settings.device.util.DeviceUtils
 import com.android.tv.settings.overlay.FlavorUtils
 import com.android.tv.settings.util.InstrumentationUtils
 import com.android.tv.settings.util.ResolutionSelectionUtils
 import com.android.tv.settings.util.SliceUtils
 import com.android.tv.settings.util.SliceUtilsKt
 import com.android.tv.twopanelsettings.slices.SlicePreference
+import com.android.tv.twopanelsettings.slices.SliceShard
+import com.android.tv.twopanelsettings.slices.compat.Slice
 import kotlinx.coroutines.launch
 
 /**
  * The "Display & sound" screen in TV Settings.
  */
 @Keep
-class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.DisplayListener {
+class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.DisplayListener,
+    SliceShard.Callbacks {
     lateinit var mAudioManager: AudioManager
     lateinit var mHdmiControlManager: HdmiControlManager
     lateinit var mDisplayManager: DisplayManager
     private var mCurrentDeviceName: String? = null
     private var mCurrentMode: Display.Mode? = null
+    private var mSliceShard: SliceShard? = null
 
     override fun onAttach(context: Context) {
         mAudioManager = context.getSystemService(AudioManager::class.java) as AudioManager
@@ -75,11 +80,37 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
         }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(preferenceScreenResId, null)
+        val sliceUri = getString(R.string.display_sounds_fragment_slice_uri)
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(preferenceScreenResId, null)
+            maybeConfigurePreferences()
+            return
+        }
+
+        setPreferencesFromResource(R.xml.settings_loading, null)
+        mSliceShard = SliceShard(this, sliceUri, this,
+            getString(R.string.device_display_sound),
+            SliceShard.getPrefContext(requireContext()), true)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View {
+        maybeConfigurePreferences()
+        return checkNotNull(super.onCreateView(inflater, container, savedInstanceState))
+    }
+
+    override fun onSlice(slice: Slice?) {
+        mSliceShard = null
+        if (slice == null) {
+            setPreferencesFromResource(preferenceScreenResId, null)
+        }
+        maybeConfigurePreferences()
+    }
+
+    private fun maybeConfigurePreferences() {
+        if (mSliceShard != null || view == null) {
+            return
+        }
         findPreference<TwoStatePreference>(KEY_SOUND_EFFECTS)?.isChecked = soundEffectsEnabled
         updateCecPreference()
 
@@ -106,7 +137,7 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
                 updateDefaultAudioOutputSettings()
             }
         }
-        return checkNotNull(super.onCreateView(inflater, container, savedInstanceState))
+
     }
 
     override fun onDestroy() {
