@@ -269,7 +269,7 @@ public class ConnectState implements State {
                 }
 
                 if (configuration == null) {
-                    notifyListener(StateMachine.RESULT_UNKNOWN_ERROR);
+                    notifyListener(StateMachine.RESULT_FAILURE);
                     return;
                 }
 
@@ -297,7 +297,7 @@ public class ConnectState implements State {
                                 UserChoiceInfo.ConnectionFailedStatus.REJECTED);
                         break;
                     case WifiConfiguration.NetworkSelectionStatus.DISABLED_DHCP_FAILURE:
-                        notifyListener(StateMachine.RESULT_UNKNOWN_ERROR);
+                        notifyListener(StateMachine.RESULT_FAILURE);
                         break;
                     default:
                         mUserChoiceInfo.setConnectionFailedStatus(
@@ -321,7 +321,7 @@ public class ConnectState implements State {
 
                 @Override
                 public void onFailure(int status) {
-                    notifyListener(StateMachine.RESULT_UNKNOWN_ERROR);
+                    notifyListener(StateMachine.RESULT_FAILURE);
                 }
             });
         }

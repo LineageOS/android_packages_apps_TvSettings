@@ -106,7 +106,6 @@ public class StateMachine extends ViewModel {
             OTHER_NETWORK,
             KNOWN_NETWORK,
             RESULT_REJECTED_BY_AP,
-            RESULT_UNKNOWN_ERROR,
             RESULT_TIMEOUT,
             RESULT_BAD_AUTH,
             RESULT_SUCCESS,
