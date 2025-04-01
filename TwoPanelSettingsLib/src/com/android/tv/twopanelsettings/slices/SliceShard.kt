@@ -142,7 +142,7 @@ class SliceShard(
                     mIsMainPanelReady = false
                     mSlice = slice
                     update()
-                } else {
+                } else if (mFragment.view != null) {
                     mCallbacks.showProgressBar(false)
                     mCallbacks.onSlice(null)
                 }
