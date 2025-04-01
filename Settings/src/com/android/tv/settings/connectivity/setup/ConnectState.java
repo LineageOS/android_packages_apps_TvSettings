@@ -201,6 +201,13 @@ public class ConnectState implements State {
                 mWifiManager.disconnect();
             }
 
+            if (mUserChoiceInfo.getEasyConnectNetworkId() != -1 &&
+                    (!mConnectSucceeded || mUserChoiceInfo.isAlreadyConnected())) {
+                // This needs to be skipped on successful new connection, else phone will show
+                // an error.
+                mWifiManager.stopEasyConnectSession();
+            }
+
             super.onDestroy();
         }
 
