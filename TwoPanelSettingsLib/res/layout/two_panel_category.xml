@@ -20,7 +20,7 @@
     android:layout_height="wrap_content"
     android:clipToPadding="false"
     android:paddingBottom="@dimen/tp_preference_item_margin_bottom"
-    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:paddingStart="@dimen/tp_preference_category_title_padding_start"
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
 
     <TextView
