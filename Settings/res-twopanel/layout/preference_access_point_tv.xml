@@ -50,10 +50,13 @@
                     android:id="@android:id/icon"
                     android:layout_width="@dimen/lb_preference_item_icon_size"
                     android:layout_height="@dimen/lb_preference_item_icon_size"
-                    android:layout_marginEnd="@dimen/lb_preference_item_icon_margin_end"
                     style="?android:attr/imageButtonStyle"
             />
         </FrameLayout>
+
+        <Space
+            android:layout_width="@dimen/lb_preference_item_icon_margin_end"
+            android:layout_height="wrap_content" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
