@@ -56,6 +56,7 @@ import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.preference.PreferenceCategory;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.tv.settings.library.instrumentation.InstrumentedPreferenceFragment;
@@ -361,6 +362,60 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
             return super.onOptionsItemSelected(menuItem);
         }
         return lifecycleHandled;
+    }
+
+    @Override
+    public RecyclerView onCreateRecyclerView(
+            LayoutInflater inflater,
+            ViewGroup parent,
+            Bundle savedInstanceState) {
+        RecyclerView recyclerView =
+            super.onCreateRecyclerView(inflater, parent, savedInstanceState);
+
+        if (FlavorUtils.isTwoPanel(getContext()) && recyclerView != null && getContext() != null) {
+            recyclerView.addItemDecoration(new FirstCategoryNoPaddingDecoration(requireContext()));
+        }
+
+        return recyclerView;
+    }
+
+    private static class FirstCategoryNoPaddingDecoration extends RecyclerView.ItemDecoration {
+        private Context context;
+
+        public FirstCategoryNoPaddingDecoration(Context context) {
+            this.context = context;
+        }
+
+        @Override
+        public void getItemOffsets(
+                @NonNull Rect outRect,
+                @NonNull View view,
+                @NonNull RecyclerView parent,
+                @NonNull RecyclerView.State state) {
+            super.getItemOffsets(outRect, view, parent, state);
+
+            int position = parent.getChildAdapterPosition(view);
+
+            RecyclerView.Adapter adapter = parent.getAdapter();
+
+            if (position == RecyclerView.NO_POSITION
+                    || !(adapter instanceof PreferenceGroupAdapter)) {
+                return;
+            }
+
+            PreferenceGroupAdapter preferenceAdapter = (PreferenceGroupAdapter) adapter;
+
+            if (position < preferenceAdapter.getItemCount()) {
+                Preference preference = preferenceAdapter.getItem(position);
+
+                if (position > 0 && preference instanceof PreferenceCategory) {
+                    int preferenceCategoryTopOffset = context.getResources()
+                            .getDimensionPixelSize(
+                                    R.dimen.preference_category_top_decoration);
+                    outRect.top += preferenceCategoryTopOffset;
+                }
+            }
+        }
     }
 
     /** Subclasses should override this to use their own PageId for statsd logging. */
