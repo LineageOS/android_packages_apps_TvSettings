@@ -20,12 +20,10 @@ import static com.android.tv.settings.util.InstrumentationUtils.logToggleInterac
 
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.tvsettings.TvSettingsEnums;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.accessibility.AccessibilityManager;
@@ -34,12 +32,10 @@ import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
-import com.android.settingslib.accessibility.AccessibilityUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 
 import java.util.List;
-import java.util.prefs.Preferences;
 
 /**
  * Fragment for configuring the accessibility shortcut
@@ -55,12 +51,12 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
     private static String updatedComponent;
 
     private SharedPreferences mSharedPref;
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.accessibility_shortcut, null);
 
         final TwoStatePreference enablePref = findPreference(KEY_ENABLE);
-        final String currentService = getCurrentService(getContext());
         enablePref.setOnPreferenceChangeListener((preference, newValue) -> {
             logToggleInteracted(TvSettingsEnums.SYSTEM_A11Y_SHORTCUT_ON_OFF, (Boolean) newValue);
             setAccessibilityShortcutEnabled((Boolean) newValue);
@@ -71,7 +67,8 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
         mSharedPref = getContext().getSharedPreferences(
                 ACCESSIBILITY_SHORTCUT_STORE, Context.MODE_PRIVATE);
         boolean shortcutEnabled = !TextUtils.isEmpty(enabledComponents)
-                || TextUtils.isEmpty(getLastShortcutService());
+                || TextUtils.isEmpty(AccessibilityShortcutUtils
+                .getLastShortcutService(mSharedPref));
         enablePref.setChecked(shortcutEnabled);
         setAccessibilityShortcutEnabled(shortcutEnabled);
     }
@@ -88,37 +85,31 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
                 .getSystemService(AccessibilityManager.class)
                 .getInstalledAccessibilityServiceList();
         final PackageManager packageManager = getContext().getPackageManager();
-        final String currentService = getCurrentService(getContext());
+        final String currentService = AccessibilityShortcutUtils.getCurrentService(getContext());
         for (AccessibilityServiceInfo service : installedServices) {
             final String serviceString = service.getComponentName().flattenToString();
             if (TextUtils.equals(currentService, serviceString)) {
                 if (servicePref != null) {
                     servicePref.setSummary(service.getResolveInfo().loadLabel(packageManager));
                 }
-                putLastShortcutService(currentService);
+                AccessibilityShortcutUtils.putLastShortcutService(mSharedPref, currentService);
             }
         }
     }
+
     private void setAccessibilityShortcutEnabled(boolean enabled) {
-        //Because the first time the shortcut is viewed,
-        //getLastShortcutService() is null, resulting in the
-        //ACCESSIBILITY_SHORTCUT_TARGET_SERVICE value not being put correctly the first time,
-        //so isFirstView is set to differentiate it.
-        SharedPreferences chooseTimes = getContext().getSharedPreferences(CHOOSE_TIMES, 
-                Context.MODE_PRIVATE);
-        boolean isFirstView = chooseTimes.getBoolean(FIRST_VIEW, true);
+        AccessibilityShortcutUtils.setAccessibilityShortcutEnabled(
+                getContext(), mSharedPref, enabled);
         if (enabled) {
-            updatedComponent = isFirstView ? getCurrentService(getContext()):
-                    getLastShortcutService();
+            boolean isFirstView = AccessibilityShortcutUtils
+                    .isFirstView(getContext(), mSharedPref);
+            updatedComponent = isFirstView
+                    ? AccessibilityShortcutUtils.getCurrentService(getContext()) :
+                    AccessibilityShortcutUtils.getLastShortcutService(mSharedPref);
             if (!TextUtils.isEmpty(updatedComponent)) {
-                chooseTimes.edit().putBoolean(FIRST_VIEW, false).apply();
-                Settings.Secure.putString(getContext().getContentResolver(),
-                        Settings.Secure.ACCESSIBILITY_SHORTCUT_TARGET_SERVICE, updatedComponent);
                 updateServicePrefSummary();
             }
         } else {
-            Settings.Secure.putString(getContext().getContentResolver(),
-                    Settings.Secure.ACCESSIBILITY_SHORTCUT_TARGET_SERVICE, "");
             final Preference servicePref = findPreference(KEY_SERVICE);
             servicePref.setSummary(null);
         }
@@ -126,28 +117,8 @@ public class AccessibilityShortcutFragment extends SettingsPreferenceFragment {
         servicePref.setEnabled(enabled);
     }
 
-    static String getCurrentService(Context context) {
-        String shortcutServiceString = AccessibilityUtils
-                .getShortcutTargetServiceComponentNameString(context, UserHandle.myUserId());
-        if (shortcutServiceString != null) {
-            ComponentName shortcutName = ComponentName.unflattenFromString(shortcutServiceString);
-            if (shortcutName != null) {
-                return shortcutName.flattenToString();
-            }
-        }
-        return null;
-    }
-
     @Override
     protected int getPageId() {
         return TvSettingsEnums.SYSTEM_A11Y_SHORTCUT;
-    }
-
-    private String getLastShortcutService() {
-        return mSharedPref.getString(LAST_SHORTCUT_SERVICE, "");
-    }
-
-    private void putLastShortcutService(String s) {
-        mSharedPref.edit().putString(LAST_SHORTCUT_SERVICE, s).apply();
     }
 }
