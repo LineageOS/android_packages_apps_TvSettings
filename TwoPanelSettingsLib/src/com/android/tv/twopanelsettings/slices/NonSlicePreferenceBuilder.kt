@@ -22,6 +22,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.ContextThemeWrapper
 import androidx.preference.Preference
+import com.android.settingslib.RestrictedPreferenceHelperProvider
 import java.lang.reflect.Constructor
 import java.lang.reflect.Array
 import java.lang.reflect.Field
@@ -61,6 +62,13 @@ class NonSlicePreferenceBuilder private constructor(className: String) {
 
         properties@ for (property in bundle.keySet()) {
             val value = bundle[property]!!
+
+            if (property == "userRestriction" && value is String &&
+                preference is RestrictedPreferenceHelperProvider) {
+                preference.getRestrictedPreferenceHelper().setUserRestriction(value)
+                continue
+            }
+
             val setterList = setters[property] ?: mutableListOf()
             for (setter in setterList) {
                 try {

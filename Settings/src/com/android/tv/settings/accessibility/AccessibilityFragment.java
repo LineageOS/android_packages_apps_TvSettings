@@ -24,18 +24,19 @@ import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.admin.DevicePolicyManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.ComponentName;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.ServiceInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.TextUtils;
-import android.view.accessibility.AccessibilityManager;
 import android.util.ArrayMap;
+import android.view.accessibility.AccessibilityManager;
 
 import androidx.annotation.Keep;
 import androidx.annotation.Nullable;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
@@ -48,13 +49,13 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
-import com.android.tv.twopanelsettings.slices.SliceFragment;
 import com.android.tv.twopanelsettings.slices.SliceShard;
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 import java.util.List;
-import java.util.Set;
 import java.util.Map;
+import java.util.Set;
+
 
 /**
  * Fragment for Accessibility settings
@@ -70,6 +71,7 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
     private static final String ACCESSIBILITY_SHORTCUT_KEY = "accessibility_shortcut";
     private static final int BOLD_TEXT_ADJUSTMENT = 500;
     private static final int FIRST_PREFERENCE_IN_CATEGORY_INDEX = -1;
+    private SharedPreferences mSharedPref;
 
     private SliceShard mSliceShard;
 
@@ -143,22 +145,30 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         var sliceUri = getString(R.string.accessibility_fragment_slice_uri);
         if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
-            setPreferencesFromResource(R.xml.accessibility, null);
+            setPreferencesResource();
             configurePreferences();
             return;
         }
 
-        setPreferencesFromResource(R.xml.settings_loading, null);
+        setPreferencesResource();
         mSliceShard = new SliceShard(this, sliceUri, this,
                 getString(R.string.accessibility_category_title),
                 SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    private void setPreferencesResource() {
+        if (FlavorUtils.isTwoPanel(getContext())) {
+            setPreferencesFromResource(R.xml.accessibility_two_panel, null);
+        } else {
+            setPreferencesFromResource(R.xml.accessibility, null);
+        }
     }
 
     @Override
     public void onSlice(@Nullable Slice slice) {
         mSliceShard = null;
         if (slice == null) {
-            setPreferencesFromResource(R.xml.accessibility, null);
+            setPreferencesResource();
         }
         configurePreferences();
     }
@@ -191,6 +201,8 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
             colorCorrectionPreferenceToSetVisible.setVisible(true);
         }
 
+        mSharedPref = getContext().getSharedPreferences(
+                ACCESSIBILITY_SHORTCUT_KEY, Context.MODE_PRIVATE);
         mServicesPrefCategory = findPreference(AccessibilityCategory.SERVICES.getKey());
         mControlsPrefCategory = findPreference(AccessibilityCategory.INTERACTION_CONTROLS.getKey());
         populateServiceToPreferenceCategoryMaps();
@@ -228,6 +240,21 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
                     Settings.Secure.FONT_WEIGHT_ADJUSTMENT,
                     (((SwitchPreference) preference).isChecked() ? BOLD_TEXT_ADJUSTMENT : 0));
             return true;
+        } else if (TextUtils.equals(preference.getKey(), ACCESSIBILITY_SHORTCUT_KEY)
+                && FlavorUtils.isTwoPanel(getContext())) {
+            logToggleInteracted(
+                    TvSettingsEnums.SYSTEM_A11Y_SHORTCUT_ON_OFF,
+                    ((SwitchPreference) preference).isChecked());
+            AccessibilityShortcutUtils.setAccessibilityShortcutEnabled(
+                    getContext(),
+                    mSharedPref,
+                    ((SwitchPreference) preference).isChecked());
+            if (((SwitchPreference) preference).isChecked()) {
+                preference.setFragment(AccessibilityShortcutServiceFragment.class.getName());
+            } else {
+                preference.setFragment(AccessibilityShortcutInfoFragment.class.getName());
+            }
+            return true;
         } else {
             return super.onPreferenceTreeClick(preference);
         }
@@ -255,11 +282,22 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
         final List<String> permittedServices = dpm.getPermittedAccessibilityServices(
                 UserHandle.myUserId());
 
-        if (installedServiceInfos.size() == 0) {
-            Preference pref = mControlsPrefCategory.findPreference(ACCESSIBILITY_SHORTCUT_KEY);
-            if (pref != null) {
-                mControlsPrefCategory.removePreference(pref);
+        Preference pref = mControlsPrefCategory.findPreference(ACCESSIBILITY_SHORTCUT_KEY);
+        if (installedServiceInfos.size() == 0 && pref != null) {
+            mControlsPrefCategory.removePreference(pref);
+        } else if (pref != null && FlavorUtils.isTwoPanel(getContext())) {
+            String enabledComponents = Settings.Secure.getString(getContext().getContentResolver(),
+                    Settings.Secure.ACCESSIBILITY_SHORTCUT_TARGET_SERVICE);
+            boolean shortcutEnabled = !TextUtils.isEmpty(enabledComponents)
+                    || TextUtils.isEmpty(AccessibilityShortcutUtils
+                    .getLastShortcutService(mSharedPref));
+
+            if (shortcutEnabled) {
+                pref.setFragment(AccessibilityShortcutServiceFragment.class.getName());
+            } else {
+                pref.setFragment(AccessibilityShortcutInfoFragment.class.getName());
             }
+            ((SwitchPreference) pref).setChecked(shortcutEnabled);
         }
 
         final boolean accessibilityEnabled = Settings.Secure.getInt(
@@ -290,7 +328,7 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
                 .equals(
                     getResources()
                         .getString(R.string.
-                                       accessibility_screen_reader_flattened_component_name))) {
+                                        accessibility_screen_reader_flattened_component_name))) {
                 title = getResources().getString(R.string.screen_reader_service_title);
             }
             servicePref.setTitle(title);

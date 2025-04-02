@@ -18,6 +18,7 @@ package com.android.tv.settings.connectivity.setup;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.wifi.WifiInfo;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.SpannableString;
@@ -253,7 +254,10 @@ public class EnterPasswordState implements State {
         public long onGuidedActionEditedAndProceed(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                 String password = action.getTitle().toString();
-                if (password.length() >= WEP_MIN_LENGTH) {
+                int minPasswordLength =
+                    mUserChoiceInfo.getWifiSecurity() == WifiInfo.SECURITY_TYPE_PSK ?
+                        PSK_MIN_LENGTH : WEP_MIN_LENGTH;
+                if (password.length() >= minPasswordLength) {
                     mUserChoiceInfo.put(UserChoiceInfo.PASSWORD, action.getTitle().toString());
                     mUserChoiceInfo.setPasswordHidden(mCheckBox.isChecked());
                     mStateMachine.getListener().onComplete(this, StateMachine.OPTIONS_OR_CONNECT);

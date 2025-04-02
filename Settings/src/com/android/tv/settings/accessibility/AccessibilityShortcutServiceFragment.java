@@ -51,7 +51,7 @@ public class AccessibilityShortcutServiceFragment extends SettingsPreferenceFrag
             (preference, newValue) -> {
                 final String newCompString = preference.getKey();
                 final String currentService =
-                        AccessibilityShortcutFragment.getCurrentService(getContext());
+                        AccessibilityShortcutUtils.getCurrentService(getContext());
                 if ((Boolean) newValue && !TextUtils.equals(newCompString, currentService)) {
                     final ComponentName cn = ComponentName.unflattenFromString(newCompString);
                     final CharSequence label = preference.getTitle();
@@ -84,7 +84,7 @@ public class AccessibilityShortcutServiceFragment extends SettingsPreferenceFrag
                 .getSystemService(AccessibilityManager.class)
                 .getInstalledAccessibilityServiceList();
         final PackageManager packageManager = getContext().getPackageManager();
-        final String currentService = AccessibilityShortcutFragment.getCurrentService(getContext());
+        final String currentService = AccessibilityShortcutUtils.getCurrentService(getContext());
         for (AccessibilityServiceInfo service : installedServices) {
             final RadioPreference preference = new RadioPreference(themedContext);
             preference.setPersistent(false);
