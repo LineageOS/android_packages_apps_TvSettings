@@ -49,6 +49,7 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
     private static final String TAG = "EnergySaverFragment";
     private static final String KEY_SLEEP_TIME = "sleepTime";
     private static final String KEY_ATTENTIVE_TIME = "attentiveTime";
+    private static final String KEY_AMBIENT_SENSE_TIME = "ambientSenseTime";
 
     private static final String SHARED_PREFS_NAME = "energy_saver";
     private static final String PREF_RESET_ATTENTIVE_TIMEOUT = "reset_attentive_timeout";
@@ -61,9 +62,11 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
 
     private ListPreference mSleepTimePref;
     private ListPreference mAttentiveTimePref;
+    private Preference mAmbientSenseTimePref;
     private RestrictedPreferenceAdapter<ListPreference> mRestrictedSleepTime;
     private RestrictedPreferenceAdapter<ListPreference> mRestrictedAttentiveTime;
     private int mDefaultAttentiveTimeoutConfig;
+    private boolean mIsFirstResume = true;
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
@@ -103,10 +106,32 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
                 setAttentiveSleepTime(validatedAttentiveSleepTime);
             }
         }
+
+        mAmbientSenseTimePref = findPreference(KEY_AMBIENT_SENSE_TIME);
     }
 
     private boolean showAttentiveSleepTimeoutSetting() {
         return getResources().getBoolean(R.bool.config_show_standby_timeout);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mIsFirstResume && mAmbientSenseTimePref.isVisible()) {
+            if (mAmbientSenseTimePref.isEnabled()) {
+                mSleepTimePref.setEnabled(false);
+                if (showAttentiveSleepTimeoutSetting()) {
+                    mAttentiveTimePref.setEnabled(false);
+                }
+                scrollToPreference(mAmbientSenseTimePref);
+            } else {
+                mSleepTimePref.setEnabled(true);
+                if (showAttentiveSleepTimeoutSetting()) {
+                    mAttentiveTimePref.setEnabled(true);
+                }
+            }
+        }
+        mIsFirstResume = false;
     }
 
     @Override
