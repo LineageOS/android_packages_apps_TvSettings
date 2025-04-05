@@ -22,6 +22,7 @@
                 android:paddingBottom="@dimen/decor_container_padding_bottom"
                 android:background="@color/tp_preference_brand_color"
                 android:elevation="@dimen/lb_preference_decor_title_container_elevation"
+                android:paddingStart="@dimen/slice_decor_container_start_padding"
                 android:transitionGroup="false">
     <ImageView
         android:id="@+id/decor_icon"

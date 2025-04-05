@@ -26,7 +26,7 @@ import com.android.tv.twopanelsettings.slices.EmbeddedSlicePreferenceHelper.Slic
  */
 open class EmbeddedSlicePreference : SlicePreference,
     HasCustomContentDescription {
-    private val mHelper: EmbeddedSlicePreferenceHelper
+    private var mHelper : EmbeddedSlicePreferenceHelper? = null
     private var mContentDescription: String? = null
 
     constructor(context: Context?, uri: String?) : super(context) {
@@ -35,37 +35,40 @@ open class EmbeddedSlicePreference : SlicePreference,
     }
 
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
-        mHelper = EmbeddedSlicePreferenceHelper(this, uri)
+        if (uri != null) {
+            mHelper = EmbeddedSlicePreferenceHelper(this, uri)
+        }
     }
 
     override fun onAttached() {
         super.onAttached()
-        mHelper.onAttached()
+        mHelper!!.onAttached()
     }
 
     override fun onDetached() {
         super.onDetached()
-        mHelper.onDetached()
+        mHelper!!.onDetached()
     }
 
     fun addListener(listener: SlicePreferenceListener?) {
-        mHelper.mListener = listener
+        mHelper!!.mListener = listener
     }
 
     fun removeListener(listener: SlicePreferenceListener?) {
-        mHelper.mListener = null
+        mHelper!!.mListener = null
     }
 
     fun update() {
-        isEnabled = mHelper.mNewPref!!.isEnabled
-        title = mHelper.mNewPref!!.title
-        summary = mHelper.mNewPref!!.summary
-        icon = mHelper.mNewPref!!.icon
-        extras.putAll(mHelper.mNewPref!!.extras)
-        if (mHelper.mNewPref is HasSliceAction
-            && (mHelper.mNewPref as HasSliceAction).sliceAction != null
+        val newPref = mHelper!!.mNewPref!!
+        isEnabled = newPref.isEnabled
+        title = newPref.title
+        summary = newPref.summary
+        icon = newPref.icon
+        extras.putAll(newPref.extras)
+        if (newPref is HasSliceAction
+            && newPref.sliceAction != null
         ) {
-            sliceAction = (mHelper.mNewPref as HasSliceAction).sliceAction
+            sliceAction = newPref.sliceAction
         }
     }
 
@@ -80,6 +83,14 @@ open class EmbeddedSlicePreference : SlicePreference,
 
     override fun getContentDescription(): String {
         return mContentDescription!!
+    }
+
+    override fun setUri(uri: String?) {
+        if (uri != getUri()) {
+            super.setUri(uri)
+            mHelper?.onDetached() // Remove old slice observer.
+            mHelper = if (uri != null) EmbeddedSlicePreferenceHelper(this, uri) else null
+        }
     }
 
     companion object {

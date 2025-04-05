@@ -85,6 +85,7 @@ public class EasyConnectQRState implements State {
         private WifiManager mWifiManager;
         private ImageView mQrCodeView;
         private View mProgressView;
+        private boolean mStartedConnect;
 
         @Override
         public void onCreate(Bundle bundle) {
@@ -94,6 +95,7 @@ public class EasyConnectQRState implements State {
             mStateMachine = ViewModelProviders.of(getActivity()).get(StateMachine.class);
             mWifiManager = (WifiManager) getActivity().getApplicationContext().getSystemService(
                     Context.WIFI_SERVICE);
+            mWifiManager.stopEasyConnectSession();
         }
 
         @Override
@@ -103,13 +105,6 @@ public class EasyConnectQRState implements State {
             mQrCodeView = view.findViewById(R.id.setup_qrcode_view);
             mProgressView = view.findViewById(R.id.setup_qrcode_progress);
 
-            return view;
-        }
-
-        @Override
-        public void onResume() {
-            super.onResume();
-
             mProgressView.setVisibility(View.VISIBLE);
             mQrCodeView.setVisibility(View.INVISIBLE);
 
@@ -118,13 +113,15 @@ public class EasyConnectQRState implements State {
                     WifiManager.EASY_CONNECT_CRYPTOGRAPHY_CURVE_PRIME256V1,
                     getActivity().getApplication().getMainExecutor(),
                     new EasyConnectDelegateCallback());
+            return view;
         }
 
         @Override
-        public void onPause() {
-            mWifiManager.stopEasyConnectSession();
-
-            super.onPause();
+        public void onDestroyView() {
+            if (!mStartedConnect) {
+                mWifiManager.stopEasyConnectSession();
+            }
+            super.onDestroyView();
         }
 
         /*
@@ -160,6 +157,7 @@ public class EasyConnectQRState implements State {
             public void onEnrolleeSuccess(int newNetworkId) {
                 if (DEBUG) Log.d(TAG, "onEnrolleeSuccess: newNetworkId = " + newNetworkId);
 
+                mStartedConnect = true;
                 mUserChoiceInfo.setEasyConnectNetworkId(newNetworkId);
 
                 for (WifiConfiguration config : mWifiManager.getConfiguredNetworks()) {

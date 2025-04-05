@@ -27,6 +27,8 @@ import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 
+import java.util.Arrays;
+
 /**
  * When other applications request to have a wifi connection, framework will bring up this activity
  * to let user select which wifi ap wanna to connect. This activity is just a door for framework
@@ -39,14 +41,17 @@ public class NetworkRequestDialogActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         final UserManager userManager = UserManager.get(this);
-        if (userManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_WIFI)) {
-            EnforcedAdmin admin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(this,
-                    UserManager.DISALLOW_CONFIG_WIFI, UserHandle.myUserId());
-            if (admin != null) {
-                RestrictedLockUtils.sendShowAdminSupportDetailsIntent(this, admin);
+        for (var restriction : Arrays.asList(UserManager.DISALLOW_CONFIG_WIFI,
+                UserManager.DISALLOW_ADD_WIFI_CONFIG)) {
+            if (userManager.hasUserRestriction(restriction)) {
+                EnforcedAdmin admin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(this,
+                        restriction, UserHandle.myUserId());
+                if (admin != null) {
+                    RestrictedLockUtils.sendShowAdminSupportDetailsIntent(this, admin);
+                }
+                finish();
+                return;
             }
-            finish();
-            return;
         }
 
         final NetworkRequestDialogFragment fragment = NetworkRequestDialogFragment.newInstance();

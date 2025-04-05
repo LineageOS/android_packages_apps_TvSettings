@@ -17,6 +17,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
+                  xmlns:custom="http://schemas.android.com/apk/res-auto"
                   android:title="@string/device_energy_saver">
 
     <PreferenceCategory
@@ -39,6 +40,12 @@
             android:summary="@string/device_energy_saver_timeout_description"
             android:entries="@array/device_energy_saver_attentive_timeout_entries"
             android:entryValues="@array/device_energy_saver_attentive_timeout_values" />
+
+        <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+            android:key="ambientSenseTime"
+            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            custom:uri="@string/ambient_sense_time_slice_uri"
+            custom:isPreferenceVisible="false" />
 
     </PreferenceCategory>
 
