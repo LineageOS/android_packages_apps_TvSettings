@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Obecná nastavení"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Zavřít návrh"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Zjišťování příkazu „Ok Google“"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Oslovte Asistenta Google kdykoli"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"Mluvit s hlasovým asistentem kdykoli"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (čtečka obrazovky)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack je funkce usnadnění přístupu a čtečka obrazovky, která čte nahlas text na obrazovce, položky nabídek a další prvky, a pomáhá tak uživatelům se zrakovým postižením Lze ji nastavit k použití se zkratkou přístupnosti."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Zařízení"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Nastavení zařízení"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Nastavení účtu"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Zámek zařízení"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Asistent Google"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Hlasový asistent"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Platby a nákupy"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Nastavení aplikací"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Poloha, využití a diagnostika, reklamy"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Dálkové ovládání a příslušenství"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Vypnutí Bluetooth"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"S vypnutým Bluetooth nebudete moci aktivovat Asistenta Google pomocí dálkového ovládání."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"S vypnutým rozhraním Bluetooth nebudete moct hlasového asistenta aktivovat pomocí dálkového ovládání."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Spárovat příslušenství"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Příslušenství"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Dálkové ovládání"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Přístup k fotoaparátu je blokován"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Pokud chcete blokování zrušit, přepněte přepínač soukromí na zařízení do pozice, která povoluje přístup k fotoaparátu."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Přístup k mikrofonu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Když je mikrofon zapnutý, mají k němu přístup všechny aplikace a služby, které mají povoleno jej používat.\n\nKdyž je mikrofon vypnutý, nemají k němu přístup žádné aplikace ani služby. Můžete však mít stále možnost stisknutím tlačítka Asistenta na dálkovém ovládání mluvit s Asistentem Google.\n\nToto nastavení nemusí mít vliv na zvuková zařízení, která ke komunikaci s televizorem používají vlastní protokoly."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Když je mikrofon zapnutý, mají k němu přístup všechny aplikace a služby, které mají povoleno jej používat.\n\nKdyž je mikrofon vypnutý, nemají k němu přístup žádné aplikace ani služby. Pořád ale můžete mít možnost mluvit s hlasovým asistentem po stisknutí tlačítka asistenta na dálkovém ovládání.\n\nTohle nastavení nemusí mít vliv na zvuková zařízení, která ke komunikaci s televizí používají vlastní protokoly."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Mikrofon na dálkovém ovládání je zapnutý"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Asistent Google má přístup k mikrofonu na dálkovém ovládání. S Asistentem budete moci mluvit stisknutím tlačítka Asistenta Google na dálkovém ovládání."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"Hlasový asistent má přístup k mikrofonu na dálkovém ovládání. S asistentem budete moct mluvit stisknutím tlačítka asistenta na dálkovém ovládání."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Mikrofon na dálkovém ovládání je vypnutý"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"Pomocí dálkového ovládání nebudete moci mluvit s Asistentem Google. Pokud chcete mít možnost použít tlačítko Asistenta Google, povolte přístup k mikrofonu."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Pomocí dálkového ovládání nebudete moct mluvit s hlasovým asistentem. Pokud chcete mít možnost použít tlačítko hlasového asistenta, povolte přístup k mikrofonu."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Přístup k fotoaparátu: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Když je toto nastavení zapnuté, všechny aplikace a služby s oprávněním mají přístup ke všem fotoaparátům v tomto zařízení.\n\nToto nastavení nebude mít vliv na periferní kamerová zařízení s vlastním protokolem."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Zapnuto"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"Časovač „Při sledování“ musí být delší než časovač „Při neaktivitě“"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Omezit připojení v pohotovostním režimu"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"V pohotovostním režimu využívá méně energie"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"V pohotovostním režimu se televize odpojí od sítě, kromě případů, kdy dostane automatické aktualizace. Může to snížit spotřebu televize, ale v pohotovostním režimu nebude možné používat funkce jako Cast nebo Asistent Google."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"V pohotovostním režimu se televize odpojí od sítě, kromě případů, kdy dostane automatické aktualizace. Může to snížit spotřebu televize, ale v pohotovostním režimu nebude možné používat funkce, jako jsou Cast nebo hlasový asistent."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Povolit pohotovostní režim připojení k síti"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Když povolíte pohotovostní režim připojení k síti, zvýší se spotřeba energie."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Záložní data nejsou momentálně ukládána do žádného účtu."</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Podsvícení tlačítek na dálkovém ovládání při každém stisknutí tlačítka."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"Na podporovaných dálkových ovládáních Google TV se stisknutím tlačítka aktivuje podsvícení."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s hlasitost"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Hlasitost Asistenta můžete ovládat na reproduktoru %1$s"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Hlasitost asistenta můžete ovládat na reproduktoru %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Ovlivňuje jen hlasitost zařízení %1$s, ne televize"</string>
 </resources>

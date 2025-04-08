@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"General Settings"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Dismiss the suggestion"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"Ok Google\" detection"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Talk to Google Assistant at any time"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"Talk to voice assistant at any time"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (screen reader)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack is a screen reader accessibility feature that assists visually impaired users by reading aloud on-screen text, menu items and other elements. It can also be set up to use with accessibility shortcut."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Device"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Device settings"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Account settings"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Device lock"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Voice assistant"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Payment and purchases"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"App settings"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Location, Usage &amp; diagnostics, Ads"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Remotes and accessories"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Turn off Bluetooth"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"You will not be able to access Google Assistant from your remote while Bluetooth is off."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"You will not be able to access voice assistant from your remote while Bluetooth is off."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Pair accessory"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Accessories"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Remote control"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Camera access blocked"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"To unblock, move the privacy switch on your device to the camera\'s \'on position\' to allow camera access."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Microphone access: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"When turned on, all apps and services that are allowed to use the microphone will be able to access it.\n\nWhen turned off, no apps or services will be able to access the microphone. But you may still be able to talk to your Google Assistant by pressing the Assistant button on your remote.\n\nAudio devices using custom protocols for communicating with the TV may not be affected by this setting."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"When turned on, all apps and services that are allowed to use the microphone will be able to access it.\n\nWhen turned off, no apps or services will be able to access the microphone. But you may still be able to talk to your voice assistant by pressing the Assistant button on your remote.\n\nAudio devices using custom protocols for communicating with the TV may not be affected by this setting."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Microphone enabled on remote"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistant is able to access the microphone on your remote. You will be able to talk to your Assistant by pressing the Google Assistant button on your remote."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"Voice assistant is able to access the microphone on your remote. You will be able to talk to your assistant by pressing the Assistant button on your remote."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Microphone disabled on remote"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"You will not be able to talk to your Google Assistant using your remote. To be able to use the Google Assistant button, enable microphone access."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"You will not be able to talk to your voice assistant using your remote. To be able to use the voice assistant button, enable microphone access."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Camera access: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"When turned on, all apps and services with permission can access any camera on this device.\n\nCamera peripherals with a custom protocol will not be affected by this setting."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"On"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\'When watching\' timer must be longer than \'When inactive\' timer"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limit network connection in standby"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Uses less energy in standby mode"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Your TV will be disconnected from your network when in standby mode, except to receive automatic updates. This may decrease your TV’s energy use, though it also means you may not be able to use functions such as Cast and Google Assistant while in standby."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"Your TV will be disconnected from your network when in standby mode, except to receive automatic updates. This may decrease your TV’s energy use, though it also means that you may not be able to use functions like Cast and voice assistant while in standby."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Allow network connection in standby"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Allowing network connection in standby will increase standby energy use."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"No account is currently storing backed-up data"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Illumination of the buttons on the remote control upon each press."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"On supported Google TV remotes, pressing the button on the remotes activates backlight illumination."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s volume"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"You can control the Assistant volume on %1$s speaker"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"You can control the assistant volume on %1$s speaker"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Only affects volume on %1$s device, not on TV"</string>
 </resources>

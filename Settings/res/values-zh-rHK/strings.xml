@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"一般設定"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"關閉此建議"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"偵測「Ok Google」啟動字詞"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"隨時與「Google 助理」交談"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"隨時與語音助手對話"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (螢幕閱讀器)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack 是螢幕閱讀器無障礙功能，為視障使用者朗讀螢幕上的文字、選單項目和其他元素。使用者亦可設定透過無障礙功能捷徑使用此功能。"</string>
     <string name="header_category_device" msgid="3023893663454705969">"裝置"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"裝置設定"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"帳戶設定"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"裝置鎖定"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google 助理"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"語音助手"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"付款和購買項目"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"應用程式設定"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"位置、使用情況與診斷、廣告"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"遙控器和配件"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"藍牙"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"關閉藍牙"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"關閉藍牙後，你將無法透過遙控器使用「Google 助理」。"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"關閉藍牙後，你將無法透過遙控器使用語音助手。"</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"配對配件"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"配件"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"遙控器"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"已封鎖相機存取權"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"如要解除封鎖，請將裝置上的私隱開關移至相機開啟位置以允許相機存取權。"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"麥克風存取權：<xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"啟用後，所有允許使用麥克風的應用程式和服務均可存取麥克風。\n\n停用後，任何應用程式或服務均無法存取麥克風。但你仍然可以透過按下遙控器上的「Google 助理」按鈕來與「Google 助理」對話。\n\n使用自訂通訊協定來與電視通訊的音響裝置可能不受此設定影響。"</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"啟用後，所有允許使用麥克風的應用程式和服務均可存取麥克風。\n\n停用後，任何應用程式或服務均無法存取麥克風，但你仍然可以按下遙控器上的數碼助理按鈕來與語音助手對話。\n\n使用自訂通訊協定與電視通訊的音響裝置可能不受此設定影響。"</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"遙控器上的麥克風已啟用"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"「Google 助理」可存取你遙控器上的麥克風。你可透過按下遙控器上的「Google 助理」按鈕來與「Google 助理」對話。"</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"語音助手可存取你遙控器上的麥克風。你可以按下遙控器上的數碼助理按鈕來與語音助手對話。"</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"遙控器上的麥克風已停用"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"你將無法再利用遙控器與「Google 助理」對話。請啟用麥克風存取權以使用「Google 助理」按鈕。"</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"你將無法再使用遙控器與語音助手對話。請啟用麥克風存取權以使用語音助手按鈕。"</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"相機存取權：<xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"啟用後，所有獲授權的應用程式和服務均可存取此裝置的任何相機。\n\n設有自訂通訊協定的周邊相機將不受此設定影響。"</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"已開啟"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"「觀看時」計時器設定的時間必須長於「無活動時」計時器"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"在待機模式下限制網絡連線"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"在待機模式下降低耗電量"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"你的電視處於待機模式時會中斷網絡連線 (接收自動更新除外)。此操作可降低電視的耗電量，但你可能無法在電視處於待機模式時使用 Google Cast 和「Google 助理」等功能。"</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"你的電視處於待機模式時，網絡連線便會中斷 (接收自動更新除外)。此操作可降低電視的耗電量，但你可能無法在電視處於待機模式時使用 Google Cast 和語音助手等功能。"</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"允許在待機模式下連接網絡"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"允許在待機模式下連接網絡，會增加待機期間的耗電量。"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"目前沒有任何帳戶儲存備份資料"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"每次按下遙控器按鈕時便會亮起。"</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"按下支援的 Google TV 遙控器按鈕時，背光便會亮起。"</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s 音量"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"你可以控制「Google 助理」在%1$s喇叭的音量"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"你可以控制%1$s喇叭上數碼助理的音量"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"只影響%1$s裝置的音量，不會影響電視"</string>
 </resources>

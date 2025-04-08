@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Configuració general"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Ignora el suggeriment"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Detecció d\'\"Ok Google\""</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Parla amb l\'Assistent de Google sempre que vulguis"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"Parla amb l\'Assistent de veu en qualsevol moment"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (lector de pantalla)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack és una funció d\'accessibilitat de lector de pantalla que ajuda els usuaris amb discapacitat visual a llegir en veu alta el text, els elements de menú i altres elements en pantalla. També es pot configurar per utilitzar-se amb una drecera d\'accessibilitat."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Dispositiu"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Configuració del dispositiu"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Configuració del compte"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Bloqueig del dispositiu"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Assistent de Google"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Assistent de veu"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Pagament i compres"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Configuració de l\'aplicació"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Ubicació, Ús i diagnòstic, Anuncis"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Comandaments i accessoris"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Desactiva el Bluetooth"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Mentre el Bluetooth estigui desactivat, no podràs accedir a l\'Assistent de Google des del comandament."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Mentre el Bluetooth estigui desactivat, no podràs accedir a l\'Assistent de veu des del comandament."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Vincula un accessori"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Accessoris"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Comandament"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Accés a la càmera bloquejat"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Per desbloquejar-lo, mou l\'interruptor de privadesa del dispositiu a la posició Càmera activada per permetre l\'accés a la càmera."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Accés al micròfon: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Si l\'actives, totes les aplicacions i els serveis que poden utilitzar el micròfon podran accedir-hi.\n\nSi el desactives, cap aplicació ni servei podrà accedir al micròfon. Però encara podràs parlar amb el teu Assistent de Google fent clic al botó de l\'Assistent del comandament.\n\nPot ser que els dispositius d\'àudio que fan servir protocols personalitzats per comunicar-se amb la televisió no estiguin afectats per aquesta opció de configuració."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Si l\'actives, totes les aplicacions i els serveis que poden utilitzar el micròfon podran accedir-hi.\n\nSi el desactives, cap aplicació ni servei podrà accedir al micròfon. Ara bé, pot ser que puguis seguir parlant amb l\'Assistent de veu si prems el botó de l\'Assistent del comandament.\n\nPot ser que els dispositius d\'àudio que fan servir protocols personalitzats per comunicar-se amb la televisió no estiguin afectats per aquesta opció de configuració."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"El micròfon està activat al comandament"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"L\'Assistent de Google pot accedir al micròfon del comandament. Podràs parlar amb el teu Assistent fent clic al botó de l\'Assistent de Google del comandament."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"L\'Assistent de veu pot accedir al micròfon del comandament. Hi podràs parlar fent clic al botó de l\'Assistent del comandament."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"El micròfon està desactivat al comandament"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"No podràs parlar amb el teu Assistent de Google amb el comandament. Per poder utilitzar el botó de l\'Assistent de Google, has d\'activar l\'accés al micròfon."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"No podràs parlar amb l\'Assistent de veu amb el comandament. Per poder utilitzar el botó de l\'Assistent de veu, has d\'activar l\'accés al micròfon."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Accés a la càmera: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Quan s\'activa, tots els serveis i aplicacions amb permís poden accedir a qualsevol càmera d\'aquest dispositiu.\n\nAquesta opció de configuració no afectarà els perifèrics de càmera que disposin d\'un protocol personalitzat."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Activat"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"El temporitzador Mentre estigui mirant contingut ha de durar més que el temporitzador Mentre estigui inactiu"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limita la connexió de xarxa en espera"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Consumeix menys energia en mode d\'espera"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"El televisor es desconnectarà de la xarxa quan estigui en mode d\'espera, excepte per rebre actualitzacions automàtiques. Això pot disminuir el consum d\'energia del televisor, però també implica que pot ser que no puguis utilitzar funcions com Cast i l\'Assistent de Google en mode d\'espera."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"El televisor es desconnectarà de la xarxa quan estigui en mode d\'espera, excepte per rebre actualitzacions automàtiques. Això pot disminuir el consum d\'energia del televisor, però també implica que pot ser que no puguis utilitzar funcions com Cast i l\'Assistent de veu en mode d\'espera."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Permet la connexió de xarxa en mode d\'espera"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Permetre la connexió de xarxa en mode d\'espera augmentarà el consum d\'energia d\'aquest mode."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Actualment no hi ha cap compte que emmagatzemi dades de còpia de seguretat."</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Il·luminació dels botons del comandament amb cada pulsació."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"Als comandaments de Google TV compatibles, prémer el botó del comandament activa la retroil·luminació."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Volum: %1$s"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Pots controlar el volum de l\'Assistent a l\'altaveu %1$s"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Pots controlar el volum de l\'Assistent a l\'altaveu %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Només afecta el volum del dispositiu %1$s, no el del televisor"</string>
 </resources>

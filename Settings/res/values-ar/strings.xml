@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"الإعدادات العامة"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"رفض الاقتراح"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"رصْد عبارة \"Ok Google\""</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"التواصل مع \"مساعد Google\" في أي وقت"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"التحدّث إلى \"المساعد الصوتي\" في أي وقت"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (قارئ الشاشة)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"ميزة TalkBack هي إحدى ميزات تسهيل الاستخدام وهي عبارة عن قارئ شاشة يساعد المستخدمين ذوي العجز البصري على التفاعل من خلال قراءة النصوص وعناصر القائمة وغيرها من العناصر المعروضة على الشاشة بصوت عالٍ. ويمكن أيضًا إعدادها لتُستخدم من خلال \"اختصار تسهيل الاستخدام\"."</string>
     <string name="header_category_device" msgid="3023893663454705969">"الجهاز"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"إعدادات الجهاز"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"إعدادات الحساب"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"قفل الجهاز"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"مساعد Google"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"المساعد الصوتي"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"الدفع وعمليات الشراء"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"إعدادات التطبيق"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"الموقع الجغرافي والاستخدام وبيانات التشخيص والإعلانات"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"وحدات التحكّم عن بُعد والملحقات"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"البلوتوث"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"إيقاف البلوتوث"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"لن تتمكن من الوصول إلى \"مساعد Google\" باستخدام وحدة التحكّم عن بُعد عندما تكون تقنية البلوتوث متوقّفة."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"سيتعذّر عليك الوصول إلى \"المساعد الصوتي\" من جهاز التحكّم عن بُعد عندما تكون تقنية البلوتوث غير مفعّلة."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"إقران جهاز ملحق"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"الملحقات"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"وحدة التحكّم عن بُعد"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"تم حظر الوصول إلى الكاميرا"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"لإزالة الحظر، حرّك مفتاح الخصوصية بجهازك إلى وضع تفعيل الكاميرا للسماح بالوصول إلى الكاميرا."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"الوصول إلى الميكروفون: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"عندما يكون الميكروفون مفعَّلاً، فإنّ كل التطبيقات والخدمات المسموح لها باستخدام الميكروفون ستتمكن من الوصول إليه.\n\nعندما يكون الميكروفون غير مفعَّل، لن تتمكن أي تطبيقات أو خدمات من الوصول إليه. سيظلّ مع ذلك بإمكانك التحدّث إلى \"مساعد Google\" عن طريق الضغط على زر \"مساعد Google\" في جهاز التحكّم عن بُعد.\n\nقد لا يؤثر هذا الخيار في الأجهزة السماعية التي تستخدم بروتوكولات خاصة للتواصل مع تلفزيونك."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"عندما يكون الميكروفون مفعَّلاً، فإنّ كل التطبيقات والخدمات المسموح لها باستخدامه ستتمكن من الوصول إليه.\n\nعندما يكون الميكروفون غير مفعَّل، لن تتمكن أي تطبيقات أو خدمات من الوصول إليه. مع ذلك، سيظلّ بإمكانك التحدّث إلى \"المساعد الصوتي\" عن طريق الضغط على الزر الخاص به في جهاز التحكّم عن بُعد.\n\nقد لا يؤثر هذا الخيار في الأجهزة السماعية التي تستخدم بروتوكولات خاصة للتواصل مع تلفزيونك."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"تم تفعيل الميكروفون في جهاز التحكّم عن بُعد"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"يمكن لتطبيق \"مساعد Google\" الوصول إلى الميكروفون في جهاز التحكّم عن بُعد. ستتمكن من التحدّث إلى \"مساعد Google\" من خلال الضغط على زر \"مساعد Google\" في جهاز التحكّم عن بُعد."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"يمكن لـ \"المساعد الصوتي\" الوصول إلى الميكروفون في جهاز التحكّم عن بُعد، وسيكون بإمكانك التحدّث إليه بالضغط على الزر الخاص به في جهاز التحكّم عن بُعد."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"تم إيقاف الميكروفون في جهاز التحكّم عن بُعد."</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"لن تتمكن من التحدّث إلى \"مساعد Google\" باستخدام جهاز التحكّم عن بُعد. لتتمكن من استخدام زر \"مساعد Google\"، عليك السماح بالوصول إلى الميكروفون."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"سيتعذّر عليك التحدّث إلى \"المساعد الصوتي\" باستخدام جهاز التحكّم عن بُعد. للتمكُّن من استخدام زر \"المساعد الصوتي\"، عليك تفعيل إمكانية الوصول إلى الميكروفون."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"الوصول إلى الكاميرا: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"في حال تشغيل الكاميرا، ستتمكن التطبيقات والخدمات التي لديها إذن من الوصول إلى أي كاميرا على هذا الجهاز.\n\nأما الأجهزة الملحقة بالكاميرا المزوّدة ببروتوكول مخصّص، فلن تتأثّر بهذا الإعداد."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"مفعّل"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"يجب أن تكون مدّة موقّت \"أثناء المشاهدة\" أطول من موقّت \"في حال عدم النشاط\"."</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"تقييد الاتصال بالشبكة في وضع الاستعداد"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"يستخدم طاقة أقل في وضع الاستعداد."</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"سيتمّ قطع اتصال تلفزيونك بالشبكة عندما يكون في وضع الاستعداد، ويُستثنى من ذلك تلقّي التحديثات التلقائية. قد يؤدي ذلك إلى تقليل استهلاك التلفزيون للطاقة، على الرغم من أنه يعني أيضًا أنك قد لا تتمكّن من استخدام وظائف مثل \"البث\" و\"مساعد Google\" وأنت في وضع الاستعداد."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"سيتمّ قطع اتصال تلفزيونك بالشبكة عندما يكون في وضع الاستعداد، ويُستثنى من ذلك تلقّي التحديثات التلقائية. قد يساعد ذلك في تقليل استهلاك التلفزيون للطاقة، لكنّه قد يؤدي أيضًا إلى عدم تمكنك من استخدام وظائف مثل \"البث\" و\"المساعد الصوتي\" أثناء وضع الاستعداد."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"السماح باتصال الشبكة في وضع الاستعداد"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"سيؤدي السماح باتصال الشبكة في وضع الاستعداد إلى زيادة استخدام الطاقة في وضع الاستعداد."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"ليس هناك حساب يخزن حاليًا البيانات التي يتم نسخها احتياطيًا."</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"تُضاء الأزرار الموجودة بجهاز التحكم عن بُعد عند كل ضغطة."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"يتم تنشيط الإضاءة الخلفية عند الضغط على أي زر متوافق من أزرار أجهزة التحكم عن بُعد لـ Google TV."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s مستوى الصوت"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"يمكنك التحكّم في مستوى صوت \"مساعد Google\" على مكبر الصوت %1$s"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"يمكنك التحكّم في مستوى صوت \"المساعد الصوتي\" على مكبّر الصوت ‎%1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"يؤثر في مستوى الصوت في %1$s فقط، وليس في التلفزيون"</string>
 </resources>

@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Általános beállítások"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Javaslat elvetése"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Az „Ok Google” felismerése"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Bármikor beszélhet Google Segédjéhez"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"Bármikor beszélhet a Hangsegédhez"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (képernyőolvasó)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"A TalkBack képernyőolvasó egy olyan kisegítő funkció, amely a képernyőn megjelenő szövegek, menüelemek és más elemek felolvasásával segít a látássérült felhasználóknak. Emellett a Kisegítő lehetőségek gyorsparancsával való használatra is beállítható."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Eszköz"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Eszközbeállítások"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Fiókbeállítások"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Eszközzár"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Segéd"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Hangsegéd"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Fizetések és vásárlások"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Alkalmazásbeállítások"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Hely, Használat és diagnosztika, Hirdetések"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Távirányítók és tartozékok"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Bluetooth kikapcsolása"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Ha a Bluetooth ki van kapcsolva, a távirányító segítségével nem tud hozzáférni a Google Segédhez."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Ha a Bluetooth ki van kapcsolva, a távirányító segítségével nem tud hozzáférni a Hangsegédhez."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Tartozék párosítása"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Tartozékok"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Távirányító"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"A kamerához való hozzáférés letiltva"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"A letiltás feloldásához kapcsolja át az eszközén található adatvédelmi kapcsolót Kamera bekapcsolva pozícióba, így engedélyezheti a kamerához való hozzáférést."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Mikrofon-hozzáférés: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Amikor be van kapcsolva, a mikrofonhasználatra jogosult összes alkalmazás és szolgáltatás hozzáférhet a mikrofonhoz.\n\nAmikor ki van kapcsolva, egyetlen alkalmazás vagy szolgáltatás sem tudja használni a mikrofont. Ön azonban továbbra is beszélhet Google Segédjéhez a távirányítón lévő Segéd gomb lenyomásával.\n\nElőfordulhat, hogy ez a beállítás nincs hatással a tévével való kommunikációhoz egyedi protokollokat használó audioeszközökre."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Amikor be van kapcsolva, a mikrofonhasználatra jogosult összes alkalmazás és szolgáltatás hozzáférhet a mikrofonhoz.\n\nAmikor ki van kapcsolva, egyetlen alkalmazás vagy szolgáltatás sem tudja használni a mikrofont. Ön azonban továbbra is beszélhet Hangsegédjéhez a távirányítón lévő Segéd gomb megnyomásával.\n\nElőfordulhat, hogy ez a beállítás nincs hatással a tévével való kommunikációhoz egyedi protokollokat használó audioeszközökre."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"A távirányítón lévő mikrofon be van kapcsolva"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"A Google Segéd hozzá tud férni a távirányítón lévő mikrofonhoz. Segédjéhez a távirányítón lévő Google Segéd gomb lenyomásával beszélhet majd."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"A Hangsegéd hozzá tud férni a távirányítón lévő mikrofonhoz. Segédjéhez a távirányítón lévő Segéd gomb megnyomásával beszélhet majd."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"A távirányítón lévő mikrofon le van tiltva"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"Nem tud majd a Google Segédjéhez beszélni a távirányítóval. Ha újra használni szeretné a Google Segéd gombot, engedélyezze a mikrofonhoz való hozzáférést."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Nem tud majd a Hangsegédjéhez beszélni a távirányítóval. Ha használni szeretné a Hangsegéd gombot, engedélyezze a mikrofonhoz való hozzáférést."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Kamera-hozzáférés: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Ha be van kapcsolva, minden engedéllyel rendelkező alkalmazás és szolgáltatás hozzáférhet az eszköz összes kamerájához.\n\nAz egyéni protokollal rendelkező kameraperifériákat ez a beállítás nem érinti."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Be"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"A „Lejátszás közben” időzítő nem lehet rövidebb az „Inaktivitás esetén” időzítőnél"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Hálózat korlátozása készenléti módban"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Kevesebb energiát fogyaszt készenléti módban"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Tévéjé lecsatlakozik a hálózatról készenléti állapotban, és csak automatikus frissítéseket fogad. Ezzel csökkentheti tévéje energiafogyasztását, viszont így előfordulhat, hogy készenléti módban nem használhat majd olyan funkciókat, mint az átküldés vagy a Google Segéd."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"Tévéje lecsatlakozik a hálózatról készenléti módban, és csak automatikus frissítéseket fogad. Ezzel csökkentheti tévéje energiafogyasztását, viszont így előfordulhat, hogy készenléti módban nem használhat majd olyan funkciókat, mint az átküldés vagy a Hangsegéd."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Hálózati kapcsolat engedélyezése készenléti módban"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Ha engedélyezi a hálózati kapcsolatot készenléti módban, akkor készenléti módban megnő az energiafogyasztás."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Jelenleg egyik fiók sem tárolja adatok biztonsági másolatát"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"A távirányító gombjainak háttérvilágítása minden lenyomáskor bekapcsol."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"A támogatott Google TV-távirányítókon a rajtuk lévő gombok megnyomásakor aktiválódik a háttérvilágítás."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"A(z) %1$s hangereje"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Vezérelheti a Segéd hangerejét a(z) %1$s hangszórón"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Vezérelheti a Segéd hangerejét a(z) %1$s hangszórón"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Csak a(z) %1$s eszköz hangerejére van hatással, a tévéére nem"</string>
 </resources>

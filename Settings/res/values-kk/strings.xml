@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Жалпы параметрлер"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Ұсынысты қабылдамау"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"Ok Google\" пәрменін анықтау"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Google Assistant қолданбасына кез келген уақытта команда беріңіз"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"Дауыстық көмекшіге кез келген уақытта пәрмен беру"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (экран оқу құралы)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack — бұл көру қабілеті нашар пайдаланушыларға экрандағы мәтінді, мәзір элементтерін және басқа элементтерді дауыстап оқу арқылы көмектесетін экран оқу құралы. Оны арнайы мүмкіндіктер жылдам пәрменімен бірге пайдалану үшін реттеуге болады."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Құрылғы"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Құрылғы параметрлері"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Аккаунт параметрлері"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Құрылғыны құлыптау"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Дауыстық көмекші"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Төлем және сатып алу транзакциялары"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Қолданба параметрлері"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Локация, пайдалану дерегі және диагностика, жарнамалар"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Пульттер және жабдықтар"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Bluetooth-ты өшіру"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Bluetooth өшірулі кезде, пульттен Google Assistant-ке кіре алмайсыз."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Bluetooth өшірулі кезде, пульттен дауыстық көмекшіге кіре алмайсыз."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Жабдықты жұптау"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Жабдықтар"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Пульт"</string>
@@ -363,7 +363,7 @@
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"Бұл құрылғыны <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> басқарады."</string>
     <string name="do_disclosure_learn_more_separator" msgid="4226390963162716446">" "</string>
     <string name="hdr_capability" msgid="3331021013422460270">"- %1$s"</string>
-    <string name="learn_more" msgid="820336467414665686">"Толығырақ"</string>
+    <string name="learn_more" msgid="820336467414665686">"Толық ақпарат"</string>
     <string name="default_camera_app_title" msgid="4573905807226306484">"{count,plural, =1{Камера қолданбасы}other{Камера қолданбалары}}"</string>
     <string name="default_calendar_app_title" msgid="1533912443930743532">"Күнтізбе қолданбасы"</string>
     <string name="default_contacts_app_title" msgid="7792041146751261191">"Контактілер қолданбасы"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Камераны пайдалану рұқсаты бөгелді"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Бөгеуді алу үшін құрылғыдағы құпиялық ауыстырғышын камераға жылжытыңыз, оның қалпы камераны пайдалануға мүмкіндік беруі тиіс."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Микрофонды пайдалану: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Микрофон қосулы болса, пайдалану рұқсаты бар барлық қолданба мен қызмет оны пайдалана алады.\n\nЕгер микрофон өшірулі болса, ешқандай қолданба не қызмет оны пайдалана алмайды. Пульттегі Assistant түймесін басып, Google Assistant-ке пәрмен бере беруіңізге болады.\n\nБұл параметр теледидармен байланыс орнату үшін арнаулы протоколдар пайдаланатын аудио құрылғыларға әсер етпеуі мүмкін."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Микрофон қосулы болса, пайдалану рұқсаты бар барлық қолданба мен қызмет оны пайдалана алады.\n\nЕгер микрофон өшірулі болса, ешқандай қолданба не қызмет оны пайдалана алмайды. Пульттегі Assistant түймесін басып, дауыстық көмекшіге пәрмен бере беруіңізге болады.\n\nБұл параметр теледидармен байланыс орнату үшін арнаулы протоколдар пайдаланатын аудио құрылғыларға әсер етпеуі мүмкін."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Пульттегі микрофон қосулы"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistant пульттегі микрофонды пайдалана алады. Пульттегі Google Assistant түймесін басып, Assistant-ке пәрмен бере аласыз."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"Дауыстық көмекші пульттегі микрофонды пайдалана алады. Пульттегі Assistant түймесін басып, көмекшіге пәрмен бере аласыз."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Пульттегі микрофон өшірулі"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"Пульт арқылы Google Assistant-ке пәрмен бере алмайтын боласыз. Google Assistant түймесін қолдану үшін микрофонды пайдалану рұқсатын қосыңыз."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Пульт арқылы дауыстық көмекшіге пәрмен бере алмайтын боласыз. Дауыстық көмекші түймесін қолдану үшін микрофонды пайдалану рұқсатын қосыңыз."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Камераны пайдалану рұқсаты: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Бұл параметр қосулы болса, рұқсат берілген барлық қолданба мен қызмет осы құрылғыдағы кез келген камераны пайдалана алады.\n\nБұл параметр камераның арнаулы протоколды перифериялық құрылғыларына әсер етпейді."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Қосулы"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\"Теледидар қосулы\" таймері \"теледидар өшірулі\" таймерінен ұзағырақ болуы керек"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Күту режимінде желі байланысын шектеу"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Күту режимінде аз қуат жұмсайды."</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Теледидарыңыз күту режимінде желіден ажыратылады (автоматты түрде жаңарту туралы хабарлар келген кезді қоспағанда). Бұл – теледидардың қуатты жұмсауын азайтуы мүмкін, алайда күту режимінде трансляциялау және Google Assistant сияқты функцияларды пайдалана алмайсыз."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"Теледидарыңыз күту режимінде тұрғанда желіден ажыратылады, автоматты жаңартулар орнату үшін ғана қосылады. Бұл – теледидарыңыздың қуатты тұтынуын азайтуы мүмкін, алайда күту режимінде трансляциялау және дауыстық көмекші секілді функцияларды пайдалана алмайсыз."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Күту режимінде желі байланысына рұқсат ету"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Күту режимінде желі байланысына рұқсат етілсе, қуаттың жұмсалуы артады."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ешқандай аккаунт қазір сақтық көшірмесі жасалған деректерді сақтап жатқан жоқ"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Басқан сайын пульттегі түймелердің жарықтандырылуы."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"Қолдау көрсетілетін Google TV пульттерінде түймені бассаңыз, жарықтандыру қосылады."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s дыбыс деңгейі"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s динамигіндегі Assistant дыбысын басқара аласыз."</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s динамигіндегі Assistant-тің дыбыс деңгейін басқара аласыз."</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Теледидардағы емес,- тек %1$s құрылғысындағы дыбысқа әсер етеді."</string>
 </resources>
