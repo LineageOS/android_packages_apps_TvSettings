@@ -31,27 +31,31 @@ import com.android.tv.twopanelsettings.slices.EmbeddedSlicePreferenceHelper.Slic
  * slice api.
  */
 class EmbeddedSliceSwitchPreference : SliceSwitchPreference {
-    private val mHelper: EmbeddedSlicePreferenceHelper
+    private var mHelper: EmbeddedSlicePreferenceHelper? = null
     private var mUri: String? = null
 
     override fun onAttached() {
         super.onAttached()
-        mHelper.onAttached()
+        mHelper?.onAttached()
     }
 
     override fun onDetached() {
         super.onDetached()
-        mHelper.onDetached()
+        mHelper?.onDetached()
     }
 
     constructor(context: Context?) : super(context) {
         init(null)
-        mHelper = EmbeddedSlicePreferenceHelper(this, mUri!!)
+        mUri?.let {
+            mHelper = EmbeddedSlicePreferenceHelper(this, it)
+        }
     }
 
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
         init(attrs)
-        mHelper = EmbeddedSlicePreferenceHelper(this, mUri!!)
+        mUri?.let {
+            mHelper = EmbeddedSlicePreferenceHelper(this, it)
+        }
     }
 
     private fun init(attrs: AttributeSet?) {
@@ -74,24 +78,33 @@ class EmbeddedSliceSwitchPreference : SliceSwitchPreference {
     }
 
     fun addListener(listener: SlicePreferenceListener?) {
-        mHelper.mListener = listener
+        mHelper!!.mListener = listener
     }
 
     fun removeListener(listener: SlicePreferenceListener?) {
-        mHelper.mListener = null
+        mHelper!!.mListener = null
     }
 
     fun update() {
-        title = mHelper.mNewPref!!.title
-        summary = mHelper.mNewPref!!.summary
-        icon = mHelper.mNewPref!!.icon
-        if (mHelper.mNewPref is TwoStatePreference) {
-            isChecked = (mHelper.mNewPref as TwoStatePreference).isChecked
+        val newPref = mHelper!!.mNewPref!!
+        title = newPref.title
+        summary = newPref.summary
+        icon = newPref.icon
+        if (newPref is TwoStatePreference) {
+            isChecked = newPref.isChecked
         }
-        if (mHelper.mNewPref is HasSliceAction) {
-            sliceAction = (mHelper.mNewPref as HasSliceAction).sliceAction
+        if (newPref is HasSliceAction) {
+            sliceAction = newPref.sliceAction
         }
         isVisible = true
+    }
+
+    fun setUri(uri: String?) {
+        if (uri != mUri) {
+            mUri = uri
+            mHelper?.onDetached() // Remove old slice observer.
+            mHelper = if (uri != null) EmbeddedSlicePreferenceHelper(this, uri) else null
+        }
     }
 
     public override fun onClick() {
