@@ -39,7 +39,9 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
 import com.android.tv.settings.FullScreenConfirmationActivity;
@@ -50,51 +52,73 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.connectivity.util.ThreadNetworkHelper;
 import com.android.tv.settings.device.eco.EnergyModesHelper.EnergyMode;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.InfoFragment;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 import java.util.Optional;
 /**
  * The Energy Modes screen in TV settings.
  */
 @Keep
-public class EnergyModesFragment extends SettingsPreferenceFragment {
+public class EnergyModesFragment extends SettingsPreferenceFragment
+        implements SliceShard.Callbacks {
     private static final String TAG = "EnergyModesFragment";
 
     private static final String EXTRA_ENERGY_MODE_IDENTIFIER = "EXTRA_ENERGY_MODE_IDENTIFIER";
     private static final String RADIO_GROUP_ENERGY_MODES = "energy_modes";
+    private static final String ENERGY_MODE_LIST_KEY = "energy_mode_list";
 
     private EnergyModesHelper mEnergyModesHelper;
     private Optional<ThreadNetworkHelper> mThreadNetworkHelperOptional;
     private boolean isThreadEnabled;
     private EnergyMode newEnergyMode;
+    private SliceShard mSliceShard;
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
+        mThreadNetworkHelperOptional = Optional.ofNullable(
+                ThreadNetworkHelper.getInstance(getContext()));
+
+        var sliceUri = SliceShard.Companion.getSliceUri(getResources(),
+                R.string.energy_modes_fragment_slice_uri, R.string.main_fragment_slice_uri,
+                    "energy_modes");
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(R.xml.energy_modes, null);
+            configurePreferences();
+            return;
+        }
+
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.energy_modes),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    private void configurePreferences() {
         mEnergyModesHelper = new EnergyModesHelper(getContext());
         EnergyMode selectedMode = mEnergyModesHelper.updateEnergyMode();
 
-        PreferenceScreen screen = getPreferenceManager().createPreferenceScreen(getContext());
-        screen.setTitle(R.string.energy_modes);
-
-        Preference titlePreference = new Preference(getContext());
-        titlePreference.setTitle(R.string.energy_modes_summary);
-        titlePreference.setEnabled(false);
-        titlePreference.setSelectable(false);
-        titlePreference.setSingleLineTitle(false);
-        screen.addPreference(titlePreference);
+        PreferenceCategory modeList = findPreference(ENERGY_MODE_LIST_KEY);
 
         for (EnergyMode energyMode : mEnergyModesHelper.getEnergyModes()) {
             RadioPreference radioPreference = createEnergyModeRadioPreference(energyMode);
             if (energyMode.equals(selectedMode)) {
                 radioPreference.setChecked(true);
             }
-            screen.addPreference(radioPreference);
+            modeList.addPreference(radioPreference);
         }
 
-        setPreferenceScreen(screen);
+    }
 
-        mThreadNetworkHelperOptional = Optional.ofNullable(
-                ThreadNetworkHelper.getInstance(getContext()));
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(R.xml.energy_modes, null);
+        }
+        configurePreferences();
     }
 
     @Override
@@ -106,7 +130,9 @@ public class EnergyModesFragment extends SettingsPreferenceFragment {
         for (EnergyMode mode : mEnergyModesHelper.getEnergyModes()) {
             final String key = getContext().getString(mode.identifierRes);
             final RadioPreference radioPreference = findPreference(key);
-            radioPreference.setChecked(mode.equals(selectedMode));
+            if (radioPreference != null) {
+                radioPreference.setChecked(mode.equals(selectedMode));
+            }
         }
 
         mThreadNetworkHelperOptional.ifPresent(threadNetworkHelper -> {

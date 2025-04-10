@@ -32,20 +32,24 @@ import android.text.format.DateUtils;
 import android.util.Log;
 
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.RestrictedPreferenceAdapter;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 /**
  * The energy saver screen in TV settings.
  */
 @Keep
 public class EnergySaverFragment extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, SliceShard.Callbacks {
     private static final String TAG = "EnergySaverFragment";
     private static final String KEY_SLEEP_TIME = "sleepTime";
     private static final String KEY_ATTENTIVE_TIME = "attentiveTime";
@@ -66,10 +70,36 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
     private RestrictedPreferenceAdapter<ListPreference> mRestrictedSleepTime;
     private RestrictedPreferenceAdapter<ListPreference> mRestrictedAttentiveTime;
     private int mDefaultAttentiveTimeoutConfig;
-    private boolean mIsFirstResume = true;
+    private boolean mAmbientSenseConfigured;
+    private SliceShard mSliceShard;
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
+        var sliceUri = SliceShard.Companion.getSliceUri(getResources(),
+                R.string.energy_saver_fragment_slice_uri,
+                R.string.main_fragment_slice_uri, "energy_saver");
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(R.xml.energy_saver, null);
+            configurePreferences();
+            return;
+        }
+
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.device_energy_saver),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(R.xml.energy_saver, null);
+        }
+        configurePreferences();
+    }
+
+    private void configurePreferences() {
         setPreferencesFromResource(R.xml.energy_saver, null);
 
         mDefaultAttentiveTimeoutConfig = getResources()
@@ -108,6 +138,7 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
         }
 
         mAmbientSenseTimePref = findPreference(KEY_AMBIENT_SENSE_TIME);
+        configureAmbientSenseTimePref();
     }
 
     private boolean showAttentiveSleepTimeoutSetting() {
@@ -117,7 +148,11 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
     @Override
     public void onResume() {
         super.onResume();
-        if (mIsFirstResume && mAmbientSenseTimePref.isVisible()) {
+        configureAmbientSenseTimePref();
+    }
+
+    private void configureAmbientSenseTimePref() {
+        if (!mAmbientSenseConfigured && isResumed() && mAmbientSenseTimePref.isVisible()) {
             if (mAmbientSenseTimePref.isEnabled()) {
                 mSleepTimePref.setEnabled(false);
                 if (showAttentiveSleepTimeoutSetting()) {
@@ -130,8 +165,8 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
                     mAttentiveTimePref.setEnabled(true);
                 }
             }
+            mAmbientSenseConfigured = false;
         }
-        mIsFirstResume = false;
     }
 
     @Override
