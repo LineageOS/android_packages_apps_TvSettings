@@ -62,6 +62,7 @@ import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RestrictedPreferenceAdapter;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.device.eco.EnergyModeConfirmationActivity;
 import com.android.tv.settings.device.eco.EnergyModesActivity;
 import com.android.tv.settings.device.eco.EnergyModesHelper;
 import com.android.tv.settings.device.eco.EnergyModesHelper.EnergyMode;
@@ -158,9 +159,16 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                         @Override
                         public void onActivityResult(ActivityResult result) {
                             if (result.getResultCode() == Activity.RESULT_OK) {
-                                Intent energyModesIntent = new Intent(getContext(),
-                                        EnergyModesActivity.class);
-                                startActivity(energyModesIntent);
+                                Intent intent = new Intent(
+                                        getContext(), EnergyModeConfirmationActivity.class
+                                );
+                                intent.putExtra(EnergyModeConfirmationActivity.EXTRA_ENERGY_MODE_ID,
+                                        getContext().getString(
+                                                R.string.energy_mode_high_identifier));
+                                intent.putExtra(
+                                        EnergyModeConfirmationActivity.EXTRA_SHOULD_ENABLE_THREAD,
+                                        true);
+                                getContext().startActivity(intent);
                             }
                         }
                     });
