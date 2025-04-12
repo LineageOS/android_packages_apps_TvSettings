@@ -6,11 +6,11 @@
 -keep public class * extends android.app.backup.BackupAgentHelper
 -keep public class * extends android.preference.Preference
 
--keepclasseswithmembernames public class androidx.preference.Preference {
+-keepclasseswithmembers public class androidx.preference.Preference {
     *;
 }
 
--keepclasseswithmembernames public class * extends androidx.preference.Preference {
+-keepclasseswithmembers public class * extends androidx.preference.Preference {
     *;
 }
 -keep public class com.android.vending.licensing.ILicensingService

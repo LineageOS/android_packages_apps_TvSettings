@@ -21,6 +21,7 @@ import android.os.Bundle
 import android.util.AttributeSet
 import android.util.Log
 import android.view.ContextThemeWrapper
+import androidx.preference.ListPreference
 import androidx.preference.Preference
 import com.android.settingslib.RestrictedPreferenceHelperProvider
 import java.lang.reflect.Constructor
@@ -63,10 +64,21 @@ class NonSlicePreferenceBuilder private constructor(className: String) {
         properties@ for (property in bundle.keySet()) {
             val value = bundle[property]!!
 
-            if (property == "userRestriction" && value is String &&
-                preference is RestrictedPreferenceHelperProvider) {
-                preference.getRestrictedPreferenceHelper().setUserRestriction(value)
+            if (preference is ListPreference && property == DEFAULT_VALUE_PROPERTY &&
+                value !is CharSequence) {
+                preference.setDefaultValue(value.toString())
                 continue
+            } else if (property == IS_PREFERENCE_VISIBLE_PROPERTY && value is Boolean) {
+                preference.isVisible = value
+                continue
+            } else if (preference is RestrictedPreferenceHelperProvider) {
+                if (property == USER_RESTRICTION_PROPERTY && value is String) {
+                    preference.getRestrictedPreferenceHelper().setUserRestriction(value)
+                    continue
+                } else if (property == USE_ADMIN_DISABLED_SUMMARY_PROPERTY && value is Boolean) {
+                    preference.getRestrictedPreferenceHelper().useAdminDisabledSummary(value)
+                    continue
+                }
             }
 
             val setterList = setters[property] ?: mutableListOf()
@@ -137,6 +149,11 @@ class NonSlicePreferenceBuilder private constructor(className: String) {
 
     companion object {
         private const val TAG = "NonSlicePreferenceBld"
+
+        private const val DEFAULT_VALUE_PROPERTY = "defaultValue"
+        private const val IS_PREFERENCE_VISIBLE_PROPERTY = "isPreferenceVisible"
+        private const val USER_RESTRICTION_PROPERTY = "userRestriction"
+        private const val USE_ADMIN_DISABLED_SUMMARY_PROPERTY = "useAdminDisabledSummary"
 
         private val builders: MutableMap<String, NonSlicePreferenceBuilder> = mutableMapOf()
 

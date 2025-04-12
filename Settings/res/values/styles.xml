@@ -475,4 +475,26 @@
         <item name="android:fontFamily">@string/preference_title_text_font</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
+
+    <style name="Theme.Settings.GuidedStepHighContrast" parent="Theme.Leanback.GuidedStep">
+        <item name="guidedActionItemContainerStyle">@style/HighContrastItemContainer</item>
+        <item name="guidedActionItemTitleStyle">@style/HighContrastGuidedActionItemTitleStyle</item>
+        <item name="guidedActionItemContentStyle">@style/HighContrastItemContentStyle</item>
+        <item name="guidedActionsSelectorDrawable">@null</item>
+    </style>
+
+    <style name="HighContrastItemContainer" parent="@style/Widget.Leanback.GuidedActionItemContainerStyle">
+        <item name="android:background">@drawable/guided_step_high_contrast_item_background</item>
+    </style>
+
+    <style name="HighContrastGuidedActionItemTitleStyle" parent="Widget.Leanback.GuidedActionItemTitleStyle">
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:textColor">@color/tp_preference_item_primary_text_color_selector</item>
+    </style>
+
+    <style name="HighContrastItemContentStyle" parent="Widget.Leanback.GuidedActionItemContentStyle">
+        <item name="android:duplicateParentState">true</item>
+    </style>
 </resources>

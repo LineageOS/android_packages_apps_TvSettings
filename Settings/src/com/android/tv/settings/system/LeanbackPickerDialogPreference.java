@@ -33,14 +33,14 @@ import com.android.tv.settings.R;
 public class LeanbackPickerDialogPreference extends DialogPreference {
 
     // the picker preference type: can be either 'date' or 'time'
-    private final String mPreferenceType;
+    private String mPickerType;
 
     public LeanbackPickerDialogPreference(Context context, AttributeSet attrs, int defStyleAttr,
                               int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         final TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.LeanbackPickerDialogPreference, 0, 0);
-        mPreferenceType = a.getString(R.styleable.LeanbackPickerDialogPreference_pickerType);
+        mPickerType = a.getString(R.styleable.LeanbackPickerDialogPreference_pickerType);
 
         a.recycle();
     }
@@ -58,7 +58,11 @@ public class LeanbackPickerDialogPreference extends DialogPreference {
         this(context, null);
     }
 
-    public String getType() {
-        return mPreferenceType;
+    public String getPickerType() {
+        return mPickerType;
+    }
+
+    public void setPickerType(String pickerType) {
+        mPickerType = pickerType;
     }
 }

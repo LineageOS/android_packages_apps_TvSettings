@@ -32,7 +32,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Icon;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -50,6 +49,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Keep;
 import androidx.annotation.Nullable;
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
@@ -256,10 +256,12 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mNoWifiUpdateBeforeMillis = SystemClock.elapsedRealtime() + INITIAL_UPDATE_DELAY;
         updateWifiList();
         mThreadNetworkHelperOptional.ifPresent(threadNetworkHelper ->  {
-            threadNetworkHelper.setOnStateChangeListener(mOnThreadNetworkStateChange);
             threadNetworkHelper.registerStateCallback();
-            mThreadNetworkPref
-                    .setOnPreferenceChangeListener(mThreadNetworkPreferenceChangeListener);
+            if (mThreadNetworkPref != null) {
+                threadNetworkHelper.setOnStateChangeListener(mOnThreadNetworkStateChange);
+                mThreadNetworkPref
+                        .setOnPreferenceChangeListener(mThreadNetworkPreferenceChangeListener);
+            }
         });
     }
 
@@ -277,8 +279,10 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mConnectivityListener.setListener(null);
         clearCurrentAccessPoints();
         mThreadNetworkHelperOptional.ifPresent(threadNetworkHelper ->  {
-            mThreadNetworkPref
-                    .setOnPreferenceChangeListener(null);
+            if (mThreadNetworkPref != null) {
+                mThreadNetworkPref
+                        .setOnPreferenceChangeListener(null);
+            }
             threadNetworkHelper.unregisterStateCallback();
             threadNetworkHelper.setOnStateChangeListener(null);
         });
@@ -380,6 +384,14 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             if (!mAddEasyConnectPref.isDisabledByAdmin()) {
                 mAddEasyConnectPref.setEnabled(false);
             }
+        }
+
+        if (getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED) &&
+                mThreadNetworkHelperOptional.isPresent()) {
+            mThreadNetworkHelperOptional.get()
+                    .setOnStateChangeListener(mOnThreadNetworkStateChange);
+            mThreadNetworkPref
+                    .setOnPreferenceChangeListener(mThreadNetworkPreferenceChangeListener);
         }
 
         updateConnectivity();

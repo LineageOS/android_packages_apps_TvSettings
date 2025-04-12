@@ -135,7 +135,7 @@ public class FeatureFactoryImplTwoPanel implements FeatureFactory {
             if (pref instanceof LeanbackPickerDialogPreference) {
                 final LeanbackPickerDialogPreference dialogPreference =
                         (LeanbackPickerDialogPreference) pref;
-                f = dialogPreference.getType().equals("date")
+                f = dialogPreference.getPickerType().equals("date")
                         ? LeanbackPickerDialogFragment.newDatePickerInstance(pref.getKey())
                         : LeanbackPickerDialogFragment.newTimePickerInstance(pref.getKey());
                 f.setTargetFragment(caller, 0);
