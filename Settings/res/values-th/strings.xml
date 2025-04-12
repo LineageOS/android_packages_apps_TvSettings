@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"การตั้งค่าทั่วไป"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"ปิดคำแนะนำ"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"การตรวจพบ \"Ok Google\""</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"คุยกับ Google Assistant ได้ทุกเมื่อ"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"พูดคุยกับผู้ช่วยแบบเสียงได้ทุกเมื่อ"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (โปรแกรมอ่านหน้าจอ)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack คือฟีเจอร์การช่วยเหลือพิเศษของโปรแกรมอ่านหน้าจอที่ช่วยผู้ใช้ที่มีความบกพร่องทางสายตาโดยการอ่านออกเสียงข้อความบนหน้าจอ รายการในเมนู และองค์ประกอบอื่นๆ อีกทั้งยังสามารถตั้งค่าให้ใช้กับทางลัดสำหรับการช่วยเหลือพิเศษได้ด้วย"</string>
     <string name="header_category_device" msgid="3023893663454705969">"อุปกรณ์"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"การตั้งค่าอุปกรณ์"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"การตั้งค่าบัญชี"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"การล็อกอุปกรณ์"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"ผู้ช่วยแบบเสียง"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"การชำระเงินและการซื้อ"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"การตั้งค่าแอป"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"ตำแหน่ง, การใช้งานและการวินิจฉัย, โฆษณา"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"รีโมตและอุปกรณ์เสริม"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"บลูทูธ"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ปิดบลูทูธ"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"คุณจะเข้าถึง Google Assistant จากรีโมตไม่ได้ขณะที่บลูทูธปิดอยู่"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"คุณจะเข้าถึงผู้ช่วยแบบเสียงจากรีโมตไม่ได้ขณะที่บลูทูธปิดอยู่"</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"จับคู่อุปกรณ์เสริม"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"อุปกรณ์เสริม"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"รีโมตคอนโทรล"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"การเข้าถึงกล้องถูกบล็อก"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"หากต้องการเลิกบล็อก ให้สลับสวิตช์ความเป็นส่วนตัวบนอุปกรณ์ไปที่ตำแหน่งเปิดกล้อง เพื่อให้สิทธิ์การเข้าถึงกล้อง"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"สิทธิ์เข้าถึงไมโครโฟน: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"เมื่อเปิดไว้ แอปและบริการทั้งหมดที่ได้รับอนุญาตให้ใช้ไมโครโฟนก็จะเข้าถึงได้\n\nเมื่อปิดไว้ จะไม่มีแอปหรือบริการใดที่สามารถเข้าถึงไมโครโฟน แต่คุณอาจยังพูดคุยกับ Google Assistant ได้โดยกดปุ่ม Assistant บนรีโมต\n\nอุปกรณ์เสียงซึ่งใช้โปรโตคอลที่กำหนดเองในการสื่อสารกับทีวีอาจไม่ได้รับผลกระทบจากการตั้งค่านี้"</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"เมื่อเปิดไว้ แอปและบริการทั้งหมดที่ได้รับอนุญาตให้ใช้ไมโครโฟนก็จะเข้าถึงได้\n\nเมื่อปิดไว้ จะไม่มีแอปหรือบริการใดที่สามารถเข้าถึงไมโครโฟน แต่คุณอาจยังพูดคุยกับผู้ช่วยแบบเสียงได้โดยกดปุ่มผู้ช่วยบนรีโมต\n\nอุปกรณ์เสียงซึ่งใช้โปรโตคอลที่กำหนดเองในการสื่อสารกับทีวีอาจไม่ได้รับผลกระทบจากการตั้งค่านี้"</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"ไมโครโฟนเปิดอยู่บนรีโมต"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistant เข้าถึงไมโครโฟนบนรีโมตได้ คุณจะพูดคุยกับ Assistant ได้โดยกดปุ่ม Google Assistant บนรีโมต"</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"ผู้ช่วยแบบเสียงเข้าถึงไมโครโฟนบนรีโมตได้ คุณจะพูดคุยกับผู้ช่วยได้โดยกดปุ่มผู้ช่วยแบบเสียงบนรีโมต"</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"ไมโครโฟนปิดอยู่บนรีโมต"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"คุณจะไม่สามารถพูดคุยกับ Google Assistant โดยใช้รีโมตได้ โปรดเปิดการเข้าถึงไมโครโฟนเพื่อให้ใช้ปุ่ม Google Assistant ได้"</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"คุณจะไม่สามารถพูดคุยกับผู้ช่วยแบบเสียงโดยใช้รีโมตได้ โปรดเปิดการเข้าถึงไมโครโฟนเพื่อให้ใช้ปุ่มผู้ช่วยแบบเสียงได้"</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"สิทธิ์เข้าถึงกล้อง: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"เมื่อเปิดไว้ แอปและบริการทั้งหมดที่มีสิทธิ์จะเข้าถึงกล้องในอุปกรณ์นี้ได้\n\nอุปกรณ์ต่อพ่วงกล้องโดยมีโปรโตคอลที่กำหนดเองจะไม่ได้รับผลกระทบจากการตั้งค่านี้"</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"เปิด"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"ตัวจับเวลา \"เมื่อรับชม\" ต้องนานกว่าตัวจับเวลา \"เมื่อไม่ได้ใช้งาน\""</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"จำกัดการเชื่อมต่อเครือข่ายในโหมดสแตนด์บาย"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"ใช้พลังงานน้อยลงในโหมดสแตนด์บาย"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"เมื่ออยู่ในโหมดสแตนด์บาย ทีวีจะยกเลิกการเชื่อมต่อกับเครือข่าย ยกเว้นในกรณีที่ต้องรับการอัปเดตอัตโนมัติ การดำเนินการนี้อาจช่วยลดการใช้พลังงานของทีวีได้ แต่เมื่ออยู่ในโหมดสแตนด์บาย คุณก็อาจใช้ฟังก์ชันต่างๆ เช่น แคสต์และ Google Assistant ไม่ได้เช่นกัน"</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"เมื่ออยู่ในโหมดสแตนด์บาย ทีวีจะยกเลิกการเชื่อมต่อกับเครือข่าย ยกเว้นในกรณีที่ต้องรับการอัปเดตอัตโนมัติ การดำเนินการนี้อาจช่วยลดการใช้พลังงานของทีวีได้ แต่เมื่ออยู่ในโหมดสแตนด์บาย คุณก็อาจใช้ฟังก์ชันต่างๆ เช่น Cast และผู้ช่วยแบบเสียง ไม่ได้เช่นกัน"</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"อนุญาตการเชื่อมต่อเครือข่ายในโหมดสแตนด์บาย"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"หากอนุญาตการเชื่อมต่อเครือข่ายในโหมดสแตนด์บาย ระบบจะใช้พลังงานสแตนด์บายเพิ่มขึ้น"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"ไม่มีบัญชีใดในปัจจุบันที่จัดเก็บข้อมูลสำรองไว้"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"การส่องสว่างของปุ่มเมื่อกดรีโมตคอนโทรลแต่ละครั้ง"</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"เมื่อใช้รีโมต Google TV ที่รองรับ การกดปุ่มบนรีโมตจะเป็นการเปิดใช้งานไฟแบ็กไลต์"</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"ระดับเสียงของ %1$s"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"คุณควบคุมระดับเสียง Assistant บนลำโพง %1$s ได้"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"คุณควบคุมระดับเสียงผู้ช่วยบนลำโพง %1$s ได้"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"มีผลกับระดับเสียงบนอุปกรณ์ %1$s เท่านั้น ไม่มีผลกับทีวี"</string>
 </resources>

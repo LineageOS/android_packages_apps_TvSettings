@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Yleisasetukset"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Hylkää ehdotus"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Hey Google ‑tunnistus"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Puhu Google Assistantille koska vain"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"Puhu ääniapurille milloin tahansa"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (näytönlukuohjelma)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack on näytönlukuohjelma, joka auttaa näkövammaisia käyttäjiä lukemalla ääneen näytöllä olevaa tekstiä, valikkokohtia ja muita elementtejä. Sitä voi käyttää myös saavutettavuuspikanäppäimellä."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Laite"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Laiteasetukset"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Tilin asetukset"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Laitteen lukitus"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Ääniapuri"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Maksaminen ja ostokset"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Sovellusasetukset"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Sijainti, käyttö, diagnostiikka, mainokset"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Kaukosäätimet ja lisävarusteet"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Laita Bluetooth pois päältä"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Et voi käyttää Google Assistantia kaukosäätimellä, kun Bluetooth on poissa päältä."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Et voi käyttää ääniapuria kaukosäätimellä, kun Bluetooth on pois päältä."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Liitä lisälaite pariksi"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Lisälaitteet"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Kaukosäädin"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Pääsy kameraan estetty"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Jos haluat poistaa eston, salli pääsy kameraan siirtämällä laitteen yksityisyysvalitsinta."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Pääsy mikrofoniin: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Kun tämä on päällä, kaikilla sovelluksilla ja palveluilla, jotka saavat käyttää mikrofonia, on pääsy siihen.\n\nKun tämä on pois päältä, millään sovelluksella tai palvelulla ei ole pääsyä mikrofoniin. Voit kuitenkin ehkä puhua Google Assistantille painamalla kaukosäätimen Assistant-painiketta.\n\nTämä asetus ei välttämättä vaikuta audiolaitteisiin, jotka käyttävät omia protokollia kommunikoidakseen TV:n kanssa."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Kun tämä on päällä, kaikilla sovelluksilla ja palveluilla, jotka saavat käyttää mikrofonia, on pääsy siihen.\n\nKun tämä on pois päältä, millään sovelluksella tai palvelulla ei ole pääsyä mikrofoniin. Voit kuitenkin ehkä puhua ääniapurille painamalla kaukosäätimen ääniapuripainiketta.\n\nTämä asetus ei välttämättä vaikuta audiolaitteisiin, jotka käyttävät omia protokollia kommunikoidakseen television kanssa."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Mikrofoni käytössä kaukosäätimessä"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"Google Assistantilla on pääsy kaukosäätimesi mikrofoniin. Voit puhua Assistantille painamalla kaukosäätimen Google Assistant ‑painiketta."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"Ääniapurilla on pääsy kaukosäätimesi mikrofoniin. Voit puhua apurille painamalla kaukosäätimen ääniapuripainiketta."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Mikrofoni ei käytössä kaukosäätimessä"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"Et voi puhua Google Assistantille kaukosäätimen avulla. Salli pääsy mikrofoniin, jotta voit käyttää Google Assistant ‑painiketta."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Et voi puhua ääniapurille kaukosäätimen avulla. Salli pääsy mikrofoniin, jotta voit käyttää ääniapuripainiketta."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Pääsy kameraan: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Kun lupa on päällä, kaikki sovellukset ja palvelut, joilla se on, saavat pääsyoikeuden kaikkiin laitteen kameroihin.\n\nTämä asetus ei vaikuta kameralisälaitteisiin, joilla on oma protokolla."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Päällä"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\"Katseltaessa\"-ajastimessa keston täytyy olla pidempi kuin \"Ei-aktiivisena\"-ajastimessa"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Rajoita verkkoyhteyttä lepotilassa"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Käytä vähemmän energiaa lepotilassa"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Verkkoyhteys katkaistaan, kun televisio on lepotilassa (ei koske automaattisia päivityksiä). Tämä voi vähentää television energiankulutusta, mutta et ehkä voi käyttää lepotilassa joitakin ominaisuuksia, esim. Castia ja Google Assistantia."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"Verkkoyhteys katkaistaan, kun televisio on lepotilassa (ei koske automaattisia päivityksiä). Tämä voi vähentää television energiankulutusta, mutta et ehkä voi käyttää lepotilassa joitakin ominaisuuksia, esim. Castia ja ääniapuria."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Verkkoyhteys lepotilassa"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Jos verkkoyhteys lepotilassa sallitaan, lepotilan energiankulutus kasvaa."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Millään tilillä ei ole tällä hetkellä varmuuskopiota"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Säädä valaisua painamalla kaukosäätimen painikkeita."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"Tuetuilla Google TV ‑kaukosäätimillä voit painaa kaukosäätimen painiketta, joka aktivoi taustavalaisun."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Äänenvoimakkuus (%1$s)"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Voit muuttaa Assistantin äänenvoimakkuutta kaiuttimella (%1$s)"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Voit muuttaa ääniapurin äänenvoimakkuutta kaiuttimella (%1$s)"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Vaikuttaa vain äänenvoimakkuuteen laitteella (%1$s), ei TV:llä"</string>
 </resources>

@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"പൊതു ക്രമീകരണം"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"നിർദ്ദേശം ഡിസ്മിസ്സ് ചെയ്യുക"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"\"Ok Google\" തിരിച്ചറിയൽ"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"ഏത് സമയത്തും Google Assistant-നോട് സംസാരിക്കുക"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"ഏതുസമയത്തും വോയ്സ് അസിസ്റ്റന്റിനോട് സംസാരിക്കുക"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (സ്‌ക്രീൻ റീഡർ)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"സ്‌ക്രീനിലെ ടെക്‌സ്‌റ്റും മെനു ഇനങ്ങളും മറ്റ് എലമെന്റുകളും ഉറക്കെ വായിച്ച് കാഴ്ചാ പരിമിതിയുള്ള ഉപയോക്താക്കളെ സഹായിക്കുന്ന സ്‌ക്രീൻ റീഡർ ഉപയോഗസഹായി ഫീച്ചറാണ് TalkBack. ഉപയോഗസഹായി കുറുക്കുവഴി ഉപയോഗിക്കുന്നതിന് ഇത് സജ്ജീകരിക്കാനും കഴിയും."</string>
     <string name="header_category_device" msgid="3023893663454705969">"ഉപകരണം"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"ഉപകരണ ക്രമീകരണം"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"അക്കൗണ്ട് ക്രമീകരണം"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"ഉപകരണ ലോക്ക്"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google Assistant"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"വോയ്സ് അസിസ്റ്റന്റ്"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"പേയ്മെന്റും വാങ്ങലുകളും"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"ആപ്പ് ക്രമീകരണം"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"ലൊക്കേഷൻ, ഉപയോഗം, പ്രശ്‌നനിർണ്ണയം, പരസ്യങ്ങൾ എന്നിവ"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"റിമോട്ടുകളും ആക്‌സസറികളും"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Bluetooth ഓഫാക്കുക"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Bluetooth ഓഫായിരിക്കുമ്പോൾ നിങ്ങളുടെ റിമോട്ടിൽ നിന്ന് Google Assistant ആക്‌സസ് ചെയ്യാനാകില്ല."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Bluetooth ഓഫായിരിക്കുമ്പോൾ നിങ്ങളുടെ റിമോട്ടിൽ നിന്ന് വോയ്സ് അസിസ്റ്റന്റ് ആക്‌സസ് ചെയ്യാനാകില്ല."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ആക്‌സസറി ജോടിയാക്കുക"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"ആക്‌സസറികൾ"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"റിമോട്ട് കൺട്രോൾ"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"ക്യാമറാ ആക്സസ് ബ്ലോക്ക് ചെയ്തിരിക്കുന്നു"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"അൺബ്ലോക്ക് ചെയ്യാൻ, ക്യാമറാ ആക്സസ് അനുവദിക്കുന്നതിന്, ക്യാമറ ഓണാണ് എന്ന സ്ഥാനത്തേക്ക് നിങ്ങളുടെ ഉപകരണത്തിലെ സ്വകാര്യത മാറ്റുക."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"മൈക്രോഫോൺ ആക്‌സസ്: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"ഓൺ ചെയ്തിരിക്കുമ്പോൾ, മൈക്രോഫോൺ ഉപയോഗിക്കാൻ അനുവദിച്ചിട്ടുള്ള എല്ലാ ആപ്പുകൾക്കും സേവനങ്ങൾക്കും അത് ആക്സസ് ചെയ്യാനാകും.\n\nഓഫ് ചെയ്തിരിക്കുമ്പോൾ, ഒരു ആപ്പുകൾക്കും സേവനങ്ങൾക്കും മൈക്രോഫോൺ ആക്സസ് ചെയ്യാനാകില്ല. എന്നാൽ റിമോട്ടിലെ Assistant ബട്ടൺ അമർത്തിക്കൊണ്ട് നിങ്ങൾക്ക് തുടർന്നും Google Assistant-നോട് സംസാരിക്കാനായേക്കും.\n\nടിവിയുമായി ആശയവിനിമയം നടത്താൻ ഇഷ്ടാനുസൃത പ്രോട്ടോക്കോളുകൾ ഉപയോഗിക്കുന്ന ഓഡിയോ ഉപകരണങ്ങളെ ഈ ക്രമീകരണം ബാധിച്ചേക്കില്ല."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"ഓൺ ചെയ്തിരിക്കുമ്പോൾ, മൈക്രോഫോൺ ഉപയോഗിക്കാൻ അനുവദിച്ചിട്ടുള്ള എല്ലാ ആപ്പുകൾക്കും സേവനങ്ങൾക്കും അത് ആക്സസ് ചെയ്യാനാകും.\n\nഓഫ് ചെയ്തിരിക്കുമ്പോൾ, ഒരു ആപ്പുകൾക്കും സേവനങ്ങൾക്കും മൈക്രോഫോൺ ആക്സസ് ചെയ്യാനാകില്ല. എന്നാൽ റിമോട്ടിലെ അസിസ്‌റ്റന്റ് ബട്ടൺ അമർത്തിക്കൊണ്ട് നിങ്ങൾക്ക് തുടർന്നും വോയ്സ് അസിസ്റ്റന്റിനോട് സംസാരിക്കാനായേക്കും.\n\nടിവിയുമായി ആശയവിനിമയം നടത്താൻ ഇഷ്ടാനുസൃത പ്രോട്ടോക്കോളുകൾ ഉപയോഗിക്കുന്ന ഓഡിയോ ഉപകരണങ്ങളെ ഈ ക്രമീകരണം ബാധിച്ചേക്കില്ല."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"റിമോട്ടിൽ മൈക്രോഫോൺ പ്രവർത്തനക്ഷമമാക്കി"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"നിങ്ങളുടെ റിമോട്ടിൽ മൈക്രോഫോൺ ആക്സസ് ചെയ്യാൻ Google Assistant-ന് കഴിയും. നിങ്ങളുടെ റിമോട്ടിലെ Google Assistant ബട്ടൺ അമർത്തിക്കൊണ്ട് Assistant-നോട് സംസാരിക്കാൻ നിങ്ങൾക്കാകും."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"നിങ്ങളുടെ റിമോട്ടിൽ മൈക്രോഫോൺ ആക്സസ് ചെയ്യാൻ വോയ്സ് അസിസ്റ്റന്റിന് കഴിയും. നിങ്ങളുടെ റിമോട്ടിലെ അസിസ്‌റ്റന്റ് ബട്ടൺ അമർത്തിക്കൊണ്ട് അസിസ്‌റ്റന്റിനോട് സംസാരിക്കാൻ നിങ്ങൾക്കാകും."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"റിമോട്ടിൽ മൈക്രോഫോൺ പ്രവർത്തനക്ഷമമാക്കി"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"റിമോട്ട് ഉപയോഗിച്ച് നിങ്ങളുടെ Google Assistant-നോട് സംസാരിക്കാനാകില്ല. Google Assistant ഉപയോഗിക്കാൻ, മൈക്രോഫോൺ ആക്സസ് പ്രവർത്തനക്ഷമമാക്കുക."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"റിമോട്ട് ഉപയോഗിച്ച് നിങ്ങളുടെ വോയ്സ് അസിസ്റ്റന്റിനോട് സംസാരിക്കാനാകില്ല. വോയ്സ് അസിസ്റ്റന്റ് ബട്ടൺ ഉപയോഗിക്കാൻ, മൈക്രോഫോൺ ആക്സസ് പ്രവർത്തനക്ഷമമാക്കുക."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"ക്യാമറാ ആക്‌സസ്: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"ഓണായിരിക്കുമ്പോൾ, അനുമതിയുള്ള എല്ലാ ആപ്പുകൾക്കും സേവനങ്ങൾക്കും ഈ ഉപകരണത്തിലെ ഏത് ക്യാമറയും ആക്സസ് ചെയ്യാനാകും.\n\nഇഷ്ടാനുസൃത പ്രോട്ടോക്കോളുള്ള ക്യാമറാ പെരിഫറലുകളെ ഈ ക്രമീകരണം ബാധിക്കില്ല."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"ഓണാണ്"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"\"കാണുമ്പോൾ\" ടൈമർ \"സജീവമല്ലാത്തപ്പോൾ\" ടൈമറിനേക്കാൾ ദൈർഘ്യമുള്ളതായിരിക്കണം"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"സ്റ്റാൻഡ്ബൈയിൽ പരിമിത നെറ്റ്‌വർക്ക് കണക്ഷൻ"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"സ്റ്റാൻഡ്ബൈ മോഡിൽ ഊർജ്ജ ഉപയോഗം കുറയ്ക്കുന്നു"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"സ്റ്റാൻഡ്ബൈ മോഡിലായിരിക്കുമ്പോൾ നിങ്ങളുടെ നെറ്റ്‌വർക്കിൽ നിന്ന് ടിവി കണക്ഷൻ വിച്ഛേദിക്കും, എന്നിരുന്നാലും സ്വയമേവയുള്ള അപ്ഡേറ്റുകൾ തുടർന്നും ലഭിക്കും. ഇത് നിങ്ങളുടെ ടിവിയുടെ ഊർജ്ജ ഉപയോഗം കുറയ്ക്കാൻ സഹായിക്കും, അതായത് സ്റ്റാൻഡ്ബൈ മോഡിൽ ആയിരിക്കുമ്പോൾ Cast, Google Assistant എന്നിവ പോലുള്ള ഫംഗ്ഷനുകൾ ഉപയോഗിക്കാനായേക്കില്ല എന്നുകൂടിയാണ് ഇതിനർത്ഥം."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"സ്റ്റാൻഡ്ബൈ മോഡിലായിരിക്കുമ്പോൾ നിങ്ങളുടെ നെറ്റ്‌വർക്കിൽ നിന്ന് ടിവി കണക്ഷൻ വിച്ഛേദിക്കും, എന്നിരുന്നാലും സ്വയമേവയുള്ള അപ്ഡേറ്റുകൾ തുടർന്നും ലഭിക്കും. ഇത് നിങ്ങളുടെ ടിവിയുടെ ഊർജ്ജ ഉപയോഗം കുറയ്ക്കാൻ സഹായിക്കും, അതായത് സ്റ്റാൻഡ്ബൈ മോഡിൽ ആയിരിക്കുമ്പോൾ Cast, വോയ്സ് അസിസ്റ്റന്റ് എന്നിവ പോലുള്ള ഫംഗ്ഷനുകൾ ഉപയോഗിക്കാനായേക്കില്ല എന്നുകൂടിയാണ് ഇതിനർത്ഥം."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"സ്റ്റാൻഡ്ബൈ മോഡിൽ നെറ്റ്‌വർക്ക് കണക്ഷൻ അനുവദിക്കുക"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"സ്റ്റാൻഡ്ബൈ മോഡിൽ നെറ്റ്‌വർക്ക് കണക്ഷൻ അനുവദിക്കുന്നത് സ്റ്റാൻഡ്ബൈ ഊർജ്ജ ഉപയോഗം വർദ്ധിപ്പിക്കും."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"നിലവിൽ അക്കൗണ്ടുകളൊന്നും ബാക്കപ്പ് ചെയ്ത ഡാറ്റ സംഭരിക്കുന്നില്ല"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"ഓരോ തവണ അമർത്തുമ്പോഴും റിമോട്ട് കൺട്രോളിലെ ബട്ടണുകൾ തിളങ്ങുന്നു."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"പിന്തുണയ്ക്കുന്ന Google TV റിമോട്ടുകളിൽ, റിമോട്ടിലെ ബട്ടൺ അമർത്തുന്നത് ബാക്ക്‌ലൈറ്റിലെ തിളക്കം സജീവമാക്കുന്നു."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s വോളിയം"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s സ്‌പീക്കറിലെ Assistant വോളിയം നിങ്ങൾക്ക് നിയന്ത്രിക്കാനാകും"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s സ്‌പീക്കറിലെ അസിസ്റ്റന്റ് വോളിയം നിങ്ങൾക്ക് നിയന്ത്രിക്കാനാകും"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"%1$s ഉപകരണത്തിലെ വോളിയത്തെ മാത്രം ബാധിക്കുന്നു, ടിവിയെ ബാധിക്കില്ല"</string>
 </resources>

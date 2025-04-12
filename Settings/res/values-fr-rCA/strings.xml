@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"Paramètres généraux"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"Ignorer la suggestion"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"Détection du mot clé « Ok Google »"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"Parler à l\'Assistant Google en tout temps"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"Parlez à l\'assistant vocal en tout temps"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"TalkBack (lecteur d\'écran)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack est une fonctionnalité d\'accessibilité de lecteur d\'écran qui aide les utilisateurs ayant une déficience visuelle en lisant à voix haute le texte à l\'écran, les éléments de menu et d\'autres éléments. Elle peut également être configurée pour être utilisée avec le raccourci d\'accessibilité."</string>
     <string name="header_category_device" msgid="3023893663454705969">"Appareil"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"Paramètres de l\'appareil"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"Paramètres de compte"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"Verrouillage de l\'appareil"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Assistant Google"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"Assistant vocal"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"Paiement et achats"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"Paramètres des applications"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"Localisation, utilisation et diagnostics, et annonces"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"Télécommandes et accessoires"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"Bluetooth"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"Désactiver le Bluetooth"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"Vous ne pouvez pas accéder à l\'Assistant Google à partir de votre télécommande si le Bluetooth est désactivé."</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"Vous ne pourrez pas accéder à l\'assistant vocal à partir de votre télécommande si le Bluetooth est désactivé."</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"Associer un accessoire"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"Accessoires"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"Télécommande"</string>
@@ -342,7 +342,7 @@
     <string name="enterprise_privacy_location_access" msgid="8978502415647245748">"Autorisations de localisation"</string>
     <string name="enterprise_privacy_microphone_access" msgid="3746238027890585248">"Autorisations du microphone"</string>
     <string name="enterprise_privacy_camera_access" msgid="6258493631976121930">"Autorisations de l\'appareil photo"</string>
-    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Applications par défaut"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="5538330175901952288">"Applis par défaut"</string>
     <string name="enterprise_privacy_number_packages" msgid="6256222390430349008">"{count,plural, =1{# application}one{# application}other{# applications}}"</string>
     <string name="enterprise_privacy_input_method" msgid="5814752394251833058">"Clavier par défaut"</string>
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"Valeur définie : <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"Accès à l\'appareil photo bloqué"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"Pour le débloquer, autorisez l\'accès en basculant le commutateur de confidentialité de votre appareil à la position Activé."</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"Accès au microphone : <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"Lorsque le microphone est activé, toutes les applications et tous les services autorisés à l\'utiliser pourront y accéder.\n\nLorsque celui-ci est désactivé, aucune application ni service ne pourra accéder au microphone. Toutefois, vous pouvez toujours parler à votre Assistant Google en appuyant sur le bouton Assistant de votre télécommande.\n\nCe paramètre pourrait ne pas s\'appliquer aux appareils audio utilisant des protocoles personnalisés pour communiquer avec le téléviseur."</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"Lorsque le microphone est activé, toutes les applis et tous les services autorisés à l\'utiliser pourront y accéder.\n\nLorsque celui-ci est désactivé, aucune appli ni aucun service ne pourra accéder au microphone. Toutefois, vous pouvez toujours parler à votre assistant vocal en appuyant sur le bouton de l\'assistant de votre télécommande.\n\nCe paramètre pourrait ne pas s\'appliquer aux appareils audio utilisant des protocoles personnalisés pour communiquer avec le téléviseur."</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"Microphone activé sur la télécommande"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"L\'Assistant Google est en mesure d\'accéder au microphone de votre télécommande. Vous pourrez parler à votre Assistant en appuyant sur le bouton Assistant Google de votre télécommande."</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"L\'assistant vocal est en mesure d\'accéder au microphone de votre télécommande. Vous pourrez parler à votre assistant en appuyant sur le bouton de l\'assistant vocal de votre télécommande."</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"Microphone désactivé sur la télécommande"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"Vous ne pourrez pas parler à votre Assistant Google à l\'aide de votre télécommande. Pour pouvoir utiliser le bouton Assistant Google, activez l\'accès au microphone."</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Vous ne pourrez pas parler à votre assistant vocal à l\'aide de votre télécommande. Pour pouvoir utiliser le bouton de l\'assistant vocal, activez l\'accès au microphone."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Accès à la caméra : <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Si vous activez cette option, l\'ensemble des applications et des services autorisés pourront accéder à toute caméra de cet appareil.\n\nCe paramètre n\'a aucune incidence sur les périphériques de caméras qui utilisent un protocole personnalisé."</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Activé"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"La durée de la minuterie « Pendant le visionnement » doit être supérieure à celle de la minuterie « Pendant l\'inactivité »"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limiter connexion réseau en mode Veille"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Consomme moins d\'énergie en mode Veille"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"Votre téléviseur sera déconnecté de votre réseau lorsqu\'il est en mode Veille, sauf pour recevoir les mises à jour automatiques. Cela peut réduire la consommation d\'énergie de votre téléviseur, mais cela signifie également que vous ne pourrez peut-être pas utiliser des fonctionnalités comme Cast et l\'Assistant Google en mode Veille."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"Votre téléviseur sera déconnecté de votre réseau lorsqu\'il est en mode Veille, sauf pour recevoir les mises à jour automatiques. Cela peut réduire la consommation d\'énergie de votre téléviseur, mais cela signifie également que vous ne pourrez peut-être pas utiliser des fonctionnalités comme Cast et l\'assistant vocal en mode Veille."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Autoriser la connexion réseau en mode Veille"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"L\'autorisation de la connexion réseau en mode Veille augmente la consommation d\'énergie dans ce mode."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Aucun compte n\'enregistre de données de sauvegarde pour le moment."</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"Les boutons de la télécommande s\'illuminent chaque fois qu\'ils sont appuyés."</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"Sur les télécommandes Google TV prises en charge, appuyer sur le bouton active le rétroéclairage."</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s volume"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"Vous pouvez contrôler le volume de l\'Assistant sur le haut-parleur %1$s"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Vous pouvez contrôler le volume de l\'assistant sur le haut-parleur %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Ne concerne que le volume sur l\'appareil %1$s, pas sur le téléviseur"</string>
 </resources>

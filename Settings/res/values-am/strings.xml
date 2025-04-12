@@ -38,7 +38,7 @@
     <string name="header_category_general_settings" msgid="3897615781153506434">"አጠቃላይ ቅንብሮች"</string>
     <string name="dismiss_suggestion" msgid="6200814545590126814">"የአስተያየት ጥቆማውን አሰናብት"</string>
     <string name="hotwording_title" msgid="2606899304616599026">"«Ok Google»ን ማወቅ"</string>
-    <string name="hotwording_summary" msgid="2170375928302175449">"በማንኛውም ጊዜ Google ረዳትን ያናግሩ"</string>
+    <string name="hotwording_summary" msgid="172570751256156407">"በማንኛውም ጊዜ ከድምፅ እርዳታ ጋር ይነጋገሩ"</string>
     <string name="screen_reader_service_title" msgid="2793165860447969975">"Talkback (ማያ ገፅ አንባቢ)"</string>
     <string name="screen_reader_summary" msgid="515373097115748618">"TalkBack የማያ ገፅ ላይ ጽሁፍ፣ የምናሌ ንጥሎች እና ሌሎች አካሎችን ጮክ ብሎ በማንበብ የቀነሰ የማየት ችሎታ ያላቸውን ተጠቃሚዎች የሚረዳ የማያ ገጽ አንባቢ የተደራሽነት ባህሪ ነው። እንዲሁም ከተደራሽነት አቋራጭ ጋር ለመጠቀም መዋቀር ይችላል።"</string>
     <string name="header_category_device" msgid="3023893663454705969">"መሣሪያ"</string>
@@ -63,7 +63,7 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"የመሣሪያ ቅንብሮች"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"የመለያ ቅንብሮች"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"የመሣሪያ ቁልፍ"</string>
-    <string name="privacy_assistant_settings_title" msgid="4524957824712623680">"Google ረዳት"</string>
+    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"የድምፅ እርዳታ"</string>
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"ክፍያ እና ግዢዎች"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"የመተግበሪያ ቅንብሮች"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"አካባቢ፣ አጠቃቀም እና ምርመራ፣ ማስታወቂያዎች"</string>
@@ -276,7 +276,7 @@
     <string name="connected_devices_slice_pref_title" msgid="6761921505544005991">"የርቀት መቆጣጠሪያዎች እና መለዋወጫዎች"</string>
     <string name="bluetooth_toggle_title" msgid="3808904783456336104">"ብሉቱዝ"</string>
     <string name="bluetooth_toggle_confirmation_dialog_title" msgid="3906746631391295717">"ብሉቱዝ አጥፋ"</string>
-    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="9017044450625172698">"ብሉቱዝ ጠፍቶ ሳለ ከእርስዎ የርቀት መቆጣጣሪያ ሆነው Google ረዳቱን መድረስ አይችሉም።"</string>
+    <string name="bluetooth_toggle_confirmation_dialog_summary" msgid="2129842434432539594">"ብሉቱዝ ጠፍቶ ሳለ ከእርስዎ የርቀት መቆጣጣሪያ ሆነው የድምፅ እርዳታን መድረስ አይችሉም።"</string>
     <string name="bluetooth_pair_accessory" msgid="5508750142754420984">"ተቀጥላን አጣምር"</string>
     <string name="bluetooth_known_devices_category" msgid="6895470515631452961">"ተቀጥላዎች"</string>
     <string name="bluetooth_official_remote_category" msgid="5817814488268307170">"የርቀት መቆጣጠሪያ"</string>
@@ -663,11 +663,11 @@
     <string name="camera_physical_privacy_enabled_title" msgid="1944155695921165511">"የካሜራ መዳረሻ ታግዷል"</string>
     <string name="camera_physical_privacy_enabled_text" msgid="6692088634676282779">"እገዳውን ማንሳት እንዲችሉ የካሜራ መዳረሻ ለመፍቀድ በመሣሪያዎ ላይ ያለውን የግላዊነት መቀየሪያ ቦታው ላይ ወዳለው ካሜራ ያንቀሳቅሱት።"</string>
     <string name="mic_toggle_info_title" msgid="1086545614315873599">"የማይክሮፎን መዳረሻ፦ <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
-    <string name="mic_toggle_info_content" msgid="3187791167208947239">"በሚበራበት ጊዜ፣ ሁሉም ማይክሮፎኑን እንዲጠቀሙ የተፈቀደላቸው መተግበሪያዎች እና አገልግሎቶች ሊደርሱበት ይችላሉ።\n\nበሚጠፋበት ጊዜ፣ ምንም መተግበሪያዎች ወይም አገልግሎቶች ማይክሮፎኑን ሊደርሱበት አይችሉም። ነገር ግን በርቀት መቆጣጠሪያዎ ላይ የረዳት አዝራሩን በመጫን የGoogle ረዳትዎን ማነጋገር ይችላሉ።\n\nከቲቪው ጋር ለመነጋገር ብጁ ፕሮቶኮሎችን የሚጠቀሙ የኦዲዮ መሣሪያዎች ይህ ቅንብር ተጽዕኖ ላያሳድርባቸው ይችላል።"</string>
+    <string name="mic_toggle_info_content" msgid="4435018638934578695">"በሚበራበት ጊዜ፣ ሁሉም ማይክሮፎኑን እንዲጠቀሙ የተፈቀደላቸው መተግበሪያዎች እና አገልግሎቶች ሊደርሱበት ይችላሉ።\n\nበሚጠፋበት ጊዜ፣ ምንም መተግበሪያዎች ወይም አገልግሎቶች ማይክሮፎኑን ሊደርሱበት አይችሉም። ነገር ግን በርቀት መቆጣጠሪያዎ ላይ የረዳት አዝራሩን በመጫን የድምፅ እርዳታዎን አሁንም ማነጋገር ይችላሉ።\n\nከቲቪው ጋር ለመነጋገር ብጁ ፕሮቶኮሎችን የሚጠቀሙ የኦዲዮ መሣሪያዎች ይህ ቅንብር ተጽዕኖ ላያሳድርባቸው ይችላል።"</string>
     <string name="mic_remote_toggle_on_info_title" msgid="8503441878870972046">"ማይክሮፎን በርቀት መቆጣጠሪያ ላይ ነቅቷል"</string>
-    <string name="mic_remote_toggle_on_info_content" msgid="2715872916376493679">"የGoogle ረዳት በእርስዎ የርቀት መቆጣጠሪያ ላይ ያለውን ማይክሮፎን ሊደርስበት ይችላል። በርቀት መቆጣጠሪያዎ ላይ የGoogle ረዳት አዝራሩን በመጫን ረዳትዎን ማነጋገር ይችላሉ።"</string>
+    <string name="mic_remote_toggle_on_info_content" msgid="2349197575836972081">"የድምፅ እርዳታ በእርስዎ የርቀት መቆጣጠሪያ ላይ ያለውን ማይክሮፎን መድረስ ይችላል። በርቀት መቆጣጠሪያዎ ላይ ረዳት አዝራሩን በመጫን ረዳትዎን ማነጋገር ይችላሉ።"</string>
     <string name="mic_remote_toggle_off_info_title" msgid="4902909833546393713">"በርቀት መቆጣጠሪያ ላይ ማይክሮፎን ተሰናክሏል"</string>
-    <string name="mic_remote_toggle_off_info_content" msgid="8062526350553191004">"የርቀት መቆጣጠሪያዎን በመጠቀም የGoogle ረዳትዎን ማነጋገር አይችሉም። የGoogle ረዳት አዝራሩን መጠቀም እንዲችሉ የማይክሮፎን መዳረሻን ያንቁ።"</string>
+    <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"የርቀት መቆጣጠሪያዎን በመጠቀም የድምፅ እርዳታዎን ማነጋገር አይችሉም። የድምፅ እርዳታ አዝራሩን መጠቀም እንዲችሉ የማይክሮፎን መዳረሻን ያንቁ።"</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"የካሜራ መዳረሻ፦ <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"ሲበራ ሁሉም ፈቃድ ያላቸው መተግበሪያዎች እና አገልግሎቶች በዚህ መሣሪያ ላይ ያለ ማንኛውም ካሜራ መድረስ ይችላሉ።\n\nብጁ ፕሮቶኮል ያላቸው የካሜራ ተቀጥላዎች በዚህ ቅንብር ተጽዕኖ አይደርስባቸውም።"</string>
     <string name="sensor_toggle_info_on" msgid="4568111889147132257">"በርቷል"</string>
@@ -702,7 +702,7 @@
     <string name="accessibility_service_settings" msgid="3251334786870932423">"የአገልግሎት ቅንብሮች"</string>
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"ከፍተኛ ንጽጽር ጽሁፍ"</string>
-    <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"ደማቅ ጽሁፍ"</string>
+    <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"ደማቅ ጽሑፍ"</string>
     <string name="bounce_key_title" msgid="8334672581038914983">"የአንጥር ቁልፎች"</string>
     <string name="bounce_key_description" msgid="8742025495500915588">"ተመራጭ ጊዜን ይምረጡ"</string>
     <string name="bounce_key_detailed" msgid="2422246064036507844">"የርቀት መቆጣጠሪያ ተደጋጋሚ የቁልፍ መጫኖችን ችላ ይላል"</string>
@@ -1030,7 +1030,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"«በመመልከት ጊዜ ላይ» ያለው የሰዓት ቆጣሪ ከ«ገቢር ባልሆነ ጊዜ ላይ» ካለው የሰዓት ቆጣሪ በላይ መሆን አለበት"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"የአውታረ መረብ ግንኙነትን በተጠባባቂነት ፍቀድ"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"የተጠባባቂ ሁነታ ላይ ያነሰ ኃይል ይጠቀማል"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="566947772381093991">"በተጠባባቂ ሁነታ ጊዜ የራስ-ሰር ዝማኔዎችን ለመቀበል ካልሆነ በስተቀር ቲቪዎ ከአውታረ መረብዎ ጋር ያለው ግንኙነት ይቋረጣል። እንደ Cast እና Google ረዳት ያሉ ተግባሮችን በተጠባባቂነት መጠቀም አይችሉም ማለት ሊሆን ቢችልም የእርስዎን የቲቪ ኃይል ፍጆታን ሊቀንስ ይችላል።"</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"በተጠባባቂ ሁነታ ውስጥ በሚሆንበት ጊዜ ራስ-ሰር ዝማኔዎችን ለመቀበል ካልሆነ በስተቀር ቲቪዎ ከአውታረ መረብዎ ጋር ያለው ግንኙነት ይቋረጣል። እንደ Cast እና የድምፅ እርዳታ ያሉ ተግባሮችን በተጠባባቂነት መጠቀም አይችሉም ማለት ሊሆን ቢችልም ይህ የእርስዎን የቲቪ ኃይል ፍጆታን ሊቀንስ ይችላል።"</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"የአውታረ መረብ ግንኙነት በተጠባባቂነት ይፈቀድ"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"የአውታረ መረብ ግንኙነትን በተጠባባቂነት መፍቀድ የተጠባባቂ ኃይል ፍጆታን ይጨምራል።"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"በአሁኑ ጊዜ ምንም መለያ ምትኬ ውሂብ እያከማቸ አይደለም።"</string>
@@ -1195,6 +1195,6 @@
     <string name="settings_backlight_description" msgid="7017662329873546994">"በእያንዳንዱ ጫን ማለት ላይ በርቀት መቆጣጠሪያው ያሉት አዝራሮች ብርሃን።"</string>
     <string name="backlight_slice_description" msgid="6201435407391858605">"በሚደገፉ የGoogle ቲቪ የርቀት መቆጣጠሪያዎች ላይ፣ የርቀት መቆጣጠሪያዎቹ ላይ ያለውን አዝራር ጫን ማለት የኋላውን ብርሃን ያነቃል።"</string>
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s የድምፅ መጠን"</string>
-    <string name="volume_change_subtitle_unselect" msgid="7419217244526249839">"%1$s ድምፅ ማውጫ ላይ የረዳት የድምፅ መጠኑን መቆጣጠር ይችላሉ"</string>
+    <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s ድምፅ ማውጫ ላይ የረዳት የድምፅ መጠኑን መቆጣጠር ይችላሉ"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"የድምፅ መጠን ላይ ተጽዕኖ የሚያደርገው ቲቪ ላይ ሳይሆን %1$s መሣሪያ ላይ ነው"</string>
 </resources>
