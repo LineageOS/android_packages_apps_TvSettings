@@ -488,4 +488,10 @@
         <item>The backlight will illuminate with each press. The illumination will last for 5 seconds each time it is activated.</item>
         <item>The backlight will illuminate with each press only during nighttime hours(6pm~6am). The illumination will last for 5 seconds each time it is activated.</item>
     </string-array>
+
+    <string-array name="accessibility_services_map" translatable="false">
+        <!-- Screen reader's component name and slice URI-->
+        <item>@string/accessibility_screen_reader_flattened_component_name</item>
+        <item>@string/screen_reader_slice_uri</item>
+    </string-array>
 </resources>
