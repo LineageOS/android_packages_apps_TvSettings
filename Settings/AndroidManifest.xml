@@ -1405,6 +1405,11 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".device.apps.ForceStopPreference$ConfirmationDialogFragmentActivity"
+            android:theme="@style/TvSettingsDialog.FullScreen"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true" />
+
     </application>
 
     <queries>
