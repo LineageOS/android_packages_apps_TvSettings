@@ -24,6 +24,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
 import android.content.res.Configuration
+import android.content.res.Resources
 import android.database.ContentObserver
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.Icon
@@ -43,6 +44,7 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.StringRes
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
@@ -805,6 +807,20 @@ class SliceShard(
             }
 
             return ContextThemeWrapper(parentContext, themeTypedValue.resourceId)
+        }
+
+        fun getSliceUri(resources: Resources, @StringRes resId : Int,
+                @StringRes fallback: Int, suffix: String) : String? {
+            val sliceUri = resources.getString(resId);
+            if (sliceUri != "*") {
+                return sliceUri
+            }
+            val mainUri = resources.getString(fallback)
+            val lastSlash = mainUri.lastIndexOf('/')
+            if (lastSlash == -1) {
+                return ""
+            }
+            return mainUri.substring(0, lastSlash + 1) + suffix
         }
 
         private fun isSamePreference(oldPref: Preference?, newPref: Preference?): Boolean {

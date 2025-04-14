@@ -212,6 +212,9 @@ open class MainFragment : PreferenceControllerFragment(),
                 CustomizationConstants.MAIN_SCREEN
             )
         }
+
+        refreshAllPreferences()
+
         if (isRestricted) {
             val appPref = findPreference<Preference>(KEY_APPLICATIONS)
             if (appPref != null) {

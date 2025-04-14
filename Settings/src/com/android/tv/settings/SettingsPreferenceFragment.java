@@ -48,6 +48,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
+import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.Preference;
@@ -59,6 +60,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.preference.PreferenceCategory;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.settingslib.core.lifecycle.events.OnCreate;
+import com.android.settingslib.core.lifecycle.events.OnResume;
+import com.android.settingslib.core.lifecycle.events.OnStart;
 import com.android.tv.settings.library.instrumentation.InstrumentedPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SettingsPreferenceUtil;
@@ -76,7 +80,24 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
         implements LifecycleOwner,
         TwoPanelSettingsFragment.PreviewableComponentCallback {
     private static final int PROGRESS_BAR_DELAY_MS=500;
-    private final Lifecycle mLifecycle = new Lifecycle(this);
+    private final Lifecycle mLifecycle = new Lifecycle(this) {
+        @Override
+        @SuppressWarnings("deprecation") // Need to call legacy lifecycle methods.
+        public void addObserver(LifecycleObserver observer) {
+            super.addObserver(observer);
+            if (observer instanceof OnCreate && getCurrentState().isAtLeast(State.CREATED)) {
+                ((OnCreate) observer).onCreate(null);
+            }
+
+            if (observer instanceof OnStart && getCurrentState().isAtLeast(State.STARTED)) {
+                ((OnStart) observer).onStart();
+            }
+
+            if (observer instanceof OnResume && getCurrentState().isAtLeast(State.RESUMED)) {
+                ((OnResume) observer).onResume();
+            }
+        }
+    };
 
     // Rename getLifecycle() to getSettingsLifecycle() as androidx Fragment has already implemented
     // getLifecycle(), overriding here would cause unexpected crash in framework.

@@ -18,8 +18,10 @@ package com.android.tv.settings.about;
 
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
+import android.os.Bundle;
 
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
@@ -27,6 +29,11 @@ import com.android.tv.settings.NopePreferenceController;
 import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.accessories.util.bluetooth.BluetoothAddressPreferenceController;
+import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
+
+import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,10 +42,12 @@ import java.util.List;
  * Fragment for showing device hardware info, such as MAC addresses and serial numbers
  */
 @Keep
-public class StatusFragment extends PreferenceControllerFragment {
+public class StatusFragment extends PreferenceControllerFragment implements SliceShard.Callbacks {
 
     private static final String KEY_BATTERY_STATUS = "battery_status";
     private static final String KEY_BATTERY_LEVEL = "battery_level";
+
+    private SliceShard mSliceShard;
 
     public static StatusFragment newInstance() {
         return new StatusFragment();
@@ -51,21 +60,53 @@ public class StatusFragment extends PreferenceControllerFragment {
 
     @Override
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
+        return ImmutableList.of();
+    }
+
+    private void addPreferenceControllers() {
         final List<AbstractPreferenceController> controllers = new ArrayList<>(10);
         final Lifecycle lifecycle = getSettingsLifecycle();
+        final Context context = requireContext();
 
         // TODO: detect if we have a battery or not
-        controllers.add(new NopePreferenceController(context, KEY_BATTERY_LEVEL));
-        controllers.add(new NopePreferenceController(context, KEY_BATTERY_STATUS));
+        addPreferenceController(new NopePreferenceController(context, KEY_BATTERY_LEVEL));
+        addPreferenceController(new NopePreferenceController(context, KEY_BATTERY_STATUS));
 
-        controllers.add(new SerialNumberPreferenceController(context));
-        controllers.add(new UptimePreferenceController(context, lifecycle));
-        controllers.add(new BluetoothAddressPreferenceController(context, lifecycle));
-        controllers.add(new IpAddressPreferenceController(context, lifecycle));
-        controllers.add(new MacAddressPreferenceController(context, lifecycle));
-        controllers.add(new ImsStatusPreferenceController(context, lifecycle));
+        addPreferenceController(new SerialNumberPreferenceController(context));
+        addPreferenceController(new UptimePreferenceController(context, lifecycle));
+        addPreferenceController(new BluetoothAddressPreferenceController(context, lifecycle));
+        addPreferenceController(new IpAddressPreferenceController(context, lifecycle));
+        addPreferenceController(new MacAddressPreferenceController(context, lifecycle));
+        addPreferenceController(new ImsStatusPreferenceController(context, lifecycle));
+    }
 
-        return controllers;
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        var sliceUri = SliceShard.Companion.getSliceUri(getResources(),
+                R.string.status_fragment_slice_uri, R.string.main_fragment_slice_uri,
+                "device_info_status");
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(getPreferenceScreenResId(), null);
+            addPreferenceControllers();
+            refreshAllPreferences();
+            return;
+        }
+
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.device_status_title),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(getPreferenceScreenResId(), null);
+        }
+        addPreferenceControllers();
+        updatePreferenceStates();
+        refreshAllPreferences();
     }
 
     protected int getPageId() {
