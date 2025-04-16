@@ -123,6 +123,11 @@
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
         custom:isPreferenceVisible="false"
         custom:uri="@string/overlay_internal_slice_uri"/>
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
+        android:key="sound_effects_switch"
+        android:icon="@drawable/ic_system_sound"
+        android:persistent="true"
+        android:title="@string/device_sound_effects"/>
     <com.android.tv.settings.LongClickPreference
         android:icon="@drawable/ic_restart_alt"
         android:key="reboot"
