@@ -97,9 +97,10 @@ public class AppPicker extends FragmentActivity {
             final List<ApplicationInfo> pkgs =
                     getActivity().getPackageManager().getInstalledApplications(0);
             final PackageManager pm = getActivity().getPackageManager();
+            final boolean isUserBuild = "user".equals(Build.TYPE);
 
             for (final ApplicationInfo ai : pkgs) {
-                if (ai.uid == Process.SYSTEM_UID) {
+                if (ai.uid == Process.SYSTEM_UID && isUserBuild) {
                     continue;
                 }
 
@@ -108,8 +109,7 @@ public class AppPicker extends FragmentActivity {
                     // On a user build, we only allow debugging of apps that
                     // are marked as debuggable.  Otherwise (for platform development)
                     // we allow all apps.
-                    if ((ai.flags&ApplicationInfo.FLAG_DEBUGGABLE) == 0
-                            && "user".equals(Build.TYPE)) {
+                    if ((ai.flags&ApplicationInfo.FLAG_DEBUGGABLE) == 0 && isUserBuild) {
                         continue;
                     }
                 }
