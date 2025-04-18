@@ -18,7 +18,9 @@ package com.android.tv.twopanelsettings.slices
 import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.content.Context
+import android.content.pm.PackageInfo
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Parcel
 import android.util.Log
@@ -56,14 +58,20 @@ class SliceCacheManager internal constructor(val context : Context) {
             parcel.recycle()
 
             if (bundle.getInt(SLICE_FORMAT_VERSION) != FORMAT_VERSION ||
-                bundle.getString(SLICE_PACKAGE_NAME) != providerInfo.packageName) {
+                bundle.getString(SLICE_PACKAGE_NAME) != providerInfo.packageName ||
+                bundle.getString(SYSTEM_BUILD_FINGERPRINT) != Build.FINGERPRINT) {
                 return@withContext null
             }
 
             val packageInfo = context.packageManager.getPackageInfo(providerInfo.packageName, 0)
-            val updateTime = maxOf(packageInfo.lastUpdateTime, packageInfo.firstInstallTime)
             if (bundle.getLong(SLICE_PACKAGE_VERSION) != packageInfo.longVersionCode ||
-                        bundle.getLong(SLICE_PACKAGE_UPDATE_TIME) != updateTime) {
+                        bundle.getLong(SLICE_PACKAGE_UPDATE_TIME) != getUpdateTime(packageInfo)) {
+                return@withContext null
+            }
+
+            val hostInfo = context.packageManager.getPackageInfo(context.packageName, 0)
+            if (bundle.getLong(HOST_PACKAGE_VERSION) != hostInfo.longVersionCode ||
+                    bundle.getLong(HOST_PACKAGE_UPDATE_TIME) != getUpdateTime(hostInfo)) {
                 return@withContext null
             }
 
@@ -82,10 +90,13 @@ class SliceCacheManager internal constructor(val context : Context) {
             val bundle = slice.toBundle()
             bundle.putInt(SLICE_FORMAT_VERSION, FORMAT_VERSION)
             bundle.putString(SLICE_PACKAGE_NAME, providerInfo.packageName)
+            bundle.putString(SYSTEM_BUILD_FINGERPRINT, Build.FINGERPRINT)
             val packageInfo = context.packageManager.getPackageInfo(providerInfo.packageName, 0)
-            val updateTime = maxOf(packageInfo.lastUpdateTime, packageInfo.firstInstallTime)
             bundle.putLong(SLICE_PACKAGE_VERSION, packageInfo.longVersionCode)
-            bundle.putLong(SLICE_PACKAGE_UPDATE_TIME, updateTime)
+            bundle.putLong(SLICE_PACKAGE_UPDATE_TIME, getUpdateTime(packageInfo))
+            val hostInfo = context.packageManager.getPackageInfo(context.packageName, 0)
+            bundle.putLong(HOST_PACKAGE_VERSION, hostInfo.longVersionCode)
+            bundle.putLong(HOST_PACKAGE_UPDATE_TIME, getUpdateTime(hostInfo))
             val parcel = Parcel.obtain()
             bundle.writeToParcel(parcel, 0)
             val data = parcel.marshall()
@@ -126,6 +137,9 @@ class SliceCacheManager internal constructor(val context : Context) {
         const val SLICE_PACKAGE_NAME = "SLICE_PACKAGE_NAME"
         const val SLICE_PACKAGE_VERSION = "SLICE_PACKAGE_VERSION"
         const val SLICE_PACKAGE_UPDATE_TIME = "SLICE_PACKAGE_UPDATE_TIME"
+        const val HOST_PACKAGE_VERSION = "SLICE_HOST_PACKAGE_VERSION"
+        const val HOST_PACKAGE_UPDATE_TIME = "SLICE_HOST_PACKAGE_UPDATE_TIME"
+        const val SYSTEM_BUILD_FINGERPRINT = "SLICE_SYSTEM_BUILD_FINGERPRINT"
 
         const val FORMAT_VERSION = 1
 
@@ -158,6 +172,9 @@ class SliceCacheManager internal constructor(val context : Context) {
             }
             return builder.toString()
         }
+
+        private fun getUpdateTime(packageInfo: PackageInfo) : Long =
+            maxOf(packageInfo.lastUpdateTime, packageInfo.firstInstallTime)
     }
 
 }
