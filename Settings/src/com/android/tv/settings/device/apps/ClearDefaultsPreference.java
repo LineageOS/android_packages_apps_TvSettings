@@ -20,7 +20,10 @@ import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected
 
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.hardware.usb.IUsbManager;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -28,89 +31,152 @@ import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
-
+import android.util.IconDrawableFactory;
 import androidx.annotation.NonNull;
 import androidx.leanback.widget.GuidanceStylist;
-
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.applications.AppUtils;
 import com.android.settingslib.applications.ApplicationsState;
+import com.android.tv.settings.FullScreenDialogFragment;
+import com.android.tv.settings.FullScreenDialogFragmentActivity;
 import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.FlavorUtils;
+
 public class ClearDefaultsPreference extends AppActionPreference {
-    private final IUsbManager mUsbManager;
-    private final PackageManager mPackageManager;
+  private final IUsbManager mUsbManager;
+  private final PackageManager mPackageManager;
 
-    public ClearDefaultsPreference(Context context, ApplicationsState.AppEntry entry) {
-        super(context, entry);
+  public ClearDefaultsPreference(Context context, ApplicationsState.AppEntry entry) {
+    super(context, entry);
 
-        final IBinder usbBinder = ServiceManager.getService(Context.USB_SERVICE);
-        mUsbManager = IUsbManager.Stub.asInterface(usbBinder);
-        mPackageManager = context.getPackageManager();
+    final IBinder usbBinder = ServiceManager.getService(Context.USB_SERVICE);
+    mUsbManager = IUsbManager.Stub.asInterface(usbBinder);
+    mPackageManager = context.getPackageManager();
 
-        refresh();
-        ConfirmationFragment.prepareArgs(getExtras(), mEntry.info.packageName);
-        UserManager userManager = getContext().getSystemService(UserManager.class);
-        if (userManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL)) {
-            final RestrictedLockUtils.EnforcedAdmin admin =
-                    RestrictedLockUtilsInternal.checkIfRestrictionEnforced(context,
-                            UserManager.DISALLOW_APPS_CONTROL, UserHandle.myUserId());
-            if (admin != null) {
-                setDisabledByAdmin(admin);
-            } else {
-                setEnabled(false);
-            }
-        }
+    refresh();
+    ConfirmationFragment.prepareArgs(getExtras(), mEntry.info.packageName);
+    UserManager userManager = getContext().getSystemService(UserManager.class);
+    if (userManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL)) {
+      final RestrictedLockUtils.EnforcedAdmin admin =
+          RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
+              context, UserManager.DISALLOW_APPS_CONTROL, UserHandle.myUserId());
+      if (admin != null) {
+        setDisabledByAdmin(admin);
+      } else {
+        setEnabled(false);
+      }
+    }
+  }
 
+  public void refresh() {
+    setTitle(R.string.device_apps_app_management_clear_default);
+    setSummary(
+        AppUtils.getLaunchByDefaultSummary(mEntry, mUsbManager, mPackageManager, getContext()));
+    this.setOnPreferenceClickListener(
+        preference -> {
+          logEntrySelected(TvSettingsEnums.APPS_ALL_APPS_APP_ENTRY_CLEAR_DEFAULTS);
+          return false;
+        });
+  }
+
+  public static class ConfirmationFragment extends AppActionPreference.ConfirmationFragment {
+    private static final String ARG_PACKAGE_NAME = "packageName";
+
+    private static void prepareArgs(@NonNull Bundle args, String packageName) {
+      args.putString(ARG_PACKAGE_NAME, packageName);
     }
 
-    public void refresh() {
-        setTitle(R.string.device_apps_app_management_clear_default);
-        setSummary(AppUtils.getLaunchByDefaultSummary(
-                mEntry, mUsbManager, mPackageManager, getContext()));
-        this.setOnPreferenceClickListener(
-                preference -> {
-                    logEntrySelected(TvSettingsEnums.APPS_ALL_APPS_APP_ENTRY_CLEAR_DEFAULTS);
-                    return false;
-                });
+    @NonNull
+    @Override
+    public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
+      final AppManagementFragment fragment = (AppManagementFragment) getTargetFragment();
+      return new GuidanceStylist.Guidance(
+          getString(R.string.device_apps_app_management_clear_default),
+          null,
+          fragment.getAppName(),
+          fragment.getAppIcon());
     }
 
     @Override
-    public String getFragment() {
-        return ConfirmationFragment.class.getName();
+    public void onOk() {
+      PackageManager packageManager = getActivity().getPackageManager();
+
+      final String packageName = getArguments().getString(ARG_PACKAGE_NAME);
+      packageManager.clearPackagePreferredActivities(packageName);
+      try {
+        final IBinder usbBinder = ServiceManager.getService(Context.USB_SERVICE);
+        IUsbManager.Stub.asInterface(usbBinder).clearDefaults(packageName, UserHandle.myUserId());
+      } catch (RemoteException e) {
+        // Ignore
+      }
+    }
+  }
+
+  public static class ConfirmationDialogFragmentActivity extends FullScreenDialogFragmentActivity {
+    private String packageName;
+
+    public Bundle provideArguments() {
+      ApplicationInfo applicationInfo = getIntent().getParcelableExtra("applicationInfo");
+      String appName = getIntent().getStringExtra("appName");
+      packageName = applicationInfo.packageName;
+      return new FullScreenDialogFragment.DialogBuilder()
+          .setTitle(getString(R.string.device_apps_app_management_clear_default))
+          .setPositiveButton(getString(R.string.settings_confirm))
+          .setNegativeButton(getString(R.string.settings_cancel))
+          .build();
     }
 
-    public static class ConfirmationFragment extends AppActionPreference.ConfirmationFragment {
-        private static final String ARG_PACKAGE_NAME = "packageName";
+    public FullScreenDialogFragmentActivity.OnPositiveActionClickedListener
+        onPositiveActionClicked() {
+      return () -> {
+        PackageManager packageManager = getPackageManager();
 
-        private static void prepareArgs(@NonNull Bundle args, String packageName) {
-            args.putString(ARG_PACKAGE_NAME, packageName);
+        packageManager.clearPackagePreferredActivities(packageName);
+        try {
+          final IBinder usbBinder = ServiceManager.getService(Context.USB_SERVICE);
+          IUsbManager.Stub.asInterface(usbBinder).clearDefaults(packageName, UserHandle.myUserId());
+        } catch (RemoteException e) {
+          // Ignore
         }
-
-        @NonNull
-        @Override
-        public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            final AppManagementFragment fragment = (AppManagementFragment) getTargetFragment();
-            return new GuidanceStylist.Guidance(
-                    getString(R.string.device_apps_app_management_clear_default),
-                    null,
-                    fragment.getAppName(),
-                    fragment.getAppIcon());
-        }
-
-        @Override
-        public void onOk() {
-            PackageManager packageManager = getActivity().getPackageManager();
-
-            final String packageName = getArguments().getString(ARG_PACKAGE_NAME);
-            packageManager.clearPackagePreferredActivities(packageName);
-            try {
-                final IBinder usbBinder = ServiceManager.getService(Context.USB_SERVICE);
-                IUsbManager.Stub.asInterface(usbBinder)
-                        .clearDefaults(packageName, UserHandle.myUserId());
-            } catch (RemoteException e) {
-                // Ignore
-            }
-        }
+        finish();
+      };
     }
+
+    public FullScreenDialogFragmentActivity.OnNegativeActionClickedListener
+        onNegativeActionClicked() {
+      return () -> {
+        finish();
+      };
+    }
+
+    @Override
+    public Drawable getDrawableIconForDialog() {
+      ApplicationInfo applicationInfo = getIntent().getParcelableExtra("applicationInfo");
+      String appName = getIntent().getStringExtra("appName");
+      IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(this);
+      return iconDrawableFactory.getBadgedIcon(applicationInfo);
+    }
+  }
+
+  @Override
+  public String getFragment() {
+    // Should show GuidedStepFragment if the flavor is One Panel
+    if (!FlavorUtils.isTwoPanel(getContext())) {
+      return ConfirmationFragment.class.getName();
+    }
+    return null;
+  }
+
+  @Override
+  public Intent getIntent() {
+    // Should show FullScreenDialog if the flavor is Two Panel
+    if (FlavorUtils.isTwoPanel(getContext())) {
+      Intent intent = new Intent(getContext(), ConfirmationDialogFragmentActivity.class);
+      intent.putExtra("applicationInfo", mEntry.info);
+      intent.putExtra("appName", getAppName());
+      return intent;
+    }
+    return null;
+  }
 }
