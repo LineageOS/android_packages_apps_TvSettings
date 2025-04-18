@@ -16,9 +16,11 @@
 package com.android.tv.twopanelsettings.slices
 
 import android.annotation.SuppressLint
+import android.app.slice.SliceItem.FORMAT_SLICE
 import android.content.res.Configuration
 import android.content.Context
 import android.content.pm.PackageInfo
+import android.content.pm.PackageManager.NameNotFoundException
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -40,9 +42,9 @@ import kotlinx.coroutines.withContext
  */
 class SliceCacheManager internal constructor(val context : Context) {
     suspend fun getCachedSlice(uri : Uri, configuration : Configuration) : Slice? {
-        val providerInfo = context.packageManager.resolveContentProvider(uri.authority!!, 0)
-            ?: return null
         return withContext(Dispatchers.IO) {
+            val providerInfo = context.packageManager.resolveContentProvider(uri.authority!!, 0)
+                ?: return@withContext null
             val fileName = getFileName(uri, configuration)
             val path = FileSystems.getDefault().getPath(context.filesDir.path, SLICE_CACHE_DIR, fileName)
             val data : ByteArray
@@ -58,21 +60,30 @@ class SliceCacheManager internal constructor(val context : Context) {
             parcel.recycle()
 
             if (bundle.getInt(SLICE_FORMAT_VERSION) != FORMAT_VERSION ||
-                bundle.getString(SLICE_PACKAGE_NAME) != providerInfo.packageName ||
                 bundle.getString(SYSTEM_BUILD_FINGERPRINT) != Build.FINGERPRINT) {
                 return@withContext null
             }
 
-            val packageInfo = context.packageManager.getPackageInfo(providerInfo.packageName, 0)
-            if (bundle.getLong(SLICE_PACKAGE_VERSION) != packageInfo.longVersionCode ||
-                        bundle.getLong(SLICE_PACKAGE_UPDATE_TIME) != getUpdateTime(packageInfo)) {
+            val packageNames =
+                bundle.getStringArray(SLICE_PACKAGE_NAMES) ?: return@withContext null
+            val packageVersions =
+                bundle.getLongArray(SLICE_PACKAGE_VERSIONS) ?: return@withContext null
+            val packageUpdateTimes =
+                bundle.getLongArray(SLICE_PACKAGE_UPDATE_TIMES) ?: return@withContext null
+
+            if (packageNames.size != packageVersions.size ||
+                packageNames.size != packageUpdateTimes.size ||
+                context.packageName !in packageNames ||
+                providerInfo.packageName !in packageNames) {
                 return@withContext null
             }
 
-            val hostInfo = context.packageManager.getPackageInfo(context.packageName, 0)
-            if (bundle.getLong(HOST_PACKAGE_VERSION) != hostInfo.longVersionCode ||
-                    bundle.getLong(HOST_PACKAGE_UPDATE_TIME) != getUpdateTime(hostInfo)) {
-                return@withContext null
+            for (i in packageNames.indices) {
+                val packageInfo = context.packageManager.getPackageInfo(packageNames[i], 0)
+                if (packageInfo.longVersionCode != packageVersions[i] ||
+                    getUpdateTime(packageInfo) != packageUpdateTimes[i]) {
+                    return@withContext null
+                }
             }
 
             return@withContext Slice(bundle)
@@ -80,23 +91,52 @@ class SliceCacheManager internal constructor(val context : Context) {
     }
 
     suspend fun saveCachedSlice(uri: Uri, configuration: Configuration, slice: Slice) {
-        val providerInfo = context.packageManager.resolveContentProvider(uri.authority!!, 0)
-        if (providerInfo == null) {
-            Log.e(TAG, "No provider for $uri")
-            return
-        }
 
         withContext(Dispatchers.IO) {
+            val providerInfo = context.packageManager.resolveContentProvider(uri.authority!!, 0)
+            if (providerInfo == null) {
+                Log.e(TAG, "No provider for $uri")
+                return@withContext
+            }
+
             val bundle = slice.toBundle()
             bundle.putInt(SLICE_FORMAT_VERSION, FORMAT_VERSION)
-            bundle.putString(SLICE_PACKAGE_NAME, providerInfo.packageName)
             bundle.putString(SYSTEM_BUILD_FINGERPRINT, Build.FINGERPRINT)
-            val packageInfo = context.packageManager.getPackageInfo(providerInfo.packageName, 0)
-            bundle.putLong(SLICE_PACKAGE_VERSION, packageInfo.longVersionCode)
-            bundle.putLong(SLICE_PACKAGE_UPDATE_TIME, getUpdateTime(packageInfo))
-            val hostInfo = context.packageManager.getPackageInfo(context.packageName, 0)
-            bundle.putLong(HOST_PACKAGE_VERSION, hostInfo.longVersionCode)
-            bundle.putLong(HOST_PACKAGE_UPDATE_TIME, getUpdateTime(hostInfo))
+
+            val packageNames = mutableSetOf(context.packageName, providerInfo.packageName)
+            val authorities = mutableSetOf(uri.authority)
+
+            for (item in slice.items.filter { it.format == FORMAT_SLICE} ) {
+                val childAuthority = item.slice?.uri?.authority ?: continue
+                if (childAuthority !in authorities) {
+                    authorities.add(childAuthority)
+                    context.packageManager.resolveContentProvider(childAuthority, 0)?.let {
+                        packageNames.add(it.packageName)
+                    }
+                }
+            }
+
+            val packages = mutableListOf<String>()
+            val versions = mutableListOf<Long>()
+            val updateTimes = mutableListOf<Long>()
+
+            for (packageName in packageNames) {
+                val packageInfo =
+                    try {
+                        context.packageManager.getPackageInfo(packageName, 0)
+                    } catch (_ : NameNotFoundException) {
+                        continue
+                    }
+                packages.add(packageName)
+                versions.add(packageInfo.longVersionCode)
+                updateTimes.add(getUpdateTime(packageInfo))
+            }
+
+            bundle.putStringArray(SLICE_PACKAGE_NAMES, packages.toTypedArray())
+            bundle.putLongArray(SLICE_PACKAGE_VERSIONS, versions.toLongArray())
+            bundle.putLongArray(SLICE_PACKAGE_UPDATE_TIMES,
+                updateTimes.toLongArray())
+
             val parcel = Parcel.obtain()
             bundle.writeToParcel(parcel, 0)
             val data = parcel.marshall()
@@ -134,11 +174,9 @@ class SliceCacheManager internal constructor(val context : Context) {
         const val TEMP_PREFIX = "temp|_"
         const val SLICE_CACHE_DIR = "slicecache"
         const val SLICE_FORMAT_VERSION = "SLICE_FORMAT_VERSION"
-        const val SLICE_PACKAGE_NAME = "SLICE_PACKAGE_NAME"
-        const val SLICE_PACKAGE_VERSION = "SLICE_PACKAGE_VERSION"
-        const val SLICE_PACKAGE_UPDATE_TIME = "SLICE_PACKAGE_UPDATE_TIME"
-        const val HOST_PACKAGE_VERSION = "SLICE_HOST_PACKAGE_VERSION"
-        const val HOST_PACKAGE_UPDATE_TIME = "SLICE_HOST_PACKAGE_UPDATE_TIME"
+        const val SLICE_PACKAGE_NAMES = "SLICE_PACKAGE_NAMES"
+        const val SLICE_PACKAGE_VERSIONS = "SLICE_PACKAGE_VERSIONS"
+        const val SLICE_PACKAGE_UPDATE_TIMES = "SLICE_PACKAGE_UPDATE_TIMES"
         const val SYSTEM_BUILD_FINGERPRINT = "SLICE_SYSTEM_BUILD_FINGERPRINT"
 
         const val FORMAT_VERSION = 1

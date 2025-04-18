@@ -33,6 +33,7 @@ import static android.app.slice.SliceItem.FORMAT_BUNDLE;
 import static android.app.slice.SliceItem.FORMAT_IMAGE;
 import static android.app.slice.SliceItem.FORMAT_INT;
 import static android.app.slice.SliceItem.FORMAT_TEXT;
+import static android.app.slice.SliceItem.FORMAT_SLICE;
 
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.BUTTONSTYLE;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_ACTION_ID;
@@ -75,6 +76,7 @@ import java.util.List;
 public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
 
   private List<Slice> mSliceActions;
+  private boolean mHasScreenTitle;
   public static final String TYPE_PREFERENCE = "TYPE_PREFERENCE";
   public static final String TYPE_PREFERENCE_CATEGORY = "TYPE_PREFERENCE_CATEGORY";
   public static final String TYPE_PREFERENCE_SCREEN_TITLE = "TYPE_PREFERENCE_SCREEN_TITLE";
@@ -138,6 +140,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
   /** Add a screen title to the builder */
   @NonNull
   public void addScreenTitle(@NonNull RowBuilder builder) {
+    mHasScreenTitle = true;
     addRow(builder, TYPE_PREFERENCE_SCREEN_TITLE);
   }
 
@@ -170,6 +173,17 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
    */
   public void setRedirectedSliceUri(CharSequence redirectedSliceUri) {
     addRow(new RowBuilder().setTitle(redirectedSliceUri), TYPE_REDIRECTED_SLICE_URI);
+  }
+
+  public void addFromSlice(Slice slice) {
+    for (SliceItem item : slice.getItems()) {
+      if (item.getFormat().equals(FORMAT_SLICE)) {
+        if (item.getSubType().equals(TYPE_PREFERENCE_SCREEN_TITLE) && mHasScreenTitle) {
+          continue;
+        }
+        getBuilder().addItem(item);
+      }
+    }
   }
 
   /** Add a row to list builder. */

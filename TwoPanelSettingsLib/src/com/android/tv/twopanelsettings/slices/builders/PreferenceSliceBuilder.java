@@ -160,6 +160,15 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
   }
 
   /**
+   * Add all preferences from supplied slice. If screen title is not added yet, it's
+   * also taken from the slice if present.
+   */
+  public PreferenceSliceBuilder addFromSlice(Slice slice) {
+    mImpl.addFromSlice(slice);
+    return this;
+  }
+
+  /**
    * Set the focused preference for slice.
    *
    * @param key key of the focused preference.
