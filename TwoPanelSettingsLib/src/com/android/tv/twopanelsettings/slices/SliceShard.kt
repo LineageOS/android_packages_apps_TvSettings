@@ -62,6 +62,7 @@ import com.android.tv.twopanelsettings.slices.compat.widget.ListContent
 import com.android.tv.twopanelsettings.slices.compat.widget.SliceContent
 import java.util.IdentityHashMap
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -179,11 +180,12 @@ class SliceShard(
         mCallbacks.setIcon(if (mScreenIcon != null) mScreenIcon!!.loadDrawable(mPrefContext) else null)
 
         if (!isCached && !TextUtils.isEmpty(mUriString)) {
-            mCallbacks.showProgressBar(true)
-            sliceLiveData.observeForever(mSliceObserver)
-            mFragment.requireContext().contentResolver.registerContentObserver(
-                SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver
-            )
+            mFragment.lifecycle.coroutineScope.launch {
+                delay(SLICE_RESUME_OBSERVE_DELAY)
+                sliceLiveData.observeForever(mSliceObserver)
+                mFragment.requireContext().contentResolver.registerContentObserver(
+                    SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver)
+            }
         }
         fireFollowupPendingIntent()
     }
@@ -792,6 +794,7 @@ class SliceShard(
         private const val KEY_SCREEN_ICON: String = "slice_key_screen_icon"
         private const val KEY_LAST_PREFERENCE: String = "slice_key_last_preference"
         private const val KEY_URI_STRING: String = "slice_key_uri_string"
+        private const val SLICE_RESUME_OBSERVE_DELAY: Long = 700
 
         fun getPrefContext(context: Context) : Context {
             val themeTypedValue = TypedValue()
