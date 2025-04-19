@@ -113,6 +113,8 @@
     <string name="device_fragment_restricted_slice_uri" translatable="false" />
     <!-- Slice URI for accessibility prefs. -->
     <string name="accessibility_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for accessibility prefs. -->
+    <string name="accessibility_fragment_slice_uri_two_panel" translatable="false">*</string>
     <!-- Slice URI for power and energy prefs. -->
     <string name="power_energy_fragment_slice_uri" translatable="false" />
     <!-- Slice URI for about prefs. -->
@@ -123,6 +125,16 @@
     <string name="keyboard_fragment_slice_uri" translatable="false" />
     <!-- Slice URI for security fragment. -->
     <string name="security_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for energy modes fragment. -->
+    <string name="energy_modes_fragment_slice_uri" translatable="false">*</string>
+    <!-- Slice URI for energy saver fragment. -->
+    <string name="energy_saver_fragment_slice_uri" translatable="false">*</string>
+    <!-- Slice URI for status fragment. -->
+    <string name="status_fragment_slice_uri" translatable="false">*</string>
+    <!-- Slice URI for legal fragment. -->
+    <string name="legal_fragment_slice_uri" translatable="false">*</string>
+    <!-- Slice URI for virtual keyboards fragment. -->
+    <string name="virtual_keyboards_fragment_slice_uri" translatable="false">*</string>
 
     <!-- Title for main screen preference for accounts on device [CHAR LIMIT=50] -->
     <string name="accounts_category_title">Accounts &amp; Profiles</string>
@@ -2453,6 +2465,8 @@
     <string name="device_apps_app_management_open">Open</string>
     <!-- Application management choice for force stopping the application [CHAR LIMIT=40] -->
     <string name="device_apps_app_management_force_stop">Force stop</string>
+     <!-- Application management choice for force stopping the application [CHAR LIMIT=40] -->
+    <string name="device_apps_app_management_force_stop_with_app_name">Force stop <xliff:g id="app_name" example="Youtube">%1$s</xliff:g>?</string>
     <!-- Application management description for force stopping the application [CHAR LIMIT=NONE] -->
     <string name="device_apps_app_management_force_stop_desc">If you force stop an app, it may misbehave.</string>
     <!-- Application management choice for uninstalling the application [CHAR LIMIT=40] -->

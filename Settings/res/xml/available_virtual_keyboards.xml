@@ -1,6 +1,6 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2021 The Android Open Source Project
+  ~ Copyright (C) 2025 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -15,9 +15,10 @@
   ~ limitations under the License.
   -->
 
-<resources>
-    <!-- Whether to check scroll state when creating preview panel fragment -->
-    <bool name="config_check_scroll_state" translatable="false">false</bool>
-    <!-- Delay before creating preview panel fragment -->
-    <integer name="config_preview_panel_create_delay" translatable="false">400</integer>
-</resources>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:title="@string/available_virtual_keyboard_category">
+
+    <PreferenceCategory android:key="virtual_keyboard_list" />
+
+</PreferenceScreen>

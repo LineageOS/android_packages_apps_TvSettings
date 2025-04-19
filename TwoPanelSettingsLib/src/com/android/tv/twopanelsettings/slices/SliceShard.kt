@@ -24,6 +24,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
 import android.content.res.Configuration
+import android.content.res.Resources
 import android.database.ContentObserver
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.Icon
@@ -43,6 +44,7 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.StringRes
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
@@ -60,6 +62,7 @@ import com.android.tv.twopanelsettings.slices.compat.widget.ListContent
 import com.android.tv.twopanelsettings.slices.compat.widget.SliceContent
 import java.util.IdentityHashMap
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -177,11 +180,12 @@ class SliceShard(
         mCallbacks.setIcon(if (mScreenIcon != null) mScreenIcon!!.loadDrawable(mPrefContext) else null)
 
         if (!isCached && !TextUtils.isEmpty(mUriString)) {
-            mCallbacks.showProgressBar(true)
-            sliceLiveData.observeForever(mSliceObserver)
-            mFragment.requireContext().contentResolver.registerContentObserver(
-                SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver
-            )
+            mFragment.lifecycle.coroutineScope.launch {
+                delay(SLICE_RESUME_OBSERVE_DELAY)
+                sliceLiveData.observeForever(mSliceObserver)
+                mFragment.requireContext().contentResolver.registerContentObserver(
+                    SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver)
+            }
         }
         fireFollowupPendingIntent()
     }
@@ -790,6 +794,7 @@ class SliceShard(
         private const val KEY_SCREEN_ICON: String = "slice_key_screen_icon"
         private const val KEY_LAST_PREFERENCE: String = "slice_key_last_preference"
         private const val KEY_URI_STRING: String = "slice_key_uri_string"
+        private const val SLICE_RESUME_OBSERVE_DELAY: Long = 700
 
         fun getPrefContext(context: Context) : Context {
             val themeTypedValue = TypedValue()
@@ -805,6 +810,20 @@ class SliceShard(
             }
 
             return ContextThemeWrapper(parentContext, themeTypedValue.resourceId)
+        }
+
+        fun getSliceUri(resources: Resources, @StringRes resId : Int,
+                @StringRes fallback: Int, suffix: String) : String? {
+            val sliceUri = resources.getString(resId);
+            if (sliceUri != "*") {
+                return sliceUri
+            }
+            val mainUri = resources.getString(fallback)
+            val lastSlash = mainUri.lastIndexOf('/')
+            if (lastSlash == -1) {
+                return ""
+            }
+            return mainUri.substring(0, lastSlash + 1) + suffix
         }
 
         private fun isSamePreference(oldPref: Preference?, newPref: Preference?): Boolean {

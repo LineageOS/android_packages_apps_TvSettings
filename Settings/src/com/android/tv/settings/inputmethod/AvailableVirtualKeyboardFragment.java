@@ -36,6 +36,7 @@ import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 
 import androidx.annotation.Keep;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
 import com.android.settingslib.inputmethod.InputMethodAndSubtypeUtilCompat;
@@ -43,6 +44,9 @@ import com.android.settingslib.inputmethod.InputMethodPreference;
 import com.android.settingslib.inputmethod.InputMethodSettingValuesWrapper;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 import java.text.Collator;
 import java.util.ArrayList;
@@ -53,22 +57,48 @@ import java.util.List;
  */
 @Keep
 public final class AvailableVirtualKeyboardFragment extends SettingsPreferenceFragment
-        implements InputMethodPreference.OnSavePreferenceListener {
+        implements InputMethodPreference.OnSavePreferenceListener, SliceShard.Callbacks {
+    private static final String VIRTUAL_KEYBOARD_LIST_KEY = "virtual_keyboard_list";
 
     private final ArrayList<TVInputMethodPreference> mInputMethodPreferenceList = new ArrayList<>();
     private InputMethodSettingValuesWrapper mInputMethodSettingValues;
     private InputMethodManager mImm;
     private DevicePolicyManager mDpm;
+    private SliceShard mSliceShard;
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
         Activity activity = getActivity();
-        PreferenceScreen screen = getPreferenceManager().createPreferenceScreen(activity);
-        screen.setTitle(activity.getString(R.string.available_virtual_keyboard_category));
-        setPreferenceScreen(screen);
         mInputMethodSettingValues = InputMethodSettingValuesWrapper.getInstance(activity);
         mImm = activity.getSystemService(InputMethodManager.class);
         mDpm = activity.getSystemService(DevicePolicyManager.class);
+
+        var sliceUri = SliceShard.Companion.getSliceUri(getResources(),
+                R.string.virtual_keyboards_fragment_slice_uri, R.string.main_fragment_slice_uri,
+                "available_virtual_keyboards");
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(R.xml.available_virtual_keyboards, null);
+            return;
+        }
+
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.available_virtual_keyboard_category),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@androidx.annotation.Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(R.xml.available_virtual_keyboards, null);
+        }
+        configurePreferences();
+    }
+
+    private void configurePreferences() {
+        mInputMethodSettingValues.refreshAllInputMethodAndSubtypes();
+        updateInputMethodPreferenceViews();
     }
 
     @Override
@@ -76,8 +106,9 @@ public final class AvailableVirtualKeyboardFragment extends SettingsPreferenceFr
         super.onResume();
         // Refresh internal states in mInputMethodSettingValues to keep the latest
         // "InputMethodInfo"s and "InputMethodSubtype"s
-        mInputMethodSettingValues.refreshAllInputMethodAndSubtypes();
-        updateInputMethodPreferenceViews();
+        if (mSliceShard == null) {
+            configurePreferences();
+        }
     }
 
     @Override
@@ -162,11 +193,12 @@ public final class AvailableVirtualKeyboardFragment extends SettingsPreferenceFr
         }
         final Collator collator = Collator.getInstance();
         mInputMethodPreferenceList.sort((lhs, rhs) -> lhs.compareTo(rhs, collator));
-        getPreferenceScreen().removeAll();
+        PreferenceCategory keyboardList = findPreference(VIRTUAL_KEYBOARD_LIST_KEY);
+        keyboardList.removeAll();
         for (int i = 0; i < numImis; ++i) {
             final TVInputMethodPreference pref = mInputMethodPreferenceList.get(i);
             pref.setOrder(i);
-            getPreferenceScreen().addPreference(pref);
+            keyboardList.addPreference(pref);
             InputMethodAndSubtypeUtilCompat.removeUnnecessaryNonPersistentPreference(pref);
             pref.updatePreferenceViews();
         }

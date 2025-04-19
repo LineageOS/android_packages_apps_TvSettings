@@ -79,8 +79,6 @@ import com.android.tv.twopanelsettings.slices.SliceSeekbarPreference;
 import com.android.tv.twopanelsettings.slices.SliceSwitchPreference;
 import com.android.tv.twopanelsettings.slices.SlicesConstants;
 
-import com.google.common.base.Preconditions;
-
 import java.util.Set;
 
 /**
@@ -109,8 +107,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private static final long PANEL_ANIMATION_ALPHA_MS = 200;
     private static final long PANEL_BACKGROUND_ANIMATION_ALPHA_MS = 500;
     private static final long PANEL_ANIMATION_DELAY_MS = 200;
-    private static final long PREVIEW_PANEL_DEFAULT_DELAY_MS =
-            ActivityManager.isLowRamDeviceStatic() ? 100 : 0;
+    private static final long PREVIEW_PANEL_DEFAULT_DELAY_MS = 400;
     private static final boolean DEFAULT_CHECK_SCROLL_STATE =
             ActivityManager.isLowRamDeviceStatic();
     private static final long CHECK_IDLE_STATE_MS = 100;
@@ -195,16 +192,8 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         mPreviewPanelCreationDelay = getContext().getResources()
                 .getInteger(R.integer.config_preview_panel_create_delay);
 
-        updatePreviewPanelCreationDelayForLowRamDevice();
-
         mAudioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
         mInputMethodManager = getContext().getSystemService(InputMethodManager.class);
-    }
-
-    private void updatePreviewPanelCreationDelayForLowRamDevice() {
-        if (ActivityManager.isLowRamDeviceStatic() && mPreviewPanelCreationDelay == 0) {
-            mPreviewPanelCreationDelay = PREVIEW_PANEL_DEFAULT_DELAY_MS;
-        }
     }
 
     @Override
@@ -575,7 +564,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
         @Override
         public void run() {
-            Preconditions.checkState(mPref == mFocusedPreference);
+            if (mPref != mFocusedPreference) {
+                return;
+            }
             if (mListView != null
                     && mListView.getScrollState() != RecyclerView.SCROLL_STATE_IDLE) {
                 mHandler.postDelayed(this, CHECK_IDLE_STATE_MS);

@@ -24,6 +24,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
+import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
@@ -31,9 +32,12 @@ import com.android.tv.settings.PreferenceUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 @Keep
-public class LegalFragment extends SettingsPreferenceFragment {
+public class LegalFragment extends SettingsPreferenceFragment implements SliceShard.Callbacks {
 
     private static final String KEY_TERMS = "terms";
     private static final String KEY_LICENSE = "license";
@@ -41,9 +45,35 @@ public class LegalFragment extends SettingsPreferenceFragment {
     private static final String KEY_WEBVIEW_LICENSE = "webview_license";
     private static final String KEY_ADS = "ads";
 
+    private SliceShard mSliceShard;
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.about_legal, null);
+        var sliceUri = SliceShard.Companion.getSliceUri(getResources(),
+                R.string.legal_fragment_slice_uri, R.string.main_fragment_slice_uri,
+                "about_legal");
+        if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
+            setPreferencesFromResource(R.xml.about_legal, null);
+            configurePreferences();
+            return;
+        }
+
+        setPreferencesFromResource(R.xml.settings_loading, null);
+        mSliceShard = new SliceShard(this, sliceUri, this,
+                getString(R.string.legal_information),
+                SliceShard.Companion.getPrefContext(requireContext()), true);
+    }
+
+    @Override
+    public void onSlice(@Nullable Slice slice) {
+        mSliceShard = null;
+        if (slice == null) {
+            setPreferencesFromResource(R.xml.about_legal, null);
+        }
+        configurePreferences();
+    }
+
+    private void configurePreferences() {
         final PreferenceScreen screen = getPreferenceScreen();
 
         final Context context = getActivity();

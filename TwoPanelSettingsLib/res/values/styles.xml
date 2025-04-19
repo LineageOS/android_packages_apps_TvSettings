@@ -34,18 +34,19 @@
     <style name="TextAppearance.TwoPanelPreference.Category" parent="TextAppearance.TwoPanelPreference.TvTextAppearanceMedium">
         <item name="android:textColor">@color/tp_preference_category_text_color</item>
         <item name="android:textSize">@dimen/tp_preference_category_text_size</item>
+        <item name="android:letterSpacing">0.07</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="TextAppearance.TwoPanelPreference.ListItem" parent="TextAppearance.TwoPanelPreference.TvTextAppearance">
+    <style name="TextAppearance.TwoPanelPreference.ListItem" parent="TextAppearance.TwoPanelPreference.TvTextAppearanceMedium">
         <item name="android:textColor">@color/tp_preference_item_primary_text_color_selector</item>
         <item name="android:textSize">@dimen/tp_preference_item_primary_text_size</item>
     </style>
 
-    <style name="TextAppearance.TwoPanelPreference.ListItem.Secondary" parent="TextAppearance.TwoPanelPreference.TvTextAppearance">
-        <item name="android:fontFamily">@string/preference_list_item_secondary_text_font</item>
+    <style name="TextAppearance.TwoPanelPreference.ListItem.Secondary" parent="TextAppearance.TwoPanelPreference.TvTextAppearanceMedium">
         <item name="android:textColor">@color/tp_preference_item_secondary_text_color_selector</item>
         <item name="android:textSize">@dimen/tp_preference_item_secondary_text_size</item>
+        <item name="android:letterSpacing">0.01</item>
     </style>
 
     <style name="TwoPanelPreferenceIconStyle" >

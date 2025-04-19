@@ -143,14 +143,21 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        var sliceUri = getString(R.string.accessibility_fragment_slice_uri);
+        var isTwoPanel = FlavorUtils.isTwoPanel(getContext());
+        var sliceUri = SliceShard.Companion.getSliceUri(getResources(),
+            isTwoPanel
+                ? R.string.accessibility_fragment_slice_uri_two_panel
+                : R.string.accessibility_fragment_slice_uri,
+            R.string.main_fragment_slice_uri,
+            isTwoPanel ? "accessibility_two_panel" : "accessibility");
+
         if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
             setPreferencesResource();
             configurePreferences();
             return;
         }
 
-        setPreferencesResource();
+        setPreferencesFromResource(R.xml.settings_loading, null);
         mSliceShard = new SliceShard(this, sliceUri, this,
                 getString(R.string.accessibility_category_title),
                 SliceShard.Companion.getPrefContext(requireContext()), true);
