@@ -54,13 +54,15 @@
     </style>
 
     <style name="TwoPanelInfoTitleTextStyle">
+        <item name="android:fontFamily">@font/brand_font</item>
         <item name="android:textSize">@dimen/settings_info_fragment_title_text_size</item>
         <item name="android:textColor">@color/info_title_text_color</item>
     </style>
 
     <style name="TwoPanelInfoSummaryTextStyle">
+        <item name="android:fontFamily">@font/brand_font</item>
         <item name="android:textSize">@dimen/settings_info_fragment_summary_text_size</item>
-        <item name="android:textColor">@color/info_title_text_color</item>
+        <item name="android:textColor">@color/info_subtitle_text_color</item>
     </style>
 
     <style name="EcoHintTextStyle">
