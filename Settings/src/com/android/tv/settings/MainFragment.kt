@@ -88,6 +88,8 @@ open class MainFragment : PreferenceControllerFragment(),
 
     private var mSuggestionQuickSettingPrefsContainer: SuggestionQuickSettingPrefsContainer? = null
 
+    private var mSuggestions : List<Suggestion>? = null
+
     private val mBCMReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             updateAccessoryPref()
@@ -202,6 +204,9 @@ open class MainFragment : PreferenceControllerFragment(),
             setPreferencesFromResource(preferenceScreenResId, null)
         }
         configurePreferences()
+        mSuggestions?.let {
+            mSuggestionQuickSettingPrefsContainer!!.onSuggestionReady(it)
+        }
     }
 
     private fun configurePreferences() {
@@ -721,7 +726,11 @@ open class MainFragment : PreferenceControllerFragment(),
     }
 
     override fun onSuggestionReady(data: List<Suggestion>) {
-        mSuggestionQuickSettingPrefsContainer!!.onSuggestionReady(data)
+        if (mSliceShard == null) {
+            mSuggestionQuickSettingPrefsContainer!!.onSuggestionReady(data)
+        } else {
+            mSuggestions = data;
+        }
     }
 
     override fun onHotwordStateChanged() {
