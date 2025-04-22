@@ -22,7 +22,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
@@ -37,7 +36,9 @@ import java.util.List;
 public class AccessibilityServiceConfirmationFragment extends SettingsGuidedStepFragment {
     private static final String ARG_LABEL = "label";
     private static final String ARG_COMPONENT = "component";
-    private static final String ARG_ENABLING = "enabling";
+    public static final String ARG_ENABLING = "enabling";
+    public static final String FLATTEN_SERVICE_COMPONENT_NAME = "flatten_component_name";
+    public static final String REQUEST_KEY = "service_confirmation_key";
 
     /**
      * Callback for dialog completion
@@ -135,12 +136,17 @@ public class AccessibilityServiceConfirmationFragment extends SettingsGuidedStep
                 ((OnAccessibilityServiceConfirmedListener) fragment)
                         .onAccessibilityServiceConfirmed(component, enabling);
             } else {
-                throw new IllegalStateException("Target fragment is not an "
-                        + "OnAccessibilityServiceConfirmedListener");
+                Bundle result = new Bundle();
+                String flattenComponentName = component.flattenToString();
+
+                result.putString(FLATTEN_SERVICE_COMPONENT_NAME, flattenComponentName);
+                result.putBoolean(ARG_ENABLING, enabling);
+
+                getParentFragmentManager().setFragmentResult(REQUEST_KEY, result);
             }
-            getFragmentManager().popBackStack();
+            getParentFragmentManager().popBackStack();
         } else if (action.getId() == GuidedAction.ACTION_ID_CANCEL) {
-            getFragmentManager().popBackStack();
+            getParentFragmentManager().popBackStack();
         } else {
             super.onGuidedActionClicked(action);
         }
