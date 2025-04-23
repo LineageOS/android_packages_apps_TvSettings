@@ -18,69 +18,66 @@ package com.android.tv.settings.device.apps;
 
 import android.content.Context;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
-import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidedAction;
-
 import com.android.settingslib.RestrictedPreference;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.widget.SettingsGuidedStepFragment;
-
 import java.util.List;
 
 public abstract class AppActionPreference extends RestrictedPreference {
-    protected ApplicationsState.AppEntry mEntry;
+  protected ApplicationsState.AppEntry mEntry;
 
-    public AppActionPreference(Context context, ApplicationsState.AppEntry entry) {
-        super(context);
-        mEntry = entry;
+  public AppActionPreference(Context context, ApplicationsState.AppEntry entry) {
+    super(context);
+    mEntry = entry;
+  }
+
+  /**
+   * Set entry and refresh pref.
+   *
+   * @param entry entry
+   */
+  public void setEntry(@NonNull ApplicationsState.AppEntry entry) {
+    mEntry = entry;
+    refresh();
+  }
+
+  /** Refresh pref from AppEntry */
+  public abstract void refresh();
+
+  public abstract static class ConfirmationFragment extends SettingsGuidedStepFragment {
+    private static final int ID_OK = 0;
+    private static final int ID_CANCEL = 1;
+
+    @Override
+    public void onCreateActions(@NonNull List<GuidedAction> actions, Bundle savedInstanceState) {
+      actions.add(
+          new GuidedAction.Builder().title(getString(android.R.string.ok)).id(ID_OK).build());
+      actions.add(
+          new GuidedAction.Builder()
+              .title(getString(android.R.string.cancel))
+              .id(ID_CANCEL)
+              .build());
     }
 
-    /**
-     * Set entry and refresh pref.
-     * @param entry entry
-     */
-    public void setEntry(@NonNull ApplicationsState.AppEntry entry) {
-        mEntry = entry;
-        refresh();
+    @Override
+    public void onGuidedActionClicked(GuidedAction action) {
+      switch ((int) action.getId()) {
+        case ID_OK:
+          onOk();
+          break;
+        case ID_CANCEL:
+          break;
+      }
+      getFragmentManager().popBackStack();
     }
 
-    /**
-     * Refresh pref from AppEntry
-     */
-    public abstract void refresh();
+    public abstract void onOk();
+  }
 
-    public abstract static class ConfirmationFragment extends SettingsGuidedStepFragment {
-        private static final int ID_OK = 0;
-        private static final int ID_CANCEL = 1;
-
-        @Override
-        public void onCreateActions(@NonNull List<GuidedAction> actions,
-                Bundle savedInstanceState) {
-            actions.add(new GuidedAction.Builder()
-                    .title(getString(android.R.string.ok))
-                    .id(ID_OK)
-                    .build());
-            actions.add(new GuidedAction.Builder()
-                    .title(getString(android.R.string.cancel))
-                    .id(ID_CANCEL)
-                    .build());
-        }
-
-        @Override
-        public void onGuidedActionClicked(GuidedAction action) {
-            switch ((int) action.getId()) {
-                case ID_OK:
-                    onOk();
-                    break;
-                case ID_CANCEL:
-                    break;
-            }
-            getFragmentManager().popBackStack();
-        }
-
-        public abstract void onOk();
-    }
-
+  String getAppName() {
+    mEntry.ensureLabel(getContext());
+    return mEntry.label;
+  }
 }

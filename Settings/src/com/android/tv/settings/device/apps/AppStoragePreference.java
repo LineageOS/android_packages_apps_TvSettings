@@ -22,48 +22,43 @@ import android.content.pm.PackageManager;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.text.TextUtils;
-
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
-
 import java.util.List;
 
 public class AppStoragePreference extends AppActionPreference {
-    private final PackageManager mPackageManager;
-    private final StorageManager mStorageManager;
+  private final PackageManager mPackageManager;
+  private final StorageManager mStorageManager;
 
-    public AppStoragePreference(Context context, ApplicationsState.AppEntry entry) {
-        super(context, entry);
-        mPackageManager = context.getPackageManager();
-        mStorageManager = (StorageManager) context.getSystemService(Context.STORAGE_SERVICE);
-        refresh();
+  public AppStoragePreference(Context context, ApplicationsState.AppEntry entry) {
+    super(context, entry);
+    mPackageManager = context.getPackageManager();
+    mStorageManager = (StorageManager) context.getSystemService(Context.STORAGE_SERVICE);
+    refresh();
+  }
+
+  public void refresh() {
+    final ApplicationInfo applicationInfo = mEntry.info;
+    final VolumeInfo volumeInfo = mPackageManager.getPackageCurrentVolume(applicationInfo);
+    final List<VolumeInfo> candidates = mPackageManager.getPackageCandidateVolumes(applicationInfo);
+    if (candidates.size() > 1 || (candidates.size() == 1 && !candidates.contains(volumeInfo))) {
+      setIntent(
+          MoveAppActivity.getLaunchIntent(getContext(), mEntry.info.packageName, getAppName()));
     }
 
-    public void refresh() {
-        final ApplicationInfo applicationInfo = mEntry.info;
-        final VolumeInfo volumeInfo = mPackageManager.getPackageCurrentVolume(applicationInfo);
-        final List<VolumeInfo> candidates =
-                mPackageManager.getPackageCandidateVolumes(applicationInfo);
-        if (candidates.size() > 1 ||
-                (candidates.size() == 1 && !candidates.contains(volumeInfo))) {
-            setIntent(MoveAppActivity
-                    .getLaunchIntent(getContext(), mEntry.info.packageName, getAppName()));
-        }
+    setTitle(R.string.device_apps_app_management_storage_used);
 
-        setTitle(R.string.device_apps_app_management_storage_used);
-
-        final String volumeDesc = mStorageManager.getBestVolumeDescription(volumeInfo);
-        final String size = mEntry.sizeStr;
-        if (TextUtils.isEmpty(size)) {
-            setSummary(R.string.storage_calculating_size);
-        } else {
-            setSummary(getContext().getString(R.string.device_apps_app_management_storage_used_desc,
-                    mEntry.sizeStr, volumeDesc));
-        }
+    final String volumeDesc = mStorageManager.getBestVolumeDescription(volumeInfo);
+    final String size = mEntry.sizeStr;
+    if (TextUtils.isEmpty(size)) {
+      setSummary(R.string.storage_calculating_size);
+    } else {
+      setSummary(
+          getContext()
+              .getString(
+                  R.string.device_apps_app_management_storage_used_desc,
+                  mEntry.sizeStr,
+                  volumeDesc));
     }
-
-    private String getAppName() {
-        mEntry.ensureLabel(getContext());
-        return mEntry.label;
-    }
+  }
 }

@@ -18,6 +18,7 @@ package com.android.tv.settings;
 
 import android.annotation.Nullable;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentActivity;
 
@@ -31,6 +32,11 @@ public abstract class FullScreenDialogFragmentActivity extends FragmentActivity 
   /** The click listener for the negative button */
   public abstract OnNegativeActionClickedListener onNegativeActionClicked();
 
+  /** Icon drawable if we want to pass a drawable instead of an icon */
+  public Drawable getDrawableIconForDialog() {
+    return null;
+  }
+
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -41,7 +47,11 @@ public abstract class FullScreenDialogFragmentActivity extends FragmentActivity 
           .add(
               android.R.id.content,
               InnerDialogFragment.newInstance(
-                  this, provideArguments(), onPositiveActionClicked(), onNegativeActionClicked()))
+                  this,
+                  provideArguments(),
+                  getDrawableIconForDialog(),
+                  onPositiveActionClicked(),
+                  onNegativeActionClicked()))
           .commitAllowingStateLoss();
     }
   }
@@ -50,14 +60,17 @@ public abstract class FullScreenDialogFragmentActivity extends FragmentActivity 
     OnPositiveActionClickedListener onPositiveActionClicked;
     OnNegativeActionClickedListener onNegativeActionClicked;
     Bundle dialogArguments;
+    Drawable drawableIcon;
 
     static InnerDialogFragment newInstance(
         Context context,
         Bundle dialogArguments,
+        Drawable drawableIcon,
         OnPositiveActionClickedListener onPositiveActionClicked,
         OnNegativeActionClickedListener onNegativeActionClicked) {
       InnerDialogFragment fragment = new InnerDialogFragment();
       fragment.setArguments(dialogArguments);
+      fragment.drawableIcon = drawableIcon;
       fragment.onPositiveActionClicked = onPositiveActionClicked;
       fragment.onNegativeActionClicked = onNegativeActionClicked;
       fragment.dialogArguments = dialogArguments;
@@ -78,6 +91,11 @@ public abstract class FullScreenDialogFragmentActivity extends FragmentActivity 
       } else {
         getActivity().finish();
       }
+    }
+
+    @Override
+    public Drawable getDrawableIcon() {
+      return drawableIcon;
     }
   }
 
