@@ -27,10 +27,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -147,9 +144,7 @@ public class ForceStopPreference extends AppActionPreference {
       String appName = getIntent().getStringExtra("appName");
       IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(this);
       Drawable drawable = iconDrawableFactory.getBadgedIcon(applicationInfo);
-      Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
       return new FullScreenDialogFragment.DialogBuilder()
-          .setIcon(Icon.createWithBitmap(bitmap))
           .setTitle(
               getString(R.string.device_apps_app_management_force_stop_with_app_name, appName))
           .setMessage(getString(R.string.device_apps_app_management_force_stop_desc))
@@ -174,11 +169,14 @@ public class ForceStopPreference extends AppActionPreference {
         finish();
       };
     }
-  }
 
-  private String getAppName() {
-    mEntry.ensureLabel(getContext());
-    return mEntry.label;
+    @Override
+    public Drawable getDrawableIconForDialog() {
+      ApplicationInfo applicationInfo = getIntent().getParcelableExtra("applicationInfo");
+      String appName = getIntent().getStringExtra("appName");
+      IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(this);
+      return iconDrawableFactory.getBadgedIcon(applicationInfo);
+    }
   }
 
   @Override
