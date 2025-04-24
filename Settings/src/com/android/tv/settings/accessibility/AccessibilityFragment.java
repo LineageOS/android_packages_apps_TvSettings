@@ -24,6 +24,7 @@ import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.admin.DevicePolicyManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.ComponentName;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ServiceInfo;
@@ -72,11 +73,14 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
     private static final String ACCESSIBILITY_SHORTCUT_KEY = "accessibility_shortcut";
     private static final String ACCESSIBILITY_FRAGMENT_TAG = "accessibility_fragment";
     private static final String SERVICE_PREF_TAG = "ServicePref:";
+    private static final String TOGGLE_BOUNCE_KEY = "toggle_bounce_key";
     private static final int BOLD_TEXT_ADJUSTMENT = 500;
     private static final int FIRST_PREFERENCE_IN_CATEGORY_INDEX = -1;
+    private static final int BOUNCE_KEY_TIME_OUT = 500; //milliseconds
 
     private SharedPreferences mSharedPref;
     private Map<String, String> mServicesComponentSliceUriMap;
+    private int mCurrentBounceKeyTimeout;
 
     private SliceShard mSliceShard;
 
@@ -188,6 +192,19 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
 
     private void configurePreferences() {
         configureServicesMap();
+        initBounceKeyTimeoutValue();
+
+        final TwoStatePreference bounceKeyPreference =
+                (TwoStatePreference) findPreference(TOGGLE_BOUNCE_KEY);
+        bounceKeyPreference.setChecked(mCurrentBounceKeyTimeout != 0);
+        if (FlavorUtils.isTwoPanel(getContext())) {
+            if (mCurrentBounceKeyTimeout == 0) {
+                bounceKeyPreference.setFragment(AccessibilityBounceKeyInfoFragment.class.getName());
+            } else {
+                bounceKeyPreference.setFragment(AccessibilityBounceKeyFragment.class.getName());
+            }
+        }
+
         final TwoStatePreference highContrastPreference =
                 (TwoStatePreference) findPreference(TOGGLE_HIGH_TEXT_CONTRAST_KEY);
         highContrastPreference.setChecked(Settings.Secure.getInt(getContext().getContentResolver(),
@@ -275,6 +292,20 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
             mEnabledPref = (SliceSwitchPreference) preference;
             mEnabledPref.setChecked(!mEnabledPref.isChecked());
             launchConfirmationFragment(preference.getExtras());
+            return true;
+        } else if (TextUtils.equals(preference.getKey(), TOGGLE_BOUNCE_KEY)) {
+            TwoStatePreference bounceKeyPreference = (TwoStatePreference) preference;
+            if (((SwitchPreference) preference).isChecked()) {
+                // If bounce key is on then set initial bounce key value as 500ms
+                mCurrentBounceKeyTimeout = BOUNCE_KEY_TIME_OUT;
+                setBounceKeyTimeoutValue(mCurrentBounceKeyTimeout);
+                bounceKeyPreference.setFragment(AccessibilityBounceKeyFragment.class.getName());
+            } else {
+                // If bounce key is off then set initial bounce key value as 500ms
+                mCurrentBounceKeyTimeout = 0;
+                setBounceKeyTimeoutValue(mCurrentBounceKeyTimeout);
+                bounceKeyPreference.setFragment(AccessibilityBounceKeyInfoFragment.class.getName());
+            }
             return true;
         } else {
             return super.onPreferenceTreeClick(preference);
@@ -480,6 +511,23 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
                 mServicesComponentSliceUriMap.get(componentName));
 
         return usingSlice;
+    }
+
+    private void initBounceKeyTimeoutValue() {
+        final ContentResolver resolver = getContext().getContentResolver();
+        mCurrentBounceKeyTimeout =
+                Settings.Secure.getInt(resolver, Settings.Secure.ACCESSIBILITY_BOUNCE_KEYS, 0);
+    }
+
+    /**
+     * Setting new bounce keys value
+     *
+     * @param bounceKeyTimeOut is the time out value for bounce key feature
+     */
+    private void setBounceKeyTimeoutValue(int bounceKeyTimeOut) {
+        final ContentResolver resolver = getContext().getContentResolver();
+        Settings.Secure.putInt(resolver,
+                Settings.Secure.ACCESSIBILITY_BOUNCE_KEYS, bounceKeyTimeOut);
     }
 
     @Override
