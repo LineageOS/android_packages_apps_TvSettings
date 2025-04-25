@@ -828,10 +828,10 @@
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"允许模拟位置"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"选择调试应用"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"等待调试器"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"通过 USB 验证应用"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"验证通过 USB 安装的应用"</string>
     <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"检查通过 ADB/ADT 安装的应用是否存在有害行为。"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"WLAN 详细日志记录"</string>
-    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"启用 WLAN 详细日志记录功能"</string>
+    <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"启用 Wi-Fi 详细日志记录功能"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"显示触摸操作"</string>
     <string name="system_pointer_location" msgid="8724050865245555084">"指针位置"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"显示布局边界"</string>
@@ -853,7 +853,7 @@
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"优化显示方式以分别实现最高分辨率或最高帧速率。此设置只会影响超高清显示屏。更改此设置后设备将重新启动。"</string>
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"启用蓝牙 HCI 信息收集日志"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"连接 USB 后开启调试模式"</string>
-    <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"调试应用会在执行前等待附加调试程序"</string>
+    <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"被调试的应用会在执行前等待附加调试程序"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"显示剪裁边界、边距等"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"使用 GPU 进行绘图时闪烁显示窗口中的视图"</string>
     <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"硬件层更新时闪烁绿色"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"版本 <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"打开"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"强行停止"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"要强行停止“<xliff:g id="APP_NAME">%1$s</xliff:g>”吗？"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"强行停止某个应用可能会导致其出现异常。"</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"卸载"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"卸载更新"</string>
@@ -1200,4 +1199,8 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s的音量"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"您可以控制%1$s音箱上的助理音量"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"仅影响%1$s设备（而非电视）的音量"</string>
+    <!-- no translation found for accessibility_service_off_title (4816862630220086861) -->
+    <skip />
+    <!-- no translation found for accessibility_service_on_title (7892907988400727648) -->
+    <skip />
 </resources>
