@@ -1410,6 +1410,26 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true" />
 
+        <activity android:name=".device.apps.ClearDataPreference$ConfirmationDialogFragmentActivity"
+            android:theme="@style/TvSettingsDialog.FullScreen"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true" />
+
+        <activity android:name=".device.apps.ClearCachePreference$ConfirmationDialogFragmentActivity"
+            android:theme="@style/TvSettingsDialog.FullScreen"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true" />
+
+        <activity android:name=".device.apps.ClearDefaultsPreference$ConfirmationDialogFragmentActivity"
+            android:theme="@style/TvSettingsDialog.FullScreen"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true" />
+
+        <activity android:name=".device.apps.EnableDisablePreference$ConfirmationDialogFragmentActivity"
+            android:theme="@style/TvSettingsDialog.FullScreen"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true" />
+
     </application>
 
     <queries>

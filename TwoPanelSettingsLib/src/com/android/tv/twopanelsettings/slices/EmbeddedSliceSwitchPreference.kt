@@ -24,6 +24,7 @@ import android.util.Log
 import androidx.preference.TwoStatePreference
 import com.android.tv.twopanelsettings.R
 import com.android.tv.twopanelsettings.slices.EmbeddedSlicePreferenceHelper.SlicePreferenceListener
+import java.lang.Override
 
 /**
  * An embedded slice switch preference which would be embedded in common TvSettings preference
@@ -99,7 +100,7 @@ class EmbeddedSliceSwitchPreference : SliceSwitchPreference {
         isVisible = true
     }
 
-    fun setUri(uri: String?) {
+    public override fun setUri(uri: String?) {
         if (uri != mUri) {
             mUri = uri
             mHelper?.onDetached() // Remove old slice observer.

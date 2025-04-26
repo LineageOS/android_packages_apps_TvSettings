@@ -30,12 +30,13 @@ import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
  * Slices version of SwitchPreference.
  */
 public class SliceSwitchPreference extends SwitchPreference implements HasSliceAction,
-        HasCustomContentDescription {
+        HasCustomContentDescription, HasSliceUri {
 
     private int mActionId;
     protected SliceActionImpl mAction;
     private SliceActionImpl mFollowupSliceAction;
     private String mContentDescription;
+    private String mUri;
 
     public SliceSwitchPreference(Context context, SliceActionImpl action) {
         super(context);
@@ -115,6 +116,14 @@ public class SliceSwitchPreference extends SwitchPreference implements HasSliceA
 
     public String getContentDescription() {
         return this.mContentDescription;
+    }
+
+    public void setUri(String uri) {
+        this.mUri = uri;
+    }
+
+    public String getUri() {
+        return mUri;
     }
 
 }

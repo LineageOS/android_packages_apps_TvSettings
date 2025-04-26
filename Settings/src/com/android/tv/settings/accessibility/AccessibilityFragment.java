@@ -24,6 +24,7 @@ import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.admin.DevicePolicyManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.ComponentName;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ServiceInfo;
@@ -50,6 +51,7 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.twopanelsettings.slices.SliceShard;
+import com.android.tv.twopanelsettings.slices.SliceSwitchPreference;
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 
 import java.util.List;
@@ -69,14 +71,22 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
     private static final String COLOR_CORRECTION_TWOPANEL_KEY = "color_correction_only_twopanel";
     private static final String COLOR_CORRECTION_CLASSIC_KEY = "color_correction_only_classic";
     private static final String ACCESSIBILITY_SHORTCUT_KEY = "accessibility_shortcut";
+    private static final String ACCESSIBILITY_FRAGMENT_TAG = "accessibility_fragment";
+    private static final String SERVICE_PREF_TAG = "ServicePref:";
+    private static final String TOGGLE_BOUNCE_KEY = "toggle_bounce_key";
     private static final int BOLD_TEXT_ADJUSTMENT = 500;
     private static final int FIRST_PREFERENCE_IN_CATEGORY_INDEX = -1;
+    private static final int BOUNCE_KEY_TIME_OUT = 500; //milliseconds
+
     private SharedPreferences mSharedPref;
+    private Map<String, String> mServicesComponentSliceUriMap;
+    private int mCurrentBounceKeyTimeout;
 
     private SliceShard mSliceShard;
 
     PreferenceCategory mServicesPrefCategory;
     PreferenceCategory mControlsPrefCategory;
+    private SliceSwitchPreference mEnabledPref;
 
     private final Map<ComponentName, PreferenceCategory>
             mServiceComponentNameToPreferenceCategoryMap = new ArrayMap<>();
@@ -181,6 +191,20 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
     }
 
     private void configurePreferences() {
+        configureServicesMap();
+        initBounceKeyTimeoutValue();
+
+        final TwoStatePreference bounceKeyPreference =
+                (TwoStatePreference) findPreference(TOGGLE_BOUNCE_KEY);
+        bounceKeyPreference.setChecked(mCurrentBounceKeyTimeout != 0);
+        if (FlavorUtils.isTwoPanel(getContext())) {
+            if (mCurrentBounceKeyTimeout == 0) {
+                bounceKeyPreference.setFragment(AccessibilityBounceKeyInfoFragment.class.getName());
+            } else {
+                bounceKeyPreference.setFragment(AccessibilityBounceKeyFragment.class.getName());
+            }
+        }
+
         final TwoStatePreference highContrastPreference =
                 (TwoStatePreference) findPreference(TOGGLE_HIGH_TEXT_CONTRAST_KEY);
         highContrastPreference.setChecked(Settings.Secure.getInt(getContext().getContentResolver(),
@@ -262,6 +286,27 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
                 preference.setFragment(AccessibilityShortcutInfoFragment.class.getName());
             }
             return true;
+        } else if (preference instanceof SliceSwitchPreference
+                && preference.getKey() != null
+                && preference.getKey().startsWith(SERVICE_PREF_TAG)) {
+            mEnabledPref = (SliceSwitchPreference) preference;
+            mEnabledPref.setChecked(!mEnabledPref.isChecked());
+            launchConfirmationFragment(preference.getExtras());
+            return true;
+        } else if (TextUtils.equals(preference.getKey(), TOGGLE_BOUNCE_KEY)) {
+            TwoStatePreference bounceKeyPreference = (TwoStatePreference) preference;
+            if (((SwitchPreference) preference).isChecked()) {
+                // If bounce key is on then set initial bounce key value as 500ms
+                mCurrentBounceKeyTimeout = BOUNCE_KEY_TIME_OUT;
+                setBounceKeyTimeoutValue(mCurrentBounceKeyTimeout);
+                bounceKeyPreference.setFragment(AccessibilityBounceKeyFragment.class.getName());
+            } else {
+                // If bounce key is off then set initial bounce key value as 500ms
+                mCurrentBounceKeyTimeout = 0;
+                setBounceKeyTimeoutValue(mCurrentBounceKeyTimeout);
+                bounceKeyPreference.setFragment(AccessibilityBounceKeyInfoFragment.class.getName());
+            }
+            return true;
         } else {
             return super.onPreferenceTreeClick(preference);
         }
@@ -324,38 +369,60 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
             String title = accInfo.getResolveInfo()
                     .loadLabel(getActivity().getPackageManager()).toString();
 
-            final String key = "ServicePref:" + componentName.flattenToString();
-            RestrictedPreference servicePref = findPreference(key);
+            final String key = SERVICE_PREF_TAG + componentName.flattenToString();
+            Preference servicePref = findPreference(key);
             if (servicePref == null) {
-                servicePref = new RestrictedPreference(getContext());
+                if (maybeUseSlice(componentName.flattenToString())) {
+                    servicePref = new SliceSwitchPreference(getContext());
+                } else {
+                    servicePref = new RestrictedPreference(getContext());
+                }
                 servicePref.setKey(key);
             }
             if (componentName
                 .flattenToString()
-                .equals(
-                    getResources()
-                        .getString(R.string.
-                                        accessibility_screen_reader_flattened_component_name))) {
+                    .equals(
+                        getResources()
+                            .getString(R.string
+                                .accessibility_screen_reader_flattened_component_name))) {
                 title = getResources().getString(R.string.screen_reader_service_title);
             }
             servicePref.setTitle(title);
             servicePref.setSummary(serviceEnabled ? R.string.settings_on : R.string.settings_off);
-            AccessibilityServiceFragment.prepareArgs(servicePref.getExtras(),
-                    serviceInfo.packageName,
-                    serviceInfo.name,
-                    accInfo.getSettingsActivityName(),
-                    title);
 
             if (serviceAllowed || serviceEnabled) {
                 servicePref.setEnabled(true);
-                servicePref.setFragment(AccessibilityServiceFragment.class.getName());
+                if (maybeUseSlice(componentName.flattenToString())) {
+                    AccessibilityServiceConfirmationFragment.prepareArgs(servicePref.getExtras(),
+                            componentName, title, !serviceEnabled);
+                    ((SliceSwitchPreference) servicePref).setChecked(serviceEnabled);
+                    if (serviceEnabled) {
+                        servicePref.setFragment(SliceUtils.PATH_SLICE_FRAGMENT);
+                        ((SliceSwitchPreference) servicePref)
+                                .setUri(mServicesComponentSliceUriMap
+                                        .get(componentName.flattenToString()));
+                    } else {
+                        servicePref.setFragment(AccessibilityServiceInfoFragment.class.getName());
+                    }
+                } else {
+                    AccessibilityServiceFragment.prepareArgs(servicePref.getExtras(),
+                            serviceInfo.packageName,
+                            serviceInfo.name,
+                            accInfo.getSettingsActivityName(),
+                            title);
+                    servicePref.setFragment(AccessibilityServiceFragment.class.getName());
+                }
             } else {
                 // Disable accessibility service that are not permitted.
                 final EnforcedAdmin admin =
                         RestrictedLockUtilsInternal.checkIfAccessibilityServiceDisallowed(
                                 getContext(), serviceInfo.packageName, UserHandle.myUserId());
                 if (admin != null) {
-                    servicePref.setDisabledByAdmin(admin);
+                    if (servicePref instanceof SliceSwitchPreference) {
+                        ((SliceSwitchPreference) servicePref).setEnabled(false);
+                    } else {
+                        ((RestrictedPreference) servicePref).setDisabledByAdmin(admin);
+                    }
                 } else {
                     servicePref.setEnabled(false);
                 }
@@ -378,6 +445,89 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
         }
         mServicesPrefCategory.setVisible(mServicesPrefCategory.getPreferenceCount() != 0);
         mControlsPrefCategory.setVisible(mControlsPrefCategory.getPreferenceCount() != 0);
+    }
+
+    private void launchConfirmationFragment(Bundle arguments) {
+        AccessibilityServiceConfirmationFragment confirmationFragment =
+                new AccessibilityServiceConfirmationFragment();
+        confirmationFragment.setArguments(arguments);
+
+        requireActivity().getSupportFragmentManager().beginTransaction()
+                .add(android.R.id.content, confirmationFragment,
+                        ACCESSIBILITY_FRAGMENT_TAG)
+                .addToBackStack(null)
+                .commit();
+
+        requireActivity()
+                .getSupportFragmentManager()
+                .setFragmentResultListener(
+                    AccessibilityServiceConfirmationFragment.REQUEST_KEY, this,
+                        (requestKey, result) -> {
+                            String flattenComponentName = result.getString(
+                                    AccessibilityServiceConfirmationFragment
+                                            .FLATTEN_SERVICE_COMPONENT_NAME, null);
+                            if (flattenComponentName != null) {
+                                ComponentName componentName = ComponentName
+                                        .unflattenFromString(flattenComponentName);
+                                boolean enabling = result.getBoolean(
+                                        AccessibilityServiceConfirmationFragment.ARG_ENABLING,
+                                        false);
+                                onAccessibilityServiceConfirmed(componentName, enabling);
+                            }
+                        });
+    }
+
+    private void configureServicesMap() {
+        mServicesComponentSliceUriMap = new ArrayMap<>();
+        String[] stringArray = getResources().getStringArray(R.array.accessibility_services_map);
+        if (stringArray != null && stringArray.length > 0) {
+            for (int i = 0; i < stringArray.length; i += 2) {
+                String key = stringArray[i];
+                String value = (i + 1 < stringArray.length) ? stringArray[i + 1] : null;
+                mServicesComponentSliceUriMap.put(key, value);
+            }
+        }
+    }
+
+    private void onAccessibilityServiceConfirmed(ComponentName componentName, boolean enabling) {
+        AccessibilityUtils.setAccessibilityServiceState(getActivity(), componentName, enabling);
+        if (mEnabledPref != null) {
+            mEnabledPref.setChecked(enabling);
+            // Check if component is talkback, then log
+            if (componentName != null
+                    && componentName.flattenToString().equals(
+                    getResources().getString(
+                            R.string.accessibility_screen_reader_flattened_component_name))) {
+                logToggleInteracted(TvSettingsEnums.SYSTEM_A11Y_TALKBACK_ON_OFF, enabling);
+            }
+        }
+        refreshServices();
+    }
+
+    private boolean maybeUseSlice(String componentName) {
+        boolean usingSlice = mServicesComponentSliceUriMap.containsKey(componentName)
+                && FlavorUtils.isTwoPanel(getContext())
+                && SliceUtils.isSliceProviderValid(getContext(),
+                mServicesComponentSliceUriMap.get(componentName));
+
+        return usingSlice;
+    }
+
+    private void initBounceKeyTimeoutValue() {
+        final ContentResolver resolver = getContext().getContentResolver();
+        mCurrentBounceKeyTimeout =
+                Settings.Secure.getInt(resolver, Settings.Secure.ACCESSIBILITY_BOUNCE_KEYS, 0);
+    }
+
+    /**
+     * Setting new bounce keys value
+     *
+     * @param bounceKeyTimeOut is the time out value for bounce key feature
+     */
+    private void setBounceKeyTimeoutValue(int bounceKeyTimeOut) {
+        final ContentResolver resolver = getContext().getContentResolver();
+        Settings.Secure.putInt(resolver,
+                Settings.Secure.ACCESSIBILITY_BOUNCE_KEYS, bounceKeyTimeOut);
     }
 
     @Override

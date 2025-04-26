@@ -20,86 +20,146 @@ import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected
 
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.text.format.Formatter;
-
+import android.util.IconDrawableFactory;
 import androidx.annotation.NonNull;
 import androidx.leanback.widget.GuidanceStylist;
-
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.applications.ApplicationsState;
+import com.android.tv.settings.FullScreenDialogFragment;
+import com.android.tv.settings.FullScreenDialogFragmentActivity;
 import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.FlavorUtils;
+
 public class ClearCachePreference extends AppActionPreference {
-    private boolean mClearingCache;
+  private static final int RESULT_CLEAR_CACHE = 2;
+  private boolean mClearingCache;
 
-    public ClearCachePreference(Context context, ApplicationsState.AppEntry entry) {
-        super(context, entry);
+  public ClearCachePreference(Context context, ApplicationsState.AppEntry entry) {
+    super(context, entry);
 
-        refresh();
-        ConfirmationFragment.prepareArgs(getExtras(), mEntry.info.packageName);
+    refresh();
+    ConfirmationFragment.prepareArgs(getExtras(), mEntry.info.packageName);
 
-        UserManager userManager = getContext().getSystemService(UserManager.class);
-        if (userManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL)) {
-            final RestrictedLockUtils.EnforcedAdmin admin =
-                    RestrictedLockUtilsInternal.checkIfRestrictionEnforced(context,
-                            UserManager.DISALLOW_APPS_CONTROL, UserHandle.myUserId());
-            if (admin != null) {
-                setDisabledByAdmin(admin);
-            } else {
-                setEnabled(false);
-            }
-        }
+    UserManager userManager = getContext().getSystemService(UserManager.class);
+    if (userManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL)) {
+      final RestrictedLockUtils.EnforcedAdmin admin =
+          RestrictedLockUtilsInternal.checkIfRestrictionEnforced(
+              context, UserManager.DISALLOW_APPS_CONTROL, UserHandle.myUserId());
+      if (admin != null) {
+        setDisabledByAdmin(admin);
+      } else {
+        setEnabled(false);
+      }
+    }
+  }
+
+  public void refresh() {
+    setTitle(R.string.device_apps_app_management_clear_cache);
+    final Context context = getContext();
+    setSummary(
+        mClearingCache
+            ? context.getString(R.string.computing_size)
+            : Formatter.formatFileSize(context, mEntry.cacheSize + mEntry.externalCacheSize));
+    setEnabled(!mClearingCache && mEntry.cacheSize > 0);
+    this.setOnPreferenceClickListener(
+        preference -> {
+          logEntrySelected(TvSettingsEnums.APPS_ALL_APPS_APP_ENTRY_CLEAR_CACHE);
+          return false;
+        });
+  }
+
+  public void setClearingCache(boolean clearingCache) {
+    mClearingCache = clearingCache;
+    refresh();
+  }
+
+  public static class ConfirmationFragment extends AppActionPreference.ConfirmationFragment {
+    private static final String ARG_PACKAGE_NAME = "packageName";
+
+    private static void prepareArgs(@NonNull Bundle args, String packageName) {
+      args.putString(ARG_PACKAGE_NAME, packageName);
     }
 
-    public void refresh() {
-        setTitle(R.string.device_apps_app_management_clear_cache);
-        final Context context = getContext();
-        setSummary(mClearingCache ? context.getString(R.string.computing_size)
-                : Formatter.formatFileSize(context, mEntry.cacheSize + mEntry.externalCacheSize));
-        setEnabled(!mClearingCache && mEntry.cacheSize > 0);
-        this.setOnPreferenceClickListener(
-                preference -> {
-                    logEntrySelected(TvSettingsEnums.APPS_ALL_APPS_APP_ENTRY_CLEAR_CACHE);
-                    return false;
-                });
-    }
-
-    public void setClearingCache(boolean clearingCache) {
-        mClearingCache = clearingCache;
-        refresh();
+    @NonNull
+    @Override
+    public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
+      final AppManagementFragment fragment = (AppManagementFragment) getTargetFragment();
+      return new GuidanceStylist.Guidance(
+          getString(R.string.device_apps_app_management_clear_cache),
+          null,
+          fragment.getAppName(),
+          fragment.getAppIcon());
     }
 
     @Override
-    public String getFragment() {
-        return ConfirmationFragment.class.getName();
+    public void onOk() {
+      final AppManagementFragment fragment = (AppManagementFragment) getTargetFragment();
+      fragment.clearCache();
+    }
+  }
+
+  public static class ConfirmationDialogFragmentActivity extends FullScreenDialogFragmentActivity {
+    public Bundle provideArguments() {
+      ApplicationInfo applicationInfo = getIntent().getParcelableExtra("applicationInfo");
+      String appName = getIntent().getStringExtra("appName");
+      return new FullScreenDialogFragment.DialogBuilder()
+          .setTitle(getString(R.string.device_apps_app_management_clear_cache))
+          .setPositiveButton(getString(R.string.settings_confirm))
+          .setNegativeButton(getString(R.string.settings_cancel))
+          .build();
     }
 
-    public static class ConfirmationFragment extends AppActionPreference.ConfirmationFragment {
-        private static final String ARG_PACKAGE_NAME = "packageName";
-
-        private static void prepareArgs(@NonNull Bundle args, String packageName) {
-            args.putString(ARG_PACKAGE_NAME, packageName);
-        }
-
-        @NonNull
-        @Override
-        public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            final AppManagementFragment fragment = (AppManagementFragment) getTargetFragment();
-            return new GuidanceStylist.Guidance(
-                    getString(R.string.device_apps_app_management_clear_cache),
-                    null,
-                    fragment.getAppName(),
-                    fragment.getAppIcon());
-        }
-
-        @Override
-        public void onOk() {
-            final AppManagementFragment fragment =
-                    (AppManagementFragment) getTargetFragment();
-            fragment.clearCache();
-        }
+    public FullScreenDialogFragmentActivity.OnPositiveActionClickedListener
+        onPositiveActionClicked() {
+      return () -> {
+        setResult(RESULT_CLEAR_CACHE);
+        finish();
+      };
     }
+
+    public FullScreenDialogFragmentActivity.OnNegativeActionClickedListener
+        onNegativeActionClicked() {
+      return () -> {
+        finish();
+      };
+    }
+
+    @Override
+    public Drawable getDrawableIconForDialog() {
+      ApplicationInfo applicationInfo = getIntent().getParcelableExtra("applicationInfo");
+      String appName = getIntent().getStringExtra("appName");
+      IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(this);
+      return iconDrawableFactory.getBadgedIcon(applicationInfo);
+    }
+  }
+
+  @Override
+  public String getFragment() {
+    // Should show GuidedStepFragment if the flavor is One Panel
+    if (!FlavorUtils.isTwoPanel(getContext())) {
+      return ConfirmationFragment.class.getName();
+    }
+    return null;
+  }
+
+  @Override
+  public Intent getIntent() {
+    // Should show FullScreenDialog if the flavor is Two Panel
+    if (FlavorUtils.isTwoPanel(getContext())) {
+      Intent intent = new Intent(getContext(), ConfirmationDialogFragmentActivity.class);
+      intent.putExtra("applicationInfo", mEntry.info);
+      intent.putExtra("appName", getAppName());
+      intent.putExtra("enable", !mEntry.info.enabled);
+      return intent;
+    }
+    return null;
+  }
 }
