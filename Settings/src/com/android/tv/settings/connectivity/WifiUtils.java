@@ -15,32 +15,78 @@
  */
 package com.android.tv.settings.connectivity;
 
-import android.net.wifi.ScanResult;
-import android.net.wifi.WifiConfiguration;
-import android.text.TextUtils;
-
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.StringRes;
 import com.android.tv.settings.R;
-
-import com.android.tv.settings.library.network.AccessPoint;
+import com.android.tv.twopanelsettings.slices.InfoFragment;
 import com.android.wifitrackerlib.WifiEntry;
 
 /** Helper class for Wifi configuration. */
-class WifiUtils {
-    @StringRes
-    static int getConnectionStatus(WifiEntry wifiEntry) {
-        if (wifiEntry.canSignIn()) {
-            return R.string.wifi_captive_portal;
-        } else if (wifiEntry.getConnectedState() == WifiEntry.CONNECTED_STATE_CONNECTED) {
-            return wifiEntry.hasInternetAccess()
-                    ? R.string.connected : R.string.wifi_no_internet;
-        } else if (wifiEntry.shouldEditBeforeConnect()) {
-            return R.string.wifi_bad_password;
-        } else if (wifiEntry.isSaved()) {
-            return R.string.wifi_saved;
-        }
-        return R.string.not_connected;
+public class WifiUtils {
+  @StringRes
+  static int getConnectionStatus(WifiEntry wifiEntry) {
+    if (wifiEntry.canSignIn()) {
+      return R.string.wifi_captive_portal;
+    } else if (wifiEntry.getConnectedState() == WifiEntry.CONNECTED_STATE_CONNECTED) {
+      return wifiEntry.hasInternetAccess() ? R.string.connected : R.string.wifi_no_internet;
+    } else if (wifiEntry.shouldEditBeforeConnect()) {
+      return R.string.wifi_bad_password;
+    } else if (wifiEntry.isSaved()) {
+      return R.string.wifi_saved;
     }
+    return R.string.not_connected;
+  }
 
-    private WifiUtils() {}
+  /** Truncates IP address to 32 characters with ellipse or first whitespace if it is too long */
+  public static CharSequence truncateIpAddress(CharSequence input) {
+    final int MAX_LENGTH = 28;
+    final String ELLIPSIS = " ...";
+
+    if (input.length() > MAX_LENGTH) {
+      int truncateAt = MAX_LENGTH;
+
+      for (int i = 0; i < MAX_LENGTH; i++) {
+        if (Character.isWhitespace(input.charAt(i))) {
+          truncateAt = i;
+          break;
+        }
+      }
+
+      StringBuilder truncated = new StringBuilder(truncateAt + ELLIPSIS.length());
+      truncated.append(input, 0, truncateAt);
+      truncated.append(ELLIPSIS);
+      return truncated.toString();
+
+    } else {
+      return input;
+    }
+  }
+
+  public static class IpAddressInfoFragment extends InfoFragment {
+    public static String ARG_IP_ADDRESS_EXTRA = "IP_ADDRESS_EXTRA";
+
+    public IpAddressInfoFragment() {}
+
+    @Override
+    public View onCreateView(
+        LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+      View view = super.onCreateView(inflater, container, savedInstanceState);
+      CharSequence ipAddress = getArguments().getCharSequence(ARG_IP_ADDRESS_EXTRA);
+      ((TextView) view.findViewById(com.android.tv.twopanelsettings.R.id.info_title))
+          .setText(getActivity().getString(R.string.title_ip_address));
+      view.findViewById(com.android.tv.twopanelsettings.R.id.info_title)
+          .setVisibility(View.VISIBLE);
+      ((TextView) view.findViewById(com.android.tv.twopanelsettings.R.id.info_summary))
+          .setText(ipAddress);
+      view.findViewById(com.android.tv.twopanelsettings.R.id.info_summary)
+          .setVisibility(View.VISIBLE);
+      return view;
+    }
+  }
+
+  private WifiUtils() {}
 }
