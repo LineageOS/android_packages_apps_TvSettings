@@ -827,9 +827,9 @@
     <string name="system_usb_debugging" msgid="2158285492172755923">"USB பிழைதிருத்தம்"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"போலி இருப்பிடங்களை அனுமதி"</string>
     <string name="system_select_debug_app" msgid="6200987902307533721">"பிழைத்திருத்தப் பயன்பாட்டைத் தேர்வுசெய்க"</string>
-    <string name="system_wait_for_debugger" msgid="5715878008542589060">"பிழைத்திருத்திக்குக் காத்திருக்கவும்"</string>
+    <string name="system_wait_for_debugger" msgid="5715878008542589060">"பிழைத்திருத்திக்குக் காத்திருத்தல்"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"USB ஆப்ஸைச் சரிபார்"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"தீங்கு விளைவிக்கும் செயல்பாட்டை அறிய ADB/ADT மூலம் நிறுவப்பட்ட ஆப்ஸைச் சரிபார்"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"தீங்கு விளைவிக்கும் செயல்பாட்டை அறிய ADB/ADT மூலம் நிறுவப்பட்ட ஆப்ஸைச் சரிபார்க்கும்"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"வைஃபை அதிவிவர நுழைவு"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"வைஃபை அதிவிவர நுழைவை இயக்கு"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"தொடுதலைக் காட்டு"</string>
@@ -853,7 +853,7 @@
     <string name="system_desc_hdmi_optimization" msgid="5695603795556335912">"அதிகபட்ச தெளிவுத்திறன் அல்லது ஃபிரேம் வீதத்திற்கு திரை உகப்பாக்கப்பட்டது. இது அல்ட்ரா HD திரைகளை மட்டும் பாதிக்கும். இந்த அமைப்பை மாற்றுவது, சாதனத்தை மீண்டும் தொடங்கும்."</string>
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"புளுடூத் HCI ஸ்னூப் பதிவை இயக்கு"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"USB இணைக்கப்பட்டிருக்கும்போது பிழைத்திருத்தப் பயன்முறையை அமை"</string>
-    <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"பிழைத்திருத்தப்பட்ட ஆப்ஸ் செயல்படுவதற்கு முன்பு பிழைத்திருத்தியை இணைப்பதற்குக் காத்திருக்கிறது"</string>
+    <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"பிழைத்திருத்தப்பட்ட ஆப்ஸ் செயல்படுவதற்கு முன்பு பிழைத்திருத்தியை இணைப்பதற்குக் காத்திருக்கும்"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"கிளிப் எல்லைகள், ஓரங்கள், மேலும் பலவற்றைக் காட்டும்"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"GPU மூலம் வரையும்போது சாளரங்களில் காட்சிகளைக் காட்டு"</string>
     <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"வன்பொருள் லேயர்களைப் புதுப்பிக்கும்போது, அவற்றைப் பச்சை நிறத்தில் காட்டு"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"பதிப்பு <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"திறக்கும்"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"உடனே நிறுத்து"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"<xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸை உடனே நிறுத்தவா?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"ஆப்ஸை உடனே நிறுத்தினால், தவறாகச் செயல்படலாம்."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"நிறுவல் நீக்கு"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"புதுப்பிப்புகளை நிறுவல் நீக்கு"</string>
@@ -1200,4 +1199,8 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s ஒலியளவு"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s ஸ்பீக்கரில் Assistantடின் ஒலியளவைக் கட்டுப்படுத்தலாம்"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"%1$s சாதனத்தில் மட்டுமே ஒலியளவை மாற்றும், டிவியில் மாற்றாது"</string>
+    <!-- no translation found for accessibility_service_off_title (4816862630220086861) -->
+    <skip />
+    <!-- no translation found for accessibility_service_on_title (7892907988400727648) -->
+    <skip />
 </resources>
