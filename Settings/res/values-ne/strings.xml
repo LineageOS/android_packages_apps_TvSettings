@@ -313,7 +313,7 @@
     <string name="system_inputs" msgid="5552840337357572096">"इनपुट"</string>
     <string name="system_inputs_devices" msgid="2158421111699829399">"इनपुट तथा यन्त्रहरू"</string>
     <string name="system_home_theater_control" msgid="6228949628173590310">"होम थिएटरसम्बन्धी नियन्त्रण"</string>
-    <string name="system_developer_options" msgid="8480844257066475479">"विकासकर्ताका विकल्पहरू"</string>
+    <string name="system_developer_options" msgid="8480844257066475479">"विकासकर्ता मोड"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"कुनै पनि होइन"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"प्रयोग तथा निदान"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"डिभाइसका एड्मिन एपहरू उपलब्ध छैनन्"</string>
@@ -845,7 +845,7 @@
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"स्ट्रिक्ट मोड अन गर्नुहोस्"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"प्रोफाइल GPU रेन्डर गर्दै"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"ट्रेस सक्षम पार्नुहोस्"</string>
-    <string name="system_dont_keep_activities" msgid="4641165963339846161">"गतिविधि नराखियोस्"</string>
+    <string name="system_dont_keep_activities" msgid="4641165963339846161">"गतिविधि जारी नराख्नुहोस्"</string>
     <string name="system_background_process_limit" msgid="1985373407150771045">"ब्याकग्राउन्ड प्रक्रियाको सीमा"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"सबै ANRs देखाउनुहोस्"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"स्वप्न मोड अक्षम पार्नुहोस्"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"संस्करण <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"खोल्नुहोस्"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"जबरजस्ती बन्द गर्नुहोस्"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"<xliff:g id="APP_NAME">%1$s</xliff:g> जबरजस्ती रोक्ने हो?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"तपाईंले एप बन्द गर्न बल गर्नुभयो भने, यसले चाहेअनुसार काम नगर्न सक्छ।"</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"स्थापना हटाउनुहोस्"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"अपडेटहरू अनइन्स्टल गर्नुहोस्"</string>
@@ -1200,4 +1199,8 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s भोल्युम"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"तपाईं %1$s स्पिकरमा एसिस्टेन्टको भोल्युम नियन्त्रण गर्न सक्नुहुन्छ"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"यसबाट %1$s डिभाइसको भोल्युम मात्र प्रभावित हुन्छ , टिभीको हुँदैन"</string>
+    <!-- no translation found for accessibility_service_off_title (4816862630220086861) -->
+    <skip />
+    <!-- no translation found for accessibility_service_on_title (7892907988400727648) -->
+    <skip />
 </resources>

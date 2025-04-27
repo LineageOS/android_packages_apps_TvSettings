@@ -409,7 +409,7 @@
     <string name="device_status_summary" msgid="3270932829412434985">"নেটওয়ার্ক, সিরিয়াল নম্বর এবং অন্যান্য তথ্য"</string>
     <string name="manual" msgid="5683935624321864999">"ম্যানুয়াল"</string>
     <string name="regulatory_information" msgid="9107675969694713391">"রেগুলেটরি তথ্য"</string>
-    <string name="device_feedback" msgid="4871903271442960465">"এই ডিভাইসের সম্পর্কে মতামত পাঠান"</string>
+    <string name="device_feedback" msgid="4871903271442960465">"এই ডিভাইস সম্পর্কে মতামত পাঠান"</string>
     <string name="oem_unlock_enable_disabled_summary_bootloader_unlocked" msgid="4641790432171693921">"বুটলোডার আগে থেকেই আনলক করা আছে"</string>
     <string name="oem_unlock_enable_disabled_summary_connectivity" msgid="2979556699380115576">"আগে ইন্টারনেটে কানেক্ট হন"</string>
     <string name="oem_unlock_enable_disabled_summary_connectivity_or_locked" msgid="1946089732305102622">"ইন্টারনেটে কানেক্ট হন/পরিষেবা প্রদানকারীর সাথে যোগাযোগ করুন"</string>
@@ -846,7 +846,7 @@
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"প্রোফাইল GPU রেন্ডারিং"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"ট্রেস সক্ষম করুন"</string>
     <string name="system_dont_keep_activities" msgid="4641165963339846161">"অ্যাক্টিভিটি রাখবেন না"</string>
-    <string name="system_background_process_limit" msgid="1985373407150771045">"পশ্চাদপট প্রক্রিয়ার সীমা"</string>
+    <string name="system_background_process_limit" msgid="1985373407150771045">"ব্যাকগ্রাউন্ড প্রসেসের সীমা"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"সব ANR দেখান"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"ঘুম অক্ষম করুন"</string>
     <string name="system_desc_hdcp_checking" msgid="1664068008848077241">"শুধুমাত্র DRM সামগ্রীর জন্য ব্যবহার করুন"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"সংস্করণ <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"খুলুন"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"বলপূর্বক বন্ধ করুন"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"<xliff:g id="APP_NAME">%1$s</xliff:g> অ্যাপকে জোর করে বন্ধ করবেন?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"যদি আপনি কোনো অ্যাপ্লিকেশান বলপূর্বক বন্ধ করেন, তবে এটি অসদাচরণ করতে পারে৷"</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"আনইনস্টল করুন"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"আপডেটগুলি আনইনস্টল করুন"</string>
@@ -1200,4 +1199,8 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s ভলিউম"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"আপনি %1$s স্পিকারে অ্যাসিস্ট্যান্ট ভলিউম নিয়ন্ত্রণ করতে পারবেন"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"%1$s ডিভাইসকে শুধু ভলিউম প্রভাবিত করে , টিভিকে নয়"</string>
+    <!-- no translation found for accessibility_service_off_title (4816862630220086861) -->
+    <skip />
+    <!-- no translation found for accessibility_service_on_title (7892907988400727648) -->
+    <skip />
 </resources>
