@@ -63,6 +63,10 @@ public class TVInputMethodPreference extends InputMethodPreference {
   public void onBindViewHolder(PreferenceViewHolder holder) {
     super.onBindViewHolder(holder);
     if (FlavorUtils.isTwoPanel(getContext())) {
+      // Superclass sets an onClickListener, which makes the switch clickable, we don't want this.
+      // We want the click to be deferred to the parent view
+      CompoundButton switchWidget = getSwitch();
+      switchWidget.setClickable(false);
       setOnFocusChangeListenerTintChanges(holder);
     }
   }
@@ -76,10 +80,6 @@ public class TVInputMethodPreference extends InputMethodPreference {
     ViewGroup widgetFrame = (ViewGroup) holder.findViewById(android.R.id.widget_frame);
     View container = (View) widgetFrame.getParent();
     MaterialSwitch switchWidget = (MaterialSwitch) widgetFrame.findViewById(R.id.switchWidget);
-    switchWidget.setTrackTintList(getContext().getColorStateList(R.color.track_tint_selector));
-    switchWidget.setTrackDecorationTintList(
-        getContext().getColorStateList(R.color.track_decoration_tint_selector));
-    switchWidget.setThumbTintList(getContext().getColorStateList(R.color.thumb_tint_selector));
     container.setOnFocusChangeListener(
         (v, hasFocus) -> {
           if (hasFocus) {
