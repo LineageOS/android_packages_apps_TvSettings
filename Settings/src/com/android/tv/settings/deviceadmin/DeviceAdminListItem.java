@@ -25,6 +25,7 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 import android.util.Log;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 /**
  * List item for device admin apps installed on the device.

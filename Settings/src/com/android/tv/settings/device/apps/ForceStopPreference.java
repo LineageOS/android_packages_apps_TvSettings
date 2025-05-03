@@ -42,6 +42,7 @@ import com.android.tv.settings.FullScreenDialogFragment;
 import com.android.tv.settings.FullScreenDialogFragmentActivity;
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 public class ForceStopPreference extends AppActionPreference {
   private Context context;
@@ -142,8 +143,6 @@ public class ForceStopPreference extends AppActionPreference {
     public Bundle provideArguments() {
       ApplicationInfo applicationInfo = getIntent().getParcelableExtra("applicationInfo");
       String appName = getIntent().getStringExtra("appName");
-      IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(this);
-      Drawable drawable = iconDrawableFactory.getBadgedIcon(applicationInfo);
       return new FullScreenDialogFragment.DialogBuilder()
           .setTitle(
               getString(R.string.device_apps_app_management_force_stop_with_app_name, appName))
@@ -174,8 +173,8 @@ public class ForceStopPreference extends AppActionPreference {
     public Drawable getDrawableIconForDialog() {
       ApplicationInfo applicationInfo = getIntent().getParcelableExtra("applicationInfo");
       String appName = getIntent().getStringExtra("appName");
-      IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(this);
-      return iconDrawableFactory.getBadgedIcon(applicationInfo);
+      TvIconDrawableFactory tvIconDrawableFactory = TvIconDrawableFactory.newInstance(this);
+      return tvIconDrawableFactory.maybeGetRoundAppIcon(applicationInfo);
     }
   }
 

@@ -29,6 +29,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 
 import androidx.annotation.Keep;
@@ -41,6 +42,7 @@ import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 /**
  * Fragment for managing which apps are allowed to turn the screen on
@@ -76,9 +78,12 @@ public class TurnScreenOn extends ManageAppOp {
     public Preference bindPreference(@NonNull Preference preference,
             ApplicationsState.AppEntry entry) {
         final TwoStatePreference switchPref = (SwitchWithSoundPreference) preference;
+        Drawable icon = TvIconDrawableFactory
+            .newInstance(getPreferenceManager().getContext())
+            .maybeGetRoundAppIcon(entry.info);
         switchPref.setTitle(entry.label);
         switchPref.setKey("package:" + entry.info.uid + ":" + entry.info.packageName);
-        switchPref.setIcon(entry.icon);
+        switchPref.setIcon(icon);
         switchPref.setChecked(((PermissionState) entry.extraInfo).isAllowed());
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
             findEntriesUsingPackageName(entry.info.packageName)
