@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"থ্ৰেডৰ নেটৱৰ্কে থ্ৰেড-সক্ষম কৰা স্মাৰ্ট হ’ম ডিভাইচসমূহ স্থানীয়ভাৱে সংযোগ কৰে, যাৰ ফলত সামৰ্থ্য আৰু কাৰ্যদক্ষতা বৃদ্ধি হয়। \n\nঅন কৰিলে, এই ডিভাইচটোৱে আপোনাৰ থ্ৰেডৰ নেটৱৰ্ক সৃষ্টি কৰিব অথবা তাত যোগদান কৰিব। আপোনাৰ ভৱিষ্যতৰ স্মাৰ্ট হ’ম ডিভাইচসমূহ সহজে ছেটআপ কৰিবলৈ ক্ৰিডেনশ্বিয়েলসমূহ ব্যক্তিগতভাৱে ক্লাউডত আপল’ড কৰা হ’ব।\n\nঅফ কৰিলে, এই ডিভাইচটোৱে আপোনাৰ থ্ৰেডৰ নেটৱৰ্কত থকা অন্য ডিভাইচসমূহৰ সৈতে আৰু যোগাযোগ কৰিব নোৱাৰিব। নিৰ্দিষ্ট কিছুমান স্মাৰ্ট হ’ম ডিভাইচ আৰু সেৱাই আশা কৰা ধৰণে কাম নকৰিবও পাৰে।\n\ng.co/tv/threadত অধিক জানক"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"থ্ৰেডৰ নেটৱৰ্ক অফ কৰিবনে?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"অফ কৰা থাকিলে, নিৰ্দিষ্ট কিছুমান স্মাৰ্ট হ’ম ডিভাইচ আৰু সেৱাই আশা কৰা ধৰণে কাম নকৰিবও পাৰে। আপুনি আগবাঢ়িব বিচাৰেনে?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"থ্ৰেড নেটৱর্ক অন কৰিবনে?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"থ্ৰেড নেটৱর্কৰ বাবে বৰ্ধিত শক্তি ম’ডৰ আৱশ্যক। ক্ষিপ্ৰভাৱে বৃদ্ধি হোৱালৈ শক্তিৰ ম\'ডটো সলনি কৰক আৰু তাৰ পাছত থ্ৰেড নেটৱর্ক অন কৰিবলৈ উভতি আহক।"</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"থ্ৰেড সক্ষম কৰিবলৈ শক্তিৰ ম\'ডটো সলনি কৰক"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"এই টিভিক আপোনাৰ থ্ৰেডৰ নেটৱৰ্ক সৃষ্টি কৰা বা তাত যোগদান কৰাৰ অনুমতি দিবলৈ আৰু আপোনাৰ স্মাৰ্ট হ’ম ডিভাইচসমূহ দক্ষতাৰে সংযোগ কৰিবলৈ, ইয়াক বৰ্ধিত শক্তিৰ ম’ডৰ প্ৰয়োজন।"</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"অফ কৰক"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"শক্তিৰ ম’ডটো সলনি কৰক"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"বৰ্ধিত শক্তিৰ ম’ডলৈ সলনি কৰক"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"ৱাই-ফাই"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"নেটৱৰ্কৰ লগত সংযোগ কৰক"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"নেটৱর্কৰ ডায়েগনষ্টিক্স"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"<xliff:g id="APP_VERSION">%1$s</xliff:g> সংস্কৰণ"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"খোলক"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"বলেৰে বন্ধ কৰক"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"<xliff:g id="APP_NAME">%1$s</xliff:g> বলেৰে বন্ধ কৰিবনে?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"আপুনি কোনো এপ্‌ বলেৰে বন্ধ কৰিবলৈ চেষ্টা কৰিলে ই অস্বাভাৱিক আচৰণ কৰিব পাৰে৷"</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"আনইনষ্টল কৰক"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"আপডেইটবিলাক আনইনষ্টনল কৰক"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$sৰ ভলিউম"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"আপুনি %1$sৰ স্পীকাৰত এছিষ্টেণ্টৰ ভলিউম নিয়ন্ত্ৰণ কৰিব পাৰে"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"কেৱল %1$s ডিভাইচৰ ভলিউমত প্ৰভাৱ পেলায়, টিভিত নেপেলায়"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>:অফ আছে"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>:অন আছে"</string>
 </resources>

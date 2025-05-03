@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Мрежата Thread локално поврзува уреди за паметен дом што поддржуваат Thread, зголемувајќи ги ефикасноста и изведбата.\n\nКога е вклучен, уредов ќе ја создаде или ќе се придружи на мрежата Thread. Акредитивите ќе се прикачат приватно во облакот за полесно поставување на уредите за паметен дом во иднина.\n\nКога е исклучен, уредов веќе нема да може да комуницира со други уреди на мрежата Thread. Некои услуги и уреди за паметен дом можеби нема да функционираат според очекувањата.\n\nДознајте повеќе на g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Да се исклучи мрежата Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Ако е исклучено, некои уреди и услуги за паметен дом можеби нема да функционираат според очекувањата. Дали сакате да продолжите?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Да се вклучи мрежата Thread?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Мрежата Thread бара „Режим на зголемена потрошувачка на енергија“. Прво променете го режимот во „Режим на зголемена потрошувачка на енергија“, па вратете се за да ја вклучите мрежата Thread."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Променете го режимот на енергија за да ја овозможите Thread"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"За да може телевизоров да ја создаде или да се придружи во вашата мрежа Thread и ефикасно да ги поврзе вашите уреди за паметен дом, треба да биде во „Режим на зголемена потрошувачка на енергија“."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Исклучи"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Променете го режимот на потрошувачка на енергија"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Префрлете се на „Режим на зголемена потрошувачка на енергија“"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Поврзете се на мрежа"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Дијагностика на мрежа"</string>
@@ -703,7 +703,7 @@
     <string name="accessibility_screen_reader_flattened_component_name" msgid="6834614827111101213">"com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"</string>
     <string name="accessibility_toggle_high_text_contrast_preference_title" msgid="9200419191468995574">"Текст со висок контраст"</string>
     <string name="accessibility_toggle_bold_text_preference_title" msgid="3328992531170432669">"Текст во болд"</string>
-    <string name="bounce_key_title" msgid="8334672581038914983">"Копчиња за игнорирање повторени притискања"</string>
+    <string name="bounce_key_title" msgid="8334672581038914983">"Игнорирај повторени притискања"</string>
     <string name="bounce_key_description" msgid="8742025495500915588">"Изберете го претпочитаното време"</string>
     <string name="bounce_key_detailed" msgid="2422246064036507844">"Далечинското игнорира повторени притискања на копчињата"</string>
     <string name="bounce_key_description_summary" msgid="6753146496890170215">"Игнорирање случајни брзи, повторени притискања на копчињата. Може да го приспособите временскиот интервал во кој се игнорираат притискањата"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Верзија <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Отвори"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Исклучи присилно"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"Да се исклучи присилно <xliff:g id="APP_NAME">%1$s</xliff:g>?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Ако присилно запрете апликација, може да не се однесува правилно."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Деинсталирај"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Деинсталирај ажурирања"</string>
@@ -1078,8 +1077,8 @@
     <string name="manage_keyboards" msgid="7983890675377321912">"Управувајте со тастатурите"</string>
     <string name="app_permission_summary_allowed" msgid="5359622119044147500">"Со дозвола"</string>
     <string name="app_permission_summary_not_allowed" msgid="5131611341738385303">"Без дозвола"</string>
-    <string name="usage_access" msgid="3555037254084707746">"Податоци за користењето"</string>
-    <string name="usage_access_description" msgid="6545638068710045735">"Податоците за користењето ѝ овозможуваат на апликацијата да следи кои други апликации ги користите и колку често, како и вашиот оператор, поставки за јазик и други детали."</string>
+    <string name="usage_access" msgid="3555037254084707746">"Податоци за користење апликации"</string>
+    <string name="usage_access_description" msgid="6545638068710045735">"Пристапот до податоците за користењето апликации ѝ овозможува на апликацијата да следи кои други апликации ги користите и колку често, како и вашиот оператор, поставки за јазик и други детали."</string>
     <string name="high_power_apps" msgid="5841073958519976562">"Оптимизација на енергијата"</string>
     <string name="high_power_apps_description" msgid="8651692364795060525">"Оптимизирајте ја употребата на енергија на апликациите"</string>
     <string name="high_power_apps_empty" msgid="3084512758421482051">"Нема апликации што треба да се оптимизираат"</string>
@@ -1103,7 +1102,7 @@
     <string name="write_settings_off" msgid="6730113471695092167">"Не"</string>
     <string name="manage_external_storage_title" msgid="8139593207533811077">"Пристап до сите датотеки"</string>
     <string name="permit_manage_external_storage" msgid="1776899171934627417">"Дозволи пристап за управување со сите датотеки"</string>
-    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"Дозволете апликацијава да ги чита, менува и брише сите датотеки на уредов или на поврзаните мемориски уреди. Ако се дозволи, апликацијата може да пристапува до датотеките без ваше изречно знаење."</string>
+    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"Дозволете ѝ на апликацијава да ги чита, менува и брише сите датотеки на уредов или на поврзаните мемориски уреди. Ако ѝ дозволите, апликацијата може да пристапува до датотеките без ваше изречно знаење."</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Слика во слика"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Дозволи слика во слика"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"Ниту една од инсталираните апликации не поддржува слика во слика"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Јачина на звук: %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Може да ја контролирате јачината на звукот на помошникот на звучникот на %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Влијае само на јачината на звукот на уред %1$s, не на телевизор"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: исклучено"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: вклучено"</string>
 </resources>

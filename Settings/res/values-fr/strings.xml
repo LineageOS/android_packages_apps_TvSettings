@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Le réseau Thread connecte localement les appareils connectés compatibles avec Thread, ce qui améliore l\'efficacité et les performances.\n\nLorsqu\'il sera activé, cet appareil créera ou rejoindra votre réseau Thread. Les identifiants seront importés en privé dans le cloud pour faciliter la configuration de vos futurs appareils connectés.\n\nLorsqu\'il sera désactivé, cet appareil ne pourra plus communiquer avec les autres du réseau Thread. Il est possible que certains appareils et services pour la maison connectée ne fonctionnent pas comme prévu.\n\nEn savoir plus : g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Désactiver le réseau Thread ?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Si le réseau est désactivé, il est possible que certains appareils et services pour la maison connectée ne fonctionnent pas comme prévu. Voulez-vous continuer ?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Activer le réseau Thread ?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Le réseau Thread nécessite le mode d\'énergie \"Élevée\". Passez à ce mode, puis revenez pour activer le réseau Thread."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Modifiez le mode d\'énergie pour activer Thread"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Pour que ce téléviseur puisse créer ou rejoindre votre réseau Thread et connecter efficacement vos appareils connectés, il doit être réglé sur le mode d\'énergie \"Élevée\"."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Désactiver"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Modifier le mode d\'énergie"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Passer en mode d\'énergie \"Élevée\""</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Se connecter au réseau"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnostic réseau"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Version <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Ouvrir"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Forcer l\'arrêt"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"Forcer l\'arrêt de <xliff:g id="APP_NAME">%1$s</xliff:g> ?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Si vous forcez l\'arrêt d\'une application, celle-ci peut présenter des dysfonctionnements."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Désinstaller"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Désinstaller les mises à jour"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Volume %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Vous pouvez contrôler le volume de l\'assistant sur l\'enceinte %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"N\'affecte que le volume sur l\'appareil %1$s, pas sur la TV"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g> : désactivé"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g> : activé"</string>
 </resources>

@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread 網絡會在本機連接支援 Thread 的智能家居裝置，以提高效率和效能。\n\n開啟後，此裝置將會建立或加入你的 Thread 網絡。憑證將會以保密形式上載至雲端，以便你日後更輕易設定智能家居裝置。\n\n關閉後，此裝置將無法再與你 Thread 網絡上其他裝置通訊。部分智能家居裝置和服務可能無法正常運作。\n\n你可前往 g.co/tv/thread 瞭解詳情"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"要關閉 Thread 網絡嗎？"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"關閉後，部分智能家居裝置和服務可能無法正常運作。要繼續嗎？"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"要開啟 Thread 網絡嗎？"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Thread 網絡需要使用「高耗電模式」。請先變更為「高耗電模式」，然後返回這裡開啟 Thread 網絡。"</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"變更耗電模式以啟用 Thread"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"此電視需要啟用「高耗電模式」，才能建立或加入你的 Thread 網絡，並有效連結智能家居裝置。"</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"關閉"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"變更耗電模式"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"切換至「高耗電模式」"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"連線至網絡"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"網絡診斷"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"版本 <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"開啟"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"強制停止"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"要強制停止「<xliff:g id="APP_NAME">%1$s</xliff:g>」嗎？"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"如果你強制停止應用程式，應用程式或許不能正常操作。"</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"解除安裝"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"解除安裝更新"</string>
@@ -1103,7 +1102,7 @@
     <string name="write_settings_off" msgid="6730113471695092167">"否"</string>
     <string name="manage_external_storage_title" msgid="8139593207533811077">"所有檔案存取權"</string>
     <string name="permit_manage_external_storage" msgid="1776899171934627417">"允許存取以管理所有檔案"</string>
-    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"允許此應用程式讀取、修改和刪除此裝置或任何已連接的儲存空間卷宗上的所有檔案。如獲得權限，應用程式可能會在你不知情的情況下存取檔案。"</string>
+    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"允許此應用程式讀取、修改和刪除此裝置或任何已連接儲存卷上的所有檔案。如獲得權限，應用程式可能會在你不知情的情況下存取檔案。"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"畫中畫"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"允許畫中畫"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"沒有已安裝的應用程式支援畫中畫"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s 音量"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"你可以控制%1$s喇叭上數碼助理的音量"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"只影響%1$s裝置的音量，不會影響電視"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>：閂咗"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>：開咗"</string>
 </resources>

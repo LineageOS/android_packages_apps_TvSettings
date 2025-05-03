@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Sieć Thread lokalnie łączy inteligentne urządzenia domowe, które ją obsługą, aby działały bardziej wydajnie.\n\nPo włączeniu to urządzenie utworzy sieć Thread lub do niej dołączy. Dane logowania zostaną przesłane do prywatnego folderu w chmurze – ułatwi to konfigurację kolejnych inteligentnych urządzeń domowych.\n\nPo wyłączeniu to urządzenie nie będzie już mogło komunikować się z innymi urządzeniami w sieci Thread. Niektóre usługi i inteligentne urządzenia domowe mogą nie działać zgodnie z oczekiwaniami.\n\nWięcej informacji znajdziesz na g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Wyłączyć sieć Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Jeśli ją wyłączysz, niektóre usługi i inteligentne urządzenia domowe mogą nie działać zgodnie z oczekiwaniami. Czy chcesz kontynuować?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Włączyć sieć Thread?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Sieć Thread wymaga trybu zwiększonego zużycia energii. Najpierw zmień tryb zużycia energii na Zwiększony, a potem wróć, aby włączyć sieć Thread."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Zmień tryb zużycia energii, aby włączyć Thread"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Aby ten telewizor mógł utworzyć sieć Thread lub do niej dołączyć i skutecznie łączyć się z urządzeniami w inteligentnym domu, musi być w trybie podwyższonego zużycia energii."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Wyłącz"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Zmień tryb zużycia energii"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Włącz tryb zwiększonego zużycia energii"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Łączenie z siecią"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnostyka sieci"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Wersja <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Otwórz"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Wymuś zatrzymanie"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"Wymusić zatrzymanie aplikacji <xliff:g id="APP_NAME">%1$s</xliff:g>?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Jeśli wymusisz zatrzymanie aplikacji, może ona zadziałać nieprawidłowo."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Odinstaluj"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Odinstaluj aktualizacje"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Głośność: %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Głośność asystenta możesz zmienić na głośniku %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Zmienia głośność tylko na urządzeniu %1$s, nie na telewizorze"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: wyłączono"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: włączono"</string>
 </resources>

@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread ağı, Thread özellikli akıllı ev cihazlarını yerel olarak bağlayarak verimliliği ve performansı artırır.\n\nBu cihaz, açıldığında Thread ağı oluşturur veya Thread ağınıza katılır. Kimlik bilgileri, gelecekte akıllı ev cihazlarını daha kolay kurabilmeniz için gizli olarak buluta yüklenir.\n\nBu cihaz, kapatıldığında artık Thread ağınızdaki diğer cihazlarla iletişim kuramaz. Bazı akıllı ev cihazları ve hizmetleri beklendiği gibi çalışmayabilir.\n\nDaha fazla bilgiyi g.co/tv/thread adresinde bulabilirsiniz"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread ağı kapatılsın mı?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Kapatıldığında bazı akıllı ev cihazları ve hizmetleri beklendiği gibi çalışmayabilir. Devam etmek istiyor musunuz?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Thread ağı açılsın mı?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Thread ağı için Daha Yüksek enerji modu gerekir. Daha Yüksek enerji moduna geçtikten sonra Thread ağını açmak için geri dönün."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Thread\'i etkinleştirmek için enerji modunu değiştirin"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Bu TV\'nin Thread ağı oluşturmasına veya Thread ağınıza katılmasına ve akıllı ev cihazlarınızı verimli bir şekilde bağlamasına izin vermek için Daha Yüksek Enerji modu kullanması gerekir."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Kapat"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Enerji modunu değiştirin"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Daha Yüksek Enerji moduna geçin"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Kablosuz"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Ağa bağlan"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Ağ teşhisi"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Sürüm <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Aç"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Zorla durdur"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"<xliff:g id="APP_NAME">%1$s</xliff:g> zorla durdurulsun mu?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Uygulamayı zorla durdurursanız hatalı davranabilir."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Kaldır"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Güncellemelerin yüklemesini kaldır"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s ses düzeyi"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s hoparlöründe asistanın ses düzeyin kontrol edebilirsiniz"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Yalnızca %1$s cihazının ses düzeyini etkiler, TV\'nin sesini etkilemez"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>:Kapalı"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>:Açık"</string>
 </resources>

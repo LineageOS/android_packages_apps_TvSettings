@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"A rede Thread conecta localmente os dispositivos de domótica compatibles con ese protocolo, o que incrementa a eficiencia e o rendemento.\n\nAo activarse, este dispositivo creará a rede Thread ou unirase a ela. As credenciais cargaranse en privado na nube para que che resulte máis doado configurar os dispositivos de domótica no futuro.\n\nAo desactivarse, este dispositivo deixará de poder comunicarse cos demais aparellos conectados a través da rede Thread. É posible que algúns servizos e dispositivos de domótica non funcionen segundo o previsto.\n\nMáis información en g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Queres desactivar a rede Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Ao desactivarse, é posible que algúns servizos e dispositivos de domótica non funcionen segundo o previsto. Queres continuar?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Queres activar a rede Thread?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"A rede Thread require o modo enerxético Máis consumo. Primeiro, cambia o modo enerxético a Máis consumo e, despois, volve para activar a opción Rede Thread."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Cambia o modo de enerxía para activar a rede Thread"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Para permitir que esta televisión cree a rede Thread e se conecte de maneira eficaz aos teus dispositivos de domótica, debe ter activado o modo de alto consumo."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Desactivar"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Cambiar o modo enerxético"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Cambia ao modo de alto consumo"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wifi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Conectarse á rede"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Diagnóstico de rede"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Versión <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Abrir"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Forzar a parada"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"Queres forzar a parada de <xliff:g id="APP_NAME">%1$s</xliff:g>?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Se forzas a parada dunha aplicación, é posible que non funcione correctamente."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Desinstalar"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Desinstalar actualizacións"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Volume (%1$s)"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Podes controlar o volume do asistente en %1$s altofalante"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Só lle afecta ao volume de %1$s dispositivo, non ao da televisión"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: desactivado"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: activado"</string>
 </resources>

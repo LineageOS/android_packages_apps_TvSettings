@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Omrežje Thread lokalno poveže pametne naprave za dom s podporo za protokol Thread ter tako poveča njihovo učinkovitost in zmogljivost.\n\nKo to napravo vklopite, bo ustvarila omrežje Thread ali se mu pridružila. Poverilnice bodo zasebno naložene v oblak, da boste lažje nastavili prihodnje pametne naprave za dom.\n\nKo to napravo izklopite, ne bo več mogla komunicirati z drugimi napravami v vašem omrežju Thread. Nekatere pametne naprave za dom in storitve pametnega doma morda ne bodo delovale po pričakovanjih.\n\nPreberite več o tem na g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Ali želite izklopiti omrežje Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Če jih izklopite, nekatere pametne naprave za dom in storitve pametnega doma morda ne bodo delovale po pričakovanjih. Ali želite nadaljevati?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Ali želite vklopiti omrežje Thread?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Omrežje Thread zahteva povečan način porabe energije. Najprej spremenite način porabe energije na »Povečan« in se nato vrnite, da vklopite omrežje Thread."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Spremenite način porabe energije, če želite omogočiti omrežje Thread"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Če želite, da ta televizor ustvari omrežje Thread ali se mu pridruži in učinkovito poveže vaše pametne naprave za dom, potrebuje način povečane porabe energije."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Izklopi"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Spremeni način porabe energije"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Preklopi na način povečane porabe energije"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Vzpostavitev povezave z omrežjem"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Omrežna diagnostika"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Različica <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Odpri"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Vsili ustavitev"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"Želite vsiljeno ustaviti aplikacijo <xliff:g id="APP_NAME">%1$s</xliff:g>?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Če boste aplikacijo prisilno ustavili, morda ne bo pravilno delovala."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Odmesti"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Odmesti posodobitve"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Glasnost za %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Glasnost pomočnika lahko upravljate v zvočniku %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"To vpliva na glasnost samo v napravi %1$s, ne na televizorju"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: Izklopljeno"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: Vklopljeno"</string>
 </resources>

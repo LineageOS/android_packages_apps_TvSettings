@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread-netwerk verbind plaaslik Thread-geaktiveerde slimhuistoestelle, wat doeltreffendheid en werkverrigting ’n hupstoot gee.\n\nAs hierdie toestel aangeskakel is, sal dit jou Thread-netwerk skep of daarby aansluit. Eiebewyse sal privaat na die wolk opgelaai word vir makliker opstelling van jou toekomstige slimhuistoestelle.\n\nAs hierdie toestel afgeskakel is, sal dit nie meer met ander toestelle op jou Thread-netwerk kan kommunikeer nie. Sekere slimhuistoestelle en -dienste sal dalk nie na verwagting werk nie.\n\nKry meer inligting by g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Skakel Thread-netwerk af?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Sekere slimhuistoestelle en -dienste sal dalk nie na verwagting werk as dit afgeskakel is nie. Wil jy voortgaan?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Skakel Thread-netwerk aan?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Thread-netwerk vereis verhoogde energiemodus. Verander eers energiemodus na \"Verhoog\" en kom dan terug om Thread-netwerk aan te skakel."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Verander energiemodus om Thread te aktiveer"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Om hierdie TV toe te laat om jou Thread-netwerk te skep of daarby aan te sluit en jou slimhuistoestelle doeltreffend te verbind, benodig dit verhoogde energiemodus."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Skakel af"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Verander energiemodus"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Skakel oor na verhoogde energiemodus"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Koppel aan netwerk"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Netwerkdiagnostiek"</string>
@@ -826,10 +826,10 @@
     <string name="system_email_address" msgid="3725494874473757217">"E-posadres"</string>
     <string name="system_usb_debugging" msgid="2158285492172755923">"USB-ontfouting"</string>
     <string name="system_allow_mock_locations" msgid="2483106887711851466">"Laat skynliggings toe"</string>
-    <string name="system_select_debug_app" msgid="6200987902307533721">"Kies ontfoutprogram"</string>
+    <string name="system_select_debug_app" msgid="6200987902307533721">"Kies ontfoutapp"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"Wag vir ontfouter"</string>
-    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Verifieer programme oor USB"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Kontroleer programme wat via ADB/ADT geïnstalleer is vir skadelike gedrag"</string>
+    <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"Verifieer apps oor USB"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"Kontroleer apps wat via ADB/ADT geïnstalleer is vir skadelike gedrag"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Breedvoerige loginskrywing vir Wi-Fi"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Aktiveer breedvoerige loginskrywing vir Wi-Fi"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"Wys aanrakings"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Weergawe <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Maak oop"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Verplig stop"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"Verplig <xliff:g id="APP_NAME">%1$s</xliff:g> om te stop?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"As jy ’n app verplig om te stop, kan dit verkeerd optree."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Deïnstalleer"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Deïnstalleer opdaterings"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s volume"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Jy kan die assistent se volume op die %1$s-luidspreker beheer."</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Beïnvloed slegs die volume op die %1$s-toestel, nie op TV nie"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>:Af"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>:Aan"</string>
 </resources>

@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Naudojant „Thread“ tinklą, vietinėje sistemoje sujungiami išmaniųjų namų įrenginiai, kuriuose įgalintas „Thread“ tinklas, padidinant efektyvumą ir našumą.\n\nĮjungus šis įrenginys sukurs „Thread“ tinklą arba prisijungs prie jo. Prisijungimo duomenys bus privačiai įkelti debesyje, kad būtų lengviau nustatyti būsimus išmaniųjų namų įrenginius.\n\nIšjungus šis įrenginys nebegalės užmegzti ryšio su kitais įrenginiais „Thread“ tinkle. Tam tikri išmaniųjų namų įrenginiai ir paslaugos gali neveikti, kaip numatyta.\n\nSužinokite daugiau adresu g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Išjungti „Thread“ tinklą?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Išjungus tam tikri išmaniųjų namų įrenginiai ir paslaugos gali neveikti, kaip numatyta. Ar norite tęsti?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Įjungti „Thread“ tinklą?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"„Thread“ tinklui reikalingas daugiau energijos vartojantis režimas. Pirmiausia pakeiskite energijos vartojimo režimą į „Padidintas“, tada grįžkite ir įjunkite „Thread“ tinklą."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Pakeiskite energijos režimą, kad įgalintumėte „Thread“"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Kad šis televizorius galėtų sukurti „Thread“ tinklą arba prie jo prisijungti ir efektyviai susieti išmaniųjų namų įrenginius, reikia įjungti daugiau energijos vartojantį režimą."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Išjungti"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Keisti energijos režimą"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Perjungti į daugiau energijos vartojantį režimą"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Prisijunkite prie tinklo"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Tinklo diagnostika"</string>
@@ -813,7 +813,7 @@
     <string name="system_drawing" msgid="5802739024643871942">"Atvaizdavimas"</string>
     <string name="system_monitoring" msgid="7997260748312620855">"Stebėjimas"</string>
     <string name="system_apps" msgid="8481888654606868074">"Programos"</string>
-    <string name="system_stay_awake" msgid="5935117574414511413">"Veikti"</string>
+    <string name="system_stay_awake" msgid="5935117574414511413">"Ekrano neišjungti"</string>
     <string name="keep_screen_on_summary" msgid="4680661166009970792">"Ekranas niekada neveiks miego režimu"</string>
     <string name="system_hdcp_checking" msgid="3757586362130048838">"HDCP tikrinimas"</string>
     <string name="system_hdmi_optimization" msgid="4122753440620724144">"HDMI optimizavimas"</string>
@@ -1199,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s garsumas"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Pagelbiklio balsu garsumą galite valdyti garsiakalbyje (%1$s)"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Paveikia garsumą tik įrenginyje (%1$s), o ne televizoriuje"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"„<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>“: išjungta"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"„<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>“: įjungta"</string>
 </resources>

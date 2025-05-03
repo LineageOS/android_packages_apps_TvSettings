@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Das Thread-Netzwerk verbindet Thread-kompatible Smart-Home-Geräte lokal, um die Effizienz und die Leistung zu steigern.\n\nWenn aktiviert, erstellt das Gerät ein Thread-Netzwerk oder tritt deinem bei. Damit du neue Smart-Home-Geräte in Zukunft einfacher einrichten kannst, werden die Anmeldedaten sicher in die Cloud hochgeladen.\n\nWenn deaktiviert, kann dieses Gerät nicht mehr mit anderen Geräten in deinem Thread-Netzwerk kommunizieren. Bestimmte Smart-Home-Geräte und ‑Dienste funktionieren eventuell nicht wie erwartet.\n\nWeitere Informationen unter g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread-Netzwerk deaktivieren?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Wenn deaktiviert, funktionieren bestimmte Smart-Home-Geräte und ‑Dienste eventuell nicht wie erwartet. Möchtest du fortfahren?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Thread-Netzwerk aktivieren?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Für das Thread-Netzwerk ist der Modus mit erhöhtem Energieverbrauch erforderlich. Wechsle zuerst zu diesem Modus und kehre dann hierher zurück, um das Thread-Netzwerk zu aktivieren."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Energiemodus wechseln, damit das Thread-Netzwerk genutzt werden kann"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Damit dieser Fernseher ein Thread-Netzwerk erstellen oder mit einem Thread-Netzwerk verknüpft werden kann und deine Smart-Home-Geräte korrekt verbunden werden können, muss er den Modus mit erhöhtem Energieverbrauch verwenden."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Deaktivieren"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Energiemodus ändern"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Zum Modus mit erhöhtem Energieverbrauch wechseln"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"WLAN"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Mit Netzwerk verbinden"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Netzwerkdiagnose"</string>
@@ -877,12 +877,12 @@
     <string name="enable_opengl_traces_none" msgid="4718084947494592040">"Keine"</string>
   <string-array name="animation_scale_entries">
     <item msgid="5408992662476056082">"Animation aus"</item>
-    <item msgid="6818290063799857019">"Animationsfaktor: 0,5x"</item>
-    <item msgid="8257959452691080724">"Animationsfaktor: 1x"</item>
-    <item msgid="4781052272686018414">"Animationsfaktor: 1,5x"</item>
-    <item msgid="2272016945160227610">"Animationsfaktor: 2x"</item>
-    <item msgid="5015441793276576312">"Animationsfaktor: 5x"</item>
-    <item msgid="1290233583371556415">"Animationsfaktor: 10x"</item>
+    <item msgid="6818290063799857019">"Animationsfaktor: 0,5 x"</item>
+    <item msgid="8257959452691080724">"Animationsfaktor: 1 x"</item>
+    <item msgid="4781052272686018414">"Animationsfaktor: 1,5 x"</item>
+    <item msgid="2272016945160227610">"Animationsfaktor: 2 x"</item>
+    <item msgid="5015441793276576312">"Animationsfaktor: 5 x"</item>
+    <item msgid="1290233583371556415">"Animationsfaktor: 10 x"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="8845064783618702239">"Aus"</string>
     <string name="track_frame_time_bars" msgid="5841531515222229632">"Auf Bildschirm als Balken"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Version <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Öffnen"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Beenden erzwingen"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"Beenden von <xliff:g id="APP_NAME">%1$s</xliff:g> erzwingen?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Das Beenden der App zu erzwingen, kann zu unerwünschtem Verhalten führen."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Deinstallieren"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Updates deinstallieren"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s – Lautstärke"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Du kannst die Lautstärke des Assistenten über den „%1$s“-Lautsprecher steuern"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Wirkt sich nur auf die Lautstärke des Geräts „%1$s“ aus, nicht auf den Fernseher"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: Aus"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: An"</string>
 </resources>

@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"थ्रेड अन गरिएका स्मार्ट होम डिभाइसहरूको प्रभावकारिता र पर्फर्मेन्स बढाउने प्रयोजनका लागि थ्रेड नेटवर्कले ती डिभाइसहरू स्थानीय रूपमा कनेक्ट गर्छ।\n\nथ्रेड नेटवर्क अन गरिएका बेला यो डिभाइसले थ्रेड नेटवर्क बनाउने छ वा यो डिभाइस तपाईंको थ्रेड नेटवर्कमा सामेल हुने छ। तपाईं भविष्यमा आफ्ना स्मार्ट होम डिभाइसहरू सजिलै सेटअप गर्न सक्नुहोस् भन्नाका लागि क्रिडेन्सियलहरू क्लाउडमा गोप्य रूपमा अपलोड गरिने छन्।\n\nथ्रेड नेटवर्क अफ गरिएका बेला यो डिभाइसले तपाईंको थ्रेड नेटवर्कमा सामेल भएका अन्य डिभाइससँग कनेक्ट गर्न सक्ने छैन। निश्चित स्मार्ट होम डिभाइस र सेवाहरूले अपेक्षा गरेअनुसार काम नगर्न सक्छन्।\n\ng.co/tv/thread मा गई थप जान्नुहोस्"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"थ्रेड नेटवर्क अफ गर्ने हो?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"थ्रेड नेटवर्क अफ गरिएका खण्डमा निश्चित स्मार्ट होम डिभाइस र सेवाहरूले अपेक्षा गरेअनुसार काम नगर्न सक्छन्। तपाईं अघि बढ्न चाहनुहुन्छ?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"थ्रेड नेटवर्क अन गर्ने हो?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"थ्रेड नेटवर्क प्रयोग गर्ने बढी ऊर्जा खपत गर्ने मोड चाहिन्छ। ऊर्जा खपत गर्ने मोड बदलेर बढी ऊर्जा खपत गर्ने मोड बनाउनुहोस् अनि थ्रेड नेटवर्क अन गर्न फिर्ता आउनुहोस्।"</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"थ्रेड अन गर्न ऊर्जा खपत गर्ने मोड परिवर्तन गर्नुहोस्"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"यो टिभीलाई तपाईंको थ्रेड नेटवर्क बनाउन वा त्यसमा सामेल हुन र तपाईंका स्मार्ट होम डिभाइसमा प्रभावकारी रूपमा कनेक्ट हुन दिन यसमा बढी ऊर्जा खपत गर्ने मोड अन गर्नु पर्ने हुन्छ।"</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"अफ गर्नुहोस्"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"ऊर्जा खपत गर्ने मोड परिवर्तन गर्नुहोस्"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"बढी ऊर्जा खपत गर्ने मोड प्रयोग गर्नुहोस्"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"नेटवर्कमा कनेक्ट गर्नुहोस्"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"नेटवर्कका निदानहरू"</string>
@@ -313,7 +313,7 @@
     <string name="system_inputs" msgid="5552840337357572096">"इनपुट"</string>
     <string name="system_inputs_devices" msgid="2158421111699829399">"इनपुट तथा यन्त्रहरू"</string>
     <string name="system_home_theater_control" msgid="6228949628173590310">"होम थिएटरसम्बन्धी नियन्त्रण"</string>
-    <string name="system_developer_options" msgid="8480844257066475479">"विकासकर्ताका विकल्पहरू"</string>
+    <string name="system_developer_options" msgid="8480844257066475479">"विकासकर्ता मोड"</string>
     <string name="accessibility_none" msgid="6355646833528306702">"कुनै पनि होइन"</string>
     <string name="system_diagnostic" msgid="1654842813331919958">"प्रयोग तथा निदान"</string>
     <string name="no_device_admins" msgid="4628974717150185625">"डिभाइसका एड्मिन एपहरू उपलब्ध छैनन्"</string>
@@ -348,16 +348,16 @@
     <string name="enterprise_privacy_input_method_name" msgid="1088874503312671318">"<xliff:g id="APP_LABEL">%s</xliff:g> मा सेट गरिएको छ"</string>
     <string name="enterprise_privacy_always_on_vpn_device" msgid="8845550514448914237">"सधैँ-सक्रिय रहने VPN सेवा सक्रिय गरिएको छ"</string>
     <string name="enterprise_privacy_always_on_vpn_personal" msgid="6996782365866442280">"तपाईँको व्यक्तिगत प्रोफाइलमा सधैँ-सक्रिय रहने VPN सेवा सक्रिय गरिएको छ"</string>
-    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"तपाईँको कार्य प्रोफाइलमा सधैँ-सक्रिय रहने VPN सेवा सक्रिय गरिएको छ"</string>
+    <string name="enterprise_privacy_always_on_vpn_work" msgid="3674119583050531071">"तपाईँको वर्क प्रोफाइलमा सधैँ-सक्रिय रहने VPN सेवा सक्रिय गरिएको छ"</string>
     <string name="enterprise_privacy_global_http_proxy" msgid="2818848848337527780">"विश्वव्यापी HTTP प्रोक्सी सेट गरियो"</string>
     <string name="enterprise_privacy_ca_certs_device" msgid="975646846291012452">"विश्वसनीय प्रमाणपत्रहरू"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="7641368559306519707">"तपाईंको व्यक्तिगत प्रोफाइलमा रहेका विश्वसनीय प्रमाणपत्रहरू"</string>
-    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"तपाईंको कार्य प्रोफाइलमा रहेका विश्वसनीय प्रमाणपत्रहरू"</string>
+    <string name="enterprise_privacy_ca_certs_work" msgid="2905939250974399645">"तपाईंको वर्क प्रोफाइलमा रहेका विश्वसनीय प्रमाणपत्रहरू"</string>
     <string name="enterprise_privacy_number_ca_certs" msgid="5918439861975410142">"{count,plural, =1{# CA प्रमाणपत्र}other{# वटा CA प्रमाणपत्र}}"</string>
     <string name="enterprise_privacy_lock_device" msgid="3140624232334033641">"प्रशासकले यन्त्र लक गर्न र पासवर्ड रिसेट गर्न सक्नुहुन्छ"</string>
     <string name="enterprise_privacy_wipe_device" msgid="1714271125636510031">"प्रशासकले डिभाइसका सबै डेटा मेट्न सक्नुहुन्छ"</string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="8272298134556250600">"यन्त्रको सबै डेटा मेट्नुअघि पासवर्ड प्रविष्ट गर्ने असफल प्रयासहरूको संख्या"</string>
-    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"कार्य प्रोफाइलको डेटा मेट्नुअघि पासवर्ड प्रविष्ट गर्ने असफल प्रयासहरूको संख्या"</string>
+    <string name="enterprise_privacy_failed_password_wipe_work" msgid="1184137458404844014">"वर्क प्रोफाइलको डेटा मेट्नुअघि पासवर्ड प्रविष्ट गर्ने असफल प्रयासहरूको संख्या"</string>
     <string name="enterprise_privacy_number_failed_password_wipe" msgid="277415009661470768">"{count,plural, =1{# औँ प्रयास}other{# औँ प्रयास}}"</string>
     <string name="do_disclosure_generic" msgid="8390478119591845948">"तपाईंको संगठनले यस यन्त्रलाई व्यवस्थापन गर्दछ।"</string>
     <string name="do_disclosure_with_name" msgid="4755509039938948975">"यो डिभाइस <xliff:g id="ORGANIZATION_NAME">%s</xliff:g> ले व्यवस्थापन गर्दछ।"</string>
@@ -845,7 +845,7 @@
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"स्ट्रिक्ट मोड अन गर्नुहोस्"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"प्रोफाइल GPU रेन्डर गर्दै"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"ट्रेस सक्षम पार्नुहोस्"</string>
-    <string name="system_dont_keep_activities" msgid="4641165963339846161">"गतिविधि नराखियोस्"</string>
+    <string name="system_dont_keep_activities" msgid="4641165963339846161">"गतिविधि जारी नराख्नुहोस्"</string>
     <string name="system_background_process_limit" msgid="1985373407150771045">"ब्याकग्राउन्ड प्रक्रियाको सीमा"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"सबै ANRs देखाउनुहोस्"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"स्वप्न मोड अक्षम पार्नुहोस्"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"संस्करण <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"खोल्नुहोस्"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"जबरजस्ती बन्द गर्नुहोस्"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"<xliff:g id="APP_NAME">%1$s</xliff:g> जबरजस्ती रोक्ने हो?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"तपाईंले एप बन्द गर्न बल गर्नुभयो भने, यसले चाहेअनुसार काम नगर्न सक्छ।"</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"स्थापना हटाउनुहोस्"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"अपडेटहरू अनइन्स्टल गर्नुहोस्"</string>
@@ -1143,7 +1142,7 @@
     <string name="admin_profile_owner_message" msgid="5729169873349157622">"तपाईंको प्रशासकले तपाईंको कार्य प्रोफाइलसँग सम्बन्धित एप र डेटाका साथै सेटिङ। अनुमति, संस्थागत पहुँच, नेटवर्क सम्बन्धी गतिविधि र यस यन्त्रको स्थानसम्बन्धी जानकारीको अनुगमन र व्यवस्थापन गर्न सक्छ।"</string>
     <string name="admin_profile_owner_user_message" msgid="6431405126322617268">"तपाईंको प्रशासकले यस प्रयोगकर्तासँग सम्बन्धित एप तथा डेटाका साथै सेटिङ, अनुमति, संस्थागत पहुँच, नेटवर्क सम्बन्धी गतिविधि र यस यन्त्रको स्थानसम्बन्धी जानकारीको अनुगमन र व्यवस्थापन गर्न सक्छ।"</string>
     <string name="admin_device_owner_message" msgid="1935507216776040907">"तपाईंको प्रशासकले यस यन्त्रसँग सम्बन्धित एप र डेटाका साथै सेटिङ, अनुमति, संस्थागत पहुँच, नेटवर्क सम्बन्धी गतिविधि, र यस यन्त्रको स्थानसम्बन्धी जानकारीको अनुगमन र व्यवस्थापन गर्न सक्छ।"</string>
-    <string name="remove_managed_profile_label" msgid="8950011141359605612">"कार्य प्रोफाइल हटाउनुहोस्"</string>
+    <string name="remove_managed_profile_label" msgid="8950011141359605612">"वर्क प्रोफाइल हटाउनुहोस्"</string>
     <string name="active_device_admin_msg" msgid="185537304726228624">"डिभाइसको एड्मिन एप"</string>
     <string name="remove_device_admin" msgid="2623866073546295104">"यो डिभाइसको एड्मिन एप डिएक्टिभेट गर्नुहोस्"</string>
     <string name="uninstall_device_admin" msgid="6301368408620948266">"एपको स्थापना रद्द गर्नुहोस्"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s भोल्युम"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"तपाईं %1$s स्पिकरमा एसिस्टेन्टको भोल्युम नियन्त्रण गर्न सक्नुहुन्छ"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"यसबाट %1$s डिभाइसको भोल्युम मात्र प्रभावित हुन्छ , टिभीको हुँदैन"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>:अफ"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>:अन"</string>
 </resources>

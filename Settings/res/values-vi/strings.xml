@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Mạng Thread kết nối cục bộ các thiết bị nhà thông minh có hỗ trợ giao thức Thread, giúp tăng cường hiệu quả và hiệu suất.\n\nKhi ở trạng thái bật, thiết bị này sẽ tạo hoặc kết nối với mạng Thread của bạn. Thông tin đăng nhập sẽ được tải lên đám mây ở chế độ riêng tư để sau này bạn dễ dàng thiết lập các thiết bị nhà thông minh.\n\nKhi ở trạng thái tắt, thiết bị này sẽ không thể giao tiếp với các thiết bị khác trên mạng Thread của bạn nữa. Một số dịch vụ và thiết bị nhà thông minh có thể không hoạt động như dự kiến.\n\nHãy tìm hiểu thêm tại g.co/tv/thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Bạn muốn tắt mạng Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Ở trạng thái tắt, một số dịch vụ và thiết bị nhà thông minh có thể không hoạt động như dự kiến. Bạn có muốn tiếp tục không?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Bạn muốn bật mạng Thread?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Mạng Thread yêu cầu chế độ Tăng mức sử dụng năng lượng. Trước tiên, hãy chuyển chế độ sử dụng năng lượng sang Tăng cường, sau đó quay lại để bật mạng Thread."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Thay đổi chế độ năng lượng để bật Thread"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Để cho phép TV này tạo hoặc tham gia mạng Thread và kết nối hiệu quả với các thiết bị nhà thông minh, bạn cần chuyển sang chế độ Tăng mức sử dụng năng lượng."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Tắt"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Thay đổi chế độ sử dụng năng lượng"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Chuyển sang chế độ Tăng mức sử dụng năng lượng"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Kết nối mạng"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Chẩn đoán mạng"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Phiên bản <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Mở"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Buộc dừng"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"Buộc dừng <xliff:g id="APP_NAME">%1$s</xliff:g>?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Nếu bạn buộc dừng một ứng dụng, ứng dụng đó có thể hoạt động không đúng cách."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Gỡ cài đặt"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Gỡ cài đặt bản cập nhật"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"Âm lượng %1$s"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Bạn có thể kiểm soát âm lượng của trợ lý trên loa %1$s"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Chỉ ảnh hưởng đến âm lượng trên thiết bị %1$s chứ không ảnh hưởng đến TV"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: Tắt"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: Bật"</string>
 </resources>

@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"ተከታታይ አውታረ መረብ ተከታታይ-የነቃላቸው ዘመናዊ የቤት መሣሪያዎችን በአካባቢያዊ ያገናኛል፣ በዚህም ውጤታማነትን እና አፈጻጸምን ይጨምራል።\n\nሲበራ፣ ይህ መሣሪያ ተከታታይ አውታረ መረብዎን ይፈጥራል ወይም ይቀላቀላል። ለቀላል የወደፊት ዘመናዊ የቤት መሣሪያዎችዎ ውቅረት የመግቢያ ማስረጃዎች ወደ ደመና በግል ይሰቀላሉ።\n\nሲጠፋ፣ ይህ መሣሪያ ከእንግዲህ በተከታታይ አውታረ መረብዎ ላይ ከሌሎች መሣሪያዎች ጋር መገናኘት አይችልም። የተወሰኑ ዘመናዊ የቤት መሣሪያዎች እና አገልግሎቶች እንደተጠበቁት ላይሠሩ ይችላሉ።\n\ng.co/tv/thread ላይ የበለጠ ይወቁ"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"ተከታታይ አውታረ መረብ ይጥፋ?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"ከጠፉ የተወሰኑ ዘመናዊ የቤት መሣሪያዎች እና አገልግሎቶች እንደተጠበቁት ላይሠሩ ይችላሉ። መቀጠል ይፈልጋሉ?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"የተከታታይ አውታረ መረብ ይብራ?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"የተከታታይ አውታረ መረብ የኃይል ሁነታን ይጨምራል። የኃይል ሁነታን ወደ መጀመሪያ የጨመረ እና ከዚያም የተከታታይ አውታረ መረብን ለማብራት ይመለሱ።"</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"ተከታታይን ለማንቃት የኃይል ሁነታን ይለውጡ"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"ይህ ቲቪ የተከታታይ አውታረ መረብዎን እንዲፈጥር ወይም እንዲቀላቀል እና የዘመናዊ ቤት መሣሪያዎችዎን በብቃት እንዲያገናኝ ለመፍቀድ የጨመረ የኃይል ሁነታ ያስፈልገዋል።"</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"አጥፋ"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"የኃይል ሁነታን ለውጥ"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"ወደ የጨመረ የኃይል ሁነታ ቀይር"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"ከአውታረ መረብ ጋር ይገናኙ"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"የአውታረ መረብ ምርመራ"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"ስሪት <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"ክፈት"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"በኃይል አቁም"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"<xliff:g id="APP_NAME">%1$s</xliff:g> በኃይል ይቁም?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"አንድ መተግበሪያ አስገድደው ካቆሙት ተገቢ ያልሆነ ጸባይ ሊያሳይ ይችላል።"</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"አራግፍ"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"ዝማኔዎች አራግፍ"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s የድምፅ መጠን"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s ድምፅ ማውጫ ላይ የረዳት የድምፅ መጠኑን መቆጣጠር ይችላሉ"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"የድምፅ መጠን ላይ ተጽዕኖ የሚያደርገው ቲቪ ላይ ሳይሆን %1$s መሣሪያ ላይ ነው"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>፦ጠፍቷል"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>፦በርቷል"</string>
 </resources>

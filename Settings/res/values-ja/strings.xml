@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread ネットワークは Thread 対応のスマートホーム デバイスをローカルでつなげて、効率性とパフォーマンスを向上させます。\n\n有効にすると、このデバイスは Thread ネットワークを作成するか、ネットワークに接続します。今後追加されるスマートホーム デバイスを簡単にセットアップできるよう認証情報は非公開でクラウドにアップロードされます。\n\n無効にすると、このデバイスは Thread ネットワーク上の他のデバイスと通信できなくなります。一部のスマートホーム デバイスやサービスは正常に動作しないことがあります。\n\n詳しくは g.co/tv/thread をご覧ください"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread ネットワークを OFF にしますか？"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"OFF にすると、一部のスマートホーム デバイスやサービスは正常に動作しないことがあります。続行しますか？"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Thread ネットワークを ON にしますか？"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"Thread ネットワークでは、エネルギー モードを [増加] に設定する必要があります。最初にエネルギー モードを [増加] に変更してから、ここに戻って Thread ネットワークを ON にしてください。"</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Thread を有効にするには、エネルギー モードを変更してください"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"このテレビで Thread ネットワークを作成または Thread ネットワークに接続したり、スマートホーム デバイスを効率的に接続したりするには、高エネルギー モードに切り替える必要があります。"</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"OFF にする"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"エネルギー モードを変更"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"高エネルギー モードに切り替え"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"ネットワークへの接続"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"ネットワーク診断"</string>
@@ -829,7 +829,7 @@
     <string name="system_select_debug_app" msgid="6200987902307533721">"デバッグアプリの選択"</string>
     <string name="system_wait_for_debugger" msgid="5715878008542589060">"デバッガの待機"</string>
     <string name="system_verify_apps_over_usb" msgid="7289212844195483932">"USB 経由のアプリも検証"</string>
-    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"ADB/ADT経由でインストールされたアプリに不正な動作がないかを確認する"</string>
+    <string name="system_desc_verify_apps_over_usb" msgid="7737988681480237094">"ADB/ADT経由でインストールされたアプリに不正な動作がないかを確認します"</string>
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"Wi-Fi詳細ログ"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"Wi-Fi 詳細ログの有効化"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"タップの表示"</string>
@@ -855,8 +855,8 @@
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"USB 接続時にデバッグモードにする"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"アプリは実行前にデバッガのアタッチを待機します"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"クリップの境界線、マージンなどを表示する"</string>
-    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"GPUでの描画時にウィンドウ内の表示を点滅させる"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"更新されたハードウェア層を緑で点滅させる"</string>
+    <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"GPU での描画時にウィンドウ内の表示を点滅させます"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"更新されたハードウェア層を緑で点滅させます"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"良好な状態から順に: 青、緑、薄い赤、赤"</string>
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"更新時にウィンドウの表示面全体を点滅させる"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"メインスレッドの処理が長引く場合は画面を点滅させる"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"バージョン<xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"開く"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"強制停止"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"<xliff:g id="APP_NAME">%1$s</xliff:g> を強制停止しますか？"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"アプリを強制停止すると、アプリが正常に機能しないことがあります。"</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"アンインストール"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"アップデートのアンインストール"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"%1$s の音量"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"%1$s スピーカーのアシスタントの音量を調整できます"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"音量が調整されるのはテレビではなく、%1$s デバイスのみです"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: OFF"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: ON"</string>
 </resources>

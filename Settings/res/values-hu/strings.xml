@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"A Thread-hálózat helyben kapcsolja össze a Thread-kompatibilis okosotthoni eszközöket, javítva a hatékonyságukat és a teljesítményüket.\n\nAmikor be van kapcsolva, ez az eszköz létrehozza a Thread-hálózatot, vagy csatlakozik hozzá. A hitelesítési adatok privát módon fel lesznek töltve a felhőbe, hogy később egyszerűbb legyen beállítani az okosotthoni eszközöket.\n\nAmikor ki van kapcsolva, az eszköz nem tud kommunikálni a Thread-hálózathoz tartozó más eszközökkel. Lehet, hogy az okosotthon egyes eszközei és szolgáltatásai nem fognak a várt módon működni.\n\nTovábbi információ: g.co/tv/thread."</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Kikapcsolja a Thread-hálózatot?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Kikapcsolt állapotban előfordulhat, hogy egyes okosotthoni eszközök és szolgáltatások nem fognak a várt módon működni. Szeretné folytatni?"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="1975654727631313381">"Bekapcsolja a Thread-hálózatot?"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="6579289433006123263">"A Thread-hálózat használatához a Nagyobb energiafelhasználás mód szükséges. Először állítsa az energiafelhasználási módot Nagyobb energiafelhasználás módra, majd térjen vissza ide, és kapcsolja be a Thread-hálózatot."</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Módosítsa az energiafogyasztási módot a Thread engedélyezéséhez"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Ahhoz, hogy ez a tévé létre tudja hozni a Thread-hálózatot, vagy csatlakozni tudjon hozzá, és hatékonyan össze tudja kapcsolni az okosotthoni eszközeit, Nagyobb energiafogyasztás módra van szüksége."</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"Kikapcsolás"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="6535896653472709387">"Az energiafogyasztási mód módosítása"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"Váltás Nagyobb energiafelhasználás módra"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"Csatlakozás hálózathoz"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"Hálózati diagnosztika"</string>
@@ -983,8 +983,7 @@
     <string name="device_apps_app_management_version" msgid="2119174719194899740">"Verzió: <xliff:g id="APP_VERSION">%1$s</xliff:g>"</string>
     <string name="device_apps_app_management_open" msgid="4249743535677261897">"Megnyitás"</string>
     <string name="device_apps_app_management_force_stop" msgid="4454221309989640309">"Kényszerített leállítás"</string>
-    <!-- no translation found for device_apps_app_management_force_stop_with_app_name (2018658181693785382) -->
-    <skip />
+    <string name="device_apps_app_management_force_stop_with_app_name" msgid="2018658181693785382">"Kényszerített leállítást végez ezen: <xliff:g id="APP_NAME">%1$s</xliff:g>?"</string>
     <string name="device_apps_app_management_force_stop_desc" msgid="1980972142863114899">"Ha egy alkalmazást leállásra kényszerít, lehetséges, hogy az hibásan fog működni."</string>
     <string name="device_apps_app_management_uninstall" msgid="4171103696233332967">"Eltávolítás"</string>
     <string name="device_apps_app_management_uninstall_updates" msgid="5647988075828648951">"Frissítések eltávolítása"</string>
@@ -1200,4 +1199,6 @@
     <string name="volume_change_settings_title" msgid="7861540652599113353">"A(z) %1$s hangereje"</string>
     <string name="volume_change_subtitle_unselect" msgid="4671089222833161493">"Vezérelheti a Segéd hangerejét a(z) %1$s hangszórón"</string>
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Csak a(z) %1$s eszköz hangerejére van hatással, a tévéére nem"</string>
+    <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>:Ki"</string>
+    <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>:Be"</string>
 </resources>
