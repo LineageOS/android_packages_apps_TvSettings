@@ -45,6 +45,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 import java.util.List;
 
@@ -65,14 +66,14 @@ public class NotificationAccess extends SettingsPreferenceFragment {
     private NotificationManager mNotificationManager;
     private PackageManager mPackageManager;
     private ServiceListing mServiceListing;
-    private IconDrawableFactory mIconDrawableFactory;
+    private TvIconDrawableFactory mTvIconDrawableFactory;
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         mPackageManager = context.getPackageManager();
         mNotificationManager = context.getSystemService(NotificationManager.class);
-        mIconDrawableFactory = IconDrawableFactory.newInstance(context);
+        mTvIconDrawableFactory = TvIconDrawableFactory.newInstance(context);
     }
 
     @Override
@@ -139,8 +140,7 @@ public class NotificationAccess extends SettingsPreferenceFragment {
             final SwitchWithSoundPreference pref = new SwitchWithSoundPreference(
                     getPreferenceManager().getContext());
             pref.setPersistent(false);
-            pref.setIcon(mIconDrawableFactory.getBadgedIcon(service, service.applicationInfo,
-                    UserHandle.getUserId(service.applicationInfo.uid)));
+            pref.setIcon(mTvIconDrawableFactory.maybeGetRoundAppIcon(service.applicationInfo));
             if (title != null && !title.equals(summary)) {
                 pref.setTitle(title);
                 pref.setSummary(summary);

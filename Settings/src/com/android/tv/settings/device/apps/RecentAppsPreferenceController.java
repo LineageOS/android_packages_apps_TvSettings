@@ -26,7 +26,6 @@ import android.os.UserHandle;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.ArraySet;
-import android.util.IconDrawableFactory;
 import android.util.Log;
 
 import androidx.annotation.VisibleForTesting;
@@ -38,6 +37,8 @@ import com.android.settingslib.applications.AppUtils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.utils.StringUtil;
+
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -65,7 +66,7 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
     private final UsageStatsManager mUsageStatsManager;
     private final ApplicationsState mApplicationsState;
     private final int mUserId;
-    private final IconDrawableFactory mIconDrawableFactory;
+    private final TvIconDrawableFactory mTvIconDrawableFactory;
 
     private Calendar mCal;
     private List<UsageStats> mStats;
@@ -89,7 +90,7 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
     @VisibleForTesting(otherwise = VisibleForTesting.NONE)
     RecentAppsPreferenceController(Context context, ApplicationsState appState) {
         super(context);
-        mIconDrawableFactory = IconDrawableFactory.newInstance(context);
+        mTvIconDrawableFactory = TvIconDrawableFactory.newInstance(context);
         mUserId = UserHandle.myUserId();
         mPm = context.getPackageManager();
         mUsageStatsManager =
@@ -169,7 +170,7 @@ public class RecentAppsPreferenceController extends AbstractPreferenceController
             }
             pref.setKey(pkgName);
             pref.setTitle(appEntry.label);
-            pref.setIcon(mIconDrawableFactory.getBadgedIcon(appEntry.info));
+            pref.setIcon(mTvIconDrawableFactory.maybeGetRoundAppIcon(appEntry.info));
             // Show empty summary if app last used time is larger than current time. b/183744220
             if (stat.getLastTimeUsed() > System.currentTimeMillis()) {
                 pref.setSummary("");
