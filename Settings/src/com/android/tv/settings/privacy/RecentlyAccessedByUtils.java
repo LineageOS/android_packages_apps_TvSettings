@@ -32,6 +32,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+import com.android.tv.settings.widget.TvIconDrawableFactory;
+
 /**
  * Helper class for the 'Recently Accessed By' sections.
  */
@@ -49,7 +51,7 @@ public class RecentlyAccessedByUtils {
      */
     public static List<App> getAppList(Context context, int[] appOps) {
         PackageManager packageManager = context.getPackageManager();
-        IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(context);
+        TvIconDrawableFactory tvIconDrawableFactory = TvIconDrawableFactory.newInstance(context);
         long currentTime = System.currentTimeMillis();
 
         List<AppOpsManager.PackageOps> packageOps = context.getSystemService(
@@ -73,7 +75,7 @@ public class RecentlyAccessedByUtils {
             }
 
             App recentApp = getRecentRequestFromOps(packageManager, currentTime, ops,
-                    iconDrawableFactory);
+                    tvIconDrawableFactory);
             if (recentApp != null) {
                 recentApps.add(recentApp);
             }
@@ -86,7 +88,7 @@ public class RecentlyAccessedByUtils {
     }
 
     private static App getRecentRequestFromOps(PackageManager packageManager, long currentTime,
-            AppOpsManager.PackageOps ops, IconDrawableFactory iconDrawableFactory) {
+            AppOpsManager.PackageOps ops, TvIconDrawableFactory tvIconDrawableFactory) {
         String packageName = ops.getPackageName();
         List<AppOpsManager.OpEntry> entries = ops.getOps();
         long recentAccessCutoffTime = currentTime - RECENT_TIME_INTERVAL_MILLIS;
@@ -116,7 +118,7 @@ public class RecentlyAccessedByUtils {
             return null;
         }
 
-        Drawable icon = iconDrawableFactory.getBadgedIcon(appInfo);
+        Drawable icon = tvIconDrawableFactory.maybeGetRoundAppIcon(appInfo);
         CharSequence appLabel = packageManager.getApplicationLabel(appInfo);
         return new App(packageName, icon, appLabel, mostRecentAccessEnd);
     }

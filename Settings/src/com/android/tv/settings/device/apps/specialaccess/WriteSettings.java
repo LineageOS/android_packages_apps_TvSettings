@@ -24,6 +24,7 @@ import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 import android.Manifest;
 import android.app.AppOpsManager;
 import android.app.tvsettings.TvSettingsEnums;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
@@ -36,6 +37,7 @@ import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 /**
  * Fragment for managing apps which can write system settings
@@ -71,9 +73,12 @@ public class WriteSettings extends ManageAppOp {
     public Preference bindPreference(@NonNull Preference preference,
             ApplicationsState.AppEntry entry) {
         final TwoStatePreference switchPref = (SwitchWithSoundPreference) preference;
+        Drawable icon = TvIconDrawableFactory
+            .newInstance(getPreferenceManager().getContext())
+            .maybeGetRoundAppIcon(entry.info);
         switchPref.setTitle(entry.label);
         switchPref.setKey(entry.info.packageName);
-        switchPref.setIcon(entry.icon);
+        switchPref.setIcon(icon);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
             findEntriesUsingPackageName(entry.info.packageName).forEach(
                     packageEntry -> setWriteSettingsAccess(packageEntry, (Boolean) newValue));

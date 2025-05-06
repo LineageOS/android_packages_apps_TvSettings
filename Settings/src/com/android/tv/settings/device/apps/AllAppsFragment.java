@@ -37,6 +37,7 @@ import androidx.preference.PreferenceGroup;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -72,6 +73,7 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
     private PreferenceGroup mDisabledPreferenceGroup;
     private PreferenceGroup mOtherPreferenceGroup;
     private Preference mShowOtherApps;
+    private TvIconDrawableFactory mTvIconDrawableFactory;
 
     private final Handler mHandler = new Handler();
     private final Map<PreferenceGroup,
@@ -108,6 +110,7 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mApplicationsState = ApplicationsState.getInstance(getActivity().getApplication());
+        mTvIconDrawableFactory = TvIconDrawableFactory.newInstance(getContext());
         sSystemAppPackages = Arrays.stream(getResources()
                 .getStringArray(R.array.system_app_packages)).collect(Collectors.toSet());
 
@@ -293,7 +296,7 @@ public class AllAppsFragment extends SettingsPreferenceFragment implements
         preference.setSummary(entry.sizeStr);
         preference.setFragment(AppManagementFragment.class.getName());
         AppManagementFragment.prepareArgs(preference.getExtras(), entry.info.packageName);
-        preference.setIcon(entry.icon);
+        preference.setIcon(mTvIconDrawableFactory.maybeGetRoundAppIcon(entry.info));
         return preference;
     }
 

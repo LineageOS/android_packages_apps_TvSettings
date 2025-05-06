@@ -28,6 +28,7 @@ import com.android.settingslib.widget.AppPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.enterprise.apps.ApplicationFeatureProvider;
 import com.android.tv.settings.enterprise.apps.UserAppInfo;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 import java.util.List;
 
@@ -70,13 +71,14 @@ public class ApplicationListPreferenceController extends AbstractPreferenceContr
         if (screen == null) {
             return;
         }
-        final IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(mContext);
         final Context prefContext = mParent.getPreferenceManager().getContext();
+        final TvIconDrawableFactory tvIconDrawableFactory =
+            TvIconDrawableFactory.newInstance(prefContext);
         for (int position = 0; position < result.size(); position++) {
             final UserAppInfo item = result.get(position);
             final Preference preference = new AppPreference(prefContext);
             preference.setTitle(item.appInfo.loadLabel(mPm));
-            preference.setIcon(iconDrawableFactory.getBadgedIcon(item.appInfo));
+            preference.setIcon(tvIconDrawableFactory.maybeGetRoundAppIcon(item.appInfo));
             preference.setOrder(position);
             preference.setSelectable(false);
             screen.addPreference(preference);

@@ -41,6 +41,7 @@ import com.android.tv.settings.FullScreenDialogFragment;
 import com.android.tv.settings.FullScreenDialogFragmentActivity;
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -244,8 +245,8 @@ public class EnableDisablePreference extends AppActionPreference {
     public Drawable getDrawableIconForDialog() {
       ApplicationInfo applicationInfo = getIntent().getParcelableExtra("applicationInfo");
       String appName = getIntent().getStringExtra("appName");
-      IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(this);
-      return iconDrawableFactory.getBadgedIcon(applicationInfo);
+      TvIconDrawableFactory tvIconDrawableFactory = TvIconDrawableFactory.newInstance(this);
+      return tvIconDrawableFactory.maybeGetRoundAppIcon(applicationInfo);
     }
   }
 

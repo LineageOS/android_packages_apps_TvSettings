@@ -23,6 +23,7 @@ import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.Keep;
@@ -37,6 +38,7 @@ import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.library.device.apps.specialaccess.PowerAllowlistBackend;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 /**
  * Fragment for managing power save allowlist
@@ -90,9 +92,12 @@ public class HighPower extends SettingsPreferenceFragment implements
     public Preference bindPreference(@NonNull Preference preference,
             ApplicationsState.AppEntry entry) {
         final TwoStatePreference switchPref = (SwitchWithSoundPreference) preference;
+        Drawable icon = TvIconDrawableFactory
+            .newInstance(getPreferenceManager().getContext())
+            .maybeGetRoundAppIcon(entry.info);
         switchPref.setTitle(entry.label);
         switchPref.setKey(entry.info.packageName);
-        switchPref.setIcon(entry.icon);
+        switchPref.setIcon(icon);
         if (mPowerAllowlistBackend.isSysAllowlisted(entry.info.packageName)) {
             switchPref.setChecked(false);
             switchPref.setEnabled(false);
