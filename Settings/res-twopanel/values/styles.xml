@@ -29,4 +29,14 @@
         <item name="guidedStepTheme">@style/Theme.Settings.GuidedStepHighContrast</item>
         <item name="android:alertDialogTheme">@style/TvSettingsDialog</item>
    </style>
+
+   <!-- The theme used for Connectivity in AndroidManifest allowing overlay. -->
+   <style name="TvSettingsConnectivityTheme" parent="Theme.TwoPanelSettingsConnectivity" />
+
+   <!-- Settings theme for connectivity -->
+   <style name="Theme.TwoPanelSettingsConnectivity" parent="@style/Theme.Settings.TwoPanel">
+        <item name="guidedStepTheme">@style/GuidedStepFragmentThemeTwoPanel</item>
+        <item name="android:windowBackground">@drawable/connectivity_background</item>
+        <item name="android:fontFamily">@font/brand_font</item>
+   </style>
 </resources>

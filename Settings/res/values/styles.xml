@@ -54,6 +54,9 @@
         <item name="switchStyle">@style/Widget.AppCompat.CompoundButton.Switch</item>
     </style>
 
+    <!-- The theme used for Connectivity in AndroidManifest allowing overlay. -->
+    <style name="TvSettingsConnectivityTheme" parent="Theme.SettingsConnectivity" />
+
     <!-- Settings theme for connectivity -->
     <style name="Theme.SettingsConnectivity" parent="@style/Theme.Settings">
         <item name="guidedStepTheme">@style/GuidedStepFragmentThemeTwoPanel</item>
@@ -278,7 +281,7 @@
         <item name="android:gravity">start|center_vertical</item>
         <item name="android:layout_gravity">start|center_vertical</item>
         <item name="android:singleLine">true</item>
-        <item name="android:fontFamily">@string/font_sans_serif_condensed</item>
+        <item name="android:fontFamily">@font/brand_font</item>
         <item name="android:textSize">@dimen/setup_list_item_text_size</item>
         <item name="android:textColor">@color/setup_list_item</item>
     </style>
@@ -371,7 +374,8 @@
         <item name="android:gravity">start|center_vertical</item>
         <item name="android:singleLine">false</item>
         <item name="android:maxLines">3</item>
-        <item name="android:fontFamily">@string/preference_category_text_font</item>
+        <!-- From TwoPanelSettingsLib -->
+        <item name="android:fontFamily">@font/brand_font</item>
         <item name="android:textSize">@dimen/guided_action_text_size_two_panel</item>
         <item name="android:textColor">@color/tp_preference_item_primary_text_color_selector</item>
     </style>
@@ -385,7 +389,8 @@
     </style>
 
     <style name="GuidedActionItemDescriptionStyleTwoPanel" parent="Widget.Leanback.GuidedActionItemDescriptionStyle">
-        <item name="android:fontFamily">sans-serif</item>
+        <!-- From TwoPanelSettingsLib -->
+        <item name="android:fontFamily">@font/brand_font_medium</item>
         <item name="android:textColor">@color/tp_preference_item_secondary_text_color_selector</item>
         <item name="android:textSize">@dimen/guided_action_description_text_size_two_panel</item>
         <item name="android:duplicateParentState">true</item>
