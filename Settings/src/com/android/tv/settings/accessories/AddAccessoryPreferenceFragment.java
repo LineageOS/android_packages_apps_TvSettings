@@ -47,7 +47,7 @@ import java.util.List;
 public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragmentCompat implements
         LifecycleOwner {
 
-    private SparseArray<Drawable> mResizedDrawables = new SparseArray<>();
+    private final SparseArray<Drawable.ConstantState> mDrawablesConstantState = new SparseArray<>();
     private final Lifecycle mLifecycle = new Lifecycle(this);
 
     public AddAccessoryPreferenceFragment() {
@@ -106,8 +106,10 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
 
     private Drawable getDeviceDrawable(BluetoothDevice device) {
         final int resId = AccessoriesFragment.getImageIdForDevice(device, false);
-        Drawable drawable = mResizedDrawables.get(resId);
-        if (drawable == null) {
+        Drawable drawable;
+        Drawable.ConstantState drawableConstantState = mDrawablesConstantState.get(resId);
+
+        if (drawableConstantState == null) {
             final Drawable tempDrawable = getActivity().getDrawable(resId);
             // icons for TwoPanel have a bigger icon offset
             final int iconOffset =
@@ -124,7 +126,9 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
             final Canvas canvas = new Canvas(bitmap);
             tempDrawable.draw(canvas);
             drawable = new BitmapDrawable(getResources(), bitmap);
-            mResizedDrawables.put(resId, drawable);
+            mDrawablesConstantState.put(resId, drawable.getConstantState());
+        } else {
+            drawable = drawableConstantState.newDrawable();
         }
         return drawable;
     }
