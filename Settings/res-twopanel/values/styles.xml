@@ -35,8 +35,28 @@
 
    <!-- Settings theme for connectivity -->
    <style name="Theme.TwoPanelSettingsConnectivity" parent="@style/Theme.Settings.TwoPanel">
-        <item name="guidedStepTheme">@style/GuidedStepFragmentThemeTwoPanel</item>
+        <item name="guidedStepTheme">@style/ConnectivityGuidedStepFragmentThemeTwoPanel</item>
         <item name="android:windowBackground">@drawable/connectivity_background</item>
         <item name="android:fontFamily">@font/brand_font</item>
    </style>
+
+   <!-- The theme used for Connectivity Text Input allowing overlay. -->
+   <style name="ConnectivityTextInput" parent="ConnectivityTextInputTwoPanel" />
+
+   <style name="ConnectivityTextInputTwoPanel">
+        <item name="android:fontFamily">@font/brand_font</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textCursorDrawable">@drawable/setup_text_input_cursor</item>
+        <item name="android:textColor">#FF001222</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <!-- The style used for Connectivity Text Input Wrapper allowing overlay. -->
+    <style name="ConnectivityTextBackgroundStyle" parent="ConnectivityTextInputWrapperTwoPanel" />
+
+    <style name="ConnectivityTextInputWrapperTwoPanel">
+        <item name="android:background">@drawable/setup_text_input_background_two_panel</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
 </resources>
