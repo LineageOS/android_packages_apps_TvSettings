@@ -73,7 +73,7 @@ public class SliceProviderWrapperContainer {
     public void attachInfo(Context context, ProviderInfo info) {
       mSliceProvider.attachInfo(context, info);
       super.attachInfo(context, info);
-      mSliceManager = context.getSystemService(SliceManager.class);
+      mSliceManager = SliceManager.from(context);
     }
 
     @Override
