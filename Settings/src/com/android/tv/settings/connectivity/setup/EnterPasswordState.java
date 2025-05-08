@@ -29,7 +29,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
-import android.widget.CheckBox;
+import android.widget.Checkable;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,6 +47,7 @@ import com.android.tv.settings.connectivity.security.WifiSecurityHelper;
 import com.android.tv.settings.connectivity.util.GuidedActionsAlignUtil;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.List;
 
@@ -56,7 +57,7 @@ import java.util.List;
 public class EnterPasswordState implements State {
     private final FragmentActivity mActivity;
     private Fragment mFragment;
-    private static final int ACTION_ID_CHECKBOX = 999;
+    private static final int ACTION_ID_CHECKABLE = 999;
     private UserChoiceInfo mUserChoiceInfo;
     private StateMachine mStateMachine;
 
@@ -103,7 +104,7 @@ public class EnterPasswordState implements State {
         private UserChoiceInfo mUserChoiceInfo;
         private StateMachine mStateMachine;
         private EditText mTextInput;
-        private CheckBox mCheckBox;
+        private Checkable mCheckable;
         private GuidedAction mPasswordAction;
         private boolean mEditFocused = false;
 
@@ -127,7 +128,7 @@ public class EnterPasswordState implements State {
                 public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
                     LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                     View v = inflater.inflate(onProvideItemLayoutId(viewType), parent, false);
-                    if (viewType == ACTION_ID_CHECKBOX) {
+                    if (viewType == ACTION_ID_CHECKABLE) {
                         return new PasswordViewHolder(v);
                     }
                     return new GuidedActionsAlignUtil.SetupViewHolder(v);
@@ -141,16 +142,16 @@ public class EnterPasswordState implements State {
                 @Override
                 public void onBindViewHolder(ViewHolder vh, GuidedAction action) {
                     super.onBindViewHolder(vh, action);
-                    if (action.getId() == ACTION_ID_CHECKBOX) {
-                        PasswordViewHolder checkBoxVH = (PasswordViewHolder) vh;
-                        mCheckBox = checkBoxVH.mCheckbox;
-                        checkBoxVH.itemView.setOnClickListener(view -> {
-                            mCheckBox.setChecked(!mCheckBox.isChecked());
+                    if (action.getId() == ACTION_ID_CHECKABLE) {
+                        PasswordViewHolder checkableVH = (PasswordViewHolder) vh;
+                        mCheckable = checkableVH.mCheckable;
+                        checkableVH.itemView.setOnClickListener(view -> {
+                            mCheckable.setChecked(!mCheckable.isChecked());
                             if (mPasswordAction != null) {
                                 setSelectedActionPosition(0);
                             }
                         });
-                        mCheckBox.setChecked(mUserChoiceInfo.isPasswordHidden());
+                        mCheckable.setChecked(mUserChoiceInfo.isPasswordHidden());
                     } else if (action.getId() == GuidedAction.ACTION_ID_CONTINUE) {
                         mTextInput = (EditText) vh.itemView.findViewById(
                                 R.id.guidedactions_item_title);
@@ -169,8 +170,12 @@ public class EnterPasswordState implements State {
 
                 @Override
                 public int onProvideItemLayoutId(int viewType) {
-                    if (viewType == ACTION_ID_CHECKBOX) {
-                        return R.layout.password_checkbox;
+                    if (viewType == ACTION_ID_CHECKABLE) {
+                        if (FlavorUtils.isTwoPanel(getActivity())) {
+                            return R.layout.password_switch;
+                        } else {
+                            return R.layout.password_checkbox;
+                        }
                     } else {
                         return R.layout.setup_password_item;
                     }
@@ -238,10 +243,10 @@ public class EnterPasswordState implements State {
                     .editable(true)
                     .build();
             actions.add(mPasswordAction);
-            GuidedAction checkboxAction = new GuidedAction.Builder(context)
-                    .id(ACTION_ID_CHECKBOX)
+            GuidedAction checkableAction = new GuidedAction.Builder(context)
+                    .id(ACTION_ID_CHECKABLE)
                     .build();
-            actions.add(checkboxAction);
+            actions.add(checkableAction);
         }
 
         @Override
@@ -259,7 +264,7 @@ public class EnterPasswordState implements State {
                         PSK_MIN_LENGTH : WEP_MIN_LENGTH;
                 if (password.length() >= minPasswordLength) {
                     mUserChoiceInfo.put(UserChoiceInfo.PASSWORD, action.getTitle().toString());
-                    mUserChoiceInfo.setPasswordHidden(mCheckBox.isChecked());
+                    mUserChoiceInfo.setPasswordHidden(mCheckable.isChecked());
                     mStateMachine.getListener().onComplete(this, StateMachine.OPTIONS_OR_CONNECT);
                 } else {
                     final Activity activity = getActivity();
@@ -282,9 +287,9 @@ public class EnterPasswordState implements State {
         }
 
         private void updatePasswordInputObfuscation() {
-            if (mTextInput != null && mCheckBox != null) {
+            if (mTextInput != null && mCheckable != null) {
                 mTextInput.setInputType(InputType.TYPE_CLASS_TEXT
-                        | (mCheckBox.isChecked()
+                        | (mCheckable.isChecked()
                         ? InputType.TYPE_TEXT_VARIATION_PASSWORD
                         : InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD));
             }
@@ -292,11 +297,11 @@ public class EnterPasswordState implements State {
 
 
         private static class PasswordViewHolder extends GuidedActionsAlignUtil.SetupViewHolder {
-            CheckBox mCheckbox;
+            Checkable mCheckable;
 
             PasswordViewHolder(View v) {
                 super(v);
-                mCheckbox = v.findViewById(R.id.password_checkbox);
+                mCheckable = v.findViewById(R.id.password_checkable);
             }
         }
     }
