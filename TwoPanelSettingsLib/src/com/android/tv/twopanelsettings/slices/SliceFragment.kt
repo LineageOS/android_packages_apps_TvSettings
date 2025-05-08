@@ -158,6 +158,8 @@ open class SliceFragment :
     }
   }
 
+  override fun attachSliceShard(sliceShard: SliceShard) {}
+
   override fun onSlice(slice: Slice?) {}
 
   override fun onCreateView(
