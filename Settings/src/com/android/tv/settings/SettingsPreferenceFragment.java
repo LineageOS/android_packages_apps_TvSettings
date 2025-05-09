@@ -69,6 +69,8 @@ import com.android.tv.settings.util.SettingsPreferenceUtil;
 import com.android.tv.settings.widget.SettingsViewModel;
 import com.android.tv.settings.widget.TsPreference;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
+import com.android.tv.twopanelsettings.slices.SliceSeekbarPreference;
+import com.android.tv.twopanelsettings.slices.SliceShard;
 
 import java.util.Collections;
 
@@ -78,7 +80,8 @@ import java.util.Collections;
  */
 public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceFragment
         implements LifecycleOwner,
-        TwoPanelSettingsFragment.PreviewableComponentCallback {
+        TwoPanelSettingsFragment.PreviewableComponentCallback,
+        TwoPanelSettingsFragment.SliceFragmentCallback {
     private static final int PROGRESS_BAR_DELAY_MS=500;
     private final Lifecycle mLifecycle = new Lifecycle(this) {
         @Override
@@ -99,6 +102,8 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
         }
     };
 
+    @Nullable private SliceShard mSliceShard;
+
     // Rename getLifecycle() to getSettingsLifecycle() as androidx Fragment has already implemented
     // getLifecycle(), overriding here would cause unexpected crash in framework.
     @NonNull
@@ -114,6 +119,15 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
     public void onAttach(Context context) {
         super.onAttach(context);
         mLifecycle.onAttach(context);
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (savedInstanceState != null && mSliceShard != null) {
+            mSliceShard.onRestoreInstanceState(savedInstanceState);
+        }
     }
 
     @CallSuper
@@ -179,6 +193,30 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
     }
 
     public void setIcon(@Nullable Drawable icon) {}
+
+    public void attachSliceShard(SliceShard sliceShard) {
+        this.mSliceShard = sliceShard;
+    }
+
+    @Override
+    public void onPreferenceFocused(Preference preference) {
+        if (mSliceShard != null) {
+            mSliceShard.onPreferenceFocused(preference);
+        }
+    }
+
+    @Override
+    public void onSeekbarPreferenceChanged(SliceSeekbarPreference preference, int addValue) {
+        if (mSliceShard != null) {
+            mSliceShard.onSeekbarPreferenceChanged(preference, addValue);
+        }
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        return (mSliceShard != null && mSliceShard.onPreferenceTreeClick(preference))
+                || super.onPreferenceTreeClick(preference);
+    }
 
     // While the default of relying on text language to determine gravity works well in general,
     // some page titles (e.g., SSID as Wifi details page title) are dynamic and can be in different
@@ -307,6 +345,9 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         mLifecycle.onSaveInstanceState(outState);
+        if (mSliceShard != null) {
+            mSliceShard.onSaveInstanceState(outState);
+        }
     }
 
     @CallSuper
