@@ -24,12 +24,13 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatEditText;
 import androidx.leanback.widget.ImeKeyMonitor;
 
 /**
  * Mostly copied from {@GuidedActionEditText}, remove some code to satisfies TvSettings need.
  */
-public class SettingsGuidedActionEditText extends EditText implements ImeKeyMonitor {
+public class SettingsGuidedActionEditText extends AppCompatEditText implements ImeKeyMonitor {
     private ImeKeyMonitor.ImeKeyListener mKeyListener;
 
     public SettingsGuidedActionEditText(Context context) {

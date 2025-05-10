@@ -22,7 +22,7 @@
     android:layout_height="match_parent"
     android:gravity="start" >
 
-    <TextView
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
         android:id="@+id/guidance_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:lineSpacingMultiplier="@dimen/setup_title_line_spacing_multiplier"
         android:textAppearance="@style/Setup.Description.Title" />
 
-    <TextView
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
         android:id="@+id/guidance_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

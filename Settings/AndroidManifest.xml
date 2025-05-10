@@ -173,7 +173,7 @@
             android:excludeFromRecents="true"
             android:exported="true"
             android:permission="android.permission.NETWORK_SETTINGS"
-            android:theme="@style/Theme.SettingsConnectivity" >
+            android:theme="@style/TvSettingsConnectivityTheme" >
             <intent-filter>
                 <action android:name="com.android.settings.wifi.action.WIFI_CONNECTION_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -186,7 +186,7 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/Theme.SettingsConnectivity">
+            android:theme="@style/TvSettingsConnectivityTheme">
             <intent-filter>
                 <action android:name="com.android.settings.wifi.action.EDIT_PROXY_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -199,7 +199,7 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/Theme.SettingsConnectivity">
+            android:theme="@style/TvSettingsConnectivityTheme">
             <intent-filter>
                 <action android:name="com.android.settings.wifi.action.EDIT_IP_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -212,7 +212,7 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:theme="@style/Theme.SettingsConnectivity">
+            android:theme="@style/TvSettingsConnectivityTheme">
             <intent-filter>
                 <action android:name="com.android.settings.wifi.action.ADD_WIFI_NETWORK"/>
                 <category android:name="android.intent.category.DEFAULT"/>

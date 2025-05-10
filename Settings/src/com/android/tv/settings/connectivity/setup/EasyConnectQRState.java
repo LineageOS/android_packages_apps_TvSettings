@@ -39,6 +39,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.util.QrCodeGenerator;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 /**
  * State responsible for showing the connect page.
@@ -100,7 +101,9 @@ public class EasyConnectQRState implements State {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle bundle) {
-            final View view = inflater.inflate(R.layout.setup_qr_code, container, false);
+            View view = inflater.inflate(FlavorUtils.isTwoPanel(getActivity())
+                    ? R.layout.setup_qr_code_two_panel : R.layout.setup_qr_code,
+                    container, false);
 
             mQrCodeView = view.findViewById(R.id.setup_qrcode_view);
             mProgressView = view.findViewById(R.id.setup_qrcode_progress);

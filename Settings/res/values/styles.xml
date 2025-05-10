@@ -54,6 +54,9 @@
         <item name="switchStyle">@style/Widget.AppCompat.CompoundButton.Switch</item>
     </style>
 
+    <!-- The theme used for Connectivity in AndroidManifest allowing overlay. -->
+    <style name="TvSettingsConnectivityTheme" parent="Theme.SettingsConnectivity" />
+
     <!-- Settings theme for connectivity -->
     <style name="Theme.SettingsConnectivity" parent="@style/Theme.Settings">
         <item name="guidedStepTheme">@style/GuidedStepFragmentThemeTwoPanel</item>
@@ -219,12 +222,24 @@
         <item name="android:textSize">@dimen/setup_list_item_text_size</item>
     </style>
 
+    <!-- The style used for Connectivity Text Input allowing overlay. -->
+    <style name="ConnectivityTextInput" parent="Setup.Action.TextInput" />
+
     <style name="Setup.Action.TextInput">
         <item name="android:fontFamily">@string/font_sans_serif_condensed</item>
         <item name="android:background">@drawable/setup_text_input_underline</item>
         <item name="android:textCursorDrawable">@drawable/setup_text_input_cursor</item>
         <item name="android:textColor">@color/setup_list_item_focused</item>
         <item name="android:textSize">@dimen/setup_list_item_text_size</item>
+    </style>
+
+
+    <!-- The style used for Connectivity Text Input Wrapper allowing overlay. -->
+    <style name="ConnectivityTextBackgroundStyle" parent="Setup.Action.TextInputWrapper" />
+
+    <style name="Setup.Action.TextInputWrapper">
+        <item name="android:layout_height">@dimen/setup_list_item_height</item>
+        <item name="android:background">@drawable/setup_text_input_background</item>
     </style>
 
     <style name="Setup.ProgressTitle">
@@ -278,7 +293,7 @@
         <item name="android:gravity">start|center_vertical</item>
         <item name="android:layout_gravity">start|center_vertical</item>
         <item name="android:singleLine">true</item>
-        <item name="android:fontFamily">@string/font_sans_serif_condensed</item>
+        <item name="android:fontFamily">@font/brand_font</item>
         <item name="android:textSize">@dimen/setup_list_item_text_size</item>
         <item name="android:textColor">@color/setup_list_item</item>
     </style>
@@ -323,6 +338,21 @@
         <item name="android:paddingBottom">@dimen/guided_actions_vertical_offset_bottom</item>
         <item name="android:clipToPadding">false</item>
     </style>
+
+    <style name="ConnectivityGuidedActionsListStyleTwoPanel" parent="Widget.Leanback.GuidedActionsListStyle">
+        <item name="android:layout_width">@dimen/guided_actions_list_width_two_panel</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_marginTop">78dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:verticalSpacing">@dimen/guided_actions_list_vertical_spacing_two_panel</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
 
     <style name="GuidedActionItemContainerStyleTwoPanel" parent="Widget.Leanback.GuidedActionItemContainerStyle">
         <item name="android:background">@drawable/preference_item_background</item>
@@ -371,7 +401,8 @@
         <item name="android:gravity">start|center_vertical</item>
         <item name="android:singleLine">false</item>
         <item name="android:maxLines">3</item>
-        <item name="android:fontFamily">@string/preference_category_text_font</item>
+        <!-- From TwoPanelSettingsLib -->
+        <item name="android:fontFamily">@font/brand_font</item>
         <item name="android:textSize">@dimen/guided_action_text_size_two_panel</item>
         <item name="android:textColor">@color/tp_preference_item_primary_text_color_selector</item>
     </style>
@@ -385,7 +416,8 @@
     </style>
 
     <style name="GuidedActionItemDescriptionStyleTwoPanel" parent="Widget.Leanback.GuidedActionItemDescriptionStyle">
-        <item name="android:fontFamily">sans-serif</item>
+        <!-- From TwoPanelSettingsLib -->
+        <item name="android:fontFamily">@font/brand_font_medium</item>
         <item name="android:textColor">@color/tp_preference_item_secondary_text_color_selector</item>
         <item name="android:textSize">@dimen/guided_action_description_text_size_two_panel</item>
         <item name="android:duplicateParentState">true</item>
