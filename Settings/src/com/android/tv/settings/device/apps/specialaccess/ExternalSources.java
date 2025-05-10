@@ -19,6 +19,7 @@ package com.android.tv.settings.device.apps.specialaccess;
 import android.Manifest;
 import android.app.AppOpsManager;
 import android.app.tvsettings.TvSettingsEnums;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
@@ -33,6 +34,7 @@ import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.RestrictedSwitchPreference;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 /**
  * Fragment for controlling if apps can install other apps
@@ -73,9 +75,12 @@ public class ExternalSources extends ManageAppOp {
     public Preference bindPreference(@NonNull Preference preference,
             ApplicationsState.AppEntry entry) {
         final RestrictedSwitchPreference switchPref = (RestrictedSwitchPreference) preference;
+        Drawable icon = TvIconDrawableFactory
+            .newInstance(getPreferenceManager().getContext())
+            .maybeGetRoundAppIcon(entry.info);
         switchPref.setTitle(entry.label);
         switchPref.setKey(entry.info.packageName);
-        switchPref.setIcon(entry.icon);
+        switchPref.setIcon(icon);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
             findEntriesUsingPackageName(entry.info.packageName)
                     .forEach(packageEntry -> setCanInstallApps(packageEntry, (Boolean) newValue));

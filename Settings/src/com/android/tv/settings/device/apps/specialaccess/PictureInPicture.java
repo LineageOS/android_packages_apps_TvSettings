@@ -27,6 +27,7 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 
 import androidx.annotation.Keep;
@@ -40,6 +41,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.SwitchWithSoundPreference;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -120,9 +122,12 @@ public class PictureInPicture extends SettingsPreferenceFragment
     public Preference bindPreference(@NonNull Preference preference,
             ApplicationsState.AppEntry entry) {
         final TwoStatePreference switchPref = (SwitchWithSoundPreference) preference;
+        Drawable icon = TvIconDrawableFactory
+            .newInstance(getPreferenceManager().getContext())
+            .maybeGetRoundAppIcon(entry.info);
         switchPref.setTitle(entry.label);
         switchPref.setKey(entry.info.packageName);
-        switchPref.setIcon(entry.icon);
+        switchPref.setIcon(icon);
         switchPref.setChecked((Boolean) entry.extraInfo);
         switchPref.setOnPreferenceChangeListener((pref, newValue) -> {
             findEntriesUsingPackageName(entry.info.packageName)

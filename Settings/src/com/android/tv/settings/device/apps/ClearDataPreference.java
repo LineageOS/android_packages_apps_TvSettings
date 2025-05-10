@@ -37,6 +37,7 @@ import com.android.tv.settings.FullScreenDialogFragment;
 import com.android.tv.settings.FullScreenDialogFragmentActivity;
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.widget.TvIconDrawableFactory;
 
 public class ClearDataPreference extends AppActionPreference {
   private static final int RESULT_CLEAR_DATA = 1;
@@ -136,8 +137,8 @@ public class ClearDataPreference extends AppActionPreference {
     public Drawable getDrawableIconForDialog() {
       ApplicationInfo applicationInfo = getIntent().getParcelableExtra("applicationInfo");
       String appName = getIntent().getStringExtra("appName");
-      IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(this);
-      return iconDrawableFactory.getBadgedIcon(applicationInfo);
+      TvIconDrawableFactory tvIconDrawableFactory = TvIconDrawableFactory.newInstance(this);
+      return tvIconDrawableFactory.maybeGetRoundAppIcon(applicationInfo);
     }
   }
 
