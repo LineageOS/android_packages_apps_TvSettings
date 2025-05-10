@@ -122,6 +122,7 @@ class SliceShard(
         screenTitle = initialTitle
         mPrefContext = prefContext
 
+        callbacks.attachSliceShard(this);
         mFragment.lifecycle.addObserver(object : DefaultLifecycleObserver {
             override fun onResume(owner: LifecycleOwner) {
                 resume()
@@ -775,6 +776,8 @@ class SliceShard(
         fun setIcon(icon: Drawable?)
 
         fun onSlice(slice: Slice?)
+
+        fun attachSliceShard(sliceShard: SliceShard)
     }
 
     /** Callback for one panel settings fragment  */
