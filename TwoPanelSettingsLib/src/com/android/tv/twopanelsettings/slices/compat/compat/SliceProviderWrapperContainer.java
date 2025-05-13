@@ -48,10 +48,6 @@ public class SliceProviderWrapperContainer {
   @RequiresApi(28)
   public static class SliceProviderWrapper extends SliceProvider {
     private static final String TAG = "SliceProviderWrapper";
-    private static final String METHOD_BIND = "bind_slice";
-    private static final String METHOD_MAP = "map_slice";
-    private static final String EXTRA_URI = "slice_uri";
-    private static final String EXTRA_INTENT = "slice_intent";
 
     private com.android.tv.twopanelsettings.slices.compat.SliceProvider mSliceProvider;
 
@@ -97,24 +93,6 @@ public class SliceProviderWrapperContainer {
     @Override
     @SuppressWarnings("deprecation")
     public Bundle call(String method, String arg, Bundle extras) {
-      if (mAutoGrantPermissions != null) {
-        Uri uri = null;
-        if (METHOD_BIND.equals(method)) {
-          uri = extras != null ? (Uri) extras.getParcelable(EXTRA_URI) : null;
-        } else if (METHOD_MAP.equals(method)) {
-          Intent intent = extras.getParcelable(EXTRA_INTENT);
-          if (intent != null) {
-            uri = onMapIntentToUri(intent);
-          }
-        }
-        if (uri != null) {
-          if (mSliceManager.checkSlicePermission(
-                  uri, Binder.getCallingPid(), Binder.getCallingUid())
-              != PackageManager.PERMISSION_GRANTED) {
-            checkPermissions(uri);
-          }
-        }
-      }
       // Since calls get routed through here on API 28+, need to delegate to
       // SliceProviderWithCallback if the method is remote callback.
       // Note that we use string instead of constant to prevent unnecessary dependency.
