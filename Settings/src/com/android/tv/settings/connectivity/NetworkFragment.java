@@ -31,6 +31,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Icon;
 import android.net.ConnectivityManager;
+import android.net.ConnectivitySettingsManager;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -514,13 +515,16 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         final boolean wifiEnabled = mIsWifiHardwarePresent
                 && mConnectivityListener.isWifiEnabledOrEnabling();
         final boolean ethernetConnected = mConnectivityListener.isEthernetConnected();
+        final boolean wifiAlwaysRequested =
+                ConnectivitySettingsManager.getWifiAlwaysRequested(getContext(), false);
+        final boolean shouldAllowWifi = !ethernetConnected || wifiAlwaysRequested;
         mEnableWifiPref.setChecked(wifiEnabled);
 
-        mWifiNetworksCategory.setVisible(wifiEnabled && !ethernetConnected);
+        mWifiNetworksCategory.setVisible(wifiEnabled && shouldAllowWifi);
         mCollapsePref.setVisible(wifiEnabled && mWifiNetworksCategory.shouldShowCollapsePref());
-        mAddPref.setVisible(wifiEnabled && !ethernetConnected);
+        mAddPref.setVisible(wifiEnabled && shouldAllowWifi);
         if (mAddEasyConnectPref != null) {
-            mAddEasyConnectPref.setVisible(isEasyConnectEnabled() && !ethernetConnected);
+            mAddEasyConnectPref.setVisible(isEasyConnectEnabled() && shouldAllowWifi);
         }
 
         if (!wifiEnabled) {
@@ -576,8 +580,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             mEthernetStatusPref.setSummary(mConnectivityListener.getEthernetIpAddress());
         }
 
-        mEnableWifiPref.setSummary(ethernetConnected ?
-                getString(R.string.unplug_ethernet_to_use_wifi) : null);
+        mEnableWifiPref.setSummary(shouldAllowWifi ? null
+                : getString(R.string.unplug_ethernet_to_use_wifi));
     }
 
     private void updateWifiList() {
@@ -585,8 +589,10 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             return;
         }
 
+        final boolean wifiAlwaysRequested =
+                ConnectivitySettingsManager.getWifiAlwaysRequested(getContext(), false);
         if (!mIsWifiHardwarePresent || !mConnectivityListener.isWifiEnabledOrEnabling()
-            || mConnectivityListener.isEthernetConnected()) {
+            || (mConnectivityListener.isEthernetConnected() && !wifiAlwaysRequested)) {
             mWifiNetworksCategory.removeAll();
             mNoWifiUpdateBeforeMillis = 0;
             return;
