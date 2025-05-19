@@ -42,6 +42,12 @@
             android:entryValues="@array/device_energy_saver_attentive_timeout_values" />
 
         <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+            android:key="ambientSenseTimeSection"
+            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            custom:uri="@string/ambient_sense_time_section_slice_uri"
+            custom:isPreferenceVisible="false" />
+
+        <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
             android:key="ambientSenseTime"
             android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
             custom:uri="@string/ambient_sense_time_slice_uri"
