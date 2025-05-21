@@ -41,6 +41,7 @@
         android:singleLine="false"
         android:maxLines="4"
         android:ellipsize="end"
+        android:hyphenationFrequency="full"
         style="@style/TextAppearance.TwoPanelPreference.Title"/>
     <com.android.tv.twopanelsettings.SmoothScalingTextView
         android:id="@+id/decor_subtitle"

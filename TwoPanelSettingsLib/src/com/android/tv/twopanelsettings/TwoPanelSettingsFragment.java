@@ -65,7 +65,9 @@ import androidx.preference.ListPreference;
 import androidx.preference.MultiSelectListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceGroupAdapter;
+import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -1180,7 +1182,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     }
 
     /** Show error message in preview panel **/
-    public void showErrorMessage(String errorMessage, Fragment fragment) {
+    public void showErrorMessage(String errorMessage, Fragment fragment, String sliceUri) {
         Fragment prefFragment =
                 getChildFragmentManager().findFragmentById(frameResIds[mPrefPanelIdx]);
         if (fragment == prefFragment) {
@@ -1196,7 +1198,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             transaction.replace(frameResIds[mPrefPanelIdx], newPrefFragment);
             transaction.commitAllowingStateLoss();
         } else {
-            Preference preference = getChosenPreference(prefFragment);
+            Preference preference = getPreferenceByUri(prefFragment, sliceUri);
             if (preference != null) {
                 if (isA11yOn()) {
                     appendErrorToContentDescription(prefFragment, errorMessage);
@@ -1277,6 +1279,34 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         PreferenceGroupAdapter adapter =
                 (PreferenceGroupAdapter) (leanbackPreferenceFragment.getListView().getAdapter());
         return adapter != null ? adapter.getItem(position) : null;
+    }
+
+    /** Get the a preference from the current list view by its Uri. */
+    public static Preference getPreferenceByUri(Fragment fragment, String uri) {
+        if (!(fragment instanceof LeanbackPreferenceFragmentCompat)) {
+            return null;
+        }
+
+        PreferenceScreen preferenceScreen  = ((LeanbackPreferenceFragmentCompat) fragment)
+            .getPreferenceScreen();
+
+        return findPreferenceByUriInPreferenceGroup(preferenceScreen, uri);
+    }
+
+    /** Iterate through PreferenceGroup to find one that matches a uri */
+    private static Preference findPreferenceByUriInPreferenceGroup(
+        PreferenceGroup preferenceGroup, String uri) {
+        for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
+            Preference preference = preferenceGroup.getPreference(i);
+            if (preference instanceof HasSliceUri
+                    && ((HasSliceUri) preference).getUri().equals(uri)) {
+                return preference;
+            }
+            if (preference instanceof PreferenceGroup) {
+                findPreferenceByUriInPreferenceGroup((PreferenceGroup) preference, uri);
+            }
+        }
+        return null;
     }
 
     /** Creates preview preference fragment. */
