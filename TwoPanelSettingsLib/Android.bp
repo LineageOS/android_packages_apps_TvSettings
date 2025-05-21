@@ -60,19 +60,18 @@ android_library {
     use_resource_processor: false,
 }
 
-android_library {
-    name: "TvSliceLib",
+filegroup {
+    name: "TvSliceLibSrc",
     srcs: [
         "src/com/android/tv/twopanelsettings/slices/SlicesConstants.java",
         "src/com/android/tv/twopanelsettings/slices/builders/**/*.java",
         "src/com/android/tv/twopanelsettings/slices/compat/**/*.java",
         "src/com/android/tv/twopanelsettings/slices/base/**/*.java",
     ],
+}
 
-    resource_dirs: [
-        "src/com/android/tv/twopanelsettings/slices/compat/res/view",
-    ],
-
+android_library {
+    name: "TvSliceLibDeps",
     static_libs: [
         "androidx.appcompat_appcompat",
         "androidx.annotation_annotation",
@@ -82,5 +81,44 @@ android_library {
         "androidx.slice_slice-core",
         "androidx.slice_slice-view",
         "error_prone_annotations",
+    ],
+}
+
+android_library {
+    name: "TvSliceLib",
+    srcs: [
+        ":TvSliceLibSrc",
+    ],
+
+    resource_dirs: [
+        "src/com/android/tv/twopanelsettings/slices/compat/res/view",
+    ],
+
+    static_libs: [
+        "TvSliceLibDeps",
+    ],
+}
+
+droiddoc {
+    name: "TwoPanelSliceLibDocs",
+    custom_template: "droiddoc-templates-sdk",
+    srcs: [
+        ":TvSliceLibSrc",
+    ],
+    flags: [
+        "-offlinemode",
+        "-title \"TV Settings Slice Library\"",
+    ],
+    libs: [
+        "TvSliceLibDeps",
+    ],
+    hdf: [
+        "android.whichdoc offline",
+        "dac true",
+        "sdk.codename V",
+        "sdk.preview 0",
+        "sdk.preview.version 1",
+        "sdk.rel.id 1",
+        "sdk.version 16",
     ],
 }
