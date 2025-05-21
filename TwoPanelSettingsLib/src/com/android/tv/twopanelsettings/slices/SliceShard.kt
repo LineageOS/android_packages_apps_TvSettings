@@ -708,7 +708,7 @@ class SliceShard(
             if (uriString != mUriString) {
                 showErrorMessageAsToast(errorMessage)
             } else {
-                showErrorMessage(errorMessage)
+                showErrorMessage(errorMessage, uriString)
             }
         }
         // Provider should provide the correct slice uri in the parameter if it wants to do certain
@@ -729,10 +729,10 @@ class SliceShard(
         }
     }
 
-    private fun showErrorMessage(errorMessage: String) {
+    private fun showErrorMessage(errorMessage: String, sliceUri: String) {
         if (isTwoPanel) {
             (mFragment.callbackFragment as TwoPanelSettingsFragment).showErrorMessage(
-                errorMessage, mFragment
+                errorMessage, mFragment, sliceUri
             )
         }
     }
