@@ -57,7 +57,7 @@
         android:entries="@array/bt_hci_snoop_log_entries"
         android:entryValues="@array/bt_hci_snoop_log_values" />
 
-    <com.android.settingslib.RestrictedSwitchPreference
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
         android:key="oem_unlock_enable"
         android:title="@string/oem_unlock_enable"
         android:summary="@string/oem_unlock_enable_summary"
