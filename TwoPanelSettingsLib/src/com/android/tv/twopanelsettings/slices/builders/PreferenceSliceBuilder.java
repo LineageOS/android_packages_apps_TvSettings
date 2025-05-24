@@ -22,7 +22,10 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.RADIO;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.SEEKBAR;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.SWITCH;
 
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -36,6 +39,7 @@ import androidx.core.util.Pair;
 
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.SliceSpecs;
+import com.android.tv.twopanelsettings.slices.compat.SliceProvider;
 import com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder;
 import com.android.tv.twopanelsettings.slices.compat.builders.SliceAction;
 import com.android.tv.twopanelsettings.slices.compat.core.SliceHints;
@@ -48,17 +52,50 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO: Remove unused code and add test.
-/** Builder for constructing slices composed of rows of TvSettings style preferences. */
+/**
+ * TV Settings UI is customized by implementing a {@link SliceProvider} and overriding
+ * {@link SliceProvider#onBindSlice(Uri, Bundle)} to return a preference page constructed by
+ * {@link PreferenceSliceBuilder}. Each preference is constructed using a {@link RowBuilder} and
+ * preferences can be nested in categories, in which case you can add child RowBuilders to category
+ * RowBuilder. Example use:
+ * <pre>
+ * {@code
+ * public Slice onBindSlice(Uri sliceUri, Bundle extras) {
+ *     PreferenceSliceBuilder psb = new PreferenceSliceBuilder(
+ *        context, sliceUri, PreferenceSliceBuilder.Infinity)
+ *     psb.addScreenTitle(new RowBuilder().setTitle()...)
+ *     psb.addPreference(new RowBuilder().setTitle()...)
+ *     return psb.buildForSettings();
+ * }
+ * }
+ * </pre>
+ * <p>
+ * TV Settings uses a copy of now deprecated Android slices that is simplified and tailored for
+ * TV Settings use and supported going forward. There are two types of Slices:
+ * <p>
+ * <ul>
+ *     <li>Custom setting pages implemented entirely outside TV Settings. There are reloaded
+ *         every time page is visited and can contain non-persistable data such as
+ *         {@link android.app.PendingIntent}s. While page is visible, it can be refreshed by
+ *         {@link android.content.ContentResolver#notifyChange(Uri, ContentObserver)}.</li>
+ *     <li>Updates to top level Settings page and standard child pages such as "System". There
+ *         are cached persistently and only re-fetched when app that provided the slice is updated.
+ *         Therefore these slices must be persistable by using only regular Intents and not
+ *         PendingIntents. If needed, all pages can be explicitly refreshed by sending
+ *         com.android.tv.settings.CLEAR_CACHED_SLICES broadcast to TV Settings.</li>
+ *     </li>
+ * </ul>
+ * <p>
+ * A slice can append all preferences from another slice by using {@link #addFromSlice}. This
+ * also copies screen title from another slice if one is not already added explicitly.
+ */
 public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
   private PreferenceSliceBuilderImpl mImpl;
 
-  /** Constant representing infinity. */
+  /** Constant representing infinite time to live. */
   public static final long INFINITY = SliceHints.INFINITY;
 
-  /** @hide */
-  // @RestrictTo(RestrictTo.Scope.LIBRARY)
   @IntDef({
     View.LAYOUT_DIRECTION_RTL,
     View.LAYOUT_DIRECTION_LTR,
@@ -143,7 +180,8 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
   /**
    * Set a custom screen title for slice. It is recommended to invoke setPageId() for the RowBuilder
-   * in addition to setTitle(), to help with logging.
+   * in addition to setTitle(), to help with logging. {@link RowBuilder#setSubtitle} and
+   * {@link RowBuilder#setIcon} can be used to further customize page heading.
    */
   public PreferenceSliceBuilder addScreenTitle(RowBuilder builder) {
     mImpl.addScreenTitle(builder);
@@ -152,7 +190,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
   /**
    * Add an embedded preference placeholder where another slice can control the properties via
-   * setEmbeddedPreference.
+   * setEmbeddedPreference. Use {@link RowBuilder#setTargetSliceUri} to specify delegated slice.
    */
   public PreferenceSliceBuilder addEmbeddedPreference(RowBuilder builder) {
     mImpl.addEmbeddedPreference(builder);
@@ -201,6 +239,9 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     return this;
   }
 
+  /**
+   * Represents a preference or preference category within preference screen.
+   */
   public static class RowBuilder {
 
     private final Uri mUri;
@@ -465,13 +506,33 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     }
 
     /**
-     * Set a pendingIntent for the preference builder.
-     *
-     * @param pendingIntent pendingIntent
-     * @return builder
+     * Set preference click action as a {@link PendingIntent}.
      */
     @NonNull
     @CanIgnoreReturnValue
+    public RowBuilder setAction(@NonNull PendingIntent pendingIntent) {
+      return setPrimaryAction(new SliceAction(pendingIntent, "", false));
+    }
+
+    /**
+     * Set preference click action as a {@link Intent}. This form is suitable for persistently
+     * cachable slices used to customize main settings screens. Intent can be an activity or
+     * broadcast. If security is necessary, it can be added by requiring a WRITE_SECURE_SETTINGS
+     * permission (that TV Settings has and regular apps won't) and/or adding an extra with a
+     * secret.
+     */
+    @NonNull
+    @CanIgnoreReturnValue
+    public RowBuilder setAction(@NonNull Intent intent) {
+      return setPrimaryAction(new SliceAction(intent, "", false));
+    }
+
+    /**
+     * @deprecated Use {@link #setAction} with Intent or PendingIntent
+     */
+    @NonNull
+    @CanIgnoreReturnValue
+    @Deprecated
     public RowBuilder setPendingIntent(@NonNull Parcelable pendingIntent) {
       return setPrimaryAction(new SliceAction(pendingIntent, "", false));
     }
@@ -486,6 +547,29 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
      */
     @NonNull
     @CanIgnoreReturnValue
+    public RowBuilder setFollowupAction(@NonNull PendingIntent pendingIntent) {
+      mFollowupAction = new SliceAction(pendingIntent, "", false);
+      return this;
+    }
+
+    /**
+     * Set a followup Intent for the preference builder. After the initial pendingIntent is
+     * launched and result is retrieved by TvSettings, TvSettings will pack the result into the
+     * followup Intent and launch it.
+     */
+    @NonNull
+    @CanIgnoreReturnValue
+    public RowBuilder setFollowupAction(@NonNull Intent intent) {
+      mFollowupAction = new SliceAction(intent, "", false);
+      return this;
+    }
+
+    /**
+     * @deprecated Use {@link #setAction} with Intent or PendingIntent
+     */
+    @NonNull
+    @CanIgnoreReturnValue
+    @Deprecated
     public RowBuilder setFollowupPendingIntent(@NonNull Parcelable pendingIntent) {
       mFollowupAction = new SliceAction(pendingIntent, "", false);
       return this;
@@ -630,51 +714,51 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     /**
      * Add a radio button to the RowBuilder.
      *
-     * @param pendingIntent pendingIntent to launch when radio is clicked.
+     * @param intent pendingIntent or intent to launch when radio is clicked.
      * @param isChecked Initial state of the radio button
      */
     @NonNull
     @CanIgnoreReturnValue
-    public RowBuilder addRadioButton(Parcelable pendingIntent, boolean isChecked) {
-      return addButton(pendingIntent, isChecked, RADIO);
+    public RowBuilder addRadioButton(Parcelable intent, boolean isChecked) {
+      return addButton(intent, isChecked, RADIO);
     }
 
     /**
      * Add a radio button to the RowBuilder.
      *
-     * @param pendingIntent pendingIntent to launch when radio is clicked.
+     * @param intent pendingIntent or intent to launch when radio is clicked.
      * @param isChecked Initial state of the radio button
      * @param radioGroup group of the radio
      */
     @NonNull
     @CanIgnoreReturnValue
     public RowBuilder addRadioButton(
-        Parcelable pendingIntent, boolean isChecked, CharSequence radioGroup) {
-      return addButton(pendingIntent, isChecked, RADIO).setRadioGroup(radioGroup);
+        Parcelable intent, boolean isChecked, CharSequence radioGroup) {
+      return addButton(intent, isChecked, RADIO).setRadioGroup(radioGroup);
     }
 
     /**
      * Add a checkmark to the RowBuilder.
      *
-     * @param pendingIntent pendingIntent to launch when checkmark is clicked.
+     * @param intent pendingIntent or intent to launch when checkmark is clicked.
      * @param isChecked Initial state of the check mark.
      */
     @NonNull
     @CanIgnoreReturnValue
-    public RowBuilder addCheckMark(Parcelable pendingIntent, boolean isChecked) {
-      return addButton(pendingIntent, isChecked, CHECKMARK);
+    public RowBuilder addCheckMark(Parcelable intent, boolean isChecked) {
+      return addButton(intent, isChecked, CHECKMARK);
     }
 
     /**
      * Add a switch to the RowBuilder.
      *
-     * @param pendingIntent pendingIntent to launch when switch is clicked.
+     * @param intent pendingIntent or intent to launch when switch is clicked.
      * @param isChecked Initial state of the switch.
      */
     @NonNull
     @CanIgnoreReturnValue
-    public RowBuilder addSwitch(Parcelable pendingIntent, boolean isChecked) {
-      return addButton(pendingIntent, isChecked, SWITCH);
+    public RowBuilder addSwitch(Parcelable intent, boolean isChecked) {
+      return addButton(intent, isChecked, SWITCH);
     }
 
     @NonNull
@@ -689,7 +773,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     /**
      * Add a switch for the preference.
      *
-     * @param pendingIntent pendingIntent
+     * @param intent PendingIntent or Intent to launch when switch is clicked
      * @param actionTitle title for the switch, also used for contentDescription.
      * @param isChecked the state of the switch
      * @return
@@ -697,8 +781,8 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     @NonNull
     @CanIgnoreReturnValue
     public PreferenceSliceBuilder.RowBuilder addSwitch(
-        Parcelable pendingIntent, @NonNull CharSequence actionTitle, boolean isChecked) {
-      SliceAction switchAction = new SliceAction(pendingIntent, actionTitle, isChecked);
+        Parcelable intent, @NonNull CharSequence actionTitle, boolean isChecked) {
+      SliceAction switchAction = new SliceAction(intent, actionTitle, isChecked);
       mButtonStyle = SWITCH;
       return addEndItem(switchAction);
     }
@@ -706,8 +790,8 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     @NonNull
     @CanIgnoreReturnValue
     public PreferenceSliceBuilder.RowBuilder addSeekBar(
-        Parcelable pendingIntent, int min, int max, int value) {
-      SliceAction seekbarAction = new SliceAction(pendingIntent, "", false);
+        Parcelable intent, int min, int max, int value) {
+      SliceAction seekbarAction = new SliceAction(intent, "", false);
       mButtonStyle = SEEKBAR;
       mSeekbarMin = min;
       mSeekbarMax = max;
@@ -756,7 +840,9 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
       return this;
     }
 
-    /** */
+    /**
+     * Returns list of currently added child preferences
+     */
     public List<RowBuilder> getPreferences() {
       return mChildPreferences;
     }
@@ -892,7 +978,9 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
       return mClassName;
     }
 
-    /**  */
+    /**
+     * Sets class name of this preference, for example "androidx.preference.PreferenceCategory".
+     */
     @NonNull
     @CanIgnoreReturnValue
     public RowBuilder setClassName(@Nullable String className) {
@@ -1073,7 +1161,11 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
       return mProperties;
     }
 
-    /**  */
+    /**
+     * List of properties for this preference. For example, adding a boolean called
+     * "orderingAsAdded" to bundle will call setOrderingAsAdded method with value
+     * as argument.
+     */
     @NonNull
     @CanIgnoreReturnValue
     public RowBuilder setProperties(@Nullable Bundle properties) {

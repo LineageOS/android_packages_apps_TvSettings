@@ -27,7 +27,7 @@ import androidx.core.content.ContextCompat;
 
 /** Create two panel settings style icon */
 public class IconUtil {
-  private static final int INSET = 12;
+  private static final int INSET = 18;
   private static final String TAG = "IconUtil";
 
   /** Add the border and return the compound icon. */
