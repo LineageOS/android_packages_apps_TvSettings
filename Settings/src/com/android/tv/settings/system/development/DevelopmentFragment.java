@@ -93,6 +93,7 @@ import com.android.tv.settings.system.development.audio.AudioDebug;
 import com.android.tv.settings.system.development.audio.AudioMetrics;
 import com.android.tv.settings.system.development.audio.AudioReaderException;
 import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.settings.widget.SwitchWithSoundPreference;
 import com.android.tv.twopanelsettings.slices.SliceShard;
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 
@@ -928,7 +929,13 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             mHaveDebugSettings = true;
         } else {
             mDebugAppPref.setSummary(getResources().getString(R.string.debug_app_not_set));
-            mWaitForDebugger.setEnabled(false);
+            if (FlavorUtils.isTwoPanel(getContext())) {
+                SwitchWithSoundPreference debuggerSwitchPreference =
+                    (SwitchWithSoundPreference) mWaitForDebugger;
+                debuggerSwitchPreference.setDisabledButFocusable(true);
+            } else {
+                mWaitForDebugger.setEnabled(false);
+            }
         }
     }
 

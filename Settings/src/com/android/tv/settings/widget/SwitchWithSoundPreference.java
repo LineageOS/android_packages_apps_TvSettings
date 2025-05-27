@@ -25,10 +25,11 @@ import androidx.preference.SwitchPreference;
 import com.android.tv.settings.SystemSoundsPlayer;
 import com.android.tv.settings.TvSettingsApplication;
 
+import com.android.tv.twopanelsettings.FocusableWhenDisabledPreference;
 /**
  * SwitchPreference that plays custom select / deselect sound effects
  */
-public class SwitchWithSoundPreference extends SwitchPreference {
+public class SwitchWithSoundPreference extends FocusableWhenDisabledPreference {
     private final SystemSoundsPlayer mSystemSoundsPlayer;
 
     public SwitchWithSoundPreference(Context context, AttributeSet attrs, int defStyleAttr,
