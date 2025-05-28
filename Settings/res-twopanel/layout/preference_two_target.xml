@@ -16,7 +16,8 @@
   -->
 <!-- Based on leanback_preference.xml, overrides
 packages/SettingsLib/TwoTargetPreference/res/layout/preference_two_target.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.android.tv.twopanelsettings.FocusableWhenDisabledLinearLayout
+              xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/container"
               android:layout_width="@dimen/tp_preference_width"
               android:layout_height="wrap_content"
@@ -88,7 +89,8 @@ packages/SettingsLib/TwoTargetPreference/res/layout/preference_two_target.xml --
         android:background="@color/tp_preference_item_secondary_text_color_selector"/>
 
     <!-- Preference should place its actual preference widget here. -->
-    <LinearLayout android:id="@android:id/widget_frame"
+    <com.android.tv.twopanelsettings.FocusableWhenDisabledLinearLayout
+                  android:id="@android:id/widget_frame"
                   android:layout_width="wrap_content"
                   android:layout_height="match_parent"
                   android:minWidth="56dp"
@@ -96,4 +98,4 @@ packages/SettingsLib/TwoTargetPreference/res/layout/preference_two_target.xml --
                   android:gravity="center"
                   android:orientation="vertical"/>
 
-</LinearLayout>
+</com.android.tv.twopanelsettings.FocusableWhenDisabledLinearLayout>

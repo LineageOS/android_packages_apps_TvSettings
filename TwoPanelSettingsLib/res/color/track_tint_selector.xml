@@ -14,25 +14,32 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:color="@color/tp_preference_switch_track_on_focused_color"
-        android:state_enabled="true"
+        app:disabledButFocusable="false"
         android:state_focused="true"
         android:state_checked="true"/>
     <item android:color="@color/tp_preference_switch_track_off_focused_color"
-        android:state_enabled="true"
+        app:disabledButFocusable="false"
         android:state_focused="true"/>
     <item android:color="@color/tp_preference_switch_track_on_default_color"
-        android:state_enabled="true"
+        app:disabledButFocusable="false"
         android:state_checked="true"/>
     <item android:color="@color/tp_preference_switch_track_off_default_color"
-        android:state_enabled="true"/>
+        app:disabledButFocusable="false"/>
     <item android:color="@color/tp_preference_switch_track_on_focused_disabled_color"
+        app:disabledButFocusable="true"
         android:state_focused="true"
         android:state_checked="true"/>
     <item android:color="@color/tp_preference_switch_track_off_focused_disabled_color"
+        app:disabledButFocusable="true"
         android:state_focused="true"/>
     <item android:color="@color/tp_preference_switch_track_on_default_disabled_color"
+        app:disabledButFocusable="true"
         android:state_checked="true"/>
-    <item android:color="@color/tp_preference_switch_track_off_default_disabled_color" />
+    <item
+        app:disabledButFocusable="true"
+        android:color="@color/tp_preference_switch_track_off_default_disabled_color" />
 </selector>

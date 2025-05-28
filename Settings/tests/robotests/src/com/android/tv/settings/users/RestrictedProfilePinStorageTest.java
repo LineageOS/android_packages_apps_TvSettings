@@ -243,7 +243,7 @@ public class RestrictedProfilePinStorageTest {
         LockscreenCredential credential = LockscreenCredential.createPinOrNone(pin);
         when(mLockPatternUtils.isSecure(anyInt())).thenReturn(pin != null);
         when(mLockSettings.checkCredential(any(), anyInt(), any()))
-                .thenReturn(VerifyCredentialResponse.ERROR);
+                .thenReturn(VerifyCredentialResponse.OTHER_ERROR);
         when(mLockPatternUtils.checkCredential(any(), anyInt(), any()))
                 .thenReturn(false);
         if (pin != null) {

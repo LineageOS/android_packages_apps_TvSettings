@@ -151,7 +151,11 @@ public class NotificationAccess extends SettingsPreferenceFragment {
             pref.setChecked(mNotificationManager.isNotificationListenerAccessGranted(cn));
             // Prevent the user from removing access from a default notification listener.
             if (mDefaultPackages.contains(cn.getPackageName()) && pref.isChecked()) {
-                pref.setEnabled(false);
+                if (FlavorUtils.isTwoPanel(getContext())) {
+                    pref.setDisabledButFocusable(true);
+                } else {
+                    pref.setEnabled(false);
+                }
                 pref.setSummary(R.string.default_notification_access_package_summary);
             }
             pref.setOnPreferenceChangeListener((preference, newValue) -> {

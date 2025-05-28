@@ -23,9 +23,10 @@ import android.os.UserManager;
 import android.service.oemlock.OemLockManager;
 import android.text.TextUtils;
 import android.util.Log;
-
 import androidx.preference.TwoStatePreference;
 
+import com.android.tv.settings.widget.SwitchWithSoundPreference;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.R;
 
 public class OemUnlockPreferenceController implements OemUnlockDialog.Callback {
@@ -34,7 +35,8 @@ public class OemUnlockPreferenceController implements OemUnlockDialog.Callback {
 
     private final OemLockManager mOemLockManager;
     private final UserManager mUserManager;
-    private final TwoStatePreference mPreference;
+    private final SwitchWithSoundPreference mPreference;
+    private final Context mContext;
 
     public OemUnlockPreferenceController(Context context, TwoStatePreference preference) {
         if (!TextUtils.equals(SystemProperties.get("ro.oem_unlock_supported", "0"), "1")) {
@@ -44,11 +46,12 @@ public class OemUnlockPreferenceController implements OemUnlockDialog.Callback {
             mOemLockManager = (OemLockManager) context.getSystemService(Context.OEM_LOCK_SERVICE);
         }
         mUserManager = (UserManager) context.getSystemService(Context.USER_SERVICE);
-        mPreference = preference;
+        mPreference = (SwitchWithSoundPreference) preference;
+        mContext = context;
         updateState();
     }
 
-    public TwoStatePreference getPreference() {
+    public SwitchWithSoundPreference getPreference() {
         return mPreference;
     }
 
@@ -77,7 +80,11 @@ public class OemUnlockPreferenceController implements OemUnlockDialog.Callback {
     }
 
     public void updateState() {
-        mPreference.setEnabled(shouldEnableOemUnlockPreference());
+        if (FlavorUtils.isTwoPanel(mContext)) {
+            mPreference.setDisabledButFocusable(!shouldEnableOemUnlockPreference());
+        } else {
+            mPreference.setEnabled(shouldEnableOemUnlockPreference());
+        }
         mPreference.setChecked(isOemUnlockedAllowed());
         mPreference.setSummary(getPreferenceSummary());
     }

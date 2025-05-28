@@ -15,7 +15,8 @@
   ~ limitations under the License
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.android.tv.twopanelsettings.FocusableWhenDisabledLinearLayout
+              xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/container"
               android:layout_width="@dimen/tp_preference_width"
               android:layout_height="wrap_content"
@@ -80,11 +81,11 @@
     </LinearLayout>
 
     <!-- Preference should place its actual preference widget here. -->
-    <LinearLayout android:id="@android:id/widget_frame"
+    <com.android.tv.twopanelsettings.FocusableWhenDisabledLinearLayout
+                  android:id="@android:id/widget_frame"
                   android:layout_width="wrap_content"
                   android:layout_height="match_parent"
                   android:duplicateParentState="true"
                   android:gravity="center_vertical"
                   android:orientation="vertical" />
-
-</LinearLayout>
+</com.android.tv.twopanelsettings.FocusableWhenDisabledLinearLayout>
