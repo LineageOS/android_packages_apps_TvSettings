@@ -109,6 +109,10 @@ class EmbeddedSliceSwitchPreference : SliceSwitchPreference {
     }
 
     public override fun onClick() {
+        if (getDisabledButFocusable()) {
+            return
+        }
+
         var newValue = !isChecked
         try {
             if (mAction == null) {
