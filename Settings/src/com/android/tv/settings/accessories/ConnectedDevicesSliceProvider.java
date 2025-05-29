@@ -17,8 +17,6 @@
 package com.android.tv.settings.accessories;
 
 
-import static android.app.PendingIntent.FLAG_IMMUTABLE;
-import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
 import static android.content.Intent.FLAG_RECEIVER_FOREGROUND;
 
 import static com.android.tv.settings.accessories.AddAccessoryActivity.ACTION_CONNECT_INPUT;
@@ -35,7 +33,6 @@ import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.FIN
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.isFindMyRemoteButtonEnabled;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTION_BACKLIGHT;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.getBacklightModeIntent;
-import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.BACKLIGHT_MODE_SETTING;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.getBacklightMode;
 
 import android.app.PendingIntent;
@@ -62,8 +59,8 @@ import android.util.Log;
 
 import androidx.annotation.IntegerRes;
 import androidx.core.graphics.drawable.IconCompat;
-import com.android.tv.twopanelsettings.slices.compat.Slice;
-import com.android.tv.twopanelsettings.slices.compat.SliceProvider;
+
+import com.android.tv.twopanelsettings.slices.TvSettingsSliceProvider;
 
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
@@ -82,26 +79,17 @@ import java.util.Map;
 import java.util.Set;
 
 /** The SliceProvider for "connected devices" settings */
-public class ConnectedDevicesSliceProvider extends SliceProvider implements
+public class ConnectedDevicesSliceProvider extends TvSettingsSliceProvider implements
         BluetoothDeviceProvider.Listener {
 
     private static final String TAG = "ConnectedDevices";
     private static final boolean DEBUG = false;
     private static final boolean DISCONNECT_PREFERENCE_ENABLED = false;
-    private static final int ACTIVE_AUDIO_OUTPUT_INTENT_REQUEST_CODE = 9;
     private final Map<Uri, Integer> mPinnedUris = new ArrayMap<>();
     private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     private boolean mBtDeviceServiceBound;
     private BluetoothDevicesService.LocalBinder mBtDeviceServiceBinder;
-
-    private final BluetoothDeviceProvider mLocalBluetoothDeviceProvider =
-            new LocalBluetoothDeviceProvider() {
-                @Override
-                BluetoothDeviceProvider getHostBluetoothDeviceProvider() {
-                    return getBluetoothDeviceProvider();
-                }
-    };
 
     private final ServiceConnection mBtDeviceServiceConnection =
             new SimplifiedConnection() {
@@ -146,19 +134,6 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
     static final int[] YES_NO_ARGS = {YES, NO};
 
     @Override
-    public boolean onCreateSliceProvider() {
-        return true;
-    }
-
-    @Override
-    public PendingIntent onCreatePermissionRequest(Uri sliceUri, String callingPackage) {
-        final Intent settingsIntent = new Intent(Settings.ACTION_SETTINGS);
-        final PendingIntent noOpIntent = PendingIntent.getActivity(
-                getContext(), 0, settingsIntent, PendingIntent.FLAG_IMMUTABLE);
-        return noOpIntent;
-    }
-
-    @Override
     public void onSlicePinned(Uri sliceUri) {
         mHandler.post(() -> {
             if (DEBUG) {
@@ -179,9 +154,9 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
     }
 
     @Override
-    public Slice onBindSlice(Uri sliceUri) {
+    protected boolean createSlice(PreferenceSliceBuilder builder, Uri sliceUri) {
         if (DEBUG) {
-            Log.d(TAG, "onBindSlice: " + sliceUri);
+            Log.d(TAG, "createSlice: " + sliceUri);
         }
         StrictMode.ThreadPolicy oldPolicy = StrictMode.getThreadPolicy();
         try {
@@ -189,18 +164,18 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
             StrictMode.setThreadPolicy(
                 new StrictMode.ThreadPolicy.Builder(oldPolicy).permitDiskReads().build());
             if (ConnectedDevicesSliceUtils.isGeneralPath(sliceUri)) {
-                return createGeneralSlice(sliceUri);
+                return createGeneralSlice(builder);
             } else if (ConnectedDevicesSliceUtils.isBluetoothDevicePath(sliceUri)) {
-                return createBluetoothDeviceSlice(sliceUri);
+                return createBluetoothDeviceSlice(builder, sliceUri);
             } else if (ConnectedDevicesSliceUtils.isFindMyRemotePath(sliceUri)) {
-                return createFindMyRemoteSlice(sliceUri);
+                return createFindMyRemoteSlice(builder);
             } else if (ConnectedDevicesSliceUtils.isBacklightPath(sliceUri)) {
-                return createBacklightSlice(sliceUri);
+                return createBacklightSlice(builder, sliceUri);
             }
         } finally {
             StrictMode.setThreadPolicy(oldPolicy);
         }
-        return null;
+        return false;
     }
 
     @Override
@@ -235,8 +210,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
     }
 
     // The initial slice in the Connected Device flow.
-    private Slice createGeneralSlice(Uri sliceUri) {
-        PreferenceSliceBuilder psb = new PreferenceSliceBuilder(getContext(), sliceUri);
+    private boolean createGeneralSlice(PreferenceSliceBuilder psb) {
         psb.addScreenTitle(
                 new RowBuilder()
                         .setTitle(getString(R.string.connected_devices_slice_pref_title))
@@ -247,11 +221,11 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         updateOfficialRemoteSettings(psb);
         updateFmr(psb);
         updateBacklight(psb);
-        return psb.buildForSettings();
+        return true;
     }
 
     // The slice page that shows detail information of a particular device.
-    private Slice createBluetoothDeviceSlice(Uri sliceUri) {
+    private boolean createBluetoothDeviceSlice(PreferenceSliceBuilder psb, Uri sliceUri) {
         Context context = getContext();
         String deviceAddr = ConnectedDevicesSliceUtils.getDeviceAddr(sliceUri);
         BluetoothDevice device = BluetoothDevicesService.findDevice(deviceAddr);
@@ -262,7 +236,6 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
             deviceName = AccessoryUtils.getLocalName(device);
         }
 
-        PreferenceSliceBuilder psb = new PreferenceSliceBuilder(getContext(), sliceUri);
         psb.addScreenTitle(
                 new RowBuilder()
                         .setTitle(deviceName)
@@ -393,7 +366,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
 
         infoPref.addInfoItem(getString(R.string.bluetooth_serial_number_label), deviceAddr);
         psb.addPreference(infoPref);
-        return psb.buildForSettings();
+        return true;
     }
 
     private void updateBluetoothToggle(PreferenceSliceBuilder psb) {
@@ -656,9 +629,8 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                 && !AccessoryUtils.isKnownDevice(context, device);
     }
 
-    private Slice createFindMyRemoteSlice(Uri sliceUri) {
+    private boolean createFindMyRemoteSlice(PreferenceSliceBuilder psb) {
         Context context = getContext();
-        final PreferenceSliceBuilder psb = new PreferenceSliceBuilder(context, sliceUri);
         psb.addScreenTitle(new RowBuilder()
                 .setTitle(getString(R.string.settings_find_my_remote_title))
                 .setSubtitle(getString(R.string.find_my_remote_slice_description)));
@@ -686,7 +658,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                 .setPendingIntent(action)
                 .setIcon(IconCompat.createWithResource(context, R.drawable.ic_play_arrow))
                 .setIconNeedsToBeProcessed(true));
-        return psb.buildForSettings();
+        return true;
     }
 
     /**
@@ -695,9 +667,8 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
      * 1: Standard (Always)
      * 2: Scheduled (Only during nighttime)
      */
-    private Slice createBacklightSlice(Uri sliceUri) {
+    private boolean createBacklightSlice(PreferenceSliceBuilder psb, Uri sliceUri) {
         Context context = getContext();
-        final PreferenceSliceBuilder psb = new PreferenceSliceBuilder(context, sliceUri);
         psb.addScreenTitle(new RowBuilder()
                 .setTitle(getString(R.string.settings_backlight_title))
                 .setSubtitle(getString(R.string.backlight_slice_description)));
@@ -727,6 +698,6 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
             psb.addPreference(backlightModeRow);
         }
 
-        return psb.buildForSettings();
+        return true;
     }
 }

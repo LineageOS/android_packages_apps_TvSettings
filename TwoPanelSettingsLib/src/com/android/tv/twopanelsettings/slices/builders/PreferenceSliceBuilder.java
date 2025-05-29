@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.android.tv.twopanelsettings.slices.builders;
 
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.BUTTONSTYLE;
@@ -27,6 +26,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.ContentObserver;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
@@ -34,12 +34,14 @@ import android.view.View;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.core.graphics.drawable.IconCompat;
 import androidx.core.util.Pair;
 
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.SliceSpecs;
 import com.android.tv.twopanelsettings.slices.compat.SliceProvider;
+import com.android.tv.twopanelsettings.slices.compat.SliceViewManager;
 import com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder;
 import com.android.tv.twopanelsettings.slices.compat.builders.SliceAction;
 import com.android.tv.twopanelsettings.slices.compat.core.SliceHints;
@@ -195,6 +197,10 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
   public PreferenceSliceBuilder addEmbeddedPreference(RowBuilder builder) {
     mImpl.addEmbeddedPreference(builder);
     return this;
+  }
+
+  public PreferenceSliceBuilder addFromSliceUri(Context context, Uri uri) {
+    return addFromSlice(SliceViewManager.getInstance(context).bindSlice(uri));
   }
 
   /**
@@ -523,6 +529,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
      */
     @NonNull
     @CanIgnoreReturnValue
+    @RequiresApi(Build.VERSION_CODES.BAKLAVA)
     public RowBuilder setAction(@NonNull Intent intent) {
       return setPrimaryAction(new SliceAction(intent, "", false));
     }
@@ -559,6 +566,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
      */
     @NonNull
     @CanIgnoreReturnValue
+    @RequiresApi(Build.VERSION_CODES.BAKLAVA)
     public RowBuilder setFollowupAction(@NonNull Intent intent) {
       mFollowupAction = new SliceAction(intent, "", false);
       return this;
@@ -835,6 +843,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     /** Adds a child preference to preference category. */
     @NonNull
     @CanIgnoreReturnValue
+    @RequiresApi(Build.VERSION_CODES.BAKLAVA)
     public RowBuilder addPreference(RowBuilder childPreference) {
       mChildPreferences.add(childPreference);
       return this;
@@ -974,6 +983,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     }
 
     @Nullable
+    @RequiresApi(Build.VERSION_CODES.BAKLAVA)
     public String getClassName() {
       return mClassName;
     }
@@ -983,6 +993,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
      */
     @NonNull
     @CanIgnoreReturnValue
+    @RequiresApi(Build.VERSION_CODES.BAKLAVA)
     public RowBuilder setClassName(@Nullable String className) {
       mClassName = className;
       return this;
@@ -1168,6 +1179,7 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
      */
     @NonNull
     @CanIgnoreReturnValue
+    @RequiresApi(Build.VERSION_CODES.BAKLAVA)
     public RowBuilder setProperties(@Nullable Bundle properties) {
       mProperties = properties;
       return this;
