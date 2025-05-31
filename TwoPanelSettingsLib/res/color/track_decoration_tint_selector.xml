@@ -14,19 +14,21 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:color="@color/tp_preference_switch_track_decoration_on_focused_color"
-        android:state_enabled="true"
+        app:disabledButFocusable="false"
         android:state_focused="true"
         android:state_checked="true"/>
     <item android:color="@color/tp_preference_switch_track_decoration_off_focused_color"
-        android:state_enabled="true"
+        app:disabledButFocusable="false"
         android:state_focused="true"/>
     <item android:color="@color/tp_preference_switch_track_decoration_on_default_color"
-        android:state_enabled="true"
+        app:disabledButFocusable="false"
         android:state_checked="true"/>
     <item android:color="@color/tp_preference_switch_track_decoration_off_default_color"
-        android:state_enabled="true"/>
+        app:disabledButFocusable="false"/>
     <item android:color="@color/tp_preference_switch_track_decoration_on_focused_disabled_color"
         android:state_focused="true"
         android:state_checked="true"/>
