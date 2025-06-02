@@ -37,6 +37,7 @@ import android.view.WindowManager;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.preference.PreferenceScreen;
 
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
@@ -413,8 +414,13 @@ public class AddAccessoryActivity extends FragmentActivity
             return;
         }
 
-        int prevNumDevices = mPreferenceFragment.getPreferenceScreen().getPreferenceCount();
+        PreferenceScreen screen = mPreferenceFragment.getPreferenceScreen();
+        if (screen == null) {
+            Log.w(TAG, "PreferenceScreen is null, skipping updateView");
+            return;
+        }
 
+        int prevNumDevices = screen.getPreferenceCount();
 
         mPreferenceFragment.updateList(mPreferenceFragment.getPreferenceScreen(),
                 mBluetoothDevices, mCurrentTargetAddress, mCurrentTargetStatus, mCancelledAddress);
