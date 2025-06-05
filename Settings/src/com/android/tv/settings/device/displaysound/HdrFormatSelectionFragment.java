@@ -34,6 +34,7 @@ import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.hardware.display.DisplayManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 import android.widget.Toast;
 
@@ -64,7 +65,6 @@ import java.util.stream.Collectors;
  */
 @Keep
 public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
-
     static final String KEY_HDR_FORMAT_SELECTION = "hdr_format_selection_option";
     static final String KEY_SUPPORTED_HDR_FORMATS = "supported_formats";
     static final String KEY_UNSUPPORTED_HDR_FORMATS = "unsupported_formats";
@@ -80,6 +80,8 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
     static final int[] HDR_FORMATS_DISPLAY_ORDER = {
         HDR_TYPE_DOLBY_VISION, HDR_TYPE_HDR10, HDR_TYPE_HDR10_PLUS, HDR_TYPE_HLG
     };
+
+    private static final String TAG = "HdrFormatSelectionFragment";
 
     private PreferenceCategory mSupportedFormatsPreferenceCategory;
     private PreferenceCategory mUnsupportedFormatsPreferenceCategory;
@@ -227,6 +229,10 @@ public class HdrFormatSelectionFragment extends PreferenceControllerFragment {
 
     private void selectRadioPreference(Preference preference) {
         final RadioPreference radioPreference = (RadioPreference) preference;
+        if (radioPreference == null) {
+            Log.w(TAG, "RadioPreference is null");
+            return;
+        }
         radioPreference.setChecked(true);
         radioPreference.clearOtherRadioPreferences(getPreferenceGroup());
     }

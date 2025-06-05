@@ -33,6 +33,7 @@ import android.hardware.display.HdrConversionMode;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Display;
 import android.widget.Button;
 
@@ -63,7 +64,6 @@ import java.util.concurrent.TimeUnit;
  */
 @Keep
 public class ResolutionSelectionFragment extends PreferenceControllerFragment {
-
     static final String KEY_MODE_SELECTION = "resolution_selection_option";
     static final String KEY_RESOLUTION_PREFIX = "resolution_selection_";
     static final String KEY_RESOLUTION_SELECTION_AUTO = "resolution_selection_auto";
@@ -197,6 +197,10 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
 
     private void selectRadioPreference(Preference preference) {
         final RadioPreference radioPreference = (RadioPreference) preference;
+        if (radioPreference == null) {
+            Log.w(TAG, "RadioPreference is null");
+            return;
+        }
         radioPreference.setChecked(true);
         radioPreference.clearOtherRadioPreferences(getPreferenceGroup());
     }

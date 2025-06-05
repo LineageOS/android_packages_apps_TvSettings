@@ -33,6 +33,7 @@ import android.content.DialogInterface;
 import android.hardware.display.DisplayManager;
 import android.hardware.display.HdrConversionMode;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 
 import androidx.annotation.Keep;
@@ -55,7 +56,6 @@ import java.util.Set;
  */
 @Keep
 public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragment {
-
     static final String KEY_HDR_FORMAT_PREFIX = "hdr_format_";
 
     static final String KEY_DYNAMIC_RANGE_SELECTION_SDR =
@@ -63,6 +63,9 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
 
     static final String KEY_DYNAMIC_RANGE_SELECTION_FORCE =
             "preferred_dynamic_range_selection_force_screen_option";
+
+    private static final String TAG = "PreferredDynamicRangeForceFragment";
+
     private DisplayManager mDisplayManager;
     private int[] mHdrTypes;
 
@@ -146,6 +149,10 @@ public class PreferredDynamicRangeForceFragment extends SettingsPreferenceFragme
 
     private void selectRadioPreference(Preference preference) {
         final RadioPreference radioPreference = (RadioPreference) preference;
+        if (radioPreference == null) {
+            Log.w(TAG, "RadioPreference is null");
+            return;
+        }
         radioPreference.setChecked(true);
         radioPreference.clearOtherRadioPreferences(getPreferenceGroup());
     }
