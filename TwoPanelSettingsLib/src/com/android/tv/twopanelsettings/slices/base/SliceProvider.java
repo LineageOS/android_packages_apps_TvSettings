@@ -481,14 +481,7 @@ public abstract class SliceProvider extends ContentProvider {
 
   private Parcelable onBindSliceStrict(
       Uri sliceUri, List<SliceSpec> supportedSpecs, Bundle extras) {
-    ThreadPolicy oldPolicy = StrictMode.getThreadPolicy();
-    try {
-      StrictMode.setThreadPolicy(
-          new StrictMode.ThreadPolicy.Builder().detectAll().penaltyDeath().build());
-      return onBindSlice(sliceUri, new ArraySet<>(supportedSpecs), extras);
-    } finally {
-      StrictMode.setThreadPolicy(oldPolicy);
-    }
+    return onBindSlice(sliceUri, new ArraySet<>(supportedSpecs), extras);
   }
 
   private final Runnable mAnr =
