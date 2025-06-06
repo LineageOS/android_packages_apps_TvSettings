@@ -28,24 +28,82 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder;
+import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder.RowBuilder;
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.tv.twopanelsettings.slices.compat.SliceProvider;
 
 /**
- * Slices allow adding individual settings and settings pages to TV Settings through content
- * providers hosted in other apps. Select existing settings pages, including top level and
- * System settings can be also customized through Google and OEM slice providers. These pages
- * are cached by TV Settings persistently for performance and reliability and are only refetched
- * when host app is updated.
- * <h1>Use cases</h1>
- * Use cases for slice provider include the following:
+ * Google TV - TvSettings Slices API Integration Guide.
+ *
+ * <p>This guide outlines how to integrate third-party settings into the Google TV Settings app
+ * using its custom Slices API. This API is distinct from deprecated Android slices and is fully
+ * supported going forward.
+ *
+ * <h2>Overview</h2>
+ * <p>The TvSettings Slices API allows apps to implement and surface their own settings content
+ * directly within the main TV Settings application. This provides a seamless user experience by
+ * embedding external settings as if they were part of TV Settings.
+ *
+ * <p>Additionally, a variation of slices can customize default TV Settings pages such as top level
+ * settings, System or Network preferences by rearranging and rename settings without OTA updates
+ * and adding new slice preferences from Google and OEMs.
+ *
+ * <h3>Use Cases</h3>
  * <ul>
- *     <li>Integrating sections implemented by other Google apps for example Google Play or
- *         Ambient mode</li>
- *     <li>OEMs providing settings for special hardware or software capabilities of specific
- *         devices</li>
- *     <li>Google and OEMs being able to update settings tree without an OTA</li>
+ * <li>Integrating sections like "Parental controls" from Google Play.
+ * <li>Adding new settings for features like Ambient Mode.
+ * <li>Implementing OEM-specific settings for custom hardware.
+ * <li>Keeping naming and order of settings consistent across Android releases without OTAs
+ * <li>Exposing new 1P and 3P functionality with play store rather than system updates.
  * </ul>
+ *
+ * <h2>Integration</h2>
+ *
+ * To integrate with TV Settings, extend {@link TvSettingsSliceProvider} and override
+ * {@link #createSlice} to populate the settings screen. Multiple screens can be handled by the
+ * same slice provider by checking passed in URI. Export content provider in your app Manifest and
+ * ensure access control by requiring WRITE_SECURE_SETTINGS permission or checking caller package.
+ * <p>
+ * When user interacts with Settings, you will get callbacks configured by
+ * {@link RowBuilder#setAction} and {@link RowBuilder#setFollowupAction}. Activity and broadcast
+ * callbacks are supported.
+ *
+ * <h3>All slice settings pages details</h3>
+ *
+ * <ul>
+ *     <li>Override a corresponding string resource, for example
+ *         R.string.connected_devices_slice_uri to point to your content provider in device specific
+ *         overlay.
+ *     <li>Call {@link PreferenceSliceBuilder#addScreenTitle} to describe the page.
+ *     <li>Call {@link PreferenceSliceBuilder#addPreference} or
+ *          {@link PreferenceSliceBuilder#addEmbeddedPreference} to add desired settings.
+ *     <li>If data is not ready yet return false and load it on background (though ANRs are no
+ *         longer raised if {@link #createSlice} blocks).
+ *     <li>When data is loaded or changes, call {@link #invalidateSlice} to update UI
+ * </ul>
+ *
+ * <h3>Updatable main settings pages details</h3>
+ *
+ * <ul>
+ *     <li>Override a corresponding resource, for example, R.string.main_fragment_slice_uri</li>
+ *     <li>Include default settings by calling {@link PreferenceSliceBuilder#addFromSliceUri} with
+ *         default URI for the page. This will inherit title screen unless already set.
+ *     <li>Add any additional settings at the end.
+ *     <li>Actions must use regular rather than pending intents as slices are cached persistently.
+ *         Protect activities/broadcasts with WRITE_SECURE_SETTINGS permission if sensitive.
+ *     <li>Use {@link PreferenceSliceBuilder#addEmbeddedPreference} if pending intents or up to
+ *         date current state are required.
+ *     <li>If data is not ready yet (for example content provider host app does not have overlay
+ *         for current system language installed) return false. Default settings will be used and
+ *         content provider will be called again when settings screen is reopened.
+ *     <li>Slice will be refreshed when TV Settings, content provider host app or app referenced in
+ *         {@link PreferenceSliceBuilder#addFromSliceUri} is updated. If update is needed earlier,
+ *         for example due to language overlay being installed, call
+ *         {@link #invalidatesCachedSlices}.
+ * </ul>
+ *
+ * @see PreferenceSliceBuilder
+ * @see RowBuilder
  */
 public abstract class TvSettingsSliceProvider extends SliceProvider {
     private static final String CLEAR_CACHE_BROADCAST =
