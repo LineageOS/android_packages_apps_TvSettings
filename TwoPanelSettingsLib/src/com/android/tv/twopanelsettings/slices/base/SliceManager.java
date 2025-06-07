@@ -242,7 +242,7 @@ public class SliceManager {
       extras.putParcelableArrayList(
           SliceProvider.EXTRA_SUPPORTED_SPECS, new ArrayList<>(supportedSpecs));
       return provider.call(SliceProvider.METHOD_SLICE, null, extras);
-    } catch (RemoteException e) {
+    } catch (Exception e) {
       // Arbitrary and not worth documenting, as Activity
       // Manager will kill this process shortly anyway.
       return null;

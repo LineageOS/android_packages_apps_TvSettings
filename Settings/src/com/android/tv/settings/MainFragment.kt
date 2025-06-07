@@ -177,7 +177,8 @@ open class MainFragment : PreferenceControllerFragment(),
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        val sliceUri = getString(R.string.main_fragment_slice_uri)
+        //val sliceUri = getString(R.string.main_fragment_slice_uri)
+        val sliceUri = "content://com.example.updatablesettings.sliceprovider/main_prefs_x"
 
         if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
             setPreferencesFromResource(preferenceScreenResId, null)
