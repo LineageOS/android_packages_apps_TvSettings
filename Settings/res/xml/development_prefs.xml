@@ -275,6 +275,11 @@
             android:summary="%s"
             android:title="@string/simulate_color_space" />
 
+        <com.android.tv.settings.widget.SwitchWithSoundPreference
+            android:key="enable_angle_as_system_driver"
+            android:title="@string/enable_angle_as_system_driver"
+            android:summary="@string/enable_angle_as_system_driver_summary"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory android:key="media_category"

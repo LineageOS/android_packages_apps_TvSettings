@@ -3090,5 +3090,11 @@
     <!-- Label for screen reader switch On [CHAR LIMIT=100] -->
     <string name="accessibility_service_on_title"><xliff:g id="accessibility_service_name" example="Talkback">%s</xliff:g>:On</string>
 
+    <!-- Debugging developer settings: enable angle as system driver? [CHAR LIMIT=50] -->
+    <string name="enable_angle_as_system_driver">Enable ANGLE as default OpenGL ES driver</string>
+    <!-- Debugging developer settings: enable angle as system driver summary [CHAR LIMIT=NONE] -->
+    <string name="enable_angle_as_system_driver_summary">Experimental, requires reboot.</string>
+    <!--Dialog body text used to explain a reboot is required after changing ANGLE as system GLES driver setting-->
+    <string name="reboot_dialog_enable_angle_as_system_driver">A reboot is required to change the system OpenGL ES driver</string>
 
 </resources>
