@@ -64,6 +64,7 @@ filegroup {
     name: "TvSliceLibSrc",
     srcs: [
         "src/com/android/tv/twopanelsettings/slices/SlicesConstants.java",
+        "src/com/android/tv/twopanelsettings/slices/TvSettingsSliceProvider.java",
         "src/com/android/tv/twopanelsettings/slices/builders/**/*.java",
         "src/com/android/tv/twopanelsettings/slices/compat/**/*.java",
         "src/com/android/tv/twopanelsettings/slices/base/**/*.java",
