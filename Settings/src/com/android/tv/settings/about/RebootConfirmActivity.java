@@ -48,11 +48,24 @@ import java.util.List;
 public class RebootConfirmActivity extends FragmentActivity {
 
     private static final String ARG_SAFE_MODE = "RebootConfirmFragment.safe_mode";
+    private static final String ARG_TITLE = "RebootConfirmFragment.title";
+    private static final String ARG_SUMMARY = "RebootConfirmFragment.summary";
+    private static final String ARG_DEFAULT_TO_CONFIRM = "RebootConfirmFragment.default_to_confirm";
+
 
     /** generate an Intent to start this Activity */
     public static Intent getIntent(Context context, boolean safeMode) {
         return new Intent(context, RebootConfirmActivity.class)
                 .putExtra(ARG_SAFE_MODE, safeMode);
+    }
+
+    public static Intent getIntent(Context context, boolean safeMode, String title, String summary,
+            boolean defaultToConfirm) {
+        return new Intent(context, RebootConfirmActivity.class)
+                .putExtra(ARG_SAFE_MODE, safeMode)
+                .putExtra(ARG_TITLE, title)
+                .putExtra(ARG_SUMMARY, summary)
+                .putExtra(ARG_DEFAULT_TO_CONFIRM, defaultToConfirm);
     }
 
     protected static void reboot(Context context, boolean toSafeMode) {
@@ -84,20 +97,24 @@ public class RebootConfirmActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         if (savedInstanceState == null) {
-            boolean toSafeMode = isToSafeMode(getIntent().getExtras());
+            Bundle extras = getIntent().getExtras();
+            boolean toSafeMode = isToSafeMode(extras);
+            String title = extras != null ? extras.getString(ARG_TITLE) : null;
+            String summary = extras != null ? extras.getString(ARG_SUMMARY) : null;
+            boolean defaultToConfirm = extras != null && extras.getBoolean(ARG_DEFAULT_TO_CONFIRM);
             boolean twoPanel = FlavorUtils.isTwoPanel(getApplicationContext());
 
             if (!twoPanel) {
                 setTheme(R.style.Theme_Leanback_GuidedStep);
                 GuidedStepSupportFragment.addAsRoot(
                         this,
-                        GuidedStepRebootConfirmFragment.newInstance(toSafeMode),
+                        GuidedStepRebootConfirmFragment.newInstance(toSafeMode, title, summary),
                         android.R.id.content);
             } else {
                 setTheme(R.style.TvSettingsDialog_FullScreen);
                 FullScreenDialogRebootConfirmFragment dialogFragment =
                         FullScreenDialogRebootConfirmFragment.newInstance(getApplicationContext(),
-                                toSafeMode);
+                                toSafeMode, title, summary, defaultToConfirm);
                 getSupportFragmentManager()
                         .beginTransaction()
                         .add(android.R.id.content, dialogFragment)
@@ -110,16 +127,19 @@ public class RebootConfirmActivity extends FragmentActivity {
     public static class FullScreenDialogRebootConfirmFragment extends FullScreenDialogFragment {
 
         public static FullScreenDialogRebootConfirmFragment newInstance(Context context,
-                boolean safeMode) {
+                boolean safeMode, @Nullable String title, @Nullable String summary,
+                boolean defaultToConfirm) {
             Bundle args = new FullScreenDialogFragment.DialogBuilder()
                     .setIcon(Icon.createWithResource(context, R.drawable.ic_warning_132dp))
-                    .setTitle(safeMode ? context.getString(R.string.reboot_safemode_confirm)
-                            : context.getString(R.string.system_reboot_confirm))
-                    .setMessage(safeMode ? context.getString(R.string.reboot_safemode_desc) : null)
+                    .setTitle(title != null ? title :
+                                safeMode ? context.getString(R.string.reboot_safemode_confirm)
+                                         : context.getString(R.string.system_reboot_confirm))
+                    .setMessage(summary != null ? summary :
+                            safeMode ? context.getString(R.string.reboot_safemode_desc) : null)
                     .setPositiveButton(safeMode ? context.getString(R.string.reboot_safemode_action)
                             : context.getString(R.string.restart_button_label))
                     .setNegativeButton(context.getString(R.string.settings_cancel))
-                    .setInitialFocusOnNegativeButton(true)
+                    .setInitialFocusOnNegativeButton(!defaultToConfirm)
                     .build();
 
             args.putBoolean(ARG_SAFE_MODE, safeMode);
@@ -144,9 +164,15 @@ public class RebootConfirmActivity extends FragmentActivity {
     public static class GuidedStepRebootConfirmFragment extends SettingsGuidedStepFragment {
 
         public static GuidedStepRebootConfirmFragment newInstance(
-                boolean safeMode) {
+                boolean safeMode, @Nullable String title, @Nullable String summary) {
             Bundle args = new Bundle(1);
             args.putBoolean(ARG_SAFE_MODE, safeMode);
+            if (title != null) {
+                args.putString(ARG_TITLE, title);
+            }
+            if (summary != null) {
+                args.putString(ARG_SUMMARY, summary);
+            }
 
             GuidedStepRebootConfirmFragment
                     fragment = new GuidedStepRebootConfirmFragment();
@@ -163,17 +189,19 @@ public class RebootConfirmActivity extends FragmentActivity {
         @Override
         public @NonNull
         GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
+            String title = getArguments().getString(ARG_TITLE);
+            String summary = getArguments().getString(ARG_SUMMARY);
             if (getArguments().getBoolean(ARG_SAFE_MODE, false)) {
                 return new GuidanceStylist.Guidance(
-                        getString(R.string.reboot_safemode_confirm),
-                        getString(R.string.reboot_safemode_desc),
+                        title != null ? title : getString(R.string.reboot_safemode_confirm),
+                        summary != null ? summary : getString(R.string.reboot_safemode_desc),
                         null,
                         getActivity().getDrawable(R.drawable.ic_warning_132dp)
                 );
             } else {
                 return new GuidanceStylist.Guidance(
-                        getString(R.string.system_reboot_confirm),
-                        null,
+                        title != null ? title : getString(R.string.system_reboot_confirm),
+                        summary,
                         null,
                         getActivity().getDrawable(R.drawable.ic_warning_132dp)
                 );

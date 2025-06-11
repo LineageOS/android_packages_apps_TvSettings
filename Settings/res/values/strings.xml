@@ -1683,6 +1683,10 @@
     <string name="recently_accessed_by_category">Recently Accessed By</string>
     <!-- Placeholder that shows when no apps have recently accessed the camera/microphone [CHAR LIMIT=50] -->
     <string name="no_recent_sensor_accesses">No recent accesses</string>
+    <!-- Placeholder that shows when no apps have recently accessed the camera/microphone [CHAR LIMIT=100] -->
+    <string name="no_recent_camera_accesses">No apps or services have recently accessed camera</string>
+        <!-- Placeholder that shows when no apps have recently accessed the camera/microphone [CHAR LIMIT=100] -->
+    <string name="no_recent_microphone_accesses">No apps or services have recently accessed microphone</string>
     <!-- Element on which to click when there are more apps in the list that we want to show initially.
     The rest of the apps will be shown when the element is clicked [CHAR LIMIT=50]-->
     <string name="recently_accessed_show_all">See all</string>
@@ -1757,9 +1761,9 @@
     </string>
 
     <!-- Camera/Microphone state within mic_toggle_info_title and camera_toggle_info_title [CHAR LIMIT=20] -->
-    <string name="sensor_toggle_info_on">On</string>
+    <string name="sensor_toggle_info_on">on</string>
     <!-- Camera/Microphone state within mic_toggle_info_title and camera_toggle_info_title [CHAR LIMIT=20] -->
-    <string name="sensor_toggle_info_off">Off</string>
+    <string name="sensor_toggle_info_off">off</string>
 
     <!-- Title for Location in System Settings [CHAR LIMIT=50] -->
     <string name="system_location">Location</string>
@@ -2249,7 +2253,7 @@
 
     <!-- Keyboard Settings -->
     <!-- Title for launch settings Intent for IME or Autofill.[CHAR LIMIT=80] -->
-    <string name="title_settings"><xliff:g id="name" example="Gboard">%1$s</xliff:g> Settings</string>
+    <string name="title_settings"><xliff:g id="name" example="Gboard">%1$s</xliff:g> settings</string>
     <!-- Title for Current Keyboard [CHAR LIMIT=80] -->
     <string name="title_current_keyboard">Current keyboard</string>
     <!-- Title for configure current keyboard [CHAR LIMIT=80] -->
@@ -2721,9 +2725,9 @@
     <string name="allow_overlay_description">Allow an app to display on top of other apps you\u2019re using. It may interfere with your use of those apps or change the way they seem to appear or behave.</string>
 
     <!-- Main settings screen item's title to go into the write system settings screen [CHAR LIMIT=30] -->
-    <string name="write_system_settings">Modify system settings</string>
+    <string name="write_system_settings">System settings access</string>
     <!-- Title for the apps that are allowed to write system settings [CHAR LIMIT=60] -->
-    <string name="write_settings_title">Can modify system settings</string>
+    <string name="write_settings_title">System settings access</string>
     <!-- Description of the write system settings [CHAR LIMIT=NONE] -->
     <string name="write_settings_description">This permission allows an app to modify system settings.</string>
     <!-- Summary of app allowed to write system settings [CHAR LIMIT=45] -->
@@ -2758,7 +2762,7 @@
     <!-- Special access > Title for managing turn screen on settings. [CHAR LIMIT=50] -->
     <string name="turn_screen_on_title">Turn screen on</string>
     <!-- Label for a setting which controls whether an app can turn the screen on [CHAR LIMIT=45] -->
-    <string name="allow_turn_screen_on">Allow turning the screen on</string>
+    <string name="allow_turn_screen_on">Turn screen on</string>
     <!-- Description for a setting which controls whether an app can turn the screen on
          [CHAR LIMIT=NONE] -->
     <string name="allow_turn_screen_on_description">Allow an app to turn the screen on. If granted, the app may turn on the screen at any time without your explicit intent.</string>
@@ -3090,5 +3094,11 @@
     <!-- Label for screen reader switch On [CHAR LIMIT=100] -->
     <string name="accessibility_service_on_title"><xliff:g id="accessibility_service_name" example="Talkback">%s</xliff:g>:On</string>
 
+    <!-- Debugging developer settings: enable angle as system driver? [CHAR LIMIT=50] -->
+    <string name="enable_angle_as_system_driver">Enable ANGLE as default OpenGL ES driver</string>
+    <!-- Debugging developer settings: enable angle as system driver summary [CHAR LIMIT=NONE] -->
+    <string name="enable_angle_as_system_driver_summary">Experimental, requires reboot.</string>
+    <!--Dialog body text used to explain a reboot is required after changing ANGLE as system GLES driver setting-->
+    <string name="reboot_dialog_enable_angle_as_system_driver">A reboot is required to change the system OpenGL ES driver</string>
 
 </resources>

@@ -49,6 +49,7 @@ import android.net.wifi.WifiManager;
 import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.GraphicsEnvironment;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
@@ -88,6 +89,7 @@ import com.android.settingslib.development.SystemPropPoker;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RestrictedPreferenceAdapter;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.about.RebootConfirmActivity;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.system.development.audio.AudioDebug;
 import com.android.tv.settings.system.development.audio.AudioMetrics;
@@ -195,6 +197,10 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
 
     private static final String TOGGLE_ADB_WIRELESS_KEY = "toggle_adb_wireless";
 
+    private static final String ENABLE_ANGLE_AS_SYSTEM_DRIVER_KEY = "enable_angle_as_system_driver";
+    private static final String PROPERTY_PERSISTENT_GRAPHICS_EGL = "persist.graphics.egl";
+    private static final String ANGLE_DRIVER_SUFFIX = "angle";
+
     private String mPendingDialogKey;
 
     private IWindowManager mWindowManager;
@@ -277,6 +283,8 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private TwoStatePreference mForceResizable;
 
     private Preference mWirelessDebugging;
+
+    private TwoStatePreference mEnableAngle;
 
     private final ArrayList<Preference> mAllPrefs = new ArrayList<>();
 
@@ -534,6 +542,11 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         } else {
             mWirelessDebugging.setFragment(WirelessDebuggingFragment.class.getName());
         }
+
+        mEnableAngle = findPreference(ENABLE_ANGLE_AS_SYSTEM_DRIVER_KEY);
+        mAllPrefs.add(mEnableAngle);
+        String currentDriver = SystemProperties.get(PROPERTY_PERSISTENT_GRAPHICS_EGL, "");
+        mEnableAngle.setChecked(currentDriver.startsWith(ANGLE_DRIVER_SUFFIX));
     }
 
     private void removePreference(String key) {
@@ -1814,6 +1827,14 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             saveRecordedAudio();
         } else if (preference == mPlayRecordedAudio) {
             playRecordedAudio();
+        } else if (preference == mEnableAngle) {
+            GraphicsEnvironment.getInstance().toggleAngleAsSystemDriver(
+                    mEnableAngle.isChecked());
+            Context context = requireContext();
+            context.startActivity(RebootConfirmActivity.getIntent(context, /* safeMode= */ false,
+                    /* title= */ null,
+                    getString(R.string.reboot_dialog_enable_angle_as_system_driver),
+                    /* defaultToConfirm= */ true));
         } else {
             return super.onPreferenceTreeClick(preference);
         }
