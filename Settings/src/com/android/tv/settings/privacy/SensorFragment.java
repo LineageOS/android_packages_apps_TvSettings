@@ -266,7 +266,17 @@ public class SensorFragment extends SettingsPreferenceFragment {
 
         if (mAllRecentAppPrefs.size() == 0) {
             Preference banner = new Preference(themedContext);
-            banner.setSummary(R.string.no_recent_sensor_accesses);
+            switch (mToggle) {
+                case MIC_TOGGLE:
+                    banner.setSummary(R.string.no_recent_microphone_accesses);
+                    break;
+                case CAMERA_TOGGLE:
+                    banner.setSummary(R.string.no_recent_camera_accesses);
+                    break;
+                default:
+                    banner.setSummary(R.string.no_recent_sensor_accesses);
+                    break;
+            }
             banner.setSelectable(false);
             recentRequests.addPreference(banner);
         }
