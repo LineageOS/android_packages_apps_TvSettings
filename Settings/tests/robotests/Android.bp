@@ -26,6 +26,8 @@ android_robolectric_test {
         "Settings_robolectric_meta_service_file",
         "SettingsLib-robo-testutils",
         "Settings-robo-testutils",
+        "androidx.test.core",
+        "androidx.test.ext.junit",
     ],
 
     java_resource_dirs: ["config"],
