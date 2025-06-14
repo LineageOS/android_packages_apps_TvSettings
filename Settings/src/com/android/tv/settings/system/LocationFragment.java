@@ -108,9 +108,10 @@ public class LocationFragment extends SettingsPreferenceFragment implements
             mLocationMode.setPersistent(false);
             mLocationMode.setTitle(R.string.location_status);
             mLocationMode.setDialogTitle(R.string.location_status);
+            mLocationMode.setDialogMessage(R.string.system_location_summary);
             mLocationMode.setSummary("%s");
             mLocationMode.setEntries(new CharSequence[] {
-                    getString(R.string.location_mode_wifi_description),
+                    getString(R.string.on),
                     getString(R.string.off)
             });
             mLocationMode.setEntryValues(new CharSequence[] {
@@ -118,7 +119,7 @@ public class LocationFragment extends SettingsPreferenceFragment implements
                     LOCATION_MODE_OFF
             });
             mLocationMode.setSummaries(new CharSequence[] {
-                    getString(R.string.system_location_summary),
+                    null,
                     null
             });
             mLocationMode.setOnPreferenceChangeListener(this);

@@ -183,8 +183,8 @@ public class LeanbackListPreferenceDialogFragmentCompat extends
 
         CharSequence message = this.mDialogMessage;
         if (!TextUtils.isEmpty(message)) {
-            TextView messageView = (TextView) view.findViewById(16908299);
-            messageView.setVisibility(0);
+            TextView messageView = (TextView) view.findViewById(android.R.id.message);
+            messageView.setVisibility(View.VISIBLE);
             messageView.setText(message);
         }
 
