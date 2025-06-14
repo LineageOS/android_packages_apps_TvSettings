@@ -23,14 +23,15 @@ import android.view.View;
 
 import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
+import com.android.tv.twopanelsettings.FocusableWhenDisabledSwitchPreference;
 
 import com.android.tv.twopanelsettings.slices.compat.core.SliceActionImpl;
 
 /**
  * Slices version of SwitchPreference.
  */
-public class SliceSwitchPreference extends SwitchPreference implements HasSliceAction,
-        HasCustomContentDescription, HasSliceUri {
+public class SliceSwitchPreference extends FocusableWhenDisabledSwitchPreference implements
+    HasSliceAction, HasCustomContentDescription, HasSliceUri {
 
     private int mActionId;
     protected SliceActionImpl mAction;
@@ -100,6 +101,14 @@ public class SliceSwitchPreference extends SwitchPreference implements HasSliceA
     @Override
     public void setFollowupSliceAction(SliceActionImpl sliceAction) {
         mFollowupSliceAction = sliceAction;
+    }
+
+    @Override
+    protected void onClick() {
+        if (getDisabledButFocusable()) {
+            return;
+        }
+        super.onClick();
     }
 
     private void update() {

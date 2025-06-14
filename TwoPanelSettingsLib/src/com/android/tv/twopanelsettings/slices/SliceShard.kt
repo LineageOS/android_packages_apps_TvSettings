@@ -54,6 +54,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceScreen
 import androidx.preference.TwoStatePreference
+import com.android.tv.twopanelsettings.FocusableWhenDisabledSwitchPreference
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment
 import com.android.tv.twopanelsettings.slices.compat.Slice
 import com.android.tv.twopanelsettings.slices.compat.SliceItem
@@ -496,6 +497,11 @@ class SliceShard(
                 newGroup.removeAll()
                 updatePreferenceGroup(oldPref, newChildren)
             }
+
+            if (oldPref is FocusableWhenDisabledSwitchPreference
+                && newPref is FocusableWhenDisabledSwitchPreference) {
+                oldPref.setDisabledButFocusable((newPref.getDisabledButFocusable()))
+            }
         }
 
         //addPreference will reset the checked status of TwoStatePreference.
@@ -555,6 +561,10 @@ class SliceShard(
         } else if (preference is TwoStatePreference
             && preference is HasSliceAction
         ) {
+            if (preference is FocusableWhenDisabledSwitchPreference
+                && preference.getDisabledButFocusable()) {
+                    return true
+            }
             val isChecked: Boolean = (preference as TwoStatePreference).isChecked
             preference.getExtras()
                 .putBoolean(SlicesConstants.EXTRA_PREFERENCE_INFO_STATUS, isChecked)

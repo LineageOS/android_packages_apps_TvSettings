@@ -650,6 +650,10 @@
     <string name="sensor_toggle_description" msgid="7415801459994303159">"Para todas as apps e serviços"</string>
     <string name="recently_accessed_by_category" msgid="6841705864715653428">"Acedido recentemente por"</string>
     <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Sem acessos recentes"</string>
+    <!-- no translation found for no_recent_camera_accesses (7922043879872070573) -->
+    <skip />
+    <!-- no translation found for no_recent_microphone_accesses (4243126468848548494) -->
+    <skip />
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Ver tudo"</string>
     <string name="microphone" msgid="7893752847683941214">"Microfone"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"Acesso ao microfone"</string>
@@ -670,8 +674,10 @@
     <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Não vai poder falar com o assistente de voz através do seu comando. Para poder usar o botão do assistente de voz, ative o acesso ao microfone."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Acesso à câmara: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Quando a opção está ativada, todos os serviços e apps com autorização podem aceder a qualquer câmara neste dispositivo.\n\nOs periféricos das câmaras com um protocolo personalizado não são afetados por esta definição."</string>
-    <string name="sensor_toggle_info_on" msgid="4568111889147132257">"Ligado"</string>
-    <string name="sensor_toggle_info_off" msgid="7546772458177469821">"Desligado"</string>
+    <!-- no translation found for sensor_toggle_info_on (4013827154639541427) -->
+    <skip />
+    <!-- no translation found for sensor_toggle_info_off (3542660719703408510) -->
+    <skip />
     <string name="system_location" msgid="4057295363709016511">"Localização"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Permitir que as apps que lhe tenham solicitado autorização utilizem informações sobre a sua localização"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Consentimento de localização"</string>
@@ -792,7 +798,7 @@
     <string name="color_cyan" msgid="3172130225116530998">"Azul-turquesa"</string>
     <string name="color_yellow" msgid="3519470952904560404">"Amarelo"</string>
     <string name="color_magenta" msgid="2377854703399624607">"Magenta"</string>
-    <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"Descrição áudio"</string>
+    <string name="accessibility_toggle_audio_description_preference_title" msgid="933923296129403548">"Descrição de áudio"</string>
     <string name="accessibility_audio_description_summary" msgid="2027813223650517036">"Ouça uma descrição do que se passa no ecrã em filmes e programas suportados"</string>
     <string name="system_accessibility_status" msgid="8504842254080682515">"Ativar"</string>
     <string name="system_accessibility_config" msgid="4820879735377962851">"Configuração"</string>
@@ -897,7 +903,8 @@
     <string name="tts_rate_normal" msgid="3631458247079252628">"Média"</string>
     <string name="tts_rate_fast" msgid="5723868816257531421">"Rápida"</string>
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"Muito rápida"</string>
-    <string name="title_settings" msgid="780933693363320088">"Definições do <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <!-- no translation found for title_settings (4269159454024305758) -->
+    <skip />
     <string name="title_current_keyboard" msgid="891238509164879851">"Teclado atual"</string>
     <string name="title_configure" msgid="846802387014612210">"Configurar"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Opções do teclado"</string>
@@ -1095,8 +1102,10 @@
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Sobrepor a outras aplicações"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Permitir sobreposição a outras aplicações"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Permitir que uma aplicação se sobreponha a outras aplicações que esteja a utilizar. Esta ação pode interferir com a sua utilização dessas aplicações ou alterar a forma como estas aparecem ou se comportam."</string>
-    <string name="write_system_settings" msgid="4284654265954461890">"Modificar definições sistema"</string>
-    <string name="write_settings_title" msgid="2361816483383105754">"Podem modificar as definições do sistema"</string>
+    <!-- no translation found for write_system_settings (9023005036458214990) -->
+    <skip />
+    <!-- no translation found for write_settings_title (3418928647080624719) -->
+    <skip />
     <string name="write_settings_description" msgid="7382397926674265937">"Esta autorização permite que uma aplicação modifique as definições do sistema."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Sim"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Não"</string>
@@ -1109,7 +1118,8 @@
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Permitir que as apps criem uma janela de ecrã no ecrã enquanto as aplicações estão abertas ou depois de sair das mesmas (por exemplo, para continuar a ver um vídeo). Esta janela é apresentada sobre as outras aplicações que estiver a utilizar."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Permita que as apps definam alarmes e agendem ações com um horário específico. Esta ação permite que as apps sejam executadas em segundo plano, o que pode usar mais energia.\n\nSe esta autorização estiver desativada, os alarmes existentes e os eventos com base no tempo agendados pela app não funcionam."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Ativar o ecrã"</string>
-    <string name="allow_turn_screen_on" msgid="4903401106871656521">"Permitir a ativação do ecrã"</string>
+    <!-- no translation found for allow_turn_screen_on (9071257620628205016) -->
+    <skip />
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Permita que uma app ative o ecrã. Se a autorização for concedida, a app pode ativar o ecrã em qualquer altura sem a sua intenção explícita."</string>
     <string name="special_access" msgid="21806055758289916">"Acesso especial a aplicações"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
@@ -1201,4 +1211,10 @@
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Apenas afeta o volume no dispositivo %1$s, não na TV"</string>
     <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: desativado"</string>
     <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: ativado"</string>
+    <!-- no translation found for enable_angle_as_system_driver (2621814239122082069) -->
+    <skip />
+    <!-- no translation found for enable_angle_as_system_driver_summary (6941274244229799261) -->
+    <skip />
+    <!-- no translation found for reboot_dialog_enable_angle_as_system_driver (5658387699421699408) -->
+    <skip />
 </resources>

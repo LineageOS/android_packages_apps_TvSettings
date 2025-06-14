@@ -19,8 +19,9 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.preference.PreferenceViewHolder
 import androidx.preference.SwitchPreference
+import com.android.tv.twopanelsettings.FocusableWhenDisabledSwitchPreference
 
-open class FocusableWhenDisabledPreference
+public open class FocusableWhenDisabledSwitchPreference
 @JvmOverloads
 constructor(
   context: Context,

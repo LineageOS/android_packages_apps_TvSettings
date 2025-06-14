@@ -28,11 +28,12 @@
         android:layout_marginBottom="32dp"
         android:importantForAccessibility="no" />
 
-    <TextView
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
         android:id="@+id/dialog_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:importantForAccessibility="yes"
+        android:textAppearance="@style/TextAppearance.TwoPanelPreference.DialogTitle"
         android:textColor="#F1F3F4"
         android:textSize="28sp" />
 
@@ -59,12 +60,11 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:orientation="vertical" >
-            <TextView
+            <com.android.tv.twopanelsettings.SmoothScalingTextView
                 android:id="@+id/dialog_message"
                 android:maxWidth="600dp"
                 android:textAlignment="center"
-                android:textColor="#DBE8EAED"
-                android:textSize="16sp"
+                android:textAppearance="@style/TextAppearance.TwoPanelPreference.DialogText"
                 android:lineSpacingExtra="5sp" 
                 android:importantForAccessibility="yes"
                 android:layout_width="wrap_content"
@@ -90,12 +90,11 @@
                     android:visibility="gone"
                     android:layout_width="16dp"
                     android:layout_height="16dp" />
-                <TextView
+                <com.android.tv.twopanelsettings.SmoothScalingTextView
                     android:id="@+id/hint_text"
                     android:importantForAccessibility="yes"
                     android:textAlignment="center"
-                    android:textColor="#DBE8EAED"
-                    android:textSize="16sp"
+                    android:textAppearance="@style/TextAppearance.TwoPanelPreference.DialogText"
                     android:lineSpacingExtra="5sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -110,7 +109,7 @@
         android:layout_marginTop="48dp"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
-        <Button
+        <com.android.tv.twopanelsettings.SmoothScalingButton
             android:id="@+id/positive_button"
             style="?android:attr/buttonBarButtonStyle"
             android:visibility="gone"
@@ -118,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:maxHeight="@null"/>
-        <Button
+        <com.android.tv.twopanelsettings.SmoothScalingButton
             android:id="@+id/negative_button"
             style="?android:attr/buttonBarButtonStyle"
             android:visibility="gone"

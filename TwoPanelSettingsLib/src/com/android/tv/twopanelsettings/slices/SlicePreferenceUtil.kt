@@ -25,6 +25,7 @@ import android.util.Pair
 import androidx.core.graphics.drawable.IconCompat
 import androidx.preference.Preference
 import androidx.preference.PreferenceGroup
+import com.android.tv.twopanelsettings.FocusableWhenDisabledSwitchPreference
 import com.android.tv.twopanelsettings.IconUtil
 import com.android.tv.twopanelsettings.R
 import com.android.tv.twopanelsettings.slices.NonSlicePreferenceBuilder.Companion.forClassName
@@ -181,13 +182,18 @@ object SlicePreferencesUtil {
             }
 
             val isEnabled = enabled(item)
-            // Set whether preference is enabled.
-            if (preference is InfoPreference || !isEnabled) {
-                preference.isEnabled = false
-            }
-            // Set whether preference is selectable
-            if (!selectable(item) || !isEnabled) {
-                preference.isSelectable = false
+            if (preference !is FocusableWhenDisabledSwitchPreference) {
+                // Set whether preference is selectable
+                if (!selectable(item) || !isEnabled) {
+                    preference.isSelectable = false
+                }
+                // Set whether preference is enabled.
+                if (preference is InfoPreference || !isEnabled) {
+                    preference.isEnabled = false
+                }
+            } else if (!isEnabled) {
+                // This is a FocusableWhenDisabledSwitchPreference
+                preference.setDisabledButFocusable(true)
             }
             // Set the key for the preference
             val key = getKey(item)
