@@ -650,10 +650,8 @@
     <string name="sensor_toggle_description" msgid="7415801459994303159">"Per tutte le app e tutti i servizi"</string>
     <string name="recently_accessed_by_category" msgid="6841705864715653428">"Accessi recenti:"</string>
     <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Nessun accesso recente"</string>
-    <!-- no translation found for no_recent_camera_accesses (7922043879872070573) -->
-    <skip />
-    <!-- no translation found for no_recent_microphone_accesses (4243126468848548494) -->
-    <skip />
+    <string name="no_recent_camera_accesses" msgid="7922043879872070573">"Nessun servizio o app ha effettuato di recente l\'accesso alla fotocamera"</string>
+    <string name="no_recent_microphone_accesses" msgid="4243126468848548494">"Nessun servizio o app ha effettuato di recente l\'accesso al microfono"</string>
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Mostra tutto"</string>
     <string name="microphone" msgid="7893752847683941214">"Microfono"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"Accesso al microfono"</string>
@@ -674,10 +672,8 @@
     <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Non potrai parlare all\'assistente vocale tramite il telecomando. Per poter usare il tasto dell\'assistente vocale, abilita l\'accesso al microfono."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Accesso alla videocamera: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Se attivi questa opzione, tutte le app e tutti i servizi autorizzati potranno accedere a qualsiasi videocamera su questo dispositivo.\n\nQuesta impostazione non influirà sulle videocamere con un protocollo personalizzato."</string>
-    <!-- no translation found for sensor_toggle_info_on (4013827154639541427) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (3542660719703408510) -->
-    <skip />
+    <string name="sensor_toggle_info_on" msgid="4013827154639541427">"on"</string>
+    <string name="sensor_toggle_info_off" msgid="3542660719703408510">"off"</string>
     <string name="system_location" msgid="4057295363709016511">"Posizione"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Consenti alle applicazioni che hanno chiesto la tua autorizzazione di utilizzare le informazioni sulla tua posizione"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Consenso alla geolocalizzazione"</string>
@@ -903,8 +899,7 @@
     <string name="tts_rate_normal" msgid="3631458247079252628">"Normale"</string>
     <string name="tts_rate_fast" msgid="5723868816257531421">"Veloce"</string>
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"Molto veloce"</string>
-    <!-- no translation found for title_settings (4269159454024305758) -->
-    <skip />
+    <string name="title_settings" msgid="4269159454024305758">"Impostazioni <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="title_current_keyboard" msgid="891238509164879851">"Tastiera corrente"</string>
     <string name="title_configure" msgid="846802387014612210">"Configura"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Opzioni tastiera"</string>
@@ -1102,10 +1097,8 @@
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Mostra sopra altre app"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Consenti la visualizzazione sopra altre app"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Consenti di mostrare un\'app sopra le altre app in uso. Potrebbe interferire con il tuo utilizzo di queste app oppure modificarne la visualizzazione o il comportamento."</string>
-    <!-- no translation found for write_system_settings (9023005036458214990) -->
-    <skip />
-    <!-- no translation found for write_settings_title (3418928647080624719) -->
-    <skip />
+    <string name="write_system_settings" msgid="9023005036458214990">"Accesso alle imp. di sistema"</string>
+    <string name="write_settings_title" msgid="3418928647080624719">"Accesso alle impostazioni di sistema"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"Questa autorizzazione consente a un\'app di modificare le impostazioni di sistema."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Sì"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"No"</string>
@@ -1118,8 +1111,7 @@
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Consenti alle app di creare una finestra Picture in picture quando l\'app è aperta o dopo l\'uscita (ad esempio, per continuare a guardare un video). Questa finestra viene visualizzata sopra le altre app in uso."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Consenti alle app di impostare sveglie e programmare azioni per le quali il fattore temporale è decisivo. Le app potranno così essere eseguite in background, comportando un consumo maggiore della batteria.\n\nSe questa autorizzazione viene disattivata, le sveglie esistenti e gli eventi basati sull\'orario programmati dalle app non funzioneranno."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Attiva lo schermo"</string>
-    <!-- no translation found for allow_turn_screen_on (9071257620628205016) -->
-    <skip />
+    <string name="allow_turn_screen_on" msgid="9071257620628205016">"Attiva lo schermo"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Consenti a un\'app di attivare lo schermo. Se la autorizzi, l\'app può attivare lo schermo in qualsiasi momento senza la tua autorizzazione esplicita."</string>
     <string name="special_access" msgid="21806055758289916">"Accesso speciale per le app"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
@@ -1211,10 +1203,7 @@
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Influisce sul volume solo su %1$s dispositivo, non sulla TV"</string>
     <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: off"</string>
     <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: on"</string>
-    <!-- no translation found for enable_angle_as_system_driver (2621814239122082069) -->
-    <skip />
-    <!-- no translation found for enable_angle_as_system_driver_summary (6941274244229799261) -->
-    <skip />
-    <!-- no translation found for reboot_dialog_enable_angle_as_system_driver (5658387699421699408) -->
-    <skip />
+    <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Attiva ANGLE come driver OpenGL ES predefinito"</string>
+    <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"In fase sperimentale, richiede il riavvio."</string>
+    <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"È necessario riavviare per cambiare il driver OpenGL ES di sistema"</string>
 </resources>
