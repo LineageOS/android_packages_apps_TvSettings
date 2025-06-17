@@ -748,7 +748,7 @@ class SliceShard(
     }
 
     private fun showErrorMessageAsToast(errorMessage: String) {
-        Toast.makeText(mFragment.requireActivity(), errorMessage, Toast.LENGTH_SHORT).show()
+        Toast.makeText(mPrefContext, errorMessage, Toast.LENGTH_SHORT).show()
     }
 
     private fun getPreferenceActionId(preference: Preference): Int {
