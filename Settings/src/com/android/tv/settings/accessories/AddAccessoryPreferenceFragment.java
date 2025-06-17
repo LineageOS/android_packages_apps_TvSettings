@@ -38,6 +38,8 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.twopanelsettings.IconUtil;
 
 import java.util.List;
 
@@ -89,9 +91,16 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
             } else {
                 preference.setSummary(bt.getAddress());
             }
-            preference.setIcon(getDeviceDrawable(bt));
-            preference.setKey(bt.getAddress());
-            preference.setTitle(bt.getName());
+            if (!FlavorUtils.isTwoPanel(themedContext)) {
+                preference.setIcon(getDeviceDrawable(bt));
+                preference.setKey(bt.getAddress());
+                preference.setTitle(bt.getName());
+            } else {
+                preference.setIcon(AccessoriesFragment.getImageIdForDevice(bt, false));
+                preference.setKey(bt.getAddress());
+                preference.setTitle(bt.getName());
+                preference.setLayoutResource(R.layout.add_accessory_preference);
+            }
             screen.addPreference(preference);
         }
         setPreferenceScreen(screen);
@@ -103,6 +112,7 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
             screen.removeAll();
         }
     }
+
 
     private Drawable getDeviceDrawable(BluetoothDevice device) {
         final int resId = AccessoriesFragment.getImageIdForDevice(device, false);
