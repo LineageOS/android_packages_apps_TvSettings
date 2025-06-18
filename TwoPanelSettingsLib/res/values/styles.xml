@@ -109,4 +109,8 @@
     <style name="TwoPanelPreferenceFragmentListStyle" parent="@style/PreferenceFragmentList.Leanback">
         <item name="android:paddingTop">0dp</item>
     </style>
+
+    <style name="TwoPanelPreferenceStyle" parent="@style/LeanbackPreference">
+        <item name="android:layout">@layout/leanback_preference_two_panel</item>
+    </style>
 </resources>
