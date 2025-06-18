@@ -529,4 +529,13 @@
     <style name="HighContrastItemContentStyle" parent="Widget.Leanback.GuidedActionItemContentStyle">
         <item name="android:duplicateParentState">true</item>
     </style>
+
+    <style name="Theme.Settings.AccessoryPreference" parent="@style/Theme.Settings">
+        <item name="preferenceTheme">@style/AccessoryPreferenceOverlay</item>
+    </style>
+
+
+    <style name="AccessoryPreferenceOverlay" parent="PreferenceThemeOverlayLeanback">
+        <item name="android:selectableItemBackground">@drawable/guided_step_high_contrast_item_background</item>
+    </style>
 </resources>
