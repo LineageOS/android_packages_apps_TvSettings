@@ -44,7 +44,6 @@
             android:icon="@drawable/ic_settings_channels_and_inputs"
             android:key="channels_and_inputs_slice"
             android:title="@string/channels_and_inputs_title"
-            android:summary="@string/channels_and_inputs_summary"
             android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
             custom:isPreferenceVisible="false"
             custom:uri="@string/channels_and_inputs_slice_uri">

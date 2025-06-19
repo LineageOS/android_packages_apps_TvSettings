@@ -21,6 +21,7 @@
     <ListPreference android:key="auto_date_time"
                     android:persistent="true"
                     android:title="@string/system_auto_date_time"
+                    android:dialogTitle="@string/system_auto_date_time"
                     android:summary="%s"
                     android:entries="@array/auto_date_time_entries"
                     android:entryValues="@array/auto_date_time_entry_values" />
