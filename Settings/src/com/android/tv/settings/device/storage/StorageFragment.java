@@ -39,6 +39,8 @@ import com.android.tv.settings.device.apps.AppsFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 
@@ -80,7 +82,9 @@ public class StorageFragment extends SettingsPreferenceFragment {
     private StoragePreference mCacheUsagePref;
     private StoragePreference mMiscUsagePref;
     private StoragePreference mAvailablePref;
-    private static String file_path = "/cache";
+    private static String CACHE_PATH = "/cache";
+    private static String ROOT_PATH = "/";
+
     public static void prepareArgs(Bundle bundle, VolumeInfo volumeInfo) {
         bundle.putString(VolumeInfo.EXTRA_VOLUME_ID, volumeInfo.getId());
     }
@@ -257,7 +261,18 @@ public class StorageFragment extends SettingsPreferenceFragment {
     }
 
     private static long cachePartitionSize() {
-        File cache = new File(file_path);
+        File root = new File(ROOT_PATH);
+        File cache = new File(CACHE_PATH);
+
+        try {
+            if (Files.getFileStore(root.toPath()).equals(Files.getFileStore(cache.toPath()))) {
+                return 0L;
+            }
+        } catch(IOException e) {
+            Log.e(TAG, "Unable to get filestore", e);
+            return 0L;
+        }
+
         try {
             return cache.getUsableSpace();
         } catch (SecurityException e) {
