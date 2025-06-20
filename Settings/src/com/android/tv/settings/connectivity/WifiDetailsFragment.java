@@ -21,6 +21,9 @@ import static com.android.tv.settings.util.InstrumentationUtils.logEntrySelected
 
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.drawable.Icon;
+import android.graphics.drawable.Drawable;
 import android.net.IpConfiguration.IpAssignment;
 import android.net.IpConfiguration.ProxySettings;
 import android.net.wifi.WifiConfiguration;
@@ -38,6 +41,8 @@ import androidx.preference.Preference;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.RestrictedPreference;
+import com.android.tv.settings.FullScreenDialogFragment;
+import com.android.tv.settings.FullScreenDialogFragmentActivity;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.connectivity.WifiUtils.IpAddressInfoFragment;
@@ -64,6 +69,9 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
 
   private static final String VALUE_MAC_RANDOM = "random";
   private static final String VALUE_MAC_DEVICE = "device";
+
+  private static final String EXTRA_SSID = "ssid";
+  private static final String EXTRA_NETWORK_ID = "network_id";
 
   private Preference mConnectionStatusPref;
   private Preference mIpAddressPref;
@@ -197,8 +205,17 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
               : R.string.wifi_action_dhcp);
       mIpSettingsPref.setIntent(EditIpSettingsActivity.createWifiIntent(getContext(), networkId));
 
-      mForgetNetworkPref.setFragment(ForgetNetworkConfirmFragment.class.getName());
-      ForgetNetworkConfirmFragment.prepareArgs(mForgetNetworkPref.getExtras(), mAccessPoint);
+      if (FlavorUtils.isTwoPanel(getContext())) {
+        Intent forgetNetworkIntent = new Intent(
+            getContext(),
+            ConfirmationDialogFragmentActivity.class);
+        forgetNetworkIntent.putExtra(EXTRA_SSID, mAccessPoint.getSsidStr());
+        forgetNetworkIntent.putExtra(EXTRA_NETWORK_ID, mAccessPoint.getConfig().networkId);
+        mForgetNetworkPref.setIntent(forgetNetworkIntent);
+      } else {
+        mForgetNetworkPref.setFragment(ForgetNetworkConfirmFragment.class.getName());
+        ForgetNetworkConfirmFragment.prepareArgs(mForgetNetworkPref.getExtras(), mAccessPoint);
+      }
     }
 
     mProxySettingsPref.setVisible(wifiConfiguration != null);
@@ -332,6 +349,45 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
         wifiManager.forget(mAccessPoint.getConfig().networkId, null);
       }
       getFragmentManager().popBackStack();
+    }
+  }
+
+  public static class ConfirmationDialogFragmentActivity extends FullScreenDialogFragmentActivity {
+    public Bundle provideArguments() {
+      Intent intent = getIntent();
+      return new FullScreenDialogFragment.DialogBuilder()
+          .setIcon(Icon.createWithResource(this, R.drawable.ic_network))
+          .setTitle(getString(R.string.wifi_forget_network_dialog_title,
+            intent.getStringExtra(EXTRA_SSID)))
+          .setMessage(getString(R.string.wifi_forget_network_description))
+          .setPositiveButton(getString(R.string.settings_confirm))
+          .setNegativeButton(getString(R.string.settings_cancel))
+          .build();
+    }
+
+    public FullScreenDialogFragmentActivity.OnPositiveActionClickedListener
+        onPositiveActionClicked() {
+      return () -> {
+        Intent intent = getIntent();
+        int networkId = intent.getIntExtra(EXTRA_NETWORK_ID, -1);
+        if (networkId != -1) {
+          WifiManager wifiManager = getSystemService(WifiManager.class);
+          wifiManager.forget(networkId, null);
+        }
+        finish();
+      };
+    }
+
+    public FullScreenDialogFragmentActivity.OnNegativeActionClickedListener
+        onNegativeActionClicked() {
+      return () -> {
+        finish();
+      };
+    }
+
+    @Override
+    public Drawable getDrawableIconForDialog() {
+      return null;
     }
   }
 }

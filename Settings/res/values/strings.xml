@@ -1343,7 +1343,9 @@
     <!-- Title for action to connect to the wifi network [CHAR LIMIT=80] -->
     <string name="wifi_connect">Connect</string>
     <!-- Title for action to forget the wifi network configuration [CHAR LIMIT=80] -->
-    <string name="wifi_forget_network">Forget network</string>
+    <string name="wifi_forget_network">Forget</string>
+    <!-- Title for confirmation dialog that lets user forget the wifi network configuration [CHAR LIMIT=80] -->
+    <string name="wifi_forget_network_dialog_title">Forget <xliff:g id="ssid">%1$s</xliff:g>?</string>
     <!-- Description for action to forget the wifi network configuration [CHAR LIMIT=100] -->
     <string name="wifi_forget_network_description">This clears information used to connect to this network, including a saved password</string>
     <!-- Description for action to scan a QR code with your phone [CHAR LIMIT=300] -->

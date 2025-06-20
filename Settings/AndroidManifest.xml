@@ -1441,6 +1441,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true" />
 
+        <activity android:name=".connectivity.WifiDetailsFragment$ConfirmationDialogFragmentActivity"
+            android:theme="@style/TvSettingsDialog.FullScreen"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true" />
+
+
     </application>
 
     <queries>
