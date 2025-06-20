@@ -303,7 +303,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
     private String formatIpAddresses(Network network) {
         final LinkProperties linkProperties = mConnectivityManager.getLinkProperties(network);
         if (linkProperties == null) {
-            return null;
+            return "";
         }
         final StringBuilder sb = new StringBuilder();
         boolean gotAddress = false;
@@ -317,7 +317,7 @@ public class ConnectivityListener implements WifiTracker.WifiListener {
         if (gotAddress) {
             return sb.toString();
         } else {
-            return null;
+            return "";
         }
     }
 
