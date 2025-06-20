@@ -52,7 +52,9 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 /**
  * TV Settings UI is customized by implementing a {@link SliceProvider} and overriding
@@ -199,16 +201,20 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     return this;
   }
 
+  public PreferenceSliceBuilder addFromSliceUri(Context context, Uri uri, Set<String> hiddenKeys) {
+    return addFromSlice(SliceViewManager.getInstance(context).bindSlice(uri), hiddenKeys);
+  }
+
   public PreferenceSliceBuilder addFromSliceUri(Context context, Uri uri) {
-    return addFromSlice(SliceViewManager.getInstance(context).bindSlice(uri));
+    return addFromSliceUri(context, uri, Collections.emptySet());
   }
 
   /**
    * Add all preferences from supplied slice. If screen title is not added yet, it's
    * also taken from the slice if present.
    */
-  public PreferenceSliceBuilder addFromSlice(Slice slice) {
-    mImpl.addFromSlice(slice);
+  public PreferenceSliceBuilder addFromSlice(Slice slice, Set<String> hiddenKeys) {
+    mImpl.addFromSlice(slice, hiddenKeys);
     return this;
   }
 
