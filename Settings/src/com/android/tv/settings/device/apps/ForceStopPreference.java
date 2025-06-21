@@ -155,9 +155,9 @@ public class ForceStopPreference extends AppActionPreference {
     public FullScreenDialogFragmentActivity.OnPositiveActionClickedListener
         onPositiveActionClicked() {
       return () -> {
-        ApplicationInfo applicationInfo = getIntent().getParcelableExtra("applicationInfo");
+        String pkgName = getIntent().getStringExtra("packageName");
         ActivityManager am = getSystemService(ActivityManager.class);
-        am.forceStopPackage(applicationInfo.packageName);
+        am.forceStopPackage(pkgName);
         finish();
       };
     }
