@@ -70,10 +70,14 @@ import com.android.tv.twopanelsettings.slices.compat.builders.SliceAction;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicLong;
 
 // TODO: Remove unused code, add test.
 /** Provide the implementation for PreferenceSliceBuilder */
 public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
+  private static final AtomicLong hideSeq = new AtomicLong(0);
 
   private List<Slice> mSliceActions;
   private boolean mHasScreenTitle;
@@ -175,15 +179,55 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     addRow(new RowBuilder().setTitle(redirectedSliceUri), TYPE_REDIRECTED_SLICE_URI);
   }
 
-  public void addFromSlice(Slice slice) {
+  public void addFromSlice(Slice slice, Set<String> hiddenKeys) {
     for (SliceItem item : slice.getItems()) {
-      if (item.getFormat().equals(FORMAT_SLICE)) {
-        if (item.getSubType().equals(TYPE_PREFERENCE_SCREEN_TITLE) && mHasScreenTitle) {
+      if (Objects.equals(item.getFormat(), FORMAT_SLICE)) {
+        if (Objects.equals(item.getSubType(), TYPE_PREFERENCE_SCREEN_TITLE) && mHasScreenTitle) {
           continue;
         }
-        getBuilder().addItem(item);
+        getBuilder().addItem(hideKeys(item, hiddenKeys));
       }
     }
+  }
+
+  private static SliceItem hideKeys(SliceItem sliceItem, Set<String> hiddenKeys) {
+    if (!Objects.equals(sliceItem.getFormat(), FORMAT_SLICE) || hiddenKeys.isEmpty()) {
+      return sliceItem;
+    }
+
+    boolean isHiddenKey = false;
+
+    Slice slice = sliceItem.getSlice();
+    SliceItem[] items = slice.getItemArray();
+    for (int i = 0; i < items.length; i++) {
+      SliceItem item = items[i];
+      if (Objects.equals(item.getFormat(), FORMAT_TEXT)
+              && Objects.equals(item.getSubType(), TAG_KEY)
+        && hiddenKeys.contains(item.getText().toString())) {
+        isHiddenKey = true;
+      } else if (Objects.equals(item.getFormat(), FORMAT_SLICE)) {
+        items[i] = hideKeys(items[i], hiddenKeys);
+      }
+    }
+
+    if (!isHiddenKey) {
+      return sliceItem;
+    }
+
+    // Put preference in a hidden category rather than removing so that Settings code that relies
+    // on it's presence doesn't break.
+    String key = "_hidden_preference" + hideSeq.getAndIncrement();
+    Slice.Builder sliceBuilder = new Slice.Builder(
+            slice.getUri().buildUpon().appendPath(key).build());
+    sliceBuilder.addItem(new SliceItem("androidx.preference.PreferenceCategory",
+            FORMAT_TEXT, SUBTYPE_CLASSNAME, new String[0]));
+    Bundle bundle = new Bundle();
+    bundle.putBoolean("visible", false);
+    sliceBuilder.addItem(new SliceItem(bundle, FORMAT_BUNDLE, SUBTYPE_PROPERTIES, new String[0]));
+    sliceBuilder.addItem(new SliceItem(key, FORMAT_TEXT, TAG_KEY, new String[]{ HINT_KEYWORDS }));
+    sliceBuilder.addItem(sliceItem);
+    sliceBuilder.addHints(HINT_LIST_ITEM);
+    return new SliceItem(sliceBuilder.build(), FORMAT_SLICE, TYPE_PREFERENCE, new String[0]);
   }
 
   /** Add a row to list builder. */

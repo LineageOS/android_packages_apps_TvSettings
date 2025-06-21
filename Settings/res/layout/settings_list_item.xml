@@ -74,7 +74,8 @@
         android:layout_centerVertical="true"
         android:layout_toStartOf="@id/action_next_chevron_background"
         android:layout_toEndOf="@id/action_icon"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:duplicateParentState="true">
 
         <TextView
             android:id="@+id/action_title"
@@ -82,7 +83,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="@integer/action_title_min_lines"
-            android:ellipsize="end" />
+            android:ellipsize="end"
+            android:textColor="@color/tp_preference_item_primary_text_color_selector"
+            android:duplicateParentState="true"/>
 
         <TextView
             android:id="@+id/action_description"
