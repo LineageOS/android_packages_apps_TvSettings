@@ -53,16 +53,57 @@ public class AccessibilityServiceActivity extends TvSettingsActivity {
             Log.e(TAG, "Input accessibility service info is absent on device, returning null");
             return null;
         }
+        // only trust and use installed a11y service matched
+        AccessibilityServiceInfo installedA11yServiceInfo =
+                getAccessibilityServiceInfo(a11yServiceInfo, installedA11yServiceInfos);
+        if (installedA11yServiceInfo == null) {
+            Log.e(TAG,
+                    "Cannot find a matched installed accessibility service info, returning null");
+            return null;
+        }
+
         Bundle args = new Bundle();
         AccessibilityServiceFragment.prepareArgs(
                 args,
-                a11yServiceInfo.getResolveInfo().serviceInfo.packageName,
-                a11yServiceInfo.getResolveInfo().serviceInfo.name,
-                a11yServiceInfo.getSettingsActivityName(),
-                a11yServiceInfo.getResolveInfo().loadLabel(this.getPackageManager()).toString());
+                installedA11yServiceInfo.getResolveInfo().serviceInfo.packageName,
+                installedA11yServiceInfo.getResolveInfo().serviceInfo.name,
+                installedA11yServiceInfo.getSettingsActivityName(),
+                installedA11yServiceInfo.getResolveInfo().loadLabel(
+                        this.getPackageManager()).toString());
         return com.android.tv.settings.overlay.FlavorUtils.getFeatureFactory(
-                this).getSettingsFragmentProvider()
+                        this).getSettingsFragmentProvider()
                 .newSettingsFragment(AccessibilityServiceFragment.class.getName(), args);
+    }
+
+    /**
+     * Retrieves an {@link AccessibilityServiceInfo} object from a list of available service
+     * information that matches the ID of a given incoming service information.
+     *
+     * <p>This method iterates through a provided list of {@link AccessibilityServiceInfo} objects.
+     * For each service in the list, it compares its unique identifier (ID) with the ID of the
+     * {@code incomingServiceInfo}. If a match is found, the matching {@link
+     * AccessibilityServiceInfo} object from the list is returned.
+     *
+     * @param incomingServiceInfo The {@link AccessibilityServiceInfo} object whose ID is to be
+     *     matched. This object provides the target ID for the search.
+     * @param serviceInfos A {@link List} of {@link AccessibilityServiceInfo} objects to search
+     *     through. This list typically contains information about currently installed or active
+     *     accessibility services.
+     * @return The {@link AccessibilityServiceInfo} object from {@code serviceInfos} that has the
+     *     same ID as {@code incomingServiceInfo}, or {@code null} if no matching service is found
+     *     in the list.
+     */
+    private AccessibilityServiceInfo getAccessibilityServiceInfo(
+            AccessibilityServiceInfo incomingServiceInfo,
+            List<AccessibilityServiceInfo> serviceInfos) {
+        final int serviceInfoCount = serviceInfos.size();
+        for (int i = 0; i < serviceInfoCount; i++) {
+            AccessibilityServiceInfo serviceInfo = serviceInfos.get(i);
+            if (serviceInfo.getId().equals(incomingServiceInfo.getId())) {
+                return serviceInfo;
+            }
+        }
+        return null;
     }
 
     @Override
