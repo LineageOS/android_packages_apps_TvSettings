@@ -18,6 +18,8 @@ package com.android.tv.settings.users;
 
 import android.app.Activity;
 import android.app.AppGlobals;
+import android.app.admin.DevicePolicyManager;
+import android.app.admin.flags.Flags;
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
@@ -116,6 +118,12 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
      * apps.
      */
     private static final String EXTRA_EXIT_AFTER_UPDATE = "exit_after_update";
+
+    /**
+     * Settings' identifier for setting policies or restrictions in {@link DevicePolicyManager}.
+     */
+    public static final String SETTINGS_SYSTEM_ENTITY =
+            "com.android.settings";
 
     private boolean mFirstTime = true;
     private boolean mNewUser;
@@ -684,9 +692,8 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
                             default:
                                 continue;
                         }
-                        mUserManager.setApplicationRestrictions(packageName,
-                                RestrictionsManager.convertRestrictionsToBundle(restrictions),
-                                mUser);
+                        setApplicationRestrictions(packageName,
+                            RestrictionsManager.convertRestrictionsToBundle(restrictions));
                         break;
                     }
                 }
@@ -702,8 +709,7 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
      */
     private void requestRestrictionsForApp(String packageName,
             AppRestrictionsPreference preference) {
-        Bundle oldEntries =
-                mUserManager.getApplicationRestrictions(packageName, mUser);
+        Bundle oldEntries = getApplicationRestrictions(packageName);
         Intent intent = new Intent(Intent.ACTION_GET_RESTRICTION_ENTRIES);
         intent.setPackage(packageName);
         intent.putExtra(Intent.EXTRA_RESTRICTIONS_BUNDLE, oldEntries);
@@ -735,8 +741,8 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
             if (restrictions != null && restrictionsIntent == null) {
                 onRestrictionsReceived(mPreference, restrictions);
                 if (mRestrictedProfile) {
-                    mUserManager.setApplicationRestrictions(mPackageName,
-                            RestrictionsManager.convertRestrictionsToBundle(restrictions), mUser);
+                    setApplicationRestrictions(mPackageName,
+                        RestrictionsManager.convertRestrictionsToBundle(restrictions));
                 }
             } else if (restrictionsIntent != null) {
                 mPreference.setRestrictions(null);
@@ -850,11 +856,10 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
             if (list != null) {
                 // If there's a valid result, persist it to the user manager.
                 pref.setRestrictions(list);
-                mUserManager.setApplicationRestrictions(packageName,
-                        RestrictionsManager.convertRestrictionsToBundle(list), mUser);
+                setApplicationRestrictions(
+                    packageName, RestrictionsManager.convertRestrictionsToBundle(list));
             } else if (bundle != null) {
-                // If there's a valid result, persist it to the user manager.
-                mUserManager.setApplicationRestrictions(packageName, bundle, mUser);
+                setApplicationRestrictions(packageName, bundle);
             }
         }
         // Remove request from the map
@@ -869,6 +874,46 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
             }
         }
         return selectedString;
+    }
+
+    private Bundle getApplicationRestrictions(String packageName) {
+        if (Flags.setApplicationRestrictionsCoexistence()) {
+            DevicePolicyManager dpm = getDevicePolicyManager();
+            if (dpm != null) {
+                return dpm.getApplicationRestrictionsBySystem(SETTINGS_SYSTEM_ENTITY, packageName);
+            } else {
+                Log.e(TAG, "Cannot get old restrictions; No DPM found.");
+                return Bundle.EMPTY;
+            }
+        } else {
+            return mUserManager.getApplicationRestrictions(packageName, mUser);
+        }
+    }
+
+    private void setApplicationRestrictions(String packageName, Bundle bundle) {
+        if (Flags.setApplicationRestrictionsCoexistence()) {
+            DevicePolicyManager dpm = getDevicePolicyManager();
+            if (dpm != null) {
+                dpm.setApplicationRestrictionsBySystem(SETTINGS_SYSTEM_ENTITY, packageName, bundle);
+            } else {
+                Log.e(TAG, "Cannot set restrictions; No DPM found.");
+            }
+        } else {
+            mUserManager.setApplicationRestrictions(packageName, bundle, mUser);
+        }
+    }
+
+    private DevicePolicyManager getDevicePolicyManager() {
+        try {
+            final Context managedProfileContext = getContext().createPackageContextAsUser(
+                    getContext().getPackageName(), 0 /* flags */, mUser);
+            final DevicePolicyManager dpm = managedProfileContext.getSystemService(
+                    DevicePolicyManager.class);
+            return dpm;
+        } catch (PackageManager.NameNotFoundException e) {
+            Log.e(TAG, "Failed to create user context", e);
+          return null;
+        }
     }
 
     /**
