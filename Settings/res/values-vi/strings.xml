@@ -650,10 +650,8 @@
     <string name="sensor_toggle_description" msgid="7415801459994303159">"Đối với tất cả các ứng dụng và dịch vụ"</string>
     <string name="recently_accessed_by_category" msgid="6841705864715653428">"Các ứng dụng truy cập gần đây"</string>
     <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Không có ứng dụng nào truy cập gần đây"</string>
-    <!-- no translation found for no_recent_camera_accesses (7922043879872070573) -->
-    <skip />
-    <!-- no translation found for no_recent_microphone_accesses (4243126468848548494) -->
-    <skip />
+    <string name="no_recent_camera_accesses" msgid="7922043879872070573">"Gần đây, không có ứng dụng hay dịch vụ nào sử dụng máy ảnh"</string>
+    <string name="no_recent_microphone_accesses" msgid="4243126468848548494">"Gần đây, không có ứng dụng hay dịch vụ nào sử dụng micrô"</string>
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Xem tất cả"</string>
     <string name="microphone" msgid="7893752847683941214">"Micrô"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"Quyền truy cập vào micrô"</string>
@@ -674,10 +672,8 @@
     <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Bạn không thể sử dụng điều khiển từ xa để trò chuyện với trợ lý thoại. Để sử dụng nút trợ lý thoại, bạn phải cấp quyền truy cập micrô."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Quyền truy cập vào máy ảnh: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Khi bạn bật chế độ này, tất cả các ứng dụng và dịch vụ có quyền đều có thể truy cập vào máy ảnh trên thiết bị này.\n\nCác thiết bị ngoại vi của máy ảnh có giao thức tùy chỉnh sẽ không chịu ảnh hưởng của chế độ cài đặt này."</string>
-    <!-- no translation found for sensor_toggle_info_on (4013827154639541427) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (3542660719703408510) -->
-    <skip />
+    <string name="sensor_toggle_info_on" msgid="4013827154639541427">"bật"</string>
+    <string name="sensor_toggle_info_off" msgid="3542660719703408510">"tắt"</string>
     <string name="system_location" msgid="4057295363709016511">"Vị trí"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Cho phép các ứng dụng đã yêu cầu bạn cho phép sử dụng thông tin vị trí của bạn"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Đồng ý vị trí"</string>
@@ -903,8 +899,7 @@
     <string name="tts_rate_normal" msgid="3631458247079252628">"Bình thường"</string>
     <string name="tts_rate_fast" msgid="5723868816257531421">"Nhanh"</string>
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"Rất nhanh"</string>
-    <!-- no translation found for title_settings (4269159454024305758) -->
-    <skip />
+    <string name="title_settings" msgid="4269159454024305758">"Cài đặt <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="title_current_keyboard" msgid="891238509164879851">"Bàn phím hiện tại"</string>
     <string name="title_configure" msgid="846802387014612210">"Định cấu hình"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Tùy chọn bàn phím"</string>
@@ -1102,10 +1097,8 @@
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Hiển thị trên các ứng dụng khác"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Cho hiển thị trên ứng dụng khác"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Cho phép một ứng dụng hiển thị trên các ứng dụng khác mà bạn đang sử dụng. Điều này có thể ảnh hưởng đến cách bạn sử dụng các ứng dụng đó hoặc thay đổi cách chúng xuất hiện hoặc hoạt động."</string>
-    <!-- no translation found for write_system_settings (9023005036458214990) -->
-    <skip />
-    <!-- no translation found for write_settings_title (3418928647080624719) -->
-    <skip />
+    <string name="write_system_settings" msgid="9023005036458214990">"Truy cập vào chế độ cài đặt hệ thống"</string>
+    <string name="write_settings_title" msgid="3418928647080624719">"Truy cập vào chế độ cài đặt hệ thống"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"Quyền này cho phép ứng dụng sửa đổi các chế độ cài đặt hệ thống."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Có"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Không"</string>
@@ -1118,8 +1111,7 @@
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Cho phép ứng dụng tạo cửa sổ hình trong hình khi ứng dụng đang mở hoặc sau khi bạn rời khỏi ứng dụng đó (chẳng hạn như để tiếp tục xem video). Cửa sổ này sẽ hiển thị trên các ứng dụng khác mà bạn đang sử dụng."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Cho phép các ứng dụng đặt chuông báo và lên lịch cho các thao tác cần chính xác về thời gian. Chế độ này cho phép ứng dụng chạy ở chế độ nền và có thể tiêu tốn nhiều điện hơn.\n\nNếu bạn không cấp quyền này, các chuông báo và sự kiện mà ứng dụng đã đặt lịch sẽ không hoạt động."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Bật màn hình"</string>
-    <!-- no translation found for allow_turn_screen_on (9071257620628205016) -->
-    <skip />
+    <string name="allow_turn_screen_on" msgid="9071257620628205016">"Bật màn hình"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Cho phép ứng dụng bật màn hình. Nếu được phép, ứng dụng có thể bật màn hình bất kỳ lúc nào kể cả khi bạn không có ý định như vậy."</string>
     <string name="special_access" msgid="21806055758289916">"Quyền truy cập đặc biệt"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
@@ -1211,10 +1203,7 @@
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Chỉ ảnh hưởng đến âm lượng trên thiết bị %1$s chứ không ảnh hưởng đến TV"</string>
     <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: Tắt"</string>
     <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: Bật"</string>
-    <!-- no translation found for enable_angle_as_system_driver (2621814239122082069) -->
-    <skip />
-    <!-- no translation found for enable_angle_as_system_driver_summary (6941274244229799261) -->
-    <skip />
-    <!-- no translation found for reboot_dialog_enable_angle_as_system_driver (5658387699421699408) -->
-    <skip />
+    <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Bật ANGLE làm trình điều khiển OpenGL ES mặc định"</string>
+    <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Thử nghiệm, cần khởi động lại."</string>
+    <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Cần phải khởi động lại để thay đổi trình điều khiển hệ thống OpenGL ES"</string>
 </resources>

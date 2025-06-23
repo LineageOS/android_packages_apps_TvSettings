@@ -650,10 +650,8 @@
     <string name="sensor_toggle_description" msgid="7415801459994303159">"Барлық қолданба мен қызмет үшін"</string>
     <string name="recently_accessed_by_category" msgid="6841705864715653428">"Соңғы пайдалану рұқсаттары:"</string>
     <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Соңғы пайдалану рұқсаттары жоқ."</string>
-    <!-- no translation found for no_recent_camera_accesses (7922043879872070573) -->
-    <skip />
-    <!-- no translation found for no_recent_microphone_accesses (4243126468848548494) -->
-    <skip />
+    <string name="no_recent_camera_accesses" msgid="7922043879872070573">"Камераны жақында ешқандай қолданба мен қызмет пайдаланбады."</string>
+    <string name="no_recent_microphone_accesses" msgid="4243126468848548494">"Микрофонды жақында ешқандай қолданба мен қызмет пайдаланбады."</string>
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Барлығын көру"</string>
     <string name="microphone" msgid="7893752847683941214">"Микрофон"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"Микрофонды пайдалану"</string>
@@ -674,10 +672,8 @@
     <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Пульт арқылы дауыстық көмекшіге пәрмен бере алмайтын боласыз. Дауыстық көмекші түймесін қолдану үшін микрофонды пайдалану рұқсатын қосыңыз."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Камераны пайдалану рұқсаты: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Бұл параметр қосулы болса, рұқсат берілген барлық қолданба мен қызмет осы құрылғыдағы кез келген камераны пайдалана алады.\n\nБұл параметр камераның арнаулы протоколды перифериялық құрылғыларына әсер етпейді."</string>
-    <!-- no translation found for sensor_toggle_info_on (4013827154639541427) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (3542660719703408510) -->
-    <skip />
+    <string name="sensor_toggle_info_on" msgid="4013827154639541427">"қосулы"</string>
+    <string name="sensor_toggle_info_off" msgid="3542660719703408510">"өшірулі"</string>
     <string name="system_location" msgid="4057295363709016511">"Локация"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Рұқсат сұраған қолданбаларға орныңыз туралы ақпаратты пайдалануға рұқсат ету"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Орынды анықтауға келісім"</string>
@@ -903,8 +899,7 @@
     <string name="tts_rate_normal" msgid="3631458247079252628">"Қалыпты"</string>
     <string name="tts_rate_fast" msgid="5723868816257531421">"Жылдам"</string>
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"Өте жылдам"</string>
-    <!-- no translation found for title_settings (4269159454024305758) -->
-    <skip />
+    <string name="title_settings" msgid="4269159454024305758">"<xliff:g id="NAME">%1$s</xliff:g> параметрлері"</string>
     <string name="title_current_keyboard" msgid="891238509164879851">"Ағымдағы пернетақта"</string>
     <string name="title_configure" msgid="846802387014612210">"Конфигурациялау"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Пернетақта опциялары"</string>
@@ -1102,10 +1097,8 @@
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Басқа қолданбалардың үстінен көрсету"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Басқа қолданба үстінен көрсетуге рұқсат беру"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Қолданбаның пайдаланылып жатқан басқа қолданбалардың үстінен көрсетілуіне рұқсат беріледі. Ол қолданбаларды пайдалануыңызға кедергі келтіріп, олардың көрсетілуін не жұмысын өзгертуі мүмкін."</string>
-    <!-- no translation found for write_system_settings (9023005036458214990) -->
-    <skip />
-    <!-- no translation found for write_settings_title (3418928647080624719) -->
-    <skip />
+    <string name="write_system_settings" msgid="9023005036458214990">"Жүйе параметрлеріне кіру"</string>
+    <string name="write_settings_title" msgid="3418928647080624719">"Жүйе параметрлеріне кіру"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"Бұл рұқсат қолданбаға жүйе параметрлерін өзгертуге мүмкіндік береді."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Иә"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Жоқ"</string>
@@ -1118,8 +1111,7 @@
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Қолданба ашық болғанда не одан шыққанда (мысалы, бейнені әрі қарай көру үшін), қолданбаларға \"суреттегі сурет\" терезесін ашуға мүмкіндік береді. Бұл терезе ашылған басқа қолданбалардың үстінен шығады."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Қолданбаларға оятқыштарды орнатуға және уақытқа қатысты басқа да әрекеттерді жоспарлауға рұқсат береді. Мұндайда қолданба фондық режимде жұмыс істейді, сондықтан қуат шығыны артуы мүмкін.\n\nБұл рұқсат өшірулі болса, осы қолданбада жоспарланған ағымдағы оятқыштар мен уақытқа байланысты іс-шаралар жұмыс істемейді."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Экранды қосу"</string>
-    <!-- no translation found for allow_turn_screen_on (9071257620628205016) -->
-    <skip />
+    <string name="allow_turn_screen_on" msgid="9071257620628205016">"Экранды қосу"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Қолданбаның экранды қосуына рұқсат береді. Рұқсат берілсе, қолданба кез келген уақытта экранды өздігінен қосуы мүмкін."</string>
     <string name="special_access" msgid="21806055758289916">"Арнайы рұқсат"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
@@ -1211,10 +1203,7 @@
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Теледидардағы емес,- тек %1$s құрылғысындағы дыбысқа әсер етеді."</string>
     <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: өшірулі"</string>
     <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: қосулы"</string>
-    <!-- no translation found for enable_angle_as_system_driver (2621814239122082069) -->
-    <skip />
-    <!-- no translation found for enable_angle_as_system_driver_summary (6941274244229799261) -->
-    <skip />
-    <!-- no translation found for reboot_dialog_enable_angle_as_system_driver (5658387699421699408) -->
-    <skip />
+    <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"ANGLE-ді әдепкі OpenGL ES драйвері ретінде қосу"</string>
+    <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Эксперименттік нұсқа, өшіріп қосу қажет."</string>
+    <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Жүйенің OpenGL ES драйверін өзгерту үшін өшіріп қосу қажет."</string>
 </resources>
