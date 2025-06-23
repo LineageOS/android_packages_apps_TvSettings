@@ -650,10 +650,8 @@
     <string name="sensor_toggle_description" msgid="7415801459994303159">"Для всіх додатків і сервісів"</string>
     <string name="recently_accessed_by_category" msgid="6841705864715653428">"Додатки, які нещодавно отримували доступ"</string>
     <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Немає додатків, які нещодавно отримували доступ"</string>
-    <!-- no translation found for no_recent_camera_accesses (7922043879872070573) -->
-    <skip />
-    <!-- no translation found for no_recent_microphone_accesses (4243126468848548494) -->
-    <skip />
+    <string name="no_recent_camera_accesses" msgid="7922043879872070573">"Жоден додаток або сервіс останнім часом не отримував доступу до камери"</string>
+    <string name="no_recent_microphone_accesses" msgid="4243126468848548494">"Жоден додаток або сервіс останнім часом не отримував доступу до мікрофона"</string>
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Показати все"</string>
     <string name="microphone" msgid="7893752847683941214">"Мікрофон"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"Доступ до мікрофона"</string>
@@ -674,10 +672,8 @@
     <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"Тепер ви зможете спілкуватися з голосовим помічником за допомогою пульта дистанційного керування. Щоб використовувати кнопку виклику голосового помічника, надайте доступ до мікрофона."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Доступ до камери: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Коли цей параметр увімкнено, усі додатки й сервіси з відповідним дозволом можуть отримувати доступ до будь-якої камери на пристрої.\n\nЦе налаштування не впливає на периферійні пристрої камери зі спеціальним протоколом."</string>
-    <!-- no translation found for sensor_toggle_info_on (4013827154639541427) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (3542660719703408510) -->
-    <skip />
+    <string name="sensor_toggle_info_on" msgid="4013827154639541427">"увімкнено"</string>
+    <string name="sensor_toggle_info_off" msgid="3542660719703408510">"вимкнено"</string>
     <string name="system_location" msgid="4057295363709016511">"Місцезнаходження"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Дозволити програмам, які запитували дозвіл, використовувати інформацію про ваше місцезнаходження"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Згода щодо місцезнаходження"</string>
@@ -903,8 +899,7 @@
     <string name="tts_rate_normal" msgid="3631458247079252628">"Звичайно"</string>
     <string name="tts_rate_fast" msgid="5723868816257531421">"Швидко"</string>
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"Дуже швидко"</string>
-    <!-- no translation found for title_settings (4269159454024305758) -->
-    <skip />
+    <string name="title_settings" msgid="4269159454024305758">"<xliff:g id="NAME">%1$s</xliff:g>: налаштування"</string>
     <string name="title_current_keyboard" msgid="891238509164879851">"Поточна клавіатура"</string>
     <string name="title_configure" msgid="846802387014612210">"Налаштувати"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Параметри клавіатури"</string>
@@ -1102,10 +1097,8 @@
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Показувати поверх додатків"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Показ поверх інших додатків"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Дозволити додатку відображатися поверх інших відкритих додатків. Він може заважати користуватись іншими додатками або може змінювати їх вигляд чи поведінку."</string>
-    <!-- no translation found for write_system_settings (9023005036458214990) -->
-    <skip />
-    <!-- no translation found for write_settings_title (3418928647080624719) -->
-    <skip />
+    <string name="write_system_settings" msgid="9023005036458214990">"Доступ до налаштувань системи"</string>
+    <string name="write_settings_title" msgid="3418928647080624719">"Доступ до системних налаштувань"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"Додаток із цим дозволом може змінювати налаштування системи."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Так"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Ні"</string>
@@ -1118,8 +1111,7 @@
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Дозвольте додаткам створювати вікно з картинкою в картинці, коли вони відкриті або коли ви вийшли з них (наприклад, щоб дивитися відео). Це вікно з’являтиметься поверх інших додатків."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Дозволити додаткам налаштовувати будильники й створювати події на певний час. Додатки зможуть працювати у фоновому режимі й тому використовувати більше заряду акумулятора.\n\nЯкщо вимкнути цей дозвіл, наявні будильники й події, створені додатком, не працюватимуть."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Увімкнення екрана"</string>
-    <!-- no translation found for allow_turn_screen_on (9071257620628205016) -->
-    <skip />
+    <string name="allow_turn_screen_on" msgid="9071257620628205016">"Увімкнення екрана"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Додатку буде дозволено вмикати екран. З таким дозволом додаток зможе будь-коли вмикати екран пристрою навіть без вашого явного наміру."</string>
     <string name="special_access" msgid="21806055758289916">"Спеціальний доступ додатка"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>."</string>
@@ -1211,10 +1203,7 @@
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"Вплине лише на гучність на пристрої \"%1$s\", а не на телевізорі"</string>
     <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: вимкнено"</string>
     <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: увімкнено"</string>
-    <!-- no translation found for enable_angle_as_system_driver (2621814239122082069) -->
-    <skip />
-    <!-- no translation found for enable_angle_as_system_driver_summary (6941274244229799261) -->
-    <skip />
-    <!-- no translation found for reboot_dialog_enable_angle_as_system_driver (5658387699421699408) -->
-    <skip />
+    <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Увімкнути ANGLE як драйвер OpenGL ES за умовчанням"</string>
+    <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Експериментальна функція, потрібен перезапуск."</string>
+    <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Щоб змінити системний драйвер OpenGL ES, перезапустіть пристрій"</string>
 </resources>

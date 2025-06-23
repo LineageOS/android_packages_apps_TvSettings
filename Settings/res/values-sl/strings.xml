@@ -650,10 +650,8 @@
     <string name="sensor_toggle_description" msgid="7415801459994303159">"Za vse aplikacije in storitve"</string>
     <string name="recently_accessed_by_category" msgid="6841705864715653428">"Nedavno uporabljala aplikacija"</string>
     <string name="no_recent_sensor_accesses" msgid="3498112970658050800">"Ni nedavnih dostopov"</string>
-    <!-- no translation found for no_recent_camera_accesses (7922043879872070573) -->
-    <skip />
-    <!-- no translation found for no_recent_microphone_accesses (4243126468848548494) -->
-    <skip />
+    <string name="no_recent_camera_accesses" msgid="7922043879872070573">"Nobena aplikacija ali storitev ni nedavno dostopala do kamere"</string>
+    <string name="no_recent_microphone_accesses" msgid="4243126468848548494">"Nobena aplikacija ali storitev ni nedavno dostopala do mikrofona"</string>
     <string name="recently_accessed_show_all" msgid="5234849189704717855">"Pokaži vse"</string>
     <string name="microphone" msgid="7893752847683941214">"Mikrofon"</string>
     <string name="mic_toggle_title" msgid="7193417007060235665">"Dostop do mikrofona"</string>
@@ -674,10 +672,8 @@
     <string name="mic_remote_toggle_off_info_content" msgid="7102410903448065152">"S glasovnim pomočnikom ne bo mogoče komunicirati prek daljinskega upravljalnika. Če želite uporabljati gumb za glasovnega pomočnika, omogočite dostop do mikrofona."</string>
     <string name="camera_toggle_info_title" msgid="3871317082313736088">"Dostop do fotoaparata: <xliff:g id="SENSOR_STATE">%s</xliff:g>"</string>
     <string name="camera_toggle_info_content" msgid="2999965953853204003">"Ko je v vklopljenem položaju, lahko vse aplikacije in storitve z dovoljenjem dostopajo do poljubne kamere v tej napravi.\n\nTa nastavitev ne vpliva na zunanje kamere s protokolom po meri."</string>
-    <!-- no translation found for sensor_toggle_info_on (4013827154639541427) -->
-    <skip />
-    <!-- no translation found for sensor_toggle_info_off (3542660719703408510) -->
-    <skip />
+    <string name="sensor_toggle_info_on" msgid="4013827154639541427">"vklopljeno"</string>
+    <string name="sensor_toggle_info_off" msgid="3542660719703408510">"izklopljeno"</string>
     <string name="system_location" msgid="4057295363709016511">"Lokacija"</string>
     <string name="system_desc_location" msgid="1680134126100535031">"Aplikacije lahko z mojim dovoljenjem uporabijo podatke o lokaciji"</string>
     <string name="system_network_location_confirm" msgid="7128162421781085332">"Soglasje za lokacijo"</string>
@@ -903,8 +899,7 @@
     <string name="tts_rate_normal" msgid="3631458247079252628">"Običajno"</string>
     <string name="tts_rate_fast" msgid="5723868816257531421">"Hitro"</string>
     <string name="tts_rate_very_fast" msgid="7756663146626103952">"Zelo hitro"</string>
-    <!-- no translation found for title_settings (4269159454024305758) -->
-    <skip />
+    <string name="title_settings" msgid="4269159454024305758">"Nastavitve za <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="title_current_keyboard" msgid="891238509164879851">"Trenutna tipkovnica"</string>
     <string name="title_configure" msgid="846802387014612210">"Konfiguriranje"</string>
     <string name="desc_configure_keyboard" msgid="3474279140150468141">"Možnosti tipkovnice"</string>
@@ -1102,10 +1097,8 @@
     <string name="system_alert_window_settings" msgid="5790572489650085051">"Prekrivanje drugih aplikacij"</string>
     <string name="permit_draw_overlay" msgid="5312730681030266735">"Dovoli prekrivanje drugih aplikacij"</string>
     <string name="allow_overlay_description" msgid="5152329837278240259">"Omogočite aplikaciji, da na zaslonu prekrije druge aplikacije, ki jih uporabljate. To lahko vpliva na uporabo teh aplikacij ali spremeni njihov običajen videz ali delovanje."</string>
-    <!-- no translation found for write_system_settings (9023005036458214990) -->
-    <skip />
-    <!-- no translation found for write_settings_title (3418928647080624719) -->
-    <skip />
+    <string name="write_system_settings" msgid="9023005036458214990">"Dostop do sistem. nastavitev"</string>
+    <string name="write_settings_title" msgid="3418928647080624719">"Dostop do sistemskih nastavitev"</string>
     <string name="write_settings_description" msgid="7382397926674265937">"To dovoljenje aplikaciji dovoljuje spreminjanje sistemskih nastavitev."</string>
     <string name="write_settings_on" msgid="71675710746513956">"Da"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"Ne"</string>
@@ -1118,8 +1111,7 @@
     <string name="picture_in_picture_app_detail_summary" msgid="3296649114939705896">"Dovolite aplikacijam, da ustvarijo okno s sliko v sliki, medtem ko je aplikacija odprta ali potem ko jo zapustite (na primer, da nadaljujete z ogledom videoposnetka). To okno prekrije druge aplikacije, ki jih uporabljate."</string>
     <string name="alarms_and_reminders_description" msgid="4063972350154624500">"Aplikacijam dovolite nastavljanje alarmov in načrtovanje časovno občutljivih dejanj. S tem aplikacijam omogočite izvajanje v ozadju, kar bo morda povečalo porabo energije baterije.\n\nČe je to dovoljenje izklopljeno, obstoječi alarmi in časovno občutljivi dogodki, ki jih nastavi aplikacija, ne bodo delovali."</string>
     <string name="turn_screen_on_title" msgid="5293798529284629011">"Vklop zaslona"</string>
-    <!-- no translation found for allow_turn_screen_on (9071257620628205016) -->
-    <skip />
+    <string name="allow_turn_screen_on" msgid="9071257620628205016">"Vklop zaslona"</string>
     <string name="allow_turn_screen_on_description" msgid="7521761625343889415">"Omogočite aplikaciji, da vklopi zaslon. Če ji to odobrite, lahko aplikacija kadar koli brez vašega eksplicitnega namena vklopi zaslon."</string>
     <string name="special_access" msgid="21806055758289916">"Posebni dostop za aplikacije"</string>
     <string name="string_concat" msgid="5213870180216051497">"<xliff:g id="PART1">%1$s</xliff:g>, <xliff:g id="PART2">%2$s</xliff:g>"</string>
@@ -1211,10 +1203,7 @@
     <string name="volume_change_subtitle_select" msgid="357283268411175266">"To vpliva na glasnost samo v napravi %1$s, ne na televizorju"</string>
     <string name="accessibility_service_off_title" msgid="4816862630220086861">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: Izklopljeno"</string>
     <string name="accessibility_service_on_title" msgid="7892907988400727648">"<xliff:g id="ACCESSIBILITY_SERVICE_NAME">%s</xliff:g>: Vklopljeno"</string>
-    <!-- no translation found for enable_angle_as_system_driver (2621814239122082069) -->
-    <skip />
-    <!-- no translation found for enable_angle_as_system_driver_summary (6941274244229799261) -->
-    <skip />
-    <!-- no translation found for reboot_dialog_enable_angle_as_system_driver (5658387699421699408) -->
-    <skip />
+    <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Omogoči ANGLE kot privzeti gonilnik OpenGL ES"</string>
+    <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Preizkusno, zahteva vnovični zagon."</string>
+    <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Če želite spremeniti sistemski gonilnik OpenGL ES, morate znova zagnati napravo"</string>
 </resources>
