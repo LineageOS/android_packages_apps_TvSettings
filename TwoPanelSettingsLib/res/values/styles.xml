@@ -120,4 +120,8 @@
         <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/tp_preference_decor_title_text_color</item>
     </style>
+
+    <style name="TwoPanelPreferenceStyle" parent="@style/LeanbackPreference">
+        <item name="android:layout">@layout/leanback_preference_two_panel</item>
+    </style>
 </resources>
