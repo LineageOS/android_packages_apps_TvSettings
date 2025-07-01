@@ -119,6 +119,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private int mMaxScrollX;
     private final RootViewOnKeyListener mRootViewOnKeyListener = new RootViewOnKeyListener();
     private int mPrefPanelIdx;
+    private int mButtonState = 0;
     private HorizontalScrollView mScrollView;
     private final Handler mHandler = new Handler(Looper.getMainLooper());
     private boolean mIsNavigatingBack;
@@ -995,8 +996,13 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             }
             scrollToPanel.setOnDispatchTouchListener(null);
             previewPanel.setOnDispatchTouchListener((view, env) -> {
-                if (env.getActionMasked() == MotionEvent.ACTION_UP) {
-                    forward();
+                if (env.getActionMasked() == MotionEvent.ACTION_DOWN) {
+                    mButtonState = env.getButtonState();
+                } else if (env.getActionMasked() == MotionEvent.ACTION_UP) {
+                    if (mButtonState != MotionEvent.BUTTON_SECONDARY) {
+                        forward();
+                    }
+                    mButtonState = 0;
                 }
                 return true;
             });
