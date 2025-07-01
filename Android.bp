@@ -71,6 +71,9 @@ android_library {
     platform_apis: true,
     // TODO(b/319716205): re-enable use_resource_processor
     use_resource_processor: false,
+    flags_packages: [
+        "android.app.supervision.flags-aconfig",
+    ],
 }
 
 android_app {
@@ -98,6 +101,9 @@ android_app {
     ],
     // TODO(b/319716205): re-enable use_resource_processor
     use_resource_processor: false,
+    flags_packages: [
+        "android.app.supervision.flags-aconfig",
+    ],
 }
 
 android_app {
@@ -128,6 +134,9 @@ android_app {
     ],
     // TODO(b/319716205): re-enable use_resource_processor
     use_resource_processor: false,
+    flags_packages: [
+        "android.app.supervision.flags-aconfig",
+    ],
 }
 
 // Two-panel TvSettings
@@ -172,6 +181,9 @@ android_app {
     },
     // TODO(b/319716205): re-enable use_resource_processor
     use_resource_processor: false,
+    flags_packages: [
+        "android.app.supervision.flags-aconfig",
+    ],
 }
 
 // Two-panel TvSettings 0 Debug
@@ -208,4 +220,7 @@ android_app {
     ],
     // TODO(b/319716205): re-enable use_resource_processor
     use_resource_processor: false,
+    flags_packages: [
+        "android.app.supervision.flags-aconfig",
+    ],
 }
