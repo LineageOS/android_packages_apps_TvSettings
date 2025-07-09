@@ -72,12 +72,12 @@
     <style name="TwoPanelSwitchPreferenceStyle" parent="@style/Preference.SwitchPreferenceCompat">
         <item name="widgetLayout">@layout/preference_switch</item>
         <item name="android:widgetLayout">@layout/preference_switch</item>
-        <item name="android:layout">@layout/leanback_preference</item>
+        <item name="android:layout">@layout/leanback_preference_two_panel</item>
     </style>
     <style name="TwoPanelSwitchPreferenceCompatStyle" parent="@style/Preference.SwitchPreferenceCompat">
         <item name="widgetLayout">@layout/preference_switch_compat</item>
         <item name="android:widgetLayout">@layout/preference_switch</item>
-        <item name="android:layout">@layout/leanback_preference</item>
+        <item name="android:layout">@layout/leanback_preference_two_panel</item>
     </style>
     <style name="Widget.TwoPanelPreference.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
         <item name="materialThemeOverlay">@style/ThemeOverlay.TwoPanelPreference.Switch</item>
