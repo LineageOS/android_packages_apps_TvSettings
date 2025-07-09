@@ -26,6 +26,7 @@ import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.Keep;
@@ -70,6 +71,8 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
             AudioFormat.ENCODING_DTS, AudioFormat.ENCODING_DTS_HD, AudioFormat.ENCODING_DTS_UHD_P1,
             AudioFormat.ENCODING_DRA
     };
+
+    private static final String TAG = "AdvancedVolumeFragment";
 
     private Map<Integer, Boolean> mFormats;
     private List<Integer> mReportedFormats;
@@ -211,6 +214,10 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
 
     private void selectRadioPreference(Preference preference) {
         final RadioPreference radioPreference = (RadioPreference) preference;
+        if (radioPreference == null) {
+            Log.w(TAG, "RadioPreference is null");
+            return;
+        }
         radioPreference.setChecked(true);
         radioPreference.clearOtherRadioPreferences(getPreferenceGroup());
     }
