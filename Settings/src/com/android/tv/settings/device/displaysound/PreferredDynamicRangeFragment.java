@@ -26,6 +26,7 @@ import android.content.Context;
 import android.hardware.display.DisplayManager;
 import android.hardware.display.HdrConversionMode;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 
 import androidx.annotation.Keep;
@@ -147,6 +148,10 @@ public class PreferredDynamicRangeFragment  extends SettingsPreferenceFragment {
 
     private void selectRadioPreference(Preference preference) {
         final RadioPreference radioPreference = (RadioPreference) preference;
+        if (radioPreference == null) {
+            Log.w(TAG, "RadioPreference is null");
+            return;
+        }
         radioPreference.setChecked(true);
         radioPreference.clearOtherRadioPreferences(getPreferenceGroup());
     }
