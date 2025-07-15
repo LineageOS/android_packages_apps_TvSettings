@@ -45,13 +45,13 @@ import com.android.tv.settings.connectivity.setup.SuccessState;
 import com.android.tv.settings.connectivity.setup.UserChoiceInfo;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
+import com.android.tv.settings.connectivity.util.StateMachineActivity;
 import com.android.tv.settings.core.instrumentation.InstrumentedActivity;
 
 /**
  * Manual-style add wifi network (the kind you'd use for adding a hidden or out-of-range network.)
  */
-public class AddWifiNetworkActivity extends InstrumentedActivity
-        implements State.FragmentChangeListener {
+public class AddWifiNetworkActivity extends StateMachineActivity {
     private static final String TAG = "AddWifiNetworkActivity";
 
     private static final String EXTRA_TYPE = "com.android.tv.settings.connectivity.type";
@@ -65,13 +65,6 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
                 .putExtra(EXTRA_TYPE, EXTRA_TYPE_EASYCONNECT);
     }
 
-    private final StateMachine.Callback mStateMachineCallback = new StateMachine.Callback() {
-        @Override
-        public void onFinish(int result) {
-            setResult(result);
-            finish();
-        }
-    };
     private State mChooseSecurityState;
     private State mConnectFailedState;
     private State mConnectState;
@@ -80,13 +73,10 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
     private State mEasyConnectQrState;
     private State mSuccessState;
     private State mOptionsOrConnectState;
-    private State mFinishState;
-    private StateMachine mStateMachine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         if (!isAddWifiAllowed()) {
             EnforcedAdmin admin = RestrictedLockUtilsInternal.checkIfRestrictionEnforced(this,
@@ -98,9 +88,6 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
             return;
         }
 
-        setContentView(R.layout.wifi_container);
-        mStateMachine = ViewModelProviders.of(this).get(StateMachine.class);
-        mStateMachine.setCallback(mStateMachineCallback);
         UserChoiceInfo userChoiceInfo = ViewModelProviders.of(this).get(UserChoiceInfo.class);
         userChoiceInfo.getWifiConfiguration().hiddenSSID = true;
 
@@ -115,7 +102,6 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
         mConnectFailedState = new ConnectFailedState(this);
         mSuccessState = new SuccessState(this);
         mOptionsOrConnectState = new OptionsOrConnectState(this);
-        mFinishState = new FinishState(this);
         AdvancedWifiOptionsFlow.createFlow(
                 this, true, true, null, mOptionsOrConnectState,
                 mConnectState, AdvancedWifiOptionsFlow.START_DEFAULT_PAGE);
@@ -192,7 +178,7 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
         mStateMachine.addState(
                 mConnectFailedState,
                 StateMachine.SELECT_WIFI,
-                mFinishState
+                getFinishState()
         );
 
         if (isEasyConnectFlow) {
@@ -202,29 +188,6 @@ public class AddWifiNetworkActivity extends InstrumentedActivity
         }
 
         mStateMachine.start(true);
-    }
-
-    @Override
-    public void onBackPressed() {
-        mStateMachine.back();
-    }
-
-    private void updateView(Fragment fragment, boolean movingForward) {
-        if (fragment != null) {
-            FragmentTransaction updateTransaction = getSupportFragmentManager().beginTransaction();
-            if (movingForward) {
-                updateTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-            } else {
-                updateTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
-            }
-            updateTransaction.replace(R.id.wifi_container, fragment, TAG);
-            updateTransaction.commitAllowingStateLoss();
-        }
-    }
-
-    @Override
-    public void onFragmentChange(Fragment newFragment, boolean movingForward) {
-        updateView(newFragment, movingForward);
     }
 
     private boolean isAddWifiAllowed() {

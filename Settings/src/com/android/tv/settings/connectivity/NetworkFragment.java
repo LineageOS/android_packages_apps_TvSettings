@@ -62,6 +62,7 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.RestrictedPreferenceAdapter;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.basic.BasicModeFeatureProvider;
+import com.android.tv.settings.connectivity.thread.ShareThreadNetworkActivity;
 import com.android.tv.settings.connectivity.util.ThreadNetworkHelper;
 import com.android.tv.settings.device.eco.EnergyModeConfirmationActivity;
 import com.android.tv.settings.device.eco.EnergyModesHelper;
@@ -103,6 +104,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private static final String KEY_WIFI_ALWAYS_SCAN = "wifi_always_scan";
     private static final String KEY_ETHERNET = "ethernet";
     private static final String KEY_WIFI_THREAD_NETWORK = "wifi_thread_network";
+    private static final String KEY_SHARE_THREAD_NETWORK = "share_thread_network";
     private static final String KEY_ETHERNET_STATUS = "ethernet_status";
     private static final String KEY_ETHERNET_PROXY = "ethernet_proxy";
     private static final String KEY_ETHERNET_DHCP = "ethernet_dhcp";
@@ -152,6 +154,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 @Override
                 public void isEnabled(boolean enabled) {
                     mThreadNetworkPref.setChecked(enabled);
+                    mShareThreadNetworkPref.setVisible(enabled);
                 }
             };
     private final ActivityResultLauncher<Intent> enableThreadNetworkIntentLauncher =
@@ -200,6 +203,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private TwoStatePreference mAlwaysScan;
     private PreferenceCategory mEthernetCategory;
     private TwoStatePreference mThreadNetworkPref;
+    private Preference mShareThreadNetworkPref;
     private Preference mEthernetStatusPref;
     private Preference mEthernetProxyPref;
     private Preference mEthernetDhcpPref;
@@ -351,6 +355,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mAddEasyConnectPref = (RestrictedPreference) findPreference(KEY_WIFI_ADD_EASYCONNECT);
         mAlwaysScan = (TwoStatePreference) findPreference(KEY_WIFI_ALWAYS_SCAN);
         mThreadNetworkPref = (SwitchPreference) findPreference(KEY_WIFI_THREAD_NETWORK);
+        mShareThreadNetworkPref = findPreference(KEY_SHARE_THREAD_NETWORK);
 
         mEthernetCategory = (PreferenceCategory) findPreference(KEY_ETHERNET);
         mEthernetStatusPref = findPreference(KEY_ETHERNET_STATUS);
@@ -361,6 +366,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             mEnableWifiPref.setVisible(false);
         }
         mThreadNetworkPref.setVisible(mThreadNetworkHelperOptional.isPresent());
+        mShareThreadNetworkPref.setVisible(mThreadNetworkPref.isChecked());
         Preference networkDiagnosticsPref = findPreference(KEY_NETWORK_DIAGNOSTICS);
         Intent networkDiagnosticsIntent = makeNetworkDiagnosticsIntent();
         if (networkDiagnosticsIntent != null) {
@@ -482,6 +488,9 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 break;
             case KEY_WIFI_ADD_EASYCONNECT:
                 startActivity(AddWifiNetworkActivity.createEasyConnectIntent(getContext()));
+                break;
+            case KEY_SHARE_THREAD_NETWORK:
+                startActivity(new Intent(getContext(), ShareThreadNetworkActivity.class));
                 break;
         }
         return super.onPreferenceTreeClick(preference);
