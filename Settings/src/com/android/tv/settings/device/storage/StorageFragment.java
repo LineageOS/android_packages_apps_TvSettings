@@ -26,6 +26,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
+import android.system.ErrnoException;
+import android.system.Os;
 import android.text.TextUtils;
 import android.util.Log;
 import java.io.File;
@@ -265,10 +267,10 @@ public class StorageFragment extends SettingsPreferenceFragment {
         File cache = new File(CACHE_PATH);
 
         try {
-            if (Files.getFileStore(root.toPath()).equals(Files.getFileStore(cache.toPath()))) {
+            if (Os.stat(root.getPath()).st_dev == Os.stat(cache.getPath()).st_dev) {
                 return 0L;
             }
-        } catch(IOException e) {
+        } catch(ErrnoException e) {
             Log.e(TAG, "Unable to get filestore", e);
             return 0L;
         }
