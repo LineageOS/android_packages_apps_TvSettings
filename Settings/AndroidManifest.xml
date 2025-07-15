@@ -1446,6 +1446,11 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:excludeFromRecents="true" />
 
+        <activity android:name=".about.LegalFragment$ConfirmationDialogFragmentActivity"
+            android:theme="@style/TvSettingsDialog.FullScreen"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true" />
+
 
     </application>
 
