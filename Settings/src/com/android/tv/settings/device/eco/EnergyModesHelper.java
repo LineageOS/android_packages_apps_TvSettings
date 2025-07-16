@@ -31,6 +31,8 @@ import android.os.PowerManager.LowPowerStandbyPolicy;
 import android.provider.DeviceConfig;
 import android.util.ArraySet;
 
+import androidx.annotation.XmlRes;
+
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
 
@@ -86,6 +88,8 @@ public final class EnergyModesHelper {
         public final int baseAllowedFeaturesRes;
         @ArrayRes
         public final int vendorAllowedFeaturesRes;
+        @XmlRes
+        public final int extensions;
 
         /**
          * Base mode from which all allowed reasons, allowed features, and exempt packages
@@ -101,7 +105,8 @@ public final class EnergyModesHelper {
                 @DrawableRes int ecoHintIconRes, @ArrayRes int baseExemptPackagesRes,
                 @ArrayRes int vendorExemptPackagesRes, @IntegerRes int baseAllowedReasonsRes,
                 @IntegerRes int vendorAllowedReasonsRes, @ArrayRes int baseAllowedFeaturesRes,
-                @ArrayRes int vendorAllowedFeaturesRes, @Nullable EnergyMode baseMode) {
+                @ArrayRes int vendorAllowedFeaturesRes, @XmlRes int extensions,
+                @Nullable EnergyMode baseMode) {
             this.ecoHighlighted = ecoHighlighted;
             this.enableLowPowerStandby = enableLowPowerStandby;
             this.enabledRes = enabledRes;
@@ -120,6 +125,7 @@ public final class EnergyModesHelper {
             this.vendorAllowedReasonsRes = vendorAllowedReasonsRes;
             this.baseAllowedFeaturesRes = baseAllowedFeaturesRes;
             this.vendorAllowedFeaturesRes = vendorAllowedFeaturesRes;
+            this.extensions = extensions;
             this.baseMode = baseMode;
         }
     }
@@ -143,6 +149,7 @@ public final class EnergyModesHelper {
             R.integer.energy_mode_low_vendorAllowedReasons,
             R.array.energy_mode_low_baseAllowedFeatures,
             R.array.energy_mode_low_vendorAllowedFeatures,
+            R.xml.energy_mode_low_extensions,
             /* baseMode= */ null);
 
     public static EnergyMode MODE_MODERATE_ENERGY = new EnergyMode(
@@ -164,6 +171,7 @@ public final class EnergyModesHelper {
             R.integer.energy_mode_moderate_vendorAllowedReasons,
             R.array.energy_mode_moderate_baseAllowedFeatures,
             R.array.energy_mode_moderate_vendorAllowedFeatures,
+            R.xml.energy_mode_moderate_extensions,
             MODE_LOW_ENERGY);
 
     public static EnergyMode MODE_HIGH_ENERGY = new EnergyMode(
@@ -185,6 +193,7 @@ public final class EnergyModesHelper {
             R.integer.energy_mode_high_vendorAllowedReasons,
             R.array.energy_mode_high_baseAllowedFeatures,
             R.array.energy_mode_high_vendorAllowedFeatures,
+            R.xml.energy_mode_high_extensions,
             MODE_MODERATE_ENERGY);
 
     public static EnergyMode MODE_UNRESTRICTED = new EnergyMode(
@@ -200,7 +209,8 @@ public final class EnergyModesHelper {
             R.array.energy_mode_high_features,
             R.string.energy_mode_high_eco_hint,
             R.drawable.ic_bolt,
-            0, 0, 0, 0, 0, 0, null);
+            0, 0, 0, 0, 0, 0,
+            R.xml.energy_mode_unrestricted_extensions, null);
 
     public static EnergyMode[] ENERGY_MODES = new EnergyMode[] {
             MODE_LOW_ENERGY, MODE_MODERATE_ENERGY, MODE_HIGH_ENERGY, MODE_UNRESTRICTED };

@@ -61,13 +61,22 @@ android_library {
 }
 
 filegroup {
-    name: "TvSliceLibSrc",
+    name: "TvSliceLibJavaSrc",
     srcs: [
         "src/com/android/tv/twopanelsettings/slices/SlicesConstants.java",
         "src/com/android/tv/twopanelsettings/slices/TvSettingsSliceProvider.java",
         "src/com/android/tv/twopanelsettings/slices/builders/**/*.java",
         "src/com/android/tv/twopanelsettings/slices/compat/**/*.java",
         "src/com/android/tv/twopanelsettings/slices/base/**/*.java",
+    ],
+}
+
+filegroup {
+    name: "TvSliceLibKotlinSrc",
+    srcs: [
+        "src/com/android/tv/twopanelsettings/slices/builders/**/*.kt",
+        "src/com/android/tv/twopanelsettings/slices/compat/**/*.kt",
+        "src/com/android/tv/twopanelsettings/slices/base/**/*.kt",
     ],
 }
 
@@ -88,7 +97,8 @@ android_library {
 android_library {
     name: "TvSliceLib",
     srcs: [
-        ":TvSliceLibSrc",
+        ":TvSliceLibJavaSrc",
+        ":TvSliceLibKotlinSrc",
     ],
 
     resource_dirs: [
@@ -104,7 +114,7 @@ droiddoc {
     name: "TwoPanelSliceLibDocs",
     custom_template: "droiddoc-templates-sdk",
     srcs: [
-        ":TvSliceLibSrc",
+        ":TvSliceLibJavaSrc",
     ],
     flags: [
         "-offlinemode",

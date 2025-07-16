@@ -30,7 +30,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.android.tv.settings.R;
 import com.android.tv.settings.device.eco.EnergyModesHelper.EnergyMode;
+import com.android.tv.twopanelsettings.slices.builders.XmlResourceToBundle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,6 +85,9 @@ public class EnergyModesContentProvider extends ContentProvider {
 
     /** Key for a String array representing the features of an energy mode. */
     private static final String KEY_FEATURES = "features";
+
+    /** Key for an extensions bundle passed through by settings. */
+    private static final String KEY_EXTENSIONS = "extensions";
 
     @Override
     public boolean onCreate() {
@@ -149,6 +154,9 @@ public class EnergyModesContentProvider extends ContentProvider {
         Bundle bundle = new Bundle();
         bundle.putString(KEY_DEFAULT_MODE, getModeIdentifier(defaultMode));
         bundle.putString(KEY_SELECTED_MODE, getModeIdentifier(currentMode));
+        XmlResourceToBundle extensions = new XmlResourceToBundle(getContext().getResources(),
+            R.xml.energy_modes_extensions, getContext().getTheme(), getContext().getPackageName());
+        bundle.putParcelable(KEY_EXTENSIONS, extensions.toBundle());
         bundle.putParcelableList(KEY_ENERGY_MODES, getModes(energyModesHelper));
         return bundle;
     }
@@ -209,6 +217,9 @@ public class EnergyModesContentProvider extends ContentProvider {
                 context.getResources().getStringArray(mode.featuresRes));
         bundle.putStringArray(KEY_FEATURES,
                 helper.getAllowedFeatures(mode).toArray(new String[0]));
+        XmlResourceToBundle extensions = new XmlResourceToBundle(context.getResources(),
+                mode.extensions, context.getTheme(), context.getPackageName());
+        bundle.putParcelable(KEY_EXTENSIONS, extensions.toBundle());
 
         return bundle;
     }
