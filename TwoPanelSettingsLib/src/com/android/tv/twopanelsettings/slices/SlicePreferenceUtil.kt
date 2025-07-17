@@ -242,6 +242,10 @@ object SlicePreferencesUtil {
             if (preference.title != null) {
                 fallbackInfoContentDescription += preference.title.toString()
             }
+            if (preference.title != null) {
+                fallbackInfoContentDescription +=
+                    HasCustomContentDescription.CONTENT_DESCRIPTION_SEPARATOR + subtitle
+            }
             if (infoImage != null) {
                 b.putParcelable(SlicesConstants.EXTRA_PREFERENCE_INFO_IMAGE, infoImage.toIcon())
             }
