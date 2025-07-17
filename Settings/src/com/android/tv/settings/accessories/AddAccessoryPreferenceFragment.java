@@ -114,33 +114,31 @@ public class AddAccessoryPreferenceFragment extends BaseLeanbackPreferenceFragme
     }
 
 
-    private Drawable getDeviceDrawable(BluetoothDevice device) {
-        final int resId = AccessoriesFragment.getImageIdForDevice(device, false);
-        Drawable drawable;
-        Drawable.ConstantState drawableConstantState = mDrawablesConstantState.get(resId);
+  private Drawable getDeviceDrawable(BluetoothDevice device) {
+      final int resId = AccessoriesFragment.getImageIdForDevice(device, false);
+      Drawable drawable;
+      Drawable.ConstantState drawableConstantState = mDrawablesConstantState.get(resId);
 
-        if (drawableConstantState == null) {
-            final Drawable tempDrawable = getActivity().getDrawable(resId);
-            // icons for TwoPanel have a bigger icon offset
-            final int iconOffset =
-                    getResources().getDimensionPixelSize(R.dimen.preference_icon_offset);
-            final int iconWidth =
-                    getResources().getDimensionPixelSize(R.dimen.lb_dialog_list_item_icon_width)
-                            + iconOffset;
-            final int iconHeight =
-                    getResources().getDimensionPixelSize(R.dimen.lb_dialog_list_item_icon_height)
-                            + iconOffset;
-            tempDrawable.setBounds(0, 0, iconWidth, iconHeight);
-            final Bitmap bitmap =
-                    Bitmap.createBitmap(iconWidth, iconHeight, Bitmap.Config.ARGB_8888);
-            final Canvas canvas = new Canvas(bitmap);
-            tempDrawable.draw(canvas);
-            drawable = new BitmapDrawable(getResources(), bitmap);
-            mDrawablesConstantState.put(resId, drawable.getConstantState());
-        } else {
-            drawable = drawableConstantState.newDrawable();
-        }
-        return drawable;
+      if (drawableConstantState == null) {
+        final Drawable tempDrawable = getActivity().getDrawable(resId);
+        // icons for TwoPanel have a bigger icon offset
+        final int iconOffset = getResources().getDimensionPixelSize(R.dimen.preference_icon_offset);
+        final int iconWidth =
+            getResources().getDimensionPixelSize(R.dimen.lb_dialog_list_item_icon_width)
+                + iconOffset;
+        final int iconHeight =
+            getResources().getDimensionPixelSize(R.dimen.lb_dialog_list_item_icon_height)
+                + iconOffset;
+        tempDrawable.setBounds(0, 0, iconWidth, iconHeight);
+        final Bitmap bitmap = Bitmap.createBitmap(iconWidth, iconHeight, Bitmap.Config.ARGB_8888);
+        final Canvas canvas = new Canvas(bitmap);
+        tempDrawable.draw(canvas);
+        drawable = new BitmapDrawable(getResources(), bitmap);
+        mDrawablesConstantState.put(resId, drawable.getConstantState());
+      } else {
+        drawable = drawableConstantState.newDrawable();
+      }
+      return drawable;
     }
 
     @Override

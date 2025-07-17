@@ -28,6 +28,7 @@ import android.view.View;
 
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.ProgressDialogFragment;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.CenterAlignedDynamicDrawableSpan;
 
 /**
@@ -45,8 +46,10 @@ public class AddAccessoryContentFragment extends ProgressDialogFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if (!FlavorUtils.isTwoPanel(getActivity())) {
+            setIcon(R.drawable.ic_bluetooth_searching_128dp);
+        }
         setTitle(R.string.accessories_add_title);
-        setIcon(R.drawable.ic_bluetooth_searching_128dp);
         setSummary(R.string.accessories_add_bluetooth_inst);
         updateExtraDescription();
         if (getResources() != null) {

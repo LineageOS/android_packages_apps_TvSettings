@@ -59,4 +59,7 @@
         <item name="android:background">@drawable/setup_text_input_background_two_panel</item>
         <item name="android:layout_height">48dp</item>
     </style>
+
+    <!-- Override the Bluetooth Theme to TwoPanel style. -->
+    <style name="BluetoothAccessoryTheme" parent="TwoPanelBluetoothAccessoryTheme" />
 </resources>
