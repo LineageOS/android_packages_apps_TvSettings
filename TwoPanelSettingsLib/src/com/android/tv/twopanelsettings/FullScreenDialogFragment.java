@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.tv.settings;
+package com.android.tv.twopanelsettings;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
@@ -36,7 +36,7 @@ import androidx.fragment.app.Fragment;
  * Full screen dialog fragment.
  *
  * <p>Use {@link DialogBuilder} to set up the arguments to the fragment. To be used with the {@link
- * R.style#TvSettingsDialog_FullScreen} theme.
+ * R.style#TwoPanelTvSettingsDialog_FullScreen} theme.
  */
 public class FullScreenDialogFragment extends Fragment {
   /** Constant for {@link #onButtonPressed(int)} indicating the positive button was pressed. */
@@ -122,7 +122,7 @@ public class FullScreenDialogFragment extends Fragment {
     LayoutInflater themedInflater =
         inflater.cloneInContext(
             new ContextThemeWrapper(inflater.getContext(), R.style.TvSettingsDialog_FullScreen));
-    View view = themedInflater.inflate(R.layout.full_screen_dialog, container, false);
+    View view = themedInflater.inflate(R.layout.tp_full_screen_dialog, container, false);
 
     ImageView iconView = view.findViewById(R.id.dialog_icon);
     TextView titleView = view.findViewById(R.id.dialog_title);

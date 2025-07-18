@@ -30,7 +30,7 @@ import android.util.Log;
 import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
-import com.android.tv.settings.FullScreenDialogFragment;
+import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.settings.R;
 import java.util.List;
 
