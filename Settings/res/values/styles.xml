@@ -538,4 +538,44 @@
     <style name="AccessoryPreferenceOverlay" parent="PreferenceThemeOverlayLeanback">
         <item name="android:selectableItemBackground">@drawable/guided_step_high_contrast_item_background</item>
     </style>
+
+    <!-- Override the Bluetooth Theme to TwoPanel style. -->
+    <style name="BluetoothAccessoryTheme" parent="Theme.Settings.Transparent" />
+        <style name="TwoPanelBluetoothAccessoryTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">#FF000000</item>
+        <item name="linearProgressIndicatorStyle">@style/BluetoothAccessoryProgressStyle</item>
+        <item name="preferenceTheme">@style/BluetoothAccessoryPreferenceTheme</item>
+    </style>
+
+    <style name="BluetoothAccessoryPreferenceTheme" parent="@style/PreferenceThemeOverlay.v14.Leanback">
+        <item name="android:listPreferredItemPaddingStart">12dp</item>
+        <item name="android:selectableItemBackground">@drawable/accessory_preference_background</item>
+        <item name="android:textAppearanceListItem">@style/TextAppearance.TwoPanelPreference.ListItem</item>
+        <item name="android:textAppearanceListItemSecondary">@style/TextAppearance.TwoPanelPreference.ListItem.Secondary</item>
+        <item name="android:imageButtonStyle">@style/TwoPanelPreferenceIconStyle</item>
+    </style>
+
+    <style name="BluetoothAccessoryProgressStyle" parent="android:Widget">
+        <item name="indicatorColor">#FFE4F3FF</item>
+        <item name="trackColor">#33E4F3FF</item>
+        <item name="trackThickness">4dp</item>
+        <item name="trackCornerRadius">50%</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="indeterminateAnimationType">disjoint</item>
+        <item name="indicatorDirectionLinear">startToEnd</item>
+    </style>
+
+    <style name="BluetoothAccessoryTextAppearanceLargeStyle" parent="android:TextAppearance">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">#FFE4F3FF</item>
+        <item name="android:fontFamily">@font/brand_font</item>
+    </style>
+
+    <style name="BluetoothAccessoryTextAppearanceMediumStyle" parent="android:TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FF959EA7</item>
+        <item name="android:fontFamily">@font/brand_font_medium</item>
+    </style>
 </resources>

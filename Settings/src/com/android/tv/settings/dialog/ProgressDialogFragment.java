@@ -25,6 +25,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.TextView.BufferType;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
@@ -32,6 +33,8 @@ import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.FlavorUtils;
+
 
 public class ProgressDialogFragment extends Fragment {
 
@@ -45,8 +48,10 @@ public class ProgressDialogFragment extends Fragment {
     @Override
     public @Nullable View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
             Bundle savedInstanceState) {
+        int layoutId = FlavorUtils.isTwoPanel(getActivity())
+            ? R.layout.progress_fragment_two_panel : R.layout.progress_fragment;
         final ViewGroup view =
-                (ViewGroup) inflater.inflate(R.layout.progress_fragment, container, false);
+                (ViewGroup) inflater.inflate(layoutId, container, false);
 
         mIconView = view.findViewById(android.R.id.icon);
         mTitleView = view.findViewById(android.R.id.title);
@@ -82,11 +87,11 @@ public class ProgressDialogFragment extends Fragment {
     }
 
     public void setExtraText(@StringRes int resId) {
-        mExtraTextView.setText(resId);
+        mExtraTextView.setText(resId, BufferType.SPANNABLE);
     }
 
     public void setExtraText(CharSequence text) {
-        mExtraTextView.setText(text);
+        mExtraTextView.setText(text, BufferType.SPANNABLE);
         mExtraTextView.setVisibility(TextUtils.isEmpty(text) ? View.GONE : View.VISIBLE);
     }
 
