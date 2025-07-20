@@ -63,7 +63,8 @@
     <string name="privacy_device_settings_category" msgid="5018334603278648524">"डिभाइसका सेटिङहरू"</string>
     <string name="privacy_account_settings_category" msgid="5786591549945777400">"खाताका सेटिङहरू"</string>
     <string name="privacy_device_lock_settings_title" msgid="2859882209591786575">"डिभाइसको लक"</string>
-    <string name="privacy_assistant_settings_title" msgid="3712261229443155572">"भ्वाइस एसिस्टेन्ट"</string>
+    <!-- no translation found for privacy_assistant_settings_title (7733038236847179927) -->
+    <skip />
     <string name="privacy_purchases_settings_title" msgid="6490965297061569673">"भुक्तानी तथा खरिदहरू"</string>
     <string name="privacy_app_settings_category" msgid="858250971978879266">"एपका सेटिङहरू"</string>
     <string name="privacy_category_summary" msgid="3534434883380511043">"स्थान, प्रयोग तथा निदान, विज्ञापनहरू"</string>
@@ -499,10 +500,8 @@
     <string name="wifi_connecting" msgid="4234341255109283018">"<xliff:g id="SSID">%1$s</xliff:g> सँग जडान गर्दै"</string>
     <string name="wifi_saving" msgid="320653339670641708">"<xliff:g id="SSID">%1$s</xliff:g> को लागि कन्फिगरेसन सुरक्षित गर्दै"</string>
     <string name="wifi_connect" msgid="2206086690065242121">"कनेक्ट गर्नुहोस्"</string>
-    <!-- no translation found for wifi_forget_network (1347484611969041359) -->
-    <skip />
-    <!-- no translation found for wifi_forget_network_dialog_title (849302112447210343) -->
-    <skip />
+    <string name="wifi_forget_network" msgid="1347484611969041359">"हटाउनुहोस्"</string>
+    <string name="wifi_forget_network_dialog_title" msgid="849302112447210343">"<xliff:g id="SSID">%1$s</xliff:g> हटाउने हो?"</string>
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"यसले यो नेटवर्कमा सुरक्षित भएका पासवर्ड सहित जडान गर्न प्रयोग हुने जानकरीलाई क्लियर गर्दछ।"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" कुनै मोबाइल फोनमार्फत QR कोड स्क्यान गरेर उक्त फोन Wi-Fi मा कनेक्ट गर्नुहोस् अनि दिइएका निर्देशनहरूको पालना गर्नुहोस्।\n \n"<b>"Android फोन"</b>" प्रयोग गरी \'सेटिङ -&gt; नेटवर्क तथा इन्टरनेट -&gt; Wi-Fi -&gt; Wi-Fi नेटवर्क चयन गर्नुहोस् -&gt; उन्नत -&gt; डिभाइस थप्नुहोस्\' मा जानुहोस् अनि QR कोड स्क्यान गर्नुहोस्।"</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"रद्द गर्न \'पछाडि\' बटन थिच्नुहोस्"</string>
@@ -643,12 +642,12 @@
     <string name="system_auto_date_time" msgid="8458199433555868708">"स्वत: मिति र समय"</string>
   <string-array name="auto_date_time_entries">
     <item msgid="8119837829162871025">"नेटवर्कद्वारा उपलब्ध गराइएको समय प्रयोग गर्नुहोस्"</item>
-    <item msgid="369146066143710034">"निष्क्रिय"</item>
+    <item msgid="369146066143710034">"अफ"</item>
   </string-array>
   <string-array name="auto_date_time_ts_entries">
     <item msgid="1010003447137304123">"नेटवर्कद्वारा उपलब्ध गराइएको समय प्रयोग गर्नुहोस्"</item>
     <item msgid="5645263357181875427">"ट्रान्सपोर्ट स्ट्रिमद्वारा उपलब्ध गराइएको समय प्रयोग गर्नुहोस्"</item>
-    <item msgid="5501503537181350884">"निष्क्रिय"</item>
+    <item msgid="5501503537181350884">"अफ"</item>
   </string-array>
     <string name="sensor_toggle_description" msgid="7415801459994303159">"सबै एप र सेवाहरूका लागि"</string>
     <string name="recently_accessed_by_category" msgid="6841705864715653428">"हालसालै निम्न एपले प्रयोग गरेको छ:"</string>
