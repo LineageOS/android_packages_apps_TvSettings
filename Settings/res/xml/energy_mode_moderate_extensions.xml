@@ -14,4 +14,22 @@
   See the License for the specific language governing permissions and
   limitations under the License
   -->
-<EnergyModeExtensions/>
+<EnergyModeExtensions xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Configures Energy mode selection during TV Setup (OOBE). Per country overrides take
+         precedence over defaults configured in R.string/R.boolean resource overlays. -->
+    <TvSetupModeSelection>
+        <!-- Conditions for which this mode will be visible during OOBE. -->
+        <VisibleConditions>
+            <!-- <country android:name="US" /> -->
+            <!-- <country android:name="CA" /> -->
+        </VisibleConditions>
+        <!-- Conditions for which this mode will be hidden during OOBE. -->
+        <HiddenConditions>
+            <!-- <country android:name="FR" /> -->
+        </HiddenConditions>
+        <!-- Conditions for which this mode will be default during OOBE. -->
+        <DefaultConditions>
+            <!-- <country android:name="NZ" /> -->
+        </DefaultConditions>
+    </TvSetupModeSelection>
+</EnergyModeExtensions>

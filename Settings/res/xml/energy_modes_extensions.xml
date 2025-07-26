@@ -14,4 +14,26 @@
   See the License for the specific language governing permissions and
   limitations under the License
   -->
-<EnergyModesExtensions/>
+
+<EnergyModesExtensions
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Configures Energy mode selection during TV Setup (OOBE) -->
+    <TvSetupModeSelection>
+        <!-- Conditions under which OOBE mode selection is always shown rather than
+             using default policy. -->
+        <ForceShowConditions>
+            <!-- Add countries for which mode selection is always shown. -->
+            <!-- <country android:name="US"/> -->
+            <!-- <country android:name="CA"/> -->
+        </ForceShowConditions>
+
+        <!-- Conditions under which OOBE mode selection is always skipped rather than
+             using default policy. -->
+        <ForceHideConditions>
+            <!-- <country android:name="FR"/> -->
+        </ForceHideConditions>
+
+        <!-- If present, increased energy used modes will be annotated with a warning -->
+        <!-- <ShowIncreasedEnergyUseDisclosure /> -->
+    </TvSetupModeSelection>
+</EnergyModesExtensions>
