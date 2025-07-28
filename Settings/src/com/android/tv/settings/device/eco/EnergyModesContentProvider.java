@@ -155,7 +155,8 @@ public class EnergyModesContentProvider extends ContentProvider {
         bundle.putString(KEY_DEFAULT_MODE, getModeIdentifier(defaultMode));
         bundle.putString(KEY_SELECTED_MODE, getModeIdentifier(currentMode));
         XmlResourceToBundle extensions = new XmlResourceToBundle(getContext().getResources(),
-            R.xml.energy_modes_extensions, getContext().getTheme(), getContext().getPackageName());
+            R.xml.energy_modes_config_extensions, getContext().getTheme(),
+                getContext().getPackageName());
         bundle.putParcelable(KEY_EXTENSIONS, extensions.toBundle());
         bundle.putParcelableList(KEY_ENERGY_MODES, getModes(energyModesHelper));
         return bundle;

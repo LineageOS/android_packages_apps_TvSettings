@@ -16,7 +16,8 @@
   -->
 
 <EnergyModesExtensions
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <!-- Configures Energy mode selection during TV Setup (OOBE) -->
     <TvSetupModeSelection>
         <!-- Conditions under which OOBE mode selection is always shown rather than
@@ -28,9 +29,10 @@
         </ForceShowConditions>
 
         <!-- Conditions under which OOBE mode selection is always skipped rather than
-             using default policy. -->
+             using default policy. Can optionally override default mode selected. -->
         <ForceHideConditions>
-            <!-- <country android:name="FR"/> -->
+            <!-- <country android:name="FR"
+                      app:defaultEnergyMode="@string/energy_mode_high_identifier" /> -->
         </ForceHideConditions>
 
         <!-- If present, increased energy used modes will be annotated with a warning -->
