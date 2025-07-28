@@ -2725,8 +2725,13 @@
     <string name="permit_draw_overlay">Allow display over other apps</string>
     <!-- Description of allowing overlay setting [CHAR LIMIT=NONE] -->
     <string name="allow_overlay_description">Allow an app to display on top of other apps you\u2019re using. It may interfere with your use of those apps or change the way they seem to appear or behave.</string>
-
-    <!-- Main settings screen item's title to go into the write system settings screen [CHAR LIMIT=48] -->
+    <!-- Media management apps settings title [CHAR LIMIT=40] -->
+    <string name="media_management_apps_title">Media management apps</string>
+    <!-- Label for a setting which controls whether an app can manage media files [CHAR LIMIT=45] -->
+    <string name="media_management_apps_toggle_label">Allow app to manage media</string>
+    <!-- Description for a setting which controls whether an app can manage media files [CHAR LIMIT=NONE] -->
+    <string name="media_management_apps_description">If allowed, this app can modify or delete media files created with other apps without asking you. App must have permission to access files and media.</string>
+    <!-- Main settings screen item's title to go into the write system settings screen [CHAR LIMIT=30] -->
     <string name="write_system_settings">System settings access</string>
     <!-- Title for the apps that are allowed to write system settings [CHAR LIMIT=60] -->
     <string name="write_settings_title">System settings access</string>
