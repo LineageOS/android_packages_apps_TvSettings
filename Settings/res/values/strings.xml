@@ -95,47 +95,6 @@
 
     <!-- Main Fragment General Settings Preferences -->
     <skip />
-    <!-- Slice URI for main fragment settings updates. -->
-    <string name="main_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for development settings updates. -->
-    <string name="development_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for display and sounds settings. -->
-    <string name="display_sounds_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for network settings. -->
-    <string name="network_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for privacy settings. -->
-    <string name="privacy_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for apps fragment. -->
-    <string name="apps_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for device prefs. -->
-    <string name="device_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for restricted device prefs. -->
-    <string name="device_fragment_restricted_slice_uri" translatable="false" />
-    <!-- Slice URI for accessibility prefs. -->
-    <string name="accessibility_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for accessibility prefs. -->
-    <string name="accessibility_fragment_slice_uri_two_panel" translatable="false">*</string>
-    <!-- Slice URI for power and energy prefs. -->
-    <string name="power_energy_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for about prefs. -->
-    <string name="about_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for date/time fragment. -->
-    <string name="date_time_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for keyboard fragment. -->
-    <string name="keyboard_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for security fragment. -->
-    <string name="security_fragment_slice_uri" translatable="false" />
-    <!-- Slice URI for energy modes fragment. -->
-    <string name="energy_modes_fragment_slice_uri" translatable="false">*</string>
-    <!-- Slice URI for energy saver fragment. -->
-    <string name="energy_saver_fragment_slice_uri" translatable="false">*</string>
-    <!-- Slice URI for status fragment. -->
-    <string name="status_fragment_slice_uri" translatable="false">*</string>
-    <!-- Slice URI for legal fragment. -->
-    <string name="legal_fragment_slice_uri" translatable="false">*</string>
-    <!-- Slice URI for virtual keyboards fragment. -->
-    <string name="virtual_keyboards_fragment_slice_uri" translatable="false">*</string>
-
     <!-- Title for main screen preference for accounts on device [CHAR LIMIT=50] -->
     <string name="accounts_category_title">Accounts &amp; Profiles</string>
     <!-- Summary for main screen preference for accounts on device indicates no account is signed in[CHAR LIMIT=50] -->
@@ -164,8 +123,6 @@
     <string name="display_and_sound_category_title">Display &amp; Sound</string>
     <!-- Title for main screen preference for help and feedback [CHAR LIMIT=50] -->
     <string name="help_and_feedback_category_title">Help &amp; Feedback</string>
-    <!-- Optional slice URI to replace built in Help & Feedback -->
-    <string name="help_and_feedback_slice_uri" translatable="false"/>
     <!-- Title for main screen preference for privacy settings [CHAR LIMIT=50] -->
     <string name="privacy_category_title">Privacy</string>
     <!-- Title for device-related privacy settings category [CHAR LIMIT=50] -->
@@ -287,14 +244,8 @@
     <string name="apps_see_all_apps">See all apps</string>
     <!-- Title for a section that lets users modify permissions related app settings. [CHAR_LIMIT=50]-->
     <string name="apps_permissions_category_title">Permissions</string>
-    <!-- An item title on the privacy and apps screen. If clicked, the user is taken to screen listing Security options. [CHAR_LIMIT=50]-->
-    <string name="overlay_security_slice_title"/>
-    <!-- An item title on the privacy and apps screen. If clicked, the user is taken to screen listing Update options. [CHAR_LIMIT=50]-->
-    <string name="update_slice_title"/>
     <!-- Title of the preference to add more apps [CHAR LIMIT=60] -->
     <string name="add_apps_title">Add more apps</string>
-    <!-- Serialized intent of the preference to add more apps. -->
-    <string name="add_apps_intent" translatable="false" />
 
     <!-- All application preferences -->
     <skip />
@@ -339,15 +290,8 @@
     <string name="device_energy_saver">Shut-Off Timer</string>
     <!-- Summary of the preference which changes energy saver settings. [CHAR LIMIT=80] -->
     <string name="device_energy_saver_summary">Set timers to turn TV off and save energy</string>
-    <!-- Preference for ambient sense time settings. -->
-    <string name="ambient_sense_time_section_slice_uri" translatable="false"/>
-    <string name="ambient_sense_time_slice_uri" translatable="false"/>
-    <!-- Preference which shows internal settings. [CHAR LIMIT=50] -->
-    <string name="overlay_internal_slice_title"/>
-    <string name="overlay_internal_slice_uri" translatable="false"/>
     <!-- Preference which shows fastpair settings. [CHAR LIMIT=50] -->
     <string name="device_fastpair">Devices</string>
-    <string name="fastpair_slice_uri" translatable="false" />
 
     <!-- Display and sound screen -->
     <skip />
@@ -657,8 +601,6 @@
         [CHAR LIMIT=250]-->
     <string name="hdr_enabled_format_info_clicked">To disable, change the
         format selection to Manual.</string>
-    <!-- Package to send HDR settings change broadcasts to -->
-    <string name="hdr_settings_changed_broadcast_package" translatable="false"/>
 
     <!-- Title for preference for Resolution selection. [CHAR LIMIT=50] -->
     <string name="resolution_selection_title">Resolution</string>
@@ -701,10 +643,6 @@
     <!-- Message of dialog asking user to confirm before clearing all caches. [CHAR LIMIT=48] -->
     <string name="device_storage_clear_cache_message">This will clear cached data for all apps.</string>
 
-    <!-- Title of settings entry for default audio output settings. -->
-    <string name="default_audio_output_settings_title" translatable="true"/>
-    <string name="default_audio_output_settings_slice_uri" translatable="false"/>
-
     <!-- Remote and Accessories -->
     <skip />
     <!-- Preference which manages pairing new accessories. [CHAR LIMIT=50] -->
@@ -733,8 +671,6 @@
     <string name="accessory_change_name">Change name</string>
     <!-- Title of dialog for renaming the bluetooth accessory [CHAR LIMIT=50] -->
     <string name="accessory_change_name_title">Enter a new name for this accessory</string>
-    <!-- Package to send menu state changes to and names of parameters -->
-    <string name="accessory_menu_state_broadcast_package" translatable="false"/>
 
     <!-- Remote and Accessories -->
     <skip />
@@ -744,11 +680,6 @@
     <string name="accessories_add_title">Searching for accessories&#8230;</string>
     <!-- Description text for bluetooth device pairing instructions. [CHAR LIMIT=150] -->
     <string name="accessories_add_bluetooth_inst">Before pairing your Bluetooth devices, make sure they\'re in pairing mode.</string>
-    <!-- Extra description text for bluetooth device pairing instructions. It is a placeholder to be overrode. -->
-    <string name="accessories_add_bluetooth_inst_extra" translatable="false"/>
-    <!-- The extra description is presented with button icons. These two strings can be overrode to be used for describing the pairing buttons for accessibility feature such as Talkback. -->
-    <string name="accessories_pairing_button1" translatable="false"/>
-    <string name="accessories_pairing_button2" translatable="false"/>
     <!-- Description text for autopairing when the user is in the pairing activity due to pressing the back HW button.  %1 will be replaced with the countdown value. [CHAR LIMIT=150] -->
     <string name="accessories_autopair_msg">A device was found and will automatically pair in <xliff:g id="countdown">%1$s</xliff:g> seconds</string>
     <!-- Error message displayed to the user indicating that a selected action is not supported on this device. [CHAR LIMIT=150] -->
@@ -794,16 +725,12 @@
     <string name="bluetooth_pair_accessory">Pair accessory</string>
     <!-- The category title for connected/paired accessories. [CHAR LIMIT=30] -->
     <string name="bluetooth_known_devices_category">Accessories</string>
-    <!-- Uri to be overlaid by partner to show official remote control settings. -->
-    <string name="bluetooth_official_remote_entry_slice_uri" translatable="false" />
     <!-- Category for listing official remote control devices. Can be overlaid by OEM to something
         like "Foobar Remote". -->
     <string name="bluetooth_official_remote_category">Remote Control</string>
     <!-- Title for official remote control settings. Can be overlaid by OEM to something like as
         "Foobar Remote Settings". -->
     <string name="bluetooth_official_remote_entry_title">Remote control settings</string>
-    <!-- Uri to be overlaid by partner to show remote control infrared settings. -->
-    <string name="bluetooth_ir_entry_slice_uri" translatable="false" />
     <!-- Title for remote control infrared settings. -->
     <string name="bluetooth_ir_entry_title">Set up remote buttons</string>
     <!-- Subtitle for remote control infrared settings. -->
@@ -880,11 +807,6 @@
     <string name="accessibility_none">None</string>
     <!-- Preference which manages Diagnostic and Usage reporting -->
     <string name="system_diagnostic">Usage &amp; diagnostics</string>
-    <string name="cast_settings_title" translatable="false" />
-    <string name="cast_settings_slice_uri" translatable="false" />
-    <string name="assistant_broadcast_title" translatable="false" />
-    <string name="assistant_broadcast_slice_uri" translatable="false" />
-    <string name="top_level_assistant_slice_uri" translatable="false" />
 
     <!-- Message when there are no available device admin apps to display -->
     <string name="no_device_admins">No device admin apps available</string>
@@ -1141,9 +1063,6 @@
     <string name="regulatory_information">Regulatory information</string>
     <!-- Feedback on the device [CHAR LIMIT=35] -->
     <string name="device_feedback">Send feedback about this device</string>
-
-    <!-- Full package name of OEM preferred device feedback reporter. [DO NOT TRANSLATE] -->
-    <string name="oem_preferred_feedback_reporter" translatable="false" />
 
     <!-- OEM Unlock strings (duplicated with Settings) -->
     <!-- setting enable OEM unlock Checkbox's summary to explain this Checkbox is disabled because the bootloader has been unlocked [CHAR_LIMIT=60] -->
@@ -1490,8 +1409,6 @@
     <!-- Storage settings forget description [CHAR_LIMIT=NONE] -->
     <string name="storage_forget_wall_of_text">To use the apps or data this drive contains, replug it in. Alternatively, you can choose to forget this storage if the drive isn\'t available.\n\nIf you choose Forget, all the data the drive contains will be lost forever.\n\nYou can reinstall the apps later, but the data stored on this drive will be lost.</string>
 
-    <string name="storage_suggestions" translatable="false" />
-    <string name="ambient_slice_storage_uri" translatable="false" />
     <!-- Header title for device storage [CHAR_LIMIT=50] -->
     <string name="storage_device_storage_section">Device storage</string>
     <!-- Header title for removable storage [CHAR_LIMIT=50] -->
@@ -2825,62 +2742,6 @@
     <!-- Message of dialog shown to the user whether to allow an app to enable discovery mode. [CHAR LIMIT=NONE] -->
     <string name="bluetooth_ask_discovery_message">An app wants to make your TV visible to other Bluetooth devices for <xliff:g id="timeout">%1$d</xliff:g> seconds.</string>
 
-    <!-- Package name of slice rendering app -->
-    <string name="slice_rendering_app" translatable="false"/>
-
-    <!-- Slice uri for "Accounts & Profiles" -->
-    <string name="account_slice_uri" translatable="false"/>
-    <!-- Slice uri and title for manange user services settings -->
-    <string name="manage_user_services_slice_uri" translatable="false" />
-    <string name="manage_user_services_slice_title" translatable="false" />
-
-    <!-- Title of preference for help center [CHAR LIMIT=60] -->
-    <string name="help_center_title" translatable="true"/>
-    <string name="help_center_link" translatable="false"/>
-
-    <!-- Slice uri for "Privacy" -->
-    <string name="privacy_assistant_slice_uri" translatable="false"/>
-    <string name="privacy_purchases_slice_uri" translatable="false"/>
-    <string name="privacy_device_lock_slice_uri" translatable="false"/>
-
-    <!-- Slice uri and title for "Ambient mode" -->
-    <string name="ambient_slice_uri" translatable="false" />
-    <string name="ambient_settings_title" translatable="false" />
-
-    <!-- Slice uri for "Channels & Inputs" -->
-    <string name="channels_and_inputs_slice_uri" translatable="false"/>
-
-    <!-- Slice uri for "Channels & Inputs" (fallback if not overridden) -->
-    <string name="channels_and_inputs_fallback_slice_uri" translatable="false"/>
-
-    <!-- Slice uri for "Connected devices" -->
-    <string name="connected_devices_slice_uri" translatable="false"/>
-    <string name="cec_settings_slice_uri" translatable="false"/>
-
-    <string name="storage_summary_fragment_name" translatable="false"/>
-    <!-- Slice uri for hdr fomat selection -->
-    <string name="resolution_slice_uri" translatable="false"/>
-    <!-- Slice uri for hdr and color format -->
-    <string name="hdr_and_color_format_slice_uri" translatable="false"/>
-    <!-- Slice uri for Color format in Advanced display settings -->
-    <string name="advanced_color_format_slice_uri" translatable="false"/>
-    <!-- Slice uri for Dolby Vision Mode in Advanced display settings -->
-    <string name="advanced_dolby_vision_mode_slice_uri" translatable="false"/>
-    <!-- Slice uri for extended audio settings in Display & Sound settings -->
-    <string name="audio_ext_uri" translatable="false"/>
-
-    <!-- Slice uri for general information -->
-    <string name="general_info_slice_uri" translatable="false"/>
-
-    <!-- Top level uri for settings slices -->
-    <string name="top_level_settings_slice_uri" translatable="false"/>
-
-    <!-- Slice uri for update settings -->
-    <string name="update_slice_uri" translatable="false"/>
-
-    <!-- Slice uri for overlay security settings -->
-    <string name="overlay_security_slice_uri" translatable="false"/>
-
     <!-- Title for dialog displayed when user selects on a setting locked by an admin [CHAR LIMIT=30 BACKUP_MESSAGE_ID:4867639270211833535] -->
     <string name="disabled_by_policy_title">Action not allowed</string>
     <!-- Title for dialog displayed to tell user that changing volume was disallowed by an admin [CHAR LIMIT=50] -->
@@ -2979,26 +2840,6 @@
     <!-- Message of a dialog shown to inform that the account type is not available or failed to add account. [CHAR LIMIT=100] -->
     <string name="add_account_failed_dialog_message">Failed to add account or the account type is not available.</string>
 
-    <!-- Placeholder font for compiling. The real font will be provided by RRO. -->
-    <string name="preference_title_text_font" translatable="false" />
-
-    <!-- Start up verification -->
-    <string name="startup_verification_action" translatable="false" />
-    <string name="startup_verification_package" translatable="false" />
-
-    <!-- Basic mode -->
-    <string name="basic_mode_provider_uri" translatable="false" />
-    <string name="basic_mode_exit_package" translatable="false" />
-    <string name="basic_mode_exit_component" translatable="false" />
-    <string name="basic_mode_exit_data" translatable="false" />
-    <string name="basic_mode_exit_internet" translatable="false" />
-    <string name="basic_mode_suggestion_category_title" translatable="false" />
-    <string name="basic_mode_exit_preference_title" translatable="false" />
-    <string name="basic_mode_exit_preference_subtitle" translatable="false" />
-    <string name="basic_mode_exit_info_title" translatable="false" />
-    <string name="basic_mode_exit_info_summary" translatable="false" />
-    <string name="basic_mode_accounts_and_sign_in_info_summary" translatable="false" />
-
     <!-- Vendor & Samples -->
     <string name="vendor_activity_title" translatable="false">Vendor sample activity</string>
     <string name="vendor_sample_settings_summary" translatable="false">(Subtitle is suggested to give further information)</string>
@@ -3012,34 +2853,22 @@
     <string name="external_inputs_settings_title">External inputs</string>
     <!-- Summary for vendor sample "Display & Sound" settings [CHAR LIMIT=60] -->
     <string name="display_and_sound_vendor_summary">Picture, screen, sound</string>
-    <!-- Slice uri for "Display & Sound" settings -->
-    <string name="display_and_sound_slice_uri" translatable="false"></string>
     <!-- Title for "Picture" settings [CHAR LIMIT=60] -->
     <string name="picture_settings_title">Picture</string>
-    <!-- Intent action for vendor picture activity -->
-    <string name="picture_settings_vendor_action" translatable="false"/>
     <!-- Title for "Screen" settings [CHAR LIMIT=60] -->
     <string name="screen_settings_title">Screen</string>
     <!-- Title for "Sound" settings [CHAR LIMIT=60] -->
     <string name="sound_settings_title">Sound</string>
-    <!-- Intent action for vendor sound activity -->
-    <string name="sound_settings_vendor_action" translatable="false"/>
     <!-- Title of power and energy page [CHAR LIMIT=60] -->
     <string name="power_and_energy">Power &amp; Energy</string>
     <!-- Title of power on behavior item [CHAR LIMIT=60] -->
     <string name="power_on_behavior">Power on behavior</string>
-    <string name="power_boot_resume_slice_uri" translatable="false" />
     <!-- Title of the Reset section, which lets user select from factory reset or other reset related operations. [CHAR LIMIT=60] -->
     <string name="reset_options_title">Reset</string>
-    <!-- Slice uri for "Television" settings -->
-    <string name="system_tv_slice_uri" translatable="false"></string>
     <!-- Title for "Television" settings [CHAR LIMIT=60] -->
     <string name="system_tv_title">Television</string>
-    <!-- Slice uri for "Monitor" settings -->
-    <string name="menu_monitor_slice_uri" translatable="false"></string>
     <!-- Title for "Monitor" settings [CHAR LIMIT=60] -->
     <string name="menu_monitor">Monitor</string>
-
     <string name="font_sans_serif" translatable="false">sans-serif</string>
     <string name="font_sans_serif_light" translatable="false">sans-serif-light</string>
     <string name="font_sans_serif_thin" translatable="false">sans-serif-thin</string>
@@ -3081,19 +2910,6 @@
     <string name="volume_change_subtitle_unselect">You can control the assistant volume on %1$s speaker</string>
     <!-- Subtitle for volume change during select -->
     <string name="volume_change_subtitle_select">Only affects volume on %1$s device , not on TV</string>
-
-    <!-- Slice uri for no signal sleep timer -->
-    <string name="no_signal_sleep_timer_slice_uri" translatable="false"/>
-    <!-- Slice uri for automatic power on -->
-    <string name="automatic_power_on_slice_uri" translatable="false"/>
-
-    <!-- Slice uri for Device Serial number -->
-    <string name="device_serial_number_slice_uri" translatable="false"/>
-    <!-- Slice uri for HW Revision -->
-    <string name="hw_revison_slice_uri" translatable="false"/>
-
-    <!-- Screen reader slice uri -->
-    <string name="screen_reader_slice_uri" translatable="false"/>
 
     <!-- Label for screen reader switch Off [CHAR LIMIT=100] -->
     <string name="accessibility_service_off_title"><xliff:g id="accessibility_service_name" example="Talkback">%s</xliff:g>:Off</string>
