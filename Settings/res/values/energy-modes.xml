@@ -100,5 +100,11 @@
 
     <bool name="energy_mode_unrestricted_enabled">false</bool>
     <string name="energy_mode_unrestricted_identifier" translatable="false">unrestricted</string>
+
+    <!-- Schema for energy_mode_config_extensions.xml. -->
+    <declare-styleable name="EnergyModeConfigExtensions">
+        <!-- Default mode, should point to one of mode identifiers. -->
+        <attr name="defaultEnergyMode" format="reference" />
+    </declare-styleable>
 </resources>
 
