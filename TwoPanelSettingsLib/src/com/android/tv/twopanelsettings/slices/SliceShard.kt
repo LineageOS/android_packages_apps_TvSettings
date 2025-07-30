@@ -181,15 +181,15 @@ class SliceShard(
         mCallbacks.setSubtitle(mScreenSubtitle)
         mCallbacks.setIcon(if (mScreenIcon != null) mScreenIcon!!.loadDrawable(mPrefContext) else null)
 
-        if (!isCached && !TextUtils.isEmpty(mUriString)) {
-            mFragment.lifecycle.coroutineScope.launch {
-                delay(SLICE_RESUME_OBSERVE_DELAY)
+        mFragment.lifecycle.coroutineScope.launch {
+            delay(SLICE_RESUME_OBSERVE_DELAY)
+            if (!isCached && !TextUtils.isEmpty(mUriString)) {
                 sliceLiveData.observeForever(mSliceObserver)
                 mFragment.requireContext().contentResolver.registerContentObserver(
-                    SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver)
+                SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver)
             }
+            fireFollowupPendingIntent()
         }
-        fireFollowupPendingIntent()
     }
 
     private fun pause() {
