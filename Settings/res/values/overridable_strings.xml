@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2025 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!--
+    Slice URIs and other strings which are device specific rather than part of Android platform and
+    are to be overridden in device specific resource overlays.
+-->
+<resources>
+    <!-- The following settings pages can be customized by pointing corresponding config URIs
+         to slice providers. -->
+
+    <!-- Slice URI for main fragment settings updates. -->
+    <string name="main_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for development settings updates. -->
+    <string name="development_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for display and sounds settings. -->
+    <string name="display_sounds_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for network settings. -->
+    <string name="network_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for privacy settings. -->
+    <string name="privacy_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for apps fragment. -->
+    <string name="apps_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for device prefs. -->
+    <string name="device_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for restricted device prefs. -->
+    <string name="device_fragment_restricted_slice_uri" translatable="false" />
+    <!-- Slice URI for accessibility prefs. -->
+    <string name="accessibility_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for accessibility prefs. -->
+    <string name="accessibility_fragment_slice_uri_two_panel" translatable="false">*</string>
+    <!-- Slice URI for power and energy prefs. -->
+    <string name="power_energy_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for about prefs. -->
+    <string name="about_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for date/time fragment. -->
+    <string name="date_time_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for keyboard fragment. -->
+    <string name="keyboard_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for security fragment. -->
+    <string name="security_fragment_slice_uri" translatable="false" />
+    <!-- Slice URI for energy modes fragment. -->
+    <string name="energy_modes_fragment_slice_uri" translatable="false">*</string>
+    <!-- Slice URI for energy saver fragment. -->
+    <string name="energy_saver_fragment_slice_uri" translatable="false">*</string>
+    <!-- Slice URI for status fragment. -->
+    <string name="status_fragment_slice_uri" translatable="false">*</string>
+    <!-- Slice URI for legal fragment. -->
+    <string name="legal_fragment_slice_uri" translatable="false">*</string>
+    <!-- Slice URI for virtual keyboards fragment. -->
+    <string name="virtual_keyboards_fragment_slice_uri" translatable="false">*</string>
+
+    <!-- URIs for regular, non-cachable slices. -->
+
+    <!-- Optional slice URI to replace built in Help & Feedback -->
+    <string name="help_and_feedback_slice_uri" translatable="false"/>
+    <!-- Preference for ambient sense time settings. -->
+    <string name="ambient_sense_time_section_slice_uri" translatable="false"/>
+    <string name="ambient_sense_time_slice_uri" translatable="false"/>
+    <string name="fastpair_slice_uri" translatable="false" />
+    <!-- Preference which shows internal settings. [CHAR LIMIT=50] -->
+    <string name="overlay_internal_slice_title"/>
+    <string name="overlay_internal_slice_uri" translatable="false"/>
+    <!-- Title of settings entry for default audio output settings. -->
+    <string name="default_audio_output_settings_title" translatable="true"/>
+    <string name="default_audio_output_settings_slice_uri" translatable="false"/>
+    <!-- Uri to be overlaid by partner to show official remote control settings. -->
+    <string name="bluetooth_official_remote_entry_slice_uri" translatable="false" />
+    <!-- Uri to be overlaid by partner to show remote control infrared settings. -->
+    <string name="bluetooth_ir_entry_slice_uri" translatable="false" />
+    <string name="cast_settings_title" translatable="false" />
+    <string name="cast_settings_slice_uri" translatable="false" />
+    <string name="assistant_broadcast_title" translatable="false" />
+    <string name="assistant_broadcast_slice_uri" translatable="false" />
+    <string name="top_level_assistant_slice_uri" translatable="false" />
+    <string name="ambient_slice_storage_uri" translatable="false" />
+    <!-- Slice uri for "Accounts & Profiles" -->
+    <string name="account_slice_uri" translatable="false"/>
+    <!-- Slice title for manage user services settings -->
+    <string name="manage_user_services_slice_title" translatable="false" />
+    <!-- Slice uri for manange user services settings -->
+    <string name="manage_user_services_slice_uri" translatable="false" />
+
+    <!-- Slice uri for "Privacy" -->
+    <string name="privacy_assistant_slice_uri" translatable="false"/>
+    <string name="privacy_purchases_slice_uri" translatable="false"/>
+    <string name="privacy_device_lock_slice_uri" translatable="false"/>
+
+    <!-- Slice uri and title for "Ambient mode" -->
+    <string name="ambient_slice_uri" translatable="false" />
+    <string name="ambient_settings_title" translatable="false" />
+
+    <!-- Slice uri for "Channels & Inputs" -->
+    <string name="channels_and_inputs_slice_uri" translatable="false"/>
+
+    <!-- Slice uri for "Channels & Inputs" (fallback if not overridden) -->
+    <string name="channels_and_inputs_fallback_slice_uri" translatable="false"/>
+
+    <!-- Slice uri for "Connected devices" -->
+    <string name="connected_devices_slice_uri" translatable="false"/>
+    <string name="cec_settings_slice_uri" translatable="false"/>
+
+    <!-- Title of preference for help center [CHAR LIMIT=60] -->
+    <string name="help_center_title" translatable="true"/>
+    <string name="help_center_link" translatable="false"/>
+
+    <!-- Package name of slice rendering app -->
+    <string name="slice_rendering_app" translatable="false"/>
+
+    <!-- Slice uri for hdr format selection -->
+    <string name="resolution_slice_uri" translatable="false"/>
+    <!-- Slice uri for hdr and color format -->
+    <string name="hdr_and_color_format_slice_uri" translatable="false"/>
+    <!-- Slice uri for Color format in Advanced display settings -->
+    <string name="advanced_color_format_slice_uri" translatable="false"/>
+    <!-- Slice uri for Dolby Vision Mode in Advanced display settings -->
+    <string name="advanced_dolby_vision_mode_slice_uri" translatable="false"/>
+    <!-- Slice uri for extended audio settings in Display & Sound settings -->
+    <string name="audio_ext_uri" translatable="false"/>
+    <!-- Slice uri for general information -->
+    <string name="general_info_slice_uri" translatable="false"/>
+    <!-- Top level uri for settings slices -->
+    <string name="top_level_settings_slice_uri" translatable="false"/>
+    <!-- An item title on the privacy and apps screen. If clicked, the user is taken to screen listing Update options. [CHAR_LIMIT=50]-->
+    <string name="update_slice_title" translatable="false"/>
+    <!-- Slice uri for update settings -->
+    <string name="update_slice_uri" translatable="false"/>
+    <!-- An item title on the privacy and apps screen. If clicked, the user is taken to screen listing Security options. [CHAR_LIMIT=50]-->
+    <string name="overlay_security_slice_title"/>
+    <!-- Slice uri for overlay security settings -->
+    <string name="overlay_security_slice_uri" translatable="false"/>
+    <!-- Slice uri for "Display & Sound" settings -->
+    <string name="display_and_sound_slice_uri" translatable="false" />
+    <string name="power_boot_resume_slice_uri" translatable="false" />
+    <!-- Slice uri for "Television" settings -->
+    <string name="system_tv_slice_uri" translatable="false" />
+    <!-- Slice uri for "Monitor" settings -->
+    <string name="menu_monitor_slice_uri" translatable="false" />
+    <!-- Slice uri for no signal sleep timer -->
+    <string name="no_signal_sleep_timer_slice_uri" translatable="false"/>
+    <!-- Slice uri for automatic power on -->
+    <string name="automatic_power_on_slice_uri" translatable="false"/>
+    <!-- Slice uri for Device Serial number -->
+    <string name="device_serial_number_slice_uri" translatable="false"/>
+    <!-- Slice uri for HW Revision -->
+    <string name="hw_revison_slice_uri" translatable="false"/>
+    <!-- Screen reader slice uri -->
+    <string name="screen_reader_slice_uri" translatable="false"/>
+
+    <!-- Serialized intent of the preference to add more apps. -->
+    <string name="add_apps_intent" translatable="false" />
+
+    <!-- Package to send menu state changes to and names of parameters -->
+    <string name="accessory_menu_state_broadcast_package" translatable="false"/>
+    <!-- Extra description text for bluetooth device pairing instructions. It is a placeholder to be overrode. -->
+    <string name="accessories_add_bluetooth_inst_extra" translatable="false"/>
+    <!-- The extra description is presented with button icons. These two strings can be overrode to be used for describing the pairing buttons for accessibility feature such as Talkback. -->
+    <string name="accessories_pairing_button1" translatable="false"/>
+    <string name="accessories_pairing_button2" translatable="false"/>
+
+    <!-- Full package name of OEM preferred device feedback reporter. [DO NOT TRANSLATE] -->
+    <string name="oem_preferred_feedback_reporter" translatable="false" />
+
+    <string name="storage_suggestions" translatable="false" />
+    <string name="storage_summary_fragment_name" translatable="false"/>
+
+    <!-- Placeholder font for compiling. The real font will be provided by RRO. -->
+    <string name="preference_title_text_font" translatable="false" />
+
+    <!-- Start up verification -->
+    <string name="startup_verification_action" translatable="false" />
+    <string name="startup_verification_package" translatable="false" />
+
+    <!-- Basic mode -->
+    <string name="basic_mode_provider_uri" translatable="false" />
+    <string name="basic_mode_exit_package" translatable="false" />
+    <string name="basic_mode_exit_component" translatable="false" />
+    <string name="basic_mode_exit_data" translatable="false" />
+    <string name="basic_mode_exit_internet" translatable="false" />
+    <string name="basic_mode_suggestion_category_title" translatable="false" />
+    <string name="basic_mode_exit_preference_title" translatable="false" />
+    <string name="basic_mode_exit_preference_subtitle" translatable="false" />
+    <string name="basic_mode_exit_info_title" translatable="false" />
+    <string name="basic_mode_exit_info_summary" translatable="false" />
+    <string name="basic_mode_accounts_and_sign_in_info_summary" translatable="false" />
+
+    <!-- Intent action for vendor picture activity -->
+    <string name="picture_settings_vendor_action" translatable="false"/>
+    <!-- Intent action for vendor sound activity -->
+    <string name="sound_settings_vendor_action" translatable="false"/>
+    <!-- Package to send HDR settings change broadcasts to -->
+    <string name="hdr_settings_changed_broadcast_package" translatable="false"/>
+</resources>
+
