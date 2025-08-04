@@ -86,5 +86,10 @@
         android:key="security"
         android:title="@string/system_security"
         android:fragment="com.android.tv.settings.system.SecurityFragment" />
-
+    <!-- vendor privacy info -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="vendor_privacy"
+        custom:uri="@string/vendor_privacy_slice_uri"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false" />
 </PreferenceScreen>

@@ -59,4 +59,11 @@
         custom:uri="@string/automatic_power_on_slice_uri"
         custom:isPreferenceVisible="false" />
 
+    <!-- Advanced Settings -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="power_and_energy_advanced_settings"
+        custom:uri="@string/power_and_energy_advanced_settings_slice_uri"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false" />
+
 </PreferenceScreen>

@@ -141,4 +141,11 @@
         custom:uri="@string/hw_revison_slice_uri"
         android:fragment="com.android.tv.twopanelsettings.slices.InfoFragment"
         custom:isPreferenceVisible="false" />
+
+    <!-- vendor device info -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="vendor_more_device_info"
+        custom:uri="@string/vendor_more_device_info_slice_uri"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false" />
 </PreferenceScreen>
