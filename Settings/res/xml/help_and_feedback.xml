@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:title="@string/help_and_feedback_category_title">
     <Preference
         android:key="feedback"
@@ -11,4 +12,10 @@
         <intent
             android:action="com.android.settings.action.LAUNCH_HELP" />
     </Preference>
+    <!-- vendor help -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="vendor_help"
+        custom:uri="@string/vendor_help_slice_uri"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false" />
 </PreferenceScreen>
