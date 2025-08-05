@@ -38,9 +38,6 @@ public class WirelessDebuggingInfoFragment extends InfoFragment {
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
-        ((ImageView) view.findViewById(R.id.info_title_icon))
-                .setImageResource(R.drawable.ic_info_outline_base);
-        view.findViewById(R.id.info_title_icon).setVisibility(View.VISIBLE);
         ((TextView) view.findViewById(R.id.info_summary))
                 .setText(getString(R.string.adb_wireless_connection_failed_message,
                         getDeviceName()));

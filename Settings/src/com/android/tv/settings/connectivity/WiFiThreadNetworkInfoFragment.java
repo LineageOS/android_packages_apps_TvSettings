@@ -35,11 +35,7 @@ public class WiFiThreadNetworkInfoFragment extends InfoFragment {
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
-        ImageView infoTitleIconImageView = view.requireViewById(R.id.info_title_icon);
         TextView infoSummaryTextView = view.requireViewById(R.id.info_summary);
-
-        infoTitleIconImageView.setImageResource(R.drawable.ic_info_outline_base);
-        infoTitleIconImageView.setVisibility(View.VISIBLE);
 
         infoSummaryTextView.setText(R.string.wifi_setting_thread_network_context);
         infoSummaryTextView.setVisibility(View.VISIBLE);

@@ -35,11 +35,6 @@ public class AccessibilityTimeoutInfoFragment extends InfoFragment {
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
 
-        ImageView imageView;
-        imageView = (ImageView) view.findViewById(R.id.info_title_icon);
-        imageView.setImageResource(R.drawable.ic_info_outline_base);
-        imageView.setVisibility(View.VISIBLE);
-
         TextView textView;
         textView = (TextView) view.findViewById(R.id.info_title);
         textView.setText(R.string.accessibility_timeout_info_title);
