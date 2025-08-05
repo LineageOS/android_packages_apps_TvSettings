@@ -185,7 +185,8 @@ public class EnergyModesFragment extends SettingsPreferenceFragment
             RadioPreference modePref = (RadioPreference) preference;
 
             modePref.setChecked(true);
-            modePref.clearOtherRadioPreferences(getPreferenceScreen());
+            PreferenceCategory modeList = findPreference(ENERGY_MODE_LIST_KEY);
+            modePref.clearOtherRadioPreferences(modeList);
 
             int energyModeId = preference.getExtras().getInt(EXTRA_ENERGY_MODE_IDENTIFIER);
             EnergyMode currentEnergyMode = mEnergyModesHelper.updateEnergyMode();
