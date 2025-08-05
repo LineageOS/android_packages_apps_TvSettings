@@ -203,6 +203,27 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
                         handleIntentAndFinishActivityCallback);
             }
         }
+
+        if (Partner.getInstance(getContext()).isCustomizationPackageProvided()) {
+            // Finish full-screen TvSettings activity after navigate to vendor's one-panel activity
+            // to keep the background playback playing
+            Preference.OnPreferenceClickListener handleIntentAndFinishActivityCallback =
+                    preference -> {
+                        Intent intent = preference.getIntent();
+                        if (intent != null) {
+                            getContext().startActivity(intent);
+                            getActivity().finish();
+                        }
+                        return true;
+                    };
+            for (int index = 0; index < getPreferenceScreen().getPreferenceCount(); index++) {
+                final Preference preference = getPreferenceScreen().getPreference(index);
+                final boolean isVendorIntentHandled = isVendorPrefIntentHandled(preference);
+                if(isVendorIntentHandled) {
+                    preference.setOnPreferenceClickListener(handleIntentAndFinishActivityCallback);
+                }
+            }
+        }
     }
 
     private boolean isVendorPrefIntentHandled(Preference pref) {
