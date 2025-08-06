@@ -27,6 +27,7 @@ import android.util.Log;
 
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 /**
  * BluetoothPairingRequest is a receiver for any Bluetooth pairing request. It
@@ -48,6 +49,11 @@ public final class BluetoothPairingRequest extends BroadcastReceiver {
             int type = intent.getIntExtra(BluetoothDevice.EXTRA_PAIRING_VARIANT,
                     BluetoothDevice.ERROR);
             Intent pairingIntent = new Intent();
+            if (FlavorUtils.isTwoPanel(context)) {
+                pairingIntent.setClass(context, BluetoothPairingFullScreenDialogActivity.class);
+            } else {
+                pairingIntent.setClass(context, BluetoothPairingDialog.class);
+            }
             pairingIntent.setClass(context, BluetoothPairingDialog.class);
             pairingIntent.putExtra(BluetoothDevice.EXTRA_DEVICE, device);
             pairingIntent.putExtra(BluetoothDevice.EXTRA_PAIRING_VARIANT, type);
