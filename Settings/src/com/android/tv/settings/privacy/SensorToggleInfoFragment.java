@@ -75,9 +75,6 @@ public class SensorToggleInfoFragment extends InfoFragment {
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = super.onCreateView(inflater, container, savedInstanceState);
-        ImageView icon = view.findViewById(R.id.info_title_icon);
-        icon.setImageResource(R.drawable.ic_info_outline_base);
-        icon.setVisibility(View.VISIBLE);
 
         ((TextView) view.findViewById(R.id.info_summary)).setText(mToggle.toggleInfoText);
 

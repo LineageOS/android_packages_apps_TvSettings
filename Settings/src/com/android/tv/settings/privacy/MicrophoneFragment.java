@@ -65,8 +65,6 @@ public class MicrophoneFragment extends SensorFragment {
         mMicRemoteToggle.setTitle(themedContext.getString(R.string.mic_remote_toggle_title));
         mMicRemoteToggle.setChecked(getMicRemoteToggleState());
         Bundle b = mMicRemoteToggle.getExtras();
-        b.putParcelable(EXTRA_PREFERENCE_INFO_TITLE_ICON,
-                Icon.createWithResource(themedContext, R.drawable.ic_info_outline_base));
         category.addPreference(mMicRemoteToggle);
         if (!FlavorUtils.isTwoPanel(themedContext)) {
             // Show the toggle info text beneath instead.

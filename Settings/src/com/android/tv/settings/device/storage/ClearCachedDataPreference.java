@@ -159,11 +159,6 @@ public class ClearCachedDataPreference extends RestrictedPreference implements
         public View onCreateView(
                 LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View view = super.onCreateView(inflater, container, savedInstanceState);
-            ((ImageView) view.findViewById(com.android.tv.twopanelsettings.R.id.info_title_icon))
-                    .setImageResource(
-                            com.android.tv.twopanelsettings.R.drawable.ic_info_outline_base);
-            view.findViewById(com.android.tv.twopanelsettings.R.id.info_title_icon).setVisibility(
-                    View.VISIBLE);
             ((TextView) view.findViewById(
                     com.android.tv.twopanelsettings.R.id.info_summary)).setText(getSummaryResId());
             view.findViewById(com.android.tv.twopanelsettings.R.id.info_summary).setVisibility(
