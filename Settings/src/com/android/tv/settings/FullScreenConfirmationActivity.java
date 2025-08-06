@@ -23,7 +23,7 @@ import android.util.Log;
 
 import androidx.fragment.app.FragmentActivity;
 
-import com.android.tv.settings.FullScreenDialogFragment;
+import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
 

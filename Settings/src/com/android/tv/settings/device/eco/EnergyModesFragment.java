@@ -45,7 +45,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
 import com.android.tv.settings.FullScreenConfirmationActivity;
-import com.android.tv.settings.FullScreenDialogFragment;
+import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;

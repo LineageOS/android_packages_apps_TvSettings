@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.android.tv.settings;
+package com.android.tv.twopanelsettings;
 
 import android.annotation.Nullable;
 import android.content.Context;
