@@ -37,10 +37,6 @@ public class WiFiEasyConnectInfoFragment extends InfoFragment {
             Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
 
-        ((ImageView) view.findViewById(R.id.info_title_icon))
-                .setImageResource(R.drawable.ic_info_outline_base);
-        view.findViewById(R.id.info_title_icon).setVisibility(View.VISIBLE);
-
         ((TextView) view.findViewById(R.id.info_title)).setText(
                 R.string.wifi_setting_other_options_add_network_via_easyconnect);
         view.findViewById(R.id.info_title).setVisibility(View.VISIBLE);

@@ -58,7 +58,7 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.settingslib.RestrictedPreference;
 import com.android.tv.settings.FullScreenConfirmationActivity;
-import com.android.tv.settings.FullScreenDialogFragment;
+import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RestrictedPreferenceAdapter;

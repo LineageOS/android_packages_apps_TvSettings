@@ -69,10 +69,6 @@ public class PhysicalPrivacyUnblockInfoFragment extends InfoFragment {
         ImageView infoImage = view.findViewById(R.id.info_image);
         infoImage.setImageResource(mToggle.physicalPrivacyEnabledInfoPanelImage);
 
-        ImageView icon = view.findViewById(R.id.info_title_icon);
-        icon.setImageResource(R.drawable.ic_info_outline_base);
-        icon.setVisibility(View.VISIBLE);
-
         TextView titleView = view.findViewById(R.id.info_title);
         titleView.setVisibility(View.VISIBLE);
         titleView.setText(mToggle.physicalPrivacyEnabledInfoTitle);

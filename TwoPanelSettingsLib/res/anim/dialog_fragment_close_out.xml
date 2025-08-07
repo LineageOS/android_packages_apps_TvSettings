@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2018 The Android Open Source Project
+<!-- Copyright (C) 2016 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,21 +13,20 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
 
-<resources>
-  <declare-styleable name="SlicePreference">
-    <attr name="uri" format="string" />
-  </declare-styleable>
+    <objectAnimator
+        android:duration="@integer/dialog_fade_out_duration"
+        android:propertyName="x"
+        android:valueType="floatType"
+        android:valueFrom="0"
+        android:valueTo="@dimen/dialog_slide_in_offset" />
 
-  <declare-styleable name="RadioPreference">
-    <attr name="radioGroup" format="string" />
-  </declare-styleable>
+    <objectAnimator
+        android:duration="@integer/dialog_fade_out_duration"
+        android:propertyName="alpha"
+        android:valueFrom="1.0"
+        android:valueTo="0.0"
+        android:valueType="floatType" />
 
-  <declare-styleable name="DisabledButFocusablePreference">
-    <attr name="disabledButFocusable" format="boolean" />
-  </declare-styleable>
-
-  <declare-styleable name="TwoPanelMaxHeightScrollView">
-    <attr name="android:maxHeight"/>
-  </declare-styleable>
-</resources>
+</set>

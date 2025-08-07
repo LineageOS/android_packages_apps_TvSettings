@@ -33,7 +33,7 @@ import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
-import com.android.tv.settings.FullScreenDialogFragment;
+import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.connectivity.util.ThreadNetworkHelper;
 import com.android.tv.settings.device.eco.EnergyModesHelper.EnergyMode;

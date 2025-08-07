@@ -929,6 +929,9 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         }, PANEL_ANIMATION_DELAY_MS);
 
         mHandler.postDelayed(() -> {
+            if (getHost() == null) {
+                return;
+            }
             removeFragment(mPrefPanelIdx + 2);
             mIsNavigatingBack = false;
             Fragment previewFragment =
