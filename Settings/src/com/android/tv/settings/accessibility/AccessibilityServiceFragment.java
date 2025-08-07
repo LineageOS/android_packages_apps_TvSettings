@@ -37,6 +37,7 @@ import com.android.settingslib.RestrictedSwitchPreference;
 import com.android.settingslib.accessibility.AccessibilityUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.List;
 import java.util.Set;
@@ -105,13 +106,18 @@ public class AccessibilityServiceFragment extends SettingsPreferenceFragment imp
                 getResources()
                     .getString(R.string.
                                    accessibility_screen_reader_flattened_component_name))) {
-            final Preference screenReaderPref = new Preference(themedContext);
-            screenReaderPref.setTitle(
-                getResources().getString(
-                    R.string.screen_reader_service_title));
-            screenReaderPref.setSummary(R.string.screen_reader_summary);
-            screenReaderPref.setEnabled(false);
-            screen.addPreference(screenReaderPref);
+
+            if (!FlavorUtils.isTwoPanel(themedContext)) {
+                final Preference screenReaderPref = new Preference(themedContext);
+                screenReaderPref.setTitle(
+                    getResources().getString(
+                        R.string.screen_reader_service_title));
+                screenReaderPref.setSummary(R.string.screen_reader_summary);
+                screenReaderPref.setEnabled(false);
+                screen.addPreference(screenReaderPref);
+            } else {
+                screen.setSummary(getResources().getString(R.string.screen_reader_summary));
+            }
         }
 
         setPreferenceScreen(screen);
