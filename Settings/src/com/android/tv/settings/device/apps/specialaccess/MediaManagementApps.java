@@ -16,6 +16,11 @@
 
 package com.android.tv.settings.device.apps.specialaccess;
 
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
+import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
+
 import android.Manifest;
 import android.app.AppOpsManager;
 import android.content.Intent;
@@ -30,6 +35,7 @@ import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
 import com.android.settingslib.applications.ApplicationsState;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.R;
 
 /**
@@ -64,7 +70,7 @@ public class MediaManagementApps extends ManageAppOp {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.media_management_apps, null);
+        setPreferencesFromResource(getPreferenceScreenResId(), null);
     }
 
     @NonNull
@@ -120,4 +126,12 @@ public class MediaManagementApps extends ManageAppOp {
         }
     }
 
+
+    private int getPreferenceScreenResId() {
+        if (FlavorUtils.isTwoPanel(getContext())) {
+            return R.xml.media_management_apps_x;
+        } else {
+            return R.xml.media_management_apps;
+        }
+    }
 }
