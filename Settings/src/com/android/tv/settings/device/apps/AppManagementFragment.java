@@ -41,6 +41,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 import java.util.ArrayList;
@@ -253,15 +254,24 @@ public class AppManagementFragment extends SettingsPreferenceFragment {
 
     // Version
     Preference versionPreference = findPreference(KEY_VERSION);
-    if (versionPreference == null) {
-      versionPreference = new Preference(themedContext);
-      versionPreference.setKey(KEY_VERSION);
-      replacePreference(versionPreference);
-      versionPreference.setSelectable(false);
+
+    if (!FlavorUtils.isTwoPanel(themedContext)) {
+      if (versionPreference == null) {
+        versionPreference = new Preference(themedContext);
+        versionPreference.setKey(KEY_VERSION);
+        replacePreference(versionPreference);
+        versionPreference.setSelectable(false);
+      }
+      versionPreference.setTitle(
+          getString(R.string.device_apps_app_management_version, mEntry.getVersion(getActivity())));
+      versionPreference.setSummary(mPackageName);
+    } else {
+      PreferenceScreen screen = getPreferenceScreen();
+      String version =
+        getString(R.string.device_apps_app_management_version, mEntry.getVersion(getActivity()));
+      String packageName = mPackageName;
+      screen.setSummary(version + "\n" + packageName);
     }
-    versionPreference.setTitle(
-        getString(R.string.device_apps_app_management_version, mEntry.getVersion(getActivity())));
-    versionPreference.setSummary(mPackageName);
 
     // Open
     Preference openPreference = findPreference(KEY_OPEN);
