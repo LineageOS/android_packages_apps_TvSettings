@@ -132,8 +132,14 @@ public class SensorFragment extends SettingsPreferenceFragment {
 
     private void addPhysicalPrivacyEnabledInfo(PreferenceScreen screen, Context themedContext) {
         mPhysicalPrivacyEnabledInfo = new Preference(themedContext);
-        mPhysicalPrivacyEnabledInfo.setLayoutResource(
+        if (!FlavorUtils.isTwoPanel(themedContext)) {
+            mPhysicalPrivacyEnabledInfo.setLayoutResource(
                 R.layout.sensor_physical_privacy_enabled_info);
+        } else {
+            mPhysicalPrivacyEnabledInfo.setLayoutResource(
+                R.layout.sensor_physical_privacy_enabled_info_two_panel);
+        }
+
         mPhysicalPrivacyEnabledInfo.setSelectable(true);
         mPhysicalPrivacyEnabledInfo.setTitle(mToggle.physicalPrivacyEnabledInfoTitle);
         mPhysicalPrivacyEnabledInfo.setSummary(mToggle.physicalPrivacyEnabledInfoText);
