@@ -80,6 +80,9 @@ public class TvAccessPointPreference extends AccessPointPreference {
                 Drawable drawable = getContext()
                         .getDrawable(R.drawable.ic_wifi_signal_lock_outline);
                 frictionImageView.setImageDrawable(drawable);
+            } else if (mAccessPoint.getSecurity() == AccessPoint.SECURITY_NONE) {
+                // We need to explicitly clear the view because prefs are recycled.
+                frictionImageView.setImageDrawable(null);
             }
         }
     }
