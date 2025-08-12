@@ -78,4 +78,10 @@
         android:icon="@drawable/ic_network_check"
         android:title="@string/connectivity_network_diagnostics" />
 
+    <!-- Advanced Settings -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="network_advanced_settings"
+        custom:uri="@string/network_advanced_settings_slice_uri"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false" />
 </PreferenceScreen>

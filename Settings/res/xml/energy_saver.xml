@@ -55,4 +55,8 @@
 
     </PreferenceCategory>
 
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="countdown_from_now"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        settings:uri="@string/countdown_from_now_slice_uri"/>
 </PreferenceScreen>
