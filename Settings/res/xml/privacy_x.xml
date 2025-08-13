@@ -31,19 +31,23 @@
     <Preference
         android:key="location"
         android:title="@string/system_location"
+        android:icon="@drawable/ic_location_on"
         android:fragment="com.android.tv.settings.system.LocationFragment" />
     <Preference
         android:key="microphone"
         android:title="@string/microphone"
+        android:icon="@drawable/ic_mic_on"
         android:fragment="com.android.tv.settings.privacy.MicrophoneFragment" />
     <Preference
         android:key="camera"
         android:title="@string/camera"
+        android:icon="@drawable/ic_camera_on"
         android:fragment="com.android.tv.settings.privacy.SensorFragment" />
 
     <com.android.tv.twopanelsettings.slices.SlicePreference
         android:key="usageAndDiag"
         android:title="@string/system_diagnostic"
+        android:icon="@drawable/ic_query_stats"
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
         custom:uri="content://com.google.android.settings.usage/usagediagnostics">
         <intent android:action="com.google.android.settings.USAGE_AND_DIAGNOSTICS_SETTING"/>
@@ -51,6 +55,7 @@
     <com.android.tv.twopanelsettings.slices.CustomContentDescriptionPreference
         android:key="ads"
         android:title="@string/about_ads"
+        android:icon="@drawable/ic_ads_click"
         android:fragment="com.android.tv.settings.privacy.AdsInfoFragment"/>
 
     <PreferenceCategory
@@ -101,4 +106,12 @@
         android:title="@string/overlay_security_slice_title"
         android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
         custom:uri="@string/overlay_security_slice_uri"/>
+
+    <!-- vendor privacy info -->
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="vendor_privacy"
+        custom:uri="@string/vendor_privacy_slice_uri"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false" />
+
 </PreferenceScreen>

@@ -47,8 +47,7 @@ public class TvIconDrawableFactory {
     return new TvIconDrawableFactory(context);
   }
 
-  // Returns a rounded application icon if it would look okay. If it is not large enough to
-  // look good with our rounding algorithm just return the icon from PackageManager as-is.
+  // Returns a rounded application icon if the flavor is Two Panel settings.
   public Drawable maybeGetRoundAppIcon(ApplicationInfo applicationInfo) {
     Drawable icon;
     Drawable packageManagerIcon = mPm.loadItemIcon(applicationInfo, applicationInfo);
@@ -56,14 +55,8 @@ public class TvIconDrawableFactory {
       return packageManagerIcon;
     }
 
-    boolean getRoundedIcon = false;
-    if (packageManagerIcon instanceof AdaptiveIconDrawable
-        || Math.min(packageManagerIcon.getIntrinsicWidth(), packageManagerIcon.getIntrinsicHeight())
-            >= ROUND_ICON_MIN_SIZE) {
-      getRoundedIcon = true;
-    }
     icon = packageManagerIcon;
-    if (icon != null && getRoundedIcon) {
+    if (icon != null) {
       Bitmap iconBitmap = getBitmapFromDrawable(icon);
       Bitmap roundIconBitmap = getRoundBitmap(iconBitmap);
       return new BitmapDrawable(mContext.getResources(), roundIconBitmap);
