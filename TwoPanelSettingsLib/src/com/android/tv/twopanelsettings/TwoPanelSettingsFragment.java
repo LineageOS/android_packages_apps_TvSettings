@@ -779,6 +779,13 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 }
             }
 
+            // If the back animation is playing, don't send UP/DOWN events. This prevents a race
+            // condition with preview fragment when moving back
+            if (mIsNavigatingBack && event.getAction() == KeyEvent.ACTION_DOWN
+               && (keyCode == KeyEvent.KEYCODE_DPAD_UP || keyCode == KeyEvent.KEYCODE_DPAD_DOWN)) {
+               return true;
+            }
+
             if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_BACK) {
                 if (event.getRepeatCount() > 0) {
                     // Ignore long press on back button.
