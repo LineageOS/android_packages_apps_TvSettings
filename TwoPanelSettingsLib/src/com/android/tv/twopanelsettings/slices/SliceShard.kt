@@ -16,6 +16,7 @@
 package com.android.tv.twopanelsettings.slices
 
 import android.app.Activity
+import android.app.ActivityOptions
 import android.app.PendingIntent
 import android.app.slice.Slice.HINT_PARTIAL
 import android.app.tvsettings.TvSettingsEnums
@@ -257,7 +258,10 @@ class SliceShard(
         }
         if (followupPendingIntent is PendingIntent) {
             try {
-                followupPendingIntent.send()
+                val options = ActivityOptions.makeBasic()
+                options.setPendingIntentBackgroundActivityStartMode(
+                    ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED)
+                followupPendingIntent.send(options.toBundle())
             } catch (e: PendingIntent.CanceledException) {
                 Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e)
             }
@@ -275,9 +279,17 @@ class SliceShard(
                 }
             } else {
                 try {
+                    val options = ActivityOptions.makeBasic()
+                    options.setPendingIntentBackgroundActivityStartMode(
+                        ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED)
                     (mPreferenceFollowupIntent as PendingIntent).send(
-                        requireContext(),
-                        mFollowupPendingIntentResultCode, mFollowupPendingIntentExtras
+                        /* context= */ requireContext(),
+                        /* code= */ mFollowupPendingIntentResultCode,
+                        /* intent= */ mFollowupPendingIntentExtras,
+                        /* onFinished= */ null,
+                        /* handler= */ null,
+                        /* requiredPermission= */ null,
+                        /* options= */ options.toBundle()
                     )
                 } catch (e: PendingIntent.CanceledException) {
                     Log.e(TAG, "Followup PendingIntent for slice cannot be sent", e)
