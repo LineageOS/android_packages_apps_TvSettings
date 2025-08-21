@@ -16,6 +16,8 @@
 
 package com.android.tv.settings.device.eco;
 
+import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
+
 import android.annotation.ArrayRes;
 import android.annotation.BoolRes;
 import android.annotation.ColorRes;
@@ -24,6 +26,7 @@ import android.annotation.IntegerRes;
 import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.annotation.StringRes;
+import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.PowerManager;
@@ -34,11 +37,13 @@ import android.util.ArraySet;
 import androidx.annotation.XmlRes;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.connectivity.util.ThreadNetworkHelper;
 import com.android.tv.settings.overlay.FlavorUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -445,6 +450,13 @@ public final class EnergyModesHelper {
 
     /** Sets the given energy mode in the system. */
     public void setEnergyMode(@NonNull EnergyMode energyMode) {
+        Optional.ofNullable(ThreadNetworkHelper.getInstance(mContext)).ifPresent(
+                helper -> {
+                    boolean isEnabled = (energyMode == MODE_HIGH_ENERGY);
+                    helper.setEnabled(isEnabled);
+                    logToggleInteracted(TvSettingsEnums.NETWORK_T_N, isEnabled);
+                });
+
         LowPowerStandbyPolicy policy = getPolicy(energyMode);
         PowerManager powerManager = mContext.getSystemService(PowerManager.class);
         powerManager.setLowPowerStandbyEnabled(energyMode.enableLowPowerStandby);
