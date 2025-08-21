@@ -22,6 +22,8 @@ import static com.android.tv.settings.util.InstrumentationUtils.logToggleInterac
 
 import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
+import android.media.AudioDeviceAttributes;
+import android.media.AudioDeviceInfo;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -72,6 +74,8 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
             AudioFormat.ENCODING_DRA
     };
 
+    static boolean sVariableVolumeControl;
+
     private static final String TAG = "AdvancedVolumeFragment";
 
     private Map<Integer, Boolean> mFormats;
@@ -112,6 +116,14 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.advanced_sound, null /* key */);
 
+        AudioDeviceAttributes audioDeviceHdmiOut =
+            new AudioDeviceAttributes(
+                AudioDeviceAttributes.ROLE_OUTPUT, AudioDeviceInfo.TYPE_HDMI, "");
+
+        sVariableVolumeControl =
+            mAudioManager.getDeviceVolumeBehavior(audioDeviceHdmiOut)
+                == AudioManager.DEVICE_VOLUME_BEHAVIOR_VARIABLE;
+
         String surroundSoundSettingKey = getSurroundPassthroughSetting(getContext());
         selectRadioPreference(findPreference(surroundSoundSettingKey));
 
@@ -120,12 +132,20 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
             createInfoFragments();
         }
 
-        createFormatInfoPreferences();
-        createFormatPreferences();
-        if (surroundSoundSettingKey == KEY_SURROUND_SOUND_MANUAL) {
-            showFormatPreferences();
-        } else {
-            hideFormatPreferences();
+        if (!sVariableVolumeControl) {
+            createFormatInfoPreferences();
+            createFormatPreferences();
+            if (surroundSoundSettingKey == KEY_SURROUND_SOUND_MANUAL) {
+                showFormatPreferences();
+            } else {
+                hideFormatPreferences();
+            }
+        }
+        else {
+            // disable surround sound options
+            getPreferenceGroup().setEnabled(false);
+            ((RadioPreference) findPreference(KEY_SURROUND_SOUND_AUTO)).setChecked(false);
+            ((RadioPreference) findPreference(KEY_SURROUND_SOUND_MANUAL)).setChecked(false);
         }
     }
 
@@ -155,14 +175,6 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
                             TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_SELECT_FORMATS_AUTO);
                     mAudioManager.setEncodedSurroundMode(
                             Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO);
-                    hideFormatPreferences();
-                    break;
-                }
-                case KEY_SURROUND_SOUND_NONE: {
-                    logEntrySelected(
-                            TvSettingsEnums.DISPLAY_SOUND_ADVANCED_SOUNDS_SELECT_FORMATS_NONE);
-                    mAudioManager.setEncodedSurroundMode(
-                            Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER);
                     hideFormatPreferences();
                     break;
                 }
@@ -298,7 +310,8 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
                     continue;
                 }
                 pref = createPreference(titleId, KEY_SURROUND_SOUND_FORMAT_INFO_PREFIX + formatId);
-                if (mReportedFormats.contains(formatId)) {
+                if (getSurroundPassthroughSetting(getContext()) != KEY_SURROUND_SOUND_NONE
+                        && mReportedFormats.contains(formatId)) {
                     mEnabledFormatsPreferenceCategory.addPreference(pref);
                 } else {
                     mDisabledFormatsPreferenceCategory.addPreference(pref);
@@ -399,9 +412,6 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
         switch (value) {
             case Settings.Global.ENCODED_SURROUND_OUTPUT_MANUAL:
                 return KEY_SURROUND_SOUND_MANUAL;
-            case Settings.Global.ENCODED_SURROUND_OUTPUT_NEVER:
-                return KEY_SURROUND_SOUND_NONE;
-            case Settings.Global.ENCODED_SURROUND_OUTPUT_AUTO:
             default:
                 return KEY_SURROUND_SOUND_AUTO;
         }

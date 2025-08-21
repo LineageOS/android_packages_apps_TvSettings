@@ -320,7 +320,11 @@
     <string name="surround_sound_format_e_ac3_joc">Dolby Atmos with Dolby Digital Plus</string>
     <!-- Name of the Dynamic Resolution Adaption sound format that is displayed to the user [CHAR LIMIT=50] -->
     <string name="surround_sound_format_dra">DRA</string>
-
+    <!-- Summary when surround sound is disabled because of variable volume control.
+        [CHAR LIMIT=300] -->
+    <string name="surround_sound_variable_volume_control_summary">To enable surround sound, go to
+        Settings &gt; Remotes &amp; Accessories &gt; Set up remote buttons &gt; Volume control and
+        then select an option other than this device.</string>
     <!-- An informational message displayed in the surround sound settings, explaining to the
         user that the auto setting may sometimes cause issues. [CHAR LIMIT=135]-->
     <string name="surround_sound_auto_info">Note: The Automatic option may not work if your device
