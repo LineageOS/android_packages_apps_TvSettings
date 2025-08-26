@@ -240,9 +240,9 @@ public class WifiDetailsFragment extends SettingsPreferenceFragment
     boolean canModifyNetwork =
         !WifiConfigHelper.isNetworkLockedDown(getContext(), wifiConfiguration);
     if (canModifyNetwork) {
-      mProxySettingsPref.setDisabledByAdmin(null);
-      mIpSettingsPref.setDisabledByAdmin(null);
-      mForgetNetworkPref.setDisabledByAdmin(null);
+      mProxySettingsPref.setDisabledByAdmin((EnforcedAdmin) null);
+      mIpSettingsPref.setDisabledByAdmin((EnforcedAdmin) null);
+      mForgetNetworkPref.setDisabledByAdmin((EnforcedAdmin) null);
 
       mProxySettingsPref.setEnabled(true);
       mIpSettingsPref.setEnabled(true);
