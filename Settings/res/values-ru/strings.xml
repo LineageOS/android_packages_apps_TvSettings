@@ -138,6 +138,8 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos с Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <!-- no translation found for surround_sound_variable_volume_control_summary (5617179789645766442) -->
+    <skip />
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Примечание. Параметр \"Автоматически\" может не работать, если устройство предоставляет неверные данные о поддерживаемых форматах."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Автоматически"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Включить все поддерживаемые форматы"</string>
@@ -844,7 +846,7 @@
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"Включен строгий режим"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Запись времени работы графического процессора"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"Включить трассировки"</string>
-    <string name="system_dont_keep_activities" msgid="4641165963339846161">"Не сохранять активности"</string>
+    <string name="system_dont_keep_activities" msgid="4641165963339846161">"Не сохранять объекты Activity"</string>
     <string name="system_background_process_limit" msgid="1985373407150771045">"Лимит фоновых процессов"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"Все ANR"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Отключить спящий режим"</string>
@@ -855,10 +857,10 @@
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Приложение ожидает подключения отладчика"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Показывать границы клипа, поля и т. д."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Подсвечивать области экрана при отрисовке с GPU"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Выделять аппаратные уровни зеленым при обновлении"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Выделять слои с аппаратной отрисовкой зеленым при обновлении"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Порядок: синий, зеленый, светло-красный, красный"</string>
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Подсвечивать окна полностью при их обновлении"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Подсвечивать экран во время длительных операций"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Подсвечивать экран, когда приложения выполняют длительные операции в основном потоке"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Измерение времени для adb shell dumpsys gfxinfo"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Неизвестные источники"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Разрешить установку приложений не из Play Маркета"</string>
