@@ -28,8 +28,8 @@
     <string name="action_off_description" msgid="1368039592272701910">"बन्द गर्नुहोस्"</string>
     <string name="agree" msgid="8155497436593889753">"सहमत"</string>
     <string name="disagree" msgid="7402998517682194430">"असहमत"</string>
-    <string name="enabled" msgid="5127188665060746381">"सक्षम पारिएको छ"</string>
-    <string name="disabled" msgid="4589065923272201387">"असक्षम पारिएको छ"</string>
+    <string name="enabled" msgid="5127188665060746381">"अन गरिएको छ"</string>
+    <string name="disabled" msgid="4589065923272201387">"अफ गरिएको छ"</string>
     <string name="unavailable" msgid="1610732303812180196">"उपलब्ध छैन"</string>
     <string name="allow" msgid="6982558814345894019">"अनुमति दिनुहोस्"</string>
     <string name="deny" msgid="8291577308813053917">"अस्वीकार गर्नुहोस्"</string>
@@ -138,8 +138,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"\'Dolby Digital Plus सहितको Dolby Atmos\' साउन्ड फर्म्याट"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
-    <!-- no translation found for surround_sound_variable_volume_control_summary (5617179789645766442) -->
-    <skip />
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"सराउन्ड साउन्ड अन गर्न \"सेटिङ &gt; रिमोट &amp; एक्सेसरिज &gt; रिमोटका बटनहरू सेटअप गर्नुहोस् &gt; भोल्युम कन्ट्रोल\" मा जानुहोस् अनि त्यसपछि यो डिभाइसबाहेकको कुनै एउटा विकल्प चयन गर्नुहोस्।"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"नोट: तपाईंको यन्त्रले प्रयोग गर्न मिल्ने फर्म्याटबारे सही तरिकाले रिपोर्ट नगरेका खण्डमा स्वतः काम गर्ने विकल्पले काम नगर्न सक्छ।"</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"स्वचालित"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"प्रयोग गर्न मिल्ने सबै फर्म्याटहरू अन गर्नुहोस्"</string>
@@ -319,7 +318,7 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"उपलब्ध छैन"</string>
     <string name="manage_device_admin" msgid="2719119510627926381">"डिभाइसका एड्मिन"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"कुनै सक्रिय एपहरू छैनन्"</string>
-    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"प्रशासक, इन्क्रिप्सन नीति वा प्रामाणिक भण्डारणद्वारा असक्षम पारिएको छ"</string>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"प्रशासक, इन्क्रिप्सन नीति वा प्रामाणिक भण्डारणद्वारा अफ गरिएको छ"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"व्यवस्थित गरिएको यन्त्रको जानकारी"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"तपाईंको संगठनले व्यवस्थापन गरेका परिवर्तन र सेटिङहरू"</string>
     <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> ले व्यवस्थापन गरेका परिवर्तन र सेटिङहरू  "</string>
@@ -1105,8 +1104,8 @@
     <string name="write_settings_on" msgid="71675710746513956">"छ"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"छैन"</string>
     <string name="manage_external_storage_title" msgid="8139593207533811077">"सबै फाइल हेर्ने तथा प्रयोग गर्ने अनुमति"</string>
-    <string name="permit_manage_external_storage" msgid="1776899171934627417">"सबै फाइलहरूको व्यवस्थापन गर्ने अनुमति दिनुहोस्"</string>
-    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"यो एपलाई यो डिभाइस वा जोडिएको कुनै भण्डारणमा रहेका सबै फाइलहरू पढ्ने, परिमार्जन गर्ने तथा मेट्ने अनुमति दिनुहोस्। अनुमति दिइएका खण्डमा यो एपले तपाईंको स्पष्ट अनुमतिविनै फाइलहरू प्रयोग गर्नसक्छ।"</string>
+    <string name="permit_manage_external_storage" msgid="1776899171934627417">"सबै फाइलहरू व्यवस्थापन गर्ने एक्सेस दिनुहोस्"</string>
+    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"यो एपलाई यो डिभाइस वा जोडिएको कुनै भण्डारणमा रहेका सबै फाइलहरू पढ्ने, परिमार्जन गर्ने तथा मेट्ने अनुमति दिनुहोस्। अनुमति दिइएका खण्डमा यो एपले तपाईंको स्पष्ट अनुमतिविनै फाइलहरू एक्सेस गर्नसक्छ।"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Picture-in-picture"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Picture-in-picture लाई अनुमति दिनुहोस्"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"स्थापना गरिएको कुनै पनि एपले Picture-in-picture मोडलाई समर्थन गर्दैन"</string>
