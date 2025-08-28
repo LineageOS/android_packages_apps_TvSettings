@@ -55,21 +55,11 @@ public class AdvancedVolumeInfo {
 
         protected abstract int getSummaryResId();
 
-        private int getVariableVolumeControlSummaryResId() {
-            return R.string.surround_sound_variable_volume_control_summary;
-        }
-
         @Override
         public View onCreateView(
                 LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View view = super.onCreateView(inflater, container, savedInstanceState);
-            if (!AdvancedVolumeFragment.sVariableVolumeControl) {
-                ((TextView) view.findViewById(R.id.info_summary)).setText(getSummaryResId());
-            }
-            else {
-                ((TextView) view.findViewById(R.id.info_summary)).setText(
-                    getVariableVolumeControlSummaryResId());
-            }
+            ((TextView) view.findViewById(R.id.info_summary)).setText(getSummaryResId());
             view.findViewById(R.id.info_summary).setVisibility(View.VISIBLE);
             return view;
         }
