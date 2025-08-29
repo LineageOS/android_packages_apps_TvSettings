@@ -1315,11 +1315,15 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
             Preference preference = preferenceGroup.getPreference(i);
             if (preference instanceof HasSliceUri
-                    && ((HasSliceUri) preference).getUri().equals(uri)) {
+                    && TextUtils.equals(((HasSliceUri) preference).getUri(), uri)) {
                 return preference;
             }
             if (preference instanceof PreferenceGroup) {
-                findPreferenceByUriInPreferenceGroup((PreferenceGroup) preference, uri);
+                Preference foundPref =
+                        findPreferenceByUriInPreferenceGroup((PreferenceGroup) preference, uri);
+                if (foundPref != null) {
+                    return foundPref;
+                }
             }
         }
         return null;
