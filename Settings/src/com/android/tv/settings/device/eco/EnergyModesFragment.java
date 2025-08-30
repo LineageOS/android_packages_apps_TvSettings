@@ -17,7 +17,6 @@
 package com.android.tv.settings.device.eco;
 
 import static com.android.tv.settings.device.eco.EnergyModesHelper.MODE_HIGH_ENERGY;
-import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
 
 import android.app.Activity;
 import android.app.tvsettings.TvSettingsEnums;
@@ -27,7 +26,6 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,10 +40,8 @@ import androidx.annotation.Keep;
 import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceScreen;
 
 import com.android.tv.settings.FullScreenConfirmationActivity;
-import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -53,6 +49,7 @@ import com.android.tv.settings.connectivity.util.ThreadNetworkHelper;
 import com.android.tv.settings.device.eco.EnergyModesHelper.EnergyMode;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
+import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.twopanelsettings.slices.InfoFragment;
 import com.android.tv.twopanelsettings.slices.SliceShard;
 import com.android.tv.twopanelsettings.slices.compat.Slice;
@@ -145,9 +142,7 @@ public class EnergyModesFragment extends SettingsPreferenceFragment
     public void onPause() {
         super.onPause();
 
-        mThreadNetworkHelperOptional.ifPresent(threadNetworkHelper -> {
-            threadNetworkHelper.unregisterStateCallback();
-        });
+        mThreadNetworkHelperOptional.ifPresent(ThreadNetworkHelper::unregisterStateCallback);
     }
 
     private RadioPreference createEnergyModeRadioPreference(EnergyMode mode) {
@@ -203,8 +198,7 @@ public class EnergyModesFragment extends SettingsPreferenceFragment
                     if (isThreadEnabled && newEnergyMode != MODE_HIGH_ENERGY) {
                         disableThreadNetworkIntentLauncher
                                 .launch(getDisableThreadNetworkConfirmationIntent());
-                    }
-                    else {
+                    } else {
                         mEnergyModesHelper.setEnergyMode(newEnergyMode);
                     }
                 }
@@ -222,10 +216,7 @@ public class EnergyModesFragment extends SettingsPreferenceFragment
                         @Override
                         public void onActivityResult(ActivityResult result) {
                             if (result.getResultCode() == Activity.RESULT_OK) {
-                                mThreadNetworkHelperOptional.get().setEnabled(false);
                                 mEnergyModesHelper.setEnergyMode(newEnergyMode);
-                                logToggleInteracted(
-                                        TvSettingsEnums.NETWORK_T_N, false);
                             }
                         }
                     });
