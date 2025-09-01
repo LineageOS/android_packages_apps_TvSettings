@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="system_reboot_confirm_cm">הפעלה מחדש אל:</string>
+    <string name="global_action_restart_system">מערכת</string>
+    <string name="global_action_restart_recovery">Recovery</string>
+    <string name="global_action_restart_bootloader">Bootloader</string>
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">רק עוד צעד אחד מהפעלת אפשרויות מפתח.</item>
+        <item quantity="two">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
+        <item quantity="many">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
+        <item quantity="other">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
+    </plurals>
+    <string name="show_dev_on_cm">הפעלת כבר את הגדרות למפתחים!</string>
+    <string name="show_dev_already_cm">אין צורך, הפעלת כבר את הגדרות למפתחים.</string>
+    <string name="system_buttons">לחצנים</string>
+    <string name="power_button_long_press_action_title">פעולת לחיצה ארוכה על כפתור ההפעלה</string>
+    <string name="power_button_long_press_for_power_menu_action">גישה לתפריט הפעלה</string>
+    <string name="power_button_long_press_for_assistant_action">פתיחת מסייע</string>
+    <string name="enable_adb_root">ניפוי תקלות עם גישת שורש</string>
+    <string name="enable_adb_root_summary">אפשר הרצת ניפוי תקלות באנדרואיד עם גישת שורש</string>
+    <string name="advanced_restart_title">אתחול מתקדם</string>
+    <string name="advanced_restart_summary">הצגת אפשרויות עבור שיחזור, מנהל אתחול או אתחול רך</string>
+    <string name="adb_over_network">ADB דרך הרשת</string>
+    <string name="adb_over_network_summary">הפעלת ניפוי שגיאות TCP/IP דרך ממשקי רשת (Wi\u2011Fi, רשתות USB). הגדרה זו מתאפסת באתחול</string>
+    <string name="adb_over_network_warning">אזהרה: כאשר ADB דרך הרשת מופעל, הטלפון שלך חדיר מכל הרשתות המחוברות!\n\nיש להשתמש באפשרות זו רק בעת חיבור לרשתות מהימנות.\n\nהאם בוודאות ברצונך להפעיל אפשרות זו?</string>
+    <string name="trust_category_features">מצב</string>
+    <string name="trust_feature_selinux">SELinux</string>
+    <string name="trust_feature_selinux_value_enforcing">אכיפה</string>
+    <string name="trust_feature_selinux_value_disabled">מושבת</string>
+    <string name="trust_feature_selinux_explain">SELinux מכתיב לאילו תהליכים יש גישה לקבצים/נתיבים שונים בהתקן שלך.\nזה מונע מיישומים ומשירותים לגשת אל קבצים שהם לא אמורים לגשת אליהם: בדרך זו תהליכים זדוניים מוגבלים והאבטחת שלך נשמרת.</string>
+    <string name="trust_feature_security_patches">תיקוני אבטחה לאנדרואיד</string>
+    <string name="trust_feature_security_patches_value_base">פלטפורמה: %1$s\nיצרן: %2$s</string>
+    <string name="trust_feature_security_patches_value_new">עדכני</string>
+    <string name="trust_feature_security_patches_value_medium">לא עדכני כבר כמה חודשים</string>
+    <string name="trust_feature_security_patches_value_old">לא עדכני</string>
+    <string name="trust_feature_security_patches_explain">עדכוני אבטחה מתפרסמים מדי חודש על־ידי Google בשיתוף פעולה עם יצרני מערכות על־שבב על מנת לפתור פגמים שיכולים להיות מנוצלים על ידי יישומים זדוניים במטרה לעקוף מגבלות אבטחה ולגרום נזק קבוע להתקן שלך. העדכונים המוצעים על־ידי Google מוחלים על כל ההתקנים התומכים, אך עדכונים לקוד קנייני ניתנים להשמה אך ורק על־ידי יצרן ההתקן שלך. על־מנת לשמור על בטיחות התקנך, יש לוודא כי גרסת LineageOS שברשותך תמיד עדכנית, וכמו כן יש לוודא כי תמונת המערכת של היצרן מעודכנת לגרסה האחרונה כפי שהומלץ על־ידי LineageOS.</string>
+    <string name="trust_feature_encryption">הצפנה</string>
+    <string name="trust_feature_encryption_value_enabled">מופעל</string>
+    <string name="trust_feature_encryption_value_nolock">נדרשת נעילת מסך מאובטחת</string>
+    <string name="trust_feature_encryption_value_disabled">מושבת</string>
+    <string name="trust_feature_encryption_explain">הצפנת ההתקן שלך מונעת גישה לנתונים שלך כאשר הטלפון אינו מופעל לתוך מערכת האנדרואיד. זה חשוב במיוחד במקרה שהטלפון נגנב, שכן ההצפנה מונעת מאנשים לקרוא את ההודעות, אנשי הקשר ומידע אישי אחר ללא הסיסמה שלך.\nכדי להפוך את ההצפנה ליעילה יותר, יש להגדיר סיסמה מאובטחת למסך הנעילה.</string>
+    <string name="trust_category_tools">פרטיות</string>
+    <string name="trust_notification_alerts_title">התראות אבטחה</string>
+    <string name="trust_restrict_usb_title">הגבלת USB</string>
+    <string name="trust_restrict_usb_summary">שליטה בתמיכה בחיבורים דרך USB, כגון אוזניות, התקני אחסון, התקני קלט (עכברים, מקלדות, ג\'ויסטיקים) ו-ADB</string>
+    <string name="trust_restrict_usb_always">מניעת חיבורי USB</string>
+    <string name="trust_restrict_usb_disabled">אפשר חיבורי USB תמיד</string>
+    <string name="trust_onboarding_description">Trust מסייע לשמור על אבטחת ההתקן ולהגן על פרטיותך.\nסמליל Trust יוצג רק כאשר תוכן הדף אומת.</string>
+    <string name="trust_warnings_alerts_intro">באפשרותך לבחור בעיות האבטחה שיקפיצו התראות. למען בטיחותך, מומלץ להפעיל את כל ההתראות.</string>
+    <string name="trust_warnings_selinux">מצב SELinux</string>
+    <string name="trust_warnings_keys">חתימת בניה</string>
+    <string name="sleep_button_label">שינה</string>
+    <string name="system_sleep_confirm">לעבור למצב שינה?</string>
+    <string name="shutdown_button_label">כיבוי</string>
+    <string name="system_shutdown_confirm">לכבות כעת?</string>
+    <string name="convertible_port_busy_title">פתחת USB 1 נמצאת בשימוש</string>
+    <string name="convertible_port_busy_warning">יש לנתק התקנים או אביזרים, ולנסות שוב</string>
+    <string name="mtp_enable_title">ניגש לתיקיות SHIELD במחשב, דרך USB</string>
+    <string name="mtp_retry_error">נכשל. נא לנסות שוב.</string>
+    <string name="mtp_unexpected_error">שגיאה בלתי צפויה. נא לנסות שוב מאוחר יותר.</string>
+    <string name="usb_debugging_enable_title">ניפוי שגיאות USB מופעל</string>
+</resources>
