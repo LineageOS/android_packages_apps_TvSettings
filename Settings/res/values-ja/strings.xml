@@ -96,10 +96,10 @@
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread ネットワークは Thread 対応のスマートホーム デバイスをローカルでつなげて、効率性とパフォーマンスを向上させます。\n\n有効にすると、このデバイスは Thread ネットワークを作成するか、ネットワークに接続します。今後追加されるスマートホーム デバイスを簡単にセットアップできるよう認証情報は非公開でクラウドにアップロードされます。\n\n無効にすると、このデバイスは Thread ネットワーク上の他のデバイスと通信できなくなります。一部のスマートホーム デバイスやサービスは正常に動作しないことがあります。\n\n詳しくは g.co/tv/thread をご覧ください"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread ネットワークを OFF にしますか？"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"OFF にすると、一部のスマートホーム デバイスやサービスは正常に動作しないことがあります。続行しますか？"</string>
-    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Thread を有効にするには、エネルギー モードを変更してください"</string>
-    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"このテレビで Thread ネットワークを作成または Thread ネットワークに接続したり、スマートホーム デバイスを効率的に接続したりするには、高エネルギー モードに切り替える必要があります。"</string>
+    <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Thread を有効にするには、消費電力モードを変更してください"</string>
+    <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"このテレビで Thread ネットワークを作成または Thread ネットワークに接続したり、スマートホーム デバイスを効率的に接続したりするには、高消費電力モードに切り替える必要があります。"</string>
     <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"OFF にする"</string>
-    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"高エネルギー モードに切り替え"</string>
+    <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"高消費電力モードに切り替え"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"Wi-Fi"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"ネットワークへの接続"</string>
     <string name="connectivity_network_diagnostics" msgid="4396132865849151854">"ネットワーク診断"</string>
@@ -1031,8 +1031,8 @@
     <string name="device_energy_saver_validation_sleep" msgid="7490897287741107840">"[動作していないとき] タイマーは [視聴しているとき] タイマーより短くしてください"</string>
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"[視聴しているとき] タイマーは [動作していないとき] タイマーより長くしてください"</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"スタンバイ時のネットワーク接続を制限"</string>
-    <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"スタンバイ モード時のエネルギー使用量を節約します"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"スタンバイ モード時は、自動アップデートを受信する場合を除き、テレビとネットワークの接続を解除します。スタンバイ時のテレビのエネルギー使用量を減らせますが、キャストや音声アシスタントなどの機能を利用することはできなくなります。"</string>
+    <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"スタンバイ モード時の消費電力を節約します"</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"スタンバイ モード時は、自動アップデートを受信する場合を除き、テレビとネットワークの接続を解除します。スタンバイ時のテレビの消費電力を減らせますが、キャストや音声アシスタントなどの機能を利用することはできなくなります。"</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"スタンバイ時のネットワーク接続を許可"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"スタンバイ時のネットワーク接続を許可すると、スタンバイ時のエネルギー使用量が増えます。"</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"現在バックアップデータを保存しているアカウントはありません"</string>
@@ -1185,11 +1185,11 @@
     <string name="system_tv_title" msgid="2800695543185187197">"テレビ"</string>
     <string name="menu_monitor" msgid="1132156256141628466">"モニター"</string>
     <string name="adb_pairing_device_dialog_ethernet_pairing_code_label" msgid="7551782499828944838">"イーサネット ペア設定コード"</string>
-    <string name="energy_modes" msgid="1331693860386361744">"エネルギー モード"</string>
-    <string name="energy_modes_summary" msgid="2324906343309484649">"これらの設定は、使用していないデバイスに影響を与えます"</string>
+    <string name="energy_modes" msgid="1331693860386361744">"消費電力モード"</string>
+    <string name="energy_modes_summary" msgid="2324906343309484649">"この設定は、電源が切れている状態の動作に影響します。"</string>
     <string name="energy_mode_enables" msgid="357960364751477627">"有効になる機能:"</string>
-    <string name="energy_mode_eco_hint" msgid="5280058011809503514">"テレビの機能を有効にすると、その数に応じて電力消費量が増える場合があります。"</string>
-    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"「<xliff:g id="ENERGYMODENAME">%s</xliff:g>」の有効化"</string>
+    <string name="energy_mode_eco_hint" msgid="5280058011809503514">"電源が切れている状態でネットワーク機能が有効になると、消費電力が増える可能性があります。"</string>
+    <string name="energy_modes_confirmation_title" msgid="4520280098781914825">"「<xliff:g id="ENERGYMODENAME">%s</xliff:g>」モードの適用"</string>
     <string name="settings_find_my_remote_title" msgid="4586368268611622848">"リモコンを探す"</string>
     <string name="settings_find_my_remote_description" msgid="6606011378441585154">"Google TV リモコンの場所がわからなくなったときに、リモコンから音を鳴らして探せるようにします"</string>
     <string name="find_my_remote_slice_description" msgid="313598681990933215">"Google TV のこのボタンを押すと、リモコンから 30 秒間音が鳴ります。この機能を使用できるのは、対応する Google TV リモコンのみです。\n\n音を止めるには、リモコンのいずれかのボタンを押します。"</string>

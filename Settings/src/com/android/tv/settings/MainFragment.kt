@@ -179,8 +179,7 @@ open class MainFragment : PreferenceControllerFragment(),
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        //val sliceUri = getString(R.string.main_fragment_slice_uri)
-        val sliceUri = "content://com.example.updatablesettings.sliceprovider/main_prefs_x"
+        val sliceUri = getString(R.string.main_fragment_slice_uri)
 
         if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
             setPreferencesFromResource(preferenceScreenResId, null)
@@ -287,10 +286,19 @@ open class MainFragment : PreferenceControllerFragment(),
             SliceUtils.maybeUseSlice(findPreference(KEY_CHANNELS_AND_INPUTS), sliceInputsPreference)
         }
 
-        SliceUtils.maybeUseSlice(
-            findPreference(KEY_HELP_AND_FEEDBACK),
-            findPreference(KEY_HELP_AND_FEEDBACK_SLICE)
-        )
+        val helpAndFeedbackPref = findPreference<Preference>(KEY_HELP_AND_FEEDBACK)
+        val helpAndFeedbackSlicePref = findPreference<SlicePreference>(KEY_HELP_AND_FEEDBACK_SLICE)
+        if (FlavorUtils.isTwoPanel(context)) {
+            // The following block always makes a "Help and Feedback" preference visible,
+            // which we do not want in one-panel settings
+            SliceUtils.maybeUseSlice(
+                helpAndFeedbackPref,
+                helpAndFeedbackSlicePref
+            )
+        } else {
+            helpAndFeedbackPref?.isVisible = false
+            helpAndFeedbackSlicePref?.isVisible = false
+        }
     }
 
     @VisibleForTesting

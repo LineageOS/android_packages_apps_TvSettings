@@ -57,7 +57,8 @@ public class AccessibilityTimeoutFragment extends SettingsPreferenceFragment
             radioPreference.setKey(entryValues[i]);
             radioPreference.setOnPreferenceChangeListener(this);
             radioPreference.setPersistent(false);
-            if (mCurrentA11yTimeout == Integer.parseInt(entryValues[i])) {
+            if (mCurrentA11yTimeout == Integer.parseInt(
+                    entryValues[i].replaceAll("\\D", ""))) {
                 radioPreference.setChecked(true);
             }
             if (isTwoPanel){
@@ -80,13 +81,14 @@ public class AccessibilityTimeoutFragment extends SettingsPreferenceFragment
         }
         PreferenceScreen a11yTimeoutScreen = getPreferenceManager().getPreferenceScreen();
         radioPreference.clearOtherRadioPreferences(a11yTimeoutScreen);
-        mCurrentA11yTimeout = Integer.parseInt(radioPreference.getKey());
+        mCurrentA11yTimeout = Integer.parseInt(radioPreference.getKey().replaceAll("\\D", ""));
         final String[] entryValues =
                 getContext().getResources().getStringArray(R.array.a11y_timeout_values);
         commit();
         radioPreference.setChecked(true);
         if(isTwoPanel){
-            if (mCurrentA11yTimeout==Integer.parseInt(entryValues[0])) {
+            if (mCurrentA11yTimeout == Integer.parseInt(
+                    entryValues[0].replaceAll("\\D", ""))) {
                 // Setting information fragment only for default value
                 radioPreference.setFragment(AccessibilityTimeoutInfoFragment.class.getName());
             }else{
