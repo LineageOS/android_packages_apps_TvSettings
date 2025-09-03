@@ -702,10 +702,12 @@ open class MainFragment : PreferenceControllerFragment(),
         if ((preference.key == KEY_ACCOUNTS_AND_SIGN_IN && !mHasAccounts
                     && !AccountsUtil.isAdminRestricted(context))
             || (preference.key == KEY_ACCESSORIES && !mHasBtAccessories)
-            || preference.key == KEY_DISPLAY_AND_SOUND
-            || preference.key == KEY_CHANNELS_AND_INPUTS
+            || (preference.key == KEY_DISPLAY_AND_SOUND
+                    && preference.intent != null)
+            || (preference.key == KEY_CHANNELS_AND_INPUTS
+                    && preference.intent != null)
         ) {
-            preference.intent ?.let { requireContext().startActivity(it) }
+            context!!.startActivity(preference.intent)
             return true
         } else if (preference.key == KEY_BASIC_MODE_EXIT
             && FlavorUtils.getFeatureFactory(context)
