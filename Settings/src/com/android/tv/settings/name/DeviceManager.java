@@ -19,7 +19,9 @@ package com.android.tv.settings.name;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
@@ -31,13 +33,20 @@ public class DeviceManager {
     public static final String ACTION_DEVICE_NAME_UPDATE =
             "com.android.tv.settings.name.DeviceManager.DEVICE_NAME_UPDATE";
     /**
-     * Retrieves the name from Settings.Global.DEVICE_NAME
+     * Retrieves the name from Settings.Global.DEVICE_NAME. If the device name is not set, it
+     * returns Build.MODEL.
      *
      * @param context A context that can access Settings.Global
      * @return The device name.
      */
     public static String getDeviceName(Context context) {
-        return Settings.Global.getString(context.getContentResolver(), Settings.Global.DEVICE_NAME);
+        String name = Settings.Global.getString(
+                context.getContentResolver(), Settings.Global.DEVICE_NAME);
+        if (TextUtils.isEmpty(name)) {
+            setDeviceName(context, Build.MODEL); // Empty name would cause problems with BT.
+            return Build.MODEL;
+        }
+        return name;
     }
 
     /**
