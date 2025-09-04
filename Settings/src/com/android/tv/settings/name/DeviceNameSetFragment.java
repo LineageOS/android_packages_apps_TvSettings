@@ -91,9 +91,6 @@ public class DeviceNameSetFragment extends SettingsGuidedStepFragment {
         mDeviceNames.addAll(Arrays.asList(getResources().getStringArray(R.array.rooms)));
         // The strings added above are static names that should always be shown.
         String currentDeviceName = DeviceManager.getDeviceName(getActivity());
-        if (currentDeviceName == null) {
-            currentDeviceName = Build.MODEL;
-        }
         // Ideally we don't want to have identical entries. (e.g., if a device was named
         // "Android TV", then "Android TV" (from static names) will be pre-selected/highlighted
         // instead of being added to top of the list.
