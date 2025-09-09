@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2021 The Android Open Source Project
+  ~ Copyright (C) 2025 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -26,10 +26,35 @@
         android:id="@+id/setup_qrcode_view"
         android:layout_width="280dp"
         android:layout_height="280dp"
-        android:layout_marginBottom="40dp"
         android:layout_marginStart="40dp"
         app:layout_constraintStart_toEndOf="@id/setup_qrcode_guideline"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
+        android:id="@+id/thread_qr_code_string"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/brand_font"
+        android:textColor="#E8EAED"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@id/setup_qrcode_view"
+        app:layout_constraintEnd_toEndOf="@id/setup_qrcode_view"
+        app:layout_constraintTop_toBottomOf="@id/setup_qrcode_view" />
+
+    <com.android.tv.twopanelsettings.SmoothScalingTextView
+        android:id="@+id/thread_qr_code_countdown"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:fontFamily="monospace"
+        android:textColor="#5F6368"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@id/setup_qrcode_view"
+        app:layout_constraintEnd_toEndOf="@id/setup_qrcode_view"
+        app:layout_constraintTop_toBottomOf="@id/thread_qr_code_string" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -43,30 +68,21 @@
 
         <com.android.tv.twopanelsettings.SmoothScalingTextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
             android:fontFamily="@font/brand_font"
-            android:text="@string/title_wifi_scan_qr_code"
+            android:text="@string/share_thread_title"
             android:textColor="#E8EAED"
             android:textSize="32sp" />
 
         <com.android.tv.twopanelsettings.SmoothScalingTextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginVertical="24dp"
-            android:lineSpacingExtra="6sp"
-            android:fontFamily="@font/brand_font"
-            android:text="@string/wifi_scan_qr_code_description"
-            android:textColor="#9AA0A6"
-            android:textSize="15sp" />
-
-        <com.android.tv.twopanelsettings.SmoothScalingTextView
+            android:id="@+id/setup_qrcode_description"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:fontFamily="@font/brand_font"
             android:text="@string/wifi_scan_qr_code_back_description"
             android:textColor="#5F6368"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline

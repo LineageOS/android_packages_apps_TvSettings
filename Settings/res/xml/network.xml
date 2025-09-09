@@ -36,7 +36,6 @@
         <com.android.settingslib.RestrictedPreference
             android:key="wifi_add_easyconnect"
             android:title="@string/wifi_setting_other_options_add_network_via_easyconnect"
-            android:icon="@drawable/ic_qr_code"
             custom:userRestriction="no_config_wifi">
         </com.android.settingslib.RestrictedPreference>
         <com.android.settingslib.RestrictedPreference
@@ -57,6 +56,10 @@
             android:persistent="true"
             android:title="@string/wifi_setting_thread_network"
             android:fragment="com.android.tv.settings.connectivity.WiFiThreadNetworkInfoFragment"/>
+        <Preference
+            android:key="share_thread_network"
+            android:title="@string/share_thread_network"
+            android:fragment="com.android.tv.settings.connectivity.ShareThreadNetworkInfoFragment"/>
     </PreferenceCategory>
 
     <PreferenceCategory
