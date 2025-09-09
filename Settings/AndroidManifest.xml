@@ -219,6 +219,15 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".connectivity.thread.ShareThreadNetworkActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/TvSettingsConnectivityTheme">
+        </activity>
+
         <!-- The other application needs to define the similar custom permission in its manifest
         to be able to READ network change data -->
         <provider
