@@ -15,7 +15,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
 import com.android.settingslib.core.AbstractPreferenceController;
-import com.android.settingslib.suggestions.SuggestionControllerMixinCompat;
 import com.android.settingslib.utils.IconCache;
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
@@ -32,7 +31,7 @@ public class SuggestionQuickSettingPrefsContainer  {
     private static final String KEY_SUGGESTIONS_LIST = "suggestions";
     @VisibleForTesting PreferenceCategory mSuggestionsList;
     IconCache mIconCache;
-    private SuggestionControllerMixinCompat mSuggestionControllerMixin;
+    private TvSuggestionControllerMixinCompat mSuggestionControllerMixin;
     /** Controllers for the Quick Settings section. */
     private List<AbstractPreferenceController> mPreferenceControllers;
 
@@ -53,7 +52,7 @@ public class SuggestionQuickSettingPrefsContainer  {
             ComponentName componentName = new ComponentName("com.android.settings.intelligence",
                     "com.android.settings.intelligence.suggestions.SuggestionService");
             mSuggestionControllerMixin =
-                    new SuggestionControllerMixinCompat(mainFragment.getContext(),
+                    new TvSuggestionControllerMixinCompat(mainFragment.getContext(),
                     mainFragment, mainFragment.getSettingsLifecycle(), componentName);
         }
     }
