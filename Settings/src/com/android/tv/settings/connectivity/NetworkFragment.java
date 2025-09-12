@@ -154,7 +154,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 @Override
                 public void isEnabled(boolean enabled) {
                     mThreadNetworkPref.setChecked(enabled);
-                    mShareThreadNetworkPref.setVisible(enabled);
+                    updateThreadShareVisibility(enabled);
                 }
             };
     private final ActivityResultLauncher<Intent> enableThreadNetworkIntentLauncher =
@@ -366,7 +366,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             mEnableWifiPref.setVisible(false);
         }
         mThreadNetworkPref.setVisible(mThreadNetworkHelperOptional.isPresent());
-        mShareThreadNetworkPref.setVisible(mThreadNetworkPref.isChecked());
+        updateThreadShareVisibility(mThreadNetworkPref.isChecked());
         Preference networkDiagnosticsPref = findPreference(KEY_NETWORK_DIAGNOSTICS);
         Intent networkDiagnosticsIntent = makeNetworkDiagnosticsIntent();
         if (networkDiagnosticsIntent != null) {
@@ -409,6 +409,12 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         }
 
         updateConnectivity();
+    }
+
+    private void updateThreadShareVisibility(boolean isThreadsEnabled) {
+        mShareThreadNetworkPref.setVisible(
+                getContext().getResources().getBoolean(
+                        R.bool.config_share_thread_network_enabled) && isThreadsEnabled);
     }
 
     private Intent getRestrictWifiHookIntent(){
