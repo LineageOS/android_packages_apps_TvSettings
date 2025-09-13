@@ -16,7 +16,6 @@
 package com.android.tv.twopanelsettings
 
 import android.content.Context
-import android.content.res.ColorStateList
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Outline
@@ -25,15 +24,15 @@ import android.graphics.PorterDuff
 import android.graphics.PorterDuffXfermode
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
-import androidx.appcompat.widget.AppCompatImageView
 import android.util.AttributeSet
 import android.util.Log
+import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewOutlineProvider
 import android.widget.FrameLayout
 import androidx.annotation.VisibleForTesting
-import androidx.core.content.withStyledAttributes
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.graphics.createBitmap
 import com.google.android.material.progressindicator.CircularProgressIndicator
 import com.google.zxing.BarcodeFormat
@@ -42,8 +41,6 @@ import com.google.zxing.WriterException
 import com.google.zxing.common.BitMatrix
 import com.google.zxing.qrcode.QRCodeWriter
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel
-import java.util.EnumMap
-import kotlin.coroutines.CoroutineContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -54,6 +51,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.EnumMap
+import kotlin.coroutines.CoroutineContext
 
 class QrCodeView
 @JvmOverloads
@@ -116,7 +115,12 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) :
         }
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.qr_code_layout, this, true)
+        val themedContext =
+            ContextThemeWrapper(
+                context,
+                com.google.android.material.R.style.Theme_MaterialComponents
+            )
+        LayoutInflater.from(themedContext).inflate(R.layout.qr_code_layout, this, true)
         qrCanvas = findViewById(R.id.qr_code_canvas)
         spinner = findViewById(R.id.qr_loading_spinner)
         backgroundContainer = findViewById(R.id.background_container)
