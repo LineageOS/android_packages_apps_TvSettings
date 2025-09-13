@@ -43,7 +43,7 @@ import androidx.annotation.VisibleForTesting
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import com.android.settingslib.core.AbstractPreferenceController
-import com.android.settingslib.suggestions.SuggestionControllerMixinCompat
+import com.android.settingslib.core.lifecycle.Lifecycle
 import com.android.tv.settings.HotwordSwitchController.HotwordStateListener
 import com.android.tv.settings.accessories.AccessoryUtils
 import com.android.tv.settings.accounts.AccountsFragment
@@ -71,7 +71,7 @@ import java.util.Optional
  */
 @Keep
 open class MainFragment : PreferenceControllerFragment(),
-    SuggestionControllerMixinCompat.SuggestionControllerHost,
+    TvSuggestionControllerMixinCompat.SuggestionControllerHost,
     SuggestionPreference.Callback,
     HotwordStateListener,
     SliceShard.Callbacks {

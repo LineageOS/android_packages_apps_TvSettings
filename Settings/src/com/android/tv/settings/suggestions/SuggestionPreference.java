@@ -29,8 +29,8 @@ import android.view.View;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
-import com.android.settingslib.suggestions.SuggestionControllerMixinCompat;
 import com.android.tv.settings.R;
+import com.android.tv.settings.TvSuggestionControllerMixinCompat;
 
 /**
  * Custom preference for Suggestions.
@@ -40,12 +40,12 @@ public class SuggestionPreference extends Preference {
     private static final String TAG = "SuggestionPreference";
 
     private final Suggestion mSuggestion;
-    private final SuggestionControllerMixinCompat mSuggestionControllerMixin;
+    private final TvSuggestionControllerMixinCompat mSuggestionControllerMixin;
     private String mId;
     private Callback mCallback;
 
     public SuggestionPreference(Suggestion suggestion, Context context,
-            SuggestionControllerMixinCompat suggestionControllerMixin, Callback callback) {
+            TvSuggestionControllerMixinCompat suggestionControllerMixin, Callback callback) {
         super(context);
         setLayoutResource(R.layout.suggestion_item);
         this.mSuggestionControllerMixin = suggestionControllerMixin;
