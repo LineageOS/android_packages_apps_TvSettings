@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"一律可以掃描，允許 Google 的定位服務和其他應用程式掃描網路，即使 Wi-Fi 已關閉"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread 網路"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread 網路會在本地連接支援 Thread 的智慧住宅裝置，提升效率和效能。\n\n如果開啟這項設定，這部裝置將建立或加入 Thread 網路。為方便日後設定智慧住宅裝置，憑證將以私密方式上傳至雲端。\n\n如果關閉這項設定，這部裝置將無法再與 Thread 網路中的其他裝置通訊。某些智慧住宅裝置和服務可能無法正常運作。\n\n詳情請參閱 g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"共用 Thread 網路憑證"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"與其他裝置共用 Thread 網路憑證，簡化 <xliff:g id="DEVICE">%1$s</xliff:g> 的 Thread 網路設定程序"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"再次共用"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"共用代碼將於 <xliff:g id="MINUTES">%1$02d</xliff:g> 分 <xliff:g id="SECONDS">%2$02d</xliff:g> 秒後失效"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"無法共用 Thread 網路"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"已成功共用 Thread 網路"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"共用代碼已過期，無法再用來將任何裝置新增到 Thread 網路"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"要關閉 Thread 網路嗎？"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"如果關閉這項設定，某些智慧住宅裝置和服務可能無法正常運作。要繼續嗎？"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"變更電源模式來啟用 Thread"</string>
@@ -501,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"用於連線至這個網路的資訊 (包括已儲存的密碼) 將會遭到清除"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" 如要加入 Wi-Fi 網路，請使用手機掃描 QR 圖碼，並按照畫面上的指示操作。\n \n 請依序前往 "<b>"Android 手機"</b>"上的 [設定] -&gt; [網路和網際網路] -&gt; [Wi-Fi] -&gt; 選取所需 Wi-Fi 網路 -&gt; [進階] -&gt; 新增裝置，然後掃描 QR 圖碼。"</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"按下返回按鈕即可取消"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"使用 Thread 憑證設定裝置"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"如要將裝置新增到 Thread 網路，請使用裝置的應用程式掃描這個 QR code。基於安全考量，這個 QR code 會在 <xliff:g id="MINUTES">%1$s</xliff:g> 分鐘後失效。"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"確定"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"繼續"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"變更網路"</string>
@@ -856,7 +865,7 @@
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"執行受偵錯的應用程式之前，先等待偵錯程序附加完成"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"顯示剪輯範圍、邊界等"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"使用 GPU 繪圖時在視窗中閃爍顯示畫面"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"在硬體層更新時閃綠燈"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"在硬體層更新時閃爍綠色"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"從優到劣依序顯示為：藍色、綠色、淺紅色、紅色"</string>
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"更新表層時閃爍顯示整個視窗表層"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"當應用程式在主執行緒中進行長時間作業時，讓螢幕閃爍"</string>

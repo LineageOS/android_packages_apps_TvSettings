@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"ใช้การสแกนได้เสมอ ให้บริการตำแหน่งของ Google และแอปอื่นๆ สแกนหาเครือข่ายได้ แม้ในขณะที่ Wi-Fi ปิดอยู่"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"เครือข่าย Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"เครือข่าย Thread จะเชื่อมต่ออุปกรณ์สมาร์ทโฮมที่เปิดใช้งาน Thread เข้าด้วยกันเป็นการภายในเพื่อเพิ่มประสิทธิภาพการทำงาน\n\nเมื่อเปิดไว้ อุปกรณ์นี้จะสร้างหรือเข้าร่วมเครือข่าย Thread ระบบจะอัปโหลดข้อมูลเข้าสู่ระบบแบบเป็นส่วนตัวไปยังระบบคลาวด์เพื่อให้ตั้งค่าอุปกรณ์สมาร์ทโฮมในอนาคตได้ง่ายขึ้น\n\nเมื่อปิดใช้ อุปกรณ์นี้จะสื่อสารกับอุปกรณ์อื่นๆ ในเครือข่าย Thread ไม่ได้อีกต่อไป อุปกรณ์สมาร์ทโฮมและบริการบางอย่างอาจไม่ทำงานตามที่คาดหวัง\n\nดูข้อมูลเพิ่มเติมที่ g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"แชร์ข้อมูลเข้าสู่ระบบของเครือข่าย Thread"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"แชร์ข้อมูลเข้าสู่ระบบของเครือข่าย Thread กับอุปกรณ์อื่นๆ เพื่อให้ตั้งค่าในเครือข่าย Thread ของ <xliff:g id="DEVICE">%1$s</xliff:g> ได้ง่ายขึ้น"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"แชร์อีกครั้ง"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"คิวอาร์โค้ดจะหมดอายุใน <xliff:g id="MINUTES">%1$02d</xliff:g> นาที <xliff:g id="SECONDS">%2$02d</xliff:g> วินาที"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"แชร์เครือข่าย Thread ไม่ได้"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"แชร์เครือข่าย Thread สำเร็จแล้ว"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"คิวอาร์โค้ดหมดอายุก่อนที่จะเพิ่มอุปกรณ์ลงในเครือข่าย Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"ปิดเครือข่าย Thread ใช่ไหม"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"หากปิดไว้ อุปกรณ์สมาร์ทโฮมและบริการบางอย่างอาจไม่ทำงานตามที่คาดหวัง ต้องการดำเนินการต่อไหม"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"เปลี่ยนโหมดพลังงานเพื่อเปิดใช้ Thread"</string>
@@ -501,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"การดำเนินการนี้จะล้างข้อมูลที่ใช้เพื่อเชื่อมต่อกับเครือข่ายนี้ ซึ่งรวมถึงรหัสผ่านที่บันทึกไว้ด้วย"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" เข้าร่วม Wi-Fi โดยสแกนคิวอาร์โค้ดจากโทรศัพท์มือถือแล้วทำตามวิธีการ\n \n จาก"<b>"โทรศัพท์ Android"</b>" ให้ไปที่การตั้งค่า -&gt; เครือข่ายและอินเทอร์เน็ต -&gt; Wi-Fi -&gt; เลือก Wi-Fi -&gt; ขั้นสูง -&gt; เพิ่มอุปกรณ์แล้วสแกนคิวอาร์โค้ด"</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"กดปุ่มย้อนกลับเพื่อยกเลิก"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"ใช้ข้อมูลเข้าสู่ระบบของ Thread เพื่อตั้งค่าอุปกรณ์"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"หากต้องการเพิ่มอุปกรณ์ไปยังเครือข่าย Thread ให้สแกนคิวอาร์โค้ดนี้ในแอปของอุปกรณ์ โปรดทราบว่าคิวอาร์โค้ดจะหมดอายุใน <xliff:g id="MINUTES">%1$s</xliff:g> นาทีเพื่อความปลอดภัย"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ตกลง"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"ต่อไป"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"เปลี่ยนเครือข่าย"</string>
