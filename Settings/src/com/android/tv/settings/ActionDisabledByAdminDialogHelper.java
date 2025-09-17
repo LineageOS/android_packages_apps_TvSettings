@@ -17,10 +17,12 @@
 package com.android.tv.settings;
 
 import android.annotation.NonNull;
+import android.annotation.Nullable;
 import android.annotation.UserIdInt;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.admin.DevicePolicyManager;
+import android.app.admin.EnforcingAdmin;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -48,12 +50,19 @@ public class ActionDisabledByAdminDialogHelper {
 
     private static final String TAG = ActionDisabledByAdminDialogHelper.class.getName();
     @VisibleForTesting EnforcedAdmin mEnforcedAdmin;
+    @Nullable EnforcingAdmin mEnforcingAdmin;
     private ViewGroup mDialogView;
     private String mRestriction = null;
     private Activity mActivity;
 
     public ActionDisabledByAdminDialogHelper(Activity activity) {
         mActivity = activity;
+    }
+
+    private @UserIdInt int getEnforcingAdminUserId(@NonNull EnforcingAdmin admin) {
+        return admin.getUserHandle() == null
+                ? UserHandle.USER_NULL
+                : admin.getUserHandle().getIdentifier();
     }
 
     private @UserIdInt int getEnforcementAdminUserId(@NonNull EnforcedAdmin admin) {
@@ -68,6 +77,8 @@ public class ActionDisabledByAdminDialogHelper {
         return getEnforcementAdminUserId(mEnforcedAdmin);
     }
 
+    /** @deprecated Please use the same method that takes {@link EnforcingAdmin}. */
+    @Deprecated
     public AlertDialog.Builder prepareDialogBuilder(String restriction,
             EnforcedAdmin enforcedAdmin) {
         mEnforcedAdmin = enforcedAdmin;
@@ -82,21 +93,61 @@ public class ActionDisabledByAdminDialogHelper {
         return builder;
     }
 
+    /**
+     * Prepares an alert dialog that shows information about a restriction set by the given admin.
+     */
+    @NonNull
+    public AlertDialog.Builder prepareDialogBuilder(
+            @Nullable String restriction, @Nullable EnforcingAdmin enforcingAdmin) {
+        mEnforcingAdmin = enforcingAdmin;
+        mRestriction = restriction;
+        final AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
+        mDialogView = (ViewGroup) LayoutInflater.from(builder.getContext()).inflate(
+ R.layout.admin_support_details_dialog, null);
+        initializeDialogViews(mDialogView, mEnforcingAdmin, mRestriction);
+        builder.setPositiveButton(R.string.okay, null).setView(mDialogView);
+        maybeSetLearnMoreButton(builder);
+        return builder;
+    }
+
     void maybeSetLearnMoreButton(AlertDialog.Builder builder) {
         // The "Learn more" button appears only if the restriction is enforced by an admin in the
         // same profile group. Otherwise the admin package and its policies are not accessible to
         // the current user.
         final UserManager um = UserManager.get(mActivity.getApplicationContext());
         if (um.isSameProfileGroup(
-                getEnforcementAdminUserId(mEnforcedAdmin),
-                um.getProcessUserId())) {
-            builder.setNeutralButton(R.string.learn_more, (dialog, which) -> {
-                showAdminPolicies(mEnforcedAdmin, mActivity);
-                mActivity.finish();
-            });
+                getEnforcementAdminUserId(mEnforcedAdmin), um.getProcessUserId())) {
+            builder.setNeutralButton(
+                    R.string.learn_more,
+                    (dialog, which) -> {
+                        showAdminPolicies(mEnforcedAdmin, mActivity);
+                        mActivity.finish();
+                    });
+        }
+        if (mEnforcingAdmin != null) {
+            if (um.isSameProfileGroup(
+                    getEnforcingAdminUserId(mEnforcingAdmin), um.getProcessUserId())) {
+                builder.setNeutralButton(
+                        R.string.learn_more,
+                        (dialog, which) -> {
+                            showAdminPolicies(mEnforcingAdmin, mActivity);
+                            mActivity.finish();
+                        });
+            }
+        } else if (mEnforcedAdmin != null
+                && um.isSameProfileGroup(
+                getEnforcementAdminUserId(mEnforcedAdmin), um.getProcessUserId())) {
+            builder.setNeutralButton(
+                    R.string.learn_more,
+                    (dialog, which) -> {
+                        showAdminPolicies(mEnforcedAdmin, mActivity);
+                        mActivity.finish();
+                    });
         }
     }
 
+    /** @deprecated Please use the same method that takes {@link EnforcingAdmin}. */
+    @Deprecated
     public void updateDialog(String restriction, EnforcedAdmin admin) {
         if (mEnforcedAdmin.equals(admin) && Objects.equals(mRestriction, restriction)) {
             return;
@@ -105,6 +156,16 @@ public class ActionDisabledByAdminDialogHelper {
         mRestriction = restriction;
         initializeDialogViews(mDialogView, mEnforcedAdmin.component, getEnforcementAdminUserId(),
                 mRestriction);
+    }
+
+    /** Updates the dialog view to show information about a restriction set by the given admin. */
+    public void updateDialog(@Nullable String restriction, @Nullable EnforcingAdmin admin) {
+        if (Objects.equals(mEnforcingAdmin, admin) && Objects.equals(mRestriction, restriction)) {
+            return;
+        }
+        mEnforcingAdmin = admin;
+        mRestriction = restriction;
+        initializeDialogViews(mDialogView, mEnforcingAdmin, mRestriction);
     }
 
     private void initializeDialogViews(View root, ComponentName admin, int userId,
@@ -123,6 +184,15 @@ public class ActionDisabledByAdminDialogHelper {
         }
 
         setAdminSupportDetails(mActivity, root, new EnforcedAdmin(admin, user));
+    }
+
+    private void initializeDialogViews(
+            View root, @Nullable EnforcingAdmin enforcingAdmin, @Nullable String restriction) {
+        if (enforcingAdmin == null) {
+            return;
+        }
+        setAdminSupportTitle(root, restriction);
+        setAdminSupportDetails(mActivity, root, enforcingAdmin);
     }
 
     @VisibleForTesting
@@ -189,6 +259,27 @@ public class ActionDisabledByAdminDialogHelper {
         }
     }
 
+    @VisibleForTesting
+    void setAdminSupportDetails(
+            final Activity activity,
+            final View root,
+            @Nullable final EnforcingAdmin enforcingAdmin) {
+        if (enforcingAdmin == null) {
+            return;
+        }
+        final DevicePolicyManager dpm = activity.getSystemService(DevicePolicyManager.class);
+        CharSequence supportMessage = null;
+        if (enforcingAdmin.getComponentName() != null
+                && UserHandle.isSameApp(Process.myUid(), Process.SYSTEM_UID)) {
+            supportMessage = dpm.getShortSupportMessageForUser(
+                    enforcingAdmin.getComponentName(), getEnforcingAdminUserId(enforcingAdmin));
+        }
+        if (supportMessage != null) {
+            final TextView textView = root.findViewById(R.id.admin_support_msg);
+            textView.setText(supportMessage);
+        }
+    }
+
     void showAdminPolicies(final EnforcedAdmin enforcedAdmin, final Activity activity) {
         final Intent intent = new Intent();
         if (enforcedAdmin.component != null) {
@@ -198,6 +289,18 @@ public class ActionDisabledByAdminDialogHelper {
             intent.putExtra(DeviceAdminAdd.EXTRA_CALLED_FROM_SUPPORT_DIALOG, true);
             // DeviceAdminAdd class may need to run as managed profile.
             activity.startActivityAsUser(intent, enforcedAdmin.user);
+        }
+    }
+
+    void showAdminPolicies(final EnforcingAdmin enforcingAdmin, final Activity activity) {
+        final Intent intent = new Intent();
+        if (enforcingAdmin.getComponentName() != null) {
+            intent.setClass(activity, DeviceAdminAdd.class);
+            intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN,
+                    enforcingAdmin.getComponentName());
+            intent.putExtra(DeviceAdminAdd.EXTRA_CALLED_FROM_SUPPORT_DIALOG, true);
+            // DeviceAdminAdd class may need to run as managed profile.
+            activity.startActivityAsUser(intent, enforcingAdmin.getUserHandle());
         }
     }
 }
