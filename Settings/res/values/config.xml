@@ -208,6 +208,19 @@
     -->
     <bool name="config_hide_channels_and_inputs">false</bool>
 
+    <!--
+        Controls whether the "Accessibility > Letterbox wallpapers" preference is visible
+        in TvSettings.
+
+        Some devices include the LetterboxWallpapers APK only for its AccessibilityService
+        (e.g., to ensure Assistant/voice search UI renders correctly after leaving Settings),
+        while the app's UI is not meant to be user-facing. Those devices should overlay this
+        flag to false to hide the preference and avoid user confusion.
+
+        Default 'true' keeps existing behavior.
+    -->
+    <bool name="config_show_letterbox_wallpapers_setting">true</bool>
+
     <!-- Controls whether thread network sharing is enabled. -->
     <bool name="config_share_thread_network_enabled">false</bool>
     <integer name="share_thread_network_key_validity_minutes">3</integer>
