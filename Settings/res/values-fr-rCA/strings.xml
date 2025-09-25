@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Recherche de réseaux toujours active : autorisez le service de localisation de Google et les autres applications à rechercher des réseaux, même si la connexion Wi-Fi est désactivée"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Réseau Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Le réseau Thread connecte localement les appareils pour maison intelligente compatibles avec Thread, améliorant ainsi l\'efficacité et la performance.\n\nUne fois activé, l\'appareil créera votre réseau Thread ou s\'y joindra. Les authentifiants seront téléversés de façon privée dans le nuage pour faciliter la configuration de vos futurs appareils pour maison intelligente.\n\nS\'il est désactivé, l\'appareil ne sera plus en mesure de communiquer avec d\'autres appareils sur votre réseau Thread. Certains services et certains appareils pour maison intelligente pourraient ne pas fonctionner comme prévu.\n\nPour en savoir plus, consultez la page g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Partager les authentifiants du réseau Thread"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Partagez les authentifiants du réseau Thread avec d\'autres appareils pour simplifier la configuration de votre réseau Thread <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Partager à nouveau"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Le code expirera dans <xliff:g id="MINUTES">%1$02d</xliff:g> min <xliff:g id="SECONDS">%2$02d</xliff:g> s"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Impossible de partager le réseau Thread"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Le réseau Thread a bien été partagé"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Le code a expiré avant qu\'un appareil soit ajouté au réseau Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Désactiver le réseau Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Certains services et certains appareils pour maison intelligente pourraient ne pas fonctionner comme prévu s\'ils sont désactivés. Souhaitez-vous continuer?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Modifier le mode énergétique pour activer Thread"</string>
@@ -501,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Supprimer les données utilisées pour se connect. au réseau, y compris tout mot de passe enregistré."</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Pour vous connecter à un réseau Wi-Fi, numérisez le code QR sur un téléphone et suivez les instructions.\n \n Sur un "<b>"téléphone Android"</b>", sélectionnez Paramètres &gt; Réseau et Internet &gt; Wi-Fi &gt; sélectionnez un réseau Wi-Fi &gt; Paramètres avancés &gt; ajoutez un appareil, puis numérisez le code QR."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Appuyez sur le bouton Retour pour annuler"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Utiliser les authentifiants Thread pour configurer un appareil"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Pour ajouter un appareil à votre réseau Thread, balayez ce code QR dans l\'appli de l\'appareil. Pour des raisons de sécurité, le code expirera dans <xliff:g id="MINUTES">%1$s</xliff:g> minutes."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continuer"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Changer de réseau"</string>

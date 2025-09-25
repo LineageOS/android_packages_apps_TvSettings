@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"إمكانية البحث عن شبكة دائمًا، يسمح لخدمة الموقع الجغرافي والتطبيقات الأخرى من Google بالبحث عن شبكات، حتى عند عدم تشغيل Wi-Fi."</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"شبكة Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"تربط شبكة Thread الأجهزة المنزلية الذكية عبر اتصال محلي لا يحتاج إلى الإنترنت، ما يعزّز الكفاءة والأداء.\n\nعند تفعيل هذه الميزة سينشئ هذا الجهاز شبكة Thread أو ينضم إليها. سيتم تحميل بيانات الاعتماد بخصوصية إلى السحابة الإلكترونية لإعداد الأجهزة المنزلية الذكية القادمة بشكل أسهل.\n\nلن يتمكّن هذا الجهاز من الاتصال بالأجهزة الأخرى على شبكة Thread عندما تكون هذه الميزة غير مفعّلة. قد لا تعمل خدمات وأجهزة منزلية ذكية معيّنة على النحو المتوقع.\n\nمزيد من المعلومات على g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"مشاركة بيانات اعتماد شبكة Thread"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"يمكنك مشاركة بيانات اعتماد شبكة Thread مع الأجهزة الأخرى لتسهيل عملية الإعداد على شبكة Thread <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"المشاركة مرة أخرى"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"ستنتهي صلاحية الرمز بعد ‎<xliff:g id="MINUTES">%1$02d</xliff:g> دقيقة و‎<xliff:g id="SECONDS">%2$02d</xliff:g> ثانية"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"تعذّرت مشاركة شبكة Thread"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"تمت مشاركة شبكة Thread بنجاح"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"انتهت صلاحية الرمز قبل إضافة أي جهاز إلى شبكة Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"هل لديك رغبة في إيقاف شبكة Thread؟"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"في حال إيقاف التشغيل، قد لا تعمل خدمات وأجهزة منزلية ذكية معيّنة على النحو المتوقع. هل لديك رغبة في المتابعة؟"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"تغيير وضع الطاقة لتفعيل شبكة Thread"</string>
@@ -501,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"يؤدي هذا إلى محو المعلومات المستخدمة للاتصال بهذه الشبكة، بما في ذلك كلمات المرور المحفوظة"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" يمكنك الانضمام إلى شبكة Wi-Fi من خلال مسح رمز الاستجابة السريعة ضوئيًا باستخدام هاتف جوّال واتّباع التعليمات.\n \n من "<b>"هاتف Android"</b>" انتقِل إلى الإعدادات -&gt; الشبكة &amp; الإنترنت -&gt; شبكة Wi-Fi -&gt; اختيار شبكة Wi-Fi -&gt; الإعدادات المتقدّمة -&gt; إضافة جهاز، ثم امسح رمز الاستجابة السريعة ضوئيًا."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"اضغط على زر الرجوع للإلغاء."</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"استخدام بيانات اعتماد Thread لإعداد جهاز"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"لإضافة جهاز إلى شبكة Thread، يجب مسح رمز الاستجابة السريعة هذا ضوئيًا في تطبيق الجهاز. ولأسباب أمنية، ستنتهي صلاحية الرمز بعد ‎<xliff:g id="MINUTES">%1$s</xliff:g> دقيقة."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"موافقة"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"متابعة"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"تغيير الشبكة"</string>
@@ -958,7 +967,7 @@
     <string name="restricted_profile_change_password_title" msgid="6961384850606763601">"تغيير رقم التعريف الشخصي"</string>
     <string name="restricted_profile_create_preference_screen" msgid="3263536648469645089">"هل تريد إنشاء ملف شخصي محدود؟"</string>
     <string name="restricted_profile_already_created_placeholder" msgid="8619544048199836920">"سبق أن تم إنشاء الملف الشخصي."</string>
-    <string name="restricted_profile_skip_action" msgid="4674562040162193593">"التخطّي"</string>
+    <string name="restricted_profile_skip_action" msgid="4674562040162193593">"تخطّي"</string>
     <string name="restricted_profile_create_pin_action" msgid="1883036507880250231">"إنشاء رقم تعريف شخصي"</string>
     <string name="restricted_profile_enter_preference_screen" msgid="676246260867597333">"هل تريد إدخال ملف شخصي محدود؟"</string>
     <string name="restricted_profile_enter_not_found_placeholder" msgid="2270969471829375976">"ما مِن ملفات شخصية محدودة."</string>

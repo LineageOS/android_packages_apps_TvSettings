@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Սկանավորումը միշտ հասանելի․ թույլատրել Google-ի տեղորոշման ծառայությանը և այլ հավելվածներին որոնել ցանցեր` նույնիսկ երբ Wi-Fi-ն անջատված է"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread ցանց"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread ցանցն ապահովում է խելացի տան Thread աջակցող սարքերի լոկալ կապը՝ բարձրացնելով աշխատանքի արդյունավետությունը և արտադրողականությունը։\n\nԵրբ այն միացված է, այս սարքը կստեղծի Thread ցանց կամ կմիանա ձեր ցանցին։ Մուտքի տվյալներն անանուն կերպով կվերբեռնվեն ամպային սերվերներ՝ ձեր խելացի տան հետագա սարքերի կարգավորման համար։\n\nԵրբ Thread ցանցն անջատված է, այս սարքը չի կարողանա կապ հաստատել ձեր Thread ցանցի մյուս սարքերի հետ։ Խելացի տան որոշակի սարքեր և ծառայություններ կարող են պատշաճ չաշխատել։\n\nԻմացեք ավելին այստեղ՝ g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Կիսվել Thread ցանցի մուտքի տվյալներով"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Ձեր <xliff:g id="DEVICE">%1$s</xliff:g> սարքում Thread ցանցի կարգավորումը հեշտացնելու համար կիսվեք Thread ցանցի մուտքի տվյալներով մյուս սարքերի հետ"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Նորից կիսվել"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Կոդը վավեր կլինի <xliff:g id="MINUTES">%1$02d</xliff:g> ր <xliff:g id="SECONDS">%2$02d</xliff:g> վ"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Չհաջողվեց կիսվել Thread ցանցի մուտքի տվյալներով"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Դուք կիսվեցիք ձեր Thread ցանցի մուտքի տվյալներով"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Կոդն այլևս վավեր չէ։ Մինչ այն վավեր էր, ոչ մի սարք չի ավելացվել։"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Անջատե՞լ Thread ցանցը"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Եթե անջատեք, խելացի տան որոշակի սարքեր և ծառայություններ կարող են պատշաճ չաշխատել։ Շարունակե՞լ։"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Փոխեք էներգիայի սպառման ռեժիմը՝ Thread ցանցը միացնելու համար"</string>
@@ -285,7 +292,7 @@
     <string name="bluetooth_disconnect_action_title" msgid="1135513009197728480">"Անջատել"</string>
     <string name="bluetooth_disconnect_confirm" msgid="1445977623973613581">"Անջատել %1$s սարքից"</string>
     <string name="bluetooth_rename_action_title" msgid="4200419902722729907">"Վերանվանել"</string>
-    <string name="bluetooth_rename" msgid="7791922876280337194">"Վերանվանել միացված սարքը"</string>
+    <string name="bluetooth_rename" msgid="7791922876280337194">"Վերանվանել կապակցված սարքը"</string>
     <string name="bluetooth_forget_action_title" msgid="2351140076684719196">"Հեռացնել"</string>
     <string name="bluetooth_forget_confirm" msgid="5175414848391021666">"Հեռացնել %1$s սարքը"</string>
     <string name="bluetooth_serial_number_label" msgid="6639294603220209971">"Bluetooth-ի հասցե"</string>
@@ -501,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Այս ցանցին միանալու համար օգտագործվող տվյալները, ներառյալ պահված գաղտնաբառը, կջնջվեն:"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Wi-Fi-ին միանալու համար հեռախոսով սկանավորեք QR կոդը և հետևեք հրահանգներին։\n \n "<b>"Android հեռախոսում"</b>" անցեք Կարգավորումներ -&gt; Ցանց և ինտերնետ -&gt; Wi-Fi -&gt; Ընտրել Wi-Fi ցանց -&gt; Լրացուցիչ -&gt; Ավելացնել սարք, այնուհետև սկանավորեք QR կոդը։"</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Չեղարկելու համար սեղմեք «Հետ» կոճակը"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Սարք կարգավորելու համար օգտագործեք Thread ցանցի մուտքի տվյալները"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Thread ցանցում սարք ավելացնելու համար սկանավորեք QR կոդը հավելվածում։ Անվտանգության նկատառումներից ելնելով՝ կոդը վավեր կլինի <xliff:g id="MINUTES">%1$s</xliff:g> րոպե։"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"Լավ"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Շարունակել"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Փոխել ցանցը"</string>
