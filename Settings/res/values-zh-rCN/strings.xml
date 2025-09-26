@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"随时都可扫描，允许 Google 的位置信息服务和其他应用扫描网络，即使 WLAN 已关闭"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread 网络"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread 网络会在本地连接支持 Thread 的智能家居设备，从而提升效率和性能。\n\n此设置处于开启状态时，这部设备将创建或加入 Thread 网络。凭据将以不公开方式上传到云端，方便您日后更轻松地设置智能家居设备。\n\n此设置处于关闭状态时，这部设备将无法再与 Thread 网络中的其他设备通信。某些智能家居设备和服务可能无法按预期运行。\n\n您可前往 g.co/tv/thread 了解详情"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"共享 Thread 网络凭证"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"与其他设备共享 Thread 网络凭证以简化 <xliff:g id="DEVICE">%1$s</xliff:g> 的 Thread 网络设置"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"再次共享"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"二维码将在 <xliff:g id="MINUTES">%1$02d</xliff:g> 分钟 <xliff:g id="SECONDS">%2$02d</xliff:g> 秒后失效"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"无法共享 Thread 网络"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"已成功共享 Thread 网络"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"尚未将任何设备添加到 Thread 网络，但二维码已失效"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"要关闭 Thread 网络吗？"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"如果关闭此设置，某些智能家居设备和服务可能无法按预期运行。要继续吗？"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"更改能耗模式以启用 Thread"</string>
@@ -501,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"这将清除用于连接至此网络的信息（包括已保存的密码）"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" 如要加入 WLAN，请使用手机扫描二维码，然后按照说明操作。\n \n在 "<b>"Android 手机"</b>"中，依次转到“设置”-&gt;“网络和互联网”-&gt;“WLAN”-&gt; 选择所需 WLAN -&gt;“高级”-&gt;“添加设备”，然后扫描二维码。"</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"按返回按钮即可取消"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"使用 Thread 凭证设置设备"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"若要将某部设备添加到 Thread 网络，请使用该设备上的应用扫描此二维码。为安全起见，此二维码将在 <xliff:g id="MINUTES">%1$s</xliff:g> 分钟后失效。"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"确定"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"继续"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"更改网络"</string>
