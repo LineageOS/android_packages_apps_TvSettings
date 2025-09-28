@@ -1094,9 +1094,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                 scrollToPanel.setBackgroundColor(mainPanelColor);
             }
             if (fragmentToBecomeMainPanel != null && fragmentToBecomeMainPanel.getView() != null) {
-                if (!isA11yOn()) {
-                    fragmentToBecomeMainPanel.getView().requestFocus();
-                }
+                fragmentToBecomeMainPanel.getView().requestFocus();
                 for (int resId : frameResIds) {
                     Fragment f = getChildFragmentManager().findFragmentById(resId);
                     if (f != null) {
