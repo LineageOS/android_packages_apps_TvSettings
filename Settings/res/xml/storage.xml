@@ -15,10 +15,15 @@
   limitations under the License
   -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <Preference
-        android:key="migrate"
-        android:title="@string/storage_migrate" />
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <!-- Hiding as this does not work for some account types. -->
+    <PreferenceCategory android:key="migrate_category"
+        custom:isPreferenceVisible="false">
+        <Preference
+            android:key="migrate"
+            android:title="@string/storage_migrate" />
+    </PreferenceCategory>
     <Preference
         android:key="eject"
         android:title="@string/storage_eject" />
