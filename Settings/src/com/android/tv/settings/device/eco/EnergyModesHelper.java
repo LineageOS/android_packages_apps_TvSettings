@@ -450,17 +450,28 @@ public final class EnergyModesHelper {
 
     /** Sets the given energy mode in the system. */
     public void setEnergyMode(@NonNull EnergyMode energyMode) {
+        LowPowerStandbyPolicy policy = getPolicy(energyMode);
+        PowerManager powerManager = mContext.getSystemService(PowerManager.class);
+
+        final LowPowerStandbyPolicy currentPolicy = powerManager.getLowPowerStandbyPolicy();
+        if (currentPolicy == null) {
+            return;
+        }
+
+        final EnergyMode currentEnergyMode = getEnergyMode(currentPolicy.getIdentifier());
+        if (currentEnergyMode == energyMode) {
+            return;
+        }
+
+        powerManager.setLowPowerStandbyEnabled(energyMode.enableLowPowerStandby);
+        powerManager.setLowPowerStandbyPolicy(policy);
+
         Optional.ofNullable(ThreadNetworkHelper.getInstance(mContext)).ifPresent(
                 helper -> {
                     boolean isEnabled = (energyMode == MODE_HIGH_ENERGY);
                     helper.setEnabled(isEnabled);
                     logToggleInteracted(TvSettingsEnums.NETWORK_T_N, isEnabled);
                 });
-
-        LowPowerStandbyPolicy policy = getPolicy(energyMode);
-        PowerManager powerManager = mContext.getSystemService(PowerManager.class);
-        powerManager.setLowPowerStandbyEnabled(energyMode.enableLowPowerStandby);
-        powerManager.setLowPowerStandbyPolicy(policy);
     }
 
     /**
