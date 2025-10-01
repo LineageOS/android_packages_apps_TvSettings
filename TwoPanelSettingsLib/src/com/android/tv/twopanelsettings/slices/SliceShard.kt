@@ -710,9 +710,15 @@ class SliceShard(
             savedInstanceState.getParcelable(KEY_PREFERENCE_FOLLOWUP_INTENT)
         mFollowupPendingIntentResultCode =
             savedInstanceState.getInt(KEY_PREFERENCE_FOLLOWUP_RESULT_CODE)
-        screenTitle = savedInstanceState.getCharSequence(KEY_SCREEN_TITLE)
-        mScreenSubtitle = savedInstanceState.getCharSequence(KEY_SCREEN_SUBTITLE)
-        mScreenIcon = savedInstanceState.getParcelable(KEY_SCREEN_ICON)
+        if (screenTitle == null) {
+            screenTitle = savedInstanceState.getCharSequence(KEY_SCREEN_TITLE)
+        }
+        if (mScreenSubtitle == null) {
+            mScreenSubtitle = savedInstanceState.getCharSequence(KEY_SCREEN_SUBTITLE)
+        }
+        if (mScreenIcon == null) {
+            mScreenIcon = savedInstanceState.getParcelable(KEY_SCREEN_ICON)
+        }
         mLastFocusedPreferenceKey = savedInstanceState.getString(KEY_LAST_PREFERENCE)
         setUri(savedInstanceState.getString(KEY_URI_STRING))
     }
