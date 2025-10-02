@@ -20,7 +20,9 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
+import static org.robolectric.Shadows.shadowOf;
 
+import android.os.Looper;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceGroup;
@@ -153,10 +155,11 @@ public class MatchContentFrameRateFragmentTest {
     }
 
     @Test
-    @LooperMode(LooperMode.Mode.LEGACY)
+    @LooperMode(LooperMode.Mode.PAUSED)
     public void testDefaultPreference() {
         FragmentController.of(mMatchContentFrameRateFragment)
             .create();
+        shadowOf(Looper.getMainLooper()).idle();
         assertThat(mAutoPreference.isChecked()).isTrue();
         assertThat(mNeverPreference.isChecked()).isFalse();
         assertThat(mAlwaysPreference.isChecked()).isFalse();
