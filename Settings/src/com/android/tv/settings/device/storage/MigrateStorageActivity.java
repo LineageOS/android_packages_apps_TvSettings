@@ -19,8 +19,10 @@ package com.android.tv.settings.device.storage;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserManager;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.text.TextUtils;
@@ -32,10 +34,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
-import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
+import com.android.internal.widget.LockPatternUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.dialog.ProgressDialogFragment;
 import com.android.tv.settings.widget.SettingsGuidedStepFragment;
@@ -146,6 +148,22 @@ public class MigrateStorageActivity extends FragmentActivity {
     }
 
     private void startMigrationInternal() {
+        final LockPatternUtils lpu = new LockPatternUtils(this);
+        if (StorageManager.isFileEncrypted()) {
+            for (UserInfo user : getSystemService(UserManager.class).getUsers()) {
+                if (StorageManager.isCeStorageUnlocked(user.id)) {
+                    continue;
+                }
+                if (!lpu.isSecure(user.id)) {
+                    lpu.unlockUserKeyIfUnsecured(user.id);
+                } else {
+                    // This should not happen for TV as it does not have lock screen
+                    Log.w(TAG, "User is currently locked and has a secure lock screen.");
+                    showMigrationFailureToast();
+                    finish();
+                }
+            }
+        }
         try {
             mMoveId = mPackageManager.movePrimaryStorage(mTargetVolumeInfo);
             getSupportFragmentManager().beginTransaction()
