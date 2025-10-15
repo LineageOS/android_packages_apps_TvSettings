@@ -65,7 +65,6 @@ import com.android.tv.twopanelsettings.slices.TvSettingsSliceProvider;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
-import com.android.settingslib.media.flags.Flags;
 import com.android.tv.settings.R;
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder;
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder.RowBuilder;
@@ -245,8 +244,7 @@ public class ConnectedDevicesSliceProvider extends TvSettingsSliceProvider imple
         Intent i;
         // Update "Use for TV audio".
         // Set as active audio output device only connected devices that have audio capabilities
-        if (Flags.enableTvMediaOutputDialog()
-                && cachedDevice != null && !cachedDevice.isBusy()
+        if (cachedDevice != null && !cachedDevice.isBusy()
                 && AccessoryUtils.isConnected(device) && cachedDevice.isConnected()
                 && (AccessoryUtils.isBluetoothHeadset(device)
                 || AccessoryUtils.hasAudioProfile(cachedDevice))) {
