@@ -51,6 +51,12 @@
         android:key="ads"
         android:title="@string/about_ads"/>
 
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="acr"
+        custom:uri="@string/acr_privacy_slice_uri"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false" />
+
     <PreferenceCategory
         android:key="accountSettings"
         android:title="@string/privacy_account_settings_category"
