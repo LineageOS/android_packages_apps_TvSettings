@@ -35,15 +35,12 @@ public class LockPatternUtilsCompat {
                 savedCredential.mLockscreenCredential, userHandle);
     }
 
-    public boolean checkCredential(@NonNull
-            LockscreenCredentialCompat credentialCompat, int userId) {
-        try {
-            return mLockPatternUtils.checkCredential(
-                    credentialCompat.mLockscreenCredential, userId, null);
-        } catch (LockPatternUtils.RequestThrottledException e) {
-            e.printStackTrace();
-        }
-        return false;
+    /** Checks the given credential for the given user. */
+    public boolean checkCredential(
+            @NonNull LockscreenCredentialCompat credentialCompat, int userId) {
+        return mLockPatternUtils
+                .checkCredential(credentialCompat.mLockscreenCredential, userId, null)
+                .isMatched();
     }
 
     public boolean isSecure(int userId) {

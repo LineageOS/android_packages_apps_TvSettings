@@ -27,8 +27,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.internal.widget.LockPatternUtils;
-import com.android.internal.widget.LockPatternUtils.RequestThrottledException;
 import com.android.internal.widget.LockscreenCredential;
+import com.android.internal.widget.VerifyCredentialResponse;
 
 import java.util.Arrays;
 
@@ -187,17 +187,20 @@ public class RestrictedProfilePinStorage {
     private boolean checkPasswordLegacy(String pin) {
         try (LockscreenCredential credential = LockscreenCredential.createPin(pin)) {
             Log.i(TAG, "checkPasswordLegacy " + Arrays.toString(credential.getCredential()));
-            boolean response = mLockPatternUtils.checkCredential(credential, mOwnerUserId, null);
+            VerifyCredentialResponse fullResponse = mLockPatternUtils.checkCredential(
+                    credential, mOwnerUserId, null);
+            boolean response = fullResponse.isMatched();
+            if (fullResponse.hasTimeout()) {
+                Log.e(TAG, "Unable to check password for unlocking the user due to timeout");
+                return false; // Interpret this as an incorrect pin and ask for the pin again.
+            }
             Log.i(TAG, "response " + response);
             if (response) {
                 // Copy PIN to internal storage.
                 setPinInternal(pin);
             }
             return response;
-        } catch (RequestThrottledException e) {
-            Log.e(TAG, "Unable to check password for unlocking the user", e);
         }
-        return false; // Interpret this as an incorrect pin and ask for the pin again.
     }
 
     private boolean hasLockscreenSecurity() {
