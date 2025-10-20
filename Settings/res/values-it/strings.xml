@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Scansione sempre disponibile, Consenti al servizio di geolocalizzazione di Google e ad altre app di cercare reti, anche quando il Wi-Fi non è attivo"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Rete Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"La rete Thread connette localmente i dispositivi per la smart home compatibili con Thread, aumentando efficienza e prestazioni.\n\nSe è attiva, questo dispositivo creerà una rete Thread o si unirà alla tua. Le credenziali saranno caricate privatamente nel cloud per facilitare la configurazione dei futuri dispositivi per la smart home.\n\nSe è disattivata, questo dispositivo non sarà più in grado di comunicare con altri dispositivi presenti sulla tua rete Thread. Alcuni servizi e dispositivi per la smart home potrebbero non funzionare come previsto.\n\nScopri di più all\'indirizzo g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Condividi credenziali di rete Thread"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Condividi le credenziali di rete Thread con altri dispositivi per semplificare la configurazione sulla tua rete Thread di <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Ricondividi"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Il codice scadrà tra <xliff:g id="MINUTES">%1$02d</xliff:g> min <xliff:g id="SECONDS">%2$02d</xliff:g> sec"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Impossibile condividere la rete Thread"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Rete Thread condivisa correttamente"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Codice scaduto prima che venisse aggiunto un dispositivo alla rete Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Disattivare la rete Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Se è disattivata, alcuni servizi e dispositivi per la smart home potrebbero non funzionare come previsto. Continuare?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Modifica la modalità energetica per attivare Thread"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Per attivare l\'audio surround, vai a Impostazioni &gt; Telecomandi e accessori &gt; Configura tasti telecomando &gt; Controllo del volume e seleziona un\'opzione diversa da questo dispositivo."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: Automatico può non funzionare se il dispositivo non segnala correttamente formati supportati."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Automatico"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Attiva tutti i formati supportati"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Verranno cancellate le informazioni utilizzate per connettersi alla rete, inclusa la password salvata"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Collegati a una rete Wi-Fi scansionando il codice QR da un telefono cellulare e segui le istruzioni.\n \n Su un "<b>"telefono Android"</b>", vai a Impostazioni -&gt; Rete e internet -&gt; Wi-Fi -&gt; seleziona una rete Wi-Fi -&gt; Avanzate -&gt; Aggiungi dispositivo e scansiona il codice QR."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Premi il pulsante Indietro per annullare"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Usa le credenziali Thread per configurare un dispositivo"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Per aggiungere un dispositivo alla tua rete Thread, scansiona questo codice QR nell\'app del dispositivo. Per motivi di sicurezza, il codice scadrà tra <xliff:g id="MINUTES">%1$s</xliff:g> minuti."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continua"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Cambia rete"</string>
@@ -930,7 +940,7 @@
     <string name="input_header_names" msgid="5903234218909970550">"Nome"</string>
     <string name="inputs_hdmi_control" msgid="650355636965841054">"Comando HDMI"</string>
     <string name="inputs_hdmi_control_desc" msgid="306769914209526682">"Consente alla TV di dare comandi ai disposit. HDMI"</string>
-    <string name="inputs_device_auto_off" msgid="2659766884754402352">"Alimentaz. autom. disp. disat."</string>
+    <string name="inputs_device_auto_off" msgid="2659766884754402352">"Spegnimento automatico dispos."</string>
     <string name="inputs_device_auto_off_desc" msgid="1164897242719608201">"Scollega dispositivi HDMI dalla TV"</string>
     <string name="inputs_tv_auto_on" msgid="544848340484583318">"Alimentaz. automat. TV attiva"</string>
     <string name="inputs_tv_auto_on_desc" msgid="3640723210479925817">"Collega la TV al dispositivo HDMI"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Attiva ANGLE come driver OpenGL ES predefinito"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"In fase sperimentale, richiede il riavvio."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"È necessario riavviare per cambiare il driver OpenGL ES di sistema"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

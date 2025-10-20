@@ -267,6 +267,10 @@ public class ConnectState implements State {
                 }
 
                 // Diagnose failure based on current WifiConfiguration.
+                if (wifiEntry.getWifiConfiguration() == null) {
+                    notifyListener(StateMachine.RESULT_FAILURE);
+                    return;
+                }
                 WifiConfiguration configuration = null;
                 for (WifiConfiguration config : mWifiManager.getConfiguredNetworks()) {
                     if (config.networkId == wifiEntry.getWifiConfiguration().networkId) {

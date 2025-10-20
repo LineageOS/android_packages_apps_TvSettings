@@ -16,10 +16,7 @@
 
 package com.android.tv.settings.device.eco;
 
-import static com.android.tv.settings.util.InstrumentationUtils.logToggleInteracted;
-
 import android.annotation.Nullable;
-import android.app.tvsettings.TvSettingsEnums;
 import android.content.Context;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
@@ -33,23 +30,20 @@ import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
 
-import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.settings.R;
-import com.android.tv.settings.connectivity.util.ThreadNetworkHelper;
 import com.android.tv.settings.device.eco.EnergyModesHelper.EnergyMode;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.GuidedActionsAlignUtil;
 import com.android.tv.settings.widget.SettingsGuidedStepFragment;
+import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 
 import java.util.List;
-import java.util.Optional;
 
 /** Activity to confirm whether an energy mode should be set */
 public class EnergyModeConfirmationActivity extends FragmentActivity {
 
     private static final String TAG = "EnergyModeConfirmationActivity";
     public static final String EXTRA_ENERGY_MODE_ID = "EXTRA_ENERGY_MODE_ID";
-    public static final String EXTRA_SHOULD_ENABLE_THREAD = "EXTRA_SHOULD_ENABLE_THREAD";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -84,7 +78,6 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
 
         private EnergyModesHelper mEnergyModesHelper;
         private EnergyMode mEnergyMode;
-        private Optional<ThreadNetworkHelper> mThreadNetworkHelperOptional;
 
         static GuidedStepConfirmationFragment newInstance(String energyModeId) {
             Bundle args = new Bundle();
@@ -102,8 +95,6 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
             String energyModeId = getArguments().getString(EXTRA_ENERGY_MODE_ID);
             mEnergyModesHelper = new EnergyModesHelper(getContext());
             mEnergyMode = mEnergyModesHelper.getEnergyMode(energyModeId);
-            mThreadNetworkHelperOptional = Optional.ofNullable(
-                    ThreadNetworkHelper.getInstance(getContext()));
             return mEnergyMode;
         }
 
@@ -136,16 +127,6 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
         public void onGuidedActionClicked(GuidedAction action) {
             if (action.getId() == GuidedAction.ACTION_ID_OK) {
                 mEnergyModesHelper.setEnergyMode(mEnergyMode);
-
-                boolean shouldEnableThread = getActivity().getIntent()
-                        .getBooleanExtra(EXTRA_SHOULD_ENABLE_THREAD, false);
-
-                if (shouldEnableThread) {
-                    mThreadNetworkHelperOptional.ifPresent(helper -> {
-                        helper.setEnabled(true);
-                        logToggleInteracted(TvSettingsEnums.NETWORK_T_N, true);
-                    });
-                }
             }
             getActivity().finish();
         }
@@ -159,7 +140,6 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
     /** Confirmation dialog for changing energy mode */
     public static class FullScreenDialogConfirmationFragment extends FullScreenDialogFragment {
         private EnergyModesHelper mEnergyModesHelper;
-        private Optional<ThreadNetworkHelper> mThreadNetworkHelperOptional;
 
         static FullScreenDialogConfirmationFragment newInstance(Context context,
                 EnergyMode energyMode) {
@@ -188,8 +168,6 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
         @Override
         public void onCreate(@androidx.annotation.Nullable Bundle savedInstanceState) {
             mEnergyModesHelper = new EnergyModesHelper(getContext());
-            mThreadNetworkHelperOptional = Optional.ofNullable(
-                    ThreadNetworkHelper.getInstance(getContext()));
             super.onCreate(savedInstanceState);
         }
 
@@ -223,15 +201,6 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
         public void onButtonPressed(int action) {
             if (action == ACTION_POSITIVE) {
                 mEnergyModesHelper.setEnergyMode(getEnergyMode());
-                boolean shouldEnableThread = getActivity().getIntent()
-                        .getBooleanExtra(EXTRA_SHOULD_ENABLE_THREAD, false);
-
-                if (shouldEnableThread) {
-                    mThreadNetworkHelperOptional.ifPresent(helper -> {
-                        helper.setEnabled(true);
-                        logToggleInteracted(TvSettingsEnums.NETWORK_T_N, true);
-                    });
-                }
             }
             getActivity().finish();
         }

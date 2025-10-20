@@ -441,7 +441,9 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
                 prefCategory = mServiceComponentNameToPreferenceCategoryMap.get(componentName);
             }
             // The method "addPreference" only adds the preference if it is not there already.
-            prefCategory.addPreference(servicePref);
+            if (!shouldShowLetterboxWallpapersSetting(componentName)) {
+                prefCategory.addPreference(servicePref);
+            }
         }
         mServicesPrefCategory.setVisible(mServicesPrefCategory.getPreferenceCount() != 0);
         mControlsPrefCategory.setVisible(mControlsPrefCategory.getPreferenceCount() != 0);
@@ -533,5 +535,15 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
     @Override
     protected int getPageId() {
         return TvSettingsEnums.SYSTEM_A11Y;
+    }
+
+    // Whether to expose the "Letterbox wallpapers" accessibility entry to users.
+    // This is overlayable to allow OEMs that ship the LetterboxWallpapers APK for its
+    // AccessibilityService (non-UI) to hide the preference if the UI is not functional
+    // or not intended for end users.
+    private boolean shouldShowLetterboxWallpapersSetting(ComponentName componentName) {
+        return componentName.flattenToString().equals(getResources().getString(
+                R.string.accessibility_letterbox_wallpapers_component_name))
+                && !getResources().getBoolean(R.bool.config_show_letterbox_wallpapers_setting);
     }
 }

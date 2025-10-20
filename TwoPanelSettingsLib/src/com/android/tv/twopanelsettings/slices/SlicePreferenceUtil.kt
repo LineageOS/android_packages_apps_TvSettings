@@ -242,7 +242,7 @@ object SlicePreferencesUtil {
             if (preference.title != null) {
                 fallbackInfoContentDescription += preference.title.toString()
             }
-            if (preference.title != null) {
+            if (subtitleExists) {
                 fallbackInfoContentDescription +=
                     HasCustomContentDescription.CONTENT_DESCRIPTION_SEPARATOR + subtitle
             }

@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Erkennungsfunktion immer verfügbar – Der Standortdienst von Google und andere Apps sollen auch bei deaktiviertem WLAN nach Netzwerken suchen"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread-Netzwerk"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Das Thread-Netzwerk verbindet Thread-kompatible Smart-Home-Geräte lokal, um die Effizienz und die Leistung zu steigern.\n\nWenn aktiviert, erstellt das Gerät ein Thread-Netzwerk oder tritt deinem bei. Damit du neue Smart-Home-Geräte in Zukunft einfacher einrichten kannst, werden die Anmeldedaten sicher in die Cloud hochgeladen.\n\nWenn deaktiviert, kann dieses Gerät nicht mehr mit anderen Geräten in deinem Thread-Netzwerk kommunizieren. Bestimmte Smart-Home-Geräte und ‑Dienste funktionieren eventuell nicht wie erwartet.\n\nWeitere Informationen unter g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Anmeldedaten für Thread-Netzwerk teilen"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Du kannst Anmeldedaten für das Thread-Netzwerk mit anderen Geräten teilen, um die Einrichtung im Thread-Netzwerk deines <xliff:g id="DEVICE">%1$s</xliff:g> zu vereinfachen"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Noch einmal freigeben"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Der Code läuft in <xliff:g id="MINUTES">%1$02d</xliff:g> Min. <xliff:g id="SECONDS">%2$02d</xliff:g> Sek. ab"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Thread-Netzwerk konnte nicht freigegeben werden"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Thread-Netzwerk wurde freigegeben"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Der Code ist abgelaufen, bevor ein Gerät zum Thread-Netzwerk hinzugefügt wurde"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread-Netzwerk deaktivieren?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Wenn deaktiviert, funktionieren bestimmte Smart-Home-Geräte und ‑Dienste eventuell nicht wie erwartet. Möchtest du fortfahren?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Energiemodus wechseln, damit das Thread-Netzwerk genutzt werden kann"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos mit Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Wenn du Surround-Sound aktivieren möchtest, gehe zu „Einstellungen“ &gt; „Fernbedienungen &amp; Zubehör“ &gt; „Tasten der Fernbedienung einrichten“ &gt; „Lautstärkeregelung“ und wähle dann eine andere Option als „Dieses Gerät“ aus."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"„Automatisch“ funktioniert ggf. nicht, wenn das Gerät die unterstützten Formate nicht korrekt meldet."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Automatisch"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Alle unterstützten Formate aktivieren"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Löscht die Informationen für die Verbindung mit diesem Netzwerk, auch das gespeicherte Passwort"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Du kannst dich mit einem WLAN verbinden, indem du den QR-Code von einem Smartphone scannst und der Anleitung folgst.\n\nGeh auf einem "<b>"Android-Smartphone"</b>" zu den Einstellungen -&gt; „Netzwerk &amp; Internet“ -&gt; „WLAN“ -&gt; WLAN auswählen -&gt; „Erweitert“ -&gt; „Gerät hinzufügen“ und scann den QR-Code."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Schaltfläche „Zurück“ drücken, um abzubrechen"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Thread-Anmeldedaten zum Einrichten eines Geräts verwenden"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Wenn du deinem Thread-Netzwerk ein Gerät hinzufügen möchtest, scanne diesen QR-Code über die App des Geräts. Aus Sicherheitsgründen läuft der Code in <xliff:g id="MINUTES">%1$s</xliff:g> Minuten ab."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"Ok"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Weiter"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Netzwerk ändern"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"ANGLE als OpenGL ES-Standardtreiber aktivieren"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Experimentell, erfordert einen Neustart."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Ein Neustart ist erforderlich, um den OpenGL ES-Systemtreiber zu ändern"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

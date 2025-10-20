@@ -17,7 +17,6 @@
 package com.android.tv.settings.connectivity.setup;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.net.wifi.EasyConnectStatusCallback;
 import android.net.wifi.WifiConfiguration;
@@ -28,7 +27,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -36,10 +34,10 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.android.tv.settings.R;
-import com.android.tv.settings.connectivity.util.QrCodeGenerator;
 import com.android.tv.settings.connectivity.util.State;
 import com.android.tv.settings.connectivity.util.StateMachine;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.twopanelsettings.QrCodeView;
 
 /**
  * State responsible for showing the connect page.
@@ -84,8 +82,7 @@ public class EasyConnectQRState implements State {
         private StateMachine mStateMachine;
 
         private WifiManager mWifiManager;
-        private ImageView mQrCodeView;
-        private View mProgressView;
+        private QrCodeView mQrCodeView;
         private boolean mStartedConnect;
 
         @Override
@@ -106,10 +103,6 @@ public class EasyConnectQRState implements State {
                     container, false);
 
             mQrCodeView = view.findViewById(R.id.setup_qrcode_view);
-            mProgressView = view.findViewById(R.id.setup_qrcode_progress);
-
-            mProgressView.setVisibility(View.VISIBLE);
-            mQrCodeView.setVisibility(View.INVISIBLE);
 
             mWifiManager.startEasyConnectAsEnrolleeResponder(
                     getSanitizedDeviceName(),
@@ -184,21 +177,7 @@ public class EasyConnectQRState implements State {
             @Override
             public void onBootstrapUriGenerated(@NonNull Uri dppUri) {
                 if (DEBUG) Log.d(TAG, "onBootstrapUriGenerated: uri = " + dppUri.toString());
-
-                try {
-                    final Bitmap bmp = QrCodeGenerator.encodeQrCode(dppUri.toString(), 512);
-                    mQrCodeView.setImageBitmap(bmp);
-
-                    // TODO: Fade animations here?
-                    mProgressView.setVisibility(View.INVISIBLE);
-                    mQrCodeView.setVisibility(View.VISIBLE);
-
-                } catch (Exception e) {
-                    if (DEBUG) Log.d(TAG, "encodeQrCode error: " + e.getMessage());
-                    // TODO: Set error code?
-                    mStateMachine.getListener().onComplete(QRCodeFragment.this,
-                            StateMachine.RESULT_FAILURE);
-                }
+                mQrCodeView.setData(dppUri.toString());
             }
 
             @Override

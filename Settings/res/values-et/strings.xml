@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Skannimine on alati saadaval: lubage Google\'i asukohateenusel ja muudel rakendustel võrke skannida ka juhul, kui WiFi on välja lülitatud."</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread-võrk"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread-võrk ühendab kohalikult Thread-võrguga ühilduvad nuti-koduseadmed, suurendades tõhusust ja jõudlust.\n\nKui seade on sisse lülitatud, loob see teie Thread-võrgu või liitub sellega. Mandaat laaditakse privaatselt pilve üles, et teie tulevasi nuti-koduseadmeid oleks lihtsam seadistada.\n\nKui seade on välja lülitatud, ei saa see enam suhelda teiste Thread-võrgus olevate seadmetega. Teatud nuti-koduseadmed ja teenused ei pruugi ootuspäraselt toimida.\n\nLisateave: g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Thread-võrgu mandaatide jagamine"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Jagage Thread-võrgu mandaate teiste seadmetega, et hõlbustada seadistamist seadme <xliff:g id="DEVICE">%1$s</xliff:g> Thread-võrgus"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Jaga uuesti"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Kood aegub <xliff:g id="MINUTES">%1$02d</xliff:g> min <xliff:g id="SECONDS">%2$02d</xliff:g> s pärast"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Thread-võrku ei saanud jagada"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Thread-võrgu jagamine õnnestus"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Kood aegus, enne kui seade Thread-võrku lisati"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Kas lülitada Thread-võrk välja?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Kui see on välja lülitatud, ei pruugi teatud nuti-koduseadmed ja teenused ootuspäraselt toimida. Kas soovite jätkata?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Threadi võimaldamiseks peate energiarežiimi vahetama"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos koos Dolby Digital Plusiga"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Ruumilise heli lubamiseks avage Seaded &gt; Kaugjuhtimispuldid ja lisatarvikud &gt; Puldi nuppude seadistamine &gt; Helitugevuse juhtimine, seejärel tehke selle seadme asemel mõni muu valik."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Märkus. Valik Automaatne ei pruugi töötada, kui teie seade ei teavita toetatud vormingutest õigesti."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Automaatne"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Lubage kõik toetatud vormingud"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"See kustutab teabe, mida kasutatakse võrguga ühenduse loomiseks, sh salvestatud parooli"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Liituge WiFi-võrguga, skannides oma mobiiltelefoniga QR-koodi ja järgides juhiseid.\n \n Tehke "<b>"Android-telefonis"</b>" valikud Seaded -&gt; Võrk ja internet -&gt; WiFi -&gt; valige WiFi-võrk -&gt; tehke valik Täpsemad -&gt; lisage seade ja skannige siis QR-kood."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Tühistamiseks vajutage tagasiliikumise nuppu"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Seadme seadistamine Threadi mandaadi abil"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Seadme lisamiseks oma Thread-võrku skannige seadme rakenduses see QR-kood. Turvalisuse huvides aegub kood <xliff:g id="MINUTES">%1$s</xliff:g> minuti pärast."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Jätka"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Vaheta võrku"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"ANGLE-i lubamine vaikimisi OpenGL ES-i draiverina"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Katseline, nõuab taaskäivitamist."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Süsteemi OpenGL ES-i draiveri muutmiseks on vajalik taaskäivitamine"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

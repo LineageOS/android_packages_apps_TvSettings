@@ -152,6 +152,9 @@ public class EnergySaverFragment extends SettingsPreferenceFragment implements
     }
 
     private void configureAmbientSenseTimePref() {
+        if (mAmbientSenseTimePref == null) {
+            return;
+        }
         if (!mAmbientSenseConfigured && isResumed() && mAmbientSenseTimePref.isVisible()) {
             if (mAmbientSenseTimePref.isEnabled()) {
                 mSleepTimePref.setEnabled(false);

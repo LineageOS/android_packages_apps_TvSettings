@@ -51,7 +51,7 @@
     <string name="accounts_category_summary_no_account" msgid="3053606166993074648">"Nenhuma conta"</string>
     <string name="accounts_category_summary" msgid="7617932110389860822">"{count,plural, =1{# conta}one{# conta}other{# contas}}"</string>
     <string name="accounts_slice_summary" msgid="1571012157154521119">"Serviços de mídia, Assistente, pagamentos"</string>
-    <string name="connectivity_network_category_title" msgid="8226264889892008114">"Rede e Internet"</string>
+    <string name="connectivity_network_category_title" msgid="8226264889892008114">"Rede e internet"</string>
     <string name="sound_category_title" msgid="7899816751041939518">"Som"</string>
     <string name="applications_category_title" msgid="7112019490898586223">"Apps"</string>
     <string name="device_pref_category_title" msgid="8292572846154873762">"Preferências do dispositivo"</string>
@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Verificação sempre disponível: permitir que o Serviço de localização do Google e outros apps procurem redes, mesmo que o Wi-Fi esteja desativado"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Rede Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"A rede Thread conecta localmente dispositivos de casa inteligente compatíveis, aumentando a eficiência e o desempenho.\n\nQuando ativada, o dispositivo vai criar ou entrar na sua rede Thread. As credenciais serão enviadas à nuvem de forma particular para facilitar a configuração dos seus futuros dispositivos de casa inteligente.\n\nQuando desativada, este dispositivo não conseguirá mais se comunicar com outros dispositivos na sua rede Thread. Certos dispositivos e serviços de casa inteligente podem não funcionar como esperado.\n\nSaiba mais em g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Compartilhar credenciais da rede Thread"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Compartilhe as credenciais da rede Thread com outros dispositivos para simplificar a configuração dela no seu aparelho <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Compartilhar de novo"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"O código expira em <xliff:g id="MINUTES">%1$02d</xliff:g>min<xliff:g id="SECONDS">%2$02d</xliff:g>s"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Não foi possível compartilhar a rede Thread"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"A rede Thread foi compartilhada"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"O código expirou antes que qualquer dispositivo fosse adicionado à rede Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Desativar a rede Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Se desativada, certos dispositivos e serviços de casa inteligente podem não funcionar como esperado. Quer continuar?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Mude o modo de energia para ativar a rede Thread"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos com Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Para ativar o som surround, acesse Configurações &gt; Controles remotos e acessórios &gt; Configurar os botões do controle remoto &gt; Controle de volume. Em seguida, selecione um dispositivo diferente deste."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Obs: \"Automático\" pode não funcionar se o dispositivo não informar os formatos compatíveis corretos."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Automático"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Ativar todos os formatos aceitos"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Esta ação limpa as informações usadas para se conectar a esta rede, incluindo uma senha salva."</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Leia o QR code em um smartphone e siga as instruções para se conectar a uma rede Wi-Fi.\n \n Em um "<b>"smartphone Android"</b>", acesse Configurações -&gt; Rede e Internet -&gt; Wi-Fi -&gt; Selecionar Wi-Fi -&gt; Avançado -&gt; adicione o dispositivo e leia o QR code."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Pressione o botão \"Voltar\" para cancelar"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Use as credenciais da rede Thread para configurar um dispositivo"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Para adicionar um dispositivo à sua rede Thread, faça a leitura deste QR code no app do dispositivo. Por segurança, o código expira em <xliff:g id="MINUTES">%1$s</xliff:g> minutos."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continuar"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Alterar rede"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Ativar o ANGLE como o driver do OpenGL ES padrão"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Experimental, exige uma reinicialização."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"É necessário reiniciar o dispositivo para mudar o driver do OpenGL ES do sistema"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

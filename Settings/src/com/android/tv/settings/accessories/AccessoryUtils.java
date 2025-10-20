@@ -38,7 +38,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /** Provide utilities for Remote & Accessories. */
-final class AccessoryUtils {
+public final class AccessoryUtils {
 
     public static final String TAG = "AccessoryUtils";
 

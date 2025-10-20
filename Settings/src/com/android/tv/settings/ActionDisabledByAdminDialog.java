@@ -16,8 +16,14 @@
 
 package com.android.tv.settings;
 
+import android.annotation.NonNull;
 import android.app.AlertDialog;
+import android.app.admin.DevicePolicyIdentifiers;
 import android.app.admin.DevicePolicyManager;
+import android.app.admin.DpcAuthority;
+import android.app.admin.EnforcingAdmin;
+import android.app.admin.PolicyEnforcementInfo;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,14 +42,24 @@ public class ActionDisabledByAdminDialog extends FragmentActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final RestrictedLockUtils.EnforcedAdmin enforcedAdmin =
-                getAdminDetailsFromIntent(getIntent());
-        final String restriction = getRestrictionFromIntent(getIntent());
-        mDialogHelper = new ActionDisabledByAdminDialogHelper(this);
-        AlertDialog dialog = mDialogHelper.prepareDialogBuilder(restriction, enforcedAdmin)
-                .setOnDismissListener(this)
-                .show();
-        dialog.getButton(AlertDialog.BUTTON_POSITIVE).requestFocus();
+        if (android.app.admin.flags.Flags.policyTransparencyRefactorEnabled()) {
+            final EnforcingAdmin enforcingAdmin = getEnforcingAdmin(getIntent());
+            final String restriction = getRestrictionFromIntent(getIntent());
+            mDialogHelper = new ActionDisabledByAdminDialogHelper(this);
+            AlertDialog dialog = mDialogHelper.prepareDialogBuilder(restriction, enforcingAdmin)
+                    .setOnDismissListener(this)
+                    .show();
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).requestFocus();
+        } else {
+            final RestrictedLockUtils.EnforcedAdmin enforcedAdmin =
+                    getAdminDetailsFromIntent(getIntent());
+            final String restriction = getRestrictionFromIntent(getIntent());
+            mDialogHelper = new ActionDisabledByAdminDialogHelper(this);
+            AlertDialog dialog = mDialogHelper.prepareDialogBuilder(restriction, enforcedAdmin)
+                    .setOnDismissListener(this)
+                    .show();
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).requestFocus();
+        }
     }
 
     @Override
@@ -87,6 +103,44 @@ public class ActionDisabledByAdminDialog extends FragmentActivity
             }
         }
         return admin;
+    }
+
+    @androidx.annotation.VisibleForTesting
+    EnforcingAdmin getEnforcingAdmin(Intent intent) {
+        if (intent == null) {
+            return null;
+        }
+        if (android.app.admin.flags.Flags.enforcingAdminExtraEnabled() &&
+                intent.hasExtra(DevicePolicyManager.EXTRA_ENFORCING_ADMIN)) {
+            return intent.getParcelableExtra(DevicePolicyManager.EXTRA_ENFORCING_ADMIN);
+        }
+        ComponentName componentName = intent.getParcelableExtra(
+                DevicePolicyManager.EXTRA_DEVICE_ADMIN);
+        UserHandle userHandle = getUserFromIntent(intent);
+        String restriction = getRestrictionFromIntent(intent);
+
+        if (componentName == null && restriction != null) {
+            DevicePolicyManager devicePolicyManager = getSystemService(DevicePolicyManager.class);
+            PolicyEnforcementInfo policyEnforcementInfo =
+                    devicePolicyManager.getEnforcingAdminsForPolicy(
+                            DevicePolicyIdentifiers.getIdentifierForUserRestriction(restriction),
+                            userHandle.getIdentifier());
+            return policyEnforcementInfo.getMostImportantEnforcingAdmin();
+        }
+
+        if (componentName != null && userHandle != null) {
+            return new EnforcingAdmin(componentName.getPackageName(), DpcAuthority.DPC_AUTHORITY,
+                    userHandle, componentName);
+        }
+        return null;
+    }
+
+    private UserHandle getUserFromIntent(@NonNull Intent intent) {
+        if (intent.hasExtra(Intent.EXTRA_USER)) {
+            return intent.getParcelableExtra(Intent.EXTRA_USER);
+        }
+        int userId = intent.getIntExtra(Intent.EXTRA_USER_ID, UserHandle.myUserId());
+        return UserHandle.of(userId);
     }
 
     @androidx.annotation.VisibleForTesting

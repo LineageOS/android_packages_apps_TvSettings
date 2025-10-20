@@ -83,4 +83,12 @@
     <color name="eco_hint_color">#FF98B2DD</color>
 
     <color name="tp_dialog_scrollbar_color">#0DFFFFFF</color>
+
+    <color name="qr_dot_color">#A2AFC3</color>
+    <color name="qr_finder_inner_dot_color">#D3E3FD</color>
+    <color name="qr_finder_outer_ring_color">#8ADFF3FF</color>
+    <color name="qr_boundary_markers_color">#33FFFFFF</color>
+
+    <!-- To be overridden in a resource overlay for branded logos. -->
+    <drawable name="qr_code_logo">@android:color/transparent</drawable>
 </resources>

@@ -595,10 +595,11 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
         }
     }
 
-    private void assertSafeToStartCustomActivity(Intent intent, String packageName) {
+    private Intent assertSafeToStartCustomActivity(Intent intent, String packageName) {
         EventLog.writeEvent(0x534e4554, "223578534", -1 /* UID */, "");
+        final Intent vettedIntent = new Intent(intent);
         ResolveInfo resolveInfo = mPackageManager.resolveActivity(
-                intent, PackageManager.MATCH_DEFAULT_ONLY);
+                vettedIntent, PackageManager.MATCH_DEFAULT_ONLY);
 
         if (resolveInfo == null) {
             throw new ActivityNotFoundException("No result for resolving " + intent);
@@ -609,6 +610,12 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
             throw new SecurityException("Application " + packageName
                     + " is not allowed to start activity " + intent);
         }
+
+        // We were able to vet the given intent this time. Make a copy using the components
+        // that were used to do the vetting, since that's as much as we've verified is safe.
+        vettedIntent.setComponent(activityInfo.getComponentName());
+        vettedIntent.setPackage(activityInfo.packageName);
+        return vettedIntent;
     }
 
     @Override
@@ -634,9 +641,11 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
             }
             return true;
         } else if (preference.getIntent() != null) {
-
+            // We don't necessarily trust the given intent to launch its component.
+            // We will first check it, and only use parts of it that were indeed checked.
+            final Intent vettedIntent;
             try {
-                assertSafeToStartCustomActivity(preference.getIntent(),
+                vettedIntent = assertSafeToStartCustomActivity(preference.getIntent(),
                     getPackageFromKey(preference.getKey()));
             } catch (ActivityNotFoundException | SecurityException e) {
                 // return without startActivity
@@ -645,8 +654,7 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
                 return true;
             }
             try {
-                startActivityForResult(new Intent(preference.getIntent()
-                                .setPackage(preference.getKey())),
+                startActivityForResult(vettedIntent,
                         generateCustomActivityRequestCode(preference));
             } catch (ActivityNotFoundException e) {
                 Log.e(TAG, "Activity not found", e);

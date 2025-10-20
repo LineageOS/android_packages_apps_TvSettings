@@ -16,7 +16,6 @@
 
 package com.android.tv.settings.connectivity;
 
-import static com.android.tv.settings.device.eco.EnergyModesHelper.MODE_HIGH_ENERGY;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_TWO_PANEL;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
@@ -58,23 +57,23 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.settingslib.RestrictedPreference;
 import com.android.tv.settings.FullScreenConfirmationActivity;
-import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.settings.MainFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RestrictedPreferenceAdapter;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.basic.BasicModeFeatureProvider;
+import com.android.tv.settings.connectivity.thread.ShareThreadNetworkActivity;
+import com.android.tv.settings.connectivity.util.ThreadNetworkHelper;
 import com.android.tv.settings.device.eco.EnergyModeConfirmationActivity;
-import com.android.tv.settings.device.eco.EnergyModesActivity;
 import com.android.tv.settings.device.eco.EnergyModesHelper;
 import com.android.tv.settings.device.eco.EnergyModesHelper.EnergyMode;
-import com.android.tv.settings.basic.BasicModeFeatureProvider;
-import com.android.tv.settings.connectivity.util.ThreadNetworkHelper;
 import com.android.tv.settings.library.network.AccessPoint;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.SliceUtils;
 import com.android.tv.settings.widget.AccessPointPreference;
 import com.android.tv.settings.widget.CustomContentDescriptionSwitchPreference;
 import com.android.tv.settings.widget.TvAccessPointPreference;
+import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.twopanelsettings.slices.SliceShard;
 import com.android.tv.twopanelsettings.slices.compat.Slice;
 import com.android.wifitrackerlib.WifiEntry;
@@ -105,6 +104,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private static final String KEY_WIFI_ALWAYS_SCAN = "wifi_always_scan";
     private static final String KEY_ETHERNET = "ethernet";
     private static final String KEY_WIFI_THREAD_NETWORK = "wifi_thread_network";
+    private static final String KEY_SHARE_THREAD_NETWORK = "share_thread_network";
     private static final String KEY_ETHERNET_STATUS = "ethernet_status";
     private static final String KEY_ETHERNET_PROXY = "ethernet_proxy";
     private static final String KEY_ETHERNET_DHCP = "ethernet_dhcp";
@@ -122,23 +122,23 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     Boolean isChecked = (Boolean) newValue;
+                    EnergyModesHelper energyModesHelper = new EnergyModesHelper(getContext());
 
                     if (isChecked) {
-                        EnergyModesHelper energyModesHelper = new EnergyModesHelper(getContext());
                         EnergyMode currentEnergyMode = energyModesHelper.updateEnergyMode();
                         if (currentEnergyMode == null) {
-                            mThreadNetworkHelperOptional.get().setEnabled(true);
+                            Optional.ofNullable(ThreadNetworkHelper.getInstance(getContext()))
+                                    .ifPresent(helper -> helper.setEnabled(true));
                             logToggleInteracted(
                                     TvSettingsEnums.NETWORK_T_N, true);
                         } else {
                             if (energyModesHelper.getEnergyMode(currentEnergyMode.identifierRes)
-                                    != MODE_HIGH_ENERGY) {
+                                    != EnergyModesHelper.MODE_HIGH_ENERGY) {
                                 enableThreadNetworkIntentLauncher
                                         .launch(getEnableThreadNetworkConfirmationIntent());
                             } else {
-                                mThreadNetworkHelperOptional.get().setEnabled(true);
-                                logToggleInteracted(
-                                        TvSettingsEnums.NETWORK_T_N, true);
+                                Optional.ofNullable(ThreadNetworkHelper.getInstance(getContext()))
+                                        .ifPresent(helper -> helper.setEnabled(true));
                             }
                         }
                     } else {
@@ -154,6 +154,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 @Override
                 public void isEnabled(boolean enabled) {
                     mThreadNetworkPref.setChecked(enabled);
+                    updateThreadShareVisibility(enabled);
                 }
             };
     private final ActivityResultLauncher<Intent> enableThreadNetworkIntentLauncher =
@@ -169,9 +170,6 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                                 intent.putExtra(EnergyModeConfirmationActivity.EXTRA_ENERGY_MODE_ID,
                                         getContext().getString(
                                                 R.string.energy_mode_high_identifier));
-                                intent.putExtra(
-                                        EnergyModeConfirmationActivity.EXTRA_SHOULD_ENABLE_THREAD,
-                                        true);
                                 getContext().startActivity(intent);
                             }
                         }
@@ -183,10 +181,10 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                         @Override
                         public void onActivityResult(ActivityResult result) {
                             if (result.getResultCode() == Activity.RESULT_OK) {
-                                mThreadNetworkHelperOptional.get().setEnabled(false);
+                                Optional.ofNullable(ThreadNetworkHelper.getInstance(getContext()))
+                                    .ifPresent(helper -> helper.setEnabled(false));
                                 logToggleInteracted(
                                         TvSettingsEnums.NETWORK_T_N, false);
-
                             }
                         }
                     });
@@ -205,6 +203,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     private TwoStatePreference mAlwaysScan;
     private PreferenceCategory mEthernetCategory;
     private TwoStatePreference mThreadNetworkPref;
+    private Preference mShareThreadNetworkPref;
     private Preference mEthernetStatusPref;
     private Preference mEthernetProxyPref;
     private Preference mEthernetDhcpPref;
@@ -263,6 +262,14 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mConnectivityListener.setWifiListener(this);
         mNoWifiUpdateBeforeMillis = SystemClock.elapsedRealtime() + INITIAL_UPDATE_DELAY;
         updateWifiList();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // There doesn't seem to be an API to listen to everything this could cover, so
+        // tickle it here and hope for the best.
+        updateConnectivity();
         mThreadNetworkHelperOptional.ifPresent(threadNetworkHelper ->  {
             threadNetworkHelper.registerStateCallback();
             if (mThreadNetworkPref != null) {
@@ -274,18 +281,8 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-        // There doesn't seem to be an API to listen to everything this could cover, so
-        // tickle it here and hope for the best.
-        updateConnectivity();
-    }
-
-
-    @Override
-    public void onStop() {
-        mConnectivityListener.setListener(null);
-        clearCurrentAccessPoints();
+    public void onPause() {
+        super.onPause();
         mThreadNetworkHelperOptional.ifPresent(threadNetworkHelper ->  {
             if (mThreadNetworkPref != null) {
                 mThreadNetworkPref
@@ -294,6 +291,13 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             threadNetworkHelper.unregisterStateCallback();
             threadNetworkHelper.setOnStateChangeListener(null);
         });
+    }
+
+
+    @Override
+    public void onStop() {
+        mConnectivityListener.setListener(null);
+        clearCurrentAccessPoints();
         super.onStop();
     }
 
@@ -351,6 +355,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         mAddEasyConnectPref = (RestrictedPreference) findPreference(KEY_WIFI_ADD_EASYCONNECT);
         mAlwaysScan = (TwoStatePreference) findPreference(KEY_WIFI_ALWAYS_SCAN);
         mThreadNetworkPref = (SwitchPreference) findPreference(KEY_WIFI_THREAD_NETWORK);
+        mShareThreadNetworkPref = findPreference(KEY_SHARE_THREAD_NETWORK);
 
         mEthernetCategory = (PreferenceCategory) findPreference(KEY_ETHERNET);
         mEthernetStatusPref = findPreference(KEY_ETHERNET_STATUS);
@@ -361,6 +366,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
             mEnableWifiPref.setVisible(false);
         }
         mThreadNetworkPref.setVisible(mThreadNetworkHelperOptional.isPresent());
+        updateThreadShareVisibility(mThreadNetworkPref.isChecked());
         Preference networkDiagnosticsPref = findPreference(KEY_NETWORK_DIAGNOSTICS);
         Intent networkDiagnosticsIntent = makeNetworkDiagnosticsIntent();
         if (networkDiagnosticsIntent != null) {
@@ -403,6 +409,12 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
         }
 
         updateConnectivity();
+    }
+
+    private void updateThreadShareVisibility(boolean isThreadsEnabled) {
+        mShareThreadNetworkPref.setVisible(
+                getContext().getResources().getBoolean(
+                        R.bool.config_share_thread_network_enabled) && isThreadsEnabled);
     }
 
     private Intent getRestrictWifiHookIntent(){
@@ -482,6 +494,9 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 break;
             case KEY_WIFI_ADD_EASYCONNECT:
                 startActivity(AddWifiNetworkActivity.createEasyConnectIntent(getContext()));
+                break;
+            case KEY_SHARE_THREAD_NETWORK:
+                startActivity(new Intent(getContext(), ShareThreadNetworkActivity.class));
                 break;
         }
         return super.onPreferenceTreeClick(preference);

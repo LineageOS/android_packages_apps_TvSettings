@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Iskanje je vedno na voljo, Googlova lokacijska storitev in druge aplikacije naj poiščejo omrežja, tudi če je Wi-Fi izklopljen."</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Omrežje Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Omrežje Thread lokalno poveže pametne naprave za dom s podporo za protokol Thread ter tako poveča njihovo učinkovitost in zmogljivost.\n\nKo to napravo vklopite, bo ustvarila omrežje Thread ali se mu pridružila. Poverilnice bodo zasebno naložene v oblak, da boste lažje nastavili prihodnje pametne naprave za dom.\n\nKo to napravo izklopite, ne bo več mogla komunicirati z drugimi napravami v vašem omrežju Thread. Nekatere pametne naprave za dom in storitve pametnega doma morda ne bodo delovale po pričakovanjih.\n\nPreberite več o tem na g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Deljenje poverilnic za omrežje Thread"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Delite poverilnice za omrežje Thread z drugimi napravami in poenostavite nastavitev naprave <xliff:g id="DEVICE">%1$s</xliff:g> v omrežju Thread"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Vnovično deljenje"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Koda bo potekla čez <xliff:g id="MINUTES">%1$02d</xliff:g> min in <xliff:g id="SECONDS">%2$02d</xliff:g> s"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Omrežja Thread ni bilo mogoče deliti"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Omrežje Thread je bilo uspešno deljeno"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Koda je potekla, preden je bila v omrežje Thread dodana katera koli naprava"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Ali želite izklopiti omrežje Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Če jih izklopite, nekatere pametne naprave za dom in storitve pametnega doma morda ne bodo delovale po pričakovanjih. Ali želite nadaljevati?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Spremenite način porabe energije, če želite omogočiti omrežje Thread"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos s tehnologijo Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Če želite omogočiti prostorski zvok, odprite »Nastavitve« &gt; »Daljinski upravljalniki in dodatna oprema« &gt; »Nastavitev gumbov daljinskega upravljalnika« &gt; »Nadziranje glasnosti« in nato izberite možnost, ki ni ta naprava."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Opomba: nastavitev »Samodejno« morda ne deluje, če naprava neustrezno sporoča podprte oblike zvoka."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Samodejno"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Omogoči vse podprte oblike"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"S tem se izbrišejo podatki za povezavo s tem omrežjem, vključno s shranjenim geslom"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Pridružite se omrežju Wi-Fi, tako da optično preberete kodo QR iz mobilnega telefona in upoštevate navodila.\n \n V "<b>"telefonu Android"</b>" odprite »Nastavitve -&gt; Omrežje in internet -&gt; Wi-Fi -&gt; Izberite omrežje Wi-Fi -&gt; Dodatno -&gt; Dodajanje naprave« in nato optično preberite kodo QR."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Pritisnite gumb za nazaj, če želite preklicati."</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Uporaba poverilnic za omrežje Thread za nastavitev naprave"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Če želite dodati napravo v omrežje Thread, optično preberite kodo QR v aplikaciji naprave. Zaradi varnosti bo koda potekla čez <xliff:g id="MINUTES">%1$s</xliff:g> min."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"V redu"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Naprej"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Zamenjava omrežja"</string>
@@ -838,8 +848,8 @@
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"Prikaži sloj strojne opreme"</string>
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"Prikaži prepisovanje GPE"</string>
     <string name="system_show_surface_updates" msgid="7680759813613585278">"Prikaži posodobitve površine"</string>
-    <string name="system_window_animation_scale" msgid="685477540250939659">"Merilo animacije okna"</string>
-    <string name="system_transition_animation_scale" msgid="7266380208347453619">"Merilo animacije prehoda"</string>
+    <string name="system_window_animation_scale" msgid="685477540250939659">"Hitrost animacije okna"</string>
+    <string name="system_transition_animation_scale" msgid="7266380208347453619">"Hitrost animacije prehoda"</string>
     <string name="system_animator_duration_scale" msgid="3829445237130423625">"Merilo trajanja animacije"</string>
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"Strog način je omogočen"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Upodobitev profilov z GPE-jem"</string>
@@ -876,12 +886,12 @@
     <string name="enable_opengl_traces_none" msgid="4718084947494592040">"Brez"</string>
   <string-array name="animation_scale_entries">
     <item msgid="5408992662476056082">"Animacija izklopljena"</item>
-    <item msgid="6818290063799857019">"Merilo animacije: 0,5 x"</item>
-    <item msgid="8257959452691080724">"Merilo animacije: 1 x"</item>
-    <item msgid="4781052272686018414">"Merilo animacije: 1,5 x"</item>
-    <item msgid="2272016945160227610">"Merilo animacije: 2 x"</item>
-    <item msgid="5015441793276576312">"Merilo animacije: 5 x"</item>
-    <item msgid="1290233583371556415">"Merilo animacije: 10 x"</item>
+    <item msgid="6818290063799857019">"Hitrost animacije: 0,5 x"</item>
+    <item msgid="8257959452691080724">"Hitrost animacije: 1 x"</item>
+    <item msgid="4781052272686018414">"Hitrost animacije: 1,5 x"</item>
+    <item msgid="2272016945160227610">"Hitrost animacije: 2 x"</item>
+    <item msgid="5015441793276576312">"Hitrost animacije: 5 x"</item>
+    <item msgid="1290233583371556415">"Hitrost animacije: 10 x"</item>
   </string-array>
     <string name="track_frame_time_off" msgid="8845064783618702239">"Izklopljeno"</string>
     <string name="track_frame_time_bars" msgid="5841531515222229632">"Na zaslonu kot vrstice"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Omogoči ANGLE kot privzeti gonilnik OpenGL ES"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Preizkusno, zahteva vnovični zagon."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Če želite spremeniti sistemski gonilnik OpenGL ES, morate znova zagnati napravo"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

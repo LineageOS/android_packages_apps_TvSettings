@@ -22,30 +22,14 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical">
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <com.android.tv.twopanelsettings.QrCodeView
+        android:id="@+id/setup_qrcode_view"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
         android:layout_marginBottom="40dp"
         android:layout_marginStart="40dp"
         app:layout_constraintStart_toEndOf="@id/setup_qrcode_guideline"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/setup_qrcode_view"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
-            android:src="@android:color/transparent" />
-
-        <ProgressBar
-            android:id="@+id/setup_qrcode_progress"
-            style="@android:style/Widget.Material.Light.ProgressBar.Large"
-            android:layout_width="@dimen/setup_progress_spinner_size"
-            android:layout_height="@dimen/setup_progress_spinner_size"
-            android:layout_gravity="center"
-            android:indeterminate="true"
-            android:indeterminateTint="@color/setup_list_item_background_focused"
-            android:indeterminateTintMode="src_in" />
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="0dp"

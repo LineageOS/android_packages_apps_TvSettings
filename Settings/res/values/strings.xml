@@ -199,6 +199,7 @@
         for networks, even when Wi-Fi is off</string>
     <!-- Title for thread network. [CHAR LIMIT=50] -->
     <string name="wifi_setting_thread_network">Thread network</string>
+
     <!-- Thread network description [CHAR LIMIT=NONE] -->
     <string name="wifi_setting_thread_network_context">Thread network locally connects
         Thread-enabled smart home devices, boosting efficiency and performance.\n\nWhen turned on,
@@ -208,6 +209,34 @@
         Certain smart home devices and services may not work as expected.\n\nLearn more at
         g.co/tv/thread
     </string>
+
+    <!-- Preference to share thread network credentials [CHAR LIMIT=50]. -->
+    <string name="share_thread_network">Share Thread network credentials</string>
+    <!-- Description of thread network credentials sharing [CHAR_LIMIT=NONE]. -->
+    <string name="share_thread_network_description">
+        Share Thread network credentials with other devices to simplify setup on your
+        <xliff:g id="device" example="Google TV Streamer">%1$s</xliff:g> Thread network
+    </string>
+
+    <!-- Label for action to share thread network again [CHAR LIMIT=50] -->
+    <string name="thread_network_share_again">Share again</string>
+
+    <!-- Count down timer for expiration of thread network sharing QR code. [CHAR_LIMIT=50] -->
+    <string name="share_thread_network_countdown">
+        Code will expire in
+        <xliff:g id="minutes" example="02">%1$02d</xliff:g>m
+        <xliff:g id="seconds" example="32">%2$02d</xliff:g>s
+    </string>
+
+    <!-- Message displayed when thread network couldn't be shared [CHAR LIMIT=80]. -->
+    <string name="thread_network_sharing_failed">Couldn’t share thread network</string>
+
+    <!-- Message displayed when thread network is shared successfully [CHAR LIMIT=80]. -->
+    <string name="thread_network_sharing_success">Thread network shared successfully</string>
+
+    <!-- Message displayed when thread network sharing code expires without any devices added [CHAR LIMIT=80]. -->
+    <string name="thread_network_sharing_timeout">Code expired before any device was added to thread network</string>
+
     <!-- Thread network confirmation title in dialog to turn off thread
          network [CHAR LIMIT=NONE] -->
     <string name="wifi_settings_thread_network_confirmation_title">Turn off Thread Network?</string>
@@ -320,7 +349,11 @@
     <string name="surround_sound_format_e_ac3_joc">Dolby Atmos with Dolby Digital Plus</string>
     <!-- Name of the Dynamic Resolution Adaption sound format that is displayed to the user [CHAR LIMIT=50] -->
     <string name="surround_sound_format_dra">DRA</string>
-
+    <!-- Summary when surround sound is disabled because of variable volume control.
+        [CHAR LIMIT=300] -->
+    <string name="surround_sound_variable_volume_control_summary">To enable surround sound, go to
+        Settings &gt; Remotes &amp; Accessories &gt; Set up remote buttons &gt; Volume control and
+        then select an option other than this device.</string>
     <!-- An informational message displayed in the surround sound settings, explaining to the
         user that the auto setting may sometimes cause issues. [CHAR LIMIT=135]-->
     <string name="surround_sound_auto_info">Note: The Automatic option may not work if your device
@@ -1275,6 +1308,14 @@
     </string>
     <!-- Description for action to scan a QR code [CHAR LIMIT=300] -->
     <string name="wifi_scan_qr_code_back_description">Press the back button to cancel</string>
+
+    <!-- Title of the screen to share thread credentials through QR code [CHAR LIMIT=80]. -->
+    <string name="share_thread_title">Use Thread credentials to set up a device</string>
+    <!-- Description of the screen to share thread credentials through QR code [CHAR LIMIT=NONE]. -->
+    <string name="share_thread_description">
+        To add a device to your Thread network, scan this QR code in the device’s app. For security,
+        the code will expire in <xliff:g id="minutes" example="3">%1$s</xliff:g> minutes.</string>
+
     <!-- Label for action to accept the currently connected wifi network [CHAR LIMIT=50] -->
     <string name="wifi_action_ok">OK</string>
     <!-- Label for action to continue in network summary screen in setup [CHAR LIMIT=50] -->
@@ -2924,4 +2965,10 @@
     <!--Dialog body text used to explain a reboot is required after changing ANGLE as system GLES driver setting-->
     <string name="reboot_dialog_enable_angle_as_system_driver">A reboot is required to change the system OpenGL ES driver</string>
 
+    <string name="device_serial_number_slice_uri" translatable="false"/>
+    <!-- Slice uri for HW Revision -->
+    <string name="hw_revison_slice_uri" translatable="false"/>
+
+    <!-- ComponentName for the LetterboxWallpapers component that TvSettings uses to identify the "Accessibility > Letterbox wallpapers" entry -->
+    <string name="accessibility_letterbox_wallpapers_component_name"></string>
 </resources>

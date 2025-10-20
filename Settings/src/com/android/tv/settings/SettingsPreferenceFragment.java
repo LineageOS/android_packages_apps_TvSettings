@@ -58,6 +58,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.preference.PreferenceCategory;
+import android.provider.Settings;
 
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.core.lifecycle.events.OnCreate;
@@ -103,6 +104,8 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
     };
 
     @Nullable private SliceShard mSliceShard;
+    private boolean mIsAccessibilityEnabled;
+    private PreferenceGroupAdapter mPreferenceGroupAdapter;
 
     // Rename getLifecycle() to getSettingsLifecycle() as androidx Fragment has already implemented
     // getLifecycle(), overriding here would cause unexpected crash in framework.
@@ -127,6 +130,9 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
         super.onActivityCreated(savedInstanceState);
         if (savedInstanceState != null && mSliceShard != null) {
             mSliceShard.onRestoreInstanceState(savedInstanceState);
+        }
+        if (FlavorUtils.isTwoPanel(getContext())) {
+            mIsAccessibilityEnabled = getA11yState();
         }
     }
 
@@ -302,7 +308,7 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
 
     @Override
     protected RecyclerView.Adapter onCreateAdapter(PreferenceScreen preferenceScreen) {
-        return new PreferenceGroupAdapter(preferenceScreen) {
+        mPreferenceGroupAdapter = new PreferenceGroupAdapter(preferenceScreen) {
             @Override
             @NonNull
             public PreferenceViewHolder onCreateViewHolder(@NonNull ViewGroup parent,
@@ -332,6 +338,7 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
                 return vh;
             }
         };
+        return mPreferenceGroupAdapter;
     }
 
     @Override
@@ -355,6 +362,10 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
     public void onStart() {
         mLifecycle.handleLifecycleEvent(ON_START);
         super.onStart();
+        if (FlavorUtils.isTwoPanel(getContext()) && mIsAccessibilityEnabled != getA11yState()) {
+            mIsAccessibilityEnabled = getA11yState();
+            mPreferenceGroupAdapter.notifyDataSetChanged();
+        }
     }
 
     @CallSuper
@@ -436,7 +447,23 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
 
         if (FlavorUtils.isTwoPanel(getContext()) && recyclerView != null && getContext() != null) {
             recyclerView.addItemDecoration(new FirstCategoryNoPaddingDecoration(requireContext()));
+
+
+            recyclerView.addOnChildAttachStateChangeListener(
+                new RecyclerView.OnChildAttachStateChangeListener() {
+                @Override
+                public void onChildViewAttachedToWindow(@NonNull View view) {
+                    if (mIsAccessibilityEnabled) {
+                        view.setFocusable(true);
+                    }
+                }
+
+                @Override
+                public void onChildViewDetachedFromWindow(@NonNull View view) {
+                }
+            });
         }
+
 
         return recyclerView;
     }
@@ -490,5 +517,14 @@ public abstract class SettingsPreferenceFragment extends InstrumentedPreferenceF
         return buttonState == MotionEvent.BUTTON_PRIMARY
                 || buttonState == MotionEvent.BUTTON_STYLUS_PRIMARY
                 || buttonState == 0;  // motion events which creates by UI Automator
+    }
+
+    private boolean getA11yState() {
+        if (getActivity() == null) {
+            return false;
+        }
+        return Settings.Secure.getInt(
+                getActivity().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_ENABLED, 0) == 1;
     }
 }

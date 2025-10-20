@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Leit alltaf í boði, leyfa staðsetningarþjónustu Google og öðrum forritum að leita að Wi-Fi neti, jafnvel þegar slökkt er á Wi-Fi"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread-netkerfi"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread-netkerfið tengir snjallheimilistæki sem eru með kveikt á Thread staðbundið, sem eykur bæði skilvirkni og afköst.\n\nÞegar kveikt er á þessu mun tækið búa til eða tengjast Thread-netinu þínu. Skilríkjum verður hlaðið upp í skýið þannig að aðeins þú hafir aðgang að þeim til að auðvelda þér uppsetningu snjallheimilistækja í framtíðinni.\n\nÞegar slökkt er á þessu tæki mun það ekki lengur geta átt í samskiptum við önnur tæki á Thread-netkerfinu. Hugsanlegt er að viss snjallheimilistæki og -þjónustur virki ekki eins og reiknað er með.\n\nNánar á at g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Deila innskráningarupplýsingum Thread-nets"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Deildu innskráningarupplýsingum Thread-nets með öðrum tækjum til að einfalda uppsetningu á Thread-netinu í <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Deila aftur"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Kóðinn rennur út eftir <xliff:g id="MINUTES">%1$02d</xliff:g> mín. og <xliff:g id="SECONDS">%2$02d</xliff:g> sek."</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Ekki tókst að deila Thread-neti"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Thread-neti var deilt"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Kóðinn rann út áður en náðist að bæta tæki við Thread-net"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Slökkva á Thread-netkerfi?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Ef þú slekkur munu viss snjallheimilistæki og -þjónustur hugsanlega ekki virka eins og reiknað er með. Viltu halda áfram?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Breyttu orkustillingu til að kveikja á Thread"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos með Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Farðu í „Stillingar &gt; Fjarstýringar &amp; Aukahlutir &gt; Setja upp hnappa á fjarstýringu &gt; Hljóðstyrksstýring“ og veldu annan valkost en þetta tæki til að kveikja á víðóma hljóði."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Ath.: „Sjálfvirkt“ virkar mögulega ekki ef tækið veitir ekki réttar upplýsingar um studd snið."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Sjálfvirkt"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Kveikja á öllum studdum sniðum"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Þetta hreinsar upplýsingar sem notaðar eru til að tengjast þessu neti, þar á meðal vistað aðgangsorð"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Tengstu Wi-Fi með því að skanna QR-kóðann í snjallsímanum og fylgja leiðbeiningunum.\n \n Í "<b>"Android síma"</b>" skaltu opna „Stillingar -&gt; Netkerfi og internet -&gt; Wi-Fi -&gt; Velja Wi-Fi -&gt; Ítarlegt -&gt; Bæta við tæki“ og skanna svo QR-kóðann."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Ýttu á bakkhnappinn til að hætta við"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Nota innskráningarupplýsingar Thread-nets til að setja tæki upp"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Til að bæta tæki við Thread-net skaltu skanna þennan QR-kóða í forritinu í tækinu. Í öryggisskyni rennur kóðinn út eftir <xliff:g id="MINUTES">%1$s</xliff:g> mínútur."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"Í lagi"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Áfram"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Skipta um netkerfi"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Virkja ANGLE sem sjálfgefinn OpenGL ES-rekil"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Á tilraunastigi, krefst endurræsingar."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Endurræsingar er krafist til að skipta um OpenGL ES-rekil kerfis"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

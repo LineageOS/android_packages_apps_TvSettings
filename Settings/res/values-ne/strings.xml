@@ -28,8 +28,8 @@
     <string name="action_off_description" msgid="1368039592272701910">"बन्द गर्नुहोस्"</string>
     <string name="agree" msgid="8155497436593889753">"सहमत"</string>
     <string name="disagree" msgid="7402998517682194430">"असहमत"</string>
-    <string name="enabled" msgid="5127188665060746381">"सक्षम पारिएको छ"</string>
-    <string name="disabled" msgid="4589065923272201387">"असक्षम पारिएको छ"</string>
+    <string name="enabled" msgid="5127188665060746381">"अन गरिएको छ"</string>
+    <string name="disabled" msgid="4589065923272201387">"अफ गरिएको छ"</string>
     <string name="unavailable" msgid="1610732303812180196">"उपलब्ध छैन"</string>
     <string name="allow" msgid="6982558814345894019">"अनुमति दिनुहोस्"</string>
     <string name="deny" msgid="8291577308813053917">"अस्वीकार गर्नुहोस्"</string>
@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"नेटवर्क खोज्ने सुविधा सधैँ उपलब्ध हुन्छ, Google को लोकेसन सर्भिस र अन्य एपहरूलाई Wi-Fi नेटवर्क खोज्न दिनुहोस्। ती सेवाले Wi-Fi अफ भएका बेलामा पनि नेटवर्क खोज्न सक्छन्"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"थ्रेड नेटवर्क"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"थ्रेड अन गरिएका स्मार्ट होम डिभाइसहरूको प्रभावकारिता र पर्फर्मेन्स बढाउने प्रयोजनका लागि थ्रेड नेटवर्कले ती डिभाइसहरू स्थानीय रूपमा कनेक्ट गर्छ।\n\nथ्रेड नेटवर्क अन गरिएका बेला यो डिभाइसले थ्रेड नेटवर्क बनाउने छ वा यो डिभाइस तपाईंको थ्रेड नेटवर्कमा सामेल हुने छ। तपाईं भविष्यमा आफ्ना स्मार्ट होम डिभाइसहरू सजिलै सेटअप गर्न सक्नुहोस् भन्नाका लागि क्रिडेन्सियलहरू क्लाउडमा गोप्य रूपमा अपलोड गरिने छन्।\n\nथ्रेड नेटवर्क अफ गरिएका बेला यो डिभाइसले तपाईंको थ्रेड नेटवर्कमा सामेल भएका अन्य डिभाइससँग कनेक्ट गर्न सक्ने छैन। निश्चित स्मार्ट होम डिभाइस र सेवाहरूले अपेक्षा गरेअनुसार काम नगर्न सक्छन्।\n\ng.co/tv/thread मा गई थप जान्नुहोस्"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"थ्रेड नेटवर्क क्रिडेन्सियलहरू सेयर गर्नुहोस्"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"आफ्नो <xliff:g id="DEVICE">%1$s</xliff:g> थ्रेड नेटवर्कमा सेटअप प्रक्रिया सरल बनाउन अन्य डिभाइसहरूमा थ्रेड नेटवर्क क्रिडेन्सियलहरू सेयर गर्नुहोस्"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"फेरि सेयर गर्नुहोस्"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"यो कोडको म्याद <xliff:g id="MINUTES">%1$02d</xliff:g> मिनेट <xliff:g id="SECONDS">%2$02d</xliff:g> सेकेन्डमा सकिने छ"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"थ्रेड नेटवर्क सेयर गर्न सकिएन"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"थ्रेड नेटवर्क सेयर गरियो"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"थ्रेड नेटवर्कमा कुनै पनि डिभाइस हाल्नुअघि नै कोडको म्याद सकियो"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"थ्रेड नेटवर्क अफ गर्ने हो?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"थ्रेड नेटवर्क अफ गरिएका खण्डमा निश्चित स्मार्ट होम डिभाइस र सेवाहरूले अपेक्षा गरेअनुसार काम नगर्न सक्छन्। तपाईं अघि बढ्न चाहनुहुन्छ?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"थ्रेड अन गर्न ऊर्जा खपत गर्ने मोड परिवर्तन गर्नुहोस्"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"\'Dolby Digital Plus सहितको Dolby Atmos\' साउन्ड फर्म्याट"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"सराउन्ड साउन्ड अन गर्न \"सेटिङ &gt; रिमोट &amp; एक्सेसरिज &gt; रिमोटका बटनहरू सेटअप गर्नुहोस् &gt; भोल्युम कन्ट्रोल\" मा जानुहोस् अनि त्यसपछि यो डिभाइसबाहेकको कुनै एउटा विकल्प चयन गर्नुहोस्।"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"नोट: तपाईंको यन्त्रले प्रयोग गर्न मिल्ने फर्म्याटबारे सही तरिकाले रिपोर्ट नगरेका खण्डमा स्वतः काम गर्ने विकल्पले काम नगर्न सक्छ।"</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"स्वचालित"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"प्रयोग गर्न मिल्ने सबै फर्म्याटहरू अन गर्नुहोस्"</string>
@@ -317,7 +325,7 @@
     <string name="disabled_by_administrator_summary" msgid="3420979957115426764">"उपलब्ध छैन"</string>
     <string name="manage_device_admin" msgid="2719119510627926381">"डिभाइसका एड्मिन"</string>
     <string name="number_of_device_admins_none" msgid="2734299122299837459">"कुनै सक्रिय एपहरू छैनन्"</string>
-    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"प्रशासक, इन्क्रिप्सन नीति वा प्रामाणिक भण्डारणद्वारा असक्षम पारिएको छ"</string>
+    <string name="unlock_set_unlock_disabled_summary" msgid="108190334043671416">"प्रशासक, इन्क्रिप्सन नीति वा प्रामाणिक भण्डारणद्वारा अफ गरिएको छ"</string>
     <string name="enterprise_privacy_settings" msgid="8226765895133003202">"व्यवस्थित गरिएको यन्त्रको जानकारी"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5719549523275019419">"तपाईंको संगठनले व्यवस्थापन गरेका परिवर्तन र सेटिङहरू"</string>
     <string name="enterprise_privacy_settings_summary_with_name" msgid="2866704039759872293">"<xliff:g id="ORGANIZATION_NAME">%s</xliff:g> ले व्यवस्थापन गरेका परिवर्तन र सेटिङहरू  "</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"यसले यो नेटवर्कमा सुरक्षित भएका पासवर्ड सहित जडान गर्न प्रयोग हुने जानकरीलाई क्लियर गर्दछ।"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" कुनै मोबाइल फोनमार्फत QR कोड स्क्यान गरेर उक्त फोन Wi-Fi मा कनेक्ट गर्नुहोस् अनि दिइएका निर्देशनहरूको पालना गर्नुहोस्।\n \n"<b>"Android फोन"</b>" प्रयोग गरी \'सेटिङ -&gt; नेटवर्क तथा इन्टरनेट -&gt; Wi-Fi -&gt; Wi-Fi नेटवर्क चयन गर्नुहोस् -&gt; उन्नत -&gt; डिभाइस थप्नुहोस्\' मा जानुहोस् अनि QR कोड स्क्यान गर्नुहोस्।"</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"रद्द गर्न \'पछाडि\' बटन थिच्नुहोस्"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"कुनै डिभाइस सेटअप गर्न थ्रेड क्रिडेन्सियलहरू प्रयोग गर्नुहोस्"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"आफ्नो थ्रेड नेटवर्कमा कुनै डिभाइस हाल्न उक्त डिभाइसको एप खोलेर यो QR कोड स्क्यान गर्नुहोस्। सुरक्षासम्बन्धी कारणहरूले गर्दा यो कोडको म्याद <xliff:g id="MINUTES">%1$s</xliff:g> मिनेटमा सकिने छ।"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ठिक छ"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"जारी राख्नुहोस्"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"नेटवर्क बदल्नुहोस्"</string>
@@ -839,12 +849,12 @@
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"GPU ओभरड्र देखाउनुहोस्"</string>
     <string name="system_show_surface_updates" msgid="7680759813613585278">"सर्फेस अपडेट देखाउनुहोस्"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"विन्डो एनिमेसन स्केल"</string>
-    <string name="system_transition_animation_scale" msgid="7266380208347453619">"संक्रमण एनिमेसन स्केल"</string>
+    <string name="system_transition_animation_scale" msgid="7266380208347453619">"ट्रान्जिसन एनिमेसन स्केल"</string>
     <string name="system_animator_duration_scale" msgid="3829445237130423625">"एनिमेसनको अवधि मापन"</string>
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"स्ट्रिक्ट मोड अन गर्नुहोस्"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"प्रोफाइल GPU रेन्डर गर्दै"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"ट्रेस सक्षम पार्नुहोस्"</string>
-    <string name="system_dont_keep_activities" msgid="4641165963339846161">"गतिविधि जारी नराख्नुहोस्"</string>
+    <string name="system_dont_keep_activities" msgid="4641165963339846161">"गतिविधि नराख्नुहोस्"</string>
     <string name="system_background_process_limit" msgid="1985373407150771045">"ब्याकग्राउन्ड प्रक्रियाको सीमा"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"सबै ANRs देखाउनुहोस्"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"स्वप्न मोड अक्षम पार्नुहोस्"</string>
@@ -855,7 +865,7 @@
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"डिबग भएको एप चल्नुअघि डिबगरलाई पर्खिन्छ"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"क्लिप सीमा, मार्जिन, इत्यादि देखाउनुहोस्।"</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"GPU को साथ कोरिएको बेला विन्डोहरू भित्र फ्ल्यास दृश्यहरू"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"हार्डवेयर लेयर अपडेट हुँदा ती लेयर हरिया देखिऊन्"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"हार्डवेयर लेयर अपडेट हुँदा ती लेयर हरिया देखाउनुहोस्"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"सबभन्दा राम्रादेखि खराबसम्म: निलो, हरियो, हल्का रातो, रातो"</string>
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"अपडेट हुँदा विन्डोका पूरै सतहमा देखाउनुहोस्"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"एपले मुख्य थ्रेडमा लामा गतिविधि गर्दा स्क्रिन फ्ल्यास गर्नुहोस्"</string>
@@ -1103,8 +1113,8 @@
     <string name="write_settings_on" msgid="71675710746513956">"छ"</string>
     <string name="write_settings_off" msgid="6730113471695092167">"छैन"</string>
     <string name="manage_external_storage_title" msgid="8139593207533811077">"सबै फाइल हेर्ने तथा प्रयोग गर्ने अनुमति"</string>
-    <string name="permit_manage_external_storage" msgid="1776899171934627417">"सबै फाइलहरूको व्यवस्थापन गर्ने अनुमति दिनुहोस्"</string>
-    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"यो एपलाई यो डिभाइस वा जोडिएको कुनै भण्डारणमा रहेका सबै फाइलहरू पढ्ने, परिमार्जन गर्ने तथा मेट्ने अनुमति दिनुहोस्। अनुमति दिइएका खण्डमा यो एपले तपाईंको स्पष्ट अनुमतिविनै फाइलहरू प्रयोग गर्नसक्छ।"</string>
+    <string name="permit_manage_external_storage" msgid="1776899171934627417">"सबै फाइलहरू व्यवस्थापन गर्ने एक्सेस दिनुहोस्"</string>
+    <string name="allow_manage_external_storage_description" msgid="4288250228151617611">"यो एपलाई यो डिभाइस वा जोडिएको कुनै भण्डारणमा रहेका सबै फाइलहरू पढ्ने, परिमार्जन गर्ने तथा मेट्ने अनुमति दिनुहोस्। अनुमति दिइएका खण्डमा यो एपले तपाईंको स्पष्ट अनुमतिविनै फाइलहरू एक्सेस गर्नसक्छ।"</string>
     <string name="picture_in_picture_title" msgid="2636935591386702348">"Picture-in-picture"</string>
     <string name="picture_in_picture_app_detail_switch" msgid="3688997906817583854">"Picture-in-picture लाई अनुमति दिनुहोस्"</string>
     <string name="picture_in_picture_empty_text" msgid="4370198922852736600">"स्थापना गरिएको कुनै पनि एपले Picture-in-picture मोडलाई समर्थन गर्दैन"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"ANGLE लाई डिफल्ट OpenGL ES ड्राइभर बनाउनुहोस्"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"परीक्षणका क्रममा रहेको छ, रिबुट गर्नु पर्ने हुन्छ।"</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"सिस्टम OpenGL ES ड्राइभर बदल्न रिबुट गर्नु पर्ने हुन्छ"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

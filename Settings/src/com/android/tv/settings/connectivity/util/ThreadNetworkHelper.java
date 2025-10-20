@@ -23,6 +23,7 @@ import android.net.thread.ThreadNetworkException;
 import android.net.thread.ThreadNetworkManager;
 import android.os.OutcomeReceiver;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.concurrent.Executor;
 /**
@@ -72,18 +73,32 @@ public class ThreadNetworkHelper {
 
     private ThreadNetworkController.StateCallback getStateCallback() {
         return new ThreadNetworkController.StateCallback() {
-            @Override
-            public void onDeviceRoleChanged(int i) {
+            boolean isEnabled;
+            boolean isAttached;
 
+            @Override
+            public void onDeviceRoleChanged(int deviceRole) {
+                if (mOnStateChangeListener != null) {
+                    isAttached = ThreadNetworkController.isAttached(deviceRole);
+                    mOnStateChangeListener.isAttached(isEnabled && isAttached);
+                }
             }
 
             @Override
             public void onThreadEnableStateChanged(int enabledState) {
                 // There might be race condition when listener is detached so check
                 // if listener is available
+                isEnabled = enabledState == ThreadNetworkController.STATE_ENABLED;
                 if (mOnStateChangeListener != null) {
-                    mOnStateChangeListener.isEnabled(
-                            enabledState == ThreadNetworkController.STATE_ENABLED);
+                    mOnStateChangeListener.isEnabled(isEnabled);
+                    mOnStateChangeListener.isAttached(isEnabled && isAttached);
+                }
+            }
+
+            @Override
+            public void onEphemeralKeyStateChanged(int state, String key, Instant expiry) {
+                if (mOnStateChangeListener != null) {
+                    mOnStateChangeListener.onEphemeralKeyStateChanged(state, key, expiry);
                 }
             }
         };
@@ -109,8 +124,32 @@ public class ThreadNetworkHelper {
         this.mOnStateChangeListener = onStateChangeListener;
     }
 
+    public void deactivateEphimeralKeyCode(OutcomeReceiver<Void, ThreadNetworkException> receiver) {
+        mThreadNetworkController.deactivateEphemeralKeyMode(mExecutor, receiver);
+    }
+
+    public void activateEphimeralKeyMode(
+            java.time.Duration timeout, OutcomeReceiver<Void, ThreadNetworkException> receiver) {
+        deactivateEphimeralKeyCode(
+                new OutcomeReceiver<>() {
+                    @Override
+                    public void onResult(Void result) {
+                        mThreadNetworkController.activateEphemeralKeyMode(
+                                timeout, mExecutor, receiver);
+                    }
+
+                    @Override
+                    public void onError(ThreadNetworkException error) {
+                        mThreadNetworkController.activateEphemeralKeyMode(
+                                timeout, mExecutor, receiver);
+                    }
+                });
+    }
+
     /** Listener to notify state of Thread Network */
     public interface OnStateChangeListener {
-        void isEnabled(boolean enabled);
+        default void isEnabled(boolean enabled) {}
+        default void isAttached(boolean isAttached) {}
+        default void onEphemeralKeyStateChanged(int state, String key, Instant expiry) {}
     }
 }

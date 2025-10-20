@@ -94,11 +94,18 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"எப்போதும் ஸ்கேன் செய்தல், வைஃபை ஆஃபில் இருந்தாலும்கூட Googleளின் இருப்பிடச் சேவையையும் பிற ஆப்ஸையும் நெட்வொர்க்குகளை ஸ்கேன் செய்ய அனுமதிக்கும்"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread நெட்வொர்க்"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread நெட்வொர்க், Thread இணக்கமான ஸ்மார்ட் வீட்டுச் சாதனங்களை வீட்டு நெட்வொர்க் மூலம் இணைத்து செயல்திறனை மேம்படுத்துகிறது.\n\nஇயக்கப்பட்டிருக்கும்போது, இந்தச் சாதனம் உங்கள் Thread நெட்வொர்க்கை உருவாக்கும் அல்லது அதில் சேரும். எதிர்காலத்தில் உங்கள் ஸ்மார்ட் வீட்டுச் சாதனங்களை எளிதாக அமைக்க அனுமதிச் சான்றுகள் கிளவுடில் தனிப்பட்ட முறையில் பதிவேற்றப்படும்.\n\nமுடக்கப்பட்டிருக்கும்போது, இனி இந்தச் சாதனத்தால் Thread நெட்வொர்க்கில் உள்ள பிற சாதனங்களைத் தொடர்புகொள்ள முடியாது. குறிப்பிட்ட ஸ்மார்ட் வீட்டுச் சாதனங்களும் சேவைகளும் எதிர்பார்த்தபடி செயல்படாமல் போகக்கூடும்.\n\ng.co/tv/thread பக்கத்தில் மேலும் அறிந்துகொள்ளுங்கள்"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Thread நெட்வொர்க் அனுமதிச் சான்றுகளைப் பகிர்தல்"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"உங்கள் <xliff:g id="DEVICE">%1$s</xliff:g> Thread நெட்வொர்க்கில் அமைவை எளிதாக்க, Thread நெட்வொர்க் அனுமதிச் சான்றுகளை மற்ற சாதனங்களுடன் பகிரும்"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"மீண்டும் பகிர்"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"<xliff:g id="MINUTES">%1$02d</xliff:g> நிமிடம் <xliff:g id="SECONDS">%2$02d</xliff:g> வினாடியில் குறியீடு காலாவதியாகிவிடும்"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Thread நெட்வொர்க்கைப் பகிர முடியவில்லை"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Thread நெட்வொர்க் பகிரப்பட்டது"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Thread நெட்வொர்க்கில் எந்தச் சாதனமும் சேர்க்கப்படும் முன் குறியீடு காலாவதியானது"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread நெட்வொர்க்கை முடக்கவா?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"முடக்கினால், குறிப்பிட்ட ஸ்மார்ட் வீட்டுச் சாதனங்களும் சேவைகளும் எதிர்பார்த்தபடி செயல்படாமல் போகக்கூடும். தொடர விரும்புகிறீர்களா?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Threadடை ஆன் செய்ய ஆற்றல் பயன்முறையை மாற்றுங்கள்"</string>
     <string name="wifi_settings_thread_network_energy_message" msgid="7477427790762655635">"Thread நெட்வொர்க்கை உருவாக்க/ஏற்கெனவே உள்ள உங்கள் நெட்வொர்க்கில் சேரவும் உங்கள் ஸ்மார்ட் வீட்டுச் சாதனங்களைத் திறம்பட இணைக்கவும் இந்த டிவியை அனுமதிக்க இதற்கு அதிகரிக்கப்பட்ட ஆற்றல் பயன்முறை தேவை."</string>
-    <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"முடக்கு"</string>
+    <string name="wifi_settings_thread_network_confirmation_button_confirm" msgid="416625941953731814">"ஆஃப் செய்"</string>
     <string name="wifi_settings_thread_network_button_change_energy_mode" msgid="7589960989646073422">"அதிகரிக்கப்பட்ட ஆற்றல் பயன்முறைக்கு மாற்றவும்"</string>
     <string name="wifi_setting_enable_wifi" msgid="5276730445393952969">"வைஃபை"</string>
     <string name="connectivity_hint_message" msgid="5638304246522516583">"நெட்வொர்க்குடன் இணைக்கும்"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plusஸுடன் கூடிய Dolby Atmos"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"சரவுண்ட் சவுண்டை இயக்க, அமைப்புகள் &gt; ரிமோட்கள் &amp; துணைக்கருவிகள் &gt; ரிமோட் பட்டன்களை அமைத்தல் &gt; ஒலியளவுக் கட்டுப்பாடு என்பதற்குச் சென்று இந்தச் சாதனமின்றி வேறு சாதனத்தைத் தேர்ந்தெடுக்கவும்."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"குறிப்பு: ஆதரிக்கும் வடிவங்களை சாதனம் சரியாக குறிப்பிடவில்லை எனில், \'தானியங்கு\' செயல்படாமல் போகலாம்."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"தானியங்கு"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"ஆதரிக்கப்படும் அனைத்து வடிவமைப்புகளையும் இயக்கும்"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"சேமித்த கடவுச்சொல் உள்ளிட்ட இந்த நெட்வொர்க்குடன் இணைக்கப் பயன்படுத்திய தகவலை இது அழிக்கிறது"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" மொபைலில் QR குறியீட்டை ஸ்கேன் செய்து வழிமுறைகளைப் பின்பற்றுவதன் மூலம் வைஃபையில் இணையலாம்.\n \n "<b>"Android மொபைலில்"</b>" அமைப்புகள் -&gt; நெட்வொர்க் &amp; இணையம் -&gt; வைஃபை -&gt; என்பதற்குச் சென்று, வைஃபை -&gt; மேம்பட்டவை -&gt; என்பதைத் தேர்ந்தெடுத்து, சாதனத்தைச் சேர்த்து QR குறியீட்டை ஸ்கேன் செய்யுங்கள்."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"ரத்துசெய்ய \'பின்செல்\' பட்டனை அழுத்தவும்"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"சாதனத்தை அமைக்க Thread அனுமதிச் சான்றுகளைப் பயன்படுத்துங்கள்"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"உங்கள் Thread நெட்வொர்க்கில் ஒரு சாதனத்தைச் சேர்க்க, சாதனத்தின் ஆப்ஸில் இந்த QR குறியீட்டை ஸ்கேன் செய்யவும். பாதுகாப்பிற்காக, இந்தக் குறியீடு <xliff:g id="MINUTES">%1$s</xliff:g> நிமிடங்களில் காலாவதியாகிவிடும்."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"சரி"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"தொடர்க"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"நெட்வொர்க்கை மாற்று"</string>
@@ -832,12 +842,12 @@
     <string name="system_wifi_verbose_logging" msgid="3097788974146704831">"வைஃபை அதிவிவர நுழைவு"</string>
     <string name="system_desc_wifi_verbose_logging" msgid="3537578245428327314">"வைஃபை அதிவிவர நுழைவை இயக்கு"</string>
     <string name="system_show_touches" msgid="8244331695139748286">"தொடுதலைக் காட்டு"</string>
-    <string name="system_pointer_location" msgid="8724050865245555084">"குறிப்பான் இடம்"</string>
+    <string name="system_pointer_location" msgid="8724050865245555084">"பாயிண்டர் இடம்"</string>
     <string name="system_show_layout_bounds" msgid="8803080672553699649">"தளவமைப்பு எல்லைகளைக் காட்டு"</string>
     <string name="system_show_gpu_view_updates" msgid="1625918928089365222">"GPU காட்சி புதுப்பிப்புகளைக் காட்டு"</string>
     <string name="system_show_hardware_layer" msgid="5833664339844452290">"வன்பொருள் லேயரைக் காட்டு"</string>
     <string name="system_show_gpu_overdraw" msgid="5073007513540516704">"GPU ஓவர்டிராவைக் காட்டு"</string>
-    <string name="system_show_surface_updates" msgid="7680759813613585278">"மேலோட்ட புதுப்பிப்புகளைக் காட்டு"</string>
+    <string name="system_show_surface_updates" msgid="7680759813613585278">"பரப்புநிலை புதுப்பிப்புகளைக் காட்டு"</string>
     <string name="system_window_animation_scale" msgid="685477540250939659">"சாளர அனிமேஷன் வேகம்"</string>
     <string name="system_transition_animation_scale" msgid="7266380208347453619">"அனிமேஷன் மாற்றத்தின் வேகம்"</string>
     <string name="system_animator_duration_scale" msgid="3829445237130423625">"அனிமேட்டர் கால அளவு"</string>
@@ -885,7 +895,7 @@
   </string-array>
     <string name="track_frame_time_off" msgid="8845064783618702239">"முடக்கு"</string>
     <string name="track_frame_time_bars" msgid="5841531515222229632">"திரையைப் பட்டிகளாக இயக்கு"</string>
-    <string name="app_process_limit_standard" msgid="6069948528843313888">"நிலையான வரம்பு"</string>
+    <string name="app_process_limit_standard" msgid="6069948528843313888">"வழக்கமான வரம்பு"</string>
     <string name="app_process_limit_zero" msgid="4094665021909774994">"பின்புல செயல்முறைகள் இல்லை"</string>
     <string name="app_process_limit_one" msgid="4509089015775863726">"அதிகபட்சமாக 1 செயல்முறை"</string>
     <string name="app_process_limit_two" msgid="368216781690488529">"அதிகபட்சமாக 2 செயல்முறைகள்"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"இயல்பு OpenGL ES இயக்கியாக ANGLEளை இயக்கவும்"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"பரிசோதனைக்குரியது, மறுதொடக்கம் தேவை."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"சிஸ்டத்தின் OpenGL ES இயக்கியை மாற்ற மறுதொடக்கம் தேவை"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

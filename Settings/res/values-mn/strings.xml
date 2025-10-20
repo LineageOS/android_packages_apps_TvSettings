@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Үргэлж скан хийх боломжтой, Google-н байршлын үйлчилгээ болон бусад аппад Wi-Fi унтраалттай үед ч сүлжээг скан хийх боломж олгоорой"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Дэд процессын сүлжээ"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Дэд процессын сүлжээ нь дэд процессыг идэвхжүүлсэн ухаалаг гэрийн төхөөрөмжүүдийг дотоодод холбож, үр ашиг болон гүйцэтгэлийг нэмэгдүүлдэг.\n\nАсаасан байхад энэ төхөөрөмж таны Дэд процессын сүлжээг үүсгэж эсвэл нэгдэнэ. Таны ирээдүйн ухаалаг гэрийн төхөөрөмжүүдийг илүү хялбар тохируулахад зориулж мандат үнэмлэхийг үүлэнд нууцлалтайгаар байршуулна.\n\nУнтраасан байхад энэ төхөөрөмж цаашид таны Дэд процессын сүлжээн дээрх бусад төхөөрөмжтэй харилцах боломжгүй болно. Ухаалаг гэрийн зарим төхөөрөмж болон үйлчилгээ тооцоолсноор ажиллахгүй байж магадгүй.\n\nТа g.co/tv/thread дээрээс нэмэлт мэдээлэл авна уу"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Дэд процессын сүлжээний нэвтрэх мэдээлэл хуваалцах"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"<xliff:g id="DEVICE">%1$s</xliff:g>-н Дэд процессын сүлжээнийхээ тохируулгыг хялбаршуулахын тулд Дэд процессын сүлжээний нэвтрэх мэдээллийг бусад төхөөрөмжтэй хуваалцана уу"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Дахин хуваалцах"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Кодын хугацаа <xliff:g id="MINUTES">%1$02d</xliff:g>минут <xliff:g id="SECONDS">%2$02d</xliff:g>секундийн дараа дуусна"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Дэд процессын сүлжээг хуваалцаж чадсангүй"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Дэд процессын сүлжээг амжилттай хуваалцлаа"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Дэд процессын сүлжээнд ямар нэг төхөөрөмж нэмэхээс өмнө кодын хугацаа дууссан"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Дэд процессын сүлжээг унтраах уу?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Хэрэв унтраасан бол ухаалаг гэрийн зарим төхөөрөмж болон үйлчилгээ тооцоолсноор ажиллахгүй байж магадгүй. Та үргэлжлүүлэхийг хүсэж байна уу?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Дэд процессыг идэвхжүүлэхийн тулд эрчим хүчний горимыг өөрчилнө"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Digital Plus-тай Dolby Atmos"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Орчин тойрны дууг идэвхжүүлэхийн тулд Тохиргоо &gt; Алсын удирдлага &amp; Дагалдах хэрэгсэл &gt; Алсын удирдлагын товчийг тохируулах &gt; Дууны түвшний тохиргоо руу очоод, дараа нь энэ төхөөрөмжөөс өөр сонголт сонгоно уу."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Санамж: Таны төхөөрөмж дэмждэг форматаа зөв мэдээлэхгүй бол Автомат сонголт ажиллахгүй байж болно."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Автомат"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Бүх дэмжигдсэн форматыг идэвхжүүлэх"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Ингэснээр тус сүлжээнд холбогдоход шаардагддаг хадгалагдсан нууц үг гэх мэт мэдээллийг арилгах болно"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Мобайл утаснаас QR кодыг скан хийснээр Wi-Fi-д нэгдэж, зааварчилгааг дагана уу.\n \n "<b>"Android утаснаасаа"</b>" Тохиргоо -&gt; Сүлжээ &amp; Интернэт -&gt; Wi-Fi -&gt; Wi-Fi сонгох -&gt; Дэвшилтэт -&gt; Төхөөрөмж нэмэх рүү очоод, дараа нь QR кодыг скан хийнэ үү."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Цуцлахын тулд буцах товчлуурыг дарна уу"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Төхөөрөмжийг тохируулахын тулд Дэд процессын нэвтрэх мэдээллийг ашиглах"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Дэд процессын сүлжээндээ төхөөрөмж нэмэхийн тулд төхөөрөмжийн аппаасаа энэ QR кодыг скан хийнэ үү. Аюулгүй байдлын үүднээс кодын хугацаа <xliff:g id="MINUTES">%1$s</xliff:g> минутын дараа дуусна."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Үргэлжлүүлэх"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Сүлжээг өөрчлөх"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"ANGLE-г өгөгдмөл OpenGL ES драйвераар идэвхжүүлэх"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Туршилтынх, дахин асаахыг шаарддаг."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Системийн OpenGL ES драйверыг өөрчлөхийн тулд дахин асаах шаардлагатай"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

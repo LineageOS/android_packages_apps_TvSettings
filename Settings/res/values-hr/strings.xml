@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Pretraživanje uvijek dostupno, Neka Googleova usluga lokacije i druge aplikacije traže mreže, čak i kada je Wi-Fi isključen"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Mreža Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Mreža Thread povezuje pametne kućanske uređaje koji su omogućeni za Thread, poboljšavajući učinkovitost i izvedbu.\n\nKada se uključi, uređaj će izraditi mrežu Thread ili joj se pridružiti. Vjerodajnice će se privatno prenijeti u oblak radi jednostavnijeg postavljanja vaših budućih pametnih kućanskih uređaja.\n\nKad se isključi, ovaj uređaj neće moći komunicirati s drugim uređajima na mreži Thread. Neki uređaji i usluge možda neće funkcionirati prema očekivanjima.\n\nSaznajte više na g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Dijeli vjerodajnice za Thread mrežu"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Podijelite vjerodajnice za Thread mrežu s drugim uređajima radi lakšeg postavljanja u Thread mreži uređaja <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Podijeli ponovno"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Kôd će isteći za <xliff:g id="MINUTES">%1$02d</xliff:g> min <xliff:g id="SECONDS">%2$02d</xliff:g> s"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Dijeljenje Thread mreže nije uspjelo"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Thread mreža uspješno je podijeljena"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Kôd je istekao prije nego što je bilo koji uređaj dodan u Thread mrežu"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Želite li isključiti mrežu Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Ako se isključi, neki uređaji i usluge možda neće funkcionirati prema očekivanjima. Želite li nastaviti?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Promijenite način potrošnje energije da biste omogućili Thread"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos s Dolby Digital Plusom"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Da biste omogućili okružujući zvuk, otvorite Postavke &gt; Daljinski upravljači i dodaci &gt; Postavljanje gumba na daljinskom upravljaču &gt; Kontrola glasnoće, a zatim odaberite opciju koja nije ovaj uređaj."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Napomena: opcija Automatski možda neće raditi ako uređaj ne prijavi točno koje formate podržava."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Automatski"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Omogućivanje svih podržanih formata"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Time se brišu podaci potrebni za povezivanje s mrežom, uključujući spremljenu zaporku"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Priključite se na Wi-Fi skeniranjem QR koda s mobilnog telefona i slijedite upute.\n \n Na "<b>"Android telefonu"</b>" otvorite Postavke -&gt; Mreža i internet -&gt; Wi-Fi -&gt; Odaberite Wi-Fi -&gt; Napredno -&gt; Dodajte uređaj, a zatim skenirajte QR kôd."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Pritisnite gumb za natrag da biste odustali"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Upotrijebite vjerodajnice za Thread da biste postavili uređaj"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Da biste dodali uređaj u Thread mrežu, skenirajte ovaj QR kôd u aplikaciji uređaja. Iz sigurnosnih razloga kôd će isteći za <xliff:g id="MINUTES">%1$s</xliff:g> min."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"U redu"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Nastavi"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Promijeni mrežu"</string>
@@ -1149,7 +1159,7 @@
     <string name="uninstall_device_admin" msgid="6301368408620948266">"Deinstaliraj aplikaciju"</string>
     <string name="remove_and_uninstall_device_admin" msgid="1504351551194915633">"Deaktiviraj i deinstaliraj"</string>
     <string name="select_device_admin_msg" msgid="5480836736592618730">"Administrator uređaja"</string>
-    <string name="add_device_admin_msg" msgid="5390773166682603421">"Aktivirati apl. administratora uređaja?"</string>
+    <string name="add_device_admin_msg" msgid="5390773166682603421">"Aktivirati admin. aplikaciju uređaja?"</string>
     <string name="add_device_admin" msgid="5078281377915844544">"Aktiviraj aplikaciju administratora ovog uređaja"</string>
     <string name="device_admin_warning" msgid="7399916080685200660">"Aktiviranjem ove administratorske aplikacije dopustit ćete aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> izvođenje sljedećih postupaka:"</string>
     <string name="device_admin_warning_simplified" msgid="3310965971422346950">"Ovim će uređajem upravljati <xliff:g id="APP_NAME">%1$s</xliff:g> i nadzirati ga."</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Omogućite ANGLE kao zadani upr. prog. ES OpenGL-a"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Eksperimentalno, zahtijeva ponovno pokretanje."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Potrebno je ponovno pokretanje za promjenu upravljačkog programa sistemskog ES OpenGL-a"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

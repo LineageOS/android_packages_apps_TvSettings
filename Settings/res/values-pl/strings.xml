@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Skanowanie zawsze dostępne, zezwalaj usłudze lokalizacyjnej Google i innym aplikacjom na skanowanie w poszukiwaniu sieci nawet przy wyłączonym Wi-Fi"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Sieć Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Sieć Thread lokalnie łączy inteligentne urządzenia domowe, które ją obsługą, aby działały bardziej wydajnie.\n\nPo włączeniu to urządzenie utworzy sieć Thread lub do niej dołączy. Dane logowania zostaną przesłane do prywatnego folderu w chmurze – ułatwi to konfigurację kolejnych inteligentnych urządzeń domowych.\n\nPo wyłączeniu to urządzenie nie będzie już mogło komunikować się z innymi urządzeniami w sieci Thread. Niektóre usługi i inteligentne urządzenia domowe mogą nie działać zgodnie z oczekiwaniami.\n\nWięcej informacji znajdziesz na g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Udostępnij dane logowania do sieci Thread"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Udostępnij dane logowania do sieci Thread innym urządzeniom, aby uprościć konfigurację tej sieci na urządzeniu <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Udostępnij ponownie"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Kod wygaśnie za <xliff:g id="MINUTES">%1$02d</xliff:g> min <xliff:g id="SECONDS">%2$02d</xliff:g> s"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Nie udało się udostępnić sieci Thread"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Sieć Thread została udostępniona"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Kod wygasł, zanim do sieci Thread dodano jakiekolwiek urządzenie"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Wyłączyć sieć Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Jeśli ją wyłączysz, niektóre usługi i inteligentne urządzenia domowe mogą nie działać zgodnie z oczekiwaniami. Czy chcesz kontynuować?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Zmień tryb zużycia energii, aby włączyć Thread"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos z Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Aby włączyć dźwięk przestrzenny, otwórz Ustawienia &gt; Piloty i akcesoria &gt; Skonfiguruj przyciski pilota &gt; Regulacja głośności, a następnie wybierz opcję inną niż to urządzenie."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Uwaga: opcja Automatycznie może nie działać, jeśli urządzenie nie zgłasza poprawnie swoich formatów."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Automatycznie"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Włącz wszystkie obsługiwane formaty"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Powoduje to wyczyszczenie informacji używanych do łączenia z tą siecią, w tym zapisanego hasła"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Jeśli chcesz połączyć się z Wi-Fi, zeskanuj telefonem kod QR i postępuj zgodnie z instrukcjami.\n \n Na "<b>"telefonie z Androidem"</b>" otwórz Ustawienia &gt; Sieć i internet &gt; Wi-Fi &gt; wybierz Wi-Fi &gt; Zaawansowane &gt; dodaj urządzenie i zeskanuj kod QR."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Aby anulować, naciśnij przycisk Wstecz"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Użyj danych logowania do sieci Thread, aby skonfigurować urządzenie"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Aby dodać urządzenie do sieci Thread, zeskanuj ten kod QR w aplikacji na urządzeniu. Ze względów bezpieczeństwa kod wygaśnie za <xliff:g id="MINUTES">%1$s</xliff:g> min."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Dalej"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Zmień sieć"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Włącz ANGLE jako domyślny sterownik OpenGL ES"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Funkcja eksperymentalna. Wymaga ponownego uruchomienia."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Zmiana systemowego sterownika OpenGL ES wymaga ponownego uruchomienia"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

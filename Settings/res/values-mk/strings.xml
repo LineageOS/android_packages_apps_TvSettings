@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Скенирањето е секогаш достапно, дозволете локациската услуга на Google и други апликации да скенираат мрежи, дури и кога Wi-Fi е исклучено"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Мрежа Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Мрежата Thread локално поврзува уреди за паметен дом што поддржуваат Thread, зголемувајќи ги ефикасноста и изведбата.\n\nКога е вклучен, уредов ќе ја создаде или ќе се придружи на мрежата Thread. Акредитивите ќе се прикачат приватно во облакот за полесно поставување на уредите за паметен дом во иднина.\n\nКога е исклучен, уредов веќе нема да може да комуницира со други уреди на мрежата Thread. Некои услуги и уреди за паметен дом можеби нема да функционираат според очекувањата.\n\nДознајте повеќе на g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Споделете ги акредитивите за мрежата Thread"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Споделете ги акредитивите за мрежата Thread со други уреди за да го поедноставите поставувањето на мрежата Thread на вашиот уред <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Сподели повторно"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Кодот ќе истече за <xliff:g id="MINUTES">%1$02d</xliff:g> мин. и <xliff:g id="SECONDS">%2$02d</xliff:g> сек."</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Не можеше да се сподели мрежата Thread"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Мрежата Thread е успешно споделена"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Кодот истече пред да се додаде уред во мрежата Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Да се исклучи мрежата Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Ако е исклучено, некои уреди и услуги за паметен дом можеби нема да функционираат според очекувањата. Дали сакате да продолжите?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Променете го режимот на енергија за да ја овозможите Thread"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos со Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"За да го овозможите опкружувачкиот звук, одете во „Поставки &gt; Далечински и додатоци &gt; Поставете копчиња на далечинското &gt; Контрола на јачината на звукот“, а потоа изберете опција различна од уредов."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Забелешка: „Автоматски“ може нема да работи ако уредот не ги пријавува правилно поддржаните формати."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Автоматски"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Овозможете ги сите поддржани формати"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Ова ги чисти информациите користени за поврзување со оваа мрежа, вклучувајќи ги зачуваните лозинки."</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Придружете се на Wi-Fi со скенирање на QR-кодот од мобилниот телефон и со следење на упатствата.\n \n Од "<b>"телефон со Android"</b>", одете во „Поставки -&gt; Мрежа и интернет -&gt; Wi-Fi -&gt; Изберете Wi-Fi -&gt; Напредни -&gt; Додајте уред“, а потоа скенирајте го QR-кодот."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Притиснете го копчето за назад за да откажете"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Користење на акредитивите на Thread за поставување уред"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"За да додадете уред на вашата мрежа Thread, скенирајте го QR-кодов во апликацијата на уредот. За безбедност, кодот ќе истече за <xliff:g id="MINUTES">%1$s</xliff:g> минути."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"Во ред"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Продолжете"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Променете ја мрежата"</string>
@@ -853,11 +863,11 @@
     <string name="system_desc_bt_hci_log" msgid="2592649923221658103">"Овозможи евиденција за Bluetooth HCI"</string>
     <string name="system_desc_usb_debugging" msgid="5672275208185222785">"Режим за отстранување грешки кога е поврзано USB"</string>
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Пред да се изврши, апликацијата во која се отстрануваат грешки чека да се закачи програмата за отстранување грешки"</string>
-    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Прикажувај граници на исечок, маргини итн."</string>
+    <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Прикажува граници на исечок, маргини итн."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Осветли прегледи во прозорците при цртање со GPU"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Осветлувај ги хардверските слоеви со зелено кога се ажурираат"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Ги осветлува хардверските слоеви со зелено кога се ажурираат"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Од најдобро кон најлошо: сино, зелено, светло црвено, црвено"</string>
-    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Осветли површини на прозорци при нивно ажурирање"</string>
+    <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Ги осветлува површините на прозорците кога ќе се ажурираат"</string>
     <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Трепкај со екранот при долги операции на главна нишка"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Мерка прикажување на време во adb shell dumpsys gfxinfo"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Непознати извори"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Овозм. ANGLE како стандарден драјвер за OpenGL ES"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Експериментално, потребно е рестартирање."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Потребно е рестартирање за да се промени системскиот драјвер за OpenGL ES"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

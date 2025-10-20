@@ -43,8 +43,9 @@ import androidx.annotation.VisibleForTesting
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
 import com.android.settingslib.core.AbstractPreferenceController
-import com.android.settingslib.suggestions.SuggestionControllerMixinCompat
+import com.android.settingslib.core.lifecycle.Lifecycle
 import com.android.tv.settings.HotwordSwitchController.HotwordStateListener
+import com.android.tv.settings.accessories.AccessoryUtils
 import com.android.tv.settings.accounts.AccountsFragment
 import com.android.tv.settings.accounts.AccountsUtil
 import com.android.tv.settings.connectivity.ActiveNetworkProvider
@@ -70,7 +71,7 @@ import java.util.Optional
  */
 @Keep
 open class MainFragment : PreferenceControllerFragment(),
-    SuggestionControllerMixinCompat.SuggestionControllerHost,
+    TvSuggestionControllerMixinCompat.SuggestionControllerHost,
     SuggestionPreference.Callback,
     HotwordStateListener,
     SliceShard.Callbacks {
@@ -137,6 +138,7 @@ open class MainFragment : PreferenceControllerFragment(),
             )
         }
         mBtAdapter = BluetoothAdapter.getDefaultAdapter()
+        AccessoryUtils.getLocalBluetoothManager(requireActivity().getApplicationContext());
         super.onCreate(savedInstanceState)
         // This is to record the initial start of Settings root in two panel settings case, as the
         // MainFragment is the left-most pane and will not be slided in from preview pane. For
@@ -177,8 +179,7 @@ open class MainFragment : PreferenceControllerFragment(),
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        //val sliceUri = getString(R.string.main_fragment_slice_uri)
-        val sliceUri = "content://com.example.updatablesettings.sliceprovider/main_prefs_x"
+        val sliceUri = getString(R.string.main_fragment_slice_uri)
 
         if (!SliceUtils.isSliceProviderValid(requireContext(), sliceUri)) {
             setPreferencesFromResource(preferenceScreenResId, null)
@@ -285,10 +286,19 @@ open class MainFragment : PreferenceControllerFragment(),
             SliceUtils.maybeUseSlice(findPreference(KEY_CHANNELS_AND_INPUTS), sliceInputsPreference)
         }
 
-        SliceUtils.maybeUseSlice(
-            findPreference(KEY_HELP_AND_FEEDBACK),
-            findPreference(KEY_HELP_AND_FEEDBACK_SLICE)
-        )
+        val helpAndFeedbackPref = findPreference<Preference>(KEY_HELP_AND_FEEDBACK)
+        val helpAndFeedbackSlicePref = findPreference<SlicePreference>(KEY_HELP_AND_FEEDBACK_SLICE)
+        if (FlavorUtils.isTwoPanel(context)) {
+            // The following block always makes a "Help and Feedback" preference visible,
+            // which we do not want in one-panel settings
+            SliceUtils.maybeUseSlice(
+                helpAndFeedbackPref,
+                helpAndFeedbackSlicePref
+            )
+        } else {
+            helpAndFeedbackPref?.isVisible = false
+            helpAndFeedbackSlicePref?.isVisible = false
+        }
     }
 
     @VisibleForTesting
@@ -692,10 +702,12 @@ open class MainFragment : PreferenceControllerFragment(),
         if ((preference.key == KEY_ACCOUNTS_AND_SIGN_IN && !mHasAccounts
                     && !AccountsUtil.isAdminRestricted(context))
             || (preference.key == KEY_ACCESSORIES && !mHasBtAccessories)
-            || preference.key == KEY_DISPLAY_AND_SOUND
-            || preference.key == KEY_CHANNELS_AND_INPUTS
+            || (preference.key == KEY_DISPLAY_AND_SOUND
+                    && preference.intent != null)
+            || (preference.key == KEY_CHANNELS_AND_INPUTS
+                    && preference.intent != null)
         ) {
-            preference.intent ?.let { requireContext().startActivity(it) }
+            context!!.startActivity(preference.intent)
             return true
         } else if (preference.key == KEY_BASIC_MODE_EXIT
             && FlavorUtils.getFeatureFactory(context)

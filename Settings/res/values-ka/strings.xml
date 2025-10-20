@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"სკანირება ყოველთვის ხელმისაწვდომია, Google-ის მდებარეობის სერვისისთვისა და სხვა აპებისთვის ქსელების სკანირების დაშვება, მაშინაც კი, როცა Wi-Fi გამორთულია"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"თემატური გზავნილების ქსელი"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"თემატური გზავნილების ქსელი ადგილობრივად აკავშირებს თემატური გზავნილების ფუნქციის მქონე გონიერი სახლის მოწყობილობებს, რითაც ზრდის ეფექტურობასა და მუშაობის ხარისხს.\n\nჩართვისას მოწყობილობა შექმნის ან მიუერთდება თქვენს თემატური გზავნილების ქსელს. გონიერი სახლის ახალი მოწყობილობების პარამეტრების მარტივად დაყენების მიზნით, ავტორიზაციის მონაცემები ღრუბელზე კონფიდენციალურად აიტვირთება.\n\nგამორთულ მდგომარეობაში, მოწყობილობა ვეღარ შეძლებს თქვენს თემატური გზავნილების ქსელში არსებულ სხვა მოწყობილობებთან კომუნიკაციას. ზოგიერთი გონიერი სახლის მოწყობილობა და სერვისი შესაძლოა სათანადოდ არ მუშაობდეს.\n\nშეიტყვეთ მეტი: g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Thread Network-ის ავტორიზაც. მონაცემების გაზიარება"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"გაუზიარეთ Thread ქსელის ავტორიზაციის მონაცემები სხვა მოწყობილობებს, რომ მარტივად დააყენოთ Thread ქსელი თქვენს <xliff:g id="DEVICE">%1$s</xliff:g>-ზე"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"ხელახლა გაზიარება"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"კოდი ამოიწურება: <xliff:g id="MINUTES">%1$02d</xliff:g> წთ <xliff:g id="SECONDS">%2$02d</xliff:g> წმ"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Thread ქსელის გაზიარება ვერ მოხერხრდა"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Thread ქსელი გაზიარებულია წარმატებით"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"კოდის ვადა ამოიწურა თქვენი მოწყობილობის Thread ქსელში დამატებამდე"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"გსურთ თემატური გზავნილების ქსელის გამორთვა?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"გამორთულ მდგომარეობაში ზოგიერთი გონიერი სახლის მოწყობილობა და სერვისი შესაძლოა სათანადოდ არ მუშაობდეს. გსურთ გაგრძელება?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"თემატური გზავნილების ჩასართავად შეცვალეთ ენერგიის რეჟიმი"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos with Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"მოცულობითი ხმის ჩასართავად გადადით: პარამეტრები &gt; დისტანციური მართვის პულტები და აქსესუარები &gt; პულტის ღილაკების დაყენება &gt; ხმის კონტროლი და შემდეგ აირჩიეთ ამ მოწყობილობის გარდა სხვა ვარიანტი."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"„ავტომატურმა“ ვარიანტმა შეიძლება არ იმუშაოს, თუ მოწყობილობა ვერ გვამცნობს მხარდაჭერილ ფორმატებს."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"ავტომატური"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"ყველა მხარდაჭერილი ფორმატის ჩართვა"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"ეს წაშლის ამ ქსელთან დასაკავშირებლად გამოყენებულ მთელ ინფორმაციას, მათ შორის, შენახულ პაროლს."</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" დაუკავშირდით Wi-Fi-ს მობილური ტელეფონიდან QR კოდის სკანირების გზით და მიჰყევით ინსტრუქციას.\n \n "<b>"Android ტელეფონიდან"</b>" გადადით: პარამეტრები -&gt; ქსელი და ინტერნეტი -&gt; Wi-Fi -&gt; აირჩიეთ Wi-Fi -&gt; გაფართოებული -&gt; დაამატეთ მოწყობილობა და შემდეგ დაასკანირეთ QR კოდი."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"გასაუქმებლად დააჭირეთ უკან გადასვლის ღილაკს"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Thread-ის ავტორიზაციის მონაცემების გამოყენება მოწყობილობის დასაყენებლად"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"მოწყობილობის დასამატებლად თქვენს Thread ქსელზე დაასკანირეთ ეს QR კოდი მოწყობილობის აპში. უსაფრთხოებისთვის კოდის ვადა ამოიწურება <xliff:g id="MINUTES">%1$s</xliff:g> წუთში."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"კარგი"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"გაგრძელება"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"ქსელის შეცვლა"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"ANGLE-ის ჩართვა OpenGL ES-ის ნაგულისხმევ დრაივერად"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"ექსპერიმენტული, საჭიროებს გადატვირთვას."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"OpenGL ES-ის დრაივერის შესაცვლელად საჭიროა გადატვირთვა"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

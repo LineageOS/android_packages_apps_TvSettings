@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Всегда искать сети, разрешить службе геопозиционирования и другим приложениям Google искать сети, даже если модуль Wi-Fi выключен"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Сеть Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Локальная сеть Thread объединяет устройства умного дома, которые поддерживают этот протокол. В результате они работают эффективнее и их производительность повышается.\n\nКогда вы включите устройство, оно создаст сеть Thread или подключится к ней. Учетные данные будут загружены в облако конфиденциально – это позволит упростить настройку устройств умного дома.\n\nПосле выключения устройство потеряет связь с другими устройствами в сети Thread. Некоторые устройства и сервисы умного дома могут работать неправильно.\n\nПодробнее: g.co/tv/thread."</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Поделиться учетными данными сети Thread"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Чтобы настроить сеть Thread на устройстве <xliff:g id="DEVICE">%1$s</xliff:g> было легче, поделитесь учетными данными сети с другими устройствами."</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Поделиться снова"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Срок действия кода истечет через <xliff:g id="MINUTES">%1$02d</xliff:g> мин. <xliff:g id="SECONDS">%2$02d</xliff:g> сек."</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Не удалось поделиться учетными данными сети Thread."</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Вы поделились учетными данными сети Thread."</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Срок действия кода истек. Ни одно устройство подключено не было."</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Отключить сеть Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Если вы отключите сеть, некоторые устройства и сервисы умного дома, возможно, будут работать неправильно. Продолжить?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Чтобы использовать Thread, смените режим энергопотребления"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos с Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Чтобы включить объемный звук, нажмите \"Настройки &gt; Пульты и аксессуары &gt; Настройка кнопок на пульте ДУ &gt; Регулировка громкости\", а затем выберите любой вариант, кроме текущего устройства"</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Примечание. Параметр \"Автоматически\" может не работать, если устройство предоставляет неверные данные о поддерживаемых форматах."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Автоматически"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Включить все поддерживаемые форматы"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Данные, которые использовались для подключения к этой сети (включая пароль), будут удалены"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Чтобы подключиться к сети Wi-Fi, отсканируйте QR-код с помощью мобильного телефона и следуйте инструкциям на экране.\n \n На "<b>"телефоне Android"</b>" нажмите \"Настройки -&gt; Сеть и Интернет -&gt; Wi-Fi\" -&gt; выберите сеть Wi-Fi -&gt; \"Дополнительные функции -&gt; Добавить устройство\" и отсканируйте QR-код."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Чтобы отменить действие, нажмите кнопку \"Назад\"."</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Учетные данные Thread для настройки устройства"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Чтобы добавить устройство в сеть Thread, отсканируйте QR-код в приложении. Срок действия кода истечет через <xliff:g id="MINUTES">%1$s</xliff:g> мин. Это сделано для безопасности."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ОК"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Далее"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Подключиться к другой сети"</string>
@@ -844,7 +854,7 @@
     <string name="system_strict_mode_enabled" msgid="7392183793064579588">"Включен строгий режим"</string>
     <string name="system_profile_gpu_rendering" msgid="1113416260742329348">"Запись времени работы графического процессора"</string>
     <string name="system_enable_traces" msgid="108745519968154528">"Включить трассировки"</string>
-    <string name="system_dont_keep_activities" msgid="4641165963339846161">"Не сохранять активности"</string>
+    <string name="system_dont_keep_activities" msgid="4641165963339846161">"Не сохранять объекты Activity"</string>
     <string name="system_background_process_limit" msgid="1985373407150771045">"Лимит фоновых процессов"</string>
     <string name="system_show_all_anrs" msgid="5353216640638263217">"Все ANR"</string>
     <string name="system_desc_stay_awake" msgid="8485868071929937500">"Отключить спящий режим"</string>
@@ -855,10 +865,10 @@
     <string name="system_desc_wait_for_debugger" msgid="7213496668606417691">"Приложение ожидает подключения отладчика"</string>
     <string name="system_desc_show_layout_bounds" msgid="5275008598296135852">"Показывать границы клипа, поля и т. д."</string>
     <string name="system_desc_show_gpu_view_updates" msgid="9088343415389734854">"Подсвечивать области экрана при отрисовке с GPU"</string>
-    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Выделять аппаратные уровни зеленым при обновлении"</string>
+    <string name="system_desc_show_hardware_layer" msgid="3483713991865249527">"Выделять слои с аппаратной отрисовкой зеленым при обновлении"</string>
     <string name="system_desc_show_gpu_overdraw" msgid="74019834911598588">"Порядок: синий, зеленый, светло-красный, красный"</string>
     <string name="system_desc_show_surface_updates" msgid="4018685547515133353">"Подсвечивать окна полностью при их обновлении"</string>
-    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Подсвечивать экран во время длительных операций"</string>
+    <string name="system_desc_strict_mode_enabled" msgid="1974896408481676324">"Подсвечивать экран, когда приложения выполняют длительные операции в основном потоке"</string>
     <string name="system_desc_profile_gpu_rendering" msgid="1594070211030991">"Измерение времени для adb shell dumpsys gfxinfo"</string>
     <string name="security_unknown_sources_title" msgid="2012801664240314305">"Неизвестные источники"</string>
     <string name="security_unknown_sources_desc" msgid="7196715598352173267">"Разрешить установку приложений не из Play Маркета"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Использовать ANGLE как системный драйвер OpenGL ES"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Экспериментальный параметр, понадобится перезагрузка"</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Чтобы изменить системный драйвер OpenGL ES, требуется перезагрузка."</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

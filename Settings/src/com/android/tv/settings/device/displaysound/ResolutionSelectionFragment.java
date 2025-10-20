@@ -78,6 +78,18 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
     static final Set<Integer> STANDARD_RESOLUTIONS_IN_ORDER = Set.of(2160, 1080, 720, 576, 480);
     static final int DIALOG_TIMEOUT_MILLIS = 12000;
     static final int DIALOG_START_MILLIS = 1000;
+    private AlertDialog mDialog = null;
+    private Display.Mode mFinalNewMode = null;
+    private Display.Mode mFinalPreviousMode = null;
+    private boolean mPrevModeIsAuto = false;
+    private boolean mNewModeisAuto = false;
+
+    public enum SavedStateKey {
+        NEW_MODE,
+        NEW_MODE_IS_AUTO,
+        PREVIOUS_MODE,
+        PREVIOUS_MODE_IS_AUTO;
+    }
 
     /** @return the new instance of the class */
     public static ResolutionSelectionFragment newInstance() {
@@ -98,6 +110,54 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
     @Override
     protected List<AbstractPreferenceController> onCreatePreferenceControllers(Context context) {
         return null;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (mDialog != null && mDialog.isShowing()) {
+            mDialog.dismiss();
+            mDialog = null;
+        }
+    }
+
+    // Save the currently selected Display.Mode when the fragment is not expected to be destroyed.
+    // This allows restoring the user's choice if the fragment is later recreated.
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable(SavedStateKey.NEW_MODE.name(), mFinalNewMode);
+        outState.putBoolean(SavedStateKey.NEW_MODE_IS_AUTO.name(), mNewModeisAuto);
+        outState.putParcelable(SavedStateKey.PREVIOUS_MODE.name(), mFinalPreviousMode);
+        outState.putBoolean(SavedStateKey.PREVIOUS_MODE_IS_AUTO.name(), mPrevModeIsAuto);
+    }
+
+    // Get the pre-stored Display.Mode when the fragment is recreated.
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        if(savedInstanceState != null) {
+            mFinalNewMode = savedInstanceState.getParcelable(
+                SavedStateKey.NEW_MODE.name()
+            );
+            mNewModeisAuto = savedInstanceState.getBoolean(
+                SavedStateKey.NEW_MODE_IS_AUTO.name(),
+                false
+            );
+            mFinalPreviousMode = savedInstanceState.getParcelable(
+                SavedStateKey.PREVIOUS_MODE.name()
+            );
+            mPrevModeIsAuto = savedInstanceState.getBoolean(
+                SavedStateKey.PREVIOUS_MODE_IS_AUTO.name(),
+                false
+            );
+
+            if(mFinalNewMode != null && mFinalPreviousMode != null) {
+                showWarningDialogOnResolutionChange(
+                        mFinalNewMode, mNewModeisAuto,
+                        mFinalPreviousMode, mPrevModeIsAuto);
+            }
+        }
     }
 
     @Override
@@ -224,21 +284,26 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
 
             Display.Mode newMode = null;
             Display.Mode previousMode = mDisplayManager.getGlobalUserPreferredDisplayMode();
+            mPrevModeIsAuto = previousMode == null;
             if (key.equals(KEY_RESOLUTION_SELECTION_AUTO)) {
                 mDisplayManager.clearGlobalUserPreferredDisplayMode();
+                mNewModeisAuto = true;
             } else if (key.contains(KEY_RESOLUTION_PREFIX)) {
                 int modeIndex = Integer.parseInt(key.substring(KEY_RESOLUTION_PREFIX.length()));
                 newMode = mModes[modeIndex];
                 mDisplayManager.setGlobalUserPreferredDisplayMode(newMode);
+                mNewModeisAuto = false;
             }
             // if newMode is null, it means it is the automatic mode
-            Display.Mode finalNewMode = Objects.requireNonNullElse(newMode, mAutoMode);
-            Display.Mode finalPreviousMode = Objects.requireNonNullElse(previousMode, mAutoMode);
+            mFinalNewMode = Objects.requireNonNullElse(newMode, mAutoMode);
+            mFinalPreviousMode = Objects.requireNonNullElse(previousMode, mAutoMode);
             // Show the dialog after a delay of 1 second. If the dialog or any UX
             // is shown when the resolution change is under process, the dialog is lost.
             new Handler().postDelayed(new Runnable() {
                 public void run() {
-                    showWarningDialogOnResolutionChange(finalNewMode, finalPreviousMode);
+                    showWarningDialogOnResolutionChange(
+                        mFinalNewMode, mNewModeisAuto, mFinalPreviousMode, mPrevModeIsAuto
+                    );
                 }
             }, DIALOG_START_MILLIS);
         }
@@ -260,19 +325,22 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         return -1;
     }
 
-    private void setUserPreferredMode(Display.Mode mode) {
+    private void setUserPreferredMode(Display.Mode mode, boolean isAutoMode) {
         int modeIndex = lookupModeIndex(mode);
-        if (modeIndex != -1) {
+        if (modeIndex != -1 && !isAutoMode) {
             selectRadioPreference(findPreference(KEY_RESOLUTION_PREFIX + modeIndex));
             mDisplayManager.setGlobalUserPreferredDisplayMode(mode);
+            mUserPreferredModeIndex = modeIndex;
         } else {
             selectRadioPreference(findPreference(KEY_RESOLUTION_SELECTION_AUTO));
             mDisplayManager.clearGlobalUserPreferredDisplayMode();
+            mUserPreferredModeIndex = -1;
         }
     }
 
     private void showWarningDialogOnResolutionChange(
-            Display.Mode currentMode, Display.Mode previousMode) {
+            Display.Mode currentMode, boolean newAutoMode,
+            Display.Mode previousMode, boolean previousAutoMode) {
         final CountDownTimer[] timerTask = {null};
         String resolutionString = ResolutionSelectionUtils.modeToString(currentMode, getContext());
         Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
@@ -286,19 +354,20 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
 
         OnClickListener onOkClicked = (dialog, which) -> {
             changeHdrConversionFormatToOneSupportedByMode(display.getMode());
+            mUserPreferredModeIndex = newAutoMode ? -1 : lookupModeIndex(currentMode);
             dialog.dismiss();
             timerTask[0].cancel();
         };
         OnClickListener onCancelClicked = (dialog, which) -> {
-            setUserPreferredMode(previousMode);
+            setUserPreferredMode(previousMode, previousAutoMode);
             dialog.dismiss();
             timerTask[0].cancel();
         };
 
-        AlertDialog dialog = createAlertDialog(getContext(), title, dialogDescription, onOkClicked,
+        mDialog = createAlertDialog(getContext(), title, dialogDescription, onOkClicked,
                 onCancelClicked);
 
-        dialog.setOnShowListener(dialog1 -> {
+        mDialog.setOnShowListener(dialog1 -> {
             final Button cancelButton =
                     ((AlertDialog) dialog1).getButton(AlertDialog.BUTTON_NEGATIVE);
             final CharSequence negativeButtonText = cancelButton.getText();
@@ -315,14 +384,14 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
                 @Override
                 public void onFinish() {
                     if (((AlertDialog) dialog1).isShowing()) {
-                        setUserPreferredMode(previousMode);
+                        setUserPreferredMode(previousMode, previousAutoMode);
                         dialog1.dismiss();
                     }
                 }
             };
             timerTask[0].start();
         });
-        dialog.show();
+        mDialog.show();
     }
 
     private void changeHdrConversionFormatToOneSupportedByMode(Display.Mode currentMode) {

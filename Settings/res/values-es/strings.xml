@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Búsqueda siempre disponible, Permite que el servicio de ubicación de Google y otras aplicaciones busquen redes aunque la conexión Wi-Fi esté desactivada"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Red Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"La red Thread conecta de forma local los dispositivos domésticos inteligentes compatibles con Thread para mejorar la eficiencia y el rendimiento.\n\nCuando esté activada, este dispositivo creará una red Thread o se unirá a una que ya tengas. Las credenciales se subirán de forma privada a la nube para que te sea más fácil configurar los dispositivos domésticos inteligentes en un futuro.\n\nCuando esté desactivada, este dispositivo ya no podrá comunicarse con otros dispositivos de tu red Thread. Puede que algunos servicios y dispositivos domésticos inteligentes no funcionen según lo previsto.\n\nMás información en g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Compartir credenciales de red Thread"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Comparte las credenciales de la red Thread con otros dispositivos para simplificar la configuración en tu red Thread de <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Compartir de nuevo"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"El código caducará dentro de <xliff:g id="MINUTES">%1$02d</xliff:g> min y <xliff:g id="SECONDS">%2$02d</xliff:g> s"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"No se ha podido compartir la red Thread"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Red Thread compartida correctamente"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"El código ha caducado antes de que añadir un dispositivo a la red Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"¿Desactivar la red Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Si se desactiva, puede que algunos servicios y dispositivos domésticos inteligentes no funcionen según lo previsto. ¿Quieres continuar?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Cambia el modo energético para habilitar Thread"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos con Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Para habilitar el sonido envolvente, ve a Ajustes &gt; Mandos y accesorios &gt; Configurar botones del mando a distancia &gt; Control de volumen y, a continuación, selecciona una opción que no sea este dispositivo."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Nota: La opción Automático quizá no funcione si tu dispositivo no indica bien qué formatos admite."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Automático"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Habilitar todos los formatos admitidos"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Se borrará la información usada para conectarse a esta red (incluidas las contraseñas guardadas)."</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Únete a una red Wi-Fi escaneando el código QR con un teléfono móvil y siguiendo las instrucciones.\n \n Desde un "<b>"teléfono Android"</b>", ve a Ajustes -&gt; Redes e internet -&gt; Wi-Fi -&gt; Selecciona una red Wi-Fi -&gt; Avanzado -&gt; Añadir dispositivo y escanea el código QR."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Pulsa el botón para volver si quieres cancelar"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Usa las credenciales de Thread para configurar un dispositivo"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Para añadir un dispositivo a tu red Thread, escanea este código QR en la app del dispositivo. Por motivos de seguridad, el código caducará dentro de <xliff:g id="MINUTES">%1$s</xliff:g> minutos."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"Aceptar"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continuar"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Cambiar red"</string>
@@ -1031,7 +1041,7 @@
     <string name="device_energy_saver_validation_attentive" msgid="1461105528087097435">"El temporizador \"Mientras se ve contenido\" debe ser más largo que el temporizador \"Cuando esté inactivo\""</string>
     <string name="limit_network_in_standby_toggle_title" msgid="6587185599397355336">"Limitar conexión de red en modo inactivo"</string>
     <string name="limit_network_in_standby_toggle_summary" msgid="9127792748675581174">"Consume menos energía en modo inactivo"</string>
-    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"Tu televisión se desconectará de la red cuando esté en modo Inactivo, excepto para recibir actualizaciones automáticas. Este ajuste puede reducir el consumo de energía de tu televisión, aunque no podrás usar funciones como Google Cast o el asistente de voz mientras esté en modo Inactivo."</string>
+    <string name="limit_network_in_standby_toggle_info" msgid="7442334081757762718">"Tu televisión se desconectará de la red cuando esté en modo Preparado, excepto para recibir actualizaciones automáticas. Este ajuste puede reducir el consumo de energía de tu televisión, aunque no podrás usar funciones como Google Cast o el asistente de voz mientras esté en modo Preparado."</string>
     <string name="limit_network_in_standby_confirm_title" msgid="789232987058850322">"Permitir conexión de red en modo inactivo"</string>
     <string name="limit_network_in_standby_confirm_message" msgid="7176699480768019689">"Permitir la conexión de red en modo inactivo aumentará el consumo de energía en espera."</string>
     <string name="backup_configure_account_default_summary" msgid="2170733614341544296">"Ninguna cuenta está almacenando datos de copia de seguridad en este momento."</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Habilita ANGLE como controlador OpenGL ES predet."</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Experimental, requiere reiniciar el dispositivo."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Debes reiniciar para cambiar el controlador OpenGL ES del sistema"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

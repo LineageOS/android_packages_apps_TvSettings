@@ -94,6 +94,13 @@
     <string name="wifi_setting_always_scan_content_description" msgid="484630053450137332">"Nätverkssökning alltid tillgänglig: Tillåt att Googles platstjänst och andra appar söker efter nätverk, även när wifi inte har aktiverats"</string>
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread-nätverk"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread-nätverk ansluter lokalt Thread-kompatibla smarta hementer och förbättrar effektiviteten och prestandan.\n\nDen här enheten skapar eller går med i Thread-nätverket när funktionen är aktiverad. Användaruppgifter laddas upp privat till molnet för enklare konfigurering av framtida smarta hemenheter.\n\nNär enheten är av kan den inte kommunicera med andra enheter i Thread-nätverket. Vissa smarta hemenheter och tjänster kanske inte fungerar som de ska.\n\nLäs mer på g.co/tv/thread"</string>
+    <string name="share_thread_network" msgid="1976613832000966535">"Dela användaruppgifter för Thread-nätverk"</string>
+    <string name="share_thread_network_description" msgid="7742150537957957029">"Dela användaruppgifter för Thread-nätverk med andra enheter för att förenkla konfigureringen av ditt Thread-nätverk på <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="4603321026609866957">"Dela igen"</string>
+    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Koden upphör att gälla om <xliff:g id="MINUTES">%1$02d</xliff:g> min <xliff:g id="SECONDS">%2$02d</xliff:g> sek"</string>
+    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Det gick inte att dela användaruppgifterna för Thread-nätverket"</string>
+    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Användaruppgifterna för Thread-nätverket har delats"</string>
+    <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Koden upphörde att gälla innan någon enhet lades till i Thread-nätverket"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Vill du inaktivera Thread-nätverket?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Vissa smarta hemenheter och tjänster kanske inte fungerar som de ska om nätverket är inaktiverat. Vill du fortsätta?"</string>
     <string name="wifi_settings_thread_network_energy_title" msgid="3231849555524744927">"Ändra energiläge för att aktivera Thread"</string>
@@ -138,6 +145,7 @@
     <string name="surround_sound_format_dolby_truehd" msgid="5113046743572967088">"Dolby TrueHD"</string>
     <string name="surround_sound_format_e_ac3_joc" msgid="3360344066462262996">"Dolby Atmos med Dolby Digital Plus"</string>
     <string name="surround_sound_format_dra" msgid="6102878163986662443">"DRA"</string>
+    <string name="surround_sound_variable_volume_control_summary" msgid="5617179789645766442">"Om du vill aktivera surroundljud öppnar du Inställningar &gt; Fjärrkontroller och tillbehör &gt; Konfigurera fjärrkontrollsknappar &gt; Volymkontroll och väljer sedan ett annat alternativ än den här enheten."</string>
     <string name="surround_sound_auto_info" msgid="4829346839183591680">"Obs! Alternativet Automatiskt kan sluta fungera om stödda format på enheten inte rapporteras rätt."</string>
     <string name="surround_sound_auto_title" msgid="811867430010809597">"Automatisk"</string>
     <string name="surround_sound_selection_auto_desc" msgid="7272466222509838647">"Aktivera alla format som stöds"</string>
@@ -500,6 +508,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Uppgifterna som används för att ansluta till det här nätverket tas bort, inklusive sparade lösenord"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Anslut till ett wifi-nätverk genom att skanna QR-koden med en telefon och följa anvisningarna.\n \n På en "<b>"Android-telefon"</b>" öppnar du Inställningar -&gt; Nätverk och internet -&gt; wifi -&gt; Välj ett wifi-nätverk -&gt; Avancerat -&gt; Lägg till en enhet och skannar sedan QR-koden."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Avbryt genom att trycka på bakåtknappen"</string>
+    <string name="share_thread_title" msgid="7245016423667192880">"Använd Thread-användaruppgifter för att konfigurera en enhet"</string>
+    <string name="share_thread_description" msgid="8219569516530422386">"Skanna den här QR-koden i enhetens app för att lägga till en enhet i Thread-nätverket. Av säkerhetsskäl upphör koden att gälla om <xliff:g id="MINUTES">%1$s</xliff:g> minuter."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Fortsätt"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Byt nätverk"</string>
@@ -1205,4 +1215,5 @@
     <string name="enable_angle_as_system_driver" msgid="2621814239122082069">"Aktivera ANGLE som standarddrivrutin för OpenGL ES"</string>
     <string name="enable_angle_as_system_driver_summary" msgid="6941274244229799261">"Experimentell, kräver omstart."</string>
     <string name="reboot_dialog_enable_angle_as_system_driver" msgid="5658387699421699408">"Du måste starta om enheten för att ändra systemets OpenGL ES-drivrutin"</string>
+    <string name="accessibility_letterbox_wallpapers_component_name" msgid="6779159775165341059"></string>
 </resources>

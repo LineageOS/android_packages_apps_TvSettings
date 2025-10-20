@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/background_container"
+        android:layout_width="@dimen/qr_frame_default_size"
+        android:layout_height="@dimen/qr_frame_default_size"
+        android:layout_gravity="center"
+        android:background="#0FDFF3FF" />
+
+    <View
+        android:id="@+id/boundary_markers"
+        android:layout_width="@dimen/qr_boundary_markers_default_size"
+        android:layout_height="@dimen/qr_boundary_markers_default_size"
+        android:layout_gravity="center"
+        android:background="@drawable/qr_boundary_markers" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/qr_code_logo"
+        android:layout_width="@dimen/qr_logo_default_size"
+        android:layout_height="@dimen/qr_code_default_size"
+        android:layout_gravity="center"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/qr_code_canvas"
+        android:layout_width="@dimen/qr_code_default_size"
+        android:layout_height="@dimen/qr_code_default_size"
+        android:layout_gravity="center" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/qr_loading_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:importantForAccessibility="no"
+        android:indeterminateOnly="true"
+        app:indicatorColor="#E4F3FF"
+        app:indicatorSize="20dp"
+        app:trackColor="#33E4F3FF"
+        app:trackCornerRadius="1.5dp"
+        app:trackThickness="3dp" />
+
+</merge>
