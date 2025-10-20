@@ -48,8 +48,7 @@ public class ProgressDialogFragment extends Fragment {
     @Override
     public @Nullable View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
             Bundle savedInstanceState) {
-        int layoutId = FlavorUtils.isTwoPanel(getActivity())
-            ? R.layout.progress_fragment_two_panel : R.layout.progress_fragment;
+        int layoutId = getLayoutId();
         final ViewGroup view =
                 (ViewGroup) inflater.inflate(layoutId, container, false);
 
@@ -147,5 +146,9 @@ public class ProgressDialogFragment extends Fragment {
                 mExtraTextView.setLineSpacing(mExtraTextView.getLineSpacingExtra(), multiplier);
             }
         }
+    }
+
+    public int getLayoutId() {
+        return R.layout.progress_fragment;
     }
 }
