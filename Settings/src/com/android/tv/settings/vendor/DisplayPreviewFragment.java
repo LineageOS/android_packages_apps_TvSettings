@@ -103,7 +103,7 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
 
     @Override
     public void onDisplayChanged(int displayId) {
-        Display.Mode newMode = mDisplayManager.getGlobalUserPreferredDisplayMode();
+        Display.Mode newMode = updateCurrentMode();
         if (!Objects.equals(mCurrentMode, newMode)) {
             updateResolutionTitleDescription(
                     ResolutionSelectionUtils.modeToString(newMode, getContext()));
@@ -126,6 +126,9 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
         super.onStart();
         if (mDisplay.getSystemPreferredDisplayMode() != null) {
             mDisplayManager.registerDisplayListener(this, null);
+            mCurrentMode = updateCurrentMode();
+            updateResolutionTitleDescription(
+                    ResolutionSelectionUtils.modeToString(mCurrentMode, getContext()));
         }
     }
 
@@ -144,6 +147,21 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
         if (mDisplay.getSystemPreferredDisplayMode() != null) {
             mDisplayManager.unregisterDisplayListener(this);
         }
+    }
+
+    private Display.Mode updateCurrentMode() {
+        Display.Mode currentMode = mDisplay.getMode();
+        Display.Mode userPreferredMode = mDisplayManager.getGlobalUserPreferredDisplayMode();
+        /*
+            - If the user has not set a preferred display mode → return null (automatic mode)
+            - If a preferred mode exists and matches the current display's resolution and refresh rate → return the preferred mode
+            - Otherwise (preferred mode exists but does not match) → return null (automatic mode)
+        */
+        return (userPreferredMode != null && userPreferredMode.matches(
+                currentMode.getPhysicalWidth(),
+                currentMode.getPhysicalHeight(),
+                currentMode.getRefreshRate()))
+                ? userPreferredMode : null;
     }
 
     private void updateResolutionTitleDescription(String summary) {
