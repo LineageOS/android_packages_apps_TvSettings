@@ -33,6 +33,7 @@ import android.util.ArraySet;
 import android.util.Log;
 
 import androidx.annotation.Keep;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
@@ -43,6 +44,7 @@ import com.android.tv.settings.device.storage.NewStorageActivity;
 import com.android.tv.settings.device.storage.StorageFragment;
 import com.android.tv.settings.device.storage.StoragePreference;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.twopanelsettings.KtAsyncTask;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -183,7 +185,8 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
             StorageSummaryFragment.VolPreference volPreference =
                         (StorageSummaryFragment.VolPreference) deviceCategory.findPreference(key);
             if (volPreference == null) {
-                volPreference = new StorageSummaryFragment.VolPreference(themedContext, volumeInfo);
+                volPreference = new StorageSummaryFragment.VolPreference(themedContext, volumeInfo,
+                        getViewLifecycleOwner());
             }
             volPreference.refresh(themedContext, mStorageManager, volumeInfo);
             deviceCategory.addPreference(volPreference);
@@ -223,7 +226,8 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
             StorageSummaryFragment.VolPreference volPreference =
                     (StorageSummaryFragment.VolPreference) removableCategory.findPreference(key);
             if (volPreference == null) {
-                volPreference = new StorageSummaryFragment.VolPreference(themedContext, volumeInfo);
+                volPreference = new StorageSummaryFragment.VolPreference(themedContext, volumeInfo,
+                        getViewLifecycleOwner());
             }
             volPreference.refresh(themedContext, mStorageManager, volumeInfo);
             removableCategory.addPreference(volPreference);
@@ -251,9 +255,12 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
     }
 
     private static class VolPreference extends Preference {
-        VolPreference(Context context, VolumeInfo volumeInfo) {
+        private final LifecycleOwner mLifecycleOwner;
+
+        VolPreference(Context context, VolumeInfo volumeInfo, LifecycleOwner lifecycleOwner) {
             super(context);
             setKey(makeKey(volumeInfo));
+            mLifecycleOwner = lifecycleOwner;
         }
 
         private void refresh(Context context, StorageManager storageManager,
@@ -262,7 +269,7 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
                     .getBestVolumeDescription(volumeInfo);
             setTitle(description);
             if (volumeInfo.isMountedReadable()) {
-                setSummary(getSizeString(volumeInfo));
+                updateSizeSummary(volumeInfo);
                 setFragment(StorageFragment.class.getName());
                 StorageFragment.prepareArgs(getExtras(), volumeInfo);
             } else {
@@ -271,14 +278,31 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
             }
         }
 
-        private String getSizeString(VolumeInfo vol) {
-            final File path = vol.getPath();
-            if (vol.isMountedReadable() && path != null) {
-                return String.format(getContext().getString(R.string.storage_size),
-                        StoragePreference.formatSize(getContext(), path.getTotalSpace()));
-            } else {
-                return null;
-            }
+        private void updateSizeSummary(VolumeInfo vol) {
+            new KtAsyncTask<Long>(mLifecycleOwner) {
+                @Override
+                public Long doInBackground() {
+                    final File path = vol.getPath();
+                    if (path != null) {
+                        try {
+                            return path.getTotalSpace();
+                        } catch (Exception e) {
+                            Log.e(TAG, "Error getting total space.", e);
+                        }
+                    }
+                    return -1L;
+                }
+
+                @Override
+                public void onPostExecute(Long totalSpace) {
+                    if (totalSpace > -1L) {
+                        setSummary(String.format(getContext().getString(R.string.storage_size),
+                                StoragePreference.formatSize(getContext(), totalSpace)));
+                    } else {
+                        setSummary(null);
+                    }
+                }
+            }.execute();
         }
 
         public static String makeKey(VolumeInfo volumeInfo) {
