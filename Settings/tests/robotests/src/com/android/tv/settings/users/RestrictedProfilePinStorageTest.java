@@ -31,7 +31,6 @@ import android.os.RemoteException;
 
 import com.android.internal.widget.ILockSettings;
 import com.android.internal.widget.LockPatternUtils;
-import com.android.internal.widget.LockPatternUtils.RequestThrottledException;
 import com.android.internal.widget.LockscreenCredential;
 import com.android.internal.widget.VerifyCredentialResponse;
 
@@ -80,8 +79,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testSetPinWhenNoPinIsSet_success()
-            throws RemoteException, RequestThrottledException {
+    public void testSetPinWhenNoPinIsSet_success() throws RemoteException {
         mOriginalPin = null;
         initPin(mOriginalPin);
 
@@ -97,8 +95,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testSetPinWhenWrongPinIsInput_fail()
-            throws RemoteException, RequestThrottledException {
+    public void testSetPinWhenWrongPinIsInput_fail() throws RemoteException {
         initPin(mOriginalPin);
 
         mPinStorage.setPin(mNewPin, mWrongPin);
@@ -112,8 +109,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testSetPinWhenCorrectPinIsInput_success()
-            throws RemoteException, RequestThrottledException {
+    public void testSetPinWhenCorrectPinIsInput_success() throws RemoteException {
         initPin(mOriginalPin);
 
         mPinStorage.setPin(mNewPin, mOriginalPin);
@@ -128,7 +124,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testDeletePin_success() throws RemoteException, RequestThrottledException {
+    public void testDeletePin_success() throws RemoteException {
         initPin(mOriginalPin);
 
         mPinStorage.deletePin(mOriginalPin);
@@ -141,7 +137,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testDeletePin_fail() throws RemoteException, RequestThrottledException {
+    public void testDeletePin_fail() throws RemoteException {
         initPin(mOriginalPin);
 
         mPinStorage.deletePin(mWrongPin);
@@ -154,7 +150,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testIsPinCorrect() throws RemoteException, RequestThrottledException {
+    public void testIsPinCorrect() throws RemoteException {
         initPin(mOriginalPin);
 
         boolean isPinCorrect = mPinStorage.isPinCorrect(mOriginalPin);
@@ -166,7 +162,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testIsPinCorrect_legacy() throws RemoteException, RequestThrottledException {
+    public void testIsPinCorrect_legacy() throws RemoteException {
         initPinLegacy(mOriginalPin);
 
         mPinStorage.isPinCorrect(mOriginalPin);
@@ -178,7 +174,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testIsPinSet() throws RemoteException, RequestThrottledException {
+    public void testIsPinSet() throws RemoteException {
         initPinInternal(mOriginalPin);
 
         mPinStorage.isPinSet();
@@ -188,7 +184,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testIsPinSet_legacy() throws RemoteException, RequestThrottledException {
+    public void testIsPinSet_legacy() throws RemoteException {
         initPinLegacy(mOriginalPin);
 
         mPinStorage.isPinSet();
@@ -198,8 +194,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testMigrationToInternalStorage_IsPinCorrect()
-            throws RemoteException, RequestThrottledException {
+    public void testMigrationToInternalStorage_IsPinCorrect() throws RemoteException {
         initPinLegacy(mOriginalPin);
 
         mPinStorage.isPinCorrect(mOriginalPin);
@@ -211,8 +206,7 @@ public class RestrictedProfilePinStorageTest {
     }
 
     @Test
-    public void testMigrationToInternalStorage_SetPin()
-            throws RemoteException, RequestThrottledException {
+    public void testMigrationToInternalStorage_SetPin() throws RemoteException {
         initPinLegacy(mOriginalPin);
 
         mPinStorage.setPin(mNewPin, mOriginalPin);
@@ -226,12 +220,12 @@ public class RestrictedProfilePinStorageTest {
         verify(mPinService).setPin(eq(mNewPin));
     }
 
-    private void initPin(String pin) throws RemoteException, RequestThrottledException {
+    private void initPin(String pin) throws RemoteException {
         initPinInternal(pin);
         initPinLegacy(pin);
     }
 
-    private void initPinInternal(String pin) throws RemoteException, RequestThrottledException {
+    private void initPinInternal(String pin) throws RemoteException {
         when(mPinService.isPinSet()).thenReturn(pin != null);
         if (pin != null) {
             when(mPinService.isPinCorrect(any())).thenReturn(false);
@@ -239,18 +233,18 @@ public class RestrictedProfilePinStorageTest {
         }
     }
 
-    private void initPinLegacy(String pin) throws RemoteException, RequestThrottledException {
+    private void initPinLegacy(String pin) throws RemoteException {
         LockscreenCredential credential = LockscreenCredential.createPinOrNone(pin);
         when(mLockPatternUtils.isSecure(anyInt())).thenReturn(pin != null);
         when(mLockSettings.checkCredential(any(), anyInt(), any()))
                 .thenReturn(VerifyCredentialResponse.OTHER_ERROR);
         when(mLockPatternUtils.checkCredential(any(), anyInt(), any()))
-                .thenReturn(false);
+                .thenReturn(VerifyCredentialResponse.OTHER_ERROR);
         if (pin != null) {
             when(mLockSettings.checkCredential(eq(credential), eq(USER_ID), any()))
                     .thenReturn(VerifyCredentialResponse.OK);
             when(mLockPatternUtils.checkCredential(any(), eq(USER_ID), any()))
-                    .thenReturn(true);
+                    .thenReturn(VerifyCredentialResponse.OK);
         }
     }
 
