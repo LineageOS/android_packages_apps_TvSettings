@@ -60,6 +60,7 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
     lateinit var mAudioManager: AudioManager
     lateinit var mDisplayManager: DisplayManager
     var mHdmiControlManager: HdmiControlManager? = null
+    lateinit var mDisplay: Display
     private var mCurrentDeviceName: String? = null
     private var mCurrentMode: Display.Mode? = null
     private var mSliceShard: SliceShard? = null
@@ -117,10 +118,10 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
         mCurrentDeviceName = DeviceUtils.getDeviceName(context)
         updateVolumeChangePreference()
 
-        val display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY)
-        if (display.systemPreferredDisplayMode != null) {
+        mDisplay = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY)
+        if (mDisplay.systemPreferredDisplayMode != null) {
             mDisplayManager.registerDisplayListener(this, null)
-            mCurrentMode = mDisplayManager.globalUserPreferredDisplayMode
+            mCurrentMode = updateCurrentMode()
             updateResolutionTitleDescription(ResolutionSelectionUtils.modeToString(
                 mCurrentMode, context))
         } else {
@@ -220,11 +221,29 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
     override fun onDisplayAdded(displayId: Int) {}
     override fun onDisplayRemoved(displayId: Int) {}
     override fun onDisplayChanged(displayId: Int) {
-        val newMode = mDisplayManager.globalUserPreferredDisplayMode
+        val newMode = updateCurrentMode()
         if (mCurrentMode != newMode) {
             updateResolutionTitleDescription(
                 ResolutionSelectionUtils.modeToString(newMode, context))
             mCurrentMode = newMode
+        }
+    }
+
+    private fun updateCurrentMode(): Display.Mode? {
+        val currentMode = mDisplay.mode
+        val userPreferredMode = mDisplayManager.globalUserPreferredDisplayMode
+
+        /*
+            - If no preferred mode is set → return null (automatic mode)
+            - If the preferred mode matches current resolution & refresh rate → return preferred mode
+            - Otherwise → return null (automatic mode)
+        */
+        return userPreferredMode?.takeIf {
+            it.matches(
+                currentMode.physicalWidth,
+                currentMode.physicalHeight,
+                currentMode.refreshRate
+            )
         }
     }
 

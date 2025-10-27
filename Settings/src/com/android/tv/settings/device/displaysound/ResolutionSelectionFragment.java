@@ -63,13 +63,15 @@ import java.util.concurrent.TimeUnit;
  * from the list of resolution and refresh rates which are supported by device.
  */
 @Keep
-public class ResolutionSelectionFragment extends PreferenceControllerFragment {
+public class ResolutionSelectionFragment extends PreferenceControllerFragment implements
+    DisplayManager.DisplayListener {
     static final String KEY_MODE_SELECTION = "resolution_selection_option";
     static final String KEY_RESOLUTION_PREFIX = "resolution_selection_";
     static final String KEY_RESOLUTION_SELECTION_AUTO = "resolution_selection_auto";
 
     private static final String TAG = ResolutionSelectionFragment.class.getSimpleName();
     private DisplayManager mDisplayManager;
+    private Display mDisplay = null;
     private Display.Mode[] mModes;
     private int mUserPreferredModeIndex;
     private PreferenceCategory mResolutionPreferenceCategory;
@@ -81,8 +83,8 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
     private AlertDialog mDialog = null;
     private Display.Mode mFinalNewMode = null;
     private Display.Mode mFinalPreviousMode = null;
-    private boolean mPrevModeIsAuto = false;
     private boolean mNewModeisAuto = false;
+    private boolean mPrevModeIsAuto = false;
 
     public enum SavedStateKey {
         NEW_MODE,
@@ -113,6 +115,37 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        if (mDisplay.getSystemPreferredDisplayMode() != null) {
+            mDisplayManager.registerDisplayListener(this, null);
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mDisplay.getSystemPreferredDisplayMode() != null) {
+            mDisplayManager.unregisterDisplayListener(this);
+        }
+    }
+
+    @Override
+    public void onDisplayAdded(int displayId) {}
+
+    @Override
+    public void onDisplayRemoved(int displayId) {}
+
+    @Override
+    public void onDisplayChanged(int displayId) {
+        Display.Mode[] newModes = mDisplay.getSupportedModes();
+        Arrays.sort(newModes, DisplayModeComparator());
+        if (!Arrays.equals(mModes, newModes)) {
+            reBuildPreferences();
+        }
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         if (mDialog != null && mDialog.isShowing()) {
@@ -126,10 +159,12 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putParcelable(SavedStateKey.NEW_MODE.name(), mFinalNewMode);
-        outState.putBoolean(SavedStateKey.NEW_MODE_IS_AUTO.name(), mNewModeisAuto);
-        outState.putParcelable(SavedStateKey.PREVIOUS_MODE.name(), mFinalPreviousMode);
-        outState.putBoolean(SavedStateKey.PREVIOUS_MODE_IS_AUTO.name(), mPrevModeIsAuto);
+        if(mDialog != null && mDialog.isShowing()) {
+            outState.putParcelable(SavedStateKey.NEW_MODE.name(), mFinalNewMode);
+            outState.putBoolean(SavedStateKey.NEW_MODE_IS_AUTO.name(), mNewModeisAuto);
+            outState.putParcelable(SavedStateKey.PREVIOUS_MODE.name(), mFinalPreviousMode);
+            outState.putBoolean(SavedStateKey.PREVIOUS_MODE_IS_AUTO.name(), mPrevModeIsAuto);
+        }
     }
 
     // Get the pre-stored Display.Mode when the fragment is recreated.
@@ -163,33 +198,15 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.resolution_selection, null);
+        mDisplay = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
         mResolutionPreferenceCategory = findPreference(KEY_MODE_SELECTION);
+        reBuildPreferences();
+    }
 
-        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
-        mModes = display.getSupportedModes();
-        Arrays.sort(mModes, new Comparator<Display.Mode>() {
-            // Sort in descending order of refresh rate.
-            @Override
-            public int compare(Display.Mode o1, Display.Mode o2) {
-                int resolution1 = Math.min(o1.getPhysicalHeight(), o1.getPhysicalWidth());
-                int resolution2 = Math.min(o2.getPhysicalHeight(), o2.getPhysicalWidth());
-
-                // The resolution which is in list of standard resolutions appears before the one
-                // which is not.
-                if (STANDARD_RESOLUTIONS_IN_ORDER.contains(resolution2)
-                        && !STANDARD_RESOLUTIONS_IN_ORDER.contains(resolution1)) {
-                    return 1;
-                }
-                if (STANDARD_RESOLUTIONS_IN_ORDER.contains(resolution1)
-                        && !STANDARD_RESOLUTIONS_IN_ORDER.contains(resolution2)) {
-                    return -1;
-                }
-                if (resolution2 == resolution1) {
-                    return (int) o2.getRefreshRate() - (int) o1.getRefreshRate();
-                }
-                return resolution2 - resolution1;
-            }
-        });
+    private void reBuildPreferences() {
+        mResolutionPreferenceCategory.removeAll();
+        mModes = mDisplay.getSupportedModes();
+        Arrays.sort(mModes, DisplayModeComparator());
 
         createPreferences();
 
@@ -207,8 +224,12 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
         pref.setTitle(getContext().getString(R.string.resolution_selection_auto_title));
         pref.setKey(KEY_RESOLUTION_SELECTION_AUTO);
 
-        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
-        mAutoMode = display.getSystemPreferredDisplayMode();
+        mDisplay = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
+        mAutoMode = mDisplay.getSystemPreferredDisplayMode();
+        if(mAutoMode == null) {
+            // System preferred display mode is not set, so we wait for it to be set.
+            return;
+        }
         final String summary = getResources().getString(R.string.resolution_display_mode,
                 ResolutionSelectionUtils.getResolutionString(
                         mAutoMode.getPhysicalWidth(), mAutoMode.getPhysicalHeight()),
@@ -343,17 +364,16 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
             Display.Mode previousMode, boolean previousAutoMode) {
         final CountDownTimer[] timerTask = {null};
         String resolutionString = ResolutionSelectionUtils.modeToString(currentMode, getContext());
-        Display display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY);
         boolean doesCurrentModeNotSupportDvBecauseLimitedTo4k30 =
                 isHdrFormatSupported(previousMode, HDR_TYPE_DOLBY_VISION)
-                && doesCurrentModeNotSupportDvBecauseLimitedTo4k30(display);
+                && doesCurrentModeNotSupportDvBecauseLimitedTo4k30(mDisplay);
         final String dialogDescription = descriptionForNewMode(resolutionString,
                 doesCurrentModeNotSupportDvBecauseLimitedTo4k30);
         final String title = titleForNewMode(resolutionString,
                 doesCurrentModeNotSupportDvBecauseLimitedTo4k30);
 
         OnClickListener onOkClicked = (dialog, which) -> {
-            changeHdrConversionFormatToOneSupportedByMode(display.getMode());
+            changeHdrConversionFormatToOneSupportedByMode(mDisplay.getMode());
             mUserPreferredModeIndex = newAutoMode ? -1 : lookupModeIndex(currentMode);
             dialog.dismiss();
             timerTask[0].cancel();
@@ -392,6 +412,31 @@ public class ResolutionSelectionFragment extends PreferenceControllerFragment {
             timerTask[0].start();
         });
         mDialog.show();
+    }
+
+    private Comparator<Display.Mode> DisplayModeComparator() {
+        return new Comparator<Display.Mode>() {
+            @Override
+            public int compare(Display.Mode o1, Display.Mode o2) {
+                int resolution1 = Math.min(o1.getPhysicalHeight(), o1.getPhysicalWidth());
+                int resolution2 = Math.min(o2.getPhysicalHeight(), o2.getPhysicalWidth());
+
+                // The resolution which is in list of standard resolutions appears before the one
+                // which is not.
+                if (STANDARD_RESOLUTIONS_IN_ORDER.contains(resolution2)
+                        && !STANDARD_RESOLUTIONS_IN_ORDER.contains(resolution1)) {
+                    return 1;
+                }
+                if (STANDARD_RESOLUTIONS_IN_ORDER.contains(resolution1)
+                        && !STANDARD_RESOLUTIONS_IN_ORDER.contains(resolution2)) {
+                    return -1;
+                }
+                if (resolution2 == resolution1) {
+                    return (int) o2.getRefreshRate() - (int) o1.getRefreshRate();
+                }
+                return resolution2 - resolution1;
+            }
+        };
     }
 
     private void changeHdrConversionFormatToOneSupportedByMode(Display.Mode currentMode) {

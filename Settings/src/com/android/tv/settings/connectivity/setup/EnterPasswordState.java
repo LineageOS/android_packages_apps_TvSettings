@@ -162,13 +162,6 @@ public class EnterPasswordState implements State {
                 }
 
                 @Override
-                protected void onEditingModeChange(
-                        ViewHolder vh, boolean editing, boolean withTransition) {
-                    super.onEditingModeChange(vh, editing, withTransition);
-                    updatePasswordInputObfuscation();
-                }
-
-                @Override
                 public int onProvideItemLayoutId(int viewType) {
                     if (viewType == ACTION_ID_CHECKABLE) {
                         if (FlavorUtils.isTwoPanel(getActivity())) {
@@ -178,6 +171,14 @@ public class EnterPasswordState implements State {
                         }
                     } else {
                         return R.layout.setup_password_item;
+                    }
+                }
+
+                @Override
+                public void openInEditMode(@NonNull GuidedAction action) {
+                    super.openInEditMode(action);
+                    if (mTextInput != null && mCheckable != null) {
+                        updatePasswordInputObfuscation();
                     }
                 }
             };

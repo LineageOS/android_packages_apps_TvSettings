@@ -62,6 +62,12 @@ public class AddAccessoryContentFragment extends ProgressDialogFragment {
         }
     }
 
+    @Override
+    public int getLayoutId() {
+        return FlavorUtils.isTwoPanel(getActivity())
+            ? R.layout.progress_fragment_two_panel : R.layout.progress_fragment;
+    }
+
     private void updateExtraDescription() {
         String extraDescription = getString(
                 R.string.accessories_add_bluetooth_inst_extra, BUTTON1_TOKEN, BUTTON2_TOKEN);
