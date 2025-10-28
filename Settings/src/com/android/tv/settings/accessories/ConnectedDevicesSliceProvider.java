@@ -18,24 +18,22 @@ package com.android.tv.settings.accessories;
 
 
 import static android.content.Intent.FLAG_RECEIVER_FOREGROUND;
-
 import static com.android.tv.settings.accessories.AddAccessoryActivity.ACTION_CONNECT_INPUT;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTION_BACKLIGHT;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTION_FIND_MY_REMOTE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTION_TOGGLE_CHANGED;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTIVE_AUDIO_OUTPUT;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.BLUETOOTH_ON;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.EXTRA_TOGGLE_STATE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.EXTRA_TOGGLE_TYPE;
-import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_SLICE_URI;
-import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_DIRECTION;
-import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.DIRECTION_BACK;
-import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.FIND_MY_REMOTE_PHYSICAL_BUTTON_ENABLED_SETTING;
-import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.isFindMyRemoteButtonEnabled;
-import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTION_BACKLIGHT;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.getBacklightModeIntent;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.DIRECTION_BACK;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_DIRECTION;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_SLICE_URI;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.FIND_MY_REMOTE_PHYSICAL_BUTTON_ENABLED_SETTING;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.getBacklightMode;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.isFindMyRemoteButtonEnabled;
 
-import android.app.PendingIntent;
 import android.app.admin.DevicePolicyManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.bluetooth.BluetoothDevice;
@@ -52,24 +50,20 @@ import android.os.Looper;
 import android.os.StrictMode;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Log;
-
 import androidx.annotation.IntegerRes;
 import androidx.core.graphics.drawable.IconCompat;
-
-import com.android.tv.twopanelsettings.slices.TvSettingsSliceProvider;
-
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.media.flags.Flags;
 import com.android.tv.settings.R;
+import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.twopanelsettings.slices.TvSettingsSliceProvider;
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder;
 import com.android.tv.twopanelsettings.slices.builders.PreferenceSliceBuilder.RowBuilder;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -491,7 +485,20 @@ public class ConnectedDevicesSliceProvider extends TvSettingsSliceProvider imple
                     .setKey(KEY_OFFICIAL_REMOTES_CATEGORY)
                     .setTitle(getString(R.string.bluetooth_official_remote_category)));
         }
-        if (isIrSettingsUriValid) {
+
+        String customButtonSliceUri = getContext().getResources()
+                .getString(R.string.config_custom_button_entry_slice_uri);
+        boolean isCustomButtonSliceUriValid = isSliceProviderValid(customButtonSliceUri);
+        if (AccessoryUtils.isHdmiSinkDevice(getContext())
+                && AccessoryUtils.hasCustomizableRemoteButton(getContext())
+                && FlavorUtils.isTwoPanel(getContext())
+                && isCustomButtonSliceUriValid) {
+            psb.addPreference(new RowBuilder()
+                    .setKey(KEY_IR)
+                    .setTitle(getString(R.string.custom_button_entry_title))
+                    .setSubtitle(getString(R.string.custom_button_entry_subtitle))
+                    .setTargetSliceUri(customButtonSliceUri));
+        } else if (isIrSettingsUriValid) {
             psb.addPreference(new RowBuilder()
                     .setKey(KEY_IR)
                     .setTitle(getString(R.string.bluetooth_ir_entry_title))

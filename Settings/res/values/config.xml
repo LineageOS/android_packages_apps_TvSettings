@@ -43,6 +43,9 @@
     <!-- Determines whether "Quick connect" menu item is visible (if supported by hardware) -->
     <bool name="config_easyconnect_enabled">true</bool>
 
+    <!-- Slice URI for the custom button settings. -->
+    <string name="config_custom_button_entry_slice_uri" translatable="false" />
+
     <!-- Allow overlay to specify known/official device names using the return value of
         BluetoothDevice # getName() so that it is hidden from the generic bluetooth accessories
         section and is only visible in OEM-implemented Slice. -->
@@ -59,6 +62,9 @@
         turn off Bluetooth. Without an IR remote or some other form of connection, the user may not
         be able to turn it back on and have to perform FDR. -->
     <bool name="show_bluetooth_toggle">false</bool>
+
+    <!-- The key code for the custom button. Default is 313 (KEYCODE_MACRO_1). -->
+    <integer name="config_custom_button_key_code">313</integer>
 
     <!--  mDelayManualPairing  -->
     <integer name="config_delay_manual_pairing">5000</integer>

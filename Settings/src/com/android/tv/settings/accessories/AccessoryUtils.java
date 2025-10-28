@@ -21,16 +21,18 @@ import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
+import android.hardware.input.InputManager;
+import android.os.SystemProperties;
 import android.text.Html;
+import android.text.TextUtils;
 import android.util.Log;
-
+import android.view.InputDevice;
+import android.view.KeyEvent;
 import androidx.annotation.Nullable;
-
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
 import com.android.tv.settings.R;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -46,6 +48,7 @@ public final class AccessoryUtils {
     // Includes any generic keyboards or pointers, and any joystick, game pad, or remote subtypes.
     private static final int MINOR_REMOTE_MASK = 0b11001100;
     private static List<String> sKnownDeviceLabels = null;
+    private static final String PROPERTY_HDMI_DEVICE_TYPE = "ro.hdmi.device_type";
 
     /** This allows OEM to easily override the main Service if desired. */
     public static Class getBluetoothDeviceServiceClass() {
@@ -226,6 +229,44 @@ public final class AccessoryUtils {
                 if (profile.getProfileId() == BluetoothProfile.A2DP) {
                     return true;
                 }
+            }
+        }
+        return false;
+    }
+
+     /**
+     * Returns true if the device is an HDMI sink, false otherwise.
+     * TV or monitor is an HDMI sink, while a playback device (e.g. STB) is an HDMI source.
+     */
+    public static boolean isHdmiSinkDevice(Context context) {
+        // ro.hdmi.device_type: 0 for TV, 4 for playback device. Can be a comma separated list.
+        String deviceTypes = SystemProperties.get(PROPERTY_HDMI_DEVICE_TYPE);
+        if (TextUtils.isEmpty(deviceTypes)) {
+            return false;
+        }
+        return Arrays.stream(deviceTypes.trim().split(","))
+                .map(String::trim)
+                .anyMatch(s -> "0".equals(s));
+    }
+
+    /**
+     * Returns true if the device has a remote with a customizable button, false otherwise.
+     */
+      public static boolean hasCustomizableRemoteButton(Context context) {
+        if (context == null) {
+            return false;
+        }
+        InputManager inputManager = context.getSystemService(InputManager.class);
+        if (inputManager == null) {
+            return false;
+        }
+        int customButtonKeyCode = context.getResources().getInteger(
+                R.integer.config_custom_button_key_code);
+        for (int deviceId : inputManager.getInputDeviceIds()) {
+            InputDevice inputDevice = inputManager.getInputDevice(deviceId);
+            if (inputDevice != null && !inputDevice.isVirtual() &&
+                inputDevice.hasKeys(customButtonKeyCode)[0]) {
+                return true;
             }
         }
         return false;
