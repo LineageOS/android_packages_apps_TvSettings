@@ -79,6 +79,10 @@
         <item name="android:widgetLayout">@layout/preference_switch</item>
         <item name="android:layout">@layout/leanback_preference_two_panel</item>
     </style>
+    <style name="TwoPanelCheckboxPreferenceStyle" parent="@style/TwoPanelPreferenceStyle">
+        <item name="widgetLayout">@layout/preference_checkbox</item>
+        <item name="android:widgetLayout">@layout/preference_checkbox</item>
+    </style>
     <style name="Widget.TwoPanelPreference.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
         <item name="materialThemeOverlay">@style/ThemeOverlay.TwoPanelPreference.Switch</item>
     </style>
