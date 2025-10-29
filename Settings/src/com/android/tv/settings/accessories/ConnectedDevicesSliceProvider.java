@@ -34,6 +34,7 @@ import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.FIN
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.getBacklightMode;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.isFindMyRemoteButtonEnabled;
 
+import android.app.PendingIntent;
 import android.app.admin.DevicePolicyManager;
 import android.app.tvsettings.TvSettingsEnums;
 import android.bluetooth.BluetoothDevice;
@@ -292,10 +293,13 @@ public class ConnectedDevicesSliceProvider extends TvSettingsSliceProvider imple
                 );
                 i.putExtras(extras);
                 i.putExtra(KEY_EXTRAS_DEVICE, device);
+                i.setData(sliceUri);
                 Intent followUpIntent =
                         new Intent(context, ConnectedDevicesSliceBroadcastReceiver.class);
                 followUpIntent.putExtra(EXTRAS_SLICE_URI, sliceUri.toString());
-                connectionActionPref.setPendingIntent(i);
+                connectionActionPref.setPendingIntent(
+                        PendingIntent.getActivity(getContext(), 0, i,
+                                PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT));
                 connectionActionPref.setFollowupPendingIntent(followUpIntent);
                 psb.addPreference(connectionActionPref);
             }
@@ -320,11 +324,14 @@ public class ConnectedDevicesSliceProvider extends TvSettingsSliceProvider imple
         i = new Intent(context, BluetoothActionActivity.class);
         i.putExtra(KEY_EXTRAS_DEVICE, device);
         i.putExtras(extras);
+        i.setData(sliceUri);
 
         Intent followUpIntent = new Intent(context, ConnectedDevicesSliceBroadcastReceiver.class);
         followUpIntent.putExtra(EXTRAS_SLICE_URI, sliceUri.toString());
         renamePref.setFollowupPendingIntent(followUpIntent);
-        renamePref.setPendingIntent(i);
+        renamePref.setPendingIntent(
+                PendingIntent.getActivity(getContext(), 1, i,
+                        PendingIntent.FLAG_IMMUTABLE));
         psb.addPreference(renamePref);
 
         // Update "forget preference".
@@ -346,10 +353,13 @@ public class ConnectedDevicesSliceProvider extends TvSettingsSliceProvider imple
         );
         i.putExtras(extras);
         i.putExtra(KEY_EXTRAS_DEVICE, device);
+        i.setData(sliceUri);
         followUpIntent = new Intent(context, ConnectedDevicesSliceBroadcastReceiver.class);
         followUpIntent.putExtra(EXTRAS_SLICE_URI, sliceUri.toString());
         followUpIntent.putExtra(EXTRAS_DIRECTION, DIRECTION_BACK);
-        forgetPref.setPendingIntent(i);
+        forgetPref.setPendingIntent(
+                PendingIntent.getActivity(getContext(), 2, i,
+                        PendingIntent.FLAG_IMMUTABLE));
         forgetPref.setFollowupPendingIntent(followUpIntent);
         psb.addPreference(forgetPref);
 
