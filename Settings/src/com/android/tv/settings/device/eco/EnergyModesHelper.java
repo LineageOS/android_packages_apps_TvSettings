@@ -547,13 +547,14 @@ public final class EnergyModesHelper {
 
         PowerManager powerManager = mContext.getSystemService(PowerManager.class);
         final LowPowerStandbyPolicy currentPolicy = powerManager.getLowPowerStandbyPolicy();
-        if (currentPolicy == null) {
-            return null;
+        EnergyMode matchingEnergyMode = null;
+        if (currentPolicy != null) {
+            matchingEnergyMode = getEnergyMode(currentPolicy.getIdentifier());
         }
 
-        final EnergyMode matchingEnergyMode = getEnergyMode(currentPolicy.getIdentifier());
         EnergyMode targetEnergyMode = matchingEnergyMode;
-        if (!isEnergyModeEnabled(matchingEnergyMode)) {
+        // If no policy is set, or the current policy is for a disabled mode, find a new one.
+        if (targetEnergyMode == null || !isEnergyModeEnabled(targetEnergyMode)) {
             if (matchingEnergyMode == MODE_HIGH_ENERGY && isEnergyModeEnabled(MODE_UNRESTRICTED)) {
                 targetEnergyMode = MODE_UNRESTRICTED;
             } else if (matchingEnergyMode == MODE_UNRESTRICTED && isEnergyModeEnabled(
