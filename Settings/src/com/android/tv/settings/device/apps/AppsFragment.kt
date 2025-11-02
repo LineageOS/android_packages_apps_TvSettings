@@ -19,6 +19,7 @@ import android.app.Activity
 import android.app.tvsettings.TvSettingsEnums
 import android.content.Context
 import android.content.Intent
+import android.media.tv.flags.Flags
 import android.os.Bundle
 import android.provider.DeviceConfig
 import android.text.TextUtils
@@ -78,6 +79,9 @@ class AppsFragment : PreferenceControllerFragment(), SliceShard.Callbacks {
                 isVisible = false
             }
         }
+
+        findPreference<Preference>(KEY_TV_WATCHDOG_DISABLED_APPS)?.isVisible =
+            Flags.enableTvWatchdogEmmcProtection()
 
         viewLifecycleOwner.lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -185,6 +189,7 @@ class AppsFragment : PreferenceControllerFragment(), SliceShard.Callbacks {
         private const val KEY_OVERLAY_SECURITY = "overlay_security"
         private const val KEY_UPDATE = "update"
         private const val KEY_ADD_APPS="add_apps"
+        private const val KEY_TV_WATCHDOG_DISABLED_APPS = "tv_watchdog_disabled_apps"
         private const val TOP_LEVEL_SLICE_URI = "top_level_settings_slice_uri"
         private const val KEY_HIBERNATED_APPS = "see_unused_apps"
         @JvmStatic
