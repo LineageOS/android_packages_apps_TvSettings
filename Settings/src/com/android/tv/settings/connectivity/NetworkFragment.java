@@ -259,6 +259,7 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
     @Override
     public void onStart() {
         super.onStart();
+        mConnectivityListener.setListener(this);
         mConnectivityListener.setWifiListener(this);
         mNoWifiUpdateBeforeMillis = SystemClock.elapsedRealtime() + INITIAL_UPDATE_DELAY;
         updateWifiList();

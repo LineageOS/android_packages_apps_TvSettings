@@ -325,6 +325,9 @@ public class AccessibilityFragment extends SettingsPreferenceFragment
     }
 
     private void refreshServices() {
+        if (!isAdded() || getActivity() == null) {
+            return;
+        }
         DevicePolicyManager dpm = getContext().getSystemService(DevicePolicyManager.class);
         final List<AccessibilityServiceInfo> installedServiceInfos =
                 getActivity().getSystemService(AccessibilityManager.class)

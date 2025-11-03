@@ -58,7 +58,6 @@ public class SliceSwitchPreference extends FocusableWhenDisabledSwitchPreference
             holder.itemView.setFocusableInTouchMode(true);
         }
         if (!TextUtils.isEmpty(mContentDescription)) {
-            holder.itemView.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);
             holder.itemView.setContentDescription(
                     CustomContentDescriptionUtil.getFullSwitchContentDescription(
                             getContext(), mContentDescription, this.isChecked()));

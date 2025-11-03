@@ -52,7 +52,6 @@ public class SliceCheckboxPreference extends CheckBoxPreference implements HasSl
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
         if (!TextUtils.isEmpty(mContentDescription)) {
-            holder.itemView.setAccessibilityLiveRegion(View.ACCESSIBILITY_LIVE_REGION_POLITE);
             holder.itemView.setContentDescription(mContentDescription);
         }
     }
