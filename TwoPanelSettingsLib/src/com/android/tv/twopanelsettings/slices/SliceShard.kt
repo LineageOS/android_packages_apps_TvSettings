@@ -55,6 +55,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceGroup
 import androidx.preference.PreferenceScreen
 import androidx.preference.TwoStatePreference
+import com.android.tv.twopanelsettings.R
 import com.android.tv.twopanelsettings.FocusableWhenDisabledSwitchPreference
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment
 import com.android.tv.twopanelsettings.slices.compat.Slice
@@ -174,6 +175,13 @@ class SliceShard(
     }
 
     private fun resume() {
+        if (TextUtils.isEmpty(mUriString)) {
+            mCallbacks.showProgressBar(false)
+            mCallbacks.setTitle(
+                mPrefContext.getString(R.string.error_loading_settings))
+            return
+        }
+
         if (TextUtils.isEmpty(screenTitle)) {
             screenTitle = mInitialTitle
         }
