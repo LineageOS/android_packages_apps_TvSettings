@@ -18,6 +18,7 @@ package com.android.tv.settings.system;
 
 import android.app.timedetector.ManualTimeSuggestion;
 import android.app.timedetector.TimeDetector;
+import android.app.timedetector.TimeDetectorHelper;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -128,6 +129,18 @@ public class LeanbackPickerDialogFragment extends LeanbackPreferenceDialogFragme
         if (pickerType.equals(TYPE_DATE)) {
             styledInflater.inflate(R.layout.date_picker_widget, pickerContainer, true);
             DatePicker datePicker = pickerContainer.findViewById(R.id.date_picker);
+
+            // Limit the dates the user can pick to a sensible range
+            final Calendar calendar = Calendar.getInstance();
+            calendar.clear();
+            int minYear = TimeDetectorHelper.INSTANCE.getManualDateSelectionYearMin();
+            calendar.set(minYear, Calendar.JANUARY, 1);
+            datePicker.setMinDate(calendar.getTimeInMillis());
+            int maxYear = TimeDetectorHelper.INSTANCE.getManualDateSelectionYearMax();
+            calendar.clear();
+            calendar.set(maxYear, Calendar.DECEMBER, 31);
+            datePicker.setMaxDate(calendar.getTimeInMillis());
+
             mPicker = datePicker;
             if (getParentFragment() instanceof LeanbackSettingsFragmentCompat) {
                 datePicker.setActivated(true);
