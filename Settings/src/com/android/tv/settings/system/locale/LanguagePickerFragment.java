@@ -45,6 +45,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
@@ -120,12 +122,13 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
     }
 
     private void loadLocales(Context applicationContext, Runnable mainThreadRunnable) {
-        mLocaleInfos = new ArrayList<>(mLocaleDataViewModel.getLocaleInfos(applicationContext));
-
         final Locale sortingLocale = Locale.getDefault();
         final LocaleHelper.LocaleInfoComparator comp =
                 new LocaleHelper.LocaleInfoComparator(sortingLocale, false);
-        mLocaleInfos.sort(comp);
+        final SortedSet<LocaleStore.LocaleInfo> localeInfos = new TreeSet<>(comp);
+        localeInfos.addAll(mLocaleDataViewModel.getLocaleInfos(applicationContext));
+        mLocaleInfos = new ArrayList<>(localeInfos);
+
         for (LocaleStore.LocaleInfo localeInfo : mLocaleInfos) {
             mLocaleDataViewModel.addLocaleInfoList(localeInfo, applicationContext);
         }

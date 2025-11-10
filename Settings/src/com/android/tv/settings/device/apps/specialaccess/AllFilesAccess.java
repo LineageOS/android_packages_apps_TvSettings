@@ -74,6 +74,10 @@ public class AllFilesAccess extends ManageAppOp {
         switchPref.setOnPreferenceChangeListener((pref, grant) -> {
             findEntriesUsingPackageName(entry.info.packageName)
                     .forEach(packageEntry -> setMode(entry, (Boolean) grant));
+            pref.setSummary(
+                    getContext().getText((Boolean) grant
+                            ? R.string.app_permission_summary_allowed
+                            : R.string.app_permission_summary_not_allowed));
             return true;
         });
         switchPref.setSummary(getPreferenceSummary(entry));
