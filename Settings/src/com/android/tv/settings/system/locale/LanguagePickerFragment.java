@@ -39,9 +39,13 @@ import com.android.internal.app.LocaleStore;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.customization.CustomizationContentProvider;
 import com.android.tv.settings.library.util.ThreadUtils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -127,7 +131,27 @@ public class LanguagePickerFragment extends SettingsPreferenceFragment {
                 new LocaleHelper.LocaleInfoComparator(sortingLocale, false);
         final SortedSet<LocaleStore.LocaleInfo> localeInfos = new TreeSet<>(comp);
         localeInfos.addAll(mLocaleDataViewModel.getLocaleInfos(applicationContext));
-        mLocaleInfos = new ArrayList<>(localeInfos);
+
+        android.content.SharedPreferences sharedPreferences =
+                CustomizationContentProvider.Companion.getCustomizationSharedPreferences(
+                        applicationContext);
+        String languageListStr = sharedPreferences.getString("language_list", "");
+        Set<String> languageList = new HashSet<>();
+        if (!languageListStr.isEmpty()) {
+            languageList.addAll(Arrays.asList(languageListStr.toLowerCase().split(",")));
+        }
+
+        if (!languageList.isEmpty()) {
+            ArrayList<LocaleStore.LocaleInfo> filteredLocaleInfos = new ArrayList<>();
+            for (LocaleStore.LocaleInfo info : localeInfos) {
+                if (languageList.contains(info.getLocale().getLanguage().toLowerCase())) {
+                    filteredLocaleInfos.add(info);
+                }
+            }
+            mLocaleInfos = filteredLocaleInfos;
+        } else {
+            mLocaleInfos = new ArrayList<>(localeInfos);
+        }
 
         for (LocaleStore.LocaleInfo localeInfo : mLocaleInfos) {
             mLocaleDataViewModel.addLocaleInfoList(localeInfo, applicationContext);

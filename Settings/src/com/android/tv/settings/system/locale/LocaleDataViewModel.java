@@ -37,6 +37,7 @@ import java.util.Map;
 import java.util.Set;
 
 import com.android.tv.settings.R;
+import com.android.tv.settings.customization.CustomizationContentProvider;
 
 /**
  * ViewModel to provide data for locale selection.
@@ -82,11 +83,23 @@ public class LocaleDataViewModel extends ViewModel {
             mUnsupportedLocales = new HashSet<>(Arrays.asList(unsupportedLocales));
         }
 
+        android.content.SharedPreferences sharedPreferences =
+                CustomizationContentProvider.Companion.getCustomizationSharedPreferences(
+                        context);
+        String countryListStr = sharedPreferences.getString("country_list", "");
+        Set<String> countryList = new HashSet<>();
+        if (!countryListStr.isEmpty()) {
+            countryList.addAll(Arrays.asList(countryListStr.toLowerCase().split(",")));
+        }
+
         ArrayList<LocaleStore.LocaleInfo> localeInfoWithCountryList = new ArrayList<>();
         for (LocaleStore.LocaleInfo locale : LocaleStore.getLevelLocales(
                 context, Collections.emptySet(), localeInfo, TRANSLATED_ONLY)) {
             if (!mUnsupportedLocales.contains(locale.getId())) {
-                localeInfoWithCountryList.add(locale);
+                if (countryList.isEmpty() || countryList.contains(
+                        locale.getLocale().getCountry().toLowerCase())) {
+                    localeInfoWithCountryList.add(locale);
+                }
             }
         }
 
