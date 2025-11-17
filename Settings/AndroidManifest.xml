@@ -1412,6 +1412,12 @@
             </intent-filter>
         </provider>
 
+        <provider
+            android:name=".customization.CustomizationContentProvider"
+            android:authorities="com.android.tv.settings.customization"
+            android:exported="true"
+            android:permission="android.permission.WRITE_SECURE_SETTINGS" />
+
         <activity
             android:name=".device.eco.EnergyModesActivity"
             android:configChanges="keyboard|keyboardHidden|navigation"
