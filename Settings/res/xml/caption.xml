@@ -36,6 +36,11 @@
             android:summary="%s"
             android:entries="@array/captioning_font_size_selector_titles"
             android:entryValues="@array/captioning_font_size_selector_values" />
+        <com.android.tv.settings.widget.SwitchWithSoundPreference
+            android:key="captions_easy_reader"
+            android:persistent="true"
+            android:title="@string/captions_easy_reader"
+            android:summary="@string/captions_easy_reader_subtext"/>
     </PreferenceCategory>
     <PreferenceCategory
         android:key="captions_style"

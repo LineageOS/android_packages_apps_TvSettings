@@ -98,6 +98,7 @@ android_app {
     privileged: true,
     static_libs: [
         "TvSettingsStaticLibs",
+        "android.view.accessibility.flags-aconfig-java",
     ],
     // TODO(b/319716205): re-enable use_resource_processor
     use_resource_processor: false,
