@@ -38,7 +38,7 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
-import com.android.settingslib.datetime.ZoneGetter;
+import com.android.tv.settings.util.TimeZoneUtils;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RestrictedPreferenceAdapter;
 import com.android.tv.settings.SettingsPreferenceFragment;
@@ -199,7 +199,7 @@ public class DateTimeFragment extends SettingsPreferenceFragment implements
         mTimePref.updatePreference(pref ->
                 pref.setSummary(DateFormat.getTimeFormat(getActivity()).format(now.getTime())));
         mTimeZone.updatePreference(pref ->
-                pref.setSummary(ZoneGetter.getTimeZoneOffsetAndName(getActivity(),
+                pref.setSummary(TimeZoneUtils.getTimeZoneDisplayName(getActivity(),
                         now.getTimeZone(), now.getTime())));
 
         mTime24Pref.setSummary(DateFormat.getTimeFormat(getActivity()).format(dummyDate));
