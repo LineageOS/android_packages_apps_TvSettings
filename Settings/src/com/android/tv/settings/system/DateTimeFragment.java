@@ -206,10 +206,10 @@ public class DateTimeFragment extends SettingsPreferenceFragment implements
     }
 
     private void updateTimeDateEnable() {
-        final boolean enable = TextUtils.equals(getAutoDateTimeState(), AUTO_DATE_TIME_OFF);
+        final boolean isVisible = TextUtils.equals(getAutoDateTimeState(), AUTO_DATE_TIME_OFF);
 
-        mDatePref.updatePreference(pref -> pref.setEnabled(enable));
-        mTimePref.updatePreference(pref -> pref.setEnabled(enable));
+        mDatePref.updatePreference(pref -> pref.setVisible(isVisible));
+        mTimePref.updatePreference(pref -> pref.setVisible(isVisible));
     }
 
     @Override
