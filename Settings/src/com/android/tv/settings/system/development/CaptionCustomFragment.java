@@ -214,7 +214,8 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragmentCompat impl
 
     private String getCaptionsTextColor() {
         return Integer.toHexString(Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, 0) & 0x00ffffff);
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, 0x00ffffff)
+                & 0x00ffffff);
     }
 
     private void setCaptionsTextColor(String textColor) {
@@ -227,12 +228,13 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragmentCompat impl
 
     private String getCaptionsTextOpacity() {
         return opacityToString(Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, 0) & 0xff000000);
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, 0xff000000)
+                & 0xff000000);
     }
 
     private void setCaptionsTextOpacity(String textOpacity) {
         final int color = Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, 0) & 0x00ffffff;
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, 0x00ffffff) & 0x00ffffff;
         final int alpha = (int) Long.parseLong(textOpacity, 16) & 0xff000000;
         Settings.Secure.putInt(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, color | alpha);
@@ -261,7 +263,8 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragmentCompat impl
 
     private boolean isCaptionsBackgroundVisible() {
         return (Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, 0) & 0xff000000) != 0;
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, 0xff000000) & 0xff000000)
+                != 0;
     }
 
     private void setCaptionsBackgroundVisible(boolean visible) {
@@ -288,7 +291,7 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragmentCompat impl
     }
 
     private String getCaptionsBackgroundOpacity() {
-        return opacityToString (Settings.Secure.getInt(getContext().getContentResolver(),
+        return opacityToString(Settings.Secure.getInt(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, 0) & 0xff000000);
     }
 
