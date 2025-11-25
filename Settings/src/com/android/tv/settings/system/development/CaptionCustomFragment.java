@@ -17,9 +17,11 @@
 package com.android.tv.settings.system.development;
 
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.view.accessibility.CaptioningManager;
 
 import androidx.annotation.Keep;
 import androidx.leanback.preference.LeanbackPreferenceFragmentCompat;
@@ -45,6 +47,22 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragmentCompat impl
     private static final String KEY_WINDOW_COLOR = "window_color";
     private static final String KEY_WINDOW_OPACITY = "window_opacity";
 
+    private static final int COLOR_MASK = 0x00ffffff;
+    private static final int ALPHA_MASK = 0xff000000;
+
+    // User facing color formatting, e.g. #55AA00
+    private static final String HEX_COLOR_FORMAT = "#%06X";
+
+    // Default values for the settings.
+    private static final int DEFAULT_COLOR_TEXT = Color.WHITE & COLOR_MASK;
+    private static final int DEFAULT_COLOR_EDGE = Color.BLACK & COLOR_MASK;
+    private static final int DEFAULT_COLOR_BACKGROUND = Color.BLACK & COLOR_MASK;
+    private static final int DEFAULT_COLOR_WINDOW = Color.BLACK & COLOR_MASK;
+
+    private static final int ALPHA_100 = 0xff000000;
+    private static final int ALPHA_0 = 0x00000000;
+    private static final String FONT_DEFAULT = "default";
+
     private ListPreference mFontFamilyPref;
     private ListPreference mTextColorPref;
     private ListPreference mTextOpacityPref;
@@ -67,60 +85,60 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragmentCompat impl
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.caption_custom, null);
 
-        final TypedArray ta =
-                getResources().obtainTypedArray(R.array.captioning_color_selector_ids);
+        final TypedArray ta = getResources().obtainTypedArray(
+                R.array.captioning_color_selector_ids);
         final int colorLen = ta.length();
-        final String[] namedColors =
-                getResources().getStringArray(R.array.captioning_color_selector_titles);
+        final String[] namedColors = getResources().getStringArray(
+                R.array.captioning_color_selector_titles);
         final String[] colorNames = new String[colorLen];
         final String[] colorValues = new String[colorLen];
         for (int i = 0; i < colorLen; i++) {
             final int color = ta.getColor(i, 0);
-            colorValues[i] = Integer.toHexString(color & 0x00ffffff);
+            colorValues[i] = Integer.toHexString(color & COLOR_MASK);
             if (i < namedColors.length) {
                 colorNames[i] = namedColors[i];
             } else {
-                colorNames[i] = String.format("#%06X", color & 0x00ffffff);
+                colorNames[i] = String.format(HEX_COLOR_FORMAT, color & COLOR_MASK);
             }
         }
         ta.recycle();
 
-        mFontFamilyPref = (ListPreference) findPreference(KEY_FONT_FAMILY);
+        mFontFamilyPref = findPreference(KEY_FONT_FAMILY);
         mFontFamilyPref.setOnPreferenceChangeListener(this);
 
-        mTextColorPref = (ListPreference) findPreference(KEY_TEXT_COLOR);
+        mTextColorPref = findPreference(KEY_TEXT_COLOR);
         mTextColorPref.setEntries(colorNames);
         mTextColorPref.setEntryValues(colorValues);
         mTextColorPref.setOnPreferenceChangeListener(this);
 
-        mTextOpacityPref = (ListPreference) findPreference(KEY_TEXT_OPACITY);
+        mTextOpacityPref = findPreference(KEY_TEXT_OPACITY);
         mTextOpacityPref.setOnPreferenceChangeListener(this);
-        mEdgeTypePref = (ListPreference) findPreference(KEY_EDGE_TYPE);
+        mEdgeTypePref = findPreference(KEY_EDGE_TYPE);
         mEdgeTypePref.setOnPreferenceChangeListener(this);
 
-        mEdgeColorPref = (ListPreference) findPreference(KEY_EDGE_COLOR);
+        mEdgeColorPref = findPreference(KEY_EDGE_COLOR);
         mEdgeColorPref.setEntries(colorNames);
         mEdgeColorPref.setEntryValues(colorValues);
         mEdgeColorPref.setOnPreferenceChangeListener(this);
 
-        mBackgroundShowPref = (TwoStatePreference) findPreference(KEY_BACKGROUND_SHOW);
+        mBackgroundShowPref = findPreference(KEY_BACKGROUND_SHOW);
 
-        mBackgroundColorPref = (ListPreference) findPreference(KEY_BACKGROUND_COLOR);
+        mBackgroundColorPref = findPreference(KEY_BACKGROUND_COLOR);
         mBackgroundColorPref.setEntries(colorNames);
         mBackgroundColorPref.setEntryValues(colorValues);
         mBackgroundColorPref.setOnPreferenceChangeListener(this);
 
-        mBackgroundOpacityPref = (ListPreference) findPreference(KEY_BACKGROUND_OPACITY);
+        mBackgroundOpacityPref = findPreference(KEY_BACKGROUND_OPACITY);
         mBackgroundOpacityPref.setOnPreferenceChangeListener(this);
 
-        mWindowShowPref = (TwoStatePreference) findPreference(KEY_WINDOW_SHOW);
+        mWindowShowPref = findPreference(KEY_WINDOW_SHOW);
 
-        mWindowColorPref = (ListPreference) findPreference(KEY_WINDOW_COLOR);
+        mWindowColorPref = findPreference(KEY_WINDOW_COLOR);
         mWindowColorPref.setEntries(colorNames);
         mWindowColorPref.setEntryValues(colorValues);
         mWindowColorPref.setOnPreferenceChangeListener(this);
 
-        mWindowOpacityPref = (ListPreference) findPreference(KEY_WINDOW_OPACITY);
+        mWindowOpacityPref = findPreference(KEY_WINDOW_OPACITY);
         mWindowOpacityPref.setOnPreferenceChangeListener(this);
     }
 
@@ -148,35 +166,16 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragmentCompat impl
             throw new IllegalStateException("Unknown preference change");
         }
         switch (key) {
-            case KEY_FONT_FAMILY:
-                setCaptionsFontFamily((String) newValue);
-                break;
-            case KEY_TEXT_COLOR:
-                setCaptionsTextColor((String) newValue);
-                break;
-            case KEY_TEXT_OPACITY:
-                setCaptionsTextOpacity((String) newValue);
-                break;
-            case KEY_EDGE_TYPE:
-                setCaptionsEdgeType((String) newValue);
-                break;
-            case KEY_EDGE_COLOR:
-                setCaptionsEdgeColor((String) newValue);
-                break;
-            case KEY_BACKGROUND_COLOR:
-                setCaptionsBackgroundColor((String) newValue);
-                break;
-            case KEY_BACKGROUND_OPACITY:
-                setCaptionsBackgroundOpacity((String) newValue);
-                break;
-            case KEY_WINDOW_COLOR:
-                setCaptionsWindowColor((String) newValue);
-                break;
-            case KEY_WINDOW_OPACITY:
-                setCaptionsWindowOpacity((String) newValue);
-                break;
-            default:
-                throw new IllegalStateException("Preference change with unknown key " + key);
+            case KEY_FONT_FAMILY -> setCaptionsFontFamily((String) newValue);
+            case KEY_TEXT_COLOR -> setCaptionsTextColor((String) newValue);
+            case KEY_TEXT_OPACITY -> setCaptionsTextOpacity((String) newValue);
+            case KEY_EDGE_TYPE -> setCaptionsEdgeType((String) newValue);
+            case KEY_EDGE_COLOR -> setCaptionsEdgeColor((String) newValue);
+            case KEY_BACKGROUND_COLOR -> setCaptionsBackgroundColor((String) newValue);
+            case KEY_BACKGROUND_OPACITY -> setCaptionsBackgroundOpacity((String) newValue);
+            case KEY_WINDOW_COLOR -> setCaptionsWindowColor((String) newValue);
+            case KEY_WINDOW_OPACITY -> setCaptionsWindowOpacity((String) newValue);
+            default -> throw new IllegalStateException("Preference change with unknown key " + key);
         }
         return true;
     }
@@ -193,56 +192,46 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragmentCompat impl
         mWindowShowPref.setChecked(isCaptionsWindowVisible());
         mWindowColorPref.setValue(getCaptionsWindowColor());
         mWindowOpacityPref.setValue(getCaptionsWindowOpacity());
-
     }
 
     private String getCaptionsFontFamily() {
         final String typeface = Settings.Secure.getString(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_CAPTIONING_TYPEFACE);
-        return TextUtils.isEmpty(typeface) ? "default" : typeface;
+        return TextUtils.isEmpty(typeface) ? FONT_DEFAULT : typeface;
     }
 
     private void setCaptionsFontFamily(String fontFamily) {
-        if (TextUtils.equals(fontFamily, "default")) {
-            Settings.Secure.putString(getContext().getContentResolver(),
-                    Settings.Secure.ACCESSIBILITY_CAPTIONING_TYPEFACE, null);
-        } else {
-            Settings.Secure.putString(getContext().getContentResolver(),
-                    Settings.Secure.ACCESSIBILITY_CAPTIONING_TYPEFACE, fontFamily);
-        }
+        Settings.Secure.putString(getContext().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_TYPEFACE,
+                TextUtils.equals(fontFamily, FONT_DEFAULT) ? null : fontFamily);
     }
 
     private String getCaptionsTextColor() {
         return Integer.toHexString(Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, 0x00ffffff)
-                & 0x00ffffff);
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, DEFAULT_COLOR_TEXT)
+                & COLOR_MASK);
     }
 
     private void setCaptionsTextColor(String textColor) {
-        final int color = (int) Long.parseLong(textColor, 16) & 0x00ffffff;
-        final int alpha = Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, 0xff000000) & 0xff000000;
-        Settings.Secure.putInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, color | alpha);
+        saveColorWithExistingOpacity(Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR,
+                textColor);
     }
 
     private String getCaptionsTextOpacity() {
         return opacityToString(Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, 0xff000000)
-                & 0xff000000);
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR,
+                /* default= */ ALPHA_100) & ALPHA_MASK);
     }
 
     private void setCaptionsTextOpacity(String textOpacity) {
-        final int color = Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, 0x00ffffff) & 0x00ffffff;
-        final int alpha = (int) Long.parseLong(textOpacity, 16) & 0xff000000;
-        Settings.Secure.putInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR, color | alpha);
+        saveOpacityWithExistingColor(Settings.Secure.ACCESSIBILITY_CAPTIONING_FOREGROUND_COLOR,
+                textOpacity, DEFAULT_COLOR_TEXT);
     }
 
     private String getCaptionsEdgeType() {
         return Integer.toString(Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_EDGE_TYPE, 0));
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_EDGE_TYPE,
+                /* default= */ CaptioningManager.CaptionStyle.EDGE_TYPE_NONE));
     }
 
     private void setCaptionsEdgeType(String edgeType) {
@@ -252,108 +241,119 @@ public class CaptionCustomFragment extends LeanbackPreferenceFragmentCompat impl
 
     private String getCaptionsEdgeColor() {
         return Integer.toHexString(Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_EDGE_COLOR, 0) & 0x00ffffff);
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_EDGE_COLOR, DEFAULT_COLOR_EDGE)
+                & COLOR_MASK);
     }
 
     private void setCaptionsEdgeColor(String edgeColor) {
         Settings.Secure.putInt(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_CAPTIONING_EDGE_COLOR,
-                0xff000000 | (int) Long.parseLong(edgeColor, 16));
+                ALPHA_100 | hexStringToInt(edgeColor));
     }
 
     private boolean isCaptionsBackgroundVisible() {
         return (Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, 0xff000000) & 0xff000000)
-                != 0;
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR,
+                /* default= */ ALPHA_100) & ALPHA_MASK) != 0;
     }
 
     private void setCaptionsBackgroundVisible(boolean visible) {
+        int alpha = visible ? ALPHA_100 : ALPHA_0;
         Settings.Secure.putInt(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR,
-                visible ? 0xff000000 : 0);
-        if (!visible) {
-            mBackgroundColorPref.setValue(Integer.toHexString(0));
-            mBackgroundOpacityPref.setValue(opacityToString(0));
-        }
+                alpha | DEFAULT_COLOR_BACKGROUND);
+        mBackgroundColorPref.setValue(Integer.toHexString(DEFAULT_COLOR_BACKGROUND));
+        mBackgroundOpacityPref.setValue(opacityToString(alpha));
     }
 
     private String getCaptionsBackgroundColor() {
         return Integer.toHexString(Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, 0) & 0x00ffffff);
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, DEFAULT_COLOR_BACKGROUND)
+                & COLOR_MASK);
     }
 
     private void setCaptionsBackgroundColor(String backgroundColor) {
-        final int color = (int) Long.parseLong(backgroundColor, 16) & 0x00ffffff;
-        final int alpha = Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, 0xff000000) & 0xff000000;
-        Settings.Secure.putInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, color | alpha);
+        saveColorWithExistingOpacity(Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR,
+                backgroundColor);
     }
 
     private String getCaptionsBackgroundOpacity() {
         return opacityToString(Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, 0) & 0xff000000);
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR,
+                /* default= */ ALPHA_100) & ALPHA_MASK);
     }
 
     private void setCaptionsBackgroundOpacity(String backgroundOpacity) {
-        final int color = Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, 0) & 0x00ffffff;
-        final int alpha = (int) Long.parseLong(backgroundOpacity, 16) & 0xff000000;
-        Settings.Secure.putInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR, color | alpha);
+        saveOpacityWithExistingColor(Settings.Secure.ACCESSIBILITY_CAPTIONING_BACKGROUND_COLOR,
+                backgroundOpacity, DEFAULT_COLOR_BACKGROUND);
     }
 
     private boolean isCaptionsWindowVisible() {
         return (Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR, 0) & 0xff000000) != 0;
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR,
+                /* default= */ ALPHA_0) & ALPHA_MASK) != 0;
     }
 
     private void setCaptionsWindowVisible(boolean visible) {
+        int alpha = visible ? ALPHA_100 : ALPHA_0;
         Settings.Secure.putInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR, visible ? 0xff000000 : 0);
-        if (!visible) {
-            mWindowColorPref.setValue(Integer.toHexString(0));
-            mWindowOpacityPref.setValue(opacityToString(0));
-        }
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR,
+                alpha | DEFAULT_COLOR_WINDOW);
+        mWindowColorPref.setValue(Integer.toHexString(DEFAULT_COLOR_WINDOW));
+        mWindowOpacityPref.setValue(opacityToString(alpha));
     }
 
     private String getCaptionsWindowColor() {
         return Integer.toHexString(Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR, 0) & 0x00ffffff);
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR, DEFAULT_COLOR_WINDOW)
+                & COLOR_MASK);
     }
 
     private void setCaptionsWindowColor(String windowColor) {
-        final int color = (int) Long.parseLong(windowColor, 16) & 0x00ffffff;
-        final int alpha = Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR, 0xff000000) & 0xff000000;
-        Settings.Secure.putInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR, color | alpha);
+        saveColorWithExistingOpacity(Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR,
+                windowColor);
     }
 
     private String getCaptionsWindowOpacity() {
         return opacityToString(Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR, 0) & 0xff000000);
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR,
+                /* default= */ ALPHA_100) & ALPHA_MASK);
     }
 
     private void setCaptionsWindowOpacity(String windowOpacity) {
-        final int color = Settings.Secure.getInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR, 0) & 0x00ffffff;
-        final int alpha = (int) Long.parseLong(windowOpacity, 16) & 0xff000000;
-        Settings.Secure.putInt(getContext().getContentResolver(),
-                Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR, color | alpha);
+        saveOpacityWithExistingColor(Settings.Secure.ACCESSIBILITY_CAPTIONING_WINDOW_COLOR,
+                windowOpacity, DEFAULT_COLOR_WINDOW);
+    }
+
+    private void saveColorWithExistingOpacity(String secureSetting, String colorString) {
+        final int color = hexStringToInt(colorString) & COLOR_MASK;
+        final int alpha = Settings.Secure.getInt(getContext().getContentResolver(),
+                secureSetting, /* default= */ ALPHA_100) & ALPHA_MASK;
+        Settings.Secure.putInt(getContext().getContentResolver(), secureSetting, color | alpha);
+    }
+
+    private void saveOpacityWithExistingColor(String secureSetting, String alphaString,
+            int defaultColor) {
+        int alpha = hexStringToInt(alphaString) & ALPHA_MASK;
+        saveOpacityWithExistingColor(secureSetting, alpha, defaultColor);
+    }
+
+    private void saveOpacityWithExistingColor(String secureSetting, int alpha, int defaultColor) {
+        final int color = Settings.Secure.getInt(getContext().getContentResolver(), secureSetting,
+                defaultColor) & COLOR_MASK;
+        Settings.Secure.putInt(getContext().getContentResolver(), secureSetting, color | alpha);
+    }
+
+    private int hexStringToInt(String value) {
+        return Integer.parseUnsignedInt(value, 16);
     }
 
     private String opacityToString(int opacity) {
-        switch (opacity & 0xff000000) {
-            case 0x40000000:
-                return "40FFFFFF";
-            case 0x80000000:
-                return "80FFFFFF";
-            case 0xc0000000:
-                return "C0FFFFFF";
-            case 0xff000000:
-            default:
-                return "FFFFFFFF";
+        // Never returns a zero opacity string since the ListPreference doesn't contain that option
+        // and it will be reset to 100 once the toggle to show the element is enabled again.
+        if (opacity == ALPHA_0) {
+            return Integer.toHexString(ALPHA_100);
         }
+        return Integer.toHexString(opacity);
     }
 }
