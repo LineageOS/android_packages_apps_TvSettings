@@ -17,6 +17,7 @@ android_robolectric_test {
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
+        ":TwoPanelSettingsLibTests",
     ],
 
     libs: ["services.core"],
