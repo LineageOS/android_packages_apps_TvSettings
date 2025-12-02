@@ -17,6 +17,7 @@ package com.android.tv.twopanelsettings.slices
 
 import android.net.Uri
 import android.view.ContextThemeWrapper
+import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.Observer
 import androidx.preference.Preference
 import com.android.tv.twopanelsettings.slices.SlicePreferencesUtil.getEmbeddedItem
@@ -28,13 +29,15 @@ import com.android.tv.twopanelsettings.slices.compat.widget.SliceContent
 /**
  * Helper class to handle the updates for embedded slice preferences.
  */
-class EmbeddedSlicePreferenceHelper internal constructor(
+class EmbeddedSlicePreferenceHelper @VisibleForTesting constructor(
     private val mPreference: Preference,
     private val mUri: String
 ) :
     Observer<Slice?> {
     private val mContext = mPreference.context
+    @VisibleForTesting
     var mListener: SlicePreferenceListener? = null
+    @VisibleForTesting
     var mNewPref: Preference? = null
     private var mSlice: Slice? = null
 

@@ -17,6 +17,8 @@ package com.android.tv.twopanelsettings.slices
 
 import android.content.Context
 import android.util.AttributeSet
+import androidx.annotation.VisibleForTesting
+
 import com.android.tv.twopanelsettings.slices.EmbeddedSlicePreferenceHelper.SlicePreferenceListener
 
 /**
@@ -26,7 +28,8 @@ import com.android.tv.twopanelsettings.slices.EmbeddedSlicePreferenceHelper.Slic
  */
 open class EmbeddedSlicePreference : SlicePreference,
     HasCustomContentDescription {
-    private var mHelper : EmbeddedSlicePreferenceHelper? = null
+@VisibleForTesting var mHelper: EmbeddedSlicePreferenceHelper? = null
+
     private var mContentDescription: String? = null
 
     constructor(context: Context?, uri: String?) : super(context) {
