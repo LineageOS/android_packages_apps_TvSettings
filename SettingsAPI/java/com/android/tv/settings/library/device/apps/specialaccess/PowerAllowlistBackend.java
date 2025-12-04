@@ -23,7 +23,7 @@ import android.content.pm.PackageManager;
 import android.os.IDeviceIdleController;
 import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.telecom.DefaultDialerManager;
+import android.telecom.TelecomManager;
 import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.Log;
@@ -164,8 +164,9 @@ public class PowerAllowlistBackend {
                     PackageManager.FEATURE_TELEPHONY);
             final ComponentName defaultSms = SmsApplication.getDefaultSmsApplication(mAppContext,
                     true /* updateIfNeeded */);
-            final String defaultDialer = DefaultDialerManager.getDefaultDialerApplication(
-                    mAppContext);
+            final TelecomManager telecomManager = mAppContext.getSystemService(
+                    TelecomManager.class);
+            final String defaultDialer = telecomManager.getDefaultDialerPackage();
 
             if (hasTelephony) {
                 if (defaultSms != null) {
