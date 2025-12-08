@@ -68,6 +68,7 @@ public final class SlicesConstants {
   public static final String EXTRA_PAGE_ID = "extra_page_id";
   public static final String EXTRA_SLICE_FOLLOWUP = "extra_slice_followup";
   public static final String EXTRA_HAS_END_ICON = "extra_has_end_icon";
+  public static final String EXTRA_RADIO_FIRE_ON_RESELECT = "extra_radio_fire_on_reselect";
   public static final int SWITCH = 0;
   public static final int CHECKMARK = 1;
   public static final int RADIO = 2;

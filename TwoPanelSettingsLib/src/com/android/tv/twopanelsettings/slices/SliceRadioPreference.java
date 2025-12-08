@@ -18,7 +18,6 @@ package com.android.tv.twopanelsettings.slices;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.view.View;
 
 import androidx.preference.PreferenceViewHolder;
 
@@ -34,6 +33,13 @@ public class SliceRadioPreference extends RadioPreference implements HasSliceAct
     private String mUri;
     private SliceActionImpl mFollowupSliceAction;
     private String mContentDescription;
+
+    /**
+     * Flag to determine if the intent should be fired even when the radio button is already
+     * checked. Default is false, meaning the intent only fires when transitioning from unchecked to
+     * checked.
+     */
+    private boolean mFireIntentOnReselect = false;
 
     public SliceRadioPreference(Context context, SliceActionImpl action) {
         super(context);
@@ -105,5 +111,24 @@ public class SliceRadioPreference extends RadioPreference implements HasSliceAct
     @Override
     public String getContentDescription() {
         return mContentDescription;
+    }
+
+    /**
+     * Sets whether the preference should fire its intent even if it's clicked while already
+     * checked.
+     *
+     * @param fireIntentOnReselect True to fire the intent on reselect, false otherwise.
+     */
+    public void setFireIntentOnReselect(boolean fireIntentOnReselect) {
+        mFireIntentOnReselect = fireIntentOnReselect;
+    }
+
+    /**
+     * Checks if the preference is configured to fire its intent on reselect.
+     *
+     * @return True if the intent will be fired even when clicked while checked, false otherwise.
+     */
+    public boolean getFireIntentOnReselect() {
+        return mFireIntentOnReselect;
     }
 }

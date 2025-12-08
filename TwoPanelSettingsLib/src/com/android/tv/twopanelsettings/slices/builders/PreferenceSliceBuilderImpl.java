@@ -32,8 +32,8 @@ import static android.app.slice.Slice.SUBTYPE_LAYOUT_DIRECTION;
 import static android.app.slice.SliceItem.FORMAT_BUNDLE;
 import static android.app.slice.SliceItem.FORMAT_IMAGE;
 import static android.app.slice.SliceItem.FORMAT_INT;
-import static android.app.slice.SliceItem.FORMAT_TEXT;
 import static android.app.slice.SliceItem.FORMAT_SLICE;
+import static android.app.slice.SliceItem.FORMAT_TEXT;
 
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.BUTTONSTYLE;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_ACTION_ID;
@@ -44,6 +44,7 @@ import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFE
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_SUMMARY;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TEXT;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_PREFERENCE_INFO_TITLE_ICON;
+import static com.android.tv.twopanelsettings.slices.SlicesConstants.EXTRA_RADIO_FIRE_ON_RESELECT;
 import static com.android.tv.twopanelsettings.slices.SlicesConstants.TYPE_PREFERENCE_EMBEDDED_PLACEHOLDER;
 import static com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder.ICON_IMAGE;
 import static com.android.tv.twopanelsettings.slices.compat.builders.ListBuilder.INFINITY;
@@ -304,6 +305,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
     private SliceItem mHasEndIconItem;
     private SliceItem mClassNameItem;
     private SliceItem mPropertiesItem;
+    private SliceItem mRadioFireOnReselectItem;
 
     /** */
     public RowBuilderImpl(@NonNull PreferenceSliceBuilderImpl parent) {
@@ -414,6 +416,7 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
 
       setClassName(builder.getClassName());
       setProperties(builder.getProperties());
+      setRadioFireOnReselect(builder.getRadioFireIntentOnReselect());
     }
 
     /** */
@@ -656,6 +659,11 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
               : null;
     }
 
+    public void setRadioFireOnReselect(boolean fireOnReselect) {
+      mRadioFireOnReselectItem = new SliceItem(
+              fireOnReselect ? 1 : 0, FORMAT_INT, EXTRA_RADIO_FIRE_ON_RESELECT, new String[] {});
+    }
+
     public void addPreference(RowBuilder childPreference) {
       Slice.Builder sb = new Slice.Builder(getBuilder());
       RowBuilderImpl impl = new RowBuilderImpl(sb);
@@ -756,6 +764,10 @@ public class PreferenceSliceBuilderImpl extends TemplateBuilderImpl {
 
       if (mPropertiesItem != null) {
         b.addItem(mPropertiesItem);
+      }
+
+      if (mRadioFireOnReselectItem != null) {
+        b.addItem(mRadioFireOnReselectItem);
       }
     }
   }
