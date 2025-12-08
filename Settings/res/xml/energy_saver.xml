@@ -53,6 +53,13 @@
             custom:uri="@string/ambient_sense_time_slice_uri"
             custom:isPreferenceVisible="false" />
 
+        <!-- Scheduled power on/off -->
+        <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+            android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+            android:key="scheduled_power_on_off"
+            custom:isPreferenceVisible="false"
+            custom:uri="@string/scheduled_power_on_off_slice_uri" />
+
     </PreferenceCategory>
 
     <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference

@@ -100,7 +100,7 @@ class SliceShard(
     private val mActivityResultLauncher: ActivityResultLauncher<IntentSenderRequest>
     private val mActivityResultLauncherIntent: ActivityResultLauncher<Intent>
     private val mActivityResultLauncherIntentFollowup: ActivityResultLauncher<Intent>
-    private val mSliceObserver: Observer<Slice>
+    private var mSliceObserver: SliceObserver? = null
     private val mContentObserver: ContentObserver = object : ContentObserver(mHandler) {
         override fun onChange(selfChange: Boolean, uri: Uri?) {
             handleUri(uri!!)
@@ -156,22 +156,22 @@ class SliceShard(
 
             }
         }
+    }
 
-        mSliceObserver = Observer { slice: Slice? ->
-            mSlice = slice
-            // Make TvSettings guard against the case that slice provider is not set up correctly
-            if (slice == null || slice.hints == null) {
-                return@Observer
-            }
-
-            if (slice.hints.contains(HINT_PARTIAL)) {
-                mCallbacks.showProgressBar(true)
-            } else {
-                mCallbacks.showProgressBar(false)
-            }
-            mIsMainPanelReady = false
-            update()
+    private fun onSliceChanged(slice: Slice?) {
+        mSlice = slice
+        // Make TvSettings guard against the case that slice provider is not set up correctly
+        if (slice == null || slice.hints == null) {
+            return
         }
+
+        if (slice.hints.contains(HINT_PARTIAL)) {
+            mCallbacks.showProgressBar(true)
+        } else {
+            mCallbacks.showProgressBar(false)
+        }
+        mIsMainPanelReady = false
+        update()
     }
 
     private fun resume() {
@@ -193,7 +193,8 @@ class SliceShard(
         mFragment.lifecycle.coroutineScope.launch {
             delay(SLICE_RESUME_OBSERVE_DELAY)
             if (!isCached && !TextUtils.isEmpty(mUriString)) {
-                sliceLiveData.observeForever(mSliceObserver)
+                mSliceObserver = SliceObserver(this@SliceShard)
+                sliceLiveData.observeForever(mSliceObserver!!)
                 mFragment.requireContext().contentResolver.registerContentObserver(
                 SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver)
             }
@@ -204,7 +205,11 @@ class SliceShard(
     private fun pause() {
         mCallbacks.showProgressBar(false)
         requireContext().contentResolver.unregisterContentObserver(mContentObserver)
-        sliceLiveData.removeObserver(mSliceObserver)
+        mSliceObserver?.let {
+            sliceLiveData.removeObserver(it)
+            it.detach()
+            mSliceObserver = null
+        }
     }
 
     private suspend fun loadCachedSlice(configuration: Configuration) : Slice? {
@@ -351,13 +356,19 @@ class SliceShard(
             }
         }
         if (isUriValid(redirectSlice)) {
-            sliceLiveData.removeObserver(mSliceObserver)
+            mSliceObserver?.let {
+                sliceLiveData.removeObserver(it)
+                it.detach()
+                mSliceObserver = null
+            }
             requireContext().contentResolver.unregisterContentObserver(mContentObserver)
             setUri(redirectSlice)
-            sliceLiveData.observeForever(mSliceObserver)
+            mSliceObserver = SliceObserver(this)
+            sliceLiveData.observeForever(mSliceObserver!!)
             requireContext().contentResolver.registerContentObserver(
                 SlicePreferencesUtil.getStatusPath(mUriString), false, mContentObserver
             )
+            return
         }
 
         val screenTitleItem: SliceItem? = SlicePreferencesUtil.getScreenTitleItem(items)
@@ -801,6 +812,18 @@ class SliceShard(
         get() {
             return if (mCurrentPageId != 0) mCurrentPageId else TvSettingsEnums.PAGE_SLICE_DEFAULT
         }
+
+    private class SliceObserver(shard: SliceShard) : Observer<Slice> {
+        private var mShard: SliceShard? = shard
+
+        override fun onChanged(value: Slice) {
+            mShard?.onSliceChanged(value)
+        }
+
+        fun detach() {
+            mShard = null
+        }
+    }
 
     interface Callbacks {
         fun showProgressBar(toShow: Boolean)
