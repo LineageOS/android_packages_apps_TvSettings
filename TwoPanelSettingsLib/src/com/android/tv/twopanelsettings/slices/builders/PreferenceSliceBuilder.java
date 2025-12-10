@@ -298,6 +298,13 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
     private String mClassName;
     private Bundle mProperties;
 
+    /**
+     * Flag to determine if the intent should be fired even when the radio button is already
+     * checked. Default is false, meaning the intent only fires when transitioning from unchecked to
+     * checked.
+     */
+    private boolean mRadioFireIntentOnReselect = false;
+
     private List<RowBuilder> mChildPreferences = new ArrayList<>();
 
     public static final int TYPE_ICON = 1;
@@ -1005,6 +1012,20 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
       return this;
     }
 
+    /**
+     * Sets whether a radio button preference should fire its intent even when clicked
+     * while already selected. This is only applicable radio button.
+     *
+     * @param fireIntentOnReselect True to fire the intent on reselect, false otherwise.
+     * @return This builder instance.
+     */
+    @NonNull
+    @CanIgnoreReturnValue
+    public RowBuilder setRadioFireIntentOnReselect(boolean fireIntentOnReselect) {
+        mRadioFireIntentOnReselect = fireIntentOnReselect;
+        return this;
+    }
+
     /** */
     public boolean iconNeedsToBeProcessed() {
       return mIconNeedsToBeProcessed;
@@ -1171,6 +1192,16 @@ public class PreferenceSliceBuilder extends TemplateSliceBuilder {
 
     public boolean isTitleActionLoading() {
       return mTitleActionLoading;
+    }
+
+    /**
+     * Gets whether a radio button preference is configured to fire its intent even when
+     * clicked while already selected.
+     *
+     * @return True if the intent will fire on reselect, false otherwise.
+     */
+    public boolean getRadioFireIntentOnReselect() {
+        return mRadioFireIntentOnReselect;
     }
 
     @Nullable

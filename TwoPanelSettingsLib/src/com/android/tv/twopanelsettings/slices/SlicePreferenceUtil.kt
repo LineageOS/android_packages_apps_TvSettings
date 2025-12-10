@@ -113,6 +113,8 @@ object SlicePreferencesUtil {
                                     preference.radioGroup =
                                         getRadioGroup(item).toString()
                                 }
+
+                                preference.fireIntentOnReselect = getRadioFireOnReselect(item)
                             }
 
                             SlicesConstants.SEEKBAR -> {
@@ -687,6 +689,20 @@ object SlicePreferencesUtil {
             }
         }
         return null
+    }
+
+    private fun getRadioFireOnReselect(sliceItem: SliceItem): Boolean {
+        val items = sliceItem.slice!!
+            .items
+        for (item in items) {
+            // Checks if radio button fire on release flag been set.
+            if (item.subType != null
+                && item.subType == SlicesConstants.EXTRA_RADIO_FIRE_ON_RESELECT
+            ) {
+                return item.int == 1
+            }
+        }
+        return false
     }
 
     private fun isPreferenceSubType(subType: String): Boolean {

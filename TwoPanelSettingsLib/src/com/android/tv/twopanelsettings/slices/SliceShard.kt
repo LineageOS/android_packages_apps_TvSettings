@@ -38,8 +38,6 @@ import android.text.TextUtils
 import android.util.Log
 import android.util.TypedValue
 import android.view.ContextThemeWrapper
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
@@ -573,9 +571,15 @@ class SliceShard(
     fun onPreferenceTreeClick(preference: Preference): Boolean {
         if (preference is SliceRadioPreference) {
             val radioPref: SliceRadioPreference = preference
-            if (!radioPref.isChecked) {
+
+            val alreadyChecked = radioPref.isChecked
+            if (!alreadyChecked) {
                 radioPref.isChecked = true
-                if (TextUtils.isEmpty(radioPref.uri)) {
+
+                val shouldSkipFiringIntentOnReselect =
+                    TextUtils.isEmpty(radioPref.uri) && !radioPref.fireIntentOnReselect
+
+                if (shouldSkipFiringIntentOnReselect) {
                     return true
                 }
             }
