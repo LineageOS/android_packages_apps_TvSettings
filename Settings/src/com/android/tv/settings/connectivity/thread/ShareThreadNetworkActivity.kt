@@ -50,15 +50,8 @@ class ShareThreadNetworkActivity : StateMachineActivity() {
 
     private fun startStateMachine() {
         val shareQRCodeState = ShareQRCodeState(this)
-        val shareSuccessState = ShareSuccessState(this)
         val shareFailedState = ShareFailedState(this)
         val timeoutState = TimeoutState(this)
-
-        mStateMachine.addState(
-            shareQRCodeState,
-            StateMachine.RESULT_SUCCESS,
-            shareSuccessState
-        )
 
         mStateMachine.addState(
             shareQRCodeState,
@@ -74,12 +67,6 @@ class ShareThreadNetworkActivity : StateMachineActivity() {
 
         mStateMachine.addState(
             shareFailedState,
-            StateMachine.TRY_AGAIN,
-            shareQRCodeState
-        )
-
-        mStateMachine.addState(
-            shareSuccessState,
             StateMachine.TRY_AGAIN,
             shareQRCodeState
         )
