@@ -35,6 +35,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.settingslib.datetime.ZoneGetter;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
+import com.android.tv.settings.util.TimeZoneUtils;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
 
 import java.util.ArrayList;
@@ -149,9 +150,15 @@ public class TimeZoneFragment extends SettingsPreferenceFragment {
         public ZonePreference(Context context, Map<? extends String, ?> zone) {
             super(context);
             setWidgetLayoutResource(R.layout.radio_preference_widget);
-            setKey((String) zone.get(ZoneGetter.KEY_ID));
+            String id = (String) zone.get(ZoneGetter.KEY_ID);
+            setKey(id);
             setPersistent(false);
-            setTitle((String) zone.get(ZoneGetter.KEY_DISPLAYNAME));
+            String overriddenName = TimeZoneUtils.getOverriddenDisplayName(context, id);
+            if (overriddenName != null) {
+                setTitle(overriddenName);
+            } else {
+                setTitle((String) zone.get(ZoneGetter.KEY_DISPLAYNAME));
+            }
             setSummary((String) zone.get(ZoneGetter.KEY_GMT));
             offset = (Integer) zone.get(ZoneGetter.KEY_OFFSET);
         }
