@@ -214,7 +214,7 @@
     <string name="share_thread_network">Share Thread network credentials</string>
     <!-- Description of thread network credentials sharing [CHAR_LIMIT=NONE]. -->
     <string name="share_thread_network_description">
-        Share Thread network credentials with other devices to simplify setup on your
+        Share Thread network credentials with new Thread devices so they can easily join your
         <xliff:g id="device" example="Google TV Streamer">%1$s</xliff:g> Thread network
     </string>
 
@@ -223,7 +223,7 @@
 
     <!-- Count down timer for expiration of thread network sharing QR code. [CHAR_LIMIT=50] -->
     <string name="share_thread_network_countdown">
-        Code will expire in
+        Code will refresh in
         <xliff:g id="minutes" example="02">%1$02d</xliff:g>m
         <xliff:g id="seconds" example="32">%2$02d</xliff:g>s
     </string>
@@ -1315,11 +1315,15 @@
     <string name="wifi_scan_qr_code_back_description">Press the back button to cancel</string>
 
     <!-- Title of the screen to share thread credentials through QR code [CHAR LIMIT=80]. -->
-    <string name="share_thread_title">Use Thread credentials to set up a device</string>
+    <string name="share_thread_title">Share Thread credentials with device</string>
     <!-- Description of the screen to share thread credentials through QR code [CHAR LIMIT=NONE]. -->
     <string name="share_thread_description">
-        To add a device to your Thread network, scan this QR code in the device’s app. For security,
-        the code will expire in <xliff:g id="minutes" example="3">%1$s</xliff:g> minutes.</string>
+        To quickly add a Thread device to your <xliff:g id="device" example="Google TV Streamer">%1$s</xliff:g> Thread network, share the network’s Thread credentials with the device by scanning this QR code in the device app or entering the sharing code.\n
+        \n
+        Code will refresh in <xliff:g id="minutes" example="3">%2$s</xliff:g> minutes.\n
+        \n
+        Learn more at g.co/tv/thread
+    </string>
 
     <!-- Label for action to accept the currently connected wifi network [CHAR LIMIT=50] -->
     <string name="wifi_action_ok">OK</string>
