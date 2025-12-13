@@ -18,6 +18,7 @@ package com.android.tv.settings.connectivity.thread
 
 import android.net.thread.ThreadNetworkController
 import android.net.thread.ThreadNetworkException
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.OutcomeReceiver
@@ -26,6 +27,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.tv.settings.R
@@ -63,6 +65,7 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
         private var ephemeralKeyExpiry: Instant? = null
         private var countDownTimer: CountDownTimer? = null
         private var activatingEphemeralMode : Boolean = false
+        private var successShown = false
 
         private val onStateChangeListener = object : ThreadNetworkHelper.OnStateChangeListener {
             override fun onEphemeralKeyStateChanged(
@@ -110,8 +113,15 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
                         }
                     }
                     ThreadNetworkController.EPHEMERAL_KEY_IN_USE -> {
-                        stateMachine.listener.onComplete(
-                            this@ShareQRCodeFragment, StateMachine.RESULT_SUCCESS)
+                        if (successShown) return
+                        successShown = true
+
+                        Toast.makeText(
+                            requireContext(),
+                            R.string.thread_network_sharing_success,
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        requireActivity().finish()
                     }
                     ThreadNetworkController.EPHEMERAL_KEY_DISABLED -> {
                         maybeReactivateEphemeralKey()
@@ -142,7 +152,7 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             val description = view.requireViewById<TextView>(R.id.setup_qrcode_description)
-            description.text = getString(R.string.share_thread_description, timeoutMinutes)
+            description.text = getString(R.string.share_thread_description, Build.MODEL, timeoutMinutes)
             threadNetworkHelper.setOnStateChangeListener(onStateChangeListener)
             threadNetworkHelper.registerStateCallback()
             activateEphemeralKey()

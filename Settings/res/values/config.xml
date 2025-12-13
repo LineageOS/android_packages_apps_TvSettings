@@ -227,6 +227,30 @@
     -->
     <bool name="config_show_letterbox_wallpapers_setting">true</bool>
 
+    <!--
+        Overridden time zones to use specific names.
+        This array defines the timezone IDs.
+        Corresponding names should be in config_overridden_timezones_names.
+        Note: If this array is non-empty, config_overridden_timezones_names must have the same length.
+    -->
+    <string-array name="config_overridden_timezones" translatable="false">
+        <!--
+            <item>Europe/Paris</item>
+            <item>America/New_York</item>
+        -->
+    </string-array>
+
+    <!--
+        Display names for overridden time zones.
+        Order must match config_overridden_timezones.
+    -->
+    <string-array name="config_overridden_timezones_names">
+        <!--
+            <item>City of Light</item>
+            <item>Big Apple</item>
+        -->
+    </string-array>
+
     <!-- Controls whether thread network sharing is enabled. -->
     <bool name="config_share_thread_network_enabled">false</bool>
     <integer name="share_thread_network_key_validity_minutes">3</integer>
