@@ -81,6 +81,10 @@ public abstract class ManageAppOp extends SettingsPreferenceFragment
 
             @Override
             public boolean filterApp(ApplicationsState.AppEntry entry) {
+                // Filter out apps with System UID to prevent crashes when modifying permissions
+                if (entry.info.uid == android.os.Process.SYSTEM_UID) {
+                    return false;
+                }
                 entry.extraInfo = createPermissionStateFor(entry.info.packageName, entry.info.uid);
                 return !shouldIgnorePackage(
                         getContext(), entry.info.packageName, customizedIgnoredPackagesArray())

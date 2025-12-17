@@ -52,6 +52,14 @@ public class TurnScreenOn extends ManageAppOp {
     private static final String TAG = TurnScreenOn.class.getSimpleName();
     private static final boolean DEBUG = false;
 
+    private AppOpsManager mAppOpsManager;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mAppOpsManager = getContext().getSystemService(AppOpsManager.class);
+    }
+
     @Override
     public int getAppOpsOpCode() {
         return AppOpsManager.OP_TURN_SCREEN_ON;
@@ -104,8 +112,8 @@ public class TurnScreenOn extends ManageAppOp {
                     + ", userId=" + UserHandle.getUserId(entry.info.uid)
                     + ", currentUser=" + ActivityManager.getCurrentUser());
         }
-        getContext().getSystemService(AppOpsManager.class).setMode(getAppOpsOpCode(),
-                entry.info.uid, entry.info.packageName, newMode);
+        mAppOpsManager.setUidMode(AppOpsManager.OPSTR_TURN_SCREEN_ON,
+                entry.info.uid, newMode);
     }
 
     @NonNull

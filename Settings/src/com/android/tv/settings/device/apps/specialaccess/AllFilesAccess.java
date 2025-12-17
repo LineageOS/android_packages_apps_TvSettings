@@ -45,6 +45,14 @@ import com.android.tv.settings.widget.TvIconDrawableFactory;
 @Keep
 public class AllFilesAccess extends ManageAppOp {
 
+    private AppOpsManager mAppOpsManager;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mAppOpsManager = getContext().getSystemService(AppOpsManager.class);
+    }
+
     @Override
     public int getAppOpsOpCode() {
         return AppOpsManager.OP_MANAGE_EXTERNAL_STORAGE;
@@ -109,9 +117,8 @@ public class AllFilesAccess extends ManageAppOp {
     }
 
     private void setMode(ApplicationsState.AppEntry entry, boolean grant) {
-        getContext().getSystemService(AppOpsManager.class)
-                .setMode(getAppOpsOpCode(), entry.info.uid, entry.info.packageName,
-                        grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
+        mAppOpsManager.setUidMode(getAppOpsOpCode(), entry.info.uid,
+                grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
     }
 
     @Override
