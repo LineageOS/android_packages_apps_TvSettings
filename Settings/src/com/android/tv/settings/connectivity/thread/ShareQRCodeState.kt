@@ -16,6 +16,7 @@
 
 package com.android.tv.settings.connectivity.thread
 
+import android.content.Context
 import android.net.thread.ThreadNetworkController
 import android.net.thread.ThreadNetworkException
 import android.os.Build
@@ -175,14 +176,21 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
         }
 
         private fun maybeReactivateEphemeralKey() {
-            if (activatingEphemeralMode ) {
+            if (activatingEphemeralMode) {
                 return
             }
 
-            if (resources.getBoolean(R.bool.config_share_thread_network_key_refreshes)) {
+            val reauthExpired = ShareThreadNetworkActivity.isReauthExpired(requireContext())
+
+            if (resources.getBoolean(R.bool.config_share_thread_network_key_refreshes) &&
+                !reauthExpired
+            ) {
                 activateEphemeralKey()
             } else {
-                stateMachine.listener?.onComplete(this@ShareQRCodeFragment, StateMachine.RESULT_TIMEOUT)
+                if (reauthExpired) {
+                    Log.i(TAG, "Reauth has expired, not refreshing QR code.")
+                }
+                requireActivity().finish()
             }
         }
 
