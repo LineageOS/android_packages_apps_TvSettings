@@ -28,18 +28,18 @@ import com.android.tv.twopanelsettings.slices.EmbeddedSlicePreferenceHelper.Slic
  */
 open class EmbeddedSlicePreference : SlicePreference,
     HasCustomContentDescription {
-@VisibleForTesting var mHelper: EmbeddedSlicePreferenceHelper? = null
+    @VisibleForTesting
+    var mHelper: EmbeddedSlicePreferenceHelper? = null
 
     private var mContentDescription: String? = null
 
     constructor(context: Context?, uri: String?) : super(context) {
         setUri(uri)
-        mHelper = EmbeddedSlicePreferenceHelper(this, getUri())
     }
 
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
-        if (uri != null) {
-            mHelper = EmbeddedSlicePreferenceHelper(this, uri)
+        if (super.getUri() != null) {
+            mHelper = EmbeddedSlicePreferenceHelper(this, super.getUri())
         }
     }
 
@@ -89,11 +89,22 @@ open class EmbeddedSlicePreference : SlicePreference,
     }
 
     override fun setUri(uri: String?) {
-        if (uri != getUri()) {
+        if (uri != super.getUri()) {
             super.setUri(uri)
             mHelper?.onDetached() // Remove old slice observer.
             mHelper = if (uri != null) EmbeddedSlicePreferenceHelper(this, uri) else null
         }
+    }
+
+    override fun getUri(): String? {
+        val redirectUri = mHelper?.getRedirectUri()
+        if (redirectUri != null) {
+            return redirectUri
+        }
+        if (mHelper != null && mHelper?.mNewPref != null && mHelper?.mNewPref is HasSliceUri) {
+            return (mHelper?.mNewPref as HasSliceUri).uri
+        }
+        return null
     }
 
     companion object {
