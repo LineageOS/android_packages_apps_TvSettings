@@ -95,11 +95,13 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"شبکه Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"شبکه Thread به‌طور محلی به دستگاه‌های سازگار با Thread در خانه هوشمند متصل می‌شود و بازده و عملکرد را تقویت می‌کند.\n\nهنگام روشن بودن، این دستگاه شبکه Thread ایجاد می‌کند یا به آن می‌پیوندد. برای راه‌اندازی آسان‌تر دستگاه‌های بعدی در خانه هوشمند، اطلاعات اعتباری به‌طور محرمانه در فضای ابری بارگذاری خواهد شد.\n\nهنگام خاموش بودن، این دستگاه دیگر نمی‌تواند با سایر دستگاه‌ها در شبکه Thread ارتباط برقرار کند. برخی‌از سرویس‌ها و دستگاه‌های خانه هوشمند ممکن است عملکرد موردنظر را نداشته باشند.\n\nدر g.co/tv/thread اطلاعات بیشتری کسب کنید"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"هم‌رسانی اعتبارنامه‌های شبکه Thread"</string>
-    <string name="share_thread_network_description" msgid="7742150537957957029">"اعتبارنامه‌های شبکه Thread را با دستگاه‌های دیگر هم‌رسانی کنید تا فرایند راه‌اندازی در شبکه Thread متعلق به <xliff:g id="DEVICE">%1$s</xliff:g> ساده شود"</string>
-    <string name="thread_network_share_again" msgid="4603321026609866957">"هم‌رسانی دوباره"</string>
-    <string name="share_thread_network_countdown" msgid="2912667246386100962">"کد <xliff:g id="MINUTES">%1$02d</xliff:g> دقیقه و <xliff:g id="SECONDS">%2$02d</xliff:g> ثانیه دیگر منقضی خواهد شد"</string>
-    <string name="thread_network_sharing_failed" msgid="132503393315179238">"شبکه Thread هم‌رسانی نشد"</string>
-    <string name="thread_network_sharing_success" msgid="2549416982853626795">"شبکه Thread باموفقیت هم‌رسانی شد"</string>
+    <string name="share_thread_network_description" msgid="6836530357198458034">"اعتبارنامه‌های شبکه Thread را با دستگاه‌های Thread جدید هم‌رسانی کنید تا بتوانند به‌راحتی به شبکه Thread در <xliff:g id="DEVICE">%1$s</xliff:g> بپیوندند"</string>
+    <!-- no translation found for thread_network_share_again (1164851319443381573) -->
+    <skip />
+    <string name="share_thread_network_countdown" msgid="5824738305197643767">"کد <xliff:g id="MINUTES">%1$02d</xliff:g> دقیقه و <xliff:g id="SECONDS">%2$02d</xliff:g> ثانیه دیگر بازآوری خواهد شد"</string>
+    <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
+    <skip />
+    <string name="thread_network_sharing_success" msgid="9080142738599803612">"اعتبارنامه‌های Thread هم‌رسانی شد"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"قبل‌از اینکه دستگاهی به شبکه Thread اضافه شود، کد منقضی شد"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"شبکه Thread خاموش شود؟"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"هنگام خاموش بودن، برخی‌از سرویس‌ها و دستگاه‌های خانه هوشمند ممکن است عملکرد موردنظر را نداشته باشند. مایلید ادامه دهید؟"</string>
@@ -510,8 +512,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"این کار اطلاعات مورد استفاده برای اتصال به این شبکه، از جمله گذرواژه ذخیره شده را پاک می‌کند"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" با اسکن کردن رمزینه پاسخ‌سریع ازطریق تلفن همراه و دنبال کردن دستورالعمل‌ها، به Wi-Fi وصل شوید.\n \n در "<b>"تلفن Android"</b>" به «تنظیمات» -&gt; «شبکه» -&gt; «اینترنت» -&gt; ‏«Wi-Fi»‏ -&gt; «انتخاب Wi-Fi»‏ -&gt; «پیشرفته» -&gt; «افزودن دستگاه» بروید و سپس رمزینه پاسخ‌سریع را اسکن کنید."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"دکمه برگشت را برای لغو کردن فشار دهید"</string>
-    <string name="share_thread_title" msgid="7245016423667192880">"برای راه‌اندازی دستگاه از اعتبارنامه‌های Thread استفاده کنید"</string>
-    <string name="share_thread_description" msgid="8219569516530422386">"برای افزودن دستگاه به شبکه Thread، این رمزینه پاسخ‌سریع را در برنامه دستگاه اسکن کنید. برای حفظ امنیت، این کد تا <xliff:g id="MINUTES">%1$s</xliff:g> دقیقه دیگر منقضی خواهد شد."</string>
+    <string name="share_thread_title" msgid="62095604026690777">"هم‌رسانی کردن اعتبارنامه‌های Thread با دستگاه"</string>
+    <string name="share_thread_description" msgid="8461670105177768763">"برای افزودن سریع دستگاه Thread به شبکه Thread در <xliff:g id="DEVICE">%1$s</xliff:g>، اعتبارنامه‌های Thread شبکه را با اسکن کردن این رمزینه پاسخ‌سریع در برنامه دستگاه یا وارد کردن کد هم‌رسانی با دستگاه هم‌رسانی کنید.\n \n کد <xliff:g id="MINUTES">%2$s</xliff:g> دقیقه دیگر بازآوری خواهد شد.\n\nبا مراجعه به g.co/tv/thread، اطلاعات بیشتری دریافت کنید"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"قبول"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"ادامه"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"تغییر شبکه"</string>
@@ -1171,7 +1173,7 @@
     <string name="share_remote_bugreport_dialog_message_finished" msgid="8515056665416643253">"سرپرست فناوری اطلاعات شما برای کمک به عیب‌یابی این دستگاه، گزارش اشکال درخواست کرده است. ممکن است برنامه‌ها و داده‌ها به اشتراک گذاشته شوند."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="4637489112422692638">"سرپرست فناوری اطلاعات شما برای کمک به عیب‌یابی این دستگاه، درخواست گزارش اشکال کرده است. ممکن است برنامه‌ها و داده‌ها به اشتراک گذاشته شوند و سرعت دستگاهتان به‌طور موقت کاهش یابد."</string>
     <string name="sharing_remote_bugreport_dialog_message" msgid="8096239263583331293">"این گزارش اشکال با سرپرست فناوری اطلاعات هم‌رسانی می‌شود. برای جزئیات بیشتر با او تماس بگیرید."</string>
-    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"اشتراک‌گذاری"</string>
+    <string name="share_remote_bugreport_action" msgid="6760197666368262892">"هم‌رسانی"</string>
     <string name="decline_remote_bugreport_action" msgid="2130779396296090961">"رد کردن"</string>
     <string name="network_connection_request_dialog_title" msgid="4103963119407212989">"دستگاه مورداستفاده با <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="8408857135950230472">"دستگاهی پیدا نشد. مطمئن شوید دستگاه‌ها روشن و برای اتصال دردسترس هستند."</string>
