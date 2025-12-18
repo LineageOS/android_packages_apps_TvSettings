@@ -254,7 +254,9 @@
     <!-- Controls whether thread network sharing is enabled. -->
     <bool name="config_share_thread_network_enabled">false</bool>
     <integer name="share_thread_network_key_validity_minutes">3</integer>
-    <bool name="config_share_thread_network_key_refreshes">false</bool>
+    <bool name="config_share_thread_network_key_refreshes">true</bool>
+    <!-- The reauth-free time for sharing thread network credentials in minutes -->
+    <integer name="config_share_thread_network_reauth_timeout_minutes">15</integer>
 
     <string name="account_reauth_action" translatable="false" />
     <string name="account_reauth_package" translatable="false" />

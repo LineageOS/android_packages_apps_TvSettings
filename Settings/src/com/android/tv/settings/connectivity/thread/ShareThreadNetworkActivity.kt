@@ -16,18 +16,35 @@
 package com.android.tv.settings.connectivity.thread
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import com.android.tv.settings.R
 import com.android.tv.settings.connectivity.util.StateMachine
 import com.android.tv.settings.connectivity.util.StateMachineActivity
+import java.util.concurrent.TimeUnit
 
 class ShareThreadNetworkActivity : StateMachineActivity() {
+    companion object {
+        internal var lastReauthTimestampMs: Long = 0
+
+        fun isReauthExpired(context: Context): Boolean {
+            val reauthTimeoutMs =
+                TimeUnit.MINUTES.toMillis(
+                    context.resources.getInteger(
+                        R.integer.config_share_thread_network_reauth_timeout_minutes
+                    ).toLong()
+                )
+            return System.currentTimeMillis() - lastReauthTimestampMs >= reauthTimeoutMs
+        }
+    }
+
     private val reauthLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
         if (result.resultCode == RESULT_OK) {
+            lastReauthTimestampMs = System.currentTimeMillis()
             startStateMachine()
         } else {
             finish()
@@ -39,7 +56,11 @@ class ShareThreadNetworkActivity : StateMachineActivity() {
         val reauthAction = getString(R.string.account_reauth_action)
         val reauthPackage = getString(R.string.account_reauth_package)
 
-        if (reauthAction.isNotEmpty() && reauthPackage.isNotEmpty()) {
+        if (
+            isReauthExpired(this) &&
+            reauthAction.isNotEmpty() &&
+            reauthPackage.isNotEmpty()
+        ) {
             val intent = Intent(reauthAction)
             intent.setPackage(reauthPackage)
             reauthLauncher.launch(intent)
@@ -51,7 +72,6 @@ class ShareThreadNetworkActivity : StateMachineActivity() {
     private fun startStateMachine() {
         val shareQRCodeState = ShareQRCodeState(this)
         val shareFailedState = ShareFailedState(this)
-        val timeoutState = TimeoutState(this)
 
         mStateMachine.addState(
             shareQRCodeState,
@@ -60,19 +80,7 @@ class ShareThreadNetworkActivity : StateMachineActivity() {
         )
 
         mStateMachine.addState(
-            shareQRCodeState,
-            StateMachine.RESULT_TIMEOUT,
-            timeoutState
-        )
-
-        mStateMachine.addState(
             shareFailedState,
-            StateMachine.TRY_AGAIN,
-            shareQRCodeState
-        )
-
-        mStateMachine.addState(
-            timeoutState,
             StateMachine.TRY_AGAIN,
             shareQRCodeState
         )

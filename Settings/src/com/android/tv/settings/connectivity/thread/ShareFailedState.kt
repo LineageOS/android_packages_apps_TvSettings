@@ -70,7 +70,7 @@ class ShareFailedState(private val activity: FragmentActivity) : State {
         ) {
             actions.add(
                 GuidedAction.Builder(requireContext())
-                    .title(R.string.wifi_action_try_again)
+                    .title(R.string.thread_network_share_again)
                     .id(ACTION_ID_TRY_AGAIN)
                     .build()
             )
