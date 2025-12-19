@@ -105,8 +105,8 @@ public class AlarmsAndReminders extends ManageAppOp {
     }
 
     private void setAlarmsAndRemindersAccess(ApplicationsState.AppEntry entry, boolean grant) {
-        mAppOpsManager.setMode(getAppOpsOpCode(),
-                entry.info.uid, entry.info.packageName,
+        mAppOpsManager.setUidMode(AppOpsManager.OPSTR_SCHEDULE_EXACT_ALARM,
+                        entry.info.uid,
                 grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
         updateAppList();
     }
