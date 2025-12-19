@@ -39,5 +39,7 @@ android_robolectric_test {
         timeout: 36000,
     },
 
+    test_suites: ["general-tests"],
+
     strict_mode: false,
 }
