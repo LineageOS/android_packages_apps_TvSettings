@@ -16,25 +16,35 @@
 
 package com.android.tv.settings.connectivity.thread
 
+import android.graphics.drawable.Icon
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.leanback.widget.GuidanceStylist
-import androidx.leanback.widget.GuidedAction
 import androidx.lifecycle.ViewModelProvider
 import com.android.tv.settings.R
-import com.android.tv.settings.connectivity.setup.WifiConnectivityGuidedStepFragment
 import com.android.tv.settings.connectivity.util.State
 import com.android.tv.settings.connectivity.util.StateMachine
+import com.android.tv.twopanelsettings.FullScreenDialogFragment
 
 /** State for displaying that sharing the Thread network failed. */
 class ShareFailedState(private val activity: FragmentActivity) : State {
     private var fragment: Fragment? = null
 
     override fun processForward() {
-        fragment = ShareFailedFragment()
-        if (activity is State.FragmentChangeListener)
+        val fragment = ShareFailedFragment()
+        val icon = Icon.createWithResource(activity, R.drawable.ic_warning)
+        val args = FullScreenDialogFragment.DialogBuilder()
+            .setIcon(icon)
+            .setTitle(activity.getString(R.string.thread_network_sharing_failed))
+            .setMessage(activity.getString(R.string.thread_network_sharing_failure_user_tips))
+            .setPositiveButton(activity.getString(R.string.thread_network_share_again))
+            .setNegativeButton(activity.getString(android.R.string.cancel))
+            .build()
+        fragment.arguments = args
+        this.fragment = fragment
+        if (activity is State.FragmentChangeListener) {
             activity.onFragmentChange(fragment, true)
+        }
     }
 
     override fun processBackward() {
@@ -47,51 +57,19 @@ class ShareFailedState(private val activity: FragmentActivity) : State {
     }
 
     /** Fragment displaying that sharing the Thread network failed. */
-    class ShareFailedFragment : WifiConnectivityGuidedStepFragment() {
+    class ShareFailedFragment : FullScreenDialogFragment() {
         private lateinit var stateMachine: StateMachine
-
-        override fun onCreateGuidance(savedInstanceState: Bundle?): GuidanceStylist.Guidance {
-            return GuidanceStylist.Guidance(
-                getString(R.string.thread_network_sharing_failed),
-                null,
-                null,
-                null
-            )
-        }
 
         override fun onCreate(savedInstanceState: Bundle?) {
             stateMachine = ViewModelProvider(requireActivity())[StateMachine::class.java]
             super.onCreate(savedInstanceState)
         }
 
-        override fun onCreateActions(
-            actions: MutableList<GuidedAction>,
-            savedInstanceState: Bundle?
-        ) {
-            actions.add(
-                GuidedAction.Builder(requireContext())
-                    .title(R.string.thread_network_share_again)
-                    .id(ACTION_ID_TRY_AGAIN)
-                    .build()
-            )
-            actions.add(
-                GuidedAction.Builder(requireContext())
-                    .title(android.R.string.cancel)
-                    .id(ACTION_ID_CANCEL)
-                    .build()
-            )
-        }
-
-        override fun onGuidedActionClicked(action: GuidedAction) {
-            when (action.id) {
-                ACTION_ID_TRY_AGAIN -> stateMachine.listener?.onComplete(this, StateMachine.TRY_AGAIN)
-                ACTION_ID_CANCEL -> requireActivity().finish()
+        override fun onButtonPressed(action: Int) {
+            when (action) {
+                ACTION_POSITIVE -> stateMachine.listener?.onComplete(this, StateMachine.TRY_AGAIN)
+                ACTION_NEGATIVE -> requireActivity().finish()
             }
-        }
-
-        companion object {
-            private const val ACTION_ID_TRY_AGAIN = 1L
-            private const val ACTION_ID_CANCEL = 2L
         }
     }
 }
