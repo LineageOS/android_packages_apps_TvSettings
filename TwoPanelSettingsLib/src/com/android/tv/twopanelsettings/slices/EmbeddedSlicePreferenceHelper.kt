@@ -20,9 +20,11 @@ import android.view.ContextThemeWrapper
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.Observer
 import androidx.preference.Preference
+import com.android.tv.twopanelsettings.slices.SlicePreferencesUtil
 import com.android.tv.twopanelsettings.slices.SlicePreferencesUtil.getEmbeddedItem
 import com.android.tv.twopanelsettings.slices.SlicePreferencesUtil.getPreference
 import com.android.tv.twopanelsettings.slices.compat.Slice
+import com.android.tv.twopanelsettings.slices.compat.SliceItem
 import com.android.tv.twopanelsettings.slices.compat.widget.ListContent
 import com.android.tv.twopanelsettings.slices.compat.widget.SliceContent
 
@@ -98,6 +100,26 @@ class EmbeddedSlicePreferenceHelper @VisibleForTesting constructor(
             mPreference.update()
         }
     }
+
+fun getRedirectUri(): String? {
+    if (mSlice == null) {
+        return null
+    }
+    val mListContent = ListContent(mSlice!!)
+    val items: List<SliceContent> = mListContent.rowItems
+    if (items.isEmpty()) {
+        return null
+    }
+    val redirectSliceItem: SliceItem? = SlicePreferencesUtil.getRedirectSlice(items)
+    if (redirectSliceItem != null) {
+        val data: SlicePreferencesUtil.Data = SlicePreferencesUtil.extract(redirectSliceItem)
+        val title: CharSequence = SlicePreferencesUtil.getText(data.mTitleItem)
+        if (title.isNotEmpty()) {
+            return title.toString()
+        }
+    }
+    return null
+}
 
     /**
      * Implement this if the container needs to do something when embedded slice preference change
