@@ -95,11 +95,13 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Mạng Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Mạng Thread kết nối cục bộ các thiết bị nhà thông minh có hỗ trợ giao thức Thread, giúp tăng cường hiệu quả và hiệu suất.\n\nKhi ở trạng thái bật, thiết bị này sẽ tạo hoặc kết nối với mạng Thread của bạn. Thông tin đăng nhập sẽ được tải lên đám mây ở chế độ riêng tư để sau này bạn dễ dàng thiết lập các thiết bị nhà thông minh.\n\nKhi ở trạng thái tắt, thiết bị này sẽ không thể giao tiếp với các thiết bị khác trên mạng Thread của bạn nữa. Một số dịch vụ và thiết bị nhà thông minh có thể không hoạt động như dự kiến.\n\nHãy tìm hiểu thêm tại g.co/tv/thread"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"Chia sẻ thông tin đăng nhập mạng Thread"</string>
-    <string name="share_thread_network_description" msgid="7742150537957957029">"Chia sẻ thông tin đăng nhập mạng Thread với các thiết bị khác để đơn giản hoá quá trình thiết lập trên mạng Thread của <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
-    <string name="thread_network_share_again" msgid="4603321026609866957">"Chia sẻ lại"</string>
-    <string name="share_thread_network_countdown" msgid="2912667246386100962">"Mã sẽ hết hạn sau <xliff:g id="MINUTES">%1$02d</xliff:g> phút <xliff:g id="SECONDS">%2$02d</xliff:g> giây"</string>
-    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Không chia sẻ được mạng Thread"</string>
-    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Đã chia sẻ thành công mạng Thread"</string>
+    <string name="share_thread_network_description" msgid="6836530357198458034">"Chia sẻ thông tin đăng nhập mạng Thread với các thiết bị Thread mới để các thiết bị này có thể dễ dàng tham gia mạng Thread của <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <!-- no translation found for thread_network_share_again (1164851319443381573) -->
+    <skip />
+    <string name="share_thread_network_countdown" msgid="5824738305197643767">"Mã sẽ được làm mới sau <xliff:g id="MINUTES">%1$02d</xliff:g> phút <xliff:g id="SECONDS">%2$02d</xliff:g> giây"</string>
+    <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
+    <skip />
+    <string name="thread_network_sharing_success" msgid="9080142738599803612">"Đã chia sẻ thông tin đăng nhập mạng Thread"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Mã đã hết hạn trước khi có thiết bị được thêm vào mạng Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Bạn muốn tắt mạng Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Ở trạng thái tắt, một số dịch vụ và thiết bị nhà thông minh có thể không hoạt động như dự kiến. Bạn có muốn tiếp tục không?"</string>
@@ -510,8 +512,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Thao tác này sẽ xóa thông tin được sử dụng để kết nối với mạng này, bao gồm mật khẩu đã lưu"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Kết nối với một mạng Wi-Fi bằng cách quét mã QR trên điện thoại di động rồi làm theo hướng dẫn.\n \n Trên "<b>"điện thoại Android"</b>", hãy chuyển đến phần Cài đặt -&gt; Mạng và Internet -&gt; Wi-Fi -&gt; Chọn Wi-Fi -&gt; Nâng cao -&gt; Thêm thiết bị rồi quét mã QR."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Nhấn vào nút quay lại để hủy"</string>
-    <string name="share_thread_title" msgid="7245016423667192880">"Dùng thông tin đăng nhập mạng Thread để thiết lập một thiết bị"</string>
-    <string name="share_thread_description" msgid="8219569516530422386">"Để thêm một thiết bị vào mạng Thread, hãy quét mã QR này trong ứng dụng của thiết bị. Vì lý do bảo mật, mã này sẽ hết hạn sau <xliff:g id="MINUTES">%1$s</xliff:g> phút."</string>
+    <string name="share_thread_title" msgid="62095604026690777">"Chia sẻ thông tin đăng nhập mạng Thread với thiết bị"</string>
+    <string name="share_thread_description" msgid="8461670105177768763">"Để nhanh chóng thêm một thiết bị Thread vào mạng Thread <xliff:g id="DEVICE">%1$s</xliff:g>, hãy chia sẻ thông tin đăng nhập mạng Thread với thiết bị bằng cách quét mã QR này trong ứng dụng quản lý thiết bị hoặc nhập mã chia sẻ.\n \n Mã sẽ được làm mới sau <xliff:g id="MINUTES">%2$s</xliff:g> phút.\n \n Tìm hiểu thêm tại g.co/tv/thread"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Tiếp tục"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Thay đổi mạng"</string>
@@ -781,7 +783,7 @@
     <string name="captions_fontfamily" msgid="1026632786438880997">"Họ phông chữ"</string>
     <string name="captions_textcolor" msgid="1566679779609140317">"Màu văn bản"</string>
     <string name="captions_edgetype" msgid="4875636291904824401">"Loại viền"</string>
-    <string name="captions_edgecolor" msgid="2779925179084237336">"Màu viền"</string>
+    <string name="captions_edgecolor" msgid="2779925179084237336">"Màu đường viền"</string>
     <string name="captions_backgroundshow" msgid="1080183686470477645">"Hiển thị nền"</string>
     <string name="captions_backgroundcolor" msgid="2056944109914399253">"Màu nền"</string>
     <string name="captions_backgroundopacity" msgid="1850126438162000027">"Độ mờ của nền"</string>

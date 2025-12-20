@@ -95,11 +95,13 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"스레드 네트워크"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"스레드 네트워크는 스레드 지원 스마트 홈 기기를 로컬에서 연결하여 효율성과 성능을 개선합니다.\n\n사용 설정하면 이 기기에서 스레드 네트워크를 만들거나 스레드 네트워크에 연결합니다. 사용자 인증 정보는 향후 스마트 홈 기기를 쉽게 설정할 수 있도록 클라우드에 비공개로 업로드됩니다.\n\n사용 중지하면 이 기기에서 더 이상 스레드 네트워크의 다른 기기와 통신할 수 없습니다. 특정 스마트 홈 기기 및 서비스는 제대로 작동하지 않을 수도 있습니다.\n\n자세한 내용은 g.co/tv/thread를 참고하세요."</string>
     <string name="share_thread_network" msgid="1976613832000966535">"스레드 네트워크 사용자 인증 정보 공유"</string>
-    <string name="share_thread_network_description" msgid="7742150537957957029">"<xliff:g id="DEVICE">%1$s</xliff:g> 스레드 네트워크에서 설정을 간소화하기 위해 다른 기기와 스레드 네트워크 사용자 인증 정보를 공유합니다."</string>
-    <string name="thread_network_share_again" msgid="4603321026609866957">"다시 공유"</string>
-    <string name="share_thread_network_countdown" msgid="2912667246386100962">"코드는 <xliff:g id="MINUTES">%1$02d</xliff:g>분 <xliff:g id="SECONDS">%2$02d</xliff:g>초 후에 만료됩니다."</string>
-    <string name="thread_network_sharing_failed" msgid="132503393315179238">"스레드 네트워크를 공유할 수 없습니다."</string>
-    <string name="thread_network_sharing_success" msgid="2549416982853626795">"스레드 네트워크가 공유되었습니다."</string>
+    <string name="share_thread_network_description" msgid="6836530357198458034">"새 스레드 기기가 <xliff:g id="DEVICE">%1$s</xliff:g> 스레드 네트워크에 쉽게 연결될 수 있도록 스레드 네트워크 사용자 인증 정보를 공유합니다."</string>
+    <!-- no translation found for thread_network_share_again (1164851319443381573) -->
+    <skip />
+    <string name="share_thread_network_countdown" msgid="5824738305197643767">"<xliff:g id="MINUTES">%1$02d</xliff:g>분 <xliff:g id="SECONDS">%2$02d</xliff:g>초 후에 코드가 새로고침됩니다."</string>
+    <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
+    <skip />
+    <string name="thread_network_sharing_success" msgid="9080142738599803612">"스레드 사용자 인증 정보가 공유됨"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"스레드 네트워크에 기기가 추가되기 전에 코드가 만료되었습니다."</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"스레드 네트워크를 사용 중지하시겠습니까?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"사용 중지하면 특정 스마트 홈 기기 및 서비스가 제대로 작동하지 않을 수 있습니다. 계속하시겠습니까?"</string>
@@ -510,8 +512,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"저장된 비밀번호를 비롯하여 이 네트워크에 연결하는 데 사용된 정보가 삭제됩니다."</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" 휴대전화에서 QR 코드를 스캔하여 Wi-Fi에 연결하고 안내에 따르세요.\n \n "<b>"Android 휴대전화"</b>"에서 설정 -&gt; 네트워크 및 인터넷 -&gt; Wi-Fi -&gt; Wi-Fi 선택 -&gt; 고급 -&gt; 기기 추가로 이동한 다음 QR 코드를 스캔하세요."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"취소하려면 뒤로 버튼을 누르세요."</string>
-    <string name="share_thread_title" msgid="7245016423667192880">"스레드 사용자 인증 정보를 사용하여 기기 설정"</string>
-    <string name="share_thread_description" msgid="8219569516530422386">"스레드 네트워크에 기기를 추가하려면 기기의 앱에서 이 QR 코드를 스캔하세요. 보안을 위해 코드는 <xliff:g id="MINUTES">%1$s</xliff:g>분 후에 만료됩니다."</string>
+    <string name="share_thread_title" msgid="62095604026690777">"기기와 스레드 사용자 인증 정보 공유"</string>
+    <string name="share_thread_description" msgid="8461670105177768763">"<xliff:g id="DEVICE">%1$s</xliff:g> 스레드 네트워크에 스레드 기기를 빠르게 추가하려면 기기 앱에서 이 QR 코드를 스캔하거나 공유 코드를 입력하여 네트워크 스레드 사용자 인증 정보를 기기와 공유하세요.\n \n <xliff:g id="MINUTES">%2$s</xliff:g>분 후에 코드가 새로고침됩니다.\n\n g.co/tv/thread에서 자세히 알아보세요."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"확인"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"계속"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"네트워크 변경"</string>

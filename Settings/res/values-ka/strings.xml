@@ -95,11 +95,13 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"თემატური გზავნილების ქსელი"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"თემატური გზავნილების ქსელი ადგილობრივად აკავშირებს თემატური გზავნილების ფუნქციის მქონე გონიერი სახლის მოწყობილობებს, რითაც ზრდის ეფექტურობასა და მუშაობის ხარისხს.\n\nჩართვისას მოწყობილობა შექმნის ან მიუერთდება თქვენს თემატური გზავნილების ქსელს. გონიერი სახლის ახალი მოწყობილობების პარამეტრების მარტივად დაყენების მიზნით, ავტორიზაციის მონაცემები ღრუბელზე კონფიდენციალურად აიტვირთება.\n\nგამორთულ მდგომარეობაში, მოწყობილობა ვეღარ შეძლებს თქვენს თემატური გზავნილების ქსელში არსებულ სხვა მოწყობილობებთან კომუნიკაციას. ზოგიერთი გონიერი სახლის მოწყობილობა და სერვისი შესაძლოა სათანადოდ არ მუშაობდეს.\n\nშეიტყვეთ მეტი: g.co/tv/thread"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"Thread Network-ის ავტორიზაც. მონაცემების გაზიარება"</string>
-    <string name="share_thread_network_description" msgid="7742150537957957029">"გაუზიარეთ Thread ქსელის ავტორიზაციის მონაცემები სხვა მოწყობილობებს, რომ მარტივად დააყენოთ Thread ქსელი თქვენს <xliff:g id="DEVICE">%1$s</xliff:g>-ზე"</string>
-    <string name="thread_network_share_again" msgid="4603321026609866957">"ხელახლა გაზიარება"</string>
-    <string name="share_thread_network_countdown" msgid="2912667246386100962">"კოდი ამოიწურება: <xliff:g id="MINUTES">%1$02d</xliff:g> წთ <xliff:g id="SECONDS">%2$02d</xliff:g> წმ"</string>
-    <string name="thread_network_sharing_failed" msgid="132503393315179238">"Thread ქსელის გაზიარება ვერ მოხერხრდა"</string>
-    <string name="thread_network_sharing_success" msgid="2549416982853626795">"Thread ქსელი გაზიარებულია წარმატებით"</string>
+    <string name="share_thread_network_description" msgid="6836530357198458034">"გაუზიარეთ Thread ქსელის ავტორიზაციის მონაცემები ახალ Thread მოწყობილობებს, რათა ისინი მარტივად შემოერთდნენ თქვენს <xliff:g id="DEVICE">%1$s</xliff:g>-ის Thread ქსელს."</string>
+    <!-- no translation found for thread_network_share_again (1164851319443381573) -->
+    <skip />
+    <string name="share_thread_network_countdown" msgid="5824738305197643767">"კოდი განახლდება <xliff:g id="MINUTES">%1$02d</xliff:g> წთ-სა და <xliff:g id="SECONDS">%2$02d</xliff:g> წმ-ში"</string>
+    <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
+    <skip />
+    <string name="thread_network_sharing_success" msgid="9080142738599803612">"Thread-ის ავტორიზაციის მონაცემები გაზიარებულია"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"კოდის ვადა ამოიწურა თქვენი მოწყობილობის Thread ქსელში დამატებამდე"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"გსურთ თემატური გზავნილების ქსელის გამორთვა?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"გამორთულ მდგომარეობაში ზოგიერთი გონიერი სახლის მოწყობილობა და სერვისი შესაძლოა სათანადოდ არ მუშაობდეს. გსურთ გაგრძელება?"</string>
@@ -510,8 +512,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"ეს წაშლის ამ ქსელთან დასაკავშირებლად გამოყენებულ მთელ ინფორმაციას, მათ შორის, შენახულ პაროლს."</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" დაუკავშირდით Wi-Fi-ს მობილური ტელეფონიდან QR კოდის სკანირების გზით და მიჰყევით ინსტრუქციას.\n \n "<b>"Android ტელეფონიდან"</b>" გადადით: პარამეტრები -&gt; ქსელი და ინტერნეტი -&gt; Wi-Fi -&gt; აირჩიეთ Wi-Fi -&gt; გაფართოებული -&gt; დაამატეთ მოწყობილობა და შემდეგ დაასკანირეთ QR კოდი."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"გასაუქმებლად დააჭირეთ უკან გადასვლის ღილაკს"</string>
-    <string name="share_thread_title" msgid="7245016423667192880">"Thread-ის ავტორიზაციის მონაცემების გამოყენება მოწყობილობის დასაყენებლად"</string>
-    <string name="share_thread_description" msgid="8219569516530422386">"მოწყობილობის დასამატებლად თქვენს Thread ქსელზე დაასკანირეთ ეს QR კოდი მოწყობილობის აპში. უსაფრთხოებისთვის კოდის ვადა ამოიწურება <xliff:g id="MINUTES">%1$s</xliff:g> წუთში."</string>
+    <string name="share_thread_title" msgid="62095604026690777">"Thread-ის ავტორიზაციის მონაცემების გაზიარება მოწყობილობასთან"</string>
+    <string name="share_thread_description" msgid="8461670105177768763">"თქვენს <xliff:g id="DEVICE">%1$s</xliff:g>-ის Thread ქსელში Thread მოწყობილობის სწრაფად დასამატებლად, მოწყობილობის აპში ამ QR კოდის სკანირებით ან გაზიარების კოდის შეყვანით მოწყობილობას გაუზიარეთ ქსელის Thread-ის ავტორიზაციის მონაცემები.\n \n კოდი განახლდება <xliff:g id="MINUTES">%2$s</xliff:g> წუთში.\n \n შეიტყვეთ მეტი ბმულზე: g.co/tv/thread"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"კარგი"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"გაგრძელება"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"ქსელის შეცვლა"</string>
