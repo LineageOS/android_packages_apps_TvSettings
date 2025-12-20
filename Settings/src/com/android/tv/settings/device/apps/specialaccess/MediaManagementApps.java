@@ -110,8 +110,8 @@ public class MediaManagementApps extends ManageAppOp {
     }
 
     private void setCanManageMedia(ApplicationsState.AppEntry entry, boolean grant) {
-        mAppOpsManager.setMode(AppOpsManager.OP_MANAGE_MEDIA,
-                entry.info.uid, entry.info.packageName,
+        mAppOpsManager.setUidMode(AppOpsManager.OP_MANAGE_MEDIA,
+                        entry.info.uid,
                 grant ? AppOpsManager.MODE_ALLOWED : AppOpsManager.MODE_ERRORED);
         updateAppList();
     }

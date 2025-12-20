@@ -95,11 +95,13 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread 網絡"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread 網絡會在本機連接支援 Thread 的智能家居裝置，以提高效率和效能。\n\n開啟後，此裝置將會建立或加入你的 Thread 網絡。憑證將會以保密形式上載至雲端，以便你日後更輕易設定智能家居裝置。\n\n關閉後，此裝置將無法再與你 Thread 網絡上其他裝置通訊。部分智能家居裝置和服務可能無法正常運作。\n\n你可前往 g.co/tv/thread 瞭解詳情"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"分享 Thread 網絡憑證"</string>
-    <string name="share_thread_network_description" msgid="7742150537957957029">"與其他裝置分享 Thread 網絡憑證，以簡化 <xliff:g id="DEVICE">%1$s</xliff:g> Thread 網絡的設定程序"</string>
-    <string name="thread_network_share_again" msgid="4603321026609866957">"再次分享"</string>
-    <string name="share_thread_network_countdown" msgid="2912667246386100962">"QR 碼會在 <xliff:g id="MINUTES">%1$02d</xliff:g> 分鐘 <xliff:g id="SECONDS">%2$02d</xliff:g> 秒後到期"</string>
-    <string name="thread_network_sharing_failed" msgid="132503393315179238">"無法分享 Thread 網絡"</string>
-    <string name="thread_network_sharing_success" msgid="2549416982853626795">"已成功分享 Thread 網絡"</string>
+    <string name="share_thread_network_description" msgid="6836530357198458034">"與新的 Thread 裝置分享 Thread 網絡憑證，以便裝置加入你「<xliff:g id="DEVICE">%1$s</xliff:g>」的 Thread 網絡"</string>
+    <!-- no translation found for thread_network_share_again (1164851319443381573) -->
+    <skip />
+    <string name="share_thread_network_countdown" msgid="5824738305197643767">"代碼會在 <xliff:g id="MINUTES">%1$02d</xliff:g> 分鐘 <xliff:g id="SECONDS">%2$02d</xliff:g> 秒後重新整理"</string>
+    <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
+    <skip />
+    <string name="thread_network_sharing_success" msgid="9080142738599803612">"已分享 Thread 憑證"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"QR 碼已在裝置加入 Thread 網絡前到期"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"要關閉 Thread 網絡嗎？"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"關閉後，部分智能家居裝置和服務可能無法正常運作。要繼續嗎？"</string>
@@ -510,8 +512,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"用於連接此網絡的資料將被清除，包括已儲存的密碼"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" 使用手機掃瞄 QR 碼以加入 Wi-Fi 網絡，然後按照指示操作。\n \n 在 "<b>"Android 手機"</b>"中前往「設定」-&gt;「網絡和互聯網」-&gt;「Wi-Fi」-&gt; 選擇 Wi-Fi 網絡 -&gt;「進階」-&gt;「新增裝置」，然後掃瞄 QR 碼。"</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"按一下返回按鈕以取消"</string>
-    <string name="share_thread_title" msgid="7245016423667192880">"使用 Thread 憑證設定裝置"</string>
-    <string name="share_thread_description" msgid="8219569516530422386">"如要將裝置加入 Thread 網絡，請在裝置的應用程式中掃瞄此 QR 碼。為安全起見，QR 碼會在 <xliff:g id="MINUTES">%1$s</xliff:g> 分鐘後到期。"</string>
+    <string name="share_thread_title" msgid="62095604026690777">"與裝置分享 Thread 憑證"</string>
+    <string name="share_thread_description" msgid="8461670105177768763">"如要將 Thread 裝置快速加入「<xliff:g id="DEVICE">%1$s</xliff:g>」的 Thread 網絡，請在裝置應用程式中掃瞄此 QR 碼或輸入分享代碼，以便與裝置分享網絡的 Thread 憑證。\n\n代碼會在 <xliff:g id="MINUTES">%2$s</xliff:g> 分鐘後重新整理。\n\n如要瞭解詳情，請前往 g.co/tv/thread"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"確定"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"繼續"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"變更網絡"</string>
