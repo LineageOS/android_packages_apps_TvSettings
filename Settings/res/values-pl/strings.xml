@@ -95,16 +95,16 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Sieć Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Sieć Thread lokalnie łączy inteligentne urządzenia domowe, które ją obsługą, aby działały bardziej wydajnie.\n\nPo włączeniu to urządzenie utworzy sieć Thread lub do niej dołączy. Dane logowania zostaną przesłane do prywatnego folderu w chmurze – ułatwi to konfigurację kolejnych inteligentnych urządzeń domowych.\n\nPo wyłączeniu to urządzenie nie będzie już mogło komunikować się z innymi urządzeniami w sieci Thread. Niektóre usługi i inteligentne urządzenia domowe mogą nie działać zgodnie z oczekiwaniami.\n\nWięcej informacji znajdziesz na g.co/tv/thread"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"Udostępnij dane logowania do sieci Thread"</string>
-    <!-- no translation found for share_thread_network_description (6836530357198458034) -->
+    <!-- no translation found for share_thread_network_description (4288391787128615463) -->
     <skip />
     <!-- no translation found for thread_network_share_again (1164851319443381573) -->
     <skip />
-    <!-- no translation found for share_thread_network_countdown (5824738305197643767) -->
-    <skip />
+    <string name="share_thread_network_countdown" msgid="5824738305197643767">"Kod odświeży się za <xliff:g id="MINUTES">%1$02d</xliff:g> min <xliff:g id="SECONDS">%2$02d</xliff:g> s"</string>
     <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
     <skip />
-    <!-- no translation found for thread_network_sharing_success (9080142738599803612) -->
+    <!-- no translation found for thread_network_sharing_failure_user_tips (8379268618358441120) -->
     <skip />
+    <string name="thread_network_sharing_success" msgid="9080142738599803612">"Dane logowania do sieci Thread zostały udostępnione"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Kod wygasł, zanim do sieci Thread dodano jakiekolwiek urządzenie"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Wyłączyć sieć Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Jeśli ją wyłączysz, niektóre usługi i inteligentne urządzenia domowe mogą nie działać zgodnie z oczekiwaniami. Czy chcesz kontynuować?"</string>
@@ -515,9 +515,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Powoduje to wyczyszczenie informacji używanych do łączenia z tą siecią, w tym zapisanego hasła"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Jeśli chcesz połączyć się z Wi-Fi, zeskanuj telefonem kod QR i postępuj zgodnie z instrukcjami.\n \n Na "<b>"telefonie z Androidem"</b>" otwórz Ustawienia &gt; Sieć i internet &gt; Wi-Fi &gt; wybierz Wi-Fi &gt; Zaawansowane &gt; dodaj urządzenie i zeskanuj kod QR."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Aby anulować, naciśnij przycisk Wstecz"</string>
-    <!-- no translation found for share_thread_title (62095604026690777) -->
-    <skip />
-    <!-- no translation found for share_thread_description (8461670105177768763) -->
+    <string name="share_thread_title" msgid="62095604026690777">"Udostępnij urządzeniu dane logowania do sieci Thread"</string>
+    <!-- no translation found for share_thread_description (2514639045690367112) -->
     <skip />
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Dalej"</string>

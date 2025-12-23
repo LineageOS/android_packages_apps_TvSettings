@@ -95,16 +95,12 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread-verkko"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread-verkko yhdistää Thread-yhteensopivat kodin älylaitteet paikallisesti, parantaen tehokkuutta.\n\nKun asetus on päällä, laite luo Thread-verkon tai liittyy sellaiseen. Kirjautumistiedot ladataan yksityisesti pilveen kodin älylaitteiden käyttöönoton helpottamiseksi jatkossa.\n\nKun asetus on pois päältä, laite ei voi kommunikoida muiden Thread-verkon laitteiden kanssa. Jotkin kodin älylaitteet ja palvelut eivät ehkä toimi odotetusti.\n\nLue lisää: g.co/tv/thread"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"Jaa Thread-verkon kirjautumistiedot"</string>
-    <!-- no translation found for share_thread_network_description (6836530357198458034) -->
-    <skip />
-    <!-- no translation found for thread_network_share_again (1164851319443381573) -->
-    <skip />
-    <!-- no translation found for share_thread_network_countdown (5824738305197643767) -->
-    <skip />
-    <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
-    <skip />
-    <!-- no translation found for thread_network_sharing_success (9080142738599803612) -->
-    <skip />
+    <string name="share_thread_network_description" msgid="4288391787128615463">"Jaa Thread-verkon kirjautumistiedot uusille laitteille, jotta ne voivat liittyä laitteen (<xliff:g id="DEVICE">%1$s</xliff:g>) Thread-verkkoon"</string>
+    <string name="thread_network_share_again" msgid="1164851319443381573">"Pyydä uusi koodi"</string>
+    <string name="share_thread_network_countdown" msgid="5824738305197643767">"Koodi päivittyy <xliff:g id="MINUTES">%1$02d</xliff:g> min <xliff:g id="SECONDS">%2$02d</xliff:g> s kuluttua"</string>
+    <string name="thread_network_sharing_failed" msgid="7696975871112489720">"Thread-kirjautumistietoja ei voi jakaa"</string>
+    <string name="thread_network_sharing_failure_user_tips" msgid="8379268618358441120">"Skannaa uusi QR-koodi tai lisää uusi jakamiskoodi laitesovelluksessa"</string>
+    <string name="thread_network_sharing_success" msgid="9080142738599803612">"Thread-kirjautumistiedot jaettu"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Koodi vanheni ennen kuin yhtään laitetta lisättiin Thread-verkkoon"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Laitetaanko Thread-verkko pois päältä?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Jos tämä laitetaan pois päältä, kaikki kodin älylaitteet ja palvelut eivät ehkä toimi odotetusti. Haluatko jatkaa?"</string>
@@ -515,10 +511,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Tämä valinta tyhjentää kaikki tämän verkon kirjautumistiedot, myös tallennetun salasanan"</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Liity Wi-Fi-verkkoon skannaamalla QR-koodi puhelimella ja seuraamalla ohjeita.\n \n "<b>"Android-puhelimella:"</b>" Valitse Asetukset -&gt; Verkko ja internet -&gt; Wi-Fi -&gt; valitse Wi-Fi-verkko -&gt; Lisäasetukset -&gt; lisää laite ja skannaa QR-koodi."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Peru painamalla Takaisin-painiketta"</string>
-    <!-- no translation found for share_thread_title (62095604026690777) -->
-    <skip />
-    <!-- no translation found for share_thread_description (8461670105177768763) -->
-    <skip />
+    <string name="share_thread_title" msgid="62095604026690777">"Jaa Thread-kirjautumistiedot laitteelle"</string>
+    <string name="share_thread_description" msgid="2514639045690367112">"Jos haluat lisätä laitteen (<xliff:g id="DEVICE">%1$s</xliff:g>) Thread‑verkkoon, skannaa tämä QR-koodi laitesovelluksella tai lisää jakamiskoodi.\n \n Koodi päivittyy <xliff:g id="MINUTES">%2$s</xliff:g> minuutin kuluttua.\n \n Lue lisää osoitteesta g.co/tv/thread"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Jatka"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Vaihda verkkoa"</string>
