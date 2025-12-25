@@ -95,16 +95,14 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Rede Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"A rede Thread conecta localmente dispositivos de casa inteligente compatíveis, aumentando a eficiência e o desempenho.\n\nQuando ativada, o dispositivo vai criar ou entrar na sua rede Thread. As credenciais serão enviadas à nuvem de forma particular para facilitar a configuração dos seus futuros dispositivos de casa inteligente.\n\nQuando desativada, este dispositivo não conseguirá mais se comunicar com outros dispositivos na sua rede Thread. Certos dispositivos e serviços de casa inteligente podem não funcionar como esperado.\n\nSaiba mais em g.co/tv/thread"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"Compartilhar credenciais da rede Thread"</string>
-    <!-- no translation found for share_thread_network_description (6836530357198458034) -->
-    <skip />
+    <string name="share_thread_network_description" msgid="4288391787128615463">"Compartilhe as credenciais da rede Thread do <xliff:g id="DEVICE">%1$s</xliff:g> com novos dispositivos para que eles possam entrar nela"</string>
     <!-- no translation found for thread_network_share_again (1164851319443381573) -->
     <skip />
-    <!-- no translation found for share_thread_network_countdown (5824738305197643767) -->
-    <skip />
+    <string name="share_thread_network_countdown" msgid="5824738305197643767">"O código será atualizado em <xliff:g id="MINUTES">%1$02d</xliff:g> min <xliff:g id="SECONDS">%2$02d</xliff:g> s"</string>
     <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
     <skip />
-    <!-- no translation found for thread_network_sharing_success (9080142738599803612) -->
-    <skip />
+    <string name="thread_network_sharing_failure_user_tips" msgid="8379268618358441120">"Leia o novo QR code ou insira o novo código de compartilhamento no app do dispositivo"</string>
+    <string name="thread_network_sharing_success" msgid="9080142738599803612">"Credenciais do Thread compartilhadas"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"O código expirou antes que qualquer dispositivo fosse adicionado à rede Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Desativar a rede Thread?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Se desativada, certos dispositivos e serviços de casa inteligente podem não funcionar como esperado. Quer continuar?"</string>
@@ -515,10 +513,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Esta ação limpa as informações usadas para se conectar a esta rede, incluindo uma senha salva."</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Leia o QR code em um smartphone e siga as instruções para se conectar a uma rede Wi-Fi.\n \n Em um "<b>"smartphone Android"</b>", acesse Configurações -&gt; Rede e Internet -&gt; Wi-Fi -&gt; Selecionar Wi-Fi -&gt; Avançado -&gt; adicione o dispositivo e leia o QR code."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Pressione o botão \"Voltar\" para cancelar"</string>
-    <!-- no translation found for share_thread_title (62095604026690777) -->
-    <skip />
-    <!-- no translation found for share_thread_description (8461670105177768763) -->
-    <skip />
+    <string name="share_thread_title" msgid="62095604026690777">"Compartilhar credenciais do Thread com o dispositivo"</string>
+    <string name="share_thread_description" msgid="2514639045690367112">"Para adicionar um dispositivo à sua rede Thread do <xliff:g id="DEVICE">%1$s</xliff:g>, use o app do dispositivo para fazer a leitura deste QR code ou digite o código de compartilhamento.\n \n O código será atualizado em <xliff:g id="MINUTES">%2$s</xliff:g> minutos.\n \n Saiba mais em g.co/tv/thread"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continuar"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Alterar rede"</string>

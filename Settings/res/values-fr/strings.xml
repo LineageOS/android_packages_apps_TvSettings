@@ -95,16 +95,14 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Réseau Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Le réseau Thread connecte localement les appareils connectés compatibles avec Thread, ce qui améliore l\'efficacité et les performances.\n\nLorsqu\'il sera activé, cet appareil créera ou rejoindra votre réseau Thread. Les identifiants seront importés en privé dans le cloud pour faciliter la configuration de vos futurs appareils connectés.\n\nLorsqu\'il sera désactivé, cet appareil ne pourra plus communiquer avec les autres du réseau Thread. Il est possible que certains appareils et services pour la maison connectée ne fonctionnent pas comme prévu.\n\nEn savoir plus : g.co/tv/thread"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"Partager les identifiants du réseau Thread"</string>
-    <!-- no translation found for share_thread_network_description (6836530357198458034) -->
-    <skip />
+    <string name="share_thread_network_description" msgid="4288391787128615463">"Partagez les identifiants du réseau Thread avec de nouveaux appareils pour qu\'ils puissent rejoindre votre réseau Thread <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
     <!-- no translation found for thread_network_share_again (1164851319443381573) -->
     <skip />
-    <!-- no translation found for share_thread_network_countdown (5824738305197643767) -->
-    <skip />
+    <string name="share_thread_network_countdown" msgid="5824738305197643767">"Le code sera actualisé dans <xliff:g id="MINUTES">%1$02d</xliff:g> min et <xliff:g id="SECONDS">%2$02d</xliff:g> s"</string>
     <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
     <skip />
-    <!-- no translation found for thread_network_sharing_success (9080142738599803612) -->
-    <skip />
+    <string name="thread_network_sharing_failure_user_tips" msgid="8379268618358441120">"Scannez le nouveau QR code ou saisissez le nouveau code de partage dans l\'application de l\'appareil"</string>
+    <string name="thread_network_sharing_success" msgid="9080142738599803612">"Identifiants Thread partagés"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Le code a expiré avant qu\'un appareil ait été ajouté au réseau Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Désactiver le réseau Thread ?"</string>
     <string name="wifi_settings_thread_network_confirmation_message" msgid="6306673413406344419">"Si le réseau est désactivé, il est possible que certains appareils et services pour la maison connectée ne fonctionnent pas comme prévu. Voulez-vous continuer ?"</string>
@@ -515,10 +513,8 @@
     <string name="wifi_forget_network_description" msgid="4146715475962713899">"Supprimer les infos utilisées pour se connecter à ce réseau, y compris tout mot de passe enregistré."</string>
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Pour rejoindre un réseau Wi-Fi, scannez le QR code depuis un téléphone mobile et suivez les instructions.\n \n Sur un "<b>"téléphone Android"</b>", accédez à Paramètres -&gt; Réseau et Internet -&gt; Wi-Fi -&gt; sélectionnez un réseau Wi-Fi -&gt; Paramètres avancés -&gt; ajoutez un appareil et scannez le QR code."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Appuyer sur le bouton \"Retour\" pour annuler"</string>
-    <!-- no translation found for share_thread_title (62095604026690777) -->
-    <skip />
-    <!-- no translation found for share_thread_description (8461670105177768763) -->
-    <skip />
+    <string name="share_thread_title" msgid="62095604026690777">"Partager les identifiants Thread avec l\'appareil"</string>
+    <string name="share_thread_description" msgid="2514639045690367112">"Pour ajouter un appareil à votre réseau Thread <xliff:g id="DEVICE">%1$s</xliff:g>, utilisez l\'application de l\'appareil pour scanner ce QR code ou saisir le code de partage.\n \n Le code sera actualisé dans <xliff:g id="MINUTES">%2$s</xliff:g> minutes.\n \n Pour en savoir plus, accédez à g.co/tv/thread."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Continuer"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Changer de réseau"</string>
