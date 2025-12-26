@@ -95,15 +95,11 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread-nätverk"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread-nätverk ansluter lokalt Thread-kompatibla smarta hementer och förbättrar effektiviteten och prestandan.\n\nDen här enheten skapar eller går med i Thread-nätverket när funktionen är aktiverad. Användaruppgifter laddas upp privat till molnet för enklare konfigurering av framtida smarta hemenheter.\n\nNär enheten är av kan den inte kommunicera med andra enheter i Thread-nätverket. Vissa smarta hemenheter och tjänster kanske inte fungerar som de ska.\n\nLäs mer på g.co/tv/thread"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"Dela användaruppgifter för Thread-nätverk"</string>
-    <!-- no translation found for share_thread_network_description (4288391787128615463) -->
-    <skip />
-    <!-- no translation found for thread_network_share_again (1164851319443381573) -->
-    <skip />
+    <string name="share_thread_network_description" msgid="4288391787128615463">"Dela användaruppgifter för Thread-nätverket med nya enheter så att de kan ansluta till Thread-nätverket för <xliff:g id="DEVICE">%1$s</xliff:g>"</string>
+    <string name="thread_network_share_again" msgid="1164851319443381573">"Få en ny kod"</string>
     <string name="share_thread_network_countdown" msgid="5824738305197643767">"Koden uppdateras om <xliff:g id="MINUTES">%1$02d</xliff:g> min <xliff:g id="SECONDS">%2$02d</xliff:g> sek"</string>
-    <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
-    <skip />
-    <!-- no translation found for thread_network_sharing_failure_user_tips (8379268618358441120) -->
-    <skip />
+    <string name="thread_network_sharing_failed" msgid="7696975871112489720">"Det går inte att dela Thread-användaruppgifter"</string>
+    <string name="thread_network_sharing_failure_user_tips" msgid="8379268618358441120">"Skanna den nya QR-koden eller ange den nya delningskoden i enhetens app"</string>
     <string name="thread_network_sharing_success" msgid="9080142738599803612">"Thread-användaruppgifter har delats"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Koden upphörde att gälla innan någon enhet lades till i Thread-nätverket"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Vill du inaktivera Thread-nätverket?"</string>
@@ -516,8 +512,7 @@
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Anslut till ett wifi-nätverk genom att skanna QR-koden med en telefon och följa anvisningarna.\n \n På en "<b>"Android-telefon"</b>" öppnar du Inställningar -&gt; Nätverk och internet -&gt; wifi -&gt; Välj ett wifi-nätverk -&gt; Avancerat -&gt; Lägg till en enhet och skannar sedan QR-koden."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Avbryt genom att trycka på bakåtknappen"</string>
     <string name="share_thread_title" msgid="62095604026690777">"Dela Thread-användaruppgifter med enheten"</string>
-    <!-- no translation found for share_thread_description (2514639045690367112) -->
-    <skip />
+    <string name="share_thread_description" msgid="2514639045690367112">"Om du vill lägga till en enhet i Thread-nätverket för <xliff:g id="DEVICE">%1$s</xliff:g> använder du enhetens app för att skanna den här QR-koden eller ange delningskoden.\n \n Koden uppdateras om <xliff:g id="MINUTES">%2$s</xliff:g> minuter.\n \n Läs mer på g.co/tv/thread."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Fortsätt"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Byt nätverk"</string>
