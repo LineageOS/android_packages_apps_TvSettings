@@ -95,15 +95,11 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"ເຄືອຂ່າຍ Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"ເຄືອຂ່າຍ Thread ຈະເຊື່ອມຕໍ່ອຸປະກອນໃຊ້ໃນເຮືອນອັດສະລິຍະທີ່ເປີດການນຳໃຊ້ Thread ໃນລະດັບເຄືອຂ່າຍເພື່ອເພີ່ມປະສິດທິພາບການເຮັດວຽກ.\n\nເມື່ອເປີດໃຊ້, ອຸປະກອນນີ້ຈະສ້າງ ຫຼື ເຂົ້າຮ່ວມເຄືອຂ່າຍ Thread ຂອງທ່ານ. ລະບົບຈະອັບໂຫຼດຂໍ້ມູນການເຂົ້າສູ່ລະບົບແບບສ່ວນຕົວໃສ່ໃນຄລາວເພື່ອໃຫ້ຕັ້ງຄ່າອຸປະກອນໃຊ້ໃນເຮືອນອັດສະລິຍະໃນອະນາຄົດຂອງທ່ານໄດ້ງ່າຍຂຶ້ນ.\n\nເມື່ອປິດໃຊ້, ອຸປະກອນນີ້ຈະບໍ່ສາມາດສື່ສານກັບອຸປະກອນອື່ນໆໃນເຄືອຂ່າຍ Thread ຂອງທ່ານໄດ້ອີກຕໍ່ໄປ. ອຸປະກອນໃຊ້ໃນເຮືອນອັດສະລິຍະ ແລະ ບໍລິການບາງຢ່າງອາດບໍ່ເຮັດວຽກຕາມທີ່ຄາດໄວ້.\n\nສຶກສາເພີ່ມເຕີມຢູ່ g.co/tv/thread"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"ແບ່ງປັນຂໍ້ມູນການເຂົ້າສູ່ລະບົບຂອງເຄືອຂ່າຍ Thread"</string>
-    <!-- no translation found for share_thread_network_description (4288391787128615463) -->
-    <skip />
-    <!-- no translation found for thread_network_share_again (1164851319443381573) -->
-    <skip />
+    <string name="share_thread_network_description" msgid="4288391787128615463">"ແບ່ງປັນຂໍ້ມູນການເຂົ້າສູ່ລະບົບຂອງເຄືອຂ່າຍ Thread ກັບອຸປະກອນໃໝ່ເພື່ອໃຫ້ພວກມັນສາມາດເຂົ້າຮ່ວມເຄືອຂ່າຍ Thread ຂອງ <xliff:g id="DEVICE">%1$s</xliff:g> ຂອງທ່ານໄດ້"</string>
+    <string name="thread_network_share_again" msgid="1164851319443381573">"ຂໍລະຫັດໃໝ່"</string>
     <string name="share_thread_network_countdown" msgid="5824738305197643767">"ລະຫັດຈະໂຫຼດຂໍ້ມູນຄືນໃໝ່ໃນອີກ <xliff:g id="MINUTES">%1$02d</xliff:g> ນາທີ <xliff:g id="SECONDS">%2$02d</xliff:g> ວິນາທີ"</string>
-    <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
-    <skip />
-    <!-- no translation found for thread_network_sharing_failure_user_tips (8379268618358441120) -->
-    <skip />
+    <string name="thread_network_sharing_failed" msgid="7696975871112489720">"ບໍ່ສາມາດແບ່ງປັນຂໍ້ມູນການເຂົ້າສູ່ລະບົບ Thread ໄດ້"</string>
+    <string name="thread_network_sharing_failure_user_tips" msgid="8379268618358441120">"ສະແກນລະຫັດ QR ໃໝ່ ຫຼື ລະບຸລະຫັດການແບ່ງປັນໃໝ່ໃນແອັບໃນອຸປະກອນ"</string>
     <string name="thread_network_sharing_success" msgid="9080142738599803612">"ແບ່ງປັນຂໍ້ມູນການເຂົ້າສູ່ລະບົບ Thread ແລ້ວ"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"ລະຫັດໝົດອາຍຸກ່ອນທີ່ຈະເພີ່ມອຸປະກອນໃດໆໃສ່ໃນເຄືອຂ່າຍ Thread"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"ປິດເຄືອຂ່າຍ Thread ບໍ?"</string>
@@ -516,8 +512,7 @@
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" ເຂົ້າຮ່ວມ Wi-Fi ໂດຍການສະແກນລະຫັດ QR ຈາກໂທລະສັບມືຖືແລ້ວເຮັດຕາມຄຳແນະນຳ.\n \n ຈາກ "<b>"ໂທລະສັບ Android"</b>" ໃຫ້ເຂົ້າໄປການຕັ້ງຄ່າ -&gt; ເຄືອຂ່າຍ ແລະ ອິນເຕີເນັດ -&gt; Wi-Fi -&gt; ເລືອກ Wi-Fi -&gt; ຂັ້ນສູງ -&gt; ເພີ່ມອຸປະກອນແລ້ວສະແກນລະຫັດ QR."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"ກົດປຸ່ມກັບຄືນເພື່ອຍົກເລີກ"</string>
     <string name="share_thread_title" msgid="62095604026690777">"ແບ່ງປັນຂໍ້ມູນການເຂົ້າສູ່ລະບົບ Thread ກັບອຸປະກອນ"</string>
-    <!-- no translation found for share_thread_description (2514639045690367112) -->
-    <skip />
+    <string name="share_thread_description" msgid="2514639045690367112">"ເພື່ອເພີ່ມອຸປະກອນໃສ່ໃນເຄືອຂ່າຍ Thread ຂອງ <xliff:g id="DEVICE">%1$s</xliff:g> ຂອງທ່ານ, ໃຫ້ໃຊ້ແອັບໃນອຸປະກອນເພື່ອສະແກນລະຫັດ QR ນີ້ ຫຼື ປ້ອນລະຫັດການແບ່ງປັນ.\n \n ລະຫັດຈະໂຫຼດຂໍ້ມູນຄືນໃໝ່ໃນອີກ <xliff:g id="MINUTES">%2$s</xliff:g> ນາທີ.\n \n ສຶກສາເພີ່ມເຕີມໄດ້ຢູ່ g.co/tv/thread"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ຕົກລົງ"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"ສືບຕໍ່"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"ປ່ຽນເຄືອຂ່າຍ"</string>

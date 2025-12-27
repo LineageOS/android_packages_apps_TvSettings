@@ -95,13 +95,11 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Сеть Thread"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Локальная сеть Thread объединяет устройства умного дома, которые поддерживают этот протокол. В результате они работают эффективнее и их производительность повышается.\n\nКогда вы включите устройство, оно создаст сеть Thread или подключится к ней. Учетные данные будут загружены в облако конфиденциально – это позволит упростить настройку устройств умного дома.\n\nПосле выключения устройство потеряет связь с другими устройствами в сети Thread. Некоторые устройства и сервисы умного дома могут работать неправильно.\n\nПодробнее: g.co/tv/thread."</string>
     <string name="share_thread_network" msgid="1976613832000966535">"Поделиться учетными данными сети Thread"</string>
-    <!-- no translation found for share_thread_network_description (4288391787128615463) -->
-    <skip />
+    <string name="share_thread_network_description" msgid="4288391787128615463">"Чтобы подключить новые устройства к сети \"<xliff:g id="DEVICE">%1$s</xliff:g>\", передайте им учетные данные Thread"</string>
     <string name="thread_network_share_again" msgid="1164851319443381573">"Получить новый код"</string>
     <string name="share_thread_network_countdown" msgid="5824738305197643767">"Код обновится через <xliff:g id="MINUTES">%1$02d</xliff:g> мин. <xliff:g id="SECONDS">%2$02d</xliff:g> сек."</string>
     <string name="thread_network_sharing_failed" msgid="7696975871112489720">"Не удалось поделиться учетными данными Thread."</string>
-    <!-- no translation found for thread_network_sharing_failure_user_tips (8379268618358441120) -->
-    <skip />
+    <string name="thread_network_sharing_failure_user_tips" msgid="8379268618358441120">"Отсканируйте новый QR-код или введите новый код доступа в приложении устройства."</string>
     <string name="thread_network_sharing_success" msgid="9080142738599803612">"Учетные данные Thread отправлены."</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"Срок действия кода истек. Ни одно устройство подключено не было."</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Отключить сеть Thread?"</string>
@@ -514,8 +512,7 @@
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" Чтобы подключиться к сети Wi-Fi, отсканируйте QR-код с помощью мобильного телефона и следуйте инструкциям на экране.\n \n На "<b>"телефоне Android"</b>" нажмите \"Настройки -&gt; Сеть и Интернет -&gt; Wi-Fi\" -&gt; выберите сеть Wi-Fi -&gt; \"Дополнительные функции -&gt; Добавить устройство\" и отсканируйте QR-код."</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Чтобы отменить действие, нажмите кнопку \"Назад\"."</string>
     <string name="share_thread_title" msgid="62095604026690777">"Отправьте на устройство учетные данные Thread"</string>
-    <!-- no translation found for share_thread_description (2514639045690367112) -->
-    <skip />
+    <string name="share_thread_description" msgid="2514639045690367112">"Чтобы добавить устройство в сеть Thread \"<xliff:g id="DEVICE">%1$s</xliff:g>\", отсканируйте этот QR-код в приложении устройства или введите код доступа.\n \n Код обновится через <xliff:g id="MINUTES">%2$s</xliff:g> мин.\n \n Подробнее: g.co/tv/thread."</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"ОК"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Далее"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Подключиться к другой сети"</string>

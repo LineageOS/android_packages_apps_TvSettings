@@ -95,15 +95,11 @@
     <string name="wifi_setting_thread_network" msgid="4625818815606838765">"Thread ネットワーク"</string>
     <string name="wifi_setting_thread_network_context" msgid="4923925562131564561">"Thread ネットワークは Thread 対応のスマートホーム デバイスをローカルでつなげて、効率性とパフォーマンスを向上させます。\n\n有効にすると、このデバイスは Thread ネットワークを作成するか、ネットワークに接続します。今後追加されるスマートホーム デバイスを簡単にセットアップできるよう認証情報は非公開でクラウドにアップロードされます。\n\n無効にすると、このデバイスは Thread ネットワーク上の他のデバイスと通信できなくなります。一部のスマートホーム デバイスやサービスは正常に動作しないことがあります。\n\n詳しくは g.co/tv/thread をご覧ください"</string>
     <string name="share_thread_network" msgid="1976613832000966535">"Thread ネットワーク認証情報の共有"</string>
-    <!-- no translation found for share_thread_network_description (4288391787128615463) -->
-    <skip />
-    <!-- no translation found for thread_network_share_again (1164851319443381573) -->
-    <skip />
+    <string name="share_thread_network_description" msgid="4288391787128615463">"Thread ネットワークの認証情報を新しいデバイスと共有して、<xliff:g id="DEVICE">%1$s</xliff:g> の Thread ネットワークに接続できるようにします"</string>
+    <string name="thread_network_share_again" msgid="1164851319443381573">"新しいコードを取得してください"</string>
     <string name="share_thread_network_countdown" msgid="5824738305197643767">"コードは <xliff:g id="MINUTES">%1$02d</xliff:g> 分 <xliff:g id="SECONDS">%2$02d</xliff:g> 秒後に更新されます"</string>
-    <!-- no translation found for thread_network_sharing_failed (7696975871112489720) -->
-    <skip />
-    <!-- no translation found for thread_network_sharing_failure_user_tips (8379268618358441120) -->
-    <skip />
+    <string name="thread_network_sharing_failed" msgid="7696975871112489720">"Thread の認証情報を共有できません"</string>
+    <string name="thread_network_sharing_failure_user_tips" msgid="8379268618358441120">"デバイスアプリで新しい QR コードをスキャンするか、新しい共有コードを入力してください。"</string>
     <string name="thread_network_sharing_success" msgid="9080142738599803612">"Thread の認証情報を共有しました"</string>
     <string name="thread_network_sharing_timeout" msgid="4743147006270273127">"コードの有効期限切れです。デバイスは Thread ネットワークに追加されていません"</string>
     <string name="wifi_settings_thread_network_confirmation_title" msgid="887749419272239361">"Thread ネットワークを OFF にしますか？"</string>
@@ -516,8 +512,7 @@
     <string name="wifi_scan_qr_code_description" msgid="6620444691131671132">" スマートフォンで QR コードをスキャンして Wi-Fi に接続し、手順に沿って操作してください。\n \n "<b>"Android スマートフォン"</b>"で [設定] -&gt; [ネットワークとインターネット] -&gt; [Wi-Fi] -&gt; [Wi-Fi を選択] -&gt; [詳細設定] -&gt; [デバイスを追加] に移動し、QR コードをスキャンします。"</string>
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"キャンセルするには戻るボタンを押します"</string>
     <string name="share_thread_title" msgid="62095604026690777">"Thread の認証情報をデバイスと共有する"</string>
-    <!-- no translation found for share_thread_description (2514639045690367112) -->
-    <skip />
+    <string name="share_thread_description" msgid="2514639045690367112">"<xliff:g id="DEVICE">%1$s</xliff:g> の Thread ネットワークにデバイスを追加するには、デバイスアプリを使用してこの QR コードをスキャンするか、共有コードを入力してください。\n\nコードは <xliff:g id="MINUTES">%2$s</xliff:g> 分後に更新されます。\n\n詳しくは g.co/tv/thread をご覧ください"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"次へ"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"ネットワークを変更"</string>
