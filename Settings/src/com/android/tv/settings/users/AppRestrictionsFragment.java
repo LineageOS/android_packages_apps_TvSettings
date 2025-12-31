@@ -50,7 +50,6 @@ import android.view.View;
 import android.widget.Checkable;
 import android.widget.CompoundButton;
 import android.widget.Switch;
-
 import androidx.annotation.NonNull;
 import androidx.collection.ArrayMap;
 import androidx.preference.ListPreference;
@@ -60,12 +59,10 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
-
 import com.android.settingslib.users.AppRestrictionsHelper;
 import com.android.tv.settings.R;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.settings.util.SafeIntents;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -161,7 +158,7 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
         }
     };
 
-    private static class AppRestrictionsPreference extends PreferenceGroup {
+  static class AppRestrictionsPreference extends PreferenceGroup {
         private final Listener mListener = new Listener();
         private ArrayList<RestrictionEntry> mRestrictions;
         private boolean mImmutable;
@@ -415,9 +412,9 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
         }
     }
 
-    private boolean isPlatformSigned(PackageInfo pi) {
-        return (pi != null && pi.signatures != null &&
-                mSysPackageInfo.signatures[0].equals(pi.signatures[0]));
+  private boolean isSystemApp(PackageInfo pi) {
+        return pi != null && pi.applicationInfo != null
+                && (pi.applicationInfo.uid == android.os.Process.SYSTEM_UID);
     }
 
     private boolean isAppEnabledForUser(PackageInfo pi) {
@@ -488,7 +485,7 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
             p.setPersistent(false);
             p.setOnPreferenceChangeListener(this);
             p.setSummary(getPackageSummary(pi, app));
-            if (pi.requiredForAllUsers || isPlatformSigned(pi)) {
+      if (pi.requiredForAllUsers || isSystemApp(pi)) {
                 p.setChecked(true);
                 p.setImmutable(true);
                 // If the app is required and has no restrictions, skip showing it
@@ -884,7 +881,8 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
         return selectedString;
     }
 
-    private Bundle getApplicationRestrictions(String packageName) {
+  @androidx.annotation.VisibleForTesting
+  Bundle getApplicationRestrictions(String packageName) {
         if (Flags.appRestrictionsCoexistence()) {
             DevicePolicyManager dpm = getDevicePolicyManager();
             if (dpm != null) {
