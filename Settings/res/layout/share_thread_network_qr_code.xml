@@ -37,7 +37,7 @@
         android:layout_marginTop="22dp"
         android:fontFamily="@font/brand_font"
         android:textColor="#E8EAED"
-        android:textSize="16sp"
+        android:textSize="24sp"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="@id/setup_qrcode_view"
         app:layout_constraintEnd_toEndOf="@id/setup_qrcode_view"
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
         android:fontFamily="monospace"
-        android:textColor="#5F6368"
+        android:textColor="#959ea7"
         android:textSize="16sp"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="@id/setup_qrcode_view"
@@ -81,7 +81,7 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/brand_font"
             android:text="@string/wifi_scan_qr_code_back_description"
-            android:textColor="#5F6368"
+            android:textColor="#959ea7"
             android:textSize="16sp" />
     </LinearLayout>
 
