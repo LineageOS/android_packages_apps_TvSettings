@@ -47,13 +47,6 @@
             custom:isPreferenceVisible="false"
             custom:uri="@string/menu_monitor_slice_uri">
         </com.android.tv.twopanelsettings.slices.SlicePreference>
-        <Preference
-            android:icon="@drawable/ic_settings_channels_and_inputs"
-            android:key="channels_and_inputs"
-            android:title="@string/channels_and_inputs_title"
-            android:fragment="com.android.tv.settings.vendor.ChannelsAndInputFragment">
-            <!-- This is an example. Change to your intent for display and preview-->
-        </Preference>
         <com.android.tv.twopanelsettings.slices.SlicePreference
             android:icon="@drawable/ic_settings_channels_and_inputs"
             android:key="channels_and_inputs_slice"
