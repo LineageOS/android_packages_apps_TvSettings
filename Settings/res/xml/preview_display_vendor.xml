@@ -18,6 +18,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:title="@string/device_display_sound">
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="cec"
+        android:title="@string/hdmi_cec_settings_title"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:uri="@string/cec_settings_slice_uri"
+        custom:isPreferenceVisible="false" />
     <PreferenceCategory
         android:key="display_category"
         android:title="@string/display_category_title" />
@@ -30,6 +36,11 @@
         android:key="font_scale"
         android:title="@string/font_scale_settings_title"
         android:fragment="com.android.tv.settings.device.displaysound.FontScalePreferenceFragment" />
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="hdr_and_color_format"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:uri="@string/hdr_and_color_format_slice_uri"
+        custom:isPreferenceVisible="false" />
     <SwitchPreference
         android:key="match_content_dynamic_range"
         android:persistent="true"
@@ -52,6 +63,22 @@
     <PreferenceCategory
         android:key="sound_category"
         android:title="@string/device_sound" />
+    <com.android.tv.twopanelsettings.slices.SlicePreference
+        android:key="default_audio_output_settings"
+        android:title="@string/default_audio_output_settings_title"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:uri="@string/default_audio_output_settings_slice_uri"
+        custom:isPreferenceVisible="false" />
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="audio_ext"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:uri="@string/audio_ext_uri"
+        custom:isPreferenceVisible="false" />
+    <Preference
+        android:key="volume_change"
+        android:title="@string/volume_change_settings_title"
+        android:fragment="com.android.tv.settings.device.displaysound.VolumeChangePreferenceFragment"
+        custom:isPreferenceVisible="false" />
     <Preference
         android:key="advanced_sound_settings"
         android:title="@string/advanced_sound_settings_title"
