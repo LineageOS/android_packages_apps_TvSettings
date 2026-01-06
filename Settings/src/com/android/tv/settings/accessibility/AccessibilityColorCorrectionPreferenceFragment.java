@@ -77,6 +77,7 @@ public class AccessibilityColorCorrectionPreferenceFragment extends SettingsPref
         mColorModeProtanomaly = (RadioPreference) findPreference(COLOR_MODE_PROTANOMALY_KEY);
         mColorModeTritanomaly = (RadioPreference) findPreference(COLOR_MODE_TRITANOMALY_KEY);
         mColorModeGrayscale = (RadioPreference) findPreference(COLOR_MODE_GRAYSCALE_KEY);
+        getInitialColorCorrectionMode();
     }
 
     @Override
@@ -129,5 +130,28 @@ public class AccessibilityColorCorrectionPreferenceFragment extends SettingsPref
     private void setColorCorrectionMode(int mode) {
         Settings.Secure.putInt(getContext().getContentResolver(),
             Settings.Secure.ACCESSIBILITY_DISPLAY_DALTONIZER, mode);
+    }
+
+    private void getInitialColorCorrectionMode() {
+        final int mode = Settings.Secure.getInt(getContext().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_DISPLAY_DALTONIZER, COLOR_CORRECTION_DEUTERANOMALY);
+
+        switch (mode) {
+            case COLOR_CORRECTION_PROTANOMALY:
+                mColorModeProtanomaly.setChecked(true);
+                break;
+            case COLOR_CORRECTION_TRITANOMALY:
+                mColorModeTritanomaly.setChecked(true);
+                break;
+            case COLOR_CORRECTION_GRAYSCALE:
+                mColorModeGrayscale.setChecked(true);
+                break;
+            case COLOR_CORRECTION_DEUTERANOMALY:
+            default:
+                // if nothing is selected, default to deuteranomaly, and set it as checked
+                setColorCorrectionMode(COLOR_CORRECTION_DEUTERANOMALY);
+                mColorModeDeuteranomaly.setChecked(true);
+                break;
+        }
     }
 }
