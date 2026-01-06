@@ -65,7 +65,7 @@ import kotlinx.coroutines.launch
  * The "Device Preferences" screen in TV settings.
  */
 @Keep
-class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnLongClickListener,
+open class DevicePrefFragment : SettingsPreferenceFragment(), LongClickPreference.OnLongClickListener,
     SliceShard.Callbacks {
     private var mSoundsSwitchPref: TwoStatePreference? = null
     private var mInputSettingNeeded = false

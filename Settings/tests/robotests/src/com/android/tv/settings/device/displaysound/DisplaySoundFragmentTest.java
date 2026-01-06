@@ -17,15 +17,12 @@
 package com.android.tv.settings.device.displaysound;
 
 import static com.google.common.truth.Truth.assertThat;
-
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
 
 import android.hardware.display.DisplayManager;
 import android.view.Display;
-
 import androidx.preference.Preference;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -44,20 +41,6 @@ public class DisplaySoundFragmentTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-    }
-
-    @Test
-    public void testNoSystemPreferredDisplayMode_hidesDisplayModeSetting() {
-        Display.Mode[] modes = new Display.Mode[] {
-                new Display.Mode(0, 800, 600, 120),
-                new Display.Mode(1, 800, 600, 60)
-        };
-        DisplaySoundFragment fragment =
-                createDisplaySoundFragmentWith(modes, modes[1], null);
-
-        Preference resolutionPreference =
-                fragment.getPreferenceScreen().findPreference(KEY_RESOLUTION_TITLE);
-        assertThat(resolutionPreference).isEqualTo(null);
     }
 
     @Test

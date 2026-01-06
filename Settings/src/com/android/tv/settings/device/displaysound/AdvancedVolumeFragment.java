@@ -30,21 +30,18 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
-
 import androidx.annotation.Keep;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
-
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.tv.settings.PreferenceControllerFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.overlay.FlavorUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -328,19 +325,37 @@ public class AdvancedVolumeFragment extends PreferenceControllerFragment {
     }
 
     private void showFormatPreferences() {
-        getPreferenceScreen().addPreference(mSupportedFormatsPreferenceCategory);
-        getPreferenceScreen().addPreference(mUnsupportedFormatsPreferenceCategory);
+    if (getPreferenceScreen() == null) {
+            return;
+        }
+        if (mSupportedFormatsPreferenceCategory != null) {
+            getPreferenceScreen().addPreference(mSupportedFormatsPreferenceCategory);
+        }
+        if (mUnsupportedFormatsPreferenceCategory != null) {
+            getPreferenceScreen().addPreference(mUnsupportedFormatsPreferenceCategory);
+        }
         updateFormatPreferencesStates();
-        // hide the formats info section.
-        getPreferenceScreen().removePreference(mFormatsInfoPreferenceCategory);
+    // hide the formats info section.
+    if (mFormatsInfoPreferenceCategory != null) {
+            getPreferenceScreen().removePreference(mFormatsInfoPreferenceCategory);
+        }
     }
 
     private void hideFormatPreferences() {
-        getPreferenceScreen().removePreference(mSupportedFormatsPreferenceCategory);
-        getPreferenceScreen().removePreference(mUnsupportedFormatsPreferenceCategory);
+    if (getPreferenceScreen() == null) {
+            return;
+        }
+        if (mSupportedFormatsPreferenceCategory != null) {
+            getPreferenceScreen().removePreference(mSupportedFormatsPreferenceCategory);
+        }
+        if (mUnsupportedFormatsPreferenceCategory != null) {
+            getPreferenceScreen().removePreference(mUnsupportedFormatsPreferenceCategory);
+        }
         updateFormatPreferencesStates();
-        // show the formats info section.
-        getPreferenceScreen().addPreference(mFormatsInfoPreferenceCategory);
+    // show the formats info section.
+    if (mFormatsInfoPreferenceCategory != null) {
+            getPreferenceScreen().addPreference(mFormatsInfoPreferenceCategory);
+        }
     }
 
     private void showFormatInfoPreferences() {
