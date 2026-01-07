@@ -22,6 +22,7 @@ import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_VENDOR;
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_X;
 
 import android.app.tvsettings.TvSettingsEnums;
+import android.app.usage.StorageStatsManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -256,11 +257,13 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
 
     private static class VolPreference extends Preference {
         private final LifecycleOwner mLifecycleOwner;
+        private final StorageStatsManager mStorageStatsManager;
 
         VolPreference(Context context, VolumeInfo volumeInfo, LifecycleOwner lifecycleOwner) {
             super(context);
             setKey(makeKey(volumeInfo));
             mLifecycleOwner = lifecycleOwner;
+            mStorageStatsManager = context.getSystemService(StorageStatsManager.class);
         }
 
         private void refresh(Context context, StorageManager storageManager,
@@ -285,7 +288,11 @@ public class StorageSummaryFragment extends SettingsPreferenceFragment {
                     final File path = vol.getPath();
                     if (path != null) {
                         try {
-                            return path.getTotalSpace();
+                            if (vol.getType() == VolumeInfo.TYPE_PRIVATE) {
+                              return mStorageStatsManager.getTotalBytes(vol.getFsUuid());
+                            } else {
+                              return path.getTotalSpace();
+                            }
                         } catch (Exception e) {
                             Log.e(TAG, "Error getting total space.", e);
                         }

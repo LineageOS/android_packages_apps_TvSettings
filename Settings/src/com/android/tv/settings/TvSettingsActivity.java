@@ -28,18 +28,15 @@ import android.transition.Transition;
 import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
-import android.window.OnBackInvokedCallback;
 import android.window.OnBackInvokedDispatcher;
-
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-
 import com.android.tv.settings.overlay.FlavorUtils;
-
 import java.util.List;
 
 public abstract class TvSettingsActivity extends FragmentActivity {
@@ -53,6 +50,7 @@ public abstract class TvSettingsActivity extends FragmentActivity {
             "extra_start_activity_elapsed_realtime";
 
     private boolean mReportedStartupLatency;
+  private boolean mBackDownSeen;
 
     public Fragment getVisibleFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -235,6 +233,26 @@ public abstract class TvSettingsActivity extends FragmentActivity {
     protected void onResume() {
         super.onResume();
         reportStartupLatency();
+    }
+
+  @Override
+  public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            mBackDownSeen = true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (!mBackDownSeen) {
+                Log.w(TAG, "Ignore back key up event without preceding down event.");
+                return true;
+            }
+            mBackDownSeen = false;
+        }
+        return super.onKeyUp(keyCode, event);
     }
 
     private void reportStartupLatency() {

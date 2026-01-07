@@ -93,6 +93,7 @@ class SliceShard(
     private var mLastFocusedPreferenceKey: String? = null
     private var mIsMainPanelReady: Boolean = true
     private var mCurrentPageId: Int = 0
+    private var mHasResumed: Boolean = false
 
     private val mHandler: Handler = Handler(Looper.getMainLooper())
     private val mActivityResultLauncher: ActivityResultLauncher<IntentSenderRequest>
@@ -189,7 +190,10 @@ class SliceShard(
         mCallbacks.setIcon(if (mScreenIcon != null) mScreenIcon!!.loadDrawable(mPrefContext) else null)
 
         mFragment.lifecycle.coroutineScope.launch {
-            delay(SLICE_RESUME_OBSERVE_DELAY)
+            if (mHasResumed) {
+                delay(SLICE_RESUME_OBSERVE_DELAY)
+            }
+            mHasResumed = true
             if (!isCached && !TextUtils.isEmpty(mUriString)) {
                 mSliceObserver = SliceObserver(this@SliceShard)
                 sliceLiveData.observeForever(mSliceObserver!!)

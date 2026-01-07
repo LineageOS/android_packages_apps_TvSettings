@@ -17,31 +17,31 @@
 package com.android.tv.settings.util;
 
 import android.content.Context;
+import android.os.LocaleList;
+import android.util.LruCache;
 
 import com.android.settingslib.datetime.ZoneGetter;
+import com.android.tv.settings.R;
 
 import java.util.Date;
-import java.util.List;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
-import java.util.concurrent.atomic.AtomicReference;
-
-import com.android.tv.settings.R;
 
 /**
  * Utility class for TimeZone related operations.
  */
 public class TimeZoneUtils {
-    private static final AtomicReference<Map<String, String>> sOverriddenCache =
-            new AtomicReference<>();
+    private static final LruCache<LocaleList, Map<String, String>> sOverriddenCache =
+            new LruCache<>(2);
 
     /**
      * Returns the display name for the given TimeZone, matching the logic in TimeZoneFragment.
      *
      * @param context The context.
-     * @param tz      The TimeZone to get the name for.
-     * @param now     The current date for offset calculation fallback.
+     * @param tz The TimeZone to get the name for.
+     * @param now The current date for offset calculation fallback.
      * @return The display name.
      */
     public static CharSequence getTimeZoneDisplayName(Context context, TimeZone tz, Date now) {
@@ -75,20 +75,23 @@ public class TimeZoneUtils {
      */
     @androidx.annotation.Nullable
     public static String getOverriddenDisplayName(Context context, String id) {
-        Map<String, String> cache = sOverriddenCache.get();
-        if (cache != null) {
-            return cache.get(id);
-        }
-        Map<String, String> map = new HashMap<>();
-        String[] ids = context.getResources().getStringArray(R.array.config_overridden_timezones);
-        String[] names = context.getResources().getStringArray(
-                R.array.config_overridden_timezones_names);
-        if (ids.length == names.length) {
-            for (int i = 0; i < ids.length; i++) {
-                map.put(ids[i], names[i]);
+        LocaleList currentLocales = context.getResources().getConfiguration().getLocales();
+
+        Map<String, String> map = sOverriddenCache.get(currentLocales);
+
+        if (map == null) {
+            map = new HashMap<>();
+            String[] ids = context.getResources().getStringArray(
+                    R.array.config_overridden_timezones);
+            String[] names = context.getResources().getStringArray(
+                    R.array.config_overridden_timezones_names);
+            if (ids.length == names.length) {
+                for (int i = 0; i < ids.length; i++) {
+                    map.put(ids[i], names[i]);
+                }
             }
-        }
-        sOverriddenCache.compareAndSet(null, map);
+            sOverriddenCache.put(currentLocales, map);
+    }
         return map.get(id);
     }
 

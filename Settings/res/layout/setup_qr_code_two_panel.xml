@@ -24,6 +24,8 @@
 
     <com.android.tv.twopanelsettings.QrCodeView
         android:id="@+id/setup_qrcode_view"
+        android:contentDescription="@string/wifi_scan_qr_code_accessibility_label"
+        android:importantForAccessibility="yes"
         android:layout_width="280dp"
         android:layout_height="280dp"
         android:layout_marginBottom="40dp"

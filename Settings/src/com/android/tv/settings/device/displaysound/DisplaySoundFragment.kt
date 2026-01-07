@@ -55,7 +55,7 @@ import kotlinx.coroutines.launch
  * The "Display & sound" screen in TV Settings.
  */
 @Keep
-class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.DisplayListener,
+open class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.DisplayListener,
     SliceShard.Callbacks {
     lateinit var mAudioManager: AudioManager
     lateinit var mDisplayManager: DisplayManager
@@ -248,7 +248,7 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
     }
 
     @get:VisibleForTesting
-    val displayManager: DisplayManager
+    open val displayManager: DisplayManager
         get() = requireContext().getSystemService(DisplayManager::class.java) as DisplayManager
 
     private fun updateResolutionTitleDescription(summary: String) {
