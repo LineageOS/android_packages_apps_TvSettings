@@ -141,7 +141,7 @@ public class BluetoothDevicesService extends Service {
                     case BluetoothA2dp.ACTION_CONNECTION_STATE_CHANGED:
                         final int state = intent.getIntExtra(BluetoothProfile.EXTRA_STATE, -1);
                         mHandler.post(() -> {
-                            onA2dpConnectionStateChanged(device.getName(), state);
+                            onA2dpConnectionStateChanged(device.getAlias(), state);
                             if (state == BluetoothProfile.STATE_CONNECTED
                                     || state == BluetoothProfile.STATE_DISCONNECTED) {
                                 onDeviceUpdated(device);
