@@ -15,9 +15,11 @@
  */
 package com.android.tv.settings.widget;
 
+import android.content.ComponentCallbacks2;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -28,19 +30,38 @@ import android.graphics.RectF;
 import android.graphics.drawable.AdaptiveIconDrawable;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.LruCache;
+import androidx.annotation.NonNull;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.R;
 
 /** Modified version of IconDrawableFactory for TV icons */
-public class TvIconDrawableFactory {
-  private static final int ROUND_ICON_MIN_SIZE = 160;
+public class TvIconDrawableFactory implements ComponentCallbacks2 {
 
   protected final Context mContext;
   protected final PackageManager mPm;
 
+  private final LruCache<String, Drawable> mIconCache;
+
   private TvIconDrawableFactory(Context context) {
     mContext = context;
     mPm = context.getPackageManager();
+
+    int maxCacheSize = mContext.getResources().getInteger(R.integer.config_icon_cache_max_size);
+
+    mIconCache = new LruCache<String, Drawable>(maxCacheSize) {
+      @Override
+      protected int sizeOf(String key, Drawable drawable) {
+        if (drawable instanceof BitmapDrawable) {
+          Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
+          return bitmap != null ? bitmap.getAllocationByteCount() : 0;
+        }
+        return 1;
+      }
+    };
+
+    mContext.registerComponentCallbacks(this);
   }
 
   public static TvIconDrawableFactory newInstance(Context context) {
@@ -49,20 +70,45 @@ public class TvIconDrawableFactory {
 
   // Returns a rounded application icon if the flavor is Two Panel settings.
   public Drawable maybeGetRoundAppIcon(ApplicationInfo applicationInfo) {
-    Drawable icon;
+    String pkgName = applicationInfo.packageName;
+
+    Drawable cachedIcon = mIconCache.get(pkgName);
+    if (cachedIcon != null) {
+      return cachedIcon;
+    }
+
     Drawable packageManagerIcon = mPm.loadItemIcon(applicationInfo, applicationInfo);
     if (!FlavorUtils.isTwoPanel(mContext)) {
       return packageManagerIcon;
     }
 
-    icon = packageManagerIcon;
-    if (icon != null) {
-      Bitmap iconBitmap = getBitmapFromDrawable(icon);
+    if (packageManagerIcon != null) {
+      Bitmap iconBitmap = getBitmapFromDrawable(packageManagerIcon);
       Bitmap roundIconBitmap = getRoundBitmap(iconBitmap);
-      return new BitmapDrawable(mContext.getResources(), roundIconBitmap);
-    } else {
-      return packageManagerIcon;
+      Drawable roundIcon = new BitmapDrawable(mContext.getResources(), roundIconBitmap);
+
+      mIconCache.put(pkgName, roundIcon);
+      return roundIcon;
     }
+
+    return packageManagerIcon;
+  }
+
+  @Override
+  public void onTrimMemory(int level) {
+    if (level >= ComponentCallbacks2.TRIM_MEMORY_MODERATE
+            || level == ComponentCallbacks2.TRIM_MEMORY_UI_HIDDEN) {
+      mIconCache.evictAll();
+    }
+  }
+
+  @Override
+  public void onConfigurationChanged(@NonNull Configuration newConfig) {
+  }
+
+  @Override
+  public void onLowMemory() {
+    mIconCache.evictAll();
   }
 
 
