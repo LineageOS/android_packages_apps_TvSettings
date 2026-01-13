@@ -537,11 +537,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
 
         mWirelessDebugging = findPreference(TOGGLE_ADB_WIRELESS_KEY);
-        if (FlavorUtils.isTwoPanel(getContext())) {
-            mWirelessDebugging.setFragment(WirelessDebuggingInfoFragment.class.getName());
-        } else {
-            mWirelessDebugging.setFragment(WirelessDebuggingFragment.class.getName());
-        }
+        mWirelessDebugging.setFragment(WirelessDebuggingFragment.class.getName());
 
         mEnableAngle = findPreference(ENABLE_ANGLE_AS_SYSTEM_DRIVER_KEY);
         mAllPrefs.add(mEnableAngle);
@@ -1952,22 +1948,17 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             return;
         }
 
-        if (!isNetworkConnected()) {
-            if (FlavorUtils.isTwoPanel(getContext())) {
-                mWirelessDebugging.setFragment(WirelessDebuggingInfoFragment.class.getName());
-            }
+        if (FlavorUtils.isTwoPanel(getContext())) {
+            mWirelessDebugging.setFragment(WirelessDebuggingFragment.class.getName());
+        }
+        boolean enabled = Settings.Global.getInt(mContentResolver,
+                Settings.Global.ADB_WIFI_ENABLED, 1) != 0;
+        if (enabled && !isNetworkConnected()) {
             mWirelessDebugging.setSummary(R.string.connectivity_summary_no_network_connected);
+        } else if (enabled) {
+            mWirelessDebugging.setSummary(R.string.enabled);
         } else {
-            if (FlavorUtils.isTwoPanel(getContext())) {
-                mWirelessDebugging.setFragment(WirelessDebuggingFragment.class.getName());
-            }
-            boolean enabled = Settings.Global.getInt(mContentResolver,
-                    Settings.Global.ADB_WIFI_ENABLED, 1) != 0;
-            if (enabled) {
-                mWirelessDebugging.setSummary(R.string.enabled);
-            } else {
-                mWirelessDebugging.setSummary(R.string.disabled);
-            }
+            mWirelessDebugging.setSummary(R.string.disabled);
         }
     }
 
