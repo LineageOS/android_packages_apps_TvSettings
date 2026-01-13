@@ -32,7 +32,7 @@ class ShareFailedState(private val activity: FragmentActivity) : State {
 
     override fun processForward() {
         val fragment = ShareFailedFragment()
-        val icon = Icon.createWithResource(activity, R.drawable.ic_warning)
+        val icon = Icon.createWithResource(activity, R.drawable.ic_info_outline)
         val args = FullScreenDialogFragment.DialogBuilder()
             .setIcon(icon)
             .setTitle(activity.getString(R.string.thread_network_sharing_failed))
