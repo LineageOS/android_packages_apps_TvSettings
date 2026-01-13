@@ -67,6 +67,7 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
         private var countDownTimer: CountDownTimer? = null
         private var activatingEphemeralMode : Boolean = false
         private var successShown = false
+        private var remainingMillis: Long = 0
 
         private val onStateChangeListener = object : ThreadNetworkHelper.OnStateChangeListener {
             override fun onEphemeralKeyStateChanged(
@@ -96,6 +97,7 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
                             countDownTimer =
                                 object : CountDownTimer(remaining.toMillis(), 1000) {
                                     override fun onTick(millisUntilFinished: Long) {
+                                        remainingMillis = millisUntilFinished
                                         val remaining = Duration.ofMillis(millisUntilFinished)
                                         val minutes = remaining.toMinutes()
                                         val seconds =
@@ -108,6 +110,7 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
                                     }
 
                                     override fun onFinish() {
+                                        remainingMillis = 0
                                         maybeReactivateEphemeralKey()
                                     }
                                 }.start()
@@ -125,7 +128,12 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
                         requireActivity().finish()
                     }
                     ThreadNetworkController.EPHEMERAL_KEY_DISABLED -> {
-                        maybeReactivateEphemeralKey()
+                        if (countDownTimer != null && remainingMillis > TIMER_FIRE_THRESHOLD_MS) {
+                            stateMachine.listener?.onComplete(
+                                this@ShareQRCodeFragment,
+                                StateMachine.RESULT_FAILURE
+                            )
+                        }
                     }
                 }
             }
@@ -230,5 +238,6 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
 
     companion object {
         const val TAG = "ThreadShareQRCode"
+        private const val TIMER_FIRE_THRESHOLD_MS = 1000
     }
 }
