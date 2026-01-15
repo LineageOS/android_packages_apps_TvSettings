@@ -223,9 +223,7 @@
 
     <!-- Count down timer for expiration of thread network sharing QR code. [CHAR_LIMIT=50] -->
     <string name="share_thread_network_countdown">
-        Code will refresh in
-        <xliff:g id="minutes" example="02">%1$02d</xliff:g>m
-        <xliff:g id="seconds" example="32">%2$02d</xliff:g>s
+        Code will refresh in &lt;b&gt;<xliff:g id="minutes" example="02">%1$02d</xliff:g>m <xliff:g id="seconds" example="32">%2$02d</xliff:g>s&lt;/b&gt;
     </string>
 
     <!-- Message displayed when thread network couldn't be shared [CHAR LIMIT=80]. -->
