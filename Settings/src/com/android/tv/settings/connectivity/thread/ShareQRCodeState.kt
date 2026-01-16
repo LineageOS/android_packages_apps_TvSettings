@@ -24,6 +24,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.OutcomeReceiver
 import android.util.Log
+import androidx.core.text.HtmlCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -87,11 +88,7 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
                         } else {
                             val minutes = remaining.toMinutes()
                             val seconds = remaining.minusMinutes(minutes).seconds
-                            qrCodeCountdown.text = getString(
-                                R.string.share_thread_network_countdown,
-                                minutes,
-                                seconds
-                            )
+                            setCountdownText(minutes, seconds)
 
                             countDownTimer =
                                 object : CountDownTimer(remaining.toMillis(), 1000) {
@@ -100,11 +97,7 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
                                         val minutes = remaining.toMinutes()
                                         val seconds =
                                             remaining.minusMinutes(minutes).seconds
-                                        qrCodeCountdown.text = getString(
-                                            R.string.share_thread_network_countdown,
-                                            minutes,
-                                            seconds
-                                        )
+                                        setCountdownText(minutes, seconds)
                                     }
 
                                     override fun onFinish() {
@@ -224,7 +217,17 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
 
         private fun updateQrCode(key: String) {
             qrCodeView.setData(key)
-            qrCodeString.text = key.chunked(3).joinToString("-")
+            qrCodeString.text = key.chunked(3).joinToString(" - ")
+        }
+
+        private fun setCountdownText(minutes: Long, seconds: Long) {
+            val countdownText = getString(
+                R.string.share_thread_network_countdown,
+                minutes,
+                seconds
+            )
+            qrCodeCountdown.text =
+                HtmlCompat.fromHtml(countdownText, HtmlCompat.FROM_HTML_MODE_LEGACY)
         }
     }
 
