@@ -110,6 +110,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private static final long PANEL_BACKGROUND_ANIMATION_ALPHA_MS = 500;
     private static final long PANEL_ANIMATION_DELAY_MS = 200;
     private static final long PREVIEW_PANEL_DEFAULT_DELAY_MS = 400;
+    private static final long PREVIEW_PANEL_STABLE_DELAY_MS = 100;
     private static final boolean DEFAULT_CHECK_SCROLL_STATE =
             ActivityManager.isLowRamDeviceStatic();
     private static final long CHECK_IDLE_STATE_MS = 100;
@@ -160,10 +161,10 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
 
     private class OnChildViewHolderSelectedListenerTwoPanel extends
             OnChildViewHolderSelectedListener {
-        private final int mPaneLIndex;
+        private final int mPanelIndex;
 
         OnChildViewHolderSelectedListenerTwoPanel(int panelIndex) {
-            mPaneLIndex = panelIndex;
+            mPanelIndex = panelIndex;
         }
 
         @Override
@@ -177,7 +178,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                     (PreferenceGroupAdapter) parent.getAdapter();
             if (preferenceGroupAdapter != null) {
                 Preference preference = preferenceGroupAdapter.getItem(adapterPosition);
-                onPreferenceFocused(preference, mPaneLIndex);
+                onPreferenceFocused(preference, mPanelIndex);
             }
         }
 
@@ -546,6 +547,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         private final Preference mPref;
         private final boolean mForceFresh;
         private final int mPanelIndex;
+        private boolean mWaitingForStable;
 
         PostShowPreviewRunnable(VerticalGridView listView, Preference pref, boolean forceFresh,
                 int panelIndex) {
@@ -553,6 +555,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             this.mPref = pref;
             this.mForceFresh = forceFresh;
             mPanelIndex = panelIndex;
+            this.mWaitingForStable = false;
         }
 
         void showPreview() {
@@ -563,6 +566,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
         void cancel() {
             mHandler.removeCallbacks(this);
             mPostShowPreviewRunnable = null;
+            mWaitingForStable = false;
         }
 
         @Override
@@ -573,8 +577,14 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
             if (mListView != null
                     && mListView.getScrollState() != RecyclerView.SCROLL_STATE_IDLE) {
                 mHandler.postDelayed(this, CHECK_IDLE_STATE_MS);
+                mWaitingForStable = false;
             } else {
-                showPreview();
+                if (!mWaitingForStable) {
+                    mWaitingForStable = true;
+                    mHandler.postDelayed(this, PREVIEW_PANEL_STABLE_DELAY_MS);
+                } else {
+                    showPreview();
+                }
             }
         }
     }
