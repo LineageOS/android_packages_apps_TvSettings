@@ -87,14 +87,14 @@
             android:summary="@string/enable_adb_summary"
             android:fragment="com.android.tv.settings.system.development.AdbDialog" />
 
-        <Preference android:key="clear_adb_keys"
-                    android:title="@string/clear_adb_keys"
-                    android:fragment="com.android.tv.settings.system.development.AdbKeysDialog" />
-
         <Preference
             android:key="toggle_adb_wireless"
             android:title="@string/enable_adb_wireless"
             android:summary="@string/connectivity_summary_no_network_connected" />
+
+        <Preference android:key="clear_adb_keys"
+            android:title="@string/clear_adb_keys"
+            android:fragment="com.android.tv.settings.system.development.AdbKeysDialog" />
 
         <com.android.tv.settings.widget.SwitchWithSoundPreference
             android:key="enable_terminal"
