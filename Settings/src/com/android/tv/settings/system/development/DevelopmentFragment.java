@@ -537,7 +537,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
 
         mWirelessDebugging = findPreference(TOGGLE_ADB_WIRELESS_KEY);
-        mWirelessDebugging.setFragment(WirelessDebuggingFragment.class.getName());
+        mWirelessDebugging.setFragment(AdbWirelessDebuggingFragment.class.getName());
 
         mEnableAngle = findPreference(ENABLE_ANGLE_AS_SYSTEM_DRIVER_KEY);
         mAllPrefs.add(mEnableAngle);
@@ -1949,7 +1949,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         }
 
         if (FlavorUtils.isTwoPanel(getContext())) {
-            mWirelessDebugging.setFragment(WirelessDebuggingFragment.class.getName());
+            mWirelessDebugging.setFragment(AdbWirelessDebuggingFragment.class.getName());
         }
         boolean enabled = Settings.Global.getInt(mContentResolver,
                 Settings.Global.ADB_WIFI_ENABLED, 1) != 0;
