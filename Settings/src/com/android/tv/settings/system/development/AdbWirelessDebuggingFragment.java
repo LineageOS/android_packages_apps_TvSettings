@@ -346,15 +346,9 @@ public class AdbWirelessDebuggingFragment extends SettingsPreferenceFragment {
         String ipAddress = getWifiIpv4Address();
         int port = getAdbWirelessPort();
         if (ipAddress == null) {
-            return TextUtils.formatSimple(
-                    "%s (%s)",
-                    getContext().getString(R.string.status_unavailable),
-                    getContext().getString(R.string.wifi_disconnected));
+            return getContext().getString(R.string.adb_wireless_unavailable_disconnected);
         } else if (port <= 0) {
-            String notAllowed = getContext().getString(R.string.app_permission_summary_not_allowed);
-            return TextUtils.formatSimple(
-                    "%s (%s)",
-                    getContext().getString(R.string.status_unavailable), notAllowed);
+            return getContext().getString(R.string.adb_wireless_unavailable_not_allowed);
         } else {
             return TextUtils.formatSimple("%s:%d", ipAddress, port);
         }
