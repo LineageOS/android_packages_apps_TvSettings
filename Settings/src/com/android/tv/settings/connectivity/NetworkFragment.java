@@ -250,6 +250,9 @@ public class NetworkFragment extends SettingsPreferenceFragment implements
                 }
             }else if(result.getResultCode() == Activity.RESULT_CANCELED){
                 // we should let user connect Wifi in default/fallback case
+                if (mEnableWifiPref != null) {
+                    mEnableWifiPref.setChecked(true);
+                }
                 updateWifiEnable();
             }
         });
