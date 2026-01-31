@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.view.accessibility.Flags;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.ListPreference;
@@ -45,8 +46,11 @@ public class CaptionFragment extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String KEY_CAPTIONS_DISPLAY = "captions_display";
+
+    private static final String KEY_DISPLAY_OPTIONS = "display_options";
     private static final String KEY_CAPTIONS_LANGUAGE = "captions_language";
     private static final String KEY_CAPTIONS_TEXT_SIZE = "captions_text_size";
+    private static final String KEY_CAPTIONS_EASY_READER = "captions_easy_reader";
     private static final String KEY_CAPTIONS_STYLE_GROUP = "captions_style";
     private static final String KEY_CAPTIONS_STYLE_0 = "captions_style_0";
     private static final String KEY_CAPTIONS_STYLE_1 = "captions_style_1";
@@ -55,6 +59,8 @@ public class CaptionFragment extends SettingsPreferenceFragment implements
     private static final String KEY_CAPTIONS_STYLE_CUSTOM = "captions_style_custom";
 
     private TwoStatePreference mCaptionsDisplayPref;
+    private PreferenceGroup mDisplayOptionsGroup;
+    private TwoStatePreference mEasyReaderPref;
     private ListPreference mCaptionsLanguagePref;
     private ListPreference mCaptionsTextSizePref;
     private PreferenceGroup mCaptionsStyleGroup;
@@ -100,6 +106,12 @@ public class CaptionFragment extends SettingsPreferenceFragment implements
         mCaptionsTextSizePref = (ListPreference) findPreference(KEY_CAPTIONS_TEXT_SIZE);
         mCaptionsTextSizePref.setOnPreferenceChangeListener(this);
 
+        mDisplayOptionsGroup = findPreference(KEY_DISPLAY_OPTIONS);
+        mEasyReaderPref = findPreference(KEY_CAPTIONS_EASY_READER);
+        if (!Flags.enableCaptionsEasyReader()) {
+            mDisplayOptionsGroup.removePreference(mEasyReaderPref);
+        }
+
         mCaptionsStyleGroup = (PreferenceGroup) findPreference(KEY_CAPTIONS_STYLE_GROUP);
 
         mCaptionsStyle0Pref = (RadioPreference) findPreference(KEY_CAPTIONS_STYLE_0);
@@ -128,6 +140,11 @@ public class CaptionFragment extends SettingsPreferenceFragment implements
             case KEY_CAPTIONS_TEXT_SIZE:
                 logEntrySelected(TvSettingsEnums.SYSTEM_A11Y_CAPTIONS_TEXT_SIZE);
                 return super.onPreferenceTreeClick(preference);
+            case KEY_CAPTIONS_EASY_READER:
+                logToggleInteracted(TvSettingsEnums.SYSTEM_A11Y_CAPTIONS_EASY_READER,
+                        ((TwoStatePreference) preference).isChecked());
+                setEasyReaderEnabled(((TwoStatePreference) preference).isChecked());
+                return true;
             case KEY_CAPTIONS_STYLE_0:
                 logEntrySelected(TvSettingsEnums.SYSTEM_A11Y_CAPTIONS_WHITE_ON_BLACK);
                 setCaptionsStyle(0);
@@ -186,6 +203,9 @@ public class CaptionFragment extends SettingsPreferenceFragment implements
         mCaptionsDisplayPref.setChecked(getCaptionsEnabled());
         mCaptionsLanguagePref.setValue(getCaptionsLocale());
         mCaptionsTextSizePref.setValue(getCaptionsTextSize());
+        if (Flags.enableCaptionsEasyReader()) {
+            mEasyReaderPref.setChecked(getEasyReaderEnabled());
+        }
         switch (getCaptionsStyle()) {
             default:
             case 0:
@@ -266,6 +286,16 @@ public class CaptionFragment extends SettingsPreferenceFragment implements
     private void setCaptionsTextSize(String textSize) {
         Settings.Secure.putFloat(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_CAPTIONING_FONT_SCALE, Float.parseFloat(textSize));
+    }
+
+    private void setEasyReaderEnabled(boolean enabled) {
+        Settings.Secure.putInt(getContext().getContentResolver(),
+                Settings.Secure.ACCESSIBILITY_CAPTIONING_EASY_READER_ENABLED, enabled ? 1 : 0);
+    }
+
+    private boolean getEasyReaderEnabled() {
+        return Settings.Secure.getInt(getContext().getContentResolver(),
+            Settings.Secure.ACCESSIBILITY_CAPTIONING_EASY_READER_ENABLED, 0) != 0;
     }
 
     @Override
