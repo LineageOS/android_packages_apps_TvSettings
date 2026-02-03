@@ -73,8 +73,8 @@ import java.util.Map;
  * the developer options.
  */
 @Keep
-public class WirelessDebuggingFragment extends SettingsPreferenceFragment {
-    private static final String TAG = "WirelessDebuggingFrag";
+public class AdbWirelessDebuggingFragment extends SettingsPreferenceFragment {
+    private static final String TAG = AdbWirelessDebuggingFragment.class.getSimpleName();
 
     private static final String PREF_KEY_ADB_WIRELESS_SELECTION_OPTION =
             "adb_wireless_selection_option";
