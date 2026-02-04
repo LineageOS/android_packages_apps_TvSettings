@@ -124,6 +124,7 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
     private HorizontalScrollView mScrollView;
     private final Handler mHandler = new Handler(Looper.getMainLooper());
     private boolean mIsNavigatingBack;
+    private boolean mBackDownSeen;
     private boolean mCheckVerticalGridViewScrollState;
     private Preference mFocusedPreference;
     private PostShowPreviewRunnable mPostShowPreviewRunnable;
@@ -796,12 +797,18 @@ public abstract class TwoPanelSettingsFragment extends Fragment implements
                return true;
             }
 
-            if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_BACK) {
-                if (event.getRepeatCount() > 0) {
-                    // Ignore long press on back button.
+            if (keyCode == KeyEvent.KEYCODE_BACK) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    mBackDownSeen = true;
                     return false;
+                } else if (event.getAction() == KeyEvent.ACTION_UP) {
+                    if (!mBackDownSeen) {
+                        Log.w(TAG, "Ignore back key up event without preceding down event.");
+                        return true;
+                    }
+                    mBackDownSeen = false;
+                    return back(true);
                 }
-                return back(true);
             }
 
             if (mInputMethodManager != null && mInputMethodManager.isAcceptingText()) {
