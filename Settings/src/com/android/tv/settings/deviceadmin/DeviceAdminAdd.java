@@ -18,7 +18,6 @@ package com.android.tv.settings.deviceadmin;
 
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.app.AppOpsManager;
 import android.app.Dialog;
 import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DeviceAdminReceiver;
@@ -35,10 +34,8 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
-import android.os.Binder;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.IBinder;
 import android.os.RemoteCallback;
 import android.os.RemoteException;
 import android.os.UserHandle;
@@ -80,10 +77,7 @@ public class DeviceAdminAdd extends FragmentActivity {
     public static final String EXTRA_CALLED_FROM_SUPPORT_DIALOG =
             "android.app.extra.CALLED_FROM_SUPPORT_DIALOG";
 
-    private final IBinder mToken = new Binder();
-
     DevicePolicyManager mDPM;
-    AppOpsManager mAppOps;
     DeviceAdminInfo mDeviceAdmin;
     String mProfileOwnerName;
 
@@ -115,7 +109,7 @@ public class DeviceAdminAdd extends FragmentActivity {
         super.onCreate(icicle);
 
         mDPM = getSystemService(DevicePolicyManager.class);
-        mAppOps = getSystemService(AppOpsManager.class);
+        getWindow().setHideOverlayWindows(true);
         PackageManager packageManager = getPackageManager();
 
         if ((getIntent().getFlags()&Intent.FLAG_ACTIVITY_NEW_TASK) != 0) {
@@ -331,9 +325,6 @@ public class DeviceAdminAdd extends FragmentActivity {
         if (!mAddingProfileOwner) {
             updateInterface();
         }
-        // As long as we are running, don't let anyone overlay stuff on top of the screen.
-        mAppOps.setUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW, true, mToken);
-        mAppOps.setUserRestriction(AppOpsManager.OP_TOAST_WINDOW, true, mToken);
     }
 
     @Override
@@ -341,8 +332,6 @@ public class DeviceAdminAdd extends FragmentActivity {
         super.onPause();
         // This just greys out the button. The actual listener is attached to R.id.restricted_action
         mActionButton.setEnabled(false);
-        mAppOps.setUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW, false, mToken);
-        mAppOps.setUserRestriction(AppOpsManager.OP_TOAST_WINDOW, false, mToken);
         try {
             ActivityManager.getService().resumeAppSwitches();
         } catch (RemoteException e) {
