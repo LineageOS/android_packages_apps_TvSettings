@@ -402,7 +402,7 @@
     <string name="ads_description" msgid="8081069475265061074">"Spravujte nastavenia reklám (napr. resetovanie reklamného identifikátora)."</string>
     <string name="ads_content_description" msgid="1006489792324920289">"Reklamy, spravujte nastavenia reklám, napríklad resetovanie reklamného identifikátora."</string>
     <string name="show_dev_on" msgid="612741433124106067">"Stal sa z vás vývojár."</string>
-    <string name="show_dev_already" msgid="1522591284776449818">"Nie je to potrebné, už ste vývojár."</string>
+    <string name="show_dev_already" msgid="1522591284776449818">"ViewerGender=OTHER Stačí, už ste vývojár. ViewerGender=FEMALE Stačí, už ste vývojárka. ViewerGender=MALE Stačí, už ste vývojár."</string>
     <string name="device_info_default" msgid="2374506935205518448">"Neznámy"</string>
     <string name="selinux_status" msgid="1146662734953021410">"Stav zabezpečenia SELinux"</string>
     <string name="selinux_status_disabled" msgid="4027105362332795142">"Zakázané"</string>
@@ -513,7 +513,7 @@
     <string name="wifi_scan_qr_code_back_description" msgid="8830716278283379280">"Ak to chcete zrušiť, stlačte tlačidlo Späť"</string>
     <string name="wifi_scan_qr_code_accessibility_label" msgid="4725144595082912418">"QR kód na pripojenie k sieti Wi‑Fi"</string>
     <string name="share_thread_title" msgid="62095604026690777">"Zdieľať prihlasovacie údaje siete Thread so zariadením"</string>
-    <string name="share_thread_description" msgid="4103244691980867041">"Ak chcete pridať zariadenie do siete Thread v zariadení <xliff:g id="DEVICE">%1$s</xliff:g>, naskenujte tento QR kód pomocou aplikácie zariadenia alebo zadajte kód zdieľania.\n \nKód sa bude obnovovať každé <xliff:g id="MINUTES">%2$s</xliff:g> min.\n \nViac sa dozviete na g.co/tv/thread"</string>
+    <string name="share_thread_description" msgid="4103244691980867041">"Ak chcete pridať zariadenie do siete Thread v zariadení <xliff:g id="DEVICE">%1$s</xliff:g>, naskenujte tento QR kód pomocou aplikácie zariadenia alebo zadajte kód zdieľania.\n \nKód sa bude obnovovať v intervale <xliff:g id="MINUTES">%2$s</xliff:g> min.\n \nViac sa dozviete na g.co/tv/thread"</string>
     <string name="wifi_action_ok" msgid="6257483288047397880">"OK"</string>
     <string name="wifi_setup_action_dont_change_network" msgid="2999582059217623090">"Pokračovať"</string>
     <string name="wifi_setup_action_change_network" msgid="1603908238711710943">"Zmeniť sieť"</string>
@@ -777,6 +777,10 @@
     <string name="captions_configure" msgid="711991018642931958">"Konfigurovať"</string>
     <string name="captions_language" msgid="5905918439449912646">"Jazyk"</string>
     <string name="captions_language_default" msgid="3894192926725192528">"Predvolené"</string>
+    <!-- no translation found for captions_easy_reader (5875452680577116736) -->
+    <skip />
+    <!-- no translation found for captions_easy_reader_subtext (5618704539662246401) -->
+    <skip />
     <string name="captions_textsize" msgid="7161136610669343510">"Veľkosť textu"</string>
     <string name="captions_captionstyle" msgid="6650139717545516071">"Štýl titulkov"</string>
     <string name="captions_customoptions" msgid="7691004663572161126">"Vlastné možnosti"</string>
