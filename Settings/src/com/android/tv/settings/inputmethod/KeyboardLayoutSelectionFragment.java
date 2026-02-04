@@ -21,6 +21,7 @@ import android.annotation.Nullable;
 import android.content.Context;
 import android.hardware.input.InputDeviceIdentifier;
 import android.hardware.input.InputManager;
+import android.hardware.input.InputManagerGlobal;
 import android.hardware.input.KeyboardLayout;
 import android.os.Bundle;
 
@@ -83,8 +84,7 @@ public class KeyboardLayoutSelectionFragment extends SettingsPreferenceFragment 
         mIm = Objects.requireNonNull(themedContext.getSystemService(InputManager.class));
         mIm.registerInputDeviceListener(this, null);
 
-        KeyboardLayout[] keyboardLayouts = mIm.getKeyboardLayoutsForInputDevice(
-                mInputDeviceIdentifier);
+        KeyboardLayout[] keyboardLayouts = mIm.getKeyboardLayouts();
         Arrays.sort(keyboardLayouts);
         RadioPreference activePreference = null;
         for (KeyboardLayout kl : keyboardLayouts) {
@@ -116,7 +116,8 @@ public class KeyboardLayoutSelectionFragment extends SettingsPreferenceFragment 
             final RadioPreference radioPreference = (RadioPreference) preference;
             radioPreference.clearOtherRadioPreferences(getPreferenceScreen());
             if (radioPreference.isChecked()) {
-                mIm.setCurrentKeyboardLayoutForInputDevice(mInputDeviceIdentifier,
+                InputManagerGlobal.getInstance().setKeyboardLayoutOverrideForInputDevice(
+                        mInputDeviceIdentifier,
                         mKeyboardLayoutMap.get(radioPreference.getKey()).getDescriptor());
             } else {
                 radioPreference.setChecked(true);
