@@ -161,6 +161,9 @@ class SliceShard(
         mSlice = slice
         // Make TvSettings guard against the case that slice provider is not set up correctly
         if (slice == null || slice.hints == null) {
+            mCallbacks.showProgressBar(false)
+            mCallbacks.setTitle(
+                mPrefContext.getString(R.string.error_loading_settings))
             return
         }
 
@@ -821,10 +824,10 @@ class SliceShard(
             return if (mCurrentPageId != 0) mCurrentPageId else TvSettingsEnums.PAGE_SLICE_DEFAULT
         }
 
-    private class SliceObserver(shard: SliceShard) : Observer<Slice> {
+    private class SliceObserver(shard: SliceShard) : Observer<Slice?> {
         private var mShard: SliceShard? = shard
 
-        override fun onChanged(value: Slice) {
+        override fun onChanged(value: Slice?) {
             mShard?.onSliceChanged(value)
         }
 
