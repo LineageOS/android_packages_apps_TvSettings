@@ -235,26 +235,6 @@ public abstract class TvSettingsActivity extends FragmentActivity {
         reportStartupLatency();
     }
 
-  @Override
-  public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            mBackDownSeen = true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
-
-    @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (!mBackDownSeen) {
-                Log.w(TAG, "Ignore back key up event without preceding down event.");
-                return true;
-            }
-            mBackDownSeen = false;
-        }
-        return super.onKeyUp(keyCode, event);
-    }
-
     private void reportStartupLatency() {
         if (mReportedStartupLatency) {
             return;

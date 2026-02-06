@@ -116,6 +116,7 @@ public class TimeZoneFragment extends SettingsPreferenceFragment {
         final PreferenceScreen screen = getPreferenceScreen();
         final int count = screen.getPreferenceCount();
         boolean hasChecked = false;
+        ZonePreference currentZonePreference = null;
         for (int i = 0; i < count; i++) {
             final Preference pref = screen.getPreference(i);
             if (!(pref instanceof ZonePreference)) {
@@ -124,6 +125,9 @@ public class TimeZoneFragment extends SettingsPreferenceFragment {
             final ZonePreference zonePref = (ZonePreference) pref;
             final boolean isChecked = TextUtils.equals(zonePref.getKey(), id);
             zonePref.setChecked(isChecked);
+            if (isChecked) {
+                currentZonePreference = zonePref;
+            }
             hasChecked |= isChecked;
         }
 
@@ -138,8 +142,15 @@ public class TimeZoneFragment extends SettingsPreferenceFragment {
                 TimeZone timeZone = TimeZone.getTimeZone(zonePref.getKey());
                 if (timeZone.hasSameRules(current)) {
                     zonePref.setChecked(true);
+                    currentZonePreference = zonePref;
                     break;
                 }
+            }
+        }
+        final ZonePreference finalSelectedPref = currentZonePreference;
+        if (finalSelectedPref != null) {
+            if (getView() != null) {
+                getView().post(() -> scrollToPreference(finalSelectedPref));
             }
         }
     }
