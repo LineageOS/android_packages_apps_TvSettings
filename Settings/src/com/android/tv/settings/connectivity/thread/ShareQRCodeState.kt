@@ -154,7 +154,7 @@ class ShareQRCodeState(private val activity: ShareThreadNetworkActivity) : State
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             val description = view.requireViewById<TextView>(R.id.setup_qrcode_description)
-            description.text = getString(R.string.share_thread_description, Build.MODEL, timeoutMinutes)
+            description.text = getString(R.string.share_thread_description, Build.MODEL)
             threadNetworkHelper.setOnStateChangeListener(onStateChangeListener)
             threadNetworkHelper.registerStateCallback()
             activateEphemeralKey()
