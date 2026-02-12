@@ -601,6 +601,10 @@ public class AppRestrictionsFragment extends SettingsPreferenceFragment implemen
         if (resolveInfo == null) {
             throw new ActivityNotFoundException("No result for resolving " + intent);
         }
+        if (!SafeIntents.isSafeToLaunch(vettedIntent)) {
+            throw new SecurityException("Intent " + intent + " is not safe to launch");
+        }
+
         // Prevent potential privilege escalation
         ActivityInfo activityInfo = resolveInfo.activityInfo;
         if (!packageName.equals(activityInfo.packageName)) {
