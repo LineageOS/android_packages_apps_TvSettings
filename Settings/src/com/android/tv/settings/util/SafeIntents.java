@@ -18,6 +18,8 @@ package com.android.tv.settings.util;
 
 import android.content.Intent;
 
+import java.util.Objects;
+
 /**
  * Utilities to sanitize external intents
  */
@@ -35,6 +37,14 @@ public final class SafeIntents {
         Intent safeIntent = new Intent(intent);
         safeIntent.removeFlags(UNSAFE_GRANT_FLAGS);
         return safeIntent;
+    }
+
+    /**
+     * Intents with content theme can return inconsistent metadata, leading to
+     * security issues between check and invocation.
+     */
+    public static boolean isSafeToLaunch(Intent intent) {
+        return !Objects.equals("content", intent.getScheme());
     }
 
     private SafeIntents() {}
