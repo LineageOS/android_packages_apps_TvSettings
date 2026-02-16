@@ -41,6 +41,8 @@ public class ButtonsFragment extends SettingsPreferenceFragment {
             "power_button_long_press_action";
     private static final String KEY_PRESS_VOLUME_UP_AND_DOWN_TO_MUTE =
             "press_volume_up_and_down_to_mute";
+    private static final String KEY_PRESS_SELECT_AND_L1_R1_FOR_BRIGHTNESS =
+            "press_select_and_l1_r1_for_brightness";
 
 
     private static final int LONG_PRESS_POWER_BUTTON_FOR_ASSISTANT = 1;
@@ -84,6 +86,13 @@ public class ButtonsFragment extends SettingsPreferenceFragment {
             (preference, newValue) -> {
                 LineageSettings.System.putInt(context.getContentResolver(),
                         LineageSettings.System.VOLUME_UP_AND_DOWN_MUTE, (Boolean) newValue ? 1 : 0);
+                return true;
+            });
+
+        findPreference(KEY_PRESS_SELECT_AND_L1_R1_FOR_BRIGHTNESS).setOnPreferenceChangeListener(
+            (preference, newValue) -> {
+                LineageSettings.System.putInt(context.getContentResolver(),
+                        LineageSettings.System.SELECT_AND_L1_R1_BRIGHTNESS, (Boolean) newValue ? 1 : 0);
                 return true;
             });
     }
