@@ -27,6 +27,7 @@ import android.os.Bundle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import com.android.tv.settings.R;
 import com.android.tv.settings.RadioPreference;
 import com.android.tv.settings.SettingsPreferenceFragment;
 import com.android.tv.twopanelsettings.TwoPanelSettingsFragment;
@@ -77,8 +78,7 @@ public class KeyboardLayoutSelectionFragment extends SettingsPreferenceFragment 
         String currentLayoutIdentifier = getArguments().getString(ARG_LAYOUT_IDENTIFIER);
         final PreferenceScreen screen =
                 getPreferenceManager().createPreferenceScreen(themedContext);
-        screen.setTitle(themedContext.getString(
-                com.android.settingslib.R.string.keyboard_layout_dialog_title));
+        screen.setTitle(themedContext.getString(R.string.keyboard_layout_dialog_title));
         screen.setSummary(mDeviceName);
         mIm = Objects.requireNonNull(themedContext.getSystemService(InputManager.class));
         mIm.registerInputDeviceListener(this, null);

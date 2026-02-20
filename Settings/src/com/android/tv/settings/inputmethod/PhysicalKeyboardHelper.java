@@ -25,7 +25,7 @@ import android.hardware.input.KeyboardLayout;
 import android.text.TextUtils;
 import android.view.InputDevice;
 
-import com.android.settingslib.R;
+import com.android.tv.settings.R;
 
 import java.text.Collator;
 import java.util.ArrayList;

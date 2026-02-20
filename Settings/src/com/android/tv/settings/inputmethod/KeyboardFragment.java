@@ -271,8 +271,7 @@ public class KeyboardFragment extends SettingsPreferenceFragment implements
                 preferenceScreen.addPreference(pref);
             }
             pref.setKey(key);
-            pref.setTitle(getPreferenceContext().getString(
-                    com.android.settingslib.R.string.physical_keyboard_title));
+            pref.setTitle(getPreferenceContext().getString(R.string.physical_keyboard_title));
             pref.setSummary(deviceInfo.getSummary());
             KeyboardLayoutSelectionFragment.prepareArgs(pref.getExtras(),
                     deviceInfo.mDeviceIdentifier,
