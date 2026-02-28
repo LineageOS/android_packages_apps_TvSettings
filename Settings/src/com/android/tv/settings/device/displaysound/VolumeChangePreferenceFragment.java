@@ -79,8 +79,12 @@ public class VolumeChangePreferenceFragment extends SettingsPreferenceFragment i
         volumeChangeGroup.setTitle(volumeChangeSubtitleUnselect);
 
         final Context themedContext = getPreferenceManager().getContext();
-        final String[] entryValues = getContext().getResources()
-                .getStringArray(R.array.volume_change_entry_values);
+        final int[] configEntryValues = getContext().getResources()
+                .getIntArray(R.array.config_volume_change_entry_values);
+        final String[] entryValues = new String[configEntryValues.length];
+        for (int i = 0; i < configEntryValues.length; i++) {
+            entryValues[i] = String.valueOf(configEntryValues[i] / 100.0f);
+        }
         final String[] entries = getContext().getResources()
                 .getStringArray(R.array.volume_change_entries);
 
