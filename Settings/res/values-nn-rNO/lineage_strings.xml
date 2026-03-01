@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="system_reboot_confirm_cm">Starta på nytt til:</string>
+    <string name="global_action_restart_system">System</string>
+    <string name="global_action_restart_recovery">Recovery</string>
+    <string name="global_action_restart_bootloader">Bootloader</string>
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Du er no <xliff:g id="step_count">%1$d</xliff:g> steg unna å slå på utviklarinnstillingar.</item>
+        <item quantity="other">Du er no <xliff:g id="step_count">%1$d</xliff:g> steg unna å slå på utviklarinnstillingar.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Du har slått på utviklarinnstillingar!</string>
+    <string name="show_dev_already_cm">Ingen grunn, du har alt slått på utviklarinnstillingar.</string>
+    <string name="system_buttons">Knappar</string>
+    <string name="power_button_long_press_action_title">Handling for langt trykk på av/på-knappen</string>
+    <string name="power_button_long_press_for_power_menu_action">Opna av/på-menyen</string>
+    <string name="power_button_long_press_for_assistant_action">Opna Assistant</string>
+    <string name="inputs_volume_control_enabled">CEC-lydstyrkekontroll</string>
+    <string name="inputs_volume_control_enabled_desc">Styr lydstyrken på TV/AVR i staden for den interne lydstyrken</string>
+    <string name="enable_adb_root">Feilsøking som root</string>
+    <string name="enable_adb_root_summary">Lat Android-feilsøking køyra som root</string>
+    <string name="advanced_restart_title">Avansert omstart</string>
+    <string name="advanced_restart_summary">Vis val for omstart til recovery, bootloader eller mjuk omstart</string>
+    <string name="adb_over_network">ADB over nettverk</string>
+    <string name="adb_over_network_summary">Slå på TCP/IP-feilsøking over nettverksgrensesnitt (Wi-Fi, USB-nettverk). Denne innstillinga vert nullstilt ved omstart.</string>
+    <string name="adb_over_network_warning">ÅTVARING: Når ADB over nettverk er slått på, er telefonen din open for innbrot på alle tilkopla nettverk!\n\nBerre bruk denne funksjonen på nettverk du stolar på.\n\nVil du verkeleg slå på denne funksjonen?</string>
+    <string name="trust_category_features">Status</string>
+    <string name="trust_feature_selinux">SELinux</string>
+    <string name="trust_feature_selinux_value_enforcing">Verksam</string>
+    <string name="trust_feature_selinux_value_disabled">Avslått</string>
+    <string name="trust_feature_selinux_explain">SELinux styrer kva prosessar som har tilgang til kva filer og baner på eininga di.\nDette hindrar appar og tenester frå å få tak i filer dei ikkje skal ha tilgang til. På denne måten vert potensielt skadelege prosessar avgrensa, og tryggleiken din vert vareteken.</string>
+    <string name="trust_feature_security_patches">Android-tryggingsoppdateringar</string>
+    <string name="trust_feature_security_patches_value_base">Plattform: %1$s\nLeverandør: %2$s</string>
+    <string name="trust_feature_security_patches_value_new">Oppdatert</string>
+    <string name="trust_feature_security_patches_value_medium">Nokre månader gamal</string>
+    <string name="trust_feature_security_patches_value_old">Ikkje oppdatert</string>
+    <string name="trust_feature_security_patches_explain">Tryggingsoppdateringar vert gjevne ut kvar månad av Google i samarbeid med brikkeleverandørar for å tetta hol som kan misbrukast av skadelege appar til å gå utanom tryggingsreglar og gjera varig skade på eininga di. Oppdateringar frå Google vert lagde inn kvar månad på alle støtta einingar, men oppdateringar til særskild kjeldekode kan berre leggjast inn av produsenten av eininga di. For å halda eininga trygg bør du sjå til at LineageOS-versjonen alltid er oppdatert, og at leverandørbiletet (viss aktuelt) er oppdatert til det nyaste som LineageOS tilrår.</string>
+    <string name="trust_feature_encryption">Kryptering</string>
+    <string name="trust_feature_encryption_value_enabled">På</string>
+    <string name="trust_feature_encryption_value_nolock">Treng ein trygg låseskjerm</string>
+    <string name="trust_feature_encryption_value_disabled">Avslått</string>
+    <string name="trust_feature_encryption_explain">Kryptering av eininga di hindrar tilgang til dataa dine når telefonen ikkje er starta opp i Android. Dette er særleg viktig viss telefonen vert stolen, då det hindrar andre i å lesa meldingar, kontaktar og anna privat informasjon utan passordet ditt.\nFor at krypteringa skal fungera best mogleg, må du setja eit trygt passord for låseskjermen.</string>
+    <string name="trust_category_tools">Personvern</string>
+    <string name="trust_notification_alerts_title">Tryggingsvarsel</string>
+    <string name="trust_restrict_usb_title">Avgrens USB</string>
+    <string name="trust_restrict_usb_summary">Styr støtte for USB-tilkoplingar som hovudtelefonar, lagringseiningar, inndata (mus, tastatur, styrepinne) og ADB</string>
+    <string name="trust_restrict_usb_always">Nekt USB-tilkoplingar</string>
+    <string name="trust_restrict_usb_disabled">Alltid lat USB-tilkoplingar vera lov</string>
+    <string name="trust_onboarding_description">Trust hjelper deg med å halda eininga trygg og ta vare på personvernet ditt.\nTrust-ikonet vert berre vist når innhaldet på sida er stadfesta.</string>
+    <string name="trust_warnings_alerts_intro">Du kan velja kva tryggingsproblem du vil ha varsel om. For din eigen tryggleik er det tilrådd å slå på alle varsla.</string>
+    <string name="trust_warnings_selinux">SELinux-status</string>
+    <string name="trust_warnings_keys">Byggesignatur</string>
+    <string name="sleep_button_label">Kvilemodus</string>
+    <string name="system_sleep_confirm">Gå i kvilemodus no?</string>
+    <string name="shutdown_button_label">Slå av</string>
+    <string name="system_shutdown_confirm">Slå av no?</string>
+    <string name="convertible_port_busy_title">USB-port 1 er i bruk</string>
+    <string name="convertible_port_busy_warning">Kopla frå alle einingar eller tilbehøyr og prøv på nytt</string>
+    <string name="mtp_enable_title">Tilgang til SHIELD-mapper på PC med USB</string>
+    <string name="mtp_enable_warning">USB-port 1 er no sett opp slik at SHIELD kan koplast til ein PC som ei medieeining.\n\nDenne porten vil ikkje lenger oppdaga USB-lagringsmedium eller USB-tilbehøyr, og kan ikkje brukast til å lada einingar.</string>
+    <string name="mtp_retry_error">Feila. Prøv på nytt.</string>
+    <string name="mtp_summary">I denne modusen kan ikkje USB-porten brukast til andre ting</string>
+    <string name="mtp_title">Før over filer til ei datamaskin med USB</string>
+    <string name="mtp_unexpected_error">Uventa feil. Prøv på nytt seinare.</string>
+    <string name="usb_debugging_enable_title">USB-feilsøking er slått på</string>
+    <string name="usb_debugging_enable_warning">USB-port 1 er no sett opp slik at SHIELD kan koplast til ein PC som ei medieeining.\n\nDenne porten vil ikkje lenger oppdaga USB-lagringsmedium eller USB-tilbehøyr, og kan ikkje brukast til å lada einingar.</string>
+</resources>
