@@ -263,4 +263,12 @@
 
     <!-- Integrate of icon cache, default: 1MB -->
     <integer name="config_icon_cache_max_size">1048576</integer>
+
+    <!-- Values for default volume levels. Storing float values as integers scaled by 100. -->
+    <integer-array name="config_volume_change_entry_values">
+        <item>0</item>    <!-- Represents 0.0 -->
+        <item>20</item>   <!-- Represents 0.2 -->
+        <item>50</item>   <!-- Represents 0.5 -->
+        <item>80</item>   <!-- Represents 0.8 -->
+    </integer-array>
 </resources>
