@@ -209,6 +209,7 @@ open class MainFragment : PreferenceControllerFragment(),
         mSuggestions?.let {
             mSuggestionQuickSettingPrefsContainer!!.onSuggestionReady(it)
         }
+        updateConnectivity()
     }
 
     private fun configurePreferences() {
