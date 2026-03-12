@@ -21,6 +21,7 @@ import static com.android.tv.settings.device.displaysound.DisplaySoundUtils.setM
 import static com.android.tv.settings.overlay.FlavorUtils.FLAVOR_CLASSIC;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.hardware.display.DisplayManager;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -38,6 +39,7 @@ import com.android.tv.settings.customization.CustomizationConstants;
 import com.android.tv.settings.customization.Partner;
 import com.android.tv.settings.customization.PartnerPreferencesMerger;
 import com.android.tv.settings.device.displaysound.PreferredDynamicRangeInfo;
+import com.android.tv.settings.device.util.DeviceUtils;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.util.ResolutionSelectionUtils;
 
@@ -54,6 +56,7 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
     private static final String KEY_MATCH_CONTENT_FRAME_RATE = "match_content_frame_rate";
     private static final String KEY_RESOLUTION_SELECTION = "resolution_selection";
     private static final String KEY_ADVANCED_DISPLAY_SETTINGS = "advanced_display_settings";
+    private static final String KEY_VOLUME_CHANGE = "volume_change";
     private static final String KEY_ADVANCED_PICTURE_SETTINGS = "advanced_sound_settings";
     private static final String KEY_VENDOR_PICTURE = "picture_vendor_settings";
     private static final String KEY_VENDOR_SOUND = "sound_vendor_settings";
@@ -87,6 +90,21 @@ public class DisplayPreviewFragment extends SettingsPreferenceFragment implement
         // Do not show sidebar info texts in case of 1 panel settings.
         if (FlavorUtils.getFlavor(getContext()) != FLAVOR_CLASSIC) {
             createInfoFragments();
+        }
+        updateVolumeChangePreference();
+    }
+
+    private void updateVolumeChangePreference() {
+        Preference volumeChangePreference = findPreference(KEY_VOLUME_CHANGE);
+        if (volumeChangePreference != null) {
+            Resources res =  getContext().getResources();
+            volumeChangePreference.setTitle(
+                    res.getString(R.string.volume_change_settings_title,
+                            DeviceUtils.getDeviceName(getContext()))
+            );
+            volumeChangePreference.setVisible(
+                    res.getBoolean(R.bool.config_volume_change)
+            );
         }
     }
 
