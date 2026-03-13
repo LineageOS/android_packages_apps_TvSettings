@@ -48,6 +48,9 @@ android_library {
         "androidx.lifecycle_lifecycle-runtime-ktx",
         "androidx.core_core-ktx",
     ],
+    libs: [
+        "com.android.libraries.tv.tvsystem.stubs.system",
+    ],
 }
 
 android_library {
@@ -73,6 +76,7 @@ android_library {
     use_resource_processor: false,
     flags_packages: [
         "android.app.supervision.flags-aconfig",
+        "android.media.tv.flags-aconfig",
     ],
 }
 
@@ -104,6 +108,7 @@ android_app {
     use_resource_processor: false,
     flags_packages: [
         "android.app.supervision.flags-aconfig",
+        "android.media.tv.flags-aconfig",
     ],
 }
 
@@ -137,6 +142,7 @@ android_app {
     use_resource_processor: false,
     flags_packages: [
         "android.app.supervision.flags-aconfig",
+        "android.media.tv.flags-aconfig",
     ],
 }
 
@@ -184,6 +190,7 @@ android_app {
     use_resource_processor: false,
     flags_packages: [
         "android.app.supervision.flags-aconfig",
+        "android.media.tv.flags-aconfig",
     ],
 }
 
@@ -223,5 +230,6 @@ android_app {
     use_resource_processor: false,
     flags_packages: [
         "android.app.supervision.flags-aconfig",
+        "android.media.tv.flags-aconfig",
     ],
 }
