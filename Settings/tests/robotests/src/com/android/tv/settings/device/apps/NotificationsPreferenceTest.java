@@ -51,18 +51,12 @@ public class NotificationsPreferenceTest {
     private static final String PACKAGE_NAME = "com.example.test";
     private static final int PACKAGE_UID = 20;
 
-    @Mock
-    ApplicationInfo mApplicationInfo;
-    @Mock
-    ApplicationsState.AppEntry mAppEntry;
-    @Mock
-    PackageInfo mPackageInfo;
-    @Mock
-    PackageManager mPackageManager;
-    @Mock
-    INotificationManager mNotificationManager;
-    @Mock
-    Resources mResources;
+    @Mock ApplicationInfo mApplicationInfo;
+    @Mock ApplicationsState.AppEntry mAppEntry;
+    @Mock PackageInfo mPackageInfo;
+    @Mock PackageManager mPackageManager;
+    @Mock INotificationManager mNotificationManager;
+    @Mock Resources mResources;
 
     private Context mContext;
     private NotificationsPreference mNotificationsPreference;
@@ -188,24 +182,24 @@ public class NotificationsPreferenceTest {
         ShadowUtils.setSystemPackage(systemApp);
     }
 
-    private void setNotificationsEnabledForPackage(String packageName,
-            boolean notificationsEnabled) {
+    private void setNotificationsEnabledForPackage(
+            String packageName, boolean notificationsEnabled) {
         try {
-            when(mNotificationManager.areNotificationsEnabledForPackage(eq(packageName),
-                    anyInt())).thenReturn(notificationsEnabled);
+            when(mNotificationManager.areNotificationsEnabledForPackage(eq(packageName), anyInt()))
+                    .thenReturn(notificationsEnabled);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
     }
 
-    private void setNotificationsUnblockableByImportanceLocked(ApplicationInfo applicationInfo,
-            boolean isUnblockable) {
+    private void setNotificationsUnblockableByImportanceLocked(
+            ApplicationInfo applicationInfo, boolean isUnblockable) {
         try {
-            when(mNotificationManager.isImportanceLocked(applicationInfo.packageName,
-                    applicationInfo.uid)).thenReturn(isUnblockable);
+            when(mNotificationManager.isImportanceLocked(
+                            applicationInfo.packageName, applicationInfo.uid))
+                    .thenReturn(isUnblockable);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
     }
 }
-

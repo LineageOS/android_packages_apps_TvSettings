@@ -41,6 +41,7 @@
 }
 
 -keep @androidx.annotation.Keep class *
+-keep class com.android.tv.settings.device.apps.TvWatchdogDisabledAppsFragment { <init>(); }
 -keepclassmembers class * {
     @androidx.annotation.Keep *;
 }

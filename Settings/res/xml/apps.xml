@@ -36,6 +36,11 @@
         <intent android:action="android.intent.action.MANAGE_UNUSED_APPS"/>
     </Preference>
 
+    <Preference
+        android:key="tv_watchdog_disabled_apps"
+        android:title="@string/tv_watchdog_disabled_apps_title"
+        android:fragment="com.android.tv.settings.device.apps.TvWatchdogDisabledAppsFragment" />
+
     <PreferenceCategory
         android:key="permissions"
         android:title="@string/apps_permissions_category_title">

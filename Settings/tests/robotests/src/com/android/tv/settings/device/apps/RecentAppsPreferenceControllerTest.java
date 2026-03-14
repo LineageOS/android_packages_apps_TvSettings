@@ -72,24 +72,15 @@ import java.util.List;
 @Config(shadows = {ShadowIconDrawableFactory.class})
 public class RecentAppsPreferenceControllerTest {
 
-    @Mock
-    private PreferenceScreen mScreen;
-    @Mock
-    private PreferenceCategory mCategory;
-    @Mock
-    private Preference mSeeAllPref;
-    @Mock
-    private UsageStatsManager mUsageStatsManager;
-    @Mock
-    private UserManager mUserManager;
-    @Mock
-    private ApplicationsState mAppState;
-    @Mock
-    private PackageManager mPackageManager;
-    @Mock
-    private ApplicationsState.AppEntry mAppEntry;
-    @Mock
-    private ApplicationInfo mApplicationInfo;
+    @Mock private PreferenceScreen mScreen;
+    @Mock private PreferenceCategory mCategory;
+    @Mock private Preference mSeeAllPref;
+    @Mock private UsageStatsManager mUsageStatsManager;
+    @Mock private UserManager mUserManager;
+    @Mock private ApplicationsState mAppState;
+    @Mock private PackageManager mPackageManager;
+    @Mock private ApplicationsState.AppEntry mAppEntry;
+    @Mock private ApplicationInfo mApplicationInfo;
 
     private Context mContext;
     private RecentAppsPreferenceController mController;
@@ -154,16 +145,12 @@ public class RecentAppsPreferenceControllerTest {
         stats.add(stat3);
 
         // stat1, stat2 are valid apps. stat3 is invalid.
-        when(mAppState.getEntry(stat1.mPackageName, UserHandle.myUserId()))
-            .thenReturn(mAppEntry);
-        when(mAppState.getEntry(stat2.mPackageName, UserHandle.myUserId()))
-            .thenReturn(mAppEntry);
-        when(mAppState.getEntry(stat3.mPackageName, UserHandle.myUserId()))
-            .thenReturn(null);
+        when(mAppState.getEntry(stat1.mPackageName, UserHandle.myUserId())).thenReturn(mAppEntry);
+        when(mAppState.getEntry(stat2.mPackageName, UserHandle.myUserId())).thenReturn(mAppEntry);
+        when(mAppState.getEntry(stat3.mPackageName, UserHandle.myUserId())).thenReturn(null);
         when(mPackageManager.resolveActivity(any(Intent.class), anyInt()))
-            .thenReturn(new ResolveInfo());
-        when(mUsageStatsManager.queryUsageStats(anyInt(), anyLong(), anyLong()))
-            .thenReturn(stats);
+                .thenReturn(new ResolveInfo());
+        when(mUsageStatsManager.queryUsageStats(anyInt(), anyLong(), anyLong())).thenReturn(stats);
         mAppEntry.info = mApplicationInfo;
 
         mController.displayPreference(mScreen);
@@ -198,13 +185,14 @@ public class RecentAppsPreferenceControllerTest {
 
         // Only the regular app stat1 should have its intent resolve.
         when(mPackageManager.resolveActivity(argThat(intentMatcher(stat1.mPackageName)), anyInt()))
-            .thenReturn(new ResolveInfo());
+                .thenReturn(new ResolveInfo());
 
-        when(mUsageStatsManager.queryUsageStats(anyInt(), anyLong(), anyLong()))
-                .thenReturn(stats);
+        when(mUsageStatsManager.queryUsageStats(anyInt(), anyLong(), anyLong())).thenReturn(stats);
 
         // Make sure stat2 is considered an instant app.
-        ReflectionHelpers.setStaticField(AppUtils.class, "sInstantAppDataProvider",
+        ReflectionHelpers.setStaticField(
+                AppUtils.class,
+                "sInstantAppDataProvider",
                 (InstantAppDataProvider) (ApplicationInfo info) -> info == stat2Entry.info);
 
         mController.displayPreference(mScreen);
@@ -231,13 +219,10 @@ public class RecentAppsPreferenceControllerTest {
 
         // app1 has AppEntry with null info, app2 has null AppEntry.
         mAppEntry.info = null;
-        when(mAppState.getEntry(stat1.mPackageName, UserHandle.myUserId()))
-                .thenReturn(mAppEntry);
-        when(mAppState.getEntry(stat2.mPackageName, UserHandle.myUserId()))
-                .thenReturn(null);
+        when(mAppState.getEntry(stat1.mPackageName, UserHandle.myUserId())).thenReturn(mAppEntry);
+        when(mAppState.getEntry(stat2.mPackageName, UserHandle.myUserId())).thenReturn(null);
 
-        when(mUsageStatsManager.queryUsageStats(anyInt(), anyLong(), anyLong()))
-                .thenReturn(stats);
+        when(mUsageStatsManager.queryUsageStats(anyInt(), anyLong(), anyLong())).thenReturn(stats);
 
         // We should not crash here.
         mController.displayPreference(mScreen);
@@ -258,13 +243,12 @@ public class RecentAppsPreferenceControllerTest {
 
         // stat1, stat2 are not displayable
         when(mAppState.getEntry(stat1.mPackageName, UserHandle.myUserId()))
-            .thenReturn(mock(ApplicationsState.AppEntry.class));
+                .thenReturn(mock(ApplicationsState.AppEntry.class));
         when(mAppState.getEntry(stat2.mPackageName, UserHandle.myUserId()))
-            .thenReturn(mock(ApplicationsState.AppEntry.class));
+                .thenReturn(mock(ApplicationsState.AppEntry.class));
         when(mPackageManager.resolveActivity(any(Intent.class), anyInt()))
-            .thenReturn(new ResolveInfo());
-        when(mUsageStatsManager.queryUsageStats(anyInt(), anyLong(), anyLong()))
-            .thenReturn(stats);
+                .thenReturn(new ResolveInfo());
+        when(mUsageStatsManager.queryUsageStats(anyInt(), anyLong(), anyLong())).thenReturn(stats);
 
         mController.displayPreference(mScreen);
 
@@ -279,12 +263,10 @@ public class RecentAppsPreferenceControllerTest {
         final List<UsageStats> stats = new ArrayList<>();
         stats.add(stat1);
 
-        when(mAppState.getEntry(stat1.mPackageName, UserHandle.myUserId()))
-            .thenReturn(mAppEntry);
+        when(mAppState.getEntry(stat1.mPackageName, UserHandle.myUserId())).thenReturn(mAppEntry);
         when(mPackageManager.resolveActivity(any(Intent.class), anyInt()))
-            .thenReturn(new ResolveInfo());
-        when(mUsageStatsManager.queryUsageStats(anyInt(), anyLong(), anyLong()))
-            .thenReturn(stats);
+                .thenReturn(new ResolveInfo());
+        when(mUsageStatsManager.queryUsageStats(anyInt(), anyLong(), anyLong())).thenReturn(stats);
         mAppEntry.info = mApplicationInfo;
 
         mController.displayPreference(mScreen);
