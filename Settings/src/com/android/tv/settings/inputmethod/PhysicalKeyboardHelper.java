@@ -24,6 +24,8 @@ import android.hardware.input.InputManager;
 import android.hardware.input.KeyboardLayout;
 import android.text.TextUtils;
 import android.view.InputDevice;
+import android.view.inputmethod.InputMethodInfo;
+import android.view.inputmethod.InputMethodManager;
 
 import com.android.tv.settings.R;
 
@@ -45,7 +47,12 @@ public class PhysicalKeyboardHelper {
             @NonNull Context context) {
         final List<DeviceInfo> keyboards = new ArrayList<>();
         final InputManager im = context.getSystemService(InputManager.class);
-        if (im == null) {
+        final InputMethodManager imm = context.getSystemService(InputMethodManager.class);
+        if (im == null || imm == null) {
+            return new ArrayList<>();
+        }
+        final InputMethodInfo currentImeInfo = imm.getCurrentInputMethodInfo();
+        if (currentImeInfo == null) {
             return new ArrayList<>();
         }
         for (int deviceId : InputDevice.getDeviceIds()) {
@@ -54,7 +61,8 @@ public class PhysicalKeyboardHelper {
                 continue;
             }
             final String currentLayoutDesc =
-                    im.getCurrentKeyboardLayoutForInputDevice(device.getIdentifier());
+                    im.getKeyboardLayoutForInputDevice(device.getIdentifier(), context.getUserId(),
+                            currentImeInfo, /* imeSubtype= */ null).getLayoutDescriptor();
             keyboards.add(new DeviceInfo(device.getName(), device.getId(),
                     device.getIdentifier(), currentLayoutDesc,
                     getLayoutLabel(currentLayoutDesc, context, im)));
