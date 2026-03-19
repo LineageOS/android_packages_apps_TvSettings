@@ -54,86 +54,14 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
             EnergyModesHelper energyModesHelper = new EnergyModesHelper(getApplicationContext());
             EnergyMode energyMode = energyModesHelper.getEnergyMode(energyModeId);
 
-            boolean twoPanel = FlavorUtils.isTwoPanel(getApplicationContext());
-
-            if (!twoPanel) {
-                GuidedStepSupportFragment
-                        .addAsRoot(this, GuidedStepConfirmationFragment.newInstance(energyModeId),
-                                android.R.id.content);
-            } else {
-                setTheme(R.style.TvSettingsDialog_FullScreen);
-                FullScreenDialogConfirmationFragment dialogFragment =
-                        FullScreenDialogConfirmationFragment.newInstance(
-                                getApplicationContext(), energyMode);
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .add(android.R.id.content, dialogFragment)
-                        .commitAllowingStateLoss();
-            }
-        }
-    }
-
-    /** Fragment to confirm whether an energy mode should be set */
-    public static class GuidedStepConfirmationFragment extends SettingsGuidedStepFragment {
-
-        private EnergyModesHelper mEnergyModesHelper;
-        private EnergyMode mEnergyMode;
-
-        static GuidedStepConfirmationFragment newInstance(String energyModeId) {
-            Bundle args = new Bundle();
-            args.putString(EXTRA_ENERGY_MODE_ID, energyModeId);
-            GuidedStepConfirmationFragment fragment = new GuidedStepConfirmationFragment();
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        private EnergyMode getEnergyMode() {
-            if (mEnergyMode != null) {
-                return mEnergyMode;
-            }
-
-            String energyModeId = getArguments().getString(EXTRA_ENERGY_MODE_ID);
-            mEnergyModesHelper = new EnergyModesHelper(getContext());
-            mEnergyMode = mEnergyModesHelper.getEnergyMode(energyModeId);
-            return mEnergyMode;
-        }
-
-        @NonNull
-        @Override
-        public GuidanceStylist.Guidance onCreateGuidance(Bundle savedInstanceState) {
-            EnergyMode energyMode = getEnergyMode();
-            return new GuidanceStylist.Guidance(
-                    getString(R.string.energy_modes_confirmation_title,
-                            getString(energyMode.titleRes)),
-                    mEnergyModesHelper.getSummary(energyMode) + "\n\n"
-                            + getString(energyMode.ecoHintRes),
-                    /* breadcrumb= */ null,
-                    /* icon= */ null);
-        }
-
-        @Override
-        public void onCreateActions(@NonNull List<GuidedAction> actions,
-                Bundle savedInstanceState) {
-            actions.add(new GuidedAction.Builder(getContext())
-                    .clickAction(GuidedAction.ACTION_ID_OK)
-                    .title(getString(R.string.settings_confirm))
-                    .build());
-            actions.add(new GuidedAction.Builder(getContext())
-                    .clickAction(GuidedAction.ACTION_ID_CANCEL)
-                    .build());
-        }
-
-        @Override
-        public void onGuidedActionClicked(GuidedAction action) {
-            if (action.getId() == GuidedAction.ACTION_ID_OK) {
-                mEnergyModesHelper.setEnergyMode(mEnergyMode);
-            }
-            getActivity().finish();
-        }
-
-        @Override
-        public GuidanceStylist onCreateGuidanceStylist() {
-            return GuidedActionsAlignUtil.createGuidanceStylist();
+            setTheme(R.style.TvSettingsDialog_FullScreen);
+            FullScreenDialogConfirmationFragment dialogFragment =
+                    FullScreenDialogConfirmationFragment.newInstance(
+                            getApplicationContext(), energyMode);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(android.R.id.content, dialogFragment)
+                    .commitAllowingStateLoss();
         }
     }
 
@@ -163,6 +91,11 @@ public class EnergyModeConfirmationActivity extends FragmentActivity {
                     new FullScreenDialogConfirmationFragment();
             fragment.setArguments(args);
             return fragment;
+        }
+
+        @Override
+        protected int getLayoutResId() {
+            return R.layout.energy_modes_full_screen_dialog;
         }
 
         @Override
