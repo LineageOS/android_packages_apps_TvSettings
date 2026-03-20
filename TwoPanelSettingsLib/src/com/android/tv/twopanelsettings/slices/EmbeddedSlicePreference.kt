@@ -16,6 +16,7 @@
 package com.android.tv.twopanelsettings.slices
 
 import android.content.Context
+import android.text.TextUtils
 import android.util.AttributeSet
 import androidx.annotation.VisibleForTesting
 
@@ -103,6 +104,10 @@ open class EmbeddedSlicePreference : SlicePreference,
         }
         if (mHelper != null && mHelper?.mNewPref != null && mHelper?.mNewPref is HasSliceUri) {
             return (mHelper?.mNewPref as HasSliceUri).uri
+        }
+        var uri = super.getUri()
+        if(!TextUtils.isEmpty(uri)){
+            return uri
         }
         return null
     }
