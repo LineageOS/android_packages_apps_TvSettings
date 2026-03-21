@@ -116,13 +116,17 @@ public class FullScreenDialogFragment extends Fragment {
     }
   }
 
+  protected int getLayoutResId() {
+    return R.layout.tp_full_screen_dialog;
+  }
+
   @Override
   public View onCreateView(
       LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     LayoutInflater themedInflater =
         inflater.cloneInContext(
             new ContextThemeWrapper(inflater.getContext(), R.style.TvSettingsDialog_FullScreen));
-    View view = themedInflater.inflate(R.layout.tp_full_screen_dialog, container, false);
+    View view = themedInflater.inflate(getLayoutResId(), container, false);
 
     ImageView iconView = view.findViewById(R.id.dialog_icon);
     TextView titleView = view.findViewById(R.id.dialog_title);
@@ -212,12 +216,14 @@ public class FullScreenDialogFragment extends Fragment {
                   // ScrollView is focusable by default (regardless of XML
                   // value), so we have to set Scrollview to not be focusable
                   // if it's not tall enough
-                  ScrollView scrollView = activity.requireViewById(R.id.dialog_message_scroll_view);
-                  boolean isScrollable =
-                      scrollView.canScrollVertically(/* direction= */ 1)
-                          || scrollView.canScrollVertically(/* direction= */ -1);
-                  if (!isScrollable) {
-                    scrollView.setFocusable(false);
+                  ScrollView scrollView = activity.findViewById(R.id.dialog_message_scroll_view);
+                  if (scrollView != null) {
+                    boolean isScrollable =
+                        scrollView.canScrollVertically(/* direction= */ 1)
+                            || scrollView.canScrollVertically(/* direction= */ -1);
+                    if (!isScrollable) {
+                      scrollView.setFocusable(false);
+                    }
                   }
                   rootView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 }
