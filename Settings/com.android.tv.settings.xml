@@ -20,7 +20,6 @@
         <permission name="android.permission.BACKUP"/>
         <permission name="android.permission.BLUETOOTH_CONNECT"/>
         <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
-        <permission name="android.permission.CONTROL_TV_WATCHDOG_CONFIG"/>
         <permission name="android.permission.DELETE_CACHE_FILES"/>
         <permission name="android.permission.DUMP"/>
         <permission name="android.permission.FORCE_STOP_PACKAGES"/>
@@ -38,5 +37,6 @@
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.SET_UNRESTRICTED_KEEP_CLEAR_AREAS"/>
         <permission name="android.permission.THREAD_NETWORK_PRIVILEGED"/>
+        <permission name="com.android.tv.permission.CONTROL_TV_WATCHDOG_CONFIG" />
     </privapp-permissions>
 </permissions>
