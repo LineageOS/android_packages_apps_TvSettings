@@ -122,7 +122,7 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
         mCurrentDeviceName = DeviceUtils.getDeviceName(context)
         updateVolumeChangePreference()
 
-        val display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY)
+        /*val display = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY)
         if (display.systemPreferredDisplayMode != null) {
             mDisplayManager.registerDisplayListener(this, null)
             mCurrentMode = mDisplayManager.globalUserPreferredDisplayMode
@@ -130,7 +130,7 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
                 mCurrentMode, context))
         } else {
             removePreference(findPreference(KEY_RESOLUTION_TITLE))
-        }
+        }*/
         val dynamicRangePreference = findPreference<SwitchPreference>(KEY_DYNAMIC_RANGE)
         if (mDisplayManager.supportedHdrOutputTypes.isEmpty()) {
             removePreference(dynamicRangePreference)
