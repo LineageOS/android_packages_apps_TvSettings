@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="system_reboot_confirm_cm">دووبارە کارپێکردنەوە بۆ:</string>
+    <string name="global_action_restart_system">سیستم</string>
+    <string name="global_action_restart_recovery">ڕیکۆڤەری (Recovery)</string>
+    <string name="global_action_restart_bootloader">بووتلۆدەر (Bootloader)</string>
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">تەنها %1$d هەنگاوت ماوە بۆ چالاککردنی هەڵبژاردنەکانی گەشەپێدەر.</item>
+        <item quantity="other">تەنها %1$d هەنگاوت ماوە بۆ چالاککردنی هەڵبژاردنەکانی گەشەپێدەر.</item>
+    </plurals>
+    <string name="show_dev_on_cm">هەڵبژاردنەکانی گەشەپێدەرت چالاک کرد!</string>
+    <string name="show_dev_already_cm">پێویست ناکات، هەڵبژاردنەکانی گەشەپێدەر پێشتر چالاک کراوە.</string>
+    <string name="system_buttons">دوگمەکان</string>
+    <string name="power_button_long_press_action_title">کرداری داگرتنی درێژی دوگمەی پێکردن</string>
+    <string name="power_button_long_press_for_power_menu_action">کردنەوەی پێڕستی پێکردن</string>
+    <string name="power_button_long_press_for_assistant_action">کردنەوەی یاریدەدەر (Assistant)</string>
+    <string name="inputs_volume_control_enabled">کۆنتڕۆڵکردنی دەنگی CEC</string>
+    <string name="inputs_volume_control_enabled_desc">کۆنتڕۆڵکردنی دەنگی TV/AVR لە جیاتی دەنگی ناوخۆیی</string>
+    <string name="enable_adb_root">دیباگکردنی ڕووت (Rooted debugging)</string>
+    <string name="enable_adb_root_summary">ڕێگەدان بە کارپێکردنی دیباگی ئەندرۆید وەک ڕووت</string>
+    <string name="advanced_restart_title">دووبارە کارپێکردنەوەی پێشکەوتوو</string>
+    <string name="advanced_restart_summary">نیشاندانی هەڵبژاردنەکان بۆ چوونە ناو ڕیکۆڤەری، بووتلۆدەر یان دووبارە کارپێکردنەوەی سۆفت</string>
+    <string name="adb_over_network">ADB لە ڕێگەی تۆڕەوە</string>
+    <string name="adb_over_network_summary">چالاککردنی دیباگی TCP/IP لە ڕێگەی تۆڕەوە (Wi-Fi، تۆڕەکانی USB). ئەم ڕێکخستنە دوای دووبارە کارپێکردنەوە دەسڕێتەوە.</string>
+    <string name="adb_over_network_warning">ئاگاداری: کاتێک ADB لە ڕێگەی تۆڕەوە چالاکە، مۆبایلەکەت کراوەیە بۆ هێرشی ئەلیکترۆنی لە هەموو ئەو تۆڕانەی لێی بەستراویت!\n\nتەنها کاتێک ئەمە بەکاربهێنە کە بە تۆڕە جێگەی بڕواکانەوە بەستراویت.\n\nبە ڕاستی دەتەوێت ئەم تایبەتمەندییە چالاک بکەیت؟</string>
+    <string name="trust_category_features">بارودۆخ</string>
+    <string name="trust_feature_selinux">سیستمی SELinux</string>
+    <string name="trust_feature_selinux_value_enforcing">سەپێنراو (Enforcing)</string>
+    <string name="trust_feature_selinux_value_disabled">ناچالاک</string>
+    <string name="trust_feature_selinux_explain">سیستمی SELinux دیاری دەکات کام پڕۆسە دەستی بگات بە کام فایل و ڕێڕەو لە ئامێرەکەدا.\nئەمە ڕێگری دەکات لە ئەپ و خزمەتگوزارییەکان کە دەستیان بگات بەو فایلانەی بۆیان نییە: بەم شێوەیە پڕۆسە زیانبەخشەکان سنووردار دەکرێن و ئاسایشی مۆبایلەکەت دەپارێزرێت.</string>
+    <string name="trust_feature_security_patches">پارچە نوێکارییە ئەمنییەکانی ئەندرۆید</string>
+    <string name="trust_feature_security_patches_value_base">پلاتفۆرم: %1$s\nوەبەرهێنەر: %2$s</string>
+    <string name="trust_feature_security_patches_value_new">نوێیە</string>
+    <string name="trust_feature_security_patches_value_medium">چەند مانگێک کۆنە</string>
+    <string name="trust_feature_security_patches_value_old">کۆن بووە</string>
+    <string name="trust_feature_security_patches_explain">پارچە نوێکارییە ئەمنییەکان مانگانە لەلایەن گووگڵەوە بە هاوکاری کۆمپانیاکانی دروستکەری پارچەکان بڵاودەکرێنەوە بۆ چارەسەرکردنی ئەو کێشانەی کە ڕەنگە ئەپە زیانبەخشەکان بەکاریبهێنن بۆ تێپەڕاندنی ئاستەنگە ئەمنییەکان. بۆ پاراستنی ئامێرەکەت، دڵنیابە هەمیشە وەشانی LineageOS مۆبایلەکەت نوێیە.</string>
+    <string name="trust_feature_encryption">کۆدکردن (Encryption)</string>
+    <string name="trust_feature_encryption_value_enabled">چالاکە</string>
+    <string name="trust_feature_encryption_value_nolock">پێویستی بە ڕوونمای قوفڵی پارێزراو هەیە</string>
+    <string name="trust_feature_encryption_value_disabled">ناچالاکە</string>
+    <string name="trust_feature_encryption_explain">کۆدکردنی ئامێرەکەت ڕێگری دەکات لە دەستگەیشتن بە زانیارییەکانت کاتێک مۆبایلەکەت نەچووەتە ناو سیستمی ئەندرۆید. ئەمە زۆر گرنگە ئەگەر مۆبایلەکەت بدزرێت، چونکە ڕێگری دەکات لە کەسانی تر کە نامە، ناوەکان و زانیارییە تایبەتەکانت بخوێننەوە بەبێ وشەی نهێنی.</string>
+    <string name="trust_category_tools">تایبەتمەندی</string>
+    <string name="trust_notification_alerts_title">ئاگادارکەرەوە ئەمنییەکان</string>
+    <string name="trust_restrict_usb_title">سنووردارکردنی USB</string>
+    <string name="trust_restrict_usb_summary">کۆنتڕۆڵکردنی پشتگیری بۆ پەیوەندییەکانی USB وەک گوێگر، ئامێرەکانی هەڵگرتنی زانیاری، ماوس، تەختەکلیل و ADB</string>
+    <string name="trust_restrict_usb_always">ڕەتکردنەوەی پەیوەندییەکانی USB</string>
+    <string name="trust_restrict_usb_disabled">هەمیشە ڕێگە بە پەیوەندییەکانی USB بدە</string>
+    <string name="trust_onboarding_description">بەشی Trust یارمەتیت دەدات لە پاراستنی ئامێرەکەت و پاراستنی تایبەتمەندییەکانت.\nوێنۆچکەی Trust تەنها کاتێک دەردەکەوێت کە ناوەڕۆکی لاپەڕەکە پشکنراو بێت.</string>
+    <string name="trust_warnings_alerts_intro">دەتوانیت ئەو کێشە ئەمنییەکان هەڵبژێریت کە دەتەوێت ئاگادارییان بیت. بۆ سەلامەتیت، پێشنیار دەکرێت هەموو ئاگادارکەرەوەکان چالاک بکەیت.</string>
+    <string name="trust_warnings_selinux">بارودۆخی SELinux</string>
+    <string name="trust_warnings_keys">ئیمزای وەشان (Build signature)</string>
+    <string name="sleep_button_label">خەواندن</string>
+    <string name="system_sleep_confirm">ئێستا بخرێتە دۆخی خەوتن؟</string>
+    <string name="shutdown_button_label">کوژاندنەوە</string>
+    <string name="system_shutdown_confirm">ئێستا بکوژێندرێتەوە؟</string>
+    <string name="convertible_port_busy_title">دەرچەی USB 1 خەریکە</string>
+    <string name="convertible_port_busy_warning">هەموو ئامێرەکان لێ بکەرەوە و دووبارە هەوڵ بدەرەوە</string>
+    <string name="mtp_enable_title">دەستگەیشتن بە فۆڵدەرەکانی SHIELD لە کۆمپیوتەرەوە</string>
+    <string name="mtp_enable_warning">دەرچەی USB 1 ئێستا ڕێکخراوە بۆ ئەوەی وەک ئامێرێکی میدیا ببەسترێت بە کۆمپیوتەرەوە.\n\nلەم دۆخەدا دەرچەکە ئامێری هەڵگرتن یان ئێکسسوارات ناناسێتەوە و بۆ بارگاویکردن بەکارنایەت.</string>
+    <string name="mtp_retry_error">سەرکەوتوو نەبوو. تکایە دووبارە هەوڵ بدەرەوە.</string>
+    <string name="mtp_summary">لەم دۆخەدا، دەرچەی USB بۆ مەبەستی تر کار ناکات</string>
+    <string name="mtp_title">گواستنەوەی فایلەکان بۆ کۆمپیوتەر بە USB</string>
+    <string name="mtp_unexpected_error">هەڵەیەکی چاوەڕواننەکراو. تکایە دواتر هەوڵ بدەرەوە.</string>
+    <string name="usb_debugging_enable_title">دیباگی USB چالاک کرا</string>
+    <string name="usb_debugging_enable_warning">دەرچەی USB 1 ئێستا بۆ دیباگکردن و پەیوەندیی کۆمپیوتەر ڕێکخراوە.</string>
+</resources>
