@@ -26,6 +26,7 @@ import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcast
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTION_TOGGLE_CHANGED;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.ACTIVE_AUDIO_OUTPUT;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.BLUETOOTH_ON;
+import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.DISCONNECT_BT_ON_SLEEP;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.EXTRA_TOGGLE_STATE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceBroadcastReceiver.EXTRA_TOGGLE_TYPE;
 import static com.android.tv.settings.accessories.ConnectedDevicesSliceUtils.EXTRAS_SLICE_URI;
@@ -138,6 +139,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
     static final String KEY_EXTRAS_DEVICE = "extra_devices";
     static final String KEY_BLUETOOTH_DEVICE_INFO = "bluetooth_device_info";
     static final String KEY_FIND_MY_REMOTE_TOGGLE = "fmr_toggle";
+    static final String KEY_DISCONNECT_BT_ON_SLEEP_TOGGLE = "disconnect_bt_on_sleep_toggle";
     static final String KEY_TOGGLE_ACTIVE_AUDIO_OUTPUT = "toggle_active_audio_output";
     static final String KEY_BACKLIGHT_RADIO_GROUP = "backlight_radio_group";
 
@@ -248,6 +250,7 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
         updateOfficialRemoteSettings(psb);
         updateFmr(psb);
         updateBacklight(psb);
+        updateDisconnectBtOnSleep(psb);
         return psb.buildForSettings();
     }
 
@@ -566,6 +569,23 @@ public class ConnectedDevicesSliceProvider extends SliceProvider implements
                 .setTitle(getString(R.string.settings_find_my_remote_title))
                 .setSubtitle(getString(R.string.settings_find_my_remote_description))
                 .setTargetSliceUri(ConnectedDevicesSliceUtils.FIND_MY_REMOTE_SLICE_URI.toString()));
+    }
+
+    private void updateDisconnectBtOnSleep(PreferenceSliceBuilder psb) {
+        Context context = getContext();
+        if (!context.getResources().getBoolean(R.bool.config_show_disconnect_bt_on_sleep)) {
+            return;
+        }
+        boolean isEnabled = ConnectedDevicesSliceUtils.isDisconnectBtOnSleepEnabled(context);
+        Intent intent = new Intent(ACTION_TOGGLE_CHANGED)
+                .setClass(context, ConnectedDevicesSliceBroadcastReceiver.class)
+                .putExtra(EXTRA_TOGGLE_TYPE, DISCONNECT_BT_ON_SLEEP)
+                .putExtra(EXTRA_TOGGLE_STATE, !isEnabled);
+        psb.addPreference(new RowBuilder()
+                .setKey(KEY_DISCONNECT_BT_ON_SLEEP_TOGGLE)
+                .setTitle(getString(R.string.disconnect_bt_on_sleep_title))
+                .setSubtitle(getString(R.string.disconnect_bt_on_sleep_summary))
+                .addSwitch(intent, isEnabled));
     }
 
     private void updateBacklight(PreferenceSliceBuilder psb) {

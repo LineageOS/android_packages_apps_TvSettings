@@ -55,6 +55,7 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
     // Bluetooth off is handled differently by ResponseActivity with confirmation dialog.
     static final String BLUETOOTH_ON = "BLUETOOTH_ON";
     static final String ACTIVE_AUDIO_OUTPUT = "ACTIVE_AUDIO_OUTPUT";
+    static final String DISCONNECT_BT_ON_SLEEP = "DISCONNECT_BT_ON_SLEEP";
 
     static final String BACKLIGHT_MODE = "BACKLIGHT_MODE";
     static final String ACTION_BACKLIGHT = "com.google.android.tv.BACKLIGHT";
@@ -87,6 +88,11 @@ public class ConnectedDevicesSliceBroadcastReceiver extends BroadcastReceiver {
                         setFindMyRemoteButtonEnabled(context, isChecked);
                         context.getContentResolver().notifyChange(
                                 ConnectedDevicesSliceUtils.FIND_MY_REMOTE_SLICE_URI, null);
+                    }
+                    case DISCONNECT_BT_ON_SLEEP -> {
+                        ConnectedDevicesSliceUtils.setDisconnectBtOnSleepEnabled(context, isChecked);
+                        context.getContentResolver().notifyChange(
+                                ConnectedDevicesSliceUtils.GENERAL_SLICE_URI, null);
                     }
                 }
             }

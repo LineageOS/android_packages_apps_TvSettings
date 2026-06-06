@@ -54,6 +54,14 @@ public final class ConnectedDevicesSliceUtils {
             "find_my_remote_physical_button_enabled";
 
     /**
+     * The {@link Settings.Global} integer setting controlling whether connected Bluetooth
+     * HID accessories (controllers/remotes) are disconnected when the device sleeps.
+     * Default value: 0 (off).
+     */
+    static final String DISCONNECT_BT_ON_SLEEP_SETTING =
+            "bluetooth_disconnect_on_sleep";
+
+    /**
      * The {@link Settings.Global} integer setting name.
      *
      * <p>The settings saves the selection for Backlight feature
@@ -140,6 +148,17 @@ public final class ConnectedDevicesSliceUtils {
     static void setFindMyRemoteButtonEnabled(Context context, boolean enabled) {
         Settings.Global.putInt(context.getContentResolver(),
                 FIND_MY_REMOTE_PHYSICAL_BUTTON_ENABLED_SETTING,
+                enabled ? 1 : 0);
+    }
+
+    public static boolean isDisconnectBtOnSleepEnabled(Context context) {
+        return Settings.Global.getInt(context.getContentResolver(),
+                DISCONNECT_BT_ON_SLEEP_SETTING, 0) != 0;
+    }
+
+    static void setDisconnectBtOnSleepEnabled(Context context, boolean enabled) {
+        Settings.Global.putInt(context.getContentResolver(),
+                DISCONNECT_BT_ON_SLEEP_SETTING,
                 enabled ? 1 : 0);
     }
 

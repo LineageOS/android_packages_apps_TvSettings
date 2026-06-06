@@ -20,4 +20,8 @@
 
     <!-- Determines whether display settings should show frame rate configs. -->
     <bool name="enable_framerate_config">true</bool>
+
+    <!-- Whether to show the "disconnect Bluetooth accessories on standby" toggle
+         under Remotes & Accessories. Enabled per-device (e.g. Android TV). -->
+    <bool name="config_show_disconnect_bt_on_sleep">false</bool>
 </resources>
