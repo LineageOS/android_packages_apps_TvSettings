@@ -16,8 +16,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="system_reboot_confirm_cm">دووبارە کارپێکردنەوە بۆ:</string>
     <string name="global_action_restart_system">سیستم</string>
-    <string name="global_action_restart_recovery">ڕیکۆڤەری (Recovery)</string>
-    <string name="global_action_restart_bootloader">بووتلۆدەر (Bootloader)</string>
+    <string name="global_action_restart_recovery">Recovery</string>
+    <string name="global_action_restart_bootloader">Bootloader</string>
     <plurals name="show_dev_countdown_cm">
         <item quantity="one">تەنها %1$d هەنگاوت ماوە بۆ چالاککردنی هەڵبژاردنەکانی گەشەپێدەر.</item>
         <item quantity="other">تەنها %1$d هەنگاوت ماوە بۆ چالاککردنی هەڵبژاردنەکانی گەشەپێدەر.</item>
@@ -30,10 +30,10 @@
     <string name="power_button_long_press_for_assistant_action">کردنەوەی یاریدەدەر (Assistant)</string>
     <string name="inputs_volume_control_enabled">کۆنتڕۆڵکردنی دەنگی CEC</string>
     <string name="inputs_volume_control_enabled_desc">کۆنتڕۆڵکردنی دەنگی TV/AVR لە جیاتی دەنگی ناوخۆیی</string>
-    <string name="enable_adb_root">دیباگکردنی ڕووت (Rooted debugging)</string>
-    <string name="enable_adb_root_summary">ڕێگەدان بە کارپێکردنی دیباگی ئەندرۆید وەک ڕووت</string>
+    <string name="enable_adb_root">هەڵەدۆزیی Root</string>
+    <string name="enable_adb_root_summary">ڕێگەدان بە کارپێکردنی هەڵەدۆزیی ئەندرۆید وەک root</string>
     <string name="advanced_restart_title">دووبارە کارپێکردنەوەی پێشکەوتوو</string>
-    <string name="advanced_restart_summary">نیشاندانی هەڵبژاردنەکان بۆ چوونە ناو ڕیکۆڤەری، بووتلۆدەر یان دووبارە کارپێکردنەوەی سۆفت</string>
+    <string name="advanced_restart_summary">نیشاندانی هەڵبژاردنەکان بۆ چوونە ناو Recovery، Bootloader یان دووبارە کارپێکردنەوەی سۆفت</string>
     <string name="adb_over_network">ADB لە ڕێگەی تۆڕەوە</string>
     <string name="adb_over_network_summary">چالاککردنی دیباگی TCP/IP لە ڕێگەی تۆڕەوە (Wi-Fi، تۆڕەکانی USB). ئەم ڕێکخستنە دوای دووبارە کارپێکردنەوە دەسڕێتەوە.</string>
     <string name="adb_over_network_warning">ئاگاداری: کاتێک ADB لە ڕێگەی تۆڕەوە چالاکە، مۆبایلەکەت کراوەیە بۆ هێرشی ئەلیکترۆنی لە هەموو ئەو تۆڕانەی لێی بەستراویت!\n\nتەنها کاتێک ئەمە بەکاربهێنە کە بە تۆڕە جێگەی بڕواکانەوە بەستراویت.\n\nبە ڕاستی دەتەوێت ئەم تایبەتمەندییە چالاک بکەیت؟</string>
@@ -63,7 +63,7 @@
     <string name="trust_warnings_alerts_intro">دەتوانیت ئەو کێشە ئەمنییەکان هەڵبژێریت کە دەتەوێت ئاگادارییان بیت. بۆ سەلامەتیت، پێشنیار دەکرێت هەموو ئاگادارکەرەوەکان چالاک بکەیت.</string>
     <string name="trust_warnings_selinux">بارودۆخی SELinux</string>
     <string name="trust_warnings_keys">ئیمزای وەشان (Build signature)</string>
-    <string name="sleep_button_label">خەواندن</string>
+    <string name="sleep_button_label">دواخستن</string>
     <string name="system_sleep_confirm">ئێستا بخرێتە دۆخی خەوتن؟</string>
     <string name="shutdown_button_label">کوژاندنەوە</string>
     <string name="system_shutdown_confirm">ئێستا بکوژێندرێتەوە؟</string>
