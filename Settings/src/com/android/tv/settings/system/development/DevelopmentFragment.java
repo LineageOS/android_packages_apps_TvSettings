@@ -21,7 +21,7 @@ import static android.view.CrossWindowBlurListeners.CROSS_WINDOW_BLUR_SUPPORTED;
 import static com.android.tv.settings.overlay.FlavorUtils.X_EXPERIENCE_FLAVORS_MASK;
 
 import android.Manifest;
-import android.adb.ADBRootService;
+import android.adb.AdbRootService;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AppOpsManager;
@@ -222,7 +222,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
     private boolean mLastEnabledState;
     private boolean mHaveDebugSettings;
 
-    private ADBRootService mADBRootService;
+    private AdbRootService mAdbRootService;
 
     private TwoStatePreference mEnableDeveloper;
     private TwoStatePreference mEnableAdb;
@@ -356,7 +356,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 false,
                 mToggleContentObserver);
 
-        mADBRootService = new ADBRootService();
+        mAdbRootService = new AdbRootService();
 
         super.onCreate(icicle);
     }
@@ -470,7 +470,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
             disableForUser(mPassword);
         }
 
-        if (!mADBRootService.isSupported() || !mUm.isAdminUser()) {
+        if (!mAdbRootService.isSupported() || !mUm.isAdminUser()) {
             disableForUser(mEnableAdbRoot);
         }
 
@@ -761,7 +761,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
         mHaveDebugSettings = false;
         updateSwitchPreference(mEnableAdb, Settings.Global.getInt(cr,
                 Settings.Global.ADB_ENABLED, 0) != 0);
-        updateSwitchPreference(mEnableAdbRoot, mADBRootService.getEnabled());
+        updateSwitchPreference(mEnableAdbRoot, mAdbRootService.getEnabled());
         if (mEnableTerminal != null) {
             updateSwitchPreference(mEnableTerminal,
                     context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
@@ -1810,7 +1810,7 @@ public class DevelopmentFragment extends SettingsPreferenceFragment
                 mVerifyAppsOverUsb.setChecked(false);
             }
         } else if (preference == mEnableAdbRoot) {
-            mADBRootService.setEnabled(mEnableAdbRoot.isChecked());
+            mAdbRootService.setEnabled(mEnableAdbRoot.isChecked());
         } else if (preference == mAdbOverNetwork) {
             SystemProperties.set(ADB_PORT_PROP, mAdbOverNetwork.isChecked() ? "5555" : "-1");
             updateAdbOverNetwork();
