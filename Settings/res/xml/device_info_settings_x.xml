@@ -104,6 +104,11 @@
         android:title="@string/fcc_equipment_id"
         android:summary="@string/device_info_default"/>
 
+    <!-- LineageOS version -->
+    <Preference android:key="lineage_version"
+        android:title="@*lineageos.platform:string/lineage_version"
+        android:summary="@string/device_info_default"/>
+
     <!-- Device Baseband version -->
     <Preference android:key="baseband_version"
         android:title="@string/baseband_version"
@@ -112,6 +117,11 @@
     <!-- Device Kernel version -->
     <Preference android:key="kernel_version"
         android:title="@string/kernel_version"
+        android:summary="@string/device_info_default"/>
+
+    <!-- Device Build date -->
+    <Preference android:key="build_date"
+        android:title="@*lineageos.platform:string/build_date"
         android:summary="@string/device_info_default"/>
 
     <!-- Detailed build version -->
