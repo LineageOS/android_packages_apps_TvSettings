@@ -21,7 +21,6 @@
     <plurals name="show_dev_countdown_cm">
         <item quantity="one">רק עוד צעד אחד מהפעלת אפשרויות מפתח.</item>
         <item quantity="two">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
-        <item quantity="many">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
         <item quantity="other">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
     </plurals>
     <string name="show_dev_on_cm">הפעלת כבר את הגדרות למפתחים!</string>
@@ -43,25 +42,25 @@
     <string name="trust_feature_selinux">SELinux</string>
     <string name="trust_feature_selinux_value_enforcing">אכיפה</string>
     <string name="trust_feature_selinux_value_disabled">מושבת</string>
-    <string name="trust_feature_selinux_explain">SELinux מכתיב לאילו תהליכים יש גישה לקבצים/נתיבים שונים בהתקן שלך.\nזה מונע מיישומים ומשירותים לגשת אל קבצים שהם לא אמורים לגשת אליהם: בדרך זו תהליכים זדוניים מוגבלים והאבטחת שלך נשמרת.</string>
+    <string name="trust_feature_selinux_explain">SELinux מכתיב לאילו תהליכים יש גישה לקבצים/נתיבים שונים במכשירך.\nזה מונע מיישומים ומשירותים לגשת אל קבצים שהם לא אמורים לגשת אליהם: בדרך זו תהליכים זדוניים מוגבלים והאבטחת שלך נשמרת.</string>
     <string name="trust_feature_security_patches">תיקוני אבטחה לאנדרואיד</string>
     <string name="trust_feature_security_patches_value_base">פלטפורמה: %1$s\nיצרן: %2$s</string>
     <string name="trust_feature_security_patches_value_new">עדכני</string>
     <string name="trust_feature_security_patches_value_medium">לא עדכני כבר כמה חודשים</string>
     <string name="trust_feature_security_patches_value_old">לא עדכני</string>
-    <string name="trust_feature_security_patches_explain">עדכוני אבטחה מתפרסמים מדי חודש על־ידי Google בשיתוף פעולה עם יצרני מערכות על־שבב על מנת לפתור פגמים שיכולים להיות מנוצלים על ידי יישומים זדוניים במטרה לעקוף מגבלות אבטחה ולגרום נזק קבוע להתקן שלך. העדכונים המוצעים על־ידי Google מוחלים על כל ההתקנים התומכים, אך עדכונים לקוד קנייני ניתנים להשמה אך ורק על־ידי יצרן ההתקן שלך. על־מנת לשמור על בטיחות התקנך, יש לוודא כי גרסת LineageOS שברשותך תמיד עדכנית, וכמו כן יש לוודא כי תמונת המערכת של היצרן מעודכנת לגרסה האחרונה כפי שהומלץ על־ידי LineageOS.</string>
+    <string name="trust_feature_security_patches_explain">עדכוני אבטחה מתפרסמים מדי חודש על ידי Google בשיתוף פעולה עם יצרני מערכות על שבב על מנת לפתור פגמים שיכולים להיות מנוצלים על ידי יישומים זדוניים במטרה לעקוף מגבלות אבטחה ולגרום נזק קבוע למכשירך. העדכונים המוצעים על ידי Google מוחלים על כל ההתקנים התומכים, אך עדכונים לקוד קנייני ניתנים להשמה אך ורק על ידי יצרן המכשיר שלך. על מנת לשמור על אבטחת מכשירך, יש לוודא כי גרסת LineageOS שברשותך תמיד עדכנית, וכמו כן (במידה ונדרש)  יש לוודא כי תמונת המערכת של היצרן מעודכנת לגרסה האחרונה המומלצת על די LineageOS.</string>
     <string name="trust_feature_encryption">הצפנה</string>
     <string name="trust_feature_encryption_value_enabled">מופעל</string>
     <string name="trust_feature_encryption_value_nolock">נדרשת נעילת מסך מאובטחת</string>
     <string name="trust_feature_encryption_value_disabled">מושבת</string>
-    <string name="trust_feature_encryption_explain">הצפנת ההתקן שלך מונעת גישה לנתונים שלך כאשר הטלפון אינו מופעל לתוך מערכת האנדרואיד. זה חשוב במיוחד במקרה שהטלפון נגנב, שכן ההצפנה מונעת מאנשים לקרוא את ההודעות, אנשי הקשר ומידע אישי אחר ללא הסיסמה שלך.\nכדי להפוך את ההצפנה ליעילה יותר, יש להגדיר סיסמה מאובטחת למסך הנעילה.</string>
+    <string name="trust_feature_encryption_explain">הצפנת מכשירך מונעת גישה למידע שלך כאשר האנדרואיד לא אותחל בטלפון שלך. זה חשוב במיוחד במקרה שהטלפון שלך נגנב, מכיוון שהוא מונע מאנשים לקרוא את ההודעות שלך, אנשי הקשר, ומידע אישי נוסף ללא הסיסמה שלך.\nכדי להפוך את ההצפנה ליעילה יותר, יש להגדיר סיסמת מסך נעילה מאובטחת.</string>
     <string name="trust_category_tools">פרטיות</string>
     <string name="trust_notification_alerts_title">התראות אבטחה</string>
     <string name="trust_restrict_usb_title">הגבלת USB</string>
     <string name="trust_restrict_usb_summary">שליטה בתמיכה בחיבורים דרך USB, כגון אוזניות, התקני אחסון, התקני קלט (עכברים, מקלדות, ג\'ויסטיקים) ו-ADB</string>
     <string name="trust_restrict_usb_always">מניעת חיבורי USB</string>
     <string name="trust_restrict_usb_disabled">אפשר חיבורי USB תמיד</string>
-    <string name="trust_onboarding_description">Trust מסייע לשמור על אבטחת ההתקן ולהגן על פרטיותך.\nסמליל Trust יוצג רק כאשר תוכן הדף אומת.</string>
+    <string name="trust_onboarding_description">Trust מסייע לשמור על אבטחת מכשירך ולהגן על פרטיותך.\nסמליל Trust יוצג רק כאשר תוכן הדף אומת.</string>
     <string name="trust_warnings_alerts_intro">באפשרותך לבחור בעיות האבטחה שיקפיצו התראות. למען בטיחותך, מומלץ להפעיל את כל ההתראות.</string>
     <string name="trust_warnings_selinux">מצב SELinux</string>
     <string name="trust_warnings_keys">חתימת בניה</string>
