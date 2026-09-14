@@ -95,8 +95,12 @@ class DisplaySoundFragment : SettingsPreferenceFragment(), DisplayManager.Displa
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View {
-        maybeConfigurePreferences()
         return checkNotNull(super.onCreateView(inflater, container, savedInstanceState))
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        maybeConfigurePreferences()
     }
 
     override fun onSlice(slice: Slice?) {
