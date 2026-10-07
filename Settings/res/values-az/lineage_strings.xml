@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Tərtibatçı ayarlarını fəallaşdırmağa <xliff:g id="step_count">%1$d</xliff:g> addım qalıb</item>
+        <item quantity="other">Tərtibatçı ayarlarını fəallaşdırmağa <xliff:g id="step_count">%1$d</xliff:g> addım qalıb</item>
+    </plurals>
+    <string name="show_dev_on_cm">Tərtibatçı ayarlarını fəallaşdırdınız!</string>
+    <string name="show_dev_already_cm">Artıq tərtibatçı ayarlarını fəallaşdırmısınız.</string>
+    <string name="enable_adb_root">Rootlu sazlama</string>
+    <string name="enable_adb_root_summary">Android sazlamanın rootlu olaraq işləməsinə icazə ver</string>
+    <string name="adb_over_network">Şəbəkə üzərindən ADB</string>
+    <string name="adb_over_network_summary">Şəbəkə interfeysləri (Wi\u2011Fi, USB şəbəkələri) üzərindən TCP/IP sazlamanı fəallaşdır. Bu ayar yenidən başladılanda sıfırlanır</string>
+    <string name="adb_over_network_warning">XƏBƏRDARLIQ: Şəbəkə üzərindən ADB fəal olduğu halda, telefonunuz bütün bağlantı qurulmuş şəbəkələrdə müdaxilələrə açıqdır!\n\nBu funksiya yalnız etibarlı şəbəkələrə bağlı olduğunuz zaman istifadə edin.\n\nHəqiqətən də bu özəliyi fəallaşdırmaq istəyirsiniz?</string>
+    <string name="system_buttons">Düymәlәr</string>
+    <string name="power_button_long_press_action_title">Güc düyməsinə uzun basma hərəkəti</string>
+    <string name="power_button_long_press_for_power_menu_action">Güc menyusuna erişim</string>
+    <string name="power_button_long_press_for_assistant_action">Köməkçini aç</string>
+    <string name="inputs_volume_control_enabled">CEC Səs Kontrolu</string>
+    <string name="inputs_volume_control_enabled_desc">Daxili səsin əvəzinə TV/AVR səsini idarə et</string>
+</resources>

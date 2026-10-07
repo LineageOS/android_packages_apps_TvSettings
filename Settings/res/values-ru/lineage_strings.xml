@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Нажмите еще <xliff:g id="step_count">%1$d</xliff:g> раз, чтобы включить настройки для разработчиков.</item>
+        <item quantity="few">Нажмите еще <xliff:g id="step_count">%1$d</xliff:g> раза, чтобы включить настройки для разработчиков.</item>
+        <item quantity="many">Нажмите еще <xliff:g id="step_count">%1$d</xliff:g> раз, чтобы включить настройки для разработчиков.</item>
+        <item quantity="other">Нажмите еще <xliff:g id="step_count">%1$d</xliff:g> раза, чтобы включить настройки для разработчиков.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Настройки для разработчиков включены!</string>
+    <string name="show_dev_already_cm">Нет необходимости, вы уже включили параметры разработки.</string>
+    <string name="enable_adb_root">Отладка суперпользователем</string>
+    <string name="enable_adb_root_summary">Разрешить запуск отладки Android с правами суперпользователя</string>
+    <string name="adb_over_network">ADB по сети</string>
+    <string name="adb_over_network_summary">Включить отладку TCP/IP через сетевые интерфейсы (Wi\u2011Fi и USB-сети). Эта настройка сбрасывается при перезагрузке</string>
+    <string name="adb_over_network_warning">Внимание: при включении отладки по сети, возможен неконтролируемый доступ к вашему устройству.\n\nИспользуйте эту функцию только при подключении к доверенным сетям.\n\nВы действительно хотите включить эту функцию?</string>
+    <string name="system_buttons">Кнопки</string>
+    <string name="power_button_long_press_action_title">Длительное нажатие кнопки питания</string>
+    <string name="power_button_long_press_for_power_menu_action">Доступ к меню питания</string>
+    <string name="power_button_long_press_for_assistant_action">Запуск ассистента</string>
+    <string name="inputs_volume_control_enabled">Регулятор громкости CEC</string>
+    <string name="inputs_volume_control_enabled_desc">Управляйте громкостью ТВ/AVR вместо внутренней громкости</string>
+</resources>

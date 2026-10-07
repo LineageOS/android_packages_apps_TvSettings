@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">T\'ammancat <xliff:g id="step_count">%1$d</xliff:g> passu a s\'ativatzione de sa cunfiguratzione de isvilupu.</item>
+        <item quantity="other">T\'ammancant <xliff:g id="step_count">%1$d</xliff:g> passos a s\'ativatzione de sa cunfiguratzione de isvilupu.</item>
+    </plurals>
+    <string name="show_dev_on_cm">As ativadu sa cunfiguratzione de isvilupu.</string>
+    <string name="show_dev_already_cm">Non serbit, as giai ativadu sa cunfiguratzione de isvilupu.</string>
+    <string name="enable_adb_root">Curretzione de errores cun atzessu root</string>
+    <string name="enable_adb_root_summary">Permite s\'esecutzione de sa curretzione de Android cun atzessu root</string>
+    <string name="adb_over_network">ADB tràmite rete</string>
+    <string name="adb_over_network_summary">Ativa sa curretzione de errores TCP/IP tràmite interfaches de rete (sena filos, retes USB). Custu paràmetru at a èssere ripristinadu a su riaviu</string>
+    <string name="adb_over_network_warning">ATENTZIONE: Cando s\'ADB tràmite rete est ativadu, su telèfonu est vulneràbile a intromissiones in totu is retes connessas!\n\nImprea custa optzione isceti dae retes fidadas.\n\nSeguru chi boles ativare custa funtzione?</string>
+    <string name="system_buttons">Butones</string>
+    <string name="power_button_long_press_action_title">Atzione de sa pressione longa de su butone de aviu</string>
+    <string name="power_button_long_press_for_power_menu_action">Atzessu a su menù de aviu</string>
+    <string name="power_button_long_press_for_assistant_action">Aberi s\'assistente</string>
+    <string name="inputs_volume_control_enabled">Controllu de su volùmene CEC</string>
+    <string name="inputs_volume_control_enabled_desc">Controllu de su volùmene TV/AVR imbetzes de su volùmene internu</string>
+</resources>

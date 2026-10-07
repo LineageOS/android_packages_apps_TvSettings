@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Απομένει <xliff:g id="step_count">%1$d</xliff:g> βήμα για να ενεργοποιήσετε τις ρυθμίσεις για προγραμματιστές.</item>
+        <item quantity="other">Απομένουν <xliff:g id="step_count">%1$d</xliff:g> βήματα για να ενεργοποιήσετε τις ρυθμίσεις για προγραμματιστές.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Ενεργοποιήσατε τις ρυθμίσεις για προγραμματιστές!</string>
+    <string name="show_dev_already_cm">Δεν χρειάζεται, έχετε ήδη ενεργοποιήσει τις ρυθμίσεις για προγραμματιστές.</string>
+    <string name="enable_adb_root">Εντοπισμός σφαλμάτων root</string>
+    <string name="enable_adb_root_summary">Επιτρέψτε την εκτέλεση του εντοπισμού σφαλμάτων Android ως root</string>
+    <string name="adb_over_network">Εντοπισμός σφαλμάτων μέσω δικτύου</string>
+    <string name="adb_over_network_summary">Λειτουργία εντοπισμού σφαλμάτων μέσω TCP/IP δικτύων (δίκτυα Wi\u2011Fi, USB). Η ρύθμιση επαναφέρεται κατά την εκκίνηση</string>
+    <string name="adb_over_network_warning">ΠΡΟΣΟΧΗ: Όταν ο εντοπισμός σφαλμάτων μέσω δικτύου είναι ενεργοποιημένος, το τηλέφωνό σας είναι ανοικτό για εισβολές σε όλα τα συνδεδεμένα δίκτυα!\n\nΧρησιμοποιήστε αυτή τη λειτουργία μόνο όταν είστε συνδεδεμένοι σε έμπιστα δίκτυα.\n\nΘέλετε πραγματικά να ενεργοποιήσετε αυτή τη λειτουργία;</string>
+    <string name="system_buttons">Πλήκτρα</string>
+    <string name="power_button_long_press_action_title">Ενέργεια παρατεταμένης πίεσης πλήκτρου λειτουργίας</string>
+    <string name="power_button_long_press_for_power_menu_action">Πρόσβαση μενού απενεργοποίησης</string>
+    <string name="power_button_long_press_for_assistant_action">Άνοιγμα βοηθού</string>
+    <string name="press_volume_up_and_down_to_mute_title">Σίγαση δύο πλήκτρων</string>
+    <string name="press_volume_up_and_down_to_mute_summary">Πατήστε τα πλήκτρα έντασης πάνω και κάτω για εναλλαγή σίγασης ήχου</string>
+    <string name="inputs_volume_control_enabled">Έλεγχος έντασης CEC</string>
+    <string name="inputs_volume_control_enabled_desc">Έλεγχος της έντασης TV/AVR αντί της εσωτερικής έντασης</string>
+    <string name="unsupported">Μη υποστηριζόμενο</string>
+</resources>

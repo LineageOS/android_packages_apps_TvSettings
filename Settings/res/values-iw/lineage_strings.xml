@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">רק עוד צעד אחד מהפעלת אפשרויות מפתח.</item>
+        <item quantity="two">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
+        <item quantity="other">רק עוד <xliff:g id="step_count">%1$d</xliff:g> צעדים מהפעלת אפשרויות מפתח.</item>
+    </plurals>
+    <string name="show_dev_on_cm">הפעלת כבר את הגדרות למפתחים!</string>
+    <string name="show_dev_already_cm">אין צורך, הפעלת כבר את הגדרות למפתחים.</string>
+    <string name="enable_adb_root">ניפוי תקלות עם גישת שורש</string>
+    <string name="enable_adb_root_summary">אפשר הרצת ניפוי תקלות באנדרואיד עם גישת שורש</string>
+    <string name="adb_over_network">ADB דרך הרשת</string>
+    <string name="adb_over_network_summary">הפעלת ניפוי שגיאות TCP/IP דרך ממשקי רשת (Wi\u2011Fi, רשתות USB). הגדרה זו מתאפסת באתחול</string>
+    <string name="adb_over_network_warning">אזהרה: כאשר ADB דרך הרשת מופעל, הטלפון שלך חדיר מכל הרשתות המחוברות!\n\nיש להשתמש באפשרות זו רק בעת חיבור לרשתות מהימנות.\n\nהאם בוודאות ברצונך להפעיל אפשרות זו?</string>
+    <string name="system_buttons">לחצנים</string>
+    <string name="power_button_long_press_action_title">פעולת לחיצה ארוכה על כפתור ההפעלה</string>
+    <string name="power_button_long_press_for_power_menu_action">גישה לתפריט הפעלה</string>
+    <string name="power_button_long_press_for_assistant_action">פתיחת מסייע</string>
+    <string name="inputs_volume_control_enabled">שליטת עוצמת קול CEC</string>
+    <string name="inputs_volume_control_enabled_desc">שליטת עוצמת קול TV/AVR במקום עוצמת קול פנימית</string>
+</resources>

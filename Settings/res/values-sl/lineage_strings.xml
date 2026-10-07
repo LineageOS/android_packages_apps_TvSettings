@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Zdaj ste <xliff:g id="step_count">%1$d</xliff:g> korak pred omogočenjem nastavitev za razvijalce.</item>
+        <item quantity="two">Zdaj ste <xliff:g id="step_count">%1$d</xliff:g> koraka pred omogočenjem nastavitev za razvijalce.</item>
+        <item quantity="few">Zdaj ste <xliff:g id="step_count">%1$d</xliff:g> korake pred omogočenjem nastavitev za razvijalce.</item>
+        <item quantity="other">Zdaj ste <xliff:g id="step_count">%1$d</xliff:g> korakov pred omogočenjem nastavitev za razvijalce.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Omogočili ste nastavitve za razvijalce!</string>
+    <string name="show_dev_already_cm">Ni treba, ste že omogočili nastavitve za razvijalce.</string>
+    <string name="enable_adb_root">Skrbniško odpravljanje napak</string>
+    <string name="enable_adb_root_summary">Dovoli izvajanje Android odpravljanja napak kot skrbnik</string>
+    <string name="adb_over_network">ADB prek omrežja</string>
+    <string name="adb_over_network_summary">Omogoči odpravljanje napak TCP/IP prek omrežnih vmesnikov (Wi\u2011Fi, omrežij USB). Ta nastavitev se ob vnovičnem zagonu ponastavi</string>
+    <string name="adb_over_network_warning">OPOZRILO: Ko je ADB prek omrežja omogočen, je vaš telefon ranljiv za vdore iz vseh povezanih omrežij! \n\nTo funkcijo uporabljajte samo, ko ste povezani na zaupanja vredna omrežja.\n\nAli res želite omogočiti to funkcijo?</string>
+    <string name="system_buttons">Gumbi</string>
+    <string name="power_button_long_press_action_title">Dejanje pridržanja gumba za vklop</string>
+    <string name="power_button_long_press_for_power_menu_action">Odpri meni izklopa</string>
+    <string name="power_button_long_press_for_assistant_action">Odpri pomočnika</string>
+    <string name="inputs_volume_control_enabled">Nadzor glasnosti CEC</string>
+    <string name="inputs_volume_control_enabled_desc">Upravljajte TV/AVR glasnost namesto notranje glasnosti</string>
+</resources>

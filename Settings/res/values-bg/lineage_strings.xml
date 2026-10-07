@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Вие сте на <xliff:g id="step_count">%1$d</xliff:g> стъпка към включване на настройки на разработника
+</item>
+        <item quantity="other">Вие сте на <xliff:g id="step_count">%1$d</xliff:g> стъпки към включване на настройки на разработника
+</item>
+    </plurals>
+    <string name="show_dev_on_cm">Настройки за разработчици активирани!</string>
+    <string name="show_dev_already_cm">Няма нужда, настройките за разработчици вече са активирани</string>
+    <string name="enable_adb_root">Отстраняване на грешки с администраторски права (root)</string>
+    <string name="enable_adb_root_summary">Разрешете отстраняване на грешки в Android с администраторски права</string>
+    <string name="adb_over_network">Режим за отстраняване на грешки през мрежата</string>
+    <string name="adb_over_network_summary">Разреши TCP/IP откриване на грешки през мрежови интерфейси (Wi\u2011Fi, USB мрежи). Тази настройка се нулира при рестартиране</string>
+    <string name="adb_over_network_warning">Предупреждение: Когато ADB по мрежата е разрешен, телефонът ви е отворен за проникване от всички свързани мрежи! \n\nИзползвай тази функция, само когато сте свързан с надеждни мрежи.\n\nНаистина ли искате да разрешите тази функция?</string>
+    <string name="system_buttons">Бутони</string>
+    <string name="power_button_long_press_action_title">Действие при задържане на пускови бутон</string>
+    <string name="power_button_long_press_for_power_menu_action">Достъпване меню за захранване</string>
+    <string name="power_button_long_press_for_assistant_action">Отвори Асистент</string>
+    <string name="inputs_volume_control_enabled">Регулатор на звук CEC</string>
+    <string name="inputs_volume_control_enabled_desc">Регулиране TV/AVR звука, вместо на устройството</string>
+</resources>

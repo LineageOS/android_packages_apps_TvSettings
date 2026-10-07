@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="other">还需 <xliff:g id="step_count">%1$d</xliff:g> 步操作即可启用开发者选项。</item>
+    </plurals>
+    <string name="show_dev_on_cm">您已经启用了开发者选项！</string>
+    <string name="show_dev_already_cm">您已启用开发者选项，无需进行此操作。</string>
+    <string name="enable_adb_root">以 Root 身份调试</string>
+    <string name="enable_adb_root_summary">允许以 root 身份运行 Android 调试</string>
+    <string name="adb_over_network">网络 ADB 调试</string>
+    <string name="adb_over_network_summary">启用通过网络接口（Wi\u2011Fi、USB 网络）的 TCP/IP 调试。该设置重启后失效</string>
+    <string name="adb_over_network_warning">警告：当网络 ADB 调试启用时，您的设备将在所有已连接的网络上接收指令！\n\n请只在您信任的网络中启用此功能。\n\n您真的要开启这个功能吗？</string>
+    <string name="system_buttons">按钮</string>
+    <string name="power_button_long_press_action_title">长按电源按钮时动作</string>
+    <string name="power_button_long_press_for_power_menu_action">访问电源菜单</string>
+    <string name="power_button_long_press_for_assistant_action">打开助理</string>
+    <string name="inputs_volume_control_enabled">CEC 音量控制</string>
+    <string name="inputs_volume_control_enabled_desc">控制 TV/AVR 音量而不是内部音量</string>
+</resources>

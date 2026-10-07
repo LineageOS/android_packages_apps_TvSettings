@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="one">Ești la <xliff:g id="step_count">%1$d</xliff:g> pas distanță de a activa opțiunile de dezvoltator.</item>
+        <item quantity="few">Ești la <xliff:g id="step_count">%1$d</xliff:g> pași distanță de a activa opțiunile de dezvoltator.</item>
+        <item quantity="other">Ești la <xliff:g id="step_count">%1$d</xliff:g> pași distanță de a activa opțiunile de dezvoltator.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Ați deblocat setările de dezvoltator!</string>
+    <string name="show_dev_already_cm">Nu mai este nevoie, aţi activat deja setările dezvoltator.</string>
+    <string name="enable_adb_root">Depanare ca root</string>
+    <string name="enable_adb_root_summary">Permiteți depanării sistemului Android să ruleze ca root</string>
+    <string name="adb_over_network">ADB prin rețea</string>
+    <string name="adb_over_network_summary">Activează depanarea TCP/IP prin interfețele de rețea (Wi\u2011Fi, rețele USB). Această setare este resetată la repornire</string>
+    <string name="adb_over_network_warning">AVERTISMENT: Când ADB prin reţea este activat, telefonul dvs. este deschis pentru intruziuni pe toate reţelele conectate!\n\nUtilizaţi această caracteristică doar atunci când sunteţi conectat la rețele de încredere.\n\nDoriţi cu adevărat să activaţi această funcţie?</string>
+    <string name="system_buttons">Butoane</string>
+    <string name="power_button_long_press_action_title">Acțiunea apăsării lungi a butonului de pornire</string>
+    <string name="power_button_long_press_for_power_menu_action">Acces Meniu Power</string>
+    <string name="power_button_long_press_for_assistant_action">Deschide Asistentul</string>
+    <string name="inputs_volume_control_enabled">Control volum CEC</string>
+    <string name="inputs_volume_control_enabled_desc">Controlează volumul TV/AVR în locul volumului intern</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="other">Bạn còn <xliff:g id="step_count">%1$d</xliff:g> bước nữa để bật cài đặt nhà phát triển.</item>
+    </plurals>
+    <string name="show_dev_on_cm">Bạn đã bật cài đặt nhà phát triển!</string>
+    <string name="show_dev_already_cm">Không cần thiết, bạn đã bật cài đặt nhà phát triển.</string>
+    <string name="enable_adb_root">Gỡ lỗi với quyền root</string>
+    <string name="enable_adb_root_summary">Cho phép chạy gỡ lỗi Android với quyền root</string>
+    <string name="adb_over_network">ADB qua mạng</string>
+    <string name="adb_over_network_summary">Bật tính năng gỡ lỗi TCP/IP qua giao diện mạng (mạng Wi\u2011Fi, USB). Thiết lập này sẽ được đặt lại khi khởi động lại máy</string>
+    <string name="adb_over_network_warning">CẢNH BÁO: Khi ADB qua mạng được bật, điện thoại của bạn sẽ có thể bị xâm nhập trên tất cả các mạng kết nối!\n\nChỉ sử dụng tính năng này khi bạn đang kết nối trên các mạng đáng tin cậy.\n\nBạn có thực sự muốn bật chức năng này?</string>
+    <string name="system_buttons">Phím</string>
+    <string name="power_button_long_press_action_title">Hành động nhấn giữ nút nguồn</string>
+    <string name="power_button_long_press_for_power_menu_action">Truy cập menu Nguồn</string>
+    <string name="power_button_long_press_for_assistant_action">Mở Trợ lý</string>
+    <string name="inputs_volume_control_enabled">Kiểm soát âm lượng CEC</string>
+    <string name="inputs_volume_control_enabled_desc">Điều khiển âm lượng TV/AVR thay vì âm lượng bên trong</string>
+</resources>

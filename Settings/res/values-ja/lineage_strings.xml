@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="other">開発者向けオプションが有効になるまであと<xliff:g id="step_count">%1$d</xliff:g>ステップです。</item>
+    </plurals>
+    <string name="show_dev_on_cm">開発者向けオプションが有効になりました!</string>
+    <string name="show_dev_already_cm">必要ありません、開発者向けオプションはすでに有効になっています。</string>
+    <string name="enable_adb_root">root 権限でのデバッグ</string>
+    <string name="enable_adb_root_summary">root 権限での Android デバッグを許可します</string>
+    <string name="adb_over_network">ネットワーク経由の ADB</string>
+    <string name="adb_over_network_summary">ネットワークインターフェース（Wi\u2011Fi、USB ネットワーク）経由での TCP/IP デバッグを有効にします。この設定は再起動時にリセットされます</string>
+    <string name="adb_over_network_warning">警告: ネットワーク経由の ADB が有効になっているとき、デバイスは接続しているすべてのネットワーク上で侵入に対して無防備になります。\n\n信頼できるネットワーク接続しているときにのみ、この機能を使用してください。\n\nこの機能を本当に有効にしますか？</string>
+    <string name="system_buttons">ボタン</string>
+    <string name="power_button_long_press_action_title">電源ボタンの長押しの動作</string>
+    <string name="power_button_long_press_for_power_menu_action">電源メニューにアクセス</string>
+    <string name="power_button_long_press_for_assistant_action">アシスタントを開く</string>
+    <string name="inputs_volume_control_enabled">CEC 音量制御</string>
+    <string name="inputs_volume_control_enabled_desc">内部音量の代わりに TV/AVR 音量を制御</string>
+</resources>

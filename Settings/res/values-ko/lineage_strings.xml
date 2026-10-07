@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="other">개발자 설정을 활성화하려면 <xliff:g id="step_count">%1$d</xliff:g>회 더 누르세요.</item>
+    </plurals>
+    <string name="show_dev_on_cm">개발자 설정이 활성화되었습니다!</string>
+    <string name="show_dev_already_cm">이미 개발자 설정이 활성화되어 있습니다.</string>
+    <string name="enable_adb_root">디버깅 시 루트 권한 사용</string>
+    <string name="enable_adb_root_summary">ADB와 같은 디버깅 모드 사용 시 루트 권한을 사용합니다.</string>
+    <string name="adb_over_network">네트워크를 통한 ADB</string>
+    <string name="adb_over_network_summary">네트워크 인터페이스(Wi\u2011Fi, USB 네트워크)를 통한 TCP/IP 디버깅을 사용합니다. 이 설정은 재부팅 시 초기화됩니다.</string>
+    <string name="adb_over_network_warning">경고: 네트워크를 통한 ADB 연결을 켜면, 기기가 모든 연결된 네트워크를 통한 침입 위험에 노출됩니다!\n\n신뢰할 수 있는 네트워크에서만 이 기능을 사용하세요.\n\n정말 이 기능을 사용하시겠습니까?</string>
+    <string name="system_buttons">버튼</string>
+    <string name="power_button_long_press_action_title">전원 버튼 길게 누를 때 작업</string>
+    <string name="power_button_long_press_for_power_menu_action">전원 메뉴 열기</string>
+    <string name="power_button_long_press_for_assistant_action">어시스턴트 열기</string>
+    <string name="inputs_volume_control_enabled">CEC 볼륨 제어</string>
+    <string name="inputs_volume_control_enabled_desc">내부 볼륨 대신 TV/AVR 볼륨 제어</string>
+</resources>
