@@ -28,7 +28,14 @@ import android.graphics.drawable.Icon;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
@@ -42,15 +49,36 @@ import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
 import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
+import org.lineageos.internal.util.PowerMenuUtils;
+
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /** Activity to confirm rebooting the device */
 public class RebootConfirmActivity extends FragmentActivity {
 
+    private static final String TAG = "RebootConfirmActivity";
+
     private static final String ARG_SAFE_MODE = "RebootConfirmFragment.safe_mode";
     private static final String ARG_TITLE = "RebootConfirmFragment.title";
     private static final String ARG_SUMMARY = "RebootConfirmFragment.summary";
     private static final String ARG_DEFAULT_TO_CONFIRM = "RebootConfirmFragment.default_to_confirm";
+    private static final String ARG_ADVANCED_RESTART = "RebootConfirmFragment.advanced_restart";
+
+    /** Keys of org.lineageos.platform's config_restartActionsList, in SystemUI's spelling. */
+    private static final String ACTION_RESTART = "restart";
+    private static final String ACTION_RESTART_RECOVERY = "restart_recovery";
+    private static final String ACTION_RESTART_BOOTLOADER = "restart_bootloader";
+    private static final String ACTION_RESTART_FASTBOOT = "restart_fastboot";
+
+    /** Values of the matching PowerManager.REBOOT_* constants. */
+    private static final String REASON_RECOVERY = "recovery";
+    private static final String REASON_BOOTLOADER = "bootloader";
+    private static final String REASON_FASTBOOT = "fastboot";
+
+    /** Leanback's own action ids are negative, so index the configured targets from here. */
+    private static final long ACTION_ID_RESTART_TARGET_BASE = 1000;
 
 
     /** generate an Intent to start this Activity */
@@ -84,6 +112,73 @@ public class RebootConfirmActivity extends FragmentActivity {
         }.execute();
     }
 
+    /**
+     * Restarts into {@code reason}, one of the bootloader's recognised modes.
+     *
+     * <p>Goes through rebootCustom() rather than reboot(), the way the power menu does:
+     * ShutdownThread only skips its "Factory data reset" progress dialog for a recovery restart
+     * when the custom flag is set.
+     */
+    protected static void reboot(Context context, String reason) {
+        final PowerManager pm = context.getSystemService(PowerManager.class);
+
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                pm.rebootCustom(reason);
+                return null;
+            }
+        }.execute();
+    }
+
+    private static boolean isAdvancedRestart(Bundle args) {
+        return args != null && args.getBoolean(ARG_ADVANCED_RESTART, false);
+    }
+
+    /** One entry of config_restartActionsList that we know how to carry out. */
+    private static final class RestartTarget {
+        final int labelResId;
+        @Nullable
+        final String reason;
+
+        RestartTarget(int labelResId, @Nullable String reason) {
+            this.labelResId = labelResId;
+            this.reason = reason;
+        }
+    }
+
+    /**
+     * The restart targets this device offers, in the order it lists them. Shared by both
+     * confirmation styles so they stay in step; unknown keys are skipped.
+     */
+    private static List<RestartTarget> getRestartTargets(Context context) {
+        List<RestartTarget> targets = new ArrayList<>();
+        for (String action : context.getResources().getStringArray(
+                org.lineageos.platform.internal.R.array.config_restartActionsList)) {
+            switch (action) {
+                case ACTION_RESTART:
+                    targets.add(new RestartTarget(R.string.global_action_restart_system, null));
+                    break;
+                case ACTION_RESTART_RECOVERY:
+                    targets.add(new RestartTarget(
+                            R.string.global_action_restart_recovery, REASON_RECOVERY));
+                    break;
+                case ACTION_RESTART_BOOTLOADER:
+                    targets.add(new RestartTarget(
+                            R.string.global_action_restart_bootloader, REASON_BOOTLOADER));
+                    break;
+                case ACTION_RESTART_FASTBOOT:
+                    targets.add(new RestartTarget(
+                            R.string.global_action_restart_fastboot, REASON_FASTBOOT));
+                    break;
+                default:
+                    Log.w(TAG, "Unknown restart action: " + action);
+                    break;
+            }
+        }
+        return targets;
+    }
+
     protected static boolean isToSafeMode(Bundle arguments) {
         boolean toSafeMode = false;
         if (arguments != null) {
@@ -99,6 +194,7 @@ public class RebootConfirmActivity extends FragmentActivity {
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             boolean toSafeMode = isToSafeMode(extras);
+            boolean advancedRestart = !toSafeMode && PowerMenuUtils.isAdvancedRestartPossible(this);
             String title = extras != null ? extras.getString(ARG_TITLE) : null;
             String summary = extras != null ? extras.getString(ARG_SUMMARY) : null;
             boolean defaultToConfirm = extras != null && extras.getBoolean(ARG_DEFAULT_TO_CONFIRM);
@@ -114,7 +210,7 @@ public class RebootConfirmActivity extends FragmentActivity {
                 setTheme(R.style.TvSettingsDialog_FullScreen);
                 FullScreenDialogRebootConfirmFragment dialogFragment =
                         FullScreenDialogRebootConfirmFragment.newInstance(getApplicationContext(),
-                                toSafeMode, title, summary, defaultToConfirm);
+                                toSafeMode, advancedRestart, title, summary, defaultToConfirm);
                 getSupportFragmentManager()
                         .beginTransaction()
                         .add(android.R.id.content, dialogFragment)
@@ -127,26 +223,97 @@ public class RebootConfirmActivity extends FragmentActivity {
     public static class FullScreenDialogRebootConfirmFragment extends FullScreenDialogFragment {
 
         public static FullScreenDialogRebootConfirmFragment newInstance(Context context,
-                boolean safeMode, @Nullable String title, @Nullable String summary,
-                boolean defaultToConfirm) {
+                boolean safeMode, boolean advancedRestart, @Nullable String title,
+                @Nullable String summary, boolean defaultToConfirm) {
             Bundle args = new FullScreenDialogFragment.DialogBuilder()
                     .setIcon(Icon.createWithResource(context, R.drawable.ic_warning_132dp))
-                    .setTitle(title != null ? title :
+                    .setTitle(advancedRestart
+                            ? context.getString(R.string.system_reboot_confirm_cm)
+                            : title != null ? title :
                                 safeMode ? context.getString(R.string.reboot_safemode_confirm)
                                          : context.getString(R.string.system_reboot_confirm))
                     .setMessage(summary != null ? summary :
                             safeMode ? context.getString(R.string.reboot_safemode_desc) : null)
-                    .setPositiveButton(safeMode ? context.getString(R.string.reboot_safemode_action)
-                            : context.getString(R.string.restart_button_label))
+                    // In advanced mode every restart target is added in onViewCreated(), so the
+                    // stock positive button is left unlabelled and therefore hidden.
+                    .setPositiveButton(advancedRestart ? null
+                            : safeMode ? context.getString(R.string.reboot_safemode_action)
+                                       : context.getString(R.string.restart_button_label))
                     .setNegativeButton(context.getString(R.string.settings_cancel))
                     .setInitialFocusOnNegativeButton(!defaultToConfirm)
                     .build();
 
             args.putBoolean(ARG_SAFE_MODE, safeMode);
+            args.putBoolean(ARG_ADVANCED_RESTART, advancedRestart);
             FullScreenDialogRebootConfirmFragment fragment =
                     new FullScreenDialogRebootConfirmFragment();
             fragment.setArguments(args);
             return fragment;
+        }
+
+        /**
+         * Builds a row of restart targets above the dialog's button bar, one button per entry of
+         * config_restartActionsList and in the order the device configures them, leaving cancel
+         * alone in the bar below. The stock positive button stays hidden: every target is one of
+         * these instead, so the overlay decides which appear and in which order.
+         */
+        @Override
+        public void onViewCreated(View view, Bundle savedInstanceState) {
+            super.onViewCreated(view, savedInstanceState);
+            if (!isAdvancedRestart(getArguments())) {
+                return;
+            }
+            final Context context = requireContext();
+            final ViewGroup buttonBar = view.findViewById(R.id.button_bar);
+            final LayoutInflater inflater = LayoutInflater.from(buttonBar.getContext());
+
+            // The targets go in a row of their own above the dialog's button bar, leaving cancel
+            // alone in it: four peer destinations read better apart from the way out, and it
+            // keeps a stray left or right off a reboot.
+            final LinearLayout targetsRow = new LinearLayout(buttonBar.getContext());
+            targetsRow.setOrientation(LinearLayout.HORIZONTAL);
+            targetsRow.setGravity(Gravity.CENTER_HORIZONTAL);
+            targetsRow.setClipChildren(false);
+            targetsRow.setClipToPadding(false);
+
+            Button firstTarget = null;
+            for (RestartTarget target : getRestartTargets(context)) {
+                Button button = (Button) inflater.inflate(
+                        R.layout.restart_action_button, targetsRow, false);
+                button.setText(target.labelResId);
+                button.setOnClickListener(v -> reboot(context, target.reason));
+                targetsRow.addView(button);
+                if (firstTarget == null) {
+                    firstTarget = button;
+                }
+            }
+            if (firstTarget == null) {
+                // Nothing usable configured. The positive button was suppressed for advanced
+                // mode, so put a plain restart back rather than leave a dialog that can only
+                // be dismissed.
+                Button positiveButton = view.findViewById(R.id.positive_button);
+                positiveButton.setText(R.string.restart_button_label);
+                positiveButton.setVisibility(View.VISIBLE);
+                return;
+            }
+
+            final ViewGroup root = (ViewGroup) buttonBar.getParent();
+            final ViewGroup.MarginLayoutParams barParams =
+                    (ViewGroup.MarginLayoutParams) buttonBar.getLayoutParams();
+            final LinearLayout.LayoutParams rowParams = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            // The row takes over the bar's gap from the message, and the two rows sit closer to
+            // each other than the pair sits to the rest of the dialog.
+            rowParams.topMargin = barParams.topMargin;
+            barParams.topMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16,
+                    context.getResources().getDisplayMetrics());
+            buttonBar.setLayoutParams(barParams);
+            root.addView(targetsRow, root.indexOfChild(buttonBar), rowParams);
+
+            // Up from cancel would otherwise land on whichever target happens to sit above its
+            // centre, which shifts with the configured list.
+            firstTarget.setId(View.generateViewId());
+            view.findViewById(R.id.negative_button).setNextFocusUpId(firstTarget.getId());
         }
 
         @Override
@@ -162,6 +329,9 @@ public class RebootConfirmActivity extends FragmentActivity {
     /** Confirmation page in the guided step style */
     @Keep
     public static class GuidedStepRebootConfirmFragment extends SettingsGuidedStepFragment {
+
+        /** The targets onCreateActions() built, indexed by action id. */
+        private List<RestartTarget> mTargets = new ArrayList<>();
 
         public static GuidedStepRebootConfirmFragment newInstance(
                 boolean safeMode, @Nullable String title, @Nullable String summary) {
@@ -183,7 +353,7 @@ public class RebootConfirmActivity extends FragmentActivity {
         @Override
         public void onViewCreated(View view, Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
-            setSelectedActionPosition(1);
+            setSelectedActionPosition(0);
         }
 
         @Override
@@ -195,6 +365,13 @@ public class RebootConfirmActivity extends FragmentActivity {
                 return new GuidanceStylist.Guidance(
                         title != null ? title : getString(R.string.reboot_safemode_confirm),
                         summary != null ? summary : getString(R.string.reboot_safemode_desc),
+                        null,
+                        getActivity().getDrawable(R.drawable.ic_warning_132dp)
+                );
+            } else if (PowerMenuUtils.isAdvancedRestartPossible(getActivity())) {
+                return new GuidanceStylist.Guidance(
+                        getString(R.string.system_reboot_confirm_cm),
+                        null,
                         null,
                         getActivity().getDrawable(R.drawable.ic_warning_132dp)
                 );
@@ -212,20 +389,37 @@ public class RebootConfirmActivity extends FragmentActivity {
         public void onCreateActions(@NonNull List<GuidedAction> actions,
                 Bundle savedInstanceState) {
             final Context context = getActivity();
-            if (getArguments().getBoolean(ARG_SAFE_MODE, false)) {
-                actions.add(new GuidedAction.Builder(context)
-                        .id(GuidedAction.ACTION_ID_OK)
-                        .title(R.string.reboot_safemode_action)
-                        .build());
-            } else {
-                actions.add(new GuidedAction.Builder(context)
-                        .id(GuidedAction.ACTION_ID_OK)
-                        .title(R.string.restart_button_label)
-                        .build());
-            }
             actions.add(new GuidedAction.Builder(context)
                     .clickAction(GuidedAction.ACTION_ID_CANCEL)
                     .build());
+            if (getArguments().getBoolean(ARG_SAFE_MODE, false)) {
+                actions.add(new GuidedAction.Builder(context)
+                        .icon(R.drawable.ic_restart_alt)
+                        .id(GuidedAction.ACTION_ID_OK)
+                        .title(R.string.reboot_safemode_action)
+                        .build());
+                return;
+            }
+
+            mTargets = PowerMenuUtils.isAdvancedRestartPossible(context)
+                    ? getRestartTargets(context)
+                    : Collections.emptyList();
+            if (mTargets.isEmpty()) {
+                actions.add(new GuidedAction.Builder(context)
+                        .icon(R.drawable.ic_restart_alt)
+                        .id(GuidedAction.ACTION_ID_OK)
+                        .title(R.string.restart_button_label)
+                        .build());
+                return;
+            }
+
+            for (int i = 0; i < mTargets.size(); i++) {
+                actions.add(new GuidedAction.Builder(context)
+                        .icon(R.drawable.ic_restart_alt)
+                        .id(ACTION_ID_RESTART_TARGET_BASE + i)
+                        .title(mTargets.get(i).labelResId)
+                        .build());
+            }
         }
 
         @Override
@@ -249,8 +443,12 @@ public class RebootConfirmActivity extends FragmentActivity {
 
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
-            if (action.getId() == GuidedAction.ACTION_ID_OK) {
+            final long id = action.getId();
+            final int index = (int) (id - ACTION_ID_RESTART_TARGET_BASE);
+            if (id == GuidedAction.ACTION_ID_OK) {
                 reboot(requireContext(), isToSafeMode(requireArguments()));
+            } else if (index >= 0 && index < mTargets.size()) {
+                reboot(requireContext(), mTargets.get(index).reason);
             } else {
                 requireActivity().finish();
             }
