@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Advanced restart menu, with the targets styled after the TV Material wide button -->
+    <style name="Theme.Reset.RestartTargets">
+        <item name="android:windowBackground">@drawable/full_screen_dialog_background</item>
+        <item name="guidedActionItemContainerStyle">@style/RestartTargetContainerStyle</item>
+        <item name="guidedActionItemTitleStyle">@style/RestartTargetTitleStyle</item>
+    </style>
+
+    <style name="RestartTargetContainerStyle" parent="GuidedActionItemContainerStyleTwoPanel">
+        <item name="android:background">@drawable/restart_target_background</item>
+        <item name="android:layout_height">@dimen/restart_target_height</item>
+        <item name="android:stateListAnimator">@animator/dialog_button_animator</item>
+    </style>
+
+    <style name="RestartTargetTitleStyle" parent="GuidedActionItemTitleStyleTwoPanel">
+        <item name="android:fontFamily">@font/brand_font_medium</item>
+    </style>
+</resources>

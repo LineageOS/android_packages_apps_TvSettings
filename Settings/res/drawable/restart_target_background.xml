@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="#E3E3E3" />
+            <corners android:radius="@dimen/restart_target_corner_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#1AFFFFFF" />
+            <corners android:radius="@dimen/restart_target_corner_radius" />
+        </shape>
+    </item>
+</selector>
