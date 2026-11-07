@@ -28,7 +28,10 @@ import android.graphics.drawable.Icon;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
@@ -36,22 +39,43 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.leanback.app.GuidedStepSupportFragment;
 import androidx.leanback.widget.GuidanceStylist;
 import androidx.leanback.widget.GuidedAction;
+import androidx.leanback.widget.GuidedActionsStylist;
 
 import com.android.tv.twopanelsettings.FullScreenDialogFragment;
 import com.android.tv.settings.R;
 import com.android.tv.settings.overlay.FlavorUtils;
+import com.android.tv.settings.util.GuidedActionsAlignUtil;
 import com.android.tv.settings.widget.SettingsGuidedStepFragment;
 
+import org.lineageos.internal.util.PowerMenuUtils;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /** Activity to confirm rebooting the device */
 public class RebootConfirmActivity extends FragmentActivity {
 
+    private static final String TAG = "RebootConfirmActivity";
+
     private static final String ARG_SAFE_MODE = "RebootConfirmFragment.safe_mode";
     private static final String ARG_TITLE = "RebootConfirmFragment.title";
     private static final String ARG_SUMMARY = "RebootConfirmFragment.summary";
     private static final String ARG_DEFAULT_TO_CONFIRM = "RebootConfirmFragment.default_to_confirm";
+    private static final String ARG_ADVANCED_RESTART = "RebootConfirmFragment.advanced_restart";
 
+    /** Keys of org.lineageos.platform's config_restartActionsList, in SystemUI's spelling. */
+    private static final String ACTION_RESTART = "restart";
+    private static final String ACTION_RESTART_RECOVERY = "restart_recovery";
+    private static final String ACTION_RESTART_BOOTLOADER = "restart_bootloader";
+    private static final String ACTION_RESTART_FASTBOOT = "restart_fastboot";
+
+    /** Values of the matching PowerManager.REBOOT_* constants. */
+    private static final String REASON_RECOVERY = "recovery";
+    private static final String REASON_BOOTLOADER = "bootloader";
+    private static final String REASON_FASTBOOT = "fastboot";
+
+    /** Leanback's own action ids are negative, so index the configured targets from here. */
+    private static final long ACTION_ID_RESTART_TARGET_BASE = 1000;
 
     /** generate an Intent to start this Activity */
     public static Intent getIntent(Context context, boolean safeMode) {
@@ -84,6 +108,64 @@ public class RebootConfirmActivity extends FragmentActivity {
         }.execute();
     }
 
+    /**
+     * Goes through rebootCustom() rather than reboot(), the way the power menu does:
+     * ShutdownThread only skips its "Factory data reset" progress dialog for a recovery restart
+     * when the custom flag is set.
+     */
+    protected static void reboot(Context context, @Nullable String reason) {
+        final PowerManager pm = context.getSystemService(PowerManager.class);
+
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                pm.rebootCustom(reason);
+                return null;
+            }
+        }.execute();
+    }
+
+    /** One entry of config_restartActionsList that we know how to carry out. */
+    private static final class RestartTarget {
+        final int labelResId;
+        @Nullable
+        final String reason;
+
+        RestartTarget(int labelResId, @Nullable String reason) {
+            this.labelResId = labelResId;
+            this.reason = reason;
+        }
+    }
+
+    /** The restart targets this device offers, in the order it lists them. */
+    private static List<RestartTarget> getRestartTargets(Context context) {
+        List<RestartTarget> targets = new ArrayList<>();
+        for (String action : context.getResources().getStringArray(
+                org.lineageos.platform.internal.R.array.config_restartActionsList)) {
+            switch (action) {
+                case ACTION_RESTART:
+                    targets.add(new RestartTarget(R.string.global_action_restart_system, null));
+                    break;
+                case ACTION_RESTART_RECOVERY:
+                    targets.add(new RestartTarget(
+                            R.string.global_action_restart_recovery, REASON_RECOVERY));
+                    break;
+                case ACTION_RESTART_BOOTLOADER:
+                    targets.add(new RestartTarget(
+                            R.string.global_action_restart_bootloader, REASON_BOOTLOADER));
+                    break;
+                case ACTION_RESTART_FASTBOOT:
+                    targets.add(new RestartTarget(
+                            R.string.global_action_restart_fastboot, REASON_FASTBOOT));
+                    break;
+                default:
+                    Log.w(TAG, "Unknown restart action: " + action);
+                    break;
+            }
+        }
+        return targets;
+    }
+
     protected static boolean isToSafeMode(Bundle arguments) {
         boolean toSafeMode = false;
         if (arguments != null) {
@@ -99,16 +181,27 @@ public class RebootConfirmActivity extends FragmentActivity {
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             boolean toSafeMode = isToSafeMode(extras);
+            boolean advancedRestart = !toSafeMode
+                    && PowerMenuUtils.isAdvancedRestartPossible(this)
+                    && !getRestartTargets(this).isEmpty();
             String title = extras != null ? extras.getString(ARG_TITLE) : null;
             String summary = extras != null ? extras.getString(ARG_SUMMARY) : null;
             boolean defaultToConfirm = extras != null && extras.getBoolean(ARG_DEFAULT_TO_CONFIRM);
             boolean twoPanel = FlavorUtils.isTwoPanel(getApplicationContext());
 
-            if (!twoPanel) {
-                setTheme(R.style.Theme_Leanback_GuidedStep);
+            // The full screen dialog only fits two buttons, so on two panel the list of restart
+            // targets uses the guided step page too, in the two panel theme from the manifest.
+            if (!twoPanel || advancedRestart) {
+                if (!twoPanel) {
+                    setTheme(R.style.Theme_Leanback_GuidedStep);
+                } else {
+                    getWindow().setBackgroundDrawableResource(
+                            R.drawable.full_screen_dialog_background);
+                }
                 GuidedStepSupportFragment.addAsRoot(
                         this,
-                        GuidedStepRebootConfirmFragment.newInstance(toSafeMode, title, summary),
+                        GuidedStepRebootConfirmFragment.newInstance(
+                                toSafeMode, advancedRestart, title, summary),
                         android.R.id.content);
             } else {
                 setTheme(R.style.TvSettingsDialog_FullScreen);
@@ -163,10 +256,15 @@ public class RebootConfirmActivity extends FragmentActivity {
     @Keep
     public static class GuidedStepRebootConfirmFragment extends SettingsGuidedStepFragment {
 
+        /** The targets onCreateActions() built, indexed by action id. */
+        private List<RestartTarget> mTargets = new ArrayList<>();
+
         public static GuidedStepRebootConfirmFragment newInstance(
-                boolean safeMode, @Nullable String title, @Nullable String summary) {
+                boolean safeMode, boolean advancedRestart, @Nullable String title,
+                @Nullable String summary) {
             Bundle args = new Bundle(1);
             args.putBoolean(ARG_SAFE_MODE, safeMode);
+            args.putBoolean(ARG_ADVANCED_RESTART, advancedRestart);
             if (title != null) {
                 args.putString(ARG_TITLE, title);
             }
@@ -180,10 +278,29 @@ public class RebootConfirmActivity extends FragmentActivity {
             return fragment;
         }
 
+        /** Two panel only gets here for the list of restart targets. */
+        private boolean isTwoPanel() {
+            return FlavorUtils.isTwoPanel(getContext());
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                Bundle savedInstanceState) {
+            View view = super.onCreateView(inflater, container, savedInstanceState);
+            return isTwoPanel() ? GuidedActionsAlignUtil.createView(view, this) : view;
+        }
+
+        @Override
+        public GuidedActionsStylist onCreateActionsStylist() {
+            return isTwoPanel() ? GuidedActionsAlignUtil.createGuidedActionsStylist()
+                    : super.onCreateActionsStylist();
+        }
+
         @Override
         public void onViewCreated(View view, Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
-            setSelectedActionPosition(1);
+            setSelectedActionPosition(
+                    getArguments().getBoolean(ARG_ADVANCED_RESTART, false) ? 0 : 1);
         }
 
         @Override
@@ -197,6 +314,13 @@ public class RebootConfirmActivity extends FragmentActivity {
                         summary != null ? summary : getString(R.string.reboot_safemode_desc),
                         null,
                         getActivity().getDrawable(R.drawable.ic_warning_132dp)
+                );
+            } else if (getArguments().getBoolean(ARG_ADVANCED_RESTART, false)) {
+                return new GuidanceStylist.Guidance(
+                        getString(R.string.advanced_restart_confirm_title),
+                        getString(R.string.advanced_restart_confirm_summary),
+                        null,
+                        null
                 );
             } else {
                 return new GuidanceStylist.Guidance(
@@ -212,6 +336,16 @@ public class RebootConfirmActivity extends FragmentActivity {
         public void onCreateActions(@NonNull List<GuidedAction> actions,
                 Bundle savedInstanceState) {
             final Context context = getActivity();
+            if (getArguments().getBoolean(ARG_ADVANCED_RESTART, false)) {
+                mTargets = getRestartTargets(context);
+                for (int i = 0; i < mTargets.size(); i++) {
+                    actions.add(new GuidedAction.Builder(context)
+                            .id(ACTION_ID_RESTART_TARGET_BASE + i)
+                            .title(mTargets.get(i).labelResId)
+                            .build());
+                }
+                return;
+            }
             if (getArguments().getBoolean(ARG_SAFE_MODE, false)) {
                 actions.add(new GuidedAction.Builder(context)
                         .id(GuidedAction.ACTION_ID_OK)
@@ -230,6 +364,11 @@ public class RebootConfirmActivity extends FragmentActivity {
 
         @Override
         public GuidanceStylist onCreateGuidanceStylist() {
+            if (isTwoPanel()) {
+                // The two panel guided step theme's guidance styles carry no layout sizes, so
+                // they only work with the layout made for them.
+                return GuidedActionsAlignUtil.createGuidanceStylist();
+            }
             return new GuidanceStylist() {
                 @Override
                 public int onProvideLayoutId() {
@@ -249,8 +388,12 @@ public class RebootConfirmActivity extends FragmentActivity {
 
         @Override
         public void onGuidedActionClicked(GuidedAction action) {
-            if (action.getId() == GuidedAction.ACTION_ID_OK) {
+            final long id = action.getId();
+            final int index = (int) (id - ACTION_ID_RESTART_TARGET_BASE);
+            if (id == GuidedAction.ACTION_ID_OK) {
                 reboot(requireContext(), isToSafeMode(requireArguments()));
+            } else if (index >= 0 && index < mTargets.size()) {
+                reboot(requireContext(), mTargets.get(index).reason);
             } else {
                 requireActivity().finish();
             }
