@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="other">你只需再按 <xliff:g id="step_count">%1$d</xliff:g> 次，即可啟用開發人員選項。</item>
+    </plurals>
+    <string name="show_dev_on_cm">您已經啟用開發人員選項！</string>
+    <string name="show_dev_already_cm">不需要，您已經啟用開發人員選項。</string>
+    <string name="enable_adb_root">Root 權限偵錯</string>
+    <string name="adb_over_network">網絡 ADB 偵錯</string>
+    <string name="adb_over_network_summary">啟用透過網絡介面（Wi\u2011Fi、USB 網絡）的 TCP/IP 除錯。此設定會於重啟後重設。</string>
+    <string name="adb_over_network_warning">警告：當啟用網絡 ADB 偵錯時，您的手機將在所有已連接的網絡上開放並面臨入侵風險！\n\n建議您只在信任的網路才使用此功能。\n\n您確定您想啟用此功能嗎？</string>
+    <string name="trust_feature_selinux_value_enforcing">強制模式</string>
+    <string name="trust_feature_selinux_explain">SELinux 會規管裝置上每個處理程序可存取的檔案或路徑。\n這能阻止應用程式和服務讀取不應存取的檔案：即使出現潛在的惡意程序，其行為亦會受限，從而保障裝置的安全。</string>
+    <string name="trust_feature_security_patches">Android 安全性修補程式</string>
+    <string name="trust_feature_encryption">加密</string>
+    <string name="trust_feature_encryption_value_enabled">已啟用</string>
+    <string name="trust_feature_encryption_value_disabled">已停用</string>
+    <string name="trust_category_tools">私隱</string>
+    <string name="trust_restrict_usb_title">限制 USB</string>
+    <string name="trust_restrict_usb_always">拒絕 USB 連線</string>
+    <string name="trust_restrict_usb_disabled">一律允許 USB 連線</string>
+    <string name="trust_onboarding_description">Trust 有助你保障裝置安全及保護個人私隱。\n只有當頁面內容已通過驗證時，Trust 圖示才會顯示。</string>
+    <string name="trust_warnings_alerts_intro">你可選擇希望獲提示的安全問題。為保障安全，建議啟用所有警示功能。</string>
+    <string name="trust_warnings_selinux">SELinux 狀態</string>
+    <string name="trust_warnings_keys">建構簽章</string>
+    <string name="sleep_button_label">休眠</string>
+    <string name="system_sleep_confirm">立即休眠？</string>
+    <string name="shutdown_button_label">關機</string>
+    <string name="convertible_port_busy_title">USB 連接埠 1 正在使用中</string>
+    <string name="convertible_port_busy_warning">請拔除所有裝置或配件後再試一次</string>
+    <string name="mtp_enable_warning">USB 連接埠 1 已設定供 SHIELD 作為媒體裝置連接至電腦。\n\n此連接埠將不再偵測 USB 儲存媒體或 USB 配件，亦不能用於充電。</string>
+    <string name="mtp_retry_error">失敗。請重試。</string>
+    <string name="mtp_title">使用 USB 將檔案傳輸到電腦</string>
+    <string name="mtp_unexpected_error">發生意外的錯誤。請稍後再試。</string>
+    <string name="usb_debugging_enable_warning">USB 連接埠 1 已設定供 SHIELD 作為媒體裝置連接至電腦。\n\n此連接埠將不再偵測 USB 儲存媒體或 USB 配件，亦不能用於充電。</string>
+</resources>
