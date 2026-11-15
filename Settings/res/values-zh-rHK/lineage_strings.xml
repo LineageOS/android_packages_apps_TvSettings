@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2017-2024 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="show_dev_countdown_cm">
+        <item quantity="other">你只需再按 <xliff:g id="step_count">%1$d</xliff:g> 次，即可啟用開發人員選項。</item>
+    </plurals>
+    <string name="show_dev_on_cm">您已經啟用開發人員選項！</string>
+    <string name="show_dev_already_cm">不需要，您已經啟用開發人員選項。</string>
+    <string name="enable_adb_root">Root 權限偵錯</string>
+    <string name="adb_over_network">網絡 ADB 偵錯</string>
+    <string name="adb_over_network_summary">啟用透過網絡介面（Wi\u2011Fi、USB 網絡）的 TCP/IP 除錯。此設定會於重啟後重設。</string>
+    <string name="adb_over_network_warning">警告：當啟用網絡 ADB 偵錯時，您的手機將在所有已連接的網絡上開放並面臨入侵風險！\n\n建議您只在信任的網路才使用此功能。\n\n您確定您想啟用此功能嗎？</string>
+</resources>
